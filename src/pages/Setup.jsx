@@ -309,13 +309,19 @@ export default function Setup() {
             type="number"
             inputMode="numeric"
             min={1}
-            max={maxAvailable || 1}
+            max={maxAvailable || undefined}
             value={questionCount}
             onChange={(e) => setQuestionCount(e.target.value)}
-            onBlur={() => setQuestionCount(String(Math.max(1, Math.min(maxAvailable || 1, Number(questionCount) || 0))))}
+            onBlur={() => setQuestionCount((prev) => {
+              const n = Number(prev) || 1
+              const clamped = maxAvailable > 0 ? Math.min(n, maxAvailable) : n
+              return String(Math.max(1, clamped))
+            })}
             className="w-full sm:w-32 rounded-lg border border-slate-300 p-2.5 text-base"
-            disabled={maxAvailable === 0}
           />
+          {maxAvailable === 0 && (
+            <p className="mt-1 text-xs text-slate-400">Pehle upar selection karo, max yahan dikhega.</p>
+          )}
         </div>
 
         <div>
