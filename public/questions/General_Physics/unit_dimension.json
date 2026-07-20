@@ -1,0 +1,218 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "unit_dimension",
+  "topicName": "Unit & Dimension",
+  "questions": [
+    {
+      "id": "phy_unit_dimension_q1",
+      "question": "SI system में force का unit क्या है?",
+      "options": ["newton", "joule", "watt", "pascal"],
+      "correctIndex": 0,
+      "explanation": "Force = mass × acceleration, अर्थात kg·m/s² जिसे newton कहते हैं, इसलिए option 0 सही है। joule energy/work का unit है, watt power का unit है और pascal pressure का unit है, इसलिए ये गलत हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q2",
+      "question": "Force का dimensional formula कौन-सा है?",
+      "options": ["[M L² T⁻²]", "[M L T⁻¹]", "[M L⁻¹ T⁻²]", "[M L T⁻²]"],
+      "correctIndex": 3,
+      "explanation": "Force = mass × acceleration = [M] × [L T⁻²] = [M L T⁻²], इसलिए option 3 सही है। [M L² T⁻²] energy का, [M L T⁻¹] momentum का और [M L⁻¹ T⁻²] pressure का dimension है।"
+    },
+    {
+      "id": "phy_unit_dimension_q3",
+      "question": "Work या energy का SI unit क्या है?",
+      "options": ["newton", "joule", "watt", "pascal"],
+      "correctIndex": 1,
+      "explanation": "Work = force × displacement = N·m = joule, इसलिए option 1 सही है। newton force का, watt power का और pascal pressure का unit है, अतः ये गलत हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q4",
+      "question": "Work (या energy) का dimensional formula कौन-सा है?",
+      "options": ["[M L T⁻²]", "[M L² T⁻¹]", "[M L² T⁻²]", "[M L² T⁻³]"],
+      "correctIndex": 2,
+      "explanation": "Work = force × distance = [M L T⁻²] × [L] = [M L² T⁻²], इसलिए option 2 सही है। [M L T⁻²] force का और [M L² T⁻³] power का dimension है; [M L² T⁻¹] angular momentum जैसा है।"
+    },
+    {
+      "id": "phy_unit_dimension_q5",
+      "question": "Power का SI unit क्या है?",
+      "options": ["watt", "joule", "newton", "pascal"],
+      "correctIndex": 0,
+      "explanation": "Power = work/time = joule/second = watt, इसलिए option 0 सही है। joule energy का, newton force का और pascal pressure का unit है, अतः ये गलत हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q6",
+      "question": "Power का dimensional formula कौन-सा है?",
+      "options": ["[M L² T⁻²]", "[M L² T⁻³]", "[M L T⁻³]", "[M L² T⁻¹]"],
+      "correctIndex": 1,
+      "explanation": "Power = work/time = [M L² T⁻²]/[T] = [M L² T⁻³], इसलिए option 1 सही है। [M L² T⁻²] energy का dimension है और बाकी दोनों किसी standard quantity से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_unit_dimension_q7",
+      "question": "Pressure का SI unit क्या है?",
+      "options": ["newton", "joule", "watt", "pascal"],
+      "correctIndex": 3,
+      "explanation": "Pressure = force/area = N/m² = pascal, इसलिए option 3 सही है। newton force का, joule energy का और watt power का unit है, अतः ये गलत हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q8",
+      "question": "Pressure का dimensional formula कौन-सा है?",
+      "options": ["[M L T⁻²]", "[M L² T⁻²]", "[M L⁻¹ T⁻²]", "[M L⁻¹ T⁻¹]"],
+      "correctIndex": 2,
+      "explanation": "Pressure = force/area = [M L T⁻²]/[L²] = [M L⁻¹ T⁻²], इसलिए option 2 सही है। [M L T⁻²] force का, [M L² T⁻²] energy का और [M L⁻¹ T⁻¹] coefficient of viscosity का dimension है।"
+    },
+    {
+      "id": "phy_unit_dimension_q9",
+      "question": "निम्न में से कौन-सी एक fundamental (base) quantity है?",
+      "options": ["force", "velocity", "luminous intensity", "density"],
+      "correctIndex": 2,
+      "explanation": "Luminous intensity सात base quantities में से एक है (unit candela), इसलिए option 2 सही है। force, velocity और density सभी derived quantities हैं क्योंकि इन्हें base quantities से प्राप्त किया जाता है।"
+    },
+    {
+      "id": "phy_unit_dimension_q10",
+      "question": "SI system में fundamental (base) units की कुल संख्या कितनी है?",
+      "options": ["5", "6", "7", "9"],
+      "correctIndex": 2,
+      "explanation": "SI में 7 base units हैं — metre, kilogram, second, ampere, kelvin, mole और candela, इसलिए option 2 सही है। बाकी संख्याएँ गलत हैं क्योंकि वे इस मानक गणना से मेल नहीं खातीं।"
+    },
+    {
+      "id": "phy_unit_dimension_q11",
+      "question": "Amount of substance का SI unit क्या है?",
+      "options": ["candela", "kelvin", "ampere", "mole"],
+      "correctIndex": 3,
+      "explanation": "Amount of substance को mole में मापा जाता है, इसलिए option 3 सही है। candela luminous intensity का, kelvin temperature का और ampere electric current का unit है।"
+    },
+    {
+      "id": "phy_unit_dimension_q12",
+      "question": "Luminous intensity का SI unit क्या है?",
+      "options": ["candela", "mole", "lumen", "lux"],
+      "correctIndex": 0,
+      "explanation": "Luminous intensity का base unit candela है, इसलिए option 0 सही है। mole amount of substance का unit है; lumen luminous flux और lux illuminance की derived units हैं, base unit नहीं।"
+    },
+    {
+      "id": "phy_unit_dimension_q13",
+      "question": "Velocity का dimensional formula कौन-सा है?",
+      "options": ["[L T⁻¹]", "[L T⁻²]", "[L² T⁻¹]", "[M L T⁻¹]"],
+      "correctIndex": 0,
+      "explanation": "Velocity = displacement/time = [L]/[T] = [L T⁻¹], इसलिए option 0 सही है। [L T⁻²] acceleration का dimension है, [M L T⁻¹] momentum का और [L² T⁻¹] किसी standard velocity से मेल नहीं खाता।"
+    },
+    {
+      "id": "phy_unit_dimension_q14",
+      "question": "Acceleration का dimensional formula कौन-सा है?",
+      "options": ["[L T⁻¹]", "[L T⁻²]", "[M L T⁻²]", "[L² T⁻²]"],
+      "correctIndex": 1,
+      "explanation": "Acceleration = velocity/time = [L T⁻¹]/[T] = [L T⁻²], इसलिए option 1 सही है। [L T⁻¹] velocity का और [M L T⁻²] force का dimension है, इसलिए ये गलत हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q15",
+      "question": "Momentum का dimensional formula कौन-सा है?",
+      "options": ["[M L T⁻²]", "[M L² T⁻¹]", "[M L T⁻¹]", "[M L² T⁻²]"],
+      "correctIndex": 2,
+      "explanation": "Momentum = mass × velocity = [M] × [L T⁻¹] = [M L T⁻¹], इसलिए option 2 सही है। [M L T⁻²] force का और [M L² T⁻²] energy का dimension है।"
+    },
+    {
+      "id": "phy_unit_dimension_q16",
+      "question": "निम्न में से किस जोड़ी (pair) के dimensions समान होते हैं?",
+      "options": ["force और energy", "work और torque", "pressure और force", "power और energy"],
+      "correctIndex": 1,
+      "explanation": "Work और torque दोनों का dimension [M L² T⁻²] होता है, इसलिए option 1 सही है। बाकी जोड़ियों में दोनों quantities के dimensions अलग-अलग हैं, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q17",
+      "question": "Frequency का dimensional formula कौन-सा है?",
+      "options": ["[T]", "[L T⁻¹]", "[T⁻²]", "[T⁻¹]"],
+      "correctIndex": 3,
+      "explanation": "Frequency = 1/time period = 1/[T] = [T⁻¹], इसलिए option 3 सही है। [T] time का dimension है, [L T⁻¹] velocity का और [T⁻²] किसी standard frequency से मेल नहीं खाता।"
+    },
+    {
+      "id": "phy_unit_dimension_q18",
+      "question": "1 newton को base units में लिखने पर क्या मिलता है?",
+      "options": ["kg·m/s", "kg·m/s²", "kg·m²/s²", "kg/(m·s²)"],
+      "correctIndex": 1,
+      "explanation": "Force = mass × acceleration = kg × m/s² = kg·m/s², इसलिए option 1 सही है। kg·m/s momentum है, kg·m²/s² energy (joule) है और kg/(m·s²) pressure के करीब है।"
+    },
+    {
+      "id": "phy_unit_dimension_q19",
+      "question": "Density का dimensional formula कौन-सा है?",
+      "options": ["[M L⁻³]", "[M L³]", "[M L⁻²]", "[M L⁻¹]"],
+      "correctIndex": 0,
+      "explanation": "Density = mass/volume = [M]/[L³] = [M L⁻³], इसलिए option 0 सही है। बाकी विकल्पों में length की power गलत है, इसलिए वे किसी सही density से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_unit_dimension_q20",
+      "question": "निम्न में से कौन-सी quantity dimensionless (विमाहीन) है?",
+      "options": ["force", "velocity", "density", "strain"],
+      "correctIndex": 3,
+      "explanation": "Strain = change in length/original length, अर्थात दो lengths का अनुपात, इसलिए यह dimensionless है और option 3 सही है। force, velocity और density सभी के निश्चित dimensions होते हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q21",
+      "question": "Universal gravitational constant G का dimensional formula कौन-सा है?",
+      "options": ["[M⁻¹ L³ T⁻²]", "[M L³ T⁻²]", "[M⁻¹ L² T⁻²]", "[M⁻¹ L³ T⁻¹]"],
+      "correctIndex": 0,
+      "explanation": "F = G·m₁m₂/r² से G = F·r²/(m₁m₂) = [M L T⁻²][L²]/[M²] = [M⁻¹ L³ T⁻²], इसलिए option 0 सही है। बाकी विकल्पों में mass, length या time की power गलत होने से वे गलत हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q22",
+      "question": "Principle of homogeneity of dimensions क्या कहता है?",
+      "options": ["समीकरण के दोनों पक्षों की संख्या (magnitude) समान होती है", "केवल SI unit में लिखी समीकरण ही सही होती है", "एक सही physical equation के दोनों पक्षों का dimension समान होता है", "हर physical quantity dimensionless होती है"],
+      "correctIndex": 2,
+      "explanation": "इस सिद्धांत के अनुसार एक dimensionally correct equation में दोनों पक्षों के dimensions समान होने चाहिए, इसलिए option 2 सही है। magnitude का समान होना जरूरी नहीं, समीकरण किसी भी unit system में लिखी जा सकती है और हर quantity dimensionless नहीं होती।"
+    },
+    {
+      "id": "phy_unit_dimension_q23",
+      "question": "Electric current का SI unit क्या है?",
+      "options": ["volt", "ampere", "coulomb", "ohm"],
+      "correctIndex": 1,
+      "explanation": "Electric current का base unit ampere है, इसलिए option 1 सही है। volt potential difference का, coulomb charge का और ohm resistance का unit है।"
+    },
+    {
+      "id": "phy_unit_dimension_q24",
+      "question": "Thermodynamic temperature का SI unit क्या है?",
+      "options": ["celsius", "fahrenheit", "kelvin", "joule"],
+      "correctIndex": 2,
+      "explanation": "Temperature का base SI unit kelvin है, इसलिए option 2 सही है। celsius और fahrenheit temperature की व्यावहारिक scales हैं पर base SI unit नहीं, और joule energy का unit है।"
+    },
+    {
+      "id": "phy_unit_dimension_q25",
+      "question": "Impulse का dimensional formula कौन-सा है?",
+      "options": ["[M L T⁻²]", "[M L² T⁻¹]", "[M L² T⁻²]", "[M L T⁻¹]"],
+      "correctIndex": 3,
+      "explanation": "Impulse = force × time = [M L T⁻²][T] = [M L T⁻¹], जो momentum के dimension के बराबर है, इसलिए option 3 सही है। [M L T⁻²] force का और [M L² T⁻²] energy का dimension है।"
+    },
+    {
+      "id": "phy_unit_dimension_q26",
+      "question": "किसी physical quantity का dimensional formula [M L² T⁻²] है; यह quantity क्या हो सकती है?",
+      "options": ["power", "force", "energy", "pressure"],
+      "correctIndex": 2,
+      "explanation": "[M L² T⁻²] energy/work/torque का dimension है, इसलिए option 2 सही है। power का [M L² T⁻³], force का [M L T⁻²] और pressure का [M L⁻¹ T⁻²] होता है।"
+    },
+    {
+      "id": "phy_unit_dimension_q27",
+      "question": "एक uniform velocity v को समय t से गुणा करने पर (v × t) प्राप्त राशि का dimension क्या होगा?",
+      "options": ["[L]", "[L T⁻¹]", "[T]", "[L T]"],
+      "correctIndex": 0,
+      "explanation": "v × t = [L T⁻¹] × [T] = [L], जो distance का dimension है, इसलिए option 0 सही है। [L T⁻¹] velocity का, [T] time का है और [L T] किसी standard quantity से मेल नहीं खाता।"
+    },
+    {
+      "id": "phy_unit_dimension_q28",
+      "question": "Coefficient of friction (μ) का dimensional formula क्या है?",
+      "options": ["[M L T⁻²]", "dimensionless (विमाहीन)", "[M L⁻¹ T⁻²]", "[L T⁻²]"],
+      "correctIndex": 1,
+      "explanation": "μ = friction force/normal reaction = दो forces का अनुपात, इसलिए यह dimensionless है और option 1 सही है। [M L T⁻²] force का, [M L⁻¹ T⁻²] pressure का और [L T⁻²] acceleration का dimension है।"
+    },
+    {
+      "id": "phy_unit_dimension_q29",
+      "question": "Plane angle (radian में) का dimensional formula क्या है?",
+      "options": ["[L]", "[L⁻¹]", "[T⁻¹]", "[M⁰ L⁰ T⁰]"],
+      "correctIndex": 3,
+      "explanation": "Angle = arc length/radius = [L]/[L] = dimensionless = [M⁰ L⁰ T⁰], इसलिए option 3 सही है। [L], [L⁻¹] और [T⁻¹] सभी के निश्चित dimensions हैं जो angle के लिए गलत हैं।"
+    },
+    {
+      "id": "phy_unit_dimension_q30",
+      "question": "समीकरण v² = u² + 2as की dimensional जाँच करने पर क्या निष्कर्ष निकलता है? (v, u = velocity, a = acceleration, s = distance)",
+      "options": ["समीकरण गलत है क्योंकि बाएँ पक्ष का dimension [L T⁻¹] है", "समीकरण गलत है क्योंकि दाएँ पक्ष का dimension [L] है", "dimension की जाँच करना संभव नहीं है", "समीकरण dimensionally correct है क्योंकि सभी पदों का dimension [L² T⁻²] है"],
+      "correctIndex": 3,
+      "explanation": "v² = [L² T⁻²], u² = [L² T⁻²] और 2as = [L T⁻²][L] = [L² T⁻²]; सभी पदों का dimension समान होने से option 3 सही है। v² का dimension [L T⁻¹] या [L] नहीं होता, और dimension की जाँच पूरी तरह संभव है, इसलिए बाकी विकल्प गलत हैं।"
+    }
+  ]
+}

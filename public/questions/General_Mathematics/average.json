@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "average",
+  "topicName": "Average",
+  "questions": [
+    {
+      "id": "math_average_q1",
+      "question": "12, 18, 24, 30 और 36 का average ज्ञात करें।",
+      "options": ["24", "22", "26", "28"],
+      "correctIndex": 0,
+      "explanation": "sum = 12+18+24+30+36 = 120, और average = 120/5 = 24। बाकी options इस sum को 5 से divide करने पर नहीं मिलते।"
+    },
+    {
+      "id": "math_average_q2",
+      "question": "पहली 10 natural numbers का average ज्ञात करें।",
+      "options": ["5", "5.5", "6", "6.5"],
+      "correctIndex": 1,
+      "explanation": "पहली 10 natural numbers (1 से 10) का sum = 55, और average = 55/10 = 5.5। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q3",
+      "question": "8 boys का average weight 45 kg है। यदि एक boy (जिसका weight 52 kg है) group छोड़ देता है, तो शेष 7 boys का नया average weight ज्ञात करें।",
+      "options": ["42", "43", "44", "46"],
+      "correctIndex": 2,
+      "explanation": "total weight = 8×45 = 360 kg। एक boy (52 kg) निकलने पर शेष total = 360-52 = 308 kg, और नया average = 308/7 = 44 kg। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q4",
+      "question": "5 consecutive numbers का average 23 है। सबसे बड़ी संख्या ज्ञात करें।",
+      "options": ["22", "23", "24", "25"],
+      "correctIndex": 3,
+      "explanation": "5 consecutive numbers को n, n+1, n+2, n+3, n+4 मानें, इनका average = n+2 = 23 => n = 21। सबसे बड़ी संख्या = n+4 = 25। बाकी options इस sequence में सबसे बड़ी संख्या नहीं हैं।"
+    },
+    {
+      "id": "math_average_q5",
+      "question": "एक cricketer की 10 innings में average score 42 है। 11वीं innings में वह 64 runs बनाता है। उसकी नई average ज्ञात करें।",
+      "options": ["44", "43", "45", "46"],
+      "correctIndex": 0,
+      "explanation": "पहली 10 innings का total = 10×42 = 420, नया total (11 innings) = 420+64 = 484, नई average = 484/11 = 44। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q6",
+      "question": "15 numbers का average 30 है। यदि प्रत्येक number में 4 जोड़ दिया जाए, तो नई average ज्ञात करें।",
+      "options": ["32", "34", "36", "38"],
+      "correctIndex": 1,
+      "explanation": "जब हर number में एक ही constant जोड़ा जाता है, तो average में भी वही constant जुड़ जाता है। नई average = 30+4 = 34। बाकी options इस नियम से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q7",
+      "question": "30 students के marks का average 60 है। यदि उनमें से 18 students का average 55 है, तो शेष 12 students का average ज्ञात करें।",
+      "options": ["65", "66", "67.5", "70"],
+      "correctIndex": 2,
+      "explanation": "कुल total = 30×60 = 1800, 18 students का total = 18×55 = 990, इसलिए शेष 12 students का total = 1800-990 = 810, और उनका average = 810/12 = 67.5। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q8",
+      "question": "5 members वाले एक family का average age 24 years है। सबसे छोटे member की age 8 years है। 8 years पहले (जब youngest member का जन्म भी नहीं हुआ था), शेष 4 members की average age क्या थी?",
+      "options": ["18", "19", "22", "20"],
+      "correctIndex": 3,
+      "explanation": "वर्तमान total age = 5×24 = 120 years। youngest को हटाने पर शेष 4 members का total = 120-8 = 112 years। 8 years पहले इन 4 members में से हर एक की age 8 साल कम थी, इसलिए total = 112 - (4×8) = 112-32 = 80, और average = 80/4 = 20 years। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q9",
+      "question": "पहली 20 odd natural numbers का average ज्ञात करें।",
+      "options": ["20", "19", "21", "22"],
+      "correctIndex": 0,
+      "explanation": "पहली n odd numbers का sum हमेशा n² होता है, इसलिए sum = 20² = 400, और average = 400/20 = 20। बाकी options इस formula से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q10",
+      "question": "एक car 60 km की दूरी 30 km/h की speed से तय करती है और वापसी की same दूरी 60 km/h की speed से तय करती है। पूरी journey की average speed ज्ञात करें।",
+      "options": ["36", "40", "45", "50"],
+      "correctIndex": 1,
+      "explanation": "जब समान दूरी दो अलग speeds a और b से तय हो, तो average speed = 2ab/(a+b) होती है। यहाँ = (2×30×60)/(30+60) = 3600/90 = 40 km/h। साधारण arithmetic mean (45) यहाँ लागू नहीं होता क्योंकि समय अलग-अलग है, इसलिए 45 गलत है। 36 और 50 भी formula से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q11",
+      "question": "6 numbers का average 18 है। यदि एक number हटा दिया जाए, तो शेष 5 numbers का average 16 हो जाता है। हटाई गई number ज्ञात करें।",
+      "options": ["24", "26", "28", "30"],
+      "correctIndex": 2,
+      "explanation": "6 numbers का total = 6×18 = 108, शेष 5 numbers का total = 5×16 = 80, इसलिए हटाई गई number = 108-80 = 28। बाकी options इस subtraction से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q12",
+      "question": "4 men का average weight 3 kg बढ़ जाता है जब उनमें से 65 kg वाले एक man को एक नए man से replace किया जाता है। नए man का weight ज्ञात करें।",
+      "options": ["71", "74", "76", "77"],
+      "correctIndex": 3,
+      "explanation": "total weight में वृद्धि = 4×3 = 12 kg, इसलिए नए man का weight = 65+12 = 77 kg। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q13",
+      "question": "पहली 5 natural numbers के squares का average ज्ञात करें।",
+      "options": ["11", "10", "12", "13"],
+      "correctIndex": 0,
+      "explanation": "squares हैं 1, 4, 9, 16, 25, जिनका sum = 55, और average = 55/5 = 11। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q14",
+      "question": "3 numbers का average 28 है। पहली number दूसरी की दोगुनी (twice) है, और दूसरी number तीसरी की दोगुनी है। तीसरी number ज्ञात करें।",
+      "options": ["8", "10", "14", "12"],
+      "correctIndex": 3,
+      "explanation": "माना तीसरी number = x, तो दूसरी = 2x और पहली = 4x। sum = 7x = 3×28 = 84 => x = 12। check: numbers 48, 24, 12 का sum 84 और average 28 सही है। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_average_q15",
+      "question": "11 results का average 50 है। यदि पहली 6 results का average 49 और अंतिम 6 results का average 52 है, तो 6वाँ result ज्ञात करें (जो दोनों groups में common है)।",
+      "options": ["52", "54", "56", "58"],
+      "correctIndex": 2,
+      "explanation": "कुल 11 results का total = 550, पहली 6 का total = 294, अंतिम 6 का total = 312। 6वाँ result दोनों totals में count हो जाता है, इसलिए 6वाँ result = (294+312) - 550 = 56। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q16",
+      "question": "पहली 10 multiples of 7 का average ज्ञात करें।",
+      "options": ["35", "36.5", "37.5", "38.5"],
+      "correctIndex": 3,
+      "explanation": "multiples हैं 7,14,...,70, जिनका sum = 385, और average = 385/10 = 38.5। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q17",
+      "question": "25 students की average height 150 cm है। यदि उनमें से 10 students की average height 144 cm है, तो शेष 15 students की average height ज्ञात करें।",
+      "options": ["154", "150", "152", "156"],
+      "correctIndex": 0,
+      "explanation": "कुल total = 25×150 = 3750 cm, पहली 10 का total = 10×144 = 1440 cm, शेष 15 का total = 3750-1440 = 2310 cm, average = 2310/15 = 154 cm। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q18",
+      "question": "9 numbers का average 25 है। यदि पहली number में 1, दूसरी में 2, तीसरी में 3, इस तरह 9वीं number में 9 जोड़ दिया जाए, तो नई average ज्ञात करें।",
+      "options": ["27", "30", "33", "36"],
+      "correctIndex": 1,
+      "explanation": "कुल जोड़ी गई value = 1+2+...+9 = 45, यह total में जुड़ जाती है, इसलिए average में वृद्धि = 45/9 = 5। नई average = 25+5 = 30। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q19",
+      "question": "एक batsman की 16 innings के बाद average 36 है। यदि वह 17वीं innings में 70 runs बनाता है, तो उसकी average में कितनी वृद्धि होगी?",
+      "options": ["1", "1.5", "2", "2.5"],
+      "correctIndex": 2,
+      "explanation": "पुराना total = 16×36 = 576, नया total = 576+70 = 646, नई average = 646/17 = 38, इसलिए वृद्धि = 38-36 = 2। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q20",
+      "question": "5 consecutive even numbers का average 24 है। सबसे छोटी संख्या ज्ञात करें।",
+      "options": ["16", "18", "19", "20"],
+      "correctIndex": 3,
+      "explanation": "numbers को n, n+2, n+4, n+6, n+8 मानें, इनका average = n+4 = 24 => n = 20। सबसे छोटी संख्या 20 है। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q21",
+      "question": "एक factory के 20 workers की average salary Rs. 8000 है। यदि manager की salary भी शामिल कर ली जाए, तो average Rs. 8500 हो जाती है। manager की salary ज्ञात करें।",
+      "options": ["18500", "17500", "19000", "20000"],
+      "correctIndex": 0,
+      "explanation": "20 workers का total = 20×8000 = 160000, 21 लोगों का नया total = 21×8500 = 178500, इसलिए manager की salary = 178500-160000 = 18500। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q22",
+      "question": "पहली 15 multiples of 8 का average ज्ञात करें।",
+      "options": ["60", "64", "68", "72"],
+      "correctIndex": 1,
+      "explanation": "sum = 8×(1+2+...+15) = 8×120 = 960, और average = 960/15 = 64। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q23",
+      "question": "दो numbers का average 35 है। यदि एक number 40 है, तो दूसरी number ज्ञात करें।",
+      "options": ["25", "28", "30", "32"],
+      "correctIndex": 2,
+      "explanation": "दोनों का sum = 2×35 = 70, इसलिए दूसरी number = 70-40 = 30। बाकी options इस subtraction से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q24",
+      "question": "एक student के 5 subjects में average marks 68 हैं। यदि वह 6 subjects में average 72 पाना चाहता है, तो उसे 6ठे subject में कितने marks लाने होंगे?",
+      "options": ["86", "88", "90", "92"],
+      "correctIndex": 3,
+      "explanation": "5 subjects का total = 5×68 = 340, 6 subjects के लिए required total = 6×72 = 432, इसलिए 6ठे subject में marks = 432-340 = 92। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q25",
+      "question": "7 consecutive numbers का average 21 है। सबसे बड़ी संख्या ज्ञात करें।",
+      "options": ["24", "23", "25", "26"],
+      "correctIndex": 0,
+      "explanation": "numbers को n से n+6 तक मानें, इनका average = n+3 = 21 => n = 18। सबसे बड़ी संख्या = n+6 = 24। बाकी options इस sequence में सबसे बड़ी नहीं हैं।"
+    },
+    {
+      "id": "math_average_q26",
+      "question": "एक class में 14 students की average age 15 years है। यदि teacher की age (45 years) भी शामिल कर ली जाए, तो सभी 15 व्यक्तियों की नई average age ज्ञात करें।",
+      "options": ["16", "17", "18", "19"],
+      "correctIndex": 1,
+      "explanation": "14 students का total age = 14×15 = 210 years, teacher सहित नया total = 210+45 = 255, और 15 व्यक्तियों की average = 255/15 = 17 years। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q27",
+      "question": "4 numbers का average 15 है। जब एक पाँचवीं number जोड़ी जाती है, तो average 17 हो जाती है। पाँचवीं number ज्ञात करें।",
+      "options": ["21", "23", "25", "27"],
+      "correctIndex": 2,
+      "explanation": "पहली 4 का total = 4×15 = 60, 5 numbers का नया total = 5×17 = 85, इसलिए पाँचवीं number = 85-60 = 25। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q28",
+      "question": "पहली 12 natural numbers का average ज्ञात करें।",
+      "options": ["6", "6.25", "6.4", "6.5"],
+      "correctIndex": 3,
+      "explanation": "पहली 12 natural numbers का sum = (12×13)/2 = 78, और average = 78/12 = 6.5। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q29",
+      "question": "A, B और C का average weight 45 kg है। A और B का average weight 40 kg है, और B और C का average weight 43 kg है। B का weight ज्ञात करें।",
+      "options": ["31", "33", "35", "37"],
+      "correctIndex": 0,
+      "explanation": "A+B+C = 135, A+B = 80 => C = 55, B+C = 86 => B = 86-55 = 31। check: A = 80-31 = 49, और A+B+C = 49+31+55 = 135 सही है। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_average_q30",
+      "question": "6 numbers का average 20 है। इनमें से दो numbers हटाने पर शेष 4 numbers का average 18 हो जाता है। हटाई गई दो numbers का average ज्ञात करें।",
+      "options": ["20", "24", "28", "32"],
+      "correctIndex": 1,
+      "explanation": "6 numbers का total = 120, शेष 4 का total = 4×18 = 72, इसलिए हटाई गई 2 numbers का total = 120-72 = 48, और उनका average = 48/2 = 24। बाकी options इस calculation से मेल नहीं खाते।"
+    }
+  ]
+}

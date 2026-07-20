@@ -1,0 +1,368 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "metallurgy",
+  "topicName": "Metallurgy",
+  "questions": [
+    {
+      "id": "chem_metallurgy_q1",
+      "question": "Metallurgy में gangue किसे कहते हैं?",
+      "options": [
+        "वह शुद्ध धातु जो ore से प्राप्त होती है",
+        "ore के साथ प्राकृतिक रूप से मौजूद अवांछित मिट्टी, रेत और चट्टान जैसी अशुद्धियाँ",
+        "वह गैस जो roasting के दौरान निकलती है",
+        "वह reducing agent जो smelting में प्रयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gangue ore के साथ मिली हुई अवांछित मिट्टी, रेत या चट्टान जैसी अशुद्धियाँ होती हैं जिन्हें concentration process में अलग किया जाता है। Option A गलत है क्योंकि वह refined धातु है, gangue नहीं; Option C roasting में निकलने वाली gas (जैसे SO2) है; Option D reducing agent (जैसे coke) है, ये दोनों gangue नहीं हैं।"
+    },
+    {
+      "id": "chem_metallurgy_q2",
+      "question": "Mineral और ore में क्या मुख्य अंतर होता है?",
+      "options": [
+        "सभी minerals ही ores कहलाते हैं",
+        "mineral केवल non-metal यौगिक होता है",
+        "वह mineral जिससे धातु को technically तथा आर्थिक रूप से (economically) लाभप्रद ढंग से निकाला जा सके, उसे ore कहते हैं",
+        "ore हमेशा शुद्ध धातु के रूप में प्राप्त होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "हर mineral में धातु का यौगिक हो सकता है, परंतु केवल वे minerals जिनसे धातु आसानी से तथा लाभप्रद ढंग से निकाली जा सके, ores कहलाते हैं। Option A गलत है क्योंकि सभी minerals आर्थिक रूप से उपयोगी नहीं होते; Option B और D भी mineral/ore की सही परिभाषा नहीं देते क्योंकि ore में गंगू सहित यौगिक रूप ही मिलता है, शुद्ध धातु नहीं।"
+    },
+    {
+      "id": "chem_metallurgy_q3",
+      "question": "Froth flotation प्रक्रिया मुख्यतः किस प्रकार के ores के concentration के लिए उपयोग की जाती है?",
+      "options": [
+        "Carbonate ores जैसे CaCO3",
+        "Sulphide ores जैसे ZnS, PbS और CuFeS2",
+        "Oxide ores जैसे Fe2O3",
+        "Hydrated oxide ores जैसे Bauxite"
+      ],
+      "correctIndex": 1,
+      "explanation": "Froth flotation में sulphide ore के particles pine oil के साथ froth (झाग) बनाकर ऊपर आ जाते हैं जबकि भारी gangue पानी में डूब जाता है, इसलिए यह विधि sulphide ores (ZnS, PbS, CuFeS2) के लिए उपयुक्त है। Carbonate, oxide और hydrated-oxide ores सामान्यतः gravity separation या calcination से concentrate किए जाते हैं, froth flotation से नहीं।"
+    },
+    {
+      "id": "chem_metallurgy_q4",
+      "question": "भारी oxide ores जैसे Haematite (Fe2O3) और Cassiterite (SnO2) को हल्के gangue से अलग करने के लिए सामान्यतः कौन-सी concentration विधि प्रयोग की जाती है?",
+      "options": [
+        "Gravity separation, जो ore और gangue के घनत्व (density) के अंतर पर आधारित है",
+        "Froth flotation",
+        "Electrolytic refining",
+        "Zone refining"
+      ],
+      "correctIndex": 0,
+      "explanation": "Gravity separation में भारी ore particles पानी की धारा में नीचे बैठ जाते हैं जबकि हल्का gangue बह जाता है, यह घनत्व के अंतर पर आधारित होने से Fe2O3, SnO2 जैसे भारी oxide ores के लिए उपयुक्त है। Froth flotation sulphide ores के लिए है, जबकि electrolytic और zone refining तो धातु शुद्धिकरण की विधियाँ हैं, ore concentration की नहीं।"
+    },
+    {
+      "id": "chem_metallurgy_q5",
+      "question": "Tin ore (Cassiterite, SnO2) में मौजूद magnetic अशुद्धि (जैसे wolframite) को गैर-चुंबकीय cassiterite से अलग करने के लिए कौन-सी concentration विधि उपयुक्त है?",
+      "options": [
+        "Froth flotation",
+        "Calcination",
+        "Gravity separation",
+        "Magnetic separation"
+      ],
+      "correctIndex": 3,
+      "explanation": "Magnetic separation में चुंबकीय पदार्थ (जैसे wolframite) को electromagnet द्वारा गैर-चुंबकीय cassiterite से अलग किया जाता है, यह विधि तभी काम करती है जब ore या gangue में से कोई एक चुंबकीय हो। Froth flotation sulphide ores के लिए, calcination heating प्रक्रिया के लिए, और gravity separation घनत्व-अंतर पर आधारित है, चुंबकीय गुण पर नहीं।"
+    },
+    {
+      "id": "chem_metallurgy_q6",
+      "question": "Calcination प्रक्रिया में concentrated ore को किस परिस्थिति में गर्म किया जाता है?",
+      "options": [
+        "वायु की अधिकता (excess air) में उच्च ताप पर",
+        "पानी में डुबोकर",
+        "सीमित वायु या वायु की अनुपस्थिति में, गलनांक से नीचे गर्म करके, जिससे moisture और CO2 जैसी वाष्पशील अशुद्धियाँ निकल जाती हैं (जैसे CaCO3 → CaO + CO2)",
+        "किसी तरल reducing agent के साथ मिलाकर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Calcination में ore को हवा की सीमित मात्रा या अनुपस्थिति में गलनांक से नीचे गर्म किया जाता है जिससे moisture, crystal जल या CO2 (जैसे carbonate ores से) बाहर निकल जाता है। Excess air में गर्म करना roasting है, पानी में डुबोना कोई metallurgical step नहीं है, और तरल reducing agent के साथ गर्म करना smelting से संबंधित है।"
+    },
+    {
+      "id": "chem_metallurgy_q7",
+      "question": "Roasting प्रक्रिया मुख्यतः किन ores पर तथा किस परिस्थिति में की जाती है?",
+      "options": [
+        "Sulphide ores को वायु की अधिकता (excess air) में गर्म करके, जिससे sulphur, SO2 गैस के रूप में निकल जाता है (जैसे ZnS + O2 → ZnO + SO2)",
+        "Carbonate ores को वायु की पूर्ण अनुपस्थिति में गर्म करके",
+        "Oxide ores को पानी में उबालकर",
+        "केवल hydrated ores को ठंडा करके"
+      ],
+      "correctIndex": 0,
+      "explanation": "Roasting में sulphide ore को हवा की अधिकता में गर्म किया जाता है जिससे sulphur, SO2 गैस के रूप में उड़ जाता है और धातु का oxide बनता है। Carbonate ores को हवा की अनुपस्थिति में गर्म करना calcination है, पानी में उबालना या केवल ठंडा करना roasting की परिभाषा नहीं है।"
+    },
+    {
+      "id": "chem_metallurgy_q8",
+      "question": "Smelting प्रक्रिया में क्या होता है?",
+      "options": [
+        "ore से केवल moisture हटाई जाती है",
+        "calcined या roasted ore को reducing agent (जैसे coke) के साथ उच्च ताप पर गलाकर धातु के oxide को अपचयित (reduce) कर गलित धातु प्राप्त की जाती है",
+        "ore को केवल हवा में सुखाया जाता है",
+        "धातु को electrolysis द्वारा शुद्ध किया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Smelting में calcined/roasted ore को coke जैसे reducing agent के साथ furnace में उच्च ताप पर गलाया जाता है ताकि धातु का oxide अपचयित होकर गलित धातु बने। केवल moisture हटाना calcination है, हवा में सुखाना कोई metallurgical step नहीं, और electrolysis द्वारा शुद्धिकरण refining कहलाता है, smelting नहीं।"
+    },
+    {
+      "id": "chem_metallurgy_q9",
+      "question": "Sodium (Na), Potassium (K), Calcium (Ca) और Aluminium (Al) जैसी अत्यधिक reactive धातुओं को उनके यौगिकों से किस विधि द्वारा निकाला जाता है?",
+      "options": [
+        "केवल roasting द्वारा",
+        "carbon के साथ reduction द्वारा",
+        "पानी में घोलकर",
+        "उनके गलित (molten) यौगिकों के electrolysis द्वारा"
+      ],
+      "correctIndex": 3,
+      "explanation": "अत्यधिक reactive धातुएँ (Na, K, Ca, Al) carbon से भी अपचयित नहीं होतीं क्योंकि वे carbon से भी अधिक reactive हैं, इसलिए इन्हें molten oxide या chloride के electrolysis से निकाला जाता है। केवल roasting करना, carbon reduction या पानी में घोलना इन धातुओं के लिए कार्य नहीं करता।"
+    },
+    {
+      "id": "chem_metallurgy_q10",
+      "question": "Zinc, Iron और Lead जैसी moderately reactive धातुओं को उनके ores से मुख्यतः किस विधि से निकाला जाता है?",
+      "options": [
+        "molten अवस्था के electrolysis से",
+        "प्राकृतिक रूप से शुद्ध (native) धातु के रूप में मिलने से",
+        "calcination या roasting के बाद carbon अथवा CO द्वारा reduction करके",
+        "केवल आसवन (distillation) से"
+      ],
+      "correctIndex": 2,
+      "explanation": "Moderately reactive धातुओं (Zn, Fe, Pb) के ore को पहले calcination/roasting द्वारा oxide में बदला जाता है, फिर carbon या CO द्वारा अपचयन कर धातु प्राप्त की जाती है। Electrolysis अत्यधिक reactive धातुओं के लिए है, native अवस्था कम reactive धातुओं की विशेषता है, और केवल distillation refining की विधि है, निष्कर्षण की नहीं।"
+    },
+    {
+      "id": "chem_metallurgy_q11",
+      "question": "Gold (Au), Silver (Ag) और Platinum (Pt) जैसी कम reactive (noble) धातुएँ प्रकृति में मुख्यतः किस रूप में पाई जाती हैं?",
+      "options": [
+        "मुक्त (native/free) अवस्था में, बिना किसी यौगिक के",
+        "केवल sulphide ores के रूप में",
+        "केवल carbonate ores के रूप में",
+        "केवल oxide ores के रूप में"
+      ],
+      "correctIndex": 0,
+      "explanation": "कम reactive या noble धातुएँ हवा, पानी और अन्य पदार्थों से आसानी से react नहीं करतीं, इसलिए ये प्रकृति में मुक्त (native) अवस्था में पाई जाती हैं। Sulphide, carbonate या oxide ores के रूप में मिलना moderately/highly reactive धातुओं (जैसे Zn, Fe, Al) की विशेषता है।"
+    },
+    {
+      "id": "chem_metallurgy_q12",
+      "question": "Copper के sulphide ore (Cu2S) से Copper प्राप्त करते समय आंशिक roasting से बना Cu2O, शेष बचे Cu2S के साथ अभिक्रिया कर बिना किसी बाहरी reducing agent के Copper दे देता है (Cu2S + 2Cu2O → 6Cu + SO2)। इस प्रक्रिया को क्या कहते हैं?",
+      "options": [
+        "Calcination",
+        "Electrolytic reduction",
+        "Froth flotation",
+        "Self-reduction (auto reduction)"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब Cu2S आंशिक रूप से roast होकर Cu2O बनाता है और शेष Cu2S स्वयं Cu2O को अपचयित कर Copper दे देता है, तो इसे self-reduction (auto reduction) कहते हैं, क्योंकि यहाँ बाहरी carbon की आवश्यकता नहीं पड़ती। Calcination केवल heating step है, electrolytic reduction electricity पर आधारित है, और froth flotation एक concentration विधि है, ये तीनों इस अभिक्रिया का वर्णन नहीं करते।"
+    },
+    {
+      "id": "chem_metallurgy_q13",
+      "question": "Blast furnace में Iron निकालने हेतु मुख्यतः कौन-कौन से raw materials डाले जाते हैं?",
+      "options": [
+        "केवल iron ore और पानी",
+        "Iron ore (Haematite, Fe2O3), Coke और Limestone",
+        "केवल coke और वायु",
+        "Bauxite, coke और caustic soda"
+      ],
+      "correctIndex": 1,
+      "explanation": "Blast furnace में मुख्यतः Iron ore (Haematite), Coke (reducing agent) और Limestone (flux) ऊपर से डाले जाते हैं तथा नीचे से गर्म वायु प्रवाहित की जाती है। केवल iron ore-पानी, केवल coke-वायु, या Bauxite-caustic soda वाले विकल्प Iron extraction के लिए आवश्यक raw materials का सही सेट नहीं दर्शाते (अंतिम विकल्प तो Aluminium extraction से संबंधित है)।"
+    },
+    {
+      "id": "chem_metallurgy_q14",
+      "question": "Blast furnace में coke की मुख्य भूमिका क्या होती है?",
+      "options": [
+        "यह reducing agent के रूप में CO उत्पन्न करके Fe2O3 को Fe में अपचयित करता है तथा आवश्यक ऊष्मा भी प्रदान करता है",
+        "यह केवल furnace को ठंडा रखता है",
+        "यह gangue को घोलकर सीधे धातु बनाता है",
+        "यह केवल moisture को सोखता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Coke जलकर CO2 और फिर CO बनाता है, यही CO, Fe2O3 को अपचयित कर Fe देता है, साथ ही coke का दहन furnace के लिए आवश्यक ऊष्मा भी देता है। Furnace को ठंडा रखना, gangue को सीधे धातु में बदलना, या केवल moisture सोखना coke की भूमिका नहीं है।"
+    },
+    {
+      "id": "chem_metallurgy_q15",
+      "question": "Blast furnace में limestone (CaCO3) डालने का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "यह अतिरिक्त reducing agent का कार्य करता है",
+        "यह Iron की मात्रा सीधे बढ़ाता है",
+        "यह flux का कार्य करता है, calcined होकर बना CaO silica (SiO2) जैसी अशुद्धि से मिलकर slag (CaSiO3) बनाता है",
+        "यह furnace का तापमान घटाकर reaction रोकता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Limestone गर्म होकर CaO बनाता है जो flux की तरह कार्य करते हुए silica (SiO2) जैसी acidic gangue अशुद्धि से मिलकर आसानी से पिघलने वाला slag (calcium silicate, CaSiO3) बनाता है, जो अलग हो जाता है। यह reducing agent नहीं है, सीधे Iron की मात्रा नहीं बढ़ाता, और तापमान घटाने का कार्य नहीं करता।"
+    },
+    {
+      "id": "chem_metallurgy_q16",
+      "question": "Blast furnace में Iron ore के मुख्य अपचयन (reduction) की सही अभिक्रिया कौन-सी है?",
+      "options": [
+        "Fe2O3 + 3H2 → 2Fe + 3H2O",
+        "FeO + CO2 → FeCO3",
+        "2Fe + O2 → 2FeO",
+        "Fe2O3 + 3CO → 2Fe + 3CO2"
+      ],
+      "correctIndex": 3,
+      "explanation": "Blast furnace में coke से बनी CO गैस, Fe2O3 को Fe2O3 + 3CO → 2Fe + 3CO2 अभिक्रिया द्वारा अपचयित कर धात्विक Iron देती है। Hydrogen का प्रयोग यहाँ नहीं होता, FeO और CO2 की अभिक्रिया अनुपयुक्त है, और 2Fe + O2 → 2FeO तो Iron के oxidation की अभिक्रिया है, अपचयन की नहीं।"
+    },
+    {
+      "id": "chem_metallurgy_q17",
+      "question": "Blast furnace में बनने वाला slag मुख्यतः किस यौगिक का बना होता है और यह furnace में कहाँ एकत्र होता है?",
+      "options": [
+        "यह Fe3O4 का बना होता है और तली में जमता है",
+        "यह calcium silicate (CaSiO3) का बना होता है और गलित (molten) Iron के ऊपर तैरता है",
+        "यह शुद्ध carbon का बना होता है",
+        "यह पूरी तरह CO2 गैस के रूप में ऊपर से निकल जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slag calcium silicate (CaSiO3) का बना होता है और चूँकि इसका घनत्व molten Iron से कम होता है, यह उसके ऊपर तैरता रहता है जिससे इसे अलग करना आसान होता है। यह Fe3O4 या शुद्ध carbon नहीं है, और न ही यह गैस के रूप में बाहर निकलता है।"
+    },
+    {
+      "id": "chem_metallurgy_q18",
+      "question": "Blast furnace के संचालन के दौरान तली (bottom) से मुख्यतः क्या प्राप्त होता है?",
+      "options": [
+        "गलित (molten) Iron, जिसके ऊपर हल्का slag तैरता रहता है",
+        "शुद्ध ऑक्सीजन गैस",
+        "ठोस Haematite ore बिना किसी परिवर्तन के",
+        "केवल limestone का अवशेष"
+      ],
+      "correctIndex": 0,
+      "explanation": "अपचयन के बाद घनत्व अधिक होने के कारण गलित Iron furnace की तली में एकत्र होता है, जबकि हल्का slag उसके ऊपर तैरता है और इन दोनों को अलग-अलग निकाला जाता है। ऑक्सीजन गैस, अपरिवर्तित ore, या केवल limestone अवशेष तली से प्राप्त उत्पाद नहीं हैं।"
+    },
+    {
+      "id": "chem_metallurgy_q19",
+      "question": "Electrolytic refining में अशुद्ध धातु और शुद्ध धातु को किस प्रकार व्यवस्थित किया जाता है?",
+      "options": [
+        "अशुद्ध धातु को cathode तथा शुद्ध धातु की शीट को anode बनाया जाता है",
+        "दोनों को cathode बनाकर बिना current के जोड़ा जाता है",
+        "अशुद्ध धातु को anode तथा शुद्ध धातु की पतली शीट को cathode बनाया जाता है, और उसी धातु के लवण का घोल electrolyte के रूप में प्रयोग होता है",
+        "दोनों धातुओं को electrolyte में बिना current प्रवाहित किए डुबोया जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Electrolytic refining में अशुद्ध धातु anode बनती है जो current प्रवाहित करने पर घुलकर electrolyte में आयन के रूप में जाती है और शुद्ध धातु cathode पर जमा हो जाती है। अशुद्ध धातु को cathode बनाना, दोनों को cathode बनाना, या बिना current के केवल डुबोना refining की सही प्रक्रिया नहीं है।"
+    },
+    {
+      "id": "chem_metallurgy_q20",
+      "question": "Electrolytic refining के दौरान anode के नीचे जमा होने वाले 'anode mud' में मुख्यतः क्या पाया जाता है?",
+      "options": [
+        "शुद्ध धातु के आयन जो cathode की ओर गति करते हैं",
+        "electrolysis के दौरान बनने वाली hydrogen गैस के बुलबुले",
+        "electrolyte का पूर्णतः शुद्ध जल",
+        "Silver (Ag), Gold (Au) और Platinum (Pt) जैसी कीमती अशुद्धियाँ जो घुलती नहीं और नीचे बैठ जाती हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब अशुद्ध धातु anode पर घुलती है, तो उसमें मौजूद Ag, Au, Pt जैसी कम reactive कीमती अशुद्धियाँ घुले बिना नीचे बैठ जाती हैं, इसे anode mud कहते हैं और इसे बाद में अलग से निकाला जाता है। शुद्ध धातु के आयन cathode की ओर जाते हैं, hydrogen गैस यहाँ नहीं बनती (धातु के लवण का घोल होने से), और electrolyte शुद्ध जल नहीं होता।"
+    },
+    {
+      "id": "chem_metallurgy_q21",
+      "question": "Zone refining, जिसका उपयोग अत्यंत शुद्ध (ultra-pure) धातु प्राप्त करने के लिए होता है, किस सिद्धांत पर कार्य करती है?",
+      "options": [
+        "impurities केवल electrolysis की सहायता से हटाई जाती हैं",
+        "impurities धातु के solid भाग की तुलना में molten भाग में अधिक घुलनशील होती हैं, इसलिए एक चलायमान (moving) heater से धातु की छड़ को बार-बार गुज़ारने पर impurities एक सिरे पर एकत्रित हो जाती हैं",
+        "impurities वाष्पीकरण द्वारा सीधे उड़ जाती हैं",
+        "impurities चुम्बकीय आकर्षण के आधार पर अलग होती हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Zone refining में impurities molten zone में अधिक घुलनशील होने से, moving heater के साथ आगे बढ़ते हुए एक सिरे पर एकत्रित हो जाती हैं जिसे बाद में काटकर हटा दिया जाता है। यह विधि electrolysis, वाष्पीकरण या चुम्बकीय गुण पर आधारित नहीं है।"
+    },
+    {
+      "id": "chem_metallurgy_q22",
+      "question": "Zone refining विधि मुख्यतः किन पदार्थों को अत्यधिक शुद्ध बनाने के लिए प्रयोग की जाती है?",
+      "options": [
+        "Silicon और Germanium जैसे semiconductor पदार्थ",
+        "Zinc और Mercury जैसी कम गलनांक वाली धातुएँ",
+        "Iron और Copper जैसी सामान्य धातुएँ",
+        "Sodium और Potassium जैसी अत्यधिक reactive धातुएँ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Zone refining का उपयोग मुख्यतः Silicon, Germanium जैसे semiconductor पदार्थों को अत्यंत उच्च शुद्धता (जैसे electronic-grade) तक शुद्ध करने के लिए किया जाता है। Zinc, Mercury जैसी कम गलनांक धातुओं के लिए distillation उपयुक्त है, जबकि सामान्य Iron/Copper और अत्यधिक reactive धातुओं के लिए क्रमशः अन्य विधियाँ (जैसे electrolytic refining, electrolysis) प्रयोग होती हैं।"
+    },
+    {
+      "id": "chem_metallurgy_q23",
+      "question": "Distillation द्वारा refining किन धातुओं के लिए उपयुक्त होती है और यह किस गुण पर आधारित होती है?",
+      "options": [
+        "Iron जैसी उच्च गलनांक धातुओं के लिए, घनत्व अंतर पर आधारित",
+        "Gold जैसी अत्यधिक स्थिर धातुओं के लिए, magnetism पर आधारित",
+        "Zinc और Mercury जैसी निम्न क्वथनांक (low boiling point) वाली धातुओं के लिए, जिन्हें वाष्पित कर एक अलग पात्र में संघनित (condense) कर शुद्ध किया जाता है",
+        "Aluminium के लिए, molten electrolysis पर आधारित"
+      ],
+      "correctIndex": 2,
+      "explanation": "Distillation refining में कम क्वथनांक वाली धातु (जैसे Zinc, Mercury) को गर्म कर वाष्प में बदला जाता है और फिर ठंडा कर संघनित करने से शुद्ध धातु प्राप्त होती है जबकि उच्च क्वथनांक वाली अशुद्धियाँ पीछे रह जाती हैं। Iron की distillation संभव नहीं (अत्यधिक उच्च क्वथनांक), Gold की refining electrolytic विधि से होती है, और Aluminium इस विधि से refined नहीं होता।"
+    },
+    {
+      "id": "chem_metallurgy_q24",
+      "question": "Alloy किसे कहते हैं?",
+      "options": [
+        "किसी एक शुद्ध धातु का दूसरा नाम",
+        "केवल दो non-metals का मिश्रण",
+        "धातु और उसके unprocessed ore का सीधा मिश्रण",
+        "दो या अधिक धातुओं (या धातु व non-metal) का समांगी (homogeneous) मिश्रण, जिसे उन्हें पिघलाकर तथा फिर ठंडा करके बनाया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Alloy दो या अधिक धातुओं (या किसी धातु व non-metal जैसे carbon) को पिघलाकर मिलाने और फिर ठंडा करने से बना समांगी मिश्रण होता है, जैसे स्टील (Fe+C)। यह किसी एक शुद्ध धातु का पर्याय नहीं, केवल non-metals का मिश्रण नहीं, और न ही यह धातु व अनप्रोसेस्ड ore का सीधा मिश्रण है।"
+    },
+    {
+      "id": "chem_metallurgy_q25",
+      "question": "Brass किन तत्वों का alloy है?",
+      "options": [
+        "Copper (Cu) और Tin (Sn)",
+        "Copper (Cu) और Zinc (Zn)",
+        "Lead (Pb) और Tin (Sn)",
+        "Iron (Fe) और Chromium (Cr)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Brass, Copper (Cu) और Zinc (Zn) का alloy है, जो नल-नल के पुर्जों, बर्तन आदि बनाने में प्रयोग होता है। Cu और Sn से Bronze बनता है, Pb और Sn से Solder बनता है, और Fe-Cr Stainless steel के घटकों में से एक जोड़ी है, ये सब Brass नहीं हैं।"
+    },
+    {
+      "id": "chem_metallurgy_q26",
+      "question": "Bronze किन तत्वों का alloy है?",
+      "options": [
+        "Copper (Cu) और Tin (Sn)",
+        "Copper (Cu) और Zinc (Zn)",
+        "Aluminium (Al) और Magnesium (Mg)",
+        "Iron (Fe) और Nickel (Ni)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bronze, Copper (Cu) और Tin (Sn) का alloy है, जो मूर्तियों, सिक्कों और bearings में प्रयोग होता है। Cu-Zn से Brass बनता है, Al-Mg हल्के alloys (जैसे कुछ aircraft alloys) में प्रयुक्त होता है, और Fe-Ni अलग विशेष alloys में प्रयोग होता है, ये Bronze नहीं हैं।"
+    },
+    {
+      "id": "chem_metallurgy_q27",
+      "question": "Stainless steel किन तत्वों का alloy है और इसका मुख्य गुण क्या है?",
+      "options": [
+        "Cu और Sn का alloy, उच्च विद्युत चालकता के लिए प्रसिद्ध",
+        "Al, Cu और Mg का alloy, हल्केपन के लिए प्रसिद्ध",
+        "Iron (Fe), Chromium (Cr) और Nickel (Ni) का alloy, जो जंग (corrosion) के प्रति प्रतिरोधी होता है",
+        "Pb और Sn का alloy, निम्न गलनांक के लिए प्रसिद्ध"
+      ],
+      "correctIndex": 2,
+      "explanation": "Stainless steel, Iron में Chromium और Nickel मिलाकर बनाया जाता है जिससे सतह पर एक सुरक्षात्मक oxide layer बनती है और यह corrosion-प्रतिरोधी हो जाता है। Cu-Sn (Bronze) चालकता के लिए नहीं, Al-Cu-Mg (Duralumin जैसे) हल्केपन के लिए, और Pb-Sn (Solder) निम्न गलनांक के लिए जाने जाते हैं, ये Stainless steel नहीं हैं।"
+    },
+    {
+      "id": "chem_metallurgy_q28",
+      "question": "Solder alloy, जिसका उपयोग विद्युत जोड़ों (electrical joints) को जोड़ने में होता है, किन धातुओं से बनता है?",
+      "options": [
+        "Cu और Zn, उच्च चालकता के लिए",
+        "Fe और Cr, उच्च कठोरता के लिए",
+        "Al और Mg, हल्केपन के लिए",
+        "Lead (Pb) और Tin (Sn), जिनका गलनांक (melting point) दोनों मूल धातुओं की तुलना में कम होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Solder, Lead (Pb) और Tin (Sn) का alloy है जिसका गलनांक Pb व Sn दोनों से कम होता है, इसलिए यह आसानी से पिघलाकर विद्युत जोड़ों को जोड़ने के काम आता है। Cu-Zn (Brass), Fe-Cr (Stainless steel में प्रयुक्त) और Al-Mg (हल्के alloys) की भूमिका अलग होती है और इनका गलनांक कम रखने का उद्देश्य नहीं होता।"
+    },
+    {
+      "id": "chem_metallurgy_q29",
+      "question": "धातुओं को उनकी शुद्ध अवस्था में उपयोग करने की बजाय alloy बनाकर उपयोग क्यों किया जाता है?",
+      "options": [
+        "क्योंकि alloy बनाना ore से धातु निकालने से सस्ता है",
+        "क्योंकि alloy बनाने से कठोरता (hardness), corrosion प्रतिरोध और tensile strength जैसे गुणों में सुधार होता है",
+        "क्योंकि शुद्ध धातुएँ हमेशा रासायनिक रूप से अस्थिर होती हैं",
+        "क्योंकि alloy बनाने से धातु का द्रव्यमान कम हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Alloy बनाने से शुद्ध धातु की तुलना में hardness, tensile strength और corrosion resistance जैसे गुणों में सुधार होता है, जैसे pure Iron की तुलना में Stainless steel अधिक टिकाऊ है। यह ore निकालने से सस्ता होने, शुद्ध धातुओं के अस्थिर होने, या द्रव्यमान घटाने के कारण नहीं किया जाता।"
+    },
+    {
+      "id": "chem_metallurgy_q30",
+      "question": "Bauxite (Al2O3.2H2O) किस धातु का प्रमुख ore है?",
+      "options": [
+        "Aluminium (Al)",
+        "Iron (Fe)",
+        "Zinc (Zn)",
+        "Copper (Cu)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bauxite (Al2O3.2H2O) Aluminium का प्रमुख ore है जिससे electrolysis (Hall-Héroult process) द्वारा Aluminium निकाला जाता है। Iron का प्रमुख ore Haematite (Fe2O3), Zinc का Zinc blende (ZnS), और Copper का Copper pyrites (CuFeS2) होता है, Bauxite इनमें से किसी का ore नहीं है।"
+    }
+  ]
+}

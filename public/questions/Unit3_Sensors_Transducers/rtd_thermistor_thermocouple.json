@@ -1,0 +1,368 @@
+{
+  "unit": "unit3",
+  "unitName": "Sensors, Transducers and Applications",
+  "topic": "rtd_thermistor_thermocouple",
+  "topicName": "RTD, Thermistor & Thermocouple - Construction, Seebeck Effect & Types",
+  "questions": [
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q1",
+      "question": "RTD (Resistance Temperature Detector) किस principle पर तापमान measure करता है?",
+      "options": [
+        "Seebeck effect पर",
+        "Metal conductor के resistance का temperature बढ़ने के साथ predictable रूप से बढ़ना",
+        "Photoelectric effect पर",
+        "Piezoelectric effect पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "RTD, pure metal (जैसे Platinum) के इस गुण पर आधारित है कि तापमान बढ़ने पर उसका electrical resistance एक predictable और लगभग linear rate से बढ़ता है। Seebeck effect thermocouple में काम करता है, photoelectric effect light-sensing में, और piezoelectric effect mechanical stress से voltage generate करने में उपयोग होता है।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q2",
+      "question": "PT100 RTD नाम में '100' अंक क्या दर्शाता है?",
+      "options": [
+        "इसकी maximum operating temperature 100°C है",
+        "0°C पर इसका resistance 100 ohm होता है",
+        "इसका accuracy class 100% है",
+        "इसमें 100 turns की winding होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PT100 का मतलब है Platinum RTD जिसका resistance 0°C (ice point) पर ठीक 100 ohm होता है; यह एक industry-standard RTD है। बाकी options '100' अंक की सही व्याख्या नहीं करते।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q3",
+      "question": "RTD बनाने के लिए Platinum को सबसे अधिक क्यों पसंद किया जाता है?",
+      "options": [
+        "क्योंकि यह सबसे सस्ता material है",
+        "क्योंकि यह chemically stable, highly linear resistance-temperature characteristic वाला और wide temperature range में उपयोगी है",
+        "क्योंकि यह magnetic material है",
+        "क्योंकि इसमें कोई resistance नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Platinum अपनी chemical stability, corrosion resistance, अच्छी repeatability और लगभग linear resistance-temperature relationship के कारण RTD के लिए industry-standard material है, भले ही यह महंगा हो। बाकी options गलत गुण बताते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q4",
+      "question": "RTD का temperature coefficient of resistance (TCR) किस प्रकार का होता है?",
+      "options": [
+        "Negative (तापमान बढ़ने पर resistance घटता है)",
+        "Positive (तापमान बढ़ने पर resistance बढ़ता है)",
+        "Zero (कोई परिवर्तन नहीं)",
+        "यह random होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RTD में तापमान बढ़ने के साथ resistance भी बढ़ता है, इसलिए इसका temperature coefficient positive होता है; यह thermistor (NTC) के negative coefficient से अलग है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouth_q5",
+      "question": "Thermistor शब्द किन दो शब्दों के मेल से बना है?",
+      "options": [
+        "Thermal और History",
+        "Thermal और Resistor",
+        "Thermo और Isotope",
+        "Thermal और Insulator"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermistor शब्द 'Thermal' और 'Resistor' के मेल से बना है, यानी यह एक ऐसा resistor है जिसका resistance temperature पर अत्यधिक निर्भर होता है। बाकी options गलत शब्द-संयोजन हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q6",
+      "question": "NTC thermistor का पूरा नाम क्या है और इसकी विशेषता क्या है?",
+      "options": [
+        "Negative Temperature Coefficient - तापमान बढ़ने पर resistance घटता है",
+        "Neutral Temperature Coefficient - resistance स्थिर रहता है",
+        "New Type Circuit - यह एक digital sensor है",
+        "Normal Temperature Control - यह केवल control के लिए है"
+      ],
+      "correctIndex": 0,
+      "explanation": "NTC (Negative Temperature Coefficient) thermistor में तापमान बढ़ने पर resistance तेजी से घटता है, जो semiconductor material की properties के कारण होता है। बाकी options गलत परिभाषा देते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q7",
+      "question": "PTC thermistor किस स्थिति में उपयोग होता है?",
+      "options": [
+        "जहां तापमान बढ़ने पर resistance बढ़े, जैसे self-resetting fuse/overcurrent protection में",
+        "जहां resistance temperature से पूरी तरह independent हो",
+        "केवल light sensing के लिए",
+        "केवल pressure sensing के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "PTC (Positive Temperature Coefficient) thermistor में तापमान (या current) बढ़ने पर resistance तेजी से बढ़ता है, जिससे यह self-resetting overcurrent/overheat protection devices में उपयोग होता है। बाकी options गलत applications हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q8",
+      "question": "Thermistor, RTD की तुलना में किस गुण के लिए जाना जाता है?",
+      "options": [
+        "कम sensitivity लेकिन अधिक linearity",
+        "बहुत अधिक sensitivity (resistance में बड़ा परिवर्तन) लेकिन कम linearity और सीमित temperature range",
+        "पूरी तरह linear characteristic wide range में",
+        "Thermistor का resistance temperature से independent होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermistor, RTD की तुलना में बहुत अधिक sensitive होता है (छोटे temperature change पर बड़ा resistance change) लेकिन इसकी characteristic अत्यधिक non-linear (exponential) होती है और यह सीमित temperature range में ही अच्छे से काम करता है। बाकी options विपरीत/गलत गुण बताते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q9",
+      "question": "Thermocouple तापमान measurement के लिए किस physical effect पर आधारित है?",
+      "options": [
+        "Piezoelectric effect",
+        "Seebeck effect (दो असमान metals के junction पर temperature difference से EMF उत्पन्न होना)",
+        "Photoelectric effect",
+        "Hall effect"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermocouple, Seebeck effect पर काम करता है जिसमें दो भिन्न धातुओं (dissimilar metals) के जोड़ (junction) पर तापमान अंतर होने से एक small EMF (thermo-EMF) उत्पन्न होता है, जो temperature के समानुपाती होता है। बाकी effects अलग sensing principles से संबंधित हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q10",
+      "question": "Thermocouple circuit में 'hot junction' और 'cold junction (reference junction)' का क्या अर्थ है?",
+      "options": [
+        "Hot junction जहां तापमान measure करना है, cold junction एक known reference temperature पर रखा जाने वाला junction है",
+        "दोनों junctions समान तापमान पर होते हैं",
+        "Hot junction केवल high temperature applications में होता है",
+        "Cold junction का कोई महत्व नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hot (measuring) junction को measure किए जाने वाले process/environment में रखा जाता है जबकि cold (reference) junction एक known, controlled temperature (आमतौर पर 0°C या compensated) पर रखा जाता है ताकि net EMF से accurate temperature difference calculate की जा सके। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q11",
+      "question": "Type-K thermocouple किन दो धातुओं से बना होता है?",
+      "options": [
+        "Copper और Constantan",
+        "Chromel और Alumel (Nickel-Chromium और Nickel-Aluminium alloys)",
+        "Iron और Constantan",
+        "Platinum और Rhodium"
+      ],
+      "correctIndex": 1,
+      "explanation": "Type-K thermocouple, Chromel (Nickel-Chromium alloy) और Alumel (Nickel-Aluminium alloy) से बनता है और यह wide range (-200°C से 1260°C) तथा अच्छी stability के कारण सबसे widely used thermocouple है। Copper-Constantan Type-T है, Iron-Constantan Type-J है, और Platinum-Rhodium Type-R/S/B thermocouples में उपयोग होता है।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q12",
+      "question": "Type-J thermocouple किन धातुओं से बनता है और इसका typical range क्या है?",
+      "options": [
+        "Iron और Constantan, range लगभग 0°C से 750°C",
+        "Chromel और Alumel, range 1000°C से 2000°C",
+        "Platinum और Rhodium, range -270°C से 100°C",
+        "Copper और Constantan, range -200°C से 350°C"
+      ],
+      "correctIndex": 0,
+      "explanation": "Type-J thermocouple, Iron (positive leg) और Constantan (negative leg) से बना होता है और इसकी उपयोगी range लगभग 0°C से 750°C होती है, हालांकि Iron के oxidation के कारण उच्च तापमान/oxidizing environment में यह कम उपयुक्त है। बाकी options Type-K, Type-R/S और Type-T के values हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q13",
+      "question": "Type-T thermocouple किन धातुओं से बना होता है और यह किस range के लिए उपयुक्त है?",
+      "options": [
+        "Chromel-Alumel, high temperature के लिए",
+        "Copper और Constantan, कम/sub-zero temperature (जैसे -200°C से 350°C) की accurate measurement के लिए",
+        "Iron-Constantan, केवल 0°C से 100°C के लिए",
+        "Platinum-Rhodium, केवल furnace applications के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Type-T thermocouple, Copper और Constantan से बनता है और यह low temperature तथा cryogenic applications में अच्छी accuracy देता है (लगभग -200°C से 350°C range)। बाकी options गलत material/range combinations हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q14",
+      "question": "Thermocouple का output signal typically किस order का होता है?",
+      "options": [
+        "कुछ Volts (V) के order का",
+        "कुछ milliVolts (mV) के order का",
+        "कुछ kiloVolts (kV) के order का",
+        "यह current के रूप में होता है, voltage के रूप में नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermocouple की Seebeck EMF बहुत छोटी होती है, आमतौर पर कुछ microvolt प्रति °C से मिलाकर पूरे range में कुछ millivolts (mV) के order की होती है, इसलिए accurate measurement के लिए sensitive amplifier की जरूरत पड़ती है। बाकी options गलत magnitude बताते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q15",
+      "question": "Thermocouple circuit में 'cold junction compensation (CJC)' की आवश्यकता क्यों होती है?",
+      "options": [
+        "क्योंकि thermocouple को AC supply चाहिए",
+        "क्योंकि reference/cold junction का तापमान अक्सर 0°C न होकर ambient temperature होता है, जिसे electronically compensate करना पड़ता है",
+        "क्योंकि thermocouple का resistance temperature से independent होता है",
+        "क्योंकि thermocouple में कोई EMF उत्पन्न नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Practical instruments में ice-bath (0°C) reference junction रखना मुश्किल होता है, इसलिए cold junction का actual ambient temperature electronically sense करके compensation circuit द्वारा measurement को correct किया जाता है। बाकी options गलत कारण देते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q16",
+      "question": "RTD की तुलना में thermocouple का प्रमुख advantage क्या है?",
+      "options": [
+        "यह किसी external excitation supply के बिना स्वयं EMF generate करता है और बहुत high temperature range (जैसे 1800°C तक) में काम कर सकता है",
+        "यह RTD से ज्यादा accurate होता है",
+        "यह RTD से ज्यादा linear होता है",
+        "इसे किसी cold junction compensation की जरूरत नहीं पड़ती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thermocouple एक self-generating (active) sensor है जो बिना किसी excitation supply के EMF उत्पन्न करता है और यह RTD/thermistor की तुलना में बहुत अधिक high temperature range में काम कर सकता है। वास्तव में RTD आमतौर पर thermocouple से अधिक accurate और linear होता है, और cold junction compensation thermocouple के लिए आवश्यक होता है।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q17",
+      "question": "RTD, thermocouple की तुलना में किस गुण में बेहतर है?",
+      "options": [
+        "RTD ज्यादा high temperature range कवर करता है",
+        "RTD अधिक accuracy, better linearity और better repeatability देता है (मध्यम temperature range में)",
+        "RTD को किसी excitation current की जरूरत नहीं होती",
+        "RTD का response time thermocouple से हमेशा तेज़ होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RTD (विशेषकर Platinum RTD) मध्यम temperature range में thermocouple की तुलना में बेहतर accuracy, linearity और repeatability प्रदान करता है, हालांकि इसे excitation current चाहिए होता है (passive device) और इसका response time thermocouple से सामान्यतः धीमा होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q18",
+      "question": "RTD को measurement circuit में जोड़ने पर उसे बताई गई excitation current से क्यों सावधानी बरतनी पड़ती है?",
+      "options": [
+        "अधिक current से RTD में self-heating error हो सकती है (I²R heating के कारण गलत तापमान दिखना)",
+        "इससे RTD का resistance शून्य हो जाता है",
+        "इससे RTD magnetic बन जाता है",
+        "इसका कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "RTD में excitation current प्रवाहित होने से I²R के अनुसार कुछ heat उत्पन्न होती है (self-heating effect), जो actual measured temperature में error डाल सकती है; इसलिए excitation current को छोटा रखा जाता है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q19",
+      "question": "3-wire RTD configuration, 2-wire configuration की तुलना में क्यों बेहतर मानी जाती है?",
+      "options": [
+        "3-wire में lead wire resistance के कारण होने वाली error को काफी हद तक compensate किया जा सकता है",
+        "3-wire में कम तार लगते हैं",
+        "3-wire configuration सस्ती होती है",
+        "3-wire में RTD की जरूरत नहीं पड़ती"
+      ],
+      "correctIndex": 0,
+      "explanation": "2-wire RTD में connecting lead wires का resistance measurement में जुड़ जाता है जिससे error आता है; 3-wire (और 4-wire) configuration में bridge arrangement के through lead wire resistance का प्रभाव काफी हद तक cancel हो जाता है, जिससे accuracy बढ़ती है। बाकी options गलत तर्क देते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q20",
+      "question": "एक PT100 RTD के लिए, temperature बढ़ने पर resistance में परिवर्तन को approx किस coefficient से दर्शाया जाता है?",
+      "options": [
+        "α (alpha) लगभग 0.00385 ohm/ohm/°C",
+        "α लगभग 10 ohm/ohm/°C",
+        "α negative होता है, लगभग -0.00385",
+        "α का कोई मानक मान नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "PT100 RTD का standard temperature coefficient (alpha) लगभग 0.00385 ohm/ohm/°C होता है (IEC 60751 standard), जो positive होता है क्योंकि तापमान बढ़ने पर resistance बढ़ता है। बाकी options गलत sign या magnitude दर्शाते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q21",
+      "question": "एक PT100 RTD जिसका coefficient लगभग 0.385 ohm/°C है (approx), 0°C पर 100 ohm resistance रखता है। 50°C तापमान पर इसका resistance approximately कितना होगा?",
+      "options": [
+        "100 ohm",
+        "लगभग 119.25 ohm",
+        "लगभग 150 ohm",
+        "लगभग 50 ohm"
+      ],
+      "correctIndex": 1,
+      "explanation": "R = R0 + (coefficient x ΔT) = 100 + (0.385 x 50) = 100 + 19.25 = 119.25 ohm (approx linear approximation)। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q22",
+      "question": "Medical/electronic temperature sensing applications (जैसे body temperature या room temperature measurement) में thermistor को क्यों प्राथमिकता दी जाती है?",
+      "options": [
+        "क्योंकि यह high temperature (1000°C+) measure कर सकता है",
+        "क्योंकि narrow range में इसकी high sensitivity छोटे temperature changes को भी सटीकता से detect करती है और यह सस्ता व छोटा होता है",
+        "क्योंकि इसे किसी calibration की जरूरत नहीं होती",
+        "क्योंकि यह self-generating sensor है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermistor की high sensitivity narrow temperature range (जैसे 0-100°C) में छोटे-छोटे तापमान परिवर्तन को भी accurately detect कर लेती है, और यह compact व low-cost होता है, इसलिए यह medical व consumer electronics applications के लिए उपयुक्त है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q23",
+      "question": "Thermocouple 'law of intermediate metals' के अनुसार क्या कहा गया है?",
+      "options": [
+        "थर्मोकपल में किसी third metal को जोड़ने से output EMF हमेशा बदल जाता है",
+        "यदि circuit में third metal को इस तरह जोड़ा जाए कि उसके दोनों junctions समान तापमान पर हों, तो net EMF पर कोई प्रभाव नहीं पड़ता",
+        "यह नियम केवल Type-K thermocouple पर लागू होता है",
+        "इस नियम का thermocouple circuits से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Law of intermediate metals के अनुसार, यदि circuit में कोई तीसरी धातु insert की जाए लेकिन उसके दोनों connecting junctions को समान तापमान पर रखा जाए, तो net thermo-EMF पर कोई असर नहीं पड़ता — इसी सिद्धांत के कारण connecting wires और measuring instrument thermocouple circuit में जोड़े जा सकते हैं। बाकी options गलत व्याख्या हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q24",
+      "question": "उच्च तापमान (जैसे 1600°C तक) की accurate measurement के लिए कौन-सा thermocouple type सबसे उपयुक्त है?",
+      "options": [
+        "Type-T (Copper-Constantan)",
+        "Type-J (Iron-Constantan)",
+        "Type-R/S/B (Platinum-Rhodium alloys)",
+        "Type-K केवल"
+      ],
+      "correctIndex": 2,
+      "explanation": "Type-R, S और B thermocouples, Platinum-Rhodium alloys से बने होते हैं और बहुत उच्च तापमान (1600°C-1800°C तक) में stable रहते हैं, इसलिए furnace जैसी high-temperature applications में इस्तेमाल होते हैं। Type-T और Type-J कम temperature range के लिए उपयुक्त हैं, और Type-K की range (1260°C तक) इनसे कम है।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q25",
+      "question": "Thermistor का resistance-temperature relationship किस प्रकार का होता है?",
+      "options": [
+        "Linear relationship",
+        "Highly non-linear (exponential) relationship",
+        "Resistance temperature से independent",
+        "Step-wise (digital) relationship"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermistor की resistance-temperature curve exponential (highly non-linear) होती है, जिसे accurately model करने के लिए Steinhart-Hart equation जैसे non-linear formulas इस्तेमाल किए जाते हैं। यह RTD की तुलनात्मक linear behaviour से अलग है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q26",
+      "question": "4-wire RTD configuration, 3-wire configuration की तुलना में किस स्थिति में उपयोग की जाती है?",
+      "options": [
+        "जब highest possible accuracy चाहिए और lead wire resistance error को पूरी तरह eliminate करना हो",
+        "जब बिल्कुल accuracy की जरूरत नहीं है",
+        "केवल कम cost applications में",
+        "4-wire RTD का उपयोग नहीं किया जाता"
+      ],
+      "correctIndex": 0,
+      "explanation": "4-wire RTD configuration lead wire resistance के प्रभाव को लगभग पूरी तरह eliminate कर देती है (constant current source और separate voltage sensing wires का उपयोग करके), इसलिए यह laboratory-grade highest accuracy applications में इस्तेमाल होती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q27",
+      "question": "Thermocouple की extension/compensating wires का रंग coding व material क्यों महत्वपूर्ण है?",
+      "options": [
+        "क्योंकि wire का रंग तापमान बदल देता है",
+        "क्योंकि गलत material/polarity की wire जोड़ने से अतिरिक्त junctions बनकर measurement में error आ जाती है",
+        "क्योंकि रंग से केवल wire पहचानने में मदद मिलती है, accuracy से कोई संबंध नहीं",
+        "Extension wires का कोई महत्व नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermocouple extension/compensating wires को उसी material composition और सही polarity में जोड़ना जरूरी है, अन्यथा unwanted additional junctions बन जाते हैं जो अतिरिक्त EMF जोड़कर measurement में गलती पैदा कर देते हैं। इसलिए standard color coding follow किया जाता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q28",
+      "question": "किसी industrial furnace की तापमान monitoring के लिए RTD की जगह thermocouple क्यों चुना जाता है?",
+      "options": [
+        "क्योंकि thermocouple furnace जैसी बहुत उच्च तापमान (जैसे 1000°C से अधिक) की range को cover कर सकता है जबकि सामान्य RTD की range सीमित (लगभग 850°C तक) होती है",
+        "क्योंकि thermocouple RTD से सस्ता कभी नहीं होता",
+        "क्योंकि RTD उच्च तापमान में तेजी से काम करता है",
+        "क्योंकि thermocouple को किसी compensation की जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "उच्च तापमान furnace applications में जहां तापमान RTD की practical range से ऊपर चला जाता है, वहां thermocouple (विशेषकर Type-R/S/B) उपयुक्त होता है क्योंकि यह बहुत उच्च तापमान झेल सकता है। बाकी options गलत तर्क देते हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q29",
+      "question": "Precision laboratory temperature calibration में RTD को thermocouple की जगह प्राथमिकता क्यों दी जाती है?",
+      "options": [
+        "क्योंकi RTD की stability, repeatability और accuracy thermocouple से बेहतर होती है moderate temperature range में",
+        "क्योंकि RTD किसी excitation current के बिना काम करता है",
+        "क्योंकि RTD बहुत सस्ता होता है",
+        "क्योंकि thermocouple बिल्कुल भी accurate नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Precision/laboratory calibration applications में RTD (विशेष रूप से Platinum RTD) को इसलिए चुना जाता है क्योंकि moderate temperature range में इसकी stability, repeatability और accuracy thermocouple से काफी बेहतर होती है, भले ही इसे excitation current चाहिए। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_rtd_thermistor_thermocouple_q30",
+      "question": "एक system design engineer को -50°C से 150°C range में उच्च accuracy temperature measurement चाहिए, साथ ही linear output भी वरीयता है। किस sensor को चुनना सबसे उपयुक्त होगा?",
+      "options": [
+        "Type-J thermocouple",
+        "Platinum RTD (PT100)",
+        "NTC Thermistor",
+        "PTC Thermistor"
+      ],
+      "correctIndex": 1,
+      "explanation": "इस moderate temperature range (-50°C से 150°C) में Platinum RTD (PT100) उच्च accuracy, अच्छी linearity और stability प्रदान करता है, जो इस application के लिए thermocouple (जो कम accurate है) या thermistor (जो highly non-linear है) से बेहतर विकल्प है। इसलिए PT100 सबसे उपयुक्त choice है।"
+    }
+  ]
+}

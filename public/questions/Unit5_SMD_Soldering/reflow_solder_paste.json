@@ -1,0 +1,368 @@
+{
+  "unit": "unit5",
+  "unitName": "SMD Soldering and De-soldering",
+  "topic": "reflow_solder_paste",
+  "topicName": "Reflow Soldering Process, Solder Paste, Flux & Reflow Profile",
+  "questions": [
+    {
+      "id": "u5_reflow_solder_paste_q1",
+      "question": "Solder paste मुख्य रूप से किन दो घटकों का mixture होता है?",
+      "options": [
+        "Solder alloy powder और flux",
+        "Copper powder और water",
+        "Tin sheet और epoxy resin",
+        "Lead wire और rosin core"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solder paste, minute solder alloy particles (जैसे Sn-Pb या Sn-Ag-Cu) और flux के homogeneous mixture से बनता है, जो component placement के दौरान tackiness भी देता है। Option B, C और D actual composition नहीं हैं — copper powder/water किसी paste में नहीं होता, tin sheet solid form है और lead wire traditional wire solder है, paste नहीं।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q2",
+      "question": "Reflow soldering process में solder paste को PCB pads पर लगाने के लिए सबसे ज्यादा प्रयोग होने वाली विधि कौन सी है?",
+      "options": [
+        "Hand brush application",
+        "Stencil printing",
+        "Dip coating",
+        "Spray painting"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stencil printing में एक metal stencil के apertures से squeegee की मदद से accurate मात्रा में paste सही pads पर deposit होता है, जो mass production में सटीक व consistent है। Hand brush, dip coating और spray painting में मात्रा नियंत्रित नहीं होती और precise placement संभव नहीं होता।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q3",
+      "question": "Flux का reflow soldering process में मुख्य कार्य क्या है?",
+      "options": [
+        "PCB को mechanical support देना",
+        "Component को cool करना",
+        "Metal surfaces की oxidation हटाकर wetting को बेहतर बनाना",
+        "Board की thickness बढ़ाना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Flux, pad व component terminal की सतह से oxide layer हटाता है और surface tension कम करके solder की wetting ability बढ़ाता है, जिससे strong joint बनता है। Mechanical support, cooling या thickness बढ़ाने से flux का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q4",
+      "question": "एक typical reflow soldering profile में कितने मुख्य zones/stages होते हैं?",
+      "options": [
+        "Preheat, soak, reflow और cooling — चार stages",
+        "केवल heating और cooling — दो stages",
+        "सिर्फ एक continuous heating stage",
+        "Drying और drilling — दो stages"
+      ],
+      "correctIndex": 0,
+      "explanation": "Standard reflow profile में preheat, soak (thermal soak), reflow (peak temperature) और cooling — चार stages होते हैं जो controlled तरीके से solder paste को melt और solidify करते हैं। बाकी options में stages अधूरे या गलत हैं, जैसे drilling तो PCB fabrication की process है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q5",
+      "question": "Reflow profile के 'soak zone' का उद्देश्य क्या है?",
+      "options": [
+        "Board को तुरंत melting temperature तक पहुँचाना",
+        "पूरे board व components का temperature uniform करना और flux को activate करना",
+        "Solder joints को permanently ठंडा करना",
+        "PCB को साफ करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Soak zone में temperature को कुछ समय के लिए स्थिर रखा जाता है ताकि board के सभी components का temperature equalize हो जाए और flux properly activate होकर oxides हटा सके, जिससे thermal shock भी कम होता है। तुरंत melting तक पहुँचाना reflow zone का काम है, cooling अलग stage है और cleaning इसका उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q6",
+      "question": "Reflow zone में board का temperature किस स्तर तक पहुँचाया जाता है?",
+      "options": [
+        "Room temperature के आसपास",
+        "Solder alloy के melting point से ऊपर peak temperature तक",
+        "केवल 50°C तक",
+        "Flux के boiling point से नीचे"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reflow zone में temperature को solder alloy के melting point (जैसे Sn-Ag-Cu के लिए लगभग 217°C) से ऊपर peak तक ले जाया जाता है ताकि paste पूरी तरह पिघलकर joint बना सके। Room temperature या 50°C पर solder melt नहीं होगा और flux boiling point से नीचे रहने से proper reflow नहीं होगा।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q7",
+      "question": "Reflow profile के अंतिम 'cooling zone' का महत्व क्या है?",
+      "options": [
+        "Solder joint को धीरे-धीरे melt करना",
+        "Controlled rate से cooling करके strong grain structure वाला solid joint बनाना",
+        "Flux को दोबारा activate करना",
+        "PCB को गर्म रखना ताकि components ढीले रहें"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cooling zone में controlled cooling rate से solder solidify होता है जिससे fine grain structure और strong, reliable joint बनता है; बहुत तेज़ cooling से thermal stress व crack आ सकते हैं। Melting, flux reactivation या components को ढीला रखना इस zone का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q8",
+      "question": "Solder paste में flux का percentage आमतौर पर कितना होता है?",
+      "options": [
+        "लगभग 50-60%",
+        "लगभग 10-12% (weight basis पर)",
+        "0%, यानी flux नहीं होता",
+        "लगभग 90%"
+      ],
+      "correctIndex": 1,
+      "explanation": "Typical solder paste में मेटल content लगभग 85-90% (weight) और flux/vehicle content लगभग 10-12% होता है। 50-60% या 90% flux content अवास्तविक है और flux की गैर-मौजूदगी paste की definition के विपरीत है क्योंकि flux के बिना proper wetting संभव नहीं।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q9",
+      "question": "Solder paste को refrigerator में store करने का मुख्य कारण क्या है?",
+      "options": [
+        "Paste का रंग बदलने से रोकना",
+        "Flux activity और solder particles के oxidation को धीमा करके shelf life बढ़ाना",
+        "PCB को ठंडा रखना",
+        "Paste का weight बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Low temperature storage flux की premature activity और metal particles के surface oxidation को धीमा करता है, जिससे paste की shelf life व performance बनी रहती है। रंग बदलने से रोकना, PCB ठंडा रखना या weight बढ़ाना इसके वास्तविक कारण नहीं हैं।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q10",
+      "question": "Reflow soldering से पहले solder paste को room temperature पर लाने की सलाह क्यों दी जाती है?",
+      "options": [
+        "ताकि paste में moisture condensation न हो और viscosity सही रहे",
+        "ताकि paste का color बदल जाए",
+        "ताकि PCB का design बदला जा सके",
+        "ताकि flux पूरी तरह हट जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cold paste को सीधे खोलने से moisture condensation हो सकती है जो printing quality और joint reliability को प्रभावित करती है, इसलिए इसे room temperature पर stabilize किया जाता है ताकि viscosity भी सही बने। बाकी options का इससे कोई तकनीकी संबंध नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q11",
+      "question": "Rosin based flux (RMA type) की एक विशेषता क्या है?",
+      "options": [
+        "यह अत्यंत corrosive होता है और residue साफ करना अनिवार्य है",
+        "यह mildly activated होता है और residue अपेक्षाकृत non-corrosive रहता है",
+        "इसमें कोई activator नहीं होता",
+        "यह केवल metal cutting में प्रयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RMA (Rosin Mildly Activated) flux में हल्के activators होते हैं जो oxide हटाते हैं, पर इसका residue अपेक्षाकृत non-corrosive और कम harmful होता है, इसलिए कई बार cleaning अनिवार्य नहीं होता। यह अत्यंत corrosive नहीं है, activator-रहित नहीं है और metal cutting flux से बिल्कुल अलग है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q12",
+      "question": "No-clean flux का प्रयोग करने का फायदा क्या है?",
+      "options": [
+        "Reflow के बाद PCB washing की जरूरत आमतौर पर नहीं पड़ती",
+        "यह solder joint को कमजोर बनाता है",
+        "इसमें flux होता ही नहीं",
+        "यह केवल through-hole soldering में प्रयोग होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "No-clean flux का residue इतना कम व non-corrosive होता है कि reflow के बाद अलग से cleaning/washing की जरूरत सामान्यतः नहीं पड़ती, जिससे production समय व लागत बचती है। यह joint को कमजोर नहीं करता, इसमें flux मौजूद होता है और यह SMT reflow में भी व्यापक रूप से प्रयोग होता है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q13",
+      "question": "Solder paste की viscosity बहुत ज्यादा कम (thin) होने पर क्या समस्या आ सकती है?",
+      "options": [
+        "Paste stencil में चिपक कर बिल्कुल print नहीं होगा",
+        "Paste bridging और slump की समस्या हो सकती है",
+        "Joint की strength असीमित बढ़ जाएगी",
+        "PCB का color बदल जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "बहुत कम viscosity वाला paste stencil printing के बाद फैल (slump) सकता है जिससे adjacent pads के बीच solder bridging का risk बढ़ता है। यह printing को रोकता नहीं बल्कि खराब करता है, joint strength असीमित नहीं बढ़ती और PCB color से इसका संबंध नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q14",
+      "question": "Reflow oven में IR (Infrared) heating की तुलना में convection heating का एक फायदा क्या है?",
+      "options": [
+        "यह केवल metal parts को गर्म करता है",
+        "यह board पर अधिक uniform temperature distribution देता है, shadow effect कम होता है",
+        "यह heat बिल्कुल नहीं देता",
+        "इसमें केवल manual soldering iron प्रयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Convection heating में गर्म हवा का circulation होता है जिससे board के अलग-अलग हिस्सों व shadowed components तक heat अधिक uniformly पहुँचता है, जबकि IR heating में shadowing के कारण असमान heating हो सकती है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q15",
+      "question": "Solder paste में उपयोग होने वाला lead-free alloy का एक सामान्य उदाहरण कौन सा है?",
+      "options": [
+        "Sn-Ag-Cu (SAC alloy)",
+        "शुद्ध lead (Pb) मात्र",
+        "Pure aluminium",
+        "Pure iron"
+      ],
+      "correctIndex": 0,
+      "explanation": "RoHS compliance के लिए आजकल SAC alloy (Tin-Silver-Copper) जैसे lead-free solder paste व्यापक रूप से प्रयोग होते हैं। शुद्ध lead lead-free नहीं है, और pure aluminium या pure iron solder alloy के लिए उपयुक्त नहीं क्योंकि इनकी melting point व wetting properties solder joint के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q16",
+      "question": "Reflow profile में यदि preheat rate बहुत तेज़ रखा जाए तो component पर क्या असर हो सकता है?",
+      "options": [
+        "Component हमेशा बेहतर perform करेगा",
+        "Thermal shock से component crack या damage हो सकता है",
+        "PCB automatically साफ हो जाएगा",
+        "Solder paste ठोस अवस्था में ही रह जाएगा हमेशा के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "बहुत तेज़ preheat rate से sudden temperature rise होता है जिससे ceramic capacitors जैसे sensitive components में thermal shock, cracking या delamination हो सकती है। यह component performance को बेहतर नहीं बल्कि खराब करता है, और cleaning या permanent solid state से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q17",
+      "question": "'Solder balling' defect किस कारण से होता है?",
+      "options": [
+        "बहुत अधिक flux activity और moisture के कारण paste के छोटे particles अलग होकर गोले बना लेते हैं",
+        "PCB की thickness बढ़ने से",
+        "Component का रंग बदलने से",
+        "Board को बिल्कुल गर्म न करने से"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solder balling तब होता है जब reflow के दौरान paste के कुछ छोटे particles मुख्य joint से अलग होकर छोटे गोलों के रूप में PCB पर रह जाते हैं, जिसका कारण excessive moisture, गलत profile या flux issues होते हैं। PCB thickness, color या heating न होना इसका सीधा कारण नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q18",
+      "question": "Reflow soldering में 'Time Above Liquidus (TAL)' का क्या अर्थ है?",
+      "options": [
+        "वह समय जितनी देर PCB store में रखा गया",
+        "वह duration जितनी देर solder alloy अपने melting point से ऊपर molten अवस्था में रहता है",
+        "PCB की drilling में लगा समय",
+        "Component का cooling समय शुरू होने से पहले का समय"
+      ],
+      "correctIndex": 1,
+      "explanation": "TAL वह समय है जितनी देर तक solder alloy अपने liquidus temperature (melting point) से ऊपर molten अवस्था में रहता है, जो proper wetting और joint formation के लिए critical है। Storage समय, drilling समय या cooling से पहले का general समय TAL की परिभाषा नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q19",
+      "question": "यदि reflow profile में peak temperature आवश्यकता से बहुत अधिक रखा जाए तो क्या खतरा है?",
+      "options": [
+        "Component व PCB को thermal damage और excessive oxidation का खतरा",
+        "Solder joint कभी नहीं बनेगा",
+        "PCB की conductivity infinite हो जाएगी",
+        "Flux की जरूरत खत्म हो जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "बहुत अधिक peak temperature से components व PCB substrate को thermal damage, excessive intermetallic growth और flux/paste का जलना (excessive oxidation) हो सकता है, जिससे reliability कम होती है। बाकी options वास्तविक physical परिणाम नहीं हैं।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q20",
+      "question": "Solder paste printing के बाद 'stencil cleaning' क्यों आवश्यक है?",
+      "options": [
+        "ताकि apertures में paste जमा न हो और अगली printing accurate रहे",
+        "ताकि stencil का रंग बदल जाए",
+        "ताकि PCB हमेशा के लिए गर्म रहे",
+        "ताकि flux की मात्रा बढ़ जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "बार-बार printing के बाद stencil apertures में paste जमा हो सकता है जिससे अगली prints में paste की मात्रा असमान हो जाती है; इसलिए periodic stencil cleaning से consistent print quality बनी रहती है। बाकी options का practical process से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q21",
+      "question": "SMT assembly line में reflow oven के बाद आमतौर पर कौन सा inspection किया जाता है?",
+      "options": [
+        "केवल PCB का weight check",
+        "AOI (Automated Optical Inspection) से solder joints का visual/quality check",
+        "PCB को दोबारा drill करना",
+        "Component leads को manually mould करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reflow के बाद AOI का प्रयोग करके solder joints, bridging, missing components आदि defects की जांच की जाती है ताकि quality सुनिश्चित हो सके। Weight check, drilling या lead moulding standard post-reflow inspection प्रक्रिया नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q22",
+      "question": "Flux का 'activator' component मुख्य रूप से क्या कार्य करता है?",
+      "options": [
+        "Metal surface को chemically clean करके oxide हटाना",
+        "PCB को mechanically मजबूत बनाना",
+        "Component को cool करना",
+        "Solder paste को solid रखना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Activator, flux का वह chemical घटक है जो metal surface पर मौजूद oxide layer को chemically हटाता है ताकि solder proper wetting कर सके। Mechanical strength, cooling या paste को solid रखना activator का कार्य नहीं है — यह वेटिंग सुधारने के लिए chemically काम करता है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q23",
+      "question": "Lead-free solder paste (SAC alloy) का melting point traditional Sn-Pb paste (63/37) की तुलना में कैसा होता है?",
+      "options": [
+        "काफी कम होता है",
+        "बराबर होता है",
+        "अपेक्षाकृत अधिक होता है (लगभग 217-220°C)",
+        "melting होता ही नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Sn-Pb eutectic solder का melting point लगभग 183°C होता है जबकि lead-free SAC alloy का melting point लगभग 217-220°C होता है, इसलिए reflow profile का peak temperature भी अधिक रखना पड़ता है। यह कम नहीं, बराबर नहीं, और यह भी melt अवश्य होता है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q24",
+      "question": "Solder paste की 'metal content percentage' बढ़ाने से printed deposit पर क्या असर पड़ता है?",
+      "options": [
+        "Deposit volume व joint की consistency में सुधार होता है, कम slump होता है",
+        "Paste पूरी तरह solid हो जाता है और print ही नहीं होता",
+        "Flux की जरूरत खत्म हो जाती है",
+        "PCB का color बदल जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Higher metal content (जैसे 90% के आसपास) से paste में अधिक solder particles होते हैं जिससे printed deposit की consistency और volume बेहतर होते हैं तथा slump कम होता है। यह printing को असंभव नहीं बनाता, flux की जरूरत खत्म नहीं करता और color पर असर नहीं डालता।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q25",
+      "question": "Reflow soldering के दौरान 'tombstoning' defect का क्या कारण होता है?",
+      "options": [
+        "PCB की मोटाई बहुत अधिक होना",
+        "Component के दोनों ends पर असमान heating/wetting force के कारण एक end उठ जाना",
+        "Flux का बिल्कुल ना होना",
+        "Stencil का साफ होना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tombstoning तब होता है जब chip component (जैसे chip resistor/capacitor) के दोनों terminals पर solder की surface tension force असमान रूप से लगती है, जिससे एक end उठकर खड़ा हो जाता है — यह असमान heating या pad design के कारण होता है। PCB thickness, flux की absence या clean stencil इसका सीधा कारण नहीं हैं।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q26",
+      "question": "Reflow profile design करते समय component manufacturer की datasheet देखना क्यों जरूरी है?",
+      "options": [
+        "क्योंकि उसमें केवल price दिया होता है",
+        "क्योंकि datasheet में recommended max peak temperature व TAL limits दिए होते हैं जिन्हें follow करना जरूरी है",
+        "क्योंकि datasheet PCB का रंग बताती है",
+        "इसकी कोई आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर component की अपनी thermal tolerance limits होती हैं, जो datasheet में recommended reflow profile (peak temp, TAL, ramp rate) के रूप में दी जाती हैं; इन्हें follow न करने से component damage हो सकता है। Datasheet price या रंग नहीं बताती और इसे ignore करना उचित प्रक्रिया नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q27",
+      "question": "Solder paste में मौजूद flux, reflow के बाद जो residue छोड़ता है, उसे हटाने के लिए क्या प्रयोग होता है (जहां cleaning जरूरी हो)?",
+      "options": [
+        "केवल पानी से बिना किसी solvent के",
+        "उपयुक्त cleaning agent/solvent (जैसे IPA आधारित cleaner) से PCB cleaning",
+        "Sand paper से रगड़कर",
+        "Hammer से टैप करके"
+      ],
+      "correctIndex": 1,
+      "explanation": "जहां flux residue harmful हो सकता है वहाँ उपयुक्त solvent-based cleaning agents (जैसे Isopropyl Alcohol आधारित cleaner) से PCB को साफ किया जाता है ताकि residue पूरी तरह हट सके। साधारण पानी अक्सर पर्याप्त नहीं, sand paper से scratches आती हैं और hammer tapping पूरी तरह अनुचित है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q28",
+      "question": "Reflow soldering के लिए 'stencil thickness' का चुनाव किस पर निर्भर करता है?",
+      "options": [
+        "केवल PCB के रंग पर",
+        "Component pad size और required paste volume पर",
+        "Operator की height पर",
+        "Reflow oven के brand नाम पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stencil की thickness component pads के size और उन्हें चाहिए solder paste की मात्रा के अनुसार चुनी जाती है ताकि सही volume की paste deposit हो — fine-pitch components के लिए thinner stencil प्रयोग होती है। PCB का रंग, operator की height या oven brand से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q29",
+      "question": "Reflow soldering प्रक्रिया, hand soldering की तुलना में बड़े पैमाने पर production में क्यों preferred है?",
+      "options": [
+        "क्योंकि यह slow और inconsistent होती है",
+        "क्योंकि यह एक साथ कई components को uniform व consistent quality के साथ solder कर देती है",
+        "क्योंकि इसमें flux की जरूरत ही नहीं होती",
+        "क्योंकि यह केवल through-hole components के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reflow soldering automated process है जो एक single controlled thermal cycle में board के सभी SMD components को एक साथ, uniform व repeatable quality के साथ solder कर देती है, जिससे mass production में समय व labour cost बचती है। यह धीमी या inconsistent नहीं, flux के बिना संभव नहीं और मुख्यतः SMD के लिए है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q30",
+      "question": "Reflow profile में 'ramp-up rate' (temperature rise rate) को अत्यधिक सीमित (limited) क्यों रखा जाता है?",
+      "options": [
+        "ताकि PCB जल्दी draw हो जाए",
+        "ताकि components व solder joints में thermal stress/shock से बचा जा सके",
+        "ताकि flux तुरंत खत्म हो जाए",
+        "ताकि oven की बिजली खपत बढ़ जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ramp-up rate को नियंत्रित सीमा (typically 1-3°C/second के आसपास) में रखा जाता है ताकि components व PCB में अचानक temperature difference से होने वाले thermal stress, warping या cracking से बचाव हो सके। यह PCB draw करने, flux खत्म करने या बिजली खपत बढ़ाने के लिए नहीं किया जाता।"
+    }
+  ]
+}

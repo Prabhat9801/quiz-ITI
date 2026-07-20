@@ -1,0 +1,368 @@
+{
+  "unit": "unit1",
+  "unitName": "Analog and Digital Electronics circuits",
+  "topic": "dac_circuits",
+  "topicName": "Digital to Analog Converter (DAC) Circuits",
+  "questions": [
+    {
+      "id": "u1_dac_circuits_q1",
+      "question": "DAC (digital to analog converter) का मुख्य कार्य क्या है?",
+      "options": [
+        "analog signal को digital code में बदलना",
+        "digital input code को उसके अनुरूप analog output voltage या current में बदलना",
+        "AC voltage को DC voltage में बदलना",
+        "digital signal को amplify करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर यह है कि DAC digital input code को analog output में बदलता है। पहला विकल्प ADC का कार्य है (analog से digital), तीसरा विकल्प rectifier का कार्य है, और चौथा विकल्प amplifier का कार्य है, इसलिए ये गलत हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q2",
+      "question": "R-2R ladder DAC का सबसे बड़ा advantage क्या है?",
+      "options": [
+        "इसमें केवल दो resistor values (R और 2R) की जरूरत होती है, जिससे इसे scale करना आसान है",
+        "इसमें किसी भी resistor की जरूरत नहीं होती",
+        "इसका output हमेशा digital ही रहता है",
+        "इसमें reference voltage की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "R-2R ladder में सिर्फ दो ही resistor values R और 2R चाहिए, इसलिए अधिक bits के लिए इसे बढ़ाना (scale करना) आसान है। दूसरा और चौथा विकल्प गलत है क्योंकि resistor और reference voltage दोनों जरूरी हैं, तथा तीसरा विकल्प गलत है क्योंकि DAC का output analog होता है।"
+    },
+    {
+      "id": "u1_dac_circuits_q3",
+      "question": "binary weighted DAC का मुख्य drawback क्या है?",
+      "options": [
+        "यह केवल 2-bit input ही ले सकता है",
+        "इसका output digital होता है",
+        "इसमें resistor values की wide range (जैसे 1R, 2R, 4R, 8R...) चाहिए, जिन्हें सटीक बनाना कठिन है",
+        "यह कभी भी काम नहीं करता"
+      ],
+      "correctIndex": 2,
+      "explanation": "binary weighted DAC में हर bit के लिए अलग weighted resistor (1R, 2R, 4R, 8R...) चाहिए, और अधिक bits पर values की range बहुत बड़ी हो जाती है जिन्हें precisely बनाना मुश्किल है। पहला विकल्प गलत है क्योंकि इसमें कोई bit सीमा नहीं है, दूसरा गलत है क्योंकि output analog है, और चौथा स्पष्ट रूप से गलत है।"
+    },
+    {
+      "id": "u1_dac_circuits_q4",
+      "question": "एक 8-bit DAC का resolution (discrete output levels की संख्या) कितनी होगी?",
+      "options": [
+        "8 levels",
+        "64 levels",
+        "128 levels",
+        "256 levels"
+      ],
+      "correctIndex": 3,
+      "explanation": "n-bit DAC के output levels 2^n होते हैं, इसलिए 8-bit के लिए 2^8 = 256 levels होते हैं। 8, 64 और 128 गलत हैं क्योंकि ये क्रमशः केवल bit संख्या, 2^6 और 2^7 दर्शाते हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q5",
+      "question": "n-bit DAC में discrete analog output levels की संख्या किस formula से मिलती है?",
+      "options": [
+        "2^n",
+        "n^2",
+        "2n",
+        "n/2"
+      ],
+      "correctIndex": 0,
+      "explanation": "n-bit DAC में हर bit combination एक अलग level देता है, और कुल combinations 2^n होते हैं। n^2, 2n और n/2 गलत हैं क्योंकि binary system में levels घातांक (exponent) के रूप में बढ़ते हैं, गुणा के रूप में नहीं।"
+    },
+    {
+      "id": "u1_dac_circuits_q6",
+      "question": "एक DAC का step size (LSB value) किस अनुपात से घटता है जब bits की संख्या बढ़ती है?",
+      "options": [
+        "step size बढ़ता जाता है",
+        "step size पर कोई असर नहीं पड़ता",
+        "step size घटता जाता है क्योंकि Vref को अधिक levels में बाँटा जाता है",
+        "step size हमेशा Vref के बराबर रहता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "अधिक bits होने पर 2^n बढ़ता है, इसलिए Vref/(2^n) यानी step size छोटा होता जाता है और resolution बेहतर होती है। पहला और चौथा विकल्प इसके विपरीत हैं, तथा दूसरा गलत है क्योंकि bits का सीधा असर step size पर पड़ता है।"
+    },
+    {
+      "id": "u1_dac_circuits_q7",
+      "question": "यदि किसी n-bit DAC का reference voltage Vref है, तो step size (LSB का voltage) किसके बराबर होता है?",
+      "options": [
+        "Vref × 2^n",
+        "Vref / (2^n)",
+        "Vref × n",
+        "2^n / Vref"
+      ],
+      "correctIndex": 1,
+      "explanation": "step size वह सबसे छोटा voltage change है जो एक LSB बदलने पर मिलता है, और यह Vref/(2^n) होता है। बाकी विकल्प गलत हैं क्योंकि step size Vref को levels की संख्या 2^n से भाग देने पर मिलता है, गुणा करने पर नहीं।"
+    },
+    {
+      "id": "u1_dac_circuits_q8",
+      "question": "एक 4-bit DAC का Vref = 16 V है। इसका step size (LSB value) कितना होगा (Vref/2^n के अनुसार)?",
+      "options": [
+        "4 V",
+        "2 V",
+        "1 V",
+        "8 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "step size = Vref/(2^n) = 16/(2^4) = 16/16 = 1 V। 4 V, 2 V और 8 V गलत हैं क्योंकि इनमें 2^4 = 16 से सही भाग नहीं किया गया है।"
+    },
+    {
+      "id": "u1_dac_circuits_q9",
+      "question": "किसी DAC में LSB (least significant bit) किसे दर्शाता है?",
+      "options": [
+        "सबसे बड़े weight वाला bit जो सबसे अधिक output बदलता है",
+        "सबसे छोटे weight वाला bit जो output में सबसे छोटा (एक step) परिवर्तन करता है",
+        "वह bit जो हमेशा 1 रहता है",
+        "reference voltage को दर्शाने वाला bit"
+      ],
+      "correctIndex": 1,
+      "explanation": "LSB सबसे कम weight वाला bit होता है और इसके बदलने पर output केवल एक step size बदलता है। पहला विकल्प MSB का वर्णन है, तीसरा और चौथा गलत हैं क्योंकि LSB का मान बदल सकता है और यह reference voltage को नहीं दर्शाता।"
+    },
+    {
+      "id": "u1_dac_circuits_q10",
+      "question": "किसी DAC में MSB (most significant bit) का weight कितना होता है?",
+      "options": [
+        "यह output में सबसे बड़ा योगदान (full scale का लगभग आधा) देता है",
+        "यह output में सबसे छोटा योगदान देता है",
+        "इसका output पर कोई प्रभाव नहीं होता",
+        "यह हमेशा step size के बराबर होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "MSB सबसे बड़े weight वाला bit है और इसका योगदान full scale output के लगभग आधे के बराबर होता है। दूसरा विकल्प LSB का गुण है, तीसरा गलत है क्योंकि MSB का प्रभाव सबसे अधिक होता है, और चौथा गलत है क्योंकि step size तो LSB का मान है।"
+    },
+    {
+      "id": "u1_dac_circuits_q11",
+      "question": "binary weighted DAC में resistors का weighting किस क्रम में होता है?",
+      "options": [
+        "सभी resistors समान मान के होते हैं",
+        "1R, 2R, 4R, 8R जैसे binary अनुपात में, जिससे हर bit का weight अलग होता है",
+        "केवल R और 2R दो values",
+        "resistor की जगह capacitor उपयोग होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "binary weighted DAC में हर bit के लिए 1R, 2R, 4R, 8R... के binary अनुपात वाले resistors होते हैं ताकि हर bit को उचित weight मिले। पहला गलत है क्योंकि values समान नहीं होतीं, तीसरा R-2R ladder का गुण है, और चौथा गलत है क्योंकि इसमें resistors ही होते हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q12",
+      "question": "एक 3-bit DAC कितने अलग-अलग analog output levels उत्पन्न कर सकता है?",
+      "options": [
+        "3 levels",
+        "6 levels",
+        "8 levels",
+        "9 levels"
+      ],
+      "correctIndex": 2,
+      "explanation": "3-bit DAC के लिए levels = 2^3 = 8 होते हैं (000 से 111 तक)। 3, 6 और 9 गलत हैं क्योंकि ये 2^n की गणना को नहीं दर्शाते।"
+    },
+    {
+      "id": "u1_dac_circuits_q13",
+      "question": "एक 8-bit DAC को उसकी resolution किस रूप में व्यक्त किया जाता है?",
+      "options": [
+        "8 bits या 1 भाग in 256",
+        "8 bits या 1 भाग in 8",
+        "16 bits",
+        "2 bits"
+      ],
+      "correctIndex": 0,
+      "explanation": "8-bit DAC की resolution 8 bits होती है जो 1 part in 2^8 = 256 दर्शाती है। दूसरा गलत है क्योंकि यह 1 in 8 नहीं बल्कि 1 in 256 है, और 16 bits तथा 2 bits स्पष्ट रूप से गलत मान हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q14",
+      "question": "एक 4-bit DAC में Vref = 15 V है और full scale output के लिए step size = FS/(2^n − 1) माना जाए, तो step size कितना होगा?",
+      "options": [
+        "1 V",
+        "0.5 V",
+        "2 V",
+        "15 V"
+      ],
+      "correctIndex": 0,
+      "explanation": "यहाँ step size = FS/(2^n − 1) = 15/(2^4 − 1) = 15/15 = 1 V। 0.5 V, 2 V और 15 V गलत हैं क्योंकि इनमें (2^4 − 1) = 15 से सही भाग नहीं किया गया।"
+    },
+    {
+      "id": "u1_dac_circuits_q15",
+      "question": "एक 3-bit DAC का step size 1 V है। यदि digital input 101 (यानी decimal 5) हो तो analog output कितना होगा?",
+      "options": [
+        "3 V",
+        "7 V",
+        "5 V",
+        "2 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "analog output = digital value × step size = 5 × 1 V = 5 V। 3 V और 7 V गलत हैं क्योंकि वे binary 101 के दशमलव मान 5 से मेल नहीं खाते, और 2 V भी गलत गणना है।"
+    },
+    {
+      "id": "u1_dac_circuits_q16",
+      "question": "एक DAC में settling time किसे कहते हैं?",
+      "options": [
+        "input बदलने के बाद output को अपने final value के निकट स्थिर होने में लगने वाला समय",
+        "DAC को on होने में लगने वाला कुल समय",
+        "reference voltage को बदलने का समय",
+        "resistor के गर्म होने का समय"
+      ],
+      "correctIndex": 0,
+      "explanation": "settling time वह समय है जो digital input बदलने के बाद analog output को final मान के एक निश्चित error band में स्थिर होने में लगता है। बाकी विकल्प गलत हैं क्योंकि settling time न तो on होने का समय है, न reference बदलने का, और न ही resistor के गर्म होने से संबंधित है।"
+    },
+    {
+      "id": "u1_dac_circuits_q17",
+      "question": "R-2R ladder DAC को binary weighted DAC की तुलना में अधिक practical क्यों माना जाता है?",
+      "options": [
+        "क्योंकि इसमें reference voltage नहीं चाहिए",
+        "क्योंकि इसमें केवल दो resistor values होने से high bit counts पर भी accuracy बनाए रखना आसान है",
+        "क्योंकि इसका output digital रहता है",
+        "क्योंकि यह बिना op-amp के काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "R-2R ladder में सिर्फ R और 2R दो ही मान होने से matched resistors बनाना और अधिक bits पर accuracy रखना आसान है, जबकि binary weighted में values की range बहुत बड़ी हो जाती है। पहला और चौथा विकल्प गलत हैं क्योंकि reference voltage और सामान्यतः op-amp दोनों की आवश्यकता होती है, और तीसरा गलत है क्योंकि output analog होता है।"
+    },
+    {
+      "id": "u1_dac_circuits_q18",
+      "question": "एक 5-bit DAC कुल कितने discrete output levels देगा?",
+      "options": [
+        "10 levels",
+        "25 levels",
+        "32 levels",
+        "16 levels"
+      ],
+      "correctIndex": 2,
+      "explanation": "levels = 2^n = 2^5 = 32 होते हैं। 10 और 25 गलत हैं क्योंकि वे 2n और n^2 के भ्रम से आते हैं, और 16 गलत है क्योंकि वह 2^4 का मान है।"
+    },
+    {
+      "id": "u1_dac_circuits_q19",
+      "question": "यदि किसी DAC का step size छोटा हो तो इसका क्या अर्थ है?",
+      "options": [
+        "DAC की resolution खराब है",
+        "DAC कम bits वाला है",
+        "DAC की resolution बेहतर (fine) है क्योंकि output अधिक बारीक steps में बदलता है",
+        "DAC काम नहीं करेगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "छोटा step size का मतलब है output अधिक बारीक (fine) steps में बदलता है, यानी बेहतर resolution। पहला विकल्प इसके विपरीत है, दूसरा गलत है क्योंकि छोटा step अधिक bits दर्शाता है, और चौथा स्पष्ट रूप से गलत है।"
+    },
+    {
+      "id": "u1_dac_circuits_q20",
+      "question": "एक 8-bit DAC का Vref = 5.12 V है। इसका step size (Vref/2^n) लगभग कितना होगा?",
+      "options": [
+        "20 mV",
+        "40 mV",
+        "10 mV",
+        "5 mV"
+      ],
+      "correctIndex": 0,
+      "explanation": "step size = 5.12/(2^8) = 5.12/256 = 0.02 V = 20 mV। 40 mV, 10 mV और 5 mV गलत हैं क्योंकि इनमें 256 से सही भाग नहीं किया गया।"
+    },
+    {
+      "id": "u1_dac_circuits_q21",
+      "question": "किसी DAC का full scale output किस स्थिति में मिलता है?",
+      "options": [
+        "जब सभी input bits 0 हों",
+        "जब सभी input bits 1 हों (अधिकतम digital input)",
+        "जब केवल LSB 1 हो",
+        "जब reference voltage 0 हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "full scale के निकट अधिकतम output तब मिलता है जब सभी input bits 1 हों यानी digital input अपने अधिकतम मान पर हो। पहला विकल्प minimum (शून्य) output देता है, तीसरा केवल एक step देता है, और चौथा गलत है क्योंकि Vref = 0 पर कोई output नहीं होगा।"
+    },
+    {
+      "id": "u1_dac_circuits_q22",
+      "question": "एक 4-bit DAC का step size 0.5 V है। digital input 1010 (decimal 10) के लिए analog output कितना होगा?",
+      "options": [
+        "10 V",
+        "4 V",
+        "5 V",
+        "2.5 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "output = digital value × step size = 10 × 0.5 V = 5 V। 10 V और 4 V गलत गणनाएँ हैं, और 2.5 V भी गलत है क्योंकि 10 × 0.5 = 5 V ही सही है।"
+    },
+    {
+      "id": "u1_dac_circuits_q23",
+      "question": "किसी DAC की resolution को bits की संख्या से क्यों जोड़ा जाता है?",
+      "options": [
+        "क्योंकि bits की संख्या output current तय करती है",
+        "क्योंकि अधिक bits होने पर 2^n levels बढ़ते हैं जिससे output को अधिक बारीकी से दर्शाया जा सकता है",
+        "क्योंकि bits reference voltage को बदल देते हैं",
+        "क्योंकि bits settling time को शून्य कर देते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "resolution bits की संख्या पर निर्भर है क्योंकि n bits से 2^n discrete levels बनते हैं और अधिक levels मतलब बारीक (fine) resolution। बाकी विकल्प गलत हैं क्योंकि bits की संख्या सीधे output current, reference voltage या settling time को इस तरह निर्धारित नहीं करती।"
+    },
+    {
+      "id": "u1_dac_circuits_q24",
+      "question": "binary weighted DAC में यदि bits की संख्या अधिक (जैसे 12-bit) हो तो व्यावहारिक समस्या क्या आती है?",
+      "options": [
+        "resistor values की range बहुत बड़ी हो जाती है जिससे precise और matched resistors बनाना कठिन होता है",
+        "output हमेशा digital हो जाता है",
+        "reference voltage स्वयं बढ़ जाता है",
+        "DAC का step size negative हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "अधिक bits पर सबसे बड़े और सबसे छोटे resistor के बीच का अनुपात बहुत बड़ा हो जाता है, जिससे matched और accurate resistors बनाना कठिन होता है — यही binary weighted DAC की मुख्य सीमा है। बाकी विकल्प तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q25",
+      "question": "एक 2-bit DAC के लिए कुल कितने output levels और कितने steps होंगे?",
+      "options": [
+        "2 levels और 1 step",
+        "4 levels और 3 steps",
+        "8 levels और 7 steps",
+        "3 levels और 2 steps"
+      ],
+      "correctIndex": 1,
+      "explanation": "2-bit DAC में levels = 2^2 = 4 होते हैं (00, 01, 10, 11) और steps = 2^n − 1 = 3 होते हैं। बाकी विकल्प गलत हैं क्योंकि वे 2^2 = 4 levels और उसके अनुरूप 3 steps को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u1_dac_circuits_q26",
+      "question": "किसी DAC में quantization किसे दर्शाता है?",
+      "options": [
+        "output को लगातार (continuous) बनाना",
+        "output का केवल कुछ निश्चित discrete levels में ही उपलब्ध होना, बीच के मान संभव नहीं",
+        "reference voltage को दुगुना करना",
+        "digital input को मिटा देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "quantization का अर्थ है कि DAC का output केवल गिने-चुने discrete levels (2^n) पर ही मिलता है, इनके बीच के मान संभव नहीं होते। पहला विकल्प गलत है क्योंकि output continuous नहीं होता, और तीसरा तथा चौथा quantization से असंबंधित हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q27",
+      "question": "एक 6-bit DAC का Vref = 6.4 V है। इसका step size (Vref/2^n) कितना होगा?",
+      "options": [
+        "0.2 V",
+        "0.1 V",
+        "0.4 V",
+        "0.05 V"
+      ],
+      "correctIndex": 1,
+      "explanation": "step size = 6.4/(2^6) = 6.4/64 = 0.1 V। 0.2 V, 0.4 V और 0.05 V गलत हैं क्योंकि इनमें 64 से सही भाग नहीं किया गया।"
+    },
+    {
+      "id": "u1_dac_circuits_q28",
+      "question": "R-2R ladder DAC में op-amp का सामान्यतः क्या उपयोग होता है?",
+      "options": [
+        "digital input को store करने के लिए",
+        "ladder network से मिलने वाले current/voltage को output analog voltage में बदलने और buffer करने के लिए",
+        "resistors को गर्म करने के लिए",
+        "clock signal उत्पन्न करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "R-2R ladder में op-amp आमतौर पर current-to-voltage converter/summing amplifier के रूप में काम करता है जो network के output को उपयोगी analog voltage में बदलता और buffer करता है। बाकी विकल्प गलत हैं क्योंकि op-amp न तो data store करता है, न resistor गर्म करता है, न clock बनाता है।"
+    },
+    {
+      "id": "u1_dac_circuits_q29",
+      "question": "यदि एक 3-bit DAC का full scale output 7 V है और यह FS/(2^n − 1) step का उपयोग करता है, तो input 110 (decimal 6) पर output कितना होगा?",
+      "options": [
+        "7 V",
+        "5 V",
+        "3 V",
+        "6 V"
+      ],
+      "correctIndex": 3,
+      "explanation": "step size = 7/(2^3 − 1) = 7/7 = 1 V, इसलिए output = 6 × 1 V = 6 V। 7 V full scale (input 111) पर मिलेगा, और 5 V तथा 3 V गलत गणनाएँ हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q30",
+      "question": "दो DAC — एक 8-bit और एक 10-bit — में से किसकी resolution बेहतर होगी और क्यों?",
+      "options": [
+        "8-bit, क्योंकि इसमें कम levels होते हैं",
+        "दोनों की resolution समान होती है",
+        "10-bit, क्योंकि इसमें 2^10 = 1024 levels होते हैं जो 8-bit के 256 levels से अधिक बारीक हैं",
+        "8-bit, क्योंकि इसका step size छोटा होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "10-bit DAC में 2^10 = 1024 levels होते हैं जबकि 8-bit में केवल 256, इसलिए अधिक levels और छोटा step size होने से 10-bit की resolution बेहतर है। पहला और चौथा विकल्प गलत हैं क्योंकि 8-bit में कम levels और बड़ा step size होता है, और दूसरा गलत है क्योंकि दोनों की resolution समान नहीं होती।"
+    }
+  ]
+}

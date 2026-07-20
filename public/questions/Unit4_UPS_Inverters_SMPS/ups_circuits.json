@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "ups_circuits",
+  "topicName": "UPS Circuits - Control, Power, Alarm, Indicator",
+  "questions": [
+    {
+      "id": "u4_ups_circuits_q1",
+      "question": "एक UPS में control circuit का प्राथमिक कार्य क्या होता है?",
+      "options": [
+        "Charging, inverter switching, transfer switching और sensing जैसे सभी operations को manage तथा coordinate करना",
+        "केवल battery को चार्ज करना",
+        "केवल AC output को rectify करना",
+        "केवल buzzer को लगातार बजाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Control circuit UPS का 'brain' होता है जो sensing signals प्राप्त करके charging circuit, inverter switching और mains/battery transfer switching को coordinate करता है। Option B केवल power circuit के charger block का काम है, C rectifier का काम है, D alarm circuit का काम है — ये सब control circuit के overall coordination कार्य का सिर्फ एक हिस्सा हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q2",
+      "question": "आधुनिक UPS के control circuit में microcontroller/IC आधारित logic किस प्रकार काम करता है?",
+      "options": [
+        "यह केवल mains voltage को rectify करता है",
+        "यह sensing inputs (battery voltage, mains status, load current) को process करके charging, inverter switching और transfer switching के decisions लेता है",
+        "यह केवल LED की brightness घटाता-बढ़ाता है",
+        "यह transformer की winding बदलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Microcontroller/IC control circuit में विभिन्न sensing signals को पढ़कर यह तय करता है कि battery charge करनी है, inverter को कब switch on/off करना है और mains fail होने पर transfer कब करना है। Option A rectifier का काम है, C indicator circuit का सीधा काम नहीं, D power circuit के transformer से संबंधित नहीं है क्योंकि winding बदलना control circuit का काम नहीं।"
+    },
+    {
+      "id": "u4_ups_circuits_q3",
+      "question": "एक UPS के power circuit में सामान्यतः कौन-कौन से मुख्य blocks शामिल होते हैं?",
+      "options": [
+        "केवल एक LED और एक resistor",
+        "केवल एक buzzer और एक switch",
+        "Rectifier, battery charger, inverter power stage और transformer",
+        "केवल microcontroller और display"
+      ],
+      "correctIndex": 2,
+      "explanation": "Power circuit वह भाग है जो वास्तविक power handle करता है — इसमें rectifier (AC to DC), battery charger, inverter power stage (DC to AC) और transformer शामिल होते हैं। Option A और B alarm/indicator circuit के components हैं, D control circuit का भाग है जो power handle नहीं करता।"
+    },
+    {
+      "id": "u4_ups_circuits_q4",
+      "question": "UPS के power circuit में rectifier block का मुख्य कार्य क्या है?",
+      "options": [
+        "Incoming mains AC को DC में convert करना ताकि battery चार्ज हो सके और DC bus मिले",
+        "Battery की DC को AC output में बदलना",
+        "Low battery पर buzzer बजाना",
+        "Fault होने पर LED जलाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rectifier mains AC supply को DC में convert करता है, जो आगे battery charging और DC bus के लिए उपयोग होती है। Option B inverter power stage का काम है, C alarm circuit का काम है, D indicator circuit का काम है — इनका rectifier की मूल function से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u4_ups_circuits_q5",
+      "question": "Power circuit में battery charger block किस प्रकार काम करता है?",
+      "options": [
+        "यह केवल mains fail की स्थिति में सक्रिय होता है",
+        "यह rectified DC से नियंत्रित current/voltage द्वारा battery को charge करता है और control circuit के signal पर charging rate adjust करता है",
+        "यह सीधे load को AC output देता है",
+        "यह buzzer और LED को power देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Battery charger rectifier से मिली DC supply को नियंत्रित current-limited तरीके से battery तक पहुँचाता है, और control circuit से मिलने वाले signal के अनुसार charging rate (trickle/fast) adjust करता है। Option A गलत क्योंकि charging mains present रहने पर ही होती है, C inverter power stage का काम है, D alarm/indicator circuits सीधे इससे power नहीं लेते।"
+    },
+    {
+      "id": "u4_ups_circuits_q6",
+      "question": "UPS के power circuit में inverter power stage का कार्य क्या है?",
+      "options": [
+        "यह switching devices (जैसे MOSFET/IGBT/transistor) की मदद से battery की DC को AC output में बदलता है",
+        "यह mains AC को सीधे DC में बदलता है",
+        "यह केवल battery voltage को measure करता है",
+        "यह केवल overload होने पर beep करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inverter power stage में power switching devices control circuit से मिले drive signal के अनुसार on/off होकर battery की DC को AC output में convert करते हैं। Option B rectifier का काम है, C sensing circuit का काम है, D alarm circuit से संबंधित है — ये inverter power stage के मुख्य function से अलग हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q7",
+      "question": "UPS में transfer switch (relay आधारित) का मुख्य कार्य क्या है?",
+      "options": [
+        "Battery को हमेशा चार्ज रखना",
+        "केवल indicator LED को on/off करना",
+        "Buzzer की frequency बदलना",
+        "Control circuit के signal पर load को mains supply और inverter output के बीच switch करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Transfer switch (relay/electronic switch) control circuit से मिले signal के अनुसार load को mains या inverter output में से किसी एक source से जोड़ता है, ताकि mains fail होने पर supply निर्बाध बनी रहे। Option A charger का काम है, B indicator circuit का काम है, C alarm circuit से संबंधित है — ये transfer switch के core function से भिन्न हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q8",
+      "question": "UPS के control circuit में sensing block मुख्यतः किसका पता लगाता है?",
+      "options": [
+        "केवल कमरे का तापमान",
+        "Mains voltage की उपस्थिति/अनुपस्थिति (mains fail), battery voltage स्तर और load current",
+        "केवल LED की चमक",
+        "केवल buzzer की आवाज़"
+      ],
+      "correctIndex": 2,
+      "explanation": "Sensing circuit मुख्य रूप से mains की स्थिति (present/fail), battery का voltage level और load current को continuously monitor करता है ताकि control circuit सही निर्णय ले सके। Option A, C, D UPS के sensing block के actual parameters नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q9",
+      "question": "जब battery voltage निर्धारित निम्न सीमा (low battery threshold) से नीचे चला जाता है, तो alarm circuit सामान्यतः क्या करता है?",
+      "options": [
+        "Buzzer से intermittent या continuous beep देकर low battery की चेतावनी देता है",
+        "Transformer की winding बदल देता है",
+        "Rectifier को बंद कर देता है",
+        "Mains supply को boost कर देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Control circuit से sense हुए low battery signal पर alarm circuit buzzer को activate करता है ताकि उपयोगकर्ता को battery जल्द खत्म होने की चेतावनी मिल सके। Option B, C, D alarm circuit के इस चेतावनी कार्य से असंबंधित हैं और ये अन्य blocks के कार्य हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q10",
+      "question": "UPS में overload की स्थिति में alarm circuit की सामान्य प्रतिक्रिया क्या होती है?",
+      "options": [
+        "Battery चार्जिंग तेज कर देता है",
+        "Buzzer से continuous या तेज़ beep देकर overload की चेतावनी देता है, अक्सर fault LED के साथ",
+        "Inverter की frequency दोगुनी कर देता है",
+        "Mains rectifier को disconnect कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब load current निर्धारित सीमा से अधिक हो जाता है, तो sensing circuit यह जानकारी control circuit को देता है और control circuit alarm circuit को activate करता है जो buzzer और fault indicator के माध्यम से overload की सूचना देता है। Option A, C, D overload alarm की actual प्रतिक्रिया नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q11",
+      "question": "Mains fail होने पर alarm circuit द्वारा दिया गया beep pattern सामान्यतः overload alarm के beep pattern से किस प्रकार भिन्न रखा जाता है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे रखे जाते हैं",
+        "Mains fail पर आमतौर पर intermittent (रुक-रुक कर) beep दिया जाता है ताकि यह overload/fault की continuous beep से अलग पहचाना जा सके",
+        "Mains fail पर buzzer पूरी तरह बंद रहता है",
+        "Mains fail पर केवल LED बंद होती है, buzzer कभी नहीं बजता"
+      ],
+      "correctIndex": 2,
+      "explanation": "अधिकतर designs में अलग-अलग fault conditions को अलग beep pattern (जैसे mains fail पर intermittent, overload पर continuous) दिया जाता है ताकि उपयोगकर्ता समस्या की प्रकृति पहचान सके। Option A गलत है क्योंकि अलग pattern रखना ही उद्देश्य है, C और D गलत हैं क्योंकि mains fail पर alarm सक्रिय होता है, बंद नहीं रहता।"
+    },
+    {
+      "id": "u4_ups_circuits_q12",
+      "question": "UPS के indicator circuit में 'Mains-On' LED किस स्थिति में जलती है?",
+      "options": [
+        "जब battery पूरी तरह discharge हो जाए",
+        "जब overload हो",
+        "जब buzzer बज रहा हो",
+        "जब mains supply उपलब्ध हो और UPS mains पर चल रहा हो या उससे battery चार्ज हो रही हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "Mains-On LED यह दर्शाती है कि control circuit ने mains की उपस्थिति detect कर ली है और UPS mains supply का उपयोग कर रहा है। Option A 'battery-low' या 'fault' स्थिति है, B overload indication है, C buzzer से सीधा संबंध नहीं — ये सभी अलग indicator/alarm स्थितियाँ हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q13",
+      "question": "'Battery-On' या 'Inverter-On' indicator LED कब जलती है?",
+      "options": [
+        "जब mains fail हो जाए और control circuit load को battery/inverter output पर transfer कर दे",
+        "जब battery पूरी तरह चार्ज हो जाए",
+        "जब overload trip हो जाए",
+        "जब rectifier fuse उड़ जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Battery-On/Inverter-On LED यह बताती है कि mains fail होने के कारण control circuit ने transfer switch operate करके load को inverter output पर shift कर दिया है। Option B 'charging complete' की अलग indication है, C overload indicator से संबंधित है, D fuse fail होना एक separate fault condition है।"
+    },
+    {
+      "id": "u4_ups_circuits_q14",
+      "question": "Indicator circuit में 'Charging' LED किस condition को दर्शाती है?",
+      "options": [
+        "यह दर्शाती है कि mains present है और charger circuit सक्रिय रूप से battery को चार्ज कर रहा है",
+        "यह दर्शाती है कि battery पूरी तरह खत्म हो चुकी है",
+        "यह दर्शाती है कि inverter overload में है",
+        "यह दर्शाती है कि buzzer खराब हो गया है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Charging LED control circuit द्वारा प्राप्त charger status signal पर आधारित होती है और यह दर्शाती है कि rectifier से मिली DC से battery charger active रूप से चार्ज कर रहा है। Option B, C, D इस indicator के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_circuits_q15",
+      "question": "UPS के 'Fault' indicator LED का उद्देश्य क्या होता है?",
+      "options": [
+        "यह केवल normal mains presence दिखाती है",
+        "यह overload, battery low, over-temperature जैसी असामान्य स्थितियों में जलकर/blink करके समस्या का संकेत देती है",
+        "यह केवल charging complete दिखाती है",
+        "यह केवल frequency दिखाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fault LED control circuit द्वारा detect की गई किसी भी असामान्य स्थिति (overload, low battery, over-temperature आदि) पर जलकर या blink करके उपयोगकर्ता को सचेत करती है। Option A, C, D fault indicator के इस चेतावनी उद्देश्य से भिन्न normal-status indications हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q16",
+      "question": "Control circuit और power circuit के बीच interaction में control circuit inverter power stage को किस माध्यम से चलाता है?",
+      "options": [
+        "केवल एक LED के जरिए",
+        "केवल buzzer signal के जरिए",
+        "Fuse के जरिए",
+        "Gate/base drive signals (जैसे PWM pulses) भेजकर, जो power switching devices को on/off करते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Control circuit oscillator/microcontroller द्वारा उत्पन्न gate/base drive signals (अक्सर PWM के रूप में) inverter power stage के switching devices को भेजता है, जिससे वे control किए गए pattern में on/off होकर AC output बनाते हैं। Option A, B, C control-power interaction का actual माध्यम नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q17",
+      "question": "Control circuit और alarm circuit के बीच interaction कैसे होता है?",
+      "options": [
+        "Control circuit fault/low-battery/overload जैसी conditions detect करके alarm circuit को trigger signal भेजता है ताकि buzzer activate हो",
+        "Alarm circuit control circuit को command देकर inverter बंद कराता है",
+        "दोनों में कोई संबंध नहीं होता, अलग-अलग काम करते हैं",
+        "Alarm circuit सीधे battery चार्ज करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Control circuit sensing के आधार पर किसी fault condition को पहचानकर एक trigger signal alarm circuit को भेजता है, जिससे buzzer driver activate होकर beep करता है। Option B, C, D control-alarm circuit के actual data flow और संबंध से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_circuits_q18",
+      "question": "UPS के control circuit में oscillator block 50 Hz output के लिए power transistors को किस प्रकार drive करता है?",
+      "options": [
+        "यह हमेशा एक ही transistor को continuously ON रखता है",
+        "यह push-pull power transistors को alternately (एक के बाद एक) ON/OFF करता है ताकि alternate half-cycles बनें और 50 Hz AC output मिले",
+        "यह केवल battery को short-circuit करता है",
+        "यह केवल indicator LED को blink कराता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Oscillator दो push-pull transistors को alternately trigger करता है जिससे transformer की primary winding में alternate current flow होता है और secondary पर 50 Hz AC मिलती है। Option A से AC output संभव नहीं, C खतरनाक व गलत, D indicator circuit का अलग कार्य है।"
+    },
+    {
+      "id": "u4_ups_circuits_q19",
+      "question": "Overload की स्थिति में UPS का protection loop किस क्रम में कार्य करता है?",
+      "options": [
+        "पहले buzzer बजता है, उसके बाद load current sense होता है",
+        "Current sensing block load current सेंस करता है, यह जानकारी control circuit को जाती है, जो सीमा पार होने पर alarm activate करता है और आवश्यकता पड़ने पर inverter को shutdown/limit करता है",
+        "पहले transformer जल जाता है, फिर sensing होती है",
+        "Rectifier सीधे buzzer को control करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही क्रम है: current sensor load current मापता है, control circuit उसे threshold से तुलना करता है, सीमा पार होने पर alarm circuit को trigger करता है और power stage को protect करने हेतु shutdown/current-limit करता है। Option A क्रम उल्टा है, C असुरक्षित और गलत तरीका है, D rectifier का सीधा alarm control से संबंध नहीं।"
+    },
+    {
+      "id": "u4_ups_circuits_q20",
+      "question": "'Low battery cut-off' function control circuit में क्यों दिया जाता है?",
+      "options": [
+        "Charging speed बढ़ाने के लिए",
+        "Buzzer की आवाज़ तेज करने के लिए",
+        "Mains supply को बंद करने के लिए",
+        "Battery को deep-discharge (अत्यधिक नीचे voltage तक डिस्चार्ज) होने से बचाने के लिए, ताकि battery की life खराब न हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "Battery voltage निश्चित निम्न सीमा से नीचे जाने पर control circuit inverter output को बंद कर देता है ताकि battery deep-discharge होकर स्थायी रूप से खराब न हो। Option A, B, C low battery cut-off के वास्तविक सुरक्षा उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_circuits_q21",
+      "question": "Deep discharge protection सक्रिय होने पर indicator circuit सामान्यतः क्या दिखाता है?",
+      "options": [
+        "Low-battery/fault LED के साथ output बंद होने का संकेत, ताकि उपयोगकर्ता battery की स्थिति समझ सके",
+        "Charging LED तेज चमकने लगती है",
+        "Mains-On LED बंद हो जाती है और कुछ नहीं दिखता",
+        "केवल frequency indicator चमकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब deep discharge protection trip होकर inverter output बंद करता है, तो control circuit low-battery/fault indicator को activate करता है ताकि उपयोगकर्ता को स्थिति स्पष्ट हो। Option B, C, D इस protection की actual indication से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_circuits_q22",
+      "question": "UPS के control circuit में oscillator 50 Hz output generate करने हेतु power transistors को alternately switch करता है। एक complete cycle का time period और प्रत्येक half-cycle का समय कितना होगा?",
+      "options": [
+        "50 ms cycle time, 25 ms half-cycle",
+        "10 ms cycle time, 5 ms half-cycle",
+        "20 ms cycle time, 10 ms half-cycle",
+        "100 ms cycle time, 50 ms half-cycle"
+      ],
+      "correctIndex": 2,
+      "explanation": "Time period T = 1/f = 1/50 Hz = 20 ms होता है, और चूँकि AC waveform के दो half-cycles मिलकर एक cycle बनाते हैं, प्रत्येक half-cycle = 10 ms का होगा — यही समय है जितनी देर के लिए प्रत्येक transistor ON रहता है। शेष विकल्प सही calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_circuits_q23",
+      "question": "जब control circuit mains fail detect करता है, तो relay/electronic transfer switch द्वारा load को battery/inverter output पर shift करने में सामान्यतः कितना समय लगता है?",
+      "options": [
+        "लगभग 1 second",
+        "लगभग कुछ milliseconds (जैसे 4-10 ms के आसपास)",
+        "लगभग 1 मिनट",
+        "यह transfer कभी automatic नहीं होता, हमेशा हाथ से करना पड़ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sensing तथा transfer switch की fast electronics के कारण transfer प्रक्रिया आमतौर पर कुछ ही milliseconds में पूरी हो जाती है ताकि जुड़े equipment पर असर कम-से-कम हो। Option A और C अत्यधिक धीमे और अव्यावहारिक हैं, D गलत है क्योंकि control circuit इसे automatic रूप से करता है।"
+    },
+    {
+      "id": "u4_ups_circuits_q24",
+      "question": "यदि mains supply उपलब्ध है फिर भी UPS का output completely बंद है और कोई indicator LED भी नहीं जल रही, तो troubleshooting में सबसे पहले किसकी जाँच करनी चाहिए?",
+      "options": [
+        "सीधे transformer की winding बदल देनी चाहिए",
+        "केवल buzzer बदल देना चाहिए",
+        "केवल battery बदल देनी चाहिए",
+        "Control circuit की supply voltage और उसके main IC/microcontroller की working स्थिति जाँचनी चाहिए, क्योंकि इसके बिना कोई भी block operate नहीं होगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "चूँकि कोई भी LED नहीं जल रही और output भी बंद है, इसका मतलब है कि control circuit को स्वयं आवश्यक supply नहीं मिल रही या उसका IC काम नहीं कर रहा — इसे पहले जाँचना logical है। Option A, B, C बिना control circuit की पुष्टि किए सीधे parts बदलना गलत और अव्यवस्थित तरीका है।"
+    },
+    {
+      "id": "u4_ups_circuits_q25",
+      "question": "यदि UPS में battery ठीक से चार्ज हो रही है लेकिन 'Charging' indicator LED नहीं जल रही, तो समस्या सबसे अधिक संभावना किसमें होगी?",
+      "options": [
+        "Indicator circuit में LED या उसकी series resistor/driver transistor में fault होगी, जबकि power circuit ठीक काम कर रहा है",
+        "Rectifier पूरी तरह खराब हो गया है",
+        "Battery पूरी तरह खराब हो गई है",
+        "Inverter power stage खराब हो गया है"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूँकि charging actual में हो रही है (यानी power circuit ठीक है), इसलिए समस्या indicator circuit में ही होगी — जैसे LED फुँकी हुई, series resistor open, या driver transistor faulty। Option B, C, D गलत हैं क्योंकि दिए गए लक्षण के अनुसार charging function स्वयं सही काम कर रहा है।"
+    },
+    {
+      "id": "u4_ups_circuits_q26",
+      "question": "यदि UPS से लगातार (continuous) buzzer sound आ रही है और साथ में fault LED भी जल रही है जबकि mains supply सामान्य है, तो यह सबसे अधिक किस स्थिति का संकेत है?",
+      "options": [
+        "Mains fail होने का संकेत",
+        "Battery पूरी तरह चार्ज होने का संकेत",
+        "Overload या किसी internal fault (जैसे over-temperature) की संभावना, क्योंकि mains सामान्य होने पर भी alarm सक्रिय है",
+        "Charging सामान्य रूप से चल रही है"
+      ],
+      "correctIndex": 2,
+      "explanation": "चूँकि mains सामान्य है फिर भी continuous alarm और fault LED सक्रिय है, इसलिए यह mains fail (जो अलग beep pattern देता) नहीं बल्कि overload या internal fault (जैसे over-temperature) का संकेत है। Option A गलत है क्योंकि mains सामान्य है, B और D सामान्य/सफल स्थितियाँ हैं जिनमें continuous fault alarm नहीं बजता।"
+    },
+    {
+      "id": "u4_ups_circuits_q27",
+      "question": "Control circuit में comparator IC (जैसे LM339 प्रकार) का उपयोग सामान्यतः किस काम के लिए किया जाता है?",
+      "options": [
+        "AC को DC में rectify करने के लिए",
+        "Sensed voltage (जैसे battery voltage या mains sample) की तुलना एक reference voltage से करके threshold पार होने पर output signal देने के लिए",
+        "Battery को सीधे चार्ज करने के लिए",
+        "Transformer की winding turns बदलने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Comparator IC sensed signal (जैसे battery voltage का sample) को reference voltage से तुलना करता है और threshold पार होने पर high/low output देता है, जिसका उपयोग low-battery detection, mains sensing आदि में होता है। Option A rectifier का काम है, C charger power stage का काम है, D transformer से संबंधित नहीं।"
+    },
+    {
+      "id": "u4_ups_circuits_q28",
+      "question": "UPS के control circuit (low-voltage logic side) और power circuit (उच्च voltage/current side) के बीच optocoupler का उपयोग किस उद्देश्य से किया जाता है?",
+      "options": [
+        "Buzzer की आवाज़ बढ़ाने के लिए",
+        "Battery को तेज चार्ज करने के लिए",
+        "LED की चमक कम करने के लिए",
+        "दोनों sections के बीच electrical isolation प्रदान करते हुए signal transfer करना, ताकि उच्च voltage/noise, sensitive control circuit को नुकसान न पहुँचाए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Optocoupler light के माध्यम से signal transfer करता है जिससे control circuit और power circuit के बीच कोई सीधा electrical connection नहीं रहता, इससे high-voltage side की गड़बड़ी या noise sensitive logic circuit को नुकसान नहीं पहुँचाती। Option A, B, C optocoupler के actual isolation उद्देश्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q29",
+      "question": "Control circuit में transfer relay को operate करने के लिए आमतौर पर एक relay driver transistor का उपयोग क्यों किया जाता है?",
+      "options": [
+        "क्योंकि control IC/microcontroller से मिलने वाला low current signal सीधे relay coil की higher current आवश्यकता को drive नहीं कर सकता, इसलिए transistor current को amplify करके relay चलाता है",
+        "क्योंकि transistor buzzer की आवाज़ बदलता है",
+        "क्योंकि transistor battery को चार्ज करता है",
+        "क्योंकि transistor mains voltage को rectify करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "IC/microcontroller की output pin से मिलने वाला current relay coil को सीधे energize करने के लिए पर्याप्त नहीं होता, इसलिए एक driver transistor इस छोटे signal को amplify करके आवश्यक current relay coil को देता है। Option B, C, D relay driver transistor के इस core function से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q30",
+      "question": "कुछ UPS में fault indicator LED अलग-अलग संख्या में blink करके अलग-अलग fault codes दिखाती है (जैसे 2 बार blink = overload, 3 बार blink = over-temperature)। इस design का मुख्य लाभ क्या है?",
+      "options": [
+        "इससे battery जल्दी चार्ज होती है",
+        "इससे buzzer की जरूरत खत्म हो जाती है",
+        "इससे केवल एक ही LED से कई प्रकार के faults को अलग-अलग पहचाना जा सकता है, जिससे troubleshooting आसान होती है",
+        "इससे mains frequency बदल जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Blink-code आधारित indication से limited संख्या में LEDs का उपयोग करके भी अलग-अलग fault conditions को सटीक रूप से पहचाना जा सकता है, जिससे technician जल्दी सही समस्या की ओर ध्यान दे सके। Option A, B, D इस blink-code design के actual लाभ से असंबंधित हैं।"
+    }
+  ]
+}

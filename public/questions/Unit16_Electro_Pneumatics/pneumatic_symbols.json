@@ -1,0 +1,368 @@
+{
+  "unit": "unit16",
+  "unitName": "Electro Pneumatics",
+  "topic": "pneumatic_symbols",
+  "topicName": "Pneumatic & Electro-Pneumatic Symbols (ISO 1219)",
+  "questions": [
+    {
+      "id": "u16_pneumatic_symbols_q1",
+      "question": "ISO 1219 standard पर आधारित pneumatic diagrams में symbols बनाने का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Circuit को सुंदर दिखाना",
+        "Components की universal और standardized graphical पहचान देना ताकि कहीं भी आसानी से समझा जा सके",
+        "केवल manufacturing cost कम करना",
+        "Actuator की speed बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "ISO 1219 pneumatic/hydraulic components के लिए standardized symbols define करता है ताकि दुनिया भर में कोई भी technician diagram को बिना भाषा-भेद के समझ सके। यह सिर्फ सुंदरता, cost या actuator speed के लिए नहीं है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q2",
+      "question": "Pneumatic circuit diagram में single-acting cylinder का symbol किस विशेषता से पहचाना जाता है?",
+      "options": [
+        "एक तरफ air port और return के लिए spring दिखाई जाती है",
+        "दोनों तरफ air ports होते हैं और कोई spring नहीं होती",
+        "इसमें दो अलग cylinders जुड़े दिखाए जाते हैं",
+        "इसमें कोई piston symbol नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Single-acting cylinder में सिर्फ एक तरफ air inlet port होता है और extend होने के बाद return stroke के लिए spring का symbol दिखाया जाता है। Double-acting cylinder में दोनों तरफ ports होते हैं (Option B), C और D गलत description हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q3",
+      "question": "Double-acting cylinder के symbol में कितने air ports दिखाए जाते हैं?",
+      "options": [
+        "एक",
+        "दो, दोनों तरफ जिनसे extend और retract दोनों operations air pressure से होते हैं",
+        "तीन",
+        "चार"
+      ],
+      "correctIndex": 1,
+      "explanation": "Double-acting cylinder में दोनों सिरों पर एक-एक port होता है जिससे extend और retract दोनों stroke compressed air pressure से control होते हैं, इसलिए spring की आवश्यकता नहीं होती। एक port single-acting में होता है, तीन या चार ports standard cylinder symbol में नहीं दिखाए जाते।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q4",
+      "question": "3/2 directional control valve (DCV) के नाम में '3' और '2' क्रमशः क्या दर्शाते हैं?",
+      "options": [
+        "3 valves और 2 actuators",
+        "3 ports और 2 switching positions",
+        "3 positions और 2 ports",
+        "3 seconds का time delay और 2 volt supply"
+      ],
+      "correctIndex": 1,
+      "explanation": "DCV की naming convention में पहला अंक ports की संख्या और दूसरा अंक valve की switching positions की संख्या बताता है, इसलिए 3/2 valve में 3 ports और 2 positions होती हैं। बाकी options गलत interpretation हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q5",
+      "question": "5/2 DCV symbol में valve boxes (squares) की संख्या कितनी दिखाई जाती है?",
+      "options": [
+        "एक",
+        "दो, प्रत्येक position के लिए एक box जिसमें flow paths दिखाए जाते हैं",
+        "पाँच",
+        "इसमें कोई box नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "5/2 valve में दो positions होती हैं, इसलिए symbol में दो squares (boxes) बनाए जाते हैं और प्रत्येक box के अंदर उस position के लिए flow paths (lines व arrows) दिखाए जाते हैं। एक, पाँच boxes या बिना box वाला विकल्प गलत है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q6",
+      "question": "Pneumatic symbol में arrow (तीर) की दिशा क्या दर्शाती है?",
+      "options": [
+        "Component का weight",
+        "Air flow की direction (path)",
+        "Component की price",
+        "Wire का color code"
+      ],
+      "correctIndex": 1,
+      "explanation": "Symbol में arrows यह दिखाते हैं कि उस particular valve position में air किस path से किस दिशा में flow करेगी। Weight, price या color code का इससे कोई सम्बन्ध नहीं है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q7",
+      "question": "Symbol में 'T' आकार की line (blocked port symbol) किस स्थिति को दर्शाती है?",
+      "options": [
+        "Port बंद (blocked) है, यानी उस path से air flow नहीं हो रही",
+        "Port से maximum flow हो रहा है",
+        "यह electrical connection दर्शाती है",
+        "यह temperature sensor दर्शाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Symbol में 'T' या perpendicular line से terminate होने वाला port यह दर्शाता है कि उस position में वह port blocked है यानी वहाँ से air flow नहीं हो रही। यह maximum flow, electrical connection या temperature sensing को नहीं दर्शाता।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q8",
+      "question": "Manually operated push-button valve का actuation symbol कैसे दिखाया जाता है?",
+      "options": [
+        "एक arrow के साथ 'M' अक्षर",
+        "Valve के एक तरफ एक button/knob जैसा graphical symbol जो push actuation दर्शाता है",
+        "Valve के अंदर coil का symbol",
+        "Valve के ऊपर roller wheel का symbol"
+      ],
+      "correctIndex": 1,
+      "explanation": "Push-button actuation को एक button/knob जैसे simple graphical symbol से दर्शाया जाता है जो valve के एक तरफ जुड़ा होता है, यह manual push operation इंगित करता है। Coil symbol solenoid actuation के लिए और roller symbol mechanical roller lever valve के लिए होता है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q9",
+      "question": "Solenoid actuated valve के symbol में किस विशेष चिन्ह से solenoid operation पहचानी जाती है?",
+      "options": [
+        "एक diagonal cross के साथ rectangular coil symbol, जो valve की एक तरफ जुड़ा होता है",
+        "एक spring का zig-zag symbol",
+        "एक triangle जो flow direction दिखाता है",
+        "एक roller symbol जो valve के ऊपर होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solenoid actuation को rectangular coil symbol (कभी-कभी diagonal cross या coil lines के साथ) से दर्शाया जाता है जो valve body के एक सिरे पर जुड़ा दिखाया जाता है। Spring return अलग symbol है, triangle flow arrow है, roller mechanical actuation दर्शाता है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q10",
+      "question": "Spring return (spring offset) actuation को pneumatic symbol में कैसे दर्शाया जाता है?",
+      "options": [
+        "एक zig-zag (coil) line जो valve की एक तरफ लगी होती है",
+        "एक solid rectangular box",
+        "एक arrow जो ऊपर की तरफ इशारा करता है",
+        "एक circle जिसमें 'S' लिखा होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Spring return को zig-zag (spring-coil जैसी) line से दर्शाया जाता है जो valve को default position में वापस लाने के लिए मानी जाती है। बाकी options spring का मानक symbol नहीं हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q11",
+      "question": "Roller lever operated valve के actuation symbol में क्या विशेष रूप से दिखाया जाता है?",
+      "options": [
+        "एक coil और उसके अंदर electric current",
+        "एक lever के सिरे पर एक छोटा roller (wheel) जो mechanical actuation दर्शाता है",
+        "एक pressure gauge का symbol",
+        "दो parallel lines जो filter दर्शाती हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Roller lever valve के symbol में lever के अंत में एक छोटा circle (roller) दिखाया जाता है, जो यह इंगित करता है कि यह valve किसी mechanical cam/object से roller के दबने पर actuate होती है। Coil solenoid के लिए, gauge pressure measurement के लिए और parallel lines filter के लिए होती हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q12",
+      "question": "Non-return valve (check valve) का symbol basically किसे दर्शाता है?",
+      "options": [
+        "एक ball जो एक seat पर बैठकर सिर्फ एक दिशा में flow allow करती है (arrow और angled line से दिखाया गया)",
+        "दो arrows जो opposite direction में flow दिखाते हैं",
+        "एक coil जो electric signal से control होता है",
+        "एक rectangular box बिना किसी flow path के"
+      ],
+      "correctIndex": 0,
+      "explanation": "Non-return (check) valve symbol में एक arrow के साथ एक angled line/ball-seat जैसा चिन्ह होता है जो दर्शाता है कि flow केवल एक ही direction में possible है, विपरीत दिशा में blocked रहती है। Opposite arrows bidirectional flow दिखाते जो गलत है, coil electrical actuation है, और खाली box इसका symbol नहीं है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q13",
+      "question": "Shuttle valve (OR function valve) का symbol किस आकार में दिखाया जाता है?",
+      "options": [
+        "एक rectangle जिसमें दो inlet ports और एक outlet port के साथ बीच में एक ball/element दिखाया जाता है जो higher pressure input की तरफ shift होता है",
+        "एक single port वाला simple circle",
+        "एक coil और spring का combination",
+        "एक arrow जो सीधे नीचे जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Shuttle valve symbol में दो inputs (X, Y) और एक output (A) होते हैं, बीच में एक moving element (ball) दिखाया जाता है जो higher pressure signal की ओर shift होकर उसे output से जोड़ता है — यह OR logic function है। बाकी options शटल वाल्व के standard symbol से मेल नहीं खाते।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q14",
+      "question": "Flow control valve (throttle valve) का symbol में किस विशेष चिन्ह से पहचान होती है?",
+      "options": [
+        "Line के बीच में एक arrow जो diagonally cut करता है, जो variable restriction दर्शाता है",
+        "एक coil जो electric current से चलती है",
+        "दो parallel plates जो filter दर्शाती हैं",
+        "एक ball जो एक तरफ को block करती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Flow control (throttle) valve के symbol में flow line को diagonally cut करता हुआ एक arrow दिखाया जाता है, जो restriction को adjustable/variable दर्शाता है और flow rate control करने का संकेत देता है। Coil solenoid के लिए, parallel plates filter के लिए, और ball check valve के लिए होती है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q15",
+      "question": "Pressure regulating valve (pressure relief valve) का ISO symbol किस मुख्य feature से पहचाना जाता है?",
+      "options": [
+        "एक rectangle जिसमें spring-loaded adjustable arrow और exhaust path दिखाया जाता है",
+        "दो coils जो parallel जुड़े होते हैं",
+        "एक simple straight line बिना किसी symbol के",
+        "एक roller के साथ lever"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pressure regulating/relief valve symbol में एक adjustable spring (diagonal arrow) और excess pressure के लिए exhaust path दिखाया जाता है जो set pressure से ऊपर जाने पर air release करता है। Coils, straight lines और roller lever इसके standard चिन्ह नहीं हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q16",
+      "question": "Air service unit (FRL - Filter, Regulator, Lubricator) का combined symbol में क्रम किस प्रकार दिखाया जाता है?",
+      "options": [
+        "Regulator, फिर Lubricator, फिर Filter",
+        "Filter, फिर Regulator, फिर Lubricator (air flow direction के अनुसार)",
+        "Lubricator, फिर Filter, फिर Regulator",
+        "तीनों को एक ही single box में मिला दिया जाता है बिना किसी क्रम के"
+      ],
+      "correctIndex": 1,
+      "explanation": "FRL unit में air flow की दिशा में सबसे पहले Filter (contaminants हटाने के लिए), फिर Regulator (pressure set करने के लिए), और अंत में Lubricator (oil mist देने के लिए) आता है — यही मानक क्रम symbol में भी दिखाया जाता है। बाकी क्रम गलत हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q17",
+      "question": "Electro-pneumatic circuit diagram में limit switch (electrical) का symbol pneumatic roller valve के symbol से किस प्रकार अलग होता है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे होते हैं, कोई अंतर नहीं",
+        "Limit switch electrical contact symbol (NO/NC contact lines) का उपयोग करता है जबकि pneumatic roller valve pneumatic flow-path box का उपयोग करता है",
+        "Limit switch में हमेशा coil दिखाई जाती है",
+        "Pneumatic roller valve में हमेशा resistor symbol होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Electrical limit switch को ladder/electrical diagrams में standard NO (normally open) या NC (normally closed) contact symbols से दर्शाया जाता है, जबकि pneumatic roller lever valve को flow-path वाले valve box symbol से दर्शाया जाता है — दोनों अलग domains के हैं। Options A, C, D गलत हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q18",
+      "question": "Electro-pneumatic circuit में relay coil का electrical symbol आमतौर पर कैसे दर्शाया जाता है?",
+      "options": [
+        "एक circle या rectangle जिसमें coil label (जैसे K1) लिखा होता है",
+        "एक ball और seat जैसा check valve symbol",
+        "एक arrow जो flow direction दिखाता है",
+        "दो parallel horizontal lines"
+      ],
+      "correctIndex": 0,
+      "explanation": "Relay coil को ladder diagram में एक circle/rectangle के रूप में दिखाया जाता है जिसके अंदर या पास relay का designation (जैसे K1, CR1) लिखा होता है ताकि उससे जुड़े contacts पहचाने जा सकें। Check valve, flow arrow और parallel lines relay coil का symbol नहीं हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q19",
+      "question": "5/3 way DCV (5 ports, 3 positions) के symbol में middle (center) position सामान्यतः किसे दर्शाती है?",
+      "options": [
+        "Valve हमेशा extend position में locked रहती है",
+        "Neutral/mid position जिसमें actuator ports blocked रह सकते हैं (closed centre) या exhaust हो सकते हैं",
+        "Valve पूरी तरह disconnect हो जाती है supply से बिना किसी logic के",
+        "यह position सिर्फ decoration के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "5/3 valve में तीसरी (center) position neutral/mid-position होती है, जो design के अनुसार closed-centre (सभी ports blocked) या exhaust-centre हो सकती है, इसका उपयोग actuator को बीच में hold करने के लिए होता है। बाकी options गलत व्याख्या हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q20",
+      "question": "Symbol में 'P' अक्षर सामान्यतः किस port को दर्शाता है?",
+      "options": [
+        "Exhaust port",
+        "Pressure supply (inlet) port",
+        "Pilot signal port",
+        "Piston port"
+      ],
+      "correctIndex": 1,
+      "explanation": "ISO 1219 convention अनुसार 'P' port compressed air supply (pressure inlet) को दर्शाता है, जबकि exhaust ports को 'R' या 'S' और working ports को 'A', 'B' से दर्शाया जाता है। Pilot signal ports को 'X', 'Y', 'Z' आदि से और piston का इससे कोई सम्बन्ध नहीं है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q21",
+      "question": "Symbol में 'A' और 'B' letters आमतौर पर किसे दर्शाते हैं?",
+      "options": [
+        "Working (output) ports जो actuator से जुड़े होते हैं",
+        "Exhaust ports",
+        "Pilot control lines",
+        "Filter और Regulator के लिए labels"
+      ],
+      "correctIndex": 0,
+      "explanation": "ISO convention में 'A' और 'B' working ports होते हैं जो actuator (cylinder) की दोनों sides से जुड़ते हैं और compressed air वहीं से actuator तक पहुँचती है। Exhaust ports 'R'/'S' से, pilot lines 'X'/'Y'/'Z' से दर्शाए जाते हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q22",
+      "question": "Symbol में exhaust port को सामान्यतः किस letter से दर्शाया जाता है?",
+      "options": [
+        "P",
+        "A",
+        "R या S",
+        "X"
+      ],
+      "correctIndex": 2,
+      "explanation": "ISO 1219 convention अनुसार exhaust (return to atmosphere) ports को 'R' या 'S' letters से दर्शाया जाता है। 'P' supply port है, 'A' working port है, और 'X' pilot signal port के लिए इस्तेमाल होता है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q23",
+      "question": "Pneumatic circuit में timer (time delay valve) का symbol किस विशेष feature से पहचाना जाता है?",
+      "options": [
+        "एक clock/hourglass जैसा छोटा symbol जो valve actuation के साथ जुड़ा होता है, जो delay function दर्शाता है",
+        "एक ball जो free flow दिखाती है",
+        "दो parallel coils",
+        "एक साधारण straight arrow"
+      ],
+      "correctIndex": 0,
+      "explanation": "Timer/time-delay valve symbol में actuation side पर एक छोटा clock या restrictor+small reservoir जैसा चिन्ह दिखाया जाता है जो यह इंगित करता है कि signal एक निश्चित समय बाद valve को actuate करेगा। बाकी options timer function नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q24",
+      "question": "Double solenoid operated 5/2 DCV के symbol में दोनों सिरों पर क्या दिखाया जाता है?",
+      "options": [
+        "दोनों सिरों पर coil (solenoid) symbol, प्रत्येक अलग-अलग position को control करता है",
+        "एक सिरे पर spring और दूसरे सिरे पर roller",
+        "दोनों सिरों पर filter symbol",
+        "दोनों सिरों पर pressure gauge"
+      ],
+      "correctIndex": 0,
+      "explanation": "Double solenoid valve में दोनों ends पर coil symbols होते हैं (जैसे Y1 और Y2), जिनमें से जो भी energize होता है वह valve को उस दिशा में shift करता है, valve बिना signal के last position में रहती है (memory function)। Spring-roller combination single solenoid spring-return valve की विशेषता है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q25",
+      "question": "Symbol reading में यदi valve box के अंदर parallel दो सीधी lines (बिना cross या arrow के) दिखाई जाएँ, तो वह किस स्थिति को दर्शाता है?",
+      "options": [
+        "Blocked flow",
+        "Direct (open) flow path, बिना किसी restriction या direction change के",
+        "Solenoid actuation",
+        "Pilot operation"
+      ],
+      "correctIndex": 1,
+      "explanation": "Valve box के अंदर दो सीधी parallel lines खुला (through/direct) flow path दर्शाती हैं यानी उस position में air बिना restriction सीधे pass होती है। Blocked flow के लिए 'T' चिन्ह प्रयोग होता है, solenoid coil symbol से और pilot अलग line से दर्शाया जाता है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q26",
+      "question": "Air operated (pilot operated) valve actuation symbol में क्या विशेष दिखाया जाता है?",
+      "options": [
+        "एक small rectangle जिसमें एक दिशा में arrow जाता हुआ pilot air line से जुड़ा दिखाया जाता है",
+        "एक coil जिसमें current flow arrow हो",
+        "एक mechanical spring केवल",
+        "एक pushbutton का symbol"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pilot (air) operated actuation को एक छोटे triangle/rectangle के रूप में दिखाया जाता है जो एक pilot line से जुड़ा होता है, जो यह दर्शाता है कि valve external pilot air signal से actuate होती है, न कि मैकेनिकल या electrical रूप से। Coil solenoid के लिए और pushbutton manual actuation के लिए होता है।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q27",
+      "question": "Circuit diagram में दो valves के बीच solid line (single continuous line) किसे दर्शाती है?",
+      "options": [
+        "Electrical wiring connection",
+        "Main pneumatic flow line (working line) जिससे compressed air pass होती है",
+        "Mechanical linkage",
+        "Data communication cable"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pneumatic diagrams में solid continuous line main working (pressure carrying) line दर्शाती है जिससे compressed air एक component से दूसरे component तक जाती है। Electrical wiring, mechanical linkage और data cable के अलग symbols होते हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q28",
+      "question": "Diagram में dashed (dotted) line सामान्यतः किस प्रकार का connection दर्शाती है?",
+      "options": [
+        "Main pressure line",
+        "Pilot line (control signal line) जो valve actuation को control करती है",
+        "Exhaust line direct atmosphere में",
+        "Cylinder की piston rod"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dashed line pilot (control) signal line को दर्शाती है जो किसी valve के actuation को नियंत्रित करने के लिए एक अलग signal air path के रूप में काम करती है, यह main working line से अलग होती है। Main line solid, exhaust अलग symbol और piston rod mechanical part है, line type से नहीं दर्शाई जाती।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q29",
+      "question": "Cylinder cushioning (end cushioning) को symbol में कैसे दर्शाया जाता है?",
+      "options": [
+        "Cylinder symbol के अंत में एक छोटा rectangle या step जो cushion arrangement दर्शाता है",
+        "Piston के बीच में एक coil",
+        "Cylinder के बाहर एक separate valve symbol हमेशा जोड़कर",
+        "Cushioning को कभी symbol में नहीं दिखाया जाता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cushioned cylinder के symbol में piston के दोनों या एक end पर एक छोटा step/rectangle बनाया जाता है जो यह दर्शाता है कि stroke के अंत में air cushioning से gradual deceleration होता है, जिससे impact कम होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u16_pneumatic_symbols_q30",
+      "question": "Combined electro-pneumatic circuit diagrams को आमतौर पर दो अलग हिस्सों में क्यों दिखाया जाता है (electrical ladder diagram व pneumatic circuit diagram अलग-अलग)?",
+      "options": [
+        "क्योंकि दोनों systems की notation, components और working principle अलग होते हैं, इसलिए स्पष्टता के लिए अलग दिखाना आसान होता है",
+        "क्योंकि electrical circuit की कोई जरूरत नहीं होती",
+        "क्योंकि pneumatic circuit हमेशा गलत होता है",
+        "क्योंकि दोनों को एक साथ दिखाना कानूनी रूप से मना है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Electrical (ladder) diagram में contacts, coils, relays की notation होती है जबकि pneumatic diagram में valve boxes, flow paths और actuators की notation होती है — दोनों अलग domains की standard notations होने के कारण अलग-अलग दिखाने से circuit समझना और troubleshoot करना आसान होता है। बाकी options तर्कहीन हैं।"
+    }
+  ]
+}

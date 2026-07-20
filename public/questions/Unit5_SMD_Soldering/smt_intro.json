@@ -1,0 +1,368 @@
+{
+  "unit": "unit5",
+  "unitName": "SMD Soldering and De-soldering",
+  "topic": "smt_intro",
+  "topicName": "Surface Mount Technology - Introduction & Advantages over Through-hole",
+  "questions": [
+    {
+      "id": "u5_smt_intro_q1",
+      "question": "Surface Mount Technology (SMT) में components को PCB पर किस प्रकार mount किया जाता है?",
+      "options": [
+        "PCB की surface पर बने pads पर सीधे solder करके, बिना lead को hole में डाले",
+        "PCB में drill किए गए holes में leads डालकर दूसरी side से solder करके",
+        "केवल mechanical clamp से बिना किसी solder के",
+        "PCB के edge connector में plug करके"
+      ],
+      "correctIndex": 0,
+      "explanation": "SMT में component के terminals को PCB की surface पर बने solder pads पर सीधे mount किया जाता है, इसलिए holes की जरूरत नहीं पड़ती। Option B through-hole technology है। Option C में कोई electrical connection नहीं बनेगा और D edge-connector की बात है जो SMT mounting नहीं है।"
+    },
+    {
+      "id": "u5_smt_intro_q2",
+      "question": "Through-hole technology (THT) की तुलना में SMT का एक प्रमुख advantage क्या है?",
+      "options": [
+        "बड़े size के components आसानी से लगते हैं",
+        "components की high packing density मिलती है जिससे board का size छोटा होता है",
+        "hand soldering ही एकमात्र तरीका होता है",
+        "PCB में अधिक drilling की जरूरत पड़ती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMT components छोटे होते हैं और board की दोनों sides पर लग सकते हैं, जिससे high packing density और छोटा board size मिलता है। Option A गलत है क्योंकि SMT छोटे components के लिए बेहतर है। Option C गलत है क्योंकि SMT में reflow/mass soldering मुख्य है। Option D गलत है — SMT में drilling कम होती है।"
+    },
+    {
+      "id": "u5_smt_intro_q3",
+      "question": "SMT components को आमतौर पर किस soldering process से bulk में solder किया जाता है?",
+      "options": [
+        "Wave soldering by hand iron",
+        "Reflow soldering",
+        "Torch brazing",
+        "Ultrasonic welding"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMT में solder paste लगाकर reflow soldering process द्वारा एक साथ सभी joints बनाए जाते हैं। Wave soldering मुख्यतः through-hole के लिए है (hand iron नहीं)। Torch brazing और ultrasonic welding electronics assembly के standard SMT तरीके नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q4",
+      "question": "SMT के कारण high-frequency circuits में performance बेहतर क्यों होती है?",
+      "options": [
+        "leads लंबे होते हैं जिससे inductance बढ़ता है",
+        "components के leads बहुत छोटे या ना के बराबर होते हैं जिससे parasitic inductance और capacitance कम होते हैं",
+        "solder joints की संख्या बढ़ जाती है",
+        "PCB का weight बढ़ जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMT components के leads बहुत छोटे होते हैं, इसलिए parasitic inductance/capacitance कम होते हैं जो high-frequency performance सुधारते हैं। Option A उल्टा है (लंबे leads THT में होते हैं)। Options C और D performance improvement के कारण नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q5",
+      "question": "SMT assembly में automatic component placement के लिए किस मशीन का उपयोग होता है?",
+      "options": [
+        "Pick and place machine",
+        "Lathe machine",
+        "Drilling machine",
+        "Wave solder pot"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pick and place machine reel/tray से SMD components उठाकर PCB pads पर सटीक जगह रखती है। Lathe और drilling machine electronics assembly की placement मशीनें नहीं हैं। Wave solder pot soldering के लिए है, placement के लिए नहीं।"
+    },
+    {
+      "id": "u5_smt_intro_q6",
+      "question": "SMT की तुलना में through-hole components का एक वास्तविक फायदा क्या है?",
+      "options": [
+        "बहुत छोटा size",
+        "mechanical strength अधिक होती है क्योंकि leads board में से गुजरते हैं",
+        "automatic placement हमेशा आसान",
+        "parasitic inductance शून्य होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Through-hole leads board के holes में से गुजरकर दूसरी side पर solder होते हैं, जिससे connectors और heavy components को अधिक mechanical strength मिलती है। छोटा size, आसान automatic placement और कम parasitic SMT की खूबियाँ हैं, THT की नहीं।"
+    },
+    {
+      "id": "u5_smt_intro_q7",
+      "question": "SMT में 'solder paste' किन दो मुख्य घटकों का मिश्रण है?",
+      "options": [
+        "पानी और नमक",
+        "powdered solder alloy और flux",
+        "epoxy और hardener",
+        "तांबा और सोना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solder paste में fine solder alloy powder और flux मिला होता है जो reflow के दौरान melt होकर joint बनाता है। बाकी विकल्प (पानी-नमक, epoxy-hardener, copper-gold) solder paste की संरचना नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q8",
+      "question": "SMT assembly की एक चुनौती (disadvantage) क्या है?",
+      "options": [
+        "components बहुत बड़े होते हैं",
+        "बहुत छोटे components की manual soldering और repair कठिन होती है, specialized equipment चाहिए",
+        "board का size बहुत बड़ा हो जाता है",
+        "parasitic effect बढ़ जाते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD components बहुत छोटे होने के कारण manual handling, soldering और rework कठिन होता है और microscope/hot-air जैसे specialized tools चाहिए। बाकी विकल्प SMT के फायदों के उलट हैं, इसलिए गलत हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q9",
+      "question": "SMD का full form क्या है?",
+      "options": [
+        "Standard Mounted Device",
+        "Surface Mount Device",
+        "System Module Diode",
+        "Solder Metal Deposit"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD का अर्थ Surface Mount Device है — वह component जो PCB की surface पर mount होता है। बाकी विकल्प सही full-form नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q10",
+      "question": "SMT में PCB की दोनों sides पर components लगाने से क्या लाभ होता है?",
+      "options": [
+        "board का weight दोगुना बढ़ता है बिना फायदे के",
+        "उसी board area में अधिक components fit होते हैं, जिससे component density बढ़ती है",
+        "soldering बिल्कुल जरूरी नहीं रहती",
+        "board flexible हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "दोनों sides पर mounting से समान area में अधिक components लगते हैं और component density बढ़ती है — यह SMT का बड़ा फायदा है। Option A सिर्फ नुकसान बताता है, C गलत है (soldering जरूरी है), D असंबंधित है।"
+    },
+    {
+      "id": "u5_smt_intro_q11",
+      "question": "SMT resistors और capacitors में अक्सर leads के बजाय क्या होता है?",
+      "options": [
+        "लंबे wire leads",
+        "metallized end terminations (end caps)",
+        "screw terminals",
+        "plastic hooks"
+      ],
+      "correctIndex": 1,
+      "explanation": "Chip resistors/capacitors में दोनों सिरों पर metallized end terminations होते हैं जो सीधे pad पर solder होते हैं। लंबे wire leads THT में होते हैं; screw terminal और plastic hooks SMD chip components में नहीं होते।"
+    },
+    {
+      "id": "u5_smt_intro_q12",
+      "question": "SMT में manufacturing cost आमतौर पर कम क्यों होती है (mass production में)?",
+      "options": [
+        "क्योंकि प्रत्येक component हाथ से लगाया जाता है",
+        "क्योंकि automatic placement व reflow से high speed व कम labour में bulk production होता है, और drilling कम होती है",
+        "क्योंकि components बहुत महंगे होते हैं",
+        "क्योंकि हर joint को अलग-अलग hand solder करना पड़ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Automatic pick-and-place व reflow से तेज़, कम-labour bulk production और कम drilling के कारण mass production में cost घटती है। Options A और D manual process बताते हैं जो cost बढ़ाते हैं; C असंबंधित है।"
+    },
+    {
+      "id": "u5_smt_intro_q13",
+      "question": "किसी portable mobile phone में SMT को THT पर प्राथमिकता देने का मुख्य कारण क्या है?",
+      "options": [
+        "अधिक weight चाहिए इसलिए",
+        "छोटा, हल्का और compact design जरूरी होता है जो SMT से मिलता है",
+        "बड़े socket-mounted ICs जरूरी होते हैं",
+        "hand soldering आसान होती है इसलिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mobile phones को compact, हल्का design चाहिए जो SMT की high density से संभव है। बड़ा weight (A) और बड़े socketed ICs (C) portable design के विपरीत हैं; D असंबंधित है।"
+    },
+    {
+      "id": "u5_smt_intro_q14",
+      "question": "SMT में through-hole की तुलना में drilling की जरूरत कैसी होती है?",
+      "options": [
+        "बहुत अधिक holes drill करने पड़ते हैं",
+        "कम होती है क्योंकि leads holes में नहीं जाते; केवल vias के लिए holes चाहिए",
+        "बिल्कुल भी board नहीं चाहिए",
+        "holes का diameter बहुत बड़ा होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMT में component leads holes में नहीं जाते, इसलिए component holes की जरूरत नहीं; केवल layer-to-layer connection के लिए vias चाहिए, जिससे drilling घटती है। बाकी विकल्प तथ्यगत रूप से गलत हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q15",
+      "question": "SMT assembly line का सामान्य क्रम क्या है?",
+      "options": [
+        "Reflow → paste printing → placement",
+        "Solder paste printing → component placement → reflow soldering",
+        "Placement → drilling → wave soldering",
+        "Inspection → paste printing → placement"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही क्रम है: पहले stencil से solder paste printing, फिर pick-and-place से component placement, फिर reflow soldering। बाकी क्रम गलत हैं क्योंकि reflow या inspection प्रक्रिया के आरंभ में नहीं आते और drilling SMT flow का हिस्सा नहीं है।"
+    },
+    {
+      "id": "u5_smt_intro_q16",
+      "question": "SMT components का weight THT components की तुलना में सामान्यतः कैसा होता है?",
+      "options": [
+        "बहुत अधिक",
+        "कम, क्योंकि size और material दोनों छोटे होते हैं",
+        "बिल्कुल बराबर",
+        "weight का कोई महत्व नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "छोटे size और कम material के कारण SMD components हल्के होते हैं, जिससे पूरा product हल्का बनता है। Options A और C तथ्यगत रूप से गलत हैं; D प्रश्न का उत्तर नहीं देता।"
+    },
+    {
+      "id": "u5_smt_intro_q17",
+      "question": "SMT में 'reflow' शब्द का क्या अर्थ है?",
+      "options": [
+        "solder को दोबारा पिघलाकर joint बनाना, जहाँ paste heat से melt होकर फिर solidify होता है",
+        "PCB को पानी में धोना",
+        "components को reel में लपेटना",
+        "board को reverse polarity देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reflow में solder paste को गर्म करके melt (flow) कराया जाता है और फिर ठंडा होने पर वह solidify होकर joint बनाता है। बाकी विकल्प (धोना, reeling, polarity) reflow की परिभाषा से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q18",
+      "question": "SMT ने electronic products में miniaturization को कैसे बढ़ावा दिया?",
+      "options": [
+        "बड़े components के इस्तेमाल से",
+        "बहुत छोटे SMD components और high-density placement से products को compact बनाकर",
+        "अधिक drilling करके",
+        "अधिक wire leads जोड़कर"
+      ],
+      "correctIndex": 1,
+      "explanation": "छोटे SMD components और high-density placement से products छोटे व compact बने, इसलिए SMT miniaturization का आधार है। बाकी विकल्प (बड़े components, अधिक drilling, wire leads) miniaturization के विपरीत हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q19",
+      "question": "किसी SMD chip resistor को THT resistor से पहचानने का आसान तरीका क्या है?",
+      "options": [
+        "SMD में लंबे metal leads होते हैं",
+        "SMD बहुत छोटा rectangular block होता है जिसके दोनों सिरों पर metal ends होते हैं, wire leads नहीं",
+        "SMD हमेशा glass tube में होता है",
+        "SMD में screw होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD chip resistor एक छोटा rectangular block होता है जिसके सिरों पर metallized ends होते हैं और कोई wire lead नहीं होता। लंबे leads THT में होते हैं; glass tube और screw SMD chip resistor की पहचान नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q20",
+      "question": "SMT assembly में automated optical inspection (AOI) का उद्देश्य क्या है?",
+      "options": [
+        "board को गर्म करना",
+        "cameras द्वारा solder joints व placement की गुणवत्ता जाँचना और defects पकड़ना",
+        "components को reel में भरना",
+        "solder paste बनाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "AOI cameras की मदद से placement और solder joints की जाँच करके missing/misaligned components व solder defects पकड़ता है। बाकी विकल्प (heating, reeling, paste बनाना) AOI का कार्य नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q21",
+      "question": "SMT का उपयोग करने पर PCB के दोनों तरफ mounting संभव होने से signal path पर क्या असर पड़ता है?",
+      "options": [
+        "signal path लंबे हो जाते हैं और speed घटती है",
+        "components पास-पास रहने से interconnection और signal path छोटे रहते हैं, जिससे performance बेहतर होती है",
+        "signal path का कोई महत्व नहीं",
+        "signals पूरी तरह रुक जाते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dense two-sided placement से components पास रहते हैं, interconnect track छोटे रहते हैं और signal delay/parasitics घटते हैं। Option A उल्टा है; C और D तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q22",
+      "question": "SMT के लिए component packaging सामान्यतः किस रूप में आती है ताकि machine feed हो सके?",
+      "options": [
+        "खुले डिब्बे में बिखरे हुए",
+        "tape and reel, tube या tray के रूप में",
+        "केवल कागज़ के लिफाफे में",
+        "मिट्टी के बर्तन में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pick-and-place feeding के लिए SMD components tape-and-reel, tube या tray में packaged आते हैं। बिखरे हुए घटक (A), कागज़ी लिफाफा (C) या मिट्टी का बर्तन (D) automatic feeding के लिए उपयुक्त नहीं।"
+    },
+    {
+      "id": "u5_smt_intro_q23",
+      "question": "SMT और THT को एक ही board पर मिलाकर उपयोग करने को क्या कहते हैं?",
+      "options": [
+        "Pure SMT assembly",
+        "Mixed technology (mixed assembly)",
+        "Wave-only assembly",
+        "No-solder assembly"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब एक board पर SMD और through-hole दोनों components होते हैं तो उसे mixed technology या mixed assembly कहते हैं। Pure SMT में केवल SMD होते हैं; बाकी विकल्प उपयुक्त नाम नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q24",
+      "question": "SMT boards में connectors या heavy components के लिए अक्सर THT का उपयोग क्यों किया जाता है?",
+      "options": [
+        "क्योंकि SMD joints उन्हें आसानी से लगाते हैं",
+        "क्योंकि through-hole leads अधिक mechanical strength देते हैं जो mechanical stress झेलने वाले भागों में जरूरी है",
+        "क्योंकि THT सस्ता ही एकमात्र कारण है",
+        "क्योंकि connectors solder नहीं होते"
+      ],
+      "correctIndex": 1,
+      "explanation": "Connectors और heavy parts पर plugging/mechanical stress पड़ता है, इसलिए through-hole leads की अधिक mechanical strength जरूरी होती है। Option A उल्टा है, C अधूरा/गलत कारण है, D तथ्यगत रूप से गलत है।"
+    },
+    {
+      "id": "u5_smt_intro_q25",
+      "question": "SMT में solder joint बनने पर 'self-alignment' effect का क्या अर्थ है?",
+      "options": [
+        "component अपने आप board से गिर जाता है",
+        "reflow के दौरान molten solder का surface tension component को pads पर सही स्थिति में खींच लेता है",
+        "component का rंग बदल जाता है",
+        "solder ठंडा नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reflow में molten solder के surface tension से component थोड़ा misaligned होने पर भी pads पर center हो जाता है — इसे self-alignment कहते हैं। बाकी विकल्प इस phenomenon की सही व्याख्या नहीं करते।"
+    },
+    {
+      "id": "u5_smt_intro_q26",
+      "question": "SMT assembly में एक बड़ा reliability लाभ क्या है?",
+      "options": [
+        "अधिक vibration से joints टूटते हैं",
+        "छोटे और हल्के components कम lead inductance और अच्छी shock/vibration resistance देते हैं",
+        "joints बिल्कुल नहीं बनते",
+        "board हमेशा गर्म रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हल्के, छोटे SMD components कम mass और कम lead inductance के कारण vibration/shock को बेहतर झेलते हैं, जिससे reliability बढ़ती है। Options A, C, D तथ्यगत रूप से गलत हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q27",
+      "question": "SMT boards की repair में through-hole की तुलना में मुख्य कठिनाई क्या है?",
+      "options": [
+        "components बहुत बड़े होने से handle नहीं होते",
+        "बहुत छोटे components और fine-pitch leads के कारण desoldering/resoldering में hot-air व microscope की जरूरत पड़ती है",
+        "solder बिल्कुल नहीं पिघलता",
+        "board को छूना मना है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD की छोटी body और fine pitch के कारण repair में hot-air rework station और magnification चाहिए, जो THT की तुलना में कठिन है। बाकी विकल्प असत्य हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q28",
+      "question": "एक ही function वाले circuit को SMT में बनाने पर THT की तुलना में board size पर क्या असर पड़ता है?",
+      "options": [
+        "board size बढ़ जाता है",
+        "board size काफी घट जाता है क्योंकि components छोटे और density अधिक होती है",
+        "board size बिल्कुल नहीं बदलता",
+        "board चौकोर से गोल हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMT में छोटे components और उच्च density के कारण समान function के लिए board size काफी घट जाता है। बाकी विकल्प (बढ़ना, न बदलना, आकार बदलना) गलत हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q29",
+      "question": "SMT में 'fine pitch' शब्द किससे संबंधित है?",
+      "options": [
+        "component के leads/pads के बीच बहुत कम दूरी (spacing)",
+        "PCB की मोटाई",
+        "solder का तापमान",
+        "board का रंग"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fine pitch का अर्थ है adjacent leads या pads के बीच बहुत कम दूरी (pitch), जो high-density IC packages में होता है। यह PCB मोटाई, solder तापमान या रंग से संबंधित नहीं है।"
+    },
+    {
+      "id": "u5_smt_intro_q30",
+      "question": "SMT को अपनाने से इलेक्ट्रॉनिक products की overall production efficiency पर क्या प्रभाव पड़ा?",
+      "options": [
+        "production धीमी और महंगी हो गई",
+        "automation, तेज़ placement और mass reflow से production तेज़, सस्ती और अधिक consistent हो गई",
+        "हर board हाथ से बनना जरूरी हो गया",
+        "products बड़े और भारी हो गए"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMT ने automation, high-speed placement और mass reflow soldering द्वारा production को तेज़, किफायती और consistent बनाया। बाकी विकल्प SMT के वास्तविक प्रभाव के उलट हैं।"
+    }
+  ]
+}

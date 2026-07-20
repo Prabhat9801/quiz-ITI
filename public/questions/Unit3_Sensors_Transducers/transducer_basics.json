@@ -1,0 +1,368 @@
+{
+  "unit": "unit3",
+  "unitName": "Sensors, Transducers and Applications",
+  "topic": "transducer_basics",
+  "topicName": "Transducer Basics - Active/Passive, Primary/Secondary & Characteristics",
+  "questions": [
+    {
+      "id": "u3_transducer_basics_q1",
+      "question": "एक Transducer का मूल कार्य क्या होता है?",
+      "options": [
+        "एक प्रकार की physical energy या signal को दूसरे प्रकार में convert करना",
+        "केवल AC voltage को DC voltage में बदलना",
+        "signal को बिना किसी बदलाव के आगे भेजना",
+        "electrical power को बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transducer वह device है जो एक physical quantity (जैसे temperature, pressure) को measurable दूसरे रूप (आमतौर पर electrical signal) में convert करता है। Option B केवल rectifier का कार्य है, C repeater/buffer है, और D amplifier का कार्य है — ये transducer की परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q2",
+      "question": "Active transducer और passive transducer में मुख्य अंतर क्या है?",
+      "options": [
+        "Active transducer तेज़ होता है जबकि passive धीमा",
+        "Active transducer स्वयं output energy generate करता है, passive को external excitation की आवश्यकता होती है",
+        "Active transducer केवल AC पर चलता है, passive केवल DC पर",
+        "दोनों में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Active (self-generating) transducer input energy से ही output electrical signal generate करता है और उसे external supply की जरूरत नहीं होती, जबकि passive transducer अपने parameter (R, L, C) में बदलाव दिखाता है जिसके लिए external excitation चाहिए। Option A और C गलत भेद हैं, और D परिभाषा के विपरीत है।"
+    },
+    {
+      "id": "u3_transducer_basics_q3",
+      "question": "निम्नलिखित में से कौन-सा एक active (self-generating) transducer है?",
+      "options": [
+        "Strain gauge",
+        "RTD (Resistance Temperature Detector)",
+        "Thermocouple",
+        "LVDT"
+      ],
+      "correctIndex": 2,
+      "explanation": "Thermocouple Seebeck effect से स्वयं EMF generate करता है, इसलिए यह active transducer है। Strain gauge और RTD अपनी resistance बदलते हैं तथा LVDT को AC excitation चाहिए — ये सभी passive transducer हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q4",
+      "question": "एक passive transducer किस सिद्धांत पर आधारित होता है?",
+      "options": [
+        "यह मापी जाने वाली quantity के अनुसार अपने R, L या C जैसे passive parameter को बदलता है",
+        "यह स्वयं voltage generate करता है",
+        "यह हमेशा light energy को electrical में बदलता है",
+        "यह किसी भी excitation के बिना काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Passive transducer measurand के अनुसार अपने resistance, inductance या capacitance में बदलाव करता है और इसे पढ़ने के लिए external excitation चाहिए। Option B active transducer का गुण है, C केवल photocell जैसे विशेष cases पर लागू होता है, और D passive की परिभाषा के विपरीत है।"
+    },
+    {
+      "id": "u3_transducer_basics_q5",
+      "question": "किसी transducer की sensitivity को कैसे परिभाषित किया जाता है?",
+      "options": [
+        "input की न्यूनतम value जिसे detect किया जा सके",
+        "output में परिवर्तन और input में परिवर्तन का अनुपात (change in output / change in input)",
+        "output की अधिकतम value",
+        "input और output के बीच का time delay"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sensitivity = output में बदलाव / input में बदलाव, अर्थात transducer input के प्रति कितना प्रतिक्रियाशील है। Option A resolution/threshold की ओर इशारा करता है, C full-scale range से जुड़ा है, और D response time है।"
+    },
+    {
+      "id": "u3_transducer_basics_q6",
+      "question": "Transducer की linearity characteristic किसे दर्शाती है?",
+      "options": [
+        "output कितनी तेज़ी से बदलता है",
+        "output कितनी बार दोहराया जा सकता है",
+        "input और output के बीच का संबंध एक सीधी रेखा (straight line) के कितना निकट है",
+        "device कितनी power खींचता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Linearity यह बताती है कि actual input-output curve एक ideal straight line के कितना करीब है; अधिक linearity माप को सरल बनाती है। Option A response/speed है, B repeatability है, और D power consumption है।"
+    },
+    {
+      "id": "u3_transducer_basics_q7",
+      "question": "किसी measuring transducer में accuracy शब्द का अर्थ क्या है?",
+      "options": [
+        "measured value का true (actual) value के कितना निकट होना",
+        "एक ही माप को बार-बार दोहराने की क्षमता",
+        "सबसे छोटा change जिसे पढ़ा जा सके",
+        "output का maximum मान"
+      ],
+      "correctIndex": 0,
+      "explanation": "Accuracy बताती है कि measured value वास्तविक (true) value के कितना पास है। Option B precision/repeatability है, C resolution है, और D full-scale है — इन्हें accuracy के साथ भ्रमित नहीं करना चाहिए।"
+    },
+    {
+      "id": "u3_transducer_basics_q8",
+      "question": "किसी transducer का resolution किसे कहते हैं?",
+      "options": [
+        "output signal की power",
+        "input में सबसे छोटा परिवर्तन जिसे transducer detect कर सके",
+        "true value से विचलन",
+        "input और output के बीच phase difference"
+      ],
+      "correctIndex": 1,
+      "explanation": "Resolution वह न्यूनतम input परिवर्तन है जिसे transducer स्पष्ट रूप से detect कर सके। Option A power है, C accuracy/error है, और D phase है — ये resolution की परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q9",
+      "question": "एक primary transducer (जैसे Bourdon tube) का कार्य क्या होता है?",
+      "options": [
+        "electrical output को display में बदलना",
+        "measurand को सीधे electrical signal में convert करना",
+        "measurand को पहले किसी mechanical या intermediate रूप में sense/convert करना",
+        "signal को amplify करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Primary transducer measurand को पहले sense करके एक intermediate (अक्सर mechanical) रूप में बदलता है, जैसे Bourdon tube pressure को displacement में। Option B secondary/complete conversion है, A display device है, और D amplifier है।"
+    },
+    {
+      "id": "u3_transducer_basics_q10",
+      "question": "Pressure माप की एक सामान्य व्यवस्था में Bourdon tube को primary और LVDT को secondary transducer माना जाता है क्योंकि—",
+      "options": [
+        "दोनों एक ही energy convert करते हैं",
+        "Bourdon tube pressure को displacement में और LVDT उस displacement को electrical signal में बदलता है",
+        "LVDT pressure को सीधे मापता है",
+        "Bourdon tube electrical output देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "यहाँ Bourdon tube (primary) pressure को mechanical displacement में बदलता है, और LVDT (secondary) उस displacement को उपयोगी electrical signal में। Option C और D गलत हैं क्योंकि Bourdon tube electrical output नहीं देता और LVDT सीधे pressure नहीं मापता; A भी गलत है।"
+    },
+    {
+      "id": "u3_transducer_basics_q11",
+      "question": "यदि किसी temperature transducer का output 0.5 V per °C बदलता है, तो इसकी sensitivity क्या है?",
+      "options": [
+        "0.5 V/°C",
+        "2 °C/V",
+        "0.5 °C/V",
+        "5 V/°C"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sensitivity = output change / input change = 0.5 V / 1 °C = 0.5 V/°C। Option B और C इकाई को उलट देते हैं, और D मान की गणना गलत है।"
+    },
+    {
+      "id": "u3_transducer_basics_q12",
+      "question": "एक transducer में hysteresis error का अर्थ क्या है?",
+      "options": [
+        "input बढ़ाने और घटाने पर एक ही input पर अलग-अलग output मिलना",
+        "output का शून्य होना",
+        "input के साथ output का बिल्कुल linear होना",
+        "power supply का उतार-चढ़ाव"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hysteresis में एक ही input value पर, बढ़ते और घटते क्रम में, output अलग-अलग मिलता है (loop बनती है)। Option C linearity है (opposite), B dead output है, और D supply variation से संबंधित है — ये hysteresis नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q13",
+      "question": "निम्नलिखित में से कौन-सा active transducer का उदाहरण है?",
+      "options": [
+        "Capacitive transducer",
+        "Piezoelectric crystal",
+        "Potentiometer",
+        "Thermistor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Piezoelectric crystal दबाव पड़ने पर स्वयं charge/voltage generate करता है, अतः यह active transducer है। Capacitive, potentiometer और thermistor सभी अपने passive parameter (C, R) बदलते हैं और external excitation चाहते हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q14",
+      "question": "किसी अच्छे transducer के लिए निम्न में से कौन-सी विशेषता वांछनीय है?",
+      "options": [
+        "कम sensitivity और अधिक hysteresis",
+        "अधिक linearity, अधिक accuracy और कम hysteresis",
+        "output का समय के साथ लगातार बदलते रहना (drift)",
+        "बहुत अधिक noise"
+      ],
+      "correctIndex": 1,
+      "explanation": "आदर्श transducer उच्च linearity, उच्च accuracy, अच्छी sensitivity तथा कम hysteresis/drift/noise रखता है। Option A, C और D अवांछनीय गुण हैं जो माप को खराब करते हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q15",
+      "question": "Photovoltaic cell (solar cell) किस श्रेणी का transducer है?",
+      "options": [
+        "Passive transducer",
+        "Active (self-generating) transducer",
+        "Secondary transducer",
+        "Digital transducer"
+      ],
+      "correctIndex": 1,
+      "explanation": "Photovoltaic cell light energy से स्वयं voltage generate करता है, इसलिए यह active/self-generating transducer है। इसे external excitation नहीं चाहिए, अतः यह passive नहीं है; C और D श्रेणियाँ इसकी energy-generation प्रकृति को नहीं दर्शातीं।"
+    },
+    {
+      "id": "u3_transducer_basics_q16",
+      "question": "किसी transducer में 'repeatability' किसे कहते हैं?",
+      "options": [
+        "समान परिस्थितियों में एक ही input पर बार-बार लगभग समान output देने की क्षमता",
+        "true value से अंतर",
+        "input की न्यूनतम पहचान योग्य value",
+        "output का अधिकतम मान"
+      ],
+      "correctIndex": 0,
+      "explanation": "Repeatability बताती है कि समान परिस्थितियों में transducer कितनी विश्वसनीयता से एक ही output दोहराता है। Option B accuracy है, C resolution/threshold है, और D full-scale है।"
+    },
+    {
+      "id": "u3_transducer_basics_q17",
+      "question": "एक transducer की range (span) से क्या तात्पर्य है?",
+      "options": [
+        "output की सबसे छोटी value",
+        "input की न्यूनतम और अधिकतम measurable values के बीच का अंतराल",
+        "true value से विचलन",
+        "power consumption"
+      ],
+      "correctIndex": 1,
+      "explanation": "Range/span वह minimum से maximum input मान का क्षेत्र है जिसे transducer सही ढंग से माप सकता है। Option A output value है, C error है, और D power है — ये range की परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q18",
+      "question": "किसी transducer के output में 'drift' किसे कहते हैं?",
+      "options": [
+        "input बदलने पर output का बदलना",
+        "constant input पर भी समय या temperature के साथ output का धीरे-धीरे बदल जाना",
+        "output का linear होना",
+        "output का शून्य होना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Drift वह अवांछित परिवर्तन है जिसमें input स्थिर रहने पर भी समय या temperature के कारण output बदलता है। Option A सामान्य कार्य है, C linearity है, और D dead output है।"
+    },
+    {
+      "id": "u3_transducer_basics_q19",
+      "question": "Piezoelectric transducer के self-generating होने का कारण क्या है?",
+      "options": [
+        "यह mechanical stress पड़ने पर स्वयं electric charge उत्पन्न करता है",
+        "इसमें battery लगी होती है",
+        "यह resistance बदलता है",
+        "यह capacitance बदलता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Piezoelectric material पर force/stress पड़ते ही उसके crystal में charge उत्पन्न होता है, इसलिए इसे external supply नहीं चाहिए। Option B गलत है (कोई battery नहीं), और C, D passive transducers के तरीके हैं, piezoelectric का नहीं।"
+    },
+    {
+      "id": "u3_transducer_basics_q20",
+      "question": "निम्न में से कौन-सा जोड़ा 'active transducer और उसका सिद्धांत' सही ढंग से मिलाता है?",
+      "options": [
+        "Strain gauge — Seebeck effect",
+        "Thermocouple — Seebeck effect",
+        "RTD — Piezoelectric effect",
+        "LVDT — Photovoltaic effect"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermocouple Seebeck effect पर आधारित active transducer है। Strain gauge resistance-based passive है (Seebeck नहीं), RTD temperature-resistance पर आधारित है (piezoelectric नहीं), और LVDT mutual inductance पर आधारित है (photovoltaic नहीं)।"
+    },
+    {
+      "id": "u3_transducer_basics_q21",
+      "question": "एक transducer का static error किसके बराबर होता है?",
+      "options": [
+        "measured value और true value के बीच का अंतर",
+        "output और power का गुणनफल",
+        "input और time का अनुपात",
+        "sensitivity और range का योग"
+      ],
+      "correctIndex": 0,
+      "explanation": "Static error = measured value − true value, जो accuracy से सीधे जुड़ा है। शेष विकल्प (B, C, D) कोई मान्य error परिभाषा नहीं देते और भ्रामक संयोजन हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q22",
+      "question": "किसी pressure transducer की span 20 kPa से 120 kPa है। इसका span (range) कितना है?",
+      "options": [
+        "120 kPa",
+        "20 kPa",
+        "100 kPa",
+        "140 kPa"
+      ],
+      "correctIndex": 2,
+      "explanation": "Span = अधिकतम − न्यूनतम = 120 − 20 = 100 kPa। Option A केवल upper limit है, B lower limit है, और D दोनों का योग है — ये span नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q23",
+      "question": "किसी transducer में threshold किसे कहते हैं?",
+      "options": [
+        "true value से विचलन",
+        "शून्य input से शुरू करते हुए वह न्यूनतम input जिस पर detectable output मिलता है",
+        "output का अधिकतम मान",
+        "output का phase"
+      ],
+      "correctIndex": 1,
+      "explanation": "Threshold वह न्यूनतम input है, जो शून्य से बढ़ाते हुए, पहली बार measurable output उत्पन्न करता है। Option A accuracy से जुड़ा है, C full-scale है, और D phase है — ये threshold नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_transducer_basics_q24",
+      "question": "'Precision' और 'accuracy' में मूल अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल समान अर्थ रखते हैं",
+        "Accuracy true value से निकटता है, जबकि precision बार-बार लिए गए मापों के आपस में निकट होने (repeatability) से संबंधित है",
+        "Precision true value से निकटता है और accuracy repeatability",
+        "दोनों केवल digital devices पर लागू होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Accuracy बताती है कि माप true value के कितने पास है, जबकि precision यह कि बार-बार लिए माप आपस में कितने निकट हैं। Option C इन दोनों को उलट देता है, A उन्हें समान मान लेता है, और D गलत सीमा लगाता है।"
+    },
+    {
+      "id": "u3_transducer_basics_q25",
+      "question": "निम्न में से कौन-सा passive transducer light intensity मापने के लिए प्रयोग होता है?",
+      "options": [
+        "Thermocouple",
+        "Photovoltaic cell",
+        "LDR (Light Dependent Resistor)",
+        "Piezoelectric crystal"
+      ],
+      "correctIndex": 2,
+      "explanation": "LDR light intensity बढ़ने पर अपनी resistance घटाता है, अतः यह passive (parameter-changing) transducer है। Thermocouple और piezoelectric self-generating हैं, और photovoltaic cell active (voltage generate करता है) है।"
+    },
+    {
+      "id": "u3_transducer_basics_q26",
+      "question": "किसी transducer का output impedance अधिक होने का क्या नुकसान है?",
+      "options": [
+        "signal तेज़ हो जाता है",
+        "जब load जोड़ा जाता है तो loading effect के कारण output signal कमजोर/विकृत हो सकता है",
+        "sensitivity शून्य हो जाती है",
+        "यह हमेशा accuracy बढ़ाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "उच्च output impedance पर low-impedance load जोड़ने से loading effect होता है और output voltage गिर/विकृत हो जाता है। Option A, C और D गलत हैं क्योंकि यह न तो signal तेज़ करता है, न sensitivity शून्य करता है, न accuracy बढ़ाता है।"
+    },
+    {
+      "id": "u3_transducer_basics_q27",
+      "question": "किसी transducer को 'inverse transducer' कहते हैं जब वह—",
+      "options": [
+        "electrical quantity को non-electrical (physical) quantity में बदलता है",
+        "physical quantity को electrical में बदलता है",
+        "केवल AC को DC में बदलता है",
+        "signal को amplify करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inverse transducer electrical signal को किसी physical output (जैसे displacement, sound) में बदलता है, उदा. piezoelectric actuator या loudspeaker। Option B सामान्य transducer है, C rectifier है, और D amplifier है।"
+    },
+    {
+      "id": "u3_transducer_basics_q28",
+      "question": "एक transducer का output 4 mV/°C है और तापमान 10 °C बढ़ता है, तो output में कितना परिवर्तन होगा?",
+      "options": [
+        "0.4 mV",
+        "4 mV",
+        "40 mV",
+        "400 mV"
+      ],
+      "correctIndex": 2,
+      "explanation": "Output change = sensitivity × input change = 4 mV/°C × 10 °C = 40 mV। Option A और B गणना में भाग/एकल मान की गलती हैं, और D परिमाण दस गुना अधिक है।"
+    },
+    {
+      "id": "u3_transducer_basics_q29",
+      "question": "'Sensor' और 'transducer' शब्दों के संदर्भ में सबसे सही कथन कौन-सा है?",
+      "options": [
+        "Sensor केवल measurand को sense करता है, जबकि transducer उसे किसी अन्य (आमतौर पर electrical) रूप में convert भी करता है",
+        "दोनों में कोई संबंध नहीं है",
+        "Transducer केवल sense करता है, convert नहीं",
+        "Sensor हमेशा output को amplify करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sensor measurand का पता लगाता है, जबकि transducer उसे sense करके एक उपयोगी (प्रायः electrical) रूप में बदल देता है; अक्सर व्यवहार में इन्हें एक साथ प्रयोग किया जाता है। Option C भूमिकाएँ उलटता है, B और D गलत हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q30",
+      "question": "किसी transducer की dynamic characteristic किससे संबंधित है?",
+      "options": [
+        "स्थिर (steady) input पर व्यवहार",
+        "तेज़ी से बदलते (time-varying) input के प्रति response, जैसे speed of response और dynamic error",
+        "केवल उसके physical आकार से",
+        "उसके रंग से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dynamic characteristics समय के साथ बदलते input के प्रति transducer के response (जैसे response time, dynamic error, bandwidth) को दर्शाती हैं। Option A static characteristic है, और C, D माप गुणों से असंबंधित हैं।"
+    }
+  ]
+}

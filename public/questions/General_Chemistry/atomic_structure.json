@@ -1,0 +1,218 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "atomic_structure",
+  "topicName": "Atomic Structure",
+  "questions": [
+    {
+      "id": "chem_atomic_structure_q1",
+      "question": "एक atom में किस particle पर धनात्मक (positive) charge होता है?",
+      "options": ["Electron", "Proton", "Neutron", "Photon"],
+      "correctIndex": 1,
+      "explanation": "Proton पर +1 धनात्मक charge होता है और यह nucleus में रहता है। Electron पर ऋणात्मक charge, Neutron उदासीन होता है, और Photon एक ऊर्जा कण है, atom का मूल कण नहीं।"
+    },
+    {
+      "id": "chem_atomic_structure_q2",
+      "question": "किसी element का atomic number किसके बराबर होता है?",
+      "options": ["Neutrons की संख्या", "Protons की संख्या", "Protons और neutrons का योग", "Electrons और neutrons का योग"],
+      "correctIndex": 1,
+      "explanation": "Atomic number (Z) nucleus में protons की संख्या के बराबर होता है और उदासीन atom में यह electrons के बराबर भी होता है। Protons+neutrons का योग mass number होता है, केवल neutrons या अन्य योग atomic number नहीं दर्शाते।"
+    },
+    {
+      "id": "chem_atomic_structure_q3",
+      "question": "किसी atom का mass number किसका योग होता है?",
+      "options": ["Protons और electrons", "Protons और neutrons", "केवल neutrons", "Electrons और neutrons"],
+      "correctIndex": 1,
+      "explanation": "Mass number (A) = protons + neutrons, क्योंकि atom का लगभग पूरा द्रव्यमान nucleus में इन्हीं दो कणों में होता है। Electrons का द्रव्यमान नगण्य होने से उन्हें नहीं गिना जाता।"
+    },
+    {
+      "id": "chem_atomic_structure_q4",
+      "question": "एक atom में 11 protons और 12 neutrons हैं, तो इसका mass number कितना है?",
+      "options": ["11", "12", "23", "1"],
+      "correctIndex": 2,
+      "explanation": "Mass number = protons + neutrons = 11 + 12 = 23, यह Sodium (Na) है। 11 केवल atomic number है, 12 केवल neutrons और 1 दोनों का अंतर है।"
+    },
+    {
+      "id": "chem_atomic_structure_q5",
+      "question": "किसी shell में अधिकतम electrons की संख्या 2n2 सूत्र से मिलती है। दूसरे (L) shell में अधिकतम कितने electrons रह सकते हैं?",
+      "options": ["2", "8", "18", "32"],
+      "correctIndex": 1,
+      "explanation": "L shell के लिए n=2, इसलिए 2n2 = 2×4 = 8 electrons। 2 पहले (K) shell के लिए, 18 तीसरे (M) और 32 चौथे (N) shell के लिए होते हैं।"
+    },
+    {
+      "id": "chem_atomic_structure_q6",
+      "question": "उदासीन (neutral) atom में protons और electrons की संख्या का क्या संबंध होता है?",
+      "options": ["Protons > electrons", "Protons = electrons", "Protons < electrons", "कोई निश्चित संबंध नहीं"],
+      "correctIndex": 1,
+      "explanation": "उदासीन atom में धनात्मक protons और ऋणात्मक electrons की संख्या बराबर होती है जिससे कुल charge शून्य रहता है। असमान होने पर वह ion बन जाता है, atom नहीं।"
+    },
+    {
+      "id": "chem_atomic_structure_q7",
+      "question": "समान atomic number पर भिन्न mass number वाले atoms को क्या कहते हैं?",
+      "options": ["Isobars", "Isotopes", "Isomers", "Isotones"],
+      "correctIndex": 1,
+      "explanation": "Isotopes में protons समान पर neutrons भिन्न होने से mass number अलग होता है, जैसे Cl-35 और Cl-37। Isobars में mass समान, Isotones में neutrons समान, और Isomers रासायनिक संरचना से जुड़ा शब्द है।"
+    },
+    {
+      "id": "chem_atomic_structure_q8",
+      "question": "Magnesium (Mg) का atomic number 12 है। इसका सही electronic configuration क्या होगा?",
+      "options": ["2, 8, 2", "2, 8, 8", "2, 10", "8, 2, 2"],
+      "correctIndex": 0,
+      "explanation": "12 electrons को क्रम से भरने पर K=2, L=8, M=2 अर्थात 2,8,2 विन्यास बनता है। 2,8,8 में 18 electrons, 2,10 shell सीमा का उल्लंघन और 8,2,2 गलत भरण क्रम है।"
+    },
+    {
+      "id": "chem_atomic_structure_q9",
+      "question": "किसी atom की valency मुख्यतः किससे निर्धारित होती है?",
+      "options": ["nucleus के protons से", "सबसे बाहरी shell के valence electrons से", "neutrons की संख्या से", "कुल electrons की संख्या से"],
+      "correctIndex": 1,
+      "explanation": "Valency सबसे बाहरी shell (valence shell) के electrons पर निर्भर करती है क्योंकि यही bonding में भाग लेते हैं। Protons, neutrons या कुल electrons सीधे valency तय नहीं करते।"
+    },
+    {
+      "id": "chem_atomic_structure_q10",
+      "question": "Oxygen का atomic number 8 है, इसकी valency कितनी होगी?",
+      "options": ["8", "6", "2", "4"],
+      "correctIndex": 2,
+      "explanation": "Oxygen का विन्यास 2,6 है; बाहरी shell में 6 electrons होने से इसे octet पूरा करने हेतु 2 electrons चाहिए, इसलिए valency 2 है। 8 और 6 विन्यास संख्याएँ हैं, 4 गलत है।"
+    },
+    {
+      "id": "chem_atomic_structure_q11",
+      "question": "electron की खोज किस वैज्ञानिक से जुड़ी है?",
+      "options": ["Rutherford", "J.J. Thomson", "Chadwick", "Bohr"],
+      "correctIndex": 1,
+      "explanation": "Electron की खोज J.J. Thomson ने cathode ray experiment से की। Rutherford ने nucleus, Chadwick ने neutron खोजा, और Bohr ने shells/orbits का model दिया।"
+    },
+    {
+      "id": "chem_atomic_structure_q12",
+      "question": "किसी atom के nucleus में मुख्यतः कौन-कौन से कण होते हैं?",
+      "options": ["Protons और electrons", "Protons और neutrons", "केवल electrons", "Neutrons और electrons"],
+      "correctIndex": 1,
+      "explanation": "Nucleus में protons और neutrons (सामूहिक रूप से nucleons) होते हैं जिनमें atom का लगभग पूरा द्रव्यमान होता है। Electrons nucleus के चारों ओर shells में घूमते हैं।"
+    },
+    {
+      "id": "chem_atomic_structure_q13",
+      "question": "एक Cl atom का mass number 35 और atomic number 17 है। इसमें neutrons की संख्या कितनी है?",
+      "options": ["17", "35", "18", "52"],
+      "correctIndex": 2,
+      "explanation": "Neutrons = mass number − atomic number = 35 − 17 = 18। 17 protons की संख्या है, 35 mass number और 52 दोनों का योग जो गलत है।"
+    },
+    {
+      "id": "chem_atomic_structure_q14",
+      "question": "sabse भीतरी shell जिसे K shell कहते हैं, उसमें अधिकतम कितने electrons रह सकते हैं?",
+      "options": ["2", "8", "18", "1"],
+      "correctIndex": 0,
+      "explanation": "K shell के लिए n=1, 2n2 = 2×1 = 2 electrons अधिकतम रह सकते हैं। 8 L shell के लिए, 18 M shell के लिए और 1 केवल Hydrogen का electron है।"
+    },
+    {
+      "id": "chem_atomic_structure_q15",
+      "question": "Hydrogen के तीन isotopes protium, deuterium और tritium में क्या समान रहता है?",
+      "options": ["neutrons की संख्या", "protons की संख्या", "mass number", "nucleons की संख्या"],
+      "correctIndex": 1,
+      "explanation": "सभी isotopes में protons की संख्या (atomic number) समान रहती है, यहाँ 1। Neutrons और इससे mass number तथा nucleons की संख्या इन isotopes में भिन्न होती है।"
+    },
+    {
+      "id": "chem_atomic_structure_q16",
+      "question": "किसी atom का लगभग पूरा द्रव्यमान कहाँ केंद्रित होता है?",
+      "options": ["shells में घूमते electrons में", "nucleus में", "atom की सतह पर", "electrons और nucleus में बराबर"],
+      "correctIndex": 1,
+      "explanation": "Protons और neutrons nucleus में होते हैं और इन्हीं का द्रव्यमान लगभग पूरा atomic mass बनाता है। Electrons का द्रव्यमान नगण्य होने से atom का mass केंद्र nucleus है।"
+    },
+    {
+      "id": "chem_atomic_structure_q17",
+      "question": "किसी element X का electronic configuration 2, 8, 1 है। यह किस group व्यवहार वाला element है?",
+      "options": ["Noble gas (निष्क्रिय)", "एक valence electron वाला अत्यधिक क्रियाशील धातु", "चार valence electrons वाला", "सात valence electrons वाला अधातु"],
+      "correctIndex": 1,
+      "explanation": "2,8,1 विन्यास में बाहरी shell में केवल 1 electron है (यह Sodium है), जो आसानी से खोकर cation बनाता है, इसलिए यह क्रियाशील धातु है। शेष विकल्प भिन्न valence संख्या वाले elements दर्शाते हैं।"
+    },
+    {
+      "id": "chem_atomic_structure_q18",
+      "question": "neutron की खोज किसने की थी?",
+      "options": ["J.J. Thomson", "James Chadwick", "Niels Bohr", "Dalton"],
+      "correctIndex": 1,
+      "explanation": "James Chadwick ने 1932 में उदासीन कण neutron की खोज की। Thomson ने electron, Bohr ने orbit model और Dalton ने प्रारंभिक atomic theory दी।"
+    },
+    {
+      "id": "chem_atomic_structure_q19",
+      "question": "जिन atoms में valence shell पूरी तरह भरी होती है (जैसे Neon 2,8), वे रासायनिक रूप से कैसे होते हैं?",
+      "options": ["अत्यधिक क्रियाशील", "लगभग निष्क्रिय (stable)", "केवल धातुओं से react करते हैं", "आसानी से electron खोते हैं"],
+      "correctIndex": 1,
+      "explanation": "पूरी valence shell (octet) होने से noble gases जैसे Neon स्थिर और लगभग निष्क्रिय होते हैं और bond बनाने की प्रवृत्ति नहीं रखते। इसलिए वे न आसानी से electron खोते हैं न लेते हैं।"
+    },
+    {
+      "id": "chem_atomic_structure_q20",
+      "question": "Aluminium (Al) का atomic number 13 है, इसकी सामान्य valency कितनी है?",
+      "options": ["1", "2", "3", "5"],
+      "correctIndex": 2,
+      "explanation": "Al का विन्यास 2,8,3 है; बाहरी shell के 3 electrons खोकर यह Al3+ बनाता है, इसलिए valency 3 है। 1, 2 या 5 इसके valence electrons से मेल नहीं खाते।"
+    },
+    {
+      "id": "chem_atomic_structure_q21",
+      "question": "electron पर कितना charge होता है?",
+      "options": ["+1 इकाई", "−1 इकाई", "शून्य", "+2 इकाई"],
+      "correctIndex": 1,
+      "explanation": "Electron पर एक इकाई ऋणात्मक (−1) charge होता है। +1 charge proton पर, शून्य charge neutron पर होता है, और +2 किसी मूल कण का charge नहीं है।"
+    },
+    {
+      "id": "chem_atomic_structure_q22",
+      "question": "किसी atom में shells भरने का सही क्रम क्या है?",
+      "options": ["पहले बाहरी shell फिर भीतरी", "पहले भीतरी (K) shell फिर बाहर की ओर", "किसी भी क्रम में", "केवल valence shell भरती है"],
+      "correctIndex": 1,
+      "explanation": "Electrons पहले न्यूनतम ऊर्जा वाली भीतरी K shell भरते हैं फिर बाहर की ओर L, M क्रम में, यही Aufbau सिद्धांत का आधार है। बाहर से या किसी भी क्रम में भरना गलत है।"
+    },
+    {
+      "id": "chem_atomic_structure_q23",
+      "question": "दो atoms X (mass 40, Z=20) और Y (mass 40, Z=18) आपस में क्या कहलाते हैं?",
+      "options": ["Isotopes", "Isobars", "Isotones", "समान element"],
+      "correctIndex": 1,
+      "explanation": "Isobars वे होते हैं जिनका mass number समान (यहाँ 40) पर atomic number भिन्न होता है। Isotopes में Z समान होता, isotones में neutrons समान, और भिन्न Z होने से ये समान element नहीं हैं।"
+    },
+    {
+      "id": "chem_atomic_structure_q24",
+      "question": "Chlorine (Z=17) का electronic configuration क्या है?",
+      "options": ["2, 8, 7", "2, 7, 8", "2, 8, 8, 1", "8, 8, 1"],
+      "correctIndex": 0,
+      "explanation": "17 electrons भरने पर K=2, L=8, M=7 अर्थात 2,8,7 बनता है और बाहरी 7 electrons इसे क्रियाशील बनाते हैं। शेष विकल्प गलत भरण क्रम या गलत कुल संख्या दर्शाते हैं।"
+    },
+    {
+      "id": "chem_atomic_structure_q25",
+      "question": "किसी atom का आकार (radius) मुख्यतः किससे निर्धारित होता है?",
+      "options": ["nucleus के व्यास से", "सबसे बाहरी electron shell तक की दूरी से", "neutrons की संख्या से", "protons के charge से केवल"],
+      "correctIndex": 1,
+      "explanation": "Atomic radius nucleus से सबसे बाहरी shell तक की दूरी होती है, इसलिए बाहरी electrons का स्थान आकार तय करता है। Nucleus अत्यंत छोटा है और अकेला neutrons या charge आकार नहीं मापता।"
+    },
+    {
+      "id": "chem_atomic_structure_q26",
+      "question": "octet rule के अनुसार अधिकांश atoms स्थिरता प्राप्त करने के लिए बाहरी shell में कितने electrons चाहते हैं?",
+      "options": ["2", "6", "8", "18"],
+      "correctIndex": 2,
+      "explanation": "Octet rule के अनुसार atoms अपनी valence shell में 8 electrons पूरे करके noble gas जैसी स्थिरता पाना चाहते हैं। 2 केवल duplet (जैसे He) पर लागू होता, 6 अस्थिर और 18 shell सीमा है।"
+    },
+    {
+      "id": "chem_atomic_structure_q27",
+      "question": "Calcium (Z=20) एक धातु है। bond बनाते समय यह क्या करता है?",
+      "options": ["2 electrons ग्रहण करता है", "2 electrons खोकर Ca2+ बनाता है", "8 electrons ग्रहण करता है", "कोई परिवर्तन नहीं करता"],
+      "correctIndex": 1,
+      "explanation": "Ca का विन्यास 2,8,8,2 है; बाहरी 2 electrons खोकर यह Ca2+ बनकर octet पूरा करता है, इसलिए यह धनायन बनाता है। Electrons ग्रहण करना अधातुओं का गुण है और निष्क्रिय रहना Ca पर लागू नहीं।"
+    },
+    {
+      "id": "chem_atomic_structure_q28",
+      "question": "किसी element के isotopes के रासायनिक गुण लगभग समान क्यों होते हैं?",
+      "options": ["उनके neutrons समान होते हैं", "उनके valence electrons और atomic number समान होते हैं", "उनका mass number समान होता है", "उनका आकार भिन्न होता है"],
+      "correctIndex": 1,
+      "explanation": "Isotopes का atomic number और इसलिए electronic configuration व valence electrons समान होते हैं, जो रासायनिक गुण तय करते हैं। Neutrons व mass number भिन्न होने से केवल भौतिक गुण थोड़े बदलते हैं।"
+    },
+    {
+      "id": "chem_atomic_structure_q29",
+      "question": "Nitrogen (Z=7) की valency कितनी होती है?",
+      "options": ["2", "3", "5", "7"],
+      "correctIndex": 1,
+      "explanation": "N का विन्यास 2,5 है; बाहरी shell में 5 electrons होने से octet पूरा करने हेतु इसे 3 electrons चाहिए, इसलिए valency 3 है। 7 कुल electrons है और 5 valence electrons की संख्या, valency नहीं।"
+    },
+    {
+      "id": "chem_atomic_structure_q30",
+      "question": "एक ion X2+ में 10 electrons और 12 protons हैं। इसके उदासीन atom का atomic number कितना है?",
+      "options": ["10", "8", "12", "22"],
+      "correctIndex": 2,
+      "explanation": "Atomic number protons की संख्या से तय होता है जो 12 है (यह Mg है), भले ही ion बनने से 2 electrons कम हों। 10 electrons की संख्या है और 22, 8 गलत योग/अंतर हैं।"
+    }
+  ]
+}

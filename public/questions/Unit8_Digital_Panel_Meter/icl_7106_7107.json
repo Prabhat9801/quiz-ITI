@@ -1,0 +1,368 @@
+{
+  "unit": "unit8",
+  "unitName": "Digital Panel Meter",
+  "topic": "icl_7106_7107",
+  "topicName": "ICL 7106 & ICL 7107 - Dual Slope ADC & 3.5 Digit Display",
+  "questions": [
+    {
+      "id": "u8_icl_7106_7107_q1",
+      "question": "ICL7106 और ICL7107 दोनों ICs मूलतः किस प्रकार की A/D conversion technique पर आधारित हैं?",
+      "options": [
+        "Dual slope (dual ramp) integration technique",
+        "Successive approximation technique",
+        "Flash (parallel comparator) technique",
+        "Sigma-delta (charge balancing) technique"
+      ],
+      "correctIndex": 0,
+      "explanation": "ICL7106 और ICL7107 दोनों dual slope (dual ramp) integration technique पर आधारित A/D converters हैं, जिसमें input को एक fixed समय तक integrate करके फिर known reference voltage को विपरीत दिशा में integrate किया जाता है और समय मापा जाता है (Option A सही)। Successive approximation (B) एक register-based binary search technique है, flash conversion (C) parallel comparators उपयोग करता है, और sigma-delta (D) oversampling व noise-shaping पर आधारित है — इनमें से कोई भी इन ICs में उपयोग नहीं होता।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q2",
+      "question": "ICL7106/7107 के conversion cycle का सबसे पहला phase कौन-सा होता है?",
+      "options": [
+        "Signal integrate phase",
+        "Auto-zero (AZ) phase",
+        "De-integrate (reference integrate) phase",
+        "Display latch update phase"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक conversion cycle सबसे पहले auto-zero (AZ) phase से शुरू होता है, जिसमें input को internally disconnect करके buffer, integrator व comparator के offset voltages को null किया जाता है (Option B सही)। Signal integrate (A) इसके बाद आता है, de-integrate (C) उसके बाद, और display latch update (D) पूरा cycle खत्म होने पर होता है — ये पहला phase नहीं हैं।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q3",
+      "question": "Signal integrate phase के दौरान integrator पर क्या किया जाता है?",
+      "options": [
+        "ज्ञात reference voltage को विपरीत polarity में integrate किया जाता है",
+        "Auto-zero capacitor के voltage को integrate किया जाता है",
+        "Unknown analog input voltage (Vin) को एक fixed संख्या के clock pulses (जैसे 1000 counts) तक integrate किया जाता है",
+        "केवल ground (0V) potential को integrate किया जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Signal integrate phase में unknown analog input voltage (Vin) को एक निश्चित (fixed) समय अर्थात fixed संख्या के clock pulses (जैसे 1000 counts) तक integrator पर लगाया जाता है, जिससे integrator output की ढाल (slope) Vin के अनुपात में बनती है (Option C सही)। Reference को विपरीत polarity में integrate करना (A) तो de-integrate phase में होता है, auto-zero capacitor का voltage (B) auto-zero phase से संबंधित है, और केवल ground potential (D) कोई useful integration नहीं देगा।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q4",
+      "question": "De-integrate (reference integrate) phase किस स्थिति में समाप्त होता है?",
+      "options": [
+        "हमेशा एक fixed संख्या के clock pulses के बाद ही, चाहे कुछ भी हो",
+        "जब input voltage तुरंत zero हो जाए",
+        "जब TEST pin activate किया जाए",
+        "जब comparator detect करता है कि integrator output वापस zero crossing पर पहुँच गया है"
+      ],
+      "correctIndex": 3,
+      "explanation": "De-integrate phase में known reference voltage को विपरीत polarity में integrate किया जाता है जब तक integrator output वापस शून्य (zero crossing) तक नहीं पहुँच जाता; comparator इस zero-crossing को detect करके counting रोक देता है, और तब तक गिने गए pulses ही reading बनते हैं (Option D सही)। यह किसी fixed संख्या के pulses (A) पर निर्भर नहीं है (यह variable होता है), input voltage स्वयं zero होने (B) से इसका सीधा संबंध नहीं, और TEST pin (C) का de-integrate समाप्ति से कोई लेना-देना नहीं।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q5",
+      "question": "De-integrate phase के दौरान गिने गए clock pulses की संख्या क्या represent करती है?",
+      "options": [
+        "Input signal के परिमाण के अनुपात में display की digital reading (count)",
+        "केवल oscillator की stability",
+        "Auto-zero capacitor का leakage",
+        "Supply voltage का ripple मात्र"
+      ],
+      "correctIndex": 0,
+      "explanation": "De-integrate phase में गिने गए clock pulses की संख्या सीधे input signal के परिमाण (magnitude) के अनुपात में होती है और यही digital count display पर दिखाई गई reading बनाती है (Option A सही)। यह गिनती oscillator की stability (B) को दर्शाने के लिए नहीं है (हालांकि clock एक ही cycle में stable रहना चाहिए), और यह auto-zero capacitor leakage (C) या supply ripple (D) को measure नहीं करती।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q6",
+      "question": "3.5 digit digital panel meter की अधिकतम (maximum) count/reading कितनी होती है?",
+      "options": [
+        "999",
+        "1999",
+        "2999",
+        "9999"
+      ],
+      "correctIndex": 1,
+      "explanation": "3.5 digit display में तीन पूरे digits (0-9) और एक half digit (केवल 0 या 1) होता है, इसलिए अधिकतम count 1999 होता है (Option B सही)। 999 (A) केवल 3 पूरे digits जितना है, जबकि 2999 (C) और 9999 (D) तब संभव होते जब half digit भी 0-9 तक जा सकता या पूरा चौथा digit होता — जो 3.5 digit display में नहीं होता।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q7",
+      "question": "3.5 digit display में 'half digit' की क्या सीमा (limitation) होती है?",
+      "options": [
+        "यह 0 से 9 तक पूरा अंक दिखा सकता है",
+        "यह केवल decimal point को control करता है",
+        "यह केवल blank अथवा '1' दिखा सकता है",
+        "यह polarity sign दिखाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Half digit की display क्षमता सीमित होती है — यह केवल blank (कुछ न दिखाना) अथवा '1' दिखा सकता है, इसी वजह से अधिकतम reading 1999 तक सीमित रहती है (Option C सही)। यह 0-9 तक पूरा अंक (A) नहीं दिखा सकता (वह पूर्ण digit की विशेषता है), यह decimal point control (B) नहीं करता, और polarity sign (D) अलग indicator/digit से आता है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q8",
+      "question": "ICL7106 और ICL7107 के बीच सबसे प्रमुख structural अंतर क्या है?",
+      "options": [
+        "दोनों केवल successive approximation technique उपयोग करते हैं",
+        "ICL7106 में कोई display driver circuitry नहीं होती",
+        "दोनों में कोई तकनीकी अंतर नहीं होता",
+        "ICL7106 LCD display को सीधे drive करता है जबकि ICL7107 LED display को सीधे drive करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "ICL7106 का output stage LCD को सीधे drive करने के लिए design किया गया है (backplane drive सहित), जबकि ICL7107 का output stage LED segments को सीधे drive करने योग्य current देता है — यही इनका मुख्य structural अंतर है (Option D सही)। दोनों dual slope technique उपयोग करते हैं, successive approximation नहीं (A); दोनों में ही display driver circuitry मौजूद है (B गलत); और स्पष्ट रूप से एक महत्वपूर्ण तकनीकी अंतर है (C गलत)।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q9",
+      "question": "ICL7106 का उपयोग battery-operated portable digital multimeters में अधिक क्यों किया जाता है?",
+      "options": [
+        "क्योंकि LCD drive करने में इसकी power consumption बहुत कम (कुछ mW स्तर) होती है",
+        "क्योंकि इसकी accuracy ICL7107 से कहीं अधिक होती है",
+        "क्योंकि इसमें अलग IC package की आवश्यकता नहीं पड़ती",
+        "क्योंकि यह केवल AC signals को measure कर सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCD को drive करने में लगभग कोई current नहीं लगता (यह voltage-controlled device है), इसलिए ICL7106+LCD combination की power consumption बहुत कम (कुछ mW) रहती है, जो battery-operated portable multimeters के लिए आदर्श है (Option A सही)। दोनों ICs की core accuracy लगभग समान dual-slope architecture पर आधारित है (B गलत), IC package तो फिर भी required है (C गलत), और यह मुख्यतः DC signals measure करता है, केवल AC नहीं (D गलत)।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q10",
+      "question": "ICL7107, ICL7106 की तुलना में higher power क्यों dissipate करता है?",
+      "options": [
+        "क्योंकि इसकी clock frequency ICL7106 से बहुत अधिक रखी जाती है",
+        "क्योंकि यह LED segments को सीधे drive करने के लिए अपेक्षाकृत अधिक current sink/source करता है",
+        "क्योंकि इसमें auto-zero feature उपलब्ध नहीं होता",
+        "क्योंकि यह dual slope की जगह flash conversion technique उपयोग करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "LED segments को पर्याप्त brightness से जलाने के लिए प्रत्येक segment को कई mA current चाहिए, और ICL7107 यह current सीधे source/sink करता है, जिससे इसकी power dissipation ICL7106 (LCD driver) से अधिक होती है (Option B सही)। क्लॉक frequency दोनों में समान range में रखी जा सकती है (A गलत), दोनों में auto-zero feature मौजूद है (C गलत), और दोनों ही dual slope technique उपयोग करते हैं, flash नहीं (D गलत)।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q11",
+      "question": "LCD को damage-free drive करने के लिए ICL7106 में कौन-सा विशेष signal/pin आवश्यक होता है, जो ICL7107 में इस प्रयोजन के लिए उपयोग नहीं होता?",
+      "options": [
+        "TEST pin",
+        "POL pin",
+        "Backplane (BP) square wave drive signal",
+        "OSC1 pin"
+      ],
+      "correctIndex": 2,
+      "explanation": "LCD को damage-free drive करने के लिए ICL7106 में backplane (BP) नामक एक square wave signal pin दिया गया है, जिसके सापेक्ष segment outputs को phase में या out of phase में drive किया जाता है (Option C सही)। TEST pin (A) display test के लिए है, POL pin (B) polarity indication देता है, और OSC1 (D) clock oscillator से संबंधित है — ये LCD backplane drive के लिए नहीं हैं और ICL7107 में भी मौजूद रहते हैं।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q12",
+      "question": "LCD के segment output को BP (backplane) signal के सापेक्ष किस प्रकार drive किया जाता है ताकि वह segment ON दिखे?",
+      "options": [
+        "Segment output को BP के same phase में रखा जाता है ताकि net voltage zero रहे",
+        "Segment को हमेशा DC HIGH स्तर पर रखा जाता है",
+        "Segment को permanently floating रखा जाता है",
+        "Segment output को BP के विपरीत phase (out of phase) में drive किया जाता है ताकि net AC voltage बने"
+      ],
+      "correctIndex": 3,
+      "explanation": "किसी segment को ON दिखाने के लिए उसका output signal BP से out of phase (विपरीत phase) में drive किया जाता है, जिससे segment और backplane के बीच net AC voltage बनता है और LCD का वह भाग activate होता है (Option D सही)। Same phase (A) में रखने पर net voltage zero रहता है यानी segment OFF रहता है, DC HIGH (B) LCD को नुकसान पहुँचाएगा, और permanently floating (C) रखने पर कोई नियंत्रण संभव नहीं होगा।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q13",
+      "question": "LCD के segments को कभी भी pure DC voltage से क्यों नहीं चलाया जाता?",
+      "options": [
+        "क्योंकि DC bias LCD में electrochemical (electrolysis जैसा) damage करके उसका जीवनकाल घटा देता है",
+        "क्योंकि DC voltage से LCD का contrast बहुत बढ़ जाता है",
+        "क्योंकि DC voltage से display की brightness बढ़ जाती है",
+        "क्योंकि DC voltage से auto-zero feature खराब हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि LCD के segments पर लगातार DC voltage लगाया जाए तो उसमें electrochemical/electrolysis जैसी प्रक्रिया होकर liquid crystal material और electrodes को स्थायी नुकसान होता है और उसका जीवनकाल घट जाता है, इसीलिए हमेशा AC (square wave) drive उपयोग होता है (Option A सही)। DC से contrast (B) या brightness (C) बढ़ने का कोई तकनीकी आधार नहीं है, और इसका auto-zero feature (D) से भी कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q14",
+      "question": "Auto-zero (AZ) phase का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Reference voltage को measure करना",
+        "Buffer amplifier, integrator और comparator के offset voltages को null करना",
+        "Input signal को amplify करना",
+        "Clock frequency को calibrate करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Auto-zero phase के दौरान input को internally short करके feedback loop बनाई जाती है, जो buffer amplifier, integrator और comparator के अंतर्निहित offset voltages को measure करके auto-zero capacitor पर store करती और null करती है, जिससे measurement में लगभग शून्य offset error रहता है (Option B सही)। यह phase reference voltage measure (A) नहीं करता, input signal amplify (C) नहीं करता, और clock frequency calibrate (D) भी नहीं करता।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q15",
+      "question": "Dual slope ADC में accuracy मुख्यतः किन components की सटीक tolerance पर निर्भर नहीं करती, जो इसका एक बड़ा लाभ माना जाता है?",
+      "options": [
+        "Reference voltage की stability पर",
+        "Clock की stability एक ही conversion cycle के दौरान पर",
+        "Integrating resistor (Rint) और integrating capacitor (Cint) के absolute values पर",
+        "Comparator के zero-crossing detection पर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Dual slope ADC में signal integrate और de-integrate दोनों phases में वही Rint व Cint उपयोग होते हैं, इसलिए इनके absolute values की सटीक tolerance पर final reading निर्भर नहीं करती — यही dual slope technique की खासियत है (Option C सही)। इसके विपरीत, reference voltage की stability (A), एक ही cycle में clock की stability (B), और comparator का सही zero-crossing detection (D) — ये सभी accuracy के लिए वास्तव में महत्वपूर्ण होते हैं, इसलिए ये उत्तर गलत हैं।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q16",
+      "question": "Dual slope ADC principle मुख्यतः किस प्रकार के noise को अच्छी तरह reject करता है?",
+      "options": [
+        "केवल high frequency RF noise",
+        "केवल comparator की thermal noise",
+        "केवल reference voltage में power supply ripple",
+        "वह noise जिसका average मान fixed signal-integrate समय में शून्य हो जाता है (जैसे mains hum)"
+      ],
+      "correctIndex": 3,
+      "explanation": "चूँकि signal integrate की अवधि fixed रहती है, इस दौरान input के साथ मौजूद कोई भी periodic noise (जैसे 50/60Hz mains hum) जिसका average उस निश्चित समय में लगभग शून्य हो जाता है, अच्छी तरह reject हो जाता है — इसे normal-mode rejection कहा जाता है (Option D सही)। यह गुण विशेष रूप से केवल high frequency RF noise (A), केवल comparator thermal noise (B), या केवल supply ripple (C) तक सीमित नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q17",
+      "question": "यदि किसी देश में mains frequency 50Hz है, तो dual slope ADC का signal-integrate time प्रायः किस अवधि का multiple रखा जाता है ताकि mains hum अच्छी तरह reject हो?",
+      "options": [
+        "50Hz के एक पूर्ण cycle (अर्थात 20ms) का integer multiple",
+        "50Hz के आधे cycle का असंगत (non-integer) भाग",
+        "Oscillator frequency का यादृच्छिक (random) भाग",
+        "केवल auto-zero समय का आधा भाग"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि signal-integrate time को mains cycle time (50Hz पर 20ms) का पूर्ण (integer) multiple रखा जाए, तो उस दौरान mains hum का औसत मान लगभग शून्य हो जाता है और वह प्रभावी रूप से reject हो जाता है (Option A सही)। असंगत/non-integer भाग (B) hum को पूरी तरह reject नहीं करेगा, यादृच्छिक चुनाव (C) design सिद्धांत नहीं है, और auto-zero समय (D) का इस rejection से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q18",
+      "question": "ICL7106/7107 में IN HI और IN LO pins क्या represent करते हैं?",
+      "options": [
+        "Reference voltage input terminals",
+        "Differential analog input terminals, जिन पर मापी जाने वाली signal दी जाती है",
+        "Oscillator के दो सिरे (terminals)",
+        "Display segment output pins"
+      ],
+      "correctIndex": 1,
+      "explanation": "IN HI और IN LO, ADC के differential analog input terminals हैं जिन पर वह voltage/signal लगाई जाती है जिसे measure करना है (Option B सही)। Reference voltage तो REF HI/REF LO pins (A) पर दी जाती है, oscillator OSC1/OSC2/OSC3 pins (C) से जुड़ता है, और display segment outputs (D) अलग pins होते हैं — ये IN HI/IN LO नहीं हैं।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q19",
+      "question": "REF HI और REF LO pins के बीच लगाया गया voltage क्या दर्शाता है?",
+      "options": [
+        "Supply voltage जो IC को चलाता है",
+        "Auto-zero capacitor का voltage",
+        "ADC के लिए reference voltage (Vref), जो सामान्यतः full-scale input का आधा रखा जाता है",
+        "Backplane drive signal की amplitude"
+      ],
+      "correctIndex": 2,
+      "explanation": "REF HI और REF LO के बीच लगाया गया voltage ADC का reference voltage (Vref) होता है, और counting scheme की वजह से यह सामान्यतः full-scale input reading का आधा रखा जाता है (Option C सही)। यह IC की supply voltage (A) नहीं है, auto-zero capacitor का voltage (B) अलग pin (AZ) पर होता है, और backplane drive amplitude (D) से इसका कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q20",
+      "question": "यदि किसी 3.5 digit meter की full-scale range 200.0mV है, तो इसके लिए reference voltage (Vref) सामान्यतः कितना रखा जाता है?",
+      "options": [
+        "200.0mV के बराबर, पूरा full-scale",
+        "400.0mV, यानी double",
+        "50.0mV, यानी एक-चौथाई",
+        "लगभग 100.0mV (full-scale का आधा)"
+      ],
+      "correctIndex": 3,
+      "explanation": "ICL7106/7107 की counting scheme में reference voltage को full-scale input का आधा रखा जाता है, इसलिए 200.0mV full-scale range के लिए Vref लगभग 100.0mV होना चाहिए (Option D सही)। पूरे full-scale के बराबर (A), double (B), या एक-चौथाई (C) रखने पर display की reading count सही अनुपात में नहीं आएगी और calibration गलत हो जाएगा।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q21",
+      "question": "COMMON pin ICL7106/7107 में किस प्रकार उपयोगी होता है?",
+      "options": [
+        "यह एक internal analog reference point देता है जो single-supply operation में input signals के लिए उपयोग होता है",
+        "यह केवल digital ground point होता है",
+        "यह oscillator का output pin होता है",
+        "यह केवल display backplane से जुड़ता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "COMMON pin एक internal analog reference (आमतौर पर V+ से कुछ volt नीचे) प्रदान करता है, जिसका उपयोग single-supply operation में input व अन्य analog signals के संदर्भ बिंदु के रूप में किया जाता है (Option A सही)। यह केवल digital ground (B) नहीं है, यह oscillator output pin (C) नहीं है, और यह सीधे backplane pin (D) से भी अलग होता है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q22",
+      "question": "INT pin सामान्यतः किससे जुड़ा होता है?",
+      "options": [
+        "सीधे display segment output से",
+        "External integrating resistor (Rint) और integrating capacitor (Cint) के जरिए integrator amplifier के output से",
+        "सीधे supply voltage line से",
+        "सीधे oscillator के crystal/RC network से"
+      ],
+      "correctIndex": 1,
+      "explanation": "INT pin integrator amplifier का output होता है, जिस पर बाहरी Rint (buffer/input की तरफ से) और Cint (feedback में) जुड़े रहते हैं जो integrator की slope तय करते हैं (Option B सही)। यह सीधे display segment output (A) नहीं है, supply line (C) नहीं है, और oscillator network (D) से भी इसका सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q23",
+      "question": "AZ pin पर सामान्यतः कौन-सा external component जोड़ा जाता है?",
+      "options": [
+        "Integrating resistor Rint",
+        "Reference capacitor जो display latch से जुड़ता है",
+        "Auto-zero capacitor (CAZ), जो offset voltages को store करने में मदद करता है",
+        "Oscillator crystal"
+      ],
+      "correctIndex": 2,
+      "explanation": "AZ pin पर auto-zero capacitor (CAZ) जोड़ा जाता है जो auto-zero phase के दौरान मापे गए offset voltages को store करके उन्हें बाद के phases में cancel करने में मदद करता है (Option C सही)। Rint (A) INT/BUFF की तरफ जुड़ता है, reference capacitor का display latch से सीधा संबंध (B) नहीं होता, और oscillator crystal (D) OSC pins से जुड़ता है — ये AZ pin से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q24",
+      "question": "Integrating capacitor (Cint) के चुनाव में किस विशेषता का ध्यान रखना जरूरी है ताकि 'roll-over error' कम हो?",
+      "options": [
+        "उच्च ESR वाला electrolytic capacitor चुनना",
+        "केवल ceramic capacitor चुनना, चाहे उसकी leakage अधिक हो",
+        "capacitor की value इतनी बड़ी रखना कि integrator saturate हो जाए",
+        "कम dielectric absorption वाला capacitor (जैसे polypropylene type) चुनना"
+      ],
+      "correctIndex": 3,
+      "explanation": "उच्च dielectric absorption वाले capacitors पिछले चार्ज को कुछ समय के लिए 'याद' रखते हैं, जिससे अगली reading में roll-over जैसी त्रुटि आ सकती है; इसलिए polypropylene जैसे कम dielectric absorption वाले capacitor चुने जाते हैं (Option D सही)। उच्च ESR वाला electrolytic (A) integrator के लिए उपयुक्त नहीं, अधिक leakage वाला ceramic (B) गलत readings देगा, और integrator को saturate करना (C) तो पूरी तरह गलत approach है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q25",
+      "question": "ICL7106/7107 का clock oscillator सामान्यतः किस प्रकार बनाया जाता है?",
+      "options": [
+        "External resistor (R) और capacitor (C) उपयोग करके OSC1, OSC2, OSC3 pins के बीच बना एक साधारण RC oscillator",
+        "एक बाहरी crystal oscillator, जो अनिवार्य होता है",
+        "Internal PLL frequency synthesizer",
+        "एक mains-frequency-locked oscillator जो हमेशा 50Hz ही देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "ICL7106/7107 में सामान्यतः OSC1, OSC2, OSC3 pins के बीच एक बाहरी resistor और capacitor जोड़कर सरल RC relaxation oscillator बनाया जाता है, जिसकी frequency R व C के मान से नियंत्रित होती है (Option A सही)। Crystal oscillator (B) अनिवार्य नहीं है, IC के अंदर कोई PLL synthesizer (C) नहीं है, और यह किसी mains-locked oscillator (D) की तरह fixed 50Hz नहीं देता।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q26",
+      "question": "यदि R और C के मान इस प्रकार चुने जाएँ कि oscillator frequency लगभग 48kHz हो, तो meter की display update rate (readings per second) लगभग कितनी होगी?",
+      "options": [
+        "लगभग 48 readings per second",
+        "लगभग 3 readings per second",
+        "लगभग 1000 readings per second",
+        "लगभग 0.3 readings per second"
+      ],
+      "correctIndex": 1,
+      "explanation": "लगभग 48kHz का oscillator frequency, internal division के बाद एक conversion cycle को लगभग 4000 clock counts में पूरा करता है, जिससे display लगभग हर 1/3 सेकंड में update होता है — यानी लगभग 3 readings per second (Option B सही)। 48 readings/sec (A) oscillator frequency को readings rate समझने की भूल है, 1000 readings/sec (C) बहुत अधिक है, और 0.3 readings/sec (D) वास्तविक rate से लगभग 10 गुना कम है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q27",
+      "question": "TEST pin को ground करने पर ICL7106/7107 आधारित panel meter में क्या होता है?",
+      "options": [
+        "सभी segments तुरंत OFF हो जाते हैं",
+        "Auto-zero phase स्थायी रूप से बंद हो जाता है",
+        "Display के सभी segments (lamp test की तरह) ON हो जाते हैं, जिससे display की जाँच हो सके",
+        "Reference voltage double हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "TEST pin को ground करने पर IC के अंदर सभी display segments को force करके ON कर दिया जाता है (एक प्रकार का lamp test), जिससे technician display के किसी faulty/dead segment की जाँच कर सके (Option C सही)। इससे सभी segments OFF (A) नहीं होते, auto-zero phase स्थायी रूप से बंद (B) नहीं होता, और reference voltage double (D) होने का इससे कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q28",
+      "question": "POL pin (polarity output) किस स्थिति को इंगित करता है?",
+      "options": [
+        "जब input signal overrange हो जाए",
+        "जब clock oscillator fail कर जाए",
+        "जब auto-zero capacitor short हो जाए",
+        "जब input signal negative polarity का हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "POL pin उस समय सक्रिय (या appropriate logic level पर) होता है जब मापा जा रहा input signal negative polarity का हो, ताकि display पर '-' चिह्न दिखाया जा सके (Option D सही)। यह overrange स्थिति (A), oscillator fail होने (B), या auto-zero capacitor short होने (C) का सीधा indicator नहीं है — इन स्थितियों के लिए अलग व्यवहार/faults होते हैं।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q29",
+      "question": "यदि मापा जा रहा input, meter की full-scale range से अधिक हो जाए (overrange condition), तो ICL7106/7107 आधारित display पर सामान्यतः क्या दिखता है?",
+      "options": [
+        "तीनों lower digits blank हो जाते हैं और केवल overrange indicating '1' (leading digit) दिखता रह जाता है",
+        "Display पर सटीक negative संख्या दिखने लगती है",
+        "Display पूरी तरह freeze हो जाता है और कुछ भी नहीं बदलता",
+        "सभी digits '9999' दिखाने लगते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Overrange की स्थिति में circuit यह पता लगाता है कि count अधिकतम सीमा (1999) से अधिक हो गया है, तब यह तीनों lower digits को blank कर देता है और केवल overrange दर्शाने वाला leading '1' (साथ में polarity यदि लागू हो) दिखाता है (Option A सही)। इस स्थिति में सटीक negative संख्या (B) नहीं दिख सकती (वह range से बाहर है), display freeze (C) नहीं होता बल्कि overrange pattern दिखाता है, और '9999' (D) जैसा कोई pattern यह IC नहीं देता।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q30",
+      "question": "Digital panel meters/multimeters में ICL7106/ICL7107 जैसे ICs को प्राथमिकता क्यों दी जाती है?",
+      "options": [
+        "क्योंकि इनमें कोई analog circuitry नहीं होती",
+        "क्योंकि ये single chip में A/D conversion, auto-zero, polarity detection और display drive जैसी सुविधाएँ एक साथ देते हैं जिससे circuit design सरल व सस्ता होता है",
+        "क्योंकि इन्हें केवल AC quantities मापने के लिए बनाया गया है",
+        "क्योंकि इनमें display drive की सुविधा नहीं होती, इसलिए अलग से driver IC चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "ICL7106/7107 जैसे ICs एक ही chip में dual slope A/D conversion, auto-zero, automatic polarity detection और सीधे display drive करने की सुविधा एकीकृत करते हैं, जिससे digital panel meter/multimeter का overall circuit सरल, छोटा और सस्ता बन जाता है (Option B सही)। इनमें वास्तव में विस्तृत analog circuitry होती है (A गलत), ये मुख्यतः DC quantities मापने के लिए हैं (C गलत), और इनमें display drive क्षमता अंतर्निहित ही होती है, अलग driver IC की जरूरत नहीं (D गलत)।"
+    }
+  ]
+}

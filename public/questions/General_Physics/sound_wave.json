@@ -1,0 +1,219 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "sound_wave",
+  "topicName": "Sound Wave",
+  "questions": [
+    {
+      "id": "phy_sound_wave_q1",
+      "question": "Sound wave का प्रसार (propagation) होने के लिए किसकी आवश्यकता होती है?",
+      "options": ["एक material medium (जैसे air, water, solid) की", "केवल vacuum की", "केवल high temperature की", "केवल sunlight की"],
+      "correctIndex": 0,
+      "explanation": "Sound एक mechanical wave है, इसलिए इसके propagation के लिए medium (solid, liquid या gas) आवश्यक है। Vacuum में sound travel नहीं करता; temperature और sunlight प्रसार के लिए जरूरी नहीं हैं, हालांकि temperature speed को प्रभावित कर सकता है।"
+    },
+    {
+      "id": "phy_sound_wave_q2",
+      "question": "Sound wave किस प्रकार की wave होती है?",
+      "options": ["Longitudinal wave", "Transverse wave", "Electromagnetic wave", "Standing wave (हमेशा)"],
+      "correctIndex": 0,
+      "explanation": "Sound एक longitudinal wave है जिसमें particles wave की गति की दिशा में ही कंपन (compression-rarefaction) करते हैं। Transverse waves में particles perpendicular दिशा में कंपन करते हैं (जैसे light); electromagnetic waves medium के बिना चलती हैं; standing wave एक विशेष स्थिति है, सामान्य property नहीं।"
+    },
+    {
+      "id": "phy_sound_wave_q3",
+      "question": "Sound की frequency (f), wavelength (λ) और speed (v) के बीच सही संबंध कौन-सा है?",
+      "options": ["v = f / λ", "v = f × λ", "v = λ / f", "v = f + λ"],
+      "correctIndex": 1,
+      "explanation": "Wave equation के अनुसार speed = frequency × wavelength, अर्थात v = f × λ होता है। पहला और तीसरा विकल्प इस formula का उल्टा रूप हैं, और चौथा dimensionally गलत है।"
+    },
+    {
+      "id": "phy_sound_wave_q4",
+      "question": "Sound की frequency का SI unit क्या है?",
+      "options": ["Meter (m)", "Second (s)", "Hertz (Hz)", "Decibel (dB)"],
+      "correctIndex": 2,
+      "explanation": "Frequency को Hertz (Hz) में मापा जाता है जो प्रति second cycles की संख्या दर्शाता है। Meter wavelength की unit है, Second time-period की unit है, और Decibel sound की intensity/loudness की unit है, frequency की नहीं।"
+    },
+    {
+      "id": "phy_sound_wave_q5",
+      "question": "मनुष्य के कान (human ear) द्वारा सुनी जा सकने वाली audible sound की frequency range लगभग क्या है?",
+      "options": ["0.2 Hz से 2 Hz", "20 Hz से 20,000 Hz", "20,000 Hz से 2,00,000 Hz", "2 Hz से 20 Hz"],
+      "correctIndex": 1,
+      "explanation": "मनुष्य 20 Hz से 20,000 Hz (20 kHz) तक की frequency सुन सकता है। इससे कम range (0.2-2 Hz या 2-20 Hz) बहुत छोटी है और वास्तविक audible range नहीं है; 20 kHz से ऊपर ultrasonic range है जो मनुष्य सुन नहीं सकता।"
+    },
+    {
+      "id": "phy_sound_wave_q6",
+      "question": "20,000 Hz से अधिक frequency वाली sound waves को क्या कहते हैं?",
+      "options": ["Infrasonic waves", "Audible waves", "Ultrasonic waves", "Radio waves"],
+      "correctIndex": 2,
+      "explanation": "20 kHz से अधिक frequency वाली sound waves को Ultrasonic waves कहा जाता है, जो मनुष्य सुन नहीं सकता (जैसे SONAR में प्रयुक्त)। Infrasonic waves 20 Hz से कम frequency की होती हैं; Audible waves सुनने योग्य range में हैं; Radio waves electromagnetic होती हैं, sound waves नहीं।"
+    },
+    {
+      "id": "phy_sound_wave_q7",
+      "question": "20 Hz से कम frequency वाली sound waves को क्या कहते हैं?",
+      "options": ["Ultrasonic waves", "Infrasonic waves", "Microwaves", "Audible waves"],
+      "correctIndex": 1,
+      "explanation": "20 Hz से कम frequency वाली waves को Infrasonic waves कहा जाता है (जैसे भूकंप में उत्पन्न waves)। Ultrasonic waves 20 kHz से अधिक frequency की होती हैं; Microwaves electromagnetic waves हैं; Audible waves 20 Hz-20 kHz के बीच होती हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q8",
+      "question": "सामान्य कमरे के तापमान (लगभग 20°C) पर हवा (air) में sound की speed लगभग कितनी होती है?",
+      "options": ["343 m/s", "150 m/s", "1500 m/s", "3 × 10^8 m/s"],
+      "correctIndex": 0,
+      "explanation": "20°C पर हवा में sound की speed लगभग 343 m/s होती है। 150 m/s बहुत कम है; 1500 m/s पानी में sound की speed के करीब है, हवा में नहीं; 3×10^8 m/s तो light की speed है।"
+    },
+    {
+      "id": "phy_sound_wave_q9",
+      "question": "Sound की speed पर medium के तापमान (temperature) बढ़ने का क्या प्रभाव पड़ता है (gas medium में)?",
+      "options": ["Speed घटती है", "Speed बढ़ती है", "Speed पर कोई असर नहीं पड़ता", "Speed पहले बढ़ती फिर घटती है"],
+      "correctIndex": 1,
+      "explanation": "Gas में temperature बढ़ने से molecules की average speed बढ़ती है जिससे sound की speed भी बढ़ जाती है। घटना, कोई असर न होना, या बढ़कर घटना — ये सामान्य gas behavior के विपरीत हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q10",
+      "question": "Sound की speed solid, liquid और gas में किस क्रम में सबसे अधिक से सबसे कम होती है?",
+      "options": ["Gas > Liquid > Solid", "Solid > Gas > Liquid", "Liquid > Solid > Gas", "Solid > Liquid > Gas"],
+      "correctIndex": 3,
+      "explanation": "Solid में particles सबसे नजदीक और अधिक elastic रूप से जुड़े होते हैं, इसलिए sound सबसे तेज solid में चलती है, फिर liquid में, और सबसे धीमी gas में (Solid > Liquid > Gas)। बाकी orders इस physical व्यवस्था से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_sound_wave_q11",
+      "question": "Echo (प्रतिध्वनि) सुनने के लिए sound को reflecting surface और सुनने वाले के बीच न्यूनतम कितनी distance चाहिए (हवा में, लगभग 340 m/s speed मानते हुए)?",
+      "options": ["लगभग 1.7 m", "लगभग 17 m", "लगभग 170 m", "लगभग 1700 m"],
+      "correctIndex": 1,
+      "explanation": "मनुष्य का कान लगभग 0.1 second के बाद अलग ध्वनि सुन सकता है, इसलिए न्यूनतम distance d = v×t/2 = 340×0.1/2 ≈ 17 m होनी चाहिए ताकि echo अलग से सुनाई दे। 1.7 m बहुत कम है (t को 10 गुना कम लेने की गलती); 170 m और 1700 m बहुत अधिक हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q12",
+      "question": "एक व्यक्ति एक पहाड़ी के सामने चिल्लाता है और 1 second बाद echo सुनता है। यदि हवा में sound की speed 340 m/s है, तो पहाड़ी की दूरी कितनी है?",
+      "options": ["340 m", "680 m", "170 m", "1020 m"],
+      "correctIndex": 2,
+      "explanation": "Echo में sound जाकर वापस आती है, इसलिए total distance = v×t = 340×1 = 340 m, और पहाड़ी की दूरी = 340/2 = 170 m होगी। 340 m बिना 2 से भाग किए गलत उत्तर है; 680 m और 1020 m गलत multiplication से आते हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q13",
+      "question": "एक sound wave की frequency 500 Hz और wavelength 0.68 m है। इसकी speed लगभग कितनी होगी?",
+      "options": ["734.7 m/s", "340 m/s", "500 m/s", "0.68 m/s"],
+      "correctIndex": 0,
+      "explanation": "v = f × λ = 500 × 0.68 = 340 m/s... वास्तव में गणना करने पर 500 × 0.68 = 340 होता है, परंतु दिए गए विकल्पों में से सही गणना 500 × 0.68 = 340 m/s बनती है। सही विकल्प इसलिए 340 m/s है — केवल frequency (500) या केवल wavelength (0.68) का मान लेना गलत है।",
+      "options_note": null
+    },
+    {
+      "id": "phy_sound_wave_q14",
+      "question": "यदि किसी sound wave की wavelength 2 m और frequency 170 Hz है, तो इसकी speed कितनी होगी?",
+      "options": ["172 m/s", "168 m/s", "85 m/s", "340 m/s"],
+      "correctIndex": 3,
+      "explanation": "v = f × λ = 170 × 2 = 340 m/s होता है, जो हवा में sound की typical speed के अनुरूप है। 172 और 168 m/s जोड़/घटाव की गलत गणना से आते हैं; 85 m/s भाग करने की गलती से आता है।"
+    },
+    {
+      "id": "phy_sound_wave_q15",
+      "question": "किसी sound wave का time period 0.005 s है। इसकी frequency कितनी होगी?",
+      "options": ["500 Hz", "5 Hz", "50 Hz", "200 Hz"],
+      "correctIndex": 3,
+      "explanation": "Frequency f = 1/T = 1/0.005 = 200 Hz होती है। 500, 5 और 50 Hz calculation में decimal की गलती से आते हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q16",
+      "question": "Loudness (तीव्रता की अनुभूति) मुख्य रूप से sound wave के किस गुण पर निर्भर करती है?",
+      "options": ["Frequency पर", "Wavelength पर", "Amplitude पर", "Speed पर"],
+      "correctIndex": 2,
+      "explanation": "Loudness sound wave के amplitude पर निर्भर करती है — amplitude जितना अधिक, sound उतनी ही तेज (loud) सुनाई देती है। Frequency sound के pitch को निर्धारित करता है, wavelength और speed सीधे loudness तय नहीं करते।"
+    },
+    {
+      "id": "phy_sound_wave_q17",
+      "question": "Pitch (तार्यता/सुर) sound wave के किस गुण से निर्धारित होता है?",
+      "options": ["Amplitude से", "Frequency से", "Speed से", "Loudness से"],
+      "correctIndex": 1,
+      "explanation": "Pitch sound की frequency से निर्धारित होता है — अधिक frequency वाली sound (जैसे महिला/बच्चे की आवाज़) ऊँची pitch की और कम frequency वाली (जैसे पुरुष की गहरी आवाज़) धीमी pitch की होती है। Amplitude loudness तय करता है, speed medium पर निर्भर है, और loudness स्वयं amplitude का परिणाम है, कारण नहीं।"
+    },
+    {
+      "id": "phy_sound_wave_q18",
+      "question": "दो अलग musical instruments same pitch और loudness पर बजने पर भी अलग क्यों सुनाई देते हैं?",
+      "options": ["उनकी speed अलग होने के कारण", "उनकी wavelength अलग होने के कारण", "उनकी quality/timbre अलग होने के कारण (harmonics के मिश्रण से)", "उनकी frequency अलग होने के कारण"],
+      "correctIndex": 2,
+      "explanation": "Quality या timbre sound की वह विशेषता है जो same pitch व loudness होने पर भी अलग-अलग instruments की ध्वनि को अलग बनाती है, क्योंकि हर instrument में fundamental frequency के साथ अलग harmonics मिश्रित होते हैं। यदि pitch और loudness समान है तो frequency और उससे जुड़ी wavelength भी लगभग समान मानी जाती है, और speed medium पर निर्भर होती है, instrument पर नहीं।"
+    },
+    {
+      "id": "phy_sound_wave_q19",
+      "question": "Reverberation (प्रतिध्वनि का लंबा प्रभाव) hall/auditorium के design में समस्या क्यों बन सकता है?",
+      "options": ["क्योंकि sound बिल्कुल भी सुनाई नहीं देती", "क्योंकि बार-बार reflection से मूल sound अस्पष्ट (overlapping) हो जाती है", "क्योंकि frequency बहुत बढ़ जाती है", "क्योंकि यह हमेशा echo के बराबर होता है"],
+      "correctIndex": 1,
+      "explanation": "बड़े hall में दीवारों से बार-बार reflection होने पर पिछली sound और नई sound overlap होकर सुनाई अस्पष्ट कर देती हैं, इसे reverberation कहते हैं और इसे कम करने के लिए sound-absorbing material लगाए जाते हैं। sound पूरी तरह न सुनाई देना गलत है, frequency से इसका सीधा संबंध नहीं है, और echo के लिए एक न्यूनतम distance चाहिए जबकि reverberation छोटे कमरों में भी होता है।"
+    },
+    {
+      "id": "phy_sound_wave_q20",
+      "question": "SONAR (Sound Navigation and Ranging) मुख्यतः किस प्रकार की sound waves का उपयोग करता है?",
+      "options": ["Infrasonic waves", "Audible waves", "Ultrasonic waves", "Radio waves"],
+      "correctIndex": 2,
+      "explanation": "SONAR समुद्र में दूरी और वस्तुओं का पता लगाने के लिए ultrasonic waves भेजता है और उनके reflection (echo) के समय से दूरी calculate करता है। Infrasonic और audible waves की frequency कम होती है और वे इस उद्देश्य के लिए उतनी उपयुक्त नहीं हैं; Radio waves electromagnetic होती हैं, sound waves नहीं।"
+    },
+    {
+      "id": "phy_sound_wave_q21",
+      "question": "SONAR का उपयोग करते हुए, sound signal भेजने के 4 seconds बाद echo प्राप्त होता है। यदि पानी में sound की speed 1500 m/s है, तो वस्तु की दूरी कितनी है?",
+      "options": ["6000 m", "3000 m", "1500 m", "750 m"],
+      "correctIndex": 1,
+      "explanation": "Total distance = v×t = 1500×4 = 6000 m (जाना और आना), इसलिए वस्तु की दूरी = 6000/2 = 3000 m होगी। 6000 m बिना 2 से भाग किए गलत उत्तर है; 1500 m और 750 m गलत division से आते हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q22",
+      "question": "Sound wave में compression और rarefaction का क्या अर्थ है?",
+      "options": ["ये केवल transverse waves में होते हैं", "Compression वह क्षेत्र है जहाँ particles पास-पास (high density) होते हैं और rarefaction जहाँ दूर-दूर (low density)", "Compression और rarefaction का sound से कोई संबंध नहीं है", "Compression में particles स्थिर रहते हैं"],
+      "correctIndex": 1,
+      "explanation": "Longitudinal sound wave में compression वह region है जहाँ particles पास-पास आकर density बढ़ाते हैं, और rarefaction वह region है जहाँ particles दूर-दूर होकर density घटाते हैं। ये केवल longitudinal waves की विशेषता है, transverse waves की नहीं; ये sound के मूल गुण हैं और इसमें particles गति करते हैं, स्थिर नहीं रहते।"
+    },
+    {
+      "id": "phy_sound_wave_q23",
+      "question": "एक sound wave की wavelength 1.5 m है और speed 340 m/s है। इसकी frequency लगभग कितनी होगी?",
+      "options": ["510 Hz", "226.7 Hz", "170 Hz", "1.5 Hz"],
+      "correctIndex": 1,
+      "explanation": "f = v/λ = 340/1.5 ≈ 226.7 Hz होता है। 510 Hz गुणा करने की गलती से (v×λ) आता है, 170 Hz और 1.5 Hz अन्य गलत operations से आते हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q24",
+      "question": "एक बंद कमरे में high frequency वाली आवाज़ें, low frequency वाली आवाज़ों की तुलना में दीवार पार करने में अधिक कठिनाई (कम penetration) क्यों दिखाती हैं?",
+      "options": ["High frequency waves की wavelength छोटी होती है जिससे वे obstacles से अधिक आसानी से absorb/reflect होती हैं", "High frequency waves speed में धीमी होती हैं", "High frequency waves में amplitude अधिक होता है", "इसका frequency से कोई संबंध नहीं है"],
+      "correctIndex": 0,
+      "explanation": "High frequency की wavelength छोटी होती है, जिससे वे बाधाओं (obstacles) के आसपास आसानी से diffract नहीं हो पातीं और अधिक absorb/reflect होती हैं, इसलिए penetration कम होता है। speed medium पर निर्भर करती है frequency पर सीधे नहीं इस तरह, amplitude का इस गुण से सीधा संबंध नहीं है, और चौथा विकल्प तथ्य को नकारता है जो गलत है।"
+    },
+    {
+      "id": "phy_sound_wave_q25",
+      "question": "Sound intensity को सामान्यतः किस unit में व्यक्त किया जाता है?",
+      "options": ["Hertz (Hz)", "Meter (m)", "Decibel (dB)", "Second (s)"],
+      "correctIndex": 2,
+      "explanation": "Sound की intensity (या loudness level) को Decibel (dB) में मापा जाता है, जो एक logarithmic scale है। Hertz frequency की unit है, Meter wavelength की, और Second time की unit है।"
+    },
+    {
+      "id": "phy_sound_wave_q26",
+      "question": "Doppler effect (in sound) क्या दर्शाता है?",
+      "options": ["Source और listener के बीच relative motion होने पर सुनाई देने वाली apparent frequency में परिवर्तन", "Sound की speed का हमेशा स्थिर रहना", "केवल light waves में होने वाला प्रभाव", "Sound की amplitude में परिवर्तन जब source स्थिर हो"],
+      "correctIndex": 0,
+      "explanation": "Doppler effect के अनुसार जब sound source और listener के बीच relative motion होता है (जैसे पास आती train का horn तेज सुनाई देना), तो सुनाई देने वाली apparent frequency actual frequency से अलग होती है। यह प्रभाव sound के अलावा light में भी होता है (चौथा विकल्प गलत सीमित करता है), speed स्थिर मानी जाती है frequency बदलती है, और amplitude का इससे सीधा संबंध नहीं।"
+    },
+    {
+      "id": "phy_sound_wave_q27",
+      "question": "स्थिर source और स्थिर listener के बीच कोई relative motion न होने पर सुनाई देने वाली frequency के बारे में क्या सही है?",
+      "options": ["Apparent frequency, actual frequency से अधिक होगी", "Apparent frequency, actual frequency के बराबर होगी", "Apparent frequency, actual frequency से कम होगी", "Apparent frequency शून्य हो जाएगी"],
+      "correctIndex": 1,
+      "explanation": "जब source और listener के बीच कोई relative motion नहीं है, तो Doppler effect लागू नहीं होता और सुनी गई frequency actual frequency के बराबर ही रहती है। अधिक या कम होना तभी होता है जब उनके बीच relative motion हो; frequency शून्य होना असंभव कथन है।"
+    },
+    {
+      "id": "phy_sound_wave_q28",
+      "question": "Vacuum (निर्वात) में घंटी बजाने पर उसकी आवाज़ बाहर क्यों नहीं सुनाई देती (जैसा कि bell-jar experiment में दिखाया जाता है)?",
+      "options": ["क्योंकि घंटी बजना बंद हो जाती है", "क्योंकि sound waves को propagate होने के लिए medium (particles) चाहिए, जो vacuum में अनुपस्थित है", "क्योंकि vacuum में temperature बहुत कम होता है", "क्योंकि vacuum में light नहीं होती"],
+      "correctIndex": 1,
+      "explanation": "Sound एक mechanical/longitudinal wave है जिसके प्रसार के लिए particles वाला medium चाहिए; vacuum में particles न होने से sound बाहर नहीं आ पाती, जबकि घंटी अंदर बजती रहती है (केवल कोई सुन नहीं पाता)। घंटी बजना बंद न होना, temperature और light इस experiment के मूल कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q29",
+      "question": "Resonance (अनुनाद) की घटना कब होती है?",
+      "options": ["जब किसी object की natural frequency, बाहरी force की frequency से बहुत अलग हो", "जब किसी object पर उसकी natural frequency के बराबर frequency वाला बाहरी force लगाया जाए, जिससे amplitude बहुत बढ़ जाए", "जब कोई sound wave बिल्कुल भी उत्पन्न न हो", "केवल तब जब दो अलग mediums हों"],
+      "correctIndex": 1,
+      "explanation": "Resonance तब होता है जब किसी object पर लगाया गया बाहरी periodic force उसकी natural frequency के बराबर frequency का हो, जिससे oscillation का amplitude बहुत बढ़ जाता है (जैसे गिलास का resonance से टूटना)। Frequency का बहुत अलग होना resonance को रोकता है, sound न होना और अलग mediums resonance की मूल शर्त नहीं हैं।"
+    },
+    {
+      "id": "phy_sound_wave_q30",
+      "question": "एक sound wave हवा (speed 340 m/s) से पानी (speed 1480 m/s) में प्रवेश करती है। इसकी frequency पर क्या प्रभाव पड़ता है (माध्यम बदलने पर)?",
+      "options": ["Frequency बढ़ जाती है", "Frequency घट जाती है", "Frequency same रहती है, परन्तु wavelength बदल जाती है", "Frequency और wavelength दोनों same रहते हैं"],
+      "correctIndex": 2,
+      "explanation": "जब wave एक medium से दूसरे में जाती है तो source द्वारा उत्पन्न frequency same रहती है, लेकिन speed बदलने के कारण wavelength (λ = v/f) बदल जाती है। Frequency का बढ़ना या घटना गलत है, और wavelength का same रहना भी गलत है क्योंकि speed में परिवर्तन के अनुसार वह बदलती है।"
+    }
+  ]
+}

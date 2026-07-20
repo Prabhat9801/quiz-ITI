@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "ups_types",
+  "topicName": "UPS Types - Offline, Online, Line-Interactive",
+  "questions": [
+    {
+      "id": "u4_ups_types_q1",
+      "question": "Offline (Standby) UPS में normal mains condition के दौरान load को power कहाँ से मिलती है?",
+      "options": [
+        "Load सीधे mains supply से जुड़ा रहता है (केवल basic filtering/surge protection के साथ), जबकि battery float charging में रहती है",
+        "Load हमेशा inverter से जुड़ा रहता है",
+        "Load सीधे battery से जुड़ा रहता है",
+        "Load हमेशा rectifier के output से जुड़ा रहता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Offline UPS में normal mode में load सीधे mains AC से (केवल हल्की filtering/surge suppression के साथ) supply लेता है, जबकि battery charger अलग से battery को charge करता रहता है। Option B online UPS का तरीका है, C और D offline UPS की normal working से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_types_q2",
+      "question": "Offline UPS का typical switch-over (transfer) time लगभग कितना होता है जब mains fail होती है?",
+      "options": [
+        "लगभग 100 milliseconds",
+        "लगभग 3 से 8 milliseconds (approx.)",
+        "बिल्कुल 0 ms (zero)",
+        "लगभग 1 second"
+      ],
+      "correctIndex": 1,
+      "explanation": "Offline UPS में mains fail होने पर static switch load को inverter output पर transfer करता है, जिसमें आमतौर पर लगभग 3-8 ms का समय लगता है। Option A बहुत अधिक है, C zero transfer time online UPS की विशेषता है, D बहुत बड़ा समय है जो practically असंभव है।"
+    },
+    {
+      "id": "u4_ups_types_q3",
+      "question": "Offline UPS किस प्रकार के load के लिए सबसे उपयुक्त माना जाता है?",
+      "options": [
+        "Hospital ICU के critical medical equipment",
+        "Data center के servers",
+        "Basic loads जैसे desktop PC, printer जहाँ कुछ ms का break सहन किया जा सके",
+        "Telecom exchange के sensitive switching equipment"
+      ],
+      "correctIndex": 2,
+      "explanation": "Offline UPS का छोटा switch-over time desktop PC, printer जैसे basic loads के लिए पर्याप्त होता है क्योंकि इनकी power supply में built-in capacitor कुछ ms का gap सहन कर लेता है। Options A, B, D अत्यधिक sensitive critical loads हैं जिन्हें zero-interruption वाले online UPS की जरूरत होती है।"
+    },
+    {
+      "id": "u4_ups_types_q4",
+      "question": "तीनों प्रकार (Offline, Line-interactive, Online) में से Offline UPS की cost और circuit complexity कैसी होती है?",
+      "options": [
+        "सबसे महँगा और सबसे जटिल circuit",
+        "Online से महँगा लेकिन Line-interactive से सस्ता",
+        "तीनों में बराबर cost",
+        "सबसे कम cost और सबसे सरल circuit design"
+      ],
+      "correctIndex": 3,
+      "explanation": "Offline UPS में सबसे कम components (एक साधारण charger, battery, inverter और static switch) होते हैं, इसलिए यह सबसे सस्ता और सरल होता है। Options A, B, C तथ्यात्मक रूप से गलत हैं क्योंकि cost के मामले में क्रम Offline < Line-interactive < Online होता है।"
+    },
+    {
+      "id": "u4_ups_types_q5",
+      "question": "Offline UPS में normal mains condition के दौरान voltage fluctuations (जैसे mains में छोटे sag/surge) का load पर क्या असर होता है?",
+      "options": [
+        "ये fluctuations सीधे load तक पहुँच जाती हैं क्योंकि output directly mains से लिया जाता है (कोई regulation नहीं)",
+        "AVR इन्हें पूरी तरह correct कर देता है",
+        "Inverter इन्हें पूरी तरह filter कर देता है",
+        "ये fluctuations battery में absorb हो जाती हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Offline UPS normal mode में output regulation नहीं करता, इसलिए mains की छोटी voltage fluctuations सीधे load तक चली जाती हैं। Option B AVR वाले line-interactive UPS की विशेषता है, C और D offline UPS की normal working से मेल नहीं खाते क्योंकि inverter/battery तभी सक्रिय होते हैं जब mains fail हो।"
+    },
+    {
+      "id": "u4_ups_types_q6",
+      "question": "Offline UPS servers और critical data-processing equipment के लिए सामान्यतः क्यों suitable नहीं माना जाता?",
+      "options": [
+        "यह सबसे महँगा UPS type है",
+        "इसका छोटा-सा switch-over time भी server जैसे sensitive load को reset/crash कर सकता है",
+        "इसमें battery ही नहीं होती",
+        "इसका output हमेशा DC होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Offline UPS का कुछ ms का switch-over time भले छोटा लगे, पर server-grade sensitive electronics के लिए यह momentary break glitch या crash पैदा कर सकता है, इसलिए critical load के लिए online UPS बेहतर है। A तथ्यात्मक रूप से गलत है, C offline UPS में भी battery होती है, D output AC ही होता है।"
+    },
+    {
+      "id": "u4_ups_types_q7",
+      "question": "Online (Double-conversion) UPS में power flow का सही क्रम क्या है?",
+      "options": [
+        "Mains AC सीधे load को, battery केवल backup में स्टैंडबाय",
+        "AVR द्वारा tap-changing करके सीधे load को AC supply",
+        "Mains AC → Rectifier (DC में) → Battery/DC bus → Inverter → हमेशा Inverter से output load को (continuous double conversion)",
+        "Mains AC सीधे battery को charge करती है और load हमेशा mains से चलता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Online UPS में incoming AC को rectifier पहले DC में बदलता है, यह DC बस battery को charge करने के साथ-साथ inverter को भी feed करता है, और load हमेशा inverter के output से ही चलता है (double conversion)। Option A offline UPS का तरीका है, B line-interactive UPS का, D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_ups_types_q8",
+      "question": "Online UPS में mains fail होने पर load को inverter output से transfer होने में कितना समय लगता है?",
+      "options": [
+        "लगभग 4 से 6 ms",
+        "लगभग 10 ms",
+        "लगभग 25 ms",
+        "लगभग 0 ms (zero transfer time), क्योंकि load पहले से ही inverter output से जुड़ा रहता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Online UPS में load हमेशा inverter के output से जुड़ा रहता है; mains fail होने पर सिर्फ DC bus को rectifier की जगह battery feed करने लगती है, load की connection नहीं बदलती इसलिए transfer time zero होता है। Options A, B, C offline या line-interactive UPS के switch-over time के करीब हैं, online UPS के नहीं।"
+    },
+    {
+      "id": "u4_ups_types_q9",
+      "question": "Online UPS किस प्रकार के applications के लिए सबसे उपयुक्त माना जाता है?",
+      "options": [
+        "Data center servers, hospital ICU equipment जैसे critical व sensitive load जहाँ zero interruption जरूरी है",
+        "Basic desktop PC जहाँ बजट सबसे बड़ी प्राथमिकता है",
+        "Ceiling fan या साधारण light load",
+        "केवल battery charging उपकरण"
+      ],
+      "correctIndex": 0,
+      "explanation": "Online UPS zero transfer time और continuous clean regulated power देता है, इसलिए यह critical/sensitive load जैसे servers और medical equipment के लिए आदर्श है। Options B, C basic low-cost loads हैं जहाँ offline UPS पर्याप्त है, D UPS का उद्देश्य नहीं।"
+    },
+    {
+      "id": "u4_ups_types_q10",
+      "question": "Online UPS की efficiency, offline UPS की तुलना में आमतौर पर कैसी होती है?",
+      "options": [
+        "बराबर होती है",
+        "थोड़ी कम होती है क्योंकि continuous double conversion (AC-DC-AC) में extra conversion losses होती हैं",
+        "हमेशा 100% होती है",
+        "offline से बहुत अधिक (higher) होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Online UPS में हर पल AC-DC-AC दोनों conversions चलती रहती हैं, जिससे rectifier और inverter दोनों में losses होती हैं और overall efficiency offline की तुलना में कम रहती है (typically 85-95%)। A, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_ups_types_q11",
+      "question": "Online UPS mains input में frequency या voltage की गड़बड़ी होने पर भी load को साफ (clean) output क्यों दे पाता है?",
+      "options": [
+        "क्योंकि load कभी inverter से नहीं जुड़ता",
+        "क्योंकि इसमें AVR tap-changer लगा होता है जो voltage सुधारता है",
+        "क्योंकि output हमेशा inverter द्वारा नए सिरे से generate किया जाता है, जो input की voltage/frequency गड़बड़ियों से independent रहता है",
+        "क्योंकि यह mains से पूरी तरह disconnect रहता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Online UPS का output हमेशा inverter द्वारा freshly generate किया जाता है (double conversion के बाद), इसलिए input voltage/frequency की गड़बड़ी output को सीधे प्रभावित नहीं करती। Option A गलत है क्योंकि load हमेशा inverter से ही जुड़ा रहता है, B AVR line-interactive UPS की तकनीक है online की नहीं, D गलत क्योंकि rectifier के जरिए यह mains से जुड़ा रहता है।"
+    },
+    {
+      "id": "u4_ups_types_q12",
+      "question": "Online UPS, offline और line-interactive की तुलना में सबसे महँगा क्यों होता है?",
+      "options": [
+        "क्योंकि इसमें battery नहीं होती",
+        "क्योंकि इसका आकार सबसे छोटा होता है",
+        "क्योंकि यह केवल DC load चलाता है",
+        "क्योंकि इसमें continuous duty पर बड़ा rectifier और inverter दोनों लगातार चलते हैं, जिससे components की rating और cost बढ़ जाती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Online UPS में rectifier और inverter दोनों हमेशा पूरी load current पर continuously काम करते हैं, इसलिए इन्हें ज्यादा robust व high-rated बनाना पड़ता है, जिससे cost बढ़ जाती है। A गलत है क्योंकि इसमें battery होती है, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_ups_types_q13",
+      "question": "Line-interactive UPS का मूल architecture किस पर आधारित होता है?",
+      "options": [
+        "एक tap-changing autotransformer (AVR) mains line में series में लगा होता है, साथ ही inverter/battery combination parallel में जुड़ा रहता है",
+        "केवल एक साधारण static switch और battery",
+        "पूरी तरह double-conversion rectifier-inverter chain",
+        "केवल एक manual voltmeter और knob"
+      ],
+      "correctIndex": 0,
+      "explanation": "Line-interactive UPS में एक AVR (tap-changing autotransformer) mains line में series में जुड़ा होता है जो छोटे voltage variations को स्वयं correct करता है, जबकि inverter-battery combination मुख्यतः backup के लिए parallel में रहता है। B offline UPS का तरीका है, C online UPS का, D manual stabilizer का।"
+    },
+    {
+      "id": "u4_ups_types_q14",
+      "question": "Line-interactive UPS में AVR (Automatic Voltage Regulation) कैसे काम करता है?",
+      "options": [
+        "यह tap-changing autotransformer के जरिए under/over voltage को battery पर switch किए बिना ही सुधार देता है",
+        "यह mains को पूरी तरह DC में बदल देता है",
+        "यह केवल battery को disconnect कर देता है",
+        "यह frequency को बदल देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "AVR autotransformer की अलग-अलग taps चुनकर mains में छोटी under-voltage या over-voltage को battery mode में गए बिना ही सुधार देता है, जिससे battery पर load कम पड़ता है और उसकी life बढ़ती है। C और D AVR की working से मेल नहीं खाते, B rectifier का काम है।"
+    },
+    {
+      "id": "u4_ups_types_q15",
+      "question": "Line-interactive UPS का switch-over time offline और online की तुलना में कैसा होता है?",
+      "options": [
+        "Offline से भी अधिक होता है",
+        "Online जितना zero होता है",
+        "Offline से कुछ कम (लगभग 2-4 ms) होता है, क्योंकि inverter पहले से ही output line के साथ synchronized standby में रहता है",
+        "इसका कोई switch-over होता ही नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Line-interactive UPS में inverter output side पर पहले से synchronized standby में रहता है, इसलिए transfer switch को केवल line disconnect करके inverter को जोड़ना होता है, जिससे switch-over time offline (3-8 ms) से थोड़ा कम (लगभग 2-4 ms) रहता है, लेकिन online (0 ms) जितना नहीं। A, B, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_ups_types_q16",
+      "question": "Line-interactive UPS किन applications के लिए सबसे उपयुक्त माना जाता है?",
+      "options": [
+        "केवल घर के LED bulb के लिए",
+        "बड़े industrial furnace के लिए",
+        "केवल manual stabilizer की जगह",
+        "Small business servers, networking equipment जैसे mid-range loads जहाँ offline की सुरक्षा कम पड़े लेकिन पूरा online UPS महँगा लगे"
+      ],
+      "correctIndex": 3,
+      "explanation": "Line-interactive UPS cost और protection के बीच एक अच्छा संतुलन देता है, इसलिए यह small servers, networking switches जैसे mid-range applications के लिए उपयुक्त है। A, C बहुत basic applications हैं जहाँ offline पर्याप्त है, B जैसे भारी industrial load के लिए यह उपयुक्त नहीं।"
+    },
+    {
+      "id": "u4_ups_types_q17",
+      "question": "Line-interactive UPS और Offline UPS में मुख्य अंतर क्या है?",
+      "options": [
+        "Line-interactive में AVR (tap-changing transformer) होता है जो छोटी voltage गड़बड़ियों को battery mode में गए बिना ही सुधार देता है, जबकि offline में ऐसा कोई regulation नहीं होता",
+        "Offline UPS में battery नहीं होती",
+        "दोनों बिल्कुल एक जैसे होते हैं",
+        "Line-interactive में zero transfer time होता है जो offline में नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Line-interactive UPS का AVR mains की छोटी sag/surge को बिना battery mode में गए ही ठीक कर देता है, जिससे battery पर stress कम पड़ता है — यह feature offline UPS में नहीं होता। B गलत है, C तथ्यात्मक रूप से गलत, D गलत क्योंकि zero transfer time केवल online UPS में होता है।"
+    },
+    {
+      "id": "u4_ups_types_q18",
+      "question": "Line-interactive UPS का एक प्रमुख लाभ यह है कि इसमें battery के discharge cycles कम होते हैं। इसका कारण क्या है?",
+      "options": [
+        "क्योंकि इसमें battery जुड़ी ही नहीं होती",
+        "क्योंकि छोटी voltage sag/surge को AVR/tap-changer द्वारा ही ठीक कर दिया जाता है, battery/inverter को बार-बार activate नहीं करना पड़ता",
+        "क्योंकि यह हमेशा mains से पूरी तरह disconnect रहता है",
+        "क्योंकि इसकी battery capacity offline से बहुत बड़ी होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि AVR ही अधिकतर छोटी voltage variations को tap-changing से संभाल लेता है, battery/inverter को केवल असली power failure पर ही activate होना पड़ता है, जिससे battery की life बढ़ती है। A तथ्यात्मक रूप से गलत है, C और D line-interactive UPS की working से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_types_q19",
+      "question": "तीनों UPS types की rated cost (प्रति VA) की तुलना करने पर सही क्रम (कम से अधिक) क्या है?",
+      "options": [
+        "Online < Line-interactive < Offline",
+        "Line-interactive < Offline < Online",
+        "Offline < Line-interactive < Online",
+        "तीनों की cost हमेशा बराबर होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Cost के हिसाब से क्रम है: Offline सबसे सस्ता (सरल circuit), Line-interactive मध्यम (AVR के अतिरिक्त components), और Online सबसे महँगा (continuous double-conversion rectifier व inverter)। Options A, B यह क्रम उल्टा या गलत दिखाते हैं, D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_ups_types_q20",
+      "question": "Protection level (load को voltage/frequency गड़बड़ियों से सुरक्षा) के हिसाब से तीनों UPS types का सही क्रम (कम से अधिक) क्या है?",
+      "options": [
+        "Online < Line-interactive < Offline",
+        "Line-interactive < Online < Offline",
+        "तीनों की protection level बराबर होती है",
+        "Offline < Line-interactive < Online"
+      ],
+      "correctIndex": 3,
+      "explanation": "Offline सबसे कम protection देता है (कोई regulation नहीं), Line-interactive AVR के जरिए मध्यम protection देता है, और Online double-conversion के कारण सबसे बेहतरीन (सबसे अधिक) protection देता है। Options A, B यह क्रम गलत दिखाते हैं, C तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_ups_types_q21",
+      "question": "Overall power efficiency (conversion losses कम होने) के हिसाब से इनमें से कौन-सा कथन सही है?",
+      "options": [
+        "Offline और Line-interactive UPS की efficiency आमतौर पर Online UPS से अधिक होती है क्योंकi normal mode में कम conversion stages होते हैं",
+        "Online UPS हमेशा सबसे अधिक efficient होता है",
+        "तीनों types की efficiency हमेशा बराबर होती है",
+        "Offline UPS की efficiency सबसे कम होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Offline UPS normal mode में सीधे mains से load चलाता है (लगभग बिना loss के), और line-interactive में भी सिर्फ AVR के जरिए न्यूनतम loss होती है, जबकि online UPS में हमेशा AC-DC-AC conversion होने से efficiency कम रहती है। B, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_ups_types_q22",
+      "question": "Transfer (switch-over) time के आधार पर तीनों types का सही आरोही (increasing) क्रम क्या है?",
+      "options": [
+        "Line-interactive < Offline < Online",
+        "Online (लगभग 0 ms) < Line-interactive (लगभग 2-4 ms) < Offline (लगभग 3-8 ms)",
+        "Offline < Online < Line-interactive",
+        "तीनों का transfer time हमेशा बराबर होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Online UPS में load हमेशा inverter से जुड़ा रहने के कारण transfer time लगभग zero होता है, line-interactive में inverter standby-synchronized होने से यह थोड़ा कम (2-4 ms) रहता है, जबकि offline में यह सबसे अधिक (3-8 ms) होता है। Options A, C यह क्रम गलत दिखाते हैं, D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_ups_types_q23",
+      "question": "एक छोटे office के single desktop computer के लिए, जहाँ बजट सीमित है और थोड़ा transfer delay स्वीकार्य है, कौन-सा UPS type सबसे उपयुक्त रहेगा?",
+      "options": [
+        "Online (Double-conversion) UPS",
+        "Line-interactive UPS",
+        "Offline (Standby) UPS, क्योंकि इसकी कम cost और कुछ ms का delay desktop PC के लिए पर्याप्त सुरक्षा देता है",
+        "इनमें से कोई भी UPS उपयुक्त नहीं है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सीमित बजट और basic desktop load के लिए offline UPS पर्याप्त सुरक्षा देता है और सबसे किफायती option है। Options A, B ज्यादा महँगे हैं और इस basic जरूरत के लिए overkill हैं, D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_ups_types_q24",
+      "question": "एक hospital के ICU में लगे life-support monitoring equipment के लिए कौन-सा UPS type चुनना चाहिए और क्यों?",
+      "options": [
+        "Offline UPS, क्योंकि यह सबसे सस्ता है",
+        "Line-interactive UPS, क्योंकि यह मध्यम cost देता है",
+        "किसी भी UPS की जरूरत नहीं है",
+        "Online (Double-conversion) UPS, क्योंकि इसका zero transfer time और उच्चतम protection level जीवन-रक्षक उपकरणों के लिए सबसे सुरक्षित है"
+      ],
+      "correctIndex": 3,
+      "explanation": "ICU जैसे critical जीवन-रक्षक load में एक पल का भी interruption खतरनाक हो सकता है, इसलिए zero transfer time और सर्वोत्तम regulation देने वाला online UPS ही सही चुनाव है। Options A, B पर्याप्त सुरक्षा नहीं देते, C स्पष्ट रूप से गलत है।"
+    },
+    {
+      "id": "u4_ups_types_q25",
+      "question": "UPS की rating को Watt के बजाय VA या kVA में क्यों दिया जाता है?",
+      "options": [
+        "क्योंकि AC load का power factor 1 से कम हो सकता है, इसलिए apparent power (VA) UPS के internal components (transformer, inverter switches) की current handling क्षमता तय करने के लिए महत्वपूर्ण होती है",
+        "क्योंकि UPS केवल DC output देता है",
+        "क्योंकि VA हमेशा Watt से कम होता है",
+        "क्योंकि यह केवल resistive load के लिए बनाया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूँकि load का power factor (pf) 1 से कम हो सकता है, VA (apparent power) असली current-handling requirement दर्शाती है, इसीलिए UPS की rating VA/kVA में दी जाती है। B गलत क्योंकि output AC होता है, C गलत क्योंकि VA सामान्यतः Watt से अधिक या बराबर होता है (kW = kVA × pf), D गलत क्योंकि UPS inductive/mixed load भी चलाता है।"
+    },
+    {
+      "id": "u4_ups_types_q26",
+      "question": "एक UPS की rating 1 kVA है और उससे जुड़े load का power factor 0.8 है। इस UPS से अधिकतम कितना real power (Watts में) लिया जा सकता है?",
+      "options": [
+        "1000 Watt",
+        "800 Watt",
+        "1250 Watt",
+        "500 Watt"
+      ],
+      "correctIndex": 1,
+      "explanation": "Real power (kW) = kVA × power factor = 1 × 0.8 = 0.8 kW = 800 Watt होता है। Option A तब सही होता जब pf = 1 हो, C और D गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_types_q27",
+      "question": "एक load को 900 Watt real power चाहिए और उसका power factor 0.75 है। इस load के लिए न्यूनतम UPS rating (VA में) कितनी होनी चाहिए?",
+      "options": [
+        "675 VA",
+        "900 VA",
+        "1200 VA (1.2 kVA)",
+        "500 VA"
+      ],
+      "correctIndex": 2,
+      "explanation": "VA = Watt / power factor = 900 / 0.75 = 1200 VA (1.2 kVA), इसलिए UPS की rating कम-से-कम 1200 VA होनी चाहिए ताकि वह real power की जरूरत पूरी कर सके। Option A उल्टी गणना (900×0.75) है, B pf=1 मानने पर मिलता है जो गलत है, D गणना से मेल नहीं खाता।"
+    },
+    {
+      "id": "u4_ups_types_q28",
+      "question": "एक 2 kVA UPS से एक ऐसा load जुड़ा है जिसका power factor 0.6 है। इस स्थिति में UPS से मिलने वाला real power (Watts में) कितना होगा?",
+      "options": [
+        "2000 Watt",
+        "3333 Watt",
+        "1600 Watt",
+        "1200 Watt"
+      ],
+      "correctIndex": 3,
+      "explanation": "Real power = kVA × pf = 2000 VA × 0.6 = 1200 Watt। Option A तब होता जब pf = 1 हो, B गणितीय रूप से गलत division है, C गलत pf मानने पर आता है।"
+    },
+    {
+      "id": "u4_ups_types_q29",
+      "question": "अगर किसी load की real power requirement (kW) fixed है, तो power factor कम होने पर उस load के लिए UPS की आवश्यक kVA rating पर क्या असर पड़ेगा?",
+      "options": [
+        "kVA rating अधिक चाहिए होगी, क्योंकि kW = kVA × pf होता है और pf कम होने पर same kW के लिए kVA बढ़ानी पड़ती है",
+        "kVA rating कम चाहिए होगी",
+        "power factor का kVA rating पर कोई असर नहीं पड़ता",
+        "UPS की जरूरत ही खत्म हो जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूँकि kW = kVA × pf, इसलिए किसी fixed kW requirement के लिए pf कम होने पर kVA = kW / pf का मान बढ़ जाता है, यानी बड़ी rating वाला UPS चाहिए होगा। B, C, D इस मूल संबंध (relationship) से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_types_q30",
+      "question": "एक छोटे UPS की rating 650 VA है और उससे जुड़े load का power factor 0.8 है। यह UPS अधिकतम कितना real power (Watts में) सुरक्षित रूप से दे सकता है?",
+      "options": [
+        "650 Watt",
+        "520 Watt",
+        "812 Watt",
+        "325 Watt"
+      ],
+      "correctIndex": 1,
+      "explanation": "Real power = VA × pf = 650 × 0.8 = 520 Watt। Option A तब सही होता जब pf = 1 हो, C गलत division (650/0.8) से आता है जो VA से भी अधिक real power दिखाता है (असंभव), D गणना से मेल नहीं खाता।"
+    }
+  ]
+}

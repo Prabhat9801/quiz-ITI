@@ -1,0 +1,218 @@
+{
+  "unit": "unit1",
+  "unitName": "Analog and Digital Electronics circuits",
+  "topic": "transistors_basics",
+  "topicName": "Transistors - Basics & Working Principle",
+  "questions": [
+    {
+      "id": "u1_transistors_basics_q1",
+      "question": "एक BJT (Bipolar Junction Transistor) में कुल कितने doped regions और कितने PN junctions होते हैं?",
+      "options": ["2 regions और 1 junction", "3 regions और 2 junctions", "4 regions और 3 junctions", "3 regions और 3 junctions"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: BJT में तीन regions (Emitter, Base, Collector) और दो PN junctions होते हैं। '2 regions और 1 junction' असल में एक साधारण PN diode की संरचना है। '4 regions और 3 junctions' SCR/Thyristor जैसी four-layer device की बात है। '3 regions और 3 junctions' गलत है क्योंकि तीन regions केवल दो ही junctions बना सकते हैं।"
+    },
+    {
+      "id": "u1_transistors_basics_q2",
+      "question": "NPN transistor के active region में सही operation के लिए दोनों junctions किस तरह biased होने चाहिए?",
+      "options": ["दोनों junctions forward biased", "Emitter-Base forward और Collector-Base reverse biased", "दोनों junctions reverse biased", "Emitter-Base reverse और Collector-Base forward biased"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: active region में Emitter-Base junction forward biased और Collector-Base junction reverse biased होता है, जिससे transistor amplification करता है। 'दोनों forward' saturation region की स्थिति है। 'दोनों reverse' cut-off region दर्शाता है। अंतिम विकल्प reverse-active (inverse) mode है जो व्यावहारिक amplification में उपयोगी नहीं है।"
+    },
+    {
+      "id": "u1_transistors_basics_q3",
+      "question": "किसी transistor का current amplification factor alpha (α) = 0.98 है, तो beta (β) का मान क्या होगा?",
+      "options": ["49", "0.98", "50", "98"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: β = α/(1-α) = 0.98/(1-0.98) = 0.98/0.02 = 49। '0.98' तो α का ही मान है। '98' गलत गणना है। '50' पास का मान है पर सटीक formula से 49 ही आता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q4",
+      "question": "एक transistor में β = 100 और base current Ib = 40 µA है, तो collector current Ic लगभग कितना होगा?",
+      "options": ["0.4 mA", "40 mA", "4 mA", "400 µA केवल"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: Ic = β × Ib = 100 × 40 µA = 4000 µA = 4 mA। '0.4 mA' दस गुना कम गणना है। '40 mA' दस गुना अधिक है। '400 µA केवल' में β को 10 मान लिया गया है जो गलत है।"
+    },
+    {
+      "id": "u1_transistors_basics_q5",
+      "question": "BJT के तीन regions में doping level के अनुसार सबसे अधिक heavily doped कौन सा region होता है?",
+      "options": ["Collector", "Base", "Emitter", "तीनों बराबर doped होते हैं"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: Emitter सबसे अधिक heavily doped होता है ताकि यह अधिक charge carriers inject कर सके। Base सबसे कम (lightly) doped और पतला होता है। Collector moderately doped होता है ताकि high reverse voltage सह सके। 'तीनों बराबर' गलत है क्योंकि तीनों की doping जानबूझकर अलग रखी जाती है।"
+    },
+    {
+      "id": "u1_transistors_basics_q6",
+      "question": "BJT में emitter, base और collector currents के बीच सही सम्बन्ध क्या है?",
+      "options": ["Ib = Ic + Ie", "Ie = Ic + Ib", "Ic = Ie + Ib", "Ie = Ic - Ib"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: Kirchhoff के अनुसार Ie = Ic + Ib, क्योंकि emitter current, base और collector currents में बँट जाती है। 'Ib = Ic + Ie' गलत है क्योंकि Ib सबसे छोटी current है। 'Ic = Ie + Ib' असम्भव है क्योंकि Ic, Ie से बड़ी नहीं हो सकती। 'Ie = Ic - Ib' चिह्न गलत है।"
+    },
+    {
+      "id": "u1_transistors_basics_q7",
+      "question": "जब BJT switch के रूप में fully ON अवस्था में होता है, तो वह किस region में काम करता है?",
+      "options": ["Active region", "Cut-off region", "Saturation region", "Breakdown region"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: switch के ON अवस्था में transistor saturation region में होता है जहाँ Vce बहुत कम और Ic अधिकतम होती है। 'Active region' amplifier के लिए है, switch के लिए नहीं। 'Cut-off region' switch की OFF अवस्था है। 'Breakdown region' खराबी की स्थिति है, सामान्य operation नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q8",
+      "question": "PNP transistor को सही ढंग से बायस करने के लिए emitter की तुलना में base पर voltage कैसा होना चाहिए (active region)?",
+      "options": ["Base, emitter की तुलना में थोड़ा negative", "Base, emitter की तुलना में थोड़ा positive", "Base और emitter समान voltage पर", "Base पर कोई voltage नहीं"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: PNP में Emitter-Base junction forward bias के लिए base को emitter से थोड़ा negative रखा जाता है (current emitter से base की ओर बहती है)। NPN में इसका उल्टा (base positive) होता है, इसलिए दूसरा विकल्प गलत है। समान voltage पर junction conduct नहीं करेगा। बिना voltage के transistor cut-off में रहेगा।"
+    },
+    {
+      "id": "u1_transistors_basics_q9",
+      "question": "किसी transistor का β = 49 है, तो उसका α लगभग कितना होगा?",
+      "options": ["0.49", "0.98", "0.50", "1.02"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: α = β/(1+β) = 49/50 = 0.98। '0.49' गलत गणना है। '0.50' का कोई formula आधार नहीं। '1.02' असम्भव है क्योंकि α हमेशा 1 से कम होता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q10",
+      "question": "BJT के base region को बहुत पतला (thin) और lightly doped क्यों बनाया जाता है?",
+      "options": ["ताकि अधिकांश carriers base में ही recombine हो जाएँ", "ताकि अधिकांश injected carriers collector तक पहुँच सकें", "ताकि base current बहुत बढ़ जाए", "ताकि transistor का आकार छोटा रहे"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: पतला और lightly doped base होने से emitter से आए अधिकांश carriers recombine हुए बिना collector तक पहुँचते हैं, जिससे α और β अधिक रहते हैं। पहला विकल्प उल्टा है, क्योंकि हम recombination कम चाहते हैं। तीसरा गलत है क्योंकि पतला base तो base current घटाता है। चौथा असल कारण नहीं है।"
+    },
+    {
+      "id": "u1_transistors_basics_q11",
+      "question": "Cut-off region में एक ideal BJT switch की स्थिति सबसे सही किससे मिलती है?",
+      "options": ["बन्द (closed) switch", "खुला (open) switch", "एक constant current source", "एक forward biased diode"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: cut-off region में दोनों junctions reverse biased होते हैं और लगभग कोई current नहीं बहती, इसलिए यह खुले (open) switch जैसा है। 'बन्द switch' saturation (ON) अवस्था है। 'constant current source' active region का व्यवहार है। 'forward biased diode' cut-off के विपरीत conducting स्थिति है।"
+    },
+    {
+      "id": "u1_transistors_basics_q12",
+      "question": "NPN transistor के active region में conventional collector current की मुख्य दिशा क्या होती है?",
+      "options": ["Emitter से collector की ओर बाहरी परिपथ में", "Collector terminal से transistor के अन्दर की ओर", "Base से emitter की ओर बाहर", "Collector से emitter की ओर terminal से बाहर"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: NPN में conventional current collector terminal से भीतर की ओर बहती है (electrons उल्टी दिशा में)। पहला और चौथा विकल्प दिशा को गलत बताते हैं। तीसरा विकल्प base current की दिशा से भ्रमित करता है, collector current की नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q13",
+      "question": "Transistor में leakage current Icbo मुख्यतः किस कारण से बहती है?",
+      "options": ["Majority carriers के कारण forward biased junction में", "Minority carriers के कारण reverse biased collector-base junction में", "Base current के सीधे प्रवाह के कारण", "Emitter की heavy doping के कारण"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: Icbo reverse biased collector-base junction में minority carriers के कारण बहने वाली leakage current है और यह temperature के साथ बढ़ती है। पहला विकल्प गलत है क्योंकि leakage majority carriers से नहीं होती। तीसरा base current से भ्रमित करता है। चौथा emitter doping से leakage का सीधा सम्बन्ध नहीं जोड़ता।"
+    },
+    {
+      "id": "u1_transistors_basics_q14",
+      "question": "यदि किसी transistor में Ic = 4.95 mA और Ie = 5 mA है, तो base current Ib कितनी होगी?",
+      "options": ["9.95 mA", "0.05 mA", "0.5 mA", "5 mA"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: Ib = Ie - Ic = 5 - 4.95 = 0.05 mA। '9.95 mA' में गलती से जोड़ दिया गया है। '0.5 mA' दस गुना बड़ी गणना है। '5 mA' तो Ie का मान है, Ib का नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q15",
+      "question": "α (common-base current gain) की सामान्य मान सीमा (typical range) क्या होती है?",
+      "options": ["0.95 से 0.995 के बीच", "50 से 300 के बीच", "1 से 10 के बीच", "0.1 से 0.5 के बीच"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: α सामान्यतः 0.95 से 0.995 के बीच होता है और हमेशा 1 से कम रहता है। '50 से 300' असल में β (common-emitter gain) की range है। '1 से 10' और '0.1 से 0.5' दोनों α की वास्तविक range से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_transistors_basics_q16",
+      "question": "Common-emitter configuration में leakage current Iceo और Icbo के बीच सही सम्बन्ध क्या है?",
+      "options": ["Iceo = Icbo", "Iceo = (1+β) Icbo", "Iceo = Icbo/(1+β)", "Iceo = α × Icbo"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: Iceo = (1+β) Icbo, इसलिए common-emitter में leakage current बहुत अधिक बढ़ जाती है। 'Iceo = Icbo' गलत है क्योंकि β का गुणन छूट जाता है। तीसरा विकल्प उल्टा भाग है। 'α × Icbo' का कोई सही आधार नहीं है।"
+    },
+    {
+      "id": "u1_transistors_basics_q17",
+      "question": "Transistor को amplifier के रूप में उपयोग करने के लिए उसे किस region में biased किया जाता है?",
+      "options": ["Saturation region", "Cut-off region", "Active region", "Breakdown region"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: amplification के लिए transistor active region में biased होता है जहाँ output current, input current के समानुपाती होती है। 'Saturation' और 'Cut-off' switching के लिए उपयोग होते हैं, linear amplification के लिए नहीं। 'Breakdown region' device को नुकसान पहुँचा सकता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q18",
+      "question": "एक transistor में base current 25 µA बढ़ने पर collector current 2.5 mA बढ़ती है। इसका β कितना है?",
+      "options": ["10", "100", "1000", "25"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: β = ΔIc/ΔIb = 2.5 mA / 25 µA = 2500 µA/25 µA = 100। '10' में इकाई रूपांतरण की गलती है। '1000' अत्यधिक बड़ा है। '25' तो केवल base current का संख्यात्मक मान है, β नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q19",
+      "question": "NPN और PNP transistor में मुख्य संरचनात्मक अन्तर क्या है?",
+      "options": ["दोनों में regions की संख्या अलग होती है", "majority carriers की प्रकृति (electrons बनाम holes) अलग होती है", "PNP में कोई junction नहीं होता", "NPN में केवल एक ही terminal होता है"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: NPN में majority carriers electrons होते हैं जबकि PNP में holes; इसी कारण supply और current directions उल्टी होती हैं। पहला विकल्प गलत है क्योंकि दोनों में तीन-तीन regions होते हैं। तीसरा गलत है क्योंकि PNP में भी दो junctions होते हैं। चौथा गलत है क्योंकि हर BJT में तीन terminals होते हैं।"
+    },
+    {
+      "id": "u1_transistors_basics_q20",
+      "question": "यदि transistor का α घटकर 0.90 हो जाए, तो β का मान क्या होगा?",
+      "options": ["9", "90", "0.9", "10"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: β = α/(1-α) = 0.90/0.10 = 9। '90' और '10' गलत गणना हैं। '0.9' तो α का ही मान है, β नहीं। ध्यान दें कि α घटने पर β भी काफी घट जाता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q21",
+      "question": "Saturation region में एक typical silicon BJT का Vce(sat) लगभग कितना होता है?",
+      "options": ["लगभग 0.7 V", "लगभग 5 V", "लगभग 0.2 V", "लगभग 12 V"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: saturation में Vce(sat) लगभग 0.2 V होता है, इसलिए switch ON अवस्था में power loss कम रहता है। 'लगभग 0.7 V' असल में base-emitter forward voltage Vbe है। '5 V' और '12 V' supply voltages जैसे बड़े मान हैं, Vce(sat) नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q22",
+      "question": "किसी BJT में Ib = 50 µA और Ic = 6 mA मापा गया। इसका DC current gain βdc कितना है?",
+      "options": ["60", "120", "300", "12"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: βdc = Ic/Ib = 6 mA / 50 µA = 6000 µA/50 µA = 120। '60' आधा मान है। '300' अत्यधिक बड़ा है। '12' में इकाई रूपांतरण की गलती है।"
+    },
+    {
+      "id": "u1_transistors_basics_q23",
+      "question": "Collector region को base की तुलना में moderate doping और बड़ा आकार क्यों दिया जाता है?",
+      "options": ["ताकि यह अधिक heat dissipate कर सके और high reverse voltage सह सके", "ताकि यह सबसे अधिक carriers inject कर सके", "ताकि इसमें कोई leakage current न बहे", "ताकि base current शून्य हो जाए"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: बड़ा और moderately doped collector अधिक heat dissipate करता है और reverse biased होने के कारण अधिक voltage सह पाता है। carriers inject करने का काम emitter का है, collector का नहीं, इसलिए दूसरा विकल्प गलत है। leakage current पूरी तरह शून्य नहीं होती। collector doping का base current शून्य करने से कोई सीधा सम्बन्ध नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q24",
+      "question": "जब BJT active से saturation की ओर बढ़ता है, तो Collector-Base junction की bias अवस्था कैसे बदलती है?",
+      "options": ["reverse biased से forward biased की ओर", "forward biased से reverse biased की ओर", "हमेशा reverse biased ही रहती है", "junction पूरी तरह टूट जाता है"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: active region में Collector-Base junction reverse biased होता है, पर saturation में यह भी forward biased हो जाता है (दोनों junctions forward)। दूसरा विकल्प दिशा उल्टी बताता है। तीसरा गलत है क्योंकि saturation में bias बदल जाती है। चौथा (breakdown) सामान्य operation नहीं है।"
+    },
+    {
+      "id": "u1_transistors_basics_q25",
+      "question": "एक transistor switch driving में base resistor का मुख्य उद्देश्य क्या होता है?",
+      "options": ["collector current को बढ़ाना", "base current को सीमित (limit) करना ताकि transistor सुरक्षित रूप से saturate हो", "transistor को cut-off में रखना", "Vce को हमेशा 0.7 V रखना"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: base resistor base current को नियंत्रित/सीमित करता है ताकि पर्याप्त drive मिले पर transistor या source क्षतिग्रस्त न हो। पहला गलत है क्योंकि base resistor सीधे collector current नहीं बढ़ाता। तीसरा गलत है क्योंकि उद्देश्य transistor को ON (saturate) करना है, cut-off में रखना नहीं। चौथा विकल्प Vbe और Vce को भ्रमित करता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q26",
+      "question": "Leakage current Icbo temperature बढ़ने पर कैसे व्यवहार करती है?",
+      "options": ["घटती जाती है", "अपरिवर्तित रहती है", "लगभग हर 10°C पर दोगुनी होती जाती है", "शून्य हो जाती है"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: Icbo minority carriers पर निर्भर होने के कारण temperature के प्रति बहुत संवेदनशील है और लगभग हर 10°C वृद्धि पर दोगुनी हो जाती है, जिससे thermal runaway का खतरा रहता है। पहला और चौथा विकल्प उल्टा व्यवहार बताते हैं। 'अपरिवर्तित रहती है' भी गलत है क्योंकि यह स्पष्ट रूप से तापमान-निर्भर है।"
+    },
+    {
+      "id": "u1_transistors_basics_q27",
+      "question": "Common-emitter amplifier में emitter current 10.1 mA और base current 100 µA है। collector current लगभग कितनी होगी?",
+      "options": ["10.0 mA", "10.2 mA", "0.1 mA", "20 mA"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: Ic = Ie - Ib = 10.1 mA - 0.1 mA = 10.0 mA। '10.2 mA' में घटाने की बजाय जोड़ दिया गया है। '0.1 mA' तो base current है। '20 mA' का कोई आधार नहीं है।"
+    },
+    {
+      "id": "u1_transistors_basics_q28",
+      "question": "किसी transistor में β = 200 और आवश्यक collector current Ic = 10 mA है। संतृप्त करने के लिए न्यूनतम base current लगभग कितनी होनी चाहिए?",
+      "options": ["2 mA", "50 µA", "20 mA", "0.5 mA"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: Ib = Ic/β = 10 mA / 200 = 0.05 mA = 50 µA। '2 mA' में गुणा-भाग उल्टा है। '20 mA' असम्भव रूप से बड़ा है। '0.5 mA' दस गुना बड़ी गणना है। (व्यवहार में saturation के लिए इससे कुछ अधिक drive दी जाती है।)"
+    },
+    {
+      "id": "u1_transistors_basics_q29",
+      "question": "Emitter द्वारा base में inject किए गए carriers में से अधिकांश का क्या होता है (अच्छे transistor में)?",
+      "options": ["सभी base में recombine हो जाते हैं", "अधिकांश base region को पार करके collector तक पहुँच जाते हैं", "सभी emitter में वापस लौट आते हैं", "सभी base terminal से बाहर निकल जाते हैं"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: पतला और lightly doped base होने के कारण अधिकांश carriers recombine हुए बिना base को पार करके collector तक पहुँच जाते हैं, जिससे high α मिलता है। पहला विकल्प गलत है क्योंकि केवल थोड़े से ही recombine होते हैं (वही base current बनाते हैं)। तीसरा और चौथा विकल्प transistor action के मूल सिद्धांत के विपरीत हैं।"
+    },
+    {
+      "id": "u1_transistors_basics_q30",
+      "question": "यदि किसी transistor का α, 1 के बहुत करीब (जैसे 0.999) हो जाए, तो β पर क्या प्रभाव पड़ेगा?",
+      "options": ["β बहुत छोटा हो जाएगा", "β पर कोई प्रभाव नहीं", "β बहुत बड़ा (लगभग 999) हो जाएगा", "β ऋणात्मक हो जाएगा"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: β = α/(1-α) = 0.999/0.001 = 999, यानी α के 1 के करीब जाने पर β बहुत बड़ा हो जाता है। पहला विकल्प उल्टा है। दूसरा गलत है क्योंकि β सीधे α पर निर्भर है। β कभी ऋणात्मक नहीं होता क्योंकि α सदा 0 और 1 के बीच रहता है, इसलिए चौथा विकल्प भी गलत है।"
+    }
+  ]
+}

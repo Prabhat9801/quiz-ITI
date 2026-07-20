@@ -1,0 +1,368 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "power_switches",
+  "topicName": "Power Electronic Switches (MOSFET, IGBT, opto-coupler)",
+  "questions": [
+    {
+      "id": "u14_power_switches_q1",
+      "question": "MOSFET (Metal Oxide Semiconductor Field Effect Transistor) एक voltage-controlled device है, इसका क्या अर्थ है?",
+      "options": [
+        "इसे चलाने के लिए gate current की आवश्यकता होती है",
+        "इसे ON/OFF करने के लिए gate-source के बीच voltage apply किया जाता है, जिसमें steady-state gate current लगभग नगण्य होता है",
+        "इसे केवल AC supply पर operate किया जा सकता है",
+        "इसकी switching केवल mechanical relay द्वारा होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MOSFET में gate insulated (oxide layer द्वारा) होता है, इसलिए steady-state में gate current लगभग zero होता है और device gate-source voltage से control होता है, जो इसे उच्च input impedance वाला voltage-controlled switch बनाता है। BJT जैसे current-controlled devices में base current आवश्यक होता है, जो option A दर्शाता है, C व D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u14_power_switches_q2",
+      "question": "IGBT (Insulated Gate Bipolar Transistor) को 'hybrid device' क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि यह केवल AC supply पर काम करता है",
+        "क्योंकि यह MOSFET की voltage-controlled gate driving और BJT की low conduction loss दोनों विशेषताओं को जोड़ता है",
+        "क्योंकि इसमें कोई semiconductor नहीं होता",
+        "क्योंकि यह mechanical relay के साथ काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT input side पर MOSFET जैसा insulated gate रखता है (आसान voltage control, कम driving power) और output side पर BJT जैसी low ON-state voltage drop प्रदान करता है, इसलिए इसे hybrid device कहा जाता है। शेष options IGBT की actual construction को नहीं दर्शाते।"
+    },
+    {
+      "id": "u14_power_switches_q3",
+      "question": "उच्च power, उच्च voltage AC drive applications (जैसे बड़े industrial motor drives) में सामान्यतः किस switching device को प्राथमिकता दी जाती है?",
+      "options": [
+        "साधारण signal diode",
+        "IGBT, क्योंकि यह उच्च voltage/current handling के साथ moderate switching frequency पर कम losses देता है",
+        "केवल mechanical contactor",
+        "साधारण LED"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT उच्च voltage और current ratings को handle करने के साथ-साथ अपेक्षाकृत तेज़ switching और कम conduction loss प्रदान करता है, इसलिए यह medium-to-high power AC drives में widely प्रयुक्त होता है। Signal diode, mechanical contactor और LED power switching devices के रूप में उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u14_power_switches_q4",
+      "question": "MOSFET का उपयोग उच्च switching frequency applications (जैसे SMPS, small motor drives) में अधिक क्यों किया जाता है?",
+      "options": [
+        "क्योंकि इसमें switching losses IGBT की तुलना में कम होते हैं और यह तेज़ switching कर सकता है",
+        "क्योंकि इसकी voltage rating हमेशा IGBT से अधिक होती है",
+        "क्योंकि इसे mechanical brushes की आवश्यकता होती है",
+        "क्योंकि यह केवल low frequency पर काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "MOSFET में switching speed अधिक होती है और उच्च frequency पर switching losses IGBT की तुलना में कम रहते हैं, इसलिए यह high-frequency applications के लिए उपयुक्त है, जबकि IGBT उच्च voltage/power पर बेहतर होता है। MOSFET की voltage rating सामान्यतः IGBT से कम होती है, और यह brushless solid-state device है।"
+    },
+    {
+      "id": "u14_power_switches_q5",
+      "question": "MOSFET के तीन मुख्य terminals कौन से होते हैं?",
+      "options": [
+        "Anode, Cathode, Gate",
+        "Emitter, Base, Collector",
+        "Drain, Source, Gate",
+        "Line, Neutral, Earth"
+      ],
+      "correctIndex": 2,
+      "explanation": "MOSFET में तीन terminals होते हैं — Drain, Source और Gate, जिसमें Gate-Source voltage current flow को Drain-Source path के माध्यम से control करता है। Anode-Cathode-Gate SCR/thyristor के terminals हैं, Emitter-Base-Collector BJT के, और Line-Neutral-Earth power supply terminals हैं।"
+    },
+    {
+      "id": "u14_power_switches_q6",
+      "question": "IGBT के तीन मुख्य terminals कौन से होते हैं?",
+      "options": [
+        "Drain, Source, Gate",
+        "Collector, Emitter, Gate",
+        "Anode, Cathode, Trigger",
+        "Base, Collector, Emitter"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT में Collector, Emitter और Gate तीन terminals होते हैं, जहां Gate-Emitter voltage device को ON/OFF control करता है और current Collector से Emitter के बीच प्रवाहित होता है। Drain-Source-Gate MOSFET के terminals हैं, Anode-Cathode-Trigger SCR के, और Base-Collector-Emitter सामान्य BJT terminals हैं (बिना gate के)।"
+    },
+    {
+      "id": "u14_power_switches_q7",
+      "question": "Opto-coupler (optocoupler/opto-isolator) का मुख्य कार्य क्या है?",
+      "options": [
+        "Voltage को amplify करना",
+        "Input और output circuits के बीच light के माध्यम से electrical isolation प्रदान करते हुए signal transfer करना",
+        "AC को DC में convert करना",
+        "Motor की speed मापना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Opto-coupler में एक LED signal को light में convert करता है और एक photo-transistor/photo-diode उस light को वापस electrical signal में बदलता है, जिससे दोनों circuits electrically isolated रहते हुए भी signal transfer हो जाता है — यह high-voltage power circuit और low-voltage control circuit के बीच protection देता है। यह amplifier, rectifier या motor sensor नहीं है।"
+    },
+    {
+      "id": "u14_power_switches_q8",
+      "question": "AC drive के control circuit में gate driver stage में opto-coupler का उपयोग क्यों किया जाता है?",
+      "options": [
+        "Motor की torque बढ़ाने के लिए",
+        "High-voltage power stage (IGBT/MOSFET) को low-voltage control circuit (microcontroller) से electrically isolate करने और noise/damage से बचाने के लिए",
+        "Supply frequency बदलने के लिए",
+        "Cable की length बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power switching devices high voltage/current पर operate करते हैं जबकि control circuit low-voltage logic पर, इसलिए बीच में opto-coupler लगाकर galvanic isolation दी जाती है ताकि high-voltage fault या transient control circuit को damage न करे। यह torque, frequency या cable length से संबंधित नहीं।"
+    },
+    {
+      "id": "u14_power_switches_q9",
+      "question": "MOSFET में 'body diode' किस प्रयोजन के लिए उपयोगी होता है?",
+      "options": [
+        "यह motor की speed control करता है",
+        "यह reverse direction में current flow के लिए एक parasitic path प्रदान करता है, जो freewheeling/inductive load applications में उपयोगी है",
+        "यह केवल decoration के लिए होता है",
+        "यह gate voltage को amplify करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MOSFET की internal structure के कारण एक parasitic body diode बनता है जो Source से Drain दिशा में conduct करता है; यह inductive load switching (जैसे motor drives) में freewheeling current path के रूप में उपयोगी होता है। यह speed control या gate amplification नहीं करता।"
+    },
+    {
+      "id": "u14_power_switches_q10",
+      "question": "Switching device में 'turn-on time' और 'turn-off time' का क्या महत्व है?",
+      "options": [
+        "इनका device की efficiency से कोई लेना-देना नहीं",
+        "ये switching losses और maximum usable switching frequency निर्धारित करते हैं",
+        "ये केवल device के रंग को प्रभावित करते हैं",
+        "ये केवल device की price तय करते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Turn-on और turn-off time के दौरान device में voltage और current दोनों significant होते हैं, जिससे switching losses उत्पन्न होते हैं; तेज़ switching devices (जैसे MOSFET) उच्च frequency पर कम losses के साथ काम कर सकते हैं। Color या price से इसका सीधा तकनीकी संबंध नहीं है।"
+    },
+    {
+      "id": "u14_power_switches_q11",
+      "question": "एक ideal switch में conduction losses न्यूनतम रखने के लिए ON-state resistance/voltage drop कैसा होना चाहिए?",
+      "options": [
+        "जितना अधिक हो उतना अच्छा",
+        "यह जितना कम (न्यूनतम) हो, conduction losses उतनी ही कम होंगी",
+        "इसका losses से कोई संबंध नहीं",
+        "यह हमेशा infinite होना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "ON-state में device का resistance/voltage drop (जैसे MOSFET का RDS(on) या IGBT का VCE(sat)) जितना कम होगा, conduction power loss (I²R या I×V) उतना ही कम होगा, जिससे efficiency बेहतर रहती है। अधिक resistance से losses बढ़ेंगी, इसलिए option A व D गलत हैं।"
+    },
+    {
+      "id": "u14_power_switches_q12",
+      "question": "IGBT में 'latch-up' समस्या किस स्थिति में हो सकती है?",
+      "options": [
+        "जब device को कभी switch on न किया जाए",
+        "जब उच्च collector current या fast di/dt के कारण parasitic thyristor structure trigger हो जाए और device gate control खो दे",
+        "जब gate voltage बिल्कुल zero हो",
+        "जब device ठंडा हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT की internal structure में एक parasitic thyristor (SCR-like path) मौजूद होता है; अत्यधिक current density या तेज़ di/dt की स्थिति में यह trigger होकर latch-up कर सकता है, जिससे device gate द्वारा turn-off नहीं हो पाता और damage का खतरा रहता है। यह zero gate voltage या cooling से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_power_switches_q13",
+      "question": "Power switching devices में heat sink लगाने का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Device का वजन बढ़ाना",
+        "Switching व conduction losses के कारण उत्पन्न heat को dissipate करके device का temperature सुरक्षित सीमा में रखना",
+        "Device की gate voltage बढ़ाना",
+        "Device को waterproof बनाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power devices में losses के कारण उष्मा उत्पन्न होती है; heat sink इस heat को atmosphere में transfer करके device की junction temperature को rated safe limit के भीतर रखता है, जिससे thermal breakdown से बचाव होता है। Weight बढ़ाना, gate voltage या waterproofing से इसका संबंध नहीं।"
+    },
+    {
+      "id": "u14_power_switches_q14",
+      "question": "Snubber circuit का उपयोग power switching devices के साथ क्यों किया जाता है?",
+      "options": [
+        "Motor की speed control के लिए",
+        "Switching के दौरान होने वाले voltage spikes और dv/dt को limit करके device की सुरक्षा करने के लिए",
+        "Supply frequency मापने के लिए",
+        "Device का रंग बदलने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Turn-off के समय inductive loads के कारण voltage spikes उत्पन्न होते हैं; snubber circuit (RC या RCD network) इन spikes और dv/dt को limit करके device को over-voltage से बचाता है। Speed control या frequency measurement से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u14_power_switches_q15",
+      "question": "MOSFET की तुलना में IGBT में conduction voltage drop की प्रवृत्ति कैसी होती है, विशेषतः उच्च current पर?",
+      "options": [
+        "IGBT में voltage drop हमेशा शून्य रहता है",
+        "IGBT में bipolar conduction के कारण उच्च current पर भी voltage drop अपेक्षाकृत स्थिर व कम रहता है, जबकि high-voltage MOSFET में RDS(on) के कारण drop current के साथ काफी बढ़ जाता है",
+        "MOSFET में हमेशा IGBT से अधिक current handle होता है",
+        "दोनों में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT में bipolar output stage के कारण conduction drop (VCE(sat)) उच्च current पर भी अपेक्षाकृत flat रहता है, जबकि high-voltage MOSFET का RDS(on) resistance-based होने के कारण drop current के square के अनुपात में बढ़ता है — इसलिए उच्च power पर IGBT अधिक efficient होता है। शेष options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u14_power_switches_q16",
+      "question": "Opto-coupler के अंदर सामान्यतः कौन से दो मुख्य components होते हैं?",
+      "options": [
+        "एक resistor और एक capacitor",
+        "एक LED (infrared emitter) और एक photo-detector (photo-transistor/photo-diode)",
+        "दो transformers",
+        "दो mechanical relays"
+      ],
+      "correctIndex": 1,
+      "explanation": "Opto-coupler में input side पर एक LED (आमतौर पर infrared) electrical signal को light में convert करता है, और output side पर एक photo-transistor/photo-diode उस light को detect करके पुनः electrical signal बनाता है — दोनों के बीच कोई direct electrical connection नहीं होता। Resistor-capacitor, transformer या mechanical relay इसकी internal construction नहीं हैं।"
+    },
+    {
+      "id": "u14_power_switches_q17",
+      "question": "MOSFET का gate oxide layer अत्यंत पतला (thin) होने के कारण किस सावधानी की आवश्यकता होती है?",
+      "options": [
+        "इसे बिना किसी सावधानी के handle किया जा सकता है",
+        "Static electricity/ESD (Electrostatic Discharge) से बचाव आवश्यक है क्योंकि यह gate oxide को permanently damage कर सकता है",
+        "इसे हमेशा पानी में डुबोकर रखना चाहिए",
+        "इसे केवल AC supply पर test करना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "MOSFET का gate insulating oxide layer बहुत पतला होता है, इसलिए static discharge से उत्पन्न उच्च voltage इसे punctures कर सकता है और device permanently damage हो सकता है; इसलिए ESD-safe handling procedures (grounding straps, anti-static packaging) आवश्यक हैं। शेष options व्यावहारिक handling requirements नहीं हैं।"
+    },
+    {
+      "id": "u14_power_switches_q18",
+      "question": "AC drive के inverter section में IGBT modules को किस arrangement में लगाया जाता है ताकि 3-phase AC output बनाया जा सके?",
+      "options": [
+        "एकल IGBT द्वारा",
+        "छह (6) IGBTs को three-phase bridge (six-switch) configuration में",
+        "दो IGBTs को series में केवल",
+        "बारह IGBTs को parallel में हमेशा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard 3-phase inverter में छह IGBTs (प्रत्येक phase leg में दो — upper और lower) को bridge configuration में लगाया जाता है, जो DC link voltage से PWM switching द्वारा 3-phase AC output उत्पन्न करता है। शेष options standard inverter topology से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_power_switches_q19",
+      "question": "MOSFET की drain current, gate-source voltage (VGS) द्वारा किस प्रकार नियंत्रित होती है?",
+      "options": [
+        "VGS का drain current से कोई संबंध नहीं होता",
+        "Threshold voltage से अधिक VGS apply करने पर channel बनता/चौड़ा होता है जिससे drain current प्रवाहित हो पाता है",
+        "Drain current हमेशा constant रहता है चाहे VGS कुछ भी हो",
+        "VGS केवल AC applications में प्रभावी होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Enhancement mode MOSFET में जब VGS threshold voltage (Vth) से अधिक हो जाता है, तो gate के नीचे एक conducting channel बनता है/चौड़ा होता है जिससे drain-source के बीच current प्रवाहित हो सकता है — VGS बढ़ाने पर channel resistance घटता है और current क्षमता बढ़ती है। शेष options MOSFET की basic operation के विपरीत हैं।"
+    },
+    {
+      "id": "u14_power_switches_q20",
+      "question": "Free-wheeling diode (FWD) को power switching device (IGBT/MOSFET) के साथ anti-parallel में क्यों जोड़ा जाता है?",
+      "options": [
+        "Motor की speed बढ़ाने के लिए",
+        "Inductive load (जैसे motor winding) में stored energy को safely discharge करने का path देने के लिए, जब switch OFF होता है",
+        "Supply voltage को कम करने के लिए",
+        "Switch की gate voltage बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inductive load current अचानक बंद नहीं हो सकता; जब main switch OFF होता है तो inductor में stored energy को safely dissipate/circulate करने के लिए free-wheeling diode एक path प्रदान करता है, जिससे voltage spike से switch की सुरक्षा होती है। Speed बढ़ाना, supply voltage घटाना या gate voltage बढ़ाना इसका कार्य नहीं है।"
+    },
+    {
+      "id": "u14_power_switches_q21",
+      "question": "IGBT की driving requirement, BJT की तुलना में किस प्रकार सरल है?",
+      "options": [
+        "IGBT को driving के लिए बड़ा continuous base current चाहिए जैसे BJT",
+        "IGBT को voltage-controlled gate की आवश्यकता होती है जिसमें steady-state में नगण्य current लगता है, जबकि BJT को continuous base current चाहिए",
+        "IGBT को driving की कोई आवश्यकता ही नहीं होती",
+        "दोनों की driving requirement बिल्कुल समान है"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT का gate MOSFET जैसा insulated होता है, इसलिए इसे ON रखने के लिए केवल voltage आवश्यक है और steady-state gate current नगण्य होता है, जबकि BJT को ON रखने के लिए निरंतर base current चाहिए जिससे driver circuit जटिल व अधिक power खपत करने वाला होता है। शेष options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u14_power_switches_q22",
+      "question": "Opto-coupler में Current Transfer Ratio (CTR) क्या दर्शाता है?",
+      "options": [
+        "Output current और input LED current का अनुपात, जो device की efficiency को दर्शाता है",
+        "Device की physical size",
+        "Device की price",
+        "Device का color code"
+      ],
+      "correctIndex": 0,
+      "explanation": "CTR (Current Transfer Ratio) यह बताता है कि input LED current की तुलना में output photo-transistor कितना current conduct कर सकता है (percentage में), जो opto-coupler के signal transfer efficiency का मुख्य parameter है। यह size, price या color code से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_power_switches_q23",
+      "question": "MOSFET की तुलना में IGBT की switching frequency क्षमता सामान्यतः कैसी होती है?",
+      "options": [
+        "IGBT हमेशा MOSFET से तेज़ switch करता है",
+        "IGBT की switching speed सामान्यतः MOSFET से कम होती है, विशेषकर turn-off के दौरान 'tail current' के कारण",
+        "दोनों की switching speed बिल्कुल समान होती है",
+        "IGBT में switching की कोई अवधारणा ही नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT के turn-off के समय bipolar structure के कारण एक 'current tail' बनता है जो turn-off को धीमा कर देता है, इसलिए IGBT की practical switching frequency MOSFET की तुलना में सामान्यतः कम रहती है (यही कारण है कि उच्च frequency applications में MOSFET प्राथमिकता पाता है)। शेष options गलत हैं।"
+    },
+    {
+      "id": "u14_power_switches_q24",
+      "question": "Power electronic switch चुनते समय voltage rating के साथ derating (safety margin) क्यों रखा जाता है?",
+      "options": [
+        "क्योंकि यह device को सस्ता बनाता है",
+        "Transient voltage spikes और switching overshoots से device को damage होने से बचाने के लिए",
+        "क्योंकि यह motor की torque बढ़ाता है",
+        "क्योंकि इससे कोई फर्क नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Practical circuits में inductive switching के दौरान voltage overshoot/spikes होते हैं, इसलिए device की rated voltage को actual operating voltage से पर्याप्त margin (derating) के साथ चुना जाता है ताकि यह transient conditions में भी सुरक्षित रहे। Cost या torque से इसका सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u14_power_switches_q25",
+      "question": "Gate driver circuit में opto-coupler के अतिरिक्त gate resistor (RG) का उपयोग किस उद्देश्य के लिए किया जाता है?",
+      "options": [
+        "Gate को permanently short करने के लिए",
+        "Switching speed (dv/dt, di/dt) को नियंत्रित करने और gate ringing/oscillation को कम करने के लिए",
+        "Output current को शून्य करने के लिए",
+        "Motor की temperature मापने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gate resistor gate capacitance को charge/discharge करने की दर नियंत्रित करता है, जिससे switching speed को tune किया जा सकता है और अत्यधिक तेज़ switching से होने वाली EMI/ringing को कम किया जाता है। Gate को short करना, current शून्य करना या temperature मापना इसका कार्य नहीं है।"
+    },
+    {
+      "id": "u14_power_switches_q26",
+      "question": "MOSFET N-channel enhancement type में device को OFF रखने के लिए gate-source voltage कैसा होना चाहिए?",
+      "options": [
+        "Threshold voltage से अधिक positive",
+        "Threshold voltage से कम (typically zero या negative), ताकि conducting channel न बने",
+        "हमेशा infinite voltage",
+        "Voltage का कोई महत्व नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "N-channel enhancement MOSFET में जब VGS threshold voltage से कम (सामान्यतः zero या negative) रहता है, तो conducting channel नहीं बनता और device OFF (non-conducting) रहता है। VGS को threshold से अधिक positive रखने पर device ON हो जाता है, जो option A में गलत तरीके से बताया गया है।"
+    },
+    {
+      "id": "u14_power_switches_q27",
+      "question": "AC drive control board में isolation के लिए opto-coupler के अतिरिक्त कौन सा component भी high-voltage/low-voltage sections के बीच isolation प्रदान करता है?",
+      "options": [
+        "केवल resistor",
+        "Isolation transformer या digital isolator IC",
+        "केवल LED indicator",
+        "केवल fuse"
+      ],
+      "correctIndex": 1,
+      "explanation": "Opto-coupler के अलावा isolation transformer (pulse transformer gate drive) या modern digital isolator ICs भी power stage और control stage के बीच galvanic isolation प्रदान करने के लिए प्रयोग होते हैं। Resistor, LED indicator या fuse isolation प्रदान नहीं करते।"
+    },
+    {
+      "id": "u14_power_switches_q28",
+      "question": "किसी power switch में switching loss और conduction loss दोनों को minimize करने के लिए एक अच्छा switching device चुनते समय किन parameters को प्राथमिकता दी जाती है?",
+      "options": [
+        "केवल device का रंग",
+        "कम ON-state voltage drop/resistance और तेज़ turn-on/turn-off समय",
+        "केवल device की size",
+        "केवल device की price"
+      ],
+      "correctIndex": 1,
+      "explanation": "Total power loss = conduction loss + switching loss; इसे कम करने के लिए device में कम ON-state resistance/voltage drop (कम conduction loss) और तेज़ switching times (कम switching loss) दोनों आवश्यक हैं। Color, size या price केवल secondary considerations हैं, primary technical parameters नहीं।"
+    },
+    {
+      "id": "u14_power_switches_q29",
+      "question": "Thermal runaway की स्थिति power switching devices में क्यों खतरनाक होती है?",
+      "options": [
+        "क्योंकि device ठंडा हो जाता है और काम करना बंद कर देता है",
+        "क्योंकि तापमान बढ़ने से leakage current बढ़ता है, जिससे और अधिक heat उत्पन्न होती है — यह cycle device को permanently damage कर सकता है",
+        "क्योंकि यह motor की torque बढ़ा देता है",
+        "क्योंकि इसका device की performance पर कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermal runaway में temperature बढ़ने पर semiconductor का leakage current बढ़ता है, जिससे power dissipation और अधिक बढ़ती है और temperature और भी बढ़ जाता है — यह positive feedback loop अंततः device को destroy कर सकता है, इसलिए proper heat sinking आवश्यक है। शेष options इस phenomenon की actual प्रकृति को गलत ढंग से बताते हैं।"
+    },
+    {
+      "id": "u14_power_switches_q30",
+      "question": "यदि किसी AC drive में IGBT module फेल (short-circuit) हो जाए, तो सबसे संभावित तत्काल प्रभाव क्या होगा?",
+      "options": [
+        "Drive बिना किसी समस्या के सामान्य रूप से चलता रहेगा",
+        "DC link में उच्च fault current प्रवाहित होगा, जिससे protection circuit (fuse/circuit breaker) trip हो सकता है और अन्य components को नुकसान से बचाया जा सके",
+        "Motor की speed automatically कम हो जाएगी बिना किसी fault indication के",
+        "Drive की efficiency बढ़ जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT short-circuit fail होने पर DC link से भारी fault current प्रवाहित होता है, जिसे तुरंत detect करके protection devices (fast-acting fuse, over-current trip) circuit को isolate करना चाहिए ताकि cascading damage न हो। Drive सामान्य रूप से नहीं चल सकता, efficiency नहीं बढ़ती, और बिना fault indication के काम नहीं होगा — modern drives में fault detection अनिवार्य है।"
+    }
+  ]
+}

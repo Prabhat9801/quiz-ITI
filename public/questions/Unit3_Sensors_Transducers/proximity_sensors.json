@@ -1,0 +1,368 @@
+{
+  "unit": "unit3",
+  "unitName": "Sensors, Transducers and Applications",
+  "topic": "proximity_sensors",
+  "topicName": "Proximity Sensors - Limit Switch, Capacitive, Inductive and IR Types",
+  "questions": [
+    {
+      "id": "u3_proximity_sensors_q1",
+      "question": "Limit switch मुख्यतः किस principle पर operate करता है?",
+      "options": [
+        "Object द्वारा mechanical actuator (lever/plunger) को physically press किए जाने पर internal electrical contacts open/close हो जाते हैं",
+        "Magnetic field sensing पर",
+        "Capacitance change पर",
+        "Infrared light reflection पर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Limit switch एक electromechanical device है जिसमें object द्वारा actuator (lever, roller, plunger) को physically दबाने पर internal contacts (NO/NC) की state बदल जाती है, जिससे circuit open या close होता है। Option B, C और D non-contact type proximity sensors (जैसे inductive, capacitive, IR) के principles हैं, limit switch के नहीं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q2",
+      "question": "Limit switch और non-contact proximity sensors के बीच मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल समान होते हैं, कोई अंतर नहीं",
+        "Limit switch को object के साथ physical contact चाहिए होता है, जबकि proximity sensor बिना contact के object की presence detect करता है",
+        "Limit switch केवल liquid detect करता है",
+        "Proximity sensor हमेशा mechanical होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Limit switch operation के लिए object द्वारा physical actuator press करना आवश्यक होता है (contact-type), जबकि proximity sensors (inductive, capacitive, IR) बिना किसी physical touch के object की presence detect कर लेते हैं (non-contact type), जिससे wear-and-tear कम होता है। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q3",
+      "question": "Inductive proximity sensor मुख्यतः किस प्रकार के targets को detect कर सकता है?",
+      "options": [
+        "केवल non-metallic targets जैसे plastic और wood",
+        "केवल liquid targets",
+        "मुख्यतः metallic (ferrous और कुछ हद तक non-ferrous conductive) targets को",
+        "केवल transparent glass objects को"
+      ],
+      "correctIndex": 2,
+      "explanation": "Inductive proximity sensor eddy current principle पर काम करता है, इसलिए यह primarily metallic objects (ferrous materials जैसे iron, steel के लिए sensitivity अधिक; non-ferrous conductive materials जैसे aluminium, copper के लिए sensitivity कम) को detect करता है। Option A, B और D actual capability से मेल नहीं खाते — non-metallic/liquid detection के लिए capacitive sensor उपयुक्त होता है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q4",
+      "question": "Inductive proximity sensor के अंदर सामान्यतः किन मुख्य components का उपयोग होता है?",
+      "options": [
+        "केवल एक photodiode और LED",
+        "केवल एक mechanical spring और contact",
+        "केवल एक thermocouple junction",
+        "Oscillator coil, detector circuit, trigger circuit और output stage (जो eddy currents की presence detect करते हैं)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Inductive proximity sensor में oscillator (जो coil द्वारा high-frequency electromagnetic field बनाता है), detector circuit (जो oscillation amplitude में change detect करता है due to eddy currents), trigger circuit और output/switching stage होते हैं। Option A IR sensor का component है, Option B limit switch का है और Option C thermocouple sensor का है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q5",
+      "question": "जब कोई metallic target inductive proximity sensor के sensing face के करीब आता है, तो internally क्या होता है?",
+      "options": [
+        "Target में eddy currents induce होती हैं जो oscillator coil से energy absorb करती हैं, जिससे oscillation amplitude घट जाती है और यह change detect करके output switch होता है",
+        "Target हमेशा sensor को permanently magnetize कर देता है",
+        "Sensor की temperature अचानक बढ़ जाती है",
+        "Sensor की capacitance change होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Metallic target के करीब आने पर sensor coil द्वारा उत्पन्न alternating magnetic field उसमें eddy currents induce करता है, जो coil से energy absorb करके oscillator की amplitude को घटाती हैं (या damping बढ़ाती हैं); इस amplitude change को detector circuit sense करके output switch करता है। Option B, C और D actual working principle से मेल नहीं खाते — capacitance change तो capacitive sensor का principle है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q6",
+      "question": "Capacitive proximity sensor, inductive proximity sensor की तुलना में किस अतिरिक्त क्षमता के लिए जाना जाता है?",
+      "options": [
+        "यह केवल metals को ही detect कर सकता है, कुछ और नहीं",
+        "यह non-metallic materials (जैसे plastic, wood, liquid, powder) को भी detect कर सकता है क्योंकि यह dielectric constant में change पर आधारित है",
+        "यह केवल vacuum में काम करता है",
+        "इसमें कोई oscillator नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitive proximity sensor plate के पास किसी भी material (metallic या non-metallic, यहां तक कि liquid और powder) आने पर effective capacitance/dielectric में change को detect करता है, इसलिए यह inductive sensor (जो केवल metal detect करता है) की तुलना में wider range of materials detect कर सकता है। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q7",
+      "question": "IR (Infrared) proximity sensor का basic working principle क्या है?",
+      "options": [
+        "यह coil में eddy current induce करके काम करता है",
+        "यह dielectric constant change पर आधारित है",
+        "IR LED से infrared light emit की जाती है, जो object से reflect होकर IR photodiode/phototransistor द्वारा detect की जाती है",
+        "यह केवल mechanical contact से काम करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "IR proximity sensor में एक IR LED (transmitter) infrared light emit करती है; यदि object सामने हो तो light reflect होकर वापस आती है और IR photodiode/phototransistor (receiver) इसे detect करके object की presence signal करता है। Option A inductive sensor का principle है, Option B capacitive sensor का है और Option D limit switch का है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q8",
+      "question": "IR proximity sensor की detection range किन factors से प्रभावित होती है?",
+      "options": [
+        "केवल sensor के रंग से",
+        "इसका range हमेशा fixed और unaffected रहता है, किसी factor से प्रभावित नहीं होता",
+        "केवल supply voltage की polarity से",
+        "Object की reflectivity, color/surface finish, ambient light की intensity और IR LED की power से"
+      ],
+      "correctIndex": 3,
+      "explanation": "IR proximity sensor की range object की surface reflectivity (dark/matte surfaces कम reflect करती हैं), ambient light conditions (strong sunlight false triggering या range में कमी ला सकता है), और transmitter LED की power/receiver sensitivity पर depend करती है। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q9",
+      "question": "Limit switch में सामान्यतः किस प्रकार के contacts पाए जाते हैं?",
+      "options": [
+        "Normally Open (NO) और Normally Closed (NC) electrical contacts",
+        "केवल capacitive plates",
+        "केवल infrared emitters",
+        "केवल coil windings"
+      ],
+      "correctIndex": 0,
+      "explanation": "Limit switch में mechanically operated NO (Normally Open) और NC (Normally Closed) contacts होते हैं, जो actuator press होने पर state switch कर देते हैं, जिससे control circuit में signal generate होता है। Option B, C और D अन्य sensor types के components हैं, limit switch के नहीं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q10",
+      "question": "Inductive proximity sensor का sensing distance (nominal sensing distance, Sn) किस target material के लिए maximum होता है?",
+      "options": [
+        "Aluminium के लिए",
+        "Mild steel (ferrous material) के लिए, क्योंकि इसकी magnetic permeability अधिक होती है",
+        "Copper के लिए",
+        "Brass के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inductive sensor की rated sensing distance mild steel जैसे ferrous material के लिए standard/maximum मानी जाती है क्योंकि इसकी high permeability के कारण eddy current effect अधिक prominent होता है; non-ferrous conductive materials (aluminium, copper, brass) के लिए sensing distance correspondingly कम होती है (एक correction factor apply होता है)। Option A, C और D non-ferrous materials हैं जिनकी sensing distance कम होती है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q11",
+      "question": "Capacitive proximity sensor का 'sensitivity adjustment' (potentiometer/trimmer) किस उद्देश्य के लिए उपयोगी होता है?",
+      "options": [
+        "Sensor की supply voltage बदलने के लिए",
+        "IR light की wavelength बदलने के लिए",
+        "Detection threshold को adjust करने के लिए ताकि विशेष material/thickness के लिए false triggering से बचा जा सके",
+        "Sensor का color बदलने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "Sensitivity adjustment capacitive sensor की detection threshold को set करने में मदद करता है ताकि यह केवल desired target material/thickness पर ही trigger हो और background objects या container walls से false triggering न हो (जैसे tank के through liquid level detect करते समय)। Option A, B और D actual purpose से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_proximity_sensors_q12",
+      "question": "PNP और NPN type proximity sensors के output में मुख्य अंतर क्या है?",
+      "options": [
+        "PNP और NPN में कोई अंतर नहीं होता",
+        "PNP केवल AC पर काम करता है और NPN केवल DC पर",
+        "NPN sensor केवल capacitive होता है",
+        "PNP sensor activation पर output को positive supply (source current) से connect करता है, जबकि NPN sensor output को negative/ground (sink current) से connect करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "PNP (sourcing) type proximity sensor activation पर output terminal को positive supply voltage से connect करता है (current sources out), जबकि NPN (sinking) type output को ground/negative से connect करता है (current sinks in); दोनों DC sensors के common output configurations हैं। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q13",
+      "question": "IR proximity sensor में ambient light (जैसे sunlight) से false triggering रोकने के लिए commonly कौन सी technique उपयोग होती है?",
+      "options": [
+        "IR LED को modulate करना (जैसे 38 kHz जैसी specific frequency पर pulse करना) और receiver में उसी frequency के लिए tuned demodulator लगाना",
+        "IR LED को हमेशा continuously ON रखना बिना modulation के",
+        "Sensor को धूप में सीधे रखना",
+        "Sensor का power supply बंद कर देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "IR proximity sensors में IR light को एक specific frequency (जैसे 38 kHz) पर modulate किया जाता है और receiver में उसी frequency के लिए tuned circuit होता है, जिससे केवल sensor की अपनी modulated IR signal ही detect होती है, ambient/sunlight (जो unmodulated होती है) false triggering नहीं कर पाती। Option B, C और D actual noise-immunity technique के विपरीत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q14",
+      "question": "Shielded (embeddable) और unshielded (non-embeddable) inductive proximity sensors के बीच क्या अंतर है?",
+      "options": [
+        "Shielded sensor कभी metal detect नहीं कर सकता",
+        "Shielded sensor को metal housing में flush mount किया जा सकता है क्योंकि इसका electromagnetic field sideways में कम फैलता है, जबकि unshielded sensor का field wider होता है और उसे metal से घिरा नहीं रखा जा सकता",
+        "Unshielded sensor हमेशा capacitive होता है",
+        "इन दोनों में कोई अंतर नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Shielded (embeddable) inductive sensor में field को sensor के front की ओर concentrate रखा जाता है (side lobes कम होते हैं), इसलिए इसे metal housing में flush mount किया जा सकता है; unshielded (non-embeddable) sensor का field sideways में wider फैलता है (जिससे range अधिक मिलती है) पर इसे surrounding metal से दूर mount करना पड़ता है ताकि false triggering न हो। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q15",
+      "question": "Limit switch का उपयोग industrial machine में किस प्रकार की application के लिए किया जाता है?",
+      "options": [
+        "केवल temperature measurement के लिए",
+        "केवल liquid level measurement के लिए",
+        "Machine के moving part की end position/travel limit detect करने के लिए (जैसे conveyor, door, elevator में)",
+        "केवल sound intensity measurement के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "Limit switch का classic application किसी moving mechanical part (door, conveyor carriage, elevator, machine slide) की travel limit या end position को mechanically detect करना है, ताकि motor stop/reverse हो सके या safety interlock काम करे। Option A, B और D limit switch की typical application नहीं हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q16",
+      "question": "Proximity sensor की 'hysteresis' (differential travel) का क्या महत्व है?",
+      "options": [
+        "इससे sensor का price बढ़ जाता है, कोई functional महत्व नहीं",
+        "यह केवल sensor की color बदलता है",
+        "इसका output switching से कोई संबंध नहीं है",
+        "यह ON और OFF होने की distance के बीच एक छोटा सा gap प्रदान करता है ताकि target की boundary पर sensor rapidly ON/OFF (chattering) न करे"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hysteresis (या differential travel) sensor के switch-ON distance और switch-OFF distance के बीच एक जानबूझकर रखा गया gap है, जो target के sensing boundary पर वाइब्रेट/oscillate करने पर output को rapidly toggle (chattering) होने से रोकता है, जिससे stable switching मिलती है। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q17",
+      "question": "Capacitive proximity sensor को liquid या powder level detection के लिए उपयोग करते समय किस बात का ध्यान रखना पड़ता है?",
+      "options": [
+        "Sensitivity adjustment सही करना पड़ता है ताकि container wall के material से false detection न हो, और target material की dielectric properties consider की जाएं",
+        "Sensor को हमेशा liquid के अंदर पूरी तरह डुबोना पड़ता है",
+        "यह केवल metallic containers के साथ काम करता है",
+        "Powder या liquid को capacitive sensor कभी detect नहीं कर सकता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Non-contact capacitive level sensor को container की wall के बाहर mount किया जा सकता है; इसे properly sensitivity-adjust करना जरूरी होता है ताकि केवल target material (liquid/powder) detect हो, container wall material की वजह से false triggering न हो। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q18",
+      "question": "मान लीजिए एक conveyor line पर metal parts और plastic parts दोनों को अलग-अलग detect करना है — पहले के लिए inductive और दूसरे के लिए capacitive sensor उपयोग करने का क्या logical कारण है?",
+      "options": [
+        "Inductive sensor केवल metals के प्रति sensitive होता है (eddy current principle) जबकि capacitive sensor non-metallic materials सहित लगभग सभी materials को dielectric change के आधार पर detect कर सकता है",
+        "दोनों sensors बिल्कुल एक जैसा काम करते हैं इसलिए कोई फर्क नहीं पड़ता",
+        "Capacitive sensor केवल metals detect कर सकता है",
+        "Inductive sensor plastic parts को बेहतर detect करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inductive sensor का eddy-current-based principle इसे specifically metallic objects के प्रति sensitive बनाता है, जबकि capacitive sensor plates के पास किसी भी material (metal या non-metal) आने पर dielectric/capacitance change detect कर लेता है, इसलिए plastic parts जैसे non-metallic objects के लिए capacitive sensor अधिक उपयुक्त है। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q19",
+      "question": "IR proximity sensor में 'reflective type' और 'through-beam (opposed) type' के बीच क्या अंतर है?",
+      "options": [
+        "दोनों प्रकार बिल्कुल समान होते हैं",
+        "Through-beam type कभी metal detect नहीं कर सकता",
+        "Reflective type में transmitter और receiver एक ही unit में होते हैं और object से reflected light detect करते हैं, जबकि through-beam type में transmitter और receiver अलग-अलग units में opposite sides पर होते हैं और object द्वारा beam block होने पर detect होता है",
+        "Reflective type में कोई LED नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Reflective (diffuse) type IR sensor में transmitter-receiver एक housing में होते हैं और object से reflect होकर आने वाली light detect करते हैं; through-beam (opposed) type में transmitter एक तरफ और receiver दूसरी तरफ होता है, और object द्वारा beam interrupt होने पर detection होती है (यह longer range और अधिक reliable होता है)। Option A, B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q20",
+      "question": "Proximity sensors (inductive/capacitive) की तुलना में mechanical limit switch का एक प्रमुख disadvantage क्या है?",
+      "options": [
+        "यह हमेशा wireless होता है",
+        "इसमें moving mechanical parts होने के कारण wear-and-tear, contact bounce और limited operational life की समस्या होती है",
+        "इसे कभी industrial environment में use नहीं किया जा सकता",
+        "यह हमेशा non-contact type sensor से महंगा होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Limit switch में mechanical actuator और contacts होते हैं, जो repeated operation से wear होते हैं, contact bounce कर सकते हैं, और इनकी operational life (switching cycles) non-contact proximity sensors की तुलना में सीमित होती है। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q21",
+      "question": "Inductive proximity sensor का response time सामान्यतः limit switch की तुलना में कैसा होता है?",
+      "options": [
+        "तेज (faster) होता है क्योंकि इसमें कोई mechanical movement शामिल नहीं होता, केवल electronic detection होता है",
+        "बहुत धीमा (slower) होता है",
+        "दोनों का response time हमेशा बराबर होता है",
+        "Response time को measure ही नहीं किया जा सकता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inductive proximity sensor पूरी तरह electronic (solid-state) होता है जिसमें कोई mechanical movement नहीं होता, इसलिए इसका response time mechanical limit switch (जिसमें actuator physically move करना पड़ता है) की तुलना में काफी तेज होता है। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q22",
+      "question": "IR proximity sensor का उपयोग automatic door opening system में किस प्रकार किया जाता है?",
+      "options": [
+        "यह केवल door को manually खोलने में मदद करता है",
+        "जब कोई व्यक्ति sensor के detection zone में आता है, तो reflected/interrupted IR signal detect होकर door opening mechanism को trigger करता है",
+        "इसका automatic door से कोई संबंध नहीं है",
+        "यह केवल door को permanently बंद रखता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Automatic door system में IR proximity sensor व्यक्ति के detection zone में प्रवेश करने पर reflected IR light में change (या through-beam block होना) detect करता है, और यह signal motor/actuator को door खोलने के लिए trigger करता है। Option A, C और D actual application से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_proximity_sensors_q23",
+      "question": "Two-wire और three-wire (या four-wire) proximity sensors के बीच मुख्य अंतर क्या है?",
+      "options": [
+        "Two-wire sensor कभी काम नहीं करता",
+        "Three-wire sensor में कोई output नहीं होता",
+        "Two-wire sensor load के साथ series में जुड़ता है (power supply और switching दोनों एक ही दो wires से होते हैं), जबकि three/four-wire sensor में अलग power supply lines और अलग switching output line होती है",
+        "इन दोनों में कोई फर्क नहीं है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Two-wire proximity sensor load के साथ series में connect होता है जिसमें supply और switched output एक ही दो conductors से carry होते हैं (छोटा residual leakage current होता है), जबकि three-wire/four-wire (DC) sensor में अलग power (+V, 0V) और अलग switching output line होती है जो cleaner switching देती है। Option A, B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q24",
+      "question": "Capacitive proximity sensor की एक सीमा (limitation) क्या है जो इसे कुछ applications में inductive sensor से कम उपयुक्त बनाती है?",
+      "options": [
+        "यह कभी non-metallic material detect नहीं करता",
+        "इसमें कोई electronic circuit नहीं होता",
+        "इसका उपयोग केवल high-speed industrial robots में होता है",
+        "यह environmental factors (जैसे humidity, dust, temperature) के प्रति अधिक sensitive होता है, जिससे false triggering की संभावना बढ़ सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Capacitive sensor humidity, dust जमाव और temperature जैसे environmental factors के प्रति अपेक्षाकृत अधिक sensitive हो सकता है, जिससे कभी-कभी unintended dielectric change के कारण false triggering हो सकती है, जबकि inductive sensor इन factors से कम प्रभावित होता है (केवल metal targets पर focus होने के कारण)। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q25",
+      "question": "Roller lever type limit switch किस प्रकार की applications में विशेष रूप से उपयोगी होता है?",
+      "options": [
+        "जहाँ object smooth rolling motion के साथ actuator को धीरे-धीरे दबाता है, जैसे conveyor या cam-operated mechanisms में",
+        "केवल non-contact liquid detection में",
+        "केवल high-frequency electronic circuits में",
+        "केवल light intensity measurement में"
+      ],
+      "correctIndex": 0,
+      "explanation": "Roller lever limit switch में actuator पर एक roller लगा होता है, जो moving object या cam के साथ smoothly (rolling) contact बनाकर switch को गुजरते समय धीरे और लगातार actuate करता है, जो conveyor systems और cam-operated mechanisms में उपयुक्त है। Option B, C और D roller lever limit switch के actual application क्षेत्र से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_proximity_sensors_q26",
+      "question": "Proximity sensor का 'repeatability' parameter क्या दर्शाता है?",
+      "options": [
+        "Sensor कितनी बार बिना fail हुए continuous supply पर चल सकता है",
+        "समान परिस्थितियों में बार-बार measurement करने पर sensor की switching distance में कितनी consistency/variation आती है",
+        "Sensor की physical size कितनी बार बदलती है",
+        "Sensor का रंग कितनी बार बदलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Repeatability यह दर्शाती है कि समान conditions में बार-बार target approach करने पर sensor की actual switching distance में कितना कम/ज्यादा variation आता है — high repeatability का मतलब है कि switching point हर बार लगभग same रहता है, जो consistent operation के लिए महत्वपूर्ण है। Option A, C और D इस parameter की actual definition से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_proximity_sensors_q27",
+      "question": "यदि किसी automated production line में उच्च speed पर parts count करनी हो, तो limit switch की तुलना में inductive/capacitive proximity sensor को प्राथमिकता क्यों दी जाती है?",
+      "options": [
+        "क्योंकि limit switch हमेशा तेज होता है",
+        "क्योंकि proximity sensors केवल एक बार ही काम कर सकते हैं",
+        "क्योंकि proximity sensors mechanical wear के बिना तेज switching और लंबी life प्रदान करते हैं, जो high-speed repetitive counting के लिए उपयुक्त है",
+        "इसका speed से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 2,
+      "explanation": "High-speed repetitive counting applications में non-contact proximity sensors (inductive/capacitive) को प्राथमिकता दी जाती है क्योंकि इनमें कोई mechanical actuator नहीं होता, इसलिए ये तेज और consistent switching देते हैं तथा mechanical wear-and-tear के बिना लंबे समय तक reliably काम करते हैं। Option A, B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q28",
+      "question": "IR proximity sensor का सिग्नल strength object की दूरी बढ़ने पर कैसे बदलता है?",
+      "options": [
+        "दूरी बढ़ने पर signal strength हमेशा बढ़ती है",
+        "दूरी का signal strength पर कोई प्रभाव नहीं पड़ता",
+        "Signal strength केवल object के रंग पर depend करती है, दूरी पर नहीं",
+        "दूरी बढ़ने पर reflected IR signal strength सामान्यतः कम होती जाती है (inverse relationship), जिससे detection range की एक सीमा होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Object की दूरी बढ़ने पर IR sensor तक वापस पहुंचने वाली reflected light की intensity कम होती जाती है (light divergence के कारण), जिससे sensor का detection range सीमित होता है और एक निश्चित दूरी के बाद signal detect करने योग्य नहीं रहता। Option A, B और C तथ्यात्मक रूप से गलत हैं (हालांकि color/reflectivity भी एक factor है, दूरी primary factor है)।"
+    },
+    {
+      "id": "u3_proximity_sensors_q29",
+      "question": "Explosion-proof या hazardous area applications में proximity sensor चुनते समय किस विशेषता पर विशेष ध्यान दिया जाता है?",
+      "options": [
+        "Sensor की intrinsic safety rating और यह sparking (arcing) contacts के बिना काम करे — इसलिए non-contact solid-state sensors (inductive/capacitive) mechanical limit switches से प्राथमिकता में होते हैं",
+        "केवल sensor का रंग",
+        "केवल sensor की कीमत, कोई safety consideration नहीं",
+        "Sensor को हमेशा manually operate किया जाना चाहिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hazardous/explosive environments में spark-free, intrinsically safe operation आवश्यक होता है; non-contact solid-state proximity sensors (inductive/capacitive) mechanical contacts के sparking risk के बिना काम करते हैं, इसलिए इन्हें ऐसी applications में प्राथमिकता दी जाती है, जबकि mechanical limit switch के contacts में arcing का खतरा हो सकता है। Option B, C और D actual selection criteria से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_proximity_sensors_q30",
+      "question": "एक automated packaging line में box का सही position पर होना confirm करने के लिए सबसे उपयुक्त गैर-संपर्क (non-contact) sensor कौन सा हो सकता है और क्यों?",
+      "options": [
+        "Thermocouple, क्योंकि यह temperature measure करता है",
+        "IR (through-beam या reflective) proximity sensor, क्योंकि यह fast, non-contact detection देता है और cardboard जैसे non-metallic box को भी आसानी से detect कर सकता है",
+        "Only mechanical limit switch, क्योंकि यह सबसे तेज होता है",
+        "Strain gauge, क्योंकि यह force measure करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "IR proximity sensor (reflective या through-beam type) fast response, non-contact operation देता है और cardboard/plastic जैसे non-metallic packaging boxes को भी reliably detect कर सकता है, जिससे यह packaging line में position confirmation के लिए उपयुक्त choice है। Option A और D पूर्णतः अलग parameters (temperature, force) measure करते हैं, और Option C mechanical wear की समस्या के कारण high-speed automated line के लिए कम उपयुक्त है।"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "chemical_reactions",
+  "topicName": "Chemical Reactions",
+  "questions": [
+    {
+      "id": "chem_chemical_reactions_q1",
+      "question": "CaO और H2O की अभिक्रिया से Ca(OH)2 बनता है: CaO + H2O → Ca(OH)2. यह किस प्रकार की reaction है?",
+      "options": ["Combination reaction", "Decomposition reaction", "Displacement reaction", "Double displacement reaction"],
+      "correctIndex": 0,
+      "explanation": "दो या दो से अधिक reactants (CaO और H2O) मिलकर एक single product Ca(OH)2 बनाते हैं, इसलिए यह combination reaction है। Decomposition में एक पदार्थ टूटकर कई बनता है, displacement में एक element दूसरे को हटाता है, और double displacement में दो compounds के ions आपस में बदलते हैं — यहाँ इनमें से कोई नहीं होता।"
+    },
+    {
+      "id": "chem_chemical_reactions_q2",
+      "question": "CaCO3 को गर्म करने पर यह CaO और CO2 में टूट जाता है: CaCO3 → CaO + CO2. यह अभिक्रिया किस प्रकार की है और ऊर्जा की दृष्टि से इसकी प्रकृति क्या है?",
+      "options": ["Combination reaction, exothermic", "Decomposition reaction, endothermic", "Displacement reaction, exothermic", "Double displacement reaction, endothermic"],
+      "correctIndex": 1,
+      "explanation": "एक single reactant CaCO3, heat अवशोषित करके CaO और CO2 दो products में टूटता है, इसलिए यह thermal decomposition reaction है और ऊर्जा अवशोषित होने से endothermic है। यह न तो दो पदार्थों के जुड़ने वाली combination है, न displacement है, न ही double displacement, और न ही exothermic है।"
+    },
+    {
+      "id": "chem_chemical_reactions_q3",
+      "question": "जब iron की छड़ को CuSO4 solution में डाला जाता है तो Fe + CuSO4 → FeSO4 + Cu अभिक्रिया होती है। इसमें क्या होता है?",
+      "options": ["Cu, Fe को displace करता है", "कोई displacement नहीं होता, यह double displacement reaction है", "Fe, Cu को displace करके FeSO4 बनाता है", "यह decomposition reaction है"],
+      "correctIndex": 2,
+      "explanation": "Fe अधिक क्रियाशील (reactive) होने से CuSO4 में मौजूद Cu को उसके स्थान से हटाकर स्वयं FeSO4 बनाता है और मुक्त Cu solid के रूप में जमा होता है, इसलिए यह displacement reaction है। पहला विकल्प उल्टा है, दूसरा और चौथा गलत reaction type बताते हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q4",
+      "question": "AgNO3 solution में NaCl solution मिलाने पर AgNO3 + NaCl → AgCl (precipitate) + NaNO3 अभिक्रिया होती है। यह किस प्रकार की reaction है?",
+      "options": ["Combination reaction", "Decomposition reaction", "Displacement reaction", "Double displacement reaction (precipitation भी)"],
+      "correctIndex": 3,
+      "explanation": "दोनों compounds के ions आपस में स्थान बदलते हैं (Ag+ Cl के साथ और Na+ NO3 के साथ जुड़ता है) और अघुलनशील AgCl precipitate बनता है, इसलिए यह double displacement के साथ-साथ precipitation reaction भी है। यह न combination है (कोई single product सीधे नहीं बनता), न decomposition, न सामान्य displacement।"
+    },
+    {
+      "id": "chem_chemical_reactions_q5",
+      "question": "Chemistry में precipitate शब्द से क्या तात्पर्य है?",
+      "options": ["वह अघुलनशील solid जो दो solutions की अभिक्रिया से बनता है", "वह घुलनशील gas जो अभिक्रिया में निकलती है", "एक रंगहीन liquid byproduct", "catalyst का एक विशेष प्रकार"],
+      "correctIndex": 0,
+      "explanation": "जब दो solutions आपस में reaction करके कोई अघुलनशील (insoluble) solid बनाते हैं जो solution में नीचे बैठ जाता है, तो उसे precipitate कहते हैं, जैसे AgCl। यह gas, liquid byproduct या catalyst नहीं है।"
+    },
+    {
+      "id": "chem_chemical_reactions_q6",
+      "question": "N2 + H2 → NH3 अभिक्रिया को balance करने पर सही coefficients क्या होंगे?",
+      "options": ["N2 + H2 → NH3", "N2 + 3H2 → 2NH3", "2N2 + 3H2 → 2NH3", "N2 + 2H2 → 2NH3"],
+      "correctIndex": 1,
+      "explanation": "N2 + 3H2 → 2NH3 में दोनों तरफ N परमाणु (2) और H परमाणु (6) बराबर हैं, इसलिए यह सही balanced equation है (Haber process)। अन्य विकल्पों में N या H परमाणुओं की संख्या दोनों तरफ बराबर नहीं होती।"
+    },
+    {
+      "id": "chem_chemical_reactions_q7",
+      "question": "Fe + O2 → Fe2O3 अभिक्रिया को balance करने पर सही समीकरण कौन सा है?",
+      "options": ["2Fe + O2 → 2Fe2O3", "Fe + O2 → Fe2O3", "4Fe + 3O2 → 2Fe2O3", "4Fe + 2O2 → 2Fe2O3"],
+      "correctIndex": 2,
+      "explanation": "4Fe + 3O2 → 2Fe2O3 में Fe परमाणु (4) और O परमाणु (6) दोनों तरफ बराबर हैं, इसलिए यह सही ढंग से balanced है। शेष विकल्पों में या तो Fe या O परमाणुओं की संख्या असंतुलित रहती है।"
+    },
+    {
+      "id": "chem_chemical_reactions_q8",
+      "question": "किसी reaction में temperature बढ़ जाता है और आस-पास वातावरण को गर्मी मिलती है। यह किस प्रकार की अभिक्रिया को दर्शाता है?",
+      "options": ["temperature गिरता है और ऊर्जा अवशोषित होती है", "कोई ऊर्जा परिवर्तन नहीं होता", "केवल gas का उत्सर्जन होता है, ऊर्जा से इसका संबंध नहीं", "ऊर्जा उत्सर्जित होती है जिससे temperature बढ़ता है"],
+      "correctIndex": 3,
+      "explanation": "जब reaction के दौरान ऊर्जा (heat) products के रूप में मुक्त होती है और आस-पास का temperature बढ़ता है, तो यह exothermic reaction कहलाती है। पहला विकल्प endothermic का वर्णन है, और शेष दो विकल्प तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q9",
+      "question": "निम्नलिखित में से कौन सी endothermic अभिक्रिया है, जिसमें sunlight से ऊर्जा अवशोषित होती है?",
+      "options": ["Photosynthesis in plants", "Combustion of coal", "Respiration in body", "Neutralization of acid and base"],
+      "correctIndex": 0,
+      "explanation": "Photosynthesis में पौधे sunlight से ऊर्जा अवशोषित करके CO2 और पानी से glucose बनाते हैं, इसलिए यह endothermic reaction है। Combustion, respiration और neutralization तीनों ऊर्जा मुक्त करने वाली exothermic reactions हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q10",
+      "question": "किसी reaction में reactants की concentration बढ़ाने पर rate of reaction पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": ["rate घटती है", "rate बढ़ती है", "rate में कोई बदलाव नहीं होता", "अभिक्रिया पूरी तरह रुक जाती है"],
+      "correctIndex": 1,
+      "explanation": "Concentration बढ़ने से प्रति इकाई आयतन में particles की संख्या बढ़ती है जिससे उनकी collisions अधिक होती हैं, इसलिए rate of reaction बढ़ती है। शेष विकल्प वास्तविक व्यवहार के विपरीत हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q11",
+      "question": "Temperature बढ़ाने पर अधिकांश reactions की rate क्यों बढ़ जाती है?",
+      "options": ["rate घटती है क्योंकि molecules धीमे हो जाते हैं", "कोई प्रभाव नहीं पड़ता", "rate बढ़ती है क्योंकि molecules की kinetic energy बढ़ने से effective collisions अधिक होते हैं", "केवल catalytic reactions पर temperature का असर पड़ता है"],
+      "correctIndex": 2,
+      "explanation": "Temperature बढ़ने से molecules की kinetic energy बढ़ती है, जिससे अधिक molecules activation energy को पार करके effective collisions करते हैं और rate of reaction बढ़ती है। पहला और दूसरा विकल्प तथ्यात्मक रूप से गलत हैं, और यह प्रभाव सभी reactions पर पड़ता है, केवल catalytic पर नहीं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q12",
+      "question": "Marble के powder और marble के बड़े टुकड़े दोनों को समान सांद्रता के acid में डाला जाए, तो powder के साथ reaction तेज क्यों होती है?",
+      "options": ["marble के बड़े टुकड़े का surface area अधिक होता है", "दोनों की rate बिल्कुल समान रहती है", "catalyst की उपस्थिति के कारण अंतर आता है", "powdered marble का surface area अधिक होने से acid के साथ contact अधिक होता है, जिससे rate बढ़ती है"],
+      "correctIndex": 3,
+      "explanation": "Powder के छोटे कणों का कुल surface area बड़े टुकड़े की तुलना में अधिक होता है जिससे acid से अधिक contact होता है और rate of reaction बढ़ जाती है। यहाँ कोई catalyst नहीं है और दोनों की rate असमान रहती है, इसलिए शेष विकल्प गलत हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q13",
+      "question": "H2O2 के decomposition (2H2O2 → 2H2O + O2) में MnO2 मिलाने पर reaction तेज हो जाती है परंतु MnO2 स्वयं रासायनिक रूप से अपरिवर्तित रहता है। MnO2 यहाँ क्या कहलाता है?",
+      "options": ["Catalyst", "Reactant", "Product", "Precipitate"],
+      "correctIndex": 0,
+      "explanation": "जो पदार्थ reaction की rate बढ़ाता है पर स्वयं अंत में रासायनिक रूप से अपरिवर्तित रहता है, उसे catalyst कहते हैं, जैसे यहाँ MnO2। यह reactant या product नहीं है क्योंकि यह consume नहीं होता, और precipitate किसी अघुलनशील solid को कहते हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q14",
+      "question": "Catalyst के बारे में निम्न में से कौन सा कथन सही है?",
+      "options": ["catalyst reaction के अंत में पूरी तरह consume हो जाता है", "catalyst रासायनिक रूप से अपरिवर्तित रहते हुए reaction की rate बढ़ाता है", "catalyst केवल endothermic reactions में काम करता है", "catalyst reaction की activation energy को बढ़ा देता है"],
+      "correctIndex": 1,
+      "explanation": "Catalyst reaction को एक वैकल्पिक कम activation energy वाले मार्ग से तेज कराता है लेकिन स्वयं रासायनिक रूप से अपरिवर्तित रहता है, इसलिए यह consume नहीं होता। यह exothermic और endothermic दोनों प्रकार की reactions में काम करता है, और यह activation energy घटाता है, बढ़ाता नहीं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q15",
+      "question": "किसी chemical reaction में reactants और products में क्या अंतर होता है?",
+      "options": ["Reactants वे पदार्थ हैं जो reaction के बाद बनते हैं", "Products और reactants दोनों एक ही चीज़ हैं", "Reactants वे शुरुआती पदार्थ हैं जो आपस में reaction करते हैं, जबकि products reaction से बनने वाले नए पदार्थ हैं", "Products हमेशा gas के रूप में ही होते हैं"],
+      "correctIndex": 2,
+      "explanation": "Reactants वे पदार्थ होते हैं जिनसे reaction शुरू होती है, जबकि products वे नए पदार्थ हैं जो उस reaction के परिणामस्वरूप बनते हैं। पहला विकल्प उल्टा है, दूसरा गलत है क्योंकि दोनों भिन्न हैं, और products solid, liquid या gas किसी भी रूप में हो सकते हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q16",
+      "question": "Al + HCl → AlCl3 + H2 अभिक्रिया को balance करने पर सही समीकरण क्या होगा?",
+      "options": ["Al + 3HCl → AlCl3 + H2", "2Al + 3HCl → 2AlCl3 + H2", "Al + HCl → AlCl3 + H2", "2Al + 6HCl → 2AlCl3 + 3H2"],
+      "correctIndex": 3,
+      "explanation": "2Al + 6HCl → 2AlCl3 + 3H2 में Al (2), Cl (6) और H (6) परमाणु दोनों तरफ बराबर हैं, इसलिए यह सही ढंग से balanced है। शेष विकल्पों में Cl या H परमाणुओं की संख्या दोनों तरफ बराबर नहीं है।"
+    },
+    {
+      "id": "chem_chemical_reactions_q17",
+      "question": "2H2 + O2 → 2H2O अभिक्रिया किस प्रकार की reaction है?",
+      "options": ["Combination reaction", "Decomposition reaction", "Displacement reaction", "Double displacement reaction"],
+      "correctIndex": 0,
+      "explanation": "दो reactants H2 और O2 मिलकर केवल एक product H2O बनाते हैं, इसलिए यह combination reaction है। इसमें कोई पदार्थ टूटता नहीं (decomposition नहीं), न कोई element किसी को हटाता है (displacement नहीं), न ही दो compounds के ions बदलते हैं (double displacement नहीं)।"
+    },
+    {
+      "id": "chem_chemical_reactions_q18",
+      "question": "पानी के electrolysis द्वारा 2H2O → 2H2 + O2 अभिक्रिया होती है। यह किस प्रकार की reaction है?",
+      "options": ["Combination reaction", "Decomposition reaction", "Displacement reaction", "Double displacement reaction"],
+      "correctIndex": 1,
+      "explanation": "एक single reactant H2O, विद्युत ऊर्जा (electricity) की सहायता से टूटकर दो अलग products H2 और O2 बनाता है, इसलिए यह electrolytic decomposition reaction है। यह combination, displacement या double displacement नहीं है क्योंकि यहाँ केवल एक ही reactant टूट रहा है।"
+    },
+    {
+      "id": "chem_chemical_reactions_q19",
+      "question": "Zn + H2SO4 → ZnSO4 + H2 अभिक्रिया किस प्रकार की reaction है?",
+      "options": ["Double displacement reaction", "Decomposition reaction", "Displacement reaction", "Combination reaction"],
+      "correctIndex": 2,
+      "explanation": "Zn अधिक क्रियाशील धातु होने के कारण H2SO4 में मौजूद hydrogen को हटाकर स्वयं ZnSO4 बनाता है और H2 gas मुक्त करता है, इसलिए यह displacement reaction है। यह न double displacement है (केवल एक element हटता है, दो compounds के ions नहीं बदलते), न decomposition, न combination।"
+    },
+    {
+      "id": "chem_chemical_reactions_q20",
+      "question": "BaCl2 + Na2SO4 → BaSO4 (precipitate) + 2NaCl अभिक्रिया किस प्रकार की reaction है?",
+      "options": ["Combination reaction", "Displacement reaction", "Decomposition reaction", "Double displacement reaction (precipitation)"],
+      "correctIndex": 3,
+      "explanation": "दोनों compounds के ions आपस में स्थान बदलते हैं (Ba2+ SO4 के साथ जुड़कर अघुलनशील BaSO4 बनाता है और Na+ Cl के साथ जुड़ता है), इसलिए यह double displacement के साथ precipitation reaction भी है। यह combination, displacement या decomposition की परिभाषा में फिट नहीं बैठती।"
+    },
+    {
+      "id": "chem_chemical_reactions_q21",
+      "question": "जब किसी reaction mixture में अचानक सफ़ेद ठोस पदार्थ solution में तैरता हुआ या नीचे बैठता दिखाई देता है, तो यह किस बात का संकेत है?",
+      "options": ["एक नया अघुलनशील solid product (precipitate) बना है", "reaction में केवल gas निकल रही है", "reaction का temperature बढ़ा है", "reaction में catalyst का उपयोग हुआ है"],
+      "correctIndex": 0,
+      "explanation": "सफ़ेद ठोस का solution में बनना यह दर्शाता है कि दो घुलनशील reactants ने मिलकर एक नया अघुलनशील product (precipitate) बनाया है, जैसे AgCl या BaSO4। यह gas निकलने, temperature बढ़ने या catalyst के उपयोग से सीधे संबंधित नहीं है।"
+    },
+    {
+      "id": "chem_chemical_reactions_q22",
+      "question": "एक experiment में जैसे ही दो solutions मिलाए जाते हैं, test tube स्वयं गर्म हो जाती है। यह किस प्रकार की अभिक्रिया को दर्शाता है?",
+      "options": ["Endothermic, क्योंकि ऊर्जा अवशोषित हुई है", "Exothermic, क्योंकि ऊर्जा उत्सर्जित हुई है", "कोई ऊर्जा परिवर्तन नहीं हुआ", "यह केवल decomposition अभिक्रिया का संकेत है"],
+      "correctIndex": 1,
+      "explanation": "Test tube का गर्म होना यह दर्शाता है कि reaction के दौरान ऊर्जा बाहर निकल रही है, इसलिए यह exothermic reaction है। Endothermic में इसके विपरीत ठंडक महसूस होती, और यह अकेले decomposition का संकेत नहीं है क्योंकि कई प्रकार की reactions exothermic हो सकती हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q23",
+      "question": "जब NH4Cl को पानी में घोला जाता है तो test tube स्पर्श करने पर ठंडी महसूस होती है। यह किस प्रकार की प्रक्रिया को दर्शाता है?",
+      "options": ["Exothermic, ऊर्जा उत्सर्जित होती है", "Catalytic परिवर्तन, कोई ऊर्जा परिवर्तन नहीं", "Endothermic, क्योंकि आस-पास से ऊर्जा अवशोषित होती है", "Neutral, कोई ऊर्जा परिवर्तन नहीं होता"],
+      "correctIndex": 2,
+      "explanation": "NH4Cl के घुलने की प्रक्रिया में आस-पास के वातावरण से ऊर्जा अवशोषित होती है, जिससे test tube ठंडी महसूस होती है, इसलिए यह endothermic प्रक्रिया है। शेष विकल्प तापमान में कमी की सही व्याख्या नहीं करते।"
+    },
+    {
+      "id": "chem_chemical_reactions_q24",
+      "question": "Catalyst किस प्रकार rate of reaction को बढ़ाता है?",
+      "options": ["reactants की मात्रा बढ़ाकर", "reaction का temperature स्वयं बढ़ाकर", "reaction का pressure घटाकर", "activation energy को कम करने वाला एक वैकल्पिक मार्ग (pathway) उपलब्ध कराकर"],
+      "correctIndex": 3,
+      "explanation": "Catalyst reaction के लिए एक ऐसा वैकल्पिक मार्ग प्रदान करता है जिसकी activation energy कम होती है, जिससे अधिक molecules आसानी से products में बदल पाते हैं और rate बढ़ती है। यह न reactants की मात्रा बदलता है, न स्वयं temperature या pressure बढ़ाता/घटाता है।"
+    },
+    {
+      "id": "chem_chemical_reactions_q25",
+      "question": "Mg + O2 → MgO अभिक्रिया को balance करने पर सही समीकरण क्या होगा?",
+      "options": ["2Mg + O2 → 2MgO", "Mg + O2 → MgO", "Mg + O2 → 2MgO", "2Mg + 2O2 → 2MgO"],
+      "correctIndex": 0,
+      "explanation": "2Mg + O2 → 2MgO में Mg (2) और O (2) परमाणु दोनों तरफ बराबर हैं, इसलिए यह न्यूनतम पूर्णांक coefficients के साथ सही ढंग से balanced है। शेष विकल्पों में या तो परमाणु असंतुलित हैं या coefficients अनावश्यक रूप से बड़े हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q26",
+      "question": "किसी ईंधन का combustion (जलना), जैसे coal का O2 में जलना, किस प्रकार की reaction है और इसकी ऊर्जा प्रकृति क्या है?",
+      "options": ["Decomposition reaction, endothermic", "Combination reaction, exothermic", "Displacement reaction, endothermic", "Double displacement reaction, exothermic"],
+      "correctIndex": 1,
+      "explanation": "Combustion में ईंधन, O2 के साथ मिलकर (combine होकर) products बनाता है और साथ ही बड़ी मात्रा में ऊर्जा (heat और light) मुक्त करता है, इसलिए यह combination reaction है और exothermic भी है। यह न decomposition है, न displacement, न double displacement।"
+    },
+    {
+      "id": "chem_chemical_reactions_q27",
+      "question": "मानव शरीर में भोजन के respiration (cellular respiration) द्वारा ऊर्जा प्राप्त होने वाली अभिक्रिया की प्रकृति क्या है?",
+      "options": ["Endothermic, ऊर्जा अवशोषित होती है", "कोई ऊर्जा परिवर्तन नहीं होता", "Exothermic, क्योंकि भोजन के टूटने से ऊर्जा मुक्त होती है", "यह केवल catalytic अभिक्रिया है, ऊर्जा से इसका संबंध नहीं"],
+      "correctIndex": 2,
+      "explanation": "Respiration में glucose जैसे भोजन के अणु ऑक्सीजन के साथ टूटकर ऊर्जा मुक्त करते हैं जिसे शरीर उपयोग करता है, इसलिए यह exothermic reaction है। यह ऊर्जा अवशोषित नहीं करती और केवल catalytic प्रक्रिया नहीं है।"
+    },
+    {
+      "id": "chem_chemical_reactions_q28",
+      "question": "N2 + 3H2 ⇌ 2NH3 जैसी गैसीय अभिक्रिया में pressure बढ़ाने पर rate of reaction पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": ["rate घटती है", "rate पर कोई असर नहीं पड़ता", "अभिक्रिया पूरी तरह रुक जाती है", "rate बढ़ती है क्योंकि gas molecules की concentration और collision frequency बढ़ जाती है"],
+      "correctIndex": 3,
+      "explanation": "Pressure बढ़ाने पर गैसीय molecules एक-दूसरे के करीब आ जाते हैं जिससे प्रति इकाई आयतन concentration और collisions की frequency बढ़ती है, परिणामस्वरूप rate of reaction बढ़ जाती है। शेष विकल्प वास्तविक भौतिक व्यवहार के विपरीत हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q29",
+      "question": "Al2O3 के decomposition को 2Al2O3 → 4Al + 3O2 के रूप में balance किया गया है। इस balanced equation में सभी coefficients (2, 4 और 3) का योग कितना होगा?",
+      "options": ["9", "7", "6", "10"],
+      "correctIndex": 0,
+      "explanation": "समीकरण में coefficients 2 (Al2O3 के लिए), 4 (Al के लिए) और 3 (O2 के लिए) हैं, जिनका योग 2+4+3 = 9 होता है। शेष विकल्प गलत जोड़ पर आधारित हैं।"
+    },
+    {
+      "id": "chem_chemical_reactions_q30",
+      "question": "HCl और NaOH की अभिक्रिया HCl + NaOH → NaCl + H2O किस प्रकार की reaction है और इसकी ऊर्जा प्रकृति क्या है?",
+      "options": ["Decomposition reaction, endothermic", "Double displacement (neutralization) reaction, exothermic", "Combination reaction, endothermic", "Displacement reaction, exothermic नहीं"],
+      "correctIndex": 1,
+      "explanation": "Acid के H+ ion और base के OH- ion आपस में मिलकर पानी बनाते हैं जबकि Na+ और Cl- मिलकर NaCl बनाते हैं, यह ions का आदान-प्रदान double displacement (neutralization) reaction है और साथ ही ऊर्जा मुक्त होने से exothermic भी है। यह decomposition, combination या साधारण displacement नहीं है, और यह वास्तव में exothermic होती है।"
+    }
+  ]
+}

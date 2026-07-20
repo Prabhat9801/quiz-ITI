@@ -1,0 +1,368 @@
+{
+  "unit": "unit13",
+  "unitName": "PLC",
+  "topic": "plc_programming",
+  "topicName": "PLC Programming - Ladder Logic, FBD, Instruction List, HMI Configuration",
+  "questions": [
+    {
+      "id": "u13_plc_programming_q1",
+      "question": "IEC 61131-3 standard के अनुसार PLC programming के लिए मान्यता प्राप्त कितनी मुख्य languages परिभाषित की गई हैं?",
+      "options": [
+        "केवल 1 (Ladder Diagram)",
+        "5 languages — Ladder Diagram (LD), Function Block Diagram (FBD), Instruction List (IL), Structured Text (ST), और Sequential Function Chart (SFC)",
+        "केवल 2 languages",
+        "10 से अधिक languages"
+      ],
+      "correctIndex": 1,
+      "explanation": "IEC 61131-3 standard PLC programming के लिए 5 मुख्य languages को परिभाषित करता है: LD, FBD, IL, ST और SFC, जिनमें से हर एक अलग-अलग applications के लिए उपयुक्त होती है। बाकी options गलत संख्या बताते हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q2",
+      "question": "Ladder Logic Diagram (LD) programming को industrial automation में सबसे ज्यादा लोकप्रियता क्यों मिली?",
+      "options": [
+        "क्योंकि यह केवल computer science के students के लिए बनाई गई थी",
+        "क्योंकि इसकी graphical representation पारंपरिक relay control circuits से मिलती-जुलती है, जिससे electrical maintenance staff को समझना और troubleshoot करना आसान होता है",
+        "क्योंकि यह केवल analog signals को process करती है",
+        "क्योंकि इसमें कोई logic नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ladder Logic पारंपरिक hard-wired relay logic diagrams जैसी दिखती है, इसलिए electricians और maintenance technicians को इसे समझना व troubleshoot करना आसान लगता है, इसी कारण यह industry में सबसे लोकप्रिय बनी। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q3",
+      "question": "Function Block Diagram (FBD) programming में logic को किस प्रकार represent किया जाता है?\n\n",
+      "options": [
+        "केवल text-based commands के रूप में line-by-line",
+        "पहले से बने functional blocks (जैसे AND, OR, Timer, Counter, PID) को आपस में signal lines से जोड़कर, जो एक flow-diagram जैसा दिखता है",
+        "केवल relay contacts और coils के रूप में जैसे ladder logic",
+        "FBD में कोई logic represent नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "FBD में logic को predefined functional blocks (AND, OR, Timer, PID आदि) को signal lines से interconnect करके represent किया जाता है, जो data flow की तरह दिखता है, यह especially process control applications में उपयोगी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q4",
+      "question": "Instruction List (IL) programming किस प्रकार की language है और यह किन programmers के लिए अधिक सुविधाजनक है?\n\n",
+      "options": [
+        "यह एक graphical language है जो केवल diagrams पर आधारित है",
+        "यह एक text-based, low-level mnemonic language (जैसे LD, AND, OUT commands) है, जो assembly language जैसी होती है और अनुभवी programmers के लिए compact code लिखने में सुविधाजनक है",
+        "यह केवल HMI screens design करने के लिए है",
+        "IL का ladder logic से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Instruction List एक text-based mnemonic language है जो assembly language के समान होती है, इसमें LD, AND, OR, OUT जैसे commands sequentially लिखे जाते हैं, यह compact और experienced programmers के लिए तेज coding में मदद करती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q5",
+      "question": "एक साधारण ladder rung में 'Start push button (NO contact)' के parallel में उसी output coil का 'seal-in contact' जोड़ा गया है, और series में 'Stop push button (NC contact)' है। यह rung किस standard circuit को दर्शाती है?",
+      "options": [
+        "केवल एक साधारण AND logic बिना किसी memory के",
+        "Start-Stop Latching (Seal-in) circuit, जहाँ start button दबाने पर output ON होता है और छोड़ने के बाद भी ON रहता है जब तक stop button न दबाया जाए",
+        "यह एक timer circuit है",
+        "यह एक counter circuit है"
+      ],
+      "correctIndex": 1,
+      "explanation": "यह classic Start-Stop seal-in (latching) circuit है जहाँ output coil का अपना contact start button के parallel में जुड़कर push button छोड़ने पर भी output को ON बनाए रखता है, जब तक stop button (NC) दबाकर circuit break न किया जाए। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q6",
+      "question": "Sequential Function Chart (SFC) programming language का मुख्य उपयोग किस प्रकार की applications में होता है?",
+      "options": [
+        "जहाँ process को अलग-अलग steps/stages (जैसे step 1: fill, step 2: mix, step 3: heat) में sequentially execute करना हो, transitions के साथ",
+        "जहाँ केवल एक single relay control करना हो",
+        "SFC केवल analog signal processing के लिए है",
+        "SFC का किसी sequential process से कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "SFC उन applications के लिए उपयुक्त है जहाँ process को अलग-अलग sequential steps/states में divide करना हो, हर step के बीच transition conditions define की जाती हैं, जैसे batch processing में fill-mix-heat-discharge जैसे steps। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q7",
+      "question": "PLC programming में 'Rung' शब्द का क्या अर्थ है?",
+      "options": [
+        "यह PLC का एक physical hardware part है",
+        "Ladder diagram में एक horizontal line जिसमें एक या अधिक input conditions (contacts) और अंत में एक output (coil/instruction) होता है, जो एक complete logical statement बनाता है",
+        "यह केवल analog module का नाम है",
+        "Rung का programming से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rung ladder diagram की एक horizontal line होती है जिसमें input contacts (conditions) और अंत में output instruction होता है, यह पूरा एक logical statement/rule बनाता है जिसे PLC execute करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q8",
+      "question": "HMI (Human Machine Interface) configuration करते समय 'Tag Database' या 'Tag Mapping' का क्या उद्देश्य होता है?",
+      "options": [
+        "इसका कोई तकनीकी उद्देश्य नहीं",
+        "HMI screen के प्रत्येक graphic object (button, indicator, numeric display) को PLC के specific memory address/variable से जोड़ना ताकि real-time data दिखाया और control किया जा सके",
+        "यह केवल HMI का रंग निर्धारित करता है",
+        "Tag mapping केवल analog signals के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tag database HMI के graphic elements (buttons, indicators, displays) को PLC memory addresses/variables से link करता है, जिससे HMI पर real-time data monitor किया जा सके और operator commands PLC तक भेजे जा सकें। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q9",
+      "question": "HMI screen पर 'Alarm Configuration' सेटअप करते समय किस प्रकार की conditions को define किया जाता है?",
+      "options": [
+        "केवल screen का background color",
+        "Process parameters के threshold limits (जैसे high/low temperature या pressure) जिनके पार होने पर operator को visual/audio alert दिखाया जाए",
+        "इसका PLC memory से कोई संबंध नहीं",
+        "Alarm configuration केवल ladder logic में होती है, HMI में नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Alarm configuration में process parameters की threshold limits (जैसे high/low set points) define की जाती हैं, जिन्हें cross करने पर HMI operator को visual (blinking/color change) या audio alert देकर सचेत करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q10",
+      "question": "Ladder logic में 'Branch' instruction (parallel path) का उपयोग किस logical operation के लिए किया जाता है?",
+      "options": [
+        "केवल series logic (AND) के लिए",
+        "OR logic के लिए, जहाँ एक rung में multiple parallel paths में से किसी एक भी path के TRUE होने पर rung true हो जाती है",
+        "Branch instruction का logic से कोई संबंध नहीं",
+        "केवल output coil के बाद उपयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Branch (parallel path) instruction ladder logic में OR condition बनाने के लिए उपयोग होता है, जहाँ किसी भी एक parallel path के TRUE होने पर पूरी rung true हो जाती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q11",
+      "question": "Structured Text (ST) programming, IEC 61131-3 की अन्य languages से किस प्रकार अलग है?",
+      "options": [
+        "यह एक high-level, text-based language है जो Pascal/C जैसी syntax (IF-THEN-ELSE, FOR, WHILE loops) का उपयोग करती है, complex mathematical calculations के लिए उपयुक्त है",
+        "यह पूरी तरह graphical language है",
+        "ST केवल HMI screens के लिए है",
+        "ST में कोई programming logic नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Structured Text एक high-level, text-based programming language है जिसमें traditional programming languages (जैसे Pascal) जैसे constructs (IF-THEN-ELSE, loops, functions) होते हैं, यह complex calculations और data manipulation के लिए ladder से बेहतर होती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q12",
+      "question": "PLC programming software में 'Online Editing' या 'Online Program Modification' feature का क्या फायदा है?",
+      "options": [
+        "इसका कोई फायदा नहीं",
+        "यह PLC को running mode में रखते हुए ही program में changes करने की सुविधा देता है, जिससे production बंद किए बिना minor modifications हो सकते हैं",
+        "यह केवल HMI screens edit करने के लिए है",
+        "Online editing हमेशा PLC को permanently damage कर देती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Online editing feature से PLC को RUN mode में रखते हुए program में minor changes किए जा सकते हैं, जिससे बार-बार production रोकने की जरूरत नहीं पड़ती, यह downtime कम करने में मदद करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q13",
+      "question": "Ladder logic program में instructions को 'Top to Bottom' और 'Left to Right' क्रम में execute करने का PLC scan cycle से क्या संबंध है?",
+      "options": [
+        "इसका scan cycle से कोई संबंध नहीं",
+        "PLC scan के दौरान program को इसी क्रम में sequentially पढ़ता और execute करता है, इसलिए rung का order logic के परिणाम को प्रभावित कर सकता है, खासकर जब एक ही memory bit कई जगह उपयोग हो",
+        "यह केवल HMI configuration के लिए लागू होता है",
+        "PLC हमेशा bottom to top execute करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC अपने scan cycle में ladder program को top-to-bottom, left-to-right क्रम में sequentially execute करता है, इसलिए rungs का order महत्वपूर्ण हो सकता है जब कोई memory bit multiple rungs में उपयोग हो रहा हो। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q14",
+      "question": "FBD (Function Block Diagram) में एक AND block के दो input pins और एक output pin होते हैं। यदि दोनों inputs TRUE हैं, तो output की स्थिति क्या होगी?",
+      "options": [
+        "Output FALSE रहेगा",
+        "Output TRUE होगा, क्योंकि AND logic में दोनों inputs TRUE होने पर ही output TRUE होता है",
+        "Output undefined रहेगा",
+        "AND block में output कभी नहीं बदलता"
+      ],
+      "correctIndex": 1,
+      "explanation": "AND logic gate/block का मौलिक नियम यह है कि output तभी TRUE होता है जब सभी (यहाँ दोनों) inputs TRUE हों, यह Boolean logic का basic principle है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q15",
+      "question": "PLC programming में 'Subroutine' या 'Function Block (FB) call' का उपयोग करने का मुख्य फायदा क्या है?",
+      "options": [
+        "इसका कोई फायदा नहीं, यह केवल program को complex बनाता है",
+        "बार-बार उपयोग होने वाले logic को एक ही जगह define करके कई बार call किया जा सकता है, जिससे program size कम होता है, maintenance आसान होता है और errors कम होती हैं",
+        "यह केवल HMI के लिए उपयोगी है",
+        "Subroutine का ladder logic से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Subroutine/Function Block बार-बार दोहराए जाने वाले logic (जैसे motor start-stop logic) को एक बार define करके कई जगह reuse करने की सुविधा देता है, जिससे code की length कम होती है, debugging और maintenance आसान होते हैं। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q16",
+      "question": "HMI screen design में 'Navigation Buttons' (जैसे Home, Alarms, Trends screens के बीच जाने के लिए) क्यों जरूरी माने जाते हैं?",
+      "options": [
+        "इनका कोई तकनीकी उद्देश्य नहीं",
+        "ये operator को अलग-अलग process screens के बीच आसानी से move करने की सुविधा देते हैं, जिससे monitoring और control efficient होता है",
+        "ये केवल decoration के लिए होते हैं",
+        "Navigation buttons का PLC data से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Navigation buttons operator को process overview, alarms, trends, और individual equipment screens के बीच जल्दी move करने की सुविधा देते हैं, जिससे monitoring और control प्रक्रिया सुगम और efficient बनती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q17",
+      "question": "Ladder logic में 'Compare instruction' (जैसे Greater Than, Less Than, Equal To) का उपयोग किस प्रकार की conditions में किया जाता है?",
+      "options": [
+        "केवल simple ON/OFF digital signals के लिए",
+        "दो numeric values (जैसे current tank level की value और preset threshold value) की तुलना करने के लिए, जिसके आधार पर आगे का logic decide होता है",
+        "Compare instruction का किसी भी numerical data से कोई संबंध नहीं",
+        "यह केवल timer values के साथ काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Compare instructions दो numeric values (जैसे actual sensor reading और preset threshold) की तुलना करने के लिए उपयोग होती हैं ताकि उस तुलना के परिणाम (greater, less, equal) के आधार पर आगे का control logic execute हो सके। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q18",
+      "question": "PLC programming software में 'Cross Reference' feature का उपयोग किस उद्देश्य के लिए किया जाता है?",
+      "options": [
+        "इसका कोई उपयोग नहीं",
+        "यह बताता है कि कोई विशेष bit/address (input, output, memory) program में कहाँ-कहाँ (किन rungs में) उपयोग हुआ है, जो debugging और troubleshooting में मदद करता है",
+        "यह केवल HMI graphics बनाने के लिए है",
+        "Cross reference केवल analog modules के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cross Reference feature यह दिखाता है कि कोई specific address पूरे program में कहाँ-कहाँ (कौन-कौन सी rungs में) उपयोग हुआ है, जिससे debugging और logic tracing करना आसान हो जाता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q19",
+      "question": "एक ladder rung में एक ही address का Normally Open contact दो अलग-अलग rungs में उपयोग किया गया है। यह programming practice की दृष्टि से क्या दर्शाता है?",
+      "options": [
+        "यह गलत/invalid programming है और PLC इसे कभी accept नहीं करेगा",
+        "यह पूरी तरह valid है क्योंकि एक ही contact address को जितनी बार चाहें उतनी rungs में उपयोग किया जा सकता है (duplicate contacts allowed हैं, duplicate coils नहीं)",
+        "यह केवल counters के लिए allowed है",
+        "इसका कोई मतलब नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ladder logic में एक ही address का contact (input reference) कई rungs में बार-बार उपयोग किया जा सकता है (यह valid है), जबकि एक ही output coil को कई जगह program करना (duplicate coil) आमतौर पर गलत माना जाता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q20",
+      "question": "HMI configuration में 'Data Logging' या 'Trend Recording' feature किस उद्देश्य से सेटअप किया जाता है?",
+      "options": [
+        "इसका कोई उद्देश्य नहीं",
+        "Process parameters (जैसे temperature, pressure) की historical values को समय के साथ record करके graph के रूप में देखने के लिए, जिससे process performance analysis और troubleshooting में मदद मिलती है",
+        "यह केवल screen का color बदलता है",
+        "Data logging केवल alarm के लिए उपयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Data logging/trend recording process parameters के historical values को समय के साथ store करता है, जिन्हें graph के रूप में देखा जा सकता है, यह process performance analysis, quality control और troubleshooting में सहायक होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q21",
+      "question": "Ladder logic programming में 'MOV (Move) instruction' का सामान्य उपयोग क्या है?",
+      "options": [
+        "यह केवल physical PLC को move करने के लिए है",
+        "एक memory location/register की value को दूसरे memory location में copy करने के लिए, जैसे किसी constant value को एक register में load करना",
+        "MOV instruction का data handling से कोई संबंध नहीं",
+        "यह केवल timer preset value बदलने के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MOV instruction एक source (constant value या register) की data value को destination register/memory location में copy करने के लिए उपयोग होती है, जैसे setpoint values load करना। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q22",
+      "question": "Instruction List (IL) programming में एक typical sequence 'LD I0.0', 'AND I0.1', 'OUT Q0.0' किस ladder logic rung को दर्शाता है?",
+      "options": [
+        "I0.0 OR I0.1 होने पर Q0.0 output होता है",
+        "I0.0 AND I0.1 दोनों series में TRUE होने पर Q0.0 output energize होता है (एक साधारण AND ladder rung)",
+        "यह केवल एक timer instruction है",
+        "इसका कोई ladder equivalent नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "IL में 'LD I0.0' पहला contact load करता है, 'AND I0.1' उसे series में दूसरे contact से जोड़ता है, और 'OUT Q0.0' परिणाम को output coil में देता है — यह एक साधारण series (AND) ladder rung के बराबर है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q23",
+      "question": "HMI पर 'Numeric Entry Field' के जरिए operator द्वारा setpoint value बदलने की सुविधा देते समय कौन सी safety practice अपनानी चाहिए?",
+      "options": [
+        "किसी भी value को बिना limit के enter करने देना चाहिए",
+        "Field में minimum-maximum range validation (जैसे केवल 0-100°C के बीच value allow करना) और access-level password protection रखना चाहिए ताकि गलत/unauthorized entry से नुकसान न हो",
+        "Numeric entry field में कभी validation की जरूरत नहीं होती",
+        "Password protection का HMI safety से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Safety के लिए numeric entry fields में range validation (min-max limits) और access-level/password protection रखना जरूरी है ताकि operator गलती से या बिना authorization के असुरक्षित values enter न कर सके। बाकी options असुरक्षित practices दर्शाते हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q24",
+      "question": "Ladder logic में 'Master Control Relay (MCR)' instruction का उपयोग किस उद्देश्य से किया जाता है?",
+      "options": [
+        "यह केवल analog values दिखाने के लिए है",
+        "MCR के भीतर आने वाली सभी rungs के outputs को एक साथ enable/disable करने के लिए, जो एक प्रकार का zone control प्रदान करता है (जैसे emergency situation में पूरे section को disable करना)",
+        "MCR का ladder logic से कोई संबंध नहीं",
+        "MCR केवल counters के लिए उपयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MCR instruction ladder program के एक section (zone) की सभी rungs के non-retentive outputs को एक साथ control (enable/disable) करने की सुविधा देता है, जो सुरक्षा और grouped control के लिए उपयोगी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q25",
+      "question": "PLC program में 'Comments' और 'Rung Descriptions' जोड़ने की practice को अच्छी programming habit क्यों माना जाता है?",
+      "options": [
+        "इसका कोई फायदा नहीं, केवल program size बढ़ता है",
+        "यह program को समझने, future modification करने और नए technicians के लिए troubleshooting को आसान बनाता है",
+        "Comments PLC scan time को तेज कर देते हैं",
+        "Comments केवल HMI screens में उपयोग होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Comments और rung descriptions program logic को documentation के रूप में समझाते हैं, जिससे भविष्य में modification करने वाले या नए technicians को logic समझना व troubleshoot करना आसान हो जाता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q26",
+      "question": "FBD programming में यदि एक Timer function block का output किसी AND block के एक input से जोड़ा जाए, तो इसका क्या अर्थ है?",
+      "options": [
+        "इसका कोई logical अर्थ नहीं होता",
+        "Timer complete होने पर मिलने वाला output signal, AND block की condition का एक हिस्सा बनेगा, यानी overall output तभी TRUE होगा जब timer output के साथ-साथ AND block के अन्य inputs भी TRUE हों",
+        "यह हमेशा output को FALSE कर देगा",
+        "Timer और AND block को कभी जोड़ा नहीं जा सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "FBD में blocks को signal lines से जोड़ा जाता है, इसलिए Timer का output AND block के एक input के रूप में कार्य करेगा, और AND block का overall output तभी TRUE होगा जब उसके सभी inputs (timer output सहित) TRUE हों। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q27",
+      "question": "HMI configuration में 'User Access Levels' (जैसे Operator, Supervisor, Engineer) बनाने का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "इसका कोई सुरक्षा-संबंधी उद्देश्य नहीं",
+        "अलग-अलग roles के लिए अलग-अलग permissions define करना, जैसे operator केवल basic monitoring/control कर सके जबकि critical parameters बदलने का अधिकार केवल supervisor/engineer स्तर को हो",
+        "यह केवल screen का background color बदलता है",
+        "Access levels का PLC program से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "User access levels यह सुनिश्चित करते हैं कि केवल authorized व्यक्ति ही critical parameters या settings बदल सकें, जबकि सामान्य operator को केवल जरूरी monitoring/control permissions मिलें, इससे unauthorized या accidental changes से सुरक्षा मिलती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q28",
+      "question": "PLC ladder program में एक ही rung में timer के 'Done Bit' (DN) को एक counter instruction के input में उपयोग करना किस प्रकार की programming तकनीक को दर्शाता है?",
+      "options": [
+        "यह invalid programming है और कभी काम नहीं करेगी",
+        "Timer और counter instructions को interlink करके एक sequential/combined logic बनाना, जैसे हर बार timer पूरा होने पर counter को increment करना",
+        "इसका कोई व्यावहारिक उपयोग नहीं है",
+        "यह केवल HMI configuration में संभव है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Timer का done bit counter instruction के input में उपयोग करना valid और उपयोगी technique है, जैसे हर बार जब timer अपना preset time पूरा करे तो counter को increment करना, जो periodic counting applications में काम आता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q29",
+      "question": "PLC को programming software से connect करते समय 'Upload' और 'Download' operations में क्या अंतर है?",
+      "options": [
+        "दोनों एक ही operation हैं",
+        "Download में computer से program PLC में transfer होता है, जबकि Upload में PLC में मौजूद program वापस computer में लाया जाता है (जैसे existing program को backup/edit के लिए लेना)",
+        "Upload का मतलब है PLC को restart करना",
+        "Download का HMI configuration से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Download operation में program computer/programming device से PLC CPU में transfer किया जाता है, जबकि Upload operation में PLC में running program को वापस computer में लाया जाता है, यह तब उपयोगी है जब original source file उपलब्ध न हो। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q30",
+      "question": "एक बड़े project में जहाँ बहुत सारे similar machines (जैसे 10 identical conveyor stations) control करने हैं, 'Function Block (FB) with instance data' का उपयोग करना क्यों फायदेमंद है, बजाय हर station के लिए अलग-अलग ladder rungs लिखने के?",
+      "options": [
+        "इसका कोई फायदा नहीं, अलग rungs लिखना ही बेहतर तरीका है",
+        "एक ही Function Block logic को एक बार लिखकर हर station के लिए अलग instance data के साथ बार-बार call किया जा सकता है, जिससे program size घटती है, consistency बनी रहती है और maintenance आसान होता है",
+        "Function Block केवल HMI configuration के लिए उपयोग होता है",
+        "Instance data का PLC program से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Function Block with instance data approach में एक ही logic template को बार-बार लिखने के बजाय, हर similar machine/station के लिए अलग instance data के साथ reuse किया जाता है, जिससे program compact, consistent और maintain करने में आसान बनता है। बाकी options गलत हैं।"
+    }
+  ]
+}

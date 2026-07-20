@@ -1,0 +1,368 @@
+{
+  "unit": "unit12",
+  "unitName": "Domestic Appliances",
+  "topic": "induction_cooktop",
+  "topicName": "Induction Cooktop - Principle, Coil, IGBT, Components, Fault Identification & Heat Sinking",
+  "questions": [
+    {
+      "id": "u12_induction_cooktop_q1",
+      "question": "Induction cooktop भोजन/बर्तन को गरम करने के लिए किस मूल सिद्धांत पर कार्य करता है?",
+      "options": [
+        "Resistive heating element द्वारा",
+        "Electromagnetic induction द्वारा coil में high-frequency alternating current प्रवाहित करके ferromagnetic बर्तन में eddy currents उत्पन्न करना",
+        "Infrared radiation द्वारा",
+        "Chemical combustion द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Induction cooktop में coil में high-frequency AC प्रवाहित करने से एक तेज़ी से बदलता हुआ magnetic field उत्पन्न होता है, जो ferromagnetic (लोहे/स्टील जैसे) बर्तन के तल में eddy currents induce करता है, जिससे बर्तन स्वयं गरम होता है (I²R losses के कारण)। Resistive heating element wire heaters में, infrared radiation halogen cooktops में, और chemical combustion gas stoves में प्रयोग होता है — ये induction का सिद्धांत नहीं हैं।"
+    },
+    {
+      "id": "u12_induction_cooktop_q2",
+      "question": "Induction cooktop में eddy currents किस कारण heat उत्पन्न करते हैं?",
+      "options": [
+        "बर्तन के material में resistance के कारण I²R losses (Joule heating)",
+        "बर्तन के अंदर chemical reaction के कारण",
+        "बर्तन के रंग के कारण",
+        "बर्तन के वजन के कारण"
+      ],
+      "correctIndex": 0,
+      "explanation": "Induced eddy currents जब बर्तन के material (जिसमें कुछ resistance होता है) से प्रवाहित होते हैं, तो I²R losses (Joule heating) के रूप में heat उत्पन्न होती है, जो सीधे बर्तन के तल को गरम कर देती है। यह किसी chemical reaction, बर्तन के रंग, या वजन के कारण नहीं होता।"
+    },
+    {
+      "id": "u12_induction_cooktop_q3",
+      "question": "Induction cooktop पर खाना पकाने के लिए किस प्रकार के बर्तन उपयुक्त होते हैं?",
+      "options": [
+        "केवल glass के बर्तन",
+        "Ferromagnetic material (जैसे cast iron, magnetic stainless steel) से बने बर्तन",
+        "केवल plastic के बर्तन",
+        "केवल pure aluminium के बर्तन (बिना किसी coating के)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Induction heating के लिए बर्तन का तल ferromagnetic होना आवश्यक है (जैसे cast iron या magnetic stainless steel) ताकि magnetic field उसमें प्रभावी रूप से eddy currents व hysteresis losses उत्पन्न कर सके। Glass, plastic, और pure aluminium (non-magnetic) magnetic field से प्रभावी रूप से प्रतिक्रिया नहीं करते, इसलिए इन पर heating नहीं होती (जब तक विशेष induction-compatible base ना हो)।"
+    },
+    {
+      "id": "u12_induction_cooktop_q4",
+      "question": "यदि induction cooktop पर एक non-magnetic (जैसे pure aluminium या copper) बर्तन रखा जाए, तो क्या होगा?",
+      "options": [
+        "बर्तन तुरंत सामान्य से अधिक तेज़ गरम होगा",
+        "Cooktop बर्तन को detect नहीं करेगा या 'no pan detected' error दिखाकर काम नहीं करेगा",
+        "Cooktop फट जाएगा",
+        "Cooktop की frequency शून्य Hz हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Non-magnetic material में प्रभावी eddy currents उत्पन्न नहीं होते (या coil की impedance में अपेक्षित बदलाव detect नहीं होता), इसलिए cooktop का sensor बर्तन को उपयुक्त ना पाकर 'no pan detected' error दिखाकर heating शुरू ही नहीं करता। बर्तन तेज़ गरम नहीं होगा, cooktop फटेगा नहीं, और frequency शून्य होने जैसी कोई स्थिति परिभाषित नहीं है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q5",
+      "question": "Induction cooktop में मुख्य coil (induction coil) किस आकार में सामान्यतः बनाई जाती है?",
+      "options": [
+        "Straight single wire",
+        "Flat spiral (litz wire) coil जो cooktop की glass-ceramic surface के नीचे लगाई जाती है",
+        "गोलाकार tube जिसमें पानी बहता है",
+        "Solid metal disc"
+      ],
+      "correctIndex": 1,
+      "explanation": "Induction coil एक flat spiral आकार में litz wire (कई पतले insulated strands से बनी wire, जो skin effect कम करती है) से बनाई जाती है, जो ग्लास-सिरेमिक सतह के ठीक नीचे लगी होकर बर्तन के तल के समानांतर magnetic field उत्पन्न करती है। सीधी wire, पानी वाली tube, या solid metal disc coil की सामान्य संरचना नहीं है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q6",
+      "question": "Induction cooktop में coil को litz wire से क्यों बनाया जाता है ना कि साधारण solid wire से?",
+      "options": [
+        "क्योंकि litz wire सस्ती होती है",
+        "क्योंकि high frequency AC पर skin effect के कारण होने वाले resistive losses को litz wire (multiple insulated strands) कम करती है",
+        "क्योंकि litz wire चुम्बकीय नहीं होती",
+        "क्योंकि litz wire में current प्रवाहित ही नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "High frequency AC पर current wire की सतह (skin) पर केंद्रित होने लगता है (skin effect), जिससे effective resistance बढ़ जाती है; litz wire में कई पतले insulated strands होने से यह effect कम होता है और losses घटती हैं। यह cost के लिए नहीं चुनी जाती, coil का चुम्बकीय गुण material पर निर्भर नहीं बल्कि current पर आधारित magnetic field पर निर्भर है, और स्पष्ट रूप से current litz wire में प्रवाहित होता है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q7",
+      "question": "Induction cooktop की operating frequency सामान्यतः किस range में होती है?",
+      "options": [
+        "50 Hz (mains frequency के बराबर)",
+        "लगभग 20 kHz से 100 kHz (high frequency AC)",
+        "लगभग 2450 MHz",
+        "लगभग 1 Hz"
+      ],
+      "correctIndex": 1,
+      "explanation": "Induction cooktop mains AC को rectify करने के बाद एक high-frequency inverter circuit द्वारा लगभग 20 kHz से 100 kHz तक की AC coil में भेजता है, जिससे प्रभावी eddy currents व तेज़ heating होती है। 50 Hz mains frequency है (बहुत कम है प्रभावी induction heating के लिए), 2450 MHz microwave oven की frequency है, और 1 Hz अव्यवहारिक रूप से कम है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q8",
+      "question": "Induction cooktop में IGBT (Insulated Gate Bipolar Transistor) का मुख्य कार्य क्या है?",
+      "options": [
+        "पानी को filter करना",
+        "High-frequency switching करके DC को coil के लिए आवश्यक high-frequency AC/pulses में बदलना (inverter का मुख्य switching device)",
+        "बर्तन के तापमान को माप कर सीधे display करना",
+        "Mains supply को केवल rectify करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT एक power semiconductor switch है जो rectified DC को उच्च आवृत्ति पर on-off (switch) करके coil में high-frequency AC/current pulses भेजता है, जिससे resonant circuit के माध्यम से coil में आवश्यक magnetic field बनता है — यह inverter section का मुख्य component है। पानी filter करना अप्रासंगिक है, तापमान sensing अलग thermistor का कार्य है, और केवल rectification के लिए diode bridge प्रयोग होता है, IGBT का कार्य उससे आगे का switching है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q9",
+      "question": "IGBT को अपने अंदर किन दो devices (transistors) के गुणों का संयोजन माना जाता है?",
+      "options": [
+        "SCR और Diac",
+        "MOSFET की high input impedance/fast switching और BJT की low on-state voltage drop/high current handling capability",
+        "UJT और Triac",
+        "Photodiode और LED"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT, MOSFET (जिसकी gate पर high input impedance व fast switching होती है) और BJT (जिसमें on-state में voltage drop कम व current handling अधिक होती है) के फायदों को मिलाकर बनाया गया device है, जो इसे high power switching applications के लिए उपयुक्त बनाता है। SCR-Diac, UJT-Triac, और Photodiode-LED IGBT की संरचना से असंबंधित combinations हैं।"
+    },
+    {
+      "id": "u12_induction_cooktop_q10",
+      "question": "Induction cooktop के circuit में IGBT से पहले mains AC को DC में बदलने का कार्य कौन सा component करता है?",
+      "options": [
+        "Bridge rectifier (diode bridge)",
+        "Magnetron",
+        "Compressor",
+        "Thermostat"
+      ],
+      "correctIndex": 0,
+      "explanation": "मुख्य circuit में सबसे पहले एक bridge rectifier (diode bridge) mains AC को pulsating DC में बदलता है, फिर filter capacitor द्वारा smooth किया गया DC IGBT को दिया जाता है जो उसे high-frequency AC में बदलकर coil को भेजता है। Magnetron microwave oven का भाग है, compressor refrigeration में प्रयोग होता है, और thermostat केवल temperature control करता है, ये rectification नहीं करते।"
+    },
+    {
+      "id": "u12_induction_cooktop_q11",
+      "question": "Induction cooktop में IGBT के साथ प्रयोग होने वाला Heat sink किस उद्देश्य के लिए लगाया जाता है?",
+      "options": [
+        "IGBT की switching speed बढ़ाने के लिए",
+        "High-frequency switching के दौरान IGBT में उत्पन्न होने वाली heat को dissipate करके उसे सुरक्षित तापमान सीमा में रखने के लिए",
+        "Coil को चुम्बकीय बनाने के लिए",
+        "बर्तन का वजन मापने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT high-frequency पर switching करते समय स्वयं भी काफी heat (switching losses + conduction losses) उत्पन्न करता है; heat sink (सामान्यतः aluminium fins) इस heat को हवा में dissipate करके IGBT को rated तापमान सीमा में रखता है, जिससे thermal damage से बचाव होता है। Heat sink switching speed नहीं बढ़ाता, coil को चुम्बकीय नहीं बनाता, और वजन मापने का कार्य नहीं करता।"
+    },
+    {
+      "id": "u12_induction_cooktop_q12",
+      "question": "यदि induction cooktop का heat sink ठीक से fitted (proper thermal contact में) ना हो, तो क्या समस्या हो सकती है?",
+      "options": [
+        "Cooktop की frequency बढ़ जाएगी",
+        "IGBT ठीक से cool नहीं होगा, जिससे overheating के कारण IGBT damage/failure हो सकता है",
+        "बर्तन detect होना बंद हो जाएगा",
+        "Coil का रंग बदल जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Heat sink और IGBT के बीच proper thermal contact (thermal paste सहित) ना होने पर heat transfer efficiency घट जाती है, जिससे IGBT का तापमान rated limit से अधिक बढ़कर उसे स्थायी रूप से क्षतिग्रस्त/fail कर सकता है — यह induction cooktop खराब होने का एक सामान्य कारण है। Frequency, pan detection, या coil का रंग heat sink की fitting से सीधे प्रभावित नहीं होते।"
+    },
+    {
+      "id": "u12_induction_cooktop_q13",
+      "question": "Induction cooktop में cooling fan किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "बर्तन को ठंडा रखने के लिए",
+        "Heat sink व PCB के अन्य power components (IGBT आदि) से heat को बाहर निकालकर उन्हें safe temperature पर बनाए रखने के लिए",
+        "Coil की frequency बदलने के लिए",
+        "बिजली की खपत शून्य करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cooling fan heat sink व PCB पर लगे power components के आस-पास हवा प्रवाहित करके उनसे उत्पन्न heat को बाहर निकालता है, जिससे IGBT व अन्य components rated तापमान सीमा में सुरक्षित रहें। यह बर्तन को ठंडा रखने के लिए नहीं (बर्तन तो गरम होना ही उद्देश्य है), coil की frequency बदलने के लिए नहीं, और बिजली की खपत को शून्य करने के लिए नहीं लगाया जाता।"
+    },
+    {
+      "id": "u12_induction_cooktop_q14",
+      "question": "Induction cooktop की glass-ceramic top plate किस विशेषता के कारण चुनी जाती है?",
+      "options": [
+        "यह magnetic field को आसानी से गुजरने देती है, heat-resistant होती है, तथा साफ करने में आसान होती है",
+        "यह magnetic field को पूरी तरह block कर देती है",
+        "यह बिजली की सुचालक (electrical conductor) है",
+        "यह coil का प्रतिस्थापन (substitute) है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Glass-ceramic (जैसे Pyroceram) high heat-resistant होने के साथ-साथ magnetic field को बिना किसी रुकावट के गुजरने देती है ताकि coil का field सीधे बर्तन तक पहुंच सके, और इसकी smooth सतह साफ करने में भी आसान होती है। यह magnetic field को block नहीं करती (तब heating होगी ही नहीं), यह electrical insulator है ना कि conductor, और यह coil का प्रतिस्थापन नहीं बल्कि एक अलग protective surface है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q15",
+      "question": "Induction cooktop में temperature sensor (thermistor/NTC) का मुख्य कार्य क्या है?",
+      "options": [
+        "Top plate/IGBT के तापमान को sense करके control circuit को feedback देना ताकि overheating से बचाव हो सके",
+        "बर्तन का वजन मापना",
+        "Coil की frequency को शून्य करना",
+        "Mains voltage को rectify करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thermistor/NTC sensor top plate या heat sink/IGBT के तापमान को लगातार sense करके control circuit (microcontroller) को feedback देता है, जिससे तापमान अधिक होने पर power कम करने या cooktop को बंद करने जैसी सुरक्षा कार्रवाई हो सके। यह वजन नहीं मापता, frequency को शून्य नहीं करता, और rectification का कार्य नहीं करता — यह केवल एक temperature sensing element है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q16",
+      "question": "Induction cooktop में microcontroller (control PCB) किन-किन कार्यों को नियंत्रित करता है?",
+      "options": [
+        "केवल display की brightness",
+        "Power level, timer, pan detection, temperature safety, तथा IGBT switching की timing (PWM) को control करना",
+        "केवल plug का रंग बदलना",
+        "केवल बर्तन की सफाई"
+      ],
+      "correctIndex": 1,
+      "explanation": "Microcontroller user के द्वारा select किए गए power level, timer settings, pan detection sensor data, temperature sensors से feedback, तथा IGBT की switching timing (PWM आधारित) को समन्वित करके पूरे cooktop के operation को नियंत्रित करता है। यह केवल display brightness, plug का रंग, या बर्तन की सफाई जैसे trivial कार्यों तक सीमित नहीं है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q17",
+      "question": "Induction cooktop में power level बदलने पर वास्तव में क्या परिवर्तित होता है?",
+      "options": [
+        "Coil की wire मोटाई बदल जाती है",
+        "IGBT के switching duty cycle/frequency को control करके coil को मिलने वाली average power को कम-ज्यादा किया जाता है",
+        "बर्तन का material बदल जाता है",
+        "Mains supply की frequency (50 Hz) बदल जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power level बदलने पर microcontroller IGBT के switching pattern (duty cycle या operating frequency) को adjust करता है जिससे coil को मिलने वाली average power कम या ज्यादा होती है, जिससे heating rate control होती है। Coil की wire मोटाई या बर्तन का material fixed रहता है, और mains की 50 Hz frequency स्वयं नहीं बदलती — केवल coil की internal high-frequency operation control होती है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q18",
+      "question": "Induction cooktop में 'small pan detection' या 'no pan' error का सामान्यतः क्या कारण है?",
+      "options": [
+        "बर्तन ठीक आकार का, ferromagnetic और coil के केंद्र में सही स्थिति में नहीं है",
+        "Mains supply 50 Hz की जगह 60 Hz है",
+        "Room का तापमान बहुत कम है",
+        "उपयोगकर्ता ने timer सेट नहीं किया"
+      ],
+      "correctIndex": 0,
+      "explanation": "यह error तब आता है जब बर्तन ना तो पर्याप्त ferromagnetic material का हो, ना उचित आकार का हो, या coil के केंद्र में सही स्थिति में ना रखा गया हो, जिससे sensor को coil की impedance में अपेक्षित परिवर्तन नहीं मिलता। Mains frequency (50/60 Hz दोनों पर design होते हैं), room temperature, या timer setting इस error का कारण सामान्यतः नहीं होते।"
+    },
+    {
+      "id": "u12_induction_cooktop_q19",
+      "question": "Induction cooktop चालू करने पर यदि display तो on हो जाता है परंतु बर्तन गरम नहीं हो रहा (कोई error भी नहीं दिखा), तो सबसे संभावित fault क्या हो सकता है?",
+      "options": [
+        "IGBT/driver circuit या coil connection में fault होना",
+        "Display का रंग गहरा होना",
+        "उपयोगकर्ता का hair style",
+        "बर्तन का brand नाम"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि control section (display व microcontroller) तो काम कर रहा है परंतु power/heating section काम नहीं कर रहा, तो सामान्यतः IGBT, उसके gate driver circuit, resonant capacitor, या coil की wiring में fault होने की संभावना होती है, जिसकी जांच multimeter/oscilloscope से की जाती है। Display का रंग, hair style, या बर्तन का brand तकनीकी रूप से इस समस्या से असंबंधित हैं।"
+    },
+    {
+      "id": "u12_induction_cooktop_q20",
+      "question": "Induction cooktop बार-बार overheat होकर बंद (thermal shutdown) हो जाए, तो जांच का सबसे उचित क्रम क्या होगा?",
+      "options": [
+        "पहले cooling fan के operation, heat sink की सफाई/fitting, तथा ventilation openings के block होने की जांच करना",
+        "सीधे पूरा PCB बदल देना बिना किसी जांच के",
+        "बर्तन का रंग बदल देना",
+        "केवल power cord बदल देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thermal shutdown का सबसे सामान्य कारण अपर्याप्त cooling होता है, इसलिए पहले cooling fan चल रहा है या नहीं, heat sink साफ व सही fitted है या नहीं, तथा unit की ventilation openings dust/किसी वस्तु से block तो नहीं हैं — यह जांचना सबसे तार्किक व economical कदम है। बिना जांच के PCB बदलना अनावश्यक खर्च है, बर्तन का रंग या power cord बदलना इस समस्या का समाधान नहीं है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q21",
+      "question": "Induction cooktop में resonant capacitor (coil के साथ श्रृंखला/समानांतर में) का मुख्य कार्य क्या है?",
+      "options": [
+        "बर्तन के वजन को balance करना",
+        "Coil के साथ मिलकर एक resonant (LC) circuit बनाना जो efficient high-frequency energy transfer व switching losses कम करने में सहायक होता है",
+        "Mains voltage को सीधे बढ़ाना",
+        "Display की brightness नियंत्रित करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Resonant capacitor coil (inductor) के साथ मिलकर एक LC resonant tank circuit बनाता है, जो IGBT के लिए zero-voltage/zero-current switching (soft switching) की स्थितियाँ प्रदान कर switching losses कम करता है और efficient energy transfer सुनिश्चित करता है। यह बर्तन का वजन संतुलित नहीं करता, mains voltage को सीधे नहीं बढ़ाता, और display brightness नियंत्रित नहीं करता।"
+    },
+    {
+      "id": "u12_induction_cooktop_q22",
+      "question": "Induction cooktop की तुलना में साधारण resistive hot plate (coil heater) की एक प्रमुख कमी क्या है?",
+      "options": [
+        "Resistive hot plate में efficiency कम होती है क्योंकि heat पहले element को गरम करती है फिर बर्तन तक conduction/radiation से पहुंचती है, जिससे अधिक heat वातावरण में losses होती है",
+        "Resistive hot plate किसी भी बर्तन के साथ काम नहीं करता",
+        "Resistive hot plate में कोई heating element ही नहीं होता",
+        "Resistive hot plate induction से हमेशा तेज़ गरम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Resistive hot plate में पहले element स्वयं गरम होता है, फिर वह heat conduction/radiation द्वारा बर्तन तक पहुंचती है, जिसमें ambient losses अधिक होते हैं, जबकि induction में बर्तन स्वयं directly गरम होता है (element गरम नहीं होता), इसलिए induction अधिक efficient व तेज़ है। Resistive hot plate लगभग किसी भी बर्तन के साथ काम करता है (option B गलत), उसमें element होता ही है, और यह induction से धीमा होता है, तेज़ नहीं।"
+    },
+    {
+      "id": "u12_induction_cooktop_q23",
+      "question": "Induction cooktop की top plate (glass-ceramic) यदि टूट/crack हो जाए, तो cooktop का उपयोग जारी रखना क्यों असुरक्षित/अनुचित है?",
+      "options": [
+        "क्योंकि इससे coil व अन्य internal components को नमी/धूल से नुकसान हो सकता है तथा electrical hazard बढ़ सकता है",
+        "क्योंकि इससे केवल दिखावट खराब होती है, कोई खतरा नहीं",
+        "क्योंकि crack होने पर heating power अपने आप कई गुना बढ़ जाती है",
+        "क्योंकि crack से frequency automatically 50 Hz हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Crack के माध्यम से नमी, तरल पदार्थ या धूल अंदर coil व PCB तक पहुंच सकते हैं, जिससे short circuit, insulation failure या electrical shock जैसे खतरे बढ़ जाते हैं, इसलिए crack वाली top plate को तुरंत replace करना चाहिए। यह केवल दिखावट का मामला नहीं है, heating power अपने आप नहीं बढ़ती, और frequency ऐसे नहीं बदलती।"
+    },
+    {
+      "id": "u12_induction_cooktop_q24",
+      "question": "Induction cooktop में EMI/RFI filter (input filter section) का उद्देश्य क्या है?",
+      "options": [
+        "High-frequency switching noise को mains supply में वापस जाने से रोकना और अन्य उपकरणों में interference कम करना",
+        "बर्तन को चुम्बकीय बनाना",
+        "Coil की resistance बढ़ाना",
+        "Display का रंग बदलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "IGBT की high-frequency switching operation कुछ electromagnetic noise उत्पन्न करती है; input पर लगा EMI/RFI filter (inductor-capacitor combination) इस noise को mains lines में वापस जाने से रोकता है, जिससे अन्य नज़दीकी उपकरणों (जैसे radio) में interference कम होता है। यह बर्तन को चुम्बकीय नहीं बनाता, coil resistance नहीं बढ़ाता, और display रंग से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u12_induction_cooktop_q25",
+      "question": "Induction cooktop में gate driver circuit (IGBT को चलाने वाला) का मुख्य कार्य क्या है?",
+      "options": [
+        "बर्तन का तापमान मापना",
+        "Microcontroller के low-power control signal को amplify करके IGBT के gate को उचित voltage/current पर switch on/off करना",
+        "Mains supply को rectify करना",
+        "Display पर power level दिखाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gate driver circuit microcontroller से मिले low-power PWM signal को उचित amplitude व current में amplify करके IGBT के gate को तेज़ी से व सही समय पर on/off करता है, जिससे IGBT कुशलता से high current switch कर सके। तापमान मापना thermistor का कार्य है, rectification bridge rectifier का कार्य है, और display पर values दिखाना microcontroller/display driver का कार्य है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q26",
+      "question": "Induction cooktop की efficiency साधारण gas stove या resistive hotplate से सामान्यतः अधिक क्यों मानी जाती है?",
+      "options": [
+        "क्योंकि heat सीधे बर्तन के तल में उत्पन्न होती है, वातावरण/हवा में बहुत कम heat loss होती है",
+        "क्योंकि induction cooktop में कोई electricity खर्च ही नहीं होती",
+        "क्योंकि induction cooktop में कोई भी component गरम नहीं होता",
+        "क्योंकि यह हमेशा सबसे सस्ता उपकरण होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूंकि heat सीधे बर्तन के material में (eddy currents के रूप में) उत्पन्न होती है, ना कि किसी intermediate element में, इसलिए ambient air/surrounding में heat loss बहुत कम होती है, जिससे overall energy efficiency (लगभग 85-90%) अधिक होती है। Induction cooktop electricity ही खर्च करता है (option B गलत), IGBT/coil स्वयं भी कुछ गरम होते हैं (option C गलत), और यह cost में gas stove से सस्ता नहीं बल्कि प्रायः महंगा होता है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q27",
+      "question": "यदि induction cooktop का cooling fan चलना बंद हो जाए (motor जाम/खराब), तो सबसे संभावित परिणाम क्या होगा?",
+      "options": [
+        "Cooktop बिना किसी समस्या के हमेशा की तरह काम करता रहेगा",
+        "IGBT व heat sink का तापमान तेज़ी से बढ़ेगा, जिससे thermal protection द्वारा cooktop बंद हो सकता है या IGBT damage हो सकता है",
+        "Coil की frequency अपने आप कम हो जाएगी बिना किसी नुकसान के",
+        "बर्तन detect होना पूरी तरह असंभव हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fan बंद होने पर heat sink व IGBT से heat निकल नहीं पाएगी, जिससे तापमान तेज़ी से बढ़ेगा; microcontroller thermal sensor के संकेत पर cooktop को सुरक्षा हेतु बंद कर सकता है, या यदि protection काम ना करे तो IGBT permanently damage हो सकता है। बिना किसी समस्या के काम करना गलत है, frequency automatically सुरक्षित रूप से कम होकर बिना नुकसान के काम नहीं चलता, और pan detection सीधे fan से संबंधित नहीं है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q28",
+      "question": "Induction cooktop की servicing के दौरान capacitors को touch करने से पहले क्या सावधानी आवश्यक है?",
+      "options": [
+        "कोई सावधानी आवश्यक नहीं, capacitors हमेशा discharged रहते हैं",
+        "Filter/resonant capacitors में stored charge हो सकता है, इसलिए supply बंद करने के बाद उचित discharge होने का इंतज़ार करना या discharge resistor से जांचना आवश्यक है",
+        "केवल गीले कपड़े से पोंछना पर्याप्त है",
+        "Capacitor को सीधे हाथ से तोड़ देना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "High-voltage filter व resonant capacitors supply बंद करने के बाद भी काफी समय तक charge store रख सकते हैं, इसलिए servicing से पहले supply disconnect करके उचित discharge (discharge resistor/multimeter से जांच) सुनिश्चित करना आवश्यक है ताकि electric shock से बचा जा सके। यह मान लेना कि capacitors हमेशा discharged रहते हैं खतरनाक है, गीला कपड़ा शॉर्ट सर्किट का खतरा बढ़ाता है, और capacitor को तोड़ना अनुचित व असुरक्षित प्रक्रिया है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q29",
+      "question": "Induction cooktop में 'child lock' feature किस उद्देश्य के लिए दिया जाता है?",
+      "options": [
+        "Coil की frequency बढ़ाने के लिए",
+        "बिना अनुमति के गलती से buttons दबने पर cooktop के चालू होने या settings बदलने से रोकने के लिए, सुरक्षा हेतु",
+        "IGBT को permanently बंद करने के लिए",
+        "बर्तन के वजन को मापने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Child lock feature control panel को lock कर देता है ताकि बच्चों या गलती से हुए touch के कारण cooktop चालू ना हो या settings ना बदलें, जिससे दुर्घटना (जलने आदि) से सुरक्षा मिलती है। यह coil frequency नहीं बढ़ाता, IGBT को स्थायी रूप से बंद नहीं करता, और बर्तन का वजन मापने से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q30",
+      "question": "Induction cooktop के मुख्य components का सही क्रम/समूह कौन सा है जिनसे मिलकर पूरा circuit कार्य करता है?",
+      "options": [
+        "EMI filter → Bridge rectifier → Filter capacitor → IGBT (with gate driver & heat sink) → Resonant capacitor-coil → Microcontroller व sensors यह सब control करते हैं",
+        "केवल एक साधारण switch और bulb",
+        "केवल compressor और condenser",
+        "केवल magnetron और waveguide"
+      ],
+      "correctIndex": 0,
+      "explanation": "Induction cooktop में mains AC पहले EMI filter से गुजरती है, फिर bridge rectifier व filter capacitor द्वारा smooth DC बनती है, जिसे IGBT (gate driver व heat sink सहित) high-frequency AC में बदलकर resonant capacitor-coil circuit को भेजता है, जबकि microcontroller व sensors (temperature, pan detection) पूरे process को नियंत्रित व सुरक्षित रखते हैं। साधारण switch-bulb, compressor-condenser (refrigeration), और magnetron-waveguide (microwave oven) induction cooktop की संरचना नहीं हैं।"
+    }
+  ]
+}

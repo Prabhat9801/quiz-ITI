@@ -1,0 +1,218 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "acids_bases_salts",
+  "topicName": "Acids, Bases and Salts",
+  "questions": [
+    {
+      "id": "chem_acids_bases_salts_q1",
+      "question": "pH scale किस श्रेणी (range) में मापी जाती है?",
+      "options": ["0 से 7", "7 से 14", "0 से 14", "1 से 10"],
+      "correctIndex": 2,
+      "explanation": "pH scale 0 से 14 तक होती है, जिसमें 7 neutral, इससे कम acidic और इससे अधिक basic माना जाता है। 0-7 और 7-14 केवल आधे भाग हैं, पूर्ण scale नहीं; 1-10 गलत सीमा है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q2",
+      "question": "शुद्ध जल (pure water) का pH मान 25°C पर कितना होता है?",
+      "options": ["7", "0", "14", "5"],
+      "correctIndex": 0,
+      "explanation": "शुद्ध जल neutral होता है इसलिए इसका pH 25°C पर 7 होता है, जिसमें H+ और OH- की सांद्रता बराबर रहती है। 0 अत्यंत strong acidic, 14 अत्यंत strong basic और 5 mildly acidic को दर्शाता है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q3",
+      "question": "Strong acid को कैसे परिभाषित किया जाता है?",
+      "options": ["जो जल में आंशिक रूप से dissociate होता है", "जो जल में पूर्णतः (completely) dissociate होकर H+ ions देता है", "जो केवल ठोस अवस्था में पाया जाता है", "जो कभी भी dissociate नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "Strong acid जैसे HCl जल में पूर्णतः dissociate होकर अधिक H+ ions देता है, इसलिए वह अधिक अम्लीय होता है। आंशिक dissociation weak acid (जैसे CH3COOH) की पहचान है, शेष विकल्प acid के गुण को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q4",
+      "question": "निम्न में से कौन सा weak acid का उदाहरण है?",
+      "options": ["HCl", "H2SO4", "HNO3", "CH3COOH"],
+      "correctIndex": 3,
+      "explanation": "CH3COOH (acetic acid) जल में आंशिक रूप से dissociate होता है इसलिए यह weak acid है। HCl, H2SO4 और HNO3 सभी strong acids हैं जो पूर्णतः dissociate होते हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q5",
+      "question": "Litmus paper का उपयोग किसलिए किया जाता है?",
+      "options": ["Acid या base की उपस्थिति पहचानने के लिए (indicator के रूप में)", "केवल pH मान की सटीक गणना के लिए", "केवल salt की मात्रा मापने के लिए", "केवल water of crystallization ज्ञात करने के लिए"],
+      "correctIndex": 0,
+      "explanation": "Litmus paper एक natural indicator है जो acid में लाल (red) और base में नीला (blue) हो जाता है, इस प्रकार यह acid/base की उपस्थिति पहचानने में मदद करता है। यह सटीक pH मान, salt की मात्रा या water of crystallization नहीं बताता।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q6",
+      "question": "Blue litmus paper को किसी acidic solution में डालने पर क्या होता है?",
+      "options": ["नीला ही रहता है", "पीला हो जाता है", "लाल (red) हो जाता है", "रंगहीन हो जाता है"],
+      "correctIndex": 2,
+      "explanation": "Acidic solution blue litmus को red कर देता है, यह acid पहचानने की मानक विधि है। नीला बने रहना basic/neutral व्यवहार दर्शाता है, पीला होना methyl orange जैसे अन्य indicator से संबंधित है, और रंगहीन होना phenolphthalein के acidic माध्यम में होने से जुड़ा है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q7",
+      "question": "Phenolphthalein indicator basic solution में कौन सा रंग दिखाता है?",
+      "options": ["रंगहीन (colourless)", "गुलाबी/pink", "पीला", "नीला"],
+      "correctIndex": 1,
+      "explanation": "Phenolphthalein acidic व neutral माध्यम में रंगहीन रहता है परन्तु basic solution में गुलाबी (pink) हो जाता है, इसलिए titration में base की उपस्थिति पहचानने हेतु इसे प्रयोग किया जाता है। रंगहीन acidic/neutral अवस्था है, पीला व नीला इसके रंग नहीं हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q8",
+      "question": "Neutralization reaction में acid और base आपस में क्रिया करके क्या बनाते हैं?",
+      "options": ["Salt और water", "केवल salt", "केवल gas", "Salt और gas"],
+      "correctIndex": 0,
+      "explanation": "सामान्य neutralization reaction में acid + base → salt + water बनता है, जैसे HCl + NaOH → NaCl + H2O। केवल salt बनना अधूरा है क्योंकि water भी अनिवार्य उत्पाद है, और gas सामान्य acid-base neutralization का सीधा उत्पाद नहीं होता।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q9",
+      "question": "HCl और NaOH की neutralization reaction में कौन सा salt बनता है?",
+      "options": ["CaCl2", "Na2SO4", "NaHCO3", "NaCl"],
+      "correctIndex": 3,
+      "explanation": "HCl + NaOH → NaCl + H2O प्रतिक्रिया में common salt यानी NaCl बनता है। CaCl2 और Na2SO4 अलग acid-base संयोजनों से बनते हैं, और NaHCO3 sodium bicarbonate है जो इस प्रतिक्रिया का उत्पाद नहीं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q10",
+      "question": "किसी solution में [H+] सांद्रता 10^-3 mol/L है। इसका pH मान कितना होगा?",
+      "options": ["10", "3", "7", "-3"],
+      "correctIndex": 1,
+      "explanation": "pH = -log[H+] = -log(10^-3) = 3, अर्थात solution काफी अधिक acidic है। 10 और 7 गलत गणना हैं, -3 negative पद इस सूत्र में उपयुक्त परिणाम नहीं है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q11",
+      "question": "किसी solution का pH मान 5 है। इसमें [H+] सांद्रता कितनी होगी?",
+      "options": ["10^-9 mol/L", "10^5 mol/L", "10^-5 mol/L", "5 mol/L"],
+      "correctIndex": 2,
+      "explanation": "pH = -log[H+] से [H+] = 10^-pH = 10^-5 mol/L प्राप्त होता है। 10^-9, pH 9 के लिए होता, जबकि 10^5 और 5 mol/L न इकाई की दृष्टि से न गणना की दृष्टि से सही हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q12",
+      "question": "pH मान 7 से कम होने पर solution कैसा माना जाता है?",
+      "options": ["Acidic", "Basic", "Neutral", "Amphoteric"],
+      "correctIndex": 0,
+      "explanation": "pH 7 से कम solution में H+ आयनों की अधिकता दर्शाता है, इसलिए यह acidic होता है। pH 7 से अधिक basic, ठीक 7 neutral होता है, और amphoteric वह पदार्थ है जो acid व base दोनों की तरह व्यवहार कर सकता है, यह pH range को नहीं दर्शाता।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q13",
+      "question": "pH मान 7 से अधिक होने पर solution कैसा माना जाता है?",
+      "options": ["Acidic", "Neutral", "Amphoteric", "Basic"],
+      "correctIndex": 3,
+      "explanation": "pH 7 से अधिक होने पर OH- आयनों की अधिकता होती है, इसलिए solution basic (alkaline) कहलाता है। Acidic pH 7 से कम पर, neutral ठीक 7 पर होता है, और amphoteric पदार्थ की प्रकृति को दर्शाता है, pH स्तर को नहीं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q14",
+      "question": "Strong base का उदाहरण कौन सा है?",
+      "options": ["NH4OH", "NaOH", "CH3COOH", "H2CO3"],
+      "correctIndex": 1,
+      "explanation": "NaOH (sodium hydroxide) जल में पूर्णतः dissociate होकर अधिक OH- ions देता है, इसलिए यह strong base है। NH4OH एक weak base है, जबकि CH3COOH और H2CO3 acids हैं, base नहीं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q15",
+      "question": "NH4OH को किस श्रेणी में रखा जाता है?",
+      "options": ["Strong acid", "Strong base", "Weak base", "Weak acid"],
+      "correctIndex": 2,
+      "explanation": "NH4OH (ammonium hydroxide) जल में आंशिक रूप से dissociate होता है, इसलिए इसे weak base माना जाता है। यह acid नहीं है और पूर्ण dissociation न होने से strong base भी नहीं है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q16",
+      "question": "पेट में अम्लीयता (acidity) बढ़ने पर antacid tablet राहत कैसे देती है?",
+      "options": ["यह Mg(OH)2 जैसे mild base द्वारा अतिरिक्त acid को neutralize करती है", "यह acid की मात्रा और बढ़ा देती है", "यह केवल pain-killer की तरह काम करती है, chemical reaction नहीं होती", "यह पेट के pH को अत्यधिक acidic बना देती है"],
+      "correctIndex": 0,
+      "explanation": "Antacid में Mg(OH)2 जैसे mild base होते हैं जो पेट के अतिरिक्त HCl acid से reaction कर उसे neutralize करते हैं और राहत देते हैं। शेष विकल्प antacid की वास्तविक क्रियाविधि के विपरीत हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q17",
+      "question": "H2SO4 (sulphuric acid) को dibasic acid क्यों कहा जाता है?",
+      "options": ["इसमें दो oxygen atoms होते हैं", "यह dissociation पर दो H+ ions देता है", "इसका दो बार उपयोग होता है", "इसमें दो sulphur atoms होते हैं"],
+      "correctIndex": 1,
+      "explanation": "H2SO4 पूर्ण dissociation पर दो H+ ions (2H+ + SO4^2-) देता है, इसीलिए इसे dibasic acid कहा जाता है। Oxygen atoms की संख्या, बार-बार उपयोग, या sulphur atoms की संख्या इस वर्गीकरण का आधार नहीं है (इसमें केवल एक sulphur atom होता है)।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q18",
+      "question": "Titration प्रक्रिया का मुख्य उद्देश्य क्या है?",
+      "options": ["केवल रंग परिवर्तन देखना", "Salt का crystal बनाना", "Water of crystallization निकालना", "किसी unknown solution की सांद्रता (concentration) ज्ञात करना"],
+      "correctIndex": 3,
+      "explanation": "Titration में known concentration के solution से unknown solution को indicator की सहायता से neutralize कर उसकी concentration ज्ञात की जाती है। रंग परिवर्तन केवल end-point पहचानने का साधन है, crystal बनाना या water निकालना titration का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q19",
+      "question": "Neutralization में 20 mL, 0.5 M HCl को पूर्णतः neutralize करने के लिए 0.1 M NaOH के कितने mL की आवश्यकता होगी? (M1V1 = M2V2 सूत्र प्रयोग करें)",
+      "options": ["100 mL", "20 mL", "10 mL", "50 mL"],
+      "correctIndex": 0,
+      "explanation": "M1V1 = M2V2 सूत्र से 0.5 × 20 = 0.1 × V2, अतः V2 = 10/0.1 = 100 mL NaOH चाहिए। शेष विकल्प गलत गणना या इकाई से आते हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q20",
+      "question": "Universal indicator किसलिए प्रयोग होता है?",
+      "options": ["केवल acid पहचानने के लिए", "केवल base पहचानने के लिए", "लगभग सटीक pH मान बताने के लिए (रंग chart द्वारा)", "केवल water of crystallization मापने के लिए"],
+      "correctIndex": 2,
+      "explanation": "Universal indicator विभिन्न pH मानों पर अलग-अलग रंग देता है और रंग chart से तुलना कर लगभग सटीक pH मान बताता है, न कि केवल acid या base होने की पुष्टि। यह water of crystallization मापने का साधन नहीं है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q21",
+      "question": "Common salt (NaCl) मुख्यतः किस प्राकृतिक स्रोत से प्राप्त किया जाता है?",
+      "options": ["Limestone से खनन कर", "समुद्री जल के solar evaporation से", "Petroleum refining से", "Coal की combustion से"],
+      "correctIndex": 1,
+      "explanation": "Common salt मुख्यतः समुद्री जल को solar evaporation द्वारा सुखाकर प्राप्त किया जाता है, इसके अलावा rock salt खदानों से भी मिलता है। Limestone, petroleum और coal से NaCl सीधे प्राप्त नहीं होता।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q22",
+      "question": "Common salt (NaCl) का औद्योगिक उपयोग किसके निर्माण में होता है?",
+      "options": ["NaOH और bleaching powder जैसे रसायनों के निर्माण में", "केवल भोजन में स्वाद हेतु", "केवल photography में", "केवल water of crystallization प्राप्त करने में"],
+      "correctIndex": 0,
+      "explanation": "Common salt का उपयोग chlor-alkali process द्वारा NaOH, bleaching powder और Na2CO3 जैसे महत्वपूर्ण रसायनों के औद्योगिक निर्माण में होता है, न कि केवल भोजन में स्वाद हेतु। Photography या water of crystallization प्राप्त करना NaCl का मुख्य औद्योगिक उपयोग नहीं है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q23",
+      "question": "Water of crystallization किसे कहते हैं?",
+      "options": ["वह जल जो salt को घोलने में उपयोग होता है", "वह जल जो neutralization reaction में उत्पन्न होता है", "वह जल जो titration में प्रयोग होता है", "Crystal की संरचना में निश्चित अनुपात में उपस्थित जल के अणु"],
+      "correctIndex": 3,
+      "explanation": "Water of crystallization वह निश्चित संख्या में जल के अणु हैं जो किसी salt के crystal की संरचना में रासायनिक रूप से बंधे रहते हैं, जैसे CuSO4.5H2O में 5 जल अणु। यह घोलने वाला, neutralization का जल, या titration का जल नहीं है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q24",
+      "question": "CuSO4.5H2O (blue vitriol/copper sulphate) में प्रति molecule कितने water of crystallization के अणु उपस्थित होते हैं?",
+      "options": ["7", "5", "2", "10"],
+      "correctIndex": 1,
+      "explanation": "Copper sulphate crystal का सूत्र CuSO4.5H2O है, जिसमें 5 water of crystallization के अणु उपस्थित होते हैं जो इसका नीला रंग बनाए रखते हैं। 7, Epsom salt जैसे अन्य salts से जुड़ा है, जबकि 2 और 10 गलत हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q25",
+      "question": "Gypsum का रासायनिक सूत्र और water of crystallization की संख्या क्या है?",
+      "options": ["CuSO4.5H2O", "Na2CO3.10H2O", "CaSO4.2H2O", "MgSO4.7H2O"],
+      "correctIndex": 2,
+      "explanation": "Gypsum का सूत्र CaSO4.2H2O है, जिसमें 2 water of crystallization के अणु होते हैं और इसे गर्म करने पर Plaster of Paris बनता है। अन्य सूत्र क्रमशः copper sulphate, washing soda और Epsom salt के हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q26",
+      "question": "बेकिंग सोडा (baking soda) का रासायनिक सूत्र क्या है?",
+      "options": ["NaHCO3", "Na2CO3", "NaOH", "CaCO3"],
+      "correctIndex": 0,
+      "explanation": "Baking soda का रासायनिक नाम sodium bicarbonate है जिसका सूत्र NaHCO3 है, यह mild base की तरह कार्य करता है और खाना पकाने में प्रयुक्त होता है। Na2CO3 washing soda, NaOH caustic soda, और CaCO3 limestone/marble है।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q27",
+      "question": "Acid rain मुख्यतः किन gases के कारण होती है?",
+      "options": ["CO2 और O2", "SO2 और NOx (nitrogen oxides)", "N2 और H2", "केवल CO2"],
+      "correctIndex": 1,
+      "explanation": "वायुमंडल में मौजूद SO2 और NOx जल में घुलकर sulphuric acid व nitric acid बनाते हैं, जिससे acid rain होती है। CO2 व O2 सामान्य वायुमंडलीय गैसें हैं जो सीधे acid rain का मुख्य कारण नहीं, N2 व H2 भी इसमें भूमिका नहीं निभातीं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q28",
+      "question": "CaCO3 (limestone/marble/chalk) की dilute HCl acid के साथ प्रतिक्रिया में मुख्यतः कौन सी gas निकलती है?",
+      "options": ["Hydrogen (H2)", "Oxygen (O2)", "Sulphur dioxide (SO2)", "Carbon dioxide (CO2)"],
+      "correctIndex": 3,
+      "explanation": "CaCO3 + 2HCl → CaCl2 + H2O + CO2 प्रतिक्रिया में carbon dioxide gas निकलती है जो lime water को दूधिया कर देती है। H2 सामान्यतः धातु-acid प्रतिक्रिया से बनती है, जबकि O2 और SO2 इस प्रतिक्रिया के उत्पाद नहीं हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q29",
+      "question": "Bleaching powder का रासायनिक सूत्र और मुख्य उपयोग क्या है?",
+      "options": ["NaOCl, केवल pH मापने हेतु", "Ca(OH)2, केवल antacid के रूप में", "CaOCl2, कपड़ों/कागज के bleaching तथा जल शुद्धिकरण हेतु", "NaHCO3, केवल खाना पकाने हेतु"],
+      "correctIndex": 2,
+      "explanation": "Bleaching powder (calcium oxychloride) का सूत्र CaOCl2 है और इसका उपयोग कपड़ों-कागज के bleaching तथा पेयजल के disinfection हेतु किया जाता है। शेष विकल्प गलत सूत्र या गलत उपयोग दर्शाते हैं।"
+    },
+    {
+      "id": "chem_acids_bases_salts_q30",
+      "question": "किसी salt solution का pH मान लगभग 7 के बराबर होने पर वह salt किस प्रकार के acid और base से बना माना जाता है?",
+      "options": ["Strong acid और weak base से", "Strong acid और strong base से", "Weak acid और weak base से (हमेशा)", "केवल strong base से"],
+      "correctIndex": 1,
+      "explanation": "Strong acid और strong base की neutralization से बना salt (जैसे NaCl) जल में लगभग neutral pH (≈7) देता है। Strong acid-weak base से बना salt अम्लीय (जैसे NH4Cl) और weak acid-strong base से बना salt क्षारीय (जैसे CH3COONa) होता है, जबकि weak-weak संयोजन का pH निश्चित रूप से 7 नहीं कहा जा सकता।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit7",
+  "unitName": "Computer Hardware, OS, MS Office, Networking",
+  "topic": "powerpoint_internet",
+  "topicName": "MS PowerPoint, Internet & Email Basics",
+  "questions": [
+    {
+      "id": "u7_powerpoint_internet_q1",
+      "question": "PowerPoint में Slide Master feature का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Presentation को PDF format में save करना",
+        "सभी slides पर एक साथ common formatting, fonts और placeholders लागू करना ताकि हर slide अलग-अलग design करने की जरूरत न पड़े",
+        "Slide Show के दौरान automatic timing set करना",
+        "Slides के बीच transition effect जोड़ना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slide Master वह template slide होती है जो पूरे presentation की fonts, colors, layout और placeholders को एक साथ control करती है, जिससे बार-बार हर slide में manual formatting नहीं करनी पड़ती। Option A export की process है, Option C Rehearse Timings का काम है, और Option D Transition setting से संबंधित है, Slide Master से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q2",
+      "question": "WWW (World Wide Web) और Internet में क्या मुख्य अंतर है?",
+      "options": [
+        "WWW और Internet दोनों बिल्कुल एक ही चीज़ हैं, कोई अंतर नहीं है",
+        "Internet सिर्फ email भेजने के लिए है जबकि WWW files download करने के लिए है",
+        "Internet एक physical network of interconnected computers है, जबकि WWW उस network पर चलने वाली hyperlinked documents/websites की एक service है जिसे browser से access किया जाता है",
+        "WWW एक hardware device है जो computers को आपस में जोड़ता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Internet दुनिया भर के computers का एक विशाल physical/logical network है, जबकि WWW उस network पर उपलब्ध websites और hyperlinked pages की सेवा है जिसे HTTP/HTTPS protocol और browser के जरिए access किया जाता है। Option A गलत है क्योंकि दोनों अलग concepts हैं, Option B और D WWW या Internet की गलत परिभाषा देते हैं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q3",
+      "question": "PowerPoint में Transition और Animation में क्या फर्क है?",
+      "options": [
+        "Transition एक slide से दूसरी slide में जाने का effect है, जबकि Animation एक ही slide के अंदर text/objects पर लागू होने वाला movement effect है",
+        "Transition सिर्फ images पर लागू होता है और Animation सिर्फ text पर",
+        "Animation और Transition दोनों एक ही feature के दो नाम हैं",
+        "Transition सिर्फ Slide Master में सेट होता है जबकि Animation Notes page में सेट होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर यह है कि Transition slide-to-slide movement (जैसे Fade, Push) को control करता है, जबकि Animation एक slide के भीतर individual objects जैसे text box, image, SmartArt पर entrance/exit/emphasis effect देता है। Option B गलत है क्योंकि दोनों किसी भी object पर लागू हो सकते हैं, Option C इन्हें गलत तरीके से समान बताता है, और Option D दोनों की गलत location बताता है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q4",
+      "question": "एक URL जैसे https://www.example.com/page.html में 'https' भाग क्या दर्शाता है?",
+      "options": [
+        "Website का domain name",
+        "Web server का file path",
+        "Website का hosting country",
+        "Protocol जो browser और server के बीच secure तरीके से data transfer करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "URL में सबसे पहले आने वाला हिस्सा protocol होता है, और HTTPS एक secure (encrypted) protocol है जो browser और server के बीच communication को protect करता है। Option A में domain name 'www.example.com' है, Option B में file path '/page.html' है, और Option C URL structure में कहीं भी नहीं दर्शाया जाता।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q5",
+      "question": "PowerPoint में presentation को शुरू से Full Slide Show mode में चलाने के लिए कौन-सी key दबाई जाती है?",
+      "options": [
+        "Ctrl+S",
+        "F5",
+        "Shift+F5",
+        "Alt+F4"
+      ],
+      "correctIndex": 1,
+      "explanation": "F5 key दबाने से Slide Show शुरू से (पहली slide से) चलता है। Option A presentation को save करने की shortcut है, Option C current slide से Slide Show चालू करती है न कि शुरू से, और Option D application को बंद (close) करने की shortcut है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q6",
+      "question": "ISP (Internet Service Provider) का user के लिए क्या मुख्य काम होता है?",
+      "options": [
+        "Users को Internet से connect होने की सुविधा और access प्रदान करना",
+        "Computer के अंदर SmartArt graphics बनाना",
+        "PowerPoint slides की animation set करना",
+        "Email attachments को automatically compress करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "ISP जैसे कि Jio, Airtel या BSNL वह कंपनियां हैं जो users को Internet का connection और access उपलब्ध कराती हैं, चाहे broadband हो या mobile data। Options B, C और D PowerPoint या email से संबंधित features हैं, ISP के कार्य से इनका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q7",
+      "question": "PowerPoint में किसी मौजूदा slide की duplicate copy Slide panel में सबसे आसान तरीके से किस विधि से बनाई जा सकती है?",
+      "options": [
+        "File menu में जाकर Save As select करके",
+        "Design tab में जाकर नया theme लागू करके",
+        "Slide thumbnail पर right-click करके 'Duplicate Slide' option चुनकर",
+        "Insert tab में जाकर SmartArt insert करके"
+      ],
+      "correctIndex": 2,
+      "explanation": "Slide panel में किसी slide thumbnail पर right-click करके 'Duplicate Slide' चुनने से उसकी exact copy तुरंत बन जाती है। Option A पूरी file को नए नाम से save करने का काम करता है, Option B सिर्फ design theme बदलता है, और Option D SmartArt graphic insert करता है, slide duplicate नहीं करता।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q8",
+      "question": "एक valid email address जैसे rnd@botivate.in में '@' चिन्ह के बाद वाला हिस्सा (botivate.in) क्या दर्शाता है?",
+      "options": [
+        "यह user का password होता है",
+        "यह attachment का file name होता है",
+        "यह CC field में डाला गया दूसरा user होता है",
+        "यह domain name होता है जो mail server/host को पहचानता है जहाँ वह mailbox मौजूद है"
+      ],
+      "correctIndex": 3,
+      "explanation": "'@' के बाद का हिस्सा domain name होता है (जैसे botivate.in), जो बताता है कि mailbox किस mail server पर host है, जबकि '@' से पहले का भाग username/mailbox name होता है। Option A, B और C गलत हैं क्योंकि domain name का password, attachment या CC field से कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q9",
+      "question": "PowerPoint में SmartArt का उपयोग मुख्यतः किसलिए किया जाता है?",
+      "options": [
+        "Slide में audio narration record करने के लिए",
+        "Information/ideas को process, hierarchy, cycle या relationship जैसे visual diagrams के रूप में आसानी से दिखाने के लिए",
+        "Slides के बीच transition effect जोड़ने के लिए",
+        "Presentation को password से protect करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "SmartArt एक ready-made visual diagram tool है जिससे list, process, hierarchy, cycle आदि को graphical रूप में आसानी से दर्शाया जा सकता है, बिना manually shapes बनाए। Option A Insert tab के Audio feature से जुड़ा है, Option C Transitions tab से संबंधित है, और Option D Protect Presentation feature की बात करता है, SmartArt से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q10",
+      "question": "Email भेजते समय CC (Carbon Copy) field का मुख्य उपयोग क्या है?",
+      "options": [
+        "उन receivers को email की copy भेजना जिनके नाम/address सभी दूसरे receivers को दिखाई देते हैं, यानी जानकारी के लिए शामिल किया गया व्यक्ति",
+        "Email के साथ file attach करने के लिए",
+        "Email को गुप्त receiver को भेजना जिसका नाम बाकी लोगों को नहीं दिखता",
+        "Email का subject line लिखने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "CC field में जोड़े गए receivers की email address सभी अन्य receivers को दिखाई देती है, इसका उपयोग किसी व्यक्ति को जानकारी के लिए शामिल करने हेतु होता है। Option B Attachment feature है, Option C असल में BCC (Blind Carbon Copy) की परिभाषा है, और Option D Subject field का काम है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q11",
+      "question": "PowerPoint में Design tab से Theme लागू करने पर presentation में क्या बदलाव आता है?",
+      "options": [
+        "Slide Show automatically loop करने लगता है",
+        "Notes page automatically print हो जाता है",
+        "पूरे presentation की background colors, fonts और effect styles एक साथ बदल जाती हैं, जिससे एक consistent professional look मिलता है",
+        "सिर्फ current slide का text bold हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Design tab में मौजूद Theme पूरे presentation में colors, fonts, background graphics और effects को एक coordinated set के रूप में apply करती है ताकि सारी slides का look एक जैसा और professional दिखे। Option A Slide Show Setup से संबंधित है, Option B Print feature से जुड़ा है, और Option D सिर्फ manual text formatting से होता है, theme से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q12",
+      "question": "Modem का Internet connectivity में क्या कार्य होता है?",
+      "options": [
+        "Presentation slides की background design बदलना",
+        "Email attachments को virus से scan करना",
+        "Web pages को search engine में rank करना",
+        "Digital data को analog signals में और analog signals को digital data में convert करना ताकि computer telephone/cable line के जरिए Internet से जुड़ सके"
+      ],
+      "correctIndex": 3,
+      "explanation": "Modem (Modulator-Demodulator) digital signals को analog में बदलकर टेलीफोन/cable लाइन पर भेजता है और वापस आने वाले analog signals को digital data में बदलकर computer तक पहुंचाता है, जिससे Internet connectivity possible होती है। बाकी तीनों options PowerPoint, antivirus scanning और search engine ranking से संबंधित हैं, modem के कार्य से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q13",
+      "question": "PowerPoint की Notes Page view का उपयोग presenter मुख्यतः किसलिए करता है?",
+      "options": [
+        "Slide पर image insert करने के लिए",
+        "हर slide के नीचे speaker notes/reminders लिखने और देखने के लिए, जो audience को Slide Show में नहीं दिखती",
+        "Slides का order बदलने के लिए",
+        "Presentation को दूसरी file format में export करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Notes Page view में presenter हर slide से जुड़े speaker notes लिख सकता है जो सिर्फ presenter के लिए होते हैं और normal Slide Show के दौरान audience को दिखाई नहीं देते। Option A Insert Picture feature है, Option C Slide Sorter view में होता है, और Option D Save As/Export feature से संबंधित है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q14",
+      "question": "Search engine (जैसे Google, Bing) का मुख्य कार्य क्या है?",
+      "options": [
+        "Users द्वारा दिए गए keywords के आधार पर Internet पर उपलब्ध relevant websites/webpages ढूंढकर परिणाम दिखाना",
+        "PowerPoint slides में animation add करना",
+        "User के computer को viruses से पूरी तरह सुरक्षित रखना",
+        "Email attachments को automatically compress करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Search engine users द्वारा टाइप किए गए keywords/queries के आधार पर Internet पर मौजूद relevant webpages को index से ढूंढकर list के रूप में दिखाता है। Option B PowerPoint का Animation feature है, Option C antivirus software का काम है (search engine खुद virus protection नहीं देता), और Option D किसी email client के attachment handling से जुड़ा है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q15",
+      "question": "PowerPoint slide में video file insert करने के लिए कौन-सा tab उपयोग किया जाता है?",
+      "options": [
+        "Home tab से 'Video' option",
+        "Design tab से 'Video' option",
+        "Insert tab से Media group में 'Video' option चुनकर file से या online से video जोड़ी जाती है",
+        "Slide Show tab से 'Video' option"
+      ],
+      "correctIndex": 2,
+      "explanation": "Insert tab के Media group में 'Video' option होता है जिससे 'This Device' से local file या 'Online Videos' से video insert की जा सकती है। Options A, B और D गलत tabs बताते हैं; Home tab में formatting tools होते हैं, Design tab में themes होते हैं, और Slide Show tab में presentation चलाने से संबंधित settings होती हैं, video insert करने का option नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q16",
+      "question": "Chrome, Firefox और Edge जैसे software को किस category में रखा जाता है?",
+      "options": [
+        "Antivirus software",
+        "Operating System",
+        "Email client software",
+        "Web Browser, जो Internet पर मौजूद websites को access और display करने के लिए उपयोग किया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Chrome, Firefox और Microsoft Edge Web Browsers हैं जिनकी मदद से user URL डालकर या search करके websites को access कर सकता है। Option A antivirus (जैसे Quick Heal) की श्रेणी है, Option B Windows/Linux जैसे software की श्रेणी है, और Option C Outlook जैसे software की श्रेणी है, browser की नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q17",
+      "question": "PowerPoint presentation को handout के रूप में print करने या PDF में export करने का विकल्प कहाँ मिलता है?",
+      "options": [
+        "Insert tab में 'Print' option से",
+        "File menu में Print/Export option से, जहाँ handout layout, slides per page और file format चुनी जा सकती है",
+        "Animations tab में 'Handout' option से",
+        "View tab में 'Slide Show' option से"
+      ],
+      "correctIndex": 1,
+      "explanation": "File menu के Print section में printer settings, handout layout और slides-per-page जैसे विकल्प मिलते हैं, और Export section से PDF/XPS जैसी format में save किया जा सकता है। Option A, C और D गलत tabs हैं क्योंकि Insert tab में objects insert होते हैं, Animations tab में effects होते हैं, और View tab के Slide Show से सिर्फ presentation चलती है, print/export नहीं होता।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q18",
+      "question": "Internet पर 'Download' और 'Upload' में क्या अंतर है?",
+      "options": [
+        "Download में file को Internet server से अपने computer/device में लाया जाता है, जबकि Upload में file को अपने computer से server/Internet पर भेजा जाता है",
+        "Download सिर्फ images के लिए होता है और Upload सिर्फ videos के लिए",
+        "दोनों शब्दों का मतलब एक ही process है",
+        "Download email भेजने की प्रक्रिया है और Upload email प्राप्त करने की"
+      ],
+      "correctIndex": 0,
+      "explanation": "Download का मतलब है data/file को remote server से अपने local device पर प्राप्त करना, जबकि Upload में local device से data को server पर भेजा जाता है। Option B गलत प्रतिबंध लगाता है क्योंकि दोनों किसी भी प्रकार की file पर लागू होते हैं, Option C इन्हें गलत तरीके से समान बताता है, और Option D इनका email भेजने/प्राप्त करने से कोई सीधा संबंध नहीं दर्शाता।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q19",
+      "question": "PowerPoint में 'Slide Layout' शब्द किसे दर्शाता है?",
+      "options": [
+        "Slide Show के दौरान लगने वाला time duration",
+        "Presentation में इस्तेमाल होने वाला color theme",
+        "किसी slide में placeholders (जैसे title, content, image, chart) की arrangement और structure, जो तय करती है कि कौन-सी जगह पर क्या content आएगा",
+        "Slide पर लगाई गई animation का प्रकार"
+      ],
+      "correctIndex": 2,
+      "explanation": "Slide Layout यह निर्धारित करता है कि slide में title, text, image, chart आदि के placeholders कहाँ और कैसे arranged होंगे (जैसे Title Slide, Title and Content, Two Content)। Option A Rehearse Timings से संबंधित है, Option B Design Theme से जुड़ा है, और Option D Animation effect की बात करता है, layout की नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q20",
+      "question": "Webmail (जैसे Gmail को browser में खोलकर उपयोग करना) और Email client (जैसे Outlook application) में क्या अंतर है?",
+      "options": [
+        "Webmail और Email client में कोई अंतर नहीं है, दोनों एक ही चीज़ हैं",
+        "Webmail सिर्फ attachment भेजने के लिए होता है और Email client सिर्फ receive करने के लिए",
+        "Email client sirf mobile phones पर काम करता है, Webmail सिर्फ computer पर",
+        "Webmail को browser के माध्यम से Internet पर सीधे access किया जाता है, जबकि Email client एक separate installed software है जो emails को अपने device पर download/sync करके manage करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Webmail service (जैसे Gmail, Yahoo Mail) को browser खोलकर सीधे Internet पर उपयोग किया जाता है, जबकि Outlook जैसे Email client software को device में install करके emails को configure/download किया जाता है। Option A गलत है क्योंकि दोनों की working अलग है, Option B और C attachment या device के आधार पर गलत प्रतिबंध लगाते हैं जो वास्तविकता में लागू नहीं होते।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q21",
+      "question": "PowerPoint Animation में 'Entrance', 'Exit', 'Emphasis' और 'Motion Path' किसकी categories हैं?",
+      "options": [
+        "Slide Transition effects की categories",
+        "Animation effects की categories, जो बताती हैं कि object slide में कैसे दिखेगा, गायब होगा, highlight होगा या move करेगा",
+        "Slide Layout के प्रकार",
+        "Design Theme के रंगों के प्रकार"
+      ],
+      "correctIndex": 1,
+      "explanation": "Animations tab में Entrance object के slide में आने का effect, Exit उसके गायब होने का effect, Emphasis उसे highlight/जोर देने का effect, और Motion Path object के एक जगह से दूसरी जगह move होने का रास्ता दिखाता है। Option A Transitions से जुड़ा गलत जवाब है, जबकि Option C और D क्रमशः Layout और Theme से संबंधित हैं, Animation से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q22",
+      "question": "Email में 'Attachment' का क्या अर्थ है?",
+      "options": [
+        "Email के साथ जोड़ी गई कोई additional file, जैसे document, image या PDF, जिसे receiver download कर सकता है",
+        "Email भेजने वाले का नाम",
+        "Email की Subject line",
+        "Email की Date और Time"
+      ],
+      "correctIndex": 0,
+      "explanation": "Attachment वह अतिरिक्त file होती है जिसे email के साथ जोड़कर भेजा जाता है, जैसे resume, photo या PDF report, और receiver इसे खोलकर या download करके देख सकता है। Option B, C और D क्रमशः Sender name, Subject field और Timestamp को दर्शाते हैं, Attachment को नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q23",
+      "question": "PowerPoint में किसी slide को delete करने का सही तरीका क्या है?",
+      "options": [
+        "Design tab में जाकर theme हटाना",
+        "Slide panel में उस slide के thumbnail पर right-click करके 'Delete Slide' चुनना",
+        "Slide Show tab से 'End Show' करना",
+        "Notes Page view खोलकर text मिटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slide panel में किसी slide के thumbnail पर right-click करके 'Delete Slide' option चुनने से वह slide पूरी तरह presentation से हट जाती है। Option A सिर्फ theme बदलता/हटाता है, Option C सिर्फ Slide Show रोकता है, और Option D सिर्फ notes का text मिटाता है, इनमें से कोई भी slide को delete नहीं करता।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q24",
+      "question": "Antivirus software का computer में मुख्य कार्य क्या है?",
+      "options": [
+        "Presentation slides को automatically design करना",
+        "Internet browsing speed को तेज़ करना",
+        "Email के attachments को हमेशा बड़ा (compress) करना",
+        "Computer में मौजूद viruses, malware को detect करना, block करना और remove करना ताकि system और data सुरक्षित रहे"
+      ],
+      "correctIndex": 3,
+      "explanation": "Antivirus software system को scan करके viruses, worms, malware जैसे harmful programs को पहचानता है, block करता है और हटाता है, जिससे data व computer सुरक्षित रहते हैं। Options A, B और C क्रमशः PowerPoint Design, Internet speed और Attachment size से गलत तरीके से जोड़े गए हैं, antivirus के मुख्य कार्य से इनका संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q25",
+      "question": "PowerPoint में 'Rehearse Timings' feature का उपयोग किसलिए किया जाता है?",
+      "options": [
+        "Slides को नए theme में बदलने के लिए",
+        "प्रत्येक slide पर कितना समय (duration) दिखेगा, यह practice करके record करने के लिए ताकि automatic Slide Show में वही timing उपयोग हो",
+        "Email attachments भेजने के लिए",
+        "SmartArt diagram बनाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slide Show tab में 'Rehearse Timings' से presenter practice run के दौरान हर slide पर लगने वाला समय record कर सकता है, जिसे बाद में automatic/self-running presentation में उपयोग किया जाता है। Option A Design tab का काम है, Option C Email client का feature है, और Option D SmartArt insert करने से संबंधित है, Rehearse Timings से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q26",
+      "question": "Firewall का network/computer security में क्या कार्य होता है?",
+      "options": [
+        "Incoming और outgoing network traffic को set किए गए security rules के अनुसार monitor करके unauthorized access को रोकना",
+        "PowerPoint presentation को automatically save करना",
+        "Email की Subject line लिखना",
+        "Web browser की history को clear करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Firewall एक security system (software या hardware) है जो network में आने-जाने वाले traffic पर नज़र रखकर पहले से तय rules के आधार पर unauthorized/harmful connections को block करता है। Options B, C और D क्रमशः AutoSave, email compose और browser history clearing से जुड़े हैं, firewall के मुख्य कार्य से इनका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q27",
+      "question": "PowerPoint में slide के लिए audio narration record करने का option किस tab में मिलता है?",
+      "options": [
+        "Insert tab में Media group के अंतर्गत 'Audio' → 'Record Audio' option में",
+        "Home tab में Font group में",
+        "Design tab में Variants group में",
+        "Review tab में Spelling group में"
+      ],
+      "correctIndex": 0,
+      "explanation": "Insert tab के Media group में 'Audio' option होता है जिसमें 'Record Audio' चुनकर सीधे slide के लिए narration record की जा सकती है या 'Audio on My PC' से existing file जोड़ी जा सकती है। Option B, C और D क्रमशः text formatting, theme variants और spelling check से संबंधित हैं, audio recording से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q28",
+      "question": "Computer 'Virus' को बुनियादी रूप से किस तरह परिभाषित किया जाता है?",
+      "options": [
+        "एक hardware device जो data store करता है",
+        "एक ऐसा software जो PowerPoint presentations को automatically design करता है",
+        "एक network protocol जो email भेजने में मदद करता है",
+        "एक harmful program/code जो बिना user की जानकारी के फैलता है और files, data या system की कार्यक्षमता को नुकसान पहुंचा सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Computer virus एक malicious program होता है जो एक file/system से दूसरे में खुद को copy करके फैलता है और data corrupt करने, files delete करने या system को धीमा/खराब करने जैसे नुकसान पहुंचा सकता है। Options A, B और C क्रमशः hardware device, design tool और email protocol की गलत परिभाषा देते हैं, virus की सही परिभाषा नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q29",
+      "question": "PowerPoint में Slide Sorter view का उपयोग किसलिए किया जाता है?",
+      "options": [
+        "Slide में text की spelling check करने के लिए",
+        "सभी slides को thumbnail के रूप में एक साथ देखकर उनका order आसानी से बदलने, arrange करने या rearrange करने के लिए",
+        "Video file को slide में insert करने के लिए",
+        "Presentation को email attachment के रूप में भेजने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slide Sorter view (View tab में उपलब्ध) सभी slides को छोटे thumbnails के रूप में एक साथ दिखाता है, जिससे slides को drag करके उनका क्रम आसानी से बदला जा सकता है। Option A Review tab की Spelling Check का काम है, Option C Insert tab का Video feature है, और Option D file भेजने की process है, Slide Sorter view से इनका संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q30",
+      "question": "Email के 'To' field और 'CC' field में मुख्य receiver को लेकर क्या अंतर होता है?",
+      "options": [
+        "'To' field में वह main/primary receivers डाले जाते हैं जिनके लिए email सीधे तौर पर उद्देश्यित है, जबकि 'CC' field में उन्हें जोड़ा जाता है जिन्हें सिर्फ जानकारी के लिए copy भेजनी है",
+        "'To' और 'CC' field में कोई फर्क नहीं है, दोनों एक जैसे काम करते हैं",
+        "'To' field सिर्फ attachment भेजने के लिए होती है",
+        "'CC' field में डाला गया receiver नाम बाकी लोगों को कभी दिखाई नहीं देता"
+      ],
+      "correctIndex": 0,
+      "explanation": "'To' field में primary receivers होते हैं जिनसे सीधे response/action अपेक्षित होता है, जबकि 'CC' (Carbon Copy) में उन लोगों को जोड़ा जाता है जिन्हें सिर्फ सूचना/जानकारी के लिए email की copy चाहिए। Option B गलत तरीके से दोनों को समान बताता है, Option C attachment field से जोड़कर गलत जानकारी देता है, और Option D दरअसल BCC field की विशेषता है, CC की नहीं।"
+    }
+  ]
+}

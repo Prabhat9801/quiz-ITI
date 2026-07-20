@@ -1,0 +1,368 @@
+{
+  "unit": "unit5",
+  "unitName": "SMD Soldering and De-soldering",
+  "topic": "smd_components_packages",
+  "topicName": "SMD Components & Packages - SOT, SOD, MELF",
+  "questions": [
+    {
+      "id": "u5_smd_components_packages_q1",
+      "question": "SOT package का full form क्या है?",
+      "options": [
+        "Small Outline Transistor",
+        "System On Transistor",
+        "Standard Output Terminal",
+        "Solder On Track"
+      ],
+      "correctIndex": 0,
+      "explanation": "SOT का अर्थ Small Outline Transistor है, जो transistors और छोटे ICs के लिए प्रयोग होने वाला SMD package है। बाकी विकल्प सही full-form नहीं हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q2",
+      "question": "SOD package मुख्यतः किस component के लिए उपयोग होता है?",
+      "options": [
+        "बड़े microprocessors के लिए",
+        "diodes के लिए (Small Outline Diode)",
+        "electrolytic capacitors के लिए",
+        "connectors के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOD का अर्थ Small Outline Diode है और यह मुख्यतः SMD diodes के लिए प्रयोग होता है। बड़े microprocessors, electrolytic capacitors या connectors के लिए अलग packages होते हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q3",
+      "question": "MELF package की सबसे खास पहचान क्या है?",
+      "options": [
+        "यह चौकोर flat chip होता है",
+        "यह cylindrical (बेलनाकार) body वाला होता है जिसके सिरों पर metal end caps होते हैं",
+        "इसमें 100 से अधिक pins होते हैं",
+        "यह केवल transistor के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MELF (Metal Electrode Leadless Face) एक cylindrical body वाला component है जिसके सिरों पर metal end caps होते हैं, आमतौर पर resistors/diodes के लिए। यह flat chip नहीं है, इसमें अनेक pins नहीं होते और यह केवल transistor के लिए नहीं है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q4",
+      "question": "MELF का full form क्या है?",
+      "options": [
+        "Metal Electrode Leadless Face",
+        "Multi Element Large Frame",
+        "Mounted Electronic Lead Fixture",
+        "Metal Encased Long Fin"
+      ],
+      "correctIndex": 0,
+      "explanation": "MELF = Metal Electrode Leadless Face — बेलनाकार leadless component जिसके face (सिरों) पर metal electrodes होते हैं। बाकी विकल्प सही full-form नहीं हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q5",
+      "question": "SOT-23 package में सामान्यतः कितने terminals होते हैं?",
+      "options": [
+        "2",
+        "3 (कुछ variants में अधिक)",
+        "8",
+        "16"
+      ],
+      "correctIndex": 1,
+      "explanation": "मानक SOT-23 में 3 terminals होते हैं जो छोटे transistors के लिए उपयुक्त हैं (SOT-23-5/6 जैसे variants में अधिक pins भी होते हैं)। 2, 8 या 16 basic SOT-23 के लिए गलत हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q6",
+      "question": "SOIC package किस लिए प्रयोग होता है?",
+      "options": [
+        "बड़े power transistors के लिए",
+        "integrated circuits (ICs) के लिए — Small Outline Integrated Circuit",
+        "केवल resistors के लिए",
+        "केवल inductors के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOIC (Small Outline Integrated Circuit) दो कतारों में gull-wing leads वाला IC package है। यह resistors, inductors या केवल power transistors के लिए नहीं होता।"
+    },
+    {
+      "id": "u5_smd_components_packages_q7",
+      "question": "MELF resistor को handle करते समय सामान्य कठिनाई क्या है?",
+      "options": [
+        "यह चौकोर होने से स्थिर रहता है",
+        "बेलनाकार होने के कारण placement/reflow के दौरान लुढ़कने की प्रवृत्ति होती है",
+        "इसमें कोई solderable सिरा नहीं होता",
+        "यह चुम्बकीय होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MELF की cylindrical body के कारण यह placement और reflow के दौरान लुढ़क सकता है, जिससे handling कठिन होती है। यह स्थिर नहीं रहता (A गलत), इसके सिरे solderable होते हैं (C गलत), और यह चुम्बकीय नहीं होता (D गलत)।"
+    },
+    {
+      "id": "u5_smd_components_packages_q8",
+      "question": "SMD transistor के लिए सामान्यतः किस package का उपयोग होता है?",
+      "options": [
+        "DIP",
+        "SOT (जैसे SOT-23, SOT-223)",
+        "TO-3 metal can",
+        "MELF"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD transistors के लिए SOT (Small Outline Transistor) packages जैसे SOT-23, SOT-223 प्रयोग होते हैं। DIP और TO-3 through-hole/metal-can packages हैं और MELF मुख्यतः resistor/diode के लिए है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q9",
+      "question": "QFP package की क्या विशेषता है?",
+      "options": [
+        "केवल दो leads होते हैं",
+        "package के चारों sides पर gull-wing leads होते हैं (Quad Flat Package)",
+        "कोई lead नहीं होता, केवल bottom pads",
+        "यह बेलनाकार होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "QFP (Quad Flat Package) में चारों ओर gull-wing leads निकलते हैं, जो अधिक pin-count वाले ICs के लिए उपयुक्त है। दो-lead (A) या बेलनाकार (D) गलत; केवल bottom pads (C) BGA/QFN जैसे packages का वर्णन है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q10",
+      "question": "QFN package में leads के बजाय क्या होता है?",
+      "options": [
+        "लंबे gull-wing leads",
+        "package के bottom किनारे पर flat pads (no leads / leadless)",
+        "wire wrap posts",
+        "screw terminals"
+      ],
+      "correctIndex": 1,
+      "explanation": "QFN (Quad Flat No-lead) में leads के बजाय package के नीचे किनारों पर flat pads होते हैं, इसलिए यह leadless है। Gull-wing leads QFP में होते हैं; wire posts और screws SMD IC packages में नहीं होते।"
+    },
+    {
+      "id": "u5_smd_components_packages_q11",
+      "question": "MELF की तुलना में chip (rectangular) resistor का एक फायदा क्या है?",
+      "options": [
+        "यह लुढ़कता है इसलिए placement आसान",
+        "flat body के कारण pick-and-place में स्थिर रहता है और लुढ़कता नहीं",
+        "इसमें कोई terminal नहीं होता",
+        "यह बहुत बड़ा होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rectangular chip resistor flat होता है इसलिए placement के दौरान स्थिर रहता है और MELF की तरह लुढ़कता नहीं। Option A उल्टा है, C गलत है (end terminals होते हैं), D असंबंधित है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q12",
+      "question": "SOD-123 किस प्रकार का package है?",
+      "options": [
+        "एक transistor package",
+        "एक छोटा SMD diode package",
+        "एक बड़ा microprocessor package",
+        "एक connector package"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOD-123 एक छोटा surface-mount diode package है (SOD = Small Outline Diode)। यह transistor, microprocessor या connector package नहीं है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q13",
+      "question": "SOT-223 package आमतौर पर किसके लिए उपयुक्त है?",
+      "options": [
+        "बहुत कम power वाले signal diodes",
+        "medium power devices जैसे voltage regulators, क्योंकि इसमें बड़ा tab heat dissipation देता है",
+        "100-pin ICs",
+        "electrolytic capacitors"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOT-223 में एक बड़ा metal tab होता है जो heat dissipation में मदद करता है, इसलिए यह medium power devices जैसे voltage regulators के लिए उपयुक्त है। यह बड़े pin ICs या electrolytic capacitors के लिए नहीं होता।"
+    },
+    {
+      "id": "u5_smd_components_packages_q14",
+      "question": "SMD electrolytic capacitor की सामान्य पहचान क्या है?",
+      "options": [
+        "बेलनाकार can जो एक chip base पर लगा होता है और polarity mark होता है",
+        "flat 2-terminal ceramic chip जिसमें कोई polarity नहीं",
+        "gull-wing leads वाला IC",
+        "cylindrical MELF"
+      ],
+      "correctIndex": 0,
+      "explanation": "SMD electrolytic (aluminium) capacitor एक बेलनाकार can होता है जो chip base पर mount होता है और उस पर polarity mark होता है। Option B ceramic chip capacitor है, C IC है, D MELF resistor/diode है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q15",
+      "question": "BGA package में connections किस रूप में होते हैं?",
+      "options": [
+        "package के चारों ओर gull-wing leads",
+        "package के bottom पर solder balls की grid array",
+        "बेलनाकार end caps",
+        "screw terminals"
+      ],
+      "correctIndex": 1,
+      "explanation": "BGA (Ball Grid Array) में package के नीचे solder balls की grid होती है जो reflow में pads से जुड़ती हैं। Gull-wing leads QFP में, end caps MELF में और screws connectors में होते हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q16",
+      "question": "SMD LED किस रूप में मिलती है?",
+      "options": [
+        "लंबे 2 wire leads के साथ",
+        "छोटे surface-mount chip package में जिसके नीचे या किनारों पर solderable pads होते हैं",
+        "glass tube में",
+        "screw base के साथ"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD LED एक छोटे chip package में आती है जिसमें solderable pads होते हैं, wire leads नहीं। लंबे leads through-hole LED के हैं; glass tube और screw base SMD LED की पहचान नहीं हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q17",
+      "question": "MELF packages को सही ढंग से solder करने के लिए pad design में क्या ध्यान रखना चाहिए?",
+      "options": [
+        "pads बहुत बड़े रखने चाहिए ताकि लुढ़कना बढ़े",
+        "pads का आकार ऐसा रखना चाहिए जो cylindrical body को सहारा दे और लुढ़कने से रोके",
+        "pads की जरूरत नहीं",
+        "pads को गोल-गोल छेद बनाना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "MELF के लिए pad design को cylindrical body को सहारा देकर लुढ़कने से रोकना चाहिए ताकि सही alignment और solder joint बने। बहुत बड़े pads (A) लुढ़कना बढ़ाते हैं; pads जरूरी हैं (C गलत); होल बनाना SMD में नहीं होता (D गलत)।"
+    },
+    {
+      "id": "u5_smd_components_packages_q18",
+      "question": "TSOP package का उपयोग किसमें आम है?",
+      "options": [
+        "memory ICs में (Thin Small Outline Package)",
+        "power resistors में",
+        "बड़े connectors में",
+        "electrolytic capacitors में"
+      ],
+      "correctIndex": 0,
+      "explanation": "TSOP (Thin Small Outline Package) पतला package है जो memory ICs जैसे Flash/DRAM में आम है। यह power resistors, connectors या electrolytic capacitors के लिए नहीं है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q19",
+      "question": "SOT, SOD और MELF में से कौन-सा package आमतौर पर diode के लिए दोनों रूपों में उपलब्ध होता है?",
+      "options": [
+        "केवल SOT",
+        "SOD और MELF दोनों diode के रूप में उपलब्ध होते हैं",
+        "केवल MELF, SOD कभी नहीं",
+        "इनमें से कोई भी diode के लिए नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Diodes SOD (flat) और MELF (cylindrical) दोनों रूपों में मिलते हैं। SOT मुख्यतः transistor के लिए है, इसलिए 'केवल SOT' गलत; 'केवल MELF' और 'कोई भी नहीं' भी गलत हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q20",
+      "question": "SMD package चुनते समय high pin-count IC के लिए कौन-सा उपयुक्त है?",
+      "options": [
+        "SOT-23",
+        "QFP या BGA जैसे high-density packages",
+        "MELF",
+        "SOD-123"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक pins वाले ICs के लिए QFP (चारों ओर leads) या BGA (bottom ball grid) जैसे high-density packages उपयुक्त होते हैं। SOT-23, MELF और SOD-123 कम terminal वाले छोटे components हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q21",
+      "question": "SMD inductor की सामान्य पहचान क्या हो सकती है?",
+      "options": [
+        "gull-wing leads वाला IC",
+        "एक छोटा chip या shielded coil block जिसके नीचे solderable terminals होते हैं",
+        "बेलनाकार MELF",
+        "3-lead SOT"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD inductor एक chip या shielded coil block होता है जिसके नीचे solderable terminals होते हैं। यह IC (A), MELF (C) या transistor SOT (D) नहीं है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q22",
+      "question": "'Leadless' package का क्या अर्थ है (जैसे QFN, MELF)?",
+      "options": [
+        "package में सीसा (lead metal) होता है",
+        "package में लंबे protruding leads नहीं होते; connection pads या end caps से होता है",
+        "package में कोई terminal नहीं होता",
+        "package solder नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Leadless का अर्थ है कि package में लंबे बाहर निकले leads नहीं होते; connection सीधे pads (QFN) या end caps (MELF) से होता है। यह 'सीसा metal' (A), 'कोई terminal नहीं' (C) या 'solder नहीं होता' (D) से संबंधित नहीं है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q23",
+      "question": "SOT-23 में तीन pads पर एक छोटा transistor है; इसमें आमतौर पर कौन-कौन से terminals होते हैं?",
+      "options": [
+        "केवल anode और cathode",
+        "base, emitter और collector (या gate, source, drain)",
+        "phase, neutral, earth",
+        "input, output, ground हमेशा एक ही क्रम में fixed"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOT-23 में 3-terminal transistor के लिए base-emitter-collector (BJT) या gate-source-drain (MOSFET) होते हैं। Anode/cathode diode के हैं; phase/neutral/earth wiring के हैं; और terminal क्रम datasheet पर निर्भर करता है, हमेशा fixed नहीं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q24",
+      "question": "ceramic chip capacitor (MLCC) की पहचान क्या है?",
+      "options": [
+        "बेलनाकार can जिस पर polarity mark",
+        "छोटा rectangular chip जिसके दोनों सिरों पर metal terminations होते हैं और आमतौर पर कोई marking नहीं",
+        "gull-wing leads वाला IC",
+        "3-lead package"
+      ],
+      "correctIndex": 1,
+      "explanation": "MLCC एक rectangular ceramic chip है जिसके सिरों पर metal terminations होते हैं और आमतौर पर body पर कोई value marking नहीं होती। Option A electrolytic capacitor है, C IC है, D transistor है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q25",
+      "question": "किसी board पर बेलनाकार दो-सिरे वाला छोटा component दिख रहा है जिस पर color bands हैं — यह संभवतः क्या है?",
+      "options": [
+        "QFP IC",
+        "MELF resistor या diode",
+        "BGA processor",
+        "electrolytic capacitor"
+      ],
+      "correctIndex": 1,
+      "explanation": "बेलनाकार, दो सिरों और (कभी-कभी) color band वाला component MELF resistor या diode होता है। QFP/BGA ICs हैं और electrolytic capacitor बेलनाकार can होता है पर वह chip base पर होता है, MELF जैसा नहीं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q26",
+      "question": "SMD packages में gull-wing leads का क्या फायदा है?",
+      "options": [
+        "वे inspection और hand soldering में लगभग असंभव बनाते हैं",
+        "वे package के बाहर दिखते हैं जिससे visual inspection और soldering/rework आसान होते हैं",
+        "वे reflow रोक देते हैं",
+        "उनसे board का size बढ़ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gull-wing leads बाहर दिखते हैं, इसलिए उनके solder joints की visual inspection और hand rework आसान होते हैं (BGA balls के विपरीत जो नीचे छिपे रहते हैं)। बाकी विकल्प तथ्यगत रूप से गलत हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q27",
+      "question": "SMD package के terminals पर 'gull-wing' और 'J-lead' किसमें भिन्न होते हैं?",
+      "options": [
+        "gull-wing बाहर की ओर मुड़ता है, J-lead package के नीचे की ओर मुड़ता है (J आकार)",
+        "दोनों बिल्कुल एक जैसे हैं",
+        "gull-wing केवल resistors में होता है",
+        "J-lead केवल diodes में होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Gull-wing lead बाहर की ओर मुड़ता है (पक्षी के पंख जैसा), जबकि J-lead package के नीचे की ओर 'J' आकार में मुड़ता है (जैसे PLCC में)। वे एक जैसे नहीं हैं और किसी एक component-type तक सीमित नहीं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q28",
+      "question": "SMD diode में polarity band किस terminal को दर्शाता है?",
+      "options": [
+        "anode",
+        "cathode",
+        "gate",
+        "इसका polarity से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD diode पर बना band cathode को दर्शाता है, जिससे सही polarity में soldering संभव होती है। यह anode या gate नहीं दर्शाता, और यह polarity mark ही है, इसलिए D गलत है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q29",
+      "question": "PLCC package की एक विशेषता क्या है?",
+      "options": [
+        "बेलनाकार body",
+        "package के चारों ओर J-leads होते हैं जो नीचे की ओर मुड़ते हैं",
+        "कोई terminal नहीं",
+        "केवल 2 terminals"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLCC (Plastic Leaded Chip Carrier) में चारों ओर J-leads होते हैं जो package के नीचे की ओर मुड़ते हैं, अक्सर socket में भी लगते हैं। यह बेलनाकार नहीं है, इसमें terminals होते हैं और 2 से अधिक होते हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q30",
+      "question": "SMD components की सही identification क्यों जरूरी है repair के दौरान?",
+      "options": [
+        "क्योंकि सभी packages एक ही होते हैं",
+        "ताकि सही replacement part, सही polarity/orientation और सही soldering method चुना जा सके",
+        "ताकि board का रंग बदला जा सके",
+        "क्योंकि identification से कोई फर्क नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही package/component identification से सही replacement, सही polarity/orientation और उपयुक्त soldering/rework method चुना जाता है, जो repair की सफलता के लिए जरूरी है। बाकी विकल्प गलत या असंगत हैं।"
+    }
+  ]
+}

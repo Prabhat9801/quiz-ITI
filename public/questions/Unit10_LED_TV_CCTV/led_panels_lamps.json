@@ -1,0 +1,218 @@
+{
+  "unit": "unit10",
+  "unitName": "LED Lights, LED/LCD TV and CCTV",
+  "topic": "led_panels_lamps",
+  "topicName": "LED Panels & Lamp Specifications",
+  "questions": [
+    {
+      "id": "u10_led_panels_lamps_q1",
+      "question": "LED (Light Emitting Diode) में प्रकाश किस प्रक्रिया द्वारा उत्पन्न होता है?",
+      "options": ["Thermal heating (filament गर्म होकर)", "Electroluminescence (forward biased junction में electron-hole recombination)", "Gas discharge (गैस के ionization से)", "Fluorescence (UV light के phosphor पर पड़ने से)"],
+      "correctIndex": 1,
+      "explanation": "LED में forward bias के दौरान junction पर electron और hole का recombination होता है और energy photon के रूप में निकलती है — इसे electroluminescence कहते हैं, इसलिए option B सही है। Thermal heating incandescent bulb में होता है, gas discharge tube light/CFL में होता है, और fluorescence भी tube light के phosphor coating का सिद्धांत है — ये LED के लिए गलत हैं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q2",
+      "question": "White LED बनाने का सबसे सामान्य तरीका कौन-सा है?",
+      "options": ["Red, Green और Blue LED chips को एक साथ रखकर", "Blue LED chip पर yellow phosphor coating करके", "Infrared LED पर filter लगाकर", "White semiconductor material का उपयोग करके"],
+      "correctIndex": 1,
+      "explanation": "अधिकांश commercial white LEDs में एक blue LED chip के ऊपर yellow (YAG) phosphor coating होती है; blue और yellow मिलकर white light बनाते हैं, इसलिए option B सही है। RGB मिश्रण एक विकल्प है पर महँगा और कम आम है, infrared LED दृश्य प्रकाश नहीं देता, और सीधे 'white semiconductor' जैसी कोई चीज़ नहीं होती।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q3",
+      "question": "LED lamp की efficiency आमतौर पर किस unit में व्यक्त की जाती है?",
+      "options": ["Watt per hour (W/h)", "Lumens per watt (lm/W)", "Candela per meter (cd/m)", "Ampere per volt (A/V)"],
+      "correctIndex": 1,
+      "explanation": "LED lamp की luminous efficacy lumens per watt (lm/W) में मापी जाती है, यानी प्रति watt खर्च पर कितना प्रकाश (lumen) मिलता है — इसलिए option B सही है। W/h ऊर्जा खपत की गलत unit है, cd/m² luminance है, और A/V प्रतिरोध (conductance) से संबंधित है, efficiency नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q4",
+      "question": "एक LED lamp की rating '9W, 800 lumen' है। इसकी luminous efficacy लगभग कितनी होगी?",
+      "options": ["約 72 lm/W", "約 89 lm/W", "約 9 lm/W", "約 800 lm/W"],
+      "correctIndex": 1,
+      "explanation": "Luminous efficacy = total lumen / power = 800 / 9 ≈ 89 lm/W, इसलिए option B सही है। 72 गलत गणना है, 9 केवल wattage है और 800 केवल कुल lumen output है — ये efficacy नहीं दर्शाते।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q5",
+      "question": "LED lamp की 'Colour Temperature' किस unit में दी जाती है और 6500K किसका सूचक है?",
+      "options": ["Lumen में; warm white का", "Kelvin में; cool/day light white का", "Watt में; neutral white का", "Lux में; warm yellow का"],
+      "correctIndex": 1,
+      "explanation": "Colour temperature Kelvin (K) में दी जाती है; लगभग 6500K cool/daylight white होता है जबकि 2700-3000K warm white होता है, इसलिए option B सही है। Lumen कुल प्रकाश, Watt शक्ति और Lux illuminance की unit है — इनसे colour temperature नहीं मापी जाती।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q6",
+      "question": "LED panel में 'CRI (Colour Rendering Index)' किसे दर्शाता है?",
+      "options": ["LED कितना heat पैदा करता है", "प्रकाश स्रोत वस्तुओं के असली रंग को कितनी सही ढंग से दिखाता है", "LED की जीवन अवधि घंटों में", "LED का forward voltage"],
+      "correctIndex": 1,
+      "explanation": "CRI यह मापता है कि कोई प्रकाश स्रोत वस्तुओं के प्राकृतिक रंगों को कितनी सटीकता से दिखाता है (0-100 scale, जितना अधिक उतना बेहतर), इसलिए option B सही है। Heat, life-hours और forward voltage LED के अन्य parameters हैं पर CRI से इनका सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q7",
+      "question": "एक सामान्य white LED का typical forward voltage लगभग कितना होता है?",
+      "options": ["約 3.0 से 3.4 V", "約 0.7 V", "約 12 V", "約 0.3 V"],
+      "correctIndex": 0,
+      "explanation": "White/blue LED का forward voltage लगभग 3.0-3.4 V होता है क्योंकि इनके semiconductor का band-gap अधिक है, इसलिए option A सही है। 0.7 V silicon diode का Vf है, 12 V एक supply voltage है (single LED का Vf नहीं), और 0.3 V germanium diode जैसा कम मान है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q8",
+      "question": "LED lamp बनाने में जब कई LEDs को series में जोड़ा (stacked) जाता है, तो मुख्य लाभ क्या है?",
+      "options": ["हर LED पर पूरा supply voltage पड़ता है", "एक ही current सभी LEDs से गुजरता है जिससे uniform brightness मिलती है", "किसी एक LED के खराब होने पर बाकी चलते रहते हैं", "total voltage घट जाता है"],
+      "correctIndex": 1,
+      "explanation": "Series connection में एक ही current सभी LEDs से बहता है, जिससे सबकी brightness समान रहती है, इसलिए option B सही है। Series में supply voltage सभी LEDs में बँट जाता है (हर एक पर पूरा नहीं), series में कोई एक LED खुलने पर पूरी string बंद हो जाती है, और कुल voltage बढ़ता है, घटता नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q9",
+      "question": "LEDs को parallel में जोड़ने की मुख्य समस्या क्या है?",
+      "options": ["voltage बहुत अधिक हो जाता है", "forward voltage में थोड़े अंतर के कारण current असमान रूप से बँटता है", "brightness बहुत घट जाती है", "LEDs गर्म नहीं होते"],
+      "correctIndex": 1,
+      "explanation": "Parallel LEDs में यदि उनके Vf में हल्का भी अंतर हो तो कम Vf वाली LED ज़्यादा current खींचकर पहले खराब हो सकती है (current hogging), इसलिए option B सही है। Parallel में voltage समान रहता है (बढ़ता नहीं), brightness कम होने का सीधा कारण नहीं, और असमान current से कुछ LEDs अधिक गर्म ही होती हैं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q10",
+      "question": "12V supply पर एक 3.2V, 20mA white LED जलाने के लिए series resistor का मान लगभग कितना होगा?",
+      "options": ["約 160 Ω", "約 440 Ω", "約 600 Ω", "約 60 Ω"],
+      "correctIndex": 1,
+      "explanation": "R = (Vsupply − Vled) / I = (12 − 3.2) / 0.02 = 8.8 / 0.02 = 440 Ω, इसलिए option B सही है। 160 Ω और 60 Ω गलत गणना देते हैं, और 600 Ω से current बहुत कम (मंद प्रकाश) मिलेगा।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q11",
+      "question": "LED panel की life (जीवन अवधि) आमतौर पर किस रूप में specify की जाती है, जैसे 'L70'?",
+      "options": ["वह समय जब LED पूरी तरह बंद हो जाए", "वह घंटे जब तक brightness घटकर आरंभिक की 70% रह जाए", "70 घंटे की warranty", "70% efficiency वाली LED"],
+      "correctIndex": 1,
+      "explanation": "L70 वह उपयोग-घंटे बताता है जिसके बाद LED का प्रकाश output घटकर मूल का 70% रह जाता है (lumen depreciation), इसलिए option B सही है। LED आमतौर पर एकाएक बंद नहीं होते बल्कि धीरे-धीरे मंद होते हैं, यह warranty या fixed efficiency संख्या नहीं दर्शाता।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q12",
+      "question": "LED panel light में heat sink का मुख्य कार्य क्या है?",
+      "options": ["प्रकाश की चमक बढ़ाना", "LED junction की गर्मी को बाहर निकालना ताकि life और efficiency बनी रहे", "voltage को नियंत्रित करना", "रंग बदलना"],
+      "correctIndex": 1,
+      "explanation": "LED में उत्पन्न ऊष्मा को बाहर निकालना ज़रूरी है क्योंकि उच्च junction temperature से efficiency घटती और life कम होती है — heat sink यही thermal management करता है, इसलिए option B सही है। Heat sink सीधे brightness, voltage या रंग नियंत्रित नहीं करता।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q13",
+      "question": "SMD (Surface Mount Device) LED जैसे 2835 या 5050 में संख्या क्या दर्शाती है?",
+      "options": ["LED का forward voltage", "package के आयाम (dimensions) मिलीमीटर में", "LED की wattage", "उत्पादन का वर्ष"],
+      "correctIndex": 1,
+      "explanation": "SMD LED के code जैसे 2835 का अर्थ है 2.8 mm × 3.5 mm और 5050 का अर्थ 5.0 mm × 5.0 mm — यानी package की dimensions, इसलिए option B सही है। ये संख्याएँ Vf, wattage या निर्माण वर्ष नहीं दर्शातीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q14",
+      "question": "COB (Chip On Board) LED की मुख्य विशेषता क्या है?",
+      "options": ["एक single small chip", "कई LED chips को एक ही substrate पर सटाकर एक बड़े प्रकाश स्रोत के रूप में", "केवल infrared प्रकाश देना", "बिना driver के चलना"],
+      "correctIndex": 1,
+      "explanation": "COB में अनेक tiny LED chips एक ही board/substrate पर घनी तरह लगाए जाते हैं जिससे एक समान, उच्च घनत्व वाला उज्ज्वल प्रकाश स्रोत बनता है, इसलिए option B सही है। यह single chip नहीं, न ही केवल infrared देता है, और इसे भी उचित driver की आवश्यकता होती है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q15",
+      "question": "LED में current सीमित करना क्यों आवश्यक है?",
+      "options": ["LED का voltage बढ़ाने के लिए", "क्योंकि LED का I-V curve exponential है और बिना सीमा के current बढ़कर LED जल जाती है", "प्रकाश का रंग बदलने के लिए", "LED को reverse bias करने के लिए"],
+      "correctIndex": 1,
+      "explanation": "LED का forward I-V characteristic बहुत तीव्र (exponential) होता है — छोटी सी voltage वृद्धि पर current तेज़ी से बढ़ता है, इसलिए current-limiting न होने पर thermal runaway से LED नष्ट हो जाती है (option B सही)। Current सीमा voltage बढ़ाने, रंग बदलने या reverse bias के लिए नहीं की जाती।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q16",
+      "question": "LED panel की 'lumen output' किससे सबसे अधिक प्रभावित होती है?",
+      "options": ["केवल पैनल के रंग से", "LED की संख्या, drive current और junction temperature से", "केवल पैनल के आकार से", "supply की frequency से"],
+      "correctIndex": 1,
+      "explanation": "कुल lumen output मुख्यतः LEDs की संख्या, उनमें बहने वाले drive current और junction temperature (गर्म होने पर output घटता है) पर निर्भर करता है, इसलिए option B सही है। केवल रंग या आकार निर्णायक नहीं, और DC-driven LED पर supply frequency का सीधा प्रभाव नहीं पड़ता।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q17",
+      "question": "एक LED string में 4 white LEDs (प्रत्येक 3.2V) series में हैं। string को जलाने के लिए न्यूनतम supply voltage कितना चाहिए?",
+      "options": ["約 3.2 V", "約 12.8 V से अधिक", "約 6.4 V", "約 0.8 V"],
+      "correctIndex": 1,
+      "explanation": "Series में voltage जुड़ते हैं: 4 × 3.2 = 12.8 V, अतः current-limit के लिए थोड़ा अधिक supply (12.8 V से ऊपर) चाहिए, इसलिए option B सही है। 3.2 V केवल एक LED के लिए, 6.4 V केवल दो के लिए और 0.8 V किसी भी white LED को जलाने में अपर्याप्त है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q18",
+      "question": "LED का प्रकाश किस दिशा में सबसे तीव्र होता है और इसे किस parameter से दर्शाते हैं?",
+      "options": ["सभी दिशाओं में समान; CRI से", "एक निश्चित beam angle के भीतर; viewing/beam angle से", "केवल पीछे की ओर; power factor से", "गोलाकार समान; frequency से"],
+      "correctIndex": 1,
+      "explanation": "LED दिशात्मक प्रकाश स्रोत है और उसका प्रकाश एक निश्चित beam/viewing angle (जैसे 120°) में केंद्रित रहता है, इसलिए option B सही है। CRI रंग-प्रदर्शन, power factor विद्युत गुणवत्ता और frequency आवृत्ति दर्शाते हैं — दिशा नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q19",
+      "question": "पुराने incandescent bulb की तुलना में LED lamp का प्रमुख लाभ क्या है?",
+      "options": ["अधिक heat और अधिक बिजली खपत", "कम बिजली खपत, लंबी life और अधिक efficacy (lm/W)", "कम life पर सस्ती", "केवल DC पर चलना जरूरी"],
+      "correctIndex": 1,
+      "explanation": "LED lamp समान प्रकाश के लिए बहुत कम watt लेती है, इसकी life हजारों घंटे और efficacy बहुत अधिक होती है, इसलिए option B सही है। यह incandescent की तुलना में कम heat देती है, life लंबी होती है, और driver द्वारा AC पर भी चलती है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q20",
+      "question": "LED panel में 'binning' शब्द किससे संबंधित है?",
+      "options": ["LEDs को उनके colour, brightness और voltage के अनुसार वर्गीकृत करना", "LED को box में पैक करना", "खराब LEDs को फेंकना", "LED की सफाई"],
+      "correctIndex": 0,
+      "explanation": "Binning वह प्रक्रिया है जिसमें निर्मित LEDs को उनकी colour, luminous flux और forward voltage जैसी विशेषताओं के आधार पर समान groups (bins) में छाँटा जाता है ताकि panel में एकरूपता बनी रहे — इसलिए option A सही है। यह packing, scrap करना या सफाई नहीं है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q21",
+      "question": "LED lamp की 'power factor' उच्च (near unity) रखना क्यों वांछनीय है?",
+      "options": ["ताकि LED का रंग सफेद रहे", "ताकि supply से खींची गई current कुशलता से real power में बदले और line पर कम load पड़े", "ताकि LED का Vf घट जाए", "ताकि life कम हो जाए"],
+      "correctIndex": 1,
+      "explanation": "उच्च power factor का अर्थ है supply current मुख्यतः useful (real) power देती है, reactive घटक कम होता है जिससे line losses कम और आपूर्ति दक्ष रहती है, इसलिए option B सही है। PF का रंग, Vf या life से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q22",
+      "question": "यदि LED panel में एक LED short हो जाए (series string में), तो प्रायः क्या होगा?",
+      "options": ["पूरी string बंद हो जाएगी", "बाकी LEDs पर voltage बढ़ जाएगा जिससे वे अधिक चमकेंगी और जल्दी खराब हो सकती हैं", "कुछ भी नहीं बदलेगा", "supply voltage दुगना हो जाएगा"],
+      "correctIndex": 1,
+      "explanation": "Series में एक LED short होने से उसका share किया गया voltage बाकी LEDs पर बँट जाता है, जिससे उनमें अधिक current/brightness और अधिक तनाव आता है और वे जल्दी fail हो सकती हैं, इसलिए option B सही है। Short होने पर string बंद नहीं होती (open होने पर होती); supply voltage नहीं बदलता।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q23",
+      "question": "LED panel light में 'IP65' rating का क्या अर्थ है?",
+      "options": ["65 watt की LED", "धूल-रोधी और पानी की धारा से सुरक्षित (dust-tight and water jet protected)", "65% efficiency", "65 volt operating"],
+      "correctIndex": 1,
+      "explanation": "IP (Ingress Protection) code में पहला अंक (6) पूर्ण धूल-रोधी और दूसरा अंक (5) low-pressure water jets से सुरक्षा दर्शाता है, इसलिए option B सही है। यह wattage, efficiency या voltage rating नहीं है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q24",
+      "question": "एक 10W LED panel 230V AC पर 0.05 A खींचता है और power factor 0.9 है। वास्तविक (real) power लगभग कितनी है?",
+      "options": ["約 11.5 W", "約 10.35 W", "約 23 W", "約 5 W"],
+      "correctIndex": 1,
+      "explanation": "Real power = V × I × PF = 230 × 0.05 × 0.9 = 10.35 W, जो लगभग rated 10W के बराबर है, इसलिए option B सही है। 11.5 W केवल apparent power (V×I) है, 23 W और 5 W गलत गणनाएँ हैं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q25",
+      "question": "LED lamp में flicker (झिलमिलाहट) का मुख्य कारण क्या होता है?",
+      "options": ["उच्च गुणवत्ता का constant current driver", "driver में अपर्याप्त filtering के कारण output current में ripple", "LED का उच्च CRI", "heat sink का बड़ा होना"],
+      "correctIndex": 1,
+      "explanation": "Driver के output में यदि ripple current रह जाए (कमज़ोर filtering) तो LED की brightness आवृत्ति के साथ ऊपर-नीचे होती है जिससे flicker दिखता है, इसलिए option B सही है। अच्छा constant current driver flicker घटाता है, और CRI या बड़ा heat sink flicker का कारण नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q26",
+      "question": "LED panel की brightness को नियंत्रित (dim) करने की सबसे आम विधि कौन-सी है?",
+      "options": ["LED का रंग बदलना", "PWM (Pulse Width Modulation) से औसत current नियंत्रित करना", "supply frequency दुगनी करना", "heat sink हटाना"],
+      "correctIndex": 1,
+      "explanation": "PWM में LED को उच्च आवृत्ति पर on/off करके duty cycle बदला जाता है, जिससे औसत current और अनुभूत brightness नियंत्रित होती है बिना रंग बिगाड़े, इसलिए option B सही है। रंग बदलना, frequency दुगनी करना या heat sink हटाना dimming के तरीके नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q27",
+      "question": "किस रंग की LED का forward voltage सामान्यतः सबसे कम होता है?",
+      "options": ["Blue LED", "Infrared/Red LED", "White LED", "Violet LED"],
+      "correctIndex": 1,
+      "explanation": "Red और infrared LEDs का band-gap कम होने से इनका forward voltage (लगभग 1.6-2.0 V) सबसे कम होता है, इसलिए option B सही है। Blue, white और violet LEDs का band-gap अधिक होने से इनका Vf लगभग 3 V या अधिक होता है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q28",
+      "question": "LED panel की 'lux' rating किसका माप है?",
+      "options": ["स्रोत से निकलने वाला कुल प्रकाश", "किसी सतह पर पड़ने वाली प्रकाश की तीव्रता (illuminance) — lumen per square metre", "LED का तापमान", "LED की शक्ति"],
+      "correctIndex": 1,
+      "explanation": "Lux किसी सतह पर पड़ने वाले प्रकाश की मात्रा (illuminance = lumen/m²) मापता है, इसलिए option B सही है। कुल निकला प्रकाश lumen में, तापमान Kelvin/°C में और शक्ति watt में मापी जाती है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q29",
+      "question": "LED panel में एक ही string की सभी LEDs समान चमक क्यों दिखाती हैं जब वे series में हों?",
+      "options": ["क्योंकि हर LED पर समान voltage पड़ता है", "क्योंकि series में सभी LEDs से समान current बहता है और brightness मुख्यतः current पर निर्भर है", "क्योंकि उनका रंग समान होता है", "क्योंकि supply DC है"],
+      "correctIndex": 1,
+      "explanation": "LED की brightness मुख्यतः उससे बहने वाले current पर निर्भर करती है; series connection में current सर्वत्र समान रहता है इसलिए सभी समान चमकती हैं (option B सही)। Series में हर LED पर voltage समान होना ज़रूरी नहीं, और केवल रंग या DC होना कारण नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q30",
+      "question": "LED lamp की datasheet में 'ambient operating temperature' range देना क्यों महत्वपूर्ण है?",
+      "options": ["क्योंकि LED का रंग हमेशा तापमान से बदलता है", "क्योंकि उच्च ताप पर LED की efficiency और life घटती है, इसलिए सुरक्षित परिचालन सीमा जानना आवश्यक है", "क्योंकि LED केवल 0°C पर चलती है", "क्योंकि तापमान का LED पर कोई प्रभाव नहीं"],
+      "correctIndex": 1,
+      "explanation": "उच्च ambient/junction temperature पर LED की light output और जीवन दोनों घटते हैं, इसलिए निर्माता सुरक्षित परिचालन तापमान सीमा देते हैं ताकि विश्वसनीय प्रदर्शन मिले (option B सही)। LED किसी एक तापमान तक सीमित नहीं, और तापमान का प्रभाव नगण्य कहना गलत है।"
+    }
+  ]
+}

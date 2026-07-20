@@ -1,0 +1,368 @@
+{
+  "unit": "unit7",
+  "unitName": "Computer Hardware, OS, MS Office, Networking",
+  "topic": "printers_storage_ports",
+  "topicName": "Printers, Storage Devices, Ports, POST & Booting",
+  "questions": [
+    {
+      "id": "u7_printers_storage_ports_q1",
+      "question": "एक Dot Matrix Printer किस category में आता है?",
+      "options": [
+        "Non-impact printer",
+        "Impact printer",
+        "Thermal printer",
+        "Laser printer"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dot Matrix Printer में pins ribbon पर टकराकर (impact) कागज़ पर छपाई करती हैं, इसलिए यह impact printer है। Laser और Inkjet non-impact हैं, और thermal printer heat से छापता है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q2",
+      "question": "Laser printer में image को कागज़ पर स्थायी रूप से चिपकाने (fix करने) के लिए किसका उपयोग होता है?",
+      "options": [
+        "Ink cartridge और nozzle",
+        "Heat और pressure (fuser unit)",
+        "Ribbon और pins",
+        "Magnetic head"
+      ],
+      "correctIndex": 1,
+      "explanation": "Laser printer में toner powder को fuser unit की heat और pressure से कागज़ पर पिघलाकर fix किया जाता है। Ink nozzle inkjet में होते हैं (A), ribbon/pins dot matrix में (C), और magnetic head storage disks में (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q3",
+      "question": "Printer की print quality को किस unit में मापा जाता है?",
+      "options": [
+        "PPM (Pages Per Minute)",
+        "DPI (Dots Per Inch)",
+        "RPM (Rotations Per Minute)",
+        "Hz (Hertz)"
+      ],
+      "correctIndex": 1,
+      "explanation": "DPI यानी Dots Per Inch जितना अधिक होगा, print उतनी ही sharp और अच्छी quality की होगी। PPM printing speed मापता है (A), RPM disk की घूमने की गति (C), और Hz frequency की unit है (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q4",
+      "question": "Inkjet printer छपाई कैसे करता है?",
+      "options": [
+        "Pins से ribbon पर टकराकर",
+        "Nozzles से छोटी ink की बूँदें कागज़ पर spray करके",
+        "Laser beam और toner से",
+        "Heat से special paper जलाकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inkjet printer nozzles के जरिए liquid ink की सूक्ष्म बूँदें कागज़ पर spray करता है। Pins/ribbon dot matrix में (A), laser+toner laser printer में (C), और heat-sensitive paper thermal printer में (D) उपयोग होता है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q5",
+      "question": "POST (Power On Self Test) booting के दौरान किसके द्वारा किया जाता है?",
+      "options": [
+        "Operating System के kernel द्वारा",
+        "BIOS/firmware द्वारा",
+        "MS Word द्वारा",
+        "Antivirus द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब computer on होता है, BIOS/firmware सबसे पहले POST चलाकर RAM, keyboard आदि hardware की जाँच करता है। OS kernel POST के बाद load होता है (A); Word और antivirus application-level हैं और booting test नहीं करते।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q6",
+      "question": "एक Hard Disk Drive (HDD) में data किस रूप में store होता है?",
+      "options": [
+        "Optical pits के रूप में",
+        "Magnetic रूप में spinning platters पर",
+        "Flash memory cells में",
+        "Punched holes के रूप में"
+      ],
+      "correctIndex": 1,
+      "explanation": "HDD में तेज़ी से घूमती हुई magnetic platters पर read/write head data को magnetic form में लिखता/पढ़ता है। Optical pits CD/DVD में (A), flash cells SSD/pen drive में (C), और punched holes पुराने punch cards में होते थे (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q7",
+      "question": "एक standard single-layer DVD की approx storage capacity लगभग कितनी होती है?",
+      "options": [
+        "700 MB",
+        "4.7 GB",
+        "1.44 MB",
+        "128 GB"
+      ],
+      "correctIndex": 1,
+      "explanation": "Single-layer DVD लगभग 4.7 GB data रख सकता है। 700 MB एक CD की capacity है (A), 1.44 MB floppy disk की (C), और 128 GB आधुनिक pen drive/SSD की range है (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q8",
+      "question": "SSD (Solid State Drive) HDD की तुलना में किस कारण तेज़ होता है?",
+      "options": [
+        "इसमें बहुत तेज़ घूमने वाली platters होती हैं",
+        "इसमें कोई moving parts नहीं होते, data flash memory से access होता है",
+        "यह optical laser का उपयोग करता है",
+        "इसमें बड़ी ribbon लगी होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SSD में कोई mechanical moving part नहीं होता; data flash memory chips से electronically access होता है, जिससे यह HDD से तेज़ और टिकाऊ होता है। HDD में ही platters घूमती हैं (A); SSD न laser (C) न ribbon (D) उपयोग करता है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q9",
+      "question": "USB port का पूरा नाम क्या है?",
+      "options": [
+        "Universal Serial Bus",
+        "United System Bus",
+        "Universal System Board",
+        "Uniform Serial Buffer"
+      ],
+      "correctIndex": 0,
+      "explanation": "USB का अर्थ Universal Serial Bus है, जो एक common interface है जिससे keyboard, pen drive, printer आदि जोड़े जाते हैं। बाकी सभी विकल्प गलत full-forms हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q10",
+      "question": "Monitor को computer से connect करने के लिए आमतौर पर कौन-सा port उपयोग होता है?",
+      "options": [
+        "USB या PS/2",
+        "VGA/HDMI/DisplayPort",
+        "RJ-45",
+        "Audio jack (3.5 mm)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monitor को VGA, HDMI या DisplayPort के जरिए video signal दिया जाता है। USB/PS/2 mostly keyboard-mouse के लिए (A), RJ-45 networking के लिए (C), और 3.5 mm jack audio के लिए (D) है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q11",
+      "question": "'Booting' शब्द का सही अर्थ क्या है?",
+      "options": [
+        "Computer को बंद करने की प्रक्रिया",
+        "Computer को on करके operating system को load करने की प्रक्रिया",
+        "File को delete करना",
+        "Printer को चालू करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Booting वह प्रक्रिया है जिसमें computer on होने पर BIOS/POST के बाद operating system memory में load होता है और system उपयोग के लिए तैयार होता है। बाकी विकल्प shutdown, file deletion और printer से संबंधित हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q12",
+      "question": "Cold booting और Warm booting में मुख्य अंतर क्या है?",
+      "options": [
+        "Cold booting में system पूरी तरह off से start होता है, warm booting में पहले से चालू system को restart किया जाता है",
+        "दोनों बिल्कुल एक जैसे हैं",
+        "Cold booting केवल laptops में होती है",
+        "Warm booting में power supply बदलनी पड़ती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cold boot तब होता है जब बंद computer को power देकर चालू किया जाता है, जबकि warm boot (जैसे Ctrl+Alt+Del/Restart) पहले से चल रहे system को बिना पूरी power बंद किए फिर से start करता है। बाकी कथन गलत हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q13",
+      "question": "RJ-45 connector/port मुख्य रूप से किस काम आता है?",
+      "options": [
+        "Printer connect करने के लिए",
+        "Ethernet LAN network cable connect करने के लिए",
+        "Monitor connect करने के लिए",
+        "Speaker connect करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "RJ-45 port Ethernet (LAN) network cable के लिए उपयोग होता है। Printer के लिए आमतौर पर USB (A), monitor के लिए VGA/HDMI (C), और speaker के लिए audio jack (D) उपयोग होता है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q14",
+      "question": "यदि POST के दौरान कोई hardware error मिले, तो system आमतौर पर उपयोगकर्ता को कैसे सूचित करता है?",
+      "options": [
+        "Email भेजकर",
+        "Beep codes या screen पर error message द्वारा",
+        "Printer से page निकालकर",
+        "Automatically internet पर post करके"
+      ],
+      "correctIndex": 1,
+      "explanation": "POST error होने पर BIOS एक pattern में beep sounds (beep codes) देता है या screen पर error दिखाता है, ताकि दोष पहचाना जा सके। इस अवस्था में email, printing या internet posting संभव नहीं होती क्योंकि OS अभी load नहीं हुआ होता।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q15",
+      "question": "Blu-ray Disc की storage capacity DVD की तुलना में अधिक क्यों होती है?",
+      "options": [
+        "यह red laser के बजाय छोटी wavelength वाला blue laser उपयोग करता है",
+        "यह magnetic platters का उपयोग करता है",
+        "इसका आकार बहुत बड़ा होता है",
+        "इसमें दो motors लगे होते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Blu-ray blue laser (छोटी wavelength) उपयोग करता है, जिससे बहुत छोटे pits पढ़े जा सकते हैं और एक single layer पर ~25 GB तक data आ जाता है। यह magnetic नहीं है (B), size DVD जैसा ही है (C), और motors की संख्या से capacity तय नहीं होती (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q16",
+      "question": "Non-impact printers की एक प्रमुख विशेषता क्या है?",
+      "options": [
+        "वे बहुत शोर (noise) करते हैं क्योंकि pins टकराती हैं",
+        "वे बिना कागज़ को यांत्रिक रूप से टकराए छपाई करते हैं, इसलिए शांत होते हैं",
+        "वे केवल carbon copies बना सकते हैं",
+        "वे केवल text छाप सकते हैं, graphics नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Non-impact printers (जैसे laser, inkjet) कागज़ पर pins टकराए बिना छपाई करते हैं इसलिए कम शोर करते हैं और graphics भी छापते हैं। शोर और carbon copy impact printers की विशेषता है (A, C)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q17",
+      "question": "एक pen drive (USB flash drive) किस प्रकार की storage है?",
+      "options": [
+        "Primary/volatile memory",
+        "Non-volatile secondary storage (flash based)",
+        "Cache memory",
+        "Register"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pen drive flash memory पर आधारित non-volatile secondary storage है जो power जाने पर भी data रखती है। यह न primary/volatile RAM है (A), न cache (C), न CPU register (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q18",
+      "question": "एक हार्ड डिस्क में 'seek time' किसे कहते हैं?",
+      "options": [
+        "Disk को full format करने का समय",
+        "Read/write head को सही track तक पहुँचने में लगा समय",
+        "File को print करने का समय",
+        "Computer को boot होने में लगा समय"
+      ],
+      "correctIndex": 1,
+      "explanation": "Seek time वह समय है जिसमें read/write head सही track पर जाकर स्थित होता है — यह HDD की performance को प्रभावित करता है। यह formatting, printing या booting से संबंधित नहीं है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q19",
+      "question": "PS/2 port पारंपरिक रूप से किन devices के लिए उपयोग होता था?",
+      "options": [
+        "Keyboard और Mouse",
+        "Monitor",
+        "Printer",
+        "Network cable"
+      ],
+      "correctIndex": 0,
+      "explanation": "PS/2 round port पुराने keyboard और mouse को जोड़ने के लिए उपयोग होते थे (आमतौर पर बैंगनी और हरे रंग)। Monitor, printer और network के लिए अलग ports (VGA/HDMI, USB, RJ-45) होते हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q20",
+      "question": "Thermal printer छपाई के लिए किसका उपयोग करता है?",
+      "options": [
+        "Toner powder",
+        "Heat-sensitive paper पर heat लगाकर",
+        "Ribbon पर pins टकराकर",
+        "Blue laser"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermal printer heat से heat-sensitive (thermal) paper पर image बनाता है, जैसे ATM व POS bills में। Toner laser में (A), pins/ribbon dot matrix में (C), और blue laser Blu-ray drive में (D) होते हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q21",
+      "question": "Booting में 'bootstrap loader' का काम क्या है?",
+      "options": [
+        "Files को print करना",
+        "Operating system को storage से memory (RAM) में load करना",
+        "Hardware को manufacture करना",
+        "Virus को हटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bootstrap loader एक छोटा program है जो OS को hard disk से RAM में load करके control OS को सौंपता है। यह printing, hardware बनाना या antivirus का काम नहीं करता।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q22",
+      "question": "HDMI port की एक विशेषता क्या है?",
+      "options": [
+        "यह केवल video signal भेजता है",
+        "यह एक ही cable में digital video और audio दोनों signal भेज सकता है",
+        "यह network data भेजता है",
+        "यह केवल power supply देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "HDMI (High-Definition Multimedia Interface) एक ही cable से high-quality digital video और audio दोनों भेजता है। पुराना VGA केवल analog video देता था (A); network RJ-45 (C) और power अलग cable (D) से आता है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q23",
+      "question": "एक CD-R और CD-RW में मुख्य अंतर क्या है?",
+      "options": [
+        "CD-R पर केवल एक बार लिखा जा सकता है, CD-RW पर बार-बार लिखा/मिटाया जा सकता है",
+        "CD-R magnetic है और CD-RW optical",
+        "CD-RW की capacity 700 GB होती है",
+        "CD-R को केवल laptop में पढ़ा जा सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "CD-R (Recordable) पर सिर्फ एक बार write होता है जबकि CD-RW (Rewritable) को कई बार erase व rewrite किया जा सकता है। दोनों optical हैं (B गलत), capacity ~700 MB है 700 GB नहीं (C), और दोनों किसी भी CD drive में पढ़े जा सकते हैं (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q24",
+      "question": "यदि एक printer 20 PPM की गति से छापता है, तो 100 pages छापने में लगभग कितना समय लगेगा?",
+      "options": [
+        "2 minutes",
+        "5 minutes",
+        "10 minutes",
+        "20 minutes"
+      ],
+      "correctIndex": 1,
+      "explanation": "20 PPM का अर्थ है 20 pages प्रति minute। 100 ÷ 20 = 5 minutes लगेंगे। बाकी options गलत division के परिणाम हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q25",
+      "question": "BIOS settings/CMOS configuration को कहाँ store किया जाता है और यह कैसे बनी रहती है?",
+      "options": [
+        "Hard disk में, जो हमेशा data रखती है",
+        "CMOS memory में, जो एक छोटी battery (CMOS battery) से बनी रहती है",
+        "RAM में permanently",
+        "Printer buffer में"
+      ],
+      "correctIndex": 1,
+      "explanation": "BIOS/setup settings CMOS memory में रहती हैं जिसे motherboard पर लगी छोटी CMOS battery power देकर बनाए रखती है (इसी से date/time भी चलता रहता है)। RAM volatile है (C), hard disk में BIOS setting नहीं रहती (A), printer buffer असंबंधित है (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q26",
+      "question": "निम्न storage devices में से किसकी सामान्यतः सबसे कम capacity होती है?",
+      "options": [
+        "Floppy Disk",
+        "DVD",
+        "Blu-ray Disc",
+        "Hard Disk"
+      ],
+      "correctIndex": 0,
+      "explanation": "Floppy Disk की capacity केवल ~1.44 MB होती है, जो बाकी सभी से बहुत कम है। DVD ~4.7 GB, Blu-ray ~25 GB और Hard Disk आमतौर पर सैकड़ों GB से TB तक होती है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q27",
+      "question": "'Plug and Play' feature का क्या मतलब है?",
+      "options": [
+        "Device को जोड़ते ही OS उसे automatically पहचान कर configure कर देता है",
+        "Device केवल gaming में काम करता है",
+        "Device को हर बार manually driver install करना पड़ता है",
+        "Device को केवल power off करके जोड़ा जा सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Plug and Play में device जोड़ते ही operating system उसे पहचानकर आवश्यक driver load कर देता है, बिना जटिल manual setup के। यह gaming-specific नहीं है (B), बार-बार manual driver की जरूरत नहीं (C), और अधिकांश USB devices चलते हुए system में जोड़े जा सकते हैं (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q28",
+      "question": "Serial port और Parallel port में मुख्य अंतर क्या है?",
+      "options": [
+        "Serial port एक समय में एक bit भेजता है, parallel port एक साथ कई bits",
+        "दोनों एक ही तरह से data भेजते हैं",
+        "Serial port केवल video के लिए है",
+        "Parallel port केवल power के लिए है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Serial port data को bit-by-bit (एक-एक करके) भेजता है, जबकि parallel port कई bits एक साथ (parallel में) भेजता है। इसलिए ये अलग हैं (B गलत); दोनों data transfer के लिए हैं, न कि केवल video (C) या power (D) के लिए।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q29",
+      "question": "एक 3D printer आम printer से किस प्रकार अलग है?",
+      "options": [
+        "यह कागज़ पर 2D text छापता है",
+        "यह material की परतें (layers) जमाकर एक ठोस 3-dimensional object बनाता है",
+        "यह केवल photos print करता है",
+        "यह laser से CD जलाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "3D printer material (जैसे plastic filament) की एक के ऊपर एक परतें जमाकर वास्तविक ठोस object बनाता है, न कि कागज़ पर 2D छपाई। बाकी options सामान्य 2D printers या CD drive का काम हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q30",
+      "question": "Booting sequence में BIOS किस order में boot device खोजता है, यह किससे तय होता है?",
+      "options": [
+        "Antivirus settings से",
+        "BIOS/UEFI setup में तय किए गए boot order/boot priority से",
+        "Printer settings से",
+        "Monitor की resolution से"
+      ],
+      "correctIndex": 1,
+      "explanation": "BIOS/UEFI setup में boot priority order तय होता है (जैसे पहले SSD, फिर USB, फिर network), जिसके अनुसार OS खोजा जाता है। यह antivirus, printer या monitor resolution पर निर्भर नहीं करता।"
+    }
+  ]
+}

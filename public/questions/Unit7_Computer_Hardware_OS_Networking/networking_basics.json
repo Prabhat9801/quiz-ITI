@@ -1,0 +1,368 @@
+{
+  "unit": "unit7",
+  "unitName": "Computer Hardware, OS, MS Office, Networking",
+  "topic": "networking_basics",
+  "topicName": "Networking Basics - Topologies, TCP/IP, OSI Model & Protocols",
+  "questions": [
+    {
+      "id": "u7_networking_basics_q1",
+      "question": "Bus topology वाले network में यदि main backbone cable में कहीं भी fault (break) आ जाए, तो network पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "केवल उस जगह के आस-पास के computers प्रभावित होते हैं, बाकी network सामान्य रूप से चलता रहता है",
+        "पूरा network fail हो जाता है क्योंकि सभी devices एक ही common cable को share करती हैं",
+        "Network अपने आप star topology में बदल जाता है",
+        "केवल data transfer की speed कम हो जाती है, communication बंद नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि bus topology में सभी devices एक single backbone cable से जुड़ी होती हैं, इसलिए cable में break होने पर पूरा network down हो जाता है। Option A गलत है क्योंकि प्रभाव केवल local नहीं रहता, पूरा segment प्रभावित होता है। Option C गलत है क्योंकि topology hardware fault से अपने आप नहीं बदलती। Option D गलत है क्योंकि cable break होने पर communication पूरी तरह रुक जाता है, सिर्फ speed कम नहीं होती।"
+    },
+    {
+      "id": "u7_networking_basics_q2",
+      "question": "Star topology में सभी computers एक central device (hub/switch) से जुड़े होते हैं। यदि यह central device fail हो जाए तो क्या होगा?",
+      "options": [
+        "पूरा network fail हो जाएगा क्योंकि सभी communication इसी central device से होकर गुजरती है",
+        "केवल उस central device से जुड़ा एक computer प्रभावित होगा",
+        "Network bus topology की तरह काम करना शुरू कर देगा",
+        "Network में कोई प्रभाव नहीं पड़ेगा क्योंकि हर computer independent होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि star topology में central device (hub या switch) ही सारे data traffic को manage करता है, इसलिए इसके fail होने पर पूरा network ठप हो जाता है — यही star topology की सबसे बड़ी कमी है। Option B गलत है क्योंकि प्रभाव पूरे network पर पड़ता है, सिर्फ एक computer पर नहीं। Option C गलत है, topology hardware failure से बदलती नहीं है। Option D गलत है क्योंकि star topology में सारे computers central device पर निर्भर होते हैं, वे independent नहीं होते।"
+    },
+    {
+      "id": "u7_networking_basics_q3",
+      "question": "Ring topology में data (token) किस तरीके से एक device से दूसरे device तक पहुँचता है?",
+      "options": [
+        "Data एक central hub के माध्यम से सभी devices को एक साथ भेजा जाता है",
+        "Data हर दिशा में एक साथ broadcast होकर सभी devices तक पहुँचता है",
+        "Data एक निश्चित direction (एक निर्धारित क्रम) में एक device से अगले device तक sequentially पहुँचता है",
+        "Data केवल दो devices के बीच सीधे dedicated link द्वारा transfer होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि ring topology में प्रत्येक device एक ring के रूप में अपने पड़ोसी devices से जुड़ा होता है और data (token) एक निश्चित क्रम में एक node से दूसरे node में sequentially travel करता है। Option A गलत है क्योंकि ring में कोई central hub नहीं होता, यह star topology की विशेषता है। Option B गलत है क्योंकि data broadcast नहीं होता बल्कि point-to-point sequential तरीके से आगे बढ़ता है। Option D गलत है क्योंकि dedicated point-to-point links हर pair के बीच होना mesh topology की पहचान है।"
+    },
+    {
+      "id": "u7_networking_basics_q4",
+      "question": "Mesh topology का सबसे बड़ा फायदा (advantage) क्या माना जाता है?",
+      "options": [
+        "Cabling की लागत (cost) सबसे कम होती है क्योंकि केवल एक ही cable इस्तेमाल होती है",
+        "Setup करना बहुत आसान होता है क्योंकि devices की संख्या से कोई फर्क नहीं पड़ता",
+        "इसमें केवल एक central device की जरूरत होती है जो सारा traffic control करता है",
+        "प्रत्येक device के बीच dedicated link होने के कारण यह high reliability और fault tolerance प्रदान करती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि mesh topology में हर device दूसरे हर device से एक dedicated (point-to-point) link द्वारा जुड़ी होती है, इसलिए एक link में fault आने पर भी data दूसरे रास्ते से पहुँच सकता है — यही इसकी high reliability और fault tolerance का कारण है। Option A गलत है क्योंकि mesh topology में सबसे ज़्यादा cable और ports की जरूरत पड़ती है, इसलिए यह सबसे महंगी topology मानी जाती है। Option B गलत है क्योंकि devices बढ़ने पर links की संख्या तेजी से बढ़ती है जिससे setup जटिल हो जाता है। Option C गलत है क्योंकि mesh topology में कोई single central controlling device नहीं होता, यह star topology की विशेषता है।"
+    },
+    {
+      "id": "u7_networking_basics_q5",
+      "question": "Tree topology तथा hybrid topology के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": [
+        "Tree topology, bus और star topology के संयोजन (combination) से बनी एक hierarchical (layered) संरचना होती है, जबकि hybrid topology दो या अधिक अलग-अलग topologies का मिश्रण होती है",
+        "Tree topology में हमेशा केवल एक ही computer होता है, इसलिए इसमें कोई topology नहीं मानी जाती",
+        "Hybrid topology का मतलब है कि network में कोई भी cable इस्तेमाल नहीं होती",
+        "Tree और hybrid topology दोनों एक ही चीज़ हैं और इनमें कोई अंतर नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि tree topology वास्तव में bus और star topology के गुणों को मिलाकर एक hierarchical (root से branches की तरह) संरचना बनाती है, जबकि hybrid topology सामान्य रूप से किन्हीं दो या अधिक भिन्न topologies (जैसे star + mesh) को जोड़कर बनाई जाती है। Option B गलत है क्योंकि tree topology में कई computers/nodes होते हैं जो layers में organized होते हैं। Option C गलत है क्योंकि hybrid topology भी wired या wireless माध्यम से जुड़ती है, cable-रहित होना जरूरी नहीं। Option D गलत है क्योंकि दोनों की संरचना और उद्देश्य अलग-अलग होते हैं।"
+    },
+    {
+      "id": "u7_networking_basics_q6",
+      "question": "PAN (Personal Area Network) की मुख्य विशेषता क्या है?",
+      "options": [
+        "यह पूरे देश या कई देशों को cover करने वाला बहुत बड़ा network होता है",
+        "यह एक व्यक्ति के आस-पास बहुत कम दूरी (कुछ मीटर) में उपयोग होने वाला network है, जैसे Bluetooth से जुड़े devices",
+        "यह पूरे शहर को जोड़ने के लिए बनाया गया network है",
+        "यह केवल बड़ी companies के data centers के लिए इस्तेमाल होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि PAN एक बहुत ही छोटी range (आमतौर पर कुछ मीटर) का network होता है जो एक व्यक्ति के personal devices, जैसे mobile, headphones, smartwatch आदि को Bluetooth या infrared से आपस में जोड़ता है। Option A गलत है क्योंकि देश या कई देशों को cover करने वाला network WAN कहलाता है। Option C गलत है क्योंकि शहर स्तर के network को MAN कहा जाता है। Option D गलत है क्योंकि data centers के large-scale networks का PAN से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_networking_basics_q7",
+      "question": "MAN (Metropolitan Area Network) को किस प्रकार परिभाषित किया जाता है?",
+      "options": [
+        "यह एक network है जो LAN से बड़ा और WAN से छोटा होता है, और आमतौर पर एक पूरे शहर या metropolitan क्षेत्र को cover करता है",
+        "यह एक बहुत छोटी range का network है जो केवल एक कमरे के अंदर काम करता है",
+        "यह network केवल satellite communication के माध्यम से ही काम करता है",
+        "यह network पूरी दुनिया के सभी देशों को आपस में जोड़ता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि MAN का दायरा LAN से बड़ा (एक building/campus से आगे) लेकिन WAN से छोटा होता है और यह सामान्यतः एक पूरे शहर या metropolitan क्षेत्र के networks को आपस में जोड़ता है, जैसे cable TV network या कई office branches को जोड़ना। Option B गलत है क्योंकि एक कमरे तक सीमित network को PAN कहा जाता है। Option C गलत है क्योंकि MAN जरूरी नहीं कि केवल satellite से काम करे, यह fiber/cable से भी बनाया जा सकता है। Option D गलत है क्योंकि पूरी दुनिया को जोड़ने वाला network WAN (जैसे Internet) कहलाता है।"
+    },
+    {
+      "id": "u7_networking_basics_q8",
+      "question": "LAN और WAN के बीच सबसे महत्वपूर्ण अंतर क्या है?",
+      "options": [
+        "LAN में केवल wireless connection होता है जबकि WAN में केवल wired connection होता है",
+        "LAN और WAN में कोई अंतर नहीं होता, दोनों नाम एक ही network के लिए इस्तेमाल होते हैं",
+        "LAN में डेटा transfer speed हमेशा WAN से कम होती है",
+        "LAN एक सीमित भौगोलिक क्षेत्र (जैसे एक office या building) को cover करता है, जबकि WAN बहुत बड़े भौगोलिक क्षेत्र (जैसे पूरे देश या दुनिया) को cover करता है, जैसे Internet"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि LAN (Local Area Network) एक सीमित क्षेत्र जैसे office, school या building तक सीमित होता है, जबकि WAN (Wide Area Network) बहुत बड़े भौगोलिक क्षेत्र, यहाँ तक कि पूरी दुनिया को भी जोड़ सकता है — Internet इसका सबसे बड़ा उदाहरण है। Option A गलत है क्योंकि दोनों में wired और wireless दोनों तरह के connections इस्तेमाल हो सकते हैं। Option B गलत है क्योंकि LAN और WAN उनके coverage area के आधार पर स्पष्ट रूप से अलग-अलग network types हैं। Option C गलत है क्योंकि आमतौर पर LAN की speed WAN से अधिक ही होती है, कम नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q9",
+      "question": "TCP/IP model में कुल कितनी layers होती हैं और वे कौन-सी हैं?",
+      "options": [
+        "कुल 4 layers: Network Access, Internet, Transport और Application",
+        "कुल 7 layers, जो बिल्कुल OSI model जैसी होती हैं",
+        "कुल 3 layers: Hardware, Software और Application",
+        "कुल 5 layers: Physical, Data Link, Network, Transport और Application"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि TCP/IP model में कुल 4 layers होती हैं — Network Access (Link) layer, Internet layer, Transport layer और Application layer। Option B गलत है क्योंकि 7 layers OSI reference model की विशेषता हैं, TCP/IP model में नहीं। Option C गलत है क्योंकि यह वर्गीकरण TCP/IP या OSI किसी मान्यता प्राप्त model का हिस्सा नहीं है। Option D गलत है क्योंकि 5-layer वर्गीकरण कुछ hybrid teaching models में दिखाया जाता है, लेकिन मानक TCP/IP model 4-layer वाला ही होता है।"
+    },
+    {
+      "id": "u7_networking_basics_q10",
+      "question": "TCP/IP model की Application layer में निम्नलिखित में से कौन-सा protocol काम करता है?",
+      "options": [
+        "IP (Internet Protocol)",
+        "HTTP, FTP, SMTP और DNS जैसे protocols",
+        "Ethernet",
+        "ARP (Address Resolution Protocol)"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि HTTP, FTP, SMTP, DNS जैसे protocols end-user applications (जैसे web browsing, file transfer, email) को network services प्रदान करने के लिए Application layer पर काम करते हैं। Option A गलत है क्योंकि IP protocol, Internet layer पर काम करता है, Application layer पर नहीं। Option C गलत है क्योंकि Ethernet, Network Access (Link) layer से संबंधित protocol/standard है। Option D गलत है क्योंकि ARP, IP address को MAC address में convert करने का काम करता है और यह Network Access/Internet layer से संबंधित होता है।"
+    },
+    {
+      "id": "u7_networking_basics_q11",
+      "question": "IPv4 addressing में Class A का first octet किस range में आता है?",
+      "options": [
+        "192 से 223 के बीच",
+        "224 से 239 के बीच",
+        "1 से 126 के बीच",
+        "128 से 191 के बीच"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि IPv4 में Class A addresses का first octet 1 से 126 के बीच होता है और यह बहुत बड़े networks (बहुत सारे hosts) के लिए इस्तेमाल होता है। Option A गलत है क्योंकि 192 से 223 की range Class C को दर्शाती है। Option B गलत है क्योंकि 224 से 239 की range Class D (multicast) के लिए आरक्षित है। Option D गलत है क्योंकि 128 से 191 की range Class B addresses की पहचान है।"
+    },
+    {
+      "id": "u7_networking_basics_q12",
+      "question": "IPv4 की Class C addresses मुख्यतः किस प्रकार के networks के लिए उपयुक्त मानी जाती हैं?",
+      "options": [
+        "बहुत बड़े organizations के लिए जिनमें लाखों hosts होते हैं",
+        "छोटे networks के लिए, जिनमें प्रति network लगभग 254 hosts तक ही support होते हैं",
+        "केवल multicast communication के लिए",
+        "केवल experimental या research उद्देश्यों के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि Class C में network bits ज़्यादा और host bits कम होते हैं, जिससे प्रति network लगभग 254 usable host addresses ही मिलते हैं — यह छोटे organizations/networks के लिए उपयुक्त है। Option A गलत है क्योंकि लाखों hosts वाले बड़े networks के लिए Class A ज़्यादा उपयुक्त होता है। Option C गलत है क्योंकि multicast के लिए Class D आरक्षित है, Class C नहीं। Option D गलत है क्योंकि experimental उपयोग के लिए Class E आरक्षित होता है।"
+    },
+    {
+      "id": "u7_networking_basics_q13",
+      "question": "Subnetting करने का मुख्य उद्देश्य क्या होता है?",
+      "options": [
+        "एक बड़े network को छोटे-छोटे logical sub-networks में divide करना ताकि IP addresses का बेहतर उपयोग हो सके और network traffic/congestion कम हो",
+        "सभी computers की MAC address को permanently बदल देना",
+        "Network की cabling को पूरी तरह हटा देना",
+        "Internet की speed को बिना किसी hardware बदलाव के दोगुना कर देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि subnetting का उद्देश्य एक बड़े network को छोटे sub-networks में बाँटना है, जिससे IP addresses का efficient allocation होता है, security बेहतर होती है और broadcast traffic/congestion कम होता है। Option B गलत है क्योंकि MAC address hardware में permanently सेट होता है और subnetting का उससे कोई लेना-देना नहीं। Option C गलत है क्योंकि subnetting logical addressing से जुड़ा concept है, physical cabling हटाने से नहीं। Option D गलत है क्योंकि subnetting network organization सुधारता है, यह directly internet speed को दोगुना नहीं करता।"
+    },
+    {
+      "id": "u7_networking_basics_q14",
+      "question": "एक standard MAC address की length कितनी होती है?",
+      "options": [
+        "32-bit",
+        "48-bit (6 bytes), जो hexadecimal में लिखा जाता है",
+        "128-bit",
+        "16-bit"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि MAC address 48-bit (6 bytes) लंबा होता है जिसे आमतौर पर 6 hexadecimal जोड़ों (जैसे 00:1A:2B:3C:4D:5E) के रूप में लिखा जाता है और यह NIC (Network Interface Card) में manufacturer द्वारा permanently burned होता है। Option A गलत है क्योंकि 32-bit length IPv4 address की होती है, MAC address की नहीं। Option C गलत है क्योंकि 128-bit length IPv6 address से संबंधित है। Option D गलत है क्योंकि 16-bit किसी मानक networking address format से मेल नहीं खाता।"
+    },
+    {
+      "id": "u7_networking_basics_q15",
+      "question": "MAC address और IP address में मुख्य अंतर क्या है?",
+      "options": [
+        "MAC address और IP address दोनों एक ही चीज़ होती हैं, बस नाम अलग हैं",
+        "IP address, hardware में permanently burned होता है जबकि MAC address software द्वारा बार-बार बदला जाता है",
+        "MAC address केवल wireless devices में होता है जबकि IP address केवल wired devices में होता है",
+        "MAC address एक physical (hardware level) address है जो NIC में fixed होता है, जबकि IP address एक logical address है जो network configuration के अनुसार बदल सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि MAC address, Data Link layer पर काम करने वाला एक स्थायी (physical) hardware address है, जबकि IP address, Network layer पर काम करने वाला logical address है जो network बदलने पर या DHCP के कारण बदल सकता है। Option A गलत है क्योंकि दोनों अलग-अलग layers पर अलग-अलग उद्देश्यों के लिए काम करते हैं। Option B गलत है क्योंकि तथ्य उल्टा है — MAC address hardware में fixed होता है, IP address बदल सकता है। Option C गलत है क्योंकि MAC address wired और wireless दोनों प्रकार के NICs में होता है, केवल wireless में नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q16",
+      "question": "TCP connection स्थापित करने के लिए किस प्रक्रिया का उपयोग होता है?",
+      "options": [
+        "Three-way handshake (SYN, SYN-ACK, ACK), जिससे दोनों devices के बीच reliable connection बनता है",
+        "एक single broadcast packet भेजकर, जिसका कोई जवाब जरूरी नहीं होता",
+        "Token passing की प्रक्रिया द्वारा",
+        "बिना किसी hand-shaking के सीधा data भेज दिया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि TCP एक connection-oriented protocol है और यह three-way handshake (SYN → SYN-ACK → ACK) की प्रक्रिया से communication शुरू करने से पहले एक reliable connection establish करता है। Option B गलत है क्योंकि बिना response की broadcast प्रक्रिया UDP जैसे connectionless protocols की विशेषता के करीब है, TCP की नहीं। Option C गलत है क्योंकि token passing ring topology के data transfer से संबंधित concept है। Option D गलत है क्योंकि handshake के बिना सीधा data भेजना UDP का behaviour है, TCP का नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q17",
+      "question": "UDP (User Datagram Protocol) की सबसे प्रमुख विशेषता क्या है?",
+      "options": [
+        "यह हमेशा three-way handshake से connection establish करता है",
+        "यह connectionless protocol है, जिसमें data भेजने से पहले connection establish नहीं होता और delivery की guarantee भी नहीं दी जाती",
+        "यह data delivery की 100% guarantee देता है और हर packet को acknowledge करता है",
+        "यह केवल file transfer के लिए बनाया गया protocol है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि UDP एक connectionless protocol है — यह बिना handshake के सीधे data (datagram) भेज देता है और packet पहुँचा या नहीं, इसकी कोई acknowledgment/guarantee नहीं देता, जिससे यह तेज़ लेकिन कम reliable होता है। Option A गलत है क्योंकि three-way handshake TCP की विशेषता है, UDP connectionless होने के कारण handshake नहीं करता। Option C गलत है क्योंकि guaranteed delivery और acknowledgment TCP प्रदान करता है, UDP नहीं। Option D गलत है क्योंकि file transfer के लिए सामान्यतः reliable protocol FTP (जो TCP पर आधारित है) उपयोग होता है, UDP का उपयोग streaming, DNS जैसी सेवाओं में अधिक होता है।"
+    },
+    {
+      "id": "u7_networking_basics_q18",
+      "question": "Live video streaming या online gaming जैसी services में अक्सर TCP की जगह UDP को प्राथमिकता क्यों दी जाती है?",
+      "options": [
+        "क्योंकि UDP में error checking बिल्कुल नहीं होती इसलिए यह असुरक्षित है और इसे इसीलिए चुना जाता है",
+        "क्योंकि UDP, TCP से हमेशा सस्ता (cheaper) होता है",
+        "क्योंकि UDP में handshake और acknowledgment का overhead न होने से यह तेज़ (low latency) होता है, और यहाँ थोड़े packet loss की तुलना में speed ज्यादा जरूरी होती है",
+        "क्योंकि UDP केवल wireless networks पर ही काम करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि video streaming और gaming जैसी real-time applications में थोड़ी सी data loss स्वीकार्य होती है लेकिन delay (latency) नहीं, इसलिए UDP का कम overhead (बिना handshake/acknowledgment) फायदेमंद होता है। Option A गलत है क्योंकि यह चुनाव 'असुरक्षित' होने के कारण नहीं बल्कि speed के लिए किया जाता है। Option B गलत है क्योंकि cost, protocol चुनने का मापदंड नहीं होता। Option D गलत है क्योंकि UDP wired और wireless दोनों प्रकार के networks पर समान रूप से काम करता है।"
+    },
+    {
+      "id": "u7_networking_basics_q19",
+      "question": "FTP (File Transfer Protocol) के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": [
+        "FTP का उपयोग domain names को IP addresses में convert करने के लिए किया जाता है",
+        "FTP एक ऐसा protocol है जो client और server के बीच files upload और download करने के लिए उपयोग किया जाता है, और यह आमतौर पर port 21 (control) का उपयोग करता है",
+        "FTP का उपयोग केवल web pages को browser में display करने के लिए होता है",
+        "FTP automatically सभी devices को network से IP address assign करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि FTP विशेष रूप से एक client और server के बीच files transfer (upload/download) करने के लिए बनाया गया protocol है और यह आमतौर पर control connection के लिए port 21 का उपयोग करता है। Option A गलत है क्योंकि domain name को IP address में convert करने का काम DNS करता है, FTP नहीं। Option C गलत है क्योंकि web pages को display करने के लिए HTTP/HTTPS प्रयोग होता है। Option D गलत है क्योंकि devices को automatically IP address assign करने का काम DHCP का होता है।"
+    },
+    {
+      "id": "u7_networking_basics_q20",
+      "question": "HTTP (HyperText Transfer Protocol) आमतौर पर किस default port number पर काम करता है?",
+      "options": [
+        "Port 21",
+        "Port 25",
+        "Port 443",
+        "Port 80"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि HTTP protocol web browser और web server के बीच बिना encryption के communication के लिए default रूप से port 80 का उपयोग करता है। Option A गलत है क्योंकि port 21, FTP की control connection के लिए उपयोग होता है। Option B गलत है क्योंकि port 25, SMTP (email भेजने) के लिए इस्तेमाल होता है। Option C गलत है क्योंकि port 443, secure HTTPS communication के लिए उपयोग होता है, plain HTTP के लिए नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q21",
+      "question": "HTTPS, HTTP से किस प्रकार अलग है?",
+      "options": [
+        "HTTPS, SSL/TLS encryption का उपयोग करके data को secure बनाता है और आमतौर पर port 443 पर काम करता है, जबकि HTTP data को बिना encryption के plain text में भेजता है",
+        "HTTPS केवल images भेजने के लिए इस्तेमाल होता है, HTTP केवल text के लिए",
+        "HTTPS और HTTP दोनों बिल्कुल समान protocols हैं और इनमें कोई अंतर नहीं है",
+        "HTTPS का उपयोग केवल local network के अंदर होता है, Internet पर नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि HTTPS, HTTP के ऊपर SSL/TLS encryption की एक layer जोड़ता है जिससे data secure रूप से transfer होता है, और यह आमतौर पर port 443 उपयोग करता है, जबकि HTTP में data बिना encryption के plain text में transmit होता है जो कम सुरक्षित है। Option B गलत है क्योंकि दोनों protocols content type (text/images) के आधार पर अलग नहीं होते, बल्कि security के आधार पर अलग होते हैं। Option C गलत है क्योंकि security की दृष्टि से दोनों में स्पष्ट अंतर है। Option D गलत है क्योंकि HTTPS विशेष रूप से Internet पर secure browsing (जैसे online banking, shopping) के लिए व्यापक रूप से उपयोग होता है।"
+    },
+    {
+      "id": "u7_networking_basics_q22",
+      "question": "DNS (Domain Name System) का मुख्य कार्य क्या है?",
+      "options": [
+        "यह user-friendly domain names (जैसे www.example.com) को उनके संबंधित IP addresses में translate/resolve करता है",
+        "यह network में सभी devices को automatically IP address assign करता है",
+        "यह files को एक computer से दूसरे computer में transfer करता है",
+        "यह data को encrypt करके secure communication प्रदान करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि DNS एक तरह की 'phone book' की तरह काम करता है जो human-readable domain names को उनके corresponding numeric IP addresses में convert करता है, जिससे users को IP addresses याद रखने की जरूरत नहीं पड़ती। Option B गलत है क्योंकि automatically IP address assign करने का कार्य DHCP करता है, DNS नहीं। Option C गलत है क्योंकि files transfer करने का काम FTP जैसे protocols करते हैं। Option D गलत है क्योंकि data को encrypt करने का काम SSL/TLS जैसे mechanisms (जो HTTPS में उपयोग होते हैं) करते हैं, DNS का काम केवल name resolution है।"
+    },
+    {
+      "id": "u7_networking_basics_q23",
+      "question": "DHCP (Dynamic Host Configuration Protocol) का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Network के devices को automatically और dynamically IP address (और related configuration जैसे subnet mask, gateway) assign करना, ताकि manually configure करने की जरूरत न पड़े",
+        "Domain names को IP addresses में convert करना",
+        "Files को दो computers के बीच transfer करना",
+        "Web pages को secure encrypted तरीके से भेजना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि DHCP, network से जुड़ने वाले devices को automatically IP address और अन्य आवश्यक configuration information (जैसे default gateway, subnet mask, DNS server) प्रदान करता है, जिससे network administrators को हर device को manually configure नहीं करना पड़ता। Option B गलत है क्योंकि domain name को IP address में convert करने का काम DNS करता है। Option C गलत है क्योंकि files transfer करने का काम FTP जैसे protocol का है। Option D गलत है क्योंकि secure encrypted communication HTTPS द्वारा प्रदान की जाती है, DHCP का इससे कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_networking_basics_q24",
+      "question": "OSI (Open Systems Interconnection) Reference Model में कुल कितनी layers होती हैं, और सबसे नीचे (bottom) वाली layer कौन-सी है?",
+      "options": [
+        "6 layers होती हैं, और सबसे नीचे वाली layer Application layer है",
+        "5 layers होती हैं, और सबसे नीचे वाली layer Network layer है",
+        "4 layers होती हैं, और सबसे नीचे वाली layer Transport layer है",
+        "कुल 7 layers होती हैं, और सबसे नीचे (bottom) वाली layer Physical layer है, जबकि सबसे ऊपर वाली layer Application layer होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि OSI model में कुल 7 layers होती हैं: Physical, Data Link, Network, Transport, Session, Presentation और Application — जिसमें Physical layer सबसे नीचे और Application layer सबसे ऊपर होती है। Option A, B और C सभी गलत हैं क्योंकि इनमें layers की गलत संख्या (6, 5, 4) बताई गई है जबकि मानक OSI model में 7 layers ही मानी जाती हैं, और bottom layer भी गलत बताई गई है।"
+    },
+    {
+      "id": "u7_networking_basics_q25",
+      "question": "OSI model की Physical layer का मुख्य कार्य क्या है?",
+      "options": [
+        "Domain names को IP addresses में resolve करना",
+        "Data को raw bits के रूप में physical medium (जैसे cable, connector, voltage/signal) के माध्यम से transmit करना",
+        "IP addressing और routing का निर्णय लेना",
+        "Two devices के बीच session शुरू और समाप्त करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि Physical layer, data को raw bits (0s और 1s) के रूप में वास्तविक physical medium जैसे cables, connectors और electrical/optical signals के माध्यम से transmit करने से संबंधित है। Option A गलत है क्योंकि domain name resolution DNS (Application layer से संबंधित सेवा) का काम है। Option C गलत है क्योंकि IP addressing और routing, Network layer का कार्य है। Option D गलत है क्योंकि session establish और terminate करना Session layer की जिम्मेदारी है।"
+    },
+    {
+      "id": "u7_networking_basics_q26",
+      "question": "OSI model की Data Link layer मुख्य रूप से किन कार्यों के लिए जिम्मेदार होती है?",
+      "options": [
+        "IP addressing के आधार पर एक network से दूसरे network में routing करना",
+        "MAC addressing, data को frames में व्यवस्थित करना, और physical medium पर होने वाली errors का पता लगाना",
+        "Application programs के बीच data का session बनाए रखना",
+        "End-to-end reliable data delivery के लिए segmentation और flow control करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि Data Link layer, MAC addressing का उपयोग करके data को frames में तैयार करती है और साथ ही physical layer से मिलने वाले raw bits में error detection (और कभी-कभी correction) भी करती है। Option A गलत है क्योंकि IP addressing के आधार पर routing करना Network layer का कार्य है। Option C गलत है क्योंकि session maintain करना Session layer की जिम्मेदारी है। Option D गलत है क्योंकि segmentation और flow control जैसे कार्य मुख्यतः Transport layer से संबंधित होते हैं।"
+    },
+    {
+      "id": "u7_networking_basics_q27",
+      "question": "OSI model की Network layer किसके लिए जिम्मेदार होती है?",
+      "options": [
+        "Data को raw electrical signals में convert करना",
+        "Two applications के बीच data format और encryption manage करना",
+        "Logical addressing (जैसे IP address) का उपयोग करके data packets के लिए best path चुनना और उन्हें एक network से दूसरे network में route करना",
+        "User द्वारा उपयोग किए जा रहे software applications को सीधे network services प्रदान करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि Network layer, logical (IP) addressing का उपयोग करके packets के लिए उचित route/path निर्धारित करती है ताकि data एक network से दूसरे network तक सही तरीके से पहुँच सके — routing इसी layer का मुख्य कार्य है। Option A गलत है क्योंकि raw electrical signals में convert करना Physical layer का काम है। Option B गलत है क्योंकि data format और encryption manage करना Presentation layer से संबंधित है। Option D गलत है क्योंकि software applications को सीधे services देना Application layer का कार्य है।"
+    },
+    {
+      "id": "u7_networking_basics_q28",
+      "question": "OSI model की Transport layer के बारे में निम्नलिखित में से कौन-सा कथन सबसे सही है?",
+      "options": [
+        "यह layer केवल physical cables और connectors से संबंधित होती है",
+        "यह layer data को segments में तोड़ती है, end-to-end reliable delivery (जैसे TCP द्वारा) या fast delivery (जैसे UDP द्वारा) सुनिश्चित करती है, और flow व error control करती है",
+        "यह layer domain names को IP addresses में convert करती है",
+        "यह layer केवल MAC address के आधार पर frames को forward करती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि Transport layer data को छोटे segments में तोड़ती है और TCP जैसे protocols के माध्यम से reliable end-to-end delivery, error checking व flow control सुनिश्चित करती है, या UDP जैसे protocols से तेज़ लेकिन कम-reliable delivery प्रदान करती है। Option A गलत है क्योंकि physical cables/connectors से संबंधित कार्य Physical layer का है। Option C गलत है क्योंकि domain name को IP में convert करना DNS (एक Application-layer सेवा) का काम है, Transport layer का नहीं। Option D गलत है क्योंकि MAC address आधारित frame forwarding, Data Link layer का कार्य है।"
+    },
+    {
+      "id": "u7_networking_basics_q29",
+      "question": "OSI model और TCP/IP model के बीच सबसे प्रमुख structural अंतर क्या है?",
+      "options": [
+        "OSI model में कुल 7 layers होती हैं जबकि TCP/IP model में कुल 4 layers होती हैं, यानी TCP/IP model, OSI की कई layers (जैसे Session, Presentation, Application) को मिलाकर एक Application layer में समेट देता है",
+        "OSI model केवल wireless networks के लिए है जबकि TCP/IP model केवल wired networks के लिए है",
+        "TCP/IP model में OSI model से अधिक (8) layers होती हैं",
+        "OSI और TCP/IP model बिल्कुल एक जैसे हैं और इनमें कोई अंतर नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि OSI model एक theoretical/conceptual 7-layer model है जबकि व्यावहारिक रूप से इस्तेमाल होने वाला TCP/IP model इनमें से Session, Presentation और Application layers के कार्यों को एक ही Application layer में समेटकर कुल 4 layers में काम करता है। Option B गलत है क्योंकि दोनों models नेटवर्क के wired या wireless होने के आधार पर अलग नहीं होते, बल्कि layering approach के आधार पर अलग होते हैं। Option C गलत है क्योंकि TCP/IP में layers की संख्या OSI से कम (4) है, अधिक नहीं। Option D गलत है क्योंकि layers की संख्या और उनकी exact जिम्मेदारियों में स्पष्ट अंतर होता है।"
+    },
+    {
+      "id": "u7_networking_basics_q30",
+      "question": "Client-server networking model, peer-to-peer (P2P) networking model से किस प्रकार अलग है?",
+      "options": [
+        "Client-server model में एक dedicated server होता है जो resources/services provide करता है और clients उन्हें request करते हैं, जबकि peer-to-peer model में सभी devices (peers) बराबर स्तर पर होते हैं और resources को आपस में share कर सकते हैं",
+        "Peer-to-peer model में हमेशा एक dedicated central server होना अनिवार्य है",
+        "Client-server model में सभी computers बराबर अधिकार रखते हैं और कोई dedicated server नहीं होता",
+        "दोनों models बिल्कुल एक ही तरीके से काम करते हैं, बस नाम अलग हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि client-server model में एक या अधिक dedicated servers centralized resources/services (जैसे files, database, printing) प्रदान करते हैं और clients उनसे request करके सेवा प्राप्त करते हैं, जबकि peer-to-peer model में सभी nodes (peers) बराबर होते हैं और हर peer client और server दोनों की भूमिका निभा सकता है, जैसे कि direct file sharing। Option B गलत है क्योंकि peer-to-peer model में कोई dedicated central server जरूरी नहीं होता, यही तो client-server से इसका मुख्य अंतर है। Option C गलत है क्योंकि client-server model में server एक विशेष (dedicated) भूमिका निभाता है, सभी computers बराबर नहीं होते। Option D गलत है क्योंकि दोनों models की architecture, resource-sharing तरीका और उपयोग के परिदृश्य स्पष्ट रूप से भिन्न होते हैं।"
+    }
+  ]
+}

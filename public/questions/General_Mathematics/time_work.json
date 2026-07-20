@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "time_work",
+  "topicName": "Time and Work",
+  "questions": [
+    {
+      "id": "math_time_work_q1",
+      "question": "A किसी work को 12 days में पूरा कर सकता है और B उसी work को 24 days में पूरा कर सकता है। यदि दोनों एक साथ कार्य करें, तो पूरा work कितने days में समाप्त होगा?",
+      "options": ["8 days", "10 days", "6 days", "12 days"],
+      "correctIndex": 0,
+      "explanation": "A का rate = 1/12 और B का rate = 1/24 work/day है। साथ में rate = 1/12 + 1/24 = 2/24 + 1/24 = 3/24 = 1/8, इसलिए work 8 days में पूरा होगा। '10', '6' और '12 days' इस combined rate से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_work_q2",
+      "question": "A अकेला किसी piece of work को 20 days में और B अकेला 30 days में पूरा कर सकता है। यदि दोनों साथ मिलकर कार्य करें, तो work कितने days में पूरा होगा?",
+      "options": ["15 days", "12 days", "10 days", "20 days"],
+      "correctIndex": 1,
+      "explanation": "Combined rate = 1/20 + 1/30 = 3/60 + 2/60 = 5/60 = 1/12, अतः work 12 days में पूरा होगा। शेष options individual times के करीब हैं पर सही combined value नहीं देते।"
+    },
+    {
+      "id": "math_time_work_q3",
+      "question": "A, B से दोगुना efficient है। यदि B अकेला किसी work को 24 days में पूरा कर सकता है, तो A और B मिलकर उसी work को कितने days में पूरा करेंगे?",
+      "options": ["10 days", "6 days", "8 days", "12 days"],
+      "correctIndex": 2,
+      "explanation": "B दोगुना efficient होने के कारण A का time = 12 days यानी rate = 1/12। combined rate = 1/12 + 1/24 = 3/24 = 1/8, इसलिए काम 8 days में पूरा होगा। '10', '6' और '12 days' इस गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_work_q4",
+      "question": "A किसी work को 15 days में पूरा कर सकता है। B, A से 50% अधिक efficient है। B अकेला उस work को कितने days में पूरा करेगा?",
+      "options": ["15 days", "12 days", "20 days", "10 days"],
+      "correctIndex": 3,
+      "explanation": "B की efficiency A से 1.5 गुना है, इसलिए B का time = 15/1.5 = 10 days। '15', '12' और '20 days' गलत हैं क्योंकि ये efficiency ratio से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q5",
+      "question": "A और B मिलकर किसी work को 12 days में पूरा करते हैं। A अकेला उसी work को 20 days में पूरा कर सकता है। B अकेला वह work कितने days में पूरा करेगा?",
+      "options": ["30 days", "25 days", "24 days", "36 days"],
+      "correctIndex": 0,
+      "explanation": "B का rate = 1/12 - 1/20 = 5/60 - 3/60 = 2/60 = 1/30, इसलिए B अकेला 30 days में work पूरा करेगा। '25', '24' और '36 days' इस subtraction से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_work_q6",
+      "question": "A, B और C मिलकर किसी work को 6 days में पूरा करते हैं। A अकेला उसे 12 days में और B अकेला 18 days में पूरा कर सकता है। C अकेला वह work कितने days में पूरा करेगा?",
+      "options": ["30 days", "36 days", "24 days", "40 days"],
+      "correctIndex": 1,
+      "explanation": "C का rate = 1/6 - 1/12 - 1/18। LCM 36 से = 6/36 - 3/36 - 2/36 = 1/36, अतः C अकेला 36 days में work पूरा करेगा। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q7",
+      "question": "A किसी work को 10 days में पूरा कर सकता है। उसने 4 days तक काम किया और फिर छोड़ दिया। शेष work B ने 9 days में पूरा किया। B अकेला पूरा work कितने days में करेगा?",
+      "options": ["12 days", "18 days", "15 days", "20 days"],
+      "correctIndex": 2,
+      "explanation": "A ने 4 days में 4/10 = 2/5 work किया, शेष 3/5 work B ने 9 days में किया, अतः B का rate = (3/5)/9 = 1/15, यानी B अकेला 15 days में work पूरा करेगा। '12', '18' और '20 days' गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q8",
+      "question": "A और B मिलकर किसी work को 8 days में पूरा कर सकते हैं। उन्होंने साथ में 3 days काम किया, फिर A चला गया और शेष work B ने अकेले 15 days में पूरा किया। B अकेला पूरा work कितने days में करेगा?",
+      "options": ["20 days", "18 days", "15 days", "24 days"],
+      "correctIndex": 3,
+      "explanation": "Combined rate = 1/8, अतः 3 days में work = 3/8, शेष 5/8 work B ने 15 days में किया, इसलिए B का rate = (5/8)/15 = 1/24, यानी B अकेला 24 days में work पूरा करेगा। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_work_q9",
+      "question": "A, B और C मिलकर एक work को क्रमशः 20, 30 और 60 days में पूरा कर सकते हैं। तीनों साथ काम शुरू करते हैं, परंतु A केवल 2 days बाद काम छोड़ देता है। शेष work B और C कितने और days में पूरा करेंगे?",
+      "options": ["16 days", "18 days", "14 days", "20 days"],
+      "correctIndex": 0,
+      "explanation": "तीनों का combined rate = 1/20+1/30+1/60 = 6/60 = 1/10, अतः 2 days में 2/10 = 1/5 work हुआ, शेष 4/5 बचा। B+C का rate = 1/30+1/60 = 1/20, अतः शेष work का समय = (4/5)/(1/20) = 16 days। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q10",
+      "question": "A और B किसी work को Rs. 3600 में पूरा करने का ठेका लेते हैं। A अकेला उसे 8 days में और B अकेला 12 days में पूरा कर सकता है। C की सहायता से तीनों उसे 4 days में पूरा करते हैं। C का हिस्सा कितना होगा?",
+      "options": ["Rs. 500", "Rs. 600", "Rs. 400", "Rs. 800"],
+      "correctIndex": 1,
+      "explanation": "A+B का rate = 1/8+1/12 = 5/24, तीनों का rate = 1/4 = 6/24, इसलिए C का rate = 6/24-5/24 = 1/24। C का हिस्सा उसके work fraction (1/6) के अनुपात में होगा = 3600×1/6 = Rs. 600। शेष options यह अनुपात नहीं दर्शाते।"
+    },
+    {
+      "id": "math_time_work_q11",
+      "question": "A और B मिलकर किसी work को 10 days में पूरा कर सकते हैं। उन्होंने 4 days साथ काम किया, फिर B चला गया और A ने शेष work अकेले 12 days में पूरा किया। A अकेला पूरा work कितने days में कर सकता है?",
+      "options": ["24 days", "18 days", "20 days", "15 days"],
+      "correctIndex": 2,
+      "explanation": "Combined rate = 1/10, 4 days में work = 4/10 = 2/5, शेष 3/5 A ने 12 days में किया, अतः A का rate = (3/5)/12 = 1/20, यानी A अकेला 20 days में पूरा work करेगा। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q12",
+      "question": "12 men किसी work को 15 days में पूरा करते हैं। यदि 18 men उसी work को करें, तो कितने days में यह पूरा होगा?",
+      "options": ["12 days", "15 days", "18 days", "10 days"],
+      "correctIndex": 3,
+      "explanation": "M1D1 = M2D2 सिद्धांत से 12×15 = 18×D2, इसलिए D2 = 180/18 = 10 days। शेष options इस proportion से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q13",
+      "question": "15 men किसी piece of work को 12 days में पूरा कर सकते हैं। उसी work को 9 days में पूरा करने के लिए कितने men चाहिए?",
+      "options": ["20 men", "18 men", "15 men", "25 men"],
+      "correctIndex": 0,
+      "explanation": "15×12 = M2×9 से M2 = 180/9 = 20 men चाहिए। '18', '15' और '25 men' इस अनुपात से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_work_q14",
+      "question": "20 men किसी work को 30 days में पूरा करते हैं, प्रतिदिन 8 hours काम करके। यदि 24 men प्रतिदिन 10 hours काम करें, तो वही work कितने days में पूरा होगा?",
+      "options": ["24 days", "20 days", "18 days", "16 days"],
+      "correctIndex": 1,
+      "explanation": "M1D1H1 = M2D2H2 से 20×30×8 = 24×D2×10, अर्थात 4800 = 240×D2, इसलिए D2 = 20 days। शेष options इस formula से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q15",
+      "question": "A किसी work का 3/4 भाग 15 days में पूरा करता है। इसके बाद वह B को बुलाता है और दोनों मिलकर शेष work 3 days में पूरा करते हैं। B अकेला पूरा work कितने days में कर सकता है?",
+      "options": ["36 days", "40 days", "30 days", "25 days"],
+      "correctIndex": 2,
+      "explanation": "A का rate = (3/4)/15 = 1/20। शेष 1/4 work A+B ने 3 days में किया, अतः combined rate = (1/4)/3 = 1/12। B का rate = 1/12-1/20 = 1/30, यानी B अकेला 30 days में work पूरा करेगा। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q16",
+      "question": "A, B से तीन गुना अच्छा workman है और B से 10 days कम समय में work पूरा करता है। A अकेला वह work कितने days में पूरा करेगा?",
+      "options": ["15 days", "10 days", "8 days", "5 days"],
+      "correctIndex": 3,
+      "explanation": "यदि B का time x days है तो A का time x/3 है। x - x/3 = 10 से 2x/3 = 10, x = 15 days, अतः A का time = 15/3 = 5 days। शेष options इस equation से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q17",
+      "question": "A और B मिलकर किसी work को 12 days में पूरा करते हैं। A अकेला उसे 20 days में पूरा कर सकता है। यदि इस work के लिए कुल Rs. 6000 दिए जाएँ, तो A का हिस्सा कितना होगा?",
+      "options": ["Rs. 3600", "Rs. 3000", "Rs. 2400", "Rs. 4000"],
+      "correctIndex": 0,
+      "explanation": "B का rate = 1/12-1/20 = 1/30। A:B के rates का अनुपात (1/20):(1/30) = 3:2 है, अतः A का हिस्सा = 6000×3/5 = Rs. 3600। शेष options इस ratio से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_work_q18",
+      "question": "A, B और C किसी work को क्रमशः 10, 15 और 30 days में पूरा कर सकते हैं। यदि उन्हें साथ काम करने के लिए Rs. 4800 दिए जाएँ, तो B का हिस्सा कितना होगा?",
+      "options": ["Rs. 1800", "Rs. 1600", "Rs. 1400", "Rs. 2000"],
+      "correctIndex": 1,
+      "explanation": "Rates का अनुपात (1/10):(1/15):(1/30) = 3:2:1 है, कुल 6 parts। B का हिस्सा = 4800×2/6 = Rs. 1600। शेष options इस ratio से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q19",
+      "question": "A किसी work को 24 days में पूरा कर सकता है। B, A से 20% अधिक efficient है। B अकेला वह work कितने days में पूरा करेगा?",
+      "options": ["24 days", "22 days", "20 days", "18 days"],
+      "correctIndex": 2,
+      "explanation": "B का rate = 1.2×(1/24) = 1/20, अतः B अकेला 20 days में work पूरा करेगा। '24', '22' और '18 days' इस efficiency calculation से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q20",
+      "question": "A और B मिलकर किसी work को 15 days में, B और C मिलकर 20 days में तथा A और C मिलकर 12 days में पूरा कर सकते हैं। A, B और C तीनों मिलकर वह work कितने days में पूरा करेंगे?",
+      "options": ["15 days", "12 days", "8 days", "10 days"],
+      "correctIndex": 3,
+      "explanation": "तीनों जोड़ों के rates का योग = 1/15+1/20+1/12 = 12/60 = 1/5, जो 2×(A+B+C का rate) के बराबर है, अतः combined rate = 1/10, यानी 10 days में work पूरा होगा। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q21",
+      "question": "पिछले प्रश्न की जानकारी अनुसार (A+B = 15 days, B+C = 20 days, A+C = 12 days, तीनों साथ = 10 days), A अकेला वह work कितने days में पूरा करेगा?",
+      "options": ["20 days", "24 days", "30 days", "15 days"],
+      "correctIndex": 0,
+      "explanation": "A का rate = तीनों का combined rate - (B+C) का rate = 1/10 - 1/20 = 1/20, अतः A अकेला 20 days में work पूरा करेगा। शेष options इस subtraction से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_work_q22",
+      "question": "36 men किसी work को 18 days में पूरा कर सकते हैं। 6 days बाद 12 men और शामिल हो जाते हैं। शेष work कितने और days में पूरा होगा?",
+      "options": ["8 days", "9 days", "10 days", "12 days"],
+      "correctIndex": 1,
+      "explanation": "कुल work = 36×18 = 648 man-days। 6 days में हुआ work = 36×6 = 216 man-days, शेष = 432 man-days। अब men = 48, अतः days = 432/48 = 9 days। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q23",
+      "question": "एक contractor 40 workers को किसी work के लिए 25 days में पूरा करने हेतु नियुक्त करता है। 15 days बाद पता चलता है कि केवल 1/3 work ही पूरा हुआ है। समय पर work पूरा करने के लिए कितने अतिरिक्त workers चाहिए?",
+      "options": ["60", "90", "80", "100"],
+      "correctIndex": 2,
+      "explanation": "15 days में work = 40×15 = 600 man-days, जो 1/3 work है, अतः कुल work = 1800 man-days। शेष work = 1200 man-days, शेष समय = 10 days, अतः कुल men चाहिए = 1200/10 = 120, यानी अतिरिक्त 120-40 = 80 workers चाहिए। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_time_work_q24",
+      "question": "A किसी work को 8 days में और B उसी work को 12 days में पूरा कर सकता है। वे alternate days पर काम करते हैं, शुरुआत A से होती है। work कितने days में पूरा होगा?",
+      "options": ["10 days", "9 days", "8 1/2 days", "9 1/2 days"],
+      "correctIndex": 3,
+      "explanation": "प्रत्येक 2-day cycle में work = 1/8+1/12 = 5/24 होता है। 4 cycles (8 days) में 20/24 = 5/6 work होता है, शेष 1/6 बचता है। Day 9 (A) में 1/8=3/24 होता है, शेष 1/24 बचता है, जिसे B आधे day में पूरा कर देता है, अतः कुल समय 9 1/2 days। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q25",
+      "question": "A अकेला किसी work को 9 days में और B अकेला 18 days में पूरा कर सकता है। दोनों साथ काम शुरू करते हैं, परंतु 3 days बाद A चला जाता है। B शेष work कितने और days में पूरा करेगा?",
+      "options": ["9 days", "6 days", "12 days", "15 days"],
+      "correctIndex": 0,
+      "explanation": "Combined rate = 1/9+1/18 = 1/6, अतः 3 days में work = 3/6 = 1/2, शेष 1/2 work B अकेले rate 1/18 से करेगा, समय = (1/2)/(1/18) = 9 days। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q26",
+      "question": "6 men और 8 boys किसी work को 10 days में पूरा करते हैं, जबकि 26 men और 48 boys उसी work को 2 days में पूरा करते हैं। 15 men और 20 boys उसी work को कितने days में पूरा करेंगे?",
+      "options": ["5 days", "4 days", "6 days", "3 days"],
+      "correctIndex": 1,
+      "explanation": "समीकरणों को हल करने पर एक man की rate = 2× एक boy की rate मिलती है, और कुल work = 200 boy-units, जबकि 15 men+20 boys की rate = 50 boy-units/day, अतः समय = 200/50 = 4 days। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_work_q27",
+      "question": "A, B जितना work आधा करता है, वह भी B के लगने वाले समय के 3/4 भाग में। यदि A और B मिलकर किसी work को 18 days में पूरा करते हैं, तो B अकेला वह work कितने days में पूरा करेगा?",
+      "options": ["45 days", "40 days", "30 days", "25 days"],
+      "correctIndex": 2,
+      "explanation": "इस classic relation से A का time = 45 days और B का time = 30 days प्राप्त होता है, जिससे combined rate = 1/45+1/30 = 1/18, अर्थात 18 days मेल खाता है। शेष options यह relation संतुष्ट नहीं करते।"
+    },
+    {
+      "id": "math_time_work_q28",
+      "question": "A किसी work को 24 days में, B उसे 9 days में और C उसे 12 days में पूरा कर सकता है। B और C मिलकर काम शुरू करते हैं परंतु 3 days बाद उन्हें काम छोड़ना पड़ता है। A शेष work कितने days में पूरा करेगा?",
+      "options": ["8 days", "12 days", "15 days", "10 days"],
+      "correctIndex": 3,
+      "explanation": "B+C का rate = 1/9+1/12 = 7/36, 3 days में work = 21/36 = 7/12, शेष 5/12 work A अकेला rate 1/24 से करेगा, समय = (5/12)/(1/24) = 10 days। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q29",
+      "question": "X किसी work को 40 days में पूरा कर सकता है। उसने 8 days काम किया और फिर Y ने शेष work 16 days में पूरा किया। X और Y मिलकर पूरा work कितने days में करेंगे?",
+      "options": ["13 1/3 days", "15 days", "12 days", "10 days"],
+      "correctIndex": 0,
+      "explanation": "X का rate = 1/40, 8 days में work = 8/40 = 1/5, शेष 4/5 Y ने 16 days में किया, अतः Y का rate = (4/5)/16 = 1/20। Combined rate = 1/40+1/20 = 3/40, समय = 40/3 = 13 1/3 days। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_work_q30",
+      "question": "A किसी job को 12 days में पूरा कर सकता है। B, A से 60% अधिक efficient है। B अकेला वह job कितने days में पूरा करेगा?",
+      "options": ["8 days", "7.5 days", "6 days", "9 days"],
+      "correctIndex": 1,
+      "explanation": "B का rate = 1.6×(1/12) = 2/15, अतः B अकेला 15/2 = 7.5 days में job पूरा करेगा। शेष options इस efficiency ratio से मेल नहीं खाते।"
+    }
+  ]
+}

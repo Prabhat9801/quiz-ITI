@@ -1,0 +1,218 @@
+{
+  "unit": "unit10",
+  "unitName": "LED Lights, LED/LCD TV and CCTV",
+  "topic": "led_drivers",
+  "topicName": "LED Driver - Types, Constant Current & Selection",
+  "questions": [
+    {
+      "id": "u10_led_drivers_q1",
+      "question": "LED driver का LED के साथ प्रयोग करने का मुख्य उद्देश्य क्या है?",
+      "options": ["LED का रंग बदलना", "LED को constant/नियंत्रित current उपलब्ध कराना ताकि वह सुरक्षित और स्थिर brightness से जले", "LED का forward voltage बढ़ाना", "LED को केवल AC supply पर सीधे चलाना"],
+      "correctIndex": 1,
+      "explanation": "LED driver का मुख्य कार्य LED को उसके rated current पर constant रखना है ताकि brightness स्थिर रहे और LED सुरक्षित रहे, इसलिए option B सही है। यह LED का रंग नहीं बदलता, Vf को अनावश्यक रूप से नहीं बढ़ाता, और driver AC को उपयुक्त DC में बदलकर देता है, केवल AC पर सीधे चलाना उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q2",
+      "question": "यदि LED को सीधे एक constant voltage source से बिना current limiting के जोड़ा जाए तो क्या होने की संभावना है?",
+      "options": ["LED के I-V curve की steep प्रकृति के कारण current अनियंत्रित रूप से बढ़कर LED damage हो सकती है", "LED की brightness स्थिर बनी रहेगी", "LED का colour temperature सुधर जाएगा", "LED की life बढ़ जाएगी"],
+      "correctIndex": 0,
+      "explanation": "Forward region में LED का I-V curve बहुत steep (exponential) होता है, Vf में छोटा-सा उतार-चढ़ाव भी current में बड़ा उछाल ला सकता है, जिससे thermal runaway से LED खराब हो सकती है, इसलिए option A सही है। ऐसी स्थिति में brightness स्थिर नहीं रहती, colour temperature नहीं सुधरती, और life बढ़ने के बजाय घटने का जोखिम रहता है।"
+    },
+    {
+      "id": "u10_led_drivers_q3",
+      "question": "Linear LED driver की कार्यप्रणाली किस सिद्धांत पर आधारित होती है?",
+      "options": ["High-frequency switching से voltage को step-down करना", "Capacitor के माध्यम से AC impedance से current सीमित करना", "एक series pass transistor को variable resistor जैसे element के रूप में उपयोग कर अतिरिक्त voltage को heat के रूप में dissipate करके current नियंत्रित करना", "Transformer से voltage isolation प्रदान करना"],
+      "correctIndex": 2,
+      "explanation": "Linear driver में एक pass transistor अतिरिक्त वोल्टेज को अपने ऊपर गिराकर heat के रूप में नष्ट करता है और output current को स्थिर रखता है, इसलिए option C सही है। High-frequency switching SMPS driver में होता है, capacitor से impedance द्वारा current सीमित करना capacitive dropper है, और transformer isolation एक अलग topology है, linear driver का आधार नहीं।"
+    },
+    {
+      "id": "u10_led_drivers_q4",
+      "question": "Linear LED driver की सबसे बड़ी सीमा (drawback) क्या है?",
+      "options": ["यह EMI (electromagnetic interference) बहुत अधिक उत्पन्न करता है", "इसका circuit design अत्यंत जटिल होता है", "यह केवल DC-driven LED के लिए ही उपयोग किया जा सकता है", "अधिक voltage drop होने पर pass element में अधिक power heat के रूप में नष्ट होती है, जिससे efficiency कम रहती है"],
+      "correctIndex": 3,
+      "explanation": "Linear driver अतिरिक्त voltage को heat में बदलकर नष्ट करता है, इसलिए बड़े voltage differential पर इसकी efficiency बहुत कम हो जाती है और अधिक heat sinking चाहिए होता है, इसलिए option D सही है। यह switching driver की तुलना में कम EMI देता है, इसका circuit सरल होता है (जटिल नहीं), और यह किसी भी DC-driven LED के लिए उपयुक्त है, यह इसकी सीमा नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q5",
+      "question": "Switching (SMPS-based) LED driver, linear driver की तुलना में मुख्यतः किस कारण अधिक पसंद किया जाता है?",
+      "options": ["इसका circuit linear driver से सरल होता है", "यह high-frequency switching (जैसे buck/boost topology) से voltage परिवर्तन करता है जिससे बहुत कम power heat में नष्ट होती है और efficiency अधिक रहती है", "इसमें कोई inductor या capacitor उपयोग नहीं होता", "यह केवल बहुत कम power वाली single LED applications के लिए बनाया जाता है"],
+      "correctIndex": 1,
+      "explanation": "Switching driver में transistor को तेज़ी से on/off (PWM) करके energy को inductor/capacitor के माध्यम से कुशलता से transfer किया जाता है, जिससे heat loss कम और efficiency अधिक होती है, इसलिए option B सही है। इसका circuit linear से अधिक जटिल होता है, इसमें inductor/capacitor अनिवार्य होते हैं, और यह उच्च-power applications में भी व्यापक रूप से प्रयुक्त होता है।"
+    },
+    {
+      "id": "u10_led_drivers_q6",
+      "question": "Capacitive dropper (capacitor-based) LED driver में current सीमित करने के लिए मुख्यतः किसका उपयोग होता है?",
+      "options": ["AC supply के साथ series में जुड़ा एक capacitor, जो अपनी capacitive reactance (Xc) से current सीमित करता है", "एक high-frequency switching transistor", "एक isolation transformer", "एक बड़ा heat sink"],
+      "correctIndex": 0,
+      "explanation": "Capacitive dropper circuit में एक capacitor को AC line के series में लगाया जाता है; उसकी reactance (Xc = 1/2πfC) current को सीमित कर देती है जिससे resistor जितनी heat नहीं बनती, इसलिए option A सही है। यह switching-based नहीं है, इसमें transformer isolation नहीं होता (इसलिए non-isolated माना जाता है), और heat sink current सीमित करने का साधन नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q7",
+      "question": "Capacitive dropper LED driver को उपयोग करते समय मुख्य सुरक्षा चिंता (safety concern) क्या रहती है?",
+      "options": ["यह बहुत महंगा होता है", "यह बहुत भारी होता है", "यह non-isolated होता है, यानी output सीधे AC mains से जुड़ा रह सकता है जिससे electric shock का खतरा रहता है", "यह dimmable नहीं होता"],
+      "correctIndex": 2,
+      "explanation": "Capacitive dropper driver में कोई transformer isolation नहीं होती और output side directly mains से जुड़ा रह सकता है, इसलिए छूने पर electric shock का गंभीर खतरा रहता है, इसलिए option C सही है। यह सस्ता और हल्का होता है (महंगा/भारी नहीं), और dimmability इसकी मुख्य सुरक्षा समस्या नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q8",
+      "question": "Resistive current limiting (सीधे series resistor द्वारा) LED driving विधि की मुख्य कमी क्या है?",
+      "options": ["यह LED को बहुत तेज़ चमकाता है", "इसमें mains isolation स्वतः मिल जाता है", "यह केवल बहुत high voltage पर ही काम करता है", "अतिरिक्त voltage resistor में heat के रूप में नष्ट होती है, जिससे उच्च current/voltage applications में efficiency बहुत कम हो जाती है"],
+      "correctIndex": 3,
+      "explanation": "Series resistor supply voltage और LED के Vf के बीच के अंतर को heat में dissipate करता है, इसलिए बड़े power applications में यह अत्यंत अकुशल है, इसलिए option D सही है। यह brightness अनावश्यक रूप से नहीं बढ़ाता, isolation नहीं देता, और low voltage circuits (जैसे indicator LED) में भी प्रयुक्त होता है।"
+    },
+    {
+      "id": "u10_led_drivers_q9",
+      "question": "Isolated LED driver में input (AC mains side) और output (LED side) के बीच क्या होता है?",
+      "options": ["दोनों सीधे तार से जुड़े रहते हैं", "Transformer (या equivalent isolation barrier) द्वारा electrical isolation प्रदान की जाती है, जिससे mains voltage से LED side अलग रहता है", "दोनों के बीच कोई current प्रवाहित नहीं होता", "LED की brightness स्वतः कम हो जाती है"],
+      "correctIndex": 1,
+      "explanation": "Isolated driver में एक transformer input और output के बीच galvanic isolation प्रदान करता है, जिससे LED या fixture को छूने पर mains shock का खतरा बहुत कम होता है, इसलिए option B सही है। Non-isolated driver में सीधा connection रहता है, current तो प्रवाहित होती ही है (LED जलाने हेतु), और brightness isolation से प्रभावित नहीं होती।"
+    },
+    {
+      "id": "u10_led_drivers_q10",
+      "question": "Non-isolated LED driver का उपयोग सामान्यतः कहाँ अधिक उपयुक्त माना जाता है?",
+      "options": ["ऐसी fixtures में जहाँ LED पूरी तरह enclosed/insulated housing के अंदर हो और उपयोगकर्ता का सीधा संपर्क संभव न हो", "Swimming pool की underwater lighting में", "बिना किसी housing के खुले तारों वाली LED strip में", "Medical equipment की patient-contact lighting में"],
+      "correctIndex": 0,
+      "explanation": "Non-isolated driver सस्ता और छोटा होता है, इसलिए इसे तभी उपयुक्त माना जाता है जब LED assembly पूरी तरह insulated housing में हो और सीधा human contact संभव न हो, इसलिए option A सही है। Underwater, बिना housing के खुले तार और medical जैसे sensitive applications में सुरक्षा हेतु isolated driver ही उपयुक्त माना जाता है।"
+    },
+    {
+      "id": "u10_led_drivers_q11",
+      "question": "LED driver select करते समय उसकी input voltage range (जैसे 90-265V AC) की जांच क्यों ज़रूरी है?",
+      "options": ["क्योंकि इससे LED का रंग तय होता है", "क्योंकि इससे LED की life हमेशा कम हो जाती है", "ताकि driver स्थानीय supply voltage की सामान्य variations (fluctuations) में भी सही तरीके से काम करे और constant output दे सके", "क्योंकि इससे driver का वजन तय होता है"],
+      "correctIndex": 2,
+      "explanation": "सही input voltage range सुनिश्चित करता है कि driver, mains में होने वाले सामान्य उतार-चढ़ाव के बावजूद स्थिर output current/voltage दे सके, इसलिए option C सही है। यह LED का रंग, life में कमी या driver का वजन निर्धारित नहीं करता।"
+    },
+    {
+      "id": "u10_led_drivers_q12",
+      "question": "LED driver चुनते समय उसकी output current rating को किससे मिलाना (match करना) सबसे ज़रूरी है?",
+      "options": ["driver की input voltage से", "LED के colour temperature से", "mains supply की frequency से", "उपयोग होने वाली LED/LED string के rated forward current (If) से"],
+      "correctIndex": 3,
+      "explanation": "Driver का output current LED निर्माता द्वारा बताए गए rated forward current (If) के बराबर होना चाहिए, अन्यथा under-drive से कम brightness या over-drive से LED जल्दी खराब हो सकती है, इसलिए option D सही है। Input voltage, colour temperature या mains frequency सीधे current matching का आधार नहीं हैं।"
+    },
+    {
+      "id": "u10_led_drivers_q13",
+      "question": "यदि किसी LED string का कुल forward voltage (Vf total) driver की rated output voltage range से अधिक हो, तो क्या होगा?",
+      "options": ["LED सामान्य से अधिक चमकेगी", "driver पर्याप्त voltage प्रदान नहीं कर पाएगा, जिससे LEDs मंद जलेंगी या बिल्कुल नहीं जलेंगी", "driver तुरंत जलकर खराब हो जाएगा", "LED का रंग स्वतः बदल जाएगा"],
+      "correctIndex": 1,
+      "explanation": "यदि string का कुल Vf driver की compliance voltage range से बाहर हो तो driver LEDs को चलाने के लिए पर्याप्त voltage नहीं दे पाता, जिससे current कम बहता है और brightness घट जाती है या light बिल्कुल नहीं आती, इसलिए option B सही है। इससे LED अधिक नहीं चमकती, driver तुरंत नहीं जलता, और रंग स्वतः नहीं बदलता।"
+    },
+    {
+      "id": "u10_led_drivers_q14",
+      "question": "LED driver की wattage rating, LED load की कुल wattage से कैसी होनी चाहिए?",
+      "options": ["driver की wattage rating, कुल LED load की wattage के बराबर या उससे थोड़ी अधिक (headroom के साथ) होनी चाहिए", "driver की wattage हमेशा LED load की wattage से कम रखनी चाहिए", "wattage मिलाने की कोई आवश्यकता नहीं होती", "driver की wattage केवल input voltage पर निर्भर करती है"],
+      "correctIndex": 0,
+      "explanation": "सही selection में driver की output wattage capacity, LED load की कुल wattage के बराबर या उससे थोड़ी अधिक (जैसे 10-20% headroom) होनी चाहिए ताकि driver अधिक load से stress में न रहे, इसलिए option A सही है। Wattage कम रखने से driver overload होगा, wattage matching आवश्यक है, और यह केवल input voltage पर निर्भर नहीं करती।"
+    },
+    {
+      "id": "u10_led_drivers_q15",
+      "question": "Dimmable LED driver और non-dimmable LED driver में मुख्य अंतर क्या है?",
+      "options": ["dimmable driver में mains isolation कभी नहीं होता", "non-dimmable driver का output current हमेशा शून्य रहता है", "Dimmable driver, dimmer switch से मिलने वाले control signal (जैसे phase-cut या 0-10V) के अनुसार output current/voltage को समायोजित कर brightness बदल सकता है, जबकि non-dimmable driver में fixed output रहता है", "non-dimmable driver का आकार dimmable driver से हमेशा बड़ा होता है"],
+      "correctIndex": 2,
+      "explanation": "Dimmable driver dimming control signal के अनुसार अपने output को समायोजित कर brightness control देता है, जबकि non-dimmable driver सदैव एक fixed rated output देता है, इसलिए option C सही है। Isolation dimming से स्वतंत्र विशेषता है, non-dimmable driver में current शून्य नहीं बल्कि fixed रहता है, और आकार का सीधा संबंध dimming क्षमता से नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q16",
+      "question": "यदि एक non-dimmable LED driver को गलती से dimmer switch के साथ इस्तेमाल किया जाए, तो क्या समस्या हो सकती है?",
+      "options": ["LED अधिक efficient हो जाएगी", "driver की life अपने आप बढ़ जाएगी", "driver और LED सामान्य रूप से smoothly dim हो जाएंगे", "driver flicker कर सकता है, गुनगुना (buzz) सकता है या समय से पहले खराब हो सकता है क्योंकि वह dimming control signal को सही ढंग से handle करने के लिए डिज़ाइन नहीं किया गया"],
+      "correctIndex": 3,
+      "explanation": "Non-dimmable driver dimmer के phase-cut या अन्य control waveform को सही तरीके से process नहीं कर पाता, जिससे flicker, buzzing sound या premature failure हो सकता है, इसलिए option D सही है। इससे efficiency या life नहीं बढ़ती, और यह smoothly dim भी नहीं होगा।"
+    },
+    {
+      "id": "u10_led_drivers_q17",
+      "question": "LED driver में Power Factor Correction (PFC) circuit शामिल करने का मुख्य उद्देश्य क्या है?",
+      "options": ["LED का forward voltage कम करना", "AC input current को voltage waveform के साथ phase में लाना ताकि power factor unity के करीब रहे और harmonic distortion कम हो", "LED की brightness स्थायी रूप से बढ़ाना", "driver का आकार बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "PFC circuit input current waveform को voltage waveform के साथ align करता है जिससे power factor लगभग 1 के करीब रहता है और mains पर harmonic distortion तथा reactive power की समस्या कम होती है, इसलिए option B सही है। इसका सीधा संबंध Vf या brightness बढ़ाने से नहीं है, और driver का आकार बढ़ाना इसका उद्देश्य नहीं बल्कि कभी-कभी दुष्प्रभाव हो सकता है।"
+    },
+    {
+      "id": "u10_led_drivers_q18",
+      "question": "एक LED driver की rated output power 40W है। यदि प्रत्येक LED का power consumption (Vf × If के अनुसार) लगभग 2W है, तो इस driver से अधिकतम कितनी LEDs को सुरक्षित रूप से चलाया जा सकता है?",
+      "options": ["20 LEDs", "10 LEDs", "15 LEDs", "25 LEDs"],
+      "correctIndex": 0,
+      "explanation": "अधिकतम LEDs की संख्या = driver की कुल wattage / प्रति LED wattage = 40W / 2W = 20 LEDs, इसलिए option A सही है। 10 और 15 driver की क्षमता का पूरा उपयोग नहीं करेंगे, जबकि 25 LEDs driver की rated 40W क्षमता से अधिक (50W) load डालकर उसे overload कर देंगी।"
+    },
+    {
+      "id": "u10_led_drivers_q19",
+      "question": "LED driver की efficiency को किस प्रकार परिभाषित किया जाता है?",
+      "options": ["output voltage भाग input voltage", "input current भाग output current", "output power (LED को मिलने वाली) भाग input power (mains से ली गई), प्रतिशत में", "LED की lumen output भाग driver की wattage"],
+      "correctIndex": 2,
+      "explanation": "Driver efficiency = (output power / input power) × 100%, यह बताती है कि input power का कितना अंश उपयोगी output power में बदला, बाकी heat में नष्ट हुआ, इसलिए option C सही है। Voltage/current के simple ratios efficiency नहीं दर्शाते, और lumen/watt तो LED lamp की luminous efficacy है, driver की electrical efficiency नहीं।"
+    },
+    {
+      "id": "u10_led_drivers_q20",
+      "question": "एक LED driver 24W input लेकर 21.6W output LED string को देता है। इसकी efficiency लगभग कितनी है?",
+      "options": ["100%", "21.6%", "24%", "90%"],
+      "correctIndex": 3,
+      "explanation": "Efficiency = (Output/Input) × 100 = (21.6/24) × 100 = 90%, इसलिए option D सही है। 100% किसी भी वास्तविक driver में संभव नहीं (कुछ loss हमेशा होती है), 21.6% और 24% इकाइयों को सीधे प्रतिशत मान लेने की गलत गणना है।"
+    },
+    {
+      "id": "u10_led_drivers_q21",
+      "question": "LED driver में heat sink या adequate thermal management की आवश्यकता क्यों होती है?",
+      "options": ["ताकि driver बाहर से सुंदर दिखे", "switching/pass elements में होने वाली power losses से उत्पन्न heat को बाहर निकालकर driver के components (जैसे capacitor, IC) को सुरक्षित तापमान सीमा में रखने के लिए", "ताकि PFC value कम हो जाए", "ताकि output current जान-बूझकर अस्थिर हो जाए"],
+      "correctIndex": 1,
+      "explanation": "Driver के अंदर स्विचिंग या pass elements में जो losses होती हैं, वे heat के रूप में निकलती हैं; उचित thermal management (heat sink/ventilation) से heat-sensitive internal components की life और reliability बनी रहती है, इसलिए option B सही है। यह driver के बाहरी रूप, PFC या जानबूझकर current अस्थिर करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q22",
+      "question": "जब LEDs को parallel में जोड़कर एक ही driver से चलाया जाता है, तो driver design में इसका मुख्य असर क्या पड़ता है?",
+      "options": ["driver को उतना ही अधिक output current देने की क्षमता होनी चाहिए जितनी सभी parallel strings/LEDs मिलकर खींचती हैं, और असमान current बँटवारे (current hogging) से बचाव भी सुनिश्चित करना पड़ता है", "driver का output voltage बहुत अधिक बढ़ाना पड़ता है", "driver की dimmability अपने आप समाप्त हो जाती है", "driver में PFC की आवश्यकता नहीं रहती"],
+      "correctIndex": 0,
+      "explanation": "Parallel connection में driver का output voltage लगभग एक LED (या string) के Vf जितना ही रहता है, पर कुल current सभी parallel branches की current का योग होता है, इसलिए driver को उच्च current क्षमता के साथ-साथ Vf mismatch से current hogging रोकने की design सावधानी भी रखनी पड़ती है, इसलिए option A सही है। Voltage बहुत अधिक बढ़ाने की आवश्यकता नहीं (parallel में voltage एक जैसा रहता है), और dimmability या PFC की आवश्यकता parallel/series होने से समाप्त नहीं होती।"
+    },
+    {
+      "id": "u10_led_drivers_q23",
+      "question": "LED driver में surge/overvoltage protection (जैसे MOV या TVS diode) लगाने का उद्देश्य क्या है?",
+      "options": ["driver की efficiency स्थायी रूप से बढ़ाना", "LED की brightness बढ़ाना", "mains पर आने वाले voltage spikes (जैसे lightning surge या switching transients) से driver और LED के sensitive components को क्षति से बचाना", "LED का रंग बदलना"],
+      "correctIndex": 2,
+      "explanation": "Surge protection components अचानक आने वाले high-voltage transients को absorb/clamp करके internal circuitry (driver IC, LED) को damage से बचाते हैं, विशेषकर outdoor/street lighting में जहाँ lightning-induced surge आम है, इसलिए option C सही है। इसका efficiency, brightness या रंग बढ़ाने से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_led_drivers_q24",
+      "question": "एक LED driver में built-in over-current protection (OCP) का क्या कार्य है?",
+      "options": ["driver का size कम करना", "LED का forward voltage बढ़ाना", "driver को dimmable बनाना", "output current निर्धारित सीमा से अधिक होने पर driver को shutdown/limit करके LED और driver दोनों को damage से बचाना"],
+      "correctIndex": 3,
+      "explanation": "OCP एक fault-protection feature है जो short-circuit या असामान्य load की स्थिति में output current को सीमित या बंद कर देता है, जिससे overheating व damage रुकता है, इसलिए option D सही है। यह size, Vf या dimmability से संबंधित नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q25",
+      "question": "LED lighting fixture में flickering (झिलमिलाहट) की शिकायत हो, तो सबसे संभावित कारण driver से जुड़ा हुआ क्या हो सकता है?",
+      "options": ["driver का PFC बहुत high होना", "driver के internal filter capacitor का खराब/aged हो जाना, जिससे output current में ripple बढ़ जाए", "driver का output voltage LED की rating से बिल्कुल match होना", "driver का heat sink अत्यधिक बड़ा होना"],
+      "correctIndex": 1,
+      "explanation": "यदि driver के output filtering capacitor खराब/aged हो जाएँ तो output DC में ripple बढ़ जाता है और LED brightness उस ripple frequency पर ऊपर-नीचे होकर flicker के रूप में दिखती है, इसलिए option B सही है। High PFC, सही voltage match या बड़ा heat sink flicker का कारण नहीं बल्कि अच्छी design के संकेत हैं।"
+    },
+    {
+      "id": "u10_led_drivers_q26",
+      "question": "LED fixture में 'no light output' (बिल्कुल न जलना) की समस्या के लिए सबसे पहले किसकी जांच करनी चाहिए?",
+      "options": ["driver को input supply पहुँच रहा है या नहीं और driver का output voltage/current सही आ रहा है या नहीं", "LED का colour temperature", "fixture का बाहरी रंग", "LED का beam angle"],
+      "correctIndex": 0,
+      "explanation": "यदि LED बिल्कुल नहीं जल रही तो पहले check करना चाहिए कि driver को input supply मिल रहा है और वह सही output दे रहा है या नहीं (जैसे driver fail होना, fuse उड़ना या loose connection) — यह सबसे common cause है, इसलिए option A सही है। Colour temperature, fixture का बाहरी रंग या beam angle का 'न जलने' की समस्या से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_led_drivers_q27",
+      "question": "यदि किसी LED driver का output fuse बार-बार उड़ जाए, तो यह प्रायः किसका संकेत हो सकता है?",
+      "options": ["LED के colour temperature का सही न होना", "input voltage का बहुत कम होना", "LED string में short-circuit या driver के output stage में fault होना, जिससे अत्यधिक current बहती है", "driver की wattage rating का LED load से अधिक होना"],
+      "correctIndex": 2,
+      "explanation": "बार-बार fuse उड़ना सामान्यतः किसी shorted LED, faulty connection या driver के output section में खराबी के कारण अत्यधिक current बहने का संकेत है, इसलिए option C सही है। LED का colour temperature, कम input voltage या driver की अधिक wattage rating होना सामान्यतः इसका कारण नहीं, बल्कि अधिक wattage rating तो सुरक्षा headroom देती है।"
+    },
+    {
+      "id": "u10_led_drivers_q28",
+      "question": "Buck converter topology वाले LED driver IC में output voltage, input voltage की तुलना में सामान्यतः कैसा होता है?",
+      "options": ["output voltage हमेशा input voltage से अधिक होता है", "output voltage और input voltage बिल्कुल बराबर रहते हैं", "output AC होता है जबकि input DC होता है", "output voltage input voltage से कम (step-down) होता है, जो single या कम संख्या में series LEDs चलाने के लिए उपयुक्त है"],
+      "correctIndex": 3,
+      "explanation": "Buck (step-down) topology में output voltage हमेशा input voltage से कम होता है, इसलिए यह तब उपयोग होता है जब LED string का total Vf, available input voltage से कम हो, इसलिए option D सही है। Output अधिक होना boost converter की विशेषता है, बराबर रहना linear regulator जैसा कम-common मामला है, और driver का output सामान्यतः DC ही होता है क्योंकि LED को DC current चाहिए।"
+    },
+    {
+      "id": "u10_led_drivers_q29",
+      "question": "Boost converter topology वाले LED driver का उपयोग सामान्यतः कब किया जाता है?",
+      "options": ["जब LED string का कुल Vf उपलब्ध input voltage से कम हो", "जब LED string (जैसे अनेक series LEDs) का कुल forward voltage उपलब्ध input voltage से अधिक हो, ताकि driver voltage को step-up कर सके", "जब केवल एक single low-Vf LED चलानी हो", "जब dimming की कोई आवश्यकता न हो"],
+      "correctIndex": 1,
+      "explanation": "Boost topology output voltage को input voltage से अधिक बढ़ाती है, इसलिए इसका उपयोग तब होता है जब कई LEDs series में जुड़ी हों और उनका total Vf, source voltage (जैसे battery के कम volt) से अधिक हो, इसलिए option B सही है। कम Vf वाली स्थिति के लिए buck topology उपयुक्त है, single low-Vf LED के लिए boost ज़रूरी नहीं, और dimming आवश्यकता से topology का चुनाव सीधे तय नहीं होता।"
+    },
+    {
+      "id": "u10_led_drivers_q30",
+      "question": "एक LED string में 6 LEDs series में जुड़ी हैं, प्रत्येक का forward voltage 3.3V और rated current 350mA है। इस string को चलाने के लिए driver से आवश्यक न्यूनतम output voltage और current लगभग क्या होना चाहिए?",
+      "options": ["लगभग 19.8V और 350mA", "लगभग 3.3V और 2100mA", "लगभग 9.9V और 700mA", "लगभग 19.8V और 2100mA"],
+      "correctIndex": 0,
+      "explanation": "Series connection में voltages जुड़ते हैं (6 × 3.3V = 19.8V) जबकि current सभी LEDs में समान (350mA) रहता है, इसलिए driver को लगभग 19.8V पर 350mA output देना चाहिए, इसलिए option A सही है। Option B में voltage केवल एक LED का लिया गया और current गलत तरीके से 6 गुना बढ़ा दिया गया, option C में voltage आधा और current भी गलत है, और option D में voltage तो सही है पर current को गलत तरीके से जोड़ दिया गया है जबकि series में current नहीं जुड़ता।"
+    }
+  ]
+}

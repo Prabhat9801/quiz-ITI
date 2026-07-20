@@ -1,0 +1,218 @@
+{
+  "unit": "unit1",
+  "unitName": "Analog and Digital Electronics circuits",
+  "topic": "opamp_applications",
+  "topicName": "Operational Amplifier Applications",
+  "questions": [
+    {
+      "id": "u1_opamp_applications_q1",
+      "question": "एक ideal op-amp की open-loop gain कितनी मानी जाती है?",
+      "options": ["शून्य (zero)", "अनंत (infinite)", "एकांक unity (1)", "लगभग 100"],
+      "correctIndex": 1,
+      "explanation": "Ideal op-amp की open-loop gain अनंत (infinite) मानी जाती है, इसीलिए दोनों input terminals के बीच का voltage difference लगभग शून्य रहता है। gain शून्य होने पर कोई amplification नहीं होगी, unity gain तो voltage follower की closed-loop gain है, और 100 एक finite व्यावहारिक मान है जो ideal नहीं है।"
+    },
+    {
+      "id": "u1_opamp_applications_q2",
+      "question": "एक inverting amplifier में Rf = 100 kΩ और Rin = 10 kΩ है। इसकी voltage gain कितनी होगी?",
+      "options": ["-10", "+10", "-11", "+0.1"],
+      "correctIndex": 0,
+      "explanation": "Inverting amplifier की gain = -Rf/Rin = -100/10 = -10, जहाँ ऋण चिह्न 180° phase inversion दर्शाता है। +10 में inversion चिह्न छूट गया, -11 का सूत्र (1+Rf/Rin) non-inverting का है, और +0.1 उल्टा अनुपात (Rin/Rf) लेने की गलती है।"
+    },
+    {
+      "id": "u1_opamp_applications_q3",
+      "question": "Non-inverting amplifier की voltage gain का सूत्र क्या है?",
+      "options": ["-Rf/Rin", "Rf/Rin", "1 + Rf/Rin", "1 - Rf/Rin"],
+      "correctIndex": 2,
+      "explanation": "Non-inverting amplifier की gain = 1 + Rf/Rin होती है और यह हमेशा धनात्मक व 1 से अधिक रहती है। -Rf/Rin inverting amplifier की gain है, Rf/Rin में +1 पद छूट गया, और 1 - Rf/Rin कोई मान्य op-amp gain सूत्र नहीं है।"
+    },
+    {
+      "id": "u1_opamp_applications_q4",
+      "question": "Op-amp में 'virtual ground' concept मुख्यतः किस configuration में लागू होता है?",
+      "options": ["Non-inverting amplifier", "Voltage follower", "Inverting amplifier", "ZCD zero crossing detector"],
+      "correctIndex": 2,
+      "explanation": "Inverting amplifier में non-inverting input ground से जुड़ा होता है, इसलिए infinite gain व virtual short के कारण inverting input भी लगभग 0 V (virtual ground) पर रहता है। Non-inverting व voltage follower में signal सीधे non-inverting terminal पर आता है, और ZCD comparator की तरह open-loop चलता है जहाँ यह feedback व्यवहार नहीं होता।"
+    },
+    {
+      "id": "u1_opamp_applications_q5",
+      "question": "एक ideal op-amp का input impedance कितना होता है?",
+      "options": ["अनंत (infinite)", "शून्य (zero)", "50 Ω", "1 kΩ"],
+      "correctIndex": 0,
+      "explanation": "Ideal op-amp का input impedance अनंत होता है जिससे input terminals में कोई current नहीं बहती और source पर कोई loading नहीं होती। शून्य impedance तो output की विशेषता है, और 50 Ω व 1 kΩ finite व्यावहारिक मान हैं जो ideal नहीं हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q6",
+      "question": "CMRR (Common Mode Rejection Ratio) को किस रूप में परिभाषित किया जाता है?",
+      "options": ["differential gain और common-mode gain का अनुपात", "output voltage और input voltage का अनुपात", "Rf और Rin का अनुपात", "bandwidth और gain का गुणनफल"],
+      "correctIndex": 0,
+      "explanation": "CMRR = differential gain (Ad) / common-mode gain (Acm) होता है, जो op-amp की common-mode signals को अस्वीकार करने की क्षमता दर्शाता है। output/input अनुपात केवल gain है, Rf/Rin तो inverting amplifier की gain है, और bandwidth×gain gain-bandwidth product होता है।"
+    },
+    {
+      "id": "u1_opamp_applications_q7",
+      "question": "एक op-amp की differential gain 100000 और common-mode gain 1 है। CMRR dB में कितना होगा?",
+      "options": ["50 dB", "80 dB", "100 dB", "120 dB"],
+      "correctIndex": 2,
+      "explanation": "CMRR(dB) = 20 log(Ad/Acm) = 20 log(100000/1) = 20 × 5 = 100 dB। 80 dB का अनुपात 10000, 120 dB का 10^6, और 50 dB का लगभग 316 होता है — इसलिए ये गलत हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q8",
+      "question": "ZCD zero crossing detector मुख्यतः किस रूप में op-amp का उपयोग करता है?",
+      "options": ["summing amplifier", "comparator", "integrator", "voltage regulator"],
+      "correctIndex": 1,
+      "explanation": "ZCD में op-amp बिना negative feedback के comparator की तरह काम करता है और जब input signal 0 V को पार करता है तब output अपनी polarity बदल देता है। summing amplifier voltages जोड़ता है, integrator area निकालता है, और voltage regulator स्थिर voltage देता है — ये ZCD नहीं हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q9",
+      "question": "एक summing amplifier में तीन inputs 1V, 2V, 3V हैं और सभी input resistors तथा Rf बराबर (R) हैं। inverting configuration में output कितना होगा?",
+      "options": ["+6 V", "-6 V", "+2 V", "-2 V"],
+      "correctIndex": 1,
+      "explanation": "जब सभी resistor बराबर हों तो Vout = -(V1+V2+V3) = -(1+2+3) = -6 V, जहाँ ऋण चिह्न inverting summing के कारण है। +6 V में inversion छूट गया, और ±2 V औसत मान हैं जो सही sum नहीं देते।"
+    },
+    {
+      "id": "u1_opamp_applications_q10",
+      "question": "Instrumentation amplifier की मुख्य विशेषता कौन-सी है?",
+      "options": ["कम input impedance और कम CMRR", "उच्च input impedance और उच्च CMRR", "उच्च input impedance और कम CMRR", "कम input impedance और उच्च CMRR"],
+      "correctIndex": 1,
+      "explanation": "Instrumentation amplifier में उच्च input impedance और उच्च CMRR होते हैं, जिससे यह noise के बीच छोटे differential signals को सटीक amplify करता है। शेष विकल्प इन दोनों गुणों में से किसी एक को गलत बताते हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q11",
+      "question": "एक voltage follower (buffer) की closed-loop voltage gain कितनी होती है?",
+      "options": ["10", "0", "1", "-1"],
+      "correctIndex": 2,
+      "explanation": "Voltage follower में output सीधे inverting input से जुड़ा होने पर 100% feedback मिलती है जिससे gain = 1 (unity) होती है और output बराबर input रहता है। 10 amplification दर्शाएगा, 0 का अर्थ कोई output नहीं, और -1 inverting व्यवहार है।"
+    },
+    {
+      "id": "u1_opamp_applications_q12",
+      "question": "एक non-inverting amplifier में Rf = 90 kΩ और Rin = 10 kΩ है। gain कितनी होगी?",
+      "options": ["9", "10", "-9", "0.9"],
+      "correctIndex": 1,
+      "explanation": "Non-inverting gain = 1 + Rf/Rin = 1 + 90/10 = 1 + 9 = 10। 9 में '1' जोड़ना छूट गया, -9 inverting रूप है जबकि non-inverting कभी invert नहीं करता, और 0.9 गलत अनुपात है।"
+    },
+    {
+      "id": "u1_opamp_applications_q13",
+      "question": "Ideal op-amp का output impedance कितना होता है?",
+      "options": ["अनंत", "शून्य", "75 Ω", "1 MΩ"],
+      "correctIndex": 1,
+      "explanation": "Ideal op-amp का output impedance शून्य होता है ताकि किसी भी load पर output voltage बिना गिरे स्थिर रहे। अनंत impedance तो input की विशेषता है, और 75 Ω व 1 MΩ finite मान loading effect देंगे इसलिए ideal नहीं।"
+    },
+    {
+      "id": "u1_opamp_applications_q14",
+      "question": "Op-amp में slew rate किसे मापता है?",
+      "options": ["output voltage के परिवर्तन की अधिकतम दर", "input offset voltage", "अधिकतम open-loop gain", "power supply current"],
+      "correctIndex": 0,
+      "explanation": "Slew rate output voltage के समय के सापेक्ष परिवर्तन की अधिकतम दर (V/µs) को मापता है और उच्च frequency पर distortion सीमित करता है। input offset voltage, open-loop gain और supply current इससे भिन्न पैरामीटर हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q15",
+      "question": "एक inverting amplifier में virtual ground node पर voltage लगभग कितना होता है?",
+      "options": ["supply voltage के बराबर", "0 V", "output voltage के बराबर", "input voltage के बराबर"],
+      "correctIndex": 1,
+      "explanation": "Non-inverting input ground पर होने और infinite gain के कारण inverting input भी virtual short से लगभग 0 V रहता है। यह supply, output या input voltage के बराबर नहीं होता, इसीलिए इसे 'virtual' कहा जाता है।"
+    },
+    {
+      "id": "u1_opamp_applications_q16",
+      "question": "एक ideal op-amp की bandwidth कितनी मानी जाती है?",
+      "options": ["शून्य", "अनंत (infinite)", "20 kHz", "1 MHz"],
+      "correctIndex": 1,
+      "explanation": "Ideal op-amp की bandwidth अनंत मानी जाती है, अर्थात यह सभी frequencies को समान gain से amplify करता है। शून्य bandwidth कोई AC signal pass नहीं करेगी, और 20 kHz व 1 MHz व्यावहारिक सीमित मान हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q17",
+      "question": "एक op-amp की CMRR (साधारण अनुपात) 100000 है। इसे dB में व्यक्त करें।",
+      "options": ["60 dB", "80 dB", "100 dB", "120 dB"],
+      "correctIndex": 2,
+      "explanation": "CMRR(dB) = 20 log(100000) = 20 × 5 = 100 dB। 60 dB अनुपात 1000 के लिए, 80 dB अनुपात 10000 के लिए और 120 dB अनुपात 10^6 के लिए होता है, इसलिए ये गलत हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q18",
+      "question": "मानक op-amp आधारित instrumentation amplifier आमतौर पर कितने op-amps से बनता है?",
+      "options": ["1", "2", "3", "5"],
+      "correctIndex": 2,
+      "explanation": "मानक instrumentation amplifier 3 op-amps से बनता है — दो input buffer stage उच्च input impedance देते हैं और तीसरा difference amplifier का कार्य करता है। 1, 2 या 5 op-amp मानक विन्यास नहीं हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q19",
+      "question": "एक inverting amplifier में यदि input signal +2V और gain -5 है, तो output कितना होगा?",
+      "options": ["+10 V", "-10 V", "+2.5 V", "-2.5 V"],
+      "correctIndex": 1,
+      "explanation": "Vout = gain × Vin = (-5) × (+2) = -10 V, जहाँ ऋण चिह्न phase inversion दिखाता है। +10 V में inversion छूट गया, और ±2.5 V gain को भाग मानने की गलत गणना है।"
+    },
+    {
+      "id": "u1_opamp_applications_q20",
+      "question": "किस कारण से inverting amplifier का input impedance मुख्यतः Rin के बराबर होता है?",
+      "options": ["zero output impedance होने के कारण", "inverting input पर virtual ground होने के कारण", "open-loop gain शून्य होने के कारण", "power supply के कारण"],
+      "correctIndex": 1,
+      "explanation": "Inverting input virtual ground (लगभग 0 V) पर होता है, इसलिए source को केवल Rin ही दिखता है और input impedance ≈ Rin होता है। output impedance output पक्ष का है, open-loop gain तो infinite होती है, और power supply इसका कारण नहीं है।"
+    },
+    {
+      "id": "u1_opamp_applications_q21",
+      "question": "एक ZCD में जब input sine wave धनात्मक से ऋणात्मक की ओर 0 V पार करती है, तब output का क्या होता है?",
+      "options": ["output शून्य रहता है", "output अपनी polarity/state बदलता है", "output अपरिवर्तित रहता है", "output धीरे-धीरे बढ़ता है"],
+      "correctIndex": 1,
+      "explanation": "ZCD में जैसे ही input 0 V को पार करता है, comparator का output तुरंत विपरीत saturation level पर switch कर जाता है (polarity बदलता है)। output का शून्य रहना, अपरिवर्तित रहना या धीरे बढ़ना ZCD के snap-action व्यवहार के विपरीत है।"
+    },
+    {
+      "id": "u1_opamp_applications_q22",
+      "question": "उच्च CMRR वाले op-amp का व्यावहारिक लाभ क्या है?",
+      "options": ["अधिक power खपत", "common-mode noise का बेहतर rejection", "कम gain", "अधिक slew rate आवश्यक"],
+      "correctIndex": 1,
+      "explanation": "उच्च CMRR का अर्थ है कि दोनों inputs पर समान रूप से आने वाला common-mode noise output में बहुत कम आता है, जिससे signal अधिक शुद्ध रहता है। अधिक power खपत, कम gain या slew rate आवश्यकता CMRR से सीधे सम्बंधित लाभ नहीं हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q23",
+      "question": "एक summing amplifier में V1=2V (R1=10kΩ), V2=4V (R2=10kΩ), Rf=20kΩ, inverting configuration। output कितना होगा?",
+      "options": ["-12 V", "-6 V", "+12 V", "-3 V"],
+      "correctIndex": 0,
+      "explanation": "Vout = -(Rf/R1·V1 + Rf/R2·V2) = -((20/10)·2 + (20/10)·4) = -(4 + 8) = -12 V। -6 V में Rf weighting छूटी, +12 V में inversion छूटा, और -3 V गलत गणना है।"
+    },
+    {
+      "id": "u1_opamp_applications_q24",
+      "question": "एक op-amp में negative feedback लगाने का मुख्य उद्देश्य क्या है?",
+      "options": ["gain को अनंत करना", "gain को स्थिर व नियंत्रित करना", "output impedance बढ़ाना", "distortion बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "Negative feedback gain को external resistors द्वारा स्थिर, पूर्वानुमेय व नियंत्रित बनाता है तथा bandwidth बढ़ाकर distortion घटाता है। यह gain को अनंत नहीं करता, output impedance घटाता (बढ़ाता नहीं) है, और distortion कम करता है।"
+    },
+    {
+      "id": "u1_opamp_applications_q25",
+      "question": "एक ideal op-amp में virtual short के कारण दोनों input terminals के बीच voltage difference कितना होता है?",
+      "options": ["supply voltage के बराबर", "लगभग शून्य", "output के बराबर", "0.7 V स्थिर"],
+      "correctIndex": 1,
+      "explanation": "Infinite open-loop gain के कारण negative feedback में दोनों inputs का voltage लगभग बराबर हो जाता है (virtual short), अतः difference ≈ 0। यह supply या output voltage के बराबर नहीं होता, और 0.7 V तो diode drop है जो यहाँ अप्रासंगिक है।"
+    },
+    {
+      "id": "u1_opamp_applications_q26",
+      "question": "input offset voltage किसे कहते हैं?",
+      "options": ["वह input voltage जो output को शून्य करने के लिए आवश्यक है", "अधिकतम output voltage", "supply voltage", "feedback resistor का voltage"],
+      "correctIndex": 0,
+      "explanation": "Input offset voltage वह छोटा DC voltage है जो inputs के बीच लगाना पड़ता है ताकि वास्तविक op-amp का output शून्य हो जाए; ideal op-amp में यह 0 होता है। अधिकतम output, supply या feedback resistor voltage इसकी परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q27",
+      "question": "एक non-inverting amplifier में यदि Rf = 0 और Rin = ∞ (open) कर दिया जाए, तो परिपथ किसमें बदल जाता है?",
+      "options": ["inverting amplifier", "summing amplifier", "voltage follower", "ZCD"],
+      "correctIndex": 2,
+      "explanation": "Rf = 0 और Rin खुला करने पर gain = 1 + 0 = 1 हो जाती है, जो voltage follower (buffer) है। यह inverting या summing amplifier नहीं बनता, और negative feedback होने के कारण यह comparator/ZCD भी नहीं है।"
+    },
+    {
+      "id": "u1_opamp_applications_q28",
+      "question": "एक op-amp की differential gain 200000 और CMRR 100 dB है। common-mode gain लगभग कितना होगा?",
+      "options": ["2", "20", "200", "2000"],
+      "correctIndex": 0,
+      "explanation": "100 dB CMRR का अर्थ Ad/Acm = 10^(100/20) = 10^5 = 100000, अतः Acm = 200000/100000 = 2। 20, 200 या 2000 इस अनुपात के लिए गलत मान देते हैं।"
+    },
+    {
+      "id": "u1_opamp_applications_q29",
+      "question": "Op-amp की किस विशेषता के कारण inverting और non-inverting inputs में लगभग कोई current नहीं बहती?",
+      "options": ["zero output impedance", "infinite input impedance", "infinite bandwidth", "उच्च slew rate"],
+      "correctIndex": 1,
+      "explanation": "Infinite input impedance के कारण input terminals में current लगभग शून्य रहती है, जो op-amp विश्लेषण की एक मूल धारणा है। zero output impedance output पर, bandwidth frequency पर और slew rate speed पर लागू होते हैं — ये input current से सम्बंधित नहीं।"
+    },
+    {
+      "id": "u1_opamp_applications_q30",
+      "question": "एक inverting amplifier में gain को -20 बनाना है और Rin स्थिर 5 kΩ रखा गया है। Rf का मान क्या होगा?",
+      "options": ["5 kΩ", "20 kΩ", "100 kΩ", "0.25 kΩ"],
+      "correctIndex": 2,
+      "explanation": "gain = -Rf/Rin ⇒ -20 = -Rf/5kΩ ⇒ Rf = 20 × 5 = 100 kΩ। 5 kΩ gain -1 देता, 20 kΩ gain -4 देता, और 0.25 kΩ gain बहुत कम कर देता — इसलिए ये गलत हैं।"
+    }
+  ]
+}

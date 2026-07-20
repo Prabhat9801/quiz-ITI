@@ -1,0 +1,368 @@
+{
+  "unit": "unit8",
+  "unitName": "Digital Panel Meter",
+  "topic": "multiplexing",
+  "topicName": "Display Multiplexing - Concept, Advantages & Refresh Rate",
+  "questions": [
+    {
+      "id": "u8_multiplexing_q1",
+      "question": "Multi-digit seven segment display में 'display multiplexing' का मूल concept क्या है?",
+      "options": [
+        "प्रत्येक digit के लिए अलग-अलग power supply देना",
+        "सभी digits के समान segment lines को common रखकर हर digit को बारी-बारी (sequentially) तेज़ी से scan/ON करना",
+        "सभी digits के सभी segments को हमेशा permanently ON रखना",
+        "Display की resolution बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Multiplexing में सभी digits की समान segment lines (a, b, c...) common कर दी जाती हैं और microcontroller/driver केवल एक digit की common line को समय पर select करके उसकी data भेजता है, यह क्रम बहुत तेज़ी से दोहराया जाता है। Option A अलग supply की बात करता है जो multiplexing नहीं है, option C static drive है (अधिक wiring व current), और option D resolution से multiplexing का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u8_multiplexing_q2",
+      "question": "Static (non-multiplexed) drive की तुलना में display multiplexing का सबसे मुख्य advantage क्या है?",
+      "options": [
+        "Segments का रंग बदल जाता है",
+        "Display की resolution बढ़ जाती है",
+        "IO pins, wiring और overall component cost में कमी आती है",
+        "Refresh rate शून्य हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Multiplexing में सभी digits के लिए common segment lines और केवल digit-select lines/transistors चाहिए, जिससे decoder ICs, wiring और cost काफी घट जाती है। रंग बदलना (A) या resolution बढ़ना (B) multiplexing से संबंधित नहीं है, और refresh rate शून्य (D) होने पर तो display बिल्कुल नहीं दिखेगी।"
+    },
+    {
+      "id": "u8_multiplexing_q3",
+      "question": "Multiplexed display में 'persistence of vision' के कारण मानव आँख को क्या अनुभव होता है?",
+      "options": [
+        "आँख धीरे-धीरे बारी-बारी ON/OFF होते digits को निरंतर जलता हुआ (continuous glow) महसूस करती है",
+        "आँख हर digit को अलग-अलग स्पष्ट रूप से टिमटिमाता देखती है",
+        "आँख को केवल एक ही digit दिखाई देता है, बाकी अदृश्य रहते हैं",
+        "आँख display का रंग बदलते हुए देखती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "मानव आँख की retina पर image कुछ समय (लगभग 1/16 सेकंड) तक बनी रहती है, इसलिए यदि digits पर्याप्त तेज़ी से sequentially scan हों तो आँख को सभी digits एक साथ स्थिर रूप से जलते हुए दिखाई देते हैं। Option B तब होगा जब scanning धीमी हो, option C व्यावहारिक multiplexing में नहीं होता, और option D का persistence of vision से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u8_multiplexing_q4",
+      "question": "Flicker-free (टिमटिमाहट रहित) दिखने के लिए multiplexed display का overall frame refresh rate सामान्यतः न्यूनतम कितना होना चाहिए?",
+      "options": [
+        "1 Hz से कम",
+        "5 Hz से 10 Hz",
+        "20 Hz से 25 Hz",
+        "लगभग 50 Hz से 60 Hz से अधिक"
+      ],
+      "correctIndex": 3,
+      "explanation": "मानव आँख लगभग 50-60 Hz से अधिक refresh rate पर flicker को अलग नहीं कर पाती, इसलिए multiplexed displays को इससे अधिक frequency पर scan किया जाता है। 1 Hz, 5-10 Hz और 20-25 Hz (options A, B, C) सभी बहुत कम हैं और इन पर स्पष्ट flicker दिखाई देगा।"
+    },
+    {
+      "id": "u8_multiplexing_q5",
+      "question": "यदि multiplexing की scanning frequency आवश्यकता से बहुत कम (धीमी) रखी जाए तो क्या समस्या होगी?",
+      "options": [
+        "Power consumption शून्य हो जाएगा",
+        "Digits में स्पष्ट रूप से flicker (टिमटिमाना) दिखाई देने लगेगा",
+        "Brightness बहुत अधिक बढ़ जाएगी",
+        "Display का रंग बदल जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "धीमी scanning में persistence of vision काम नहीं कर पाती, जिससे digits का बारी-बारी ON/OFF होना आँख को स्पष्ट flicker के रूप में दिखने लगता है। Power शून्य होना (A) अव्यावहारिक है, brightness में असामान्य वृद्धि (C) नहीं होती, और रंग बदलना (D) scanning speed से संबंधित नहीं है।"
+    },
+    {
+      "id": "u8_multiplexing_q6",
+      "question": "Common anode multiplexed seven segment display circuit में प्रत्येक digit के साथ जुड़े PNP digit-select transistor का मुख्य कार्य क्या है?",
+      "options": [
+        "संबंधित digit की common anode line को Vcc से जोड़ना जब वह digit select किया जाए",
+        "Segment data को स्थायी रूप से store करना",
+        "Series current limiting resistor का कार्य करना",
+        "Display की multiplexing frequency को बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Common anode multiplexed circuit में PNP transistor selected digit के समय ON होकर उस digit की common anode line को Vcc से जोड़ता है ताकि केवल उसी digit के segments current पा सकें। यह transistor data store (B) नहीं करता, resistor का कार्य (C) नहीं करता, और frequency (D) microcontroller/timing circuit तय करता है, transistor नहीं।"
+    },
+    {
+      "id": "u8_multiplexing_q7",
+      "question": "Common cathode multiplexed display में प्रत्येक digit के लिए लगे NPN digit-driver transistor का कार्य क्या होता है?",
+      "options": [
+        "एक capacitor की तरह charge store करना",
+        "एक resistor की तरह स्थायी रूप से जुड़े रहना",
+        "Selected digit की common cathode line को ground से जोड़कर उसे ON करना",
+        "केवल diode की तरह current को एक दिशा में रोकना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Common cathode multiplexing में NPN transistor जब selected digit के समय ON किया जाता है तो वह उस digit की common cathode line को ground से जोड़ देता है, जिससे current path पूरा होकर वही digit glow करता है। Capacitor (A) और resistor (B) की तरह काम करना transistor का उद्देश्य नहीं है, और यह केवल diode (D) का कार्य भी नहीं करता।"
+    },
+    {
+      "id": "u8_multiplexing_q8",
+      "question": "Multiplexed multi-digit display में सभी digits की समान (जैसे सभी digits के a-segment) segment lines आपस में किस प्रकार जुड़ी होती हैं?",
+      "options": [
+        "प्रत्येक digit के लिए पूर्णतः अलग-अलग segment lines होती हैं",
+        "Segment lines एक-दूसरे से श्रृंखला (series) में जुड़ी होती हैं",
+        "Segment lines का digit selection से कोई प्रत्यक्ष संबंध नहीं होता",
+        "समान segment lines (जैसे सभी a-segments) आपस में parallel जोड़कर common कर दी जाती हैं, digit चयन common (anode/cathode) line से किया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Multiplexing की मूल तकनीक यही है कि सभी digits की समान segment lines parallel में common होती हैं ताकि पिन/wiring कम लगे, और यह तय करना कि data किस digit पर लागू हो, common anode/cathode digit-select line से किया जाता है। Option A static drive है, option B गलत जुड़ाव बताता है, और option C तो सीधे multiplexing के सिद्धांत के विपरीत है।"
+    },
+    {
+      "id": "u8_multiplexing_q9",
+      "question": "Multiplexed seven segment display में 'ghosting' समस्या का क्या अर्थ है?",
+      "options": [
+        "Display का पूरी तरह बंद हो जाना",
+        "गलत digit position पर हल्की/faint आकृति दिखना जो वास्तव में वहाँ नहीं होनी चाहिए",
+        "किसी segment का स्थायी रूप से जल जाना (burn out)",
+        "Display का refresh rate शून्य हो जाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ghosting में switching की timing गड़बड़ी के कारण एक digit की segment पैटर्न की हल्की छाया गलती से अगले (या पिछले) digit position पर भी दिखाई दे जाती है। Display का पूरी तरह बंद होना (A), segment का जल जाना (C), और refresh rate शून्य होना (D) अलग-अलग अन्य दोष हैं, ghosting नहीं।"
+    },
+    {
+      "id": "u8_multiplexing_q10",
+      "question": "Multiplexed display में ghosting का मुख्य कारण सामान्यतः क्या होता है?",
+      "options": [
+        "Digit driver transistor का धीमी गति से OFF होना, जिससे अगले digit की segment data पिछले digit पर हल्की झलक दे जाती है",
+        "Series resistor की value बहुत अधिक होना",
+        "Supply voltage का आवश्यकता से बहुत अधिक होना",
+        "Decoder IC का पूरी तरह से खराब (dead) हो जाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि digit-select transistor turn-off में देरी करता है और उसी समय अगले digit की segment data active हो जाए, तो कुछ current पुराने digit से भी होकर बह जाता है जिससे ghosting दिखती है। अधिक resistor value (B) से current घटेगा, अधिक supply voltage (C) से brightness/current बढ़ेगा, और पूरी तरह dead IC (D) से तो display ही काम नहीं करेगा — ये ghosting के विशिष्ट कारण नहीं हैं।"
+    },
+    {
+      "id": "u8_multiplexing_q11",
+      "question": "Ghosting कम करने के लिए multiplexed circuits में सामान्यतः कौन-सी तकनीक अपनाई जाती है?",
+      "options": [
+        "Refresh rate को बहुत कम कर देना",
+        "Common (digit-select) terminal को permanently ON रखना",
+        "Digit switching के समय थोड़े क्षण के लिए सभी segment lines को blank (OFF) कर देना, फिर नई data भेजना",
+        "Segment resistor को पूरी तरह हटा देना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Digit बदलते समय segment lines को एक बहुत छोटे blanking interval के लिए OFF रखने से पुराने और नए digit की data आपस में overlap नहीं करती, जिससे ghosting कम हो जाती है। Refresh rate कम करना (A) उलटा flicker बढ़ाएगा, common को permanently ON रखना (B) तो multiplexing को समाप्त कर देगा, और resistor हटाना (D) segment current को असुरक्षित बना देगा।"
+    },
+    {
+      "id": "u8_multiplexing_q12",
+      "question": "यदि किसी 4-digit multiplexed display में प्रत्येक digit को बारी-बारी बराबर समय के लिए ON किया जाए, तो प्रत्येक digit का duty cycle कितना होगा?",
+      "options": [
+        "100%",
+        "50%",
+        "75%",
+        "25%"
+      ],
+      "correctIndex": 3,
+      "explanation": "बराबर बंटवारे में प्रत्येक digit को कुल समय का 1/4 भाग मिलता है, अर्थात duty cycle = (1/4) × 100 = 25%। 100% (A) static drive जैसा है, 50% (B) दो-digit multiplexing के लिए होता, और 75% (C) इस स्थिति के लिए गलत गणना है।"
+    },
+    {
+      "id": "u8_multiplexing_q13",
+      "question": "एक 6-digit multiplexed display में यदि प्रत्येक digit को 2 ms के लिए ON किया जाए, तो पूरे display का overall refresh (frame) rate लगभग कितना होगा?",
+      "options": [
+        "500 Hz",
+        "लगभग 83.3 Hz",
+        "12 Hz",
+        "6 Hz"
+      ],
+      "correctIndex": 1,
+      "explanation": "एक पूरे cycle का समय = 6 digits × 2 ms = 12 ms; इसलिए refresh rate f = 1/0.012 s ≈ 83.3 Hz। 500 Hz (A) बहुत अधिक है, 12 Hz (C) वास्तव में cycle time (12 ms) की संख्या मात्र है frequency नहीं, और 6 Hz (D) digits की संख्या मात्र है।"
+    },
+    {
+      "id": "u8_multiplexing_q14",
+      "question": "यदि किसी 5-digit multiplexed display का overall frame refresh rate 100 Hz रखना है, तो प्रत्येक digit को (बराबर बंटवारे में) कितने समय के लिए ON रखना होगा?",
+      "options": [
+        "लगभग 2 ms",
+        "5 ms",
+        "10 ms",
+        "20 ms"
+      ],
+      "correctIndex": 0,
+      "explanation": "पूरे cycle का समय = 1/100 Hz = 10 ms; इसे 5 digits में बराबर बाँटने पर प्रत्येक digit का ON समय = 10/5 = 2 ms होगा। 5 ms (B) आधे cycle के बराबर है, 10 ms (C) तो पूरे cycle का समय है, और 20 ms (D) उससे भी अधिक है — ये गलत हैं।"
+    },
+    {
+      "id": "u8_multiplexing_q15",
+      "question": "Multiplexing में जैसे-जैसे प्रत्येक digit का duty cycle कम होता है (जैसे अधिक digits होने पर), समान average brightness बनाए रखने के लिए segment के peak current को क्या करना पड़ता है?",
+      "options": [
+        "Peak current घटाना पड़ता है",
+        "Peak current में कोई परिवर्तन नहीं करना पड़ता",
+        "Peak current को बढ़ाना पड़ता है (लगभग duty cycle के व्युत्क्रम अनुपात में)",
+        "Peak current को शून्य करना पड़ता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "चूँकि digit केवल duty cycle के अनुपात में समय के लिए ON रहता है, इसलिए static drive जितनी average brightness पाने के लिए उस थोड़े समय में peak current को लगभग (1/duty cycle) गुना बढ़ाना पड़ता है। Current घटाना (A) brightness और कम करेगा, कोई परिवर्तन न करना (B) brightness घटा देगा, और current शून्य करना (D) तो digit को बिल्कुल बंद कर देगा।"
+    },
+    {
+      "id": "u8_multiplexing_q16",
+      "question": "यदि static drive में किसी segment का average current 10 mA है, और उसी brightness के लिए इसे 20% duty cycle पर multiplexed drive किया जाए, तो peak (pulsed) current लगभग कितना रखना होगा?",
+      "options": [
+        "2 mA",
+        "10 mA",
+        "20 mA",
+        "50 mA"
+      ],
+      "correctIndex": 3,
+      "explanation": "Peak current ≈ average current / duty cycle = 10 mA / 0.20 = 50 mA, ताकि थोड़े समय (20%) में उतनी ही average light output मिले जितनी static 10 mA से मिलती है। 2 mA (A) और 10 mA (B) brightness घटा देंगे, और 20 mA (C) भी आवश्यक peak से कम है।"
+    },
+    {
+      "id": "u8_multiplexing_q17",
+      "question": "यदि 4 अलग-अलग digits को static drive किया जाए (प्रत्येक का अपना BCD-to-seven-segment decoder मानते हुए, प्रत्येक decoder 4-bit BCD लेता है), तो कुल कितनी BCD input lines चाहिए होंगी?",
+      "options": [
+        "4",
+        "16",
+        "8",
+        "32"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक digit के अपने decoder को 4 BCD lines चाहिए, इसलिए 4 digits के लिए कुल = 4 × 4 = 16 lines चाहिए, जबकि multiplexed drive में केवल एक common decoder की 4 BCD/segment lines + digit-select lines से काम चल जाता है। 4 (A) और 8 (C) आवश्यकता से कम हैं, और 32 (D) आवश्यकता से अधिक है।"
+    },
+    {
+      "id": "u8_multiplexing_q18",
+      "question": "Multiplexed seven segment display में microcontroller की मुख्य भूमिका क्या होती है?",
+      "options": [
+        "क्रमिक रूप से (sequentially) प्रत्येक digit को select करना और साथ ही उसकी सही segment data भेजना, और यह प्रक्रिया तेज़ी से बार-बार दोहराना",
+        "केवल circuit को power supply प्रदान करना",
+        "केवल एक बार data भेजकर स्थायी रूप से रुक जाना",
+        "Segment resistor की value बदलते रहना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Multiplexing को काम करने के लिए microcontroller (या timing circuit) को लगातार तेज़ गति से हर digit को बारी-बारी select करना और उसके साथ सही segment pattern भेजना पड़ता है ताकि persistence of vision से पूरा display स्थिर दिखे। यह केवल supply देने (B), एक बार data भेजकर रुकने (C), या resistor value बदलने (D) का कार्य नहीं है।"
+    },
+    {
+      "id": "u8_multiplexing_q19",
+      "question": "Brightness स्थिरता के संदर्भ में static drive और multiplexed drive की तुलना में कौन-सा कथन सही है?",
+      "options": [
+        "दोनों में brightness बिना किसी current परिवर्तन के बिल्कुल समान रहती है",
+        "Multiplexed drive में IO pins static drive से अधिक चाहिए",
+        "Static drive में digit हमेशा ON रहने से brightness अधिक स्थिर रहती है, जबकि multiplexed drive में समान brightness के लिए peak current बढ़ाना पड़ता है",
+        "Static drive में wiring multiplexed drive से कम होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Static drive में digit निरंतर ON रहता है इसलिए brightness स्थिर रहती है, जबकि multiplexed drive में digit थोड़े समय के लिए ही ON होता है, इसलिए समान average brightness के लिए peak current बढ़ाना पड़ता है। Option A गलत है क्योंकि current में परिवर्तन करना ही पड़ता है, option B उलटा है (multiplexed में IO pins कम चाहिए), और option D भी उलटा है (static में wiring अधिक होती है)।"
+    },
+    {
+      "id": "u8_multiplexing_q20",
+      "question": "LED seven segment display की तुलना में multiplexed LCD seven segment display को drive करने में एक महत्वपूर्ण अंतर क्या है?",
+      "options": [
+        "LCD को हमेशा DC bias से permanently चलाया जाना चाहिए",
+        "LCD segments को बहुत अधिक current देना पड़ता है",
+        "LCD में segment lines कभी common नहीं की जा सकतीं",
+        "LCD को AC waveform (alternating voltage) से drive करना पड़ता है ताकि electrode पर स्थायी DC bias से नुकसान (degradation) न हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "LCD एक voltage-driven, capacitive device है और इस पर लगातार DC bias रहने से electrochemical degradation होता है, इसलिए इसे हमेशा AC waveform से drive किया जाता है, जबकि LED current-driven device है और DC पर सीधे काम करती है। Option A इसके ठीक विपरीत सही तथ्य है, LCD में current की जरूरत नगण्य (B) होती है, और LCD की segment lines को common करना बिल्कुल संभव है (C गलत)।"
+    },
+    {
+      "id": "u8_multiplexing_q21",
+      "question": "LCD seven segment display में connections/pins कम करने के लिए multiplexing की कौन-सी सामान्य तकनीक प्रयोग होती है?",
+      "options": [
+        "प्रत्येक segment के लिए अलग backplane उपलब्ध कराना",
+        "Common (COM) backplane electrodes और segment (SEG) electrodes के बीच multiplexed waveform का प्रयोग करना",
+        "सभी segments को स्थायी रूप से हमेशा ON रखना",
+        "LCD में multiplexing तकनीकी रूप से संभव ही नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "LCD multiplexing में कुछ common backplane (COM) lines और segment (SEG) lines के बीच समयानुसार voltage waveform apply करके कई digits/segments कम connections में drive किए जाते हैं। प्रत्येक segment के लिए अलग backplane (A) देने से connections बढ़ेंगे न कि घटेंगे, सभी segments हमेशा ON रखना (C) डिस्प्ले को बेकार कर देगा, और option D तथ्यात्मक रूप से गलत है क्योंकि LCD multiplexing व्यापक रूप से प्रयोग होती है।"
+    },
+    {
+      "id": "u8_multiplexing_q22",
+      "question": "एक 8-digit seven segment display में static drive के बजाय multiplexed drive अपनाने से सबसे बड़ा practical लाभ क्या मिलता है?",
+      "options": [
+        "8 अलग-अलग decoder ICs के बजाय केवल एक common decoder और कुछ digit-select transistors से काम चल जाता है, जिससे IC count, wiring व cost घटती है",
+        "Display की refresh rate शून्य हो जाती है",
+        "Segment brightness स्वतः दोगुनी हो जाती है",
+        "Power consumption पूरी तरह शून्य हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Multiplexing का practical फायदा यही है कि 8 अलग decoders की जगह एक common decoder और कुछ सस्ते digit-select transistors से काम चल जाता है, जिससे IC संख्या, wiring और लागत सभी घटती हैं। Refresh rate शून्य होना (B) तो display बंद कर देगा, brightness का स्वतः दोगुना होना (C) गलत तथ्य है, और power शून्य होना (D) व्यावहारिक रूप से असंभव है।"
+    },
+    {
+      "id": "u8_multiplexing_q23",
+      "question": "Multiplexed display में digit-select transistors को तेज़ी से (fast) switch करने की आवश्यकता क्यों होती है?",
+      "options": [
+        "ताकि display की brightness कम हो जाए",
+        "ताकि supply voltage को कम किया जा सके",
+        "ताकि प्रत्येक digit सही समय पर तेज़ी से ON/OFF हो सके और ghosting/blur जैसी समस्याएँ न हों",
+        "ताकि segment resistor की आवश्यकता समाप्त हो जाए"
+      ],
+      "correctIndex": 2,
+      "explanation": "Fast switching digit transistors यह सुनिश्चित करते हैं कि प्रत्येक digit ठीक अपने निर्धारित समय-स्लॉट में ही ON/OFF हो, जिससे आसन्न digits की data आपस में overlap न हो और ghosting/blur न हो। Brightness कम करना (A) या supply voltage घटाना (B) इसका उद्देश्य नहीं है, और resistor की आवश्यकता (D) फिर भी बनी रहती है।"
+    },
+    {
+      "id": "u8_multiplexing_q24",
+      "question": "Multiplexed drive में static drive की तुलना में overall average power consumption सामान्यतः कैसा रहता है, यद्यपि peak current अधिक रखा जाता है?",
+      "options": [
+        "Average power हमेशा कई गुना अधिक हो जाता है",
+        "Average power का duty cycle से कोई संबंध नहीं होता",
+        "Power हमेशा पूर्णतः शून्य हो जाता है",
+        "Average power लगभग समान या कम रहता है क्योंकि प्रत्येक digit केवल थोड़े समय के लिए ही current खींचता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "यद्यपि peak current अधिक होता है, प्रत्येक digit केवल duty cycle के अनुपात में ही थोड़े समय के लिए current खींचता है, इसलिए overall average power static drive के लगभग बराबर या कम रहता है। Option A गलत है क्योंकि average power कई गुना नहीं बढ़ता, option B तथ्यात्मक रूप से गलत है (duty cycle से सीधा संबंध है), और option C व्यावहारिक रूप से असंभव है।"
+    },
+    {
+      "id": "u8_multiplexing_q25",
+      "question": "यदि किसी 3-digit multiplexed display के लिए न्यूनतम flicker-free overall frame refresh rate 50 Hz चाहिए, तो digit-select scanning frequency (प्रति digit switching दर) कम-से-कम कितनी होनी चाहिए?",
+      "options": [
+        "16.6 Hz",
+        "150 Hz",
+        "50 Hz",
+        "500 Hz"
+      ],
+      "correctIndex": 1,
+      "explanation": "पूरे frame को 50 बार प्रति सेकंड scan करने के लिए प्रत्येक digit को उतनी ही बार select करना होगा, इसलिए digit-select switching frequency = digits की संख्या × frame rate = 3 × 50 = 150 Hz होनी चाहिए। 16.6 Hz (A) तो digits/frame rate का उल्टा अनुपात है, 50 Hz (C) केवल frame rate है प्रति-digit switching rate नहीं, और 500 Hz (D) आवश्यकता से बहुत अधिक है।"
+    },
+    {
+      "id": "u8_multiplexing_q26",
+      "question": "Ghosting रोकने की एक प्रचलित तकनीक में digit बदलने के समय segment data lines के साथ सामान्यतः क्या किया जाता है?",
+      "options": [
+        "Digit बदलने से ठीक पहले सभी segment lines को थोड़े समय के लिए blank/off कर दिया जाता है, फिर नई segment data के साथ अगला digit ON किया जाता है",
+        "Segment data को पुराने digit के चालू (ON) रहते हुए ही तुरंत बदल दिया जाता है",
+        "Segment resistor को पूरी तरह हटा दिया जाता है",
+        "Supply voltage को अस्थायी रूप से बढ़ा दिया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Digit switching के समय एक छोटा blanking interval रखकर segment lines को OFF करने से पुरानी और नई segment data आपस में overlap नहीं करती, जिससे ghosting प्रभावी रूप से कम हो जाती है। Data को ON digit के साथ ही बदलना (B) ghosting को बढ़ाता है, resistor हटाना (C) असुरक्षित है, और voltage बढ़ाना (D) समस्या का समाधान नहीं है।"
+    },
+    {
+      "id": "u8_multiplexing_q27",
+      "question": "Static display की तुलना में multiplexed display चलाने के लिए microcontroller/firmware पर क्या अतिरिक्त बोझ आता है?",
+      "options": [
+        "कोई अतिरिक्त बोझ नहीं आता, दोनों बिल्कुल समान होते हैं",
+        "Firmware को static drive से कम काम करना पड़ता है",
+        "Firmware को timer/interrupt के माध्यम से लगातार तेज़ी से digit scanning करते रहना पड़ता है, जिससे processor समय अधिक खर्च होता है",
+        "Microcontroller की आवश्यकता ही पूर्णतः समाप्त हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Multiplexing में firmware को निरंतर timer/interrupt routine चलाकर हर digit को सही क्रम व समय पर scan करना पड़ता है, जिससे processor का कुछ समय व resources इसी कार्य में खर्च होते हैं — static drive में यह लगातार scanning जरूरी नहीं होती। इसलिए option A और B तथ्यात्मक रूप से गलत हैं, और option D तो बिल्कुल विपरीत है क्योंकि microcontroller की भूमिका और भी महत्वपूर्ण हो जाती है।"
+    },
+    {
+      "id": "u8_multiplexing_q28",
+      "question": "एक सामान्य multiplexed seven segment display व्यवस्था में यदि 4 digits हों, तो कुल control lines में मुख्यतः क्या शामिल होती हैं?",
+      "options": [
+        "केवल 4 digit-select lines, कोई segment line नहीं",
+        "प्रत्येक digit के लिए 7 अलग-अलग segment lines, कुल मिलाकर 28 lines",
+        "केवल एक ही control line पर्याप्त होती है",
+        "7 (या dp सहित 8) common segment lines तथा इसके अतिरिक्त N (यहाँ 4) digit-select lines"
+      ],
+      "correctIndex": 3,
+      "explanation": "Multiplexed व्यवस्था में सभी digits के लिए common 7 (या dp सहित 8) segment lines होती हैं, तथा प्रत्येक digit को चुनने के लिए अलग digit-select line दी जाती है, अर्थात 4-digit के लिए 4 digit-select lines। केवल digit-select lines (A) से segment pattern नहीं भेजा जा सकता, 28 अलग-अलग lines (B) तो static drive जैसी व्यवस्था होगी, और केवल एक line (C) से न digit चुना जा सकता है न segment pattern भेजा जा सकता है।"
+    },
+    {
+      "id": "u8_multiplexing_q29",
+      "question": "यदि किसी multiplexed display में digits की संख्या बढ़ाई जाए परंतु segment का peak current पहले जितना ही रखा जाए (frame refresh rate समान रखते हुए), तो प्रत्येक digit की perceived (average) brightness पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Brightness बढ़ जाएगी",
+        "प्रत्येक digit का duty cycle घटने से उसकी average brightness कम हो जाएगी",
+        "Brightness पर कोई प्रभाव नहीं पड़ेगा",
+        "Display का रंग बदल जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक digits होने पर प्रत्येक digit को कुल समय का छोटा हिस्सा (कम duty cycle) मिलता है, और यदि peak current न बढ़ाया जाए तो average light output (brightness) घट जाती है। इसलिए brightness बढ़ना (A) या अप्रभावित रहना (C) गलत है, और रंग बदलना (D) इस स्थिति से संबंधित नहीं है।"
+    },
+    {
+      "id": "u8_multiplexing_q30",
+      "question": "Digital Panel Meter में सामान्यतः 3-4 digit seven segment displays को static के बजाय multiplexed तरीके से ही क्यों drive किया जाता है?",
+      "options": [
+        "क्योंकि इससे microcontroller/driver IC के limited IO pins, PCB wiring और component cost में कमी आती है, जो compact panel meters के लिए व्यावहारिक है",
+        "क्योंकि multiplexing से meter की measurement accuracy स्वतः बढ़ जाती है",
+        "क्योंकि multiplexing से supply voltage की आवश्यकता पूरी तरह समाप्त हो जाती है",
+        "क्योंकि static drive में display बिल्कुल काम ही नहीं करती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Panel meters में जगह, IO pins और cost सीमित होते हैं, इसलिए multiplexing से एक ही common decoder/driver और कम connections से सभी digits drive हो जाते हैं जो compact व economical design के लिए उपयुक्त है। Measurement accuracy (B) का display drive method से सीधा संबंध नहीं है, supply voltage (C) फिर भी चाहिए, और static drive में display काम करती है (D गलत) बस उसमें अधिक ICs/wiring चाहिए।"
+    }
+  ]
+}

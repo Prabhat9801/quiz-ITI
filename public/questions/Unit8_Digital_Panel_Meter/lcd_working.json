@@ -1,0 +1,368 @@
+{
+  "unit": "unit8",
+  "unitName": "Digital Panel Meter",
+  "topic": "lcd_working",
+  "topicName": "LCD Working Principle - Polarizers, Nematic, Sizes & Backlight",
+  "questions": [
+    {
+      "id": "u8_lcd_working_q1",
+      "question": "LCD (Liquid Crystal Display) का basic working principle क्या है?",
+      "options": [
+        "यह ambient light अथवा backlight को modulate/block करके image बनाती है",
+        "यह स्वयं प्रकाश उत्पन्न (emit) करती है जैसे LED",
+        "यह केवल sound signals को display में बदलती है",
+        "यह हमेशा infrared radiation उत्सर्जित करती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCD अपने आप प्रकाश उत्पन्न नहीं करती, बल्कि liquid crystal layer के जरिए backlight अथवा ambient light को modulate/block करके image/digits बनाती है (Option A सही)। Option B (स्वयं प्रकाश emit करना) LED जैसी emissive display का गुण है, LCD का नहीं। Option C (sound signals) और Option D (हमेशा infrared उत्सर्जित करना) LCD के कार्य सिद्धांत से असंबंधित हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q2",
+      "question": "LCD की basic construction में liquid crystal material कहाँ रखा जाता है?",
+      "options": [
+        "single glass plate के ऊपर एक coating के रूप में",
+        "दो glass plates के बीच, जिन पर transparent electrodes लगे होते हैं",
+        "metal casing के अंदर बिना किसी plate के",
+        "केवल plastic sheet के ऊपर"
+      ],
+      "correctIndex": 1,
+      "explanation": "LCD की construction में liquid crystal material को दो glass plates के बीच sandwich किया जाता है, जिनकी आंतरिक सतह पर transparent (ITO) electrodes जमा किए जाते हैं (Option B सही)। Option A में single plate पर्याप्त नहीं क्योंकि voltage apply करने के लिए दोनों तरफ electrodes चाहिए। Option C (metal casing) और Option D (केवल plastic sheet) मानक LCD construction का वर्णन नहीं करते।"
+    },
+    {
+      "id": "u8_lcd_working_q3",
+      "question": "TN (Twisted Nematic) type LCD में front और rear polarizer आपस में किस angle पर लगाए जाते हैं?",
+      "options": [
+        "0 degree (parallel)",
+        "45 degree",
+        "90 degree (perpendicular)",
+        "180 degree"
+      ],
+      "correctIndex": 2,
+      "explanation": "TN (Twisted Nematic) type LCD में front और rear polarizer एक-दूसरे से 90 degree के angle (perpendicular/crossed) पर लगाए जाते हैं ताकि बिना twist वाले light को rear polarizer block कर सके (Option C सही)। Option A (parallel, 0 degree) पर बिना liquid crystal के भी light सीधे गुजर जाएगा, जो normal effect ठीक से नहीं देगा। Option B (45 degree) और Option D (180 degree) standard TN LCD के design में प्रयुक्त angle नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q4",
+      "question": "Twisted Nematic (TN) liquid crystal में बिना voltage के molecules की व्यवस्था कैसी होती है?",
+      "options": [
+        "वे बिल्कुल सीधी line में बिना किसी twist के रहते हैं",
+        "वे पूरी तरह random व अव्यवस्थित रहते हैं बिना किसी structure के",
+        "वे केवल vertical रूप से खड़े रहते हैं",
+        "वे एक glass plate से दूसरी तक धीरे-धीरे 90 degree twist के साथ layer दर layer मुड़े रहते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "TN liquid crystal में molecules एक glass plate से दूसरे तक 90 degree का helical (twist) structure बनाते हुए layer दर layer धीरे-धीरे मुड़े रहते हैं, जिससे यह light के polarization plane को भी 90 degree घुमा देते हैं (Option D सही)। Option A (कोई twist नहीं) और Option C (केवल vertical) TN structure को गलत बताते हैं, जबकि Option B (पूर्णतः random) nematic phase के व्यवस्थित molecular alignment को नकारता है।"
+    },
+    {
+      "id": "u8_lcd_working_q5",
+      "question": "TN LCD में जब किसी segment electrode पर voltage apply किया जाता है, तो field effect के कारण क्या होता है?",
+      "options": [
+        "liquid crystal molecules अपना twist खोकर (untwist होकर) light के polarization plane को नहीं घुमाते, जिससे second polarizer light को block कर देता है",
+        "liquid crystal molecules और अधिक twist हो जाते हैं जिससे light पास हो जाती है",
+        "glass plates आपस में टूट जाते हैं",
+        "ITO electrode जल जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "voltage apply करने पर electric field liquid crystal molecules को align कर देता है जिससे उनका twist structure समाप्त (untwist) हो जाता है; अब वे light के polarization plane को नहीं घुमाते, इसलिए crossed rear polarizer उस light को block कर देता है और segment dark दिखता है (Option A सही, यही field effect है)। Option B में twist बढ़ना गलत दिशा है। Option C (glass टूटना) और Option D (electrode जलना) सामान्य operation में नहीं होते।"
+    },
+    {
+      "id": "u8_lcd_working_q6",
+      "question": "LCD में transparent electrodes बनाने के लिए सामान्यतः कौन-सा material प्रयोग होता है?",
+      "options": [
+        "Copper (Cu)",
+        "Indium Tin Oxide (ITO)",
+        "Aluminium (Al)",
+        "Silver (Ag) की मोटी परत"
+      ],
+      "correctIndex": 1,
+      "explanation": "LCD में transparent electrodes बनाने के लिए Indium Tin Oxide (ITO) का प्रयोग होता है क्योंकि यह conductive होने के साथ-साथ पारदर्शी भी होता है (Option B सही)। Copper (A), Aluminium (C) और मोटी Silver layer (D) अच्छे conductor तो हैं परंतु opaque होते हैं, इसलिए इनसे प्रकाश गुजर नहीं पाएगा।"
+    },
+    {
+      "id": "u8_lcd_working_q7",
+      "question": "LCD में ITO electrodes को 'transparent' होना क्यों आवश्यक है?",
+      "options": [
+        "ताकि current कम बहे",
+        "ताकि glass प्लेट मजबूत बने",
+        "ताकि पीछे से आने वाला light/backlight उसमें से गुजरकर segment तक पहुँच सके और आँख तक दिखे",
+        "ताकि voltage AC में बदल जाए"
+      ],
+      "correctIndex": 2,
+      "explanation": "electrodes को transparent इसलिए बनाया जाता है ताकि backlight या ambient light उनमें से गुजरकर liquid crystal से होते हुए आँख तक पहुँच सके, तभी segment दिखाई देगा (Option C सही)। Option A (current कम बहना) और Option B (glass मजबूत बनना) transparency का उद्देश्य नहीं हैं, और Option D (AC में बदलना) electrode का कार्य नहीं है।"
+    },
+    {
+      "id": "u8_lcd_working_q8",
+      "question": "Reflective type LCD किस प्रकार काम करती है?",
+      "options": [
+        "यह अपनी खुद की backlight से ही प्रकाशित होती है",
+        "यह infrared sensor का प्रयोग करती है",
+        "यह हमेशा अंधेरे में ही काम करती है",
+        "यह पीछे लगे mirror/reflector की मदद से ambient (बाहरी) light को reflect करके digits दिखाती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Reflective LCD के पीछे एक reflector (mirror जैसी सतह) होता है जो बाहरी/ambient light को वापस reflect कर देता है, जिससे digits बिना किसी backlight के दिखाई देते हैं — यह calculator व low-power meters में common है (Option D सही)। Option A अपनी backlight होने की बात करता है जो transmissive प्रकार का गुण है। Option B (infrared sensor) असंबंधित है, और Option C (हमेशा अंधेरे में काम) गलत है क्योंकि reflective LCD को अंधेरे में पढ़ना कठिन होता है।"
+    },
+    {
+      "id": "u8_lcd_working_q9",
+      "question": "Transmissive type LCD को अंधेरे में पढ़ने योग्य बनाने के लिए क्या आवश्यक है?",
+      "options": [
+        "एक LED backlight जो पीछे से प्रकाश दे",
+        "एक reflector plate",
+        "अधिक ambient light",
+        "कुछ भी नहीं, यह स्वयं चमकती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transmissive LCD में प्रकाश हमेशा पीछे से ही आता है, इसलिए अंधेरे में पढ़ने के लिए एक LED backlight आवश्यक होता है (Option A सही)। Option B (reflector) reflective type में काम आता है, transmissive में नहीं। Option C (अधिक ambient light) अंधेरे की समस्या हल नहीं करता, और Option D (कुछ भी नहीं चाहिए) गलत है क्योंकि transmissive LCD स्वयं प्रकाश उत्पन्न नहीं करती।"
+    },
+    {
+      "id": "u8_lcd_working_q10",
+      "question": "Transmissive-reflective (transflective) type LCD का मुख्य लाभ क्या है?",
+      "options": [
+        "यह केवल तेज धूप में काम करती है",
+        "यह ambient light में reflective मोड और अंधेरे में backlight सहित transmissive मोड दोनों में काम कर सकती है",
+        "यह न तो ambient light में और न backlight में काम करती है",
+        "इसे कभी भी backlight की जरूरत नहीं पड़ती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Transflective (transmissive-reflective) LCD दोनों फायदे जोड़ती है — दिन में/ambient light में यह reflective mode की तरह काम करती है और अंधेरे में backlight on करके transmissive mode में भी पढ़ी जा सकती है (Option B सही)। Option A (केवल धूप में) और Option C (न किसी में काम) transflective के dual-mode गुण को नकारते हैं। Option D गलत है क्योंकि अंधेरे में backlight की जरूरत पड़ती ही है।"
+    },
+    {
+      "id": "u8_lcd_working_q11",
+      "question": "LCD का response time LED display की तुलना में सामान्यतः कैसा होता है?",
+      "options": [
+        "LED से बहुत तेज",
+        "दोनों बिल्कुल समान",
+        "LED से धीमा (कुछ milliseconds का delay)",
+        "response time जैसी कोई चीज़ LCD में लागू नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "liquid crystal molecules के mechanically align होने में कुछ time लगता है, इसलिए LCD का response time LED जैसी emissive display की तुलना में धीमा (कुछ ms) होता है (Option C सही)। Option A (तेज) और Option B (समान) तथ्यों के विपरीत हैं, तथा Option D गलत है क्योंकि response time LCD के लिए एक महत्वपूर्ण parameter है, especially fast-changing displays में।"
+    },
+    {
+      "id": "u8_lcd_working_q12",
+      "question": "LCD में 'viewing angle' सीमित होने का मुख्य कारण क्या है?",
+      "options": [
+        "glass plate का रंग बदलता रहता है",
+        "ITO electrode गर्म हो जाता है",
+        "backlight की frequency बदलती है",
+        "liquid crystal molecules के orientation के कारण अलग-अलग angle से देखने पर light transmission/contrast बदल जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "अलग-अलग viewing angle से देखने पर liquid crystal molecules के orientation के सापेक्ष light का path बदल जाता है, जिससे contrast व brightness घट-बढ़ जाती है — इसी कारण LCD का viewing angle सीमित होता है (Option D सही)। Option A, B और C (glass का रंग बदलना, electrode गर्म होना, backlight frequency बदलना) viewing angle की समस्या के वास्तविक कारण नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q13",
+      "question": "LCD को AC signal से drive क्यों किया जाता है, DC से क्यों नहीं?",
+      "options": [
+        "लगातार DC apply करने से liquid crystal material में electrolysis/ion migration होकर उसे स्थायी नुकसान (degradation) पहुँच सकता है",
+        "AC से display अधिक चमकीली (bright) दिखती है",
+        "DC से current अधिक बहता है",
+        "AC से power consumption शून्य हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि liquid crystal material को लगातार pure DC voltage से drive किया जाए तो उसमें electrolysis/ion migration जैसी electrochemical क्रिया होकर material स्थायी रूप से खराब (degrade) हो सकता है, इसलिए हमेशा AC (square wave) से drive किया जाता है ताकि average DC component zero रहे (Option A सही)। Option B (AC से अधिक चमकीली दिखना) मुख्य कारण नहीं है। Option C (DC से current अधिक बहना) और Option D (AC से power zero होना) तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q14",
+      "question": "यदि किसी LCD को गलती से लंबे समय तक pure DC voltage से drive किया जाए तो क्या परिणाम हो सकता है?",
+      "options": [
+        "display अधिक तेज गति से काम करने लगेगी",
+        "liquid crystal material में degradation/discoloration होकर display की life कम हो जाएगी",
+        "power consumption आधा हो जाएगा",
+        "कुछ नहीं होगा, DC भी AC जितना ही सुरक्षित है"
+      ],
+      "correctIndex": 1,
+      "explanation": "लंबे समय तक pure DC apply करने पर liquid crystal material में ions एक दिशा में जमा होकर electrochemical degradation व discoloration पैदा कर देते हैं, जिससे display की life घट जाती है (Option B सही)। Option A (तेज गति) गलत दिशा है। Option C (power आधा होना) असंबंधित लाभ मान लिया गया है, और Option D (DC भी सुरक्षित है) इस प्रश्न के मूल तथ्य के विपरीत है।"
+    },
+    {
+      "id": "u8_lcd_working_q15",
+      "question": "Digital Panel Meter में 7-segment LCD का मुख्य उपयोग क्या है?",
+      "options": [
+        "audio signal बजाने के लिए",
+        "motor को नियंत्रित करने के लिए",
+        "numeric readings (जैसे voltage, current मान) को digits के रूप में दिखाने के लिए",
+        "temperature बढ़ाने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "Digital Panel Meter में 7-segment LCD का मुख्य कार्य measured value (जैसे voltage, current, resistance) को numeric digits के रूप में दिखाना है (Option C सही)। Option A (audio बजाना), Option B (motor नियंत्रण) और Option D (temperature बढ़ाना) display के कार्य से पूरी तरह असंबंधित हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q16",
+      "question": "Dot matrix LCD, seven-segment LCD से किस प्रकार भिन्न है?",
+      "options": [
+        "यह केवल numbers 0-9 दिखा सकता है",
+        "यह कभी backlight नहीं मांगता",
+        "इसमें glass plates नहीं होतीं",
+        "यह छोटे-छोटे dots (pixels) के grid द्वारा characters, symbols और graphics दोनों बना सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Dot matrix LCD में छोटे-छोटे dots (pixels) की एक grid होती है, जिन्हें चुनिंदा रूप से ON/OFF करके कोई भी character, symbol या graphic बनाया जा सकता है, जबकि seven-segment केवल fixed segments के pattern तक सीमित है (Option D सही)। Option A (केवल 0-9) seven-segment जैसी सीमा बताता है, dot matrix की नहीं। Option B (कभी backlight न चाहिए) और Option C (glass plates न होना) दोनों गलत तथ्य हैं क्योंकि dot matrix LCD की construction भी अन्य LCD जैसी ही होती है।"
+    },
+    {
+      "id": "u8_lcd_working_q17",
+      "question": "एक standard 16x2 character LCD module में कुल कितने characters प्रदर्शित किए जा सकते हैं?",
+      "options": [
+        "32 characters",
+        "16 characters",
+        "20 characters",
+        "40 characters"
+      ],
+      "correctIndex": 0,
+      "explanation": "16x2 character LCD module में 16 columns और 2 rows होती हैं, इसलिए कुल characters = 16 × 2 = 32 होते हैं (Option A सही)। Option B (16) केवल एक row के characters हैं, Option C (20) और Option D (40) अन्य मॉड्यूल आकारों (जैसे 20x2, 40x2) के लिए सही हो सकते हैं पर 16x2 module के लिए नहीं।"
+    },
+    {
+      "id": "u8_lcd_working_q18",
+      "question": "Alphanumeric LCD किस प्रकार के characters प्रदर्शित कर सकती है?",
+      "options": [
+        "केवल numeric digits (0-9)",
+        "letters (A-Z) तथा numbers (0-9) दोनों",
+        "केवल special symbols",
+        "केवल decimal points"
+      ],
+      "correctIndex": 1,
+      "explanation": "Alphanumeric LCD, letters (A-Z, a-z) और numbers (0-9) दोनों प्रकार के characters प्रदर्शित कर सकती है, इसीलिए इसे 'alphanumeric' कहा जाता है (Option B सही)। Option A (केवल numeric) seven-segment जैसी सीमा है। Option C (केवल symbols) और Option D (केवल decimal point) alphanumeric display की क्षमता को कम करके बताते हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q19",
+      "question": "LED display की तुलना में LCD का सबसे बड़ा advantage क्या है?",
+      "options": [
+        "यह LED से अधिक power consume करती है",
+        "यह अंधेरे में बिना backlight के भी चमकती है",
+        "यह बहुत कम power consumption पर काम करती है, इसलिए battery-operated meters में उपयुक्त है",
+        "इसका response time हमेशा LED से तेज होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "LCD का सबसे बड़ा advantage यह है कि यह बहुत कम power consumption पर काम करती है क्योंकि यह स्वयं प्रकाश उत्पन्न नहीं करती, इसीलिए battery-operated multimeters/panel meters में इसे प्राथमिकता दी जाती है (Option C सही)। Option A (LED से अधिक power) तथ्यों के विपरीत है। Option B (बिना backlight अंधेरे में चमकना) transmissive LCD के लिए गलत है, और Option D (हमेशा LED से तेज response) गलत है क्योंकि LCD का response time सामान्यतः LED से धीमा ही होता है।"
+    },
+    {
+      "id": "u8_lcd_working_q20",
+      "question": "तेज धूप (bright sunlight) में LCD, LED display की तुलना में बेहतर क्यों दिखती है?",
+      "options": [
+        "क्योंकि LCD स्वयं अधिक तेज प्रकाश उत्सर्जित करती है",
+        "क्योंकि LCD में glare अधिक होता है",
+        "क्योंकि LED धूप में काम करना बंद कर देती है",
+        "क्योंकि reflective LCD ambient sunlight को ही reflect करके पढ़ने योग्य contrast देती है, जबकि तेज धूप में LED की चमक फीकी पड़ (wash out हो) जाती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "तेज धूप में reflective/transflective LCD ambient sunlight को ही reflect करके अच्छा contrast दे देती है, जबकि LED की चमक तुलनात्मक रूप से फीकी पड़ जाती है (wash out हो जाती है), इसलिए LCD बेहतर दिखती है (Option D सही)। Option A (LCD का स्वयं अधिक प्रकाश देना) गलत है क्योंकि LCD emissive नहीं है। Option B (अधिक glare) और Option C (LED का काम बंद होना) तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q21",
+      "question": "LCD का एक प्रमुख disadvantage यह है कि अंधेरे/कम रोशनी में पढ़ने के लिए उसे क्या चाहिए?",
+      "options": [
+        "उसे backlight की आवश्यकता पड़ती है, जिससे power consumption व complexity बढ़ जाती है",
+        "उसे किसी अतिरिक्त चीज़ की जरूरत नहीं",
+        "उसे ठंडा करना पड़ता है",
+        "उसे DC supply चाहिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCD का एक प्रमुख disadvantage यह है कि अंधेरे या कम रोशनी में इसे पढ़ने के लिए backlight जोड़नी पड़ती है, जिससे power consumption और circuit complexity दोनों बढ़ जाते हैं (Option A सही)। Option B (कुछ अतिरिक्त नहीं चाहिए) गलत है। Option C (ठंडा करना) और Option D (DC supply चाहिए) LCD की dark visibility समस्या से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q22",
+      "question": "अत्यधिक ठंडे (extreme cold) तापमान में LCD की performance पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "display और तेज गति से काम करने लगती है",
+        "liquid crystal material की viscosity बढ़ जाने से response धीमा हो जाता है और visibility खराब हो जाती है",
+        "कोई प्रभाव नहीं पड़ता, LCD तापमान से स्वतंत्र है",
+        "power consumption शून्य हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अत्यधिक ठंडे तापमान में liquid crystal material की viscosity बढ़ जाती है जिससे molecules के align होने में अधिक समय लगता है, परिणामस्वरूप response धीमा हो जाता है और visibility खराब हो जाती है (Option B सही)। Option A (तेज गति) तथ्यों के विपरीत है। Option C (कोई प्रभाव नहीं) गलत है क्योंकि LCD तापमान-संवेदनशील (temperature sensitive) device है, और Option D (power zero होना) असंबंधित है।"
+    },
+    {
+      "id": "u8_lcd_working_q23",
+      "question": "Digital panel meter में प्रयुक्त एक typical segment-type LCD का operating voltage लगभग कितना होता है?",
+      "options": [
+        "220V AC",
+        "50V DC",
+        "लगभग 3V से 5V (low voltage) AC square wave",
+        "1000V AC"
+      ],
+      "correctIndex": 2,
+      "explanation": "Digital panel meter में प्रयुक्त typical segment LCD low voltage (लगभग 3V से 5V) AC square wave पर काम करती है, जो battery/logic supply स्तर के अनुकूल है (Option C सही)। Option A (220V AC) mains voltage है जो LCD के लिए बहुत अधिक और खतरनाक है। Option B (50V DC) DC होने के कारण भी अनुपयुक्त है, और Option D (1000V) तो कहीं अधिक है — दोनों LCD को नुकसान पहुँचाएँगे।"
+    },
+    {
+      "id": "u8_lcd_working_q24",
+      "question": "एक typical segment LCD को drive करने वाले AC square wave की frequency सामान्यतः किस range में होती है?",
+      "options": [
+        "1 MHz से अधिक",
+        "0.001 Hz (लगभग DC जैसा)",
+        "10 kHz से 20 kHz",
+        "लगभग 30 Hz से 60 Hz"
+      ],
+      "correctIndex": 3,
+      "explanation": "Segment-type LCD को drive करने वाला AC square wave सामान्यतः लगभग 30 Hz से 60 Hz की low frequency पर होता है — यह इतना तेज़ होता है कि आँख को flicker न दिखे, पर इतना धीमा भी कि liquid crystal ठीक से respond कर सके (Option D सही)। Option A (1 MHz से अधिक) और Option C (10-20 kHz) बहुत अधिक frequency हैं जो सामान्य LCD driving में प्रयुक्त नहीं होतीं, और Option B (लगभग DC जैसा 0.001 Hz) electrolysis का खतरा पैदा कर देगा।"
+    },
+    {
+      "id": "u8_lcd_working_q25",
+      "question": "यदि किसी LCD driving circuit की frequency 50 Hz का square wave है, तो एक पूरे cycle का time period लगभग कितना होगा?",
+      "options": [
+        "20 ms",
+        "2 ms",
+        "200 ms",
+        "0.5 ms"
+      ],
+      "correctIndex": 0,
+      "explanation": "Time period T = 1/frequency = 1/50 = 0.02 second = 20 ms होता है, इसलिए सही उत्तर 20 ms है (Option A सही)। Option B (2 ms) यह मान 500 Hz के लिए सही होता, Option C (200 ms) 5 Hz के लिए और Option D (0.5 ms) 2 kHz के लिए सही होता — 50 Hz के लिए ये सभी गलत हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q26",
+      "question": "Digital Multimeter/Panel Meter में LCD का प्रयोग LED के बजाय अधिकतर क्यों किया जाता है?",
+      "options": [
+        "क्योंकि LCD, LED से सस्ती नहीं होती",
+        "क्योंकि battery-operated hand-held meters में कम power consumption व लंबी battery life चाहिए",
+        "क्योंकि LCD हमेशा अंधेरे में बेहतर दिखती है",
+        "क्योंकि LCD का response time LED से तेज होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hand-held battery-operated digital multimeter/panel meter में LCD का प्रयोग इसलिए किया जाता है क्योंकि इसकी power consumption बहुत कम होती है, जिससे battery अधिक समय तक चलती है (Option B सही)। Option A (LCD सस्ती नहीं होना) मुख्य कारण नहीं है। Option C (अंधेरे में बेहतर दिखना) गलत है क्योंकि LCD को अंधेरे में backlight चाहिए, और Option D (response time तेज होना) तथ्यों के विपरीत है क्योंकि LCD का response LED से धीमा होता है।"
+    },
+    {
+      "id": "u8_lcd_working_q27",
+      "question": "LCD में second (rear) polarizer, बिना voltage वाली twisted अवस्था में incoming light के साथ क्या करता है?",
+      "options": [
+        "वह light को पूरी तरह block कर देता है",
+        "वह light का रंग बदल देता है",
+        "चूँकि liquid crystal द्वारा 90 degree घुमाया गया light अब rear polarizer की axis के अनुरूप हो जाता है, इसलिए वह light को गुजरने देता है (segment 'off'/clear दिखता है)",
+        "वह light की frequency को दोगुना कर देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "बिना voltage वाली twisted अवस्था में liquid crystal, light के polarization plane को 90 degree घुमा देता है, जिससे वह rear polarizer की axis के अनुरूप हो जाता है और उसमें से गुजर जाता है — इसी कारण उस segment की अवस्था 'off'/clear (light पास) दिखती है (Option C सही)। Option A (पूरी तरह block करना) उस स्थिति के लिए है जब voltage apply की जाती है (untwisted state)। Option B (रंग बदलना) और Option D (frequency दोगुनी करना) polarizer के वास्तविक कार्य नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q28",
+      "question": "'Nematic' liquid crystal phase की विशेषता क्या है?",
+      "options": [
+        "molecules एक निश्चित crystal lattice की तरह पूरी तरह स्थिर रहते हैं",
+        "molecules गैस अवस्था जैसे पूर्णतः स्वतंत्र होते हैं",
+        "molecules solid metal जैसे fixed होते हैं",
+        "molecules rod जैसी आकृति के होते हैं और एक-दूसरे के लगभग समानांतर (parallel) दिशा में स्वतंत्र रूप से बहते/घूमते रह सकते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Nematic phase में liquid crystal molecules rod जैसी लंबी आकृति के होते हैं जो एक-दूसरे के लगभग समानांतर दिशा (orientational order) में तो रहते हैं, परंतु द्रव की तरह स्वतंत्र रूप से बह/घूम भी सकते हैं — यही solid और liquid के बीच की अनूठी अवस्था है (Option D सही)। Option A (fixed crystal lattice जैसा) solid crystal का गुण है। Option B (गैस जैसा पूर्णतः स्वतंत्र) order की कमी बताता है, और Option C (solid metal जैसे fixed) भी nematic phase के विपरीत है।"
+    },
+    {
+      "id": "u8_lcd_working_q29",
+      "question": "LED backlight का उपयोग LCD में मुख्यतः किसलिए किया जाता है?",
+      "options": [
+        "transmissive LCD में पीछे से पर्याप्त प्रकाश देने के लिए ताकि अंधेरे में भी digits/characters स्पष्ट दिखें",
+        "LCD की liquid crystal को गर्म रखने के लिए",
+        "LCD का रंग स्थायी रूप से बदलने के लिए",
+        "AC को DC में बदलने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "LED backlight का मुख्य उद्देश्य transmissive LCD में पीछे से पर्याप्त प्रकाश प्रदान करना है ताकि अंधेरे या कम रोशनी में भी digits/characters स्पष्ट रूप से दिखाई दें (Option A सही)। Option B (liquid crystal को गर्म रखना), Option C (रंग स्थायी रूप से बदलना) और Option D (AC को DC में बदलना) backlight का कार्य नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q30",
+      "question": "LCD की तुलना में LED का एक प्रमुख disadvantage क्या है जो LCD को panel meters में लोकप्रिय बनाता है?",
+      "options": [
+        "LED में glare नहीं होता",
+        "LED, LCD से बहुत अधिक power consume करती है, विशेषकर multi-digit displays में",
+        "LED बहुत महंगी होने के कारण कभी प्रयोग नहीं होती",
+        "LED का response time LCD से धीमा होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "multi-digit LED display में हर segment एक LED होता है जो लगातार current खींचता है, इसलिए LED, LCD की तुलना में काफी अधिक power consume करती है — यही कारण है कि battery चालित panel meters में LCD अधिक लोकप्रिय है (Option B सही)। Option A (glare न होना) LED का सामान्यतः विपरीत गुण है (LED में अधिक glare/brightness issue हो सकता है)। Option C (इतनी महंगी कि कभी प्रयोग न हो) तथ्यों के विपरीत है क्योंकि LED displays व्यापक रूप से प्रयुक्त होती हैं, और Option D (LED का response LCD से धीमा होना) गलत है क्योंकि वास्तव में LED का response LCD से तेज होता है।"
+    }
+  ]
+}

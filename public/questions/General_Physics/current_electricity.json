@@ -1,0 +1,218 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "current_electricity",
+  "topicName": "Current Electricity",
+  "questions": [
+    {
+      "id": "phy_current_electricity_q1",
+      "question": "Ohm's law के अनुसार, constant temperature पर voltage (V), current (I) और resistance (R) के बीच सही संबंध क्या है?",
+      "options": ["V = I + R", "V = I/R", "V = IR", "V = I²R"],
+      "correctIndex": 2,
+      "explanation": "Ohm's law कहता है कि constant temperature पर किसी conductor में V = IR होता है, यानी voltage current और resistance के product के बराबर होता है। बाकी options गलत mathematical relations हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q2",
+      "question": "Electric current का SI unit क्या है?",
+      "options": ["Volt (V)", "Ohm (Ω)", "Watt (W)", "Ampere (A)"],
+      "correctIndex": 3,
+      "explanation": "Electric current (आवेश के प्रवाह की दर) का SI unit Ampere (A) होता है। Volt potential difference की unit है, Ohm resistance की unit है, और Watt power की unit है, current की नहीं।"
+    },
+    {
+      "id": "phy_current_electricity_q3",
+      "question": "Electrical resistance का SI unit क्या है?",
+      "options": ["Ohm (Ω)", "Ampere (A)", "Volt (V)", "Farad (F)"],
+      "correctIndex": 0,
+      "explanation": "Resistance का SI unit Ohm (Ω) होता है। Ampere current की unit है, Volt potential difference की unit है, और Farad capacitance की unit है, resistance की नहीं।"
+    },
+    {
+      "id": "phy_current_electricity_q4",
+      "question": "Potential difference (voltage) का SI unit क्या है?",
+      "options": ["Ohm (Ω)", "Volt (V)", "Ampere (A)", "Joule (J)"],
+      "correctIndex": 1,
+      "explanation": "Potential difference का SI unit Volt (V) होता है। Ohm resistance की unit है, Ampere current की unit है, और Joule energy की unit है, voltage की नहीं।"
+    },
+    {
+      "id": "phy_current_electricity_q5",
+      "question": "किसी circuit में voltage 12 V है और resistance 4 Ω है। Ohm's law (I = V/R) से current कितना होगा?",
+      "options": ["48 A", "16 A", "3 A", "8 A"],
+      "correctIndex": 2,
+      "explanation": "I = V/R = 12/4 = 3 A होता है। बाकी options गलत division/multiplication से आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q6",
+      "question": "किसी circuit में current 2 A है और resistance 5 Ω है। Ohm's law (V = IR) से voltage कितना होगा?",
+      "options": ["2.5 V", "7 V", "0.4 V", "10 V"],
+      "correctIndex": 3,
+      "explanation": "V = IR = 2 × 5 = 10 V होता है। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q7",
+      "question": "किसी wire का resistance (R), उसकी resistivity (ρ), length (L) और cross-sectional area (A) से किस formula द्वारा जुड़ा होता है?",
+      "options": ["R = ρL/A", "R = ρA/L", "R = ρ/(L×A)", "R = ρLA"],
+      "correctIndex": 0,
+      "explanation": "Resistance R = ρL/A होता है, यानी resistance, length के directly proportional और cross-sectional area के inversely proportional होता है। बाकी options गलत proportionality दिखाते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q8",
+      "question": "अगर किसी wire की length double कर दी जाए (cross-sectional area same रखते हुए), तो उसका resistance कैसे बदलेगा?",
+      "options": ["आधा (half) हो जाएगा", "same रहेगा", "Double हो जाएगा", "चार गुना (4 times) हो जाएगा"],
+      "correctIndex": 2,
+      "explanation": "R = ρL/A के अनुसार resistance length के directly proportional है, इसलिए length double करने पर resistance भी double हो जाएगा। बाकी options इस direct proportionality को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_current_electricity_q9",
+      "question": "अगर किसी wire का cross-sectional area double कर दिया जाए (length same रखते हुए), तो resistance कैसे बदलेगा?",
+      "options": ["आधा (half) हो जाएगा", "Double हो जाएगा", "चार गुना हो जाएगा", "same रहेगा"],
+      "correctIndex": 0,
+      "explanation": "R = ρL/A के अनुसार resistance area के inversely proportional है, इसलिए area double करने पर resistance आधा हो जाएगा। बाकी options इस inverse proportionality को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_current_electricity_q10",
+      "question": "Resistivity (ρ) का SI unit क्या है?",
+      "options": ["Ohm (Ω)", "Ohm-meter (Ω·m)", "Ohm/meter (Ω/m)", "Siemens (S)"],
+      "correctIndex": 1,
+      "explanation": "Resistivity, resistance की तरह material की एक intrinsic property है और इसका SI unit Ohm-meter (Ω·m) होता है (R = ρL/A से ρ = RA/L)। सिर्फ Ohm resistance की unit है, resistivity की नहीं; बाकी options भी गलत हैं (Siemens conductance की unit है)।"
+    },
+    {
+      "id": "phy_current_electricity_q11",
+      "question": "Conductors (जैसे copper) की resistivity insulators (जैसे rubber) की तुलना में कैसी होती है?",
+      "options": ["बहुत कम (low)", "बराबर (same)", "बहुत ज्यादा (high)", "इनका कोई संबंध नहीं"],
+      "correctIndex": 0,
+      "explanation": "Conductors में free electrons आसानी से move कर सकते हैं, इसलिए उनकी resistivity बहुत कम होती है, जबकि insulators की resistivity बहुत ज्यादा होती है (electrons free नहीं होते)। बाकी options इस मूलभूत अंतर को गलत बताते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q12",
+      "question": "Temperature बढ़ने पर metal conductors का resistance आमतौर पर कैसे बदलता है?",
+      "options": ["घटता है", "बढ़ता है, क्योंकि atoms की vibration बढ़ने से electrons की collisions बढ़ जाती हैं", "बिल्कुल नहीं बदलता", "Zero हो जाता है"],
+      "correctIndex": 1,
+      "explanation": "Temperature बढ़ने पर metal के atoms ज्यादा vibrate करते हैं, जिससे free electrons की collisions बढ़ जाती हैं और resistance बढ़ता है। यह behaviour semiconductors से उल्टा होता है (जहाँ temperature बढ़ने पर resistance घटता है)। बाकी options metal conductors के लिए सही नहीं हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q13",
+      "question": "तीन resistors R1 = 2 Ω, R2 = 3 Ω और R3 = 5 Ω को series में जोड़ा गया है। Total (equivalent) resistance कितना होगा?",
+      "options": ["1 Ω", "0.97 Ω", "30 Ω", "10 Ω"],
+      "correctIndex": 3,
+      "explanation": "Series combination में equivalent resistance सभी resistors के सीधे जोड़ (sum) के बराबर होता है: R = R1+R2+R3 = 2+3+5 = 10 Ω। बाकी options series की formula से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_current_electricity_q14",
+      "question": "दो resistors R1 = 2 Ω और R2 = 2 Ω को parallel में जोड़ा गया है। Equivalent resistance कितना होगा?",
+      "options": ["4 Ω", "2 Ω", "0.5 Ω", "1 Ω"],
+      "correctIndex": 3,
+      "explanation": "Parallel combination में 1/R = 1/R1 + 1/R2 = 1/2 + 1/2 = 1, इसलिए R = 1 Ω होता है। बाकी options parallel formula को गलत तरीके से लागू करने पर आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q15",
+      "question": "Series circuit में current के बारे में क्या सही है?",
+      "options": ["हर component में current अलग-अलग होता है", "Current सभी components से होकर same/constant रहता है, क्योंकि रास्ता एक ही होता है", "Current zero होता है", "Current केवल पहले component में बहता है"],
+      "correctIndex": 1,
+      "explanation": "Series circuit में सभी components एक ही single path में जुड़े होते हैं, इसलिए current सभी जगह same रहता है। बाकी options series circuit की मूल property के विपरीत हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q16",
+      "question": "Parallel circuit में voltage के बारे में क्या सही है?",
+      "options": ["हर branch में voltage अलग-अलग होता है", "Voltage केवल एक branch में होता है", "हर branch में voltage source के voltage के बराबर (same) होता है", "Voltage हमेशा zero होता है"],
+      "correctIndex": 2,
+      "explanation": "Parallel circuit में सभी branches source के दोनों terminals से directly जुड़े होते हैं, इसलिए हर branch में voltage same (source के बराबर) रहता है, भले ही current अलग-अलग हो। बाकी options parallel circuit की मूल property के विपरीत हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q17",
+      "question": "अगर series में जुड़े कई bulbs में से एक bulb का filament फ्यूज (खुल) हो जाए, तो बाकी bulbs का क्या होगा?",
+      "options": ["सभी bulbs बंद हो जाएंगे, क्योंकि circuit का एकमात्र path टूट जाता है", "बाकी bulbs और तेज जलेंगे", "बाकी bulbs पर कोई असर नहीं पड़ेगा", "सिर्फ आधे bulbs बंद होंगे"],
+      "correctIndex": 0,
+      "explanation": "Series circuit में सिर्फ एक ही path होता है, इसलिए किसी भी point पर circuit टूटने से पूरा current flow रुक जाता है और सभी bulbs बंद हो जाते हैं। बाकी options series connection की properties के विपरीत हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q18",
+      "question": "अगर parallel में जुड़े कई bulbs में से एक bulb फ्यूज हो जाए, तो बाकी bulbs का क्या होगा?",
+      "options": ["सभी bulbs बंद हो जाएंगे", "बाकी bulbs सामान्य रूप से जलते रहेंगे, क्योंकि हर branch independent path है", "सभी bulbs और तेज जलेंगे", "पूरा circuit short-circuit हो जाएगा"],
+      "correctIndex": 1,
+      "explanation": "Parallel circuit में हर bulb का अपना अलग (independent) path होता है, इसलिए एक bulb फ्यूज होने पर बाकी branches में current flow बिना रुके चलता रहता है। बाकी options parallel connection की properties के विपरीत हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q19",
+      "question": "Voltage (V) और current (I) के पदों में electric power का सही formula क्या है?",
+      "options": ["P = V/I", "P = V + I", "P = VI", "P = V - I"],
+      "correctIndex": 2,
+      "explanation": "Electric power P = VI होता है, यानी power voltage और current के product के बराबर होती है। बाकी options गलत mathematical relations हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q20",
+      "question": "किसी appliance में V = 220 V और I = 2 A है। Power (P = VI) कितनी होगी?",
+      "options": ["110 W", "222 W", "218 W", "440 W"],
+      "correctIndex": 3,
+      "explanation": "P = VI = 220 × 2 = 440 W होती है। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q21",
+      "question": "Current (I) और resistance (R) के पदों में power का सही formula क्या है?",
+      "options": ["P = I²R", "P = IR", "P = I/R", "P = I + R"],
+      "correctIndex": 0,
+      "explanation": "Ohm's law (V = IR) को P = VI में substitute करने पर P = I²R मिलता है। बाकी options गलत derivation से आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q22",
+      "question": "किसी resistor से I = 2 A current बह रहा है और उसका resistance R = 10 Ω है। Power (P = I²R) कितनी होगी?",
+      "options": ["20 W", "5 W", "40 W", "100 W"],
+      "correctIndex": 2,
+      "explanation": "P = I²R = 2² × 10 = 4 × 10 = 40 W होती है। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q23",
+      "question": "Voltage (V) और resistance (R) के पदों में power का सही formula क्या है?",
+      "options": ["P = V²/R", "P = VR", "P = V/R²", "P = V + R"],
+      "correctIndex": 0,
+      "explanation": "V = IR से I = V/R, इसे P = VI में substitute करने पर P = V²/R मिलता है। बाकी options गलत derivation से आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q24",
+      "question": "220 V पर चलने वाले एक appliance का resistance 110 Ω है। Power (P = V²/R) कितनी होगी?",
+      "options": ["2 W", "220 W", "110 W", "440 W"],
+      "correctIndex": 3,
+      "explanation": "P = V²/R = (220)²/110 = 48400/110 = 440 W होती है। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q25",
+      "question": "बिजली के bill में electrical energy consumption किस commercial unit में मापी जाती है?",
+      "options": ["Joule (J)", "Watt (W)", "kWh (kilowatt-hour), जिसे 'Unit' भी कहते हैं", "Ampere-hour (Ah)"],
+      "correctIndex": 2,
+      "explanation": "बिजली के bill में energy consumption kWh (kilowatt-hour) में मापी जाती है, जिसे आमतौर पर 'Unit' कहा जाता है। Joule energy की SI unit है (पर बिल में practical नहीं), Watt power की unit है, और Ampere-hour battery की capacity मापने के लिए उपयोग होता है।"
+    },
+    {
+      "id": "phy_current_electricity_q26",
+      "question": "1000 W (1 kW) का heater 5 घंटे चलाया जाता है। कुल electrical energy consumption (kWh में) कितनी होगी?",
+      "options": ["1 kWh", "500 kWh", "0.2 kWh", "5 kWh"],
+      "correctIndex": 3,
+      "explanation": "Energy = Power × time = 1 kW × 5 h = 5 kWh होती है। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q27",
+      "question": "Circuit में fuse wire किस उद्देश्य से लगाया जाता है?",
+      "options": ["Current बढ़ाने के लिए", "Voltage को stable रखने के लिए", "Overcurrent/short-circuit की स्थिति में पिघलकर circuit तोड़ने और device व wiring को protect करने के लिए", "Resistance घटाने के लिए"],
+      "correctIndex": 2,
+      "explanation": "जब circuit में असामान्य रूप से ज्यादा current बहता है, तो fuse wire ज्यादा गर्म होकर पिघल जाता है और circuit को तोड़ देता है, जिससे उपकरण और wiring आग या damage से सुरक्षित रहते हैं। बाकी options fuse का सही कार्य नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_current_electricity_q28",
+      "question": "Fuse wire के लिए ऐसा material (जैसे tin-lead alloy) क्यों चुना जाता है जिसका melting point कम और resistivity थोड़ी अधिक हो?",
+      "options": ["ताकि यह कभी न पिघले", "ताकि थोड़ा भी extra current बहने पर वह जल्दी गर्म होकर पिघल जाए और circuit तोड़ दे", "ताकि circuit का resistance बहुत बढ़ जाए", "ताकि यह light produce करे"],
+      "correctIndex": 1,
+      "explanation": "Low melting point और थोड़ी अधिक resistivity की वजह से fuse wire overcurrent में जल्दी गर्म होकर पिघल जाता है और circuit break कर देता है, जिससे safety मिलती है। बाकी options fuse wire चुनने का सही कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_current_electricity_q29",
+      "question": "EMF (electromotive force) और terminal voltage में क्या अंतर होता है?",
+      "options": ["दोनों हमेशा बराबर होते हैं", "EMF, cell की बिना current flow के total energy per unit charge है; terminal voltage current flow के दौरान internal resistance पर drop घटाकर मिलने वाला voltage है (EMF से कम)", "Terminal voltage हमेशा EMF से ज्यादा होता है", "EMF का current से कोई संबंध नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "EMF cell की no-load स्थिति में ऊर्जा देने की क्षमता है, जबकि current flow होने पर cell के internal resistance पर कुछ voltage drop हो जाता है, इसलिए terminal voltage (V = EMF - Ir) हमेशा EMF से कम होता है। बाकी options यह अंतर सही नहीं बताते।"
+    },
+    {
+      "id": "phy_current_electricity_q30",
+      "question": "Short circuit होने पर current अचानक बहुत ज्यादा क्यों हो जाता है?",
+      "options": ["क्योंकि voltage अचानक बहुत बढ़ जाता है", "क्योंकि circuit का resistance लगभग zero हो जाता है, और Ohm's law (I = V/R) के अनुसार current बहुत बढ़ जाता है", "क्योंकि power supply रुक जाती है", "क्योंकि resistance बहुत ज्यादा बढ़ जाता है"],
+      "correctIndex": 1,
+      "explanation": "Short circuit में conductor सीधे बिना उचित resistance के जुड़ जाते हैं, जिससे resistance लगभग zero हो जाता है और Ohm's law के अनुसार (R बहुत कम होने पर) current बहुत ज्यादा बढ़ जाता है, जिससे overheating और आग लगने का खतरा होता है। बाकी options short circuit की वास्तविक वजह नहीं हैं।"
+    }
+  ]
+}

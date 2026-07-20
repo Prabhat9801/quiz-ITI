@@ -1,0 +1,368 @@
+{
+  "unit": "unit12",
+  "unitName": "Domestic Appliances",
+  "topic": "immersion_heater",
+  "topicName": "Immersion Water Heater - Principle, Parts, Insulation & Heating Element",
+  "questions": [
+    {
+      "id": "u12_immersion_heater_q1",
+      "question": "Immersion water heater पानी को गरम करने के लिए किस सिद्धांत पर कार्य करता है?",
+      "options": [
+        "Induction heating द्वारा",
+        "Electrical resistance heating element को सीधे पानी में डुबोकर, current द्वारा उत्पन्न heat को conduction/convection से पानी में transfer करना",
+        "Solar radiation द्वारा",
+        "Chemical reaction द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Immersion heater में एक resistance heating element को सीधे पानी में डुबोया जाता है; current प्रवाहित होने पर element में heat उत्पन्न होती है जो conduction द्वारा element की सतह से तथा convection currents द्वारा पूरे पानी में फैल जाती है। Induction heating धातु के बर्तनों में currents induce करके गरम करता है (जैसे induction cooktop), solar radiation में सूर्य की heat प्रयोग होती है, और chemical reaction का इससे कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u12_immersion_heater_q2",
+      "question": "Immersion heater के heating element को पानी में सीधे डुबोया क्यों जाता है?",
+      "options": [
+        "ताकि heat transfer efficient तरीके से direct conduction/convection द्वारा हो सके, बजाय हवा के माध्यम से indirect heating के",
+        "ताकि element जल्दी जंग खा जाए",
+        "ताकि electricity की खपत बढ़े",
+        "ताकि पानी में bubbles ना बनें"
+      ],
+      "correctIndex": 0,
+      "explanation": "Element को सीधे पानी में डुबोने से heat सीधे पानी में conduction व convection द्वारा transfer होती है, जिससे heating अधिक efficient व तेज़ होती है, जबकि हवा के माध्यम से indirect heating में अधिक समय व energy loss होती। Element जल्दी जंग खाना, electricity खपत बढ़ाना, या bubbles ना बनना इसका उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u12_immersion_heater_q3",
+      "question": "Immersion heater की heating element सामान्यतः किस material की बनी होती है?",
+      "options": [
+        "Copper wire",
+        "Nichrome wire जो एक insulated metal (जैसे copper या stainless steel) tube के अंदर embedded होती है",
+        "Aluminium foil",
+        "Silver wire"
+      ],
+      "correctIndex": 1,
+      "explanation": "Immersion heater में Nichrome resistance wire को एक insulated metal tube (जैसे copper/stainless steel sheath) के अंदर mica या magnesium oxide (MgO) insulation के साथ embed किया जाता है, ताकि wire पानी के सीधे संपर्क में ना आए परंतु heat बाहर transfer हो सके। Copper, aluminium, या silver तार की resistivity कम होती है, इसलिए ये स्वयं heating element के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u12_immersion_heater_q4",
+      "question": "Immersion heater के heating element और बाहरी metal sheath के बीच किस प्रकार का insulation प्रयोग होता है?",
+      "options": [
+        "Plastic insulation",
+        "Rubber insulation",
+        "Magnesium Oxide (MgO) पाउडर जैसा high-temperature electrical insulator",
+        "Paper insulation"
+      ],
+      "correctIndex": 2,
+      "explanation": "Nichrome wire और बाहरी metal sheath के बीच Magnesium Oxide (MgO) पाउडर compact करके भरा जाता है, जो electrically insulator होते हुए भी excellent thermal conductor है, जिससे heat तो बाहर आ जाती है परंतु current sheath में लीक नहीं होता। Plastic, rubber, और paper उच्च तापमान पर पिघल/जल जाते हैं, इसलिए ये heating element के अंदर insulation के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u12_immersion_heater_q5",
+      "question": "Immersion heater के बाहरी metal sheath (copper/stainless steel tube) का मुख्य कार्य क्या है?",
+      "options": [
+        "Current को सीधे पानी में प्रवाहित करना",
+        "Heating wire को पानी के सीधे संपर्क से बचाना तथा heat को कुशलता से पानी में transfer करना",
+        "पानी को ठंडा करना",
+        "Heater की speed बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metal sheath एक protective व अच्छा thermal conductor cover है जो अंदर की heating wire को पानी के सीधे संपर्क से (short circuit/corrosion से) बचाता है जबकि heat को कुशलता से बाहर पानी में पहुंचाता है। यह current को सीधे पानी में नहीं जाने देता (यह तो सुरक्षा की दृष्टि से खतरनाक होगा), पानी को ठंडा नहीं करता, और heater की कोई 'speed' नहीं होती।"
+    },
+    {
+      "id": "u12_immersion_heater_q6",
+      "question": "Immersion heater में insulation खराब (damaged) हो जाने पर सबसे बड़ा खतरा क्या हो सकता है?",
+      "options": [
+        "पानी जल्दी ठंडा होने लगेगा",
+        "Current leakage होकर पानी के माध्यम से electric shock लगने का खतरा बढ़ जाएगा",
+        "Heater की wattage अपने आप कम हो जाएगी",
+        "पानी का रंग बदल जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Insulation damage होने पर live wire और metal sheath के बीच direct contact हो सकता है, जिससे current पानी व sheath के माध्यम से leak होकर उपयोगकर्ता को गंभीर electric shock का खतरा उत्पन्न कर सकता है, इसलिए earthing व insulation testing आवश्यक है। पानी ठंडा होना, wattage अपने आप कम होना, या रंग बदलना insulation damage के सामान्य परिणाम नहीं हैं।"
+    },
+    {
+      "id": "u12_immersion_heater_q7",
+      "question": "Immersion heater की body/sheath की proper earthing क्यों आवश्यक है?",
+      "options": [
+        "ताकि पानी जल्दी गरम हो",
+        "ताकि insulation fail होने की स्थिति में leakage current को सुरक्षित रूप से earth में भेजा जा सके और shock से बचा जा सके",
+        "ताकि heater की wattage बढ़े",
+        "ताकि thermostat की life बढ़े"
+      ],
+      "correctIndex": 1,
+      "explanation": "Proper earthing insulation fail होने पर body में आए leakage current को सुरक्षित earth path देकर उपयोगकर्ता को shock से बचाती है, यह एक अनिवार्य safety measure है। यह पानी को जल्दी गरम करने, wattage बढ़ाने, या thermostat की life बढ़ाने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u12_immersion_heater_q8",
+      "question": "Immersion heater के hanging/top hook/handle assembly का क्या कार्य है?",
+      "options": [
+        "Current को नियंत्रित करना",
+        "Heater को बाल्टी/बर्तन के किनारे पर सुरक्षित रूप से लटकाना ताकि element पूरी तरह पानी में डूबा रहे और top भाग पानी से बाहर रहे",
+        "पानी को छानना",
+        "Thermostat का कार्य करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hook/handle assembly heater को बाल्टी के किनारे पर टिकाकर element को पूरी तरह पानी में डुबोए रखता है जबकि electrical connections वाला top भाग पानी की सतह से ऊपर व सुरक्षित रहता है। यह current नियंत्रित नहीं करता, पानी नहीं छानता, और thermostat का कार्य भी नहीं करता।"
+    },
+    {
+      "id": "u12_immersion_heater_q9",
+      "question": "Immersion heater को हमेशा पानी में पूरी तरह डुबोकर ही चालू क्यों किया जाना चाहिए?",
+      "options": [
+        "ताकि पानी में bubbles ना आएं",
+        "क्योंकि बिना पानी में डूबे चालू करने पर element अत्यधिक गरम होकर जल्दी जल/फट सकता है क्योंकि heat dissipate करने के लिए पानी नहीं होगा",
+        "ताकि करंट की खपत कम हो",
+        "ताकि thermostat तेज़ी से काम करे"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि element बिना पानी में डूबे चालू किया जाए तो उत्पन्न heat को dissipate करने के लिए कोई माध्यम (पानी) नहीं होता, जिससे element स्वयं अत्यधिक गरम होकर तुरंत जल सकता है या फट भी सकता है, इसलिए यह dry-run के प्रति संवेदनशील है। Bubbles, current खपत, या thermostat की speed से इसका सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u12_immersion_heater_q10",
+      "question": "एक typical घरेलू immersion water heater की power rating सामान्यतः किस range में होती है?",
+      "options": [
+        "1-2 Watt",
+        "लगभग 1000 W से 1500 W (1-1.5 kW)",
+        "लगभग 50 kW",
+        "लगभग 500 kW"
+      ],
+      "correctIndex": 1,
+      "explanation": "घरेलू उपयोग के immersion heater सामान्यतः 1000 W से 1500 W (1-1.5 kW) rating के होते हैं, जो एक बाल्टी पानी को उचित समय में गरम करने के लिए पर्याप्त है। 1-2 Watt अत्यंत कम है (heating के लिए अपर्याप्त), जबकि 50 kW और 500 kW घरेलू उपयोग के लिए अत्यधिक अधिक व असुरक्षित हैं।"
+    },
+    {
+      "id": "u12_immersion_heater_q11",
+      "question": "Immersion heater में प्रयोग होने वाली heating wire (Nichrome) का प्रतिरोध (resistance) power rating से किस समीकरण द्वारा संबंधित है?",
+      "options": [
+        "P = V × I only, resistance का कोई संबंध नहीं",
+        "P = V²/R, अर्थात कम resistance पर अधिक power (heat) उत्पन्न होगी यदि voltage स्थिर हो",
+        "P केवल current पर निर्भर करता है, resistance से नहीं",
+        "P हमेशा resistance के समानुपाती (directly proportional) होता है, चाहे voltage कुछ भी हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "स्थिर voltage पर power का सूत्र P = V²/R होता है, अर्थात resistance कम होने पर उसी voltage पर अधिक power (heat) उत्पन्न होगी, इसीलिए wire की length, thickness व material चुनकर desired wattage प्राप्त की जाती है। Option A अधूरा है (V,I,R आपस में संबंधित हैं), C गलत है क्योंकि resistance भी शामिल होता है, और D गलत है क्योंकि यह सूत्र स्थिर voltage की शर्त पर निर्भर करता है, current स्थिर होने पर संबंध उल्टा होगा।"
+    },
+    {
+      "id": "u12_immersion_heater_q12",
+      "question": "यदि immersion heater लंबे समय तक हार्ड वाटर (hard water) में प्रयोग किया जाए, तो सामान्यतः क्या समस्या होती है?",
+      "options": [
+        "Element पर scale (mineral deposit) जमकर heat transfer कम हो जाता है, जिससे heating धीमी व element अधिक गरम हो सकता है",
+        "पानी का रंग हमेशा के लिए हरा हो जाता है",
+        "Heater का current type AC से DC में बदल जाता है",
+        "कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hard water में मौजूद minerals (calcium, magnesium salts) समय के साथ element की सतह पर scale जमा देते हैं, जो एक insulating layer की तरह काम करके heat transfer को कम कर देती है, जिससे element अंदर से अधिक गरम होकर जल्दी खराब हो सकता है। पानी का रंग स्थायी रूप से नहीं बदलता, current type नहीं बदलता, और स्पष्ट रूप से प्रभाव पड़ता है इसलिए 'कोई प्रभाव नहीं' गलत है।"
+    },
+    {
+      "id": "u12_immersion_heater_q13",
+      "question": "Immersion heater में thermal cut-out/thermostat (यदि लगा हो) का मुख्य कार्य क्या है?",
+      "options": [
+        "पानी का रंग control करना",
+        "पानी का temperature एक निश्चित सीमा पर पहुंचने पर supply काटकर overheating व boiling से बचाना",
+        "Current की frequency बदलना",
+        "Heater की weight कम करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermal cut-out/thermostat पानी का temperature sense करके निर्धारित सीमा पर पहुंचने पर automatically supply काट देता है, जिससे पानी अनावश्यक रूप से उबलने या element के dry होने की स्थिति में अत्यधिक गरम होने से बचाव होता है। पानी का रंग, current frequency, या heater की weight से thermostat का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u12_immersion_heater_q14",
+      "question": "यदि immersion heater को बिना thermostat के लंबे समय तक चालू छोड़ दिया जाए, तो क्या खतरा हो सकता है?",
+      "options": [
+        "पानी उबलकर overflow हो सकता है और element पर अत्यधिक stress पड़ सकता है",
+        "बिजली का बिल कम आएगा",
+        "पानी अपने आप ठंडा होने लगेगा",
+        "कोई खतरा नहीं है, हमेशा सुरक्षित है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thermostat/automatic cut-out ना होने पर लगातार heating से पानी उबलकर overflow हो सकता है, तथा यदि पानी का स्तर कम हो जाए तो element dry होकर जल भी सकता है, इसलिए manual supervision आवश्यक है। बिजली का बिल घटने की बजाय बढ़ेगा, पानी स्वयं ठंडा नहीं होगा, और बिना निगरानी लंबे समय तक चालू रखना असुरक्षित है।"
+    },
+    {
+      "id": "u12_immersion_heater_q15",
+      "question": "Immersion heater के मुख्य भागों (parts) में सामान्यतः क्या-क्या शामिल होते हैं?",
+      "options": [
+        "Heating element (sheathed), insulation (MgO), metal sheath, hook/handle, power cord व plug",
+        "केवल एक साधारण wire और plug",
+        "Compressor और condenser",
+        "Magnetron और waveguide"
+      ],
+      "correctIndex": 0,
+      "explanation": "Immersion heater में मुख्यतः sheathed heating element, MgO insulation, बाहरी metal sheath (जो waterproof व heat conducting होती है), hook/handle assembly, तथा power cord/plug शामिल होते हैं। Compressor-condenser refrigerator/AC के भाग हैं, और magnetron-waveguide microwave oven के भाग हैं, ये immersion heater में नहीं होते।"
+    },
+    {
+      "id": "u12_immersion_heater_q16",
+      "question": "Immersion heater का power cord व plug किस विशेषता का होना चाहिए ताकि यह सुरक्षित रहे?",
+      "options": [
+        "पतला व बिना insulation वाला cord",
+        "उचित rating का, अच्छी तरह insulated flexible cord व three-pin (earthed) plug",
+        "बिना earth pin वाला दो-पिन plug",
+        "किसी भी घरेलू तार का टुकड़ा जोड़ देना पर्याप्त है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सुरक्षा के लिए heater के rated current को सहन करने योग्य, अच्छी तरह insulated flexible cord तथा three-pin (earthed) plug प्रयोग किया जाना चाहिए ताकि earthing के माध्यम से leakage current सुरक्षित रूप से निकल सके। पतला/बिना insulation वाला cord, दो-पिन (earth रहित) plug, या कोई भी साधारण तार जोड़ना असुरक्षित व अनुचित है।"
+    },
+    {
+      "id": "u12_immersion_heater_q17",
+      "question": "Immersion heater में element के अंदर हवा (air gap) या नमी (moisture) आ जाने से insulation resistance पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Insulation resistance बढ़ जाता है, कोई खतरा नहीं",
+        "Moisture insulation resistance को घटा देती है, जिससे leakage current व शॉर्ट सर्किट का खतरा बढ़ जाता है",
+        "Wattage automatically बढ़ जाती है",
+        "Heater की frequency बदल जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MgO insulation hygroscopic (नमी सोखने वाली) होती है; यदि sheath में moisture प्रवेश कर जाए तो insulation resistance काफी घट जाता है, जिससे current leakage व short circuit का खतरा बढ़ जाता है, इसीलिए heater को dry रखना व insulation testing (megger test) आवश्यक होता है। Resistance बढ़ना, wattage automatically बढ़ना, या frequency बदलना गलत परिणाम हैं।"
+    },
+    {
+      "id": "u12_immersion_heater_q18",
+      "question": "Immersion heater की insulation resistance जांचने के लिए सामान्यतः किस instrument का प्रयोग किया जाता है?",
+      "options": [
+        "Ammeter",
+        "Megger (Insulation Resistance Tester)",
+        "Wattmeter",
+        "Anemometer"
+      ],
+      "correctIndex": 1,
+      "explanation": "Megger एक high voltage DC लगाकर insulation resistance (megohms में) मापने वाला instrument है, जिससे element व sheath के बीच insulation की स्थिति (leakage की संभावना) जांची जाती है। Ammeter current मापता है, Wattmeter power मापता है, और Anemometer हवा की गति मापता है — ये insulation testing के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u12_immersion_heater_q19",
+      "question": "यदि immersion heater चालू करने पर MCB/fuse बार-बार trip हो जाए, तो सबसे संभावित कारण क्या हो सकता है?",
+      "options": [
+        "पानी बहुत ठंडा है",
+        "Element या cord में insulation fail होकर short circuit/earth fault होना",
+        "Heater का रंग गहरा है",
+        "बाल्टी plastic की है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MCB/fuse का बार-बार trip होना सामान्यतः element या connecting wiring में insulation fail होने के कारण short circuit या earth fault current बहने से होता है, जिसे insulation testing व element replacement से ठीक किया जाता है। पानी का तापमान, heater का रंग, या बाल्टी का material विद्युत सुरक्षा उपकरण के trip होने से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u12_immersion_heater_q20",
+      "question": "Immersion heater को Residual Current Device (RCD/ELCB) के साथ प्रयोग करने की सलाह क्यों दी जाती है?",
+      "options": [
+        "ताकि पानी जल्दी गरम हो",
+        "ताकि यदि insulation fail होकर करंट leak हो तो RCD तुरंत supply काटकर उपयोगकर्ता को shock से बचाए",
+        "ताकि wattage बढ़े",
+        "ताकि heater की life अनंत हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूंकि heater सीधे पानी में डूबा होता है और insulation fail होने की संभावना रहती है, RCD/ELCB किसी भी leakage current को milliseconds में detect करके supply काट देता है, जिससे गंभीर electric shock से बचाव होता है। यह पानी जल्दी गरम नहीं करता, wattage नहीं बढ़ाता, और heater की life अनंत नहीं करता — यह केवल एक safety device है।"
+    },
+    {
+      "id": "u12_immersion_heater_q21",
+      "question": "Immersion heater में convection currents पानी को गरम करने में किस प्रकार सहायता करती हैं?",
+      "options": [
+        "गरम पानी हल्का होकर ऊपर उठता है और ठंडा पानी नीचे आता है, जिससे पूरे बर्तन में पानी समान रूप से गरम होता है",
+        "Convection से पानी ठंडा रहता है",
+        "Convection केवल हवा में होता है, पानी में नहीं",
+        "Convection से current की खपत शून्य हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Element के पास गरम पानी का density कम होने से वह ऊपर उठता है और ठंडा (अधिक density वाला) पानी नीचे आता है, इस निरंतर चक्र (convection current) से पूरा पानी धीरे-धीरे समान रूप से गरम हो जाता है। Convection पानी को ठंडा नहीं रखता, यह liquids में भी होता है (केवल हवा में नहीं), और इससे current की खपत शून्य नहीं होती।"
+    },
+    {
+      "id": "u12_immersion_heater_q22",
+      "question": "Immersion heater को धातु की बाल्टी में प्रयोग करते समय अतिरिक्त सावधानी क्यों बरतनी चाहिए?",
+      "options": [
+        "क्योंकि इससे heater की wattage कम हो जाती है",
+        "क्योंकि यदि insulation fail हो तो leakage current धातु की बाल्टी में भी आ सकता है, जिससे शॉक का खतरा बढ़ जाता है",
+        "क्योंकि धातु की बाल्टी में पानी गरम नहीं होता",
+        "क्योंकि इससे thermostat काम करना बंद कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metal bucket विद्युत का conductor होती है, इसलिए यदि heater की insulation fail हो जाए तो leakage current बाल्टी की धातु body में भी पहुंच सकता है, जिससे बर्तन को छूने वाले व्यक्ति को गंभीर shock लग सकता है — इसीलिए plastic bucket व proper earthing की सलाह दी जाती है। Wattage, पानी गरम ना होना, या thermostat बंद होना इस सावधानी का कारण नहीं है।"
+    },
+    {
+      "id": "u12_immersion_heater_q23",
+      "question": "Immersion heater में element की length/coil design किस प्रकार wattage को प्रभावित करती है?",
+      "options": [
+        "Length का wattage से कोई संबंध नहीं",
+        "अधिक length (उच्च resistance) पर स्थिर voltage पर कम current व कम power मिलेगी, जबकि कम length (कम resistance) पर अधिक current व power मिलेगी",
+        "Length बढ़ाने से हमेशा wattage भी बढ़ती है चाहे resistance कुछ भी हो",
+        "Length केवल element की दिखावट के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "स्थिर cross-section के लिए wire की length बढ़ने पर resistance बढ़ता है, और स्थिर voltage पर P = V²/R के अनुसार अधिक resistance से कम power मिलती है, इसलिए wattage को desired range में रखने के लिए element की length व thickness सावधानी से design की जाती है। Options A, C और D भौतिक सिद्धांत की दृष्टि से गलत हैं।"
+    },
+    {
+      "id": "u12_immersion_heater_q24",
+      "question": "यदि immersion heater से पानी गरम होने में सामान्य से अधिक समय लग रहा हो जबकि voltage व wattage सही है, तो संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Element पर scale/deposit जमने से heat transfer efficiency कम हो गई है, या element आंशिक रूप से खराब हो गया है",
+        "पानी की मात्रा कम है",
+        "बाल्टी नई है",
+        "प्लग नया लगाया गया है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Scale/mineral deposit जमने से heat transfer की efficiency घट जाती है, या element के कुछ हिस्सों में internal damage होने से actual heating output कम हो जाता है, जिससे पानी गरम होने में अधिक समय लगता है। पानी की कम मात्रा से heating तेज़ होनी चाहिए (धीमी नहीं), और नई बाल्टी या नया plug होने से heating speed धीमी नहीं होती।"
+    },
+    {
+      "id": "u12_immersion_heater_q25",
+      "question": "Immersion heater की heating wire किस प्रकार coil (spiral) आकार में बनाई जाती है?",
+      "options": [
+        "सीधी लाइन में, बिना किसी मोड़ के",
+        "Spiral/coil आकार में ताकि सीमित स्थान में अधिक wire length समायोजित हो सके और अधिक surface area से heat transfer हो सके",
+        "केवल सजावट के लिए",
+        "ताकि wire की resistance शून्य हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Coil/spiral आकार देने से सीमित sheath length में अधिक wire समायोजित हो जाती है, जिससे desired resistance (wattage) प्राप्त होती है और साथ ही अधिक surface area heat transfer को भी बेहतर बनाती है। सीधी लाइन में इतनी length समायोजित करना कठिन होगा, coil केवल सजावट के लिए नहीं होती, और इससे resistance शून्य नहीं होता — शून्य resistance से तो कोई heat ही उत्पन्न नहीं होगी।"
+    },
+    {
+      "id": "u12_immersion_heater_q26",
+      "question": "Immersion heater के regular maintenance में क्या सावधानियां शामिल होनी चाहिए?",
+      "options": [
+        "Element/sheath पर scale की सफाई, insulation testing, cord/plug की जांच और earthing सुनिश्चित करना",
+        "केवल बाहरी रंग की पॉलिश करना",
+        "हर सप्ताह नया heater खरीदना",
+        "केवल box में रखना और कभी उपयोग ना करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Regular maintenance में scale की सफाई, insulation resistance testing (megger से), cord/plug की स्थिति जांचना, तथा earthing की निरंतरता सुनिश्चित करना शामिल है ताकि heater सुरक्षित व कुशलता से कार्य करे। केवल रंग पॉलिश करना, बार-बार नया खरीदना, या उपयोग ना करना उचित maintenance नहीं है।"
+    },
+    {
+      "id": "u12_immersion_heater_q27",
+      "question": "Immersion heater में element sheath के weld/joint की quality क्यों महत्वपूर्ण होती है?",
+      "options": [
+        "क्योंकि खराब weld से पानी sheath के अंदर प्रवेश कर सकता है और insulation खराब कर सकता है",
+        "क्योंकि इससे केवल दिखावट प्रभावित होती है",
+        "क्योंकि weld quality से wattage का कोई संबंध नहीं",
+        "क्योंकि यह केवल शोर (noise) कम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sheath के sealed ends पर weld/joint की quality खराब होने पर पानी अंदर प्रवेश करके MgO insulation को नम कर सकता है, जिससे insulation resistance घट जाती है और short circuit/leakage का खतरा बढ़ जाता है, इसलिए proper sealing अनिवार्य है। यह केवल दिखावट, wattage, या शोर से संबंधित नहीं बल्कि सीधे safety से जुड़ा है।"
+    },
+    {
+      "id": "u12_immersion_heater_q28",
+      "question": "Immersion heater को प्रयोग के बाद पानी से निकालने से पहले सबसे पहले क्या करना चाहिए?",
+      "options": [
+        "Supply को बंद (switch off) करना",
+        "सीधे पानी से बाहर निकाल लेना जबकि वह चालू हो",
+        "बाल्टी को उलट देना",
+        "Plug को गीले हाथों से पकड़ना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सुरक्षा की दृष्टि से सबसे पहले heater की supply switch off करनी चाहिए, उसके बाद ही उसे पानी से बाहर निकालना चाहिए, ताकि element हवा में चालू अवस्था में ना रहकर जले या shock का खतरा ना बने। Heater को चालू अवस्था में पानी से निकालना बेहद खतरनाक है, बाल्टी उलटना अनुचित तरीका है, और गीले हाथों से plug पकड़ना shock का सीधा खतरा है।"
+    },
+    {
+      "id": "u12_immersion_heater_q29",
+      "question": "Immersion heater और geyser (storage water heater) में मुख्य संरचनात्मक अंतर क्या है?",
+      "options": [
+        "Immersion heater एक portable/simple element है जिसे सीधे किसी भी बर्तन के पानी में डुबोया जाता है, जबकि geyser एक insulated tank के अंदर स्थायी रूप से fitted heating element व thermostat के साथ होता है",
+        "दोनों बिल्कुल एक जैसे होते हैं और इनमें कोई अंतर नहीं है",
+        "Immersion heater में हमेशा compressor होता है",
+        "Geyser में कभी element नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Immersion heater एक सरल, portable heating element है जिसे किसी भी बर्तन/बाल्टी में डुबोकर प्रयोग किया जाता है, जबकि geyser एक insulated storage tank के भीतर स्थायी रूप से fitted heating element, thermostat व safety valve के साथ आता है जो पानी को tank में ही गरम व storage करता है। दोनों में स्पष्ट अंतर है, immersion heater में compressor नहीं होता (यह refrigeration का भाग है), और geyser में तो heating element होना अनिवार्य है।"
+    },
+    {
+      "id": "u12_immersion_heater_q30",
+      "question": "Immersion heater के उपयोग के दौरान सबसे महत्वपूर्ण safety rule क्या है?",
+      "options": [
+        "हमेशा element को पूरी तरह पानी में डुबोकर रखना, गीले हाथों से ना छूना, और चालू अवस्था में पानी में हाथ ना डालना",
+        "हमेशा heater को धातु की बाल्टी में ही प्रयोग करना",
+        "Heater को बिना supervision के पूरी रात चालू छोड़ना",
+        "Thermostat को हमेशा हटा देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सबसे महत्वपूर्ण safety rule यह है कि element हमेशा पूरी तरह पानी में डूबा रहे (dry-run से बचाव), गीले हाथों से heater/plug ना छुआ जाए, और चालू अवस्था में पानी में हाथ बिल्कुल ना डाला जाए ताकि shock से बचा जा सके। धातु की बाल्टी में प्रयोग जोखिम बढ़ाता है, बिना निगरानी रात भर चालू रखना खतरनाक है, और thermostat हटाना सुरक्षा को और कम करेगा।"
+    }
+  ]
+}

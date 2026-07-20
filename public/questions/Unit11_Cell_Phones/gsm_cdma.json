@@ -1,0 +1,368 @@
+{
+  "unit": "unit11",
+  "unitName": "Cell Phones",
+  "topic": "gsm_cdma",
+  "topicName": "GSM vs CDMA - TDMA/FDMA, Features",
+  "questions": [
+    {
+      "id": "u11_gsm_cdma_q1",
+      "question": "GSM (Global System for Mobile Communications) मुख्यतः किस multiple access technique पर आधारित है?",
+      "options": [
+        "केवल FDMA",
+        "TDMA के साथ FDMA का combination",
+        "केवल CDMA",
+        "केवल OFDMA"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM एक hybrid access technique उपयोग करता है जिसमें पहले frequency को channels में बांटा जाता है (FDMA) और फिर हर frequency channel को time slots में बांटकर कई users को allot किया जाता है (TDMA)। केवल FDMA, केवल CDMA और OFDMA GSM की core access technique नहीं हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q2",
+      "question": "CDMA (Code Division Multiple Access) में users को आपस में कैसे अलग किया जाता है?",
+      "options": [
+        "अलग-अलग time slots देकर",
+        "अलग-अलग frequency channels देकर",
+        "प्रत्येक user को एक unique spreading code (PN code) देकर, जबकि सभी एक ही समय व frequency share करते हैं",
+        "अलग-अलग SIM card रंग देकर"
+      ],
+      "correctIndex": 2,
+      "explanation": "CDMA में सभी users एक ही समय पर एक ही frequency band साझा करते हैं, परंतु प्रत्येक user को एक unique spreading/PN code दिया जाता है जिससे receiver केवल अपने code से मिलते-जुलते signal को decode कर पाता है। Time slots और frequency channels देना क्रमशः TDMA और FDMA की विशेषता है, SIM रंग की कोई तकनीकी भूमिका नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q3",
+      "question": "TDMA (Time Division Multiple Access) का मूल सिद्धांत क्या है?",
+      "options": [
+        "एक ही frequency channel को अलग-अलग time slots में बांटकर कई users को sequence में सेवा देना",
+        "हर user को एक अलग frequency channel permanently देना",
+        "हर user को एक unique code assign करना",
+        "सभी users को एक साथ unlimited bandwidth देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "TDMA में एक ही carrier frequency को छोटे-छोटे समय अंतरालों (time slots) में बांटा जाता है और प्रत्येक user को बारी-बारी एक निश्चित time slot allot किया जाता है, जिससे multiple users एक ही frequency share कर पाते हैं। Permanent frequency देना FDMA है, unique code देना CDMA है, unlimited bandwidth देना अव्यवहारिक है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q4",
+      "question": "FDMA (Frequency Division Multiple Access) में users को सेवा कैसे दी जाती है?",
+      "options": [
+        "प्रत्येक user को पूरे समय के लिए एक अलग, dedicated frequency channel allot करके",
+        "प्रत्येक user को एक निश्चित time slot देकर",
+        "प्रत्येक user को एक unique spreading code देकर",
+        "सभी users को random समय पर एक साझा frequency देकर"
+      ],
+      "correctIndex": 0,
+      "explanation": "FDMA में उपलब्ध total bandwidth को छोटे-छोटे frequency channels में बांटा जाता है और हर user को पूरे communication duration के लिए एक dedicated frequency channel दिया जाता है। Time slot देना TDMA है और spreading code देना CDMA है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q5",
+      "question": "GSM और CDMA में से कौन सी technology 'soft hand-off' के लिए जानी जाती है?",
+      "options": [
+        "GSM",
+        "CDMA",
+        "दोनों में soft hand-off होता है",
+        "दोनों में hand-off होता ही नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "CDMA systems में soft hand-off feature होता है जिसमें mobile temporarily दो base stations से एक साथ जुड़ा रहता है, जिससे call drop की संभावना कम हो जाती है। GSM आमतौर पर hard hand-off (break-before-make) उपयोग करता है, इसलिए Options A, C और D गलत हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q6",
+      "question": "GSM में voice signal की digitization के लिए मुख्यतः कौन सा speech coding standard उपयोग होता है?",
+      "options": [
+        "RSA speech coding",
+        "RLE (Run Length Encoding)",
+        "RPE-LTP (Regular Pulse Excitation - Long Term Prediction) आधारित speech codec",
+        "JPEG compression"
+      ],
+      "correctIndex": 2,
+      "explanation": "GSM में voice signal को digitize और compress करने के लिए RPE-LTP आधारित full-rate speech codec उपयोग होता है, जो कम bit rate पर भी अच्छी voice quality देता है। RSA एक cryptographic algorithm है, RLE और JPEG image/data compression से संबंधित हैं, voice codec नहीं हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q7",
+      "question": "CDMA में उपयोग होने वाले PN (Pseudo-random Noise) code का क्या महत्व है?",
+      "options": [
+        "यह केवल battery की life बढ़ाता है",
+        "यह हर user के signal को unique तरीके से spread करता है जिससे receiver सही user का signal अलग पहचान सके",
+        "यह केवल SIM card को lock करता है",
+        "यह केवल camera resolution बढ़ाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PN code एक unique digital sequence होता है जिससे प्रत्येक user का signal spread spectrum में spread किया जाता है, जिससे receiver, transmitter के समान PN code का उपयोग करके सही user का data अलग निकाल पाता है और अन्य users के signals noise जैसे प्रतीत होते हैं। Battery life, SIM lock और camera resolution से PN code का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q8",
+      "question": "GSM में 'burst' शब्द से क्या तात्पर्य है?",
+      "options": [
+        "battery का अचानक discharge होना",
+        "एक निश्चित time slot में transmit किया जाने वाला data का packet",
+        "SIM card का फट जाना",
+        "camera flash का अत्यधिक तेज चमकना"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM में burst एक निश्चित duration के time slot के अंदर transmit किए जाने वाले data (training sequence, guard period सहित) की एक इकाई होती है, जो TDMA frame structure का हिस्सा है। Battery discharge, SIM फटना और camera flash burst शब्द के तकनीकी अर्थ से असंबंधित हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q9",
+      "question": "CDMA system की तुलना में GSM system का एक प्रमुख लाभ क्या माना जाता है?",
+      "options": [
+        "GSM में battery कभी discharge नहीं होती",
+        "GSM का network infrastructure worldwide अधिक व्यापक रूप से standardized और interoperable है",
+        "GSM में SIM card की जरूरत नहीं होती",
+        "GSM में कोई frequency allocation जरूरी नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM एक worldwide standard के रूप में विकसित हुआ जिससे इसका infrastructure अधिक widespread है और अलग-अलग देशों में roaming/interoperability आसान है। Battery discharge न होना और frequency allocation की जरूरत न होना असंभव तथ्य हैं, और GSM में SIM card होना आवश्यक फीचर है, कमी नहीं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q10",
+      "question": "CDMA system की तुलना में एक प्रमुख विशेषता के रूप में क्या बताया जाता है?",
+      "options": [
+        "CDMA में सभी users को अलग frequency channel देना अनिवार्य है",
+        "CDMA में soft capacity limit होती है यानी अधिक users जुड़ने पर quality धीरे-धीरे degrade होती है (hard block नहीं)",
+        "CDMA में कोई spreading code उपयोग नहीं होता",
+        "CDMA केवल wired telephones के लिए बनाई गई थी"
+      ],
+      "correctIndex": 1,
+      "explanation": "CDMA में fixed number of channels की जगह capacity 'soft' होती है — जैसे-जैसे users बढ़ते हैं, interference बढ़ने से quality धीरे-धीरे घटती है बजाय अचानक call blocking के। अलग frequency channel देना FDMA जैसा है, spreading code CDMA की core विशेषता है (न कि अनुपस्थित), और CDMA मूलतः wireless mobile communication के लिए विकसित हुई थी।"
+    },
+    {
+      "id": "u11_gsm_cdma_q11",
+      "question": "GSM network में authentication के लिए SIM card में कौन सी key store होती है?",
+      "options": [
+        "Public key infrastructure (PKI) certificate",
+        "Ki (individual subscriber authentication key)",
+        "WiFi password",
+        "Bluetooth pairing code"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM में हर subscriber के SIM card में एक unique secret authentication key Ki store होती है, जिसे network की AuC (Authentication Centre) में भी store की गई value से match करके subscriber को authenticate किया जाता है। PKI certificate, WiFi password और Bluetooth pairing code का GSM authentication से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q12",
+      "question": "TDMA frame में कई time slots होते हैं; इनमें से एक slot में केवल किसी एक user का ही data क्यों transmit होता है?",
+      "options": [
+        "क्योंकि उस समय पूरे network की बिजली बंद रहती है",
+        "क्योंकि एक frequency channel को समय के अनुसार बांटकर हर user को उसकी बारी में एक निश्चित slot allot किया जाता है",
+        "क्योंकि SIM card एक बार में केवल एक slot ही support करता है",
+        "क्योंकि camera उस समय signal को block कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "TDMA का मूल सिद्धांत ही यह है कि एक frequency channel को समय domain में अलग-अलग slots में बांटा जाता है ताकि हर user बारी-बारी अपने allotted slot में transmit/receive करे, जिससे बिना interference के multiple users एक channel share कर सकें। बिजली बंद होना, SIM limitation और camera द्वारा block करना गलत व असंबद्ध कारण हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q13",
+      "question": "GSM के एक TDMA frame में सामान्यतः कितने time slots होते हैं?",
+      "options": [
+        "2 slots",
+        "4 slots",
+        "8 slots",
+        "16 slots"
+      ],
+      "correctIndex": 2,
+      "explanation": "GSM standard में एक TDMA frame में 8 time slots होते हैं, जिनमें से प्रत्येक slot अलग-अलग user को allot किया जा सकता है, जिससे एक ही carrier frequency पर 8 users को service दी जा सकती है। 2, 4 और 16 slots GSM के actual frame structure से मेल नहीं खाते।"
+    },
+    {
+      "id": "u11_gsm_cdma_q14",
+      "question": "CDMA में 'near-far problem' किस स्थिति को दर्शाता है?",
+      "options": [
+        "जब antenna की height ज्यादा हो और मोबाइल दूर हो",
+        "जब base station के पास स्थित mobile का strong signal दूर स्थित mobile के weak signal को dominate करके interference पैदा करता है",
+        "जब SIM card पास और दूर दोनों जगह काम करे",
+        "जब camera का focus near और far दोनों settings में गलत हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Near-far problem CDMA में तब होता है जब base station के पास स्थित mobile का transmit power दूर स्थित mobile के signal की तुलना में बहुत अधिक strong होता है, जिससे receiver में weak signal दब जाता है; इसे हल करने के लिए power control उपयोग होता है। बाकी options वास्तविक near-far problem की परिभाषा नहीं दर्शाते।"
+    },
+    {
+      "id": "u11_gsm_cdma_q15",
+      "question": "GSM में power control का उपयोग किस उद्देश्य से किया जाता है?",
+      "options": [
+        "मोबाइल फोन की battery को हमेशा 100% रखने के लिए",
+        "Mobile और base station के transmit power को आवश्यकतानुसार adjust करके interference कम करना व battery बचाना",
+        "SIM card की memory बढ़ाने के लिए",
+        "camera की flash intensity control करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power control mechanism, signal quality की जरूरत के अनुसार transmit power को adjust करता है ताकि अनावश्यक high power से होने वाला interference कम हो और mobile की battery भी बचे। Battery को 100% रखना, SIM memory बढ़ाना और flash intensity control power control का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q16",
+      "question": "GSM system में किस frequency band का उपयोग भारत में सामान्यतः किया जाता रहा है (मूल GSM बैंड्स में से एक)?",
+      "options": [
+        "900 MHz और 1800 MHz",
+        "केवल 2.4 GHz Wi-Fi band",
+        "केवल 5 GHz Wi-Fi band",
+        "केवल 60 GHz mmWave band"
+      ],
+      "correctIndex": 0,
+      "explanation": "भारत सहित कई देशों में GSM सेवाओं के लिए मुख्यतः 900 MHz और 1800 MHz frequency bands उपयोग किए जाते रहे हैं। 2.4 GHz और 5 GHz bands Wi-Fi/Bluetooth के लिए उपयोग होते हैं, और 60 GHz mmWave नई high-speed short-range technologies में उपयोग होता है, GSM का मूल band नहीं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q17",
+      "question": "GSM system architecture में HLR (Home Location Register) का क्या कार्य है?",
+      "options": [
+        "यह केवल camera की photos store करता है",
+        "यह subscriber की स्थायी जानकारी (जैसे services subscribed, current location area) centrally store करता है",
+        "यह केवल battery चार्जिंग रिकॉर्ड रखता है",
+        "यह केवल SMS text edit करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "HLR एक central database है जिसमें subscriber की permanent जानकारी (subscribed services, authentication info) तथा उसकी वर्तमान location area की जानकारी store रहती है, जो call routing के लिए उपयोगी है। Photo storage, charging record और SMS editing HLR का कार्य नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q18",
+      "question": "GSM और CDMA की तुलना में, किस system में voice/data दोनों users के बीच spectrum को codes के आधार पर share किया जाता है, न कि time या frequency के आधार पर?",
+      "options": [
+        "GSM",
+        "CDMA",
+        "दोनों time के आधार पर share करते हैं",
+        "कोई भी codes का उपयोग नहीं करता"
+      ],
+      "correctIndex": 1,
+      "explanation": "CDMA में spectrum sharing का आधार unique spreading codes होते हैं, जबकि GSM time (TDMA) व frequency (FDMA) के combination पर आधारित है। इसलिए GSM, और 'दोनों time-based' तथा 'कोई भी codes उपयोग नहीं करता' विकल्प गलत हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q19",
+      "question": "CDMA आधारित systems में spread spectrum technique का मुख्य लाभ क्या है?",
+      "options": [
+        "यह signal की bandwidth को बहुत कम कर देता है",
+        "यह signal को wideband में spread करके interference व jamming के प्रति अधिक resistant बनाता है, तथा multiple users को एक साथ spectrum share करने देता है",
+        "यह केवल SIM card की price घटाता है",
+        "यह केवल camera की image quality बढ़ाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Spread spectrum technique signal को उसकी original bandwidth से अधिक wide bandwidth में spread करती है, जिससे narrow-band interference का प्रभाव कम होता है और कई users एक साथ codes की मदद से spectrum share कर पाते हैं। Bandwidth कम करना गलत तथ्य है, SIM price और camera quality से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q20",
+      "question": "GSM में SMS (Short Message Service) किस signalling channel के माध्यम से भेजा जाता है?",
+      "options": [
+        "मुख्य voice traffic channel के साथ मिलाकर",
+        "एक अलग control/signalling channel के माध्यम से, जिससे यह voice call के दौरान भी भेजा जा सकता है",
+        "केवल जब मोबाइल off हो तब",
+        "केवल camera द्वारा capture किए गए photos के साथ"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM में SMS एक अलग control/signalling channel का उपयोग करके भेजा जाता है, इसीलिए voice call चलने के दौरान भी SMS भेजना/प्राप्त करना संभव होता है। Voice traffic channel में मिलाना, फोन off रहते हुए भेजना, और photos के साथ भेजना SMS transmission के actual तरीके से मेल नहीं खाता।"
+    },
+    {
+      "id": "u11_gsm_cdma_q21",
+      "question": "GSM की तुलना में CDMA में handset और network के बीच synchronization की आवश्यकता किस लिए विशेष रूप से महत्वपूर्ण होती है?",
+      "options": [
+        "क्योंकि सभी handsets को PN code sequence को सही समय पर align करना जरूरी होता है ताकि सही de-spreading हो सके",
+        "क्योंकि handset को केवल battery चार्ज करने के लिए synchronization चाहिए",
+        "क्योंकि SIM card का रंग match करना जरूरी होता है",
+        "क्योंकि camera का shutter समय पर खुलना जरूरी होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "CDMA में सही तरीके से de-spreading (मूल signal वापस पाने) के लिए handset और network के बीच PN code timing का सटीक synchronization आवश्यक होता है, अन्यथा receiver सही signal को अलग नहीं कर पाएगा। Battery charging, SIM रंग और camera shutter timing से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q22",
+      "question": "निम्नलिखित में से कौन सा कथन GSM की एक विशेषता (feature) को सही ढंग से दर्शाता है?",
+      "options": [
+        "GSM में voice signal को बिना digitize किए सीधे analog रूप में भेजा जाता है",
+        "GSM digital cellular technology है जिसमें voice को digitize करके TDMA slots में transmit किया जाता है",
+        "GSM केवल satellite communication के लिए बनाई गई है",
+        "GSM में SIM card का उपयोग वैकल्पिक (optional) है"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM एक digital cellular standard है जिसमें voice को digitize करके compress किया जाता है और TDMA आधारित time slots में transmit किया जाता है। Analog transmission, केवल satellite के लिए होना और SIM card वैकल्पिक होना — ये सभी GSM की वास्तविक विशेषताओं के विपरीत हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q23",
+      "question": "CDMA-based handset में 'Walsh codes' का उपयोग मुख्यतः किस purpose के लिए किया जाता है?\n\n",
+      "options": [
+        "SIM card की physical size तय करने के लिए",
+        "Orthogonal codes के रूप में उपयोग करके अलग-अलग channels/users के बीच signal separation सुनिश्चित करने के लिए",
+        "केवल camera lens की coating के लिए",
+        "केवल battery की chemistry तय करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Walsh codes एक set of orthogonal codes होते हैं जिनका उपयोग CDMA (विशेषकर IS-95/CDMA2000 जैसे systems) में अलग-अलग channels या users के signals को आपस में अलग व non-interfering रखने के लिए किया जाता है। SIM size, camera lens coating और battery chemistry से Walsh codes का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q24",
+      "question": "GSM और CDMA दोनों में समान रूप से पाया जाने वाला एक common feature क्या है?",
+      "options": [
+        "दोनों में voice communication के लिए मोबाइल को digital cellular network से जोड़ना आवश्यक होता है",
+        "दोनों में SIM card का design बिल्कुल एक जैसा होता है",
+        "दोनों में केवल analog transmission होता है",
+        "दोनों में frequency reuse का कोई concept नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "दोनों technologies digital cellular networks हैं जिनमें mobile handset को base station के माध्यम से network से जुड़ना जरूरी होता है, चाहे access method (TDMA/FDMA बनाम CDMA) अलग हो। SIM design में अंतर होता है (CDMA में परंपरागत रूप से हमेशा SIM जरूरी नहीं था), analog transmission गलत है, और frequency reuse concept दोनों में मौजूद रहता है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q25",
+      "question": "CDMA में 'Rake receiver' का उपयोग किस समस्या को हल करने के लिए किया जाता है?",
+      "options": [
+        "SIM card की expiry समस्या हल करने के लिए",
+        "Multipath propagation के कारण अलग-अलग समय पर पहुंचने वाले signal components को combine करके signal quality सुधारने के लिए",
+        "camera की low-light photography सुधारने के लिए",
+        "battery का तेजी से discharge होना रोकने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rake receiver एक विशेष receiver structure है जो multipath के कारण अलग-अलग delay से पहुंचने वाले signal के कई versions को अलग-अलग 'fingers' से पकड़कर संयोजित (combine) करता है, जिससे overall signal-to-noise ratio सुधरती है। SIM expiry, low-light photography और battery discharge से Rake receiver का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q26",
+      "question": "GSM में एक ही frequency channel पर 8 users को service देने के लिए किस technique का उपयोग किया जाता है?",
+      "options": [
+        "केवल FDMA",
+        "TDMA (time slots में बांटकर)",
+        "केवल CDMA (codes के आधार पर)",
+        "केवल SDMA (space division)"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM एक ही carrier frequency को 8 time slots में बांटकर TDMA के माध्यम से 8 अलग-अलग users को service देता है। केवल FDMA में हर user को अलग frequency चाहिए होगी (एक frequency पर 8 users संभव नहीं), CDMA codes आधारित है और SDMA स्थान (space) आधारित तकनीक है, GSM की core तकनीक नहीं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q27",
+      "question": "किसी cellular technology में 'capacity' शब्द से सामान्यतः क्या तात्पर्य होता है?",
+      "options": [
+        "मोबाइल की battery की mAh रेटिंग",
+        "एक cell/system में एक साथ सेवा दिए जा सकने वाले अधिकतम users/calls की संख्या",
+        "मोबाइल की internal storage (GB)",
+        "camera की megapixel रेटिंग"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacity शब्द cellular context में यह दर्शाता है कि एक cell या पूरा system एक साथ अधिकतम कितने users/calls को satisfactorily service दे सकता है, जो GSM और CDMA की तुलना में एक महत्वपूर्ण parameter है। Battery mAh, storage GB और camera megapixel इस technical term से असंबंधित हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q28",
+      "question": "GSM के मुकाबले CDMA में voice quality पर 'variable rate vocoder' का क्या प्रभाव पड़ता है?",
+      "options": [
+        "यह हमेशा voice quality को खराब करता है",
+        "यह voice activity के अनुसार data rate को adjust करके bandwidth बचाता है और silence periods में कम bits भेजता है",
+        "यह केवल SIM card को disable करता है",
+        "यह केवल camera की flash बंद करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Variable rate vocoder बातचीत में silence या कम activity के दौरान कम data rate उपयोग करता है जिससे bandwidth व capacity efficiently उपयोग होती है, जबकि active speech के दौरान higher rate उपयोग होती है। Voice quality हमेशा खराब होना, SIM disable करना और camera flash बंद करना गलत तथ्य हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q29",
+      "question": "GSM और CDMA में से किसमें traditionally subscriber identity module (SIM) card mandatory रूप से आवश्यक रहा है?",
+      "options": [
+        "GSM में",
+        "CDMA में",
+        "दोनों में समान रूप से कभी SIM आवश्यक नहीं रहा",
+        "किसी में भी SIM की अवधारणा नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "GSM standard में SIM card subscriber identity और authentication के लिए mandatory रहा है, जबकि traditional CDMA handsets (जैसे पुराने CDMA-only phones) में subscriber जानकारी अक्सर handset में ही (ESN/MEID के जरिए) embedded रहती थी और अलग हटाने योग्य SIM जरूरी नहीं होता था। Options C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q30",
+      "question": "GSM और CDMA की तुलना करते समय, 'spectral efficiency' शब्द का क्या अर्थ है?",
+      "options": [
+        "मोबाइल की screen की brightness efficiency",
+        "दिए गए frequency spectrum में अधिकतम संभव data/voice traffic को efficiently accommodate करने की क्षमता",
+        "battery की charging efficiency",
+        "camera lens की light-gathering efficiency"
+      ],
+      "correctIndex": 1,
+      "explanation": "Spectral efficiency यह दर्शाती है कि दी गई सीमित frequency bandwidth में किसी system द्वारा कितना अधिक useful data/voice traffic (users) को efficiently handle किया जा सकता है, जो GSM व CDMA जैसी technologies की तुलना में एक अहम parameter है। Screen brightness, battery charging और camera lens efficiency से इस technical term का कोई संबंध नहीं है।"
+    }
+  ]
+}

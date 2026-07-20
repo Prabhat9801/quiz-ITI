@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "memory_io_8051",
+  "topicName": "8051 Memory Organization & I/O Ports P0-P3",
+  "questions": [
+    {
+      "id": "u2_memory_io_8051_q1",
+      "question": "मूल 8051 microcontroller में on-chip program ROM का size कितना होता है?",
+      "options": ["2 KB", "4 KB", "8 KB", "64 KB"],
+      "correctIndex": 1,
+      "explanation": "मूल 8051 में 4 KB on-chip program ROM (address 0000H-0FFFH) होती है, इसलिए option B सही है। 8 KB ROM 8052 में होती है, 64 KB तो external code memory की अधिकतम limit है, और 2 KB किसी standard 8051 variant का on-chip ROM नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q2",
+      "question": "मूल 8051 में on-chip internal data RAM का कुल size कितना होता है?",
+      "options": ["64 bytes", "128 bytes", "256 bytes", "4 KB"],
+      "correctIndex": 1,
+      "explanation": "मूल 8051 में 128 bytes internal RAM (address 00H-7FH) होती है, इसलिए option B सही है। 256 bytes internal RAM 8052 में मिलती है, 4 KB तो ROM का size है RAM का नहीं, और 64 bytes गलत मान है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q3",
+      "question": "8051 architecture किस प्रकार की memory organization पर आधारित है जहाँ program और data memory अलग-अलग होती हैं?",
+      "options": ["Von Neumann architecture", "Harvard architecture", "Superscalar architecture", "Stack based architecture"],
+      "correctIndex": 1,
+      "explanation": "8051 Harvard architecture use करता है जिसमें program memory (code) और data memory के लिए अलग address space तथा अलग control signals होते हैं, इसलिए option B सही है। Von Neumann में single common memory space होता है, superscalar और stack based architecture memory separation के concept नहीं हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q4",
+      "question": "8051 external program memory (code) और external data memory दोनों की अधिकतम capacity अलग-अलग कितनी हो सकती है?",
+      "options": ["32 KB code + 32 KB data", "64 KB code + 64 KB data", "16 KB code + 16 KB data", "64 KB code + 128 KB data"],
+      "correctIndex": 1,
+      "explanation": "8051 का 16-bit address bus (DPTR) होने के कारण अधिकतम 64 KB external code और अलग से 64 KB external data memory access कर सकता है, इसलिए option B सही है। बाकी options में दिए गए limits 16-bit addressing की 64 KB सीमा से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_memory_io_8051_q5",
+      "question": "8051 में EA (External Access) pin को GND (logic 0) से connect करने पर microcontroller किस memory से program execute करता है?",
+      "options": ["केवल internal ROM से", "केवल external program memory से", "internal RAM से", "दोनों internal और external एक साथ से"],
+      "correctIndex": 1,
+      "explanation": "जब EA pin को GND (0) पर रखा जाता है तो 8051 पूरे program को केवल external program memory से fetch करता है, इसलिए option B सही है। EA=Vcc (1) पर पहले internal ROM फिर external उपयोग होता है; internal RAM program execution के लिए नहीं होती, इसलिए बाकी options गलत हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q6",
+      "question": "जिस 8051 chip में on-chip ROM ही नहीं होती (जैसे 8031), उसके सही operation के लिए EA pin को कैसे रखना ज़रूरी है?",
+      "options": ["Vcc से जोड़ना", "GND से जोड़ना", "खुला (floating) छोड़ना", "किसी port pin से जोड़ना"],
+      "correctIndex": 1,
+      "explanation": "ROM-less chip (8031) में कोई internal program memory नहीं होती, इसलिए EA को GND से जोड़कर execution external memory पर force करना अनिवार्य है, अतः option B सही है। EA=Vcc तब internal ROM ढूँढेगा जो मौजूद नहीं; floating या port pin से जोड़ना अनिश्चित व्यवहार देगा।"
+    },
+    {
+      "id": "u2_memory_io_8051_q7",
+      "question": "8051 में external memory access के दौरान Port 0 (P0) का मुख्य कार्य क्या होता है?",
+      "options": ["केवल high address byte भेजना", "multiplexed low address byte (A0-A7) और data (D0-D7) भेजना", "केवल control signals भेजना", "serial data transmit करना"],
+      "correctIndex": 1,
+      "explanation": "External memory के दौरान P0 समय-विभाजित (multiplexed) रूप से पहले lower address byte A0-A7 और फिर data D0-D7 (AD0-AD7) carry करता है, इसलिए option B सही है। High address byte P2 भेजता है, control signals ALE/PSEN/RD/WR देते हैं, और serial data P3 के RxD/TxD से जाता है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q8",
+      "question": "8051 में external memory addressing के समय higher order address byte (A8-A15) किस port से निकलता है?",
+      "options": ["Port 0", "Port 1", "Port 2", "Port 3"],
+      "correctIndex": 2,
+      "explanation": "P2 external memory access के दौरान upper address byte A8-A15 provide करता है, इसलिए option C सही है। P0 lower address/data multiplex करता है, P1 सामान्यतः pure general purpose I/O है, और P3 alternate control व serial functions देता है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q9",
+      "question": "8051 में Port 0 को general purpose output के रूप में use करते समय external pull-up resistors क्यों लगाने पड़ते हैं?",
+      "options": ["क्योंकि P0 में internal pull-up नहीं होता (open drain output)", "क्योंकि P0 केवल input के लिए है", "क्योंकि P0 पर बहुत अधिक current मिलता है", "क्योंकि P0 केवल analog होता है"],
+      "correctIndex": 0,
+      "explanation": "P0 की output structure open-drain होती है और उसमें internal pull-up नहीं होता, इसलिए logic 1 drive करने के लिए external pull-up resistors जरूरी हैं, अतः option A सही है। P0 bidirectional है (सिर्फ input नहीं), उसमें अतिरिक्त current नहीं, और यह digital port है analog नहीं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q10",
+      "question": "8051 के चार ports में से किस port में internal pull-up होने के कारण general purpose I/O के लिए किसी external resistor की आवश्यकता नहीं होती और उसका कोई alternate function भी नहीं है?",
+      "options": ["Port 0", "Port 1", "Port 2", "Port 3"],
+      "correctIndex": 1,
+      "explanation": "P1 में internal pull-up है और यह पूरी तरह general purpose 8-bit I/O port है जिसका कोई alternate multiplexed function नहीं, इसलिए option B सही है। P0 को pull-up चाहिए, P2 address का काम करता है, और P3 के pins के alternate functions होते हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q11",
+      "question": "8051 में serial communication के RxD और TxD signals Port 3 के किन pins पर मिलते हैं?",
+      "options": ["P3.0 (RxD) और P3.1 (TxD)", "P3.2 (RxD) और P3.3 (TxD)", "P3.4 (RxD) और P3.5 (TxD)", "P3.6 (RxD) और P3.7 (TxD)"],
+      "correctIndex": 0,
+      "explanation": "P3.0 का alternate function RxD (serial receive) और P3.1 का TxD (serial transmit) है, इसलिए option A सही है। P3.2/P3.3 INT0/INT1 हैं, P3.4/P3.5 timer inputs T0/T1 हैं, और P3.6/P3.7 WR/RD control signals हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q12",
+      "question": "8051 में external interrupt INT0 और INT1 signals Port 3 के किन pins से जुड़े होते हैं?",
+      "options": ["P3.0 और P3.1", "P3.2 और P3.3", "P3.4 और P3.5", "P3.6 और P3.7"],
+      "correctIndex": 1,
+      "explanation": "P3.2 का alternate function INT0 और P3.3 का INT1 है, इसलिए option B सही है। P3.0/P3.1 serial RxD/TxD हैं, P3.4/P3.5 timer inputs T0/T1 हैं, और P3.6/P3.7 memory control WR/RD हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q13",
+      "question": "8051 में external data memory पर write operation के दौरान active होने वाला control signal Port 3 के किस pin पर मिलता है?",
+      "options": ["P3.7 (RD)", "P3.6 (WR)", "P3.5 (T1)", "P3.4 (T0)"],
+      "correctIndex": 1,
+      "explanation": "P3.6 का alternate function WR (write strobe for external data memory) है जो MOVX write के दौरान active होता है, इसलिए option B सही है। P3.7 RD (read strobe) है, जबकि P3.4/P3.5 timer external inputs T0/T1 हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q14",
+      "question": "8051 में external memory से opcode fetch के लिए dedicated read strobe signal कौन-सा है (जो program memory read करता है)?",
+      "options": ["ALE", "PSEN", "RD", "WR"],
+      "correctIndex": 1,
+      "explanation": "PSEN (Program Store Enable) external program memory से opcode read करने का strobe है, इसलिए option B सही है। ALE address latch enable करता है, RD/WR external data memory के लिए हैं program memory के लिए नहीं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q15",
+      "question": "8051 में ALE (Address Latch Enable) signal का मुख्य उद्देश्य क्या है?",
+      "options": ["P0 पर से address byte को external latch में hold करना", "serial data भेजना", "interrupt को enable करना", "internal RAM को refresh करना"],
+      "correctIndex": 0,
+      "explanation": "ALE pulse के गिरते किनारे पर P0 से आए lower address byte को external latch (जैसे 74LS373) में hold किया जाता है ताकि बाद में वही lines data के लिए free हो जाएं, इसलिए option A सही है। ALE serial, interrupt या RAM refresh से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q16",
+      "question": "8051 की internal RAM (00H-7FH) में सबसे नीचे के 32 bytes (00H-1FH) किस काम के लिए reserve हैं?",
+      "options": ["Special Function Registers", "चार register banks (R0-R7)", "bit addressable area", "stack pointer के लिए fixed area"],
+      "correctIndex": 1,
+      "explanation": "Internal RAM के address 00H-1FH में चार register banks होते हैं, प्रत्येक bank में R0-R7 (8 registers), इसलिए option B सही है। SFRs 80H-FFH में हैं, bit addressable area 20H-2FH में है, और stack का कोई fixed area नहीं होता (SP configurable है)।"
+    },
+    {
+      "id": "u2_memory_io_8051_q17",
+      "question": "8051 की internal RAM में bit-addressable area कौन-से byte address range में स्थित है?",
+      "options": ["00H-1FH", "20H-2FH", "30H-7FH", "80H-FFH"],
+      "correctIndex": 1,
+      "explanation": "20H-2FH के 16 bytes bit-addressable हैं जो कुल 128 individually addressable bits (00H-7FH bit addresses) देते हैं, इसलिए option B सही है। 00H-1FH register banks हैं, 30H-7FH general scratchpad RAM है, और 80H-FFH SFR area है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q18",
+      "question": "8051 में bit-addressable area 20H-2FH में कुल कितने individually addressable bits उपलब्ध होते हैं?",
+      "options": ["16 bits", "64 bits", "128 bits", "256 bits"],
+      "correctIndex": 2,
+      "explanation": "16 bytes × 8 bits = 128 bits individually addressable होते हैं (bit address 00H से 7FH), इसलिए option C सही है। 16 तो केवल byte count है, 64 और 256 गलत गणनाएँ हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q19",
+      "question": "8051 में जब external code और external data memory दोनों use की जाती हैं, तो कौन-सा factor उन्हें एक ही physical chip पर overlap होने के बावजूद अलग रखता है?",
+      "options": ["अलग address bus", "अलग read strobe (PSEN बनाम RD)", "अलग data bus width", "अलग clock frequency"],
+      "correctIndex": 1,
+      "explanation": "Code memory PSEN से और data memory RD से read होती है; ये अलग strobe signals दोनों 64 KB spaces को logically separate रखते हैं भले same address value हो, इसलिए option B सही है। Address bus और data bus दोनों में common रहते हैं, और clock का memory separation से संबंध नहीं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q20",
+      "question": "8051 में external data memory (RAM) को access करने के लिए कौन-सा instruction प्रयोग होता है?",
+      "options": ["MOV", "MOVC", "MOVX", "MOVP"],
+      "correctIndex": 2,
+      "explanation": "MOVX instruction external data memory के साथ accumulator में data आदान-प्रदान करता है (RD/WR signals के साथ), इसलिए option C सही है। MOV internal locations के लिए है, MOVC external/internal code memory (look-up table) पढ़ता है, और MOVP कोई 8051 instruction नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q21",
+      "question": "8051 में 16-bit DPTR (Data Pointer) register का मुख्य उपयोग क्या है?",
+      "options": ["केवल stack pointer के रूप में", "external memory के 16-bit address को hold करना", "timer value रखना", "serial baud rate set करना"],
+      "correctIndex": 1,
+      "explanation": "DPTR 16-bit pointer है जो external code/data memory तक 64 KB range का address देता है और MOVX/MOVC में index के रूप में काम आता है, इसलिए option B सही है। Stack pointer अलग 8-bit SP है, timer के लिए THx/TLx हैं, और baud rate timer/SCON से तय होता है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q22",
+      "question": "8051 के I/O port का प्रत्येक pin सामान्यतः कितने LS-TTL loads को drive कर सकता है (fan-out), P1/P2/P3 के लिए लगभग?",
+      "options": ["1 LS-TTL load", "4 LS-TTL loads", "10 LS-TTL loads", "20 LS-TTL loads"],
+      "correctIndex": 1,
+      "explanation": "8051 के ports P1, P2, P3 का प्रत्येक pin लगभग 4 LS-TTL inputs को drive कर सकता है (P0 लगभग 8), इसलिए option B सबसे उपयुक्त है। 1 बहुत कम आँकड़ा है, और 10 या 20 loads से port की current sink क्षमता पार हो जाती है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q23",
+      "question": "8051 के किसी port pin को input के रूप में सही ढंग से use करने से पहले उस pin (latch) पर क्या लिखना आवश्यक होता है?",
+      "options": ["logic 0 लिखना", "logic 1 लिखना", "कुछ भी लिखने की जरूरत नहीं", "पहले उसे float करना"],
+      "correctIndex": 1,
+      "explanation": "Port pin पढ़ने से पहले उसके latch में 1 लिखना जरूरी है ताकि output FET off हो जाए और external device pin को खींच सके, इसलिए option B सही है। 0 लिखने पर pin low में fix हो जाएगा और input नहीं पढ़ा जाएगा; इसीलिए default के भरोसे रहना गलत है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q24",
+      "question": "8051 के चारों ports P0-P3 मिलाकर कुल कितने I/O pins उपलब्ध कराते हैं?",
+      "options": ["16 pins", "24 pins", "32 pins", "40 pins"],
+      "correctIndex": 2,
+      "explanation": "चार 8-bit ports × 8 = 32 I/O pins होते हैं, इसलिए option C सही है। 40 तो पूरे DIP package के pins हैं (जिनमें power, control, crystal भी शामिल), 16 और 24 गलत गणनाएँ हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q25",
+      "question": "यदि किसी 8051 आधारित system में केवल internal 4 KB ROM ही use करनी हो और कोई external code memory न हो, तो EA pin कैसे रखेंगे?",
+      "options": ["EA = GND", "EA = Vcc", "EA floating", "EA को ALE से जोड़ेंगे"],
+      "correctIndex": 1,
+      "explanation": "EA = Vcc रखने पर CPU पहले internal ROM (0000H-0FFFH) से execute करता है, जो केवल internal ROM वाले design के लिए उपयुक्त है, इसलिए option B सही है। EA=GND external memory force करेगा, floating अनिश्चित है, और ALE से जोड़ना अर्थहीन है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q26",
+      "question": "8051 में internal RAM का 30H-7FH क्षेत्र सामान्यतः किस उद्देश्य से प्रयोग होता है?",
+      "options": ["register banks के लिए", "bit addressable storage के लिए", "general purpose scratchpad RAM और stack के लिए", "SFRs के लिए"],
+      "correctIndex": 2,
+      "explanation": "30H-7FH के 80 bytes general purpose (scratchpad) RAM हैं जिन्हें variables और stack के लिए use किया जाता है, इसलिए option C सही है। Register banks 00H-1FH में, bit addressable 20H-2FH में, और SFRs 80H-FFH में होते हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q27",
+      "question": "8051 के Special Function Registers (SFRs) internal data memory के किस address range में map होते हैं?",
+      "options": ["00H-1FH", "20H-2FH", "30H-7FH", "80H-FFH"],
+      "correctIndex": 3,
+      "explanation": "SFRs (जैसे P0, P1, ACC, PSW, SP, TMOD आदि) 80H-FFH range में map होते हैं, इसलिए option D सही है। 00H-1FH register banks, 20H-2FH bit addressable और 30H-7FH scratchpad RAM हैं, जो SFR क्षेत्र नहीं हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q28",
+      "question": "किसी 8051 system में external memory interface करते समय P0 और latch (74LS373) के बीच address को demultiplex करने के लिए latch का enable किस signal से control होता है?",
+      "options": ["PSEN", "ALE", "RD", "EA"],
+      "correctIndex": 1,
+      "explanation": "ALE signal latch के enable से जुड़ता है; ALE के गिरते किनारे पर P0 का address byte latch में captured हो जाता है (demultiplex), इसलिए option B सही है। PSEN/RD memory read strobes हैं और EA memory selection pin है, ये latch enable नहीं करते।"
+    },
+    {
+      "id": "u2_memory_io_8051_q29",
+      "question": "8051 में यदि दोनों external code और external data memory पूरी 64 KB भरनी हों, तो total addressable memory (code + data मिलाकर) कितनी होगी?",
+      "options": ["64 KB", "96 KB", "128 KB", "256 KB"],
+      "correctIndex": 2,
+      "explanation": "Code space 64 KB और data space अलग 64 KB होने के कारण दोनों मिलाकर 128 KB addressable होती है, इसलिए option C सही है। एकल 64 KB तो सिर्फ एक space है; 96 KB और 256 KB गलत योग हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q30",
+      "question": "8051 में Port 2 को यदि external memory के लिए upper address byte भेजने में use कर लिया जाए, तो उस समय P2 general purpose I/O के लिए क्यों नहीं मिल पाता?",
+      "options": ["क्योंकि P2 के pins उस समय A8-A15 address lines के रूप में busy रहते हैं", "क्योंकि P2 में pull-up नहीं होता", "क्योंकि P2 केवल input होता है", "क्योंकि P2 serial port बन जाता है"],
+      "correctIndex": 0,
+      "explanation": "External memory access में P2 continuously higher address byte A8-A15 drive करता है, इसलिए वे pins general purpose I/O के लिए उपलब्ध नहीं रहते, अतः option A सही है। P2 में internal pull-up होता है, यह केवल input नहीं है, और यह serial port नहीं बनता।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "mm420_440",
+  "topicName": "Siemens Micromaster MM-420/440: Installation, Quick Commissioning & Parameterization",
+  "questions": [
+    {
+      "id": "u14_mm420_440_q1",
+      "question": "Siemens Micromaster MM420 और MM440 drives मुख्यतः किस category के AC drives में आते हैं?",
+      "options": [
+        "General-purpose 3-phase induction motor VFD (Variable Frequency Drives)",
+        "DC motor drives",
+        "केवल servo motor drives",
+        "केवल single-phase capacitor motor controller"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: MM420 और MM440, Siemens की general-purpose Micromaster family के VFD हैं जो मुख्यतः 3-phase induction motor की speed control के लिए बनाए गए हैं (MM440 में MM420 से अधिक features व control modes होते हैं)। ये DC motor, servo motor या केवल single-phase capacitor motor control के लिए नहीं हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q2",
+      "question": "MM420 की तुलना में MM440 drive की एक प्रमुख विशेषता क्या है?",
+      "options": [
+        "MM440 में कोई keypad नहीं होता",
+        "MM440 अधिक advanced control modes (जैसे vector control/closed-loop, अधिक I/O options) प्रदान करता है और अधिक व्यापक applications के लिए उपयुक्त है",
+        "MM440 केवल single-phase supply पर चलता है",
+        "MM440 में parameter setting संभव नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: MM440, MM420 की तुलना में एक अधिक feature-rich higher-end drive है जिसमें अतिरिक्त control modes (जैसे sensor-less vector control, closed-loop options), अधिक digital/analog I/O और application flexibility होती है, जबकि MM420 basic V/f applications के लिए एक economical विकल्प है। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q3",
+      "question": "MM420/440 drive की installation करते समय, ambient environment के संदर्भ में किस बात का ध्यान रखना आवश्यक है?",
+      "options": [
+        "Drive को सीधे धूप या नमी युक्त स्थान पर लगाना बेहतर होता है",
+        "Drive को हमेशा बिना किसी clearance के दीवार से सटाकर लगाना चाहिए",
+        "Drive को उचित ventilation, निर्धारित ambient temperature range के भीतर और धूल/नमी से सुरक्षित स्थान पर mount करना चाहिए, तथा heatsink के ऊपर-नीचे clearance रखनी चाहिए",
+        "Ambient temperature का drive की rating से कोई संबंध नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: MM420/440 जैसे drives को manufacturer द्वारा निर्धारित ambient temperature range के भीतर, पर्याप्त ventilation clearance (ऊपर-नीचे) के साथ, धूल/नमी रहित स्थान पर mount करना चाहिए ताकि heatsink ठीक से cool हो सके और derating से बचा जा सके। धूप/नमी वाला स्थान या बिना clearance के mounting हानिकारक है।"
+    },
+    {
+      "id": "u14_mm420_440_q4",
+      "question": "MM420/440 की standard operator panel (BOP/AOP) में parameter number दिखाने के लिए प्रयुक्त प्रारूप सामान्यतः कैसा होता है?",
+      "options": [
+        "केवल symbols में, कोई नंबर नहीं",
+        "केवल audio beep patterns में",
+        "केवल color codes में",
+        "'P' या 'r' prefix के साथ एक parameter number, जैसे P0304 (motor rated voltage) या r0002 (केवल पढ़ने योग्य/read-only status parameter)"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Micromaster drives में parameters को 'P' prefix (adjustable/settable parameters, जैसे P0304) और 'r' prefix (read-only observation parameters, जैसे r0002) के साथ numbered format में दर्शाया जाता है, जिन्हें BOP (Basic Operator Panel) या AOP (Advanced Operator Panel) पर देखा/set किया जा सकता है। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q5",
+      "question": "MM420/440 में parameter P0010 को 'Quick Commissioning' मोड (P0010 = 1) में डालने का उद्देश्य क्या है?",
+      "options": [
+        "Motor के rated data (जैसे voltage, current, power, frequency, speed) तथा application से जुड़े आवश्यक basic parameters को एक structured sequence में set करने की सुविधा देना",
+        "Drive को permanently fault mode में डालना",
+        "DC link capacitor को discharge करना",
+        "Motor की winding को short करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: P0010 = 1 करने पर drive 'Quick Commissioning' mode में आ जाता है, जिसमें motor के nameplate data (rated voltage P0304, rated current P0305, rated power P0307, rated frequency P0310, rated speed P0311 आदि) क्रमबद्ध रूप से set किए जाते हैं ताकि drive motor के अनुसार सही operate करे। यह fault mode, capacitor discharge या winding short करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q6",
+      "question": "MM420/440 में Quick Commissioning पूरी करने के बाद P0010 को किस value पर वापस लाना आवश्यक है ताकि drive सामान्य (ready) mode में operate कर सके?",
+      "options": [
+        "P0010 = 1 पर ही रखा रहने देना",
+        "P0010 = 0 (Ready mode) पर सेट करना",
+        "P0010 = 30 पर सेट करना",
+        "P0010 को हमेशा negative value पर रखना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Quick Commissioning (P0010 = 1) पूरी होने के बाद P0010 को वापस 0 (Ready) पर सेट करना आवश्यक है, तभी drive सामान्य operation के लिए तैयार होता है; अन्यथा drive commissioning mode में ही अटका रहेगा और सामान्य run कमांड काम नहीं करेगी। P0010 = 30 factory reset से संबंधित है, negative value मान्य नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q7",
+      "question": "MM420/440 में parameter P0100 का उपयोग किस लिए किया जाता है?",
+      "options": [
+        "Motor की rated speed set करने के लिए",
+        "PID setpoint set करने के लिए",
+        "Motor और line supply की frequency standard चुनने के लिए (जैसे Europe/50Hz या North America/60Hz क्षेत्र चयन)",
+        "Digital input function select करने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: P0100 यह निर्धारित करता है कि motor data kW/50 Hz (Europe) आधार पर है या hp/60 Hz (North America) आधार पर, जिससे बाद में motor rating parameters का interpretation सही हो। यह rated speed, PID setpoint या digital input function से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q8",
+      "question": "MM420/440 Quick Commissioning में P0304 parameter किसे दर्शाता है?",
+      "options": [
+        "Motor rated frequency",
+        "Motor rated current",
+        "Motor rated power",
+        "Motor rated voltage"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: P0304 motor nameplate के अनुसार rated voltage (V) set करने के लिए प्रयुक्त होता है। Rated current के लिए P0305, rated power के लिए P0307 और rated frequency के लिए P0310 का उपयोग होता है — इसलिए बाकी विकल्प इस specific parameter के लिए गलत हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q9",
+      "question": "MM420/440 Quick Commissioning में P0305 parameter किसे दर्शाता है?",
+      "options": [
+        "Motor rated current",
+        "Motor rated voltage",
+        "Motor cooling fan type",
+        "Ramp-up time"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: P0305 motor nameplate rated current (A) set करने के लिए है, जो drive के thermal motor protection (I²t) व overload calculations के लिए महत्वपूर्ण होता है। Rated voltage P0304 है, cooling fan type व ramp-up time अलग parameters (जैसे P0335, P1120) से संबंधित हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q10",
+      "question": "MM420/440 में motor की rated speed (rpm) किस parameter में सेट की जाती है?",
+      "options": [
+        "P0304",
+        "P0311",
+        "P0305",
+        "P0700"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: P0311 motor की rated speed (rpm, nameplate के अनुसार) set करने के लिए है, जो slip compensation व speed calculation के लिए आवश्यक है। P0304 rated voltage, P0305 rated current, और P0700 command source selection से संबंधित parameters हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q11",
+      "question": "MM420/440 में P0700 parameter का क्या उपयोग है?",
+      "options": [
+        "Motor rated power set करने के लिए",
+        "Motor cooling fan चलाने के लिए",
+        "Command source selection (यानी ON/OFF/direction command कहाँ से आएगी — जैसे BOP keypad से, terminal strip से, या fieldbus से) निर्धारित करने के लिए",
+        "DC link voltage मापने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: P0700 यह निर्धारित करता है कि drive को ON/OFF, forward/reverse जैसे command signals कहाँ से मिलेंगे — जैसे P0700 = 1 (BOP keypad), P0700 = 2 (terminal/digital inputs), या fieldbus आदि। Motor power, cooling fan या DC link measurement से इसका संबंध नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q12",
+      "question": "MM420/440 में P1000 parameter का क्या उद्देश्य है?",
+      "options": [
+        "Motor की rated current set करना",
+        "DC link capacitor को discharge करना",
+        "Motor की cooling fan speed set करना",
+        "Frequency/speed setpoint source selection (जैसे keypad से, analog input से, fixed frequency से, या PID output से) निर्धारित करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: P1000 यह निर्धारित करता है कि drive को speed/frequency reference कहाँ से मिलेगा — जैसे P1000 = 1 (BOP से motorized potentiometer), P1000 = 2 (analog input), P1000 = 3 (fixed frequency), P1000 = 4 (PID setpoint) आदि। यह rated current, fan speed या capacitor discharge से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q13",
+      "question": "MM420/440 में P0003 parameter (User Access Level) का क्या कार्य है?",
+      "options": [
+        "यह निर्धारित करना कि operator/keypad पर कितनी details (standard, extended, expert level) के parameters दिखाई दें और access किए जा सकें",
+        "Motor की rated voltage set करना",
+        "Digital output function set करना",
+        "PID setpoint स्रोत निर्धारित करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: P0003 (user access level) यह तय करता है कि keypad पर कितनी विस्तृत parameter list दिखेगी — जैसे standard user (1), extended (2), expert (3/4) — जिससे साधारण उपयोगकर्ता को basic parameters तक सीमित रखा जा सके और advanced parameters expert के लिए उपलब्ध हों। बाकी विकल्प इसके कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_mm420_440_q14",
+      "question": "MM420/440 में factory default settings पर वापस लाने (factory reset) के लिए सामान्यतः किस parameter combination का उपयोग किया जाता है?",
+      "options": [
+        "P0700 = 0",
+        "P0010 = 30 और P0970 = 1",
+        "P1000 = 0",
+        "P0304 = 0"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: MM420/440 में factory reset करने के लिए सामान्यतः P0010 को 30 (factory setting mode) पर सेट किया जाता है और फिर P0970 = 1 करके reset command दी जाती है, जिससे drive सभी parameters को factory default values पर वापस ले आता है। बाकी विकल्प factory reset प्रक्रिया से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_mm420_440_q15",
+      "question": "MM420/440 installation के दौरान power terminals (L1/L2/L3, U/V/W) और control terminals को अलग-अलग cable में रखने की सलाह क्यों दी जाती है?",
+      "options": [
+        "सिर्फ cable का रंग अलग दिखाने के लिए",
+        "Control cable हमेशा power cable से लंबी होनी चाहिए",
+        "Power cable में PWM switching से उत्पन्न high-frequency noise, control/signal wiring को interference/EMI से प्रभावित होने से बचाने के लिए, अलग रूटिंग/shielding आवश्यक है",
+        "इससे motor की rated speed बढ़ जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Power (motor) cables में inverter की PWM switching से उत्पन्न high-frequency noise होती है, जो पास की control/signal wiring में EMI/interference उत्पन्न कर सकती है; इसलिए power और control cables को अलग route करना, appropriate shielding व grounding practice अपनाना आवश्यक है। बाकी विकल्प गलत कारण बताते हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q16",
+      "question": "MM420/440 में P1080 और P1082 parameters किसके लिए प्रयुक्त होते हैं?",
+      "options": [
+        "Motor rated voltage और current के लिए",
+        "Digital input की function selection के लिए",
+        "PID controller की gain values के लिए",
+        "Minimum frequency (P1080) और maximum frequency (P1082) की सीमा निर्धारित करने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: P1080 output की न्यूनतम (minimum) frequency limit तथा P1082 अधिकतम (maximum) frequency limit निर्धारित करता है, जिससे motor एक सुरक्षित व application-appropriate speed range के भीतर ही operate करे। Rated voltage/current, PID gains और digital input function अलग parameters से संबंधित हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q17",
+      "question": "MM420/440 में P1120 और P1121 parameters क्या दर्शाते हैं?",
+      "options": [
+        "Ramp-up time (acceleration time, P1120) और ramp-down time (deceleration time, P1121)",
+        "Motor rated voltage और current",
+        "PID setpoint और feedback source",
+        "Digital output-1 और output-2 function"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: P1120 motor को zero speed से maximum frequency तक पहुँचने में लगने वाला ramp-up (acceleration) time निर्धारित करता है, जबकि P1121 maximum frequency से zero speed तक आने का ramp-down (deceleration) time निर्धारित करता है। बाकी विकल्प इन parameters के वास्तविक कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_mm420_440_q18",
+      "question": "MM420/440 में P1300 parameter का उपयोग किस लिए किया जाता है?",
+      "options": [
+        "केवल motor की rated voltage set करने के लिए",
+        "Control mode selection (जैसे linear V/f control, quadratic V/f control for pumps/fans, या sensor-less vector control) निर्धारित करने के लिए",
+        "Digital input wiring का diagram दिखाने के लिए",
+        "Motor की cooling fan को बंद करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: P1300 drive के control mode को select करता है, जैसे linear V/f control (constant torque applications के लिए), quadratic/FCC (variable torque pump/fan applications के लिए), या sensor-less vector control आदि, जिससे drive को application के अनुरूप optimize किया जा सके। बाकी विकल्प इसके कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_mm420_440_q19",
+      "question": "MM420/440 में digital input की function assign करने के लिए किस parameter group का उपयोग होता है (जैसे DIN1 की function set करना)?",
+      "options": [
+        "P0304 series",
+        "P1080 series",
+        "P0701 (DIN1 function), P0702 (DIN2 function) आदि",
+        "r0002 series (read-only)"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: P0701, P0702, P0703 आदि parameters क्रमशः digital input 1, 2, 3 को कौन सा function (जैसे ON/OFF, fixed frequency selection, JOG, fault reset) assign करना है, यह निर्धारित करते हैं। P0304 series motor data से, P1080 series frequency limits से, और r0002 series केवल पढ़ने योग्य status parameters से संबंधित हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q20",
+      "question": "MM420/440 में यदि drive पर 'F' के साथ कोई error code (जैसे F0001, F0002) display हो, तो यह क्या दर्शाता है?",
+      "options": [
+        "यह एक normal running status है",
+        "यह केवल parameter number है, कोई समस्या नहीं है",
+        "यह motor की rated frequency दिखाता है",
+        "यह एक fault (error) condition दर्शाता है, जिसका कारण जानने के लिए corresponding fault code list देखनी चाहिए और उचित corrective action लेकर fault को reset करना चाहिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: MM420/440 में 'F' prefix के साथ दिखने वाला code (जैसे F0001 - overcurrent, F0002 - overvoltage आदि) एक fault condition को इंगित करता है; operator को manual में दिए fault code list से कारण समझकर उसे ठीक करना चाहिए और फिर fault reset (जैसे P0700 पर निर्धारित reset input या keypad से) करना चाहिए। यह normal running status या केवल parameter number नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q21",
+      "question": "MM420/440 में 'A' prefix वाला code (जैसे A0501) display होने पर इसका क्या अर्थ है?",
+      "options": [
+        "यह एक 'Alarm' (चेतावनी) है, जो किसी संभावित समस्या (जैसे current limit के करीब) की सूचना देता है परंतु सामान्यतः drive तुरंत trip नहीं करता, condition ठीक होने पर स्वतः साफ हो सकता है",
+        "यह एक गंभीर fault है जो तुरंत motor बंद कर देगा",
+        "यह motor की rated power दर्शाता है",
+        "यह केवल keypad की battery low होने का संकेत है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: 'A' prefix code एक Alarm (warning) है जो संभावित समस्या की चेतावनी देता है (जैसे current limit के निकट पहुँचना) परंतु आमतौर पर drive को तुरंत trip नहीं करता; स्थिति सामान्य होने पर alarm स्वतः क्लियर हो सकता है, जबकि 'F' fault में drive trip होकर manual reset चाहिए होता है। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q22",
+      "question": "MM420/440 में P0004 parameter (Parameter Filter) का क्या उपयोग है?",
+      "options": [
+        "Motor cooling fan filter साफ करना",
+        "Keypad पर parameters को category (जैसे केवल drive parameters, केवल motor parameters, केवल command/digital I/O parameters) के अनुसार filter करके दिखाना, जिससे navigation आसान हो",
+        "Power line filter को activate करना",
+        "DC link voltage filter करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: P0004 keypad पर parameters को category के अनुसार filter कर दिखाता है (जैसे P0004 = 3 केवल motor-related parameters दिखाएगा), जिससे commissioning के दौरान संबंधित parameters ढूँढना आसान हो जाता है। यह physical cooling fan filter, power line EMI filter या DC link filtering से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q23",
+      "question": "MM420/440 installation में motor cable की length बहुत अधिक (long cable run) होने पर किस अतिरिक्त उपकरण की सिफारिश की जाती है?",
+      "options": [
+        "कोई अतिरिक्त उपकरण आवश्यक नहीं",
+        "एक अतिरिक्त rectifier",
+        "Output reactor/dv-dt filter, ताकि लंबी cable में voltage reflection व insulation stress को कम किया जा सके",
+        "एक अतिरिक्त DC link capacitor bank हमेशा जरूरी है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: बहुत लंबी motor cable में PWM switching से उत्पन्न steep voltage pulses reflect होकर motor terminal पर voltage doubling जैसा प्रभाव डाल सकते हैं, जिससे insulation stress बढ़ता है; ऐसी स्थिति में output reactor या dv/dt filter लगाने की सिफारिश की जाती है। कोई अतिरिक्त उपकरण न लगाना जोखिम भरा है, और rectifier/capacitor bank इस समस्या का समाधान नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q24",
+      "question": "MM420/440 में BOP (Basic Operator Panel) पर parameter value change करने के बाद उसे स्थायी रूप से save करने (EEPROM में) के लिए सामान्यतः क्या आवश्यक है?",
+      "options": [
+        "Drive की power तुरंत काट देना",
+        "Factory reset करना",
+        "Motor को disconnect करना",
+        "'P' button दबाकर परिवर्तन confirm करना, जिससे value RAM से EEPROM (non-volatile memory) में सुरक्षित हो जाए"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: BOP पर parameter value बदलने के बाद 'P' button से confirm करने पर वह value non-volatile memory (EEPROM) में save हो जाती है, ताकि power cycle के बाद भी setting बनी रहे। Power तुरंत काटना, motor disconnect करना या factory reset करना गलत/अनावश्यक actions हैं।"
+    },
+    {
+      "id": "u14_mm420_440_q25",
+      "question": "MM420/440 में quick commissioning के दौरान P0304 (rated voltage) गलत सेट करने का क्या परिणाम हो सकता है?",
+      "options": [
+        "Motor को गलत V/f अनुपात के साथ supply मिलेगी, जिससे flux असंतुलित हो जाएगा — over-fluxing (overheating) या under-fluxing (कम torque) जैसी समस्याएँ हो सकती हैं",
+        "Drive automatically सही value ढूँढ लेगा, कोई समस्या नहीं",
+        "यह केवल display की brightness बदल देगा",
+        "यह केवल keypad की language बदल देगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: P0304 गलत सेट करने पर motor के actual rated voltage और drive द्वारा calculate किए गए V/f curve में mismatch हो जाएगा, जिससे flux असंतुलित होकर over-fluxing (अत्यधिक heating, saturation) या under-fluxing (कम torque क्षमता) जैसी समस्याएँ आ सकती हैं। यह automatic correction, display brightness या language से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q26",
+      "question": "MM420/440 में 'macro' या pre-configured parameter set (जैसे कुछ applications के लिए default settings) का उपयोग करने का क्या लाभ है?",
+      "options": [
+        "यह हमेशा गलत settings देता है",
+        "यह common applications (जैसे pump, fan, conveyor) के लिए recommended parameter values एक साथ load करके commissioning समय व complexity को कम करता है",
+        "यह motor की rated data की आवश्यकता को समाप्त कर देता है",
+        "यह केवल single-phase motors के लिए उपलब्ध है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Pre-configured macro/application-specific parameter sets, आम applications के लिए recommended default values एक साथ load कर देते हैं, जिससे हर parameter को manually सेट करने की जरूरत नहीं पड़ती और commissioning जल्दी व आसान हो जाती है। इससे भी motor rated data (nameplate) सेट करना आवश्यक रहता है, और यह single-phase तक सीमित नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q27",
+      "question": "MM420/440 drive में installation करते समय PE (Protective Earth/ground) connection का महत्व क्या है?",
+      "options": [
+        "PE connection वैकल्पिक है, इसे छोड़ा जा सकता है",
+        "PE connection केवल motor की speed बढ़ाने के लिए है",
+        "PE connection अनिवार्य है — यह leakage current को सुरक्षित path देकर personal safety सुनिश्चित करता है और EMI/noise को भी कम करने में मदद करता है",
+        "PE connection केवल DC link के लिए है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: PE (Protective Earth) connection एक अनिवार्य safety requirement है जो fault या leakage current को सुरक्षित रूप से ground में भेजकर operator को electric shock से बचाता है, साथ ही उचित grounding EMI को नियंत्रित करने में भी सहायक होती है। इसे वैकल्पिक मानना गलत व असुरक्षित है, और यह speed या DC link से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_mm420_440_q28",
+      "question": "MM420/440 commissioning में यदि motor का direction गलत (उल्टा) घूम रहा हो, तो सबसे सरल सुधार क्या हो सकता है (rewiring के अलावा)?",
+      "options": [
+        "P0304 की value बदलना",
+        "DC link capacitor बदलना",
+        "P0700 को शून्य करना",
+        "P1820 (motor reversal parameter) को set करके, बिना physically wiring बदले output phase sequence को software द्वारा उल्टा करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: MM420/440 में motor direction को parameter (जैसे P1820 - motor reversal) के जरिए software से उल्टा किया जा सकता है, जिससे physically U-V-W wiring बदलने की आवश्यकता नहीं पड़ती। P0304 rated voltage से, P0700 command source से, और capacitor बदलना direction से असंबंधित है।"
+    },
+    {
+      "id": "u14_mm420_440_q29",
+      "question": "MM420/440 में motor को terminal strip (hard-wired digital inputs) से control करने के बजाय BOP keypad से सीधे control करने के लिए P0700 को किस प्रकार सेट करना होगा?",
+      "options": [
+        "P0700 = 1 (BOP/keypad control) पर सेट करना",
+        "P0700 = 2 (terminal control) पर सेट करना",
+        "P0700 को हमेशा 0 पर रखना",
+        "P0700 का keypad control से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: P0700 = 1 सेट करने पर drive command source (ON/OFF, direction आदि) BOP keypad बन जाता है, जबकि P0700 = 2 सेट करने पर command terminal strip (digital inputs) से आती है। P0700 = 0 default/no selection जैसी स्थिति है, इसलिए यह गलत है, और P0700 का command source से सीधा संबंध है।"
+    },
+    {
+      "id": "u14_mm420_440_q30",
+      "question": "MM420/440 पर पूरी commissioning व parameterization के बाद, motor को test run करने से पहले किन बातों की जांच करनी अनिवार्य है?",
+      "options": [
+        "कोई जांच आवश्यक नहीं, सीधे full speed पर चला देना चाहिए",
+        "Motor coupling/mechanical load सुरक्षित रूप से जुड़ी है, direction सही है, safety guards लगे हैं, और पहले कम speed पर चलाकर सामान्य operation (कोई असामान्य आवाज़/vibration) confirm करना चाहिए",
+        "केवल keypad की battery चेक करनी चाहिए",
+        "केवल motor का रंग चेक करना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Test run से पहले mechanical coupling की सुरक्षा, सही rotation direction, safety guards की उपस्थिति सुनिश्चित करनी चाहिए, और पहले कम speed पर चलाकर असामान्य आवाज़/vibration न होने की पुष्टि कर धीरे-धीरे rated speed तक ले जाना एक सुरक्षित commissioning practice है। सीधे full speed पर चलाना, केवल battery या रंग चेक करना असुरक्षित/अपर्याप्त है।"
+    }
+  ]
+}

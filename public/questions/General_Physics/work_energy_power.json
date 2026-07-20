@@ -1,0 +1,218 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "work_energy_power",
+  "topicName": "Work, Energy & Power",
+  "questions": [
+    {
+      "id": "phy_work_energy_power_q1",
+      "question": "Work (W) का सामान्य सूत्र क्या है? (F = force, d = displacement, θ = बीच का कोण)",
+      "options": ["F/d", "F + d", "F·d·cosθ", "d/F"],
+      "correctIndex": 2,
+      "explanation": "Work = force × displacement × बीच के कोण का cosine = F·d·cosθ, इसलिए option 2 सही है। F/d, F+d और d/F work की सही परिभाषा नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q2",
+      "question": "Work का SI unit क्या है?",
+      "options": ["joule", "newton", "watt", "pascal"],
+      "correctIndex": 0,
+      "explanation": "Work = force × displacement = N·m = joule, इसलिए option 0 सही है। newton force का, watt power का और pascal pressure का unit है।"
+    },
+    {
+      "id": "phy_work_energy_power_q3",
+      "question": "Power का SI unit क्या है?",
+      "options": ["joule", "watt", "newton", "joule·second"],
+      "correctIndex": 1,
+      "explanation": "Power = work/time = joule/second = watt, इसलिए option 1 सही है। joule energy का, newton force का unit है और joule·second किसी standard power unit को नहीं दर्शाता।"
+    },
+    {
+      "id": "phy_work_energy_power_q4",
+      "question": "1 joule किसके बराबर होता है?",
+      "options": ["1 N/m", "1 kg·m", "1 W·s²", "1 N·m"],
+      "correctIndex": 3,
+      "explanation": "Work = force × displacement, इसलिए 1 joule = 1 newton × 1 metre = 1 N·m, अतः option 3 सही है। 1 N/m, 1 kg·m और 1 W·s² energy का सही रूपांतरण नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q5",
+      "question": "Kinetic energy (KE) का सूत्र क्या है?",
+      "options": ["mv²", "2mv²", "½mv²", "½mv"],
+      "correctIndex": 2,
+      "explanation": "गतिज ऊर्जा KE = ½mv², इसलिए option 2 सही है। mv² और 2mv² में गलत गुणांक है, और ½mv में velocity का वर्ग नहीं है, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "phy_work_energy_power_q6",
+      "question": "Gravitational potential energy (PE) का सूत्र क्या है? (m = mass, g = gravity, h = ऊँचाई)",
+      "options": ["mgh", "½mgh", "mg/h", "mgh²"],
+      "correctIndex": 0,
+      "explanation": "ऊँचाई h पर स्थितिज ऊर्जा PE = mgh, इसलिए option 0 सही है। ½mgh, mg/h और mgh² में गुणांक या h की power गलत है।"
+    },
+    {
+      "id": "phy_work_energy_power_q7",
+      "question": "Power (P) को work (W) और time (t) के रूप में कैसे लिखते हैं?",
+      "options": ["time/work", "work/time", "work × time", "force/time"],
+      "correctIndex": 1,
+      "explanation": "Power कार्य करने की दर है, P = work/time, इसलिए option 1 सही है। time/work इसका उल्टा है, work × time तथा force/time power की सही परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "phy_work_energy_power_q8",
+      "question": "10 kg की वस्तु को 5 m ऊँचाई तक उठाने में कितना work होता है? (g = 10 m/s²)",
+      "options": ["50 J", "100 J", "250 J", "500 J"],
+      "correctIndex": 3,
+      "explanation": "W = mgh = 10 × 10 × 5 = 500 J, इसलिए option 3 सही है। बाकी मान mass, g और height के गुणनफल से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q9",
+      "question": "2 kg की वस्तु 3 m/s से चल रही है; उसकी kinetic energy कितनी है?",
+      "options": ["3 J", "6 J", "9 J", "18 J"],
+      "correctIndex": 2,
+      "explanation": "KE = ½mv² = ½ × 2 × 3² = ½ × 2 × 9 = 9 J, इसलिए option 2 सही है। बाकी मान इस गणना से मेल नहीं खाते; 18 J में ½ गुणांक छोड़ने की गलती है।"
+    },
+    {
+      "id": "phy_work_energy_power_q10",
+      "question": "1 watt किसके बराबर होता है?",
+      "options": ["1 joule/second", "1 joule·second", "1 newton/second", "1 joule/newton"],
+      "correctIndex": 0,
+      "explanation": "Power = work/time, इसलिए 1 watt = 1 joule/second, अतः option 0 सही है। joule·second, newton/second और joule/newton power की सही इकाई नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q11",
+      "question": "एक मशीन 5 second में 100 J work करती है; उसकी power कितनी है?",
+      "options": ["10 W", "20 W", "50 W", "500 W"],
+      "correctIndex": 1,
+      "explanation": "P = work/time = 100 J / 5 s = 20 W, इसलिए option 1 सही है। बाकी मान work और time के सही अनुपात से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q12",
+      "question": "जब लगाया गया force displacement के लंबवत (θ = 90°) हो, तो किया गया work कितना होगा?",
+      "options": ["अधिकतम", "mgh", "Fd", "शून्य"],
+      "correctIndex": 3,
+      "explanation": "W = Fd·cosθ और cos90° = 0, इसलिए work शून्य होता है और option 3 सही है। लंबवत force के कारण work अधिकतम या Fd नहीं हो सकता, इसलिए बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "phy_work_energy_power_q13",
+      "question": "5 kg की वस्तु 4 m ऊँचाई पर है; उसकी potential energy कितनी है? (g = 10 m/s²)",
+      "options": ["20 J", "50 J", "200 J", "400 J"],
+      "correctIndex": 2,
+      "explanation": "PE = mgh = 5 × 10 × 4 = 200 J, इसलिए option 2 सही है। बाकी मान mass, g और height के गुणनफल से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q14",
+      "question": "Work-energy theorem के अनुसार किसी वस्तु पर किया गया कुल work किसके बराबर होता है?",
+      "options": ["kinetic energy में परिवर्तन", "potential energy में परिवर्तन", "कुल momentum", "power"],
+      "correctIndex": 0,
+      "explanation": "Work-energy theorem कहता है कि net work वस्तु की kinetic energy में परिवर्तन के बराबर होता है, इसलिए option 0 सही है। यह potential energy, momentum या power में परिवर्तन को नहीं दर्शाता।"
+    },
+    {
+      "id": "phy_work_energy_power_q15",
+      "question": "यदि किसी वस्तु का velocity दुगना कर दिया जाए, तो उसकी kinetic energy कितनी गुना हो जाएगी?",
+      "options": ["2 गुना", "4 गुना", "½ गुना", "समान"],
+      "correctIndex": 1,
+      "explanation": "KE = ½mv² में KE, velocity के वर्ग के समानुपाती है; velocity दुगना होने पर KE 2² = 4 गुना हो जाती है, इसलिए option 1 सही है। 2 गुना, ½ गुना या समान होना वर्ग-संबंध की उपेक्षा करता है।"
+    },
+    {
+      "id": "phy_work_energy_power_q16",
+      "question": "1 horsepower (HP) लगभग कितने watt के बराबर होता है?",
+      "options": ["100 W", "550 W", "640 W", "746 W"],
+      "correctIndex": 3,
+      "explanation": "1 HP ≈ 746 W, इसलिए option 3 सही है। बाकी मान इस मानक रूपांतरण से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q17",
+      "question": "20 N का force किसी वस्तु को उसी दिशा में 5 m तक विस्थापित करता है; किया गया work कितना है?",
+      "options": ["4 J", "25 J", "100 J", "400 J"],
+      "correctIndex": 2,
+      "explanation": "W = F × d × cos0° = 20 × 5 × 1 = 100 J, इसलिए option 2 सही है। बाकी मान force और displacement के सही गुणनफल से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q18",
+      "question": "Friction के अभाव में किसी निकाय की कुल mechanical energy का क्या होता है?",
+      "options": ["constant रहती है", "बढ़ती है", "घटती है", "शून्य हो जाती है"],
+      "correctIndex": 0,
+      "explanation": "Conservation of energy के अनुसार friction जैसे बलों के अभाव में कुल mechanical energy constant रहती है, इसलिए option 0 सही है; PE और KE आपस में बदलती हैं पर योग स्थिर रहता है। इसलिए बढ़ना, घटना या शून्य होना गलत है।"
+    },
+    {
+      "id": "phy_work_energy_power_q19",
+      "question": "स्वतंत्र रूप से गिरती हुई वस्तु की potential energy मुख्यतः किसमें बदलती है?",
+      "options": ["केवल heat", "kinetic energy", "sound", "potential energy और बढ़ती है"],
+      "correctIndex": 1,
+      "explanation": "गिरते समय ऊँचाई घटने से PE घटती है और वेग बढ़ने से वह kinetic energy में बदलती है, इसलिए option 1 सही है। यह मुख्यतः heat या sound में नहीं बदलती, और PE बढ़ने का प्रश्न ही नहीं है।"
+    },
+    {
+      "id": "phy_work_energy_power_q20",
+      "question": "Energy का SI unit किसके unit के समान होता है?",
+      "options": ["watt", "newton", "pascal", "joule"],
+      "correctIndex": 3,
+      "explanation": "Energy और work दोनों का SI unit joule है, इसलिए option 3 सही है। watt power का, newton force का और pascal pressure का unit है।"
+    },
+    {
+      "id": "phy_work_energy_power_q21",
+      "question": "एक मशीन 2 minute में 600 J work करती है; उसकी power कितनी है?",
+      "options": ["5 W", "10 W", "300 W", "1200 W"],
+      "correctIndex": 0,
+      "explanation": "2 minute = 120 second, इसलिए P = work/time = 600/120 = 5 W, अतः option 0 सही है। बाकी मान minute को second में न बदलने या गलत विभाजन से आते हैं।"
+    },
+    {
+      "id": "phy_work_energy_power_q22",
+      "question": "विद्युत ऊर्जा (electrical energy) की व्यावसायिक (commercial) इकाई क्या है?",
+      "options": ["watt", "joule", "kilowatt-hour", "newton"],
+      "correctIndex": 2,
+      "explanation": "बिजली के बिल में ऊर्जा kilowatt-hour (kWh या यूनिट) में मापी जाती है, इसलिए option 2 सही है। watt power की इकाई है, joule ऊर्जा की SI इकाई है (व्यावसायिक नहीं) और newton force की इकाई है।"
+    },
+    {
+      "id": "phy_work_energy_power_q23",
+      "question": "1 kilowatt-hour (kWh) कितने joule के बराबर होता है?",
+      "options": ["3.6 × 10³ J", "3.6 × 10⁶ J", "3.6 × 10⁵ J", "3.6 × 10⁴ J"],
+      "correctIndex": 1,
+      "explanation": "1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J, इसलिए option 1 सही है। बाकी घातें इस गणना (1000 × 3600) से मेल नहीं खातीं।"
+    },
+    {
+      "id": "phy_work_energy_power_q24",
+      "question": "4 kg की वस्तु का momentum 8 kg·m/s है; उसकी kinetic energy कितनी है?",
+      "options": ["2 J", "4 J", "16 J", "8 J"],
+      "correctIndex": 3,
+      "explanation": "KE = p²/(2m) = 8²/(2 × 4) = 64/8 = 8 J, इसलिए option 3 सही है। बाकी मान इस सूत्र से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q25",
+      "question": "किसी spring में संचित elastic potential energy का सूत्र क्या है? (k = spring constant, x = विरूपण)",
+      "options": ["½kx²", "kx", "½kx", "kx²"],
+      "correctIndex": 0,
+      "explanation": "Spring की elastic potential energy = ½kx², इसलिए option 0 सही है। kx spring force है, और ½kx व kx² में गुणांक या power गलत है।"
+    },
+    {
+      "id": "phy_work_energy_power_q26",
+      "question": "एक pump 100 kg पानी को 20 s में 10 m ऊँचाई तक उठाता है; उसकी power कितनी है? (g = 10 m/s²)",
+      "options": ["50 W", "100 W", "500 W", "1000 W"],
+      "correctIndex": 2,
+      "explanation": "पहले W = mgh = 100 × 10 × 10 = 10000 J, फिर P = W/t = 10000/20 = 500 W, इसलिए option 2 सही है। बाकी मान इस दो-चरणीय गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_work_energy_power_q27",
+      "question": "Positive work कब किया जाता है?",
+      "options": ["जब force विस्थापन के विपरीत हो", "जब force और displacement एक ही दिशा में हों", "जब force विस्थापन के लंबवत हो", "जब displacement शून्य हो"],
+      "correctIndex": 1,
+      "explanation": "जब force और displacement के बीच कोण 90° से कम हो (एक ही दिशा में) तो cosθ धनात्मक होता है और work positive होता है, इसलिए option 1 सही है। विपरीत दिशा में work negative, लंबवत या शून्य displacement पर work शून्य होता है।"
+    },
+    {
+      "id": "phy_work_energy_power_q28",
+      "question": "1000 W की एक motor 1 hour तक चलती है; उसके द्वारा खपत ऊर्जा कितनी है?",
+      "options": ["3.6 × 10³ J", "3.6 × 10⁴ J", "3.6 × 10⁵ J", "3.6 × 10⁶ J"],
+      "correctIndex": 3,
+      "explanation": "Energy = power × time = 1000 W × 3600 s = 3.6 × 10⁶ J (यानी 1 kWh), इसलिए option 3 सही है। बाकी घातें 1000 × 3600 की गणना से मेल नहीं खातीं।"
+    },
+    {
+      "id": "phy_work_energy_power_q29",
+      "question": "एक coolie सिर पर बोझ रखकर horizontal (क्षैतिज) दिशा में चलता है; गुरुत्व के विरुद्ध किया गया work कितना है?",
+      "options": ["शून्य", "mgh", "अधिकतम", "mg × दूरी"],
+      "correctIndex": 0,
+      "explanation": "गुरुत्व बल नीचे की ओर और displacement क्षैतिज होने से दोनों के बीच कोण 90° होता है, cos90° = 0, इसलिए work शून्य और option 0 सही है। mgh तब लागू होता जब ऊँचाई बदलती, इसलिए बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "phy_work_energy_power_q30",
+      "question": "एक मशीन को 500 J ऊर्जा दी जाती है और वह 400 J उपयोगी कार्य करती है; उसकी efficiency कितनी है?",
+      "options": ["40%", "60%", "80%", "100%"],
+      "correctIndex": 2,
+      "explanation": "Efficiency = (output/input) × 100 = (400/500) × 100 = 80%, इसलिए option 2 सही है। बाकी मान output और input के सही अनुपात से मेल नहीं खाते।"
+    }
+  ]
+}

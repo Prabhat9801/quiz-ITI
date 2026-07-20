@@ -1,0 +1,218 @@
+{
+  "unit": "unit6",
+  "unitName": "Cable Harnessing & Connectors",
+  "topic": "cable_classification",
+  "topicName": "Cable Classification",
+  "questions": [
+    {
+      "id": "u6_cable_classification_q1",
+      "question": "AWG system में wire gauge number बढ़ने पर conductor की thickness पर क्या असर पड़ता है?",
+      "options": ["Wire thinner होता जाता है", "Wire thicker होता जाता है", "Thickness पर कोई असर नहीं", "पहले thick फिर thin"],
+      "correctIndex": 0,
+      "explanation": "AWG (American Wire Gauge) में higher number का मतलब thinner wire होता है, जैसे AWG 22, AWG 18 से पतला है। इसलिए option 0 सही है। Option 1 उल्टा है। Option 2 गलत क्योंकि direct relation है। Option 3 का ऐसा कोई pattern नहीं होता।"
+    },
+    {
+      "id": "u6_cable_classification_q2",
+      "question": "किस insulation material की temperature rating सबसे अधिक होती है और high-temperature applications में इस्तेमाल होता है?",
+      "options": ["PVC", "Rubber", "PTFE (Teflon)", "Ordinary cotton"],
+      "correctIndex": 2,
+      "explanation": "PTFE यानी Teflon लगभग 200°C तक की high temperature सहन कर सकता है, इसलिए यह सही है। PVC सामान्यतः 70°C तक ही रहता है, rubber मध्यम range का होता है और cotton insulation heat के लिए बहुत कमजोर है।"
+    },
+    {
+      "id": "u6_cable_classification_q3",
+      "question": "Stranded conductor की तुलना में solid conductor की मुख्य विशेषता क्या है?",
+      "options": ["अधिक flexible होता है", "बार-बार bending में जल्दी टूटता नहीं", "कम flexible और fixed wiring के लिए उपयुक्त", "हमेशा aluminium का बनता है"],
+      "correctIndex": 2,
+      "explanation": "Solid conductor एक ही thick wire का होता है, इसलिए यह कम flexible होता है और fixed/permanent wiring में इस्तेमाल होता है। इसलिए option 2 सही है। Stranded conductor अधिक flexible होता है (option 0 गलत)। बार-बार bending में solid जल्दी टूट सकता है (option 1 गलत)। यह copper या aluminium दोनों का हो सकता है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q4",
+      "question": "समान length और material होने पर किस conductor की current carrying capacity (ampacity) अधिक होगी?",
+      "options": ["कम cross-section area वाला", "अधिक cross-section area वाला", "दोनों की समान", "पतले wire की अधिक"],
+      "correctIndex": 1,
+      "explanation": "अधिक cross-section area वाले conductor का resistance कम होता है और वह अधिक current सह सकता है, इसलिए option 1 सही है। कम area (thin wire) में ampacity कम होती है, इसलिए option 0 और 3 गलत हैं। Area बदलने पर capacity भी बदलती है, इसलिए option 2 गलत।"
+    },
+    {
+      "id": "u6_cable_classification_q5",
+      "question": "Copper और aluminium conductor की तुलना में सही statement कौन-सा है?",
+      "options": ["Aluminium की conductivity copper से अधिक है", "Copper की conductivity aluminium से अधिक है", "दोनों की conductivity बिल्कुल समान है", "Copper, aluminium से हल्का होता है"],
+      "correctIndex": 1,
+      "explanation": "Copper की electrical conductivity aluminium से अधिक होती है, इसलिए समान current के लिए copper wire पतला रह सकता है — option 1 सही। Aluminium की conductivity कम है (option 0 गलत), दोनों समान नहीं (option 2 गलत), और aluminium copper से हल्का होता है, copper भारी है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q6",
+      "question": "XLPE insulation का PVC पर मुख्य लाभ क्या है?",
+      "options": ["सस्ता होता है", "अधिक temperature rating और better thermal performance", "आसानी से पिघल जाता है", "केवल low voltage में उपयोग"],
+      "correctIndex": 1,
+      "explanation": "XLPE (Cross-Linked Polyethylene) की temperature rating (~90°C) PVC (~70°C) से अधिक होती है और इसकी thermal व electrical performance बेहतर है, इसलिए option 1 सही है। XLPE आमतौर पर PVC से महँगा होता है (option 0 गलत), cross-linking की वजह से आसानी से नहीं पिघलता (option 2 गलत), और यह high voltage में भी use होता है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q7",
+      "question": "एक single-core cable और multi-core cable में मुख्य अंतर क्या है?",
+      "options": ["Single-core में एक ही insulated conductor होता है", "Multi-core में केवल एक conductor होता है", "Single-core हमेशा stranded होता है", "Multi-core में insulation नहीं होता"],
+      "correctIndex": 0,
+      "explanation": "Single-core cable में एक ही insulated conductor होता है जबकि multi-core में एक ही outer sheath के अंदर कई insulated conductors होते हैं, इसलिए option 0 सही है। Multi-core में एक से अधिक conductor होते हैं (option 1 गलत), single-core solid या stranded दोनों हो सकता है (option 2 गलत), और multi-core में हर core का insulation होता है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q8",
+      "question": "किसी flexible cable में flexibility बढ़ाने के लिए conductor कैसा बनाया जाता है?",
+      "options": ["एक मोटा solid wire", "अनेक पतले strands का बना stranded conductor", "aluminium का solid core", "बिना insulation का wire"],
+      "correctIndex": 1,
+      "explanation": "अनेक पतले strands को मिलाकर बनाया गया stranded conductor अधिक flexible होता है और बार-बार bending सह लेता है, इसलिए option 1 सही है। Solid thick wire कम flexible है (option 0 गलत), aluminium solid core भी stiff रहता है (option 2 गलत), और insulation हटाना flexibility का उपाय नहीं है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q9",
+      "question": "AWG 14 और AWG 20 wire में से किसकी current carrying capacity अधिक होगी?",
+      "options": ["AWG 20", "AWG 14", "दोनों समान", "Length पर निर्भर, gauge पर नहीं"],
+      "correctIndex": 1,
+      "explanation": "AWG number जितना कम, wire उतना मोटा; इसलिए AWG 14, AWG 20 से मोटा है और अधिक current सह सकता है — option 1 सही। AWG 20 पतला है इसलिए कम ampacity (option 0 गलत), दोनों समान नहीं (option 2 गलत), capacity मुख्यतः cross-section यानी gauge पर निर्भर करती है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q10",
+      "question": "PTFE (Teflon) insulation का प्रमुख गुण जो इसे aerospace और high-temperature wiring में उपयोगी बनाता है?",
+      "options": ["बहुत कम cost", "High temperature व chemical resistance", "बहुत भारी होना", "Low insulation resistance"],
+      "correctIndex": 1,
+      "explanation": "PTFE की high temperature resistance और उत्कृष्ट chemical resistance इसे aerospace व high-temperature applications में आदर्श बनाती है, इसलिए option 1 सही है। PTFE महँगा होता है (option 0 गलत), यह हल्का व thin insulation देता है (option 2 गलत), और इसका insulation resistance बहुत अच्छा (high) होता है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q11",
+      "question": "एक ही current रेटिंग के लिए aluminium conductor का cross-section area copper की तुलना में कैसा रखना पड़ता है?",
+      "options": ["अधिक (बड़ा area)", "कम (छोटा area)", "बिल्कुल बराबर", "Area की कोई ज़रूरत नहीं"],
+      "correctIndex": 0,
+      "explanation": "Aluminium की conductivity कम होने के कारण समान current के लिए इसका cross-section area copper से बड़ा रखना पड़ता है, इसलिए option 0 सही है। छोटा area रखने पर overheating होगी (option 1 गलत), बराबर area पर्याप्त नहीं होगा (option 2 गलत), और area हमेशा आवश्यक है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q12",
+      "question": "Rubber insulation का उपयोग किस स्थिति में विशेष रूप से किया जाता है?",
+      "options": ["जहाँ high flexibility और अच्छा weather resistance चाहिए", "जहाँ 300°C temperature हो", "केवल underground high voltage में", "जहाँ conductor की ज़रूरत ही न हो"],
+      "correctIndex": 0,
+      "explanation": "Rubber insulation flexible होता है और अच्छा moisture/weather resistance देता है, इसलिए portable व trailing cables में इसका उपयोग होता है — option 0 सही। Rubber 300°C सह नहीं सकता (option 1 गलत), यह केवल underground HV के लिए सीमित नहीं (option 2 गलत), और insulation हमेशा conductor के साथ ही होता है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q13",
+      "question": "किसी conductor की resistance और उसके cross-section area में क्या संबंध होता है (समान material व length पर)?",
+      "options": ["Resistance, area के समानुपाती (directly proportional)", "Resistance, area के व्युत्क्रमानुपाती (inversely proportional)", "कोई संबंध नहीं", "Resistance हमेशा शून्य"],
+      "correctIndex": 1,
+      "explanation": "R = ρL/A सूत्र के अनुसार resistance, area के inversely proportional होता है — area बढ़ने पर resistance घटता है, इसलिए option 1 सही है। यह directly proportional नहीं (option 0 गलत), संबंध मौजूद है (option 2 गलत), और resistance शून्य नहीं होती (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q14",
+      "question": "एक conductor का diameter दोगुना कर दिया जाए तो उसका cross-section area कितना गुना हो जाता है?",
+      "options": ["2 गुना", "4 गुना", "आधा", "समान रहता है"],
+      "correctIndex": 1,
+      "explanation": "Area = π/4 × d² होता है, इसलिए diameter दोगुना करने पर area d² के कारण 4 गुना हो जाता है — option 1 सही। सिर्फ 2 गुना केवल diameter के linear बढ़ने पर होता, area पर नहीं (option 0 गलत), आधा या समान होना गलत है (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q15",
+      "question": "PVC insulation की एक मुख्य सीमा (limitation) क्या है?",
+      "options": ["बहुत महँगा होना", "High temperature पर softening व सीमित temperature rating", "आग में बिल्कुल न जलना", "conductivity बहुत अधिक होना"],
+      "correctIndex": 1,
+      "explanation": "PVC की temperature rating सीमित (~70°C) होती है और high temperature पर यह soften हो जाता है, इसलिए option 1 सही है। PVC सस्ता होता है (option 0 गलत), यह जलने पर toxic gas छोड़ता है यानी fireproof नहीं (option 2 गलत), और insulation में conductivity नहीं मापी जाती, वह insulator है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q16",
+      "question": "House wiring के fixed points के बीच में आमतौर पर किस प्रकार का conductor प्रयोग होता है?",
+      "options": ["Solid conductor", "बहुत fine stranded conductor", "बिना insulation का bare aluminium", "केवल optical fiber"],
+      "correctIndex": 0,
+      "explanation": "Fixed house wiring में हलचल कम होती है, इसलिए सस्ता व आसान solid conductor उपयुक्त रहता है — option 0 सही। Fine stranded flexible cords (जैसे appliances) के लिए होता है (option 1 गलत), bare conductor घर में असुरक्षित है (option 2 गलत), और optical fiber data के लिए है, power wiring के लिए नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q17",
+      "question": "Ampacity (current carrying capacity) को घटाने वाला कारक निम्न में से क्या है?",
+      "options": ["Conductor का ठंडा होना", "आसपास की उच्च ambient temperature", "बड़ा cross-section area", "बेहतर ventilation"],
+      "correctIndex": 1,
+      "explanation": "उच्च ambient temperature में conductor जल्दी गरम हो जाता है इसलिए safe current यानी ampacity घट जाती है — option 1 सही। ठंडा वातावरण, बड़ा area और अच्छी ventilation उलटे ampacity बढ़ाते हैं (option 0, 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q18",
+      "question": "Multi-core cable में अलग-अलग cores को पहचानने के लिए सामान्यतः किसका उपयोग होता है?",
+      "options": ["अलग-अलग colour coding of insulation", "सभी cores एक ही रंग के", "conductor का weight", "cable की length"],
+      "correctIndex": 0,
+      "explanation": "Multi-core cable में हर core की insulation पर अलग colour code (जैसे red, black, green) होता है ताकि identification आसान हो — option 0 सही। सभी एक रंग हों तो पहचान असंभव है (option 1 गलत), weight या length से individual core पहचान नहीं होती (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q19",
+      "question": "किसी stranded wire पर '7/0.2 mm' लिखा है, इसका क्या अर्थ है?",
+      "options": ["7 mm मोटा single wire", "7 strands, प्रत्येक 0.2 mm diameter का", "0.2 strands 7 mm के", "कुल length 7.2 meter"],
+      "correctIndex": 1,
+      "explanation": "'7/0.2 mm' का अर्थ है conductor 7 strands से बना है और प्रत्येक strand का diameter 0.2 mm है — option 1 सही। यह single wire नहीं (option 0 गलत), strands की संख्या पहले लिखी होती है (option 2 गलत), और यह length का संकेत नहीं है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q20",
+      "question": "Aluminium conductor का copper की तुलना में एक व्यावहारिक लाभ क्या है?",
+      "options": ["अधिक conductivity", "हल्का व सस्ता होना", "जोड़ (joints) पर कभी oxidize न होना", "अधिक tensile strength"],
+      "correctIndex": 1,
+      "explanation": "Aluminium copper से हल्का और सस्ता होता है, इसीलिए overhead transmission lines में इसका उपयोग होता है — option 1 सही। इसकी conductivity copper से कम है (option 0 गलत), aluminium joints पर oxide layer बनाता है जो समस्या है (option 2 गलत), और इसकी tensile strength copper से कम होती है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q21",
+      "question": "किसी cable की 'voltage grade' मुख्यतः किस पर निर्भर करती है?",
+      "options": ["Conductor का रंग", "Insulation की thickness व dielectric strength", "Cable की length", "strands की गिनती"],
+      "correctIndex": 1,
+      "explanation": "Cable कितना voltage सह सकती है यह मुख्यतः insulation की thickness और उसकी dielectric strength पर निर्भर करता है — option 1 सही। रंग केवल identification के लिए है (option 0 गलत), length voltage grade तय नहीं करती (option 2 गलत), और strands की गिनती flexibility/ampacity से जुड़ी है, voltage grade से नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q22",
+      "question": "समान cross-section area पर copper और aluminium में से किसका weight कम होगा?",
+      "options": ["Copper", "Aluminium", "दोनों बराबर", "Weight area पर निर्भर नहीं"],
+      "correctIndex": 1,
+      "explanation": "Aluminium की density (~2.7 g/cm³) copper (~8.9 g/cm³) से बहुत कम है, इसलिए समान area पर aluminium हल्का होता है — option 1 सही। Copper भारी है (option 0 गलत), दोनों बराबर नहीं (option 2 गलत), और weight, area व density दोनों पर निर्भर है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q23",
+      "question": "किसी cable की temperature rating का सीधा अर्थ क्या होता है?",
+      "options": ["वह अधिकतम तापमान जिस पर insulation सुरक्षित रूप से कार्य करता है", "conductor का melting point", "cable की length पर तापमान", "cable बनाने का तापमान"],
+      "correctIndex": 0,
+      "explanation": "Temperature rating वह maximum temperature है जिस पर insulation खराब हुए बिना सुरक्षित रूप से काम करता है — option 0 सही। यह conductor का melting point नहीं होता जो बहुत अधिक होता है (option 1 गलत), न ही length या manufacturing temperature से इसका संबंध है (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q24",
+      "question": "यदि किसी circuit में rating से पतला (higher AWG) wire लगा दिया जाए तो सबसे संभावित परिणाम क्या होगा?",
+      "options": ["Wire ठंडा रहेगा", "Overheating और insulation damage का खतरा", "Voltage बढ़ जाएगा", "current अपने आप घट जाएगी"],
+      "correctIndex": 1,
+      "explanation": "पतले wire की ampacity कम होती है, इसलिए rated current पर वह ज़्यादा गरम होकर insulation damage या आग का खतरा बनाता है — option 1 सही। पतला wire ठंडा नहीं रहेगा (option 0 गलत), voltage source पर निर्भर है wire पर नहीं (option 2 गलत), और load की current अपने आप नहीं घटेगी (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q25",
+      "question": "PVC, XLPE, PTFE और rubber में से सामान्यतः सबसे कम temperature rating किसकी होती है?",
+      "options": ["PTFE", "XLPE", "PVC", "silicone rubber"],
+      "correctIndex": 2,
+      "explanation": "PVC की सामान्य rating लगभग 70°C होती है जो इन विकल्पों में सबसे कम है — option 2 सही। PTFE ~200°C, XLPE ~90°C और silicone rubber भी उच्च temperature सह सकता है, इसलिए option 0, 1, 3 गलत हैं।"
+    },
+    {
+      "id": "u6_cable_classification_q26",
+      "question": "Skin effect के कारण high frequency AC में current मुख्यतः conductor के किस भाग से बहता है?",
+      "options": ["केंद्र (center) से", "बाहरी surface के पास", "पूरे cross-section में समान रूप से", "बिल्कुल नहीं बहता"],
+      "correctIndex": 1,
+      "explanation": "Skin effect के कारण high frequency AC conductor की बाहरी surface के पास केंद्रित होकर बहता है, इसीलिए high frequency में stranded/hollow conductor उपयोगी होते हैं — option 1 सही। यह center में केंद्रित नहीं होता (option 0 गलत), न ही uniform रहता है (option 2 गलत), और current बहता तो है ही (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q27",
+      "question": "किसी portable power tool के लिए किस प्रकार की cable सबसे उपयुक्त है?",
+      "options": ["Solid single-core aluminium", "Flexible multi-strand rubber/PVC insulated cable", "bare copper busbar", "optical fiber cable"],
+      "correctIndex": 1,
+      "explanation": "Portable tool बार-बार हिलता-मुड़ता है, इसलिए flexible multi-strand conductor वाली rubber/PVC insulated cable उपयुक्त है — option 1 सही। Solid aluminium stiff होकर टूट सकती है (option 0 गलत), bare busbar असुरक्षित और fixed होता है (option 2 गलत), और optical fiber power carry नहीं करती (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q28",
+      "question": "किसी cable में 'sheath' का मुख्य कार्य क्या होता है?",
+      "options": ["current को conduct करना", "conductor और अंदरूनी insulation को mechanical व environmental protection देना", "voltage बढ़ाना", "colour देना ही एकमात्र काम"],
+      "correctIndex": 1,
+      "explanation": "Sheath बाहरी protective layer है जो cable को mechanical damage, moisture व environment से बचाता है — option 1 सही। यह current conduct नहीं करता, वह काम conductor का है (option 0 गलत), voltage नहीं बढ़ाता (option 2 गलत), और colour देना इसका एकमात्र कार्य नहीं है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q29",
+      "question": "दो अलग-अलग cross-section वाली copper wires में, 2.5 sq mm और 1.5 sq mm, में से किसे अधिक load current के circuit में लगाना चाहिए?",
+      "options": ["1.5 sq mm", "2.5 sq mm", "दोनों समान रूप से उपयुक्त", "जो लंबी हो वही"],
+      "correctIndex": 1,
+      "explanation": "अधिक cross-section area (2.5 sq mm) की ampacity अधिक होती है, इसलिए higher load current के लिए यही उपयुक्त है — option 1 सही। 1.5 sq mm कम current के लिए ठीक है (option 0 गलत), दोनों समान नहीं (option 2 गलत), और चुनाव length से नहीं बल्कि area व load से होता है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q30",
+      "question": "किसी conductor की length दोगुनी करने पर उसकी resistance पर क्या असर होता है (area व material समान)?",
+      "options": ["आधी हो जाती है", "समान रहती है", "दोगुनी हो जाती है", "चार गुनी हो जाती है"],
+      "correctIndex": 2,
+      "explanation": "R = ρL/A के अनुसार resistance, length के directly proportional होती है, इसलिए length दोगुनी करने पर resistance भी दोगुनी हो जाती है — option 2 सही। आधी होना (option 0), समान रहना (option 1) और चार गुनी होना (option 3) सूत्र के विरुद्ध हैं; चार गुना तो area या diameter square से जुड़ा होता है।"
+    }
+  ]
+}

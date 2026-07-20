@@ -1,0 +1,368 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "pwm_switching",
+  "topicName": "PWM Technique, Switching Sequence/Timing & Switching Devices",
+  "questions": [
+    {
+      "id": "u14_pwm_switching_q1",
+      "question": "PWM (Pulse Width Modulation) technique में inverter output को नियंत्रित करने के लिए मुख्यतः क्या बदला जाता है?",
+      "options": [
+        "Switching pulses की width (ON time) को उच्च आवृत्ति पर बदला जाता है ताकि output का average voltage/frequency control हो",
+        "DC link voltage का magnitude हमेशा बदला जाता है",
+        "केवल rectifier का firing angle बदला जाता है",
+        "Motor की winding resistance बदली जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: PWM में fixed DC link voltage से power switches (IGBT) को उच्च frequency पर ON-OFF किया जाता है और उनकी pulse width बदलकर output का average voltage तथा effective frequency नियंत्रित की जाती है। DC link voltage आमतौर पर स्थिर रहता है, firing angle rectifier से संबंधित है और winding resistance स्थिर parameter है।"
+    },
+    {
+      "id": "u14_pwm_switching_q2",
+      "question": "Sinusoidal PWM (SPWM) technique में gating pulses कैसे generate किए जाते हैं?",
+      "options": [
+        "केवल एक fixed duty cycle square wave से",
+        "एक high frequency triangular carrier wave की एक low frequency sinusoidal reference wave से तुलना करके",
+        "Motor speed sensor के output से सीधे",
+        "DC link voltage को दोगुना करके"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: SPWM में एक high frequency triangular (carrier) wave की तुलना एक low frequency sinusoidal (reference/modulating) wave से की जाती है; जहाँ reference, carrier से अधिक होता है वहाँ switch ON होता है, जिससे sine-weighted PWM pulses बनते हैं। बाकी विकल्प SPWM generation से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q3",
+      "question": "PWM में 'carrier frequency' और 'fundamental (output) frequency' में क्या संबंध होता है?",
+      "options": [
+        "Carrier frequency हमेशा fundamental frequency से कम होती है",
+        "Carrier frequency, fundamental frequency के बराबर होती है",
+        "Carrier frequency, fundamental output frequency से काफी अधिक होती है (जैसे kHz range में)",
+        "दोनों का आपस में कोई संबंध नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Carrier (triangular) wave की frequency fundamental output frequency (जो motor को मिलती है, आमतौर पर Hz range में) से काफी अधिक (kHz range) रखी जाती है ताकि output waveform अधिक sinusoidal बने और harmonics कम हों। बाकी विकल्प यह संबंध सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q4",
+      "question": "PWM switching frequency को बढ़ाने का एक मुख्य लाभ क्या है?",
+      "options": [
+        "Switching losses कम हो जाती हैं",
+        "DC link capacitor की आवश्यकता समाप्त हो जाती है",
+        "Motor की rated voltage बढ़ जाती है",
+        "Output current waveform अधिक smooth होता है और audible motor noise कम होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Switching frequency बढ़ाने से output current waveform अधिक smooth (sinusoidal के करीब) हो जाता है जिससे harmonics तथा audible noise कम होता है, हालांकि switching losses बढ़ती हैं (घटती नहीं)। Rated voltage या DC link आवश्यकता पर इसका सीधा प्रभाव नहीं है।"
+    },
+    {
+      "id": "u14_pwm_switching_q5",
+      "question": "PWM switching frequency बहुत अधिक बढ़ाने पर एक मुख्य नुकसान (drawback) क्या होता है?",
+      "options": [
+        "Switching losses (device में) बढ़ जाती हैं जिससे heating अधिक होती है और device efficiency घट सकती है",
+        "Motor की starting torque बढ़ जाती है",
+        "Output waveform में harmonics बढ़ जाते हैं",
+        "DC link voltage कम हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: प्रत्येक switching cycle में कुछ energy loss (turn-on/turn-off loss) होती है; frequency बढ़ने पर unit समय में switching operations बढ़ जाते हैं जिससे कुल switching losses व heating बढ़ती है। Harmonics वास्तव में उच्च frequency पर कम होते हैं, यह starting torque या DC link voltage को सीधे प्रभावित नहीं करता।"
+    },
+    {
+      "id": "u14_pwm_switching_q6",
+      "question": "3-phase inverter में एक leg (एक phase) के दो switches (ऊपर व नीचे) के switching sequence में सबसे महत्वपूर्ण नियम क्या है?",
+      "options": [
+        "दोनों switches को हमेशा एक साथ ON रखना चाहिए",
+        "दोनों switches को कभी भी एक साथ ON नहीं होना चाहिए, अन्यथा DC link में short circuit (shoot-through) होगा",
+        "दोनों switches को हमेशा एक साथ OFF रखना चाहिए",
+        "Switching sequence का कोई महत्व नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: एक leg के top और bottom switch को कभी एक साथ ON नहीं करना चाहिए क्योंकि इससे DC link सीधे short हो जाएगा (shoot-through fault) जो devices को नष्ट कर सकता है; इसीलिए complementary switching के साथ dead-time भी रखा जाता है। बाकी विकल्प गलत/असुरक्षित practice हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q7",
+      "question": "Inverter switching में 'dead time' (blanking time) क्यों दिया जाता है?",
+      "options": [
+        "Motor speed बढ़ाने के लिए",
+        "DC link voltage मापने के लिए",
+        "एक leg के top switch के OFF होने और bottom switch के ON होने के बीच एक छोटा delay देकर shoot-through short circuit से बचने के लिए",
+        "PWM frequency को शून्य करने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: चूँकि real switches instantly turn OFF नहीं होते, एक switch पूरी तरह OFF होने से पहले दूसरे को ON करने पर दोनों momentarily conduct कर सकते हैं; dead time इस overlap को रोकता है और shoot-through से बचाता है। बाकी विकल्प dead time के उद्देश्य को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q8",
+      "question": "आधुनिक AC drives में inverter के power switching devices के रूप में सबसे अधिक प्रयोग होने वाला device कौन-सा है?",
+      "options": [
+        "SCR (Thyristor)",
+        "Carbon resistor",
+        "Simple diode",
+        "IGBT (Insulated Gate Bipolar Transistor)"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: IGBT अपनी fast switching speed, low gate drive power requirement और medium-high power handling क्षमता के कारण आधुनिक AC drives (VFD) के inverter section में सबसे अधिक प्रयोग होता है। SCR मुख्यतः rectifier/controlled converter में प्रयोग होता है, diode केवल uncontrolled rectification करता है, और resistor switching device नहीं है।"
+    },
+    {
+      "id": "u14_pwm_switching_q9",
+      "question": "IGBT को MOSFET और BJT का 'hybrid' device क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि इसमें MOSFET जैसा voltage-controlled gate input और BJT जैसी low ON-state voltage drop (high current handling) क्षमता होती है",
+        "क्योंकि यह पूरी तरह mechanical switch है",
+        "क्योंकि यह केवल AC circuits में काम करता है",
+        "क्योंकि इसमें कोई gate terminal नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: IGBT का input structure MOSFET जैसा voltage-controlled (उच्च input impedance, कम gate drive power) होता है जबकि output characteristics BJT जैसे low conduction (ON-state) voltage drop के साथ उच्च current handle करते हैं, इसीलिए इसे hybrid device कहा जाता है। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q10",
+      "question": "IGBT का gate terminal signal किस प्रकार का होता है?",
+      "options": [
+        "उच्च current signal जो continuously flow करता है",
+        "Voltage-controlled signal जिसमें conduction बनाए रखने के लिए बहुत कम gate current की आवश्यकता होती है",
+        "AC signal जो gate पर लगातार polarity बदलता है",
+        "Mechanical दबाव signal"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: IGBT का gate एक insulated MOS structure है, इसलिए यह voltage-controlled device है जिसमें steady-state में लगभग नगण्य gate current से conduction बनाए रखा जा सकता है, जबकि BJT को continuous base current चाहिए होता है। बाकी विकल्प IGBT gate की प्रकृति को गलत बताते हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q11",
+      "question": "Inverter switching devices में freewheeling diode (anti-parallel diode) का क्या कार्य है?",
+      "options": [
+        "Switch को permanent रूप से बंद करना",
+        "DC link voltage बढ़ाना",
+        "Inductive load (motor winding) के stored energy को safe path देकर switch के turn-OFF के समय voltage spike से बचाना",
+        "PWM frequency generate करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Motor winding inductive load है; switch के OFF होने पर stored inductive energy को freewheeling diode के जरिए एक path मिलता है, जिससे voltage spike सीमित रहता है और switch सुरक्षित रहता है। बाकी विकल्प इसके कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q12",
+      "question": "6-step (square wave) inverter switching sequence की तुलना में PWM based sinusoidal switching का मुख्य लाभ क्या है?",
+      "options": [
+        "6-step inverter में harmonics कम होते हैं जबकि PWM में अधिक",
+        "6-step inverter में DC link की आवश्यकता नहीं होती",
+        "PWM inverter में केवल एक ही switch की आवश्यकता होती है",
+        "PWM में output waveform अधिक sinusoidal होकर harmonics व motor heating/noise कम करता है, साथ ही voltage magnitude को भी control किया जा सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: 6-step inverter में output quasi-square wave होता है जिसमें harmonics अधिक होते हैं, जबकि PWM switching से output अधिक sinusoidal बनता है, harmonics-जनित heating व noise कम होते हैं, और साथ ही voltage magnitude व frequency दोनों independently control हो सकते हैं। बाकी विकल्प गलत तुलना करते हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q13",
+      "question": "PWM में 'modulation index' का क्या अर्थ है?",
+      "options": [
+        "Reference sine wave की amplitude और carrier triangular wave की amplitude का अनुपात, जो output voltage magnitude निर्धारित करता है",
+        "Motor की rated speed",
+        "DC link capacitor की value",
+        "Rectifier के diode की संख्या"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Modulation index (m) = reference signal amplitude / carrier signal amplitude; यह अनुपात output fundamental voltage की magnitude को नियंत्रित करता है — m बढ़ने पर output voltage बढ़ता है (एक सीमा तक)। बाकी विकल्प modulation index की परिभाषा से असंबंधित हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q14",
+      "question": "यदि modulation index m = 1 (या उसके निकट) रखा जाए, तो output fundamental voltage पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Output voltage शून्य हो जाएगा",
+        "Output fundamental voltage अपने अधिकतम (linear region के अंत के करीब) मान पर पहुँच जाएगा",
+        "Switching frequency शून्य हो जाएगी",
+        "DC link voltage दोगुना हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Modulation index जितना अधिक होगा (1 के निकट), output fundamental voltage उतना ही अधिक होगा — यह linear modulation region का ऊपरी छोर है, इससे आगे over-modulation में harmonics बढ़ने लगते हैं। यह output voltage को शून्य नहीं करता, न ही switching frequency या DC link voltage को प्रभावित करता है।"
+    },
+    {
+      "id": "u14_pwm_switching_q15",
+      "question": "Space Vector PWM (SVPWM) technique, sinusoidal PWM (SPWM) की तुलना में किस बात के लिए जानी जाती है?",
+      "options": [
+        "यह केवल DC motor में प्रयोग होती है",
+        "इसमें कोई switching नहीं होती",
+        "यह DC link voltage का अधिक बेहतर उपयोग (higher voltage utilization) करके अधिक output fundamental voltage देती है और harmonics भी कम करती है",
+        "यह motor को हमेशा constant speed पर रखती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: SVPWM, inverter की switching states को space vector के रूप में देखकर DC link voltage का अधिक efficient उपयोग करती है, जिससे SPWM की तुलना में अधिक fundamental output voltage मिलता है और harmonic content भी अपेक्षाकृत कम होता है। बाकी विकल्प SVPWM की विशेषताओं से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q16",
+      "question": "3-phase inverter में एक पूर्ण switching cycle में valid switching states (vectors) की संख्या कितनी होती है (2 active + zero states सहित सामान्य मान)?",
+      "options": [
+        "4",
+        "16",
+        "3",
+        "6 active vectors और 2 zero vectors (कुल 8 states)"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: 3-phase inverter (3 legs, प्रत्येक में 2 switch states) में कुल 2³ = 8 संभावित switching combinations होते हैं, जिनमें से 6 active (non-zero) voltage vectors और 2 zero vectors होते हैं। बाकी संख्याएँ मानक 3-phase 2-level inverter से मेल नहीं खातीं।"
+    },
+    {
+      "id": "u14_pwm_switching_q17",
+      "question": "IGBT की तुलना में साधारण Power MOSFET का प्रयोग किन applications में अधिक होता है?",
+      "options": [
+        "Low voltage, high switching frequency applications (जैसे SMPS, छोटे motor drives) में जहाँ fast switching चाहिए",
+        "High voltage, high power industrial drives में",
+        "केवल AC generation में",
+        "केवल mechanical braking में"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Power MOSFET की switching speed IGBT से तेज होती है परंतु उच्च voltage पर conduction losses अधिक होते हैं, इसलिए यह low voltage, high frequency applications (जैसे SMPS, छोटे drives) के लिए उपयुक्त है, जबकि उच्च voltage/power industrial drives में IGBT प्रचलित है। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q18",
+      "question": "SCR (Thyristor) को PWM based fast switching inverter में सामान्यतः क्यों नहीं प्रयोग किया जाता?",
+      "options": [
+        "SCR बहुत महंगा होता है",
+        "SCR को एक बार ON करने के बाद gate signal हटाने पर भी वह current zero होने तक ON रहता है (natural commutation की आवश्यकता), जिससे उच्च आवृत्ति पर fast turn-OFF कठिन होता है",
+        "SCR AC signal को handle नहीं कर सकता",
+        "SCR में कोई gate terminal नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: SCR latch हो जाता है और गेट सिग्नल हटाने पर भी current zero होने तक conduct करता रहता है (forced commutation के बिना जल्दी OFF नहीं होता), जिससे यह उच्च PWM switching frequency के लिए उपयुक्त नहीं है; इसके विपरीत IGBT/MOSFET को gate signal से आसानी से तुरंत OFF किया जा सकता है। बाकी विकल्प कारण गलत बताते हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q19",
+      "question": "PWM switching में 'turn-on time' और 'turn-off time' का device की switching loss पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "इनका switching loss से कोई संबंध नहीं है",
+        "अधिक turn-on/turn-off time से switching losses शून्य हो जाती हैं",
+        "अधिक turn-on/turn-off time के कारण device अधिक समय तक transition region (जहाँ voltage व current दोनों उपस्थित रहते हैं) में रहता है, जिससे switching losses बढ़ती हैं",
+        "यह केवल conduction losses को प्रभावित करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Switching transition के दौरान device में voltage और current दोनों साथ मौजूद रहते हैं, transition time जितना अधिक होगा उतनी ही अधिक instantaneous power loss और कुल switching energy loss होगी। यह conduction loss से अलग है, और switching loss शून्य नहीं होती।"
+    },
+    {
+      "id": "u14_pwm_switching_q20",
+      "question": "PWM inverter में 'over-modulation' region में operate करने पर क्या होता है?",
+      "options": [
+        "DC link voltage घट जाता है",
+        "Output voltage शून्य हो जाता है",
+        "Switching frequency automatically दोगुनी हो जाती है",
+        "Output voltage तथा harmonics दोनों बढ़ते हैं परंतु output waveform की linearity/purity कम हो जाती है (सामान्य 6-step जैसी बनने लगती है)"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Modulation index को linear region (लगभग 1) से आगे बढ़ाने पर over-modulation होता है, जिसमें output fundamental voltage और बढ़ता है परंतु waveform की sinusoidal purity कम होकर 6-step waveform की ओर झुकती है और low-order harmonics बढ़ जाते हैं। बाकी विकल्प गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q21",
+      "question": "IGBT module में प्रयुक्त 'gate resistor' (gate drive resistor) का मुख्य कार्य क्या है?",
+      "options": [
+        "Gate turn-on/turn-off के दौरान switching speed व gate current को नियंत्रित करके EMI तथा voltage overshoot को सीमित करना",
+        "Output voltage को बढ़ाना",
+        "DC link ripple को हटाना",
+        "Motor winding resistance बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Gate resistor gate capacitance के charge/discharge की rate (यानी switching speed) को नियंत्रित करता है, जिससे बहुत तेज switching से उत्पन्न EMI व voltage overshoot को सीमित किया जा सके, हालांकि इससे कुछ switching loss भी बढ़ सकती है। बाकी विकल्प इसके कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q22",
+      "question": "PWM inverter switching के कारण motor cable में उत्पन्न उच्च dv/dt (steep voltage rise) से किस समस्या की संभावना बढ़ती है?",
+      "options": [
+        "Motor की starting torque में कमी",
+        "Motor की winding insulation पर stress तथा bearing current/leakage current की समस्या",
+        "DC link capacitor का ठंडा होना",
+        "Rectifier diode का forward biasing बंद होना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: तेज switching (उच्च dv/dt) के कारण उत्पन्न voltage spikes long cable में reflect होकर motor terminal पर insulation stress बढ़ा सकते हैं और common-mode voltage के कारण bearing/leakage current भी बढ़ सकती है; इसे कम करने के लिए output reactor/dv-dt filter प्रयोग होते हैं। बाकी विकल्प असंबंधित हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q23",
+      "question": "PWM switching sequence में 'symmetrical' और 'asymmetrical' regular sampling तकनीकों में मुख्य अंतर क्या है?",
+      "options": [
+        "Asymmetrical sampling में switching बिल्कुल नहीं होती",
+        "दोनों तकनीकों में कोई अंतर नहीं है",
+        "Symmetrical sampling में carrier के एक ही peak/valley पर एक sample लिया जाता है जबकि asymmetrical sampling में प्रति carrier cycle दो बार (peak व valley दोनों पर) sample लिया जाता है",
+        "Symmetrical sampling केवल DC motor में प्रयोग होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Symmetrical regular sampled PWM में प्रति carrier cycle में एक बार reference sample लिया जाता है जिससे pulse symmetric बनता है, जबकि asymmetrical sampling में दो बार (top व bottom दोनों) sample लेने से resolution बेहतर होती है और waveform accuracy बढ़ती है। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_pwm_switching_q24",
+      "question": "Inverter की switching devices में 'snubber circuit' किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Motor की speed बढ़ाने के लिए",
+        "DC link capacitor को हटाने के लिए",
+        "PWM frequency को स्थायी रूप से शून्य करने के लिए",
+        "Turn-OFF के समय होने वाले voltage spike व dv/dt को सीमित कर switch को damage से बचाने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Snubber circuit (RC या RCD) switch के turn-OFF के समय उत्पन्न transient voltage spike व dv/dt को अवशोषित/सीमित करके device को stress से बचाता है। यह speed बढ़ाने, frequency शून्य करने या capacitor हटाने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_pwm_switching_q25",
+      "question": "एक 3-phase 2-level PWM inverter में प्रत्येक phase leg में कितने power switches होते हैं?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: प्रत्येक phase leg में एक upper (top) और एक lower (bottom) switch होता है, यानी 2 switches प्रति leg, कुल मिलाकर 3-phase inverter में 6 switches होते हैं। 1, 3 और 4 standard 2-level topology से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q26",
+      "question": "IGBT का 'collector-emitter saturation voltage (VCE(sat))' कम होने का drive के लिए क्या लाभ है?",
+      "options": [
+        "PWM frequency automatically बढ़ जाती है",
+        "Conduction losses कम होते हैं जिससे device की efficiency बढ़ती है और heating कम होती है",
+        "DC link voltage बढ़ जाता है",
+        "Motor की rated power बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: कम VCE(sat) का अर्थ है ON-state में device के पार कम voltage drop, जिससे conduction (I²R जैसी) losses कम होती हैं, device ठंडा रहता है और efficiency बेहतर होती है। यह switching frequency, DC link voltage या motor rating को सीधे नहीं बदलता।"
+    },
+    {
+      "id": "u14_pwm_switching_q27",
+      "question": "PWM inverter switching pattern में 'Third Harmonic Injection' तकनीक का उपयोग किस लिए किया जाता है?",
+      "options": [
+        "DC link capacitor का आकार बढ़ाने के लिए",
+        "Motor को उल्टा घुमाने के लिए",
+        "Reference sine wave में third harmonic जोड़कर modulation index की सीमा बढ़ाकर DC link voltage का बेहतर उपयोग करने के लिए (output voltage बढ़ाने हेतु)",
+        "Switching frequency को घटाने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Sinusoidal reference में एक निश्चित मात्रा की third harmonic जोड़ने से peak amplitude कम रहते हुए भी fundamental component बढ़ाया जा सकता है, जिससे modulation index की linear range बढ़ती है और DC link voltage का उपयोग बेहतर होता है (line-to-line output में third harmonic स्वतः cancel हो जाती है)। बाकी विकल्प इस तकनीक के उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q28",
+      "question": "IGBT ड्राइव सर्किट में 'desaturation (desat) protection' किस स्थिति से switch को बचाता है?",
+      "options": [
+        "Under-voltage से",
+        "PWM frequency के बहुत कम होने से",
+        "Over-cooling से",
+        "Short circuit/overcurrent की स्थिति में जब IGBT saturation region से बाहर आ जाता है, जिससे तुरंत turn-OFF कर device को बचाया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Short circuit या भारी overcurrent की स्थिति में IGBT saturation से बाहर आकर VCE बढ़ने लगता है (desaturation); desat protection circuit इसे sense कर तुरंत gate signal हटाकर device को damage से बचाता है। बाकी विकल्प इस protection के उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pwm_switching_q29",
+      "question": "PWM switching में यदि dead time आवश्यकता से बहुत अधिक रखा जाए, तो output waveform पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Output voltage waveform में distortion (voltage loss/notch) आ सकता है जिससे low-speed पर motor torque व control accuracy प्रभावित हो सकती है",
+        "कोई प्रभाव नहीं पड़ता",
+        "DC link voltage बढ़ जाता है",
+        "Switching losses पूरी तरह समाप्त हो जाती हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: अत्यधिक dead time के दौरान दोनों switches OFF रहते हैं जिससे output voltage वास्तविक reference से विचलित होकर waveform में notch/distortion उत्पन्न करता है, विशेषकर low output voltage/low speed पर यह प्रभाव अधिक स्पष्ट होता है। यह DC link voltage नहीं बढ़ाता और switching losses पूरी तरह समाप्त नहीं होतीं।"
+    },
+    {
+      "id": "u14_pwm_switching_q30",
+      "question": "एक PWM based VFD में switching devices के रूप में IGBT चुनने का एक प्रमुख कारण, SCR की तुलना में क्या है?",
+      "options": [
+        "IGBT SCR से सस्ता होता है इसलिए ही चुना जाता है",
+        "IGBT को forced commutation circuit की आवश्यकता के बिना gate signal से आसानी से fast turn-ON व turn-OFF किया जा सकता है, जो high frequency PWM के लिए आवश्यक है",
+        "IGBT केवल DC circuits में काम करता है",
+        "IGBT में कोई switching loss नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: IGBT एक fully controllable device है जिसे बिना किसी अतिरिक्त forced commutation circuit के gate signal से तुरंत ON व OFF किया जा सकता है, जिससे यह उच्च frequency PWM switching के लिए उपयुक्त है; जबकि SCR को OFF करने के लिए current zero crossing या forced commutation चाहिए। लागत मुख्य तकनीकी कारण नहीं है, यह AC/DC दोनों प्रकार के सर्किट में प्रयोग होता है, और इसमें switching loss होती ही है।"
+    }
+  ]
+}

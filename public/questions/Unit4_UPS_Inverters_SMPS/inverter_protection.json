@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "inverter_protection",
+  "topicName": "Inverter Protection - Battery Level, Overload, Over-charging",
+  "questions": [
+    {
+      "id": "u4_inverter_protection_q1",
+      "question": "Inverter में Low Battery Voltage Cut-off (LVC) protection का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Battery voltage एक निश्चित सीमा से नीचे जाने पर inverter output को बंद कर देना ताकि battery deep discharge से बच सके",
+        "Battery को जल्दी charge करना",
+        "Mains voltage को regulate करना",
+        "Inverter की frequency बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "LVC circuit battery voltage को लगातार sense करता है और जब यह safe threshold से नीचे गिरता है तो output बंद कर देता है, जिससे battery अत्यधिक discharge होने से बचती है और उसकी life बनी रहती है। Option B charging circuit का काम है, C stabilizer/AVR का कार्य है, D frequency से LVC का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u4_inverter_protection_q2",
+      "question": "एक सामान्य 12V lead-acid battery आधारित inverter में Low Battery Cut-off (LVC) trip point आमतौर पर किस range में सेट किया जाता है?",
+      "options": [
+        "8.0V - 8.5V",
+        "लगभग 10.2V - 10.5V",
+        "12.6V - 12.8V",
+        "14.0V - 14.4V"
+      ],
+      "correctIndex": 1,
+      "explanation": "12V lead-acid battery के लिए LVC सामान्यतः लगभग 10.2V-10.5V (यानी लगभग 1.7-1.75V प्रति cell) पर सेट किया जाता है ताकि battery पूरी तरह deep discharge न हो। 8V-8.5V (A) बहुत कम है और battery को नुकसान पहुँचाएगा, 12.6-12.8V (C) तो fully-charged voltage है, और 14.0-14.4V (D) charging voltage range है, discharge cut-off नहीं।"
+    },
+    {
+      "id": "u4_inverter_protection_q3",
+      "question": "'Deep discharge protection' शब्द का सही अर्थ क्या है?",
+      "options": [
+        "Battery को अधिकतम voltage तक तेजी से charge करना",
+        "Overload होने पर output बंद करना",
+        "Battery को उसकी rated capacity से बहुत नीचे तक discharge होने से रोकना, ताकि plates और electrolyte को स्थायी नुकसान न हो",
+        "Mains supply की frequency को स्थिर रखना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Deep discharge protection battery को उसकी safe discharge limit से आगे खाली होने से रोकता है, क्योंकि अत्यधिक discharge होने पर plates पर sulfation बढ़ती है और battery की capacity व life स्थायी रूप से घट जाती है। Option A charging से संबंधित है, B overload protection है, D frequency stabilization से जुड़ा है।"
+    },
+    {
+      "id": "u4_inverter_protection_q4",
+      "question": "अगर एक lead-acid battery को बार-बार बहुत गहरे (deep) level तक discharge किया जाए और उसमें deep discharge protection न हो, तो सबसे संभावित परिणाम क्या होगा?",
+      "options": [
+        "Battery की charging speed बढ़ जाएगी",
+        "Inverter की output frequency बदल जाएगी",
+        "Mains voltage अस्थिर हो जाएगा",
+        "Plates पर sulfation बढ़कर battery की capacity और life घट जाएगी"
+      ],
+      "correctIndex": 3,
+      "explanation": "बार-बार deep discharge होने से lead sulfate crystals plates पर जम जाते हैं (sulfation), जिससे battery की internal resistance बढ़ती है और उसकी storage capacity व overall life स्थायी रूप से कम हो जाती है। Option A, B, C इस physical/chemical नुकसान से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q5",
+      "question": "Inverter में 'overload protection' किस स्थिति में activate होता है?",
+      "options": [
+        "जब connected load का current inverter की rated capacity से अधिक हो जाए",
+        "जब battery पूरी तरह charge हो जाए",
+        "जब mains supply वापस आ जाए",
+        "जब room का temperature सामान्य हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Overload protection तब trigger होता है जब जुड़ा हुआ load inverter की rated output capacity से अधिक current खींचने लगे, जिससे output transistors/MOSFET या transformer पर अत्यधिक stress न पड़े। Option B, C, D overload की स्थिति से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q6",
+      "question": "Overload/short-circuit protection circuit में load current को sense करने के लिए सबसे सामान्य तरीका कौन-सा है?",
+      "options": [
+        "Output के series में एक low-value sensing resistor (shunt) लगाना, जिसके across पैदा हुआ voltage drop comparator को दिया जाता है",
+        "Battery के terminal voltage को सीधे मापना",
+        "केवल transformer की winding गिनना",
+        "Room की humidity मापना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Current sensing के लिए series में एक low-value shunt resistor लगाया जाता है; इसमें बहने वाले current के अनुसार पैदा होने वाला छोटा voltage drop comparator/op-amp को दिया जाता है, जो तय सीमा पार होने पर trip signal देता है। Option B battery voltage sensing है जो LVC के लिए है, C और D current sensing से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q7",
+      "question": "Short-circuit protection और सामान्य overload protection में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे होते हैं, कोई अंतर नहीं",
+        "Overload protection केवल battery के लिए होता है",
+        "Short-circuit में बहुत अधिक current अचानक बहता है इसलिए protection को बहुत तेज़ (लगभग instant) trip करना पड़ता है, जबकि सामान्य overload धीरे-धीरे current बढ़ने पर trip होता है",
+        "Short-circuit protection frequency control करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Short-circuit होने पर current बहुत तेजी से extreme स्तर तक पहुँच जाता है, इसलिए protection circuit को लगभग instantaneous रूप से output बंद करना पड़ता है, जबकि सामान्य overload में current धीरे-धीरे rated value से ऊपर बढ़ता है और उसी अनुसार trip होता है। Option A गलत है क्योंकि response time अलग होता है, B और D इनके वास्तविक कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q8",
+      "question": "'Over-charging protection' inverter/UPS charger सर्किट में क्या कार्य करता है?",
+      "options": [
+        "Load current बढ़ाकर output power बढ़ाना",
+        "Battery चार्ज होते समय उसका voltage निर्धारित सीमा से अधिक जाने पर charging current को कम कर देना या बंद कर देना",
+        "Inverter की frequency को दुगुना करना",
+        "Battery को हमेशा discharge mode में रखना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Over-charging protection charging के दौरान battery voltage को sense करता रहता है और तय upper limit (जैसे लगभग 14.4V-14.8V) पार होने पर charging current घटा देता है या पूरी तरह बंद कर देता है, ताकि battery में अत्यधिक gassing या overheating न हो। Option A, C, D इस protection के वास्तविक उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q9",
+      "question": "एक 12V lead-acid battery के लिए boost/finishing charging voltage आमतौर पर किस range में रखी जाती है, जिसके ऊपर over-charging cut-off काम करना चाहिए?",
+      "options": [
+        "लगभग 6V - 8V",
+        "लगभग 9V - 10V",
+        "लगभग 14.4V - 14.8V",
+        "लगभग 20V - 22V"
+      ],
+      "correctIndex": 2,
+      "explanation": "12V lead-acid battery के लिए सामान्य boost/finishing charging voltage लगभग 14.4V-14.8V तक होती है (Option C सही); इससे ऊपर जाने पर over-charging cut-off को active होकर charging current सीमित/बंद करना चाहिए। Option A और B ये LVC (discharge) की range के करीब बहुत कम voltage हैं, over-charging से नहीं, D इतना उच्च voltage battery को तुरंत नुकसान पहुँचाएगा और यह practical charging range नहीं है।"
+    },
+    {
+      "id": "u4_inverter_protection_q10",
+      "question": "Inverter में thermal (over-temperature) protection के लिए मुख्य रूप से किस sensing component का उपयोग किया जाता है?",
+      "options": [
+        "Ammeter",
+        "एक thermistor (NTC/PTC) जो heatsink या transformer के तापमान के अनुसार अपना resistance बदलता है",
+        "एक potentiometer",
+        "एक zener diode केवल reference के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermal protection में एक thermistor को critical component (जैसे output MOSFET का heatsink या transformer) के पास लगाया जाता है; तापमान बढ़ने पर उसका resistance बदलता है, जिससे comparator circuit को over-temperature होने का संकेत मिलता है और वह output बंद कर देता है। Option A current मापता है, C केवल threshold adjust करने में सहायक है सेंसर नहीं, D मात्र reference voltage देता है, तापमान sense नहीं करता।"
+    },
+    {
+      "id": "u4_inverter_protection_q11",
+      "question": "जब inverter में Low Battery Cut-off activate होता है, तो सामान्यतः user को किस माध्यम से सूचित किया जाता है?",
+      "options": [
+        "केवल mains supply काटकर",
+        "Transformer को गरम करके",
+        "Fuse उड़ाकर",
+        "एक red LED जलाकर और/या buzzer से आवाज देकर 'low battery' fault indicate किया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "अधिकतर inverter में low battery की स्थिति में एक dedicated LED (आमतौर पर लाल) चमकने लगती है और साथ ही एक intermittent buzzer beep देकर user को alert करता है ताकि वह mains supply जल्दी बहाल कर सके। Option A, B, C low battery indication के actual तरीकों से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q12",
+      "question": "Overload fault होने पर अच्छे quality के inverter में indication के लिए क्या किया जाता है?",
+      "options": [
+        "Battery को disconnect कर fuse जला दिया जाता है",
+        "Transformer की winding बदल दी जाती है",
+        "Charging current अचानक बढ़ा दिया जाता है",
+        "एक अलग overload LED/buzzer alarm activate होता है ताकि user को पता चले कि load कम करना है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Overload होने पर एक अलग overload-indication LED जलती है और/या buzzer alarm बजता है, जिससे user को पता चलता है कि उसे कुछ load हटाकर या घटाकर inverter को reset करना है। Option A, B, C overload indication के सामान्य तरीके नहीं हैं और इनमें से कुछ हार्डवेयर को नुकसान भी पहुँचा सकते हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q13",
+      "question": "Inverter protection circuits (LVC, overload, over-charging) में LM324 या LM339 जैसे IC का मुख्य रूप से क्या उपयोग होता है?",
+      "options": [
+        "Sensed voltage/current signal की तुलना एक fixed reference voltage से करके comparator/threshold detector के रूप में काम करना",
+        "AC mains को सीधे rectify करना",
+        "Battery की physical size मापना",
+        "Transformer की winding गिनना"
+      ],
+      "correctIndex": 0,
+      "explanation": "LM324 (op-amp) और LM339 (comparator) जैसे IC को protection circuit में sensed signal (battery voltage, load current, या temperature से मिला voltage) को एक reference voltage से compare करने के लिए उपयोग किया जाता है, और जब threshold पार होता है तो output state बदलकर relay/trip circuit को drive करता है। Option B, C, D इनके actual उपयोग से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q14",
+      "question": "LM339 comparator IC की एक विशेष बात यह है कि इसका output किस प्रकार का होता है?",
+      "options": [
+        "यह sine wave output देता है",
+        "इसका output open-collector प्रकार का होता है, इसलिए output को active high के लिए बाहर एक pull-up resistor की जरूरत होती है",
+        "यह सीधे AC output देता है",
+        "यह केवल current source के रूप में काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "LM339 (quad comparator) का output stage open-collector होता है, इसलिए output pin को high state में लाने के लिए बाहर से एक pull-up resistor supply voltage तक जोड़ना पड़ता है; इसी विशेषता के कारण यह protection circuits में relay या transistor drive करने के लिए सुविधाजनक होता है। Option A, C, D LM339 की actual output प्रकृति से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q15",
+      "question": "Inverter protection circuit में comparator का trip signal मिलने के बाद output को actually बंद करने के लिए आमतौर पर किस component का उपयोग होता है?",
+      "options": [
+        "एक capacitor जो voltage store करता है",
+        "एक transformer जो voltage बढ़ाता है",
+        "एक relay (या power transistor/MOSFET की driving/disable line) जो oscillator या output stage को बंद कर देता है",
+        "एक resistor जो केवल current सीमित करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Comparator से मिले trip signal को amplify करके एक relay (या सीधे oscillator/driver IC की enable/shutdown line) चलाई जाती है, जो inverter के oscillator या output stage को disable करके actual output बंद कर देती है। Option A, B, D स्वयं switching action नहीं कर सकते, ये केवल sensing/filtering या current-limiting में सहायक होते हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q16",
+      "question": "Overload fault के बाद अच्छे design वाले inverter में fault clear होने पर (यानी load हटाने के बाद) व्यवहार सामान्यतः कैसा होता है?",
+      "options": [
+        "Inverter हमेशा के लिए बंद रहता है",
+        "Battery पूरी तरह discharge हो जाती है",
+        "Frequency permanently बदल जाती है",
+        "Circuit auto-reset करके थोड़ी देर बाद output फिर से try करता है (auto-recovery), जबकि LVC की स्थिति में मुख्यतः mains आने पर battery पर्याप्त charge होने के बाद ही output बहाल होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "अच्छे protection design में overload trip होने के बाद circuit एक समय अंतराल पर automatically output को फिर से try करता है (यदि fault हट गया हो तो normal चलता रहता है), जबकि LVC की स्थिति में battery के पर्याप्त recharge होने तक output बंद रहता है। Option A, B, C इस auto-recovery व्यवहार का सही वर्णन नहीं करते।"
+    },
+    {
+      "id": "u4_inverter_protection_q17",
+      "question": "LVC comparator circuit में अक्सर एक छोटा 'hysteresis' (feedback resistor द्वारा) क्यों जोड़ा जाता है?",
+      "options": [
+        "ताकि battery voltage threshold के आसपास बार-बार on/off (chattering/hunting) न हो और output stable रहे",
+        "ताकि charging current बढ़ जाए",
+        "ताकि frequency दुगुनी हो जाए",
+        "ताकि transformer size छोटा हो जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hysteresis जोड़ने से cut-off और reset (cut-in) के लिए अलग-अलग threshold voltage बन जाते हैं, जिससे battery voltage threshold के ठीक आसपास मामूली उतार-चढ़ाव पर बार-बार relay या oscillator on/off (chattering) नहीं होता। Option B, C, D hysteresis के actual उद्देश्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q18",
+      "question": "व्यावहारिक रूप से 'Low Battery Cut-off (LVC)' और 'Deep Discharge Protection' के बीच संबंध को सबसे सही तरीके से कैसे समझा जाए?",
+      "options": [
+        "दोनों पूरी तरह अलग-अलग battery types के लिए होते हैं",
+        "LVC वास्तव में वही voltage sensing और cut-off action है जो battery को deep discharge से बचाकर deep discharge protection उपलब्ध कराता है",
+        "Deep discharge protection सिर्फ charging के समय काम करता है",
+        "LVC केवल overload की स्थिति में काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "LVC circuit battery के discharge voltage को sense करके तय सीमा से नीचे जाने पर output काट देता है — यही action battery को deep discharge होने से बचाता है, इसलिए दोनों शब्द एक ही protection mechanism के दो नाम माने जा सकते हैं। Option A गलत है क्योंकि यह एक ही battery पर लागू होता है, C discharge के बजाय charging से जोड़ता है जो गलत है, D overload से इसका सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u4_inverter_protection_q19",
+      "question": "कुछ inverter designs में overload होने पर तुरंत बंद करने के बजाय 'current limiting/foldback' तकनीक अपनाई जाती है। इसका क्या फायदा है?",
+      "options": [
+        "यह battery को तेजी से charge करता है",
+        "यह frequency को स्थिर रखता है",
+        "यह load current को एक सुरक्षित अधिकतम मान तक सीमित रखता है ताकि छोटे, क्षणिक overload पर output अचानक पूरी तरह बंद न हो और output devices सुरक्षित रहें",
+        "यह केवल over-charging रोकता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Current-limiting/foldback approach में जैसे ही current rated सीमा के पास पहुँचता है, circuit output voltage/current को सीमित कर देता है (पूरी तरह trip करने के बजाय), जिससे momentary surges (जैसे motor starting) पर inverter अनावश्यक रूप से बंद नहीं होता, फिर भी output stage सुरक्षित रहता है। Option A, B, D इस तकनीक के वास्तविक लाभ से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q20",
+      "question": "एक inverter की LVC trip setting 10.5V पर है। यदि load चलते समय battery का terminal voltage 11.4V दिखा रहा है, तो सर्किट क्या करेगा?",
+      "options": [
+        "Overload trip हो जाएगा",
+        "Over-charging cut-off active होगा",
+        "Thermal shutdown हो जाएगा",
+        "Output चालू रहेगा क्योंकि 11.4V अभी भी 10.5V के LVC threshold से ऊपर है"
+      ],
+      "correctIndex": 3,
+      "explanation": "चूँकि battery voltage (11.4V) निर्धारित LVC threshold (10.5V) से अधिक है, इसलिए LVC circuit trip नहीं करेगा और inverter output सामान्य रूप से चलता रहेगा। Option A, B, C इस परिस्थिति (जो केवल battery voltage से जुड़ी है, current या temperature से नहीं) पर लागू नहीं होते।"
+    },
+    {
+      "id": "u4_inverter_protection_q21",
+      "question": "Thermal protection के लिए thermistor को सबसे उपयुक्त स्थान पर कहाँ लगाया जाता है?",
+      "options": [
+        "Room की दीवार पर, output से दूर",
+        "उस heatsink/power transistor या transformer के पास, जो fault या overload की स्थिति में सबसे अधिक गर्म होता है",
+        "Battery के बाहरी case पर सामान्य स्थिति में",
+        "Mains input cable के बाहर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermistor को उस component के नजदीक लगाया जाता है जो अत्यधिक load या fault में सबसे पहले और सबसे अधिक गर्म होता है, जैसे output power MOSFET/transistor का heatsink या power transformer, ताकि वास्तविक खतरे से पहले ही protection activate हो सके। Option A, C, D इस दृष्टि से उपयुक्त sensing location नहीं हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q22",
+      "question": "एक बार LVC के कारण inverter output बंद हो जाने के बाद, mains supply वापस आने पर सामान्य व्यवहार क्या होता है?",
+      "options": [
+        "Inverter output mains आते ही तुरंत फिर से चालू हो जाता है, चाहे battery कितनी भी discharge क्यों न हो",
+        "Battery को permanently discharge mode में रखा जाता है",
+        "Charger battery को charge करना शुरू करता है, और inverter output तब तक बंद रह सकता है (या फिर से LVC पर trip करता रहेगा) जब तक battery voltage पुनः पर्याप्त स्तर तक न पहुँच जाए",
+        "Thermal protection स्वतः override हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mains वापस आने पर charger circuit battery को charge करना शुरू करता है; यदि inverter output तुरंत enable भी हो जाए तो battery अभी भी कम voltage पर होने के कारण फिर से LVC trip कर सकता है, इसलिए practically output तब तक स्थिर नहीं रहता जब तक battery पर्याप्त recharge न हो जाए (Option C सही)। Option A अव्यावहारिक है क्योंकि weak battery फिर तुरंत trip करेगी, B और D गलत हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q23",
+      "question": "अगर किसी inverter में LVC protection काम न करे और battery को बार-बार बहुत कम voltage तक discharge होने दिया जाए, तो सबसे संभावित दीर्घकालिक परिणाम क्या होगा?",
+      "options": [
+        "Inverter की output frequency धीरे-धीरे बढ़ जाएगी",
+        "Mains voltage स्वतः स्थिर हो जाएगा",
+        "Battery की plates पर sulfation बढ़कर उसकी charge-holding capacity स्थायी रूप से घट जाएगी और life कम हो जाएगी",
+        "Overload protection अपने आप activate होकर battery बचा लेगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "LVC के बिना battery बार-बार गहरे discharge level तक जाती है, जिससे plates पर sulfation जमा होता है और battery धीरे-धीरे कम charge रोक पाती है — यह स्थायी नुकसान है। Option A और B इस स्थिति से असंबंधित हैं, D गलत है क्योंकि overload protection current सीमा के लिए है, battery voltage के लिए नहीं।"
+    },
+    {
+      "id": "u4_inverter_protection_q24",
+      "question": "अगर किसी inverter में overload/short-circuit protection सही से काम न करे और load rated capacity से बहुत अधिक हो जाए, तो सबसे संभावित नुकसान क्या होगा?",
+      "options": [
+        "Battery तुरंत full charge हो जाएगी",
+        "LVC threshold अपने आप बदल जाएगा",
+        "Room का तापमान गिर जाएगा",
+        "Output power transistors/MOSFET या transformer winding अत्यधिक current के कारण गरम होकर जल सकते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "बिना उचित overload/short-circuit protection के अत्यधिक current output stage के semiconductor devices और transformer winding से होकर गुजरता है, जिससे वे अत्यधिक गरम होकर स्थायी रूप से खराब (जल) हो सकते हैं। Option A, B, C overload की वास्तविक परिणति से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q25",
+      "question": "अगर over-charging protection ठीक से काम न करे और battery को लगातार अधिक voltage पर charge किया जाता रहे, तो क्या समस्या हो सकती है?",
+      "options": [
+        "Electrolyte में अत्यधिक gassing होकर पानी की कमी हो जाएगी, plates corrode होंगी और battery की life घट जाएगी",
+        "Battery तुरंत ठंडी हो जाएगी",
+        "Inverter की frequency गिर जाएगी",
+        "LVC threshold अपने आप बढ़ जाएगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "अत्यधिक overcharging से battery के अंदर electrolysis तेज होकर पानी वाष्प बनकर उड़ता है (gassing), electrolyte level गिरता है और plates पर corrosion बढ़ता है, जिससे battery की life काफी कम हो जाती है। Option B, C, D overcharging के actual प्रभाव से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q26",
+      "question": "एक अच्छे quality inverter के front panel पर आमतौर पर कौन-सी अलग-अलग indication LEDs दी जाती हैं?",
+      "options": [
+        "केवल एक single LED जो हमेशा जलती रहती है",
+        "आमतौर पर mains-present, battery-low, और overload/fault के लिए अलग-अलग LEDs दी जाती हैं ताकि user को exact fault type का पता चले",
+        "केवल frequency indicator LED",
+        "केवल power factor indicator LED"
+      ],
+      "correctIndex": 1,
+      "explanation": "अलग-अलग LEDs (जैसे mains ON, battery low, overload) होने से user तुरंत पहचान सकता है कि समस्या battery की है, load की है या mains supply की, जिससे सही corrective action लिया जा सके। Option A, C, D व्यावहारिक inverter panel design से मेल नहीं खाते क्योंकि ये अलग-अलग fault को अलग नहीं दर्शाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q27",
+      "question": "Current-sensing shunt resistor के across मिलने वाला voltage drop, comparator तक पहुँचने से पहले सामान्यतः किस additional stage से गुजरता है?",
+      "options": [
+        "सीधे high-power relay से",
+        "एक op-amp आधारित amplifier stage से, क्योंकि shunt पर voltage drop बहुत छोटा (कुछ mV) होता है और इसे usable स्तर तक बढ़ाना पड़ता है",
+        "सीधे transformer की secondary winding से",
+        "सीधे battery के negative terminal से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Shunt resistor की value बहुत छोटी रखी जाती है ताकि power loss कम हो, इसलिए उसके across मिलने वाला voltage drop भी बहुत छोटा (mV स्तर का) होता है; इसे comparator तक पहुँचाने से पहले एक op-amp amplifier द्वारा बढ़ाया जाता है ताकि तुलना सही ढंग से हो सके। Option A, C, D इस signal-conditioning chain का सही वर्णन नहीं करते।"
+    },
+    {
+      "id": "u4_inverter_protection_q28",
+      "question": "Protection circuit में overload trip point को adjust करने के लिए आमतौर पर comparator के reference input में क्या लगाया जाता है?",
+      "options": [
+        "एक fixed value का capacitor",
+        "एक बड़ा transformer",
+        "एक बड़ा inductor",
+        "एक variable resistor (potentiometer/preset) जिससे reference voltage को घटाया-बढ़ाया जा सके और trip current level सेट किया जा सके"
+      ],
+      "correctIndex": 3,
+      "explanation": "Trip point को field में calibrate/adjust करने के लिए comparator के reference input में एक preset/potentiometer लगाया जाता है, जिससे technician आवश्यकतानुसार overload current की सीमा सेट कर सकता है। Option A, B, C इस adjustment कार्य के लिए उपयुक्त component नहीं हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q29",
+      "question": "Inverter protection circuits में LED के साथ buzzer भी क्यों जोड़ा जाता है?",
+      "options": [
+        "ताकि user बिना panel देखे भी audible alarm से fault की जानकारी तुरंत पा सके, खासकर जब वह पास में मौजूद न हो",
+        "ताकि battery जल्दी charge हो",
+        "ताकि transformer ठंडा रहे",
+        "ताकि frequency स्थिर रहे"
+      ],
+      "correctIndex": 0,
+      "explanation": "केवल visual LED indication तभी काम आती है जब user panel देख रहा हो; buzzer की audible beep alarm दूर होने पर भी user को तुरंत सचेत कर देती है कि कोई fault (जैसे low battery या overload) हुआ है। Option B, C, D buzzer जोड़ने के उद्देश्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverter_protection_q30",
+      "question": "Protection circuit में साधारण diode/zener के बजाय dedicated comparator IC (जैसे LM324/LM339) का उपयोग करना अधिक बेहतर क्यों माना जाता है?",
+      "options": [
+        "Comparator IC precise reference के साथ sharp switching (fast transition) देता है, जिससे trip threshold accurate और stable रहता है, जबकि साधारण zener/diode से यह sharpness और सटीकता प्राप्त करना कठिन होता है",
+        "Comparator IC battery को सीधे charge कर देता है",
+        "Comparator IC AC को सीधे DC में बदल देता है",
+        "Comparator IC केवल frequency control के लिए उपयोगी है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Comparator IC accurate internal reference और high gain के कारण threshold के पास बहुत तेज (sharp) output transition देता है, जिससे trip point सटीक व स्थिर रहता है; अकेले zener/diode से ऐसी sharpness और adjustability प्राप्त करना कठिन होता है। Option B, C, D comparator IC के वास्तविक कार्य से मेल नहीं खाते।"
+    }
+  ]
+}

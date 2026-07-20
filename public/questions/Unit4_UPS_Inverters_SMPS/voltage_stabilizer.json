@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "voltage_stabilizer",
+  "topicName": "Voltage Stabilizer",
+  "questions": [
+    {
+      "id": "u4_voltage_stabilizer_q1",
+      "question": "एक Voltage Stabilizer का मुख्य कार्य क्या होता है?",
+      "options": [
+        "Output voltage को input में उतार-चढ़ाव के बावजूद एक निश्चित सीमा में स्थिर रखना",
+        "AC को DC में convert करना",
+        "Frequency को 50 Hz से 60 Hz में बदलना",
+        "Load current को बढ़ाकर power output दुगुना करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Voltage Stabilizer input mains voltage के घटने-बढ़ने पर भी output को एक स्थिर (regulated) सीमा में रखता है ताकि जुड़े हुए appliances सुरक्षित रहें। Option B rectifier का काम है, C frequency converter का, और D गलत है क्योंकि stabilizer power उत्पन्न नहीं करता, केवल voltage regulate करता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q2",
+      "question": "Manual voltage stabilizer और Automatic voltage stabilizer में मुख्य अंतर क्या है?",
+      "options": [
+        "Manual में frequency हाथ से बदली जाती है",
+        "Automatic केवल DC पर काम करता है",
+        "Manual में tap selection उपयोगकर्ता हाथ से knob घुमाकर करता है, जबकि Automatic में यह अपने-आप relay/servo द्वारा होता है",
+        "दोनों में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "Manual stabilizer में उपयोगकर्ता को voltage देखकर हाथ से transformer tap चुनना पड़ता है, जबकि Automatic में circuit स्वयं sensing करके relay या servo motor से सही tap चुन लेता है। Option A frequency से stabilizer का कोई संबंध नहीं, B गलत क्योंकि दोनों AC mains पर काम करते हैं, D स्पष्ट रूप से गलत है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q3",
+      "question": "Servo voltage stabilizer में voltage correction के लिए किसका उपयोग होता है?",
+      "options": [
+        "एक SCR bridge",
+        "एक servo motor जो variable auto-transformer (variac) का carbon brush घुमाता है",
+        "एक rotary switch जिसे हाथ से घुमाया जाता है",
+        "केवल एक zener diode"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo stabilizer में एक servo motor variac के carbon brush को घुमाकर लगातार सही voltage tap चुनता है, जिससे output बहुत smooth और accurate रहता है। Option A SCR rectifier में उपयोग होता है, C manual stabilizer का तरीका है, और D zener केवल reference देता है, correction नहीं करता।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q4",
+      "question": "Relay type stabilizer में voltage को घटाने-बढ़ाने के लिए किस technique का उपयोग होता है?",
+      "options": [
+        "PWM switching",
+        "Buck-boost transformer की winding को relay द्वारा series/opposite में जोड़ना",
+        "Capacitor bank charging",
+        "Frequency modulation"
+      ],
+      "correctIndex": 1,
+      "explanation": "Relay type stabilizer में एक buck-boost (auxiliary) transformer की winding को relay द्वारा main supply के साथ additive (boost) या subtractive (buck) mode में जोड़कर voltage बढ़ाया या घटाया जाता है। Option A SMPS का तरीका है, C power factor correction से जुड़ा है, D frequency से stabilizer का संबंध नहीं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q5",
+      "question": "'Buck' mode में stabilizer output voltage के साथ क्या करता है?",
+      "options": [
+        "Output voltage को बढ़ाता (boost) है",
+        "Output voltage को घटाता है",
+        "Output को DC में बदल देता है",
+        "Frequency को दुगुना कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buck mode में auxiliary winding का voltage main voltage से घटाया (subtract) जाता है, जिससे output कम हो जाता है — यह तब उपयोगी है जब mains voltage अधिक हो। Boost इसका उलटा (बढ़ाना) होता है, इसलिए A गलत; C और D voltage stabilization से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q6",
+      "question": "'Boost' mode में buck-boost transformer की auxiliary winding किस प्रकार जुड़ती है?",
+      "options": [
+        "Main winding के साथ additive (same phase) में ताकि voltage जुड़ जाए",
+        "Main winding के opposite (out of phase) में",
+        "पूरी तरह disconnected रहती है",
+        "केवल DC output देने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Boost mode में auxiliary winding का voltage main के साथ same phase में जुड़ता है ताकि दोनों जुड़कर output बढ़ा दें — यह कम mains voltage की स्थिति में जरूरी है। Opposite connection (B) buck mode है, C में correction नहीं होगा, D rectifier का काम है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q7",
+      "question": "एक stabilizer में relay तब operate होता है जब input voltage निर्धारित window से बाहर जाता है। इस window का उद्देश्य क्या है?",
+      "options": [
+        "Relay को हमेशा चालू रखना",
+        "Frequency को stable रखना",
+        "छोटे voltage variations पर बार-बार relay चटकने (hunting) से रोकना",
+        "Battery charging तेज करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Voltage window (dead band/hysteresis) इसलिए रखी जाती है ताकि voltage में छोटे उतार-चढ़ाव पर relay बार-बार on/off न हो, जिससे relay contacts जल्दी खराब न हों (hunting न हो)। A गलत क्योंकि relay जरूरत पर ही चलता है, B frequency से संबंध नहीं, D charging से असंबंधित।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q8",
+      "question": "Relay type stabilizer की तुलना में servo stabilizer का मुख्य लाभ क्या है?",
+      "options": [
+        "यह बहुत सस्ता होता है",
+        "यह output को बहुत बारीक (fine) और सटीक ±1% के आसपास regulate करता है",
+        "इसमें कोई transformer नहीं होता",
+        "यह केवल DC output देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo stabilizer variac के brush को लगातार घुमाकर बहुत सटीक (आमतौर पर ±1%) regulation देता है, जबकि relay type steps में correction करता है इसलिए output कम accurate रहता है। A गलत क्योंकि servo महँगा होता है, C गलत क्योंकि उसमें variac/transformer होता है, D गलत क्योंकि output AC ही रहता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q9",
+      "question": "Relay type stabilizer आमतौर पर step regulation करता है। इसका मुख्य नुकसान क्या है?",
+      "options": [
+        "यह बहुत महँगा होता है",
+        "Output voltage steps में बदलता है इसलिए exact fixed value नहीं मिलती",
+        "यह किसी भी voltage variation को correct नहीं कर सकता",
+        "इसमें servo motor जल्दी जल जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Relay type में कुछ ही fixed taps होते हैं, इसलिए output steps में correct होता है और बिल्कुल exact value नहीं मिल पाती। A गलत क्योंकि relay type सस्ता होता है, C गलत क्योंकि यह range के भीतर correction करता है, D गलत क्योंकि relay type में servo motor होता ही नहीं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q10",
+      "question": "Stabilizer में 'time delay' या 'output on delay' circuit क्यों दिया जाता है?",
+      "options": [
+        "Voltage stable होने पर ही output देने के लिए, जिससे appliance को surge से बचाया जा सके",
+        "Frequency बढ़ाने के लिए",
+        "Battery charge करने के लिए",
+        "Transformer को ठंडा रखने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Time delay circuit power on होने पर कुछ सेकंड रुककर, voltage stable हो जाने पर ही output देता है, जिससे fridge/AC जैसे load को शुरुआती surge और अस्थिर voltage से बचाया जा सके। B, C और D voltage stabilizer के इस delay feature के उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q11",
+      "question": "अगर mains voltage 260V तक बढ़ जाए तो एक अच्छा automatic stabilizer क्या करेगा?",
+      "options": [
+        "Boost mode में जाकर voltage और बढ़ा देगा",
+        "Buck mode में जाकर output को safe सीमा (लगभग 220-230V) पर ले आएगा",
+        "Output बंद नहीं करेगा और पूरा 260V pass कर देगा",
+        "DC output दे देगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक input voltage पर stabilizer buck mode में जाकर voltage घटाता है ताकि output सुरक्षित सीमा में रहे; बहुत अधिक होने पर वह cut-off भी कर सकता है। A उलटा और खतरनाक है, C का मतलब stabilizer काम ही नहीं कर रहा, D गलत क्योंकि output AC ही रहता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q12",
+      "question": "Stabilizer में high-voltage cut-off और low-voltage cut-off का उद्देश्य क्या है?",
+      "options": [
+        "Load को बंद करके तब सुरक्षा देना जब voltage stabilizer की correction range के बाहर चला जाए",
+        "Frequency को नियंत्रित करना",
+        "Power factor सुधारना",
+        "Battery की life बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब input voltage इतना ज्यादा या कम हो जाए कि stabilizer उसे सुरक्षित range में correct न कर सके, तब cut-off circuit output बंद करके appliance की रक्षा करता है। B, C, D voltage cut-off के इस सुरक्षा उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q13",
+      "question": "एक relay stabilizer में voltage sensing के लिए आमतौर पर किसका उपयोग होता है?",
+      "options": [
+        "एक बड़ा electrolytic capacitor",
+        "एक comparator/op-amp या दिए गए voltage को zener reference से तुलना करने वाला circuit",
+        "एक DC motor",
+        "केवल एक fuse"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sensing circuit में step-down किए गए sample voltage की तुलना zener/reference से comparator (या dedicated IC) द्वारा की जाती है, और उसी आधार पर relay operate होता है। A capacitor filtering करता है, C motor का यहाँ काम नहीं, D fuse केवल over-current protection देता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q14",
+      "question": "Servo stabilizer में single-phase और three-phase दोनों प्रकार होते हैं। Three-phase servo stabilizer के दो मुख्य प्रकार कौन-से हैं?",
+      "options": [
+        "AC और DC type",
+        "Balanced (एक साथ सभी phase correct) और Unbalanced (प्रत्येक phase अलग correct)",
+        "Manual और frequency type",
+        "Linear और switching type"
+      ],
+      "correctIndex": 1,
+      "explanation": "Three-phase servo stabilizer या तो balanced type होते हैं (जहाँ तीनों phase एक साथ common रूप से correct होते हैं) या unbalanced/independent type (जहाँ प्रत्येक phase अलग-अलग correct होता है)। A, C, D तीन-phase servo के इस वर्गीकरण से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q15",
+      "question": "एक stabilizer की rating अक्सर VA या kVA में दी जाती है, न कि सिर्फ watt में। इसका मुख्य कारण क्या है?",
+      "options": [
+        "क्योंकि यह DC पर काम करता है",
+        "क्योंकि AC load में power factor के कारण apparent power (VA) महत्वपूर्ण होती है",
+        "क्योंकि VA हमेशा watt से कम होता है",
+        "क्योंकि यह केवल resistive load चलाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "AC में inductive load (fridge, AC) का power factor 1 से कम होता है, इसलिए stabilizer को apparent power (VA/kVA) के आधार पर rate किया जाता है ताकि सही current handling क्षमता मिले। A गलत क्योंकि यह AC device है, C गलत क्योंकि VA ≥ watt होता है, D गलत क्योंकि यह inductive load भी चलाता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q16",
+      "question": "एक 220V, 4A load को stabilizer से चलाना है और power factor 0.8 है। stabilizer की न्यूनतम VA rating लगभग क्या होनी चाहिए?",
+      "options": [
+        "704 VA",
+        "880 VA",
+        "440 VA",
+        "220 VA"
+      ],
+      "correctIndex": 1,
+      "explanation": "Apparent power VA = V × I = 220 × 4 = 880 VA होती है (power factor apparent power की गणना में गुणा नहीं होता; watt = VA × pf होता है)। इसलिए stabilizer कम-से-कम 880 VA का चाहिए। 704 VA असल में watt (880×0.8) है, इसलिए A गलत; 440 और 220 गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q17",
+      "question": "Stabilizer में buck-boost transformer को 'auxiliary' या 'booster' transformer भी कहते हैं। यह main transformer से आकार में आमतौर पर कैसा होता है?",
+      "options": [
+        "Main से बहुत बड़ा, क्योंकि यह पूरी power संभालता है",
+        "छोटा, क्योंकि यह केवल voltage का अंतर (difference) संभालता है, पूरा load voltage नहीं",
+        "बिल्कुल बराबर आकार का",
+        "इसकी कोई winding नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buck-boost transformer केवल correction के लिए आवश्यक voltage difference जोड़ता/घटाता है, पूरा output voltage नहीं देता, इसलिए इसका size तुलना में छोटा होता है। A गलत क्योंकि पूरी power नहीं संभालता, C गलत क्योंकि यह छोटा होता है, D गलत क्योंकि इसमें winding होती है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q18",
+      "question": "Automatic stabilizer में LED indicators (जैसे High/Normal/Low) का उद्देश्य क्या है?",
+      "options": [
+        "Battery charge दिखाना",
+        "Input या output voltage की स्थिति (कम/सामान्य/अधिक) दर्शाना",
+        "Frequency की गणना करना",
+        "Load का power factor मापना"
+      ],
+      "correctIndex": 1,
+      "explanation": "ये indicators उपयोगकर्ता को दिखाते हैं कि voltage low, normal या high range में है और stabilizer किस mode में correction कर रहा है। A battery से stabilizer में सीधा संबंध नहीं, C frequency नहीं मापी जाती, D power factor मापना इनका काम नहीं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q19",
+      "question": "Relay type stabilizer में relay contacts पर स्पार्किंग (arcing) कम करने के लिए क्या उपाय किया जाता है?",
+      "options": [
+        "Contacts पर तेल लगाया जाता है",
+        "Voltage zero-crossing के पास switching या suitable hysteresis देकर बार-बार switching रोकी जाती है",
+        "Relay को हमेशा गरम रखा जाता है",
+        "Frequency बढ़ा दी जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Arcing कम करने के लिए switching को voltage/current के zero-crossing के आसपास किया जाता है और hysteresis देकर बार-बार switching (hunting) रोकी जाती है, जिससे contacts की life बढ़ती है। A यांत्रिक रूप से गलत उपाय है, C और D arcing से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q20",
+      "question": "एक stabilizer 'wide range' और 'narrow range' के रूप में मिलते हैं। 'Wide range' stabilizer का लाभ क्या है?",
+      "options": [
+        "यह केवल एक ही voltage पर काम करता है",
+        "यह बहुत बड़े input voltage variation (जैसे 90V से 290V) पर भी सही output दे सकता है",
+        "यह DC output देता है",
+        "यह frequency को भी correct करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Wide range stabilizer बहुत कम से बहुत अधिक input voltage तक (जैसे 90-290V) को सुरक्षित output में संभाल सकता है, जो उन क्षेत्रों के लिए उपयोगी है जहाँ voltage बहुत उतार-चढ़ाव करता है। A उलटा अर्थ देता है, C और D stabilizer के इस गुण से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q21",
+      "question": "Servo stabilizer में 'error amplifier' का कार्य क्या है?",
+      "options": [
+        "Output और reference के बीच के अंतर (error) को बढ़ाकर servo motor को सही दिशा में घुमाने का signal देना",
+        "Battery charge करना",
+        "AC को DC में बदलना",
+        "Load current को सीधे बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Error amplifier reference voltage और actual output के अंतर (error signal) को बढ़ाकर motor drive circuit को बताता है कि brush को किस दिशा में घुमाना है ताकि error शून्य हो जाए। B, C, D servo control loop के error amplifier के कार्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q22",
+      "question": "Digital stabilizer, relay type की तुलना में कैसे अलग होता है?",
+      "options": [
+        "इसमें microcontroller sensing और tap selection अधिक सटीक व तेज करता है, तथा display देता है",
+        "इसमें कोई transformer नहीं होता",
+        "यह केवल DC पर चलता है",
+        "यह voltage को कभी correct नहीं करता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Digital stabilizer में microcontroller voltage sensing, तेज व सटीक tap selection और digital display उपलब्ध कराता है, जिससे यह पारंपरिक relay type से बेहतर होता है। B गलत क्योंकि इसमें भी transformer होता है, C गलत क्योंकि यह AC mains पर चलता है, D स्पष्ट गलत है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q23",
+      "question": "एक stabilizer का transformer अगर बहुत गरम हो रहा है, तो सबसे संभावित कारण क्या है?",
+      "options": [
+        "Frequency बहुत कम है",
+        "Overload या rated capacity से अधिक load जोड़ा गया है",
+        "Input voltage बिल्कुल सही है",
+        "Relay बहुत ठंडा है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rated VA से अधिक load जुड़ने पर transformer में अधिक current बहता है जिससे वह ज्यादा गरम होता है — यह overheating का सबसे आम कारण है। A frequency आमतौर पर fixed होती है, C सही voltage overheating का कारण नहीं, D असंबंधित है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q24",
+      "question": "Stabilizer में fuse या MCB किस प्रकार की सुरक्षा देता है?",
+      "options": [
+        "Voltage regulation",
+        "Over-current/short-circuit से सुरक्षा",
+        "Frequency correction",
+        "Power factor सुधार"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fuse/MCB overload या short-circuit की स्थिति में circuit को तोड़कर over-current से stabilizer और load की रक्षा करता है। A stabilizing circuit का काम है, C frequency से संबंध नहीं, D power factor correction fuse का काम नहीं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q25",
+      "question": "Manual stabilizer में voltmeter क्यों लगाया जाता है?",
+      "options": [
+        "उपयोगकर्ता output voltage देखकर सही tap position हाथ से चुन सके",
+        "Frequency मापने के लिए",
+        "Battery voltage देखने के लिए",
+        "Current मापने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Manual stabilizer में tap selection हाथ से होता है, इसलिए voltmeter जरूरी है ताकि उपयोगकर्ता output voltage देखकर सही knob position चुन सके। B frequency के लिए frequency meter चाहिए, C battery यहाँ नहीं होती, D current के लिए ammeter चाहिए।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q26",
+      "question": "अगर relay stabilizer relay की एक contact जल (weld) कर चिपक जाए तो क्या समस्या होगी?",
+      "options": [
+        "Output बहुत सटीक हो जाएगा",
+        "Stabilizer उस tap पर अटक जाएगा और voltage correction ठीक से नहीं कर पाएगा",
+        "Frequency बढ़ जाएगी",
+        "Battery जल्दी charge होगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Welded/चिपके contact के कारण relay switch नहीं कर पाता, जिससे stabilizer उसी tap पर अटक जाता है और input बदलने पर सही correction नहीं दे पाता। A उलटा है, C और D contact welding से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q27",
+      "question": "Servo stabilizer में carbon brush घिस जाने का सबसे आम लक्षण क्या होगा?",
+      "options": [
+        "Output बिल्कुल स्थिर रहेगा",
+        "Output voltage में उतार-चढ़ाव, चिंगारी या correction में रुकावट",
+        "Frequency शून्य हो जाएगी",
+        "Input current पूरी तरह बंद हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Carbon brush variac पर contact बनाता है; घिसने पर contact खराब होकर output में fluctuation, sparking और unstable correction होता है। A उलटा है, C frequency mains से आती है इसलिए शून्य नहीं होगी, D पूरी तरह current बंद होना brush घिसने का लक्षण नहीं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q28",
+      "question": "Static (electronic) voltage stabilizer में correction किससे किया जाता है?",
+      "options": [
+        "Servo motor और variac से",
+        "Solid-state switches (जैसे SCR/TRIAC या IGBT) द्वारा बिना किसी moving part के",
+        "हाथ से knob घुमाकर",
+        "केवल fuse द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Static stabilizer में कोई घूमने वाला भाग नहीं होता; SCR/TRIAC/IGBT जैसे solid-state switches बहुत तेज switching से correction करते हैं, जिससे response तेज और maintenance कम होती है। A servo type है, C manual है, D fuse केवल protection देता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q29",
+      "question": "Voltage stabilizer और UPS में मूलभूत अंतर क्या है?",
+      "options": [
+        "Stabilizer power cut होने पर backup देता है, UPS नहीं",
+        "Stabilizer केवल voltage regulate करता है जबकि UPS voltage regulation के साथ power cut पर battery से backup भी देता है",
+        "दोनों बिल्कुल एक ही काम करते हैं",
+        "UPS केवल DC output देता है और stabilizer AC"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stabilizer केवल mains voltage को regulate करता है और power cut होने पर output बंद हो जाता है, जबकि UPS voltage को handle करने के साथ-साथ battery से backup power भी देता है। A उलटा है, C गलत क्योंकि काम अलग हैं, D गलत क्योंकि UPS का उपयोगी output AC होता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q30",
+      "question": "एक refrigerator के लिए stabilizer चुनते समय 'time delay' feature क्यों महत्वपूर्ण है?",
+      "options": [
+        "क्योंकि यह frequency बढ़ाता है",
+        "क्योंकि यह power आने पर compressor को तुरंत start होने से रोककर उसे pressure बराबर होने का समय देता है, जिससे compressor सुरक्षित रहे",
+        "क्योंकि यह battery charge करता है",
+        "क्योंकि यह DC output देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power बहाल होते ही अगर compressor तुरंत start हो तो अंदर का pressure असंतुलित होने से उसे नुकसान हो सकता है; time delay कुछ मिनट रुककर compressor को सुरक्षित start कराता है। A frequency से संबंध नहीं, C battery यहाँ नहीं, D stabilizer AC output देता है।"
+    }
+  ]
+}

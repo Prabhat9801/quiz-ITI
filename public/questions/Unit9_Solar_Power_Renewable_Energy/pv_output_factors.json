@@ -1,0 +1,368 @@
+{
+  "unit": "unit9",
+  "unitName": "Solar Power Renewable Energy Systems",
+  "topic": "pv_output_factors",
+  "topicName": "Factors Affecting PV Output - Irradiance, Temperature, Shading, Angle",
+  "questions": [
+    {
+      "id": "u9_pv_output_factors_q1",
+      "question": "PV systems के संदर्भ में 'Irradiance' शब्द का क्या अर्थ है?",
+      "options": [
+        "Sun से प्राप्त होने वाली light power की तीव्रता, प्रति इकाई क्षेत्रफल (W/m²) में मापी गई",
+        "Battery में संचित ऊर्जा की मात्रा",
+        "Panel का तापमान",
+        "Panel की मोटाई"
+      ],
+      "correctIndex": 0,
+      "explanation": "Irradiance sunlight की power density को दर्शाती है, जिसे W/m² में मापा जाता है और यह किसी क्षण PV panel पर कितनी sunlight power पड़ रही है, इसका measure है। Battery energy storage से संबंधित है, temperature अलग parameter है, और panel की मोटाई एक physical construction detail है, ये irradiance की परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q2",
+      "question": "Irradiance बढ़ने पर PV panel के output current (Isc) पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Isc घटता है",
+        "Isc लगभग irradiance के सीधे अनुपात (proportional) में बढ़ता है",
+        "Isc में कोई बदलाव नहीं आता",
+        "Isc अनियमित रूप से घटता-बढ़ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक irradiance का मतलब है अधिक photons उपलब्ध होना, जिससे अधिक electron-hole pairs बनते हैं और short-circuit current (Isc) लगभग irradiance के सीधे अनुपात में बढ़ता है। घटना, अपरिवर्तित रहना, या अनियमित व्यवहार वास्तविक PV behaviour के विपरीत हैं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q3",
+      "question": "Irradiance बढ़ने पर PV panel के open-circuit voltage (Voc) पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Voc बहुत तेज़ी से (linearly) कई गुना बढ़ जाता है",
+        "Voc घट जाता है",
+        "Voc में केवल थोड़ी (logarithmic) वृद्धि होती है, current जितनी तेजी से नहीं बढ़ता",
+        "Voc का irradiance से कोई संबंध नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Voc irradiance के साथ केवल logarithmic रूप से थोड़ा बढ़ता है (diode equation के अनुसार), जबकि Isc लगभग linearly बढ़ता है — इसलिए Voc में वृद्धि current की तुलना में बहुत कम होती है। यह कई गुना (linearly) नहीं बढ़ता, घटता नहीं, और इसका irradiance से स्पष्ट संबंध होता है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q4",
+      "question": "Solar energy assessment में 'Peak Sun Hours' शब्द से क्या समझा जाता है?",
+      "options": [
+        "दिन में सूर्य के आकाश में दिखने के कुल घंटे",
+        "वह समय जब temperature सबसे अधिक हो",
+        "रात में चांदनी की तीव्रता",
+        "एक दिन में उपलब्ध कुल solar energy को 1000 W/m² के बराबर पूर्ण-तीव्रता वाले equivalent घंटों में व्यक्त करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Peak Sun Hours वह concept है जिसमें दिन-भर मिलने वाली variable irradiance की कुल energy को 1000 W/m² की standard तीव्रता पर equivalent घंटों में बदलकर व्यक्त किया जाता है, जो system sizing में उपयोगी है। यह केवल सूर्य के दिखने के घंटे, temperature या चांदनी से संबंधित नहीं है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q5",
+      "question": "PV cell का temperature बढ़ने पर उसके open-circuit voltage (Voc) पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Voc में कमी आती है (negative temperature coefficient के कारण)",
+        "Voc में वृद्धि होती है",
+        "Voc स्थिर रहता है",
+        "Voc अचानक दोगुना हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Temperature बढ़ने से semiconductor की reverse saturation current बढ़ती है, जिससे Voc घटता है — यह practical modules का जाना-पहचाना negative temperature coefficient है। Voc बढ़ना, स्थिर रहना या दोगुना हो जाना temperature प्रभाव की सही व्याख्या नहीं है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q6",
+      "question": "PV cell का temperature बढ़ने पर उसके short-circuit current (Isc) पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Isc में भारी गिरावट आती है",
+        "Isc में बहुत मामूली (negligible) वृद्धि होती है",
+        "Isc शून्य हो जाता है",
+        "Isc का temperature से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Temperature बढ़ने पर Isc में केवल बहुत मामूली सी वृद्धि होती है, जो Voc में होने वाली गिरावट की तुलना में नगण्य है। भारी गिरावट, शून्य हो जाना, या 'कोई संबंध न होना' वास्तविक behaviour को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u9_pv_output_factors_q7",
+      "question": "Cell temperature बढ़ने पर PV panel के overall power output पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Power output हमेशा बढ़ता है",
+        "Power output पर कोई प्रभाव नहीं पड़ता",
+        "Power output घटता है क्योंकि Voc में कमी, Isc की मामूली वृद्धि पर हावी हो जाती है (negative power temperature coefficient)",
+        "Power output केवल रात में घटता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "क्योंकि Voc temperature बढ़ने पर काफी घट जाता है जबकि Isc में केवल मामूली वृद्धि होती है, इसलिए overall power (P = V×I) घट जाता है — इसे negative power temperature coefficient कहते हैं। Power output बढ़ना, अप्रभावित रहना, या केवल रात में घटना गलत कथन हैं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q8",
+      "question": "Standard Test Conditions में 25°C rating होने के बावजूद वास्तविक outdoor operation में panel का output अक्सर STC rating से कम क्यों मिलता है (NOCT लगभग 45°C)?",
+      "options": [
+        "क्योंकि panel रात में भी गर्म रहता है",
+        "क्योंकि STC rating हमेशा गलत होती है",
+        "क्योंकि panel में कोई cooling system नहीं होना चाहिए",
+        "क्योंकि outdoor conditions में sunlight के साथ-साथ ambient heat तथा सीमित cooling के कारण cell temperature अक्सर 45°C या उससे अधिक तक पहुँच जाता है, जिससे output STC rating से कम मिलता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Field conditions में panel का actual operating temperature (NOCT के आस-पास) STC के 25°C से काफी अधिक होता है, जिससे negative temperature coefficient के कारण actual output STC rating से कम मिलता है। रात में गर्म रहने की बात असंगत है, STC rating गलत नहीं बल्कि एक standard reference है, और cooling system न होने की सलाह गलत निष्कर्ष है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q9",
+      "question": "किसी series-connected PV string में यदि कुछ cells partially shaded हो जाएँ, तो पूरी string के current पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "पूरी string का current, shaded cells के reduced current तक सीमित हो जाता है",
+        "पूरी string काम करना बंद कर देती है हमेशा",
+        "String का current बढ़ जाता है",
+        "केवल voltage प्रभावित होता है, current पर कोई असर नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Series connection में current पूरी string में समान रहना चाहिए, इसलिए shaded cells का घटा हुआ current पूरी string के current को सीमित कर देता है (weakest-link effect)। स्ट्रिंग पूरी तरह हमेशा बंद नहीं होती (bypass diode के साथ), current बढ़ना असंभव है, और यह current को भी प्रभावित करता है, केवल voltage को नहीं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q10",
+      "question": "PV module में 'hotspot' बनने की मुख्य वजह क्या होती है?",
+      "options": [
+        "Shaded cell अतिरिक्त current उत्पन्न करने लगती है",
+        "Shaded cell current-limited string में reverse bias में चली जाती है और अन्य cells की power को अवशोषित कर heat के रूप में dissipate करती है",
+        "Shaded cell का temperature घट जाता है",
+        "Hotspot केवल inverter में बनता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब shaded cell string के अन्य cells जितना current नहीं बना पाती, तो वह forced होकर reverse bias में चली जाती है और अन्य cells द्वारा उत्पन्न power को resistor की तरह absorb कर heat के रूप में dissipate करती है, जिससे hotspot बनता है। Shaded cell अतिरिक्त current नहीं बनाती, temperature घटता नहीं बल्कि बढ़ता है, और यह module-level घटना है, inverter से संबंधित नहीं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q11",
+      "question": "Module में shading के कारण होने वाले hotspot प्रभाव को कम करने के लिए मुख्यतः क्या उपाय किया जाता है?",
+      "options": [
+        "Panel को पूरी तरह हटा देना",
+        "Panel का रंग बदलना",
+        "Module में bypass diodes लगाकर shaded substring को bypass करना",
+        "String में और अधिक modules जोड़ना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bypass diodes shaded substring के लिए वैकल्पिक current path प्रदान करते हैं, जिससे उस substring पर होने वाला reverse bias तथा hotspot का खतरा कम हो जाता है। Panel हटाना कोई solution नहीं, रंग बदलने का कोई तकनीकी प्रभाव नहीं, और अधिक modules जोड़ना समस्या का समाधान नहीं करता।"
+    },
+    {
+      "id": "u9_pv_output_factors_q12",
+      "question": "Panel की सतह पर dust/soiling जमा होने का output पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Dust output को बढ़ा देती है",
+        "Dust का output से कोई संबंध नहीं होता",
+        "Dust केवल पानी सोखती है, output प्रभावित नहीं होता",
+        "Dust/soiling के कारण cells तक पहुँचने वाला effective irradiance कम हो जाता है, जिससे output घटता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Dust की परत sunlight को अवरुद्ध (block) कर देती है, जिससे cells तक कम प्रभावी irradiance पहुँचती है और परिणामस्वरूप output घट जाता है। Dust output को बढ़ाती नहीं, इसका output से स्पष्ट नकारात्मक संबंध है, और यह केवल पानी सोखने का काम नहीं करती।"
+    },
+    {
+      "id": "u9_pv_output_factors_q13",
+      "question": "यदि panel की tilt (झुकाव) angle optimal position से अधिक भटक जाए, तो output पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Angle of incidence बढ़ने से light कम प्रभावी ढंग से cell surface से टकराती है (cosine loss), जिससे output कम हो जाता है",
+        "Output हमेशा बढ़ जाता है",
+        "Tilt angle का output से कोई संबंध नहीं",
+        "Panel टूट जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Optimal tilt से हटने पर sunlight की किरणें cell surface पर अधिक तिरछे कोण पर पड़ती हैं, जिससे प्रभावी (effective) irradiance घट जाती है (cosine loss) और output कम होता है। Output हमेशा बढ़ना असंभव है, tilt angle का output पर स्पष्ट प्रभाव है, और गलत tilt से panel टूटता नहीं है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q14",
+      "question": "भारत जैसे northern hemisphere स्थान में fixed rooftop PV panels को अधिकतम annual output के लिए सामान्यतः किस दिशा की ओर face कराया जाता है?",
+      "options": [
+        "Panel को हमेशा north की ओर face कराना",
+        "Panel को true south की ओर face कराना",
+        "Panel को east की ओर स्थायी रूप से रखना",
+        "दिशा से कोई फर्क नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Northern hemisphere (जैसे भारत) में fixed panels को अधिकतम annual sunlight प्राप्त करने के लिए सामान्यतः true south की ओर face कराया जाता है। North की ओर face कराना output को न्यूनतम कर देगा, केवल east की ओर स्थायी रखना दिन के एक हिस्से तक सीमित output देगा, और दिशा का स्पष्ट रूप से महत्वपूर्ण प्रभाव होता है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q15",
+      "question": "यदि panel की azimuth (compass direction) थोड़ी सी optimal दिशा (जैसे true south) से हट जाए, तो output पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Azimuth का output पर कोई असर नहीं पड़ता",
+        "Misalignment output को हमेशा बढ़ा देता है",
+        "Optimal दिशा से हटने पर annual energy yield में कुछ कमी आती है, हालांकि थोड़ा misalignment अक्सर acceptable होता है",
+        "Misalignment panel को स्थायी रूप से क्षतिग्रस्त कर देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Azimuth में छोटी सी विचलन (जैसे 15-20°) से annual yield में सामान्यतः कुछ ही प्रतिशत की कमी आती है, जिसे practical installations में अक्सर स्वीकार्य माना जाता है, हालांकि पूर्ण optimal दिशा सर्वश्रेष्ठ रहती है। Azimuth का असर होता है (शून्य नहीं), यह output बढ़ाता नहीं बल्कि घटा सकता है, और यह panel को शारीरिक क्षति नहीं पहुँचाता।"
+    },
+    {
+      "id": "u9_pv_output_factors_q16",
+      "question": "दिन के अलग-अलग समय पर बदलते solar spectrum (spectral variation, air mass) का PV output पर क्या प्रभाव हो सकता है?",
+      "options": [
+        "Spectral variation का output पर कोई असर नहीं होता",
+        "यह केवल inverter को प्रभावित करता है",
+        "यह केवल battery को प्रभावित करता है",
+        "Cell का spectral response material के अनुसार अलग होता है, इसलिए दिन के अलग-अलग समय पर बदलते solar spectrum से output प्रभावित हो सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "अलग-अलग समय पर air mass बदलने से sunlight का spectral composition बदलता है, और चूँकि हर PV material की spectral response अलग होती है, इसलिए actual output में कुछ variation आ सकता है, भले ही कुल irradiance समान हो। यह अप्रभावित नहीं रहता, और यह cell-level phenomenon है, inverter या battery का प्रत्यक्ष विषय नहीं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q17",
+      "question": "शुष्क और धूल भरे क्षेत्रों में PV panels से अच्छा output बनाए रखने के लिए क्या आवश्यक होता है?",
+      "options": [
+        "शुष्क/धूल भरे क्षेत्रों में output बनाए रखने हेतु panels की नियमित cleaning आवश्यक होती है",
+        "Cleaning की कोई आवश्यकता नहीं होती",
+        "Cleaning से output हमेशा घट जाता है",
+        "Cleaning केवल सर्दियों में की जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "धूल भरे क्षेत्रों में soiling से irradiance blockage बढ़ती है, इसलिए output बनाए रखने के लिए panels की नियमित cleaning ज़रूरी होती है। 'कोई आवश्यकता नहीं' या 'output हमेशा घट जाना' गलत हैं (cleaning से output सुधरता है), और यह केवल किसी एक मौसम तक सीमित नहीं है, dust कभी भी जम सकती है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q18",
+      "question": "Northern hemisphere में सर्दियों के मौसम के लिए panel tilt angle को समायोजित करने का सामान्य सिद्धांत क्या है?",
+      "options": [
+        "सर्दियों में tilt angle को शून्य कर देना चाहिए",
+        "सर्दियों में सूर्य आकाश में नीचा होता है, इसलिए tilt angle को अधिक (steeper) रखना बेहतर output देता है",
+        "Tilt angle मौसम के अनुसार कभी नहीं बदलना चाहिए",
+        "गर्मियों में tilt angle को अधिकतम रखना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "सर्दियों में सूर्य की altitude कम होती है (आकाश में नीचा रहता है), इसलिए panel का tilt angle अधिक (steeper) रखने से sunlight अधिक perpendicular रूप से पड़ती है और output बेहतर मिलता है। Tilt शून्य करना गलत दिशा है, seasonal adjustment संभव और लाभदायक है, और गर्मियों में अधिकतम tilt रखना गलत सिद्धांत है (गर्मियों में सूर्य ऊँचा होता है)।"
+    },
+    {
+      "id": "u9_pv_output_factors_q19",
+      "question": "पास के पेड़ या इमारत से किसी एक-आध cell पर पड़ने वाली आंशिक shading, पूरे array के output पर कैसा प्रभाव डाल सकती है?",
+      "options": [
+        "Shading केवल उतना ही loss करती है जितना क्षेत्रफल shaded है, न अधिक न कम",
+        "Shading से output बढ़ जाता है",
+        "आंशिक shading, shaded क्षेत्रफल के अनुपात से कहीं अधिक disproportionate power loss उत्पन्न कर सकती है (series wiring के कारण)",
+        "Shading का असर केवल night time में होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Series-connected cells/modules में एक छोटे shaded भाग से भी पूरी string का current सीमित हो सकता है, इसलिए shading का प्रभाव shaded क्षेत्रफल के अनुपात से कहीं अधिक disproportionate होता है। Loss क्षेत्रफल के बराबर सीमित नहीं रहता, output बढ़ता नहीं, और shading का असर दिन के समय ही relevant होता है, night time से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q20",
+      "question": "Commercial silicon PV modules का temperature coefficient of Pmax (power) आमतौर पर किस range में होता है?",
+      "options": [
+        "आमतौर पर +5% प्रति °C (positive)",
+        "आमतौर पर शून्य होता है",
+        "आमतौर पर -50% प्रति °C",
+        "आमतौर पर लगभग -0.3% से -0.5% प्रति °C (negative)"
+      ],
+      "correctIndex": 3,
+      "explanation": "अधिकांश commercial crystalline silicon modules का temperature coefficient of Pmax लगभग -0.3% से -0.5% प्रति °C होता है, यानी temperature बढ़ने पर power output धीरे-धीरे कम होता है। +5% (positive) गलत दिशा दर्शाता है, शून्य होना (कोई प्रभाव न होना) गलत है, और -50% अत्यधिक अवास्तविक high मान है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q21",
+      "question": "एक module का Voc, 25°C पर 40V है और उसका temperature coefficient of Voc लगभग -0.33%/°C है। यदि operating temperature 65°C तक पहुँच जाए (ΔT = 40°C), तो नया approximate Voc कितना होगा?",
+      "options": [
+        "लगभग 34.7V (40V का लगभग 13.2% घटाकर)",
+        "लगभग 45.3V",
+        "लगभग 26.8V",
+        "लगभग 40V (कोई बदलाव नहीं)"
+      ],
+      "correctIndex": 0,
+      "explanation": "कुल कमी = 0.33% × 40 = 13.2%, अतः नया Voc ≈ 40V × (1 − 0.132) ≈ 34.7V होगा। 45.3V voltage को गलत तरीके से बढ़ाकर दिखाता है, 26.8V अत्यधिक कमी मानकर गलत गणना करता है, और 'कोई बदलाव नहीं' negative temperature coefficient को नज़रअंदाज़ करता है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q22",
+      "question": "बादल छाए (cloudy) दिन में PV panel के output पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Output पूरी तरह बंद हो जाता है",
+        "Diffuse sunlight के कारण output कम हो जाता है परंतु पूरी तरह बंद नहीं होता",
+        "Output clear day से अधिक हो जाता है",
+        "Cloud cover का output पर कोई असर नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "बादलों की वजह से direct irradiance कम होती है परंतु diffuse sunlight फिर भी उपलब्ध रहती है, इसलिए panel कम मात्रा में output देता रहता है, पूरी तरह बंद नहीं होता। Output पूरी तरह बंद नहीं होता, clear day से अधिक होना असंभव है, और cloud cover का स्पष्ट negative प्रभाव होता है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q23",
+      "question": "जब sunlight, panel की सतह पर बहुत तिरछे (high) angle of incidence के साथ पड़ती है, तो output पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Angle of incidence बढ़ने से output हमेशा बढ़ता है",
+        "Angle of incidence का reflection से कोई संबंध नहीं",
+        "अधिक angle of incidence पर light अधिक मात्रा में reflect होती है और प्रभावी irradiance घट जाती है",
+        "यह केवल night time में महत्वपूर्ण है"
+      ],
+      "correctIndex": 2,
+      "explanation": "High angle of incidence पर surface से अधिक light reflect होकर वापस चली जाती है (Fresnel reflection losses बढ़ती हैं), जिससे cell तक पहुँचने वाली प्रभावी irradiance घट जाती है और output कम होता है। Output हमेशा बढ़ना गलत है, angle of incidence का reflection से सीधा संबंध है, और यह day-time phenomenon है, night time से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q24",
+      "question": "Rooftop PV installation में panels के पीछे उचित ventilation/air-gap रखना क्यों महत्वपूर्ण माना जाता है?",
+      "options": [
+        "इसका output पर कोई असर नहीं पड़ता",
+        "यह केवल sound कम करने के लिए है",
+        "यह केवल दिखावे के लिए किया जाता है",
+        "यह cell temperature को कम रखने में मदद करता है जिससे output बेहतर बना रहता है (negative temperature coefficient के कारण)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Panels के पीछे हवा का प्रवाह (ventilation) रहने से cell temperature अपेक्षाकृत कम रहता है, और चूँकि temperature बढ़ने से power कम होता है, इसलिए cooling से better output बना रहता है। इसका output पर स्पष्ट असर होता है, यह sound reduction के लिए नहीं है, और यह केवल दिखावे का कार्य नहीं बल्कि performance से जुड़ा तकनीकी कारण है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q25",
+      "question": "बड़े ground-mounted PV arrays में rows के बीच उचित spacing (row pitch) रखना क्यों ज़रूरी है?",
+      "options": [
+        "Winter months में सूर्य के low angle के कारण आगे की rows पीछे की rows को shade कर सकती हैं, इसलिए उचित row spacing की गणना ज़रूरी है",
+        "Row spacing का output से कोई संबंध नहीं होता",
+        "Row shading केवल गर्मियों में होती है",
+        "अधिक rows पास-पास रखना हमेशा बेहतर होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सर्दियों में सूर्य आकाश में नीचा होता है, जिससे rows की लंबी परछाइयाँ (shadows) पीछे की rows पर पड़ सकती हैं, इसलिए worst-case sun angle को ध्यान में रखकर row spacing तय की जाती है ताकि self-shading कम से कम हो। Row spacing का output पर सीधा असर है, shading केवल गर्मियों तक सीमित नहीं (बल्कि सर्दियों में अधिक गंभीर होती है), और rows को अत्यधिक पास रखना shading loss बढ़ाएगा, बेहतर नहीं होगा।"
+    },
+    {
+      "id": "u9_pv_output_factors_q26",
+      "question": "Bifacial PV modules के rear-side (पीछे की ओर) output का प्रमुख निर्धारक factor क्या होता है?",
+      "options": [
+        "Bifacial modules का rear side कभी काम नहीं करता",
+        "Bifacial module का rear-side output ground surface की albedo (परावर्तकता) पर निर्भर करता है",
+        "Rear-side output केवल battery की स्थिति पर निर्भर करता है",
+        "Albedo का bifacial output से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bifacial modules के rear side से मिलने वाला अतिरिक्त output मुख्यतः ground या surrounding surface की albedo (light reflectivity) पर निर्भर करता है — जितनी अधिक परावर्तकता, उतना अधिक rear-side gain। Rear side वास्तव में काम करता है (यही bifacial technology की खासियत है), यह battery की स्थिति पर निर्भर नहीं करता, और albedo का इससे प्रत्यक्ष संबंध है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q27",
+      "question": "समुद्र तल से अधिक ऊँचाई (higher altitude) वाले स्थानों पर PV output पर सामान्यतः क्या प्रभाव देखा जाता है?",
+      "options": [
+        "Altitude का irradiance से कोई संबंध नहीं",
+        "अधिक altitude पर output हमेशा घट जाता है",
+        "कम atmospheric absorption के कारण irradiance थोड़ी अधिक मिल सकती है, जिससे output में सुधार हो सकता है",
+        "Altitude केवल temperature को प्रभावित करता है, irradiance को नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "अधिक altitude पर atmosphere की मोटाई कम होती है जिससे absorption/scattering losses घटते हैं और अपेक्षाकृत अधिक irradiance ज़मीन तक पहुँचती है, जो output में सुधार कर सकती है। Altitude का irradiance से संबंध है (शून्य नहीं), altitude से output हमेशा घटना ज़रूरी नहीं, और यह केवल temperature ही नहीं बल्कि irradiance को भी प्रभावित करता है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q28",
+      "question": "PV module में moisture/humidity ingress (नमी का प्रवेश) होने का दीर्घकालिक (long-term) प्रभाव क्या हो सकता है?",
+      "options": [
+        "Humidity output को तुरंत बढ़ा देती है",
+        "Humidity का module पर कोई दीर्घकालीन प्रभाव नहीं होता",
+        "Humidity केवल inverter को प्रभावित करती है",
+        "लंबे समय तक moisture ingress module में corrosion/delamination जैसी degradation उत्पन्न कर सकती है, जिससे धीरे-धीरे output घटता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "समय के साथ नमी के प्रवेश से internal electrical contacts में corrosion तथा layers में delamination हो सकती है, जिससे module की performance धीरे-धीरे degrade होती है और output घटता है। Humidity output को तुरंत बढ़ाती नहीं, इसका module पर स्पष्ट नकारात्मक दीर्घकालीन प्रभाव है, और यह module-level issue है, केवल inverter तक सीमित नहीं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q29",
+      "question": "PV output को प्रभावित करने वाले दो प्रमुख environmental factors — irradiance और temperature — का प्रभाव मुख्यतः किन electrical parameters पर पड़ता है?",
+      "options": [
+        "Irradiance मुख्यतः current (Isc) को प्रभावित करती है जबकि temperature मुख्यतः voltage (Voc) को प्रभावित करता है",
+        "दोनों का प्रभाव केवल voltage पर पड़ता है, current पर कोई नहीं",
+        "दोनों का प्रभाव केवल current पर पड़ता है, voltage पर कोई नहीं",
+        "इनमें से किसी का भी output पर कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Irradiance मुख्यतः photon flux बढ़ाकर current (Isc) को प्रभावित करती है, जबकि temperature मुख्यतः semiconductor junction properties के कारण voltage (Voc) को प्रभावित करता है — दोनों मिलकर overall power निर्धारित करते हैं। शेष options इन दोनों factors के सुस्पष्ट individual प्रभावों को नज़रअंदाज़ करते हैं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q30",
+      "question": "पूरे दिन में PV panel से अधिकतम संभव output प्राप्त करने के लिए एक प्रभावी तकनीकी उपाय क्या है?",
+      "options": [
+        "Panel को स्थायी रूप से एक ही स्थिर दिशा में लगाकर छोड़ देना सबसे बेहतर तरीका है",
+        "Solar tracking system का उपयोग करना जो पूरे दिन सूर्य की दिशा के अनुसार panel को घुमाता रहे",
+        "Panel के ऊपर हमेशा कपड़ा ढक देना",
+        "Panel की सफाई कभी न करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solar tracking system पूरे दिन सूर्य की गति के अनुसार panel के angle of incidence को optimum रखता है, जिससे fixed installation की तुलना में काफी अधिक energy प्राप्त होती है। Panel को स्थिर रखना suboptimal होता है (हालांकि सरल व सस्ता है), panel को ढकना सीधे तौर पर output बंद कर देगा, और सफाई न करना output घटाएगा, बढ़ाएगा नहीं।"
+    }
+  ]
+}

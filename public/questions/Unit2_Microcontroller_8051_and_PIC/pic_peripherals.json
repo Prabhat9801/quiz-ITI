@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "pic_peripherals",
+  "topicName": "PIC On-chip Peripherals: ADC, Comparators & Resources",
+  "questions": [
+    {
+      "id": "u2_pic_peripherals_q1",
+      "question": "PIC का on-chip ADC किस conversion तकनीक पर आधारित होता है?",
+      "options": ["Flash conversion", "Successive Approximation (SAR)", "Dual slope integration", "Sigma-delta"],
+      "correctIndex": 1,
+      "explanation": "PIC का ADC Successive Approximation Register (SAR) तकनीक इस्तेमाल करता है इसलिए option B सही है। Flash बहुत तेज पर महँगा, dual-slope धीमा (DMM में) और sigma-delta audio में प्रयोग होता है, PIC के सामान्य ADC में नहीं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q2",
+      "question": "अधिकांश mid-range PIC16F के ADC की resolution कितनी होती है?",
+      "options": ["8-bit या 10-bit", "16-bit", "4-bit", "24-bit"],
+      "correctIndex": 0,
+      "explanation": "Mid-range PIC16F में आमतौर पर 8-bit या 10-bit ADC होता है इसलिए option A सही है। 16-bit और 24-bit high-end converters में, और 4-bit इतना कम resolution इन devices में नहीं होता।"
+    },
+    {
+      "id": "u2_pic_peripherals_q3",
+      "question": "10-bit ADC का digital output range क्या होता है?",
+      "options": ["0 से 255", "0 से 511", "0 से 1023", "0 से 4095"],
+      "correctIndex": 2,
+      "explanation": "10-bit ADC 2^10 = 1024 levels देता है यानी 0 से 1023, इसलिए option C सही है। 0-255 8-bit का, 0-511 9-bit का और 0-4095 12-bit का range है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q4",
+      "question": "ADC का 10-bit result किन दो registers में store होता है?",
+      "options": ["ADRESH और ADRESL", "TMR1H और TMR1L", "PORTA और PORTB", "PR2 और CCPR1L"],
+      "correctIndex": 0,
+      "explanation": "ADC का 10-bit result ADRESH (उच्च bits) और ADRESL (निम्न bits) register pair में रखा जाता है, इसलिए option A सही है। TMR1H:TMR1L Timer1 का, PORTA/B I/O ports और PR2/CCPR1L PWM के हैं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q5",
+      "question": "ADC channel select और ADC ON/GO करने वाला register कौन सा है?",
+      "options": ["ADCON1", "ADCON0", "OPTION_REG", "INTCON"],
+      "correctIndex": 1,
+      "explanation": "ADCON0 में channel select bits (CHS), GO/DONE bit और ADON bit होते हैं इसलिए option B सही है। ADCON1 port configuration/justification/Vref के लिए, OPTION_REG Timer0 और INTCON interrupts के लिए है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q6",
+      "question": "ADC result का left/right justification तथा Vref selection आमतौर पर किस register से control होता है?",
+      "options": ["ADCON0", "ADCON1", "STATUS", "PIR1"],
+      "correctIndex": 1,
+      "explanation": "ADCON1 में ADFM (result format/justification) तथा Vref+ /Vref- चयन के bits होते हैं इसलिए option B सही है। ADCON0 channel/GO के लिए, STATUS flags और PIR1 peripheral flags रखता है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q7",
+      "question": "Acquisition time (Tacq) का ADC में क्या महत्व है?",
+      "options": ["यह वह समय है जिसमें internal holding capacitor input voltage तक charge होता है, conversion से पहले", "यह conversion खत्म होने के बाद का समय है", "यह Fosc का period है", "यह baud rate तय करता है"],
+      "correctIndex": 0,
+      "explanation": "Acquisition time वह न्यूनतम समय है जिसमें sample-hold capacitor input voltage तक charge हो जाए ताकि सही conversion हो, इसलिए option A सही है। यह conversion के बाद का समय, Fosc period या baud rate नहीं है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q8",
+      "question": "10-bit ADC पर Vref = 5V है। इसका step size (resolution) लगभग क्या होगा?",
+      "options": ["19.5 mV", "4.88 mV", "39 mV", "1.25 mV"],
+      "correctIndex": 1,
+      "explanation": "Step size = Vref / 2^n = 5 / 1024 ≈ 4.88 mV इसलिए option B सही है। 19.5 mV 8-bit (5/256) का, 39 mV गलत और 1.25 mV बहुत छोटा है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q9",
+      "question": "8-bit ADC पर Vref = 5.12V है। step size क्या होगा?",
+      "options": ["20 mV", "10 mV", "5 mV", "40 mV"],
+      "correctIndex": 0,
+      "explanation": "Step size = 5.12 / 256 = 0.02 V = 20 mV इसलिए option A सही है। 10 mV आधी value, 5 mV चौथाई और 40 mV दोगुनी value है, जो गलत हैं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q10",
+      "question": "10-bit ADC पर Vref = 5V, step ≈ 4.88 mV. यदि input 2.5V है तो digital output लगभग क्या होगा?",
+      "options": ["256", "512", "1023", "128"],
+      "correctIndex": 1,
+      "explanation": "Digital = Vin / step = 2.5 / 0.00488 ≈ 512, जो 5V range का ठीक आधा है, इसलिए option B सही है। 256 चौथाई, 1023 full-scale और 128 आठवाँ भाग है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q11",
+      "question": "8-bit ADC, Vref = 5V (step ≈ 19.5 mV) पर input 1V है तो digital output लगभग क्या होगा?",
+      "options": ["25", "51", "128", "255"],
+      "correctIndex": 1,
+      "explanation": "Digital = 1V / 0.0195 ≈ 51 इसलिए option B सही है। यह 256 का लगभग 1/5 भाग बनता है क्योंकि 1V, 5V का 1/5 है; 25, 128 और 255 गलत हैं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q12",
+      "question": "ADC के लिए Vref+ को external precise reference पर set करने का मुख्य लाभ क्या है?",
+      "options": ["Conversion तेज हो जाती है", "अधिक सटीक और स्थिर step size मिलता है जिससे measurement accuracy बढ़ती है", "ADON की जरूरत नहीं रहती", "resolution 16-bit हो जाती है"],
+      "correctIndex": 1,
+      "explanation": "एक स्थिर, सटीक external Vref से step size निश्चित रहता है जिससे conversion accuracy बेहतर होती है, इसलिए option B सही है। यह speed नहीं बढ़ाता, ADON फिर भी चाहिए और resolution hardware पर निर्भर है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q13",
+      "question": "PIC के on-chip analog comparator का config register कौन सा है?",
+      "options": ["CMCON", "ADCON0", "TRISC", "SSPCON"],
+      "correctIndex": 0,
+      "explanation": "Analog comparator module का configuration register CMCON है जिसमें comparator mode bits होते हैं, इसलिए option A सही है। ADCON0 ADC का, TRISC port direction और SSPCON MSSP का register है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q14",
+      "question": "एक analog comparator मूल रूप से क्या करता है?",
+      "options": ["दो analog voltages की तुलना कर एक digital HIGH/LOW output देता है", "एक analog voltage को 10-bit number में बदलता है", "PWM generate करता है", "Serial data भेजता है"],
+      "correctIndex": 0,
+      "explanation": "Comparator दो input voltages की तुलना करता है और जो बड़ा है उसके अनुसार digital 1 या 0 output देता है, इसलिए option A सही है। analog को number में बदलना ADC का, PWM CCP का और serial data USART का काम है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q15",
+      "question": "CVref (Comparator Voltage Reference) module का काम क्या है?",
+      "options": ["एक programmable internal reference voltage generate करना जो comparator को दी जा सके", "USART baud rate set करना", "Timer0 prescale करना", "EEPROM erase करना"],
+      "correctIndex": 0,
+      "explanation": "CVref एक resistor ladder से programmable internal reference voltage बनाता है जिसे comparator के एक input या external pin पर दिया जा सकता है, इसलिए option A सही है। यह baud rate, prescale या EEPROM से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q16",
+      "question": "SAR ADC में conversion के दौरान GO/DONE bit का व्यवहार कैसा होता है?",
+      "options": ["Software इसे set करके conversion शुरू करता है, और conversion पूरा होने पर hardware इसे clear कर देता है", "यह हमेशा 1 रहता है", "यह Fosc की frequency बताता है", "यह channel number रखता है"],
+      "correctIndex": 0,
+      "explanation": "GO/DONE bit को set करने पर conversion शुरू होता है और complete होते ही hardware इसे clear कर देता है, जिसे poll किया जा सकता है, इसलिए option A सही है। यह स्थिर 1, Fosc या channel number नहीं दर्शाता।"
+    },
+    {
+      "id": "u2_pic_peripherals_q17",
+      "question": "ADC conversion complete होने पर कौन सा interrupt flag set होता है?",
+      "options": ["TMR0IF", "ADIF", "RCIF", "CCP1IF"],
+      "correctIndex": 1,
+      "explanation": "ADC conversion खत्म होने पर ADIF (A/D Interrupt Flag) set होता है इसलिए option B सही है। TMR0IF Timer0 का, RCIF USART receive का और CCP1IF CCP module का flag है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q18",
+      "question": "किसी PIC pin को analog input की जगह digital I/O के रूप में इस्तेमाल करने के लिए सामान्यतः क्या करना पड़ता है?",
+      "options": ["ADCON1/ANSEL में उस pin को digital configure करना", "Fosc बढ़ाना", "PR2 = 0 करना", "GIE set करना"],
+      "correctIndex": 0,
+      "explanation": "कई PIC pins reset पर analog होते हैं; उन्हें digital बनाने के लिए ADCON1 (या ANSEL) में उपयुक्त configuration करना पड़ता है, इसलिए option A सही है। Fosc, PR2 या GIE इस pin-function से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q19",
+      "question": "निम्न में से कौन सा PIC का एक on-chip peripheral नहीं है?",
+      "options": ["USART", "MSSP (SPI/I2C)", "CCP module", "अलग external DAC IC"],
+      "correctIndex": 3,
+      "explanation": "External DAC IC एक बाहरी chip है, on-chip peripheral नहीं, इसलिए option D सही उत्तर (अपवाद) है। USART, MSSP और CCP तीनों PIC के भीतर मौजूद peripherals हैं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q20",
+      "question": "MSSP module मुख्य रूप से किन serial protocols को support करता है?",
+      "options": ["SPI और I2C", "USB और CAN", "Ethernet और Wi-Fi", "RS-485 और Modbus"],
+      "correctIndex": 0,
+      "explanation": "MSSP (Master Synchronous Serial Port) SPI और I2C synchronous serial communication देता है इसलिए option A सही है। USB/CAN, Ethernet/Wi-Fi और RS-485/Modbus MSSP के सीधे modes नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q21",
+      "question": "Parallel Slave Port (PSP) का मुख्य उपयोग क्या है?",
+      "options": ["PIC को किसी external microprocessor के data bus से 8-bit parallel तरीके से जोड़ना", "ADC resolution बढ़ाना", "PWM frequency set करना", "internal Vref बनाना"],
+      "correctIndex": 0,
+      "explanation": "PSP, PIC के PORTD को एक 8-bit parallel slave interface की तरह इस्तेमाल कर external microprocessor के bus से जोड़ने देता है, इसलिए option A सही है। यह ADC, PWM या Vref से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q22",
+      "question": "12-bit ADC पर Vref = 4.096V हो तो step size क्या होगा?",
+      "options": ["1 mV", "4 mV", "0.5 mV", "16 mV"],
+      "correctIndex": 0,
+      "explanation": "Step = 4.096 / 4096 = 0.001 V = 1 mV, इसलिए option A सही है। यह मान इसलिए चुना जाता है ताकि हर count 1 mV बने; 4 mV, 0.5 mV और 16 mV गलत हैं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q23",
+      "question": "ADC clock (Tad) को सही चुनना क्यों जरूरी है?",
+      "options": ["हर bit conversion के लिए एक न्यूनतम समय चाहिए; बहुत तेज Tad गलत result देगा", "इससे baud rate बदलता है", "इससे PWM duty cycle तय होता है", "इससे reset vector बदलता है"],
+      "correctIndex": 0,
+      "explanation": "SAR ADC को प्रत्येक bit के लिए एक न्यूनतम Tad चाहिए; बहुत छोटा Tad चुनने पर capacitor settle नहीं होता और conversion गलत आता है, इसलिए option A सही है। यह baud rate, PWM या reset vector से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q24",
+      "question": "10-bit ADC result को यदि केवल 8-bit variable में चाहिए (approx.) तो 'left justified' format क्यों सुविधाजनक है?",
+      "options": ["ऊपरी 8 bits ADRESH में आ जाते हैं जिन्हें सीधे पढ़कर 8-bit approximation मिल जाती है", "यह resolution 16-bit कर देता है", "यह conversion तेज करता है", "यह Vref बदल देता है"],
+      "correctIndex": 0,
+      "explanation": "Left-justified format में सबसे significant 8 bits ADRESH में होते हैं, इसलिए सिर्फ ADRESH पढ़कर 8-bit approximate value मिल जाती है, option A सही है। यह resolution, speed या Vref नहीं बदलता।"
+    },
+    {
+      "id": "u2_pic_peripherals_q25",
+      "question": "Comparator का एक विशिष्ट अनुप्रयोग क्या है?",
+      "options": ["एक analog signal के किसी threshold पार करते ही तुरंत digital संकेत/interrupt देना", "10-bit binary number बनाना", "I2C address भेजना", "crystal oscillate कराना"],
+      "correctIndex": 0,
+      "explanation": "Comparator का सामान्य उपयोग है किसी voltage के threshold को पार करते ही तुरंत HIGH/LOW output या interrupt देना (जैसे over-voltage detection), इसलिए option A सही है। बाकी काम ADC, MSSP और oscillator के हैं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q26",
+      "question": "ADC channel बदलने के तुरंत बाद conversion शुरू करने से पहले सामान्यतः क्या करना चाहिए?",
+      "options": ["नई channel के लिए पर्याप्त acquisition delay देना ताकि holding capacitor settle हो जाए", "Fosc बदलना", "GIE clear करना", "PR2 सेट करना"],
+      "correctIndex": 0,
+      "explanation": "Channel switch करने पर holding capacitor को नए source तक settle होने के लिए acquisition delay चाहिए, वरना result गलत आएगा, इसलिए option A सही है। Fosc, GIE या PR2 का इससे संबंध नहीं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q27",
+      "question": "ADC का digital output N दिया हो तो input voltage निकालने का सूत्र क्या है?",
+      "options": ["Vin = N × Vref / 2^n", "Vin = N × 2^n / Vref", "Vin = Vref / N", "Vin = N + Vref"],
+      "correctIndex": 0,
+      "explanation": "Vin = N × step = N × (Vref / 2^n), इसलिए option A सही है। बाकी सूत्र आयामिक रूप से गलत हैं और सही voltage नहीं देते।"
+    },
+    {
+      "id": "u2_pic_peripherals_q28",
+      "question": "एक 10-bit ADC (Vref = 5V) का output N = 300 पढ़ा गया। input voltage लगभग क्या है?",
+      "options": ["1.47 V", "2.50 V", "3.66 V", "0.30 V"],
+      "correctIndex": 0,
+      "explanation": "Vin = 300 × 5 / 1024 ≈ 1.465 V ≈ 1.47 V, इसलिए option A सही है। 2.50 V तो N≈512 पर, 3.66 V बहुत अधिक और 0.30 V बहुत कम है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q29",
+      "question": "ADON bit ADCON0 में किसलिए है?",
+      "options": ["ADC module को power ON/OFF करने के लिए", "channel select करने के लिए", "result justify करने के लिए", "Vref चुनने के लिए"],
+      "correctIndex": 0,
+      "explanation": "ADON bit ADC module को on/off (power) करता है इसलिए option A सही है। Channel select CHS bits से, justification ADFM से और Vref selection ADCON1 से होता है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q30",
+      "question": "अधिक resolution वाले ADC (जैसे 8-bit के बजाय 10-bit) का व्यावहारिक लाभ क्या है?",
+      "options": ["समान Vref पर छोटा step size मिलता है यानी input voltage को अधिक बारीकी से माप सकते हैं", "conversion हमेशा तेज हो जाती है", "Vref की जरूरत खत्म हो जाती है", "power खपत शून्य हो जाती है"],
+      "correctIndex": 0,
+      "explanation": "अधिक bits से 2^n बड़ा होता है इसलिए step size (Vref/2^n) छोटा और measurement अधिक बारीक होता है, इसलिए option A सही है। यह conversion तेज करना, Vref हटाना या power शून्य करना नहीं दर्शाता।"
+    }
+  ]
+}

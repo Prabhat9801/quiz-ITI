@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Devanagari renders more legibly a touch larger + with slightly more line-height */
+.quiz-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}

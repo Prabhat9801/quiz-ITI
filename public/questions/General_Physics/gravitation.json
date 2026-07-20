@@ -1,0 +1,218 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "gravitation",
+  "topicName": "Gravitation",
+  "questions": [
+    {
+      "id": "phy_gravitation_q1",
+      "question": "Newton के universal law of gravitation के अनुसार दो objects के बीच gravitational force किसके directly proportional होता है?",
+      "options": ["उनके masses के गुणनफल (product) के", "उनके masses के योग (sum) के", "उनके बीच की distance के", "उनके बीच की distance के square के"],
+      "correctIndex": 0,
+      "explanation": "Universal law of gravitation के अनुसार F = G·m1·m2/r^2, अर्थात force दोनों masses के product के directly proportional होता है। masses का sum गलत है क्योंकि formula में गुणनफल आता है; distance के तो force inversely proportional होता है, directly नहीं।"
+    },
+    {
+      "id": "phy_gravitation_q2",
+      "question": "Universal gravitational constant G का SI unit में मान लगभग कितना होता है?",
+      "options": ["9.8 N/kg", "6.67 × 10^-11 N·m^2/kg^2", "6.67 × 10^11 N·m^2/kg^2", "3 × 10^8 m/s"],
+      "correctIndex": 1,
+      "explanation": "G का मान 6.67 × 10^-11 N·m^2/kg^2 होता है जो एक बहुत छोटी constant है। 9.8 N/kg तो g (acceleration due to gravity) है; 6.67 × 10^11 में exponent का sign गलत है; 3 × 10^8 m/s प्रकाश की speed है।"
+    },
+    {
+      "id": "phy_gravitation_q3",
+      "question": "पृथ्वी की surface पर acceleration due to gravity (g) का मानक मान लगभग कितना है?",
+      "options": ["6.67 m/s^2", "8.9 m/s^2", "9.8 m/s^2", "11.2 m/s^2"],
+      "correctIndex": 2,
+      "explanation": "पृथ्वी की surface पर g लगभग 9.8 m/s^2 होता है। 6.67 constant G के अंक से भ्रम है; 8.9 गलत मान है; 11.2 km/s तो पृथ्वी का escape velocity है, g नहीं।"
+    },
+    {
+      "id": "phy_gravitation_q4",
+      "question": "किसी body का weight और mass के बारे में कौन-सा कथन सही है?",
+      "options": ["Weight हर जगह constant रहता है पर mass बदलता है", "Mass हर जगह constant रहता है पर weight जगह के g के अनुसार बदलता है", "दोनों हमेशा बराबर होते हैं", "दोनों location के साथ बदलते हैं"],
+      "correctIndex": 1,
+      "explanation": "Mass matter की मात्रा है जो हर जगह constant रहती है, जबकि weight = m·g होने के कारण g बदलने पर weight बदलता है (जैसे moon पर weight कम)। इसलिए पहला और चौथा उलटा/गलत है, और mass तथा weight बराबर नहीं होते क्योंकि इनके unit और अर्थ अलग हैं।"
+    },
+    {
+      "id": "phy_gravitation_q5",
+      "question": "एक free fall करती body का acceleration due to gravity किस पर निर्भर करता है?",
+      "options": ["Body के mass पर", "Body के आकार (shape) पर", "किसी भी body के लिए समान रहता है (mass पर निर्भर नहीं)", "Body के रंग (colour) पर"],
+      "correctIndex": 2,
+      "explanation": "g = G·M/R^2 में केवल पृथ्वी का mass M और radius R आते हैं, गिरती body का mass नहीं; इसलिए air resistance न होने पर सभी bodies समान g से गिरती हैं। body का mass, shape या colour g को नहीं बदलते।"
+    },
+    {
+      "id": "phy_gravitation_q6",
+      "question": "पृथ्वी की surface से ऊँचाई (height) बढ़ने पर g का मान कैसे बदलता है?",
+      "options": ["बढ़ता है", "घटता है", "समान रहता है", "पहले बढ़ता फिर घटता है"],
+      "correctIndex": 1,
+      "explanation": "ऊँचाई बढ़ने पर center of earth से distance r बढ़ता है और g ∝ 1/r^2 होने के कारण g घटता है। इसलिए बढ़ना, समान रहना या पहले बढ़कर घटना गलत है।"
+    },
+    {
+      "id": "phy_gravitation_q7",
+      "question": "पृथ्वी की surface से गहराई (depth) में जाने पर g का मान कैसा होता है?",
+      "options": ["बढ़ता है", "घटता है और center पर शून्य हो जाता है", "समान रहता है", "अनंत हो जाता है"],
+      "correctIndex": 1,
+      "explanation": "depth में जाने पर केवल भीतर का mass ही gravitation में योगदान देता है, इसलिए g घटता जाता है और center of earth पर g = 0 हो जाता है। बढ़ना या constant रहना गलत है, तथा g कभी अनंत नहीं होता।"
+    },
+    {
+      "id": "phy_gravitation_q8",
+      "question": "5 kg और 10 kg के दो masses के बीच distance 2 m है। G = 6.67 × 10^-11 N·m^2/kg^2 लेते हुए gravitational force लगभग कितना होगा?",
+      "options": ["8.3 × 10^-10 N", "1.6 × 10^-9 N", "3.3 × 10^-10 N", "6.67 × 10^-11 N"],
+      "correctIndex": 0,
+      "explanation": "F = G·m1·m2/r^2 = 6.67×10^-11 × (5×10) / (2^2) = 6.67×10^-11 × 50 / 4 = 6.67×10^-11 × 12.5 = 8.3 × 10^-10 N। बाकी विकल्प गलत भाग (division) या गुणा के कारण नहीं मिलते।"
+    },
+    {
+      "id": "phy_gravitation_q9",
+      "question": "Escape velocity से क्या तात्पर्य है?",
+      "options": ["वह न्यूनतम velocity जिससे कोई body पृथ्वी के gravitational pull से बाहर निकल जाए", "वह velocity जिस पर satellite orbit करता है", "पृथ्वी के घूमने की velocity", "प्रकाश की velocity"],
+      "correctIndex": 0,
+      "explanation": "Escape velocity वह न्यूनतम velocity है जिससे कोई object पृथ्वी के gravitational field से बाहर निकलकर वापस नहीं लौटता। orbital velocity इससे अलग (कम) है; पृथ्वी के घूमने की velocity और प्रकाश की velocity का इससे कोई सीधा संबंध नहीं।"
+    },
+    {
+      "id": "phy_gravitation_q10",
+      "question": "पृथ्वी के लिए escape velocity का मान लगभग कितना है?",
+      "options": ["9.8 km/s", "7.9 km/s", "11.2 km/s", "3 × 10^8 m/s"],
+      "correctIndex": 2,
+      "explanation": "पृथ्वी की escape velocity लगभग 11.2 km/s होती है। 7.9 km/s तो निचली कक्षा का orbital velocity है; 9.8 मान g से भ्रम है; 3 × 10^8 m/s प्रकाश की speed है।"
+    },
+    {
+      "id": "phy_gravitation_q11",
+      "question": "दो objects के बीच distance को दुगुना (double) कर दिया जाए तो gravitational force कैसे बदलेगा?",
+      "options": ["दुगुना हो जाएगा", "आधा हो जाएगा", "एक-चौथाई (1/4) रह जाएगा", "चार गुना हो जाएगा"],
+      "correctIndex": 2,
+      "explanation": "F ∝ 1/r^2 है, इसलिए r को 2 गुना करने पर force 1/(2^2) = 1/4 रह जाता है। आधा होना तो F ∝ 1/r के लिए होता जो गलत है; दुगुना या चार गुना होना inverse square नियम के विरुद्ध है।"
+    },
+    {
+      "id": "phy_gravitation_q12",
+      "question": "पृथ्वी की तुलना में moon पर किसी body का weight लगभग कितना होता है?",
+      "options": ["पृथ्वी के weight का 1/6", "पृथ्वी के weight का 6 गुना", "पृथ्वी के weight के बराबर", "शून्य"],
+      "correctIndex": 0,
+      "explanation": "Moon पर g पृथ्वी के g का लगभग 1/6 है, इसलिए weight = m·g भी लगभग 1/6 रह जाता है (mass वही रहता है)। 6 गुना उलटा है; बराबर या शून्य होना भी गलत है क्योंकि moon का अपना gravitation है।"
+    },
+    {
+      "id": "phy_gravitation_q13",
+      "question": "एक satellite अपनी orbit में गिरे बिना क्यों घूमता रहता है?",
+      "options": ["उस पर कोई force नहीं लगता", "gravitational force उसे centripetal force देकर orbit में बनाए रखता है", "वह पृथ्वी के magnetic force से बँधा होता है", "air pressure उसे ऊपर धकेलता है"],
+      "correctIndex": 1,
+      "explanation": "पृथ्वी का gravitational force ही satellite के लिए आवश्यक centripetal force प्रदान करता है, जिससे वह वृत्ताकार orbit में घूमता रहता है। force शून्य नहीं होता; magnetic force या air pressure orbit बनाए रखने का कारण नहीं है (अंतरिक्ष में हवा नहीं होती)।"
+    },
+    {
+      "id": "phy_gravitation_q14",
+      "question": "Kepler का law of orbits यह बताता है कि planets सूर्य के चारों ओर किस आकार के path में घूमते हैं?",
+      "options": ["पूर्ण वृत्त (perfect circle)", "elliptical (दीर्घवृत्ताकार) orbit जिसके एक focus पर सूर्य होता है", "सीधी रेखा", "square path"],
+      "correctIndex": 1,
+      "explanation": "Kepler के पहले नियम के अनुसार planets elliptical orbit में घूमते हैं और सूर्य ellipse के एक focus पर स्थित होता है। perfect circle एक विशेष स्थिति है पर सामान्य नियम नहीं; सीधी रेखा या square path भौतिक रूप से गलत हैं।"
+    },
+    {
+      "id": "phy_gravitation_q15",
+      "question": "Free fall की स्थिति में किसी body पर कौन-सा बल कार्य करता है (air resistance नगण्य)?",
+      "options": ["केवल gravitational force", "केवल friction force", "कोई बल नहीं", "केवल magnetic force"],
+      "correctIndex": 0,
+      "explanation": "Free fall में केवल gravitational force (पृथ्वी का weight) कार्य करता है, इसलिए body g से नीचे accelerate होती है। air resistance नगण्य मानने पर friction नहीं होता; बल शून्य नहीं होता और magnetic force का यहाँ कोई संबंध नहीं।"
+    },
+    {
+      "id": "phy_gravitation_q16",
+      "question": "Weight का SI unit क्या है?",
+      "options": ["kilogram (kg)", "newton (N)", "joule (J)", "pascal (Pa)"],
+      "correctIndex": 1,
+      "explanation": "Weight एक force है (W = m·g), इसलिए इसका SI unit newton (N) है। kilogram तो mass का unit है; joule energy का और pascal pressure का unit है।"
+    },
+    {
+      "id": "phy_gravitation_q17",
+      "question": "पृथ्वी पर g का मान किस स्थान पर सबसे अधिक होता है?",
+      "options": ["equator (भूमध्य रेखा) पर", "poles (ध्रुवों) पर", "समुद्र तल से बहुत ऊँचाई पर", "पर्वत की चोटी पर"],
+      "correctIndex": 1,
+      "explanation": "पृथ्वी poles पर थोड़ी चपटी है इसलिए वहाँ center से distance कम है और g अधिकतम होता है; equator पर radius अधिक होने से g कम होता है। ऊँचाई या पर्वत की चोटी पर तो g और भी घट जाता है।"
+    },
+    {
+      "id": "phy_gravitation_q18",
+      "question": "यदि किसी body का mass 8 kg है और g = 9.8 m/s^2 है, तो उसका weight कितना होगा?",
+      "options": ["8 N", "17.8 N", "78.4 N", "0.82 N"],
+      "correctIndex": 2,
+      "explanation": "Weight W = m·g = 8 × 9.8 = 78.4 N। 8 N केवल mass का मान है; 17.8 N जोड़ने की गलती है; 0.82 N भाग करने की गलती है।"
+    },
+    {
+      "id": "phy_gravitation_q19",
+      "question": "किसी object को ऊँचाई पर उठाने से उसमें कौन-सी energy बढ़ती है?",
+      "options": ["kinetic energy", "gravitational potential energy", "sound energy", "chemical energy"],
+      "correctIndex": 1,
+      "explanation": "ऊँचाई बढ़ाने पर gravitational potential energy (PE = m·g·h) बढ़ती है क्योंकि h बढ़ता है। kinetic energy गति से जुड़ी है, आराम में उठाने से नहीं बढ़ती; sound और chemical energy का इससे संबंध नहीं।"
+    },
+    {
+      "id": "phy_gravitation_q20",
+      "question": "अंतरिक्ष में orbit करते astronauts weightless (भारहीन) क्यों महसूस करते हैं?",
+      "options": ["वहाँ gravitation बिल्कुल नहीं होता", "वे और उनका यान दोनों free fall में समान acceleration से गिरते हैं", "उनके शरीर का mass शून्य हो जाता है", "अंतरिक्ष में air pressure बहुत अधिक होता है"],
+      "correctIndex": 1,
+      "explanation": "orbit में astronaut और spacecraft दोनों समान g से पृथ्वी की ओर free fall कर रहे होते हैं, इसलिए उनके बीच कोई apparent weight नहीं रहता और वे weightless महसूस करते हैं। वहाँ gravitation शून्य नहीं होता; mass शून्य नहीं होता; अंतरिक्ष में हवा/air pressure नहीं होता।"
+    },
+    {
+      "id": "phy_gravitation_q21",
+      "question": "acceleration due to gravity (g) की direction सामान्यतः किस ओर होती है?",
+      "options": ["पृथ्वी के center की ओर (नीचे)", "ऊपर आकाश की ओर", "क्षैतिज (horizontal)", "हर पल बदलती रहती है"],
+      "correctIndex": 0,
+      "explanation": "g हमेशा पृथ्वी के center की ओर, अर्थात नीचे की ओर कार्य करती है, इसीलिए वस्तुएँ नीचे गिरती हैं। ऊपर या horizontal दिशा गलत है और g की direction यादृच्छिक रूप से नहीं बदलती।"
+    },
+    {
+      "id": "phy_gravitation_q22",
+      "question": "G (universal gravitational constant) और g (acceleration due to gravity) में मुख्य अंतर क्या है?",
+      "options": ["दोनों एक ही राशि हैं", "G हर जगह constant है जबकि g स्थान के साथ बदलता है", "g हर जगह constant है जबकि G बदलता है", "दोनों का unit समान है"],
+      "correctIndex": 1,
+      "explanation": "G एक universal constant है जो पूरे ब्रह्मांड में समान रहता है, जबकि g = G·M/R^2 स्थान (height, depth, latitude) के साथ बदलता है। दोनों एक राशि नहीं हैं और इनके unit भी अलग हैं (G का N·m^2/kg^2, g का m/s^2)।"
+    },
+    {
+      "id": "phy_gravitation_q23",
+      "question": "दो masses के बीच distance को तीन गुना (3 times) कर दिया जाए तो gravitational force कितना रह जाएगा?",
+      "options": ["1/3", "1/6", "1/9", "3 गुना"],
+      "correctIndex": 2,
+      "explanation": "F ∝ 1/r^2 के अनुसार r को 3 गुना करने पर force 1/(3^2) = 1/9 रह जाता है। 1/3 तो F ∝ 1/r के लिए होता; 1/6 गलत गणना है; 3 गुना बढ़ना inverse square नियम के विरुद्ध है।"
+    },
+    {
+      "id": "phy_gravitation_q24",
+      "question": "समुद्र में ज्वार-भाटा (tides) मुख्यतः किसके gravitational pull के कारण आते हैं?",
+      "options": ["सूर्य और चंद्रमा के", "केवल तारों के", "केवल पृथ्वी के अपने core के", "बादलों के"],
+      "correctIndex": 0,
+      "explanation": "Tides मुख्यतः चंद्रमा और कुछ हद तक सूर्य के gravitational pull के कारण समुद्री जल के खिंचाव से बनते हैं। दूर के तारों का pull नगण्य है; पृथ्वी का core या बादल tides का कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_gravitation_q25",
+      "question": "चंद्रमा को पृथ्वी के चारों ओर orbit में कौन बनाए रखता है?",
+      "options": ["पृथ्वी और चंद्रमा के बीच gravitational force", "सूर्य की रोशनी का दबाव", "पृथ्वी का magnetic field", "चंद्रमा में भरी गैस"],
+      "correctIndex": 0,
+      "explanation": "पृथ्वी और चंद्रमा के बीच का gravitational force ही चंद्रमा को orbit में बनाए रखने वाला centripetal force देता है। सूर्य की रोशनी का दबाव, पृथ्वी का magnetic field या चंद्रमा की गैस इसका कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_gravitation_q26",
+      "question": "हवा (air resistance) की अनुपस्थिति में एक पंख और एक पत्थर को समान ऊँचाई से गिराया जाए तो क्या होगा?",
+      "options": ["पत्थर पहले गिरेगा", "पंख पहले गिरेगा", "दोनों एक साथ (समान समय में) गिरेंगे", "पंख कभी नहीं गिरेगा"],
+      "correctIndex": 2,
+      "explanation": "vacuum में air resistance न होने पर सभी वस्तुएँ समान g से गिरती हैं, इसलिए पंख और पत्थर एक साथ पहुँचते हैं। सामान्य हवा में पत्थर पहले गिरता है, पर वह air resistance के कारण होता है, gravitation के अंतर से नहीं।"
+    },
+    {
+      "id": "phy_gravitation_q27",
+      "question": "यदि किसी grह का mass M = 6 × 10^24 kg और radius R = 6.4 × 10^6 m है, तो उसकी surface पर g लगभग कितना होगा? (G = 6.67 × 10^-11)",
+      "options": ["9.8 m/s^2", "6.67 m/s^2", "19.6 m/s^2", "1.6 m/s^2"],
+      "correctIndex": 0,
+      "explanation": "g = G·M/R^2 = 6.67×10^-11 × 6×10^24 / (6.4×10^6)^2 = (4.0×10^14) / (4.096×10^13) ≈ 9.8 m/s^2, जो पृथ्वी का मान है। बाकी मान गलत गणना दर्शाते हैं; 1.6 m/s^2 तो moon के लिए होता है।"
+    },
+    {
+      "id": "phy_gravitation_q28",
+      "question": "Newton के gravitation नियम को 'inverse square law' क्यों कहा जाता है?",
+      "options": ["क्योंकि force distance के square के directly proportional है", "क्योंकि force distance के square के inversely proportional है", "क्योंकि force mass के square के proportional है", "क्योंकि force time के square पर निर्भर है"],
+      "correctIndex": 1,
+      "explanation": "F ∝ 1/r^2 अर्थात force दो objects के बीच की distance के square के inversely proportional होता है, इसीलिए इसे inverse square law कहते हैं। distance के square के directly proportional होना उलटा है; mass का square या time इसमें नहीं आता।"
+    },
+    {
+      "id": "phy_gravitation_q29",
+      "question": "एक लिफ्ट (lift) की rope टूट जाए और वह स्वतंत्र रूप से नीचे गिरे तो उसमें खड़े व्यक्ति को क्या अनुभव होगा?",
+      "options": ["सामान्य weight", "दुगुना weight", "weightlessness (भारहीनता)", "कोई परिवर्तन नहीं"],
+      "correctIndex": 2,
+      "explanation": "rope टूटने पर lift और व्यक्ति दोनों समान g से free fall करते हैं, इसलिए floor से कोई reaction नहीं मिलता और apparent weight शून्य यानी weightlessness महसूस होती है। इसलिए सामान्य या दुगुना weight अनुभव नहीं होता।"
+    },
+    {
+      "id": "phy_gravitation_q30",
+      "question": "Geostationary satellite की खास बात क्या है?",
+      "options": ["यह पृथ्वी की सतह पर स्थिर रहता है", "इसका orbital period पृथ्वी के घूर्णन काल (24 घंटे) के बराबर होता है, इसलिए यह आकाश में एक ही स्थान पर दिखता है", "यह हर घंटे पृथ्वी का एक चक्कर लगाता है", "यह पृथ्वी के center पर स्थित होता है"],
+      "correctIndex": 1,
+      "explanation": "Geostationary satellite का orbital period पृथ्वी के 24 घंटे के rotation के बराबर होता है, इसलिए वह जमीन से देखने पर आकाश में स्थिर प्रतीत होता है। यह सतह पर या center पर नहीं होता, और न ही हर घंटे एक चक्कर लगाता है।"
+    }
+  ]
+}

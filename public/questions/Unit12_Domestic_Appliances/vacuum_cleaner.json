@@ -1,0 +1,368 @@
+{
+  "unit": "unit12",
+  "unitName": "Domestic Appliances",
+  "topic": "vacuum_cleaner",
+  "topicName": "Vacuum Cleaner - Working Principle, Parts, Suction Motor & Circuit",
+  "questions": [
+    {
+      "id": "u12_vacuum_cleaner_q1",
+      "question": "Vacuum cleaner किस मूल सिद्धांत पर कार्य करता है?",
+      "options": [
+        "High pressure air को कमरे में फेंककर धूल उड़ाना",
+        "Impeller/fan द्वारा air को suck कर low pressure (partial vacuum) बनाना जिससे धूल हवा के साथ अंदर खिंचती है",
+        "Magnetic force से धूल के particles को आकर्षित करना",
+        "Chemical reaction से धूल को जलाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vacuum cleaner में motor से जुड़ा fan/impeller तेजी से घूमकर machine के अंदर air को बाहर धकेलता है, जिससे nozzle के आगे low pressure (partial vacuum) बनता है और वायुमंडलीय उच्च दाब की हवा धूल-कणों सहित अंदर खिंचती है। बाकी options वास्तविक physical principle को गलत तरीके से बताते हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q2",
+      "question": "Vacuum cleaner में प्रयोग होने वाला suction motor सामान्यतः किस प्रकार का होता है?",
+      "options": [
+        "Three-phase induction motor",
+        "Universal motor (series wound, high speed)",
+        "Stepper motor",
+        "Synchronous motor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vacuum cleaner में high speed (सामान्यतः 15,000-30,000 RPM) और high starting torque के लिए universal (series wound) motor प्रयोग होता है जो AC व DC दोनों पर चल सकता है। Three-phase induction motor domestic उपकरण के लिए उपयुक्त नहीं, stepper और synchronous motor high-speed suction application के लिए प्रयोग नहीं होते।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q3",
+      "question": "Universal motor को 'universal' क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि यह केवल तीन-फेज supply पर चलता है",
+        "क्योंकि यह AC और DC दोनों supply पर काम कर सकता है",
+        "क्योंकि यह बिना बिजली के चलता है",
+        "क्योंकि यह केवल battery से चलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Universal motor का series field winding armature के साथ series में जुड़ा होता है जिससे current की दिशा बदलने पर भी torque की दिशा वही रहती है, इसलिए यह AC व DC दोनों supply पर चल सकता है — इसीलिए इसे universal motor कहते हैं। बाकी options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q4",
+      "question": "Vacuum cleaner के मुख्य parts में से 'dust bag/dust container' का कार्य क्या है?",
+      "options": [
+        "Motor को गरम करना",
+        "Air के साथ खिंची धूल व मैल को इकट्ठा करना जबकि air filter होकर बाहर निकले",
+        "Suction power बढ़ाना",
+        "Nozzle की speed control करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dust bag/container एक filtering chamber है जो अंदर खिंची हवा से धूल व कणों को अलग कर इकट्ठा करता है, जबकि साफ हवा motor और exhaust से होकर बाहर निकलती है। Motor heating, suction power बढ़ाना और nozzle speed control अलग components के कार्य हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q5",
+      "question": "Vacuum cleaner में HEPA filter का मुख्य कार्य क्या है?",
+      "options": [
+        "Motor को cool करना",
+        "बहुत महीन धूल कणों (fine dust particles/allergens) को exhaust air से छानना",
+        "Suction motor की speed बढ़ाना",
+        "Dust bag को साफ करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "HEPA (High Efficiency Particulate Air) filter बहुत छोटे particles (0.3 micron तक) को भी exhaust air से पकड़ लेता है, जिससे साफ हवा बाहर निकले और allergens कम हों। यह motor cooling, speed बढ़ाने या dust bag साफ करने का कार्य नहीं करता।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q6",
+      "question": "Vacuum cleaner में impeller/fan blades की design (curved blades) किस उद्देश्य के लिए बनाई जाती है?",
+      "options": [
+        "Motor की weight कम करने के लिए",
+        "अधिकतम air-flow और suction pressure उत्पन्न करने के लिए",
+        "Noise बढ़ाने के लिए",
+        "Dust bag को गरम करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Curved impeller blades घूमते समय अधिकतम मात्रा में air को कुशलता से बाहर धकेलते हैं जिससे अधिकतम suction pressure और air-flow बनता है — यही vacuum cleaner की मूल कार्यक्षमता है। Weight कम करना, noise बढ़ाना या dust bag गरम करना blade design का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q7",
+      "question": "Vacuum cleaner circuit में motor के साथ श्रेणी (series) में लगा switch किस कार्य के लिए है?",
+      "options": [
+        "Motor की direction बदलने के लिए",
+        "Motor को supply से on/off करने के लिए",
+        "Voltage को boost करने के लिए",
+        "Dust bag को खाली करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Series switch (main power switch) motor circuit को supply से जोड़ने या काटने का कार्य करता है, जिससे user vacuum cleaner को on/off कर सके। Direction change universal motor में field/armature terminal बदलकर होता है (यहाँ जरूरी नहीं), voltage boosting और dust bag खाली करना switch के कार्य नहीं हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q8",
+      "question": "कुछ आधुनिक vacuum cleaners में speed control के लिए कौन-सा electronic component प्रयोग होता है?",
+      "options": [
+        "Zener diode",
+        "TRIAC (phase control circuit) या electronic speed controller",
+        "LED indicator केवल",
+        "Photodiode"
+      ],
+      "correctIndex": 1,
+      "explanation": "TRIAC आधारित phase control circuit AC waveform के एक हिस्से को काटकर motor को दी जाने वाली effective voltage/power को नियंत्रित करता है, जिससे suction speed adjust होती है। Zener diode voltage regulation के लिए, LED indicator केवल signal दिखाने के लिए और photodiode light sensing के लिए प्रयोग होते हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q9",
+      "question": "Vacuum cleaner motor की brushes (carbon brushes) का मुख्य कार्य क्या है?",
+      "options": [
+        "Dust को filter करना",
+        "Rotating commutator के साथ sliding contact बनाकर armature को current supply करना",
+        "Motor को cool रखना",
+        "Suction pressure बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Carbon brushes commutator की सतह पर sliding contact बनाकर stationary supply से घूमते हुए armature winding तक current पहुँचाते हैं, जिससे motor में torque उत्पन्न होता है। Dust filtering, cooling और suction pressure अलग components (filter, ventilation, fan design) से संबंधित हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q10",
+      "question": "यदि vacuum cleaner से जलने की गंध (burning smell) आ रही है और suction कमजोर हो गया है, तो सबसे संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Dust bag नया लगाया गया है",
+        "Carbon brushes घिस गए हैं या motor winding overheating से क्षतिग्रस्त हो रही है",
+        "Filter साफ है",
+        "Power cord नया है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जलने की गंध सामान्यतः घिसे हुए carbon brushes के अत्यधिक sparking से या motor winding की overheating/insulation damage से आती है, जिससे suction भी कमजोर हो जाता है। नया dust bag, साफ filter या नया power cord ऐसी समस्या उत्पन्न नहीं करते।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q11",
+      "question": "Vacuum cleaner में blockage (जैसे hose में फंसी वस्तु) होने पर motor और suction पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Suction बढ़ जाता है और motor ठंडा रहता है",
+        "Air-flow कम होने से suction कमजोर होता है और motor पर load बढ़कर overheating हो सकती है",
+        "कोई प्रभाव नहीं पड़ता",
+        "Motor की speed स्थायी रूप से बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Blockage होने पर air-flow अवरुद्ध होता है जिससे suction कमजोर हो जाता है, और motor को पर्याप्त cooling airflow न मिलने के साथ-साथ अधिक load पड़ने से वह overheat हो सकता है। Suction बढ़ना, कोई प्रभाव न पड़ना या speed स्थायी रूप से बढ़ना तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q12",
+      "question": "Vacuum cleaner के exhaust vent की जाली (mesh/grille) का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Suction शुरू करना",
+        "Motor cooling के लिए ठंडी हवा को बाहर निकलने देना और safety के लिए internal parts को cover करना",
+        "Dust bag को बदलना",
+        "Cord को स्टोर करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Exhaust vent से motor द्वारा गरम की गई हवा और cooling air बाहर निकलती है, साथ ही mesh internal moving parts को accidental touch से बचाती है। यह suction शुरू करने, dust bag बदलने या cord store करने का कार्य नहीं करता।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q13",
+      "question": "Vacuum cleaner में thermal cut-out (thermal fuse/overload protector) क्यों लगाया जाता है?",
+      "options": [
+        "Suction बढ़ाने के लिए",
+        "Motor के अत्यधिक गरम होने पर automatically circuit को disconnect कर motor को damage से बचाने के लिए",
+        "Dust bag को भरने से रोकने के लिए",
+        "Cord की लंबाई बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thermal cut-out motor winding के तापमान को sense करता है और खतरनाक स्तर पर पहुँचने पर automatically circuit को खोलकर motor को जलने/damage से बचाता है। यह suction बढ़ाने, dust bag या cord लंबाई से संबंधित नहीं है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q14",
+      "question": "Bagless (cyclonic) vacuum cleaner किस सिद्धांत पर धूल को अलग करता है?",
+      "options": [
+        "Magnetic separation से",
+        "Cyclonic action द्वारा हवा को तेज घुमाकर centrifugal force से भारी धूल कणों को container की दीवार पर अलग करना",
+        "Chemical filtration से",
+        "Heat से धूल को जलाकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cyclonic/bagless vacuum cleaner में हवा को container के अंदर तेज गति से घुमाया जाता है, जिससे centrifugal force के कारण भारी धूल कण container की बाहरी दीवार पर अलग हो जाते हैं और साफ हवा केंद्र से बाहर निकलती है। यह magnetic separation, chemical filtration या heat से जलाने पर आधारित नहीं है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q15",
+      "question": "Vacuum cleaner के flexible hose और extension wand का मुख्य कार्य क्या है?",
+      "options": [
+        "Motor को power देना",
+        "Suction air-flow को nozzle से dust chamber तक पहुँचाना और पहुँच (reach) बढ़ाना",
+        "Dust bag को साफ करना",
+        "Speed control करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flexible hose और extension wand suction air और उसमें खिंची धूल को floor nozzle से main unit के dust chamber तक ले जाते हैं, साथ ही user को दूर-दूर तक साफ-सफाई करने की सुविधा देते हैं। ये motor को power देने, dust bag साफ करने या speed control से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q16",
+      "question": "यदि vacuum cleaner चालू करने पर motor बिल्कुल नहीं चलता और कोई आवाज़ भी नहीं आती, तो जांच का सही क्रम क्या होगा?",
+      "options": [
+        "पहले dust bag बदलें",
+        "पहले power cord/plug, fuse और switch की continuity जांचें",
+        "पहले filter साफ करें",
+        "पहले hose बदलें"
+      ],
+      "correctIndex": 1,
+      "explanation": "Motor का बिल्कुल न चलना और कोई आवाज़ न आना सामान्यतः supply न पहुँचने का संकेत है, इसलिए पहले power cord, plug, fuse और main switch की continuity जांचनी चाहिए। Dust bag, filter या hose की समस्या से suction कमजोर होगा पर motor bilkul band nahi hoga."
+    },
+    {
+      "id": "u12_vacuum_cleaner_q17",
+      "question": "Vacuum cleaner motor की high RPM (जैसे 20,000-30,000 RPM) की आवश्यकता क्यों होती है?",
+      "options": [
+        "ताकि motor जल्दी खराब हो",
+        "छोटे size के fan/impeller से पर्याप्त air-flow और suction pressure उत्पन्न करने के लिए",
+        "ताकि noise कम हो",
+        "ताकि dust bag जल्दी भरे"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vacuum cleaner में fan/impeller का size सीमित होता है, इसलिए पर्याप्त air-flow और suction pressure पाने के लिए motor को बहुत उच्च RPM पर चलाना पड़ता है। यह motor को जल्दी खराब करने, noise कम करने या dust bag जल्दी भरने के लिए नहीं है (बल्कि high RPM से noise वास्तव में बढ़ता है)।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q18",
+      "question": "Vacuum cleaner में armature और field winding के बीच series connection होने का मुख्य लाभ क्या है?",
+      "options": [
+        "Motor की speed हमेशा constant रहती है चाहे load कुछ भी हो",
+        "High starting torque मिलता है जो suction शुरू करने के लिए आवश्यक है",
+        "Motor बिना supply के चल सकता है",
+        "Motor का size बहुत बड़ा हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Series wound (universal) motor में armature current ही field current होता है, इसलिए starting पर उच्च current से उच्च torque मिलता है जो suction fan को तेजी से घुमाने के लिए आवश्यक है। इसकी speed load के साथ बदलती है (constant नहीं रहती), यह बिना supply के नहीं चल सकता, और size से इसका सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q19",
+      "question": "Vacuum cleaner के power cord में लगा 'cord rewind mechanism' (automatic cord reel) किस प्रकार का होता है?",
+      "options": [
+        "Electric motor driven",
+        "Spring-loaded mechanical reel जो button दबाने पर cord को automatically अंदर खींच लेता है",
+        "Hydraulic mechanism",
+        "Magnetic mechanism"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cord rewind एक spring-loaded mechanical reel है जिसमें cord खींचते समय spring tension जमा होती है, और button दबाने पर वह tension release होकर cord को automatically अंदर लपेट लेती है। यह electric motor, hydraulic या magnetic mechanism पर आधारित नहीं है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q20",
+      "question": "Vacuum cleaner में filter बहुत गंदा/blocked होने पर motor के life पर क्या असर पड़ता है?",
+      "options": [
+        "Motor की life बढ़ जाती है",
+        "Insufficient cooling airflow के कारण motor overheat होकर उसकी life कम हो सकती है",
+        "कोई असर नहीं पड़ता",
+        "Motor की speed control बेहतर हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Motor की cooling बड़े हद तक उसी airflow पर निर्भर करती है जो suction के लिए खींची जाती है; filter blocked होने पर airflow कम हो जाता है जिससे motor overheat होकर उसकी windings को नुकसान पहुँच सकता है और life घट सकती है। बाकी options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q21",
+      "question": "Vacuum cleaner nozzle में लगा rotating brush (agitator brush) किस कार्य के लिए है, विशेषकर carpet cleaning में?",
+      "options": [
+        "Suction pressure बढ़ाने के लिए motor से जुड़ा हुआ",
+        "Carpet के fibers से चिपकी धूल व मैल को loosen कर suction के लिए आसान बनाना",
+        "Dust bag को साफ करने के लिए",
+        "Cord को घुमाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Agitator brush एक अलग छोटे motor या belt-driven mechanism से घूमता है और carpet के रेशों में फंसी धूल-मिट्टी को खरोंचकर ढीला करता है ताकि suction airflow उसे आसानी से उठा सके। यह suction pressure सीधे नहीं बढ़ाता, dust bag साफ नहीं करता और cord से इसका संबंध नहीं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q22",
+      "question": "Vacuum cleaner की suction power (Air Watts) किन दो parameters पर निर्भर करती है?",
+      "options": [
+        "केवल motor का रंग और वजन",
+        "Air-flow rate (CFM/L/s) और vacuum/suction pressure (water lift)",
+        "केवल dust bag का size",
+        "केवल cord की लंबाई"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vacuum cleaner की effective suction power (Air Watts में मापी जाती है) मुख्यतः हवा के flow rate (air-flow) और उत्पन्न suction pressure (water lift) दोनों पर निर्भर करती है। Motor का रंग/वजन, dust bag size या cord लंबाई इसका सीधा निर्धारक नहीं हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q23",
+      "question": "Robotic vacuum cleaner में obstacle detection के लिए सामान्यतः कौन-से sensors प्रयोग होते हैं?",
+      "options": [
+        "केवल thermostat",
+        "Infrared (IR) sensors, ultrasonic sensors और bumper switches",
+        "केवल magnetron",
+        "केवल capacitor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Robotic vacuum cleaner में IR sensors, ultrasonic sensors और mechanical bumper switches का संयोजन दीवारों, फर्नीचर और सीढ़ियों जैसी बाधाओं को detect करने के लिए प्रयोग होता है ताकि robot सुरक्षित रूप से navigate कर सके। Thermostat, magnetron और capacitor obstacle detection के लिए प्रयोग नहीं होते।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q24",
+      "question": "Vacuum cleaner में motor के आगे-पीछे लगे carbon brushes को समय-समय पर क्यों बदलना पड़ता है?",
+      "options": [
+        "क्योंकि वे बिजली की बचत करते हैं",
+        "क्योंकि commutator के साथ घर्षण (friction) से वे धीरे-धीरे घिस जाते हैं",
+        "क्योंकि वे dust filter का काम करते हैं",
+        "क्योंकि वे cord से जुड़े होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Carbon brushes commutator की सतह से लगातार रगड़ खाते हैं जिससे वे समय के साथ धीरे-धीरे घिसते जाते हैं, और अत्यधिक घिस जाने पर proper electrical contact न बनने से motor कमजोर चलता है या बंद हो जाता है, इसलिए इन्हें बदलना पड़ता है। बाकी options गलत कारण बताते हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q25",
+      "question": "Vacuum cleaner में motor के दोनों ओर लगे small cooling fans (यदि armature पर mounted हों) का कार्य क्या है?",
+      "options": [
+        "Suction शुरू करना",
+        "Motor winding और bearings को ठंडा रखने के लिए हवा प्रवाहित करना",
+        "Dust को इकट्ठा करना",
+        "Speed control करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "कुछ designs में मुख्य suction fan के अलावा armature shaft पर एक छोटा cooling fan भी होता है जो motor की winding और bearings के आसपास हवा प्रवाहित कर उन्हें ठंडा रखता है। यह suction शुरू करने, dust इकट्ठा करने या speed control के लिए नहीं होता।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q26",
+      "question": "Vacuum cleaner में हवा का flow path सही क्रम में क्या है?",
+      "options": [
+        "Exhaust vent → motor → dust bag → nozzle",
+        "Nozzle → hose → dust bag/filter → motor/fan → exhaust vent",
+        "Motor → nozzle → exhaust vent → dust bag",
+        "Dust bag → exhaust vent → nozzle → motor"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही flow path में हवा nozzle से floor की धूल सहित hose के जरिए dust bag/filter में जाती है जहाँ धूल अलग होती है, फिर साफ हवा motor/fan से गुजरकर exhaust vent से बाहर निकलती है। बाकी sequences वास्तविक airflow दिशा को गलत क्रम में दर्शाते हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q27",
+      "question": "यदि vacuum cleaner का suction सामान्य से बहुत कमजोर है परंतु motor सामान्य गति से चल रहा है और कोई असामान्य आवाज़ नहीं है, तो जांच का सबसे तर्कसंगत बिंदु क्या होगा?",
+      "options": [
+        "Motor बदलना",
+        "Filter/dust bag blockage और hose में किसी रुकावट की जांच करना",
+        "Power cord बदलना",
+        "Switch बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Motor का सामान्य गति से चलना बताता है कि electrical/motor part ठीक है, इसलिए कमजोर suction का कारण सामान्यतः भरा हुआ filter/dust bag या hose/nozzle में blockage होता है, जो airflow को अवरुद्ध करता है। Motor, cord या switch बदलना यहाँ अनावश्यक है क्योंकि electrical side सही काम कर रहा है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q28",
+      "question": "Vacuum cleaner में on/off switch के साथ लगा neon/LED indicator lamp किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Suction बढ़ाने के लिए",
+        "उपयोगकर्ता को visually संकेत देने के लिए कि supply/power on है",
+        "Motor को cool करने के लिए",
+        "Dust bag भरने का संकेत देने के लिए हमेशा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Indicator lamp केवल एक visual संकेत है जो बताता है कि machine को power supply मिल रही है और वह on state में है। यह suction बढ़ाने या motor cooling से संबंधित नहीं है; dust bag full indicator (यदि हो) एक अलग dedicated sensor/mechanism द्वारा दिया जाता है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q29",
+      "question": "Vacuum cleaner motor की winding में short-circuit हो जाने पर सबसे संभावित लक्षण क्या होगा?",
+      "options": [
+        "Motor सामान्य से धीमी गति से लेकिन ठंडा चलेगा",
+        "Motor बिल्कुल नहीं चलेगा, fuse उड़ सकता है या MCB trip हो सकता है",
+        "Suction power बहुत बढ़ जाएगी",
+        "केवल हल्की सी आवाज़ बदल जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Winding में short-circuit होने पर current असामान्य रूप से बहुत अधिक बढ़ जाता है, जिससे supply का fuse उड़ सकता है या protective MCB trip हो सकता है और motor बिल्कुल नहीं चलेगा। यह motor को धीमा पर ठंडा नहीं रखेगा, suction बढ़ाने का सवाल ही नहीं और यह केवल मामूली आवाज़ बदलाव तक सीमित नहीं रहेगा।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q30",
+      "question": "Vacuum cleaner की servicing के दौरान carbon brush बदलते समय किस बात का सबसे अधिक ध्यान रखना चाहिए?",
+      "options": [
+        "Brush का रंग match हो",
+        "Brush का size, spring tension और motor की original specification के अनुरूप होना चाहिए",
+        "Brush महंगा होना चाहिए",
+        "Brush की लंबाई जितनी अधिक हो उतना अच्छा"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही fit और proper contact के लिए brush का size, spring tension तथा material motor की original specification से मेल खाना चाहिए, अन्यथा sparking बढ़ सकती है या commutator को नुकसान पहुँच सकता है। रंग, कीमत या केवल अधिक लंबाई से सही performance सुनिश्चित नहीं होती।"
+    }
+  ]
+}

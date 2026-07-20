@@ -1,0 +1,368 @@
+{
+  "unit": "unit15",
+  "unitName": "Servo Motor",
+  "topic": "servo_drives",
+  "topicName": "Servo Drives - Introduction and Functions",
+  "questions": [
+    {
+      "id": "u15_servo_drives_q1",
+      "question": "Servo drive का मुख्य कार्य क्या होता है?",
+      "options": [
+        "केवल motor की body को cool करना",
+        "Controller से मिले command signal के अनुसार motor को precise power supply देकर उसकी speed, position और torque control करना",
+        "Motor की winding resistance बढ़ाना",
+        "Motor को केवल on/off switch की तरह चलाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo drive controller (जैसे PLC या CNC) से मिले command signals के अनुसार motor को नियंत्रित करके precise speed, position और torque देता है। Cooling, winding resistance बढ़ाना या simple on/off switch की तरह काम करना servo drive का कार्य नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q2",
+      "question": "Servo drive में मुख्यतः कौन से power electronic component का उपयोग motor को supply देने के लिए होता है?",
+      "options": [
+        "Simple diode bridge only",
+        "PWM based inverter (IGBT/MOSFET switching)",
+        "Series resistor bank",
+        "Capacitor start relay"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo drive में PWM based inverter, जो IGBT या MOSFET switching devices का उपयोग करता है, motor को variable voltage/frequency supply देता है। Simple diode bridge केवल rectification करता है, resistor bank और capacitor start relay servo drives में मुख्य power stage नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_drives_q3",
+      "question": "Servo drive में 'rectifier stage' का क्या कार्य है?",
+      "options": [
+        "AC supply को DC bus voltage में बदलना",
+        "DC को AC में बदलना",
+        "Feedback signal को amplify करना",
+        "Motor की speed सीधे control करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rectifier stage incoming AC supply को DC bus voltage में convert करता है, जिसे बाद में inverter stage motor को feed करने के लिए उपयोग करता है। DC को AC में बदलना inverter का काम है, feedback amplification अलग control circuit करता है, और speed control overall control loop करता है, अकेला rectifier नहीं।"
+    },
+    {
+      "id": "u15_servo_drives_q4",
+      "question": "Servo drives में 'DC bus' किसे कहते हैं?",
+      "options": [
+        "Motor की winding का एक हिस्सा",
+        "Rectifier से मिली filtered DC voltage जो inverter को supply करती है",
+        "Feedback cable का नाम",
+        "Encoder का data bus"
+      ],
+      "correctIndex": 1,
+      "explanation": "DC bus rectifier से प्राप्त filtered DC voltage होती है जिसे capacitor bank से smooth किया जाता है और inverter stage को supply की जाती है। Winding का हिस्सा, feedback cable और encoder data bus अलग-अलग concepts हैं।"
+    },
+    {
+      "id": "u15_servo_drives_q5",
+      "question": "Servo drive में overcurrent protection का क्या उद्देश्य है?",
+      "options": [
+        "Motor की speed बढ़ाना",
+        "Excessive current से motor windings और power devices को damage से बचाना",
+        "Feedback signal amplify करना",
+        "Motor की insulation कम करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Overcurrent protection excessive current की स्थिति में drive को trip करके motor windings और IGBT/MOSFET जैसे power devices को thermal damage से बचाती है। यह speed बढ़ाने, feedback amplify करने या insulation कम करने का कार्य नहीं करती।"
+    },
+    {
+      "id": "u15_servo_drives_q6",
+      "question": "Servo drive में 'regenerative braking' feature किस प्रकार काम करता है?",
+      "options": [
+        "Motor को permanently बंद करके",
+        "Braking के दौरान generate हुई energy को वापस DC bus/supply में भेजकर",
+        "Motor की winding को short करके energy waste करके",
+        "Motor की current को zero करके"
+      ],
+      "correctIndex": 1,
+      "explanation": "Regenerative braking में motor deceleration के दौरान generator की तरह काम करता है और generated energy को DC bus में वापस भेजा जाता है, जिससे energy efficiency बढ़ती है। यह permanent shutdown, winding short करने या current zero करने से अलग है।"
+    },
+    {
+      "id": "u15_servo_drives_q7",
+      "question": "Servo drives में 'braking resistor' का उपयोग कब किया जाता है?",
+      "options": [
+        "जब regenerated energy को supply में वापस नहीं भेजा जा सकता, तब उसे heat के रूप में dissipate करने के लिए",
+        "Motor की starting torque बढ़ाने के लिए",
+        "Feedback signal को filter करने के लिए",
+        "Motor की insulation test करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब drive में regenerative unit नहीं होता या excess energy को grid में वापस नहीं भेजा जा सकता, तो braking resistor उस energy को heat के रूप में dissipate करता है ताकि DC bus voltage limit में रहे। यह starting torque बढ़ाने, feedback filter करने या insulation test के लिए नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q8",
+      "question": "Servo drive के control section में मुख्यतः कौन सा processing device उपयोग होता है?",
+      "options": [
+        "Simple relay logic",
+        "Digital Signal Processor (DSP) या microcontroller",
+        "Mechanical timer",
+        "Bimetallic strip"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modern servo drives के control section में DSP या high-speed microcontroller उपयोग होता है जो real-time में complex control algorithms (PID, vector control) execute करता है। Relay logic, mechanical timer और bimetallic strip पुरानी या असंबंधित technologies हैं।"
+    },
+    {
+      "id": "u15_servo_drives_q9",
+      "question": "Servo drive और VFD (Variable Frequency Drive) में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल समान होते हैं, कोई अंतर नहीं",
+        "Servo drive high precision closed loop feedback के साथ काम करता है जबकि सामान्य VFD अक्सर open loop होता है",
+        "VFD हमेशा servo drive से महंगा होता है",
+        "Servo drive केवल AC supply पर काम करता है, VFD DC पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo drives high-resolution feedback (encoder/resolver) के साथ closed loop precision control देते हैं, जबकि सामान्य industrial VFD अक्सर open loop या sensorless vector control में काम करते हैं और उतनी precision नहीं देते। दोनों समान नहीं हैं, cost variable है और supply type का यह अंतर सही नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q10",
+      "question": "Servo drive में 'commissioning parameters' सेट करने का उद्देश्य क्या होता है?",
+      "options": [
+        "Motor की body को paint करना",
+        "Drive को connected motor और application के अनुसार सही तरीके से configure करना",
+        "Feedback cable की length बढ़ाना",
+        "Motor की weight कम करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Commissioning parameters (motor rating, feedback type, control mode, gains आदि) सेट करने से drive को specific motor और application के लिए properly configure किया जाता है ताकि सही performance मिले। Body paint, cable length या weight से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q11",
+      "question": "Servo drive में 'fault diagnostics display' किस काम आता है?",
+      "options": [
+        "Motor की winding रंगना",
+        "Drive/motor में हुई fault conditions (overcurrent, overheat, encoder error आदि) को display करके troubleshooting आसान बनाना",
+        "Motor को हमेशा high speed पर चलाना",
+        "Feedback signal को हटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fault diagnostics display drive में occur हुई fault codes (जैसे overcurrent, overheat, encoder fault) दिखाकर maintenance और troubleshooting को तेज़ और सरल बनाता है। यह winding रंगने, high speed चलाने या feedback हटाने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q12",
+      "question": "Servo drive में 'communication interface' (जैसे EtherCAT, CANopen, Modbus) का क्या उपयोग है?",
+      "options": [
+        "Motor की physical size कम करना",
+        "Drive को PLC/controller के साथ data exchange (commands, status, feedback) के लिए network से जोड़ना",
+        "Motor की winding इंसुलेशन बढ़ाना",
+        "Motor को manually चलाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Communication interfaces जैसे EtherCAT, CANopen, Modbus drive को higher-level controller से network द्वारा जोड़ते हैं ताकि commands भेजे जा सकें और status/feedback data प्राप्त हो सके। यह size कम करने, insulation बढ़ाने या manual operation से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q13",
+      "question": "Servo drive के 'inverter stage' में स्विचिंग किस उद्देश्य से की जाती है?",
+      "options": [
+        "DC voltage को fixed AC output में बदलने के लिए, बिना control के",
+        "DC bus voltage से variable voltage और variable frequency AC output generate करने के लिए (PWM switching)",
+        "Feedback cable को disconnect करने के लिए",
+        "Motor की rated power बदलने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inverter stage IGBT/MOSFET की PWM switching द्वारा DC bus voltage से variable voltage और frequency वाला AC output generate करता है, जिससे motor speed और torque control होते हैं। Fixed AC output देना, feedback cable disconnect करना या rated power बदलना inverter का कार्य नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q14",
+      "question": "Servo drive selection करते समय किस parameter को सबसे पहले match करना जरूरी होता है?",
+      "options": [
+        "Drive का रंग motor के रंग से",
+        "Drive की current/power rating motor की rated current/power से",
+        "Drive की cable length मनमानी रखी जा सकती है",
+        "Drive का brand नाम"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo drive select करते समय उसकी current और power rating motor की rated values से match होनी चाहिए ताकि motor को पर्याप्त और सुरक्षित supply मिले। रंग, cable length मनमानी या brand नाम technical matching factors नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_drives_q15",
+      "question": "Servo drive में 'dead time' (या blanking time) किस स्टेज में महत्वपूर्ण होता है?",
+      "options": [
+        "Feedback processing में",
+        "Inverter की switching devices (upper और lower switch) के बीच shoot-through रोकने के लिए",
+        "Rectifier के input filter में",
+        "Encoder cable connection में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dead time inverter के same leg के upper और lower switching devices को एक साथ ON होने (shoot-through) से रोकने के लिए दिया जाता है, ताकि short circuit न हो। यह feedback processing, input filter या encoder cable से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q16",
+      "question": "Servo drive की 'auto-tuning' सुविधा किस चीज़ को automatically identify करती है?",
+      "options": [
+        "Motor का brand नाम",
+        "Load inertia और control loop gains को optimum करने के लिए motor-load characteristics",
+        "Motor की body का रंग",
+        "Operator का नाम"
+      ],
+      "correctIndex": 1,
+      "explanation": "Auto-tuning feature motor-load system की inertia और response characteristics को measure करके control loop gains (P, I, D) को automatically optimum set करता है। Brand नाम, रंग या operator नाम technical parameters नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_drives_q17",
+      "question": "Servo drive में 'IP rating' (जैसे IP20, IP65) किस बात को दर्शाता है?",
+      "options": [
+        "Drive की processing speed",
+        "Drive के enclosure की dust और water protection level",
+        "Drive की feedback resolution",
+        "Drive का communication protocol"
+      ],
+      "correctIndex": 1,
+      "explanation": "IP rating drive के enclosure की dust ingress और water/moisture protection क्षमता को दर्शाता है, जो installation environment के अनुसार चुना जाता है। Processing speed, feedback resolution और communication protocol से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q18",
+      "question": "Servo drive में 'STO (Safe Torque Off)' safety function का क्या कार्य है?",
+      "options": [
+        "Motor की speed बढ़ाना",
+        "Emergency या safety situation में motor को power देने वाले switching signals को safely रोककर torque को तुरंत हटाना",
+        "Feedback resolution बढ़ाना",
+        "Motor की winding insulation test करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "STO (Safe Torque Off) एक safety function है जो emergency की स्थिति में inverter की switching signals को safely disable करके motor torque को तुरंत हटा देता है, बिना पूरे drive को power off किए। यह speed बढ़ाने, resolution बढ़ाने या insulation test से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q19",
+      "question": "Servo drive में heat sink और cooling fan का प्रमुख उद्देश्य क्या है?",
+      "options": [
+        "Motor की speed control करना",
+        "Power switching devices (IGBT/MOSFET) से generate होने वाली heat को dissipate करना",
+        "Feedback signal को amplify करना",
+        "Encoder data को store करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Heat sink और cooling fan power devices से switching losses के कारण generate होने वाली heat को dissipate करके उन्हें safe operating temperature में रखते हैं। Speed control, feedback amplification और data storage से इनका सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q20",
+      "question": "Servo drive में 'parameter backup/restore' function किस काम आता है?",
+      "options": [
+        "Motor की body को साफ करना",
+        "Configured settings को save करके drive replacement के समय जल्दी restore करने के लिए",
+        "Motor को हमेशा high torque पर चलाना",
+        "Feedback cable को हटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Parameter backup/restore function से configured settings को file/memory module में save किया जा सकता है, जिससे drive खराब होने पर replacement के बाद जल्दी वही settings restore की जा सकें। यह body cleaning, torque बढ़ाने या cable हटाने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q21",
+      "question": "Servo drive के 'input filter' का क्या कार्य है?",
+      "options": [
+        "Motor की speed सीधे control करना",
+        "EMI/harmonics को कम करके supply line को protect करना",
+        "Feedback resolution बढ़ाना",
+        "Motor की winding को cool करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Input filter, drive के switching operation से उत्पन्न EMI (electromagnetic interference) और harmonics को कम करता है ताकि supply line और अन्य equipment प्रभावित न हों। यह speed control, feedback resolution या winding cooling से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q22",
+      "question": "Servo drive में 'multi-axis' configuration का क्या फायदा होता है?",
+      "options": [
+        "एक ही drive से केवल एक motor चल सकता है",
+        "एक common DC bus और controller से कई axes/motors को synchronised रूप से control किया जा सकता है",
+        "Feedback devices की जरूरत खत्म हो जाती है",
+        "Motor की rated power अपने आप बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Multi-axis servo drive configuration में common DC bus और central controller से कई motors/axes को synchronised और coordinated तरीके से control किया जाता है, जो CNC machines और robotics में उपयोगी है। यह single motor limitation, feedback हटाने या power अपने आप बढ़ाने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q23",
+      "question": "Servo drive में 'gain scheduling' feature का उद्देश्य क्या है?",
+      "options": [
+        "Motor की winding बदलना",
+        "अलग-अलग operating conditions (load, speed) के अनुसार controller gains को automatically adjust करना",
+        "Feedback cable लंबी करना",
+        "Motor की body को हल्का बनाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gain scheduling feature operating conditions (जैसे speed range या load variation) के अनुसार controller gains को automatically switch/adjust करता है ताकि पूरे operating range में अच्छा performance मिले। यह winding बदलने, cable लंबी करने या body हल्का करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q24",
+      "question": "Servo drive में 'encoder simulation output' feature का क्या कार्य है?",
+      "options": [
+        "Motor को permanently बंद करना",
+        "Drive द्वारा processed position feedback को दूसरे controller/PLC के लिए simulated encoder pulses के रूप में देना",
+        "Motor की current बढ़ाना",
+        "Drive का fan बंद करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Encoder simulation output feature drive के अंदर processed position feedback signal को simulated encoder pulses (जैसे A, B, Z) के रूप में external controller को supply करता है, ताकि वह भी position monitor कर सके। यह motor बंद करने, current बढ़ाने या fan बंद करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q25",
+      "question": "Servo drive की efficiency मुख्यतः किस factor पर निर्भर करती है?",
+      "options": [
+        "Drive की body का रंग",
+        "Switching losses, conduction losses और cooling design",
+        "Feedback cable की लंबाई",
+        "Operator की training"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo drive की efficiency मुख्यतः power devices की switching losses, conduction losses और overall thermal/cooling design पर निर्भर करती है। रंग, feedback cable की लंबाई और operator training efficiency को प्रत्यक्ष रूप से प्रभावित नहीं करते।"
+    },
+    {
+      "id": "u15_servo_drives_q26",
+      "question": "Servo drive में 'position, speed, torque mode selection' किस प्रकार की flexibility देता है?",
+      "options": [
+        "Drive केवल एक ही mode में हमेशा काम करेगा",
+        "एक ही drive को application requirement के अनुसार अलग-अलग control modes में configure करने की flexibility",
+        "Motor की rated voltage बदल जाती है",
+        "Feedback device disable हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modern servo drives में mode selection feature से एक ही hardware को application requirement के अनुसार position, speed या torque control mode में configure किया जा सकता है। यह single fixed mode, rated voltage बदलने या feedback disable करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q27",
+      "question": "Servo drive में 'DC bus capacitor' का प्रमुख कार्य क्या है?",
+      "options": [
+        "Feedback signal को amplify करना",
+        "Rectified DC voltage को smooth (filter) करके ripple कम करना और energy buffer प्रदान करना",
+        "Motor की speed सीधे बदलना",
+        "Encoder pulses को count करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "DC bus capacitor rectifier से मिली DC voltage को smooth करके ripple कम करता है और transient load के दौरान energy buffer का काम करता है। Feedback amplify करना, speed सीधे बदलना और encoder pulses count करना capacitor का कार्य नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q28",
+      "question": "Servo drive में 'inrush current limiting circuit' किस स्थिति में उपयोगी होता है?",
+      "options": [
+        "Motor को normal running में चलाते समय",
+        "Drive को पहली बार power ON करते समय DC bus capacitor को charge करते हुए excessive current से बचाने के लिए",
+        "Feedback signal को disconnect करते समय",
+        "Motor की winding test करते समय"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power ON करते समय uncharged DC bus capacitors एक बड़ा inrush current खींच सकते हैं, इसलिए inrush current limiting circuit (जैसे precharge resistor) इसे नियंत्रित करता है और components को नुकसान से बचाता है। Normal running, feedback disconnect या winding test से इसका संबंध नहीं है।"
+    },
+    {
+      "id": "u15_servo_drives_q29",
+      "question": "Servo drive में 'harmonic distortion' कम करने के लिए कौन सा उपाय अपनाया जाता है?",
+      "options": [
+        "Feedback cable छोटी करना",
+        "Input line reactor या active front-end rectifier का उपयोग करना",
+        "Motor की winding बदलना",
+        "Drive की body को paint करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Harmonic distortion कम करने के लिए input line reactor या active front-end (AFE) rectifier का उपयोग किया जाता है, जिससे supply current waveform बेहतर होती है। Feedback cable छोटी करना, winding बदलना या body paint करना harmonics कम करने के उपाय नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_drives_q30",
+      "question": "Servo drive की overall performance के लिए 'response time' का क्या महत्व है?",
+      "options": [
+        "Response time जितना अधिक हो, performance उतनी ही बेहतर होती है",
+        "कम response time तेज़ और accurate control दर्शाता है, जो high dynamic applications के लिए जरूरी है",
+        "Response time का performance से कोई संबंध नहीं",
+        "Response time केवल motor की size से decide होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "कम response time यह दर्शाता है कि drive command changes पर तेज़ी से और accurately react कर सकता है, जो high-speed, high-precision applications (जैसे robotics, CNC) के लिए आवश्यक है। अधिक response time performance बेहतर नहीं बल्कि खराब दर्शाता है, इसका सीधा संबंध होता है और यह केवल motor size से decide नहीं होता।"
+    }
+  ]
+}

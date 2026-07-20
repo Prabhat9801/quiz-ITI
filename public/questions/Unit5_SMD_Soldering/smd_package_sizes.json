@@ -1,0 +1,368 @@
+{
+  "unit": "unit5",
+  "unitName": "SMD Soldering and De-soldering",
+  "topic": "smd_package_sizes",
+  "topicName": "SMD Package Size Codes (0402/0603/0805/1206) & Power Rating",
+  "questions": [
+    {
+      "id": "u5_smd_package_sizes_q1",
+      "question": "SMD chip resistor/capacitor की package code '0805' किसे represent करता है?",
+      "options": [
+        "Component का weight 0.805 gram",
+        "Component की length 0.08 inch और width 0.05 inch",
+        "Component की length 0.08 inch और width 0.05 inch नहीं बल्कि length 0.080 inch और width 0.050 inch (यानी 80 mil x 50 mil)",
+        "Component का voltage rating 08.05 volt"
+      ],
+      "correctIndex": 2,
+      "explanation": "'0805' code में पहले दो digits length (0.080 inch = 80 mil) और अगले दो digits width (0.050 inch = 50 mil) को दर्शाते हैं (imperial units में), यह standard EIA package naming convention है। यह weight, गलत dimension interpretation या voltage rating नहीं दर्शाता।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q2",
+      "question": "सबसे छोटे SMD chip package codes में से कौन सा typically सबसे छोटा size है — 0402, 0603, 0805, 1206 में?",
+      "options": [
+        "1206",
+        "0805",
+        "0603",
+        "0402"
+      ],
+      "correctIndex": 3,
+      "explanation": "0402 (0.04 inch x 0.02 inch, यानी 40 mil x 20 mil) इन चारों में सबसे छोटा size है, जबकि 1206 (120 mil x 60 mil) सबसे बड़ा है। Size बढ़ते क्रम में 0402 < 0603 < 0805 < 1206 होता है, इसलिए 1206, 0805 व 0603 गलत उत्तर हैं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q3",
+      "question": "SMD package size code '1206' का dimension approx क्या होता है?",
+      "options": [
+        "0.12 inch x 0.06 inch (120 mil x 60 mil)",
+        "1.2 inch x 0.6 inch",
+        "12 mm x 6 mm",
+        "0.012 inch x 0.006 inch"
+      ],
+      "correctIndex": 0,
+      "explanation": "1206 code में length = 0.120 inch (120 mil) और width = 0.060 inch (60 mil) होती है, जो millimetre में लगभग 3.2 mm x 1.6 mm के बराबर है। बाकी options में units की scale गलत है — inches में 1.2x0.6 या mm में 12x6 वास्तविक size से बहुत बड़े हैं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q4",
+      "question": "जैसे-जैसे SMD chip resistor का physical size बड़ा होता जाता है (जैसे 0402 से 1206 तक), उसकी power rating पर सामान्यतः क्या असर होता है?",
+      "options": [
+        "Power rating हमेशा घटती है",
+        "Power rating आमतौर पर बढ़ती है क्योंकि बड़ी surface area से अधिक heat dissipate हो सकती है",
+        "Power rating का size से कोई संबंध नहीं होता",
+        "Power rating हमेशा zero हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़े package में अधिक material व surface area होती है जिससे heat dissipation क्षमता बढ़ती है, इसलिए 1206 resistor की power rating (जैसे 1/4 W) 0402 (जैसे 1/16 W) से अधिक होती है। Power rating घटना, कोई संबंध न होना, या zero होना तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q5",
+      "question": "0402 size का SMD resistor आमतौर पर किस applications में प्रयोग होता है?",
+      "options": [
+        "High power industrial motors में",
+        "Compact व high-density mobile phone/wearable PCB designs में जहाँ space सीमित है",
+        "Overhead transmission lines में",
+        "Large transformer windings में"
+      ],
+      "correctIndex": 1,
+      "explanation": "0402 जैसा छोटा package उन applications में प्रयोग होता है जहाँ board space बहुत सीमित है, जैसे mobile phones, wearables और compact consumer electronics। High power motors, transmission lines या transformer windings में ऐसे छोटे low-power components प्रयोग नहीं होते।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q6",
+      "question": "SMD package code में इस्तेमाल होने वाले digits किस measurement system पर आधारित हैं (EIA/imperial code में)?",
+      "options": [
+        "Centimeter",
+        "Mil (1 mil = 0.001 inch), यानी hundredths of an inch",
+        "Kilometer",
+        "Litre"
+      ],
+      "correctIndex": 1,
+      "explanation": "EIA package codes (imperial) में digits hundredths of an inch (mil) में length व width दर्शाते हैं, जैसे 0603 का मतलब 0.06 inch x 0.03 inch है। Centimeter, kilometer या litre इस code system से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q7",
+      "question": "Metric package code (जैसे 1005) और imperial code (जैसे 0402) में क्या अंतर है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे units प्रयोग करते हैं",
+        "Metric code millimeter में dimension बताता है जबकि imperial code inch (mil) में, दोनों समान physical size को अलग नंबरिंग से दर्शा सकते हैं",
+        "Metric code केवल capacitors के लिए है",
+        "Imperial code का प्रयोग अब बंद हो चुका है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metric package naming (जैसे 1005 metric = 1.0mm x 0.5mm) mm में dimensions को दर्शाता है, जबकि imperial code (0402) उसी physical size को mil में दर्शाता है — दोनों अलग numbering system से एक ही size बता सकते हैं। दोनों समान units नहीं हैं, यह केवल capacitors तक सीमित नहीं और imperial code अभी भी व्यापक रूप से प्रयोग होता है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q8",
+      "question": "0603 size का SMD component 0805 की तुलना में soldering के दौरान किस प्रकार की चुनौती अधिक देता है?\n\n",
+      "options": [
+        "0603 का handling व precise placement कठिन होता है क्योंकि यह छोटा व अधिक fragile होता है",
+        "0603 हमेशा 0805 से ज्यादा मजबूत होता है",
+        "0603 में soldering की कोई चुनौती नहीं होती",
+        "0603 का placement 0805 से आसान होता है क्योंकि यह बड़ा है"
+      ],
+      "correctIndex": 0,
+      "explanation": "छोटे size (0603) के components handle करना, tweezers से पकड़ना और precise alignment के साथ place करना कठिन होता है, तथा हल्के दबाव से भी क्षति संभव है। यह 0805 से मजबूत या बड़ा नहीं है, और यह कहना कि कोई चुनौती नहीं है तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q9",
+      "question": "SMD resistor की body पर 3-digit code (जैसे '472') क्या दर्शाता है?\n\n",
+      "options": [
+        "Package size code",
+        "Resistance value — पहले दो digits significant figures और तीसरा digit multiplier (zero की संख्या) है",
+        "Manufacturing date",
+        "Voltage rating"
+      ],
+      "correctIndex": 1,
+      "explanation": "'472' code में 47 significant figures हैं और तीसरा digit '2' multiplier बताता है, यानी 47 x 10² = 4700 ohm (4.7kΩ)। यह package size code, manufacturing date या voltage rating नहीं है — यह resistance value marking है, जो package size codes जैसे 0805 से अलग concept है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q10",
+      "question": "बहुत छोटे SMD packages (जैसे 0201 या 01005) की soldering के लिए किस प्रक्रिया की सर्वाधिक अनुशंसा की जाती है?",
+      "options": [
+        "Hand soldering iron से manual placement",
+        "Automated pick-and-place machine के साथ precise stencil printing और reflow soldering",
+        "साधारण गोंद (glue) से चिपकाना",
+        "Torch heating से manual soldering"
+      ],
+      "correctIndex": 1,
+      "explanation": "इतने छोटे packages का manual placement लगभग असंभव व अत्यंत त्रुटिपूर्ण होता है, इसलिए automated pick-and-place machines व stencil-printed paste के साथ reflow process का प्रयोग किया जाता है। Hand soldering, glue या torch heating इतनी precision नहीं दे सकते।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q11",
+      "question": "SMD chip capacitor का 1206 package size, 0603 की तुलना में आमतौर पर किस विशेषता में बेहतर होता है?",
+      "options": [
+        "Higher capacitance value और better voltage/power handling capacity पाई जा सकती है",
+        "यह हमेशा किसी भी board पर सबसे ज्यादा जगह बचाता है",
+        "इसका price हमेशा कम होता है",
+        "यह हमेशा lightest weight component है"
+      ],
+      "correctIndex": 0,
+      "explanation": "बड़े physical size के कारण 1206 package में अधिक dielectric material fit हो सकता है, जिससे higher capacitance value व बेहतर voltage/current handling क्षमता मिल सकती है। यह जगह बचाने के बजाय अधिक space लेता है, price हमेशा कम नहीं होता और यह सबसे हल्का component नहीं है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q12",
+      "question": "किसी SMD component का package size चुनते समय designer को मुख्यतः किन factors पर विचार करना चाहिए?",
+      "options": [
+        "केवल component का रंग",
+        "Available board space, required power/current rating और assembly process की capability",
+        "केवल manufacturer का नाम",
+        "केवल component की packaging box का size"
+      ],
+      "correctIndex": 1,
+      "explanation": "Package size चुनते समय board पर उपलब्ध space, component की power/current handling आवश्यकता और assembly line (manual/automated) की क्षमता को ध्यान में रखा जाता है। Component का रंग, manufacturer का नाम या shipping box का size design decision में relevant नहीं है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q13",
+      "question": "0402 package size के SMD resistor की typical power rating कितनी होती है?",
+      "options": [
+        "लगभग 1 Watt",
+        "लगभग 1/16 Watt (0.0625 W) के आसपास",
+        "लगभग 100 Watt",
+        "लगभग 10 Watt"
+      ],
+      "correctIndex": 1,
+      "explanation": "0402 जैसे छोटे package में सीमित surface area के कारण power rating भी कम होती है, typically लगभग 1/16 W के आसपास। 1W, 10W या 100W जैसी उच्च ratings बड़े packages या dedicated power resistors से संबंधित हैं, इतने छोटे chip resistor से नहीं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q14",
+      "question": "1206 package size के SMD resistor की typical power rating किस range में होती है?",
+      "options": [
+        "लगभग 1/4 Watt (0.25 W) के आसपास",
+        "लगभग 0.001 Watt",
+        "लगभग 50 Watt",
+        "लगभग 500 Watt"
+      ],
+      "correctIndex": 0,
+      "explanation": "1206 size के SMD resistors का typical power rating लगभग 1/4 W (0.25 W) होता है, जो 0402/0603 से अधिक है क्योंकि इसका surface area बड़ा है। 0.001W बहुत कम है और 50W/500W जैसी ratings बड़े dedicated power resistors की होती हैं, chip resistor की नहीं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q15",
+      "question": "SMD package size बढ़ने के साथ soldering pad का design (PCB land pattern) में क्या परिवर्तन होना चाहिए?",
+      "options": [
+        "Pad size भी component terminal के अनुरूप appropriately बड़ा होना चाहिए",
+        "Pad हमेशा एक ही fixed size का रहना चाहिए चाहे component कोई भी हो",
+        "Pad size हमेशा component से छोटा रखा जाना चाहिए",
+        "Pad की जरूरत ही नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "PCB land pattern (pad size व spacing) को component के package datasheet के अनुसार design किया जाना चाहिए ताकि proper solder fillet व reliable joint बने; बड़े component के लिए बड़ा pad चाहिए। Fixed pad size, pad को component से छोटा रखना, या pad का न होना गलत practice है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q16",
+      "question": "SMD package codes में '0201' का उपयोग सामान्यतः किस प्रकार के design में होता है?",
+      "options": [
+        "बड़े industrial power supply boards में",
+        "अत्यंत high-density, miniaturized designs जैसे smartphones व compact wearables में",
+        "Overhead power line insulators में",
+        "Large PCB backplanes में जहाँ space की कोई कमी नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "0201 (0.02 inch x 0.01 inch) अत्यंत छोटा package है जो केवल उन designs में प्रयोग होता है जहाँ space की गंभीर कमी हो, जैसे smartphones और compact wearable devices। बड़े industrial boards, insulators या open backplane designs में इसकी जरूरत नहीं होती।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q17",
+      "question": "SMD package size code को पढ़ते समय यदि केवल '05' जैसे 2-digit metric-style code का हिस्सा दिखे (जैसे 0201 metric), तो यह क्या दर्शाता है?\n\n",
+      "options": [
+        "Component की price",
+        "Metric system में dimension (mm में), जो imperial code से भिन्न numbering है",
+        "Component का temperature rating",
+        "Component का current rating सीधे इस digit से पढ़ा जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metric package codes mm में dimensions को दर्शाते हैं (जैसे metric 0603 = 0.6mm x 0.3mm), जो imperial code नंबरिंग से अलग होता है, इसलिए इंजीनियर को यह पहचानना जरूरी है कि code metric है या imperial। यह price, temperature rating या current rating नहीं दर्शाता।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q18",
+      "question": "अलग-अलग SMD package sizes का उपयोग करते समय rework/repair के दौरान किस size के components में सबसे अधिक सावधानी चाहिए?",
+      "options": [
+        "1206 size, क्योंकि यह सबसे बड़ा है",
+        "छोटे packages जैसे 0402/0201, क्योंकि छोटे size व fine pitch के कारण bridging व misalignment का risk अधिक है",
+        "किसी भी size में समान सावधानी की जरूरत नहीं",
+        "केवल through-hole components में सावधानी चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "छोटे SMD packages (0402, 0201) के terminals बहुत पास-पास होते हैं और size छोटा होने से rework के दौरान bridging, tombstoning या misalignment की संभावना अधिक होती है, इसलिए इनके साथ अतिरिक्त सावधानी व fine-tip tools जरूरी हैं। 1206 अपेक्षाकृत आसान है और through-hole का इस संदर्भ से सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q19",
+      "question": "SMD component का package size और उसकी parasitic inductance/capacitance (high frequency applications में) के बीच क्या संबंध है?",
+      "options": [
+        "कोई संबंध नहीं होता, size का frequency response पर असर नहीं पड़ता",
+        "छोटे packages में parasitic inductance कम होती है, इसलिए ये high-frequency circuits के लिए बेहतर होते हैं",
+        "बड़े packages हमेशा high frequency के लिए बेहतर होते हैं",
+        "केवल through-hole components ही high frequency में प्रयोग होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "छोटे package size में lead length व parasitic inductance कम होती है, जिससे high-frequency/RF circuits में better performance मिलता है, इसलिए RF designs में अक्सर 0402 जैसे छोटे components प्रयोग होते हैं। बड़े packages में parasitic effects अधिक होते हैं, और through-hole components इस संदर्भ में उपयुक्त नहीं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q20",
+      "question": "SMD package size के बड़े होने पर thermal expansion mismatch (PCB व component के बीच) का risk किस स्थिति में अधिक बढ़ जाता है?",
+      "options": [
+        "जब PCB का material component से पूरी तरह मेल खाता हो",
+        "बड़े ceramic package व PCB के coefficient of thermal expansion (CTE) में अंतर अधिक होने पर, जिससे thermal cycling में crack का खतरा बढ़ता है",
+        "छोटे packages में यह risk हमेशा शून्य होता है",
+        "इसका package size से कोई लेना-देना नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़े ceramic packages (जैसे बड़े MLCC) में PCB substrate व component ceramic के CTE mismatch के कारण thermal cycling में अधिक stress व crack का खतरा रहता है, विशेषकर बड़े size में यह प्रभाव अधिक स्पष्ट होता है। PCB-component का पूर्ण मेल असंभव होता है, छोटे packages में risk शून्य नहीं बल्कि कम होता है, और package size का इससे सीधा संबंध है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q21",
+      "question": "मल्टीमीटर से SMD resistor का package identify करते समय code '103' पढ़ने पर resistance value क्या होगी?",
+      "options": [
+        "103 ohm",
+        "10.3 ohm",
+        "10 x 10³ = 10,000 ohm (10 kΩ)",
+        "1030 ohm"
+      ],
+      "correctIndex": 2,
+      "explanation": "'103' में पहले दो digits '10' significant figures हैं और तीसरा digit '3' multiplier है, यानी 10 x 10³ = 10,000 ohm = 10kΩ। 103 ohm, 10.3 ohm और 1030 ohm code को गलत तरीके से पढ़ने के परिणाम हैं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q22",
+      "question": "SMD package size code का ज्ञान rework technician के लिए क्यों महत्वपूर्ण है?",
+      "options": [
+        "इससे केवल component की price पता चलती है",
+        "इससे सही size के replacement component, उपयुक्त soldering tip व tweezer का चयन किया जा सकता है",
+        "इससे PCB का brand नाम पता चलता है",
+        "इसका rework से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Package size जानने से technician सही size का replacement component चुन सकता है और उसी अनुसार उपयुक्त fine-tip soldering iron, tweezers व hot-air nozzle का प्रयोग कर सकता है, जिससे rework सफल होता है। यह price या brand नाम नहीं बताता, और rework में इसकी सीधी उपयोगिता है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q23",
+      "question": "यदि किसी board के design में 0603 resistor की जगह गलती से 0402 pad लगा दिया जाए तो क्या समस्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी, दोनों size बदले जा सकते हैं",
+        "Component properly fit व solder नहीं हो पाएगा और joint reliability प्रभावित होगी",
+        "PCB का रंग बदल जाएगा",
+        "Board की power rating अपने आप बढ़ जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "अलग size के pad पर गलत size का component लगाने से terminal properly pad पर नहीं बैठेगा, जिससे solder joint कमजोर, misaligned या open हो सकता है और reliability कम होगी। यह dimensional mismatch है, कोई समस्या न होना गलत है, रंग बदलना अप्रासंगिक है और power rating अपने आप नहीं बढ़ती।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q24",
+      "question": "SMD package sizes का standardization (EIA द्वारा) किस उद्देश्य से किया गया है?",
+      "options": [
+        "ताकि हर manufacturer अलग-अलग मनमाने size बनाए",
+        "ताकि विभिन्न manufacturers के components आपस में compatible रहें और design/assembly में एकरूपता बनी रहे",
+        "ताकि केवल एक ही company components बनाए",
+        "ताकि components की price बढ़ जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "EIA जैसी standard bodies द्वारा package sizes standardize करने का उद्देश्य यह है कि अलग-अलग manufacturers के equivalent-size components आपस में interchange हो सकें, जिससे design, sourcing व assembly आसान बने। यह मनमाने sizes, single-company monopoly या price बढ़ाने के लिए नहीं है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q25",
+      "question": "किसी high-current application में SMD resistor चुनते समय केवल resistance value देखना पर्याप्त क्यों नहीं है?",
+      "options": [
+        "क्योंकि package size के अनुसार power rating भी match होनी चाहिए, वरना resistor overheat होकर fail हो सकता है",
+        "क्योंकि resistance value का current से कोई संबंध नहीं",
+        "क्योंकि केवल color code ही महत्वपूर्ण है",
+        "क्योंकि high current में resistor की जरूरत ही नहीं पड़ती"
+      ],
+      "correctIndex": 0,
+      "explanation": "High current application में resistor में power dissipation (I²R) अधिक होती है, इसलिए सही resistance के साथ-साथ उपयुक्त package size (जो पर्याप्त power rating दे) चुनना जरूरी है, अन्यथा resistor overheat होकर जल सकता है। Resistance का current से गहरा संबंध है, color code अकेला पर्याप्त नहीं और high current में resistor की जरूरत हो सकती है (जैसे current sensing)।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q26",
+      "question": "SMD package sizes की तुलना में through-hole resistor (जैसे 1/4 W axial) का एक disadvantage क्या है?\n\n",
+      "options": [
+        "यह board पर SMD की तुलना में अधिक जगह लेता है और automated high-density assembly के लिए कम उपयुक्त है",
+        "यह हमेशा SMD से छोटा होता है",
+        "इसकी power rating हमेशा शून्य होती है",
+        "इसे कभी solder नहीं किया जा सकता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Through-hole resistors में leads व body के कारण board पर अधिक जगह लगती है और ये high-density automated SMT assembly के लिए कम उपयुक्त होते हैं, जबकि SMD compact व dense placement के लिए बेहतर हैं। यह SMD से छोटा नहीं, इसकी power rating शून्य नहीं होती और यह solder किया जा सकता है (wave/hand soldering से)।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q27",
+      "question": "एक SMD capacitor की body पर '0805' marking के साथ voltage rating '50V' भी लिखा है, यह क्या दर्शाता है?\n\n",
+      "options": [
+        "Capacitor का size 0805 package family का है और इसका maximum operating voltage 50V है",
+        "Capacitor का weight 0805 gram है",
+        "Capacitor 50 बार तक ही चार्ज हो सकता है",
+        "इसका कोई तकनीकी अर्थ नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "'0805' component के physical package size को दर्शाता है जबकि '50V' उसकी maximum voltage rating है जिसे पार करने पर capacitor damage/breakdown हो सकता है। यह weight, charge cycles की संख्या नहीं दर्शाता, और इनका स्पष्ट तकनीकी अर्थ है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q28",
+      "question": "SMD components की package size कम होने के साथ manual soldering iron से rework करना क्यों कठिन होता जाता है?",
+      "options": [
+        "क्योंकि छोटे pads के बीच spacing कम होती है जिससे adjacent joints में bridging या thermal damage का risk बढ़ता है",
+        "क्योंकि छोटे components हमेशा magnetic होते हैं",
+        "क्योंकि छोटे components में solder नहीं चढ़ता",
+        "क्योंकि इनका रंग सफेद हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "छोटे package size में pads व terminals के बीच spacing बहुत कम होती है, जिससे manual iron से heat apply करते समय adjacent joints में bridging या overheating का जोखिम बढ़ जाता है, इसलिए fine-tip tools व अनुभव जरूरी है। Magnetism, solder न चढ़ना या रंग बदलना इसका कारण नहीं है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q29",
+      "question": "SMD package size बढ़ाने पर PCB की overall component density पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Density बढ़ जाती है और board size घट जाता है",
+        "Density घट जाती है क्योंकि प्रत्येक component अधिक जगह घेरता है, जिससे समान functionality के लिए बड़ा board चाहिए हो सकता है",
+        "Density पर कोई प्रभाव नहीं पड़ता",
+        "PCB का material अपने आप बदल जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़े package size (जैसे 1206) प्रत्येक component अधिक board area घेरता है, जिससे समान संख्या में components के लिए board size बड़ा करना पड़ सकता है या density घट जाती है — यह छोटे packages (0402/0603) के फायदे के विपरीत है। Density बढ़ना, कोई प्रभाव न होना, या material बदल जाना गलत कथन हैं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q30",
+      "question": "किसी design में उच्च reliability और easy manual rework दोनों प्राथमिकता हों तो सामान्यतः किस SMD size को prefer किया जाता है?",
+      "options": [
+        "अत्यंत छोटे 01005 packages",
+        "0201 packages",
+        "अपेक्षाकृत बड़े 0805/1206 packages, जो handle करने व rework करने में आसान होते हैं",
+        "package size का इससे कोई लेना-देना नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "जब manual/easy rework और उच्च reliability प्राथमिकता हो, तो 0805 या 1206 जैसे अपेक्षाकृत बड़े packages चुने जाते हैं क्योंकि इन्हें handle करना, inspect करना व rework करना आसान होता है, जबकि 01005/0201 जैसे micro-packages अत्यंत fragile व rework में कठिन हैं। इसलिए 01005, 0201 विकल्प तथा 'कोई लेना-देना नहीं' गलत हैं।"
+    }
+  ]
+}

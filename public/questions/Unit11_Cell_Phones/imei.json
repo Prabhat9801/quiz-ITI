@@ -1,0 +1,368 @@
+{
+  "unit": "unit11",
+  "unitName": "Cell Phones",
+  "topic": "imei",
+  "topicName": "IMEI Number - Structure, Purpose & Tracing Lost Phones",
+  "questions": [
+    {
+      "id": "u11_imei_q1",
+      "question": "IMEI का पूरा नाम क्या है?",
+      "options": [
+        "International Mobile Equipment Identity",
+        "Internal Mobile Electronic Index",
+        "International Media Equipment Interface",
+        "Integrated Mobile Emergency Identifier"
+      ],
+      "correctIndex": 0,
+      "explanation": "IMEI का full form International Mobile Equipment Identity है, जो हर mobile device को uniquely identify करने वाला number है (Option A)। Option B, C, D सुनने में similar लगते हैं पर ये actual full form नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q2",
+      "question": "एक standard IMEI number में कुल कितने digits होते हैं?",
+      "options": [
+        "10 digits",
+        "12 digits",
+        "15 digits",
+        "18 digits"
+      ],
+      "correctIndex": 2,
+      "explanation": "IMEI number सामान्यतः 15 digits का होता है (Option C)। Option A, B, D गलत हैं क्योंकि ये standard IMEI format से मेल नहीं खाते।"
+    },
+    {
+      "id": "u11_imei_q3",
+      "question": "IMEI number किस device को identify करता है?",
+      "options": [
+        "SIM card को",
+        "Mobile phone (hardware) को",
+        "Mobile network operator को",
+        "User के bank account को"
+      ],
+      "correctIndex": 1,
+      "explanation": "IMEI mobile phone के hardware को uniquely identify करता है, चाहे उसमें कोई भी SIM card लगी हो (Option B)। Option A SIM card का काम IMSI number करता है, Option C network operator को नहीं बल्कि device को identify करता है, और Option D का IMEI से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_imei_q4",
+      "question": "IMEI और IMSI में मुख्य अंतर क्या है?",
+      "options": [
+        "IMEI device को identify करता है जबकि IMSI subscriber/SIM को identify करता है",
+        "IMEI subscriber को identify करता है जबकि IMSI device को identify करता है",
+        "दोनों एक ही चीज़ को identify करते हैं",
+        "IMEI केवल CDMA phones में प्रयोग होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "IMEI mobile device (hardware) की unique identity है जबकि IMSI (International Mobile Subscriber Identity) SIM card/subscriber को identify करता है (Option A)। Option B इनको उल्टा बताता है, Option C ग़लत है क्योंकि दोनों अलग purposes serve करते हैं, और Option D तथ्यात्मक रूप से ग़लत है क्योंकि IMEI GSM phones में भी प्रयोग होता है।"
+    },
+    {
+      "id": "u11_imei_q5",
+      "question": "IMEI number के पहले 8 digits (TAC - Type Allocation Code) किस बारे में जानकारी देते हैं?",
+      "options": [
+        "User की location",
+        "Device की battery capacity",
+        "Phone के manufacturer और model की जानकारी",
+        "SIM card की network"
+      ],
+      "correctIndex": 2,
+      "explanation": "IMEI के शुरुआती 8 digits TAC (Type Allocation Code) होते हैं, जो device के manufacturer और model को identify करने में मदद करते हैं (Option C)। Option A, B, D IMEI structure से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q6",
+      "question": "IMEI structure में TAC के बाद वाले digits (Serial Number, SNR) क्या दर्शाते हैं?",
+      "options": [
+        "Manufacturer का नाम",
+        "उस particular unit/device का unique serial number",
+        "Network provider का code",
+        "SIM card का serial number"
+      ],
+      "correctIndex": 1,
+      "explanation": "TAC के बाद वाले 6 digits SNR (Serial Number) होते हैं, जो उसी model के अलग-अलग individual devices को unique बनाते हैं (Option B)। Option A TAC में शामिल होता है, Option C और D IMEI structure का हिस्सा नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q7",
+      "question": "IMEI का अंतिम (15वाँ) digit किसे कहा जाता है और इसका क्या उपयोग है?",
+      "options": [
+        "Check digit, जो Luhn algorithm द्वारा IMEI की validity verify करने के लिए प्रयोग होता है",
+        "Network code, जो operator पहचानता है",
+        "Battery serial number",
+        "Country code"
+      ],
+      "correctIndex": 0,
+      "explanation": "IMEI का 15वाँ digit Check Digit होता है, जो Luhn algorithm के आधार पर calculate किया जाता है ताकि पूरे IMEI number की validity verify हो सके (Option A)। Option B, C, D IMEI structure में मौजूद नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q8",
+      "question": "किसी mobile phone में IMEI number देखने के लिए कौन सा standard dial code प्रयोग होता है?",
+      "options": [
+        "*#100#",
+        "*#06#",
+        "*#123#",
+        "*#999#"
+      ],
+      "correctIndex": 1,
+      "explanation": "*#06# dial करने पर लगभग हर mobile phone अपनी IMEI number screen पर दिखा देता है (Option B)। Option A, C, D standard universally accepted IMEI check codes नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q9",
+      "question": "Dual-SIM mobile phones में IMEI number की संख्या के बारे में क्या सही है?",
+      "options": [
+        "दोनों SIM slots के लिए मिलाकर एक ही IMEI होता है",
+        "प्रत्येक SIM slot (radio) के लिए अलग-अलग IMEI होता है, यानी सामान्यतः दो IMEI numbers होते हैं",
+        "Dual-SIM phones में IMEI होता ही नहीं",
+        "IMEI केवल SIM 1 के लिए होता है, SIM 2 का कोई IMEI नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dual-SIM phones में प्रत्येक SIM slot से जुड़े radio module के लिए अलग IMEI होता है, इसलिए ऐसे phones में सामान्यतः दो अलग IMEI numbers होते हैं (Option B)। Option A, C, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u11_imei_q10",
+      "question": "यदि किसी का mobile phone चोरी हो जाए, तो IMEI number की मदद से क्या किया जा सकता है?",
+      "options": [
+        "SIM card का password change किया जा सकता है",
+        "Network operator के through phone को track और block किया जा सकता है ताकि वह किसी भी network पर काम न करे",
+        "Phone की battery life बढ़ाई जा सकती है",
+        "Phone का color बदला जा सकता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "IMEI number को network operator के database (जैसे EIR - Equipment Identity Register) में blacklist कराकर चोरी हुए phone को track किया जा सकता है और उसे किसी भी network पर काम करने से रोका जा सकता है (Option B)। Option A, C, D IMEI के कार्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u11_imei_q11",
+      "question": "भारत में IMEI-based tracking और blocking के लिए सरकार द्वारा कौन सा portal चलाया जाता है?",
+      "options": [
+        "Aadhaar Portal",
+        "CEIR (Central Equipment Identity Register) Portal",
+        "GST Portal",
+        "UPI Portal"
+      ],
+      "correctIndex": 1,
+      "explanation": "भारत सरकार ने चोरी/खोए हुए phones को track और block करने के लिए CEIR (Central Equipment Identity Register) portal शुरू किया है, जहाँ IMEI number के आधार पर complaint दर्ज की जा सकती है (Option B)। Option A, C, D अन्य उद्देश्यों के लिए हैं, इनका IMEI tracking से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_imei_q12",
+      "question": "Blacklisted (IMEI blocked) phone के बारे में क्या सही है?",
+      "options": [
+        "वह phone हमेशा की तरह किसी भी SIM के साथ normal काम करता रहेगा",
+        "वह phone किसी भी mobile network पर calls/data service प्राप्त नहीं कर सकेगा, भले ही उसमें कोई भी SIM लगी हो",
+        "वह phone केवल Wi-Fi पर बंद हो जाएगा",
+        "वह phone केवल camera से काम करना बंद कर देगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब किसी device का IMEI blacklist हो जाता है, तो network operators उस device को अपने network पर register नहीं करते, जिससे वह किसी भी SIM के साथ calls या mobile data service नहीं ले पाता (Option B)। Option A, C, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u11_imei_q13",
+      "question": "IMEI number बदलना (tampering/cloning) कानूनी दृष्टि से कैसा है?",
+      "options": [
+        "यह पूरी तरह legal और सामान्य practice है",
+        "यह अधिकांश देशों में illegal है क्योंकि इससे चोरी हुए phones को track होने से बचाया जा सकता है",
+        "इसका कोई कानूनी प्रावधान नहीं है",
+        "यह केवल manufacturer कर सकता है और यह हमेशा legal है"
+      ],
+      "correctIndex": 1,
+      "explanation": "IMEI number को tamper या clone करना अधिकांश देशों में illegal माना जाता है क्योंकि इससे चोरी या गुम हुए phones की पहचान और tracking को bypass किया जा सकता है (Option B)। Option A, C, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u11_imei_q14",
+      "question": "EIR (Equipment Identity Register) network में क्या भूमिका निभाता है?",
+      "options": [
+        "यह SIM cards को activate करता है",
+        "यह network में एक database है जो valid, suspect और blacklisted IMEI numbers की list रखता है",
+        "यह केवल billing की जानकारी store करता है",
+        "यह mobile towers की location record करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "EIR एक database है जो mobile network में उपयोग होने वाले IMEI numbers को White list (valid), Grey list (suspect) और Black list (blocked) में categorize करके रखता है (Option B)। Option A, C, D EIR के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u11_imei_q15",
+      "question": "अगर कोई व्यक्ति अपना खोया हुआ phone ढूँढना चाहता है, तो IMEI number के अलावा किस चीज़ की भी अक्सर पुलिस complaint में आवश्यकता होती है?",
+      "options": [
+        "Phone का purchase bill/invoice और police complaint (FIR)",
+        "Phone का color code",
+        "Charger का model number",
+        "Phone case का brand"
+      ],
+      "correctIndex": 0,
+      "explanation": "खोए हुए phone की tracking/blocking के लिए IMEI number के साथ-साथ purchase bill और police complaint (FIR) होना ज़रूरी होता है ताकि ownership verify हो सके (Option A)। Option B, C, D इस process के लिए आवश्यक नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q16",
+      "question": "GSM phones में IMEI number की तुलना CDMA phones में किससे की जाती है?",
+      "options": [
+        "MEID (Mobile Equipment Identifier)",
+        "IMSI",
+        "MAC address",
+        "IP address"
+      ],
+      "correctIndex": 0,
+      "explanation": "CDMA phones में device identification के लिए MEID (Mobile Equipment Identifier) प्रयोग होता है, जो कार्यात्मक रूप से GSM के IMEI के समान है (Option A)। Option B subscriber identity है, Option C और D networking devices की identity से संबंधित हैं, mobile handset identity से नहीं।"
+    },
+    {
+      "id": "u11_imei_q17",
+      "question": "IMEI number किस समय पर generate/assign किया जाता है?",
+      "options": [
+        "जब user पहली बार call करता है",
+        "जब SIM card खरीदी जाती है",
+        "Device के manufacturing के समय ही यह उसमें permanently assign किया जाता है",
+        "हर बार phone restart करने पर नया IMEI generate होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "IMEI number device के manufacturing के समय ही assign और permanently store कर दिया जाता है, यह user के actions से नहीं बदलता (Option C)। Option A, B, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u11_imei_q18",
+      "question": "IMEI number किस हिस्से में सामान्यतः store रहता है?",
+      "options": [
+        "SIM card की memory में",
+        "Phone के baseband/firmware (device memory) में",
+        "SD card में",
+        "Cloud server में बिना device के"
+      ],
+      "correctIndex": 1,
+      "explanation": "IMEI number device के firmware/baseband memory में permanently embed किया जाता है, यह hardware से जुड़ा होता है ना कि SIM card से (Option B)। Option A, C, D IMEI store करने की actual location नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q19",
+      "question": "एक valid IMEI number को verify करने के लिए कौन सा algorithm प्रयोग होता है?",
+      "options": [
+        "RSA algorithm",
+        "Luhn algorithm",
+        "AES encryption",
+        "MD5 hashing"
+      ],
+      "correctIndex": 1,
+      "explanation": "IMEI number का check digit calculate और verify करने के लिए Luhn algorithm प्रयोग होता है, जो एक checksum formula है (Option B)। Option A, C, D encryption/security algorithms हैं जिनका IMEI checksum से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u11_imei_q20",
+      "question": "अगर किसी second-hand (used) phone को खरीदते समय user को क्या सावधानी बरतनी चाहिए?",
+      "options": [
+        "IMEI number check करके यह पुष्टि करनी चाहिए कि वह blacklisted तो नहीं है",
+        "सिर्फ phone का color देखना चाहिए",
+        "सिर्फ battery की health check करनी चाहिए",
+        "किसी भी IMEI verification की ज़रूरत नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Second-hand phone खरीदने से पहले IMEI number को *#06# से check करके किसी official portal (जैसे CEIR) पर verify करना चाहिए कि वह चोरी या blacklisted तो नहीं है (Option A)। Option B, C, D इस risk को check करने में मदद नहीं करते।"
+    },
+    {
+      "id": "u11_imei_q21",
+      "question": "IMEI number को phone की box और bill पर भी print किया जाता है, इसका क्या फ़ायदा है?",
+      "options": [
+        "इससे phone हल्का हो जाता है",
+        "Purchase के समय IMEI verify करने और भविष्य में ownership proof के तौर पर उपयोग करने के लिए",
+        "इससे battery जल्दी चार्ज होती है",
+        "इससे phone की price कम हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Box और bill पर IMEI print होने से खरीदते समय verify किया जा सकता है कि device वही है, और भविष्य में theft या warranty claim के समय यह ownership proof का काम करता है (Option B)। Option A, C, D का IMEI printing से कोई तकनीकी संबंध नहीं है।"
+    },
+    {
+      "id": "u11_imei_q22",
+      "question": "अगर IMEI number gray-listed (suspect) हो, तो इसका क्या अर्थ है?",
+      "options": [
+        "Device पूरी तरह से नया है",
+        "Device में कुछ संदेहास्पद (suspicious) activity पाई गई है, लेकिन अभी पूरी तरह blocked नहीं किया गया",
+        "Device पूरी तरह से block कर दिया गया है",
+        "Device की battery खराब है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gray-listed IMEI का मतलब है कि network ने device में कुछ suspicious behavior (जैसे duplicate IMEI) detect किया है, लेकिन उसे अभी पूरी तरह blacklist नहीं किया गया है, बल्कि monitor किया जा रहा है (Option B)। Option A, C, D IMEI की गलत categorization को दर्शाते हैं।"
+    },
+    {
+      "id": "u11_imei_q23",
+      "question": "IMEI number tracing से phone की approximate location कैसे पता चलती है?",
+      "options": [
+        "IMEI number से phone के अंदर GPS chip हमेशा activate हो जाती है",
+        "Network operators अपने towers के database में उस IMEI से जुड़ी latest cell tower location को track करते हैं",
+        "IMEI number अपने आप satellite signal भेजता है",
+        "Location तभी पता चलती है जब phone off हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब phone किसी network से connected रहता है, तो operator के system में उस IMEI/device से जुड़े cell tower की जानकारी log होती रहती है, जिससे approximate location track की जा सकती है (Option B)। Option A, C, D तकनीकी रूप से ग़लत हैं क्योंकि यह IMEI का direct function नहीं है।"
+    },
+    {
+      "id": "u11_imei_q24",
+      "question": "यदि चोरी हुए phone में SIM card निकाल दी जाए और वह network से पूरी तरह disconnect हो जाए, तो IMEI tracking के बारे में क्या सही है?",
+      "options": [
+        "Phone बिना network से जुड़े भी तुरंत track हो जाएगा",
+        "जब तक phone किसी mobile network से connect नहीं होता (जैसे नई SIM डालने पर), तब तक real-time tracking संभव नहीं होती",
+        "IMEI tracking के लिए SIM card की कोई आवश्यकता ही नहीं होती",
+        "Phone हमेशा के लिए untraceable हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "IMEI tracking network के through होती है, इसलिए जब तक device किसी mobile network से connect नहीं होगा (चाहे कोई भी SIM हो), तब तक उसकी real-time location track करना मुश्किल होता है (Option B)। Option A ग़लत है क्योंकि बिना network connection के tracking संभव नहीं, Option C ग़लत है क्योंकि network connection ज़रूरी है, और Option D पूरी तरह सही नहीं क्योंकि नई SIM डालने पर उसे detect किया जा सकता है यदि IMEI blacklisted हो।"
+    },
+    {
+      "id": "u11_imei_q25",
+      "question": "IMEI number की 15 digits में से पहला 1 digit (TAC का पहला भाग) सामान्यतः क्या दर्शाता है?",
+      "options": [
+        "Reporting Body Identifier (जो approving authority को दर्शाता है)",
+        "Battery की capacity",
+        "SIM card का network provider",
+        "Phone की storage capacity"
+      ],
+      "correctIndex": 0,
+      "explanation": "IMEI के TAC में शुरुआती digits Reporting Body Identifier को दर्शाते हैं, जो यह बताता है कि उस TAC को किस approving authority (जैसे GSMA-approved body) ने allot किया है (Option A)। Option B, C, D IMEI structure से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q26",
+      "question": "Smartphones के अलावा किन अन्य devices में IMEI-जैसा concept प्रयोग होता है?",
+      "options": [
+        "केवल laptops में",
+        "Tablets और cellular-connectivity वाले IoT devices में भी, जिनमें mobile network module होता है",
+        "केवल TV में",
+        "केवल printer में"
+      ],
+      "correctIndex": 1,
+      "explanation": "जिन भी devices (जैसे tablets, IoT devices) में cellular network connectivity module होता है, उनमें भी IMEI जैसी unique identity assign की जाती है (Option B)। Option A, C, D सामान्यतः cellular network module से connected नहीं होते इसलिए इनमें IMEI नहीं होता।"
+    },
+    {
+      "id": "u11_imei_q27",
+      "question": "IMEI number check करने से पहले phone की settings में कहाँ यह जानकारी मिल सकती है?",
+      "options": [
+        "Settings > About Phone > Status/IMEI information में",
+        "Camera app में",
+        "Alarm app में",
+        "Calculator app में"
+      ],
+      "correctIndex": 0,
+      "explanation": "अधिकतर smartphones में Settings > About Phone > Status (या Model & Hardware) में जाकर IMEI number देखा जा सकता है, dial code (*#06#) के अलावा यह भी एक तरीका है (Option A)। Option B, C, D का IMEI information से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_imei_q28",
+      "question": "किसी device को network operator के through blacklist करने के लिए किस जानकारी की सबसे ज़्यादा आवश्यकता होती है?",
+      "options": [
+        "Device का सही और सटीक IMEI number",
+        "Device का रंग",
+        "Device का brand नाम मात्र",
+        "Device की screen resolution"
+      ],
+      "correctIndex": 0,
+      "explanation": "Blacklisting प्रक्रिया के लिए network operator को device का exact और सही IMEI number चाहिए होता है ताकि उस specific hardware को database में block किया जा सके (Option A)। Option B, C, D इस प्रक्रिया के लिए पर्याप्त या relevant जानकारी नहीं हैं।"
+    },
+    {
+      "id": "u11_imei_q29",
+      "question": "IMEI number को device खरीदते समय note करके सुरक्षित रखने की सलाह क्यों दी जाती है?",
+      "options": [
+        "क्योंकि इससे phone की battery life बढ़ जाती है",
+        "ताकि device चोरी होने या खोने की स्थिति में तुरंत police complaint और blocking process में इसका उपयोग किया जा सके",
+        "क्योंकि इससे phone की storage बढ़ जाती है",
+        "क्योंकि यह number हर महीने बदलता रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अगर device चोरी हो जाए और phone बंद हो, तो user के पास दोबारा उससे IMEI निकालने का कोई तरीका नहीं रहता; इसलिए पहले से नोट करके रखा गया IMEI police complaint और network blocking के लिए तुरंत काम आता है (Option B)। Option A, C, D का IMEI से कोई तकनीकी संबंध नहीं है, और IMEI कभी अपने आप नहीं बदलता।"
+    },
+    {
+      "id": "u11_imei_q30",
+      "question": "IMEI number की uniqueness (हर device के लिए अलग होना) का मुख्य लाभ क्या है?",
+      "options": [
+        "Network हर device को uniquely पहचान सकता है, जिससे theft tracking, warranty और network access control जैसे कार्य संभव होते हैं",
+        "इससे phone की price हमेशा एक जैसी रहती है",
+        "इससे SIM card बिना PIN के unlock हो जाती है",
+        "इससे phone की screen brightness automatically adjust होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "हर device का unique IMEI होने से network operators और authorities हर handset को individually पहचान सकते हैं, जिससे theft tracking, blacklisting, warranty verification और network access control जैसे महत्वपूर्ण कार्य संभव होते हैं (Option A)। Option B, C, D IMEI की uniqueness के actual लाभों से मेल नहीं खाते।"
+    }
+  ]
+}

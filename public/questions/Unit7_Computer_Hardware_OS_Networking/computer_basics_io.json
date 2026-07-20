@@ -1,0 +1,368 @@
+{
+  "unit": "unit7",
+  "unitName": "Computer Hardware, OS, MS Office, Networking",
+  "topic": "computer_basics_io",
+  "topicName": "Computer Basics, Hardware/Software & I/O Devices",
+  "questions": [
+    {
+      "id": "u7_computer_basics_io_q1",
+      "question": "एक computer के functional block diagram में ALU (Arithmetic Logic Unit) मुख्य रूप से किस काम के लिए जिम्मेदार होता है?",
+      "options": [
+        "Data को permanently store करने के लिए",
+        "Arithmetic और logical operations perform करने के लिए",
+        "Program को display पर show करने के लिए",
+        "Power supply को regulate करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "ALU, CPU का वह भाग है जो addition, subtraction जैसे arithmetic और AND, OR, comparison जैसे logical operations करता है। Option A का काम memory/storage करता है, display को monitor दिखाता है (option C), और power को SMPS regulate करता है (option D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q2",
+      "question": "CPU के तीन मुख्य functional units कौन-से हैं?",
+      "options": [
+        "Monitor, Keyboard और Mouse",
+        "RAM, ROM और Hard Disk",
+        "ALU, Control Unit और Registers/Memory Unit",
+        "Printer, Scanner और Speaker"
+      ],
+      "correctIndex": 2,
+      "explanation": "CPU के अंदर ALU (calculation), Control Unit (instructions को control करना) और Register/Memory unit (temporary data रखना) होते हैं। Option A और D सभी peripheral I/O devices हैं, जबकि option B storage/memory devices हैं जो CPU के अंदर के units नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q3",
+      "question": "निम्न में से कौन-सा एक System Software का उदाहरण है?",
+      "options": [
+        "MS Word",
+        "Operating System",
+        "Tally accounting software",
+        "Adobe Photoshop"
+      ],
+      "correctIndex": 1,
+      "explanation": "Operating System एक system software है जो hardware और user के बीच काम करता है। MS Word, Tally और Photoshop सभी application software हैं जो किसी specific user-task के लिए बने होते हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q4",
+      "question": "एक keyboard पर function keys F1 से F12 किस category में आती हैं और आमतौर पर किस काम आती हैं?",
+      "options": [
+        "Numeric entry के लिए",
+        "Special shortcut/command functions के लिए",
+        "केवल gaming के लिए",
+        "Cursor को move करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "F1-F12 function keys program-specific shortcuts देती हैं, जैसे F1 अक्सर Help खोलता है। Numeric entry के लिए numeric keypad होता है (A), cursor movement arrow keys करती हैं (D), और ये सिर्फ gaming तक सीमित नहीं हैं (C)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q5",
+      "question": "एक device जो input और output दोनों का काम करता है, उसका सही उदाहरण है:",
+      "options": [
+        "Mouse",
+        "Printer",
+        "Touch Screen",
+        "Speaker"
+      ],
+      "correctIndex": 2,
+      "explanation": "Touch Screen input (touch से data देना) और output (display दिखाना) दोनों करता है, इसलिए यह I/O device है। Mouse केवल input है, जबकि Printer और Speaker केवल output devices हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q6",
+      "question": "एक optical mouse अपनी movement को detect करने के लिए मुख्य रूप से किसका उपयोग करता है?",
+      "options": [
+        "एक rubber ball और rollers का",
+        "LED/laser light और एक optical sensor का",
+        "Magnetic field का",
+        "Ultrasonic sound waves का"
+      ],
+      "correctIndex": 1,
+      "explanation": "Optical mouse नीचे की surface पर LED या laser light डालकर परावर्तित light को optical sensor से पढ़कर movement detect करता है। Rubber ball और rollers पुराने mechanical mouse में होते थे (A); magnetic field और ultrasonic waves mouse tracking की सामान्य विधि नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q7",
+      "question": "Computer में 1 Byte कितने bits के बराबर होता है?",
+      "options": [
+        "4 bits",
+        "8 bits",
+        "16 bits",
+        "1024 bits"
+      ],
+      "correctIndex": 1,
+      "explanation": "1 Byte = 8 bits होता है, जो एक character को represent करने के लिए पर्याप्त है। 4 bits को nibble कहते हैं (A), 16 bits एक word हो सकता है (C), और 1024 का संबंध KB conversion से है (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q8",
+      "question": "निम्न में से कौन-सा एक pointing (input) device नहीं है?",
+      "options": [
+        "Joystick",
+        "Light Pen",
+        "Trackball",
+        "Plotter"
+      ],
+      "correctIndex": 3,
+      "explanation": "Plotter एक output device है जो large drawings/graphs print करता है, pointing device नहीं। Joystick, Light Pen और Trackball सभी pointing input devices हैं जो screen पर position को control करते हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q9",
+      "question": "एक QWERTY keyboard में यह नाम किससे लिया गया है?",
+      "options": [
+        "Function keys की संख्या से",
+        "पहली row के पहले छह अक्षरों से",
+        "Numeric keypad के layout से",
+        "बनाने वाली company के नाम से"
+      ],
+      "correctIndex": 1,
+      "explanation": "QWERTY नाम keyboard की सबसे ऊपर वाली letter row के पहले 6 अक्षर Q-W-E-R-T-Y से बना है। यह function keys, numeric keypad या company के नाम से संबंधित नहीं है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q10",
+      "question": "Computer के संदर्भ में 'hardware' शब्द किसको दर्शाता है?",
+      "options": [
+        "Computer के physical/tangible parts को",
+        "केवल programs और instructions को",
+        "Internet पर मौजूद data को",
+        "User द्वारा दिए गए commands को"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hardware वे भौतिक (physical) घटक हैं जिन्हें छुआ जा सकता है, जैसे CPU, keyboard, monitor। Programs/instructions software कहलाते हैं (B), Internet data और user commands hardware की परिभाषा में नहीं आते।"
+    },
+    {
+      "id": "u7_computer_basics_io_q11",
+      "question": "MICR (Magnetic Ink Character Recognition) device का सबसे आम उपयोग कहाँ होता है?",
+      "options": [
+        "Barcode पढ़ने में",
+        "Bank cheques को process करने में",
+        "Photograph scan करने में",
+        "Fingerprint पढ़ने में"
+      ],
+      "correctIndex": 1,
+      "explanation": "MICR magnetic ink से छपे characters (जैसे cheque number) पढ़ता है और banks में cheque clearing में उपयोग होता है। Barcode के लिए barcode reader (A), photo के लिए scanner (C), और fingerprint के लिए biometric scanner (D) उपयोग होता है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q12",
+      "question": "OMR (Optical Mark Reader) मुख्य रूप से किस काम में उपयोग होता है?",
+      "options": [
+        "Video record करने में",
+        "Objective/MCQ answer sheets को evaluate करने में",
+        "Sound record करने में",
+        "3D printing में"
+      ],
+      "correctIndex": 1,
+      "explanation": "OMR pencil/pen से किए गए marks (जैसे OMR answer sheet के bubbles) को detect करता है और परीक्षा उत्तर-पत्रक जाँचने में उपयोग होता है। बाकी options video, audio और printing से संबंधित हैं, जो OMR का काम नहीं है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q13",
+      "question": "एक computer में Cache memory का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Data को permanent रूप से store करना",
+        "CPU और main memory के बीच speed gap को कम करना",
+        "Power backup देना",
+        "Files को print करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cache एक बहुत तेज़ memory है जो CPU के पास frequently used data रखती है ताकि slow RAM का इंतज़ार कम हो। Permanent storage hard disk करती है (A), power backup UPS देता है (C), print करना printer का काम है (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q14",
+      "question": "निम्न में से कौन-सा volatile memory है, यानी power जाने पर data खो देती है?",
+      "options": [
+        "ROM",
+        "Hard Disk",
+        "RAM",
+        "DVD"
+      ],
+      "correctIndex": 2,
+      "explanation": "RAM volatile होती है — power off होते ही उसका data मिट जाता है। ROM non-volatile है (A), और Hard Disk व DVD secondary storage हैं जो data permanently रखते हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q15",
+      "question": "एक scanner किस प्रकार का device है?",
+      "options": [
+        "Input device",
+        "Output device",
+        "Storage device",
+        "Processing device"
+      ],
+      "correctIndex": 0,
+      "explanation": "Scanner किसी printed document या photo को digital form में computer में डालता है, इसलिए यह input device है। Output monitor/printer देते हैं, storage disk करती है, और processing CPU करता है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q16",
+      "question": "किसी program के चलने के दौरान instructions और data अस्थायी रूप से कहाँ रखे जाते हैं?",
+      "options": [
+        "Hard Disk में",
+        "RAM (main memory) में",
+        "CD-ROM में",
+        "Printer buffer में"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब कोई program run होता है तो उसका code और data RAM में load होते हैं क्योंकि RAM CPU के लिए तेज़ पहुँच देती है। Hard Disk और CD-ROM permanent storage हैं जहाँ से program पहले RAM में लाया जाता है; printer buffer केवल print jobs रखता है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q17",
+      "question": "1 Kilobyte (KB) बराबर होता है:",
+      "options": [
+        "1000 bits",
+        "1024 bytes",
+        "100 bytes",
+        "8 bytes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Computer में 1 KB = 1024 bytes (2^10) होता है। 1000 bits गलत unit है (A), 100 bytes और 8 bytes दोनों गलत conversions हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q18",
+      "question": "एक 'light pen' किस प्रकार का device है?",
+      "options": [
+        "Output device जो light emit करता है",
+        "Input device जो screen पर सीधे point/draw करने देता है",
+        "Storage device",
+        "Power device"
+      ],
+      "correctIndex": 1,
+      "explanation": "Light pen एक input pointing device है जिससे user monitor की screen पर सीधे point या draw कर सकता है। यह output नहीं देता (A), न ही data store या power supply करता है (C, D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q19",
+      "question": "Computer में data process होने का सही क्रम कौन-सा है?",
+      "options": [
+        "Output → Process → Input",
+        "Input → Process → Output",
+        "Process → Input → Output",
+        "Storage → Output → Input"
+      ],
+      "correctIndex": 1,
+      "explanation": "Computer पहले Input लेता है, फिर CPU उसे Process करता है, और अंत में Output देता है (IPO cycle)। बाकी क्रम इस मूल IPO चक्र का उल्लंघन करते हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q20",
+      "question": "निम्न में से कौन-सी memory 'firmware' रखती है और इसे बदला नहीं जा सकता (सामान्यतः)?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Cache",
+        "Register"
+      ],
+      "correctIndex": 1,
+      "explanation": "ROM (Read Only Memory) में firmware/BIOS जैसे permanent instructions रहते हैं जो सामान्यतः बदले नहीं जाते और power जाने पर भी रहते हैं। RAM, Cache और Register सभी volatile temporary memory हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q21",
+      "question": "एक 'trackball' और सामान्य mouse में मुख्य अंतर क्या है?",
+      "options": [
+        "Trackball में device को नहीं हिलाना पड़ता, केवल ऊपर की ball घुमाई जाती है",
+        "Trackball एक output device है",
+        "Trackball केवल text input देता है",
+        "Trackball को power की जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trackball में पूरे device को हिलाने के बजाय ऊपर लगी ball को उंगली से घुमाकर cursor चलाया जाता है, इसलिए कम जगह चाहिए। यह input pointing device है (output नहीं), text input नहीं देता, और normal mouse की तरह power/signal से ही काम करता है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q22",
+      "question": "Application software का सबसे सही वर्णन कौन-सा है?",
+      "options": [
+        "Software जो hardware को directly manage करता है",
+        "Software जो किसी विशेष user कार्य (task) को पूरा करने के लिए बनाया जाता है",
+        "Computer को boot करने वाला program",
+        "Device drivers का समूह"
+      ],
+      "correctIndex": 1,
+      "explanation": "Application software किसी specific कार्य के लिए होता है, जैसे document बनाना (Word) या hisab (Tally)। Hardware को manage करना, boot करना और drivers का काम system software करता है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q23",
+      "question": "किसी digital camera से ली गई image को computer में transfer करना किस श्रेणी में आता है?",
+      "options": [
+        "Input operation",
+        "Output operation",
+        "Processing operation",
+        "Booting operation"
+      ],
+      "correctIndex": 0,
+      "explanation": "Camera से image computer में लेना data को computer में डालना है, यानी input operation। Output तब होता जब computer से बाहर data जाता (जैसे print), processing CPU करता है, और booting startup process है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q24",
+      "question": "एक 'barcode reader' किस सिद्धांत पर काम करता है?",
+      "options": [
+        "Magnetic ink पढ़कर",
+        "अलग-अलग चौड़ाई की lines से परावर्तित light को पढ़कर",
+        "Fingerprint की ridges पढ़कर",
+        "Voice को पहचान कर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Barcode reader barcode की काली-सफेद lines पर light डालकर परावर्तित light के pattern से data पढ़ता है। Magnetic ink को MICR पढ़ता है (A), fingerprint biometric scanner (C), और voice को microphone/voice recognition (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q25",
+      "question": "Computer system में 'peripheral device' का क्या अर्थ है?",
+      "options": [
+        "CPU के भीतर मौजूद ALU",
+        "Motherboard पर लगा main processor",
+        "CPU के बाहर जुड़े input/output devices",
+        "Operating system का kernel"
+      ],
+      "correctIndex": 2,
+      "explanation": "Peripheral devices वे बाहरी devices हैं जो computer से जुड़ते हैं, जैसे keyboard, mouse, printer, scanner। ALU और processor CPU के internal भाग हैं (A, B), और kernel software है (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q26",
+      "question": "एक keyboard पर 'Toggle keys' का सही उदाहरण कौन-सा है?",
+      "options": [
+        "Shift और Ctrl",
+        "Caps Lock और Num Lock",
+        "Enter और Space",
+        "Arrow keys"
+      ],
+      "correctIndex": 1,
+      "explanation": "Toggle keys वे हैं जो दबाने पर on/off state बदलती हैं, जैसे Caps Lock और Num Lock। Shift/Ctrl modifier keys हैं (A), Enter/Space सामान्य keys हैं (C), और arrow keys navigation के लिए हैं (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q27",
+      "question": "निम्न में से कौन-सा group केवल output devices का है?",
+      "options": [
+        "Monitor, Printer, Speaker",
+        "Keyboard, Mouse, Scanner",
+        "Monitor, Keyboard, Printer",
+        "Speaker, Microphone, Joystick"
+      ],
+      "correctIndex": 0,
+      "explanation": "Monitor, Printer और Speaker तीनों output देते हैं। Option B के सभी input हैं; option C में Keyboard input है; option D में Microphone और Joystick input devices हैं, इसलिए ये शुद्ध output group नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q28",
+      "question": "यदि किसी file का size 2 MB है, तो यह लगभग कितने KB के बराबर होगी?",
+      "options": [
+        "20 KB",
+        "200 KB",
+        "2048 KB",
+        "20480 KB"
+      ],
+      "correctIndex": 2,
+      "explanation": "1 MB = 1024 KB होता है, इसलिए 2 MB = 2 × 1024 = 2048 KB। बाकी options गलत conversion factor (जैसे 10 या 100) मानकर निकाले गए हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q29",
+      "question": "Control Unit (CU) computer में मुख्य रूप से क्या करता है?",
+      "options": [
+        "सभी arithmetic calculations करता है",
+        "Instructions को fetch, decode कर बाकी units को control/direct करता है",
+        "Data को permanently store करता है",
+        "Screen पर graphics बनाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Control Unit instructions को memory से लाता (fetch), उन्हें decode करता है और ALU व अन्य units को signals भेजकर control करता है। Calculation ALU करता है (A), storage memory (C), और graphics GPU/monitor (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q30",
+      "question": "एक 'digitizer' या 'graphics tablet' किस प्रकार का device है?",
+      "options": [
+        "Output device जो images print करता है",
+        "Input device जिस पर stylus से drawing/handwriting को digital data में बदला जाता है",
+        "Secondary storage device",
+        "Networking device"
+      ],
+      "correctIndex": 1,
+      "explanation": "Graphics tablet/digitizer एक input device है जिस पर stylus से बनाई गई drawing या handwriting को computer digital form में लेता है। यह print नहीं करता (A), data store नहीं करता (C), और networking से संबंधित नहीं है (D)।"
+    }
+  ]
+}

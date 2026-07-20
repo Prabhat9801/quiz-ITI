@@ -1,0 +1,368 @@
+{
+  "unit": "unit10",
+  "unitName": "LED Lights, LED/LCD TV and CCTV",
+  "topic": "lcd_led_tv_principle",
+  "topicName": "LCD & LED TV - Principle, Sections and Comparison with CTV/Plasma",
+  "questions": [
+    {
+      "id": "u10_lcd_led_tv_principle_q1",
+      "question": "LCD (Liquid Crystal Display) में applied voltage से liquid crystal molecules में क्या परिवर्तन होता है, जिससे image control होती है?",
+      "options": [
+        "Molecules अपनी twist/orientation बदलकर polarized light के passage को नियंत्रित करते हैं",
+        "Molecules स्वयं polarizer में बदल जाते हैं",
+        "Molecules स्वयं प्रकाश उत्सर्जित करने लगते हैं",
+        "Molecules गर्म होकर पिघल जाते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Applied voltage के अनुसार liquid crystal molecules अपनी orientation/twist बदलते हैं, जिससे उनमें से गुजरने वाले polarized light की मात्रा नियंत्रित होती है (light modulation) — इसलिए option A सही है। Option B गलत है क्योंकि molecule स्वयं polarizer नहीं बनता, polarizer एक अलग layer होती है; option C गलत है क्योंकि LCD self-emissive नहीं है, प्रकाश backlight से आता है; option D में कोई melting नहीं होती, यह purely electrical alignment effect है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q2",
+      "question": "LCD panel में दो polarizer sheets को किस प्रकार लगाया जाता है और उनका मुख्य कार्य क्या है?",
+      "options": [
+        "दोनों polarizers समान (parallel) axis में, ताकि सारा प्रकाश हमेशा pass हो",
+        "दोनों polarizers परस्पर लंबवत (perpendicular) axis में, ताकि liquid crystal की twist के अनुसार प्रकाश की मात्रा नियंत्रित हो सके",
+        "एक polarizer केवल front में होता है, दूसरे की आवश्यकता नहीं",
+        "Polarizers केवल रंग filter का कार्य करते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "LCD में दो polarizer sheets को सामान्यतः एक-दूसरे से 90° (perpendicular) axis में लगाया जाता है; liquid crystal layer की twist के अनुसार यह तय होता है कि प्रकाश दूसरी polarizer से गुजरेगा या रुकेगा — इसलिए option B सही है। Option A में parallel polarizers से light control संभव नहीं होगा, option C तथ्यात्मक रूप से गलत है क्योंकि दोनों polarizer आवश्यक हैं, और option D गलत है क्योंकि रंग color filter layer से आता है, polarizer से नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q3",
+      "question": "क्या LCD panel स्वयं प्रकाश उत्पन्न करता है?",
+      "options": [
+        "हाँ, प्रत्येक pixel स्वयं चमकता है",
+        "हाँ, परन्तु केवल रात के समय",
+        "नहीं, LCD केवल पीछे से आने वाले backlight के प्रकाश को modulate (control) करता है",
+        "नहीं, इसे केवल सूर्य के प्रकाश की आवश्यकता होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "LCD अपने आप प्रकाश उत्पन्न नहीं करता; यह केवल backlight से आने वाले प्रकाश को liquid crystal व polarizers द्वारा modulate (कम/ज़्यादा/रोकना) करता है, इसलिए option C सही है। Option A और B गलत हैं क्योंकि pixel स्वयं emissive नहीं है, और option D गलत है क्योंकि उसे बाहरी sunlight नहीं बल्कि internal backlight (LED/CCFL) चाहिए।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q4",
+      "question": "LED TV की display technology, पारंपरिक LCD TV से मूल रूप से किस प्रकार भिन्न होती है?",
+      "options": [
+        "LED TV में पूरी तरह अलग self-emissive panel होता है, LCD panel जैसा कुछ नहीं होता",
+        "LED TV में liquid crystal की आवश्यकता ही नहीं होती",
+        "LED TV, Plasma technology का उन्नत रूप है",
+        "LED TV वास्तव में एक LCD TV ही है जिसमें backlight के लिए CCFL की जगह LED का उपयोग होता है, panel technology वही liquid crystal आधारित है"
+      ],
+      "correctIndex": 3,
+      "explanation": "LED TV बुनियादी रूप से LCD TV ही है; केवल backlight source बदला है (CCFL के स्थान पर LED), जबकि liquid crystal panel वही तकनीक है — इसलिए option D सही है। Option A और B गलत हैं क्योंकि LED TV भी liquid crystal panel पर ही आधारित है, self-emissive नहीं; option C गलत है क्योंकि Plasma पूर्णतः भिन्न gas-discharge technology है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q5",
+      "question": "LCD/LED TV के panel में TFT (Thin Film Transistor) का मुख्य कार्य क्या है?",
+      "options": [
+        "प्रत्येक sub-pixel को स्वतंत्र रूप से switch/control करके उस पर applied voltage को सटीकता से नियंत्रित करना",
+        "Backlight की brightness बढ़ाना",
+        "Audio signal को amplify करना",
+        "Tuner में channel select करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "TFT active matrix array में हर sub-pixel के साथ एक transistor जुड़ा होता है जो उस pixel पर लगने वाले voltage को स्वतंत्र और सटीक रूप से नियंत्रित करता है, जिससे sharp व स्थिर image मिलती है — इसलिए option A सही है। Backlight brightness LED driver board (option B), audio amplification अलग audio section (option C), और channel selection tuner section (option D) का कार्य है, TFT का नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q6",
+      "question": "Active matrix (TFT आधारित) LCD panel को passive matrix की तुलना में क्यों प्राथमिकता दी जाती है?",
+      "options": [
+        "Active matrix सस्ता होता है परन्तु धीमा काम करता है",
+        "हर pixel के लिए dedicated transistor होने से response तेज़, contrast बेहतर और image अधिक sharp मिलती है",
+        "Passive matrix में रंग बिल्कुल नहीं दिखते",
+        "Active matrix को backlight की कोई आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Active matrix में प्रत्येक pixel का अपना transistor होने से voltage हर pixel पर स्वतंत्र रूप से बना रहता है, जिससे response time तेज़, contrast बेहतर और crosstalk कम होता है — इसलिए option B सही है। Option A तथ्यात्मक रूप से उल्टा है (active matrix धीमा नहीं, तेज़ होता है), option C गलत है क्योंकि passive matrix में भी रंग दिखते हैं (बस गुणवत्ता कम होती है), और option D गलत है क्योंकि active matrix panel को भी backlight चाहिए।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q7",
+      "question": "LCD/LED TV के block diagram में मुख्यतः कौन-कौन से functional sections होते हैं?",
+      "options": [
+        "केवल tuner और speaker",
+        "केवल power supply और panel",
+        "Power supply (SMPS), main/mother board (video processor व scaler), T-CON board, panel, backlight/LED driver board, audio amplifier और tuner/AV input section",
+        "केवल remote sensor और CRT tube"
+      ],
+      "correctIndex": 2,
+      "explanation": "LCD/LED TV एक multi-section system है जिसमें SMPS, main board (video processing/scaling), T-CON board, panel, LED driver board, audio amplifier और tuner/AV input section मिलकर पूरा TV बनाते हैं — इसलिए option C सही है। शेष तीनों विकल्प अधूरे हैं और option D तो ग़लत भी है क्योंकि LCD/LED TV में CRT tube होता ही नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q8",
+      "question": "LCD/LED TV के SMPS (Switch Mode Power Supply) section का मुख्य कार्य क्या है?",
+      "options": [
+        "Video signal को process करना",
+        "Audio signal को amplify करना",
+        "Remote से आने वाला IR signal प्राप्त करना",
+        "AC mains input को विभिन्न sections (main board, panel, backlight आदि) के लिए आवश्यक विभिन्न regulated DC voltages में बदलना"
+      ],
+      "correctIndex": 3,
+      "explanation": "SMPS section AC mains को rectify, filter व regulate करके TV के अन्य सभी sections के लिए ज़रूरी अलग-अलग DC voltage rails (जैसे 5V, 12V, 24V) उपलब्ध कराता है — इसलिए option D सही है। Video processing main board का कार्य है (option A), audio amplification अलग section में होता है (option B), और remote signal control panel/IR sensor section receive करता है (option C), SMPS का नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q9",
+      "question": "LCD/LED TV के main board (mother board) में लगे video processor और scaler का मुख्य कार्य क्या है?",
+      "options": [
+        "Incoming video signal को process करके panel के native resolution के अनुसार scale व format करना",
+        "केवल AC को DC में बदलना",
+        "Backlight LEDs को केवल on/off करना",
+        "Speaker को केवल mute करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Main board का video processor incoming signal (tuner/HDMI आदि से) को decode व process करता है और scaler उसे panel के native resolution के अनुरूप बदलता है — इसलिए option A सही है। AC-DC conversion SMPS का काम है (option B), backlight on/off व brightness control LED driver board का काम है (option C), और mute audio section में होता है (option D), main board का प्राथमिक कार्य नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q10",
+      "question": "यदि किसी channel/source का input resolution, panel के native resolution से भिन्न हो, तो कौन-सा block इसे panel के resolution के अनुरूप convert करता है?",
+      "options": [
+        "SMPS",
+        "Scaler (main board का भाग)",
+        "Audio amplifier",
+        "Remote sensor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Scaler, main board के video processing हिस्से में होता है और यह किसी भी incoming resolution को panel के fixed native resolution में convert करता है ताकि image सही size में दिखे — इसलिए option B सही है। SMPS केवल power आपूर्ति करता है (option A), audio amplifier ध्वनि से संबंधित है (option C), और remote sensor user commands प्राप्त करता है (option D), इनका resolution conversion से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q11",
+      "question": "T-CON (Timing Controller) board का मुख्य कार्य क्या है?",
+      "options": [
+        "AC मुख्य आपूर्ति को नियंत्रित करना",
+        "Audio signal को stereo में बदलना",
+        "Main board से प्राप्त video data (जैसे LVDS signal) को panel के rows और columns के लिए उचित timing व drive signals में बदलना",
+        "Remote की IR signal को decode करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "T-CON board main board से आने वाले digital video data (LVDS) को panel के gate driver व source driver के लिए ज़रूरी सटीक timing व voltage signals में बदलता है, ताकि हर row/column ठीक समय पर scan हो — इसलिए option C सही है। AC control SMPS करता है (option A), audio processing अलग section में होता है (option B), और IR signal decode remote sensor circuit करता है (option D), T-CON का कार्य नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q12",
+      "question": "LCD/LED TV के 'panel' section में क्या होता है?",
+      "options": [
+        "केवल speaker और amplifier",
+        "केवल power transformer",
+        "केवल remote sensor circuit",
+        "Glass substrate पर बना TFT array, liquid crystal layer, color filters और polarizers जो अंतिम image बनाते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Panel section में glass substrate पर बना TFT active-matrix array, उसके ऊपर liquid crystal layer, RGB color filters और दोनों तरफ polarizer sheets होती हैं जो मिलकर अंतिम दिखने वाली image बनाती हैं — इसलिए option D सही है। Speaker/amplifier (A), power transformer (B) और remote sensor circuit (C) पूरी तरह अलग sections से संबंधित हैं, panel के अंदर नहीं होते।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q13",
+      "question": "LCD/LED TV में backlight/LED driver board का मुख्य कार्य क्या है?",
+      "options": [
+        "Backlight LEDs को आवश्यक constant current/voltage प्रदान करके उन्हें चालू रखना तथा brightness नियंत्रित करना",
+        "Video signal को scale करना",
+        "Tuner से channel signal प्राप्त करना",
+        "Remote की batteries चार्ज करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "LED driver board, SMPS से मिली DC power को उपयुक्त constant current/voltage में बदलकर backlight LED strips को supply करता है और brightness (dimming) को भी नियंत्रित करता है — इसलिए option A सही है। Video scaling main board/scaler का कार्य है (option B), channel signal tuner section प्राप्त करता है (option C), और remote की batteries TV का कोई भी internal circuit चार्ज नहीं करता (option D)।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q14",
+      "question": "LCD/LED TV के audio amplifier section का कार्य क्या है?",
+      "options": [
+        "Backlight को चालू रखना",
+        "Main board से प्राप्त कमज़ोर audio signal को amplify करके speakers चलाने योग्य बनाना",
+        "Panel के pixels को control करना",
+        "AC को DC में बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Main board से मिलने वाला audio signal शक्ति में कमज़ोर होता है; audio amplifier section उसे इतना बढ़ाता है कि वह speakers को driven कर सुनाई देने योग्य आवाज़ दे सके — इसलिए option B सही है। Backlight को चालू रखना LED driver board का काम है (option A), pixels control T-CON/panel करते हैं (option C), और AC-DC conversion SMPS करता है (option D), audio amplifier का कार्य नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q15",
+      "question": "LCD/LED TV के tuner/AV input section का मुख्य कार्य क्या है?",
+      "options": [
+        "Backlight brightness नियंत्रित करना",
+        "Panel की timing signals उत्पन्न करना",
+        "Broadcast RF signal या external AV/HDMI sources से आने वाले signal को प्राप्त कर demodulate/select करके main board को भेजना",
+        "Audio को केवल mute करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Tuner/AV input section broadcast RF signal को demodulate करता है या external sources (AV, HDMI आदि) से आने वाले signal को select करके आगे processing हेतु main board को भेजता है — इसलिए option C सही है। Backlight brightness नियंत्रण LED driver board करता है (option A), timing signals T-CON board बनाता है (option B), और केवल mute करना audio section की एक function मात्र है, tuner का मुख्य कार्य नहीं (option D)।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q16",
+      "question": "LCD/LED TV में control panel और remote sensor section का कार्य क्या है?",
+      "options": [
+        "Video signal को scale करना",
+        "Backlight LEDs को current देना",
+        "AC mains को filter करना",
+        "User के buttons press या remote की IR commands प्राप्त कर उन्हें processor तक पहुँचाना ताकि TV की settings (channel, volume आदि) बदली जा सकें"
+      ],
+      "correctIndex": 3,
+      "explanation": "Control panel के keys या remote sensor से मिलने वाले IR signals को receive कर उन्हें main processor तक भेजा जाता है ताकि user के अनुसार channel, volume, source आदि settings बदली जा सकें — इसलिए option D सही है। Video scaling (A), backlight current देना (B) और AC filtering (C) पूर्णतः अलग-अलग sections के कार्य हैं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q17",
+      "question": "LCD/LED TV, पुराने CRT (CTV) की तुलना में किस प्रमुख component के अभाव में कार्य करता है?",
+      "options": [
+        "Electron gun और phosphor-coated CRT tube",
+        "Speaker",
+        "Power supply",
+        "Remote control"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCD/LED TV में CRT (CTV) जैसा भारी glass tube, electron gun और phosphor-coated screen नहीं होता; इसके बजाय flat liquid crystal panel और backlight का उपयोग होता है — इसलिए option A सही है। Speaker (B), power supply (C) और remote control (D) तीनों LCD/LED TV और CRT TV दोनों में किसी न किसी रूप में मौजूद होते हैं, इसलिए ये अंतर नहीं दर्शाते।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q18",
+      "question": "CRT TV की तुलना में LCD/LED TV में EHT (Extra High Tension) circuit की आवश्यकता क्यों नहीं होती?",
+      "options": [
+        "क्योंकि LCD/LED TV में AC supply का उपयोग ही नहीं होता",
+        "क्योंकि इसमें electron beam को tube की screen तक accelerate करने के लिए किसी high voltage anode की आवश्यकता नहीं होती, जबकि CRT में यह ज़रूरी है",
+        "क्योंकि LCD/LED TV बिना किसी internal power supply के चलता है",
+        "क्योंकि EHT केवल audio section के लिए उपयोगी था"
+      ],
+      "correctIndex": 1,
+      "explanation": "CRT TV में electron beam को tube की phosphor screen तक तेज़ी से accelerate करने हेतु कई हज़ार volt का EHT चाहिए होता है; LCD/LED TV में कोई electron beam ही नहीं होती, इसलिए ऐसी high voltage anode supply की ज़रूरत नहीं पड़ती — इसलिए option B सही है। Option A और C तथ्यात्मक रूप से गलत हैं क्योंकि LCD/LED TV भी AC supply व internal SMPS से चलता है, और option D गलत है क्योंकि EHT का संबंध audio से नहीं बल्कि picture tube के electron acceleration से था।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q19",
+      "question": "CRT (CTV) की तुलना में LCD/LED TV की design और weight को लेकर सही कथन कौन-सा है?",
+      "options": [
+        "LCD/LED TV भारी व मोटा (bulky) होता है जबकि CRT पतला होता है",
+        "दोनों का वज़न व मोटाई बिल्कुल समान होती है",
+        "LCD/LED TV, CRT की तुलना में हल्का व पतला (slim) होता है क्योंकि इसमें भारी glass tube और electron gun नहीं होता",
+        "LCD/LED TV में CRT से अधिक glass तथा तांबे की winding होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "CRT TV में भारी glass picture tube, electron gun और deflection coils होने से यह मोटा व वज़नदार होता है, जबकि LCD/LED TV में flat panel व पतला backlight structure होने से यह हल्का व slim होता है — इसलिए option C सही है। Options A, B और D तथ्यात्मक रूप से इसके विपरीत या गलत हैं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q20",
+      "question": "समान screen size पर, CRT TV की तुलना में LED TV की power consumption सामान्यतः कैसी होती है?",
+      "options": [
+        "LED TV, CRT से अधिक बिजली खपत करता है",
+        "दोनों की खपत बराबर होती है",
+        "LED TV की खपत केवल backlight बंद करने पर ही कम होती है",
+        "LED TV सामान्यतः CRT की तुलना में कम बिजली खपत करता है क्योंकि इसे electron beam scanning व उच्च anode voltage generate नहीं करना पड़ता"
+      ],
+      "correctIndex": 3,
+      "explanation": "CRT TV को electron beam को scan कराने तथा उच्च anode/EHT voltage उत्पन्न करने के लिए अतिरिक्त power चाहिए होती है, जबकि LED TV में यह overhead नहीं होता जिससे यह समान screen size पर आमतौर पर कम बिजली खपत करता है — इसलिए option D सही है। Options A और B तथ्यात्मक रूप से गलत हैं, और option C अधूरी/भ्रामक बात है क्योंकि यह सामान्य operating consumption की तुलना नहीं दर्शाती।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q21",
+      "question": "Plasma TV और LCD/LED TV के प्रकाश उत्पन्न करने के सिद्धांत में मुख्य अंतर क्या है?",
+      "options": [
+        "Plasma TV के प्रत्येक cell में gas discharge द्वारा स्वयं प्रकाश उत्पन्न होता है (self-emissive), जबकि LCD/LED TV को अलग backlight चाहिए जिसे liquid crystal केवल modulate करता है",
+        "दोनों में backlight की समान रूप से आवश्यकता होती है",
+        "LCD/LED TV self-emissive होता है, Plasma को backlight चाहिए",
+        "दोनों में समान रूप से CRT tube का प्रयोग होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Plasma TV में प्रत्येक cell के अंदर गैस का discharge होकर UV light उत्पन्न होती है जो phosphor को उत्तेजित कर प्रकाश देती है (self-emissive), जबकि LCD/LED TV में liquid crystal स्वयं प्रकाश नहीं देता, वह केवल पीछे के backlight को modulate करता है — इसलिए option A सही है। Option B गलत है क्योंकि Plasma को अलग backlight नहीं चाहिए, option C तथ्य को उल्टा बताता है, और option D गलत है क्योंकि इनमें से कोई भी CRT tube technology पर आधारित नहीं है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q22",
+      "question": "Viewing angle की दृष्टि से Plasma TV और पारंपरिक (older) LCD TV की तुलना में सामान्यतः क्या सही है?",
+      "options": [
+        "दोनों का viewing angle बिल्कुल समान होता है",
+        "Self-emissive cells होने के कारण Plasma TV का viewing angle पारंपरिक LCD की तुलना में सामान्यतः बेहतर (wider) होता है",
+        "Plasma का viewing angle हमेशा LCD से खराब होता है",
+        "Viewing angle केवल audio quality पर निर्भर करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि Plasma cells स्वयं हर दिशा में प्रकाश उत्सर्जित करती हैं (self-emissive), इसलिए इनका viewing angle सामान्यतः पारंपरिक backlit LCD panels की तुलना में बेहतर/wider माना जाता था — इसलिए option B सही है। Option A तथ्यात्मक रूप से गलत है, option C इसके विपरीत बात कहता है, और option D निरर्थक है क्योंकि viewing angle का audio quality से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q23",
+      "question": "'Burn-in' (image retention) की समस्या मुख्यतः किस display technology में अधिक देखी जाती है और क्यों?",
+      "options": [
+        "LCD/LED TV में, क्योंकि backlight जल्दी खराब हो जाता है",
+        "दोनों में समान रूप से यह समस्या कभी नहीं होती",
+        "Plasma TV में, क्योंकि स्थिर image लंबे समय तक दिखाने पर phosphor-type cells असमान रूप से degrade हो सकते हैं",
+        "केवल CRT TV में होती है, Plasma व LCD में कभी नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Plasma TV में यदि कोई static image (जैसे logo) लंबे समय तक दिखाई जाए तो उन विशेष cells के phosphor-type material में असमान degradation होकर हल्का स्थायी निशान (burn-in) रह सकता है — इसलिए option C सही है। Option A गलत है क्योंकि LCD/LED में यह समस्या backlight से नहीं, बल्कि कम प्रभाव के रूप में होती है; option B तथ्यात्मक रूप से गलत है; और option D भी गलत है क्योंकि CRT में भी यह समस्या हो सकती थी, यह केवल CRT तक सीमित नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q24",
+      "question": "पुराने समय में response time (pixel के एक state से दूसरी state में बदलने का समय) की दृष्टि से Plasma और LCD की तुलना में सामान्यतः क्या सही माना जाता था?",
+      "options": [
+        "LCD का response time हमेशा Plasma से तेज़ होता था",
+        "दोनों का response time शून्य (zero) होता है",
+        "Response time का motion blur से कोई संबंध नहीं होता",
+        "परंपरागत रूप से Plasma TV का response time LCD की तुलना में तेज़ (कम) माना जाता था, जिससे fast-motion content में motion blur कम होता था"
+      ],
+      "correctIndex": 3,
+      "explanation": "Self-emissive gas-discharge cells के कारण Plasma cells जल्दी state बदल लेती थीं, जिससे पुराने LCD panels की तुलना में response time तेज़ (कम) होता था और fast motion (जैसे खेल) में blur कम दिखता था — इसलिए option D सही है। Option A तथ्य को उल्टा बताता है, option B अवास्तविक (zero response time संभव नहीं) है, और option C गलत है क्योंकि response time व motion blur सीधे जुड़े होते हैं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q25",
+      "question": "चमकीले (bright) दृश्यों को दिखाते समय Plasma TV की power consumption, समान आकार के LED TV की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "Plasma TV सामान्यतः अधिक बिजली खपत करता है क्योंकि प्रत्येक cell को discharge हेतु ऊर्जा चाहिए, जबकि LED TV में backlight अपेक्षाकृत कम ऊर्जा में अधिक दक्षता से कार्य करता है",
+        "Plasma TV हमेशा LED TV से कम बिजली खपत करता है",
+        "दोनों की खपत content की brightness से पूर्णतः स्वतंत्र होती है",
+        "LED TV की खपत Plasma से हमेशा अधिक होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Plasma में हर जलने वाले cell के discharge हेतु अलग ऊर्जा चाहिए होती है, विशेषकर bright scenes में सभी cells सक्रिय होने से खपत बढ़ जाती है, जबकि LED backlight अपेक्षाकृत दक्षता से कम power में कार्य करता है — इसलिए option A सही है। Options B और D तथ्यात्मक रूप से विपरीत बात कहते हैं, और option C गलत है क्योंकि Plasma की खपत content की brightness पर निर्भर करती है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q26",
+      "question": "'HD Ready' TV panel में सामान्यतः कितने pixels (approx.) होते हैं?",
+      "options": [
+        "लगभग 640 × 480 pixels",
+        "लगभग 1366 × 768 pixels",
+        "लगभग 3840 × 2160 pixels",
+        "लगभग 720 × 576 pixels"
+      ],
+      "correctIndex": 1,
+      "explanation": "'HD Ready' resolution आमतौर पर लगभग 1366 × 768 pixels होती है, इसलिए option B सही है। 640×480 पुराने standard-definition (VGA-type) format का है (option A), 3840×2160 4K Ultra HD resolution है (option C), और 720×576 पुराने PAL SD TV format का approx resolution है (option D), ये HD Ready नहीं हैं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q27",
+      "question": "Full HD resolution 1920 × 1080 में कुल कितने pixels होते हैं?",
+      "options": [
+        "लगभग 1,036,800 pixels",
+        "लगभग 921,600 pixels",
+        "लगभग 2,073,600 pixels",
+        "लगभग 3,110,400 pixels"
+      ],
+      "correctIndex": 2,
+      "explanation": "कुल pixels = चौड़ाई × ऊँचाई = 1920 × 1080 = 2,073,600 pixels, इसलिए option C सही है। 1,036,800 (option A) और 921,600 (option B) इससे कम हैं और गलत गणना दर्शाते हैं, जबकि 3,110,400 (option D) वास्तविक मान से अधिक है — कोई भी सही परिणाम नहीं देता।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q28",
+      "question": "HD Ready (1366×768 ≈ 1,049,088 pixels) की तुलना में Full HD (1920×1080 = 2,073,600 pixels) में लगभग कितने गुना अधिक pixels होते हैं?",
+      "options": [
+        "लगभग 0.5 गुना",
+        "लगभग 1 गुना (लगभग समान)",
+        "लगभग 4 गुना",
+        "लगभग 2 गुना"
+      ],
+      "correctIndex": 3,
+      "explanation": "2,073,600 ÷ 1,049,088 ≈ 1.98, यानी लगभग 2 गुना अधिक pixels Full HD में होते हैं, इसलिए option D सही है। 0.5 गुना (option A) उल्टा अनुपात है, 1 गुना (option B) बताता है कि दोनों बराबर हैं जो गलत है, और 4 गुना (option C) वास्तविक अनुपात से बहुत अधिक है (वह 4K बनाम Full HD के करीब होता है)।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q29",
+      "question": "LCD/LED TV की 'refresh rate' (जैसे 60Hz या 120Hz) किसे दर्शाती है?",
+      "options": [
+        "प्रति सेकंड screen पर image कितनी बार redraw/update होती है",
+        "Panel का response time milliseconds में",
+        "Backlight LEDs की कुल संख्या",
+        "Audio amplifier की output power"
+      ],
+      "correctIndex": 0,
+      "explanation": "Refresh rate यह बताती है कि प्रति सेकंड screen पर पूरी image कितनी बार redraw/update की जाती है (Hz में मापी जाती है), उदाहरण के लिए 60Hz का अर्थ है 60 बार प्रति सेकंड — इसलिए option A सही है। Response time एक अलग parameter है जो milliseconds में मापा जाता है (option B), LED की संख्या backlight design से संबंधित है (option C), और audio amplifier की power का refresh rate से कोई संबंध नहीं (option D)।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q30",
+      "question": "Panel की 'response time' (जैसे 8ms) से क्या तात्पर्य है?",
+      "options": [
+        "TV को on होने में लगने वाला समय",
+        "एक pixel को एक grey/colour state से दूसरी state में बदलने में लगने वाला समय; कम response time से fast-motion में blur कम होता है",
+        "Remote signal प्राप्त होने में लगने वाला समय",
+        "SMPS को गर्म होने में लगने वाला समय"
+      ],
+      "correctIndex": 1,
+      "explanation": "Response time यह दर्शाता है कि panel का कोई pixel एक colour/grey-level state से दूसरे state में बदलने में कितना समय (milliseconds में) लेता है; यह जितना कम होगा, fast-moving content में motion blur उतना ही कम दिखेगा — इसलिए option B सही है। TV on होने का समय (A), remote signal receive होने का समय (C) और SMPS का गर्म होना (D) — इनमें से किसी का भी panel के response time से कोई तकनीकी संबंध नहीं है।"
+    }
+  ]
+}

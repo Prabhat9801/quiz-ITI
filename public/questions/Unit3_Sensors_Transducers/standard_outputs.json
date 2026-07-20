@@ -1,0 +1,368 @@
+{
+  "unit": "unit3",
+  "unitName": "Sensors, Transducers and Applications",
+  "topic": "standard_outputs",
+  "topicName": "Standard Signal Outputs - 3-15 PSI, 4-20 mA, 1-5 V & Live-Zero",
+  "questions": [
+    {
+      "id": "u3_standard_outputs_q1",
+      "question": "Industrial instrumentation में pneumatic signal के लिए सबसे common standard range कौन-सा है?",
+      "options": [
+        "0-10 PSI",
+        "3-15 PSI",
+        "5-20 PSI",
+        "2-10 PSI"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pneumatic transmission में 3-15 PSI standard signal range होती है, जिसमें 3 PSI zero (live-zero) और 15 PSI full-scale को represent करता है। अन्य options (0-10, 5-20, 2-10 PSI) industry में standard नहीं माने जाते।"
+    },
+    {
+      "id": "u3_standard_outputs_q2",
+      "question": "Electronic instrumentation में current signal के लिए widely accepted standard range क्या है?",
+      "options": [
+        "0-10 mA",
+        "0-20 mA",
+        "4-20 mA",
+        "1-10 mA"
+      ],
+      "correctIndex": 2,
+      "explanation": "4-20 mA current loop industry का सबसे widely used standard है क्योंकि यह long distance पर noise-immune signal transmission देता है और live-zero (4 mA) fault detection में मदद करता है। 0-10 mA और 0-20 mA जैसे ranges में zero fault detect नहीं हो पाता, और 1-10 mA standard practice में उपयोग नहीं होता।"
+      },
+    {
+      "id": "u3_standard_outputs_q3",
+      "question": "Voltage-based signal transmission में एक common standard range कौन-सा है?",
+      "options": [
+        "0-5 V",
+        "1-5 V",
+        "2-10 V",
+        "0-1 V"
+      ],
+      "correctIndex": 1,
+      "explanation": "1-5 V DC standard voltage signal range है जो 4-20 mA current signal को 250 ohm resistor पर drop करके प्राप्त की जाती है (4mA x 250Ω=1V, 20mA x 250Ω=5V)। 0-5V और 0-1V में live-zero नहीं होता, और 2-10V standard range नहीं है।"
+    },
+    {
+      "id": "u3_standard_outputs_q4",
+      "question": "4-20 mA current loop में 'live-zero' का क्या अर्थ है?",
+      "options": [
+        "Signal का maximum value हमेशा zero होता है",
+        "Zero value पर भी 4 mA current प्रवाहित होती रहती है जिससे wire break का पता चल सके",
+        "Loop में कोई current प्रवाहित नहीं होती",
+        "Signal केवल AC में होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Live-zero का मतलब है कि measured variable के zero value पर भी 4 mA current बनी रहती है, इसलिए यदि current 0 mA हो जाए तो यह wire break या sensor fault को indicate करता है। बाकी options live-zero की सही परिभाषा नहीं देते।"
+    },
+    {
+      "id": "u3_standard_outputs_q5",
+      "question": "0-20 mA signal की तुलना में 4-20 mA signal का सबसे बड़ा advantage क्या है?",
+      "options": [
+        "यह ज्यादा power consume करता है",
+        "इसमें fault detection (open circuit sensing) संभव है क्योंकि zero पर भी current रहती है",
+        "यह केवल pneumatic systems में काम करता है",
+        "इसमें temperature compensation की जरूरत नहीं पड़ती"
+      ],
+      "correctIndex": 1,
+      "explanation": "4-20 mA में live-zero के कारण wire break या sensor failure की स्थिति में current 0 mA हो जाती है जिसे तुरंत fault के रूप में पहचाना जा सकता है, जबकि 0-20 mA में zero signal और fault में फर्क करना मुश्किल होता है। बाकी options relevant advantage नहीं हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q6",
+      "question": "एक pressure transmitter 0 से 100 PSI range को measure करता है और उसका output 3-15 PSI pneumatic signal है। 50 PSI input पर output signal क्या होगा?",
+      "options": [
+        "6 PSI",
+        "9 PSI",
+        "12 PSI",
+        "15 PSI"
+      ],
+      "correctIndex": 1,
+      "explanation": "Span calculation: output = 3 + (50/100) x (15-3) = 3 + 6 = 9 PSI। यह linear proportional relationship है। अन्य options गलत calculation या galat proportion से आते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q7",
+      "question": "4-20 mA current loop signal के लिए एक transmitter 0-500°C temperature range को measure करता है। 250°C पर output current कितनी होगी?",
+      "options": [
+        "8 mA",
+        "10 mA",
+        "12 mA",
+        "16 mA"
+      ],
+      "correctIndex": 2,
+      "explanation": "Calculation: output = 4 + (250/500) x (20-4) = 4 + 8 = 12 mA। यह midpoint temperature है इसलिए current भी 4 और 20 mA के बीच का midpoint (12 mA) आता है। बाकी options गलत ratio से निकलते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q8",
+      "question": "1-5 V standard signal, 4-20 mA current signal से किस प्रकार related है?",
+      "options": [
+        "दोनों बिल्कुल independent हैं, कोई संबंध नहीं",
+        "1-5 V, 4-20 mA current को एक 250 ohm precision resistor से पास कराकर प्राप्त किया जाता है",
+        "1-5 V हमेशा 0-20 mA से बनता है",
+        "1-5 V केवल pneumatic signal से बनता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "V = I x R के अनुसार, 4mA x 250Ω = 1V और 20mA x 250Ω = 5V होता है, इसलिए 4-20 mA current को 250 ohm resistor से पास कराकर 1-5 V signal प्राप्त होता है, जो PLC/DCS के analog input card में इस्तेमाल होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q9",
+      "question": "Pneumatic control system में 3-15 PSI signal क्यों चुना गया, 0-15 PSI क्यों नहीं?",
+      "options": [
+        "0-15 PSI ज्यादा accurate होता है",
+        "3 PSI का live-zero, tubing leakage और transmitter fault को zero signal से अलग पहचानने में मदद करता है",
+        "3-15 PSI सस्ता होता है",
+        "0-15 PSI में temperature effect ज्यादा होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "3 PSI का live-zero base value ensure करता है कि यदि air supply/tubing में leakage हो और pressure zero हो जाए, तो उसे genuine zero measurement से अलग पहचाना जा सके। बाकी options तकनीकी रूप से सही कारण नहीं हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q10",
+      "question": "एक flow transmitter 4-20 mA output देता है। यदि measured current 4 mA से कम (जैसे 0 mA) पाई जाए, तो सबसे संभावित कारण क्या है?",
+      "options": [
+        "Flow अपने maximum value पर है",
+        "Loop wiring में break/open circuit या power supply fault है",
+        "यह normal operating condition है",
+        "Transmitter सही से calibrate है"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूंकि live-zero के कारण minimum current हमेशा 4 mA होनी चाहिए, 0 mA reading wiring break, loose connection, या power failure जैसी fault condition को indicate करती है। बाकी options normal operation मानकर गलत निष्कर्ष निकालते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q11",
+      "question": "Current loop signal transmission (4-20 mA), voltage signal transmission (1-5 V) की तुलना में long distance पर ज्यादा reliable क्यों है?",
+      "options": [
+        "Current signal, wire resistance और voltage drop से लगभग अप्रभावित रहता है",
+        "Current signal में noise ज्यादा आता है",
+        "Voltage signal हमेशा तेज़ होता है",
+        "Current loop में transmitter की जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Current signal में loop के हर बिंदु पर current एक समान रहती है, इसलिए cable resistance के कारण होने वाला voltage drop measurement को प्रभावित नहीं करता, जबकि voltage signal लंबी distance में wire resistance के कारण degrade हो सकता है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q12",
+      "question": "Two-wire 4-20 mA transmitter में transmitter की power supply किस प्रकार दी जाती है?",
+      "options": [
+        "अलग से dedicated AC supply line से",
+        "उसी signal loop wire के through DC power दी जाती है (loop-powered)",
+        "Battery के अलावा कोई और स्रोत नहीं होता",
+        "Transmitter को power की जरूरत नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Two-wire loop-powered transmitter में उसी दो-wire loop से DC excitation voltage दी जाती है जिस पर 4-20 mA signal current भी carry होती है, जिससे wiring सरल होती है। बाकी options गलत हैं क्योंकि अलग power line की जरूरत नहीं होती।"
+    },
+    {
+      "id": "u3_standard_outputs_q13",
+      "question": "एक level transmitter का output 4-20 mA है और उसे 0-10 meter tank level के लिए calibrate किया गया है। 12 mA output किस level को represent करता है?",
+      "options": [
+        "2.5 meter",
+        "5 meter",
+        "7.5 meter",
+        "10 meter"
+      ],
+      "correctIndex": 1,
+      "explanation": "Level = ((12-4)/(20-4)) x 10 = (8/16) x 10 = 5 meter। यह मध्य current value है इसलिए level भी range का midpoint (5m) आता है। बाकी options गलत calculation देते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q14",
+      "question": "Field instrument से control room तक signal भेजने के लिए pneumatic (3-15 PSI) की तुलना में electronic (4-20 mA) signal का प्रमुख फायदा क्या है?",
+      "options": [
+        "Electronic signal में air compressor की जरूरत नहीं और यह faster response व लंबी distance पर बेहतर काम करता है",
+        "Pneumatic signal हमेशा तेज़ होता है",
+        "Electronic signal में tubing leakage का खतरा ज्यादा होता है",
+        "Pneumatic signal में wiring आसान होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Electronic 4-20 mA signal को compressed air tubing की जरूरत नहीं होती, इसकी response speed ज्यादा होती है और यह DCS/PLC के साथ आसानी से interface होता है, जबकि pneumatic signal में air supply, tubing और slower response जैसी limitations होती हैं। बाकी options गलत तुलना करते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q15",
+      "question": "HART protocol 4-20 mA current loop signal के साथ किस प्रकार काम करता है?",
+      "options": [
+        "यह current signal को पूरी तरह replace कर देता है",
+        "यह उसी 4-20 mA analog signal पर digital data को superimpose (overlay) करता है",
+        "HART केवल pneumatic signal के साथ काम करता है",
+        "HART का 4-20 mA signal से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "HART (Highway Addressable Remote Transducer) protocol, analog 4-20 mA signal के ऊपर एक low-level digital FSK signal superimpose करता है जिससे configuration व diagnostic data भी उसी दो wire पर भेजी जा सकती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q16",
+      "question": "Pneumatic transmitter में air supply pressure सामान्यतः कितनी रखी जाती है?",
+      "options": [
+        "3-15 PSI",
+        "20 PSI (supply pressure, signal range से अलग)",
+        "0 PSI",
+        "100 PSI"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pneumatic transmitters को चलाने के लिए supply air pressure (आमतौर पर 20 PSI) दी जाती है, जो output signal range (3-15 PSI) से अलग होती है ताकि transmitter सही range में modulate कर सके। बाकी options सही supply value नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_standard_outputs_q17",
+      "question": "एक control valve actuator 3-15 PSI signal से operate होता है। यदि control signal 9 PSI हो, तो valve किस स्थिति में होगा (assuming linear action)?",
+      "options": [
+        "पूरी तरह बंद (0%)",
+        "लगभग 50% खुला",
+        "पूरी तरह खुला (100%)",
+        "यह calculate नहीं किया जा सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "9 PSI, 3-15 PSI range का midpoint है: ((9-3)/(15-3)) x 100% = 50%, इसलिए valve लगभग आधा खुला रहेगा। बाकी options गलत percentage दर्शाते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q18",
+      "question": "4-20 mA loop में यदि transmitter की current 20 mA से अधिक (जैसे over-range में 22 mA) पहुंच जाए, तो इसका क्या अर्थ है?",
+      "options": [
+        "यह normal operating range है",
+        "Measured variable, calibrated full-scale से भी अधिक हो गया है (over-range condition)",
+        "Transmitter fail हो गया है और zero दिखा रहा है",
+        "इसका कोई अर्थ नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "कुछ transmitters over-range की स्थिति दिखाने के लिए 20 mA से थोड़ा अधिक current (जैसे 20.5-22 mA) output कर सकते हैं, जो बताता है कि process variable calibrated maximum range को पार कर गया है। बाकी options गलत व्याख्या हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q19",
+      "question": "Smart transmitters में 4-20 mA analog output के साथ digital communication (जैसे HART) रखने का मुख्य लाभ क्या है?",
+      "options": [
+        "यह current signal की accuracy घटाता है",
+        "Remote configuration, diagnostics और multiple parameters की जानकारी एक ही wire pair से मिल जाती है",
+        "यह केवल cost बढ़ाता है, कोई फायदा नहीं",
+        "इससे transmitter की range घट जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "HART जैसे digital overlay protocol से एक ही signal wire pair पर primary variable (analog) के साथ-साथ diagnostics, configuration और secondary variables भी भेजी जा सकती हैं, जिससे maintenance और troubleshooting आसान होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q20",
+      "question": "एक transmitter की calibrated range 0-200°C है और यह 1-5 V output देता है। यदि output 3 V मापा जाए, तो temperature कितना है?",
+      "options": [
+        "50°C",
+        "100°C",
+        "150°C",
+        "200°C"
+      ],
+      "correctIndex": 1,
+      "explanation": "Temperature = ((3-1)/(5-1)) x 200 = (2/4) x 200 = 100°C। यह range का midpoint value है। बाकी options गलत proportion से आते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q21",
+      "question": "Standard signal ranges (जैसे 4-20 mA, 3-15 PSI) का उपयोग करने का सबसे बड़ा उद्देश्य क्या है?",
+      "options": [
+        "हर manufacturer अपनी अलग range इस्तेमाल कर सके",
+        "विभिन्न manufacturers के instruments के बीच interchangeability और compatibility सुनिश्चित करना",
+        "Cost को अनावश्यक रूप से बढ़ाना",
+        "केवल एक ही company के equipment काम कर सकें"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard signal ranges इसलिए बनाई गई हैं ताकि विभिन्न manufacturers के transmitters, controllers और indicators आपस में बिना किसी विशेष modification के compatible रहें (interoperability)। बाकी options गलत उद्देश्य बताते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q22",
+      "question": "4-20 mA signal में zero-based measurement (0 mA = 0% signal) की जगह live-zero (4 mA = 0%) क्यों इस्तेमाल होता है?",
+      "options": [
+        "क्योंकि 0 mA को fault/wire-break से अलग नहीं पहचाना जा सकता",
+        "क्योंकि 0 mA ज्यादा accurate होता है",
+        "क्योंकि live-zero से power की बचत नहीं होती",
+        "इसका कोई तकनीकी कारण नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "अगर zero measurement को 0 mA से represent किया जाए, तो genuine zero reading और wire break/power failure में अंतर करना असंभव हो जाएगा; इसलिए live-zero (4 mA) का प्रयोग होता है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q23",
+      "question": "एक 4-20 mA current loop में external load resistance (receiver resistance) की सीमा क्यों तय की जाती है?",
+      "options": [
+        "क्योंकि load resistance से power supply voltage और transmitter की compliance voltage प्रभावित होती है",
+        "क्योंकि इससे current signal की range बदल जाती है",
+        "Load resistance का कोई प्रभाव नहीं पड़ता",
+        "क्योंकि load resistance signal को pneumatic बना देती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Loop supply voltage, transmitter की internal voltage drop और load resistance के across voltage drop (I x R) के योग के बराबर होनी चाहिए; अधिक load resistance होने पर transmitter को पर्याप्त compliance voltage नहीं मिल पाती और signal सही नहीं रहता। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q24",
+      "question": "Pneumatic (3-15 PSI) और electronic (4-20 mA) signal के बीच conversion करने वाले device को क्या कहते हैं?",
+      "options": [
+        "Rectifier",
+        "I/P Converter (Current to Pneumatic) या P/I Converter",
+        "Oscillator",
+        "Regulator"
+      ],
+      "correctIndex": 1,
+      "explanation": "I/P converter, 4-20 mA electronic signal को 3-15 PSI pneumatic signal में बदलता है (और P/I converter उल्टा काम करता है), जो electronic controllers को pneumatic actuators से interface करने के लिए उपयोग होता है। बाकी options असंबंधित devices हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q25",
+      "question": "एक control system में 1-5 V signal, 4-20 mA की जगह क्यों इस्तेमाल किया जाता है जब receiver PLC का analog input card हो?",
+      "options": [
+        "PLC के अंदर voltage-sensing input card होता है जो resistor के across voltage को read करता है",
+        "1-5 V हमेशा ज्यादा accurate होता है",
+        "Current signal PLC के लिए compatible नहीं होता",
+        "1-5 V pneumatic signal है"
+      ],
+      "correctIndex": 0,
+      "explanation": "कई PLC/DCS analog input modules internally current को precision resistor से गुजार कर उसे voltage (1-5V) में बदलकर read करते हैं, इसलिए यह conversion आंतरिक रूप से होता है। बाकी options गलत तकनीकी आधार देते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q26",
+      "question": "किसी transmitter का zero elevation या zero suppression किससे संबंधित है?",
+      "options": [
+        "Standard signal range (जैसे 4-20 mA) के start point को actual process zero के relative shift करने से",
+        "Signal की frequency से",
+        "Transmitter के weight से",
+        "Pneumatic tubing के diameter से"
+      ],
+      "correctIndex": 0,
+      "explanation": "Zero elevation/suppression एक calibration technique है जिसमें transmitter की 4 mA (या 3 PSI) output को actual process zero से ऊपर या नीचे shift किया जाता है (जैसे level measurement में dry leg/wet leg compensation के लिए)। बाकी options असंबंधित हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q27",
+      "question": "एक transmitter 4-20 mA output देता है जिसकी calibrated range 20-120°C है। Process temperature 70°C होने पर output current क्या होगी?",
+      "options": [
+        "8 mA",
+        "10 mA",
+        "12 mA",
+        "14 mA"
+      ],
+      "correctIndex": 2,
+      "explanation": "Output = 4 + ((70-20)/(120-20)) x 16 = 4 + (50/100) x 16 = 4 + 8 = 12 mA। यह range का midpoint temperature होने के कारण current भी midpoint (12 mA) आती है। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q28",
+      "question": "Digital communication protocols (जैसे Profibus, Foundation Fieldbus) के आने के बाद भी 4-20 mA analog standard अभी भी क्यों प्रचलित है?",
+      "options": [
+        "क्योंकि यह पुराने plants में पहले से installed है और simple, reliable एवं cost-effective है",
+        "क्योंकि digital signal काम नहीं करता",
+        "क्योंकि 4-20 mA सबसे तेज़ communication देता है",
+        "क्योंकि नए protocols legal नहीं हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "4-20 mA सरल, robust, cost-effective है और legacy (पुराने) plants में व्यापक रूप से installed होने के कारण अभी भी इस्तेमाल होता है, हालांकि नए plants में fieldbus जैसे digital protocol भी अपनाए जा रहे हैं। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_standard_outputs_q29",
+      "question": "एक instrumentation engineer को नया pressure transmitter select करना है जो existing 3-15 PSI pneumatic control system के साथ काम करे। उसे कौन-सा transmitter चुनना चाहिए?",
+      "options": [
+        "4-20 mA output वाला transmitter बिना किसी converter के",
+        "3-15 PSI pneumatic output वाला transmitter, या I/P converter के साथ 4-20 mA transmitter",
+        "0-10 V output वाला transmitter",
+        "1-5 V output वाला transmitter बिना converter के"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि control system pneumatic है तो transmitter का output भी 3-15 PSI होना चाहिए, या यदि electronic transmitter इस्तेमाल करना है तो I/P converter लगाकर उसे pneumatic actuator के अनुकूल बनाना होगा। बाकी options बिना conversion के incompatible रहेंगे।"
+    },
+    {
+      "id": "u3_standard_outputs_q30",
+      "question": "Standard output signals (3-15 PSI, 4-20 mA, 1-5 V) के संदर्भ में 'span' शब्द का क्या अर्थ है?",
+      "options": [
+        "Signal की frequency",
+        "Maximum और minimum output values के बीच का अंतर (जैसे 20-4=16 mA)",
+        "Transmitter की physical length",
+        "Signal transmission की speed"
+      ],
+      "correctIndex": 1,
+      "explanation": "Span, upper range value और lower range value के बीच का अंतर होता है (जैसे 4-20 mA के लिए span = 16 mA, और 3-15 PSI के लिए span = 12 PSI), जो calibration में महत्वपूर्ण parameter है। बाकी options span की सही परिभाषा नहीं देते।"
+    }
+  ]
+}

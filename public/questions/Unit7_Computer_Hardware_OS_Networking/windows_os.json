@@ -1,0 +1,368 @@
+{
+  "unit": "unit7",
+  "unitName": "Computer Hardware, OS, MS Office, Networking",
+  "topic": "windows_os",
+  "topicName": "Windows Operating System, File Management & Control Panel",
+  "questions": [
+    {
+      "id": "u7_windows_os_q1",
+      "question": "Windows जैसे Operating System का सबसे basic काम क्या होता है?",
+      "options": [
+        "केवल Internet browsing की सुविधा देना",
+        "Computer hardware और user applications के बीच interface प्रदान करना तथा resources को manage करना",
+        "केवल printer को control करना",
+        "सिर्फ documents को print करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Operating System (OS) hardware resources जैसे CPU, memory, storage को manage करता है और user को applications चलाने के लिए एक interface देता है, यही इसका core काम है। Option A गलत है क्योंकि internet browsing एक application (browser) का काम है, OS का नहीं। Option C गलत है क्योंकि printer control device driver और software द्वारा होता है, यह OS का मुख्य काम नहीं। Option D गलत है क्योंकि printing एक specific task है, OS की core responsibility नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q2",
+      "question": "Computer को on करने पर जो hardware components (RAM, keyboard, आदि) की जांच करने वाला process चलता है, उसे क्या कहते हैं?",
+      "options": [
+        "POST (Power-On Self-Test)",
+        "Formatting",
+        "Defragmentation",
+        "केवल Shutdown प्रक्रिया"
+      ],
+      "correctIndex": 0,
+      "explanation": "POST वह process है जो BIOS/UEFI द्वारा computer start होते समय hardware components की जांच करता है कि वे सही तरीके से काम कर रहे हैं या नहीं। Option B, Formatting drive को साफ करके file system तैयार करने की प्रक्रिया है। Option C, Defragmentation disk पर fragmented data को व्यवस्थित करने का process है। Option D गलत है क्योंकि यह startup की जांच नहीं, बल्कि shutdown का वर्णन गलत तरीके से करता है।"
+    },
+    {
+      "id": "u7_windows_os_q3",
+      "question": "जब computer पहले से चालू (running) हो और उसे बिना power पूरी तरह बंद किए Restart किया जाए, तो इस प्रक्रिया को क्या कहा जाता है?",
+      "options": [
+        "Cold Booting",
+        "Formatting",
+        "Warm Booting",
+        "Defragmenting"
+      ],
+      "correctIndex": 2,
+      "explanation": "Warm Booting उस स्थिति को कहते हैं जब already चालू computer को restart किया जाता है, बिना power supply पूरी तरह बंद किए। Option A, Cold Booting तब होती है जब computer को शुरू से power on किया जाए (पूरी तरह बंद अवस्था से)। Option B, Formatting का बूटिंग से कोई सीधा संबंध नहीं, यह disk तैयार करने का process है। Option D, Defragmentation disk performance सुधारने की प्रक्रिया है, restart से अलग है।"
+    },
+    {
+      "id": "u7_windows_os_q4",
+      "question": "Windows Desktop पर बने icons मुख्य रूप से किसके लिए बनाए जाते हैं?",
+      "options": [
+        "केवल Recycle Bin दिखाने के लिए",
+        "सिर्फ system files को छुपाने के लिए",
+        "केवल Control Panel खोलने के लिए",
+        "Programs, files और folders तक जल्दी पहुँचने के लिए visual representation प्रदान करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Desktop icons programs, files, folders या shortcuts को represent करते हैं ताकि user उन्हें double-click करके जल्दी open कर सके। Option A गलत है क्योंकि Recycle Bin केवल एक विशेष icon है, सभी icons का उद्देश्य यह नहीं। Option B गलत है क्योंकि icons files छुपाने के लिए नहीं बल्कि access करने के लिए होते हैं। Option C गलत है क्योंकि Control Panel खोलना केवल एक विशेष icon का काम है, general purpose नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q5",
+      "question": "Windows में Taskbar पर सामान्यतः क्या-क्या दिखाई देता है?",
+      "options": [
+        "Start button, running programs की list, system tray (clock, notifications) आदि",
+        "केवल Desktop wallpaper",
+        "सिर्फ Recycle Bin का content",
+        "केवल installed fonts की list"
+      ],
+      "correctIndex": 0,
+      "explanation": "Taskbar में Start button, currently open/running applications, quick launch icons और system tray (जैसे clock, volume, network icons) होते हैं। Option B गलत है क्योंकि wallpaper Desktop background से संबंधित है, Taskbar से नहीं। Option C गलत है क्योंकि Recycle Bin का content Recycle Bin folder खोलकर देखा जाता है, Taskbar पर नहीं। Option D गलत है क्योंकि fonts की list Control Panel/Fonts folder में होती है।"
+    },
+    {
+      "id": "u7_windows_os_q6",
+      "question": "Windows का Start Menu मुख्यतः किस काम आता है?",
+      "options": [
+        "केवल internet connection सेट करने के लिए",
+        "Installed programs, settings और search feature तक पहुँचने के लिए एक केंद्रीय (central) मेनू के रूप में",
+        "केवल files को permanently delete करने के लिए",
+        "सिर्फ disk को format करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Start Menu वह केंद्रीय स्थान है जहाँ से user installed programs, system settings, power options और search feature access कर सकता है। Option A गलत है क्योंकि internet connection Network settings के through set होता है, सिर्फ Start Menu से नहीं। Option C गलत है क्योंकि permanent deletion Recycle Bin या Shift+Delete से होता है। Option D गलत है क्योंकि disk formatting Disk Management tool से किया जाता है।"
+    },
+    {
+      "id": "u7_windows_os_q7",
+      "question": "एक file के नाम के अंत में लगा हुआ '.docx' या '.jpg' जैसा हिस्सा क्या दर्शाता है?",
+      "options": [
+        "File का size",
+        "File किस date को बनाई गई",
+        "File extension, जो file के type और उसे खोलने वाले program को पहचानने में मदद करता है",
+        "File का owner कौन है"
+      ],
+      "correctIndex": 2,
+      "explanation": "File extension (जैसे .docx, .jpg, .exe) file के type को दर्शाता है और OS को बताता है कि यह file किस program से associated है और कैसे खोली जाए। Option A गलत है क्योंकि size properties में अलग से दिखता है, extension से नहीं। Option B गलत है क्योंकि creation date file properties में अलग field होती है। Option D गलत है क्योंकि owner information भी properties/security tab में होती है, extension में नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q8",
+      "question": "Folder और File में मुख्य अंतर क्या है?",
+      "options": [
+        "Folder हमेशा file से छोटा होता है",
+        "File को कभी rename नहीं किया जा सकता जबकि folder को किया जा सकता है",
+        "Folder केवल images रखता है जबकि file अन्य सभी data रखती है",
+        "File data/information की एक इकाई है जबकि folder, files और अन्य folders को organize करके रखने वाला container होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "File actual data (text, image, program) की एक unit होती है, जबकि folder (directory) एक container है जो files और अन्य sub-folders को व्यवस्थित रखने के लिए उपयोग होता है। Option A गलत है, size का इससे कोई निश्चित संबंध नहीं। Option B गलत है क्योंकि files और folders दोनों को rename किया जा सकता है। Option C गलत है क्योंकि folder किसी भी प्रकार की files रख सकता है, केवल images नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q9",
+      "question": "File Explorer में बाईं ओर दिखने वाला वह हिस्सा जिसमें Quick access, This PC, Drives और folders की tree-structure दिखती है, उसे क्या कहते हैं?",
+      "options": [
+        "Navigation pane",
+        "Address bar",
+        "Status bar",
+        "Ribbon"
+      ],
+      "correctIndex": 0,
+      "explanation": "Navigation pane File Explorer के बाईं ओर होता है और इसमें Quick access, This PC, drives तथा folder structure tree के रूप में दिखती है, जिससे quick navigation संभव होती है। Option B, Address bar ऊपर होती है जो current path दिखाती है। Option C, Status bar सबसे नीचे होती है जो item count जैसी जानकारी दिखाती है। Option D, Ribbon ऊपर की तरफ commands/tools का toolbar होता है।"
+    },
+    {
+      "id": "u7_windows_os_q10",
+      "question": "यदि आप किसी file को एक folder से दूसरे folder में 'Move' करते हैं (जैसे Cut-Paste द्वारा), तो क्या होता है?",
+      "options": [
+        "Original स्थान पर file की एक copy भी बनी रहती है",
+        "File original location से हट जाती है और केवल नए location पर मौजूद रहती है",
+        "File स्वतः permanently delete हो जाती है",
+        "File का extension बदल जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Move (Cut-Paste, Ctrl+X फिर Ctrl+V) करने पर file अपने original location से हटकर नए location में चली जाती है, कहीं भी duplicate नहीं रहता। Option A गलत है क्योंकि duplicate रखना Copy (Ctrl+C) का काम है, Move का नहीं। Option C गलत है क्योंकि Move करने से file delete नहीं होती, बस स्थान बदलता है। Option D गलत है क्योंकि location बदलने से file का extension नहीं बदलता।"
+    },
+    {
+      "id": "u7_windows_os_q11",
+      "question": "File Explorer में किसी selected file या folder को keyboard से जल्दी rename करने के लिए कौन-सी shortcut key इस्तेमाल होती है?",
+      "options": [
+        "F1",
+        "F5",
+        "F2",
+        "F10"
+      ],
+      "correctIndex": 2,
+      "explanation": "F2 key selected file/folder को directly rename mode में डाल देती है, जिससे user तुरंत नया नाम type कर सकता है। Option A, F1 आमतौर पर Help खोलने के लिए इस्तेमाल होती है। Option B, F5 current window/screen को refresh करने के लिए है। Option D, F10 menu bar activate करने के लिए इस्तेमाल होती है, rename के लिए नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q12",
+      "question": "यदि किसी file को Recycle Bin में भेजे बिना सीधे permanently delete करना हो, तो कौन-सा shortcut इस्तेमाल किया जाता है?",
+      "options": [
+        "केवल Delete key",
+        "Ctrl+D",
+        "Ctrl+Z",
+        "Shift+Delete"
+      ],
+      "correctIndex": 3,
+      "explanation": "Shift+Delete दबाने पर file सीधे permanently delete हो जाती है और वह Recycle Bin में नहीं जाती। Option A, सिर्फ Delete key दबाने पर file पहले Recycle Bin में जाती है, permanent delete नहीं होती। Option B, Ctrl+D कुछ applications में duplicate/bookmark के लिए इस्तेमाल होता है, permanent delete के लिए नहीं। Option C, Ctrl+Z 'Undo' के लिए इस्तेमाल होता है।"
+    },
+    {
+      "id": "u7_windows_os_q13",
+      "question": "File Explorer के search box में यदि '*.docx' टाइप किया जाए, तो क्या परिणाम मिलेगा?",
+      "options": [
+        "उस folder/drive में मौजूद सभी .docx extension वाली files की list",
+        "केवल एक विशेष file जिसका नाम 'docx' है",
+        "सभी image files की list",
+        "सभी hidden folders की list"
+      ],
+      "correctIndex": 0,
+      "explanation": "'*' एक wildcard character है जो किसी भी नाम को represent करता है, इसलिए '*.docx' search करने पर वर्तमान location में सभी .docx extension वाली files मिल जाएँगी। Option B गलत है क्योंकि '*' किसी specific single file नाम को नहीं दर्शाता, बल्कि सभी matching files को। Option C गलत है क्योंकि image files के लिए .jpg, .png जैसे extensions की जरूरत होगी। Option D गलत है क्योंकि hidden folders दिखाने के लिए अलग View setting (Show hidden items) चाहिए।"
+    },
+    {
+      "id": "u7_windows_os_q14",
+      "question": "Windows के Control Panel में किसी installed software को computer से uninstall करने के लिए कौन-सा option इस्तेमाल होता है?",
+      "options": [
+        "Ease of Access",
+        "Programs and Features (Uninstall a program)",
+        "Region and Language",
+        "Windows Defender Firewall"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Programs and Features' (जिसे पुराने Windows में Add/Remove Programs कहा जाता था) से installed software को list में देखकर uninstall किया जाता है। Option A, Ease of Access accessibility settings (जैसे magnifier, narrator) के लिए है। Option C, Region and Language date/time format और keyboard language settings के लिए है। Option D, Firewall network security settings manage करने के लिए है, software uninstall के लिए नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q15",
+      "question": "Display Settings में 'Screen Resolution' बदलने से मुख्यतः क्या प्रभावित होता है?",
+      "options": [
+        "Computer की processing speed",
+        "Hard disk की storage capacity",
+        "Screen पर दिखने वाले items की clarity और size (pixels की संख्या)",
+        "Internet की connection speed"
+      ],
+      "correctIndex": 2,
+      "explanation": "Screen Resolution यह तय करता है कि screen पर कितने pixels horizontally और vertically दिखेंगे, जिससे images/text की sharpness और items का size प्रभावित होता है। Option A गलत है क्योंकि processing speed CPU से संबंधित है, resolution से नहीं। Option B गलत है क्योंकि storage capacity hard disk की physical property है। Option D गलत है क्योंकि internet speed network/ISP पर निर्भर करती है, display settings पर नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q16",
+      "question": "Windows में 'Administrator' account और 'Standard' user account में मुख्य अंतर क्या है?",
+      "options": [
+        "Standard account में unlimited storage मिलता है, Administrator में नहीं",
+        "दोनों account types में कोई अंतर नहीं होता",
+        "Administrator account में internet access नहीं मिलता",
+        "Administrator account को software install/uninstall करने और system settings बदलने की पूरी permission होती है, जबकि Standard account में ये अधिकार सीमित होते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Administrator account को system-level changes जैसे software install करना, other user accounts manage करना आदि की पूरी permission होती है, जबकि Standard account में ये permissions सीमित रहती हैं ताकि गलत बदलाव से बचा जा सके। Option A गलत है क्योंकि storage account type पर निर्भर नहीं करता। Option B गलत है क्योंकि permissions में स्पष्ट अंतर होता है। Option C गलत है क्योंकि internet access किसी भी account type से मिल सकता है, यह account permission से संबंधित नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q17",
+      "question": "गलती से delete की गई file, जो अभी भी Recycle Bin में मौजूद है, उसे वापस उसके original location पर लाने के लिए क्या किया जाता है?",
+      "options": [
+        "Recycle Bin खोलकर file पर right-click करके 'Restore' चुनना",
+        "File को दोबारा टाइप करके बनाना",
+        "Disk को format करना",
+        "Task Manager से process end करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Recycle Bin में मौजूद delete की गई file को restore करने के लिए उसे select करके right-click menu से 'Restore' option चुना जाता है, जिससे वह अपने original location पर वापस आ जाती है। Option B अव्यवहारिक है क्योंकि original content दोबारा टाइप करना data recovery नहीं है। Option C, Formatting तो पूरी drive का data मिटा देगी, यह restore करने का तरीका नहीं। Option D, Task Manager processes/programs manage करने के लिए है, files restore करने के लिए नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q18",
+      "question": "Recycle Bin को 'Empty' करने पर क्या होता है?",
+      "options": [
+        "सभी files temporarily hidden हो जाती हैं",
+        "Recycle Bin में मौजूद सभी files हार्ड डिस्क से permanently delete हो जाती हैं (सामान्य तरीके से recover नहीं की जा सकतीं)",
+        "Computer स्वतः restart हो जाता है",
+        "Desktop के सभी icons delete हो जाते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Recycle Bin 'Empty' करने पर उसमें मौजूद सभी files स्थायी रूप से delete हो जाती हैं और normal तरीकों से वापस नहीं लाई जा सकतीं। Option A गलत है क्योंकि files hidden नहीं होतीं, वे permanently हटती हैं। Option C गलत है क्योंकि यह restart triggers नहीं करता। Option D गलत है क्योंकि Desktop icons अलग होते हैं, Recycle Bin empty करने से वे प्रभावित नहीं होते।"
+    },
+    {
+      "id": "u7_windows_os_q19",
+      "question": "Windows Desktop पर किसी icon के निचले-बाएँ कोने में बना छोटा तीर (arrow) का निशान क्या दर्शाता है?",
+      "options": [
+        "यह file corrupt है",
+        "यह file Recycle Bin में जा चुकी है",
+        "यह icon एक shortcut है, actual file/program नहीं",
+        "यह file read-only है"
+      ],
+      "correctIndex": 2,
+      "explanation": "छोटा arrow निशान यह दर्शाता है कि वह icon एक shortcut है यानी असली file/program तक पहुँचने का एक लिंक मात्र है, actual file नहीं। Option A गलत है, corrupt file का कोई ऐसा standard visual indicator arrow से नहीं दिखाया जाता। Option B गलत है क्योंकि Recycle Bin में गई file Desktop पर icon के रूप में मौजूद ही नहीं रहती। Option D गलत है क्योंकि read-only attribute अलग तरीके से (properties में) दिखता है, arrow से नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q20",
+      "question": "किसी storage drive को 'Format' करने का मुख्य परिणाम क्या होता है?",
+      "options": [
+        "Drive की physical size बढ़ जाती है",
+        "केवल corrupt files ठीक हो जाती हैं, बाकी data सुरक्षित रहता है",
+        "Computer की RAM बढ़ जाती है",
+        "Drive का सारा data मिट जाता है और उस पर नया file system तैयार हो जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Format करने पर drive का existing data erase हो जाता है और एक नया file system (जैसे NTFS, FAT32) उस पर set हो जाता है, जिससे drive उपयोग के लिए तैयार होती है। Option A गलत है क्योंकि formatting से drive की physical storage capacity नहीं बदलती। Option B गलत है क्योंकि formatting सिर्फ corrupt files ठीक नहीं करती, यह पूरा data मिटा देती है। Option C गलत है क्योंकि RAM एक अलग hardware component है, disk formatting से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q21",
+      "question": "Disk Defragmentation का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Fragmented (बिखरे हुए) files के हिस्सों को disk पर एक साथ व्यवस्थित करके access speed बढ़ाना",
+        "Drive में नए partitions बनाना",
+        "Computer के viruses को हटाना",
+        "Internet की speed को बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "समय के साथ files disk पर अलग-अलग (fragmented) टुकड़ों में स्टोर हो जाती हैं; Defragmentation इन टुकड़ों को व्यवस्थित रूप से एक साथ रखकर file access तथा overall disk performance को बेहतर बनाता है। Option B गलत है क्योंकि partitions बनाना Disk Management का अलग काम है। Option C गलत है क्योंकि virus हटाना antivirus software का काम है, defragmentation का नहीं। Option D गलत है क्योंकि इसका internet speed से कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u7_windows_os_q22",
+      "question": "यदि कोई program 'Not Responding' हो जाए और बंद न हो रहा हो, तो उसे जबरन बंद करने के लिए कौन-सा tool सबसे उपयुक्त है?",
+      "options": [
+        "Disk Cleanup",
+        "Task Manager (End Task)",
+        "Recycle Bin",
+        "Control Panel के Region settings"
+      ],
+      "correctIndex": 1,
+      "explanation": "Task Manager खोलकर (Ctrl+Shift+Esc) उस hanging program को select करके 'End Task' दबाने से उसे जबरन बंद किया जा सकता है। Option A, Disk Cleanup unnecessary temporary files हटाने का tool है, hanging program बंद करने का नहीं। Option C, Recycle Bin deleted files के लिए है। Option D, Region settings भाषा और date/time format से संबंधित है, इसका programs बंद करने से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q23",
+      "question": "Windows Task Manager में 'Performance' tab मुख्यतः क्या दिखाता है?",
+      "options": [
+        "Installed printers की list",
+        "Recycle Bin में मौजूद files",
+        "CPU, Memory (RAM), Disk और Network के real-time usage graphs",
+        "User accounts के passwords"
+      ],
+      "correctIndex": 2,
+      "explanation": "Task Manager का Performance tab CPU usage, memory (RAM) usage, disk activity और network usage को real-time graphs के रूप में दिखाता है, जिससे system की performance समझी जा सकती है। Option A गलत है क्योंकि printers की list Devices and Printers में मिलती है। Option B गलत है क्योंकि Recycle Bin अलग window है। Option D गलत है क्योंकि passwords किसी भी हालत में Task Manager में नहीं दिखाए जाते, यह security के खिलाफ होगा।"
+    },
+    {
+      "id": "u7_windows_os_q24",
+      "question": "Windows का 'Safe Mode' मुख्यतः किस उद्देश्य के लिए उपयोग किया जाता है?",
+      "options": [
+        "Normal उपयोग के लिए सभी features के साथ तेज़ performance पाने के लिए",
+        "Internet browsing को अधिक सुरक्षित बनाने के लिए",
+        "Files को permanently delete करने के लिए",
+        "केवल आवश्यक drivers और services के साथ computer चलाकर problems को diagnose/troubleshoot करने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Safe Mode में Windows केवल minimum आवश्यक drivers और services के साथ start होता है, जिससे किसी software/driver से संबंधित समस्या को diagnose करना और ठीक करना आसान हो जाता है। Option A गलत है क्योंकि Safe Mode में बहुत से normal features और drivers disable रहते हैं, यह रोज़मर्रा के उपयोग के लिए नहीं है। Option B गलत है क्योंकि यह browsing security से संबंधित नहीं है। Option C गलत है क्योंकि Safe Mode का data deletion से कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u7_windows_os_q25",
+      "question": "किसी file की Properties में 'Hidden' attribute को enable करने पर क्या होता है?",
+      "options": [
+        "File normal folder view में दिखाई नहीं देती, जब तक 'Show hidden items' setting on न हो",
+        "File permanently delete हो जाती है",
+        "File का extension बदल जाता है",
+        "File automatically compress हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Hidden' attribute enable करने पर file normal View में दिखना बंद हो जाती है, इसे देखने के लिए File Explorer में 'Show hidden items' option enable करना पड़ता है। Option B गलत है क्योंकि hidden करने से file delete नहीं होती, वह disk पर मौजूद रहती है। Option C गलत है क्योंकि extension attribute से independent होता है। Option D गलत है क्योंकि hidden attribute और compression दो अलग-अलग properties हैं।"
+    },
+    {
+      "id": "u7_windows_os_q26",
+      "question": "Windows का 'File History' feature मुख्यतः किस काम आता है?",
+      "options": [
+        "Internet browsing history save करने के लिए",
+        "User की files (जैसे Documents, Pictures) का समय-समय पर automatic backup किसी दूसरी drive पर लेने के लिए",
+        "Programs को uninstall करने के लिए",
+        "Screen की brightness adjust करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "File History feature user folders (Documents, Pictures, Desktop आदि) की files का automatic backup किसी external/दूसरी drive पर समय-समय पर लेता है, ताकि data loss से बचा जा सके। Option A गलत है क्योंकि browsing history browser की setting है, File History से अलग है। Option C गलत है क्योंकि programs uninstall करना Control Panel का काम है। Option D गलत है क्योंकि brightness Display settings से control होती है।"
+    },
+    {
+      "id": "u7_windows_os_q27",
+      "question": "Computer से जुड़े hardware devices (जैसे keyboard, printer, network adapter) के drivers की स्थिति देखने और update करने के लिए कौन-सा tool इस्तेमाल किया जाता है?",
+      "options": [
+        "Recycle Bin",
+        "File History",
+        "Device Manager",
+        "Ease of Access Center"
+      ],
+      "correctIndex": 2,
+      "explanation": "Device Manager वह tool है जहाँ सभी connected hardware devices और उनके drivers की स्थिति (working properly, error, आदि) देखी और update/uninstall की जा सकती है। Option A, Recycle Bin deleted files के लिए है, hardware से इसका कोई संबंध नहीं। Option B, File History backup के लिए है। Option D, Ease of Access Center accessibility features (magnifier, narrator आदि) के लिए है।"
+    },
+    {
+      "id": "u7_windows_os_q28",
+      "question": "Windows का 'Disk Cleanup' utility मुख्यतः क्या करता है?",
+      "options": [
+        "Drive को नए सिरे से format करता है",
+        "Deleted files को Recycle Bin से restore करता है",
+        "Hardware drivers को update करता है",
+        "Temporary files, unused system files और Recycle Bin की unnecessary files हटाकर disk space खाली करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Disk Cleanup temporary files, cache, पुराने system files और Recycle Bin की files आदि को scan करके हटाने का option देता है, जिससे disk space खाली होती है। Option A गलत है क्योंकि यह पूरी drive को format नहीं करता, केवल unnecessary files हटाता है। Option B गलत है क्योंकि यह restore tool नहीं बल्कि cleanup tool है। Option C गलत है क्योंकि driver update Device Manager से होता है, Disk Cleanup से नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q29",
+      "question": "File Explorer में एक साथ कई अलग-अलग (non-continuous) files select करने के लिए कौन-सी key दबाकर click किया जाता है?",
+      "options": [
+        "Ctrl key दबाकर हर file पर click करना",
+        "Alt+F4 दबाना",
+        "केवल Enter key दबाना",
+        "Shift key दबाकर केवल एक ही file पर click करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ctrl key को दबाए रखते हुए अलग-अलग non-continuous files पर click करने से वे सभी individually select होती जाती हैं। Option B, Alt+F4 current window को बंद (close) करने के लिए है, selection के लिए नहीं। Option C, Enter key selected item को खोलने के लिए है। Option D गलत है क्योंकि Shift key लगातार (continuous) range select करने के लिए इस्तेमाल होती है, न कि सिर्फ एक file के लिए, और यह multiple non-continuous selection नहीं करता।"
+    },
+    {
+      "id": "u7_windows_os_q30",
+      "question": "यदि किसी नए software/update को install करने के बाद Windows में समस्याएँ आने लगें, तो computer को किसी पहले के stable state में वापस लाने के लिए कौन-सा feature उपयोग किया जाता है?",
+      "options": [
+        "Disk Defragmentation",
+        "System Restore",
+        "Recycle Bin Restore",
+        "Task Manager"
+      ],
+      "correctIndex": 1,
+      "explanation": "System Restore feature computer की settings और system files को किसी पहले बनाए गए restore point की स्थिति में वापस ले जाता है, जिससे नए software/update से आई समस्याएँ ठीक हो सकती हैं, बिना personal files को प्रभावित किए। Option A, Defragmentation disk performance से संबंधित है, system problems ठीक करने के लिए नहीं। Option C, Recycle Bin Restore केवल deleted individual files वापस लाने के लिए है, पूरे system state के लिए नहीं। Option D, Task Manager processes manage करने के लिए है, system को पुरानी स्थिति में लाने के लिए नहीं।"
+    }
+  ]
+}

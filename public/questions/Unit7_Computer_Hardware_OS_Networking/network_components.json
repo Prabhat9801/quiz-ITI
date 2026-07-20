@@ -1,0 +1,368 @@
+{
+  "unit": "unit7",
+  "unitName": "Computer Hardware, OS, MS Office, Networking",
+  "topic": "network_components",
+  "topicName": "Network Components - Hub, Switch, Router, NIC, Firewall, Servers & Cloud",
+  "questions": [
+    {
+      "id": "u7_network_components_q1",
+      "question": "एक Hub किस layer पर काम करता है और data को कैसे forward करता है?",
+      "options": [
+        "यह Physical layer पर काम करता है और आने वाले signal को सभी connected ports पर broadcast कर देता है",
+        "यह Network layer पर काम करता है और destination IP address देखकर data भेजता है",
+        "यह केवल दो networks को आपस में जोड़ता है और routing table का उपयोग करता है",
+        "यह MAC address table maintain करके केवल सही port पर data भेजता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hub एक simple Physical layer device है जो किसी भी port से आया signal सभी connected ports पर broadcast कर देता है, इसमें कोई intelligence नहीं होती। Option B routing की बात करता है जो Router का काम है, option C भी Router/Gateway जैसा behaviour है, और option D Switch का काम है जो MAC address table के आधार पर selective forwarding करता है।"
+    },
+    {
+      "id": "u7_network_components_q2",
+      "question": "Hub का सबसे बड़ा limitation क्या माना जाता है?",
+      "options": [
+        "यह बहुत महंगा device होता है इसलिए छोटे networks में उपयोग नहीं होता",
+        "सभी connected devices एक ही collision domain और broadcast domain share करते हैं जिससे network traffic और collisions बढ़ते हैं",
+        "यह wireless devices को connect नहीं कर सकता",
+        "यह केवल fiber optic cable के साथ काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hub में सभी ports एक ही collision domain और broadcast domain में होते हैं, इसलिए एक साथ बहुत सारा traffic collisions और network slowdown पैदा करता है। Option A गलत है क्योंकि Hub actually सस्ता device है, option C और D भी Hub की technical limitation नहीं बल्कि गलत/असंबंधित statements हैं।"
+    },
+    {
+      "id": "u7_network_components_q3",
+      "question": "एक Switch, Hub की तुलना में network performance कैसे बेहतर करता है?",
+      "options": [
+        "Switch केवल एक device को network से जोड़ने देता है जिससे load कम हो जाता है",
+        "Switch, Router की तरह अलग-अलग networks के बीच data route करता है",
+        "Switch MAC address table के आधार पर data को सीधे सही destination port पर भेजता है, जिससे unnecessary broadcast कम होता है",
+        "Switch signal को केवल amplify करता है जिससे cable की length बढ़ जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Switch अपनी MAC address table में जानता है कि कौन-सा device किस port पर connected है, इसलिए वह data को केवल सही destination port पर भेजता है, न कि सभी ports पर - यही Hub से इसे बेहतर बनाता है। Option A गलत है क्योंकि Switch multiple devices को जोड़ता है, option B Router का काम है, और option D Repeater का काम है।"
+    },
+    {
+      "id": "u7_network_components_q4",
+      "question": "Switch की MAC address table का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "यह हर device की IP address को track करती है ताकि internet पर routing हो सके",
+        "यह हर connected device का MAC address और उससे जुड़े port number को record करती है ताकि frames सही port पर forward हो सकें",
+        "यह network की bandwidth को control करती है",
+        "यह केवल firewall rules को store करती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Switch, incoming frames से source MAC address सीखकर उसे port number के साथ अपनी MAC address table में store करता है, ताकि future में उस destination के लिए frame सीधे सही port पर भेजी जा सके। Option A IP addressing और routing से संबंधित है (Router का काम), जबकि C और D Switch की मुख्य functionality नहीं हैं।"
+    },
+    {
+      "id": "u7_network_components_q5",
+      "question": "यदि एक office में सभी computers के बीच data collisions कम करने हैं और performance बढ़ानी है, तो पुराने Hub की जगह क्या लगाना बेहतर होगा?",
+      "options": [
+        "एक और Hub, क्योंकि ज्यादा ports से collisions कम हो जाएंगे",
+        "एक Switch, क्योंकि यह हर port को अलग collision domain बनाकर collisions कम करता है",
+        "एक Modem, क्योंकि यह internet connectivity बढ़ाता है",
+        "एक Repeater, क्योंकि यह केवल signal को दोबारा strong बनाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Switch हर port को अलग collision domain बना देता है, इसलिए collisions काफी कम हो जाते हैं और performance बेहतर होती है। Option A गलत है क्योंकि दूसरा Hub लगाने से collision domain shared ही रहेगा, option C Modem internet access के लिए है न कि local collisions कम करने के लिए, और option D Repeater सिर्फ signal strength बढ़ाता है, collision domain नहीं बदलता।"
+    },
+    {
+      "id": "u7_network_components_q6",
+      "question": "एक Router का मुख्य कार्य क्या है?",
+      "options": [
+        "एक ही network के अंदर devices के बीच data को MAC address के आधार पर भेजना",
+        "अलग-अलग networks के बीच data packets को उनके IP address और routing table के आधार पर सही रास्ते से भेजना",
+        "signal को amplify करके cable की range बढ़ाना",
+        "केवल दो similar network segments को बिना किसी logic के जोड़ना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Router, Network layer पर काम करते हुए अलग-अलग networks (जैसे LAN और internet) के बीच packets को IP address और routing table के आधार पर सही path से forward करता है। Option A Switch का काम है, option C Repeater का काम है, और option D Bridge जैसे simple device का वर्णन करता है, Router इससे कहीं ज्यादा intelligent होता है।"
+    },
+    {
+      "id": "u7_network_components_q7",
+      "question": "Router और Switch में मुख्य अंतर क्या है?",
+      "options": [
+        "Switch एक ही network के अंदर MAC address से forwarding करता है जबकि Router अलग-अलग networks के बीच IP address से routing करता है",
+        "Switch इंटरनेट से जुड़ता है जबकि Router केवल local devices को जोड़ता है",
+        "दोनों बिल्कुल एक जैसा काम करते हैं, बस नाम अलग है",
+        "Router केवल wireless devices के लिए होता है जबकि Switch केवल wired devices के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Switch, Data Link layer पर MAC address का उपयोग करके एक network के अंदर forwarding करता है, जबकि Router, Network layer पर IP address और routing table के आधार पर अलग-अलग networks के बीच data भेजता है। Option B वास्तविकता से उल्टा है क्योंकि आमतौर पर Router ही internet से connect होता है, option C गलत है क्योंकि दोनों की कार्यप्रणाली अलग है, और option D भी गलत है क्योंकि wired/wireless होना device के core function से अलग बात है।"
+    },
+    {
+      "id": "u7_network_components_q8",
+      "question": "एक घर में internet connection को कई devices (laptop, mobile, smart TV) में share करने के लिए किस device की सबसे ज्यादा जरूरत होती है जो अलग-अलग local network को ISP के network से जोड़े?",
+      "options": [
+        "Hub, क्योंकि यह सभी devices को एक साथ जोड़ देता है",
+        "Repeater, क्योंकि यह signal को दोबारा भेजता है",
+        "Router, क्योंकि यह local network को ISP के external network से जोड़कर routing करता है",
+        "NIC, क्योंकि यह केवल एक computer के अंदर लगती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Router local home network को ISP के external network (internet) से जोड़ता है और सही routing करके सभी devices को internet access देता है। Option A Hub केवल local devices जोड़ता है, internet access नहीं देता, option B Repeater सिर्फ signal boost करता है, और option D NIC individual device की internal component है, पूरे network को internet से नहीं जोड़ती।"
+    },
+    {
+      "id": "u7_network_components_q9",
+      "question": "NIC (Network Interface Card) का मुख्य कार्य क्या है?",
+      "options": [
+        "यह computer को network से physically connect करने और data को network signals में convert करने का काम करता है, और इसका एक unique MAC address होता है",
+        "यह केवल internet की speed को control करता है",
+        "यह data को encrypt करके firewall की तरह सुरक्षा प्रदान करता है",
+        "यह केवल printer को network से जोड़ने के लिए बना device है"
+      ],
+      "correctIndex": 0,
+      "explanation": "NIC एक hardware component है जो computer को network से जोड़ती है और data को transmit/receive करने योग्य signals में बदलती है, हर NIC का एक unique MAC address होता है जो उसे पहचान देता है। Option B, C और D गलत हैं क्योंकि ये क्रमशः ISP/Router, Firewall और किसी विशेष device की functions हैं, NIC की core function नहीं हैं।"
+    },
+    {
+      "id": "u7_network_components_q10",
+      "question": "MAC address किसे कहते हैं और यह कहाँ से जुड़ा होता है?",
+      "options": [
+        "यह ISP द्वारा दिया गया temporary internet address है जो हर बार बदलता रहता है",
+        "यह एक unique hardware-level address होता है जो NIC (Network Interface Card) में permanently assign होता है",
+        "यह केवल software द्वारा assign किया गया logical address है जो हर restart पर बदल जाता है",
+        "यह router द्वारा हर device को manually दिया जाने वाला नाम है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MAC (Media Access Control) address एक unique physical/hardware address है जो manufacturer द्वारा NIC में burn किया जाता है और सामान्यतः स्थायी रहता है। Option A और C, IP address की विशेषता से मिलते-जुलते हैं (जो बदल सकता है), और option D गलत है क्योंकि MAC address manually router द्वारा नहीं दिया जाता।"
+    },
+    {
+      "id": "u7_network_components_q11",
+      "question": "एक Modem का मुख्य काम क्या है?",
+      "options": [
+        "यह digital data को analog signal में और analog signal को digital data में convert करता है ताकि telephone/cable lines पर internet चल सके",
+        "यह network के अंदर devices के बीच MAC address से data forward करता है",
+        "यह दो अलग-अलग LAN networks के बीच data को route करता है",
+        "यह केवल wireless signal को amplify करने का काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Modem (Modulator-Demodulator) digital signal को analog में modulate करता है ताकि telephone/cable lines जैसे analog medium पर transmit हो सके, और receiving end पर वापस demodulate करता है। Option B Switch का काम है, option C Router का काम है, और option D Repeater/Access Point जैसे devices का काम है, Modem का मुख्य उद्देश्य signal conversion है।"
+    },
+    {
+      "id": "u7_network_components_q12",
+      "question": "एक Repeater network में क्यों उपयोग किया जाता है?",
+      "options": [
+        "यह data को encrypt करके security बढ़ाने के लिए उपयोग होता है",
+        "यह network traffic को filter करके unwanted data रोकने के लिए उपयोग होता है",
+        "यह कमजोर हो चुके signal को receive करके उसे regenerate/amplify करता है ताकि लंबी दूरी तक transmission हो सके",
+        "यह IP addresses को assign करने के लिए उपयोग होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "लंबी cable लंबाई या distance की वजह से signal कमजोर (attenuate) हो जाता है, Repeater उस signal को receive करके उसे regenerate/amplify करके आगे भेजता है ताकि transmission range बढ़ सके। Option A Firewall/encryption से संबंधित है, option B Firewall का काम है, और option D DHCP server जैसी service का काम है।"
+    },
+    {
+      "id": "u7_network_components_q13",
+      "question": "Bridge device का network में क्या उपयोग होता है?",
+      "options": [
+        "यह दो अलग-अलग network segments को जोड़कर उन्हें एक logical network की तरह काम करने देता है, और MAC address के आधार पर traffic filter करता है",
+        "यह केवल internet speed बढ़ाने के लिए उपयोग होता है",
+        "यह data को encrypt करके firewall जैसा काम करता है",
+        "यह हमेशा wireless devices को ही जोड़ता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bridge दो network segments को जोड़ता है और MAC address table के आधार पर decide करता है कि traffic को दूसरी तरफ भेजना है या नहीं, इस तरह वह traffic को filter करके network efficiency बढ़ाता है। Option B, C और D गलत हैं क्योंकि ये क्रमशः ISP/Router, Firewall और Access Point जैसी अलग devices की विशेषताएं हैं।"
+    },
+    {
+      "id": "u7_network_components_q14",
+      "question": "एक Gateway device का network में क्या role होता है?",
+      "options": [
+        "यह केवल एक ही network के अंदर devices को आपस में जोड़ता है",
+        "यह अलग-अलग protocols/architecture वाले networks के बीच एक entry-exit point की तरह काम करता है ताकि data आपस में समझा जा सके",
+        "यह सिर्फ signal को regenerate करने का काम करता है",
+        "यह केवल MAC address table बनाकर data forward करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gateway दो अलग-अलग तरह के networks (जैसे अलग protocol या architecture वाले networks) के बीच entry-exit point की तरह काम करता है और data को translate/convert करके दोनों तरफ समझने योग्य बनाता है। Option A Switch/Hub जैसा behaviour है, option C Repeater का काम है, और option D भी Switch की विशेषता है, Gateway का दायरा इससे व्यापक है।"
+    },
+    {
+      "id": "u7_network_components_q15",
+      "question": "Firewall का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "network traffic को predefined security rules के आधार पर monitor करना और unauthorized access को block करना",
+        "कमजोर signal को regenerate करना",
+        "network के अंदर devices को IP addresses assign करना",
+        "digital data को analog signal में convert करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Firewall (hardware या software दोनों रूप में हो सकता है) network traffic को security rules के आधार पर filter करता है और unauthorized/malicious access को network में आने से रोकता है। Option B Repeater का काम है, option C DHCP server जैसी service का काम है, और option D Modem का काम है।"
+    },
+    {
+      "id": "u7_network_components_q16",
+      "question": "Firewall hardware-based और software-based दोनों तरह से उपलब्ध हो सकता है - इसका सही उदाहरण कौन-सा है?",
+      "options": [
+        "एक standalone security appliance जो पूरे network के entry point पर लगता है (hardware firewall) और एक अलग OS के अंदर चलने वाला security program (software firewall)",
+        "केवल Router जो हमेशा firewall की तरह ही काम करता है और कुछ और नहीं",
+        "केवल एक antivirus program जो सिर्फ files scan करता है",
+        "केवल एक physical cable जो दो networks को जोड़ता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hardware firewall एक अलग standalone device के रूप में network के entry point पर लगाया जाता है, जबकि software firewall किसी computer/server के OS में install होकर उस specific system की traffic को नियंत्रित करता है - दोनों ही सही उदाहरण हैं। Option B, C और D सही उदाहरण नहीं हैं क्योंकि ये अन्य devices/programs का सीमित वर्णन करते हैं।"
+    },
+    {
+      "id": "u7_network_components_q17",
+      "question": "Access Point (AP) network में किस काम आता है?",
+      "options": [
+        "यह wired devices के बीच MAC address table maintain करके data forward करता है",
+        "यह wireless devices को existing wired network से जोड़ने की सुविधा देता है, ताकि वे बिना cable के network access कर सकें",
+        "यह दो अलग-अलग IP networks के बीच routing करता है",
+        "यह केवल signal को बिना किसी बदलाव के regenerate करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Access Point wired network से connect होकर wireless (Wi-Fi) devices को network access देने का माध्यम बनता है। Option A Switch का काम है, option C Router का काम है, और option D Repeater जैसा simple signal regeneration है, AP उससे कहीं ज्यादा functionality (wireless bridging) प्रदान करता है।"
+    },
+    {
+      "id": "u7_network_components_q18",
+      "question": "एक साधारण PC (client/workstation) और एक Server में मुख्य अंतर क्या होता है?",
+      "options": [
+        "PC आमतौर पर single-user के लिए बना होता है जबकि Server multiple clients को resources/services provide करने के लिए design किया जाता है और अधिक powerful hardware रखता है",
+        "PC और Server में कोई अंतर नहीं होता, दोनों एक जैसे hardware रखते हैं",
+        "Server हमेशा wireless होता है जबकि PC हमेशा wired होता है",
+        "PC केवल internet browsing के लिए बनता है जबकि Server केवल gaming के लिए बनता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "PC/workstation आमतौर पर एक user की daily tasks के लिए design होता है, जबकि Server high-performance hardware, ज्यादा RAM/storage और reliability के साथ multiple clients को services (file, print, database आदि) देने के लिए बनाया जाता है। Option B, C और D गलत हैं क्योंकि ये PC और Server के actual functional अंतर को नहीं दर्शाते।"
+    },
+    {
+      "id": "u7_network_components_q19",
+      "question": "एक Dedicated Server से क्या तात्पर्य है?",
+      "options": [
+        "एक ऐसा server जिसका पूरा hardware/resources केवल एक विशेष कार्य (जैसे केवल file sharing) के लिए ही उपयोग होता है, न कि किसी अन्य client-task के लिए",
+        "एक ऐसा computer जो कभी-कभी server और कभी-कभी client की तरह काम करता है",
+        "एक ऐसा device जो केवल internet browsing के लिए उपयोग होता है",
+        "एक ऐसा network cable जो सर्वर को जोड़ता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dedicated server पूरी तरह से एक ही विशेष service (जैसे file server या print server) के लिए reserved होता है, ताकि उसकी सारी processing power उसी काम में लगे। Option B एक non-dedicated/peer server जैसा behaviour है, जबकि option C और D server की अवधारणा से मेल नहीं खाते।"
+    },
+    {
+      "id": "u7_network_components_q20",
+      "question": "File Server और Print Server में क्या अंतर है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसा काम करते हैं, बस नाम अलग है",
+        "File Server network पर shared files और folders को store/manage करता है, जबकि Print Server clients की printing requests को manage करके shared printer तक भेजता है",
+        "File Server केवल internet access देता है जबकि Print Server केवल email भेजता है",
+        "Print Server data को store करता है जबकि File Server documents print करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "File Server का काम shared storage को centrally manage करना है ताकि users files access कर सकें, जबकि Print Server printing jobs को queue करके network में लगे shared printer तक पहुँचाता है - दोनों अलग-अलग dedicated services हैं। Option A गलत है क्योंकि दोनों के कार्य अलग हैं, और option C, D में functions आपस में उलट/गलत बताए गए हैं।"
+    },
+    {
+      "id": "u7_network_components_q21",
+      "question": "NOS (Network Operating System) किसे कहते हैं?",
+      "options": [
+        "एक साधारण application software जो केवल documents type करने के लिए उपयोग होता है",
+        "एक OS जो specifically server hardware पर चलता है और network resources, users, security तथा services (जैसे file/print sharing) को manage करता है, जैसे Windows Server या Linux server distributions",
+        "एक hardware device जो केवल signal को amplify करता है",
+        "एक ऐसा software जो केवल games चलाने के लिए design किया गया है"
+      ],
+      "correctIndex": 1,
+      "explanation": "NOS एक विशेष operating system होता है (जैसे Windows Server, Linux-based server OS) जो network resources को manage करता है, users/permissions control करता है और file/print sharing जैसी services provide करता है। Option A, C और D गलत हैं क्योंकि ये न तो NOS हैं और न ही इसकी functionality दर्शाते हैं।"
+    },
+    {
+      "id": "u7_network_components_q22",
+      "question": "साधारण desktop OS (जैसे Windows 10/11 client version) और NOS (जैसे Windows Server) में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे होते हैं और उनमें कोई functional difference नहीं है",
+        "Desktop OS single-user उपयोग के लिए optimize होता है जबकि NOS multiple simultaneous users/clients को network services देने, अधिक concurrent connections संभालने और centralized management के लिए design होता है",
+        "Desktop OS केवल mobile phones में चलता है",
+        "NOS केवल gaming performance के लिए design होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Desktop OS सामान्यतः एक user के daily उपयोग के लिए बनाया जाता है, जबकि NOS (Network Operating System) बहुत सारे clients को एक साथ services देने, ज्यादा concurrent connections manage करने और centralized security/user-management के लिए design होता है। Option A, C और D इस मूल अंतर को गलत तरीके से प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "u7_network_components_q23",
+      "question": "निम्न में से कौन-सा एक सही उदाहरण है NOS (Network Operating System) का?",
+      "options": [
+        "MS Paint",
+        "Windows Server और Linux-based server distributions (जैसे server के लिए इस्तेमाल होने वाले Linux versions)",
+        "Adobe Photoshop",
+        "VLC Media Player"
+      ],
+      "correctIndex": 1,
+      "explanation": "Windows Server और server-oriented Linux distributions network resources को manage करने तथा multiple clients को services देने के लिए design किए गए NOS के उदाहरण हैं। Option A, C और D सभी साधारण desktop application software हैं, इनका network management से कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u7_network_components_q24",
+      "question": "Cloud computing की मूल अवधारणा (concept) क्या है?",
+      "options": [
+        "यह केवल एक local hard disk पर data store करने की process है",
+        "यह computing resources (जैसे servers, storage, applications) को internet के माध्यम से on-demand उपलब्ध कराने की technology है, बजाय इसके कि हर user खुद अपना hardware खरीदे",
+        "यह केवल एक प्रकार का antivirus software है",
+        "यह केवल printers को network से जोड़ने की process है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cloud computing में computing resources (servers, storage, software) को remote data centers से internet के जरिए on-demand basis पर provide किया जाता है, जिससे users को खुद hardware खरीदने की जरूरत नहीं पड़ती। Option A local storage का वर्णन करता है जो cloud के विपरीत है, जबकि option C और D पूरी तरह असंबंधित हैं।"
+    },
+    {
+      "id": "u7_network_components_q25",
+      "question": "Public Cloud, Private Cloud और Hybrid Cloud में क्या अंतर है?",
+      "options": [
+        "Public Cloud किसी third-party provider द्वारा कई organizations को shared basis पर दी जाती है, Private Cloud एक ही organization के लिए dedicated होती है, और Hybrid Cloud दोनों का मेल होता है",
+        "तीनों बिल्कुल एक जैसी services हैं, सिर्फ नाम अलग है",
+        "Public Cloud केवल सरकारी organizations के लिए होती है",
+        "Private Cloud का मतलब है कि data केवल pen-drive में store होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Public Cloud में third-party provider (जैसे AWS, Azure) अपने resources कई customers को shared तरीके से देता है, Private Cloud एक ही organization के लिए exclusive रूप से setup होती है, और Hybrid Cloud दोनों approaches को मिलाकर उपयोग करती है। Option B, C और D इन प्रकारों की सही परिभाषा नहीं देते।"
+    },
+    {
+      "id": "u7_network_components_q26",
+      "question": "SaaS (Software as a Service) का एक सही उदाहरण/concept कौन-सा है?",
+      "options": [
+        "user को केवल physical server hardware खरीदकर उसे खुद install करना पड़ता है",
+        "user को internet के जरिए ready-to-use software application (जैसे web-based email service) मिलता है, बिना उसे खुद install या maintain किए",
+        "user को केवल networking cables खरीदने पड़ते हैं",
+        "user को केवल एक operating system install करने की सुविधा मिलती है, कोई application नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "SaaS model में software application को cloud provider host करता है और user उसे सीधे internet browser के जरिए इस्तेमाल करता है, बिना installation या maintenance की चिंता किए (जैसे web-based email)। Option A, C और D SaaS की परिभाषा से मेल नहीं खाते क्योंकि इनमें hardware/cable खरीदने या केवल OS देने की बात है, ready-to-use application की नहीं।"
+    },
+    {
+      "id": "u7_network_components_q27",
+      "question": "PaaS (Platform as a Service) और IaaS (Infrastructure as a Service) में बुनियादी फर्क क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसी services हैं जिनमें कोई अंतर नहीं है",
+        "PaaS developers को applications बनाने/चलाने के लिए एक ready platform (जैसे OS, runtime environment) देता है, जबकि IaaS केवल basic computing infrastructure (जैसे virtual servers, storage, networking) provide करता है जिसे user खुद configure करता है",
+        "PaaS केवल hardware बेचता है जबकि IaaS केवल software बेचता है",
+        "IaaS का मतलब है कि user को कोई भी cloud resource नहीं मिलता"
+      ],
+      "correctIndex": 1,
+      "explanation": "PaaS में provider एक तैयार platform (OS, development tools, runtime) देता है ताकि developer सीधे application बनाने पर ध्यान दे, जबकि IaaS में केवल basic infrastructure (virtual machines, storage, network) मिलता है जिसे user खुद setup/configure करता है। Option A, C और D इन दोनों services के actual scope को गलत तरीके से बताते हैं।"
+    },
+    {
+      "id": "u7_network_components_q28",
+      "question": "एक college में placement records को server पर centrally रखना है ताकि सभी staff computers से access हो सके, और साथ ही unauthorized बाहरी access को रोकना भी जरूरी है। इसके लिए किन दो devices/concepts का संयोजन सबसे उपयुक्त रहेगा?",
+      "options": [
+        "एक Repeater और एक Modem",
+        "एक File Server (records centrally store करने के लिए) और एक Firewall (unauthorized access रोकने के लिए)",
+        "केवल एक Hub, क्योंकि यह सारा काम खुद कर लेता है",
+        "केवल एक NIC, क्योंकि यह security भी देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "File Server records को centrally store/manage करेगा ताकि सभी अधिकृत staff computers access कर सकें, जबकि Firewall unauthorized/बाहरी traffic को rules के आधार पर block करेगा - यही संयोजन दोनों जरूरतें पूरी करता है। Option A में दोनों devices इस काम के लिए उपयुक्त नहीं हैं, option C में Hub सिर्फ signal broadcast करता है, security या storage management नहीं देता, और option D में NIC केवल network से जोड़ने वाली component है, यह security प्रदान नहीं करती।"
+    },
+    {
+      "id": "u7_network_components_q29",
+      "question": "एक छोटे office में 10 computers को आपस में LAN में जोड़ना है और performance भी अच्छी चाहिए, साथ ही internet भी चाहिए। सही combination कौन-सा होगा?",
+      "options": [
+        "एक Switch (सभी computers को efficiently जोड़ने के लिए) और एक Router (internet से जोड़ने के लिए)",
+        "केवल एक Repeater, क्योंकि यह internet भी देता है और computers भी जोड़ता है",
+        "केवल एक NIC, क्योंकि यह पूरे office के network को चला सकता है",
+        "केवल एक Firewall, क्योंकि यह LAN में सभी devices को जोड़ने के लिए काफी है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Switch LAN के अंदर सभी 10 computers को efficient तरीके से (MAC address table के आधार पर) जोड़ेगा जिससे collisions कम होंगे, और Router इस LAN को internet (ISP network) से जोड़ेगा - यह practical और सही combination है। Option B में Repeater केवल signal regenerate करता है, न internet देता है न properly network जोड़ता है, option C में एक NIC सिर्फ एक device के अंदर लगती है पूरे office network को नहीं चला सकती, और option D में Firewall security device है, यह devices को आपस में जोड़ने का काम नहीं करता।"
+    },
+    {
+      "id": "u7_network_components_q30",
+      "question": "एक company अपनी websites और applications को खुद के servers खरीदे बिना, एक cloud provider के virtual servers, storage और networking resources पर host करना चाहती है, ताकि वह खुद उन resources को configure करके अपना environment बना सके। यह किस cloud service model से सबसे ज्यादा मेल खाता है?",
+      "options": [
+        "SaaS, क्योंकि company को सिर्फ ready-made software चाहिए",
+        "PaaS, क्योंकि company को केवल development platform चाहिए",
+        "IaaS, क्योंकि company को basic virtual infrastructure (servers, storage, networking) चाहिए जिसे वह खुद configure करे",
+        "NOS, क्योंकि company को केवल network operating system चाहिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "यहाँ company को केवल basic infrastructure (virtual servers, storage, networking) चाहिए जिसे वह खुद configure करके अपना environment (OS, applications आदि) सेटअप करेगी - यह IaaS की परिभाषा से पूरी तरह मेल खाता है। Option A गलत है क्योंकि company को ready-made software नहीं बल्कि infrastructure चाहिए, option B गलत है क्योंकि उसे सिर्फ development platform नहीं बल्कि पूरा infrastructure control चाहिए, और option D गलत है क्योंकि NOS एक operating system है, cloud service model नहीं।"
+    }
+  ]
+}

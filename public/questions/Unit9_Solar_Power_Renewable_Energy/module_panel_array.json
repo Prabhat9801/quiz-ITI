@@ -1,0 +1,308 @@
+{
+  "unit": "unit9",
+  "unitName": "Solar Power Renewable Energy Systems",
+  "topic": "module_panel_array",
+  "topicName": "Solar Cell, Module, Panel and Array - Series/Parallel Connections",
+  "questions": [
+    {
+      "id": "u9_module_panel_array_q1",
+      "question": "सबसे छोटी basic unit जो light को directly electricity में बदलती है, उसे PV terminology में क्या कहते हैं?",
+      "options": ["Solar cell", "Module", "Array", "Panel"],
+      "correctIndex": 0,
+      "explanation": "Solar cell सबसे छोटी semiconductor unit है जो photovoltaic effect द्वारा light को directly electricity में बदलती है। Module कई cells को जोड़कर बनाई गई encapsulated इकाई है, array कई modules/panels का समूह है, और panel भी एक assembled इकाई है, न कि सबसे छोटी unit।"
+    },
+    {
+      "id": "u9_module_panel_array_q2",
+      "question": "कई solar cells को आपस में electrically जोड़कर तथा encapsulate (glass, EVA, backsheet, frame) करके जो unit बनाई जाती है, उसे क्या कहते हैं?",
+      "options": ["Array", "Module", "Cell", "Junction box"],
+      "correctIndex": 1,
+      "explanation": "Module वह इकाई है जिसमें कई cells को series/parallel में जोड़कर glass, EVA, backsheet और frame के साथ encapsulate किया जाता है ताकि वे environment से सुरक्षित रहें। Array कई modules/panels का बड़ा समूह है, cell single basic unit है, और junction box केवल module के rear पर लगा connection housing है।"
+    },
+    {
+      "id": "u9_module_panel_array_q3",
+      "question": "सामान्य व्यवहार तथा industry usage में 'Module' और 'Panel' शब्दों का प्रयोग प्रायः किस प्रकार किया जाता है?",
+      "options": [
+        "ये पूरी तरह अलग-अलग devices हैं जिनका आपस में कोई संबंध नहीं",
+        "Panel हमेशा module से 10 गुना बड़ा होता है",
+        "ये अक्सर एक-दूसरे के पर्यायवाची (interchangeably) रूप में प्रयोग होते हैं, दोनों एक ही encapsulated assembly को दर्शाते हैं",
+        "Module केवल inverter को कहा जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Practical field usage में 'module' और 'panel' शब्द अक्सर एक ही encapsulated cell-assembly के लिए interchangeably प्रयोग किए जाते हैं। ये पूरी तरह असंबंधित devices नहीं हैं, कोई fixed '10 गुना' size नियम नहीं है, और module का inverter से कोई सीधा नामकरण संबंध नहीं है।"
+    },
+    {
+      "id": "u9_module_panel_array_q4",
+      "question": "जब कई modules/panels को एक साथ electrically जोड़कर (series या parallel में) बड़ा system बनाया जाता है, तो उसे क्या कहा जाता है?",
+      "options": ["Cell", "Junction box", "Diode", "Array"],
+      "correctIndex": 3,
+      "explanation": "Array कई modules/panels के series-parallel combination से बना बड़ा system है जो desired voltage-current देने के लिए design किया जाता है। Cell सबसे छोटी unit है, junction box केवल module का connection point है, और diode केवल protection component है, ये array नहीं हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q5",
+      "question": "एक typical crystalline silicon solar cell का open-circuit voltage (Voc) लगभग कितना होता है?",
+      "options": ["लगभग 0.5-0.6V", "लगभग 12V", "लगभग 100V", "लगभग 1000V"],
+      "correctIndex": 0,
+      "explanation": "एक single crystalline silicon cell का Voc semiconductor material के bandgap के कारण लगभग 0.5-0.6V होता है। 12V, 100V या 1000V जैसे मान केवल तभी संभव हैं जब कई cells series में जोड़ी जाएँ, single cell का voltage इतना अधिक नहीं होता।"
+    },
+    {
+      "id": "u9_module_panel_array_q6",
+      "question": "यदि एक module में 36 cells series में जुड़ी हों और प्रत्येक cell का Voc लगभग 0.6V हो, तो module का approximate total Voc कितना होगा?",
+      "options": ["लगभग 6V", "लगभग 21.6V", "लगभग 3.6V", "लगभग 60V"],
+      "correctIndex": 1,
+      "explanation": "Series connection में voltage जुड़ता है, इसलिए 36 × 0.6V = 21.6V होगा। 6V, 3.6V या 60V गलत गणना पर आधारित हैं और series addition के सही नियम को नहीं दर्शाते।"
+    },
+    {
+      "id": "u9_module_panel_array_q7",
+      "question": "जब solar cells को series में जोड़ा जाता है, तो combination के current और voltage पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Voltage same रहता है परंतु current जुड़ता है",
+        "दोनों voltage और current same रहते हैं",
+        "Current same रहता है परंतु voltage cells की संख्या के अनुसार जुड़ता (add) है",
+        "दोनों voltage और current शून्य हो जाते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Series connection में current सभी cells में समान रहता है जबकि प्रत्येक cell का voltage आपस में जुड़ जाता है, जिससे total voltage बढ़ता है। Option A और B गलत नियम बताते हैं, और D तो असंभव स्थिति है क्योंकि normal operation में voltage/current शून्य नहीं होता।"
+    },
+    {
+      "id": "u9_module_panel_array_q8",
+      "question": "जब solar cells (या modules) को parallel में जोड़ा जाता है, तो combination के current और voltage पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Voltage जुड़ता है परंतु current same रहता है",
+        "दोनों current और voltage जुड़ते हैं",
+        "कोई प्रभाव नहीं पड़ता",
+        "Current जुड़ता है परंतु voltage (लगभग) same रहता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Parallel connection में सभी branches में voltage लगभग समान रहता है जबकि उनके currents आपस में जुड़ जाते हैं, जिससे total current बढ़ता है। Option A नियम को उलटा बताता है, B गलत है क्योंकि voltage नहीं जुड़ता, और C भी गलत है क्योंकि combination का स्पष्ट प्रभाव होता है।"
+    },
+    {
+      "id": "u9_module_panel_array_q9",
+      "question": "यदि series में जुड़ी एक string में केवल एक cell को आंशिक रूप से shade कर दिया जाए, तो पूरी string के current पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "String का current shaded cell के reduced current तक सीमित हो जाता है (series combination में सबसे कमज़ोर cell पूरी string को नियंत्रित करती है)",
+        "String का current बढ़ जाता है क्योंकि बाकी cells अधिक मेहनत करती हैं",
+        "String के current पर कोई प्रभाव नहीं पड़ता, केवल voltage घटता है",
+        "पूरी string की voltage शून्य हो जाती है परंतु current अप्रभावित रहता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Series string में current सभी cells से समान रूप से गुजरना चाहिए, इसलिए shaded cell का घटा हुआ current पूरी string के current को सीमित (bottleneck) कर देता है। Current बढ़ना असंभव है, current पर 'कोई प्रभाव नहीं' गलत कथन है, और voltage के शून्य होने से current अप्रभावित रहने की बात भी गलत है क्योंकि series में current ही मुख्य रूप से सीमित होता है।"
+    },
+    {
+      "id": "u9_module_panel_array_q10",
+      "question": "Module के अंदर लगे 'bypass diode' का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Module का weight कम करना",
+        "Shaded/faulty cells के कारण होने वाले hotspot से बचाव के लिए current को वैकल्पिक (alternate) रास्ता देना",
+        "Module की voltage को दोगुना करना",
+        "Module को waterproof बनाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bypass diode shaded या faulty cells को bypass करने के लिए वैकल्पिक path देता है, जिससे उन cells पर reverse voltage/hotspot का खतरा कम होता है और string का current पूरी तरह block नहीं होता। यह weight कम करने, voltage दोगुना करने, या waterproofing से संबंधित नहीं है।"
+    },
+    {
+      "id": "u9_module_panel_array_q11",
+      "question": "Bypass diodes आमतौर पर module के भीतर किस प्रकार जोड़े जाते हैं?",
+      "options": [
+        "पूरे module के single cell के साथ series में",
+        "केवल module के output पर series में",
+        "Cells के substrings (जैसे हर 18-20 cells के समूह) के parallel में",
+        "यह हमेशा module के बाहर अलग box में अकेला लगाया जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bypass diodes को cells के substrings (सामान्यतः हर 18-20 cells के group) के parallel में जोड़ा जाता है ताकि उस substring में shading होने पर current उस diode से bypass हो सके। Single cell series connection, केवल output series connection, या हमेशा बाहरी अलग box में होना — ये typical practice नहीं हैं (bypass diode प्रायः module की junction box में ही built-in होते हैं)।"
+    },
+    {
+      "id": "u9_module_panel_array_q12",
+      "question": "Array wiring में प्रयुक्त होने वाला 'blocking diode' किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Panel के output voltage को बढ़ाने के लिए",
+        "Panel की current क्षमता को दोगुना करने के लिए",
+        "Panel को cooling देने के लिए",
+        "रात में या कम light में battery से current को वापस panel/string में बहने (reverse flow) से रोकने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Blocking diode रात में या कम irradiance में battery से current को वापस panel/string की ओर बहने से रोकता है, जिससे battery अनावश्यक रूप से discharge नहीं होती। यह voltage नहीं बढ़ाता, current capacity दोगुना नहीं करता, और cooling से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_module_panel_array_q13",
+      "question": "जब दो identical modules को series में जोड़ा जाता है, तो संयुक्त (combined) string की voltage और current पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Voltage लगभग दोगुनी हो जाती है, current लगभग single module जितना ही रहता है",
+        "Voltage same रहती है, current दोगुना हो जाता है",
+        "दोनों voltage और current दोगुने हो जाते हैं",
+        "दोनों में कोई बदलाव नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Series connection में voltage जुड़ती है इसलिए दो identical modules की combined voltage लगभग दोगुनी हो जाती है, जबकि current single module जितना ही रहता है (series में current same रहता है)। शेष options series connection के मूल नियम के विपरीत हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q14",
+      "question": "जब दो identical modules को parallel में जोड़ा जाता है, तो संयुक्त combination की voltage और current पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Voltage लगभग दोगुनी हो जाती है, current same रहता है",
+        "Current लगभग दोगुना हो जाता है, voltage लगभग single module जितनी ही रहती है",
+        "दोनों voltage और current दोगुने हो जाते हैं",
+        "दोनों में कमी आती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Parallel connection में voltage लगभग same रहता है जबकि currents जुड़ते हैं, इसलिए combined current लगभग दोगुना हो जाता है और voltage single module जितनी ही रहती है। शेष options parallel combination के मूल विद्युत नियम के विपरीत हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q15",
+      "question": "PV terminology में एक साथ series में जुड़े modules के समूह को क्या कहा जाता है?",
+      "options": ["Array", "Combiner", "String", "Inverter block"],
+      "correctIndex": 2,
+      "explanation": "Series में जुड़े modules के समूह को 'string' कहा जाता है। Array कई strings का बड़ा समूह होता है (जो parallel में भी जुड़ा हो सकता है), combiner केवल strings को जोड़ने वाला box है, और inverter block DC को AC में बदलने वाली इकाई है, ये string के समानार्थी नहीं हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q16",
+      "question": "कई identical strings को आपस में parallel में जोड़कर जो बड़ा system बनता है, उसे क्या कहा जाता है?",
+      "options": ["String", "Cell", "Junction diode", "Array"],
+      "correctIndex": 3,
+      "explanation": "कई strings को parallel में जोड़कर बनाया गया बड़ा system 'array' कहलाता है। String स्वयं series-connected modules का समूह है (array का एक भाग), cell सबसे छोटी unit है, और junction diode केवल protection component है।"
+    },
+    {
+      "id": "u9_module_panel_array_q17",
+      "question": "कई parallel strings के output को एक साथ जोड़ने तथा उनमें individual fuse/protection देने के लिए प्रयुक्त उपकरण को क्या कहते हैं?",
+      "options": ["Combiner box (PV combiner/array junction box)", "Charge controller", "Multimeter", "Bypass diode"],
+      "correctIndex": 0,
+      "explanation": "Combiner box (array junction box) में सभी parallel strings के outputs को individual fuses/blocking diodes के साथ जोड़ा जाता है, ताकि एक अकेला output मिले तथा protection सुनिश्चित हो। Charge controller battery चार्जिंग नियंत्रित करता है, multimeter measurement उपकरण है, और bypass diode module के अंदर shading protection देता है, ये combiner का काम नहीं करते।"
+    },
+    {
+      "id": "u9_module_panel_array_q18",
+      "question": "Module की nameplate rating (जैसे 330 Wp) किस condition पर आधारित होती है?",
+      "options": [
+        "Actual site की average condition",
+        "Standard Test Conditions (STC): 1000 W/m² irradiance, 25°C cell temperature, AM1.5 spectrum",
+        "रात के समय की condition",
+        "केवल manufacturer की मर्ज़ी से कोई भी मान"
+      ],
+      "correctIndex": 1,
+      "explanation": "Module rating STC यानी 1000 W/m² irradiance, 25°C cell temperature तथा AM1.5 spectrum पर मापी जाती है ताकि सभी manufacturers के बीच तुलना standard आधार पर हो सके। यह actual site की औसत स्थिति नहीं है, रात में तो कोई output ही नहीं मिलता, और यह मान मनमाना नहीं बल्कि defined standard के अनुसार होता है।"
+    },
+    {
+      "id": "u9_module_panel_array_q19",
+      "question": "किसी PV array में series और parallel दोनों प्रकार के connections क्यों प्रयोग किए जाते हैं?",
+      "options": [
+        "केवल दिखावे के लिए",
+        "केवल wiring की लंबाई बढ़ाने के लिए",
+        "Load/system की आवश्यक voltage तथा current दोनों को उचित रूप से प्राप्त करने के लिए",
+        "ताकि modules जल्दी खराब हो जाएँ"
+      ],
+      "correctIndex": 2,
+      "explanation": "Series connections voltage बढ़ाते हैं और parallel connections current बढ़ाते हैं, इसलिए दोनों को मिलाकर system की आवश्यक voltage तथा current rating प्राप्त की जाती है। दिखावा, wiring लंबाई बढ़ाना, या modules को जल्दी खराब करना — इनका array design से कोई तकनीकी संबंध नहीं है।"
+    },
+    {
+      "id": "u9_module_panel_array_q20",
+      "question": "यदि किसी series string में अलग-अलग current rating (mismatched) वाले modules जोड़ दिए जाएँ, तो क्या समस्या होती है?",
+      "options": [
+        "कोई समस्या नहीं होती",
+        "String की voltage शून्य हो जाती है",
+        "सभी modules automatically समान हो जाते हैं",
+        "String का current सबसे कम current rating वाले module तक सीमित हो जाता है जिससे mismatch loss होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Series string में current सबसे कमज़ोर (lowest current rating वाले) module द्वारा सीमित हो जाता है, जिससे बेहतर modules की क्षमता का पूरा उपयोग नहीं हो पाता और mismatch loss होता है। 'कोई समस्या नहीं', 'voltage शून्य', या 'modules automatically समान होना' — ये वास्तविक व्यवहार को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u9_module_panel_array_q21",
+      "question": "Parallel strings जोड़ते समय उनकी voltage rating का match होना क्यों ज़रूरी है?",
+      "options": [
+        "अलग-अलग voltage वाली strings के बीच circulating current बहने से losses और असंतुलन (imbalance) हो सकता है",
+        "इससे कोई फर्क नहीं पड़ता",
+        "Voltage मिलाना केवल दिखने में अच्छा लगता है",
+        "यह केवल installer की सुविधा के लिए है"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि parallel strings की voltage अलग-अलग हो, तो उच्च voltage वाली string से कम voltage वाली string की ओर circulating current बह सकता है, जिससे energy loss और असंतुलित operation होता है, इसलिए voltage match करना ज़रूरी है। शेष options इस technical कारण को नज़रअंदाज़ करते हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q22",
+      "question": "एक typical crystalline silicon module में सामान्यतः कितनी cells series में जोड़ी जाती हैं (common configuration)?",
+      "options": ["केवल 2 cells", "60 या 72 cells (common configurations)", "1000 cells", "केवल 5 cells"],
+      "correctIndex": 1,
+      "explanation": "Commercial crystalline silicon modules में सामान्यतः 60 या 72 cells series में जोड़ी जाती हैं ताकि उपयुक्त system voltage (जैसे 12V/24V/48V आधारित) प्राप्त हो सके। 2 या 5 cells से पर्याप्त voltage नहीं मिलेगी, और 1000 cells व्यावहारिक module size के लिए अत्यधिक है।"
+    },
+    {
+      "id": "u9_module_panel_array_q23",
+      "question": "Module के पीछे लगे 'junction box' का क्या कार्य है?",
+      "options": [
+        "Module को गर्म रखना",
+        "Light को reflect करना",
+        "Cell strings के output terminals तथा bypass diodes को housing देकर बाहरी cables से connection प्रदान करना",
+        "Module का weight बढ़ाना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Junction box module के rear side पर लगा होता है और cell strings के output terminals व bypass diodes को सुरक्षित housing देकर बाहरी wiring से connection उपलब्ध कराता है। यह module को गर्म रखने, light reflect करने, या weight बढ़ाने का काम नहीं करता।"
+    },
+    {
+      "id": "u9_module_panel_array_q24",
+      "question": "Module में प्रयुक्त होने वाले MC4 जैसे connectors का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Module का रंग बदलना",
+        "Module की efficiency बढ़ाना",
+        "केवल सजावट के लिए",
+        "Modules के बीच सुरक्षित, weatherproof तथा locking (लॉक होने वाला) electrical connection प्रदान करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "MC4 जैसे connectors modules के बीच सुरक्षित, weatherproof और locking connection सुनिश्चित करते हैं ताकि accidental disconnection या arcing न हो। इनका रंग, efficiency, या सजावट से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_module_panel_array_q25",
+      "question": "यदि एक cell की short-circuit current (Isc) 8A है और 5 ऐसी identical cells parallel में जोड़ी जाएँ, तो combination की total Isc कितनी होगी?",
+      "options": ["40A", "8A", "1.6A", "64A"],
+      "correctIndex": 0,
+      "explanation": "Parallel connection में currents जुड़ते हैं, इसलिए total Isc = 8A × 5 = 40A होगी। 8A केवल single cell का मान है, 1.6A तथा 64A गणना की सही विधि (currents का simple addition) को नहीं दर्शाते।"
+    },
+    {
+      "id": "u9_module_panel_array_q26",
+      "question": "यदि दो identical modules जिनका प्रत्येक का Voc 22V है, series में जोड़े जाएँ, तो string का combined Voc कितना होगा (approx, ignoring losses)?",
+      "options": ["22V", "44V", "11V", "484V"],
+      "correctIndex": 1,
+      "explanation": "Series connection में voltage जुड़ता है, इसलिए दो modules का combined Voc = 22V + 22V = 44V होगा। 22V केवल single module का मान है, 11V और 484V गलत गणना (division या multiplication की गलत विधि) पर आधारित हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q27",
+      "question": "Panel/module के आगे लगे tempered glass तथा पीछे लगे backsheet का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "केवल सुंदरता बढ़ाना",
+        "Voltage output बढ़ाना",
+        "Cells को environmental damage (नमी, धूल, UV, यांत्रिक झटकों) से encapsulate करके सुरक्षा प्रदान करना",
+        "Cells का temperature control करना पूरी तरह"
+      ],
+      "correctIndex": 2,
+      "explanation": "Tempered glass और backsheet cells को नमी, धूल, UV radiation तथा यांत्रिक क्षति से सुरक्षित रखने के लिए encapsulation प्रदान करते हैं, जिससे module की life बढ़ती है। ये केवल सुंदरता या voltage बढ़ाने के लिए नहीं हैं, और यह temperature को पूरी तरह control नहीं करते, केवल कुछ हद तक प्रभावित करते हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q28",
+      "question": "Module का aluminium frame किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Voltage generate करने के लिए",
+        "Current को double करने के लिए",
+        "केवल decoration के लिए",
+        "Structural mounting support देने तथा module को mechanically मजबूती प्रदान करने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Aluminium frame module को structural मजबूती और mounting structure पर fix करने के लिए आधार प्रदान करता है। यह न तो voltage generate करता है, न current double करता है, और इसका उद्देश्य केवल decoration नहीं बल्कि मुख्यतः mechanical support है।"
+    },
+    {
+      "id": "u9_module_panel_array_q29",
+      "question": "यदि किसी array में 4 modules series में जोड़कर एक string बनाई जाए, और ऐसी 3 identical strings parallel में जोड़ी जाएँ, तो array में कुल कितने modules होंगे?",
+      "options": ["12", "7", "4", "3"],
+      "correctIndex": 0,
+      "explanation": "कुल modules = series में modules की संख्या × parallel strings की संख्या = 4 × 3 = 12 होंगे। 7 केवल गलत जोड़ (addition) पर आधारित है, जबकि 4 और 3 केवल एक-एक factor को दर्शाते हैं, पूरी गणना को नहीं।"
+    },
+    {
+      "id": "u9_module_panel_array_q30",
+      "question": "PV hierarchy को सही क्रम (सबसे छोटी इकाई से सबसे बड़ी इकाई तक) में व्यवस्थित करें।",
+      "options": [
+        "Array → Panel/Module → Cell",
+        "Cell → Module/Panel → Array",
+        "Module → Cell → Array",
+        "Array → Cell → Module"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही क्रम है: Cell (सबसे छोटी unit) → Module/Panel (cells का encapsulated समूह) → Array (कई modules/panels का बड़ा system)। शेष options इस क्रम को उलटा या गलत तरीके से प्रस्तुत करते हैं।"
+    }
+  ]
+}

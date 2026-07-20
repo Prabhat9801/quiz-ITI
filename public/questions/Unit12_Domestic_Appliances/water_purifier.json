@@ -1,0 +1,368 @@
+{
+  "unit": "unit12",
+  "unitName": "Domestic Appliances",
+  "topic": "water_purifier",
+  "topicName": "Water Purifier - RO & UV Principle, Types, Components, Consumables & Faults",
+  "questions": [
+    {
+      "id": "u12_water_purifier_q1",
+      "question": "RO (Reverse Osmosis) water purifier में शुद्धिकरण का मूल सिद्धांत क्या है?",
+      "options": [
+        "Ultraviolet radiation द्वारा bacteria को मारना",
+        "High pressure लगाकर पानी को semi-permeable membrane से गुजारना ताकि dissolved salts व impurities अलग हो जाएं",
+        "Boiling द्वारा पानी को उबालना",
+        "Activated carbon द्वारा केवल गंध हटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "RO में external pump द्वारा उच्च pressure लगाकर पानी को एक बहुत बारीक semi-permeable membrane से गुजारा जाता है, जिससे dissolved salts, heavy metals, और छोटे impurities पानी में से अलग हो जाते हैं और शुद्ध पानी बाहर आता है। UV radiation केवल microorganisms को निष्क्रिय करता है (TDS नहीं हटाता), boiling केवल bacteria मारता है, और activated carbon केवल chlorine/गंध adsorb करता है — ये RO का मूल सिद्धांत नहीं हैं।"
+    },
+    {
+      "id": "u12_water_purifier_q2",
+      "question": "RO membrane की pore size सामान्यतः कितनी होती है, जिससे यह dissolved salts को भी रोक सके?",
+      "options": [
+        "लगभग 0.0001 micron (nanometre range)",
+        "लगभग 100 micron",
+        "लगभग 1 mm",
+        "लगभग 10 cm"
+      ],
+      "correctIndex": 0,
+      "explanation": "RO membrane की pore size लगभग 0.0001 micron (nanometre scale) होती है जो पानी के molecules को तो गुजरने देती है परंतु dissolved salts, bacteria, virus जैसे बड़े particles को रोक लेती है। 100 micron sediment filter की range है, जबकि 1 mm और 10 cm इतनी बड़ी हैं कि इनसे कोई filtration प्रभावी नहीं होगा।"
+    },
+    {
+      "id": "u12_water_purifier_q3",
+      "question": "RO purifier में पानी को membrane से गुजारने के लिए आवश्यक high pressure सामान्यतः किस component द्वारा उत्पन्न की जाती है?",
+      "options": [
+        "Booster pump (DC motor driven)",
+        "UV lamp",
+        "Activated carbon filter",
+        "Sediment filter"
+      ],
+      "correctIndex": 0,
+      "explanation": "Booster pump (सामान्यतः low voltage DC motor द्वारा चालित) पानी को उच्च pressure पर RO membrane तक भेजता है ताकि osmosis की natural direction के विपरीत (reverse osmosis) पानी शुद्ध हो सके। UV lamp disinfection के लिए है, activated carbon filter chlorine/odour हटाता है, और sediment filter बड़े particles छानता है — ये pressure उत्पन्न नहीं करते।"
+    },
+    {
+      "id": "u12_water_purifier_q4",
+      "question": "UV (Ultraviolet) water purifier मुख्यतः किस प्रकार पानी को शुद्ध करता है?",
+      "options": [
+        "Dissolved salts (TDS) को हटाकर",
+        "UV rays द्वारा bacteria व virus के DNA/RNA को नष्ट करके उन्हें निष्क्रिय करना",
+        "Sediments को छानकर",
+        "Chlorine को adsorb करके"
+      ],
+      "correctIndex": 1,
+      "explanation": "UV purifier में एक UV lamp (लगभग 254 nm wavelength) पानी में मौजूद bacteria, virus तथा अन्य microorganisms के DNA/RNA structure को damage करके उन्हें प्रजनन के अयोग्य (inactive) बना देती है, जिससे पानी biologically सुरक्षित हो जाता है। UV method dissolved salts (TDS) को नहीं हटाती, यह sediment filter का कार्य है, और chlorine adsorption activated carbon करता है — ये UV का कार्य नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q5",
+      "question": "UV disinfection के लिए सामान्यतः किस wavelength की UV light प्रयोग होती है?",
+      "options": [
+        "लगभग 254 nm (UV-C range)",
+        "लगभग 700 nm (visible red)",
+        "लगभग 1000 nm (infrared)",
+        "लगभग 10 nm (X-ray range)"
+      ],
+      "correctIndex": 0,
+      "explanation": "UV-C range की लगभग 254 nm wavelength microorganisms के genetic material को सबसे प्रभावी ढंग से nष्ट करती है, इसलिए इसे germicidal wavelength भी कहा जाता है। 700 nm visible light है, 1000 nm infrared (heat) है, और 10 nm X-ray range में आती है — ये disinfection के लिए प्रयोग नहीं होतीं।"
+    },
+    {
+      "id": "u12_water_purifier_q6",
+      "question": "UV purifier की एक प्रमुख सीमा (limitation) क्या है?",
+      "options": [
+        "यह पानी में मौजूद dissolved TDS/salts को नहीं हटा पाता",
+        "यह केवल गंदे (turbid) पानी पर प्रभावी काम करता है",
+        "यह dissolved oxygen को बढ़ा देता है",
+        "यह पानी का रंग बदल देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "UV केवल microorganisms को निष्क्रिय करता है, यह पानी में घुले हुए salts, heavy metals या TDS को नहीं हटाता, इसलिए high TDS वाले पानी के लिए UV के साथ RO भी आवश्यक होता है। UV वास्तव में clear (कम turbidity वाले) पानी पर बेहतर काम करता है, यह dissolved oxygen नहीं बढ़ाता, और पानी का रंग भी नहीं बदलता।"
+    },
+    {
+      "id": "u12_water_purifier_q7",
+      "question": "RO+UV combination water purifier का प्रयोग क्यों किया जाता है?",
+      "options": [
+        "ताकि केवल पानी ठंडा हो",
+        "ताकि RO द्वारा dissolved salts हटें और UV द्वारा किसी बचे हुए microorganism को निष्क्रिय किया जा सके",
+        "ताकि पानी में chlorine की मात्रा बढ़े",
+        "ताकि पानी का pH अम्लीय हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "RO membrane dissolved salts/heavy metals हटाता है जबकि UV lamp membrane से आगे बचे किसी सूक्ष्म microorganism को disinfect कर देती है, जिससे पानी physically व biologically दोनों तरह से सुरक्षित हो जाता है। Cooling, chlorine बढ़ाना, या pH अम्लीय बनाना purifier का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q8",
+      "question": "Water purifier में प्रयोग होने वाला sediment filter (pre-filter) का कार्य क्या है?",
+      "options": [
+        "Dissolved salts हटाना",
+        "पानी में मौजूद बड़े कणों जैसे mud, sand, rust particles को छानकर हटाना",
+        "Bacteria को मारना",
+        "पानी को गरम करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sediment filter (आमतौर पर PP - Polypropylene spun filter) पानी में मौजूद mud, sand, rust जैसे बड़े suspended particles को पहले ही छान लेता है ताकि आगे के membrane/carbon filter जल्दी block ना हों। Dissolved salts हटाना RO membrane का कार्य है, bacteria मारना UV का कार्य है, और पानी गरम करना purifier का कार्य ही नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q9",
+      "question": "Activated carbon (pre/post) filter water purifier में किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Chlorine, bad odour तथा कुछ organic impurities को adsorb करने के लिए",
+        "पानी की pressure बढ़ाने के लिए",
+        "TDS को पूरी तरह हटाने के लिए",
+        "Bacteria के DNA को नष्ट करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Activated carbon filter में porous carbon particles chlorine, bad odour, तथा कुछ organic compounds को adsorption process द्वारा सोख लेते हैं, जिससे पानी का taste व smell बेहतर होता है। Pressure बढ़ाना pump का काम है, TDS पूरी तरह RO membrane हटाता है, और bacteria DNA नष्ट करना UV lamp का कार्य है।"
+    },
+    {
+      "id": "u12_water_purifier_q10",
+      "question": "RO purifier में TDS (Total Dissolved Solids) control valve/mixing valve का उद्देश्य क्या है?",
+      "options": [
+        "पानी को पूरी तरह गंदा करना",
+        "शुद्ध RO water में कुछ मात्रा raw/mineralised water मिलाकर उचित TDS स्तर व स्वाद बनाए रखना",
+        "UV lamp को बंद करना",
+        "Pump की speed बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "अत्यधिक शुद्ध (near-zero TDS) पानी बेस्वाद व essential minerals रहित हो सकता है, इसलिए TDS control/mixing valve कुछ अनुपात raw water मिलाकर पानी को स्वास्थ्यकर व स्वादिष्ट TDS range (लगभग 50-150 ppm) में रखता है। यह पानी को गंदा नहीं करता, UV lamp बंद नहीं करता, और pump की speed से इसका संबंध नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q11",
+      "question": "RO purifier में Storage tank (product water tank) का क्या कार्य है?",
+      "options": [
+        "Membrane को साफ करना",
+        "Purified water को जमा करके रखना ताकि tap खोलते ही तुरंत उपयोग किया जा सके",
+        "पानी को UV से treat करना",
+        "पानी की सारी अशुद्धियाँ हटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "RO membrane से पानी की processing rate धीमी होती है, इसलिए एक storage tank में शुद्ध पानी जमा रहता है ताकि tap खोलते ही तुरंत पानी मिल सके, बजाय हर बार सीधे membrane से पानी लेने के। Membrane साफ करना, UV treatment, या मुख्य purification storage tank का कार्य नहीं है, यह पहले ही हो चुका होता है।"
+    },
+    {
+      "id": "u12_water_purifier_q12",
+      "question": "RO water purifier में Solenoid valve (SV) का क्या कार्य होता है?",
+      "options": [
+        "Storage tank भर जाने पर inlet water supply को automatically रोकना/शुरू करना",
+        "पानी को गरम करना",
+        "UV lamp को चालू करना",
+        "Membrane की सफाई करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solenoid valve एक electrically operated valve है जो float switch/level sensor के संकेत पर storage tank भर जाने पर inlet water supply को बंद कर देता है और खाली होने पर पुनः चालू करता है, जिससे पानी की बर्बादी रुकती है। यह पानी को गरम नहीं करता, UV lamp की switching अलग control से होती है, और membrane cleaning अलग process है।"
+    },
+    {
+      "id": "u12_water_purifier_q13",
+      "question": "RO purifier में reject/waste water (concentrate) क्यों बनता है?",
+      "options": [
+        "क्योंकि membrane से गुजरते समय dissolved salts व impurities वाला concentrated पानी अलग निकलता है जिसे drain कर दिया जाता है",
+        "क्योंकि UV lamp खराब हो जाती है",
+        "क्योंकि carbon filter जल गया",
+        "क्योंकि storage tank में leakage है"
+      ],
+      "correctIndex": 0,
+      "explanation": "RO membrane पानी को दो हिस्सों में बांटता है — एक साफ permeate (product water) और दूसरा concentrated reject water जिसमें अधिकांश dissolved salts व impurities होती हैं, इसे drain line से बाहर निकाल दिया जाता है। यह UV lamp खराब होने, carbon filter जलने, या tank leakage से संबंधित नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q14",
+      "question": "यदि RO purifier से पानी बहुत कम मात्रा में (धीमी गति से) आ रहा हो, तो सबसे संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Membrane/pre-filters का choke/block हो जाना अथवा low input water pressure",
+        "UV lamp की brightness बढ़ना",
+        "Storage tank का साइज बढ़ना",
+        "TDS valve का रंग बदलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sediment/carbon pre-filters या RO membrane में scaling/choking हो जाने पर तथा input water pressure कम होने पर उत्पादन दर काफी घट जाती है, जिससे पानी धीरे आता है। UV brightness बढ़ना, tank size बढ़ना, या valve का रंग बदलना output flow rate को प्रभावित नहीं करते।"
+    },
+    {
+      "id": "u12_water_purifier_q15",
+      "question": "RO purifier में booster pump को सामान्यतः किस प्रकार की supply दी जाती है?",
+      "options": [
+        "Low voltage DC supply (transformer/adapter से)",
+        "सीधे 230V AC mains supply",
+        "3-phase AC supply",
+        "Solar panel की high voltage supply"
+      ],
+      "correctIndex": 0,
+      "explanation": "Booster pump सामान्यतः एक transformer/SMPS adapter द्वारा 230V AC mains को low voltage DC (जैसे 24V DC) में बदलकर चलाया जाता है, जिससे water contact में safety बनी रहती है। सीधे 230V AC या 3-phase supply पर pump को चलाना safety के लिए उपयुक्त नहीं है, और यह सामान्यतः solar panel से directly नहीं चलता।"
+    },
+    {
+      "id": "u12_water_purifier_q16",
+      "question": "RO purifier में float switch (level sensor) किस उद्देश्य के लिए प्रयोग होता है?",
+      "options": [
+        "Storage tank में पानी का level detect करके pump/solenoid valve को control करना",
+        "पानी का temperature मापना",
+        "पानी का taste check करना",
+        "UV lamp की life बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Float switch storage tank में पानी के स्तर के अनुसार ऊपर-नीचे होकर pump/solenoid valve को on/off signal देता है, जिससे tank ना तो overflow होता है ना ही खाली रहता है। Temperature मापना, taste check करना, या UV lamp की life बढ़ाना float switch का कार्य नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q17",
+      "question": "RO membrane की life को बढ़ाने के लिए सबसे पहले किस filter की regular सफाई/replacement आवश्यक है?",
+      "options": [
+        "Sediment और carbon pre-filters",
+        "केवल storage tank",
+        "केवल outer body",
+        "केवल tap"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sediment और carbon pre-filters यदि समय पर साफ/replace ना हों तो mud, chlorine व अन्य impurities सीधे RO membrane पर पहुंचकर उसे जल्दी choke/damage कर देती हैं, इसलिए इनकी नियमित सफाई/replacement से membrane की life बढ़ती है। Tank, outer body, या tap की सफाई से membrane life पर सीधा असर नहीं पड़ता।"
+    },
+    {
+      "id": "u12_water_purifier_q18",
+      "question": "UV lamp की life सामान्यतः कितनी अवधि की होती है, जिसके बाद इसे बदलना आवश्यक होता है?",
+      "options": [
+        "लगभग 1 सप्ताह",
+        "लगभग 8000-10000 घंटे (लगभग 1 वर्ष के प्रयोग के बराबर)",
+        "लगभग 100 वर्ष",
+        "UV lamp कभी नहीं बदलनी पड़ती"
+      ],
+      "correctIndex": 1,
+      "explanation": "UV lamp की germicidal intensity समय के साथ कम होती जाती है और सामान्यतः लगभग 8000-10000 घंटे (लगभग एक वर्ष) बाद इसकी effectiveness घट जाती है, इसलिए वार्षिक replacement की सलाह दी जाती है। 1 सप्ताह बहुत कम है, 100 वर्ष अवास्तविक है, और lamp को कभी ना बदलना गलत है क्योंकि glass तथा mercury vapour की efficiency घटती है।"
+    },
+    {
+      "id": "u12_water_purifier_q19",
+      "question": "यदि RO purifier से पानी में नमकीन (salty) स्वाद आ रहा हो, तो इसका सबसे संभावित कारण क्या है?",
+      "options": [
+        "RO membrane का damage/punctured होना जिससे TDS रिजेक्शन कम हो गया हो",
+        "UV lamp की glow कम होना",
+        "Storage tank का साइज बड़ा होना",
+        "Sediment filter का नया होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "RO membrane क्षतिग्रस्त होने या fouling/scaling के कारण उसकी salt-rejection efficiency कम हो जाती है, जिससे अधिक TDS पानी में पहुंच जाता है और नमकीन स्वाद आता है। UV lamp का taste से कोई सीधा संबंध नहीं, tank का साइज पानी के taste को प्रभावित नहीं करता, और नया sediment filter समस्या का कारण नहीं होगा।"
+    },
+    {
+      "id": "u12_water_purifier_q20",
+      "question": "RO purifier में इस्तेमाल होने वाले प्रमुख consumables (जिन्हें समय-समय पर बदलना पड़ता है) कौन-कौन से हैं?",
+      "options": [
+        "Sediment filter, carbon filter, RO membrane, और UV lamp",
+        "केवल outer plastic body",
+        "केवल power cord",
+        "केवल tap handle"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water purifier में sediment filter, carbon (pre/post) filter, RO membrane और UV lamp — ये सभी उपयोग के साथ धीरे-धीरे clog/degrade होते हैं और इसलिए regular consumables की तरह समय-समय पर बदले जाते हैं। Outer body, power cord, और tap handle consumables की श्रेणी में नहीं आते क्योंकि इन्हें बार-बार बदलने की जरूरत नहीं होती।"
+    },
+    {
+      "id": "u12_water_purifier_q21",
+      "question": "RO purifier अत्यधिक कम TDS वाले (जैसे नदी/rain water सीधे) पानी के लिए क्यों उपयुक्त नहीं माना जाता?",
+      "options": [
+        "क्योंकि पहले से कम TDS होने पर RO membrane से पानी और भी अशुद्ध हो जाता है",
+        "क्योंकि low TDS पानी पर RO membrane अनावश्यक रूप से पानी बर्बाद करता है और आवश्यक minerals भी निकाल देता है जबकि यहां UV/UF अधिक उपयुक्त होता है",
+        "क्योंकि RO केवल high TDS पानी को detect ही नहीं करता",
+        "क्योंकि RO membrane low TDS में तुरंत जल जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब input पानी की TDS पहले से ही कम (जैसे 50 ppm से कम) होती है, तो RO का प्रयोग करने से पानी की काफी मात्रा waste के रूप में निकलती है और आवश्यक minerals भी हट जाते हैं, ऐसे पानी के लिए UV या UF (Ultrafiltration) purifier अधिक उपयुक्त व economical होता है। RO पानी को अशुद्ध नहीं करता, TDS detection अलग sensor का कार्य है, और membrane तुरंत जलती नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q22",
+      "question": "UF (Ultrafiltration) purifier RO से किस प्रमुख बात में भिन्न है?",
+      "options": [
+        "UF को उच्च pressure pump की आवश्यकता नहीं होती और यह dissolved salts (TDS) नहीं हटाता, केवल bacteria/suspended particles हटाता है",
+        "UF electricity के बिना कभी काम नहीं कर सकता",
+        "UF हमेशा RO से अधिक TDS हटाता है",
+        "UF में कोई membrane नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "UF membrane के pores RO से बड़े होते हैं, इसलिए यह gravity/low pressure पर भी काम कर सकता है (बिना pump के भी) और bacteria, cysts, suspended particles हटाता है, परंतु dissolved salts (TDS) को नहीं हटा पाता। UF में भी membrane होती है, यह RO से कम TDS हटाता है (नहीं हटाता), और यह बिना electricity के भी (gravity based) काम कर सकता है।"
+    },
+    {
+      "id": "u12_water_purifier_q23",
+      "question": "RO purifier में high TDS alarm/indicator का क्या कार्य होता है?",
+      "options": [
+        "यह पानी को गरम कर देता है",
+        "जब filters/membrane की efficiency कम हो जाती है और product water की TDS निर्धारित सीमा से अधिक हो जाती है, तो user को सूचित करना",
+        "यह UV lamp को हमेशा बंद रखता है",
+        "यह storage tank का साइज बदल देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिकांश आधुनिक RO purifiers में एक TDS sensor/indicator होता है जो product water की quality लगातार जांचता है और सीमा से अधिक TDS पर alarm/indication देकर user को filter/membrane replacement की जरूरत बताता है। यह पानी गरम नहीं करता, UV lamp को स्थायी रूप से बंद नहीं रखता, और tank का साइज नहीं बदलता।"
+    },
+    {
+      "id": "u12_water_purifier_q24",
+      "question": "यदि UV purifier का lamp fuse हो जाए (जल जाए), तो पानी की गुणवत्ता पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "पानी की TDS तुरंत बहुत बढ़ जाएगी",
+        "पानी में disinfection नहीं होगा, जिससे bacteria/virus सक्रिय रह सकते हैं भले ही पानी साफ दिखे",
+        "पानी का रंग हरा हो जाएगा",
+        "Pump पूरी तरह बंद हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "UV lamp fuse होने पर पानी में disinfection process रुक जाता है, जिससे bacteria/virus निष्क्रिय नहीं होते और पानी biologically असुरक्षित हो सकता है भले ही वह दिखने में साफ लगे, इसलिए अधिकांश models में UV fail indicator/auto shut-off दिया जाता है। TDS का UV lamp से सीधा संबंध नहीं, रंग नहीं बदलता, और pump अलग circuit पर होने के कारण जरूरी नहीं कि बंद हो।"
+    },
+    {
+      "id": "u12_water_purifier_q25",
+      "question": "RO purifier के pre-filters (sediment/carbon) को कितने समय के अंतराल पर सामान्यतः बदलना चाहिए?",
+      "options": [
+        "प्रतिदिन",
+        "सामान्यतः लगभग हर 3-6 महीने में (पानी की quality व usage पर निर्भर)",
+        "कभी नहीं बदलने चाहिए",
+        "हर 10 वर्ष में एक बार"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pre-filters पानी की quality व usage के आधार पर सामान्यतः हर 3-6 महीने में बदले जाते हैं ताकि वे membrane को protect कर सकें और flow rate बनी रहे। प्रतिदिन बदलना अव्यावहारिक है, कभी ना बदलना filters को choke कर membrane को नुकसान पहुंचाएगा, और 10 वर्ष का अंतराल बहुत अधिक लंबा है।"
+    },
+    {
+      "id": "u12_water_purifier_q26",
+      "question": "Water purifier में प्रयुक्त PCB (control board) का मुख्य कार्य क्या है?",
+      "options": [
+        "पानी को filter करना",
+        "Pump, solenoid valve, UV lamp व indicators के operation को sensors के signals के अनुसार control/sequence करना",
+        "पानी को ठंडा करना",
+        "TDS को शून्य करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "PCB (control board) float switch, TDS sensor, तथा अन्य sensors से मिले संकेतों के आधार पर pump, solenoid valve, UV lamp और indicators के operation को सही क्रम व समय पर control करता है। यह स्वयं पानी को filter, ठंडा, या TDS को शून्य नहीं करता — ये अलग-अलग components का कार्य है।"
+    },
+    {
+      "id": "u12_water_purifier_q27",
+      "question": "यदि RO purifier में water leakage हो रही हो, तो सामान्यतः इसका सबसे पहला संभावित कारण क्या जांचा जाता है?",
+      "options": [
+        "UV lamp की wavelength",
+        "Loose fittings/connectors, cracked tubing अथवा O-rings का खराब होना",
+        "TDS level बहुत कम होना",
+        "PCB का programming"
+      ],
+      "correctIndex": 1,
+      "explanation": "Leakage के लिए सबसे सामान्य कारण होते हैं ढीले fittings, cracked tubing, अथवा खराब हो चुके O-rings/seals, जिनकी नियमित जांच से leakage रोकी जा सकती है। UV wavelength, TDS level, और PCB programming का leakage से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q28",
+      "question": "RO purifier के membrane housing को periodically flush (sanitize) करने का उद्देश्य क्या है?",
+      "options": [
+        "Membrane पर जमा scale/biofilm को हटाकर उसकी efficiency व life बनाए रखना",
+        "Storage tank का रंग बदलना",
+        "UV lamp की wavelength बढ़ाना",
+        "Pump का voltage बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Membrane surface पर समय के साथ mineral scale व biofilm जमा हो जाता है जो flow व rejection efficiency घटा देता है, इसलिए periodic flushing/sanitization से membrane साफ रहता है और उसकी life बढ़ती है। यह tank का रंग, UV wavelength, या pump voltage को प्रभावित नहीं करता।"
+    },
+    {
+      "id": "u12_water_purifier_q29",
+      "question": "एक RO purifier में यदि UV lamp चालू ना हो रही हो, परंतु पानी normal रूप से filter हो रहा हो, तो सामान्यतः क्या fault हो सकता है?",
+      "options": [
+        "RO membrane पूरी तरह block हो गई है",
+        "UV lamp/ballast/quartz sleeve खराब होना अथवा उसका power connection loose होना",
+        "TDS control valve का leak होना",
+        "Sediment filter का साफ होना"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि UV lamp काम नहीं कर रही लेकिन बाकी filtration normal है, तो सामान्यतः UV lamp/ballast/quartz sleeve खराब होने या उसके power connection के loose होने की संभावना होती है, जिसकी जांच अलग से करनी चाहिए। Membrane का block होना तो पूरा filtration धीमा कर देगा, TDS valve leak होना अलग समस्या है, और filter का साफ होना कोई fault नहीं है।"
+    },
+    {
+      "id": "u12_water_purifier_q30",
+      "question": "Water purifier install करते समय inlet water pressure को check करना क्यों आवश्यक है?",
+      "options": [
+        "क्योंकि इससे केवल पानी का रंग तय होता है",
+        "क्योंकि RO purifier के प्रभावी काम करने के लिए न्यूनतम आवश्यक input pressure होना चाहिए, अन्यथा membrane पर पर्याप्त force नहीं बनेगी और output कम/शून्य हो सकता है",
+        "क्योंकि इससे UV lamp की wavelength बदलती है",
+        "क्योंकि इससे storage tank का साइज तय होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RO membrane से पानी को गुजारने के लिए एक न्यूनतम input pressure आवश्यक होती है; यदि pressure कम है तो membrane पर पर्याप्त force नहीं बनेगी और purified water का output काफी कम या लगभग शून्य हो सकता है, इसीलिए कम pressure वाले क्षेत्रों में booster pump अनिवार्य होता है। Pressure का पानी के रंग, UV wavelength, या tank size से कोई सीधा संबंध नहीं है।"
+    }
+  ]
+}

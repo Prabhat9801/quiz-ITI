@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "pic_intro",
+  "topicName": "PIC Introduction, PIC16F74, CISC vs RISC, 16F/18F Family",
+  "questions": [
+    {
+      "id": "u2_pic_intro_q1",
+      "question": "PIC microcontroller का पूरा नाम क्या है और इसे कौन-सी company बनाती है?",
+      "options": ["Peripheral Interface Controller, Microchip Technology", "Programmable Integrated Controller, Intel", "Personal Instruction Controller, Atmel", "Programmed Internal Chip, Motorola"],
+      "correctIndex": 0,
+      "explanation": "PIC का अर्थ Peripheral Interface Controller है और इसे Microchip Technology बनाती है, इसलिए option A सही है। Intel 8051/8085 बनाती है, Atmel AVR family बनाती है, और Motorola (अब NXP) 68HC family बनाती है, इसलिए बाकी options गलत हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q2",
+      "question": "PIC microcontrollers किस instruction set architecture पर आधारित होते हैं?",
+      "options": ["CISC", "RISC", "VLIW", "EPIC"],
+      "correctIndex": 1,
+      "explanation": "PIC microcontrollers RISC (Reduced Instruction Set Computer) architecture पर आधारित होते हैं जिसमें कम और fixed-length instructions होते हैं, इसलिए option B सही है। CISC में जटिल variable-length instructions होते हैं, VLIW और EPIC high-end processors की architectures हैं जो PIC में उपयोग नहीं होतीं।"
+    },
+    {
+      "id": "u2_pic_intro_q3",
+      "question": "PIC16F series (mid-range) में प्रत्येक instruction word की width कितनी होती है?",
+      "options": ["8-bit", "12-bit", "14-bit", "16-bit"],
+      "correctIndex": 2,
+      "explanation": "PIC16F mid-range family में हर instruction word 14-bit चौड़ा होता है, इसलिए option C सही है। 12-bit width low-end PIC10F/12F baseline में होती है, 16-bit high-end PIC18F में होती है, और 8-bit यहाँ data bus width है instruction width नहीं।"
+    },
+    {
+      "id": "u2_pic_intro_q4",
+      "question": "PIC नाम में मौजूद अक्षर 'F' (जैसे PIC16F74) प्रोग्राम मेमोरी की किस technology को दर्शाता है?",
+      "options": ["Mask ROM", "OTP ROM", "EPROM", "Flash memory"],
+      "correctIndex": 3,
+      "explanation": "'F' अक्षर Flash memory technology को दर्शाता है जो electrically erasable और reprogrammable होती है, इसलिए option D सही है। Mask ROM factory-fixed होती है, OTP one-time-programmable होती है, और EPROM UV से erase होती है — ये सभी 'F' designation से अलग technologies हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q5",
+      "question": "CISC (Complex Instruction Set Computer) architecture की मुख्य विशेषता क्या है?",
+      "options": ["Variable-length instructions होते हैं जो कई clock cycles में execute होते हैं", "सभी instructions fixed-length और single-cycle होते हैं", "Instructions की संख्या कम होती है", "यह केवल RISC का ही दूसरा नाम है"],
+      "correctIndex": 0,
+      "explanation": "CISC में instructions variable-length होते हैं और complex operations करते हैं जिनके execution में कई clock cycles लगते हैं, इसलिए option A सही है। fixed-length single-cycle instructions RISC की विशेषता है, CISC में instructions की संख्या कम नहीं बल्कि अधिक होती है, और यह RISC का पर्यायवाची नहीं है।"
+    },
+    {
+      "id": "u2_pic_intro_q6",
+      "question": "PIC16F74 microcontroller में on-chip flash program memory का approximate size कितना होता है?",
+      "options": ["1K words", "4K words", "2K words", "8K words"],
+      "correctIndex": 1,
+      "explanation": "PIC16F74 में लगभग 4K words (14-bit प्रत्येक) की on-chip flash program memory होती है, इसलिए option B सही है। 1K और 2K words छोटे baseline/low-end PIC devices में मिलते हैं, और 8K words higher-density mid-range variants में होते हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q7",
+      "question": "PIC16F74 microcontroller में built-in Analog-to-Digital Converter (ADC) कितने channels के साथ आता है?",
+      "options": ["4-channel", "12-channel", "8-channel", "16-channel"],
+      "correctIndex": 2,
+      "explanation": "PIC16F74 में 8-channel, 8-bit ADC module होता है जो कई analog signals को multiplex कर सकता है, इसलिए option C सही है। 4, 12 और 16-channel counts इस specific device के standard configuration से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_intro_q8",
+      "question": "PIC16F74 microcontroller एक 40-pin device के रूप में कितने general-purpose I/O pins प्रदान करता है?",
+      "options": ["16 pins", "22 pins", "40 pins", "33 pins"],
+      "correctIndex": 3,
+      "explanation": "PIC16F74, 40-pin package में लगभग 33 I/O pins (PORTA-PORTE across) प्रदान करता है क्योंकि कुछ pins power, ground और oscillator के लिए reserved होते हैं, इसलिए option D सही है। 40 pins पूरे package का कुल आकार है न कि उपलब्ध I/O count, और 16, 22 pins इस device के लिए गलत counts हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q9",
+      "question": "PIC18F family, PIC16F family की तुलना में instruction word width में क्या बदलाव लाती है?",
+      "options": ["14-bit से 16-bit", "12-bit से 14-bit", "16-bit से 32-bit", "8-bit से 12-bit"],
+      "correctIndex": 0,
+      "explanation": "PIC18F family में instruction word width 16-bit होती है जबकि PIC16F mid-range में यह 14-bit होती है, इसलिए option A सही है। 12-bit से 14-bit बदलाव baseline से mid-range जाने पर होता है, और 16-bit से 32-bit या 8-bit से 12-bit PIC families के actual transitions नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q10",
+      "question": "PIC18F family, PIC16F की तुलना में hardware stack की depth में क्या सुधार लाती है?",
+      "options": ["2 levels से 4 levels", "8 levels से 31 levels", "31 levels से 8 levels", "कोई बदलाव नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "PIC16F mid-range में hardware stack की depth 8 levels होती है जबकि enhanced PIC18F family में यह बढ़ाकर 31 levels कर दी जाती है ताकि deeper subroutine nesting संभव हो सके, इसलिए option B सही है। बाकी options गलत दिशा या गलत counts दिखाते हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q11",
+      "question": "PIC10F/12F जैसी baseline family में instruction word की width कितनी होती है?",
+      "options": ["14-bit", "16-bit", "12-bit", "20-bit"],
+      "correctIndex": 2,
+      "explanation": "PIC10F/12F baseline family सबसे सरल core रखती है जिसमें instruction word केवल 12-bit चौड़ा होता है, इसलिए option C सही है। 14-bit mid-range PIC16F में और 16-bit high-end PIC18F में उपयोग होता है, जबकि 20-bit कोई standard PIC width नहीं है।"
+    },
+    {
+      "id": "u2_pic_intro_q12",
+      "question": "PIC microcontroller की architecture, memory bus organization के अनुसार किस प्रकार की मानी जाती है?",
+      "options": ["Von Neumann architecture", "Hybrid CISC architecture", "Stack-only architecture", "Harvard architecture (separate program और data memory buses के साथ)"],
+      "correctIndex": 3,
+      "explanation": "PIC microcontrollers Harvard architecture का प्रयोग करते हैं जिसमें program memory और data memory के लिए अलग-अलग buses होते हैं, जिससे simultaneous access संभव होता है, इसलिए option D सही है। Von Neumann architecture में एक ही common bus होता है, और B व C वास्तविक architecture classification नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q13",
+      "question": "मध्य-श्रेणी (mid-range) PIC16F devices में सामान्यतः लगभग कितने assembly instructions होते हैं?",
+      "options": ["35", "12", "77", "120"],
+      "correctIndex": 0,
+      "explanation": "PIC16F mid-range family में approximately 35 instructions होते हैं जो RISC design के अनुरूप compact instruction set बनाते हैं, इसलिए option A सही है। 12 instructions बहुत कम होंगे, जबकि 77 PIC18F जैसी enhanced family के करीब है और 120 किसी standard PIC core का मान नहीं है।"
+    },
+    {
+      "id": "u2_pic_intro_q14",
+      "question": "PIC18F enhanced family में instructions की संख्या लगभग कितनी होती है?",
+      "options": ["35", "77", "50", "200"],
+      "correctIndex": 1,
+      "explanation": "PIC18F family में लगभग 77 instructions होते हैं जिनमें extended arithmetic और addressing modes के अतिरिक्त instructions शामिल हैं, इसलिए option B सही है। 35 mid-range PIC16F की instruction count है, जबकि 50 और 200 इस family के standard मानों से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_intro_q15",
+      "question": "PIC microcontrollers में single-cycle instruction execution का सामान्य नियम क्या है?",
+      "options": ["सभी instructions को हमेशा 4 instruction cycles लगते हैं", "केवल arithmetic instructions single-cycle होते हैं", "अधिकांश instructions (branch/call को छोड़कर) एक ही instruction cycle में execute होते हैं", "single-cycle execution केवल PIC18F में उपलब्ध है"],
+      "correctIndex": 2,
+      "explanation": "PIC RISC architecture में अधिकांश instructions (branch/call जैसे कुछ को छोड़कर, जो 2 cycles लेते हैं) एक ही instruction cycle में पूरे होते हैं, इसलिए option C सही है। सभी instructions को 4 cycles नहीं लगते, यह केवल arithmetic तक सीमित नहीं है, और यह feature PIC16F में भी present है।"
+    },
+    {
+      "id": "u2_pic_intro_q16",
+      "question": "PIC microcontroller में एक instruction cycle पूरा करने के लिए सामान्यतः कितने oscillator clock cycles आवश्यक होते हैं?",
+      "options": ["1 clock cycle", "2 clock cycles", "8 clock cycles", "4 clock cycles"],
+      "correctIndex": 3,
+      "explanation": "PIC में oscillator के 4 clock cycles मिलकर एक instruction cycle (Q1-Q4 states) बनाते हैं, इसलिए option D सही है। 1 और 2 clock cycles इतने कम में एक पूर्ण instruction cycle पूरा नहीं होता, और 8 clock cycles मानक PIC timing से अधिक है।"
+    },
+    {
+      "id": "u2_pic_intro_q17",
+      "question": "PIC microcontroller में pipelining का क्या लाभ है?",
+      "options": ["यह एक साथ अगली instruction का fetch और वर्तमान instruction का execute overlap करके speed बढ़ाता है", "यह केवल power consumption कम करता है", "यह program memory का size बढ़ाता है", "यह केवल external interrupts संभालने के लिए है"],
+      "correctIndex": 0,
+      "explanation": "pipelining से जब एक instruction execute हो रही होती है, तब अगली instruction का fetch साथ-साथ हो जाता है, जिससे overall throughput बढ़ता है, इसलिए option A सही है। यह सीधे तौर पर power consumption, memory size या interrupt handling से संबंधित feature नहीं है।"
+    },
+    {
+      "id": "u2_pic_intro_q18",
+      "question": "PIC16F74 microcontroller किस package में लगभग कितने pins के साथ उपलब्ध होता है?",
+      "options": ["20-pin", "40-pin", "28-pin", "64-pin"],
+      "correctIndex": 1,
+      "explanation": "PIC16F74 सामान्यतः 40-pin DIP/PDIP package में उपलब्ध होता है जिसमें अधिक I/O ports (PORTA से PORTE) होते हैं, इसलिए option B सही है। 20-pin और 28-pin छोटे PIC16F members के लिए हैं, और 64-pin इस specific device का मानक package नहीं है।"
+    },
+    {
+      "id": "u2_pic_intro_q19",
+      "question": "PIC16F877A जैसे लोकप्रिय mid-range family member की मुख्य विशेषता क्या है?",
+      "options": ["इसमें कोई timer उपलब्ध नहीं होता", "यह केवल external memory पर निर्भर करता है", "यह ADC, timers, USART और CCP जैसे कई peripherals एक ही chip में देता है", "इसमें कोई I/O port नहीं होता"],
+      "correctIndex": 2,
+      "explanation": "PIC16F877A जैसे devices ADC, multiple timers, USART serial communication और CCP (Capture/Compare/PWM) module जैसे peripherals को integrate करते हैं, इसलिए option C सही है। बाकी options तथ्यात्मक रूप से गलत हैं क्योंकि यह on-chip memory व I/O भी रखता है।"
+    },
+    {
+      "id": "u2_pic_intro_q20",
+      "question": "PIC microcontroller में program development के लिए Microchip द्वारा प्रदान किया गया प्रमुख IDE tool कौन-सा है?",
+      "options": ["Keil uVision", "Eclipse CDT", "Arduino IDE", "MPLAB X IDE"],
+      "correctIndex": 3,
+      "explanation": "Microchip Technology PIC devices के लिए MPLAB X IDE प्रदान करती है जिसमें editor, compiler integration और debugger शामिल होते हैं, इसलिए option D सही है। Keil uVision मुख्यतः 8051/ARM के लिए प्रयोग होता है, Eclipse CDT एक generic C/C++ IDE है, और Arduino IDE AVR-based Arduino boards के लिए है।"
+    },
+    {
+      "id": "u2_pic_intro_q21",
+      "question": "PIC16F74 का maximum operating oscillator frequency सामान्यतः कितना होता है?",
+      "options": ["20 MHz", "4 MHz", "10 MHz", "40 MHz"],
+      "correctIndex": 0,
+      "explanation": "PIC16F74 सामान्यतः 20 MHz तक के external crystal oscillator पर operate कर सकता है, इसलिए option A सही है। 4 MHz और 10 MHz इससे कम speed दिखाते हैं जो device की maximum rated speed नहीं है, और 40 MHz इस device की standard rating से अधिक है।"
+    },
+    {
+      "id": "u2_pic_intro_q22",
+      "question": "PIC नामकरण में 'PIC16F877A' में मौजूद संख्या '16' मुख्यतः किस बात को इंगित करती है?",
+      "options": ["Device का voltage rating", "Mid-range family series designation", "Total pin count", "Clock frequency in MHz"],
+      "correctIndex": 1,
+      "explanation": "'16' PIC की mid-range family series को दर्शाने वाला designation है (जैसे PIC12F baseline, PIC16F mid-range, PIC18F high-end), इसलिए option B सही है। यह voltage rating, pin count या clock frequency को सीधे नहीं दर्शाता।"
+    },
+    {
+      "id": "u2_pic_intro_q23",
+      "question": "PIC12F family (baseline से थोड़ा ऊपर) मुख्यतः किस प्रकार के applications के लिए डिज़ाइन की जाती है?",
+      "options": ["High-end complex networking systems", "Desktop computer operating systems", "छोटे pin count वाले simple low-cost embedded applications", "Supercomputer clusters"],
+      "correctIndex": 2,
+      "explanation": "PIC12F जैसी छोटी family कम pin count और सीमित memory के साथ सरल, low-cost embedded control applications (जैसे simple sensors/switches) के लिए बनाई जाती है, इसलिए option C सही है। बाकी options इसके actual उपयोग क्षेत्र से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_intro_q24",
+      "question": "PIC architecture में W register (Working register) का मुख्य कार्य क्या है?",
+      "options": ["यह केवल external memory address रखता है", "यह केवल program counter की भूमिका निभाता है", "यह केवल interrupt vector store करता है", "यह accumulator की तरह अधिकांश ALU operations में एक operand और result को होल्ड करता है"],
+      "correctIndex": 3,
+      "explanation": "W register एक accumulator जैसा काम करता है जिसमें अधिकांश arithmetic/logic operations का एक operand होता है और result भी अक्सर इसी में store होता है, इसलिए option D सही है। बाकी roles PC, address register या interrupt vector से संबंधित हैं, W register से नहीं।"
+    },
+    {
+      "id": "u2_pic_intro_q25",
+      "question": "PIC16F mid-range family में Program Counter (PC) की width सामान्यतः कितनी होती है?",
+      "options": ["13-bit", "8-bit", "16-bit", "21-bit"],
+      "correctIndex": 0,
+      "explanation": "PIC16F mid-range family में PC 13-bit चौड़ा होता है जिससे यह 8K words तक program memory को address कर सकता है, इसलिए option A सही है। 8-bit width अपर्याप्त होगी, 16-bit और 21-bit जैसी widths PIC18F जैसी enhanced families से संबंधित हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q26",
+      "question": "8051 और PIC microcontroller की core architecture (memory access) में एक बुनियादी समानता क्या है?",
+      "options": ["दोनों में कोई program memory नहीं होती", "दोनों में program और data memory के लिए अलग address space वाली Harvard-जैसी architecture होती है", "दोनों में केवल RISC core होता है", "दोनों में कोई interrupt system नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "8051 (modified Harvard) और PIC (strict Harvard) दोनों में program memory और data memory के लिए अलग address spaces होते हैं, इसलिए option B सही है। 8051 वास्तव में CISC-जैसे core पर आधारित है न कि pure RISC, और दोनों में program memory व interrupt system मौजूद होते हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q27",
+      "question": "PIC16F74 microcontroller में कुल कितने built-in timer modules उपलब्ध होते हैं (TMR0, TMR1, TMR2)?",
+      "options": ["1", "2", "3", "4"],
+      "correctIndex": 2,
+      "explanation": "PIC16F74 में तीन timer modules — TMR0 (8-bit), TMR1 (16-bit) और TMR2 (8-bit, PWM support सहित) — उपलब्ध होते हैं, इसलिए option C सही है। 1, 2 या 4 counts इस device के actual timer resources से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_intro_q28",
+      "question": "RISC architecture में instructions की fixed-length होने का एक प्रमुख लाभ क्या है?",
+      "options": ["इससे program memory की जरूरत खत्म हो जाती है", "इससे केवल analog signals process किए जा सकते हैं", "इससे device की price हमेशा बढ़ जाती है", "Instruction decoding सरल और तेज़ हो जाती है, जिससे pipelining आसान बनती है"],
+      "correctIndex": 3,
+      "explanation": "fixed-length instructions को decode करना सरल होता है जिससे pipelining efficiently लागू की जा सकती है और execution तेज़ होता है, इसलिए option D सही है। यह program memory की आवश्यकता खत्म नहीं करता, analog processing से संबंधित नहीं है, और price पर सीधा कोई सामान्य नियम लागू नहीं होता।"
+    },
+    {
+      "id": "u2_pic_intro_q29",
+      "question": "PIC microcontroller का चयन करते समय CISC-based पुराने microprocessors की तुलना में इसका एक व्यावहारिक लाभ क्या माना जाता है?",
+      "options": ["Simple, fixed-length RISC instructions के कारण तेज़ और predictable execution", "अधिक जटिल परंतु धीमे instructions", "Program memory की पूर्ण अनुपस्थिति", "Interrupt handling की सुविधा का न होना"],
+      "correctIndex": 0,
+      "explanation": "PIC की RISC-based design के कारण अधिकांश instructions single-cycle में predictable समय में execute होते हैं, जो real-time embedded control के लिए लाभदायक है, इसलिए option A सही है। CISC जटिल परंतु धीमे होते हैं (यह PIC की विशेषता नहीं), और PIC में program memory व interrupt handling दोनों उपलब्ध होते हैं।"
+    },
+    {
+      "id": "u2_pic_intro_q30",
+      "question": "निम्न में से कौन-सा कथन PIC16F (mid-range) और PIC18F (high-end) family के अंतर को सही ढंग से दर्शाता है?",
+      "options": ["दोनों families में instruction width और stack depth बिल्कुल समान होती है", "PIC18F, PIC16F की तुलना में wider instructions, deeper stack और अधिक instruction count प्रदान करता है", "PIC16F में अधिक instruction width होती है जबकि PIC18F में कम", "PIC18F में कोई ADC peripheral उपलब्ध नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "PIC18F, PIC16F की तुलना में 16-bit instruction width, 31-level stack और लगभग 77 instructions जैसी enhanced capabilities देता है, इसलिए option B सही है। दोनों families समान नहीं हैं, PIC16F में instruction width कम (14-bit) होती है न कि अधिक, और PIC18F में भी ADC जैसे peripherals उपलब्ध होते हैं।"
+    }
+  ]
+}

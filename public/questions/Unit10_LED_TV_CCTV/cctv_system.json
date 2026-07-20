@@ -1,0 +1,368 @@
+{
+  "unit": "unit10",
+  "unitName": "LED Lights, LED/LCD TV and CCTV",
+  "topic": "cctv_system",
+  "topicName": "CCTV System - Camera Types, DVR/NVR & Working",
+  "questions": [
+    {
+      "id": "u10_cctv_system_q1",
+      "question": "CCTV (Closed Circuit Television) system के basic block diagram में मुख्य blocks कौन-कौन से होते हैं?",
+      "options": [
+        "Camera, transmission cable/network, recording device (DVR/NVR) और monitor/display",
+        "केवल camera और speaker",
+        "केवल remote control और camera",
+        "केवल power supply और cable"
+      ],
+      "correctIndex": 0,
+      "explanation": "CCTV system के basic block diagram में camera image capture करता है, cable/network उस video signal को आगे भेजता है, DVR/NVR उसे record करता है और monitor/display उसे देखने योग्य बनाता है — इसलिए option A सही है। बाकी options में system के आवश्यक blocks (recording device, monitor) गायब हैं या गलत items (speaker, remote control) शामिल हैं।"
+    },
+    {
+      "id": "u10_cctv_system_q2",
+      "question": "Dome camera की design का मुख्य लाभ क्या है?",
+      "options": [
+        "इसका bullet-shaped enclosure होता है",
+        "इसका dome-shaped, discreet enclosure camera की देखने की direction छुपाता है, जिससे यह indoor ceiling mounting के लिए उपयुक्त होता है",
+        "इसमें कोई lens नहीं होता",
+        "यह केवल outdoor long-range use के लिए design की जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dome camera का गोल, अर्ध-गोलाकार cover camera का view-direction छुपा देता है और compact ceiling-mounted look देता है, इसलिए option B सही है। Bullet-shaped enclosure अलग camera type (bullet camera) की पहचान है, हर camera में lens होता है, और dome camera indoor/outdoor दोनों में इस्तेमाल होती है, केवल long-range outdoor के लिए नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q3",
+      "question": "Bullet camera को outdoor long-distance monitoring के लिए क्यों पसंद किया जाता है?",
+      "options": [
+        "इसका कोई weatherproof housing नहीं होता",
+        "यह केवल indoor use के लिए बनाई जाती है",
+        "इसका cylindrical/tube-shaped weatherproof housing outdoor long-distance monitoring के लिए fixed direction और लंबी IR range देता है",
+        "इसमें motorized zoom हमेशा compulsory होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bullet camera का लंबा बेलनाकार housing weatherproof होता है और इसे एक निश्चित दिशा में fix करके लगाया जाता है, साथ ही यह प्रायः लंबी IR range देती है — इसलिए option C सही है। बाकी options bullet camera की वास्तविक विशेषताओं (weatherproof housing, outdoor use, बिना motorized zoom के भी काम करना) के विपरीत हैं।"
+    },
+    {
+      "id": "u10_cctv_system_q4",
+      "question": "CCTV camera में PTZ का पूरा अर्थ क्या है और यह क्या सुविधा देता है?",
+      "options": [
+        "PTZ का मतलब Power, Temperature, Zoom है",
+        "PTZ camera सिर्फ static fixed view देता है, movement नहीं कर सकता",
+        "PTZ camera सिर्फ night vision के लिए use होती है",
+        "PTZ का मतलब Pan-Tilt-Zoom है, जिससे camera horizontal (pan), vertical (tilt) घूम सकता है और lens zoom कर सकता है, remote से control करके"
+      ],
+      "correctIndex": 3,
+      "explanation": "PTZ camera को operator remote से horizontal (pan), vertical (tilt) घुमा सकता है और lens को zoom-in/out कर सकता है, इसलिए option D सही है। 'Power, Temperature, Zoom' गलत expansion है, PTZ camera स्थिर नहीं बल्कि movable होती है, और यह night vision विशेष feature नहीं बल्कि movement/zoom feature है।"
+    },
+    {
+      "id": "u10_cctv_system_q5",
+      "question": "IR (Infrared) night vision camera अंधेरे में भी objects कैसे दिखा पाती है?",
+      "options": [
+        "Camera के around लगे IR LEDs अंधेरे में infrared light emit करते हैं जो objects से reflect होकर camera के IR-sensitive sensor तक पहुँचती है",
+        "Camera खुद light produce नहीं करती, सिर्फ ambient light बढ़ाती है",
+        "IR camera सिर्फ दिन में काम करती है",
+        "IR LED का काम सिर्फ camera को गरम रखना है"
+      ],
+      "correctIndex": 0,
+      "explanation": "IR LEDs अंधेरे में अदृश्य infrared प्रकाश फेंकते हैं, जो वस्तुओं से टकराकर वापस camera के sensor तक पहुँचती है और image बनती है, इसलिए option A सही है। यह सिर्फ ambient light बढ़ाने वाली process नहीं है, IR camera विशेषतः रात/अंधेरे के लिए ही उपयोगी है, और IR LED का उद्देश्य illumination है, heating नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q6",
+      "question": "Box camera में C-mount और CS-mount lens mounting standard का उपयोग क्यों किया जाता है?",
+      "options": [
+        "यह fixed non-removable lens होती है",
+        "यह interchangeable lens mounting standards हैं जिनसे application के हिसाब से अलग focal length वाली lens लगाई जा सकती है (C-mount lens को extra ring adapter के साथ CS-mount body पर भी लगाया जा सकता है)",
+        "C-mount सिर्फ wireless camera में use होता है",
+        "CS-mount lens सिर्फ indoor dome camera में होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "C-mount/CS-mount box camera में lens को खोलकर application के अनुसार अलग focal length की lens लगाई जा सकती है, इसलिए option B सही है। यह fixed lens नहीं बल्कि interchangeable है, C-mount/CS-mount का wireless camera से कोई सीधा संबंध नहीं, और यह mounting मुख्यतः box camera में होती है, dome camera में नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q7",
+      "question": "Wireless/WiFi CCTV camera की मुख्य विशेषता क्या है?",
+      "options": [
+        "यह हमेशा coaxial cable से video transmit करती है",
+        "इसमें किसी भी power connection की ज़रूरत कभी नहीं होती",
+        "यह video signal को WiFi/wireless network के through recording device या mobile app तक भेजती है, जिससे video-cabling की ज़रूरत कम हो जाती है",
+        "यह सिर्फ analog DVR के साथ compatible होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Wireless/WiFi camera video data को wireless network के माध्यम से भेजती है, जिससे लंबी video-cable बिछाने की ज़रूरत घट जाती है, इसलिए option C सही है। यह coaxial cable पर निर्भर नहीं होती, इसे फिर भी power supply चाहिए होती है, और यह प्रायः IP-based होने से NVR/app के साथ काम करती है, analog DVR के साथ नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q8",
+      "question": "Analog CCTV camera और IP (Internet Protocol) camera में basic अंतर क्या है?",
+      "options": [
+        "Analog camera digital signal देती है और IP camera analog signal देती है",
+        "दोनों same signal type देती हैं, कोई अंतर नहीं",
+        "IP camera सिर्फ wired होती है, analog camera सिर्फ wireless होती है",
+        "Analog camera analog video signal (coax cable) देती है जिसे DVR digitize करता है, जबकि IP camera video को camera के अंदर ही digitize करके network (Ethernet) पर भेजती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Analog camera का output analog signal होता है जिसे DVR convert/store करता है, जबकि IP camera video को camera के भीतर ही digital format में बदलकर network से भेजती है — इसलिए option D सही है। पहले दो options तथ्यात्मक रूप से उल्टे/गलत हैं, और wired-wireless का यह वर्गीकरण भी गलत है क्योंकि दोनों प्रकार wired या wireless हो सकती हैं।"
+    },
+    {
+      "id": "u10_cctv_system_q9",
+      "question": "DVR (Digital Video Recorder) का मुख्य काम क्या है?",
+      "options": [
+        "Analog cameras से BNC coaxial cable द्वारा आने वाले analog video signal को built-in codec से digitize करके hard disk में store करना",
+        "सिर्फ IP camera से network video लेना",
+        "सिर्फ live view दिखाना, record न करना",
+        "Camera को power देना, video से कोई लेना-देना नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "DVR analog cameras से coax cable के जरिए मिले analog signal को अपने built-in codec से digital format में बदलकर HDD में store करता है, इसलिए option A सही है। DVR मुख्यतः analog camera के लिए है (IP नहीं), यह सिर्फ live view नहीं बल्कि recording भी करता है, और यह primarily video processing/recording device है, केवल power देने वाला उपकरण नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q10",
+      "question": "DVR-based analog CCTV system में camera से DVR तक video signal किस cable से जाता है?",
+      "options": [
+        "Cat6 Ethernet cable से",
+        "BNC coaxial cable से (analog video signal)",
+        "हमेशा fiber optic cable से",
+        "USB cable से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Analog CCTV system में camera का video output BNC coaxial cable के जरिए DVR तक जाता है, इसलिए option B सही है। Cat6 Ethernet cable IP camera/NVR system में उपयोग होती है, fiber optic केवल विशेष लंबी-दूरी installations में इस्तेमाल होती है (सामान्य नहीं), और USB cable analog camera-DVR connection के लिए उपयोग नहीं होती।"
+    },
+    {
+      "id": "u10_cctv_system_q11",
+      "question": "DVR में 'built-in codec' होने का क्या मतलब है?",
+      "options": [
+        "Codec camera को power supply देता है",
+        "Codec सिर्फ monitor का resolution set करता है",
+        "Codec analog video signal को compress/digitize करके storage format (जैसे H.264/H.265) में convert करता है ताकि HDD पर efficiently store हो सके",
+        "Codec cable की length बढ़ाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "DVR का built-in codec incoming analog video को digital, compressed format में बदलता है ताकि वह HDD में कम जगह लेकर स्टोर हो सके, इसलिए option C सही है। Codec का power supply, monitor resolution setting या cable length बढ़ाने से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u10_cctv_system_q12",
+      "question": "NVR (Network Video Recorder) analog DVR से किस तरह अलग काम करता है?",
+      "options": [
+        "NVR भी analog camera से BNC cable से signal लेता है",
+        "NVR में कोई recording नहीं होती",
+        "NVR सिर्फ monitor का काम करता है",
+        "NVR IP cameras से पहले से ही digital compressed video stream को Ethernet/network के through लेता है और store करता है, खुद analog-to-digital conversion नहीं करता"
+      ],
+      "correctIndex": 3,
+      "explanation": "NVR IP cameras से network के through पहले से digitized video stream प्राप्त करता है और सीधे store करता है, जबकि DVR analog signal को खुद digitize करता है — इसलिए option D सही है। NVR coax cable से analog signal नहीं लेता, यह भी recording करता है, और यह केवल monitor नहीं बल्कि recording device है।"
+    },
+    {
+      "id": "u10_cctv_system_q13",
+      "question": "NVR-based IP CCTV system में camera से NVR तक connection किस cable/माध्यम से होता है?",
+      "options": [
+        "Ethernet (Cat5e/Cat6) network cable से, जिसमें video digital data के रूप में travel करता है",
+        "BNC coaxial cable से",
+        "सिर्फ telephone line से",
+        "सिर्फ optical fiber compulsory है, कोई और cable नहीं चलेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "IP camera-NVR system में video Ethernet (Cat5e/Cat6) cable के through digital data packets के रूप में network पर भेजा जाता है, इसलिए option A सही है। BNC coaxial cable analog DVR system में इस्तेमाल होती है, telephone line video transmission के लिए उपयुक्त नहीं, और optical fiber सामान्यतः compulsory नहीं बल्कि विशेष लंबी दूरी में वैकल्पिक होती है।"
+    },
+    {
+      "id": "u10_cctv_system_q14",
+      "question": "PoE (Power over Ethernet) IP camera installation में क्या सुविधा देता है?",
+      "options": [
+        "यह camera को सिर्फ video signal देता है, power नहीं",
+        "एक ही Ethernet cable से IP camera को power supply और data (video) दोनों एक साथ मिल जाते हैं, अलग power cable की ज़रूरत नहीं रहती",
+        "PoE सिर्फ analog camera के साथ काम करता है",
+        "PoE camera की resolution automatically बढ़ा देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PoE technology एक ही Ethernet cable के जरिए IP camera को data और DC power दोनों पहुँचाती है, जिससे installation आसान और सस्ती होती है, इसलिए option B सही है। यह video के साथ power भी देता है, यह analog नहीं बल्कि IP camera की सुविधा है, और यह resolution को नहीं बदलता।"
+    },
+    {
+      "id": "u10_cctv_system_q15",
+      "question": "DVR और NVR system में मुख्य अंतर किस point पर सबसे स्पष्ट है?",
+      "options": [
+        "DVR हमेशा wireless होता है और NVR हमेशा wired",
+        "दोनों same camera type (analog) ही support करते हैं",
+        "DVR analog cameras को coaxial cable से connect करता है और video खुद digitize करता है, जबकि NVR IP cameras को Ethernet/network से connect करता है जो पहले से digital video भेजती हैं",
+        "NVR में storage नहीं होता, सिर्फ DVR में होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सबसे स्पष्ट अंतर camera type और cabling में है — DVR analog camera + coax cable के साथ काम करता है और खुद digitize करता है, जबकि NVR IP camera + Ethernet/network के साथ काम करता है, इसलिए option C सही है। Wired/wireless का वर्गीकरण गलत है, दोनों अलग camera types support करते हैं (analog बनाम IP), और दोनों में ही HDD storage होता है।"
+    },
+    {
+      "id": "u10_cctv_system_q16",
+      "question": "अगर site पर सिर्फ analog (non-IP) cameras लगी हों, तो recording के लिए कौन-सा device उपयुक्त होगा?",
+      "options": [
+        "NVR, क्योंकि यह सभी camera types के साथ direct चलता है",
+        "कोई भी recorder नहीं चाहिए",
+        "सिर्फ monitor लगाना काफी है",
+        "DVR, क्योंकि यह analog camera से BNC coax input ले सकता है और अंदर ही digitize करता है; NVR को IP/network camera चाहिए होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Analog cameras के लिए DVR सही choice है क्योंकि यह coax cable से analog input लेकर खुद digitize और store करता है, इसलिए option D सही है। NVR IP camera के लिए बना होता है, बिना recorder के footage store नहीं होगा, और सिर्फ monitor लगाने से recording संभव नहीं है।"
+    },
+    {
+      "id": "u10_cctv_system_q17",
+      "question": "CCTV system में continuous recording के लिए HDD (Hard Disk Drive) का क्या role है?",
+      "options": [
+        "HDD DVR/NVR द्वारा digitize किए गए video footage को लंबे समय तक store करता है ताकि बाद में playback किया जा सके",
+        "HDD camera को power देता है",
+        "HDD सिर्फ live view के लिए होता है, storage नहीं करता",
+        "HDD camera की lens को control करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "HDD DVR/NVR से processed digital video data को store करने का मुख्य storage माध्यम है, जिससे बाद में footage देखा जा सके, इसलिए option A सही है। HDD camera को power नहीं देता, यह recording (live view नहीं) के लिए है, और इसका lens control से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q18",
+      "question": "एक CCTV system में 1 camera का daily recording data लगभग 8 GB है। अगर HDD की capacity 1000 GB (1TB) है, तो यह HDD (सिर्फ इसी camera के लिए) लगभग कितने दिनों की recording store कर सकेगा?",
+      "options": [
+        "लगभग 8 दिन",
+        "लगभग 125 दिन",
+        "लगभग 12.5 दिन",
+        "लगभग 1000 दिन"
+      ],
+      "correctIndex": 1,
+      "explanation": "Days = Total storage / daily data rate = 1000 / 8 = 125 दिन, इसलिए option B सही है। 8 दिन असल में daily rate की ग़लत व्याख्या है, 12.5 दिन गणना की गलती है, और 1000 दिन सिर्फ HDD की capacity (GB में) को दिनों में गलत तरीके से मान लेने से आता है।"
+    },
+    {
+      "id": "u10_cctv_system_q19",
+      "question": "एक 8-channel CCTV system में हर camera का daily data rate 10 GB है। 7 दिनों की recording store करने के लिए कुल कितनी storage capacity चाहिए होगी?",
+      "options": [
+        "70 GB",
+        "80 GB",
+        "560 GB",
+        "4000 GB"
+      ],
+      "correctIndex": 2,
+      "explanation": "कुल daily data = 8 cameras × 10 GB = 80 GB/day; 7 दिनों के लिए = 80 × 7 = 560 GB, इसलिए option C सही है। 70 GB में cameras की संख्या शामिल नहीं की गई, 80 GB सिर्फ एक दिन का total data है (7 दिन का नहीं), और 4000 GB गणना में गलत multiplication से आता है।"
+    },
+    {
+      "id": "u10_cctv_system_q20",
+      "question": "CCTV camera resolution के संदर्भ में 'CIF' term किसे दर्शाता है?",
+      "options": [
+        "एक high-end 4K resolution standard",
+        "Camera का frame rate (fps) unit",
+        "एक नया IP camera compression format",
+        "एक पुरानी analog resolution standard (लगभग 352x288 pixels), जो low-resolution recording देती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "CIF (Common Intermediate Format) एक पुरानी, कम resolution वाली analog recording standard है जिसमें लगभग 352x288 pixels होते हैं, इसलिए option D सही है। यह 4K जैसी high-end resolution नहीं है, यह fps unit नहीं बल्कि resolution standard है, और यह कोई compression format नहीं बल्कि एक पुराना resolution-level है।"
+    },
+    {
+      "id": "u10_cctv_system_q21",
+      "question": "CCTV analog camera में 'D1' resolution का approx pixel count क्या होता है और यह CIF से कैसी है?",
+      "options": [
+        "लगभग 704x576 pixels, जो CIF से बेहतर/ज़्यादा resolution देता है",
+        "D1, CIF से कम resolution देता है",
+        "D1 सिर्फ IP camera का term है, analog में नहीं होता",
+        "D1 का मतलब सिर्फ 'Day' mode है"
+      ],
+      "correctIndex": 0,
+      "explanation": "D1 resolution लगभग 704x576 pixels होती है, जो CIF (352x288) से बेहतर और अधिक detail वाली image देती है, इसलिए option A सही है। D1 CIF से कम नहीं बल्कि अधिक resolution देता है, यह एक analog camera resolution term है (IP-specific नहीं), और इसका 'Day mode' से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q22",
+      "question": "CCTV camera में '1080p Full HD' resolution का approx pixel count क्या होता है?",
+      "options": [
+        "352 x 288",
+        "1920 x 1080 pixels, जो D1/CIF की तुलना में साफ़ और sharp image detail देता है",
+        "704 x 576",
+        "640 x 480"
+      ],
+      "correctIndex": 1,
+      "explanation": "Full HD/1080p camera resolution 1920x1080 pixels होती है, जो D1 (704x576) और CIF (352x288) से काफी ज़्यादा detail देती है, इसलिए option B सही है। बाकी सभी values D1, CIF या lower-resolution standards से संबंधित हैं, Full HD की नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q23",
+      "question": "CCTV camera में night vision के लिए IR LEDs को कहाँ और कैसे लगाया जाता है?",
+      "options": [
+        "IR LEDs camera के पीछे लगाकर camera को गरम किया जाता है",
+        "IR LEDs monitor के अंदर लगाए जाते हैं",
+        "IR LEDs lens के चारों तरफ ring के रूप में लगाए जाते हैं ताकि अंधेरे में scene पर infrared light illuminate हो और reflect होकर sensor तक पहुँचे",
+        "IR LEDs सिर्फ DVR के अंदर होते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Night vision camera में lens के चारों ओर ring की तरह IR LEDs लगाए जाते हैं जो अंधेरे में scene को infrared light से illuminate करते हैं, जिससे sensor को image मिलती है, इसलिए option C सही है। IR LED का उद्देश्य heating नहीं, यह monitor या DVR के अंदर नहीं बल्कि camera के front पर lens के आसपास होते हैं।"
+    },
+    {
+      "id": "u10_cctv_system_q24",
+      "question": "CCTV camera में 'IR cut filter' दिन और रात में कैसे काम करता है?",
+      "options": [
+        "दिन-रात दोनों में यह हमेशा lens के सामने रहता है",
+        "यह सिर्फ audio signal filter करता है",
+        "यह filter सिर्फ DVR के अंदर होता है, camera में नहीं",
+        "दिन में IR cut filter lens के सामने रहता है ताकि infrared light block हो और natural colour image मिले; रात में sensitivity बढ़ाने के लिए यह filter हट जाता है ताकि IR light भी sensor तक पहुँच सके (black & white image)"
+      ],
+      "correctIndex": 3,
+      "explanation": "IR cut filter दिन में IR light को block करके सही रंगों वाली image देता है और रात में mechanically हटकर IR light को sensor तक पहुँचने देता है ताकि night vision बेहतर हो, इसलिए option D सही है। यह हमेशा lens के सामने नहीं रहता, इसका audio से कोई लेना-देना नहीं, और यह camera के अंदर lens/sensor assembly का हिस्सा है, DVR में नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q25",
+      "question": "CCTV DVR/NVR में 'motion detection recording' feature का क्या लाभ है?",
+      "options": [
+        "यह सिर्फ तब record करता है जब frame में movement detect हो, जिससे storage space और review time दोनों बचते हैं",
+        "यह हमेशा 24 घंटे continuous record करता है बिना किसी शर्त के",
+        "यह feature camera की resolution बढ़ाता है",
+        "यह feature audio recording बंद कर देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Motion detection recording में केवल movement होने पर ही recording start होती है, जिससे unnecessary footage कम बनता है और HDD storage तथा review time दोनों बचते हैं, इसलिए option A सही है। यह continuous recording का विकल्प है, resolution से इसका संबंध नहीं, और यह audio recording को बंद नहीं करता।"
+    },
+    {
+      "id": "u10_cctv_system_q26",
+      "question": "CCTV system में mobile app से remote viewing कैसे संभव होती है?",
+      "options": [
+        "Camera directly mobile से Bluetooth से जुड़ती है",
+        "DVR/NVR को internet से connect करके, mobile app के through कहीं से भी live view और recorded footage access किया जा सकता है",
+        "Mobile app सिर्फ camera की power on/off करता है",
+        "Remote viewing के लिए monitor हमेशा ज़रूरी है, app काम नहीं करता"
+      ],
+      "correctIndex": 1,
+      "explanation": "DVR/NVR को internet से जोड़कर उसकी companion mobile app के through कहीं से भी live व recorded video access किया जा सकता है, इसलिए option B सही है। इसका Bluetooth से कोई संबंध नहीं, app सिर्फ power control नहीं देता बल्कि video access देता है, और remote viewing के लिए monitor अनिवार्य नहीं है।"
+    },
+    {
+      "id": "u10_cctv_system_q27",
+      "question": "CCTV system में DDNS (Dynamic DNS) का उपयोग क्यों किया जाता है?",
+      "options": [
+        "DDNS camera की resolution set करता है",
+        "DDNS सिर्फ local network के अंदर काम करता है, internet से connect नहीं होता",
+        "जब internet service provider dynamic (बदलने वाला) IP address देता है, तब DDNS एक fixed domain name के through DVR/NVR को internet पर हमेशा accessible रखता है",
+        "DDNS storage capacity बढ़ाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "ISP द्वारा दिया गया public IP address समय-समय पर बदल सकता है; DDNS एक स्थायी domain name के जरिए DVR/NVR को internet पर हमेशा पहुँच-योग्य बनाए रखता है, इसलिए option C सही है। इसका resolution setting, केवल local network तक सीमित रहना, या storage बढ़ाने से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q28",
+      "question": "एक '8CH DVR' (8-channel DVR) का क्या मतलब है?",
+      "options": [
+        "यह 8 अलग-अलग monitor connect कर सकता है",
+        "यह सिर्फ 8 घंटे तक ही record कर सकता है",
+        "यह 8 MP resolution support करता है",
+        "यह maximum 8 cameras के video input को connect और record कर सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Channel' शब्द DVR/NVR में उतने ही camera inputs को दर्शाता है, इसलिए 8CH DVR अधिकतम 8 cameras के video input support करता है, इसलिए option D सही है। यह monitor की संख्या, recording की समय-सीमा (घंटे), या resolution (MP) से संबंधित नहीं है।"
+    },
+    {
+      "id": "u10_cctv_system_q29",
+      "question": "Analog CCTV camera system में power supply का role क्या होता है?",
+      "options": [
+        "Camera को operate करने के लिए ज़रूरी DC voltage (जैसे 12V) provide करना, अलग से या cable के through",
+        "Power supply video signal को amplify करता है",
+        "Power supply हमेशा data storage करता है",
+        "Power supply camera का resolution decide करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "हर CCTV camera को चलाने के लिए एक निश्चित DC voltage (आमतौर पर 12V) की ज़रूरत होती है जो power supply/adaptor से मिलती है, इसलिए option A सही है। Power supply video signal amplify नहीं करता, यह data storage नहीं करता (वह HDD का काम है), और resolution camera के sensor/hardware से तय होती है, power supply से नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q30",
+      "question": "CCTV system के block diagram में 'monitor/display' का क्या काम होता है?",
+      "options": [
+        "यह video को digitize करके store करता है",
+        "यह DVR/NVR से आने वाले live या recorded video signal को देखने योग्य image के रूप में दिखाता है",
+        "यह camera को power देता है",
+        "यह IR LEDs control करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monitor/display DVR/NVR से मिले video output को visual image के रूप में दिखाने का काम करता है ताकि operator live या recorded footage देख सके, इसलिए option B सही है। Video को digitize/store करना DVR/NVR-HDD का काम है, camera को power देना power supply का काम है, और IR LEDs camera assembly का हिस्सा हैं, monitor का नहीं।"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "unit": "unit1",
+  "unitName": "Analog and Digital Electronics circuits",
+  "topic": "oscillators",
+  "topicName": "Oscillators",
+  "questions": [
+    {
+      "id": "u1_oscillators_q1",
+      "question": "Barkhausen criterion के अनुसार sustained oscillations बनाए रखने के लिए loop gain का मान कितना होना चाहिए?",
+      "options": ["|Aβ| = 0", "|Aβ| = 1", "|Aβ| > 10", "|Aβ| = 0.5"],
+      "correctIndex": 1,
+      "explanation": "Barkhausen criterion कहता है कि steady sustained oscillations के लिए loop gain |Aβ| ठीक 1 होना चाहिए। यदि |Aβ| = 0 हो तो कोई oscillation नहीं होगी, और 0.5 जैसे 1 से कम मान पर oscillations धीरे-धीरे घटकर मर जाती हैं (damped)। |Aβ| > 1 पर amplitude बढ़ती जाती है इसलिए वह steady condition नहीं है।"
+    },
+    {
+      "id": "u1_oscillators_q2",
+      "question": "Barkhausen criterion के अनुसार feedback loop के चारों ओर total phase shift कितना होना चाहिए?",
+      "options": ["90 degrees", "45 degrees", "0 या 360 degrees", "270 degrees"],
+      "correctIndex": 2,
+      "explanation": "sustained oscillations के लिए loop के चारों ओर total phase shift 0 degrees अथवा 360 degrees होना चाहिए ताकि feedback signal input के साथ in-phase (positive feedback) रहे। 90, 45 या 270 degrees पर signal in-phase नहीं रहता, इसलिए oscillation बनी नहीं रहती।"
+    },
+    {
+      "id": "u1_oscillators_q3",
+      "question": "किसी भी oscillator को शुरू करने और चालू रखने के लिए किस प्रकार का feedback आवश्यक है?",
+      "options": ["Negative feedback", "Positive feedback", "कोई feedback नहीं", "Current feedback केवल"],
+      "correctIndex": 1,
+      "explanation": "Oscillator में positive feedback आवश्यक है, जिसमें feedback signal input के साथ in-phase होकर उसे और मजबूत करता है और oscillations बनाए रखता है। Negative feedback signal को घटाता है इसलिए वह amplifier की stability के लिए उपयोगी है, oscillation के लिए नहीं। बिना feedback के oscillation संभव ही नहीं।"
+    },
+    {
+      "id": "u1_oscillators_q4",
+      "question": "RC phase-shift oscillator में feedback network में सामान्यतः कितने RC sections उपयोग किए जाते हैं?",
+      "options": ["तीन (three)", "एक (one)", "पाँच (five)", "दो (two)"],
+      "correctIndex": 0,
+      "explanation": "RC phase-shift oscillator में तीन RC sections उपयोग होते हैं। प्रत्येक section लगभग 60 degrees phase shift देता है, इस प्रकार तीन मिलकर 180 degrees देते हैं। एक या दो section पर्याप्त 180 degrees नहीं दे पाते, और amplifier स्वयं 180 degrees देता है जिससे कुल 360 degrees पूरा हो जाता है।"
+    },
+    {
+      "id": "u1_oscillators_q5",
+      "question": "RC phase-shift oscillator में प्रत्येक RC section लगभग कितना phase shift प्रदान करता है?",
+      "options": ["30 degrees", "90 degrees", "60 degrees", "180 degrees"],
+      "correctIndex": 2,
+      "explanation": "प्रत्येक RC section लगभग 60 degrees का phase shift देता है, जिससे तीन sections मिलकर 180 degrees पूरा करते हैं। 90 degrees एक single RC section सैद्धांतिक रूप से केवल तभी दे सकता है जब frequency अनन्त हो, जो व्यावहारिक नहीं। इसलिए design में 60 degrees प्रति section लिया जाता है।"
+    },
+    {
+      "id": "u1_oscillators_q6",
+      "question": "RC phase-shift oscillator के feedback network में तीन sections मिलकर कुल कितना phase shift देते हैं?",
+      "options": ["360 degrees", "90 degrees", "270 degrees", "180 degrees"],
+      "correctIndex": 3,
+      "explanation": "तीन RC sections मिलकर 180 degrees phase shift देते हैं (60 degrees प्रति section)। शेष 180 degrees inverting amplifier देता है जिससे loop का total 360 degrees हो जाता है। इसलिए अकेले feedback network 360 या 270 degrees नहीं देता; 90 degrees तो केवल एक-डेढ़ section का मान होगा।"
+    },
+    {
+      "id": "u1_oscillators_q7",
+      "question": "RC phase-shift oscillator की frequency of oscillation का सूत्र क्या है?",
+      "options": ["f = 1/(2*pi*R*C)", "f = 1/(2*pi*R*C*sqrt(6))", "f = 1/(2*pi*sqrt(L*C))", "f = sqrt(6)/(2*pi*R*C)"],
+      "correctIndex": 1,
+      "explanation": "RC phase-shift oscillator की frequency f = 1/(2*pi*R*C*sqrt(6)) होती है, जहाँ sqrt(6) तीन RC sections के कारण आता है। f = 1/(2*pi*R*C) तो Wein bridge oscillator का सूत्र है, और f = 1/(2*pi*sqrt(L*C)) LC oscillator का। अतः केवल विकल्प दो सही है।"
+    },
+    {
+      "id": "u1_oscillators_q8",
+      "question": "RC phase-shift oscillator में यदि R = 10 kΩ और C = 0.01 µF हो, तो frequency of oscillation लगभग कितनी होगी? (सूत्र f = 1/(2*pi*R*C*sqrt(6)))",
+      "options": ["650 Hz", "1592 Hz", "3184 Hz", "325 Hz"],
+      "correctIndex": 0,
+      "explanation": "R = 10 kΩ = 10^4 Ω, C = 0.01 µF = 10^-8 F, तो R*C = 10^-4 s. f = 1/(2*pi*10^-4*sqrt(6)) = 1/(2*3.14159*10^-4*2.449) ≈ 1/(1.538*10^-3) ≈ 650 Hz. 1592 Hz तो sqrt(6) के बिना (Wein का सूत्र) आता है, इसलिए वह गलत है।"
+    },
+    {
+      "id": "u1_oscillators_q9",
+      "question": "Wein bridge oscillator की frequency of oscillation किस सूत्र से दी जाती है?",
+      "options": ["f = 1/(2*pi*R*C*sqrt(6))", "f = 1/(2*pi*sqrt(L*C))", "f = 1/(2*pi*R*C)", "f = R/(2*pi*C)"],
+      "correctIndex": 2,
+      "explanation": "Wein bridge oscillator की frequency f = 1/(2*pi*R*C) होती है (जब दोनों R और दोनों C बराबर हों)। sqrt(6) वाला सूत्र RC phase-shift oscillator का है और sqrt(L*C) वाला LC oscillator का। अतः सही विकल्प तीसरा है।"
+    },
+    {
+      "id": "u1_oscillators_q10",
+      "question": "Wein bridge oscillator के amplifier को oscillation बनाए रखने के लिए कम से कम कितना gain देना आवश्यक है?",
+      "options": ["3", "1", "6", "29"],
+      "correctIndex": 0,
+      "explanation": "Wein bridge oscillator में feedback network resonant frequency पर 1/3 attenuation देता है, इसलिए |Aβ| = 1 पाने के लिए amplifier का gain कम से कम 3 होना चाहिए। gain 1 से loop gain 1/3 रहेगा और oscillation मर जाएगी। gain 29 तो RC phase-shift oscillator के लिए आवश्यक होता है।"
+    },
+    {
+      "id": "u1_oscillators_q11",
+      "question": "Wein bridge oscillator में यदि R = 1 kΩ और C = 0.1 µF हो, तो frequency of oscillation लगभग कितनी होगी? (f = 1/(2*pi*R*C))",
+      "options": ["796 Hz", "1592 Hz", "3184 Hz", "650 Hz"],
+      "correctIndex": 1,
+      "explanation": "R = 10^3 Ω, C = 0.1 µF = 10^-7 F, तो R*C = 10^-4 s. f = 1/(2*pi*10^-4) = 1/(6.283*10^-4) ≈ 1592 Hz. 796 Hz तो दुगुने R*C पर आता, और 650 Hz में sqrt(6) शामिल है जो Wein bridge में लागू नहीं होता।"
+    },
+    {
+      "id": "u1_oscillators_q12",
+      "question": "RC oscillators की तुलना में LC oscillators सामान्यतः किस frequency range के लिए उपयुक्त होते हैं?",
+      "options": ["बहुत कम (sub-audio) frequencies", "केवल DC", "उच्च (radio) frequencies", "केवल 50 Hz mains"],
+      "correctIndex": 2,
+      "explanation": "LC oscillators उच्च (radio) frequencies के लिए उपयुक्त होते हैं क्योंकि उच्च frequency पर L और C के व्यावहारिक मान छोटे व सुविधाजनक रहते हैं। RC oscillators कम (audio) frequencies के लिए बेहतर हैं। DC या केवल 50 Hz तक सीमित रहना oscillator की परिभाषा के विरुद्ध है।"
+    },
+    {
+      "id": "u1_oscillators_q13",
+      "question": "निम्न में से कौन-सा एक LC oscillator है?",
+      "options": ["Wein bridge oscillator", "Colpitts oscillator", "RC phase-shift oscillator", "Twin-T oscillator"],
+      "correctIndex": 1,
+      "explanation": "Colpitts oscillator एक LC oscillator है जिसमें tank circuit में inductor और दो capacitors होते हैं। Wein bridge, RC phase-shift और Twin-T तीनों RC oscillators हैं जो frequency निर्धारित करने के लिए resistor और capacitor का उपयोग करते हैं, inductor का नहीं।"
+    },
+    {
+      "id": "u1_oscillators_q14",
+      "question": "Hartley oscillator के tank circuit में किन घटकों का उपयोग frequency निर्धारण के लिए होता है?",
+      "options": ["तीन resistors", "केवल capacitors", "दो inductors और एक capacitor", "केवल एक resistor और एक capacitor"],
+      "correctIndex": 2,
+      "explanation": "Hartley oscillator एक LC oscillator है जिसके tank circuit में दो inductors (या एक tapped inductor) और एक capacitor होते हैं। यही इसे Colpitts से अलग करता है, जिसमें दो capacitors और एक inductor होते हैं। केवल R या केवल C वाले विकल्प LC oscillator के लिए गलत हैं।"
+    },
+    {
+      "id": "u1_oscillators_q15",
+      "question": "यदि किसी oscillator में loop gain |Aβ| का मान 1 से कम हो, तो oscillations का क्या होगा?",
+      "options": ["वे बढ़ती जाएँगी", "वे धीरे-धीरे घटकर मर जाएँगी (damped)", "वे constant amplitude पर बनी रहेंगी", "frequency दुगुनी हो जाएगी"],
+      "correctIndex": 1,
+      "explanation": "|Aβ| < 1 होने पर प्रत्येक चक्र में signal energy कम होती जाती है, इसलिए oscillations damped होकर मर जाती हैं। constant amplitude तभी मिलती है जब |Aβ| = 1 हो। |Aβ| > 1 पर amplitude बढ़ती है। loop gain frequency को नहीं बदलता, इसलिए दुगुनी होना गलत है।"
+    },
+    {
+      "id": "u1_oscillators_q16",
+      "question": "किसी practical oscillator में oscillations शुरू (start) होने के लिए loop gain का प्रारंभिक मान कैसा रखा जाता है?",
+      "options": ["थोड़ा 1 से अधिक (>1)", "ठीक 0", "बहुत कम (<0.1)", "ऋणात्मक (negative)"],
+      "correctIndex": 0,
+      "explanation": "शुरुआत में oscillations को noise से बढ़ने देने के लिए loop gain को थोड़ा 1 से अधिक रखा जाता है; amplitude बढ़ने पर non-linearity gain को घटाकर |Aβ| = 1 पर steady कर देती है। gain 0, बहुत कम या negative होने पर oscillation कभी शुरू ही नहीं होगी।"
+    },
+    {
+      "id": "u1_oscillators_q17",
+      "question": "RC phase-shift oscillator में inverting amplifier द्वारा दिया गया phase shift कितना होता है?",
+      "options": ["0 degrees", "90 degrees", "180 degrees", "45 degrees"],
+      "correctIndex": 2,
+      "explanation": "RC phase-shift oscillator में inverting amplifier स्वयं 180 degrees phase shift देता है, और तीन RC sections मिलकर शेष 180 degrees देते हैं, जिससे loop का total 360 degrees पूरा हो जाता है। 0, 90 या 45 degrees Barkhausen की total 360 degrees शर्त पूरी नहीं कर पाते।"
+    },
+    {
+      "id": "u1_oscillators_q18",
+      "question": "एक transistor आधारित RC phase-shift oscillator में amplifier का न्यूनतम voltage gain लगभग कितना होना चाहिए?",
+      "options": ["3", "1", "10", "29"],
+      "correctIndex": 3,
+      "explanation": "RC phase-shift oscillator में feedback network resonant frequency पर लगभग 1/29 attenuation देता है, इसलिए |Aβ| = 1 पाने हेतु amplifier gain कम से कम 29 होना आवश्यक है। gain 3 तो Wein bridge oscillator के लिए है। 1 या 10 पर loop gain 1 तक नहीं पहुँचता।"
+    },
+    {
+      "id": "u1_oscillators_q19",
+      "question": "Wein bridge oscillator के feedback network में frequency-selective भाग किससे बनता है?",
+      "options": ["series और parallel RC combination", "दो inductors से", "एक transformer से", "केवल resistors से"],
+      "correctIndex": 0,
+      "explanation": "Wein bridge oscillator का frequency-selective भाग series RC और parallel RC combination (lead-lag network) से बनता है, जो केवल एक विशेष frequency पर zero phase shift देता है। inductor या transformer इसमें नहीं होते, और केवल resistors से frequency selection संभव नहीं।"
+    },
+    {
+      "id": "u1_oscillators_q20",
+      "question": "Wein bridge oscillator अपनी resonant frequency पर feedback network से कितना phase shift देता है?",
+      "options": ["180 degrees", "0 degrees", "90 degrees", "60 degrees"],
+      "correctIndex": 1,
+      "explanation": "Wein bridge के lead-lag network से resonant frequency पर 0 degrees phase shift मिलता है, इसलिए non-inverting amplifier (जो 0 degrees देता है) के साथ मिलकर loop का total 0 degrees रहता है और positive feedback बनी रहती है। 180, 90 या 60 degrees यहाँ लागू नहीं होते।"
+    },
+    {
+      "id": "u1_oscillators_q21",
+      "question": "RC और LC oscillators के बीच मुख्य अंतर क्या है?",
+      "options": ["RC में केवल transistor होता है, LC में नहीं", "RC frequency R व C से तथा LC frequency L व C से निर्धारित होती है", "RC oscillator को power की जरूरत नहीं", "LC oscillator केवल DC output देता है"],
+      "correctIndex": 1,
+      "explanation": "मुख्य अंतर यह है कि RC oscillator की frequency resistor और capacitor से तथा LC oscillator की frequency inductor और capacitor (tank circuit) से निर्धारित होती है। दोनों को active device व power चाहिए, और oscillator का काम AC output देना है, DC नहीं—इसलिए बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_oscillators_q22",
+      "question": "LC oscillator के tank circuit की resonant frequency किस सूत्र से मिलती है?",
+      "options": ["f = 1/(2*pi*R*C)", "f = 1/(2*pi*sqrt(L*C))", "f = 1/(2*pi*R*C*sqrt(6))", "f = L/(2*pi*C)"],
+      "correctIndex": 1,
+      "explanation": "LC tank circuit की resonant frequency f = 1/(2*pi*sqrt(L*C)) होती है, जहाँ L inductance और C capacitance है। sqrt(6) वाला सूत्र RC phase-shift oscillator तथा 1/(2*pi*R*C) Wein bridge oscillator का है, इसलिए वे यहाँ लागू नहीं होते।"
+    },
+    {
+      "id": "u1_oscillators_q23",
+      "question": "एक oscillator मूल रूप से किस प्रकार का circuit माना जाता है?",
+      "options": ["बिना input signal के AC output देने वाला circuit", "AC को DC में बदलने वाला circuit", "voltage घटाने वाला circuit", "signal को केवल amplify करने वाला circuit"],
+      "correctIndex": 0,
+      "explanation": "Oscillator एक ऐसा circuit है जो बिना किसी external AC input के, DC supply से ऊर्जा लेकर एक निश्चित frequency का AC output उत्पन्न करता है। AC को DC में बदलना rectifier का काम है, केवल amplify करना amplifier का, इसलिए बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_oscillators_q24",
+      "question": "Barkhausen criterion की दोनों शर्तें एक साथ किस स्थिति के लिए आवश्यक हैं?",
+      "options": ["amplifier की stability के लिए", "sustained oscillations के लिए", "rectification के लिए", "filtering के लिए"],
+      "correctIndex": 1,
+      "explanation": "Barkhausen criterion की दोनों शर्तें—|Aβ| = 1 और total phase shift 0/360 degrees—एक साथ sustained oscillations बनाए रखने के लिए आवश्यक हैं। यह amplifier की stability, rectification या filtering का criterion नहीं है, इसलिए अन्य विकल्प असंगत हैं।"
+    },
+    {
+      "id": "u1_oscillators_q25",
+      "question": "यदि Wein bridge oscillator में amplifier gain आवश्यक 3 से बहुत अधिक कर दिया जाए, तो output पर क्या प्रभाव पड़ेगा?",
+      "options": ["output waveform distorted (clipped) हो जाएगा", "frequency आधी हो जाएगी", "oscillation पूरी तरह रुक जाएगी", "output शुद्ध रूप से बेहतर हो जाएगा"],
+      "correctIndex": 0,
+      "explanation": "gain को 3 से बहुत अधिक रखने पर amplitude इतनी बढ़ जाती है कि amplifier saturate होकर output waveform को clip/distort कर देता है। frequency तो R और C पर निर्भर है, gain से नहीं बदलती; और oscillation रुकने के बजाय बढ़ती है, इसलिए distortion सही उत्तर है।"
+    },
+    {
+      "id": "u1_oscillators_q26",
+      "question": "RC phase-shift oscillator में frequency f = 1/(2*pi*R*C*sqrt(6)) में sqrt(6) का कारण क्या है?",
+      "options": ["एक ही RC section का प्रभाव", "inductor की उपस्थिति", "तीन cascaded RC sections का संयुक्त प्रभाव", "amplifier का gain 6 होना"],
+      "correctIndex": 2,
+      "explanation": "sqrt(6) factor तीन cascaded RC sections के संयुक्त गणितीय विश्लेषण से आता है, जहाँ कुल 180 degrees phase shift की शर्त पर यह मान निकलता है। यह किसी एक section, inductor या gain के मान से नहीं आता, इसलिए अन्य विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_oscillators_q27",
+      "question": "एक Wein bridge oscillator को 2 kHz के लिए design करना है और C = 0.01 µF है, तो R लगभग कितना होगा? (f = 1/(2*pi*R*C))",
+      "options": ["16 kΩ", "8 kΩ", "80 kΩ", "800 Ω"],
+      "correctIndex": 1,
+      "explanation": "f = 1/(2*pi*R*C) से R = 1/(2*pi*f*C) = 1/(2*3.14159*2000*10^-8) = 1/(1.2566*10^-4) ≈ 7958 Ω ≈ 8 kΩ. 16 kΩ आधी frequency देता, 80 kΩ बहुत कम frequency और 800 Ω बहुत अधिक frequency देता, इसलिए 8 kΩ सही है।"
+    },
+    {
+      "id": "u1_oscillators_q28",
+      "question": "Positive feedback में feedback signal input signal के साथ किस संबंध में होता है?",
+      "options": ["in-phase (समान phase में)", "180 degrees out-of-phase", "90 degrees आगे", "पूरी तरह असंबंधित"],
+      "correctIndex": 0,
+      "explanation": "Positive feedback में feedback signal input के साथ in-phase रहता है जिससे वह input को और मजबूत करता है और oscillations को बनाए रखता है। 180 degrees out-of-phase होना negative feedback है, 90 degrees या असंबंधित होना Barkhausen की शर्त पूरी नहीं करता।"
+    },
+    {
+      "id": "u1_oscillators_q29",
+      "question": "समान frequency पर एक RC oscillator की तुलना में LC oscillator के घटकों के बारे में सामान्यतः क्या सही है?",
+      "options": ["LC oscillator में कोई capacitor नहीं होता", "कम audio frequency पर LC के लिए बड़े और भारी inductors चाहिए", "LC को active device की जरूरत नहीं", "RC oscillator केवल MHz पर काम करता है"],
+      "correctIndex": 1,
+      "explanation": "कम audio frequencies पर LC oscillator के लिए बहुत बड़े और भारी inductors चाहिए होते हैं, जो अव्यावहारिक हैं; इसीलिए वहाँ RC oscillator पसंद किए जाते हैं। LC में capacitor होता ही है, active device भी चाहिए, और RC oscillator कम frequency पर बेहतर काम करता है, इसलिए बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_oscillators_q30",
+      "question": "एक RC phase-shift oscillator में तीनों sections समान हैं जिनमें R = 4.7 kΩ और C = 0.01 µF है। frequency लगभग कितनी होगी? (f = 1/(2*pi*R*C*sqrt(6)))",
+      "options": ["1382 Hz", "690 Hz", "3386 Hz", "276 Hz"],
+      "correctIndex": 0,
+      "explanation": "R*C = 4700*10^-8 = 4.7*10^-5 s, sqrt(6) ≈ 2.449. f = 1/(2*3.14159*4.7*10^-5*2.449) = 1/(7.23*10^-4) ≈ 1382 Hz. 690 Hz तो लगभग दुगुने R*C पर आता; बिना sqrt(6) के मान 3386 Hz होता, इसलिए सही उत्तर लगभग 1382 Hz है।"
+    }
+  ]
+}

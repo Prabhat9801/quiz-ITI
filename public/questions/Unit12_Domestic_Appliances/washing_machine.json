@@ -1,0 +1,368 @@
+{
+  "unit": "unit12",
+  "unitName": "Domestic Appliances",
+  "topic": "washing_machine",
+  "topicName": "Washing Machine - Manual/Semi-Auto/Fully-Auto, Washing Techniques, Motor & Timer",
+  "questions": [
+    {
+      "id": "u12_washing_machine_q1",
+      "question": "Manual washing machine में कपड़ों को धोने के लिए कौन-सा तरीका प्रयोग किया जाता है?",
+      "options": [
+        "Motorized agitator द्वारा automatic wash",
+        "हाथ से hand crank या lever चलाकर agitation",
+        "Fully automatic timer-controlled cycle",
+        "Microcontroller-based sensor washing"
+      ],
+      "correctIndex": 1,
+      "explanation": "Manual washing machine में कोई motor नहीं होता, इसमें उपयोगकर्ता हाथ से hand crank या lever चलाकर agitation करता है। Option A, C और D automatic या semi-automatic/fully-automatic machines की विशेषताएँ हैं जिनमें motor और electronic control होता है।"
+    },
+    {
+      "id": "u12_washing_machine_q2",
+      "question": "Semi-automatic washing machine की मुख्य विशेषता क्या है?",
+      "options": [
+        "इसमें कोई motor नहीं होता",
+        "Wash और spin के लिए अलग-अलग tub होते हैं और उपयोगकर्ता को manually पानी भरना/निकालना पड़ता है",
+        "पूरा process पूर्णतः automatic होता है बिना किसी manual intervention के",
+        "इसमें केवल हाथ से agitation होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Semi-automatic washing machine में wash tub और spin dryer tub अलग-अलग होते हैं तथा user को पानी भरने, निकालने और कपड़े transfer करने का काम manually करना पड़ता है, बाकी agitation व spinning motorized होता है। Option A manual machine है, C fully-automatic है, D भी manual machine है।"
+    },
+    {
+      "id": "u12_washing_machine_q3",
+      "question": "Fully-automatic washing machine (top load या front load) में washing, rinsing और spinning की पूरी process किसके द्वारा control होती है?",
+      "options": [
+        "उपयोगकर्ता द्वारा हर step पर manual switch",
+        "एक ही tub में built-in timer/microcontroller और sensors द्वारा automatic sequence",
+        "अलग-अलग manual buckets से पानी डालकर",
+        "केवल hand-operated wringer से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fully-automatic machine में एक ही drum/tub में water level sensor, timer या microcontroller पूरी washing, rinsing और spinning sequence को बिना किसी manual intervention के automatically control करते हैं। बाकी options manual या semi-automatic operation के तरीके हैं।"
+    },
+    {
+      "id": "u12_washing_machine_q4",
+      "question": "Top-load fully-automatic washing machine में कपड़ों को agitate करने के लिए मुख्यतः कौन-सा component प्रयोग होता है?",
+      "options": [
+        "Pulsator (agitator disc) drum के तल पर",
+        "Drum को horizontal axis पर घुमाकर tumbling action",
+        "Steam जेट से कपड़े धोना",
+        "Ultrasonic vibration plate"
+      ],
+      "correctIndex": 0,
+      "explanation": "Top-load machine में drum के तल पर लगा pulsator (agitator disc) घूमकर पानी में turbulence बनाता है जिससे कपड़े agitate होते हैं। Horizontal tumbling action front-load machines की विशेषता है, स्टीम जेट और ultrasonic plate domestic washing machine में प्रयोग नहीं होते।"
+    },
+    {
+      "id": "u12_washing_machine_q5",
+      "question": "Front-load washing machine में drum किस axis पर घूमता है और इसकी washing technique क्या कहलाती है?",
+      "options": [
+        "Vertical axis, pulsator action",
+        "Horizontal axis, tumbling action",
+        "Diagonal axis, spinning action केवल",
+        "कोई axis नहीं, static soaking"
+      ],
+      "correctIndex": 1,
+      "explanation": "Front-load washing machine का drum horizontal axis पर घूमता है, जिससे कपड़े ऊपर उठकर गिरते हैं — इसे tumbling action कहते हैं जो gentle washing देता है। Pulsator action top-load की विशेषता है, बाकी options किसी वास्तविक तकनीक को नहीं दर्शाते।"
+    },
+    {
+      "id": "u12_washing_machine_q6",
+      "question": "Fully-automatic washing machine में motor और pulsator/drum के बीच gear reduction और direction change के लिए कौन-सा mechanism प्रयोग होता है?",
+      "options": [
+        "Direct coupling बिना किसी gear के",
+        "Gearbox/transmission assembly (clutch सहित)",
+        "केवल belt बिना pulley के",
+        "Hydraulic pump द्वारा torque transfer"
+      ],
+      "correctIndex": 1,
+      "explanation": "Washing machine में motor की high speed rotation को कम speed व अधिक torque में बदलने तथा wash/spin के बीच direction switch करने के लिए gearbox/transmission assembly (clutch mechanism सहित) प्रयोग होता है। Direct coupling, केवल belt या hydraulic pump इस कार्य को उचित रूप से नहीं कर सकते।"
+    },
+    {
+      "id": "u12_washing_machine_q7",
+      "question": "Washing machine में प्रयोग होने वाला motor सामान्यतः किस प्रकार का होता है?",
+      "options": [
+        "Stepper motor",
+        "Single-phase induction motor (capacitor start/run) या BLDC motor (fully-automatic में)",
+        "Synchronous reluctance motor केवल",
+        "DC series motor बिना brush के"
+      ],
+      "correctIndex": 1,
+      "explanation": "Domestic washing machine में सामान्यतः single-phase capacitor start/run induction motor या आधुनिक fully-automatic machines में BLDC (brushless DC) motor प्रयोग होता है जो high torque और speed control देता है। Stepper motor और brushless-less DC series motor washing machine में प्रयोग नहीं होते।"
+    },
+    {
+      "id": "u12_washing_machine_q8",
+      "question": "Semi-automatic washing machine में wash motor और spin motor की संख्या सामान्यतः कितनी होती है?",
+      "options": [
+        "एक ही common motor दोनों कार्यों के लिए",
+        "दो अलग motors — एक wash tub के लिए, दूसरा spin tub के लिए",
+        "तीन motors — wash, rinse और spin अलग-अलग",
+        "कोई motor नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Semi-automatic machine में wash tub और spin tub अलग होने के कारण सामान्यतः दो अलग motors लगे होते हैं — एक agitation के लिए और दूसरा spinning के लिए। एक common motor कभी-कभी प्रयोग होता है पर मानक design दो motors वाला ही ज्यादा प्रचलित है, तीन अलग motors या motor रहित design सही नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q9",
+      "question": "Timer knob वाली electromechanical washing machine में timer का मुख्य कार्य क्या है?",
+      "options": [
+        "केवल water temperature को control करना",
+        "Wash, rinse और spin cycles की duration व sequence को control करना",
+        "केवल motor की speed बढ़ाना",
+        "केवल water level sense करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Electromechanical timer एक cam-driven switch mechanism है जो wash, rinse और spin cycles की duration और sequence को control करता है, हर step पर अलग-अलग contacts को on/off करता है। Water temperature control, motor speed बढ़ाना और water level sensing अलग components (thermostat, water inlet valve, level sensor) का काम है।"
+    },
+    {
+      "id": "u12_washing_machine_q10",
+      "question": "Fully-automatic washing machine में water level सेंस करने के लिए सामान्यतः कौन-सा component प्रयोग होता है?",
+      "options": [
+        "Thermostat",
+        "Pressure sensor (air pressure switch) tub से जुड़ी air tube के साथ",
+        "Magnetron",
+        "Photodiode"
+      ],
+      "correctIndex": 1,
+      "explanation": "Water level sensor एक pressure switch होता है जो tub से जुड़ी air tube में पानी के भार से बदलते air pressure को sense करके level निर्धारित करता है। Thermostat तापमान सेंस करता है, magnetron microwave oven में होता है, photodiode light sensing के लिए है।"
+    },
+    {
+      "id": "u12_washing_machine_q11",
+      "question": "Washing machine के drain pump का मुख्य कार्य क्या है?",
+      "options": [
+        "Tub में fresh पानी भरना",
+        "Wash/rinse के बाद used पानी को tub से बाहर निकालना",
+        "कपड़ों को गरम करना",
+        "Drum को rotate करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Drain pump एक छोटा motorized pump है जो wash या rinse cycle के बाद tub में जमा dirty पानी को बाहर drain pipe के जरिए निकालता है। Fresh पानी inlet valve से आता है, heating (यदि हो तो) heater element से होती है, और drum को main motor rotate करता है।"
+    },
+    {
+      "id": "u12_washing_machine_q12",
+      "question": "Fully-automatic washing machine में water inlet valve किस सिद्धांत पर काम करता है?",
+      "options": [
+        "Mechanical spring द्वारा manually खोला जाता है",
+        "Solenoid valve जो electronic control द्वारा energize होकर पानी का flow खोलता/बंद करता है",
+        "Gravity द्वारा हमेशा खुला रहता है",
+        "Thermostat द्वारा तापमान के अनुसार खुलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Water inlet solenoid valve control board से signal मिलने पर electromagnetically energize होकर diaphragm खोलता है जिससे पानी tub में भरता है, और required level पर बंद हो जाता है। यह manual spring, gravity-only या thermostat-controlled नहीं होता।"
+    },
+    {
+      "id": "u12_washing_machine_q13",
+      "question": "Washing machine में overload protection के लिए motor circuit में सामान्यतः कौन-सा component लगाया जाता है?",
+      "options": [
+        "Capacitor केवल",
+        "Thermal overload protector (motor protector)",
+        "Diode bridge",
+        "Zener regulator"
+      ],
+      "correctIndex": 1,
+      "explanation": "Motor winding की overheating या overcurrent से सुरक्षा हेतु thermal overload protector लगाया जाता है जो अधिक तापमान/current पर circuit को खोल देता है। Capacitor motor की starting/running torque बढ़ाने के लिए है, diode bridge rectification के लिए और zener regulator voltage regulation के लिए प्रयोग होते हैं, ये protection नहीं देते।"
+    },
+    {
+      "id": "u12_washing_machine_q14",
+      "question": "Washing machine में spin cycle के दौरान drum की speed wash cycle की तुलना में कैसी होती है?",
+      "options": [
+        "Spin speed wash speed से बहुत कम होती है",
+        "Spin speed wash speed से काफी अधिक होती है ताकि पानी centrifugal force से निकल सके",
+        "दोनों speed बराबर रहती हैं",
+        "Spin cycle में motor बंद रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Spin cycle में drum को बहुत उच्च RPM पर घुमाया जाता है ताकि centrifugal force से कपड़ों में फंसा पानी बाहर निकल जाए, यह wash cycle की धीमी agitation speed से कहीं अधिक होती है। शेष options तकनीकी रूप से गलत हैं क्योंकि motor बंद होने या speed बराबर रहने से spinning का उद्देश्य पूरा नहीं होगा।"
+    },
+    {
+      "id": "u12_washing_machine_q15",
+      "question": "Washing machine के lid/door पर लगा door lock/lid switch किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Water level बढ़ाने के लिए",
+        "Safety हेतु — जब तक lid/door बंद न हो तब तक spinning शुरू न हो",
+        "Detergent dispense करने के लिए",
+        "Motor की speed control करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Door/lid switch एक safety interlock है जो सुनिश्चित करता है कि lid या door पूरी तरह बंद होने पर ही high-speed spinning शुरू हो, जिससे दुर्घटना से बचाव होता है। Water level, detergent dispensing और motor speed control अलग components द्वारा किए जाते हैं।"
+    },
+    {
+      "id": "u12_washing_machine_q16",
+      "question": "Detergent dispenser drawer में सामान्यतः कितने compartments होते हैं और उनका क्या कार्य है?",
+      "options": [
+        "एक ही compartment जिसमें सब कुछ एक साथ डाला जाता है",
+        "अलग-अलग compartments — pre-wash detergent, main wash detergent और fabric softener के लिए",
+        "केवल softener के लिए एक compartment",
+        "कोई compartment नहीं होता, detergent सीधे drum में डाला जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fully-automatic machine के dispenser drawer में सामान्यतः तीन compartments होते हैं — pre-wash detergent, main wash detergent और fabric softener — जो cycle के अलग-अलग चरणों में automatically पानी के flow से drum में जाते हैं। एक ही compartment या सीधे drum में डालना modern automatic design नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q17",
+      "question": "Washing machine capacitor (run capacitor) का मुख्य कार्य क्या है?",
+      "options": [
+        "Motor winding को short करना",
+        "Single-phase induction motor में phase shift पैदा कर starting torque और running efficiency बढ़ाना",
+        "Water temperature control करना",
+        "Timer को power देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Single-phase induction motor में auxiliary winding के साथ श्रेणी में लगा capacitor current में phase shift पैदा करता है जिससे rotating magnetic field बनता है और motor को starting torque व smooth running मिलती है। यह winding short नहीं करता, तापमान control नहीं करता और timer को सीधे power नहीं देता।"
+    },
+    {
+      "id": "u12_washing_machine_q18",
+      "question": "यदि washing machine का motor चालू नहीं हो रहा और केवल humming sound आ रही है, तो सबसे संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Water inlet valve खराब है",
+        "Run capacitor खराब/open हो गया है जिससे starting torque नहीं मिल रहा",
+        "Detergent dispenser बंद है",
+        "Door lock switch खुला है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Humming sound के साथ motor न चलना सामान्यतः faulty/open capacitor का लक्षण है क्योंकि इससे auxiliary winding में phase shift न होने से starting torque नहीं मिलता। Water inlet valve खराब होने पर पानी नहीं भरेगा, dispenser और door switch की खराबी अलग symptoms (जैसे machine बिल्कुल start न होना) देती हैं, motor humming नहीं करेगा उन कारणों से।"
+    },
+    {
+      "id": "u12_washing_machine_q19",
+      "question": "Washing machine में balance/suspension springs और shock absorbers (dampers) का मुख्य कार्य क्या है?",
+      "options": [
+        "Water को गरम करना",
+        "Spin cycle के दौरान drum के unbalanced load से होने वाले vibration/noise को कम करना",
+        "Detergent को घोलना",
+        "Timer की accuracy बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Suspension springs और dampers drum को cabinet के अंदर लचीले ढंग से support करते हैं जिससे high-speed spin के दौरान unbalanced कपड़ों से उत्पन्न vibration और शोर कम हो जाता है। ये heating, detergent dissolving या timer accuracy से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u12_washing_machine_q20",
+      "question": "Front-load washing machine में rubber door gasket/boot seal का मुख्य कार्य क्या है?",
+      "options": [
+        "Motor को cool रखना",
+        "Drum और outer door के बीच पानी को लीक होने से रोकना",
+        "Detergent को store करना",
+        "Water level सेंस करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rubber gasket/boot seal drum के front opening और outer glass door के बीच एक water-tight seal बनाता है ताकि washing के दौरान पानी बाहर न रिसे। यह motor cooling, detergent storage या water level sensing के लिए नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q21",
+      "question": "Washing machine में हीटिंग एलिमेंट (यदि उपलब्ध हो, जैसे कुछ front-load machines में) का मुख्य कार्य क्या है?",
+      "options": [
+        "Drum को rotate करना",
+        "Wash cycle के लिए पानी को set temperature तक गरम करना",
+        "Spin speed बढ़ाना",
+        "Water को drain करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "कुछ front-load machines में built-in heating element होता है जो thermostat के साथ मिलकर wash water को selected temperature (जैसे 40°C, 60°C) तक गरम करता है ताकि detergent बेहतर काम करे। Drum rotation motor का काम है, spin speed motor/control board तय करता है, drain pump पानी निकालने के लिए है।"
+    },
+    {
+      "id": "u12_washing_machine_q22",
+      "question": "Fully-automatic washing machine के PCB (control board) पर motor की दिशा (forward/reverse) को कैसे control किया जाता है?",
+      "options": [
+        "Mechanically हाथ से गियर बदलकर",
+        "Relay/triac के माध्यम से motor winding को alternate sequence में energize करके",
+        "Water pressure बदलकर",
+        "Detergent की मात्रा बदलकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Control board पर लगे relays या triacs motor की winding को क्रमानुसार अलग तरीके से energize करके agitator/drum की rotation direction को forward-reverse alternate करते हैं, जिससे कपड़े उलझते नहीं। यह mechanical hand gear, water pressure या detergent मात्रा से control नहीं होता।"
+    },
+    {
+      "id": "u12_washing_machine_q23",
+      "question": "Washing machine में 'wash time' के दौरान agitator/drum को बार-बार forward-reverse क्यों घुमाया जाता है?",
+      "options": [
+        "Motor को जल्दी खराब करने के लिए",
+        "कपड़ों को एक ही दिशा में उलझने से बचाकर बेहतर washing action देने के लिए",
+        "Water को जल्दी गरम करने के लिए",
+        "Detergent को फैलाने से रोकने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Forward-reverse alternating rotation से कपड़े एक ही दिशा में लिपटकर उलझते नहीं और सभी तरफ से पानी व detergent का contact बेहतर होता है जिससे washing efficiency बढ़ती है। यह motor को खराब करने, पानी गरम करने या detergent फैलाव रोकने के लिए नहीं किया जाता।"
+    },
+    {
+      "id": "u12_washing_machine_q24",
+      "question": "यदि semi-automatic washing machine का spin tub काम कर रहा है परंतु wash tub का agitator नहीं घूम रहा, तो जांच का पहला logical कदम क्या होगा?",
+      "options": [
+        "Spin tub का motor बदलना",
+        "Wash tub के motor, capacitor और उससे जुड़ी wiring/switch की जांच करना",
+        "Drain pump बदलना",
+        "पूरी machine बदल देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूंकि दोनों tubs की circuits अलग होती हैं, केवल agitator न चलने का अर्थ है समस्या wash motor, उसके capacitor या connecting wiring/switch में है, इसलिए इन्हीं की जांच पहले करनी चाहिए। Spin motor बदलना अप्रासंगिक है क्योंकि वह ठीक काम कर रहा है, drain pump का इससे संबंध नहीं और पूरी machine बदलना अव्यवहारिक व अनावश्यक है।"
+    },
+    {
+      "id": "u12_washing_machine_q25",
+      "question": "Washing machine में 'rinse' cycle का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "कपड़ों को गरम करना",
+        "कपड़ों में बचे detergent और मैल को साफ पानी से धोकर निकालना",
+        "कपड़ों को सुखाना",
+        "Motor को ठंडा करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rinse cycle में साफ पानी भरकर कपड़ों में बचा हुआ detergent और dirt निकाला जाता है ताकि कपड़े साफ व detergent-free रहें। कपड़े गरम करना, सुखाना या motor cooling rinse cycle के उद्देश्य नहीं हैं — सुखाना अलग spin/dry cycle का काम है।"
+    },
+    {
+      "id": "u12_washing_machine_q26",
+      "question": "Washing machine में प्रयोग होने वाले BLDC (Brushless DC) motor का fully-automatic machines में क्या मुख्य लाभ है?",
+      "options": [
+        "यह केवल AC supply पर बिना किसी driver circuit के चलता है",
+        "Precise speed control, कम शोर और अधिक energy efficiency (inverter technology)",
+        "इसमें कोई electronic control जरूरत नहीं होती",
+        "यह केवल manual machines में प्रयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "BLDC motor को electronic driver/inverter द्वारा precise speed नियंत्रित किया जाता है, जिससे कम शोर, कम कंपन और अधिक energy efficiency मिलती है — इसे ही 'inverter technology' washing machine कहा जाता है। यह बिना driver circuit के नहीं चलता, electronic control आवश्यक है, और manual machines में प्रयोग नहीं होता।"
+    },
+    {
+      "id": "u12_washing_machine_q27",
+      "question": "Washing machine में earthing (ग्राउंडिंग) की आवश्यकता क्यों होती है?",
+      "options": [
+        "Motor की speed बढ़ाने के लिए",
+        "Metal body में leakage current आने पर बिजली के झटके (electric shock) से सुरक्षा के लिए",
+        "Water level सेंस करने के लिए",
+        "Detergent बेहतर घुलने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Earthing यह सुनिश्चित करती है कि यदि किसी fault के कारण metal body में leakage current आ जाए तो वह ground के रास्ते सुरक्षित रूप से बह जाए, जिससे user को electric shock से बचाया जा सके। यह motor speed, water sensing या detergent dissolving से संबंधित नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q28",
+      "question": "Washing machine के lint filter (fluff filter/mesh bag) का मुख्य कार्य क्या है?",
+      "options": [
+        "Water को गरम रखना",
+        "धुलाई के दौरान कपड़ों से निकले धागे व fluff को पानी में फैलने से रोकना",
+        "Detergent को स्टोर करना",
+        "Motor को ठंडा करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lint filter/mesh bag कपड़ों से निकलने वाले धागे, बाल और fluff को पकड़ता है ताकि वे बार-बार washed कपड़ों पर वापस न चिपकें और drain pump को blockage से भी बचाता है। यह heating, detergent storage या motor cooling के लिए नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q29",
+      "question": "यदि fully-automatic washing machine में error code water inlet को दर्शाता है और नल खुला होने पर भी पानी नहीं भर रहा, तो सबसे संभावित faulty component कौन-सा है?",
+      "options": [
+        "Drain pump",
+        "Water inlet solenoid valve या उसकी filter mesh में blockage",
+        "Door lock switch",
+        "Suspension spring"
+      ],
+      "correctIndex": 1,
+      "explanation": "नल खुला होने पर भी पानी न भरने का मुख्य कारण inlet solenoid valve का खराब होना या उसकी inline filter mesh में जमी गंदगी से blockage होना है, जिससे valve खुलने पर भी flow नहीं मिलता। Drain pump पानी निकालने में, door lock cycle शुरू होने में और suspension spring vibration control में काम आते हैं, पानी भरने से इनका संबंध नहीं।"
+    },
+    {
+      "id": "u12_washing_machine_q30",
+      "question": "Washing machine के capacitor को बदलते समय उसकी rating चुनते समय मुख्यतः किस parameter का ध्यान रखा जाता है?",
+      "options": [
+        "केवल physical size",
+        "Capacitance value (µF) और voltage rating मोटर की specification के अनुसार",
+        "केवल रंग",
+        "केवल brand name"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitor बदलते समय motor की nameplate specification के अनुसार सही capacitance value (µF) और voltage rating का capacitor लगाना आवश्यक है, अन्यथा motor ठीक से start/run नहीं करेगा या जल्दी खराब हो सकता है। Physical size, रंग या brand name electrical performance तय नहीं करते।"
+    }
+  ]
+}

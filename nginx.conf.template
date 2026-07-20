@@ -1,0 +1,21 @@
+server {
+    listen ${PORT};
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    # SPA fallback - client-side routes (react-router) all resolve to index.html
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # sql.js wasm file must be served with the correct MIME type
+    location ~* \.wasm$ {
+        add_header Content-Type application/wasm;
+    }
+
+    # question bank JSON is static and immutable per build - cache aggressively
+    location /questions/ {
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+}

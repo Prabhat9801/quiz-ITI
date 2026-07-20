@@ -1,0 +1,368 @@
+{
+  "unit": "unit11",
+  "unitName": "Cell Phones",
+  "topic": "cellphone_block_diagram",
+  "topicName": "Cell Phone Block Diagram - RF Section, Baseband, Power, SIM, Working",
+  "questions": [
+    {
+      "id": "u11_cellphone_block_diagram_q1",
+      "question": "मोबाइल फोन के block diagram में RF (Radio Frequency) section का मुख्य कार्य क्या है?",
+      "options": [
+        "केवल display पर images दिखाना",
+        "Antenna के माध्यम से signal को transmit और receive करना तथा frequency को up/down convert करना",
+        "केवल SIM card की जानकारी store करना",
+        "केवल battery को चार्ज करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "RF section transmitter और receiver से मिलकर बनता है, जो antenna के जरिए radio signals को transmit/receive करता है और frequency up-conversion (transmit के लिए) व down-conversion (receive के लिए) करता है। Display, SIM data storage और battery charging अलग blocks का कार्य है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q2",
+      "question": "Baseband section (baseband processor) मोबाइल फोन में क्या कार्य करता है?",
+      "options": [
+        "केवल antenna की length adjust करना",
+        "Voice/data signal processing, coding-decoding और overall control करना",
+        "केवल camera lens को साफ करना",
+        "केवल SIM card को physically लॉक करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Baseband processor voice और data signals की digital processing, speech coding/decoding, error correction तथा overall system control (जैसे protocol handling) संभालता है। Antenna length, camera lens cleaning और SIM लॉक करना baseband का कार्य नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q3",
+      "question": "Power Management IC (PMIC) मोबाइल फोन में किस काम के लिए उपयोग होता है?",
+      "options": [
+        "यह battery से मिलने वाली voltage को विभिन्न blocks के लिए regulate व distribute करता है",
+        "यह केवल SMS भेजता है",
+        "यह केवल camera के photos edit करता है",
+        "यह केवल network signal strength बढ़ाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "PMIC battery की raw DC voltage को अलग-अलग circuits (processor, RF section, display आदि) की जरूरत अनुसार regulated voltages में convert करके distribute करता है और charging को भी control करता है। SMS भेजना, photo editing और signal strength बढ़ाना PMIC का कार्य नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q4",
+      "question": "SIM (Subscriber Identity Module) card में मुख्य रूप से क्या information store रहती है?",
+      "options": [
+        "केवल फोन की battery percentage",
+        "Subscriber की identity (IMSI), authentication keys और network से related जानकारी",
+        "केवल camera resolution की setting",
+        "केवल display की brightness setting"
+      ],
+      "correctIndex": 1,
+      "explanation": "SIM card में IMSI (International Mobile Subscriber Identity), authentication key (Ki) और network-related data store रहता है जिससे subscriber को network पर authenticate किया जाता है। Battery percentage, camera resolution और display brightness फोन के अन्य hardware/software में handle होते हैं, SIM में नहीं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q5",
+      "question": "मोबाइल फोन के block diagram में 'microphone' और 'speaker' किस section से जुड़े होते हैं?",
+      "options": [
+        "RF section से सीधे",
+        "Audio codec (baseband का हिस्सा) से, जो analog audio को digital signal में convert करता/करवाता है",
+        "केवल SIM card से",
+        "केवल camera module से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Microphone से आने वाली analog आवाज को audio codec ADC द्वारा digital में बदलता है (baseband processing के लिए), और speaker के लिए DAC digital signal को वापस analog आवाज में बदलता है। RF section, SIM और camera का microphone/speaker से सीधा data conversion संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q6",
+      "question": "Duplexer का मोबाइल फोन में क्या कार्य है?",
+      "options": [
+        "यह camera को दो lenses में बांटता है",
+        "यह एक ही antenna से transmit और receive signals को अलग करके एक-दूसरे में interfere होने से बचाता है",
+        "यह SIM card को duplicate करता है",
+        "यह केवल battery को दोगुना करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Duplexer एक ऐसा RF component है जो एक ही antenna का उपयोग transmit और receive दोनों के लिए करने देता है, साथ ही transmit signal को receiver में leak होने से रोकता है। Camera lens, SIM duplicate और battery से duplexer का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q7",
+      "question": "Antenna Switch/Duplexer के बाद transmitted RF signal को amplify करने का काम कौन सा block करता है?",
+      "options": [
+        "Power Amplifier (PA)",
+        "SIM card reader",
+        "Display driver IC",
+        "Camera image sensor"
+      ],
+      "correctIndex": 0,
+      "explanation": "Power Amplifier (PA), transmit path में मौजूद उस block को कहते हैं जो low-power modulated RF signal को इतनी power तक amplify करता है कि वह antenna से efficiently transmit हो सके। SIM reader, display driver और camera sensor का transmit path से संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q8",
+      "question": "Received weak RF signal को पहले किस block द्वारा amplify किया जाता है ताकि आगे की processing हो सके?",
+      "options": [
+        "Low Noise Amplifier (LNA)",
+        "SIM card controller",
+        "Battery charger IC",
+        "Vibrator motor driver"
+      ],
+      "correctIndex": 0,
+      "explanation": "Antenna से मिलने वाला बहुत weak received signal सबसे पहले Low Noise Amplifier (LNA) द्वारा amplify किया जाता है, जो minimum अतिरिक्त noise जोड़ते हुए signal को boost करता है। SIM controller, battery charger IC और vibrator motor driver receive path का हिस्सा नहीं हैं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q9",
+      "question": "Frequency Synthesizer (या Local Oscillator, LO) का RF section में क्या उपयोग है?",
+      "options": [
+        "यह camera के flash को control करता है",
+        "यह mixer के लिए आवश्यक accurate local oscillator frequency उत्पन्न करता है जिससे up/down conversion होता है",
+        "यह केवल SIM card को reset करता है",
+        "यह केवल battery की voltage मापता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Frequency synthesizer एक stable और accurate local oscillator signal generate करता है जिसे mixer में इस्तेमाल करके baseband signal को RF frequency में up-convert या RF signal को baseband में down-convert किया जाता है। Camera flash, SIM reset और voltage measurement से इसका संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q10",
+      "question": "मोबाइल फोन में ADC (Analog to Digital Converter) किस उद्देश्य के लिए उपयोग होता है?",
+      "options": [
+        "Analog signals (जैसे microphone की आवाज) को digital baseband processing के लिए digital form में बदलने हेतु",
+        "केवल SIM card को activate करने हेतु",
+        "केवल camera lens को focus करने हेतु",
+        "केवल battery की charging speed बढ़ाने हेतु"
+      ],
+      "correctIndex": 0,
+      "explanation": "ADC microphone जैसे analog signal sources से आने वाले continuous signal को digital samples में बदलता है ताकि baseband processor उस पर digital signal processing कर सके। SIM activation, camera focus और charging speed से ADC का सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q11",
+      "question": "DAC (Digital to Analog Converter) मोबाइल फोन में किस कार्य में उपयोग होता है?",
+      "options": [
+        "Processed digital audio signal को speaker के लिए वापस analog signal में बदलने हेतु",
+        "केवल network तलाशने (network search) हेतु",
+        "केवल camera का zoom control करने हेतु",
+        "केवल display की resolution बदलने हेतु"
+      ],
+      "correctIndex": 0,
+      "explanation": "DAC baseband processor द्वारा processed digital audio signal को वापस analog signal में convert करता है जिसे amplify करके speaker/earpiece से सुनाया जाता है। Network search, camera zoom और display resolution DAC का कार्य नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q12",
+      "question": "मोबाइल फोन के block diagram में Application Processor (AP) का क्या कार्य होता है?",
+      "options": [
+        "यह केवल RF signal transmit करता है",
+        "यह operating system, user apps और multimedia processing को handle करता है",
+        "यह केवल SIM card की metal contacts साफ करता है",
+        "यह केवल battery की temperature मापता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Application Processor (AP) मोबाइल के operating system, user applications, graphics, camera processing और multimedia tasks को handle करता है, जबकि baseband processor telecom-related signal processing संभालता है। RF transmission, SIM contacts और battery temperature measurement AP के मुख्य कार्य नहीं हैं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q13",
+      "question": "मोबाइल फोन में Real Time Clock (RTC) block का क्या उपयोग है?",
+      "options": [
+        "यह camera flash को trigger करता है",
+        "यह phone बंद होने पर भी समय व दिनांक (date) की जानकारी बनाए रखता है",
+        "यह SIM card का data encrypt करता है",
+        "यह केवल vibrator को चलाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RTC block एक छोटी backup battery/capacitor की मदद से phone off रहने पर भी सही time और date maintain रखता है, जिससे phone on होने पर सही समय दिखे। Camera flash trigger, SIM data encryption और vibrator control RTC के कार्य नहीं हैं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q14",
+      "question": "मोबाइल फोन के block diagram में EEPROM/Flash memory का मुख्य उपयोग क्या है?",
+      "options": [
+        "यह केवल antenna की tuning करता है",
+        "इसमें operating system, applications और user data को non-volatile रूप में store किया जाता है",
+        "यह केवल battery को cool रखता है",
+        "यह केवल RF signal को amplify करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flash/EEPROM memory non-volatile storage होती है जिसमें फोन बंद होने पर भी operating system, applications तथा user data (photos, contacts आदि) permanently store रहते हैं। Antenna tuning, battery cooling और RF amplification अलग blocks का कार्य है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q15",
+      "question": "जब मोबाइल फोन को switch on किया जाता है, तो सामान्यतः working sequence में सबसे पहले क्या होता है?",
+      "options": [
+        "सीधे call करना शुरू हो जाता है",
+        "Power ON होने पर PMIC विभिन्न blocks को supply देता है और processor boot होकर SIM authentication व network search शुरू करता है",
+        "camera automatically photo खींचना शुरू कर देता है",
+        "SIM card स्वतः eject हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Switch on करने पर PMIC सभी जरूरी blocks को नियंत्रित तरीके से power देता है, processor boot होता है, फिर SIM authentication की जाती है और network search करके base station से link स्थापित किया जाता है। सीधे call करना, अपने आप photo लेना और SIM eject होना गलत sequence हैं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q16",
+      "question": "मोबाइल फोन के transmitter section में modulation किस उद्देश्य से किया जाता है?",
+      "options": [
+        "Baseband voice/data signal को radio frequency carrier पर आरोपित (superimpose) करके लंबी दूरी तक transmission योग्य बनाने हेतु",
+        "केवल SIM card को गर्म करने हेतु",
+        "केवल camera की flash intensity बढ़ाने हेतु",
+        "केवल battery की voltage घटाने हेतु"
+      ],
+      "correctIndex": 0,
+      "explanation": "Modulation में baseband information signal को एक high-frequency carrier wave पर impose किया जाता है ताकि वह antenna से efficiently transmit होकर लंबी दूरी तय कर सके। SIM heating, camera flash और battery voltage से modulation का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q17",
+      "question": "Receiver section में demodulation का क्या कार्य है?",
+      "options": [
+        "यह received RF carrier signal से original baseband information signal को वापस निकालता है",
+        "यह केवल SIM card को lock करता है",
+        "यह केवल display को on/off करता है",
+        "यह केवल battery को discharge करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Demodulation, modulation की उलटी प्रक्रिया है जिसमें receiver द्वारा प्राप्त RF carrier signal में से मूल baseband voice/data information को अलग निकाला जाता है ताकि उसे आगे process किया जा सके। SIM lock, display on/off और battery discharge से demodulation का संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q18",
+      "question": "Touch screen controller मोबाइल फोन block diagram में किस block से जुड़ा रहता है?",
+      "options": [
+        "RF Power Amplifier से",
+        "Application Processor से, जो touch input को process करके user interface control करता है",
+        "SIM card slot से सीधे",
+        "Antenna switch से सीधे"
+      ],
+      "correctIndex": 1,
+      "explanation": "Touch screen controller touch panel से मिले signals को digitize करके Application Processor को भेजता है, जो उसे process करके user interface पर उचित action लेता है। Power amplifier, SIM slot और antenna switch touch input processing से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q19",
+      "question": "मोबाइल फोन में battery और charging circuit की monitoring सामान्यतः किस block द्वारा की जाती है?",
+      "options": [
+        "Camera image processor द्वारा",
+        "Power Management IC (PMIC) द्वारा, जो voltage, current और charging status को नियंत्रित करता है",
+        "Display driver द्वारा",
+        "Vibrator motor driver द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "PMIC ही वह block है जो battery की voltage, current, temperature और charging status को monitor व control करता है ताकि overcharging या deep discharge जैसी समस्याओं से बचा जा सके। Camera processor, display driver और vibrator motor driver का battery monitoring से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q20",
+      "question": "मोबाइल फोन के block diagram में 'Codec (audio codec)' शब्द से क्या तात्पर्य है?",
+      "options": [
+        "यह एक ऐसा IC है जो audio signal को coding-decoding (analog-digital conversion सहित) करता है",
+        "यह केवल SIM card का password होता है",
+        "यह केवल camera की megapixel रेटिंग होती है",
+        "यह केवल battery की mAh rating होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Audio Codec IC microphone से आने वाली analog आवाज को digital में (ADC) और processor से आने वाली digital audio को वापस analog में (DAC) convert करता है, साथ ही आवश्यक compression/decompression भी कर सकता है। SIM password, camera megapixel rating और battery mAh rating का codec से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q21",
+      "question": "मोबाइल फोन में IF (Intermediate Frequency) stage का उपयोग किसलिए किया जाता है?",
+      "options": [
+        "उच्च RF frequency को एक निश्चित मध्यवर्ती (lower) frequency में convert करके filtering व amplification को आसान बनाने हेतु",
+        "केवल SIM card का number बदलने हेतु",
+        "केवल camera का aperture control करने हेतु",
+        "केवल display का touch response बढ़ाने हेतु"
+      ],
+      "correctIndex": 0,
+      "explanation": "Superheterodyne receiver architecture में high RF signal को mixer व local oscillator की मदद से एक fixed intermediate frequency (IF) में convert किया जाता है जिससे selective filtering और amplification आसान व अधिक efficient हो जाती है। SIM number, camera aperture और touch response से IF stage का संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q22",
+      "question": "SIM card interface और baseband processor के बीच data exchange के लिए मुख्यतः कौन सा protocol/interface उपयोग होता है?",
+      "options": [
+        "USB 3.0 high speed bus",
+        "ISO/IEC 7816 standard आधारित serial interface",
+        "HDMI interface",
+        "Bluetooth wireless protocol"
+      ],
+      "correctIndex": 1,
+      "explanation": "SIM card और baseband processor के बीच communication ISO/IEC 7816 standard पर आधारित एक serial interface के माध्यम से होता है, जो smart card communication के लिए विश्वव्यापी मानक है। USB 3.0, HDMI और Bluetooth SIM communication के लिए उपयोग नहीं होते।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q23",
+      "question": "मोबाइल फोन में vibrator motor को control करने वाला signal सामान्यतः कहां से आता है?",
+      "options": [
+        "Antenna से सीधे",
+        "Application/Baseband Processor से, driver circuit के माध्यम से",
+        "SIM card से सीधे",
+        "Power amplifier से सीधे"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vibrator motor को control करने का signal processor (application/baseband) से आता है, जो driver circuit के जरिए motor को on/off करता है, जैसे incoming call alert के लिए। Antenna, SIM card और power amplifier से vibrator control का संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q24",
+      "question": "मोबाइल फोन के block diagram में Voltage Controlled Oscillator (VCO) का उपयोग किसमें होता है?",
+      "options": [
+        "Display की brightness control करने में",
+        "Frequency synthesizer/PLL के अंदर आवश्यक frequency generate करने में",
+        "SIM card को activate करने में",
+        "Camera के flash को trigger करने में"
+      ],
+      "correctIndex": 1,
+      "explanation": "VCO, Phase Locked Loop (PLL) आधारित frequency synthesizer का एक हिस्सा होता है जो control voltage के अनुसार आवश्यक output frequency generate करता है, जिसका उपयोग transmit/receive के लिए local oscillator signal बनाने में होता है। Display brightness, SIM activation और camera flash से VCO का संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q25",
+      "question": "मोबाइल हैंडसेट में Band Pass Filter (BPF) का RF section में क्या कार्य है?",
+      "options": [
+        "यह केवल SIM card की frequency बदलता है",
+        "यह केवल वांछित frequency band के signals को pass करता है और बाकी unwanted frequencies को block करता है",
+        "यह केवल camera का color balance ठीक करता है",
+        "यह केवल battery की internal resistance मापता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Band Pass Filter केवल desired operating frequency band के signals को गुजरने देता है और बाकी सभी unwanted frequencies तथा noise को attenuate/block करता है, जिससे receiver की selectivity बढ़ती है। SIM frequency, camera color balance और battery resistance measurement से BPF का संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q26",
+      "question": "मोबाइल फोन में GPS module block diagram का हिस्सा होने पर इसका मुख्य कार्य क्या है?",
+      "options": [
+        "यह केवल SIM card को दोबारा activate करता है",
+        "यह satellites से signals प्राप्त करके phone की geographical location calculate करता है",
+        "यह केवल battery चार्जिंग को तेज करता है",
+        "यह केवल display resolution बढ़ाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "GPS module अलग-अलग satellites से मिलने वाले timing signals का उपयोग करके triangulation के जरिए device की accurate location (latitude, longitude) calculate करता है। SIM reactivation, faster charging और display resolution से GPS module का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q27",
+      "question": "Baseband processor और RF section के बीच data flow में मुख्य रूप से किसका आदान-प्रदान (exchange) होता है?",
+      "options": [
+        "केवल battery voltage values",
+        "Digital baseband signals (transmit के लिए) और down-converted received signals (receive के लिए)",
+        "केवल SIM card की physical location",
+        "केवल camera की shutter speed values"
+      ],
+      "correctIndex": 1,
+      "explanation": "Baseband processor transmit path में digital baseband signal RF section को भेजता है (जो उसे modulate व up-convert करता है), और receive path में RF section से down-converted signal प्राप्त करके उसे demodulate/decode करता है। Battery voltage, SIM location और shutter speed values का यह exchange नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q28",
+      "question": "मोबाइल फोन में external memory card (जैसे microSD) किस block/interface के माध्यम से processor से जुड़ता है?",
+      "options": [
+        "RF antenna के माध्यम से",
+        "Memory card interface/controller के माध्यम से, जो processor को storage access देता है",
+        "SIM card slot के माध्यम से सीधे शेयर होकर",
+        "Power amplifier के माध्यम से"
+      ],
+      "correctIndex": 1,
+      "explanation": "microSD जैसा external memory card एक dedicated memory card interface/controller से जुड़ता है, जो processor को additional non-volatile storage तक access प्रदान करता है। RF antenna, SIM slot (शेयर नहीं होता) और power amplifier का इस connection से संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q29",
+      "question": "मोबाइल फोन का overall block diagram मुख्यतः किन दो प्रमुख sections में विभाजित किया जाता है?",
+      "options": [
+        "केवल camera section और speaker section",
+        "RF (Radio Frequency) section और Baseband (digital processing व control) section",
+        "केवल SIM section और vibrator section",
+        "केवल display section और keypad section"
+      ],
+      "correctIndex": 1,
+      "explanation": "मोबाइल फोन के architecture को मुख्यतः दो प्रमुख भागों में बांटा जाता है — RF section (transmit/receive संबंधी analog/RF circuitry) और Baseband section (digital signal processing, control व applications)। बाकी options केवल peripheral blocks हैं, प्रमुख विभाजन नहीं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q30",
+      "question": "मोबाइल फोन के power-off (switch off) होने की स्थिति में कौन सा block फिर भी थोड़ी power से active रहकर समय (RTC time) व कुछ settings बनाए रखता है?",
+      "options": [
+        "Main Application Processor पूरी क्षमता से",
+        "RTC (Real Time Clock) circuit backup power/capacitor की सहायता से",
+        "Camera image sensor",
+        "RF Power Amplifier"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phone पूरी तरह off होने पर भी RTC circuit एक छोटी backup power source (जैसे capacitor या coin cell) से चलती रहती है ताकि सही समय व दिनांक बना रहे। Main application processor, camera sensor और power amplifier फोन off होने पर बंद रहते हैं।"
+    }
+  ]
+}

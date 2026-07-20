@@ -1,0 +1,368 @@
+{
+  "unit": "unit16",
+  "unitName": "Electro Pneumatics",
+  "topic": "control_elements",
+  "topicName": "Control Elements - Directional Control Valves (3/2, 5/2), Shuttle Valve, Non-Return Valve, Pressure Control Valve, Timers/Sequencers",
+  "questions": [
+    {
+      "id": "u16_control_elements_q1",
+      "question": "3/2 way directional control valve (DCV) में '3' और '2' अंकों का क्या अर्थ है?",
+      "options": [
+        "3 different pressures और 2 different flow rates",
+        "3 ports (connections) और 2 switching positions",
+        "3 solenoids और 2 springs",
+        "3 seconds का switching time और 2 bar pressure"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pneumatic valve nomenclature में पहला अंक valve पर मौजूद total ports (जैसे P, A, R) की संख्या बताता है और दूसरा अंक valve की spool switching positions की संख्या बताता है; इस प्रकार 3/2 valve में 3 ports और 2 positions होती हैं। Options A, C, D गलत parameters को दर्शाते हैं।"
+    },
+    {
+      "id": "u16_control_elements_q2",
+      "question": "5/2 way single solenoid spring return DCV की rest position में valve किस स्थिति में रहती है?",
+      "options": [
+        "Spring द्वारा निर्धारित default position में, जब तक solenoid energize न हो",
+        "हमेशा दोनों positions पर एक साथ",
+        "यह केवल manual actuation से बदलती है, कभी spring से नहीं",
+        "Solenoid न होने पर यह random position में रहती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Single solenoid spring return valve में solenoid energize होने पर spool एक position में shift होता है और de-energize होते ही spring वापस उसे default rest position में ले आता है, इसलिए rest position spring द्वारा determined होती है। Options B, C, D valve की वास्तविक operation से मेल नहीं खाते।"
+    },
+    {
+      "id": "u16_control_elements_q3",
+      "question": "5/2 way double solenoid DCV की एक विशेष विशेषता (memory feature) क्या है?",
+      "options": [
+        "यह हमेशा spring द्वारा rest position में लौटता है",
+        "एक बार solenoid pulse देकर switch करने पर, pulse हटने के बाद भी valve उसी last-switched position में बना रहता है (bistable/memory action)",
+        "इसमें केवल एक solenoid होता है",
+        "यह केवल 3 ports वाला valve है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Double solenoid valve एक bistable (memory) valve है — एक solenoid को momentary pulse देकर switch किया जा सकता है, और pulse हटने पर भी valve उसी position में रहता है जब तक दूसरा solenoid pulse न मिले। Option A single solenoid spring-return का behaviour है, C, D गलत specifications हैं।"
+    },
+    {
+      "id": "u16_control_elements_q4",
+      "question": "Double acting cylinder को नियंत्रित करने के लिए सामान्यतः कौन-सा DCV उपयुक्त होता है?",
+      "options": [
+        "3/2 way valve",
+        "2/2 way valve",
+        "5/2 way (या 4/2 way) valve, क्योंकि इसमें दोनों तरफ air supply व exhaust के लिए अलग ports होते हैं",
+        "1/2 way valve"
+      ],
+      "correctIndex": 2,
+      "explanation": "Double acting cylinder को extend व retract दोनों दिशाओं में air pressure चाहिए होता है, इसलिए 5/2 way (या 4/2 way) valve उपयोग होता है जिसमें दो working ports, एक supply port और (5/2 में) दो अलग exhaust ports होते हैं। 3/2 way valve single acting cylinder के लिए है, 2/2 way केवल on/off flow control के लिए, 1/2 way कोई मानक valve प्रकार नहीं है।"
+    },
+    {
+      "id": "u16_control_elements_q5",
+      "question": "Single acting cylinder (spring return) को control करने के लिए कौन-सा DCV सामान्यतः प्रयोग होता है?",
+      "options": [
+        "5/2 way valve",
+        "5/3 way valve",
+        "3/2 way valve, क्योंकि cylinder की एक ही तरफ air supply चाहिए और return spring द्वारा होता है",
+        "4/3 way valve"
+      ],
+      "correctIndex": 2,
+      "explanation": "Single acting cylinder में केवल एक port पर air दी जाती है (extend के लिए) और retraction internal spring से होता है, इसलिए एक supply port, एक working port और एक exhaust port वाला 3/2 way valve पर्याप्त होता है। Options A, B, D double/multi-position acting cylinders के लिए उपयोग होते हैं।"
+    },
+    {
+      "id": "u16_control_elements_q6",
+      "question": "Shuttle valve (OR function valve) का मुख्य कार्य क्या है?",
+      "options": [
+        "दो अलग-अलग input signals में से जो भी पहले या higher pressure के साथ आए, उसे automatically output port से connect करना और दूसरे input को block करना",
+        "दोनों inputs का pressure add करके output देना",
+        "केवल एक fixed direction में air pass होने देना",
+        "Air pressure को समय के साथ धीरे-धीरे बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Shuttle valve में दो input ports (X, Y) और एक output port (A) होता है; जिस input पर पहले या अधिक pressure signal आता है, आंतरिक ball/disc उस तरफ shift होकर उसे output से जोड़ देता है और दूसरे input को seal कर देता है — यह logical OR function है। Option B AND/summation valve का काम नहीं है, C non-return (check) valve का वर्णन है, D time delay valve का कार्य है।"
+    },
+    {
+      "id": "u16_control_elements_q7",
+      "question": "Non-return valve (check valve) का मुख्य कार्य क्या है?",
+      "options": [
+        "Air pressure को दोनों दिशाओं में समान रूप से pass करना",
+        "एक निश्चित दिशा में free air flow की अनुमति देना और विपरीत दिशा में flow को पूर्णतः block कर देना",
+        "दो inputs में से higher pressure को select करना",
+        "Signal को fixed समय के लिए delay करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Non-return (check) valve केवल एक direction में air को free flow करने देता है; जैसे ही reverse direction में pressure लगती है, internal ball/poppet seat पर बैठकर flow रोक देता है, जिससे back-flow रुकता है और pressure लॉक होती है। Option A इसके एकदिशीय गुण के विपरीत है, C shuttle valve का काम है, D time delay valve का कार्य है।"
+    },
+    {
+      "id": "u16_control_elements_q8",
+      "question": "Pressure control valve (pressure regulating valve) electro-pneumatic system में किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Signal की timing control करने के लिए",
+        "System में working pressure को एक निर्धारित (set) value तक सीमित/regulate करने के लिए ताकि actuators व valves सुरक्षित pressure range में काम करें",
+        "दो signals में से एक को select करने के लिए",
+        "Flow की दिशा बदलने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pressure regulating/relief valve supply pressure को set value तक limit करता है ताकि downstream components (cylinder, valves) अत्यधिक pressure से क्षतिग्रस्त न हों और operation consistent रहे। Option A timer का कार्य है, C shuttle valve का, D directional control valve का कार्य है।"
+    },
+    {
+      "id": "u16_control_elements_q9",
+      "question": "Pressure sequence valve का उपयोग किस प्रकार की application में होता है?",
+      "options": [
+        "जब दो actuators को समय के आधार पर नहीं बल्कि पहले actuator द्वारा एक निश्चित pressure प्राप्त करने के बाद ही दूसरे actuator को signal देना हो (जैसे clamping के बाद drilling)",
+        "जब केवल एक actuator को control करना हो",
+        "जब air की moisture हटानी हो",
+        "जब motor की speed control करनी हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sequence valve तब तक बंद रहता है जब तक pilot line पर pressure preset value तक न पहुँच जाए (जैसे clamp cylinder द्वारा पूरी pressure से workpiece पकड़ना), उसके बाद ही यह अगला signal pass करता है — इस तरह pressure-dependent sequencing होती है। Options B, C, D इसके actual उपयोग से असंबंधित हैं।"
+    },
+    {
+      "id": "u16_control_elements_q10",
+      "question": "Electro-pneumatic timer relay (ON-delay timer) का कार्य क्या होता है?",
+      "options": [
+        "Input signal मिलते ही तुरंत output दे देना",
+        "Input signal मिलने के बाद एक निर्धारित (preset) समय बीतने पर ही output contact को activate करना",
+        "Output को हमेशा के लिए off रखना",
+        "केवल pressure sense करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "ON-delay timer में जैसे ही input coil energize होता है, timer count शुरू करता है और preset time पूरा होने के बाद ही output contact (NO/NC) switch होता है, जिससे sequence में delay लाया जाता है। Option A instant relay का व्यवहार है, C, D timer की actual functionality नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_control_elements_q11",
+      "question": "OFF-delay timer और ON-delay timer में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल समान कार्य करते हैं",
+        "ON-delay timer, input मिलने के बाद delay से output ON करता है; जबकि OFF-delay timer, input हटने के बाद delay से output OFF करता है (output तुरंत ON होता है)",
+        "OFF-delay timer कभी OFF नहीं होता",
+        "ON-delay timer केवल pneumatic signal पर काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "ON-delay timer में signal input आने पर output ON होने में देरी होती है, जबकि OFF-delay timer में input मिलते ही output तुरंत ON हो जाता है परंतु input हटने के बाद output OFF होने में preset delay लगता है। Options A, C, D इस मूलभूत अंतर को सही ढंग से नहीं समझाते।"
+    },
+    {
+      "id": "u16_control_elements_q12",
+      "question": "Sequencer (step counter / sequential controller) का electro-pneumatic automation में मुख्य उद्देश्य क्या है?",
+      "options": [
+        "केवल एक ही actuator को बार-बार चलाना",
+        "पूर्व-निर्धारित क्रम में कई actuators/steps को एक-दूसरे के बाद (step-by-step) automatically activate करना, प्रत्येक step पूरा होने की feedback पर आधारित",
+        "Air pressure को measure करना",
+        "केवल manual operation प्रदान करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sequencer एक control unit है जो multiple steps (जैसे A+, B+, A-, B-) को पूर्वनिर्धारित क्रम में, प्रत्येक step की completion feedback (limit switch/sensor) प्राप्त होने के बाद अगला step trigger करते हुए automatic रूप से execute करता है। Options A, C, D इसके वास्तविक automation कार्य को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_control_elements_q13",
+      "question": "5/3 way DCV में तीसरी (middle) 'closed centre' position का क्या लाभ है?",
+      "options": [
+        "यह हमेशा दोनों cylinder ports को exhaust से जोड़ देता है",
+        "Neutral position में सभी ports बंद रहते हैं, जिससे cylinder किसी भी stroke position पर बीच में रुककर लॉक (hold) हो सकता है",
+        "यह केवल single acting cylinder के लिए बनाया गया है",
+        "यह valve हमेशा spring द्वारा energized रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Closed centre 5/3 valve की middle position में P, A, B सभी ports आपस में तथा exhaust से disconnect रहते हैं, जिससे piston उस बीच की स्थिति में locked रहकर बिना drift के hold हो सकता है — यह mid-stroke stopping applications में उपयोगी है। Options A, C, D इसके actual लाभ को गलत बताते हैं।"
+    },
+    {
+      "id": "u16_control_elements_q14",
+      "question": "Quick exhaust valve (जो सामान्यतः control elements के साथ प्रयोग होता है) का मुख्य कार्य क्या है?",
+      "options": [
+        "Cylinder की speed को धीमा करना",
+        "Cylinder से exhaust air को DCV से होकर वापस भेजने के बजाय सीधे atmosphere में तेज़ी से निकालकर piston की return/extend speed बढ़ाना",
+        "Air pressure को दोगुना करना",
+        "दो अलग signals को combine करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Quick exhaust valve को cylinder port के पास लगाया जाता है ताकि exhaust air को लंबी tubing तथा DCV से होकर जाने के बजाय सीधे local atmosphere में discharge किया जाए, जिससे restriction कम होकर piston speed बढ़ जाती है। Option A इसके विपरीत प्रभाव है, C, D इसके कार्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u16_control_elements_q15",
+      "question": "Two shuttle valves को logic circuit में श्रृंखला (cascade) में जोड़ने पर क्या प्राप्त होता है?",
+      "options": [
+        "केवल एक input signal accept करने वाला circuit",
+        "तीन या अधिक अलग-अलग input signals में से किसी भी एक (OR logic) को common output तक pass करने की सुविधा",
+        "AND logic जिसमें सभी inputs एक साथ जरूरी हों",
+        "Time delay function"
+      ],
+      "correctIndex": 1,
+      "explanation": "Shuttle valves को cascade में जोड़कर तीन या अधिक input signals में से किसी भी एक signal के आने पर output प्राप्त करने की OR logic बनाई जा सकती है, जो multiple push-button/sensor locations से एक ही actuator को control करने में उपयोगी है। Options A, C, D गलत logic function बताते हैं।"
+    },
+    {
+      "id": "u16_control_elements_q16",
+      "question": "AND function प्राप्त करने के लिए pneumatic logic circuit में सामान्यतः किस valve का उपयोग होता है?",
+      "options": [
+        "Shuttle valve",
+        "Non-return valve",
+        "Dual pressure valve (two-pressure/AND valve), जिसमें output तभी मिलता है जब दोनों inputs पर signal मौजूद हो",
+        "Quick exhaust valve"
+      ],
+      "correctIndex": 2,
+      "explanation": "Dual pressure (two-pressure) valve में output तभी generate होता है जब दोनों input ports (X और Y) पर एक साथ signal present हो — यह logical AND function है, जो सामान्यतः safety interlock circuits में प्रयुक्त होता है। Shuttle valve OR function देता है, non-return valve एकदिशीय flow control है, quick exhaust valve speed बढ़ाने के लिए है।"
+    },
+    {
+      "id": "u16_control_elements_q17",
+      "question": "Flow control valve (speed control/throttle valve) directional control valve के साथ मिलकर cylinder की speed को कैसे नियंत्रित करता है?",
+      "options": [
+        "Supply pressure को बदलकर",
+        "Air passage के orifice area को variable बनाकर (needle/throttle) exhaust या supply air के flow rate को restrict करके piston की गति की गति नियंत्रित करना",
+        "Solenoid coil की voltage बदलकर",
+        "Timer के जरिए signal को delay करके"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flow control valve में एक adjustable needle/throttle होता है जिससे air के flow cross-section को घटाया-बढ़ाया जा सकता है, आमतौर पर meter-out configuration में exhaust air को restrict कर piston speed control की जाती है। Options A, C, D speed control का सही method नहीं हैं।"
+    },
+    {
+      "id": "u16_control_elements_q18",
+      "question": "Meter-out flow control (exhaust throttling) का meter-in (supply throttling) की तुलना में क्या लाभ है?",
+      "options": [
+        "यह हमेशा सस्ता होता है",
+        "Meter-out में exhaust air को restrict करने से piston पर back-pressure बनता है जिससे smoother व अधिक स्थिर (stable) speed control मिलता है, खासकर variable load में",
+        "Meter-in हमेशा बेहतर होता है",
+        "इसमें कोई solenoid जरूरी नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Meter-out method में exhaust side पर restriction लगाकर एक counter/back pressure बनाया जाता है जो piston की गति को load परिवर्तन के बावजूद अधिक uniform व stable रखता है, इसलिए यह सामान्यतः pneumatic cylinders में meter-in से बेहतर माना जाता है। Options A, C, D सही तकनीकी तुलना नहीं देते।"
+    },
+    {
+      "id": "u16_control_elements_q19",
+      "question": "5/2 way solenoid valve में जब दोनों solenoids simultaneously energize कर दिए जाएँ (double solenoid type में), तो सामान्यतः क्या समस्या हो सकती है?",
+      "options": [
+        "Valve तेज़ी से switching करने लगेगा",
+        "Valve की spool दोनों तरफ के बराबर force के कारण अनिश्चित (indeterminate) position में फंस सकता है या पहले actuated solenoid की स्थिति बनाए रख सकता है, जो control logic में interlocking की आवश्यकता दर्शाता है",
+        "Cylinder की speed दोगुनी हो जाएगी",
+        "Air supply automatically बंद हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Double solenoid valve में दोनों solenoids को एक साथ energize करना अवांछित/undefined behaviour पैदा कर सकता है, इसलिए control circuit में electrical interlocking (mutual exclusion) लगाई जाती है ताकि एक समय में केवल एक solenoid ही energize हो। Options A, C, D वास्तविक समस्या को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_control_elements_q20",
+      "question": "Pilot operated (indirect actuated) solenoid valve की आवश्यकता कब पड़ती है?",
+      "options": [
+        "जब valve का flow rate/port size बड़ा हो और छोटे solenoid coil की direct force से spool को move करना कठिन हो, तो छोटा solenoid पहले pilot air signal switch करता है जो main spool को move करता है",
+        "जब केवल manual operation करनी हो",
+        "जब air की जरूरत ही न हो",
+        "जब केवल single acting cylinder हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "बड़े size के DCV में main spool को move करने हेतु अधिक force चाहिए होता है, जो छोटे solenoid के लिए संभव नहीं; इसलिए pilot-operated valve में solenoid केवल एक छोटा pilot valve actuate करता है, जिसका output air pressure मुख्य spool को move करता है — इससे कम power में बड़े valves control होते हैं। Options B, C, D इसकी सही आवश्यकता को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_control_elements_q21",
+      "question": "Electro-pneumatic circuit में relay-based interlocking का उपयोग किस उद्देश्य से किया जाता है?",
+      "options": [
+        "केवल indication lamp जलाने के लिए",
+        "यह सुनिश्चित करने के लिए कि परस्पर विरोधी (conflicting) solenoids या actuators एक साथ energize न हों, जिससे equipment की सुरक्षा और सही sequencing सुनिश्चित हो",
+        "Air pressure बढ़ाने के लिए",
+        "Timer की delay कम करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Interlocking relay logic circuit में यह सुनिश्चित करता है कि विपरीत कार्य करने वाले outputs (जैसे forward व reverse solenoid) कभी एक साथ energize न हों, जिससे mechanical clash या valve damage से बचाव होता है। Options A, C, D इसके सुरक्षा उद्देश्य को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_control_elements_q22",
+      "question": "Bistable (double solenoid, memory) valve की तुलना में monostable (single solenoid, spring return) valve का एक नुकसान क्या है?",
+      "options": [
+        "Monostable valve, power supply fail होने पर हमेशा spring द्वारा एक निश्चित (default/safe) position में लौट आता है, जिससे यदि उस स्थिति में लौटना असुरक्षित हो तो समस्या हो सकती है",
+        "Monostable valve हमेशा दोनों ports बंद रखता है",
+        "Monostable valve में कोई spring नहीं होता",
+        "Monostable valve केवल manual operation करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Monostable valve में power fail होने पर spring valve को अपनी default position में वापस ले जाता है — कुछ applications में यह fail-safe होता है, लेकिन कुछ में यह अवांछित गति (जैसे cylinder का अचानक retract) पैदा कर सकता है, इसलिए design में इसका ध्यान रखना जरूरी है। Options B, C, D इसकी वास्तविक विशेषता को सही नहीं बताते।"
+    },
+    {
+      "id": "u16_control_elements_q23",
+      "question": "Time delay valve (pneumatic timer, non-electrical) किस principle पर आधारित होता है?",
+      "options": [
+        "Solenoid coil की heating पर",
+        "Air को एक adjustable restrictor (needle valve) के through एक छोटे reservoir (accumulator) को भरने में लगने वाले समय पर, जिसके बाद pilot signal पर्याप्त pressure तक पहुँचकर valve को switch करता है",
+        "Electrical capacitor के charge/discharge समय पर",
+        "Light sensor की response time पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pneumatic time delay valve में air एक restrictor से होकर धीरे-धीरे एक छोटे chamber (reservoir) को भरता है; जब chamber में pressure एक set threshold तक पहुँचता है तब यह pilot signal बनकर main valve spool को switch कर देता है, जिससे time delay मिलती है। Options A, C, D इसके pneumatic कार्य सिद्धांत से मेल नहीं खाते।"
+    },
+    {
+      "id": "u16_control_elements_q24",
+      "question": "Multi-step sequencing circuit A+, B+, B-, A- (जहाँ A व B दो अलग cylinders हैं) में प्रत्येक step का पूरा होना कैसे सुनिश्चित किया जाता है?",
+      "options": [
+        "प्रत्येक step पर fixed समय के लिए wait करके बिना feedback के अगला step चलाना",
+        "प्रत्येक cylinder के end position पर लगे limit switch/proximity sensor से feedback लेकर, तभी अगले step का signal generate करना",
+        "केवल operator द्वारा हर बार manual push-button दबाना",
+        "Air pressure को दोगुना करके"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही व reliable sequencing के लिए प्रत्येक cylinder के extend/retract end पर limit switch या proximity sensor लगाया जाता है ताकि जब तक वह actual मूवमेंट पूरा न कर ले, अगला step trigger न हो — यह position-based sequencing कहलाती है, केवल fixed time-based approach load बदलने पर अविश्वसनीय हो सकता है। Options A, C, D सही व robust तरीका नहीं है।"
+    },
+    {
+      "id": "u16_control_elements_q25",
+      "question": "Electro-pneumatic system में 'group control' (cascade) method sequencing में opposite motion signals के overlap (सिग्नल clash) को रोकने के लिए क्यों उपयोग होती है?",
+      "options": [
+        "क्योंकि यह केवल decoration के लिए होती है",
+        "क्योंकि एक ही limit switch signal यदि दो अलग steps में persist करता रहे तो यह conflicting output signals (जैसे A+ व A- एक साथ) उत्पन्न कर सकता है, इसलिए group control द्वारा supply लाइन को groups में divide कर एक समय में केवल एक group active रखा जाता है",
+        "क्योंकि इससे air की खपत कम होती है",
+        "क्योंकि यह केवल single cylinder systems में जरूरी है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Complex sequencing में persistent limit switch signals (जो पूरे cycle तक true रह सकते हैं) से conflicting simultaneous outputs का खतरा रहता है; cascade/group control method supply lines को अलग-अलग groups में बाँटकर एक समय में केवल एक group energize रखता है ताकि opposite signals का clash न हो। Options A, C, D इस तकनीक के वास्तविक उद्देश्य को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_control_elements_q26",
+      "question": "Pressure switch (electro-pneumatic input/control interface device) किस प्रकार कार्य करता है?",
+      "options": [
+        "यह light intensity को measure करता है",
+        "Preset pressure value तक पहुँचने पर internal diaphragm/piston मूवमेंट द्वारा electrical contact को switch (open/close) करता है",
+        "यह केवल manual push से actuate होता है",
+        "यह केवल flow rate को measure करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pressure switch में एक diaphragm या piston pneumatic pressure के अनुसार move करता है और जब pressure preset (adjustable) value तक पहुँचता है तो यह internal electrical contact को actuate कर देता है, जिससे pneumatic pressure को electrical control signal में convert किया जाता है। Options A, C, D इसके actual कार्य से भिन्न हैं।"
+    },
+    {
+      "id": "u16_control_elements_q27",
+      "question": "3/2 way solenoid valve normally closed (NC) प्रकार में de-energized अवस्था में क्या होता है?",
+      "options": [
+        "Output port supply से जुड़ा रहता है",
+        "Output port supply से disconnect रहता है और exhaust port से जुड़ा रहता है, जिससे cylinder/actuator तक air नहीं पहुँचती",
+        "Valve permanently locked हो जाता है",
+        "Solenoid burn हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "NC (normally closed) 3/2 solenoid valve की de-energized rest position में supply-to-output path बंद रहता है और output, exhaust port से जुड़ा रहता है; solenoid energize होने पर supply, output से जुड़ जाती है। Options A, C, D इसके rest-state व्यवहार को गलत दर्शाते हैं।"
+    },
+    {
+      "id": "u16_control_elements_q28",
+      "question": "Counter (electro-pneumatic component) sequencing/production circuits में किस लिए प्रयोग होता है?",
+      "options": [
+        "Air pressure measure करने के लिए",
+        "एक निर्धारित संख्या में cycles/events पूरे होने के बाद output signal देकर circuit को stop/reset करने या अगला function trigger करने के लिए",
+        "केवल time delay देने के लिए",
+        "Cylinder की force बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Counter, input pulses (जैसे प्रत्येक cycle पर आने वाला sensor signal) को गिनकर जब preset count पूरा हो जाता है तब output activate करता है, जो production batch complete होने पर machine को stop करने या alarm देने में उपयोगी है। Options A, C, D इसका सही कार्य नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_control_elements_q29",
+      "question": "Non-return valve (check valve) को cylinder के साथ meter-out flow control valve के रूप में उपयोग करते समय इसकी संरचना कैसी होती है?",
+      "options": [
+        "यह valve केवल दोनों दिशाओं में air को free flow करने देता है",
+        "इसमें check valve एक दिशा में free flow देता है (supply direction) जबकि विपरीत (exhaust) direction में air को एक adjustable orifice से होकर restricted रूप से pass होने देता है, जिससे combined flow control + non-return function मिलता है",
+        "यह केवल pressure measure करता है",
+        "यह timer की तरह कार्य करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "One-way flow control valve (check valve + throttle का combination) में एक direction में air check valve के जरिए बिना restriction free flow करती है, जबकि विपरीत direction में यह केवल एक छोटे adjustable orifice से होकर गुजरती है, जिससे meter-out/meter-in speed control संभव होता है। Options A, C, D इस combined component की सही संरचना को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_control_elements_q30",
+      "question": "Electro-pneumatic control panel में सुरक्षा हेतु 'dual pressure valve' (AND valve) को दो अलग push-button circuits के साथ किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "ताकि एक ही push-button से काम चल सके",
+        "ताकि press दबाने वाली machine जैसे उपकरण को तभी start किया जा सके जब operator दोनों हाथों से दो अलग push-buttons को एक साथ दबाए (two-hand safety control), जिससे हाथ machine के danger zone में न रहें",
+        "ताकि air की खपत बढ़े",
+        "ताकि cylinder की speed तेज़ हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Two-hand safety control में dual pressure (AND) valve का प्रयोग किया जाता है ताकि machine तभी actuate हो जब operator के दोनों हाथ अलग-अलग push-buttons पर हों, जिससे यह सुनिश्चित होता है कि हाथ danger zone (जैसे press die area) से बाहर हैं — यह एक महत्वपूर्ण safety measure है। Options A, C, D इसके actual सुरक्षा उद्देश्य को नहीं दर्शाते।"
+    }
+  ]
+}

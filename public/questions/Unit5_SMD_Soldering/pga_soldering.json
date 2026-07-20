@@ -1,0 +1,368 @@
+{
+  "unit": "unit5",
+  "unitName": "SMD Soldering and De-soldering",
+  "topic": "pga_soldering",
+  "topicName": "PGA/BGA Soldering & De-soldering",
+  "questions": [
+    {
+      "id": "u5_pga_soldering_q1",
+      "question": "PGA (Pin Grid Array) package में component की connectivity किस प्रकार होती है?",
+      "options": [
+        "Package के bottom side में grid pattern में लगे pins के द्वारा जो PCB के sockets या through-holes में इंसर्ट होते हैं",
+        "केवल top side में flat pads से",
+        "केवल side के edge connectors से",
+        "बिना किसी physical pin या pad के wireless connection से"
+      ],
+      "correctIndex": 0,
+      "explanation": "PGA package के bottom में grid arrangement में pins होते हैं जो PCB के matching holes/socket में insert होकर mechanical व electrical connection बनाते हैं। Options B, C, D PGA की actual construction को गलत बताते हैं — B, SMD जैसे flat pad packages की बात करता है।"
+    },
+    {
+      "id": "u5_pga_soldering_q2",
+      "question": "BGA (Ball Grid Array) package में component और PCB के बीच connection कैसे बनती है?",
+      "options": [
+        "Package के bottom में लगी छोटी solder balls के जरिए, जो reflow के दौरान PCB pads से bond हो जाती हैं",
+        "Metal pins के जरिए जो हाथ से insert किए जाते हैं",
+        "Screw और bolt के जरिए",
+        "Glue से चिपकाकर बिना solder के"
+      ],
+      "correctIndex": 0,
+      "explanation": "BGA package के bottom पर solder balls की grid होती है जो reflow soldering के दौरान पिघलकर PCB pads से जुड़ जाती है, जिससे electrical और mechanical connection दोनों बनते हैं। Options B, C, D BGA की construction/connection method से मेल नहीं खाते।"
+    },
+    {
+      "id": "u5_pga_soldering_q3",
+      "question": "BGA package के sides से solder joints सीधे नजर क्यों नहीं आते?",
+      "options": [
+        "क्योंकि solder balls package के नीचे hidden होते हैं, केवल X-ray या angled inspection से देखे जा सकते हैं",
+        "क्योंकि BGA में कोई solder joint होता ही नहीं",
+        "क्योंकि joints हमेशा transparent होते हैं",
+        "क्योंकि BGA केवल decoration के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "BGA का solder ball array package के नीचे hidden होता है, इसलिए visual inspection से सीधे नहीं दिखता — inspect करने के लिए X-ray inspection या side-angle magnification का उपयोग होता है। Options B, C, D गलत/असंभव दावे हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q4",
+      "question": "BGA soldering के लिए industry में मुख्यतः किस technique का उपयोग होता है?",
+      "options": [
+        "Hand soldering iron से point-to-point",
+        "Reflow soldering with hot air/IR BGA rework station जो controlled temperature profile follow करे",
+        "Wave soldering केवल",
+        "Cold welding"
+      ],
+      "correctIndex": 1,
+      "explanation": "BGA में hidden solder balls होने के कारण hand iron से soldering संभव नहीं, इसलिए dedicated BGA rework station (hot air/IR के साथ precise thermal profile) से reflow soldering की जाती है। Options A, C, D BGA soldering के लिए अनुपयुक्त तरीके हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q5",
+      "question": "BGA soldering से पहले 'stencil' का उपयोग किस लिए किया जाता है?",
+      "options": [
+        "PCB pads पर सही मात्रा में solder paste को accurately apply करने के लिए",
+        "Component को साफ करने के लिए",
+        "PCB का temperature मापने के लिए",
+        "PCB को हवा से सुखाने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Stencil में BGA pad pattern के अनुसार openings होती हैं जिनसे solder paste को exact मात्रा और location में PCB pads पर print किया जाता है, जिससे uniform, reliable joints बनते हैं। Options B, C, D stencil के कार्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q6",
+      "question": "BGA component को PCB पर align करते समय सबसे critical factor क्या है?",
+      "options": [
+        "Component का color",
+        "Solder balls का PCB pads के साथ सटीक (precise) alignment ताकि reflow के दौरान सही जगह bond बने",
+        "Component का weight",
+        "PCB का thickness"
+      ],
+      "correctIndex": 1,
+      "explanation": "BGA placement में solder balls और PCB pads का exact alignment critical है, गलत alignment से short-circuit, open joint या misregistration हो सकता है। Options A, C, D alignment प्रक्रिया के लिए महत्वपूर्ण factors नहीं हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q7",
+      "question": "BGA rework station में reflow profile के 'preheat', 'soak', 'reflow' और 'cooling' zones का क्रम बनाए रखना क्यों जरूरी है?",
+      "options": [
+        "ताकि component uniform और controlled heating/cooling से गुजरे, thermal shock, voids और cold joints से बचा जा सके",
+        "ताकि PCB का color बदल जाए",
+        "ताकि solder paste की expiry बढ़ जाए",
+        "क्रम का कोई महत्व नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही reflow profile follow करने से component और PCB में gradual व uniform heating/cooling होती है जिससे thermal stress, voids, cold solder joints और component damage से बचा जा सकता है। Options B, C, D प्रोफाइल के actual उद्देश्य को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q8",
+      "question": "BGA soldering में 'reflow peak temperature' को component datasheet के अनुसार सीमित क्यों रखा जाता है?",
+      "options": [
+        "क्योंकि अधिक peak temperature से component internally damage हो सकता है या package warp हो सकता है",
+        "क्योंकि इससे solder paste ठंडा हो जाता है",
+        "क्योंकि PCB का weight बदल जाता है",
+        "इसका कोई कारण नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "हर BGA/component का maximum allowable temperature datasheet में specify होता है; इसे पार करने से internal die damage, package warpage या delamination हो सकता है। Options B, C, D गलत/असंबंधित कारण हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q9",
+      "question": "BGA de-soldering (component हटाने) की process में सबसे पहला step क्या होता है?",
+      "options": [
+        "Component और PCB को adjacent components को thermal shield से cover करके controlled hot air से गर्म करना जब तक solder balls melt न हो जाएं",
+        "Component को सीधे force से खींच लेना",
+        "PCB को पानी में डुबो देना",
+        "Component पर hammer मारना"
+      ],
+      "correctIndex": 0,
+      "explanation": "BGA de-soldering में पहले nearby components को thermal shield से protect करके, फिर rework station की controlled hot air से पूरे component को uniformly heat किया जाता है जब तक सभी solder balls simultaneously melt न हो जाएं। Options B, C, D PCB और component को नुकसान पहुँचा सकते हैं और proper de-soldering नहीं करते।"
+    },
+    {
+      "id": "u5_pga_soldering_q10",
+      "question": "BGA component को हटाने के बाद PCB pads पर बचे हुए पुराने solder को कैसे साफ किया जाता है?",
+      "options": [
+        "Desoldering wick, solder sucker या hot air के साथ tweezers से residual solder को हटाकर pads को level किया जाता है",
+        "Pads को sand paper से रगड़ कर",
+        "Pads पर पानी डालकर",
+        "Pads को छोड़ दिया जाता है, सफाई की जरूरत नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Component हटाने के बाद pads पर बचा residual solder wick/solder sucker और controlled heat से हटाकर pads को flat व clean किया जाता है ताकि नया component सही तरह mount हो सके। Options B, C, D pads को damage करेंगे या contamination छोड़ेंगे।"
+    },
+    {
+      "id": "u5_pga_soldering_q11",
+      "question": "BGA रिवर्क में नया component लगाने से पहले 'reballing' प्रोसेस का उद्देश्य क्या है?",
+      "options": [
+        "पुराने damaged/deformed solder balls को हटाकर component के bottom पर नई uniform solder balls लगाना",
+        "Component का color बदलना",
+        "Component को हल्का बनाना",
+        "PCB को साफ करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reballing process में पुराने BGA component की खराब/deformed solder balls को हटाकर नई uniform-size solder balls attach की जाती हैं ताकि component को दोबारा PCB पर reliable तरीके से mount किया जा सके। Options B, C, D reballing के actual उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u5_pga_soldering_q12",
+      "question": "PGA component को PCB socket से हटाते समय किस बात का ध्यान रखना चाहिए?",
+      "options": [
+        "Pins को धीरे-धीरे even pressure के साथ straight ऊपर खींचना ताकि pins मुड़ें या टूटें नहीं",
+        "एक तरफ से जोर लगाकर तिरछा खींचना",
+        "Component को घुमाते हुए खींचना",
+        "Component को बिना देखे किसी भी दिशा में खींचना"
+      ],
+      "correctIndex": 0,
+      "explanation": "PGA को socket से निकालते समय सभी pins पर even, straight-up force apply करना जरूरी है ताकि कोई pin मुड़े या टूटे नहीं। Options B, C, D pins को bend या break कर सकते हैं, जिससे component/socket दोनों damage हो सकते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q13",
+      "question": "अगर PGA का कोई pin socket में insert करते समय मुड़ जाए (bent pin), तो repair में क्या किया जाता है?",
+      "options": [
+        "Pin को fine tweezers/pliers से सावधानी से सीधा किया जाता है, फिर alignment check करके insert किया जाता है",
+        "पूरे component को फेंक देना बिना कोशिश किए",
+        "Pin को काट देना",
+        "Pin को force से socket में ठूंस देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bent pin को fine tweezers या pliers से carefully straighten किया जाता है और alignment verify करने के बाद ही socket में insert किया जाता है ताकि pin टूटे नहीं। Options B, C, D अनावश्यक नुकसान या असफल insertion का कारण बनते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q14",
+      "question": "BGA soldering में 'nitrogen atmosphere' का उपयोग reflow के दौरान क्यों किया जाता है (जहाँ उपलब्ध हो)?",
+      "options": [
+        "Oxidation कम करके बेहतर wetting और solder joint quality प्राप्त करने के लिए",
+        "Component को ठंडा रखने के लिए",
+        "PCB का weight बढ़ाने के लिए",
+        "Solder paste को solid बनाने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nitrogen (inert gas) atmosphere में reflow करने से oxidation काफी कम होती है, जिससे solder joints की wetting और overall quality बेहतर होती है। Options B, C, D nitrogen atmosphere के actual उद्देश्य को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q15",
+      "question": "BGA rework के बाद joint quality verify करने के लिए सबसे reliable non-destructive method कौन-सी है?",
+      "options": [
+        "X-ray inspection जिससे hidden solder balls की shape, voids और bridging देखी जा सके",
+        "Board को हिला कर आवाज़ सुनना",
+        "Board को हाथ से मोड़ना",
+        "Board का वजन तोलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "X-ray inspection से BGA के hidden solder balls की internal shape, voids, insufficient solder और bridging जैसी defects बिना board को destroy किए देखी जा सकती हैं। Options B, C, D कोई विश्वसनीय inspection method नहीं हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q16",
+      "question": "BGA solder joint में 'void' (हवा का बुलबुला) होने से क्या समस्या हो सकती है?",
+      "options": [
+        "Joint की mechanical strength और thermal/electrical conductivity कम हो सकती है, जिससे reliability घटती है",
+        "PCB का color बदल जाता है",
+        "Component हल्का हो जाता है",
+        "कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solder joint में void होने से effective contact area कम हो जाती है, जिससे mechanical strength, thermal dissipation और electrical conductivity प्रभावित होकर long-term reliability में कमी आती है। Options B, C, D गलत/निरर्थक परिणाम हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q17",
+      "question": "BGA rework station में 'bottom heater' का क्या कार्य होता है?",
+      "options": [
+        "PCB को नीचे से uniform preheat देना ताकि पूरा board और component एक समान temperature पर पहुंचे, thermal stress कम हो",
+        "PCB को ठंडा रखना",
+        "PCB का weight मापना",
+        "केवल decoration के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bottom heater PCB को नीचे से uniformly preheat करता है जिससे पूरे board का temperature balance रहता है और top heater द्वारा दी गई localized heat से warping/thermal stress कम होता है। Options B, C, D bottom heater के actual कार्य को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q18",
+      "question": "BGA component हटाने के बाद अगर उसी component को दोबारा उपयोग करना हो, तो सबसे पहले क्या जांचा जाता है?",
+      "options": [
+        "Component के solder balls की condition (deformed/damaged तो नहीं) और contacts की visual/electrical health",
+        "Component का color",
+        "Component का brand नाम",
+        "Component की packaging box"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reuse से पहले solder balls की shape/damage और contact pads की health जांचना जरूरी है, अगर balls deformed हों तो reballing जरूरी हो सकती है। Options B, C, D component की functional reusability से असंबंधित हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q19",
+      "question": "PGA socket में लगे component को हटाने के लिए विशेष उपकरण 'chip extractor/puller' का उपयोग क्यों किया जाता है?",
+      "options": [
+        "ताकि सभी pins पर even force distribute हो और कोई pin bend/damage न हो",
+        "ताकि component का weight पता चले",
+        "ताकि socket का रंग बदल जाए",
+        "इसका कोई विशेष उद्देश्य नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chip extractor tool component के सभी sides/pins पर uniform, controlled force apply करता है जिससे बिना pins को नुकसान पहुँचाए component socket से सुरक्षित रूप से निकल जाता है। Options B, C, D इस tool के उद्देश्य को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q20",
+      "question": "BGA joint में 'insufficient solder' defect का एक कारण क्या हो सकता है?",
+      "options": [
+        "Stencil की opening में paste ठीक से fill न होना या paste print के दौरान smearing होना",
+        "PCB का बहुत ठंडा होना",
+        "Component का बहुत हल्का होना",
+        "Reflow oven का बंद होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Stencil printing के दौरान अगर paste opening में सही मात्रा में fill न हो या smearing हो जाए, तो insufficient solder की स्थिति बनती है जो weak/open joint का कारण बन सकती है। Options B, C, D insufficient solder defect के प्रत्यक्ष कारण नहीं हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q21",
+      "question": "BGA solder joint में 'bridging' defect का क्या अर्थ है?",
+      "options": [
+        "दो या अधिक पास-पास के solder balls आपस में जुड़कर unwanted short-circuit बना देना",
+        "Solder ball का पूरी तरह गायब हो जाना",
+        "Component का बहुत हल्का हो जाना",
+        "PCB का रंग बदल जाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bridging में excessive solder paste या गलत reflow profile के कारण दो adjacent solder balls आपस में जुड़ जाते हैं, जिससे electrical short-circuit होता है। Options B, C, D bridging defect की सही परिभाषा नहीं देते।"
+    },
+    {
+      "id": "u5_pga_soldering_q22",
+      "question": "BGA rework में 'tombstoning' जैसी defect (हालांकि यह ज्यादातर passive components में देखी जाती है) होने का मुख्य कारण क्या है?",
+      "options": [
+        "Reflow के दौरान component के दोनों तरफ solder melting का असमान (uneven) timing, जिससे एक तरफ ज्यादा surface tension pull करता है",
+        "Component का सही color न होना",
+        "PCB का बहुत मोटा होना",
+        "Solder paste का ठंडा होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tombstoning तब होता है जब component के दोनों ends पर solder असमान समय पर melt होता है, जिससे एक तरफ का surface tension component को ऊपर उठा देता है। Options B, C, D इस defect का सही कारण नहीं बताते।"
+    },
+    {
+      "id": "u5_pga_soldering_q23",
+      "question": "BGA rework के दौरान PCB warpage से बचने के लिए क्या practice अपनाई जाती है?",
+      "options": [
+        "PCB को support fixture/frame में properly hold करना और uniform heating profile का पालन करना",
+        "PCB को बिना support के hot air में लटकाना",
+        "PCB को तेजी से एक ही जगह पर बहुत heat देना",
+        "PCB warpage को रोकने की कोई जरूरत नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "PCB को support fixture में properly held रखना और gradual, uniform heating profile follow करना PCB warpage को रोकने में मदद करता है। Options B, C, D warpage के risk को बढ़ाते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q24",
+      "question": "De-soldering के बाद hot air gun का nozzle size चुनते समय क्या ध्यान रखा जाता है?",
+      "options": [
+        "Component के size के अनुरूप nozzle चुना जाता है ताकि heat सिर्फ target component पर focused रहे",
+        "हमेशा सबसे बड़ा nozzle इस्तेमाल किया जाता है चाहे component कितना भी छोटा हो",
+        "Nozzle size का कोई महत्व नहीं",
+        "सबसे छोटा nozzle हमेशा बड़े BGA के लिए इस्तेमाल होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nozzle का size component के footprint के अनुसार चुना जाता है ताकि heat केवल target component पर केंद्रित रहे और आसपास के components प्रभावित न हों। Options B, C, D गलत practice हैं जो adjacent component damage का कारण बन सकते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q25",
+      "question": "BGA rework में placement के बाद 'post-reflow inspection' में सबसे पहले क्या check किया जाता है?",
+      "options": [
+        "Component का alignment (कोई side shift तो नहीं) और visible edge joints की wetting",
+        "PCB का brand नाम",
+        "PCB की packaging",
+        "PCB का invoice number"
+      ],
+      "correctIndex": 0,
+      "explanation": "Post-reflow inspection में सबसे पहले component का correct alignment (कोई shift/rotation न हो) और visible periphery joints की proper wetting check की जाती है। Options B, C, D inspection प्रक्रिया से असंबंधित हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q26",
+      "question": "BGA reballing के दौरान 'solder ball size' चुनते समय किस चीज का ध्यान रखा जाता है?",
+      "options": [
+        "Component के original datasheet के अनुसार specified ball diameter और pitch",
+        "Balls का color",
+        "Balls की मात्रा से PCB का weight बढ़ाना",
+        "इसका कोई महत्व नहीं, कोई भी size चलेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reballing में component datasheet में specify किए गए ball diameter और pitch के अनुसार ही सही size की balls उपयोग करनी चाहिए, वरना pad alignment और joint reliability प्रभावित होगी। Options B, C, D गलत/असंबंधित मापदंड हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q27",
+      "question": "BGA component को रखने से पहले flux apply करने का क्या फायदा है?",
+      "options": [
+        "यह oxide हटाकर solder balls की wetting improve करता है और reflow के दौरान component को थोड़ी देर तक जगह पर hold करने में मदद करता है",
+        "यह component का weight बढ़ाता है",
+        "यह component को ठंडा रखता है",
+        "इसका कोई फायदा नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Flux oxide हटाकर बेहतर wetting देता है और अपनी tackiness के कारण reflow से पहले component को position में हल्का सा hold भी करता है। Options B, C, D flux के actual लाभ को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q28",
+      "question": "एक multi-BGA board में एक ही समय पर कई BGA components को rework करते समय क्या सावधानी जरूरी है?",
+      "options": [
+        "पहले से soldered adjacent BGA joints को reflow temperature से दोबारा melt होने से बचाने के लिए thermal shielding और localized heating जरूरी है",
+        "सभी BGAs को एक साथ पूरे board को गर्म करके हटाना चाहिए बिना किसी shielding के",
+        "किसी सावधानी की जरूरत नहीं",
+        "सभी BGAs को cold chisel से हटाना चाहिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Multi-BGA board में rework करते समय adjacent पहले से soldered BGA joints को accidental reflow से बचाने के लिए thermal shield और localized/targeted heating जरूरी है। Options B, C, D adjacent joints को नुकसान पहुँचा सकते हैं।"
+    },
+    {
+      "id": "u5_pga_soldering_q29",
+      "question": "BGA rework के बाद board को moisture sensitivity के अनुसार 'baking' क्यों किया जा सकता है?",
+      "options": [
+        "अगर BGA component moisture sensitive है तो humidity के कारण reflow के दौरान internal moisture भाप बनकर 'popcorn effect' (package cracking) कर सकती है, इसलिए पहले baking से moisture हटाई जाती है",
+        "Board का color सुधारने के लिए",
+        "Board का weight बढ़ाने के लिए",
+        "Baking की कोई जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Moisture Sensitive Level (MSL) रेटेड components में absorbed moisture reflow के high temperature में अचानक भाप बनकर package को internally crack कर सकती है (popcorn effect), इसलिए rework से पहले baking द्वारा moisture हटाई जाती है। Options B, C, D baking का सही कारण नहीं बताते।"
+    },
+    {
+      "id": "u5_pga_soldering_q30",
+      "question": "PGA/BGA rework के लिए technician को किस प्रकार का ESD precaution अनिवार्य रूप से लेना चाहिए?",
+      "options": [
+        "ESD wrist strap पहनना और ESD-safe mat/workstation का उपयोग करना ताकि static discharge से sensitive components damage न हों",
+        "हाथों को गीला रखना",
+        "Nylon के कपड़े पहनना",
+        "कोई precaution जरूरी नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "PGA/BGA जैसे sensitive high pin-count components ESD से आसानी से damage हो सकते हैं, इसलिए wrist strap और ESD-safe workstation अनिवार्य होते हैं। Options B, C, D गलत/खतरनाक practices हैं और static build-up को बढ़ा भी सकते हैं (जैसे nylon कपड़े)।"
+    }
+  ]
+}

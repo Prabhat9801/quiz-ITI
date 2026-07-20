@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "real_numbers",
+  "topicName": "Real Numbers",
+  "questions": [
+    {
+      "id": "math_real_numbers_q1",
+      "question": "सबसे छोटी prime number कौन सी है?",
+      "options": ["1", "2", "3", "0"],
+      "correctIndex": 1,
+      "explanation": "2 सबसे छोटी prime number है, क्योंकि इसके केवल दो factors 1 और 2 हैं। साथ ही यह एकमात्र even prime number भी है। 1 prime नहीं है क्योंकि उसका केवल एक ही factor होता है, 3 सबसे छोटी नहीं है, और 0 न prime है न composite।"
+    },
+    {
+      "id": "math_real_numbers_q2",
+      "question": "निम्न में से कौन सी संख्या irrational number है?",
+      "options": ["0.25", "22/7", "√2", "1.5"],
+      "correctIndex": 2,
+      "explanation": "√2 एक irrational number है क्योंकि इसे p/q के रूप में नहीं लिखा जा सकता और इसका decimal expansion non-terminating व non-repeating है (1.41421...)। 0.25 और 1.5 terminating decimals हैं इसलिए rational हैं, तथा 22/7 भी p/q रूप में है इसलिए rational है।"
+    },
+    {
+      "id": "math_real_numbers_q3",
+      "question": "यदि किसी संख्या के अंतिम अंक (unit digit) 0 या 5 हों, तो वह किससे पूरी तरह divisible होती है?",
+      "options": ["3", "5", "7", "9"],
+      "correctIndex": 1,
+      "explanation": "Divisibility rule of 5 के अनुसार जिस संख्या का unit digit 0 या 5 हो वह 5 से पूरी तरह divisible होती है। 3 और 9 की divisibility अंकों के योग पर निर्भर करती है, तथा 7 के लिए कोई सरल unit-digit rule नहीं है।"
+    },
+    {
+      "id": "math_real_numbers_q4",
+      "question": "संख्या 0.75 का rational form (p/q) सरलतम रूप में क्या होगा?",
+      "options": ["3/4", "7/5", "75/10", "15/2"],
+      "correctIndex": 0,
+      "explanation": "0.75 = 75/100 और HCF(75,100) = 25 से भाग देने पर 75/100 = 3/4 प्राप्त होता है, जो सरलतम rational form है। 75/10 गलत place value देता है, 7/5 = 1.4 है, और 15/2 = 7.5 है।"
+    },
+    {
+      "id": "math_real_numbers_q5",
+      "question": "Euclid's division lemma के अनुसार किन्हीं दो positive integers a और b के लिए a = bq + r में r का मान किस सीमा में होता है?",
+      "options": ["0 ≤ r < b", "0 < r ≤ b", "1 ≤ r < b", "0 ≤ r ≤ b"],
+      "correctIndex": 0,
+      "explanation": "Euclid's division lemma कहती है कि a = bq + r जहाँ remainder r की सीमा 0 ≤ r < b होती है, अर्थात r शून्य हो सकता है पर b से कम रहता है। शेष विकल्पों में सीमाएँ गलत हैं क्योंकि r कभी b के बराबर नहीं हो सकता।"
+    },
+    {
+      "id": "math_real_numbers_q6",
+      "question": "निम्न में से कौन सी संख्या composite number है?",
+      "options": ["23", "29", "31", "33"],
+      "correctIndex": 3,
+      "explanation": "33 = 3 × 11 है इसलिए इसके 1 और स्वयं के अलावा और भी factors हैं, अतः यह composite number है। 23, 29 और 31 तीनों prime numbers हैं क्योंकि इनके केवल दो ही factors होते हैं।"
+    },
+    {
+      "id": "math_real_numbers_q7",
+      "question": "संख्या 2^3 × 3 × 5 का मान क्या होगा?",
+      "options": ["120", "150", "90", "60"],
+      "correctIndex": 0,
+      "explanation": "2^3 = 8, फिर 8 × 3 = 24 और 24 × 5 = 120 प्राप्त होता है। इसलिए सही उत्तर 120 है। 60 = 2^2×3×5, 90 = 2×3^2×5 और 150 = 2×3×5^2 के लिए हैं, जो दिए गए prime factorization से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_real_numbers_q8",
+      "question": "किसी terminating decimal के rational form p/q (सरलतम) में denominator q का prime factorization किस रूप का होना चाहिए?",
+      "options": ["2^m × 5^n", "3^m × 7^n", "केवल prime q", "कोई भी q"],
+      "correctIndex": 0,
+      "explanation": "किसी rational number का decimal तभी terminating होता है जब सरलतम रूप में denominator q का prime factorization केवल 2^m × 5^n के रूप में हो। यदि denominator में 3, 7 आदि अन्य prime factors हों तो decimal non-terminating repeating होता है।"
+    },
+    {
+      "id": "math_real_numbers_q9",
+      "question": "दो लगातार (consecutive) integers का गुणनफल हमेशा किस प्रकार की संख्या होती है?",
+      "options": ["odd", "even", "prime", "perfect square"],
+      "correctIndex": 1,
+      "explanation": "दो लगातार integers में से एक अवश्य even होता है, इसलिए उनका गुणनफल हमेशा even number होता है, जैसे 3×4 = 12। यह न हमेशा odd, न prime और न ही perfect square होता है।"
+    },
+    {
+      "id": "math_real_numbers_q10",
+      "question": "संख्या 4536 के अंकों के योग के आधार पर यह किससे divisible है?",
+      "options": ["केवल 3", "केवल 9", "3 और 9 दोनों", "न 3 न 9"],
+      "correctIndex": 2,
+      "explanation": "अंकों का योग = 4+5+3+6 = 18 है, जो 3 और 9 दोनों से divisible है, इसलिए 4536 भी 3 और 9 दोनों से divisible है। इसीलिए 'केवल 3' या 'केवल 9' अधूरे हैं और 'न 3 न 9' गलत है।"
+    },
+    {
+      "id": "math_real_numbers_q11",
+      "question": "एक rational और एक irrational number का योग हमेशा किस प्रकार का होता है?",
+      "options": ["rational", "irrational", "integer", "prime"],
+      "correctIndex": 1,
+      "explanation": "किसी rational और किसी irrational number का योग सदैव irrational होता है, जैसे 2 + √3। यदि यह योग rational होता तो irrational को दो rational के अंतर के रूप में लिखा जा सकता, जो असंभव है। इसलिए यह integer या prime भी नहीं हो सकता।"
+    },
+    {
+      "id": "math_real_numbers_q12",
+      "question": "संख्या 7 को 3 से भाग देने पर quotient और remainder क्रमशः क्या होंगे?",
+      "options": ["2 और 1", "1 और 4", "3 और 0", "2 और 2"],
+      "correctIndex": 0,
+      "explanation": "7 = 3 × 2 + 1 अर्थात quotient = 2 और remainder = 1 है, जहाँ remainder divisor 3 से कम है। '1 और 4' में remainder divisor से बड़ा है जो नियम के विरुद्ध है, और शेष विकल्प समीकरण को संतुष्ट नहीं करते।"
+    },
+    {
+      "id": "math_real_numbers_q13",
+      "question": "संख्या 156 में अंक 5 का place value क्या है?",
+      "options": ["5", "50", "500", "55"],
+      "correctIndex": 1,
+      "explanation": "156 में अंक 5 tens स्थान पर है, इसलिए इसका place value = 5 × 10 = 50 होता है। 5 केवल face value है, 500 hundreds के लिए होता और 55 का कोई अर्थ नहीं बनता।"
+    },
+    {
+      "id": "math_real_numbers_q14",
+      "question": "0 और 50 के बीच कुल कितनी prime numbers हैं?",
+      "options": ["12", "13", "15", "16"],
+      "correctIndex": 2,
+      "explanation": "2,3,5,7,11,13,17,19,23,29,31,37,41,43,47 — कुल 15 prime numbers 0 और 50 के बीच हैं। इन्हें गिनने पर संख्या 15 आती है, इसलिए 12, 13 या 16 गलत हैं।"
+    },
+    {
+      "id": "math_real_numbers_q15",
+      "question": "√25 किस प्रकार की संख्या है?",
+      "options": ["irrational", "rational", "prime", "non-terminating"],
+      "correctIndex": 1,
+      "explanation": "√25 = 5 है जो एक integer है और प्रत्येक integer rational number होता है (5 = 5/1)। यह irrational नहीं है क्योंकि 25 perfect square है, तथा 5 prime होते हुए भी प्रश्न 'किस प्रकार की संख्या' rational श्रेणी की ओर संकेत करता है क्योंकि इसका decimal terminating है।"
+    },
+    {
+      "id": "math_real_numbers_q16",
+      "question": "किसी संख्या का 2 से divisible होने का नियम क्या है?",
+      "options": ["अंकों का योग even हो", "unit digit even हो", "unit digit 0 हो", "संख्या 5 से बड़ी हो"],
+      "correctIndex": 1,
+      "explanation": "Divisibility rule of 2 के अनुसार यदि किसी संख्या का unit digit even (0,2,4,6,8) हो तो वह 2 से divisible होती है। अंकों के योग का नियम 3 व 9 के लिए है, केवल unit digit 0 का नियम 10 के लिए है, और संख्या का बड़ा होना कोई नियम नहीं है।"
+    },
+    {
+      "id": "math_real_numbers_q17",
+      "question": "1/3 का decimal expansion किस प्रकार का है?",
+      "options": ["terminating", "non-terminating repeating", "non-terminating non-repeating", "integer"],
+      "correctIndex": 1,
+      "explanation": "1/3 = 0.3333... है जो non-terminating repeating decimal है, क्योंकि denominator 3 में 2 या 5 के अलावा prime factor है। यह terminating नहीं है, और repeating होने के कारण irrational (non-repeating) भी नहीं है।"
+    },
+    {
+      "id": "math_real_numbers_q18",
+      "question": "यदि किसी integer को 2 से भाग देने पर remainder 1 आता है, तो वह संख्या कैसी है?",
+      "options": ["even", "odd", "prime", "composite"],
+      "correctIndex": 1,
+      "explanation": "2 से भाग देने पर remainder 1 देने वाली संख्या odd होती है, जैसे 7 = 2×3+1। Even numbers 2 से भाग देने पर remainder 0 देती हैं। संख्या का prime या composite होना remainder से तय नहीं होता।"
+    },
+    {
+      "id": "math_real_numbers_q19",
+      "question": "दो irrational numbers का गुणनफल किस प्रकार का हो सकता है?",
+      "options": ["हमेशा irrational", "हमेशा rational", "rational या irrational दोनों", "हमेशा prime"],
+      "correctIndex": 2,
+      "explanation": "दो irrational numbers का गुणनफल rational भी हो सकता है और irrational भी। उदाहरण: √2 × √2 = 2 (rational) परन्तु √2 × √3 = √6 (irrational)। इसलिए यह 'हमेशा rational' या 'हमेशा irrational' नहीं होता, और prime होना अनिवार्य नहीं।"
+    },
+    {
+      "id": "math_real_numbers_q20",
+      "question": "संख्या 90 का prime factorization क्या है?",
+      "options": ["2 × 3^2 × 5", "2^2 × 3 × 5", "3 × 5 × 6", "2 × 45"],
+      "correctIndex": 0,
+      "explanation": "90 = 2 × 45 = 2 × 9 × 5 = 2 × 3^2 × 5 है, जिसमें सभी factors prime हैं। 2^2×3×5 = 60 देता है, 3×5×6 में 6 prime नहीं है, और 2×45 में 45 prime नहीं है इसलिए वे पूर्ण prime factorization नहीं हैं।"
+    },
+    {
+      "id": "math_real_numbers_q21",
+      "question": "किसी संख्या का 4 से divisible होने का नियम क्या है?",
+      "options": ["unit digit even हो", "अंतिम दो अंक 4 से divisible हों", "अंकों का योग 4 से divisible हो", "unit digit 4 हो"],
+      "correctIndex": 1,
+      "explanation": "Divisibility rule of 4 के अनुसार यदि किसी संख्या के अंतिम दो अंकों से बनी संख्या 4 से divisible हो तो पूरी संख्या 4 से divisible होती है, जैसे 316 में 16 divisible है। केवल unit digit even होना 2 का नियम है, और अंकों का योग वाला नियम 4 पर लागू नहीं होता।"
+    },
+    {
+      "id": "math_real_numbers_q22",
+      "question": "0.999... (अनंत तक) का मान किसके बराबर है?",
+      "options": ["0.9", "1", "0.99", "0 और 1 के बीच पर 1 से कम"],
+      "correctIndex": 1,
+      "explanation": "मान लें x = 0.999..., तो 10x = 9.999... और घटाने पर 10x − x = 9 अर्थात 9x = 9, जिससे x = 1 प्राप्त होता है। इसलिए 0.999... ठीक 1 के बराबर है, न कि 0.9 या 0.99 या 1 से कम कोई संख्या।"
+    },
+    {
+      "id": "math_real_numbers_q23",
+      "question": "निम्न में से कौन सी संख्या 11 से divisible है?",
+      "options": ["1331", "1234", "1000", "2020"],
+      "correctIndex": 0,
+      "explanation": "1331 के लिए alternate अंकों का अंतर = (1+3) − (3+1) = 0 है, जो 0 (11 का गुणज) होने से 1331 = 11×121 divisible है। शेष संख्याओं में यह अंतर 11 का गुणज नहीं आता इसलिए वे 11 से divisible नहीं हैं।"
+    },
+    {
+      "id": "math_real_numbers_q24",
+      "question": "दो odd numbers का योग हमेशा किस प्रकार का होता है?",
+      "options": ["odd", "even", "prime", "irrational"],
+      "correctIndex": 1,
+      "explanation": "दो odd numbers का योग हमेशा even होता है, जैसे 3 + 5 = 8। इसका कारण है कि प्रत्येक odd number को 2k+1 रूप में लिखने पर योग 2(k+m+1) आता है जो even है। यह न odd, न सदैव prime, और न irrational होता है।"
+    },
+    {
+      "id": "math_real_numbers_q25",
+      "question": "संख्या 121 किस प्रकार की संख्या है?",
+      "options": ["prime", "perfect square", "irrational", "negative"],
+      "correctIndex": 1,
+      "explanation": "121 = 11 × 11 = 11^2 है, इसलिए यह एक perfect square है। यह prime नहीं है क्योंकि इसका factor 11 है, यह integer होने से irrational नहीं है, और यह धनात्मक होने से negative भी नहीं है।"
+    },
+    {
+      "id": "math_real_numbers_q26",
+      "question": "किसी positive integer n के लिए 6n कभी किस अंक पर समाप्त नहीं होगा?",
+      "options": ["0", "2", "5", "6"],
+      "correctIndex": 2,
+      "explanation": "6n के unit digits का pattern 6,2,8,4,0 दोहराता है (6×1=6, 6×2=12, 6×5=30 आदि), जिसमें अंक 5 कभी नहीं आता क्योंकि 6n हमेशा even होगा और 5 पर समाप्त होने वाली संख्या odd होती है। अंक 0, 2 और 6 इस pattern में उपस्थित हैं।"
+    },
+    {
+      "id": "math_real_numbers_q27",
+      "question": "यदि दो संख्याओं का HCF 1 है, तो वे संख्याएँ आपस में क्या कहलाती हैं?",
+      "options": ["prime", "co-prime", "composite", "equal"],
+      "correctIndex": 1,
+      "explanation": "जिन दो संख्याओं का HCF 1 हो वे co-prime (या relatively prime) कहलाती हैं, जैसे 8 और 15। यह आवश्यक नहीं कि वे स्वयं prime हों (8 composite है), इसलिए 'prime' गलत है और वे न ही आवश्यक रूप से composite या equal होती हैं।"
+    },
+    {
+      "id": "math_real_numbers_q28",
+      "question": "13/125 का decimal expansion किस प्रकार का होगा?",
+      "options": ["terminating", "non-terminating repeating", "non-terminating non-repeating", "irrational"],
+      "correctIndex": 0,
+      "explanation": "125 = 5^3 है अर्थात denominator केवल 2^m × 5^n रूप में है, इसलिए 13/125 = 0.104 एक terminating decimal है। चूँकि denominator में 2 और 5 के अलावा कोई prime factor नहीं है, यह non-terminating या irrational नहीं होगा।"
+    },
+    {
+      "id": "math_real_numbers_q29",
+      "question": "संख्या रेखा (number line) पर π (pi) किस श्रेणी में आता है?",
+      "options": ["rational", "irrational", "integer", "natural"],
+      "correctIndex": 1,
+      "explanation": "π एक irrational number है क्योंकि इसका decimal expansion non-terminating और non-repeating (3.14159...) है और इसे p/q रूप में सटीक नहीं लिखा जा सकता। 22/7 केवल एक approximation है, इसलिए π न rational, न integer और न natural number है।"
+    },
+    {
+      "id": "math_real_numbers_q30",
+      "question": "सबसे बड़ी दो अंकों वाली prime number कौन सी है?",
+      "options": ["91", "93", "97", "99"],
+      "correctIndex": 2,
+      "explanation": "97 सबसे बड़ी two-digit prime number है क्योंकि इसका 1 और स्वयं के अलावा कोई factor नहीं है। 91 = 7×13, 93 = 3×31 और 99 = 9×11 सभी composite हैं, इसलिए वे prime नहीं हैं।"
+    }
+  ]
+}

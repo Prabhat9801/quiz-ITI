@@ -1,0 +1,218 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "dc_motor_control",
+  "topicName": "DC Motor Control",
+  "questions": [
+    {
+      "id": "u14_dc_motor_control_q1",
+      "question": "DC motor को start करते समय starter की आवश्यकता क्यों होती है?",
+      "options": ["speed बढ़ाने के लिए", "start पर Eb = 0 होने से बहुत अधिक starting current को series resistance द्वारा limit करने के लिए", "flux बढ़ाने के लिए", "power factor सुधारने के लिए"],
+      "correctIndex": 1,
+      "explanation": "सही: start पर N = 0, इसलिए Eb = 0 और Ia = V/Ra बहुत बड़ा हो जाता है; starter में series resistance इस heavy current को सुरक्षित सीमा में रखता है और speed बढ़ने पर धीरे-धीरे हटती है। starter speed या flux नहीं बढ़ाता, न ही power factor (DC में लागू नहीं) सुधारता है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q2",
+      "question": "3-point starter में NVC (No-Volt Coil / hold-on coil) का मुख्य कार्य क्या है?",
+      "options": ["overload पर motor को बंद करना", "supply fail या बहुत कम होने पर starting arm को छोड़कर उसे OFF स्थिति में लौटाना", "starting resistance को कम करना", "field current बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "सही: NVC field circuit के series में जुड़ी होती है; supply fail होने पर या voltage बहुत गिरने पर यह arm को पकड़ नहीं पाती और spring arm को OFF पर लौटा देती है, जिससे बाद में full voltage सीधे न पड़े। Overload बंद करना OLR का काम है; बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q3",
+      "question": "3-point starter में OLR (Over-Load Release) कैसे काम करता है?",
+      "options": ["overload पर एक electromagnet NVC को short/de-energize कर देता है जिससे arm OFF हो जाता है", "यह field current को बढ़ा देता है", "यह armature voltage दोगुना कर देता है", "यह starting resistance जोड़ देता है"],
+      "correctIndex": 0,
+      "explanation": "सही: overload पर line current बढ़ने पर OLR का electromagnet इतना बल बनाता है कि वह एक armature उठाकर NVC को short-circuit/de-energize कर देता है, NVC arm छोड़ देती है और motor OFF हो जाता है। बाकी विकल्प OLR के कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_dc_motor_control_q4",
+      "question": "3-point starter की एक बड़ी सीमा (drawback) क्या है, जिसे 4-point starter में सुधारा जाता है?",
+      "options": ["इसमें OLR नहीं होता", "field weakening (speed control) के दौरान field current घटने पर NVC कमजोर हो सकती है और arm गलती से छूट सकता है", "यह केवल series motor के लिए है", "यह starting current सीमित नहीं करता"],
+      "correctIndex": 1,
+      "explanation": "सही: 3-point में NVC field के series में होती है; field rheostat से flux control करते समय field current घटने पर NVC कमजोर पड़कर arm को समय से पहले छोड़ सकती है। 4-point starter में holding coil को अलग रखकर यह दोष दूर होता है। OLR मौजूद रहता है, यह shunt/compound के लिए भी है, और starting current सीमित करता ही है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q5",
+      "question": "4-point starter, 3-point starter से किस मुख्य बात में अलग होता है?",
+      "options": ["इसमें कोई NVC नहीं होती", "holding coil (NVC) को field circuit से अलग करके सीधे supply पर एक अलग resistance के साथ जोड़ा जाता है", "इसमें starting resistance नहीं होती", "यह केवल AC पर काम करता है"],
+      "correctIndex": 1,
+      "explanation": "सही: 4-point starter में holding/NVC coil को field circuit से हटाकर एक protective resistance के साथ सीधे line पर जोड़ा जाता है (चौथा point), जिससे field current बदलने पर भी coil का current स्थिर रहता है। NVC मौजूद रहती है, starting resistance रहती है, और यह DC starter है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q6",
+      "question": "DC motor की speed को base speed से ऊपर (above rated) बढ़ाने के लिए सामान्यतः कौन-सी विधि प्रयोग होती है?",
+      "options": ["armature voltage control", "field flux control (field weakening)", "armature resistance बढ़ाना", "supply frequency बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "सही: N ∝ 1/Φ, इसलिए field rheostat से flux घटाकर (field weakening) speed base speed से ऊपर बढ़ाई जाती है (constant power region)। armature voltage/resistance control base speed से नीचे के लिए है; DC में frequency लागू नहीं होती।"
+    },
+    {
+      "id": "u14_dc_motor_control_q7",
+      "question": "DC motor की speed को base speed से नीचे smoothly नियंत्रित करने के लिए सबसे अच्छी विधि कौन-सी है?",
+      "options": ["field flux control", "armature voltage control (जैसे Ward-Leonard)", "field को open करना", "supply voltage को स्थिर रखना"],
+      "correctIndex": 1,
+      "explanation": "सही: N ∝ Eb/Φ ≈ (V − IaRa)/Φ; flux constant रखकर armature voltage घटाने से speed base speed से नीचे smoothly नियंत्रित होती है (constant torque region), यही Ward-Leonard/armature voltage control का आधार है। field control से speed ऊपर जाती है; field open करना खतरनाक है; voltage स्थिर रखने से control नहीं होता।"
+    },
+    {
+      "id": "u14_dc_motor_control_q8",
+      "question": "Ward-Leonard system में DC motor की speed किस प्रकार नियंत्रित की जाती है?",
+      "options": ["motor के armature में series resistance जोड़कर", "एक अलग DC generator के field को बदलकर generator का output voltage (जो motor की armature को देता है) बदलकर", "motor का commutator बदलकर", "supply frequency बदलकर"],
+      "correctIndex": 1,
+      "explanation": "सही: Ward-Leonard में एक motor-generator set होता है; generator field rheostat से generator का output voltage 0 से पूर्ण मान तक (दोनों direction) बदलकर motor की armature voltage और इस प्रकार speed को smoothly control किया जाता है। यह armature resistance या frequency आधारित नहीं है; commutator बदलना असंगत है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q9",
+      "question": "armature resistance control विधि से speed नियंत्रण की मुख्य कमी क्या है?",
+      "options": ["speed base से ऊपर नहीं जा सकती और series resistance में बड़ी power loss (I²R) होती है, दक्षता घटती है", "यह speed बिल्कुल नहीं बदल सकती", "इसमें कोई loss नहीं होती", "यह केवल no-load पर काम करती है"],
+      "correctIndex": 0,
+      "explanation": "सही: armature के series में resistance जोड़ने से voltage drop बढ़ता है, speed घटती है, पर इस resistance में भारी I²R loss होती है जिससे efficiency गिरती है और speed केवल नीचे (base से नीचे) ही जाती है। यह speed बदलती है, loss होती है, और load पर भी काम करती है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q10",
+      "question": "DC shunt motor के rotation की direction (DOR) को उलटने (reverse) के लिए क्या करना चाहिए?",
+      "options": ["supply voltage बढ़ाना", "केवल armature connections या केवल field connections को उलटना (दोनों को एक साथ नहीं)", "armature और field दोनों को एक साथ उलटना", "speed बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "सही: torque की direction armature current और field flux दोनों पर निर्भर है; इनमें से किसी एक (armature या field) को उलटने पर rotation उलट जाता है। दोनों को एक साथ उलटने पर direction वही रहती है (दो बार उलटना = कोई बदलाव नहीं)। voltage या speed बढ़ाना direction नहीं बदलता।"
+    },
+    {
+      "id": "u14_dc_motor_control_q11",
+      "question": "व्यवहार में DC motor की direction उलटने के लिए field के बजाय armature connections उलटना अक्सर पसंद किया जाता है, क्यों?",
+      "options": ["armature current field current से कम होता है", "field winding में अधिक inductance/turns होने से field उलटने में समय लगता है व residual/arcing समस्या होती है, जबकि armature उलटना तेज होता है", "armature उलटने से flux बढ़ता है", "field कभी उलटा नहीं जा सकता"],
+      "correctIndex": 1,
+      "explanation": "सही: shunt field अत्यधिक inductive (बहुत turns) होता है, उसे उलटने में समय व arcing की समस्या होती है और field weakening के क्षण runaway का खतरा भी; इसलिए तेज व सुरक्षित reversal के लिए armature उलटा जाता है। armature current वास्तव में अधिक होता है; बाकी विकल्प गलत हैं (field उलटा जा सकता है)।"
+    },
+    {
+      "id": "u14_dc_motor_control_q12",
+      "question": "field flux control द्वारा speed नियंत्रण किस torque/power region में आता है?",
+      "options": ["constant torque region", "constant power region (speed बढ़ने पर उपलब्ध torque घटता है)", "zero power region", "constant current region"],
+      "correctIndex": 1,
+      "explanation": "सही: flux control में flux घटाकर speed बढ़ाई जाती है; चूँकि T ∝ ΦIa, flux कम होने पर उपलब्ध torque घटता है पर power (T×ω) लगभग constant रहती है — यह constant power region है। armature voltage control constant torque region देता है; बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q13",
+      "question": "एक DC shunt motor V = 230 V, Ra = 0.5 Ω पर full-field में 1000 rpm चलती है और Ia = 20 A है। यदि armature के series में 2 Ω resistance जोड़ें (flux व Ia लगभग समान), तो नई speed लगभग कितनी होगी?",
+      "options": ["1000 rpm", "818 rpm", "900 rpm", "1100 rpm"],
+      "correctIndex": 1,
+      "explanation": "सही: पहले Eb1 = 230 − 20×0.5 = 220 V। बाद में total R = 2.5 Ω, Eb2 = 230 − 20×2.5 = 180 V। constant flux पर N ∝ Eb, इसलिए N2 = 1000 × 180/220 ≈ 818 rpm। यह दिखाता है armature resistance जोड़ने से speed घटती है। बाकी मान गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q14",
+      "question": "Ward-Leonard system का एक प्रमुख लाभ क्या है?",
+      "options": ["यह बहुत सस्ता और simple होता है", "बहुत wide range में smooth speed control तथा दोनों दिशाओं में और regenerative braking संभव", "इसमें कोई moving parts नहीं होते", "यह केवल एक ही fixed speed देता है"],
+      "correctIndex": 1,
+      "explanation": "सही: Ward-Leonard में generator voltage को शून्य से पूर्ण मान तक दोनों polarity में बदलकर बहुत wide, smooth speed control और आसान reversal व regenerative braking मिलता है। यह महँगा व बड़ा (कई moving machines) होता है, इसलिए 'सस्ता/simple/no moving parts/fixed speed' गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q15",
+      "question": "3-point starter में starting handle/arm को धीरे-धीरे घुमाने का उद्देश्य क्या है?",
+      "options": ["flux को अचानक बढ़ाना", "series starting resistance को क्रमशः (step by step) हटाना ताकि motor accelerate होते हुए current सुरक्षित सीमा में रहे", "back-emf को शून्य रखना", "supply frequency बदलना"],
+      "correctIndex": 1,
+      "explanation": "सही: arm आगे बढ़ने पर series resistance step-by-step कम होती है; तब तक motor की speed व Eb बढ़ चुके होते हैं जिससे current सुरक्षित रहता है और motor सुचारू रूप से accelerate होता है। यह flux अचानक नहीं बढ़ाता, Eb बढ़ने देता है (शून्य नहीं), और DC में frequency नहीं होती।"
+    },
+    {
+      "id": "u14_dc_motor_control_q16",
+      "question": "यदि DC shunt motor start करते समय field circuit टूटा (open) हो, तो 3-point starter में NVC की स्थिति में क्या होगा?",
+      "options": ["motor सामान्य रूप से चलेगा", "NVC (जो field के series में है) को current नहीं मिलेगा, वह arm को hold नहीं कर पाएगी — यह field-failure से सुरक्षा भी देती है", "motor over-speed पर चलेगा", "starting current शून्य हो जाएगा"],
+      "correctIndex": 1,
+      "explanation": "सही: 3-point में NVC field के series में होती है; field open होने पर NVC में current नहीं बहेगा, वह arm को नहीं पकड़ेगी और motor start ही नहीं होगा — इस तरह यह field failure से भी बचाती है (no-field/over-speed से बचाव)। इसलिए motor न सामान्य चलेगा न over-speed पर।"
+    },
+    {
+      "id": "u14_dc_motor_control_q17",
+      "question": "एक DC motor को base speed पर चलाने के लिए armature voltage पूर्ण rated रखी जाती है। इससे ऊपर speed के लिए flux घटाया जाता है। नीचे speed के लिए क्या घटाया जाता है?",
+      "options": ["flux", "armature voltage", "poles की संख्या", "brush की संख्या"],
+      "correctIndex": 1,
+      "explanation": "सही: base speed से नीचे के लिए flux पूर्ण रखकर armature voltage घटाई जाती है (armature voltage control, constant torque)। flux घटाना speed को ऊपर ले जाता है; poles या brush की संख्या चालू motor में नहीं बदली जाती।"
+    },
+    {
+      "id": "u14_dc_motor_control_q18",
+      "question": "field control (flux control) विधि से speed नियंत्रण का एक लाभ क्या है?",
+      "options": ["इसमें बहुत बड़ी power loss होती है", "field current छोटा होने से field rheostat में loss कम होती है, इसलिए यह किफायती (efficient) विधि है", "इससे speed केवल घट सकती है", "यह starting के लिए प्रयोग होती है"],
+      "correctIndex": 1,
+      "explanation": "सही: shunt field current छोटा होता है, इसलिए field rheostat में power loss कम रहती है और यह विधि किफायती है (speed base से ऊपर बढ़ाने में)। इसमें loss कम होती है (अधिक नहीं), speed बढ़ती है, और यह running speed control है, starting का साधन नहीं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q19",
+      "question": "एक DC shunt motor की speed को दोगुना करने के लिए flux को लगभग कितना करना होगा (armature voltage/Eb लगभग स्थिर मानकर)?",
+      "options": ["दोगुना", "आधा", "चार गुना", "अपरिवर्तित"],
+      "correctIndex": 1,
+      "explanation": "सही: N ∝ 1/Φ (Eb स्थिर मानकर), speed दोगुनी करने के लिए flux आधा करना होगा — यही field weakening का सिद्धांत है। flux दोगुना/चार गुना करने पर speed घटेगी; अपरिवर्तित flux से speed नहीं बदलेगी।"
+    },
+    {
+      "id": "u14_dc_motor_control_q20",
+      "question": "DC series motor की speed control में 'tapped field' या field diverter का उपयोग किसलिए होता है?",
+      "options": ["armature voltage बढ़ाने के लिए", "series field के कुछ turns कम करके या field के parallel में resistance (diverter) डालकर flux घटाकर speed बढ़ाने के लिए", "starting current बढ़ाने के लिए", "commutation खराब करने के लिए"],
+      "correctIndex": 1,
+      "explanation": "सही: series motor में field diverter (field के parallel में resistance) या tapped field से field current/flux घटाया जाता है, जिससे N ∝ 1/Φ के अनुसार speed बढ़ती है। यह armature voltage या starting current बढ़ाने या commutation बिगाड़ने के लिए नहीं है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q21",
+      "question": "3-point और 4-point starter दोनों में common रूप से कौन-से दो protective devices होते हैं?",
+      "options": ["capacitor और inductor", "NVC (no-volt release) और OLR (over-load release)", "transformer और rectifier", "diode और thyristor"],
+      "correctIndex": 1,
+      "explanation": "सही: दोनों starters में NVC (supply fail/under-voltage पर बचाव) और OLR (overload पर बचाव) मुख्य protective devices होते हैं। capacitor/inductor, transformer/rectifier या diode/thyristor इन manual starters के मूल भाग नहीं हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q22",
+      "question": "एक DC motor armature voltage control में V को 220 V से 110 V करने पर (flux, load constant, drop नगण्य) speed लगभग कैसे बदलेगी?",
+      "options": ["वही रहेगी", "लगभग आधी हो जाएगी", "दोगुनी हो जाएगी", "शून्य हो जाएगी"],
+      "correctIndex": 1,
+      "explanation": "सही: N ∝ Eb ≈ V (drop नगण्य, flux constant), इसलिए voltage आधी करने पर speed लगभग आधी हो जाती है। यह constant torque region का व्यवहार है। speed वही रहना, दोगुना होना या शून्य होना गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q23",
+      "question": "आधुनिक solid-state DC drives में armature voltage control सामान्यतः किससे किया जाता है?",
+      "options": ["motor-generator set (Ward-Leonard) से", "controlled rectifier (thyristor/SCR converter) या chopper से", "केवल mechanical gear से", "field diverter से"],
+      "correctIndex": 1,
+      "explanation": "सही: आधुनिक static drives में AC supply से thyristor (phase-controlled rectifier) या DC supply से chopper द्वारा armature को variable DC voltage दी जाती है, जिससे smooth व efficient speed control होता है (Ward-Leonard का static विकल्प)। gear या field diverter armature voltage control नहीं हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q24",
+      "question": "DC motor को start करने के तुरंत बाद starting resistance धीरे-धीरे क्यों हटाई जाती है, अचानक क्यों नहीं?",
+      "options": ["ताकि flux अचानक न गिरे", "अचानक हटाने पर Eb अभी कम है, इसलिए current में तेज उछाल (surge) आएगा जो motor/supply को नुकसान दे सकता है", "ताकि speed कभी न बढ़े", "resistance गर्म रहती है इसलिए"],
+      "correctIndex": 1,
+      "explanation": "सही: शुरू में speed व Eb कम होते हैं; resistance अचानक हटाने पर Ia = (V − Eb)/Ra में तेज उछाल आएगा। धीरे-धीरे हटाने से Eb के बढ़ने के साथ current सुरक्षित सीमा में रहता है। flux या 'speed कभी न बढ़े' इसका कारण नहीं; गर्मी मुख्य कारण नहीं है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q25",
+      "question": "4-point starter में holding coil को अलग line से जोड़ने का एक संभावित नुकसान (compared to 3-point) क्या है?",
+      "options": ["इसमें OLR नहीं लगाया जा सकता", "holding coil field circuit से स्वतंत्र होने के कारण, यदि field पूरी तरह open हो जाए तो भी coil arm पकड़े रह सकती है, जिससे field-failure protection कमजोर हो जाती है", "यह starting resistance को हटा देता है", "यह केवल series motor पर काम करता है"],
+      "correctIndex": 1,
+      "explanation": "सही: 4-point में holding coil को field से अलग करने से field open होने पर भी coil arm को hold किए रह सकती है, अतः field-failure/over-speed protection 3-point जितनी विश्वसनीय नहीं रहती — इसे अलग field-loss relay से पूरा करते हैं। OLR लगता है, starting resistance रहती है, और यह shunt/compound पर भी काम करता है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q26",
+      "question": "किसी DC motor की speed को rated (base) speed से नीचे और ऊपर दोनों तरफ नियंत्रित करने के लिए किन दो विधियों को मिलाकर प्रयोग किया जाता है?",
+      "options": ["armature resistance control और brush shifting", "नीचे के लिए armature voltage control और ऊपर के लिए field flux control", "केवल field control", "केवल armature resistance control"],
+      "correctIndex": 1,
+      "explanation": "सही: base speed तक armature voltage control (constant torque) और उससे ऊपर field weakening/flux control (constant power) मिलाकर पूरी range मिलती है। केवल एक विधि पूरी range नहीं देती; brush shifting speed control विधि नहीं है।"
+    },
+    {
+      "id": "u14_dc_motor_control_q27",
+      "question": "एक DC shunt motor को reverse करने के लिए field उलटा गया और साथ ही (गलती से) armature भी उलट दिया गया। परिणाम क्या होगा?",
+      "options": ["direction उलट जाएगी", "direction वही रहेगी क्योंकि दोनों उलटने का प्रभाव एक-दूसरे को रद्द कर देता है", "motor रुक जाएगा", "motor जल जाएगा"],
+      "correctIndex": 1,
+      "explanation": "सही: torque direction Φ और Ia दोनों पर निर्भर है; दोनों को उलटने पर उनके दो negative signs रद्द हो जाते हैं और torque तथा rotation की direction अपरिवर्तित रहती है। इसीलिए केवल एक को उलटा जाता है। motor न रुकेगा न जलेगा।"
+    },
+    {
+      "id": "u14_dc_motor_control_q28",
+      "question": "DC motor speed control की विधियों में से किसमें efficiency सबसे कम रहती है (सबसे अधिक heat loss)?",
+      "options": ["field flux control", "armature (series) resistance control", "Ward-Leonard armature voltage control", "chopper control"],
+      "correctIndex": 1,
+      "explanation": "सही: armature resistance control में full load current एक बड़ी series resistance से गुजरता है जिसमें भारी I²R loss (heat) होती है, अतः efficiency सबसे कम। field control में loss छोटी है; Ward-Leonard व chopper अपेक्षाकृत efficient हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q29",
+      "question": "एक 240 V DC shunt motor, Ra = 0.4 Ω, full-load Ia = 50 A. starting current को rated का 2 गुना (100 A) तक सीमित करने के लिए starter में शुरू में कितनी कुल armature-circuit resistance चाहिए?",
+      "options": ["2.4 Ω", "4.8 Ω", "0.4 Ω", "1.2 Ω"],
+      "correctIndex": 0,
+      "explanation": "सही: start पर Eb = 0, आवश्यक कुल R = V/I(start) = 240/100 = 2.4 Ω। चूँकि Ra = 0.4 Ω पहले से है, starter की अतिरिक्त resistance = 2.4 − 0.4 = 2.0 Ω, पर कुल armature-circuit resistance 2.4 Ω होनी चाहिए। 4.8 Ω, 0.4 Ω और 1.2 Ω गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motor_control_q30",
+      "question": "DC motor के field flux control (field weakening) से speed बढ़ाने पर उसी load torque को बनाए रखने के लिए armature current के बारे में क्या सही है?",
+      "options": ["armature current घट जाता है", "flux घटने से समान torque (T ∝ ΦIa) के लिए armature current बढ़ जाता है", "armature current अपरिवर्तित रहता है", "armature current शून्य हो जाता है"],
+      "correctIndex": 1,
+      "explanation": "सही: T ∝ ΦIa; flux घटाने पर समान load torque बनाए रखने के लिए Ia बढ़ना पड़ता है, इसीलिए अत्यधिक field weakening पर overheating का खतरा रहता है और यह constant power region है। current घटना, अपरिवर्तित रहना या शून्य होना गलत है।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit9",
+  "unitName": "Solar Power Renewable Energy Systems",
+  "topic": "types_solar_cells",
+  "topicName": "Types of Solar Cells - Mono-crystalline, Poly-crystalline, Thin-film, Efficiency",
+  "questions": [
+    {
+      "id": "u9_types_solar_cells_q1",
+      "question": "Monocrystalline solar cells की पहचान सामान्यतः किस विशेषता से होती है?",
+      "options": [
+        "Cell का रंग हल्का नीला और patchy होता है",
+        "Cell गहरे काले रंग की एकसमान (uniform) सतह और cut corners (octagonal shape) वाली होती है",
+        "Cell पूरी तरह पारदर्शी (transparent) होती है",
+        "Cell का आकार हमेशा गोल (circular) होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monocrystalline cells single crystal ingot से गोल (cylindrical) rod को काटकर बनाए जाते हैं, इसलिए वे गहरे काले रंग की uniform सतह और cut corners (pseudo-square/octagonal) shape में दिखते हैं। हल्का नीला patchy रंग polycrystalline cells की पहचान है, cells transparent नहीं होते, और आकार गोल नहीं बल्कि square-ish होता है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q2",
+      "question": "Polycrystalline solar cells की सतह का रंग व texture सामान्यतः किस प्रकार का दिखता है?",
+      "options": [
+        "गहरा एकसमान काला",
+        "नीला रंग और अंदर crystal grain boundaries के patchy patterns",
+        "पूरी तरह सफेद और चमकदार",
+        "पारदर्शी शीशे जैसा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Polycrystalline cells कई छोटे silicon crystals (grains) से बने होते हैं जिनकी अलग-अलग orientation के कारण सतह पर नीला रंग और patchy/mosaic जैसा पैटर्न दिखता है। गहरा एकसमान काला रंग monocrystalline की पहचान है, सफेद-चमकदार या पारदर्शी रूप polycrystalline cells का typical appearance नहीं है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q3",
+      "question": "Monocrystalline और Polycrystalline cells में efficiency की दृष्टि से सामान्यतः क्या अंतर पाया जाता है?",
+      "options": [
+        "Polycrystalline की efficiency हमेशा monocrystalline से अधिक होती है",
+        "Monocrystalline की efficiency सामान्यतः polycrystalline से थोड़ी अधिक होती है क्योंकि single crystal structure में electron flow बेहतर होता है",
+        "दोनों की efficiency बिल्कुल समान होती है",
+        "Efficiency का crystal structure से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monocrystalline cells single continuous crystal से बनते हैं जिसमें grain boundaries नहीं होतीं, इसलिए electron flow में कम resistance होता है और efficiency (लगभग 18-22%) polycrystalline (लगभग 15-18%) से थोड़ी अधिक होती है। शेष options तथ्यात्मक रूप से गलत हैं क्योंकि crystal structure efficiency को सीधे प्रभावित करता है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q4",
+      "question": "Polycrystalline solar cells, monocrystalline की तुलना में मुख्यतः किस कारण से अधिक cost-effective (सस्ते) माने जाते हैं?",
+      "options": [
+        "इनकी manufacturing process में silicon कम बर्बाद होता है क्योंकि इन्हें single crystal ingot खींचने की ज़रूरत नहीं होती",
+        "इनमें silicon का उपयोग बिल्कुल नहीं होता",
+        "इनकी efficiency monocrystalline से अधिक होती है इसलिए सस्ते हैं",
+        "इनको बनाने में कोई manufacturing process नहीं लगती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Polycrystalline cells बनाने के लिए silicon को पिघलाकर सीधे mould में डाला जाता है (single crystal खींचने की जटिल Czochralski प्रक्रिया की आवश्यकता नहीं), जिससे material waste कम होता है और production cost कम आती है। इनमें silicon अवश्य प्रयोग होता है, इनकी efficiency monocrystalline से सामान्यतः कम होती है, और बिना किसी process के cell नहीं बनता।"
+    },
+    {
+      "id": "u9_types_solar_cells_q5",
+      "question": "Thin-film solar cells की मूल विशेषता क्या है जो उन्हें crystalline silicon cells से अलग करती है?",
+      "options": [
+        "ये semiconductor material की बहुत पतली (कुछ micrometer) layer किसी substrate पर deposit करके बनाए जाते हैं",
+        "ये हमेशा silicon के मोटे wafers से बनते हैं",
+        "इनमें कोई semiconductor material नहीं होता",
+        "ये केवल पानी के अंदर काम करते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thin-film technology में semiconductor material (जैसे a-Si, CdTe, CIGS) की बहुत पतली layer glass, metal या plastic जैसे substrate पर deposit की जाती है, जिससे हल्के व flexible modules बनते हैं। मोटे wafers crystalline cells में प्रयोग होते हैं, thin-film में semiconductor material अवश्य होता है, और इनका पानी के अंदर काम करने से कोई विशेष संबंध नहीं है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q6",
+      "question": "Thin-film solar cells (जैसे amorphous silicon) की efficiency crystalline silicon cells की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "Thin-film की efficiency crystalline silicon से काफी अधिक होती है",
+        "Thin-film की efficiency आमतौर पर crystalline silicon (mono/poly) से कम होती है (typically 6-13%)",
+        "दोनों की efficiency बिल्कुल बराबर होती है",
+        "Thin-film cells की कोई measurable efficiency नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thin-film cells की efficiency आमतौर पर crystalline silicon cells (15-22%) की तुलना में कम (लगभग 6-13%) होती है, हालांकि इनकी manufacturing सरल और लचीली (flexible) होती है। इसलिए efficiency अधिक होने या बराबर होने का दावा गलत है, और इनकी measurable efficiency निश्चित रूप से होती है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q7",
+      "question": "Thin-film solar panels का एक प्रमुख फायदा crystalline panels की तुलना में क्या है?",
+      "options": [
+        "ये बहुत भारी और मोटे होते हैं",
+        "ये हल्के, flexible और कम light के लिए भी अपेक्षाकृत बेहतर performance दे सकते हैं (कुछ applications में)",
+        "इनकी efficiency हमेशा सबसे अधिक होती है",
+        "इनकी life crystalline panels से हमेशा अधिक होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thin-film panels हल्के और flexible होते हैं, जिससे इन्हें curved surfaces या building-integrated applications में लगाया जा सकता है, और कुछ प्रकार diffuse/low-light conditions में अपेक्षाकृत बेहतर perform करते हैं। ये भारी-मोटे नहीं होते, इनकी efficiency crystalline से सामान्यतः कम होती है, और इनकी degradation दर आमतौर पर crystalline से अधिक होती है, इसलिए life लंबी होने का दावा सही नहीं है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q8",
+      "question": "CIGS (Copper Indium Gallium Selenide) किस category के solar cells में आता है?",
+      "options": [
+        "Monocrystalline silicon cells",
+        "Polycrystalline silicon cells",
+        "Thin-film solar cells",
+        "Concentrated solar power (CSP) mirrors"
+      ],
+      "correctIndex": 2,
+      "explanation": "CIGS एक thin-film semiconductor material है जो glass या flexible substrate पर पतली layer के रूप में deposit करके solar cells बनाने में प्रयोग होता है। यह crystalline silicon (mono/poly) से अलग है, और CSP mirrors का काम light को concentrate करना है, PV material नहीं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q9",
+      "question": "उच्चतम efficiency वाले commercial solar cell type के रूप में सामान्यतः किसे माना जाता है?",
+      "options": [
+        "Amorphous silicon (a-Si) thin-film",
+        "Monocrystalline silicon",
+        "CdTe thin-film",
+        "साधारण polycrystalline"
+      ],
+      "correctIndex": 1,
+      "explanation": "सामान्य commercial cells में Monocrystalline silicon cells सबसे उच्च efficiency (लगभग 18-22%, कुछ premium products में इससे अधिक) देते हैं क्योंकि इनकी single crystal संरचना electron flow में कम बाधा डालती है। Amorphous silicon और CdTe thin-film cells की efficiency इससे सामान्यतः कम होती है, और साधारण polycrystalline भी monocrystalline से थोड़ी कम efficiency देते हैं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q10",
+      "question": "यदि किसी installation में छत का area सीमित (limited) हो और अधिकतम power निकालनी हो, तो किस प्रकार के cells को प्राथमिकता दी जाती है?",
+      "options": [
+        "Amorphous thin-film cells (कम efficiency के कारण)",
+        "Monocrystalline cells (उच्च efficiency के कारण कम area में अधिक power)",
+        "किसी भी प्रकार के cells से कोई फर्क नहीं पड़ेगा",
+        "केवल CdTe cells ही उपयुक्त होंगे"
+      ],
+      "correctIndex": 1,
+      "explanation": "सीमित area में अधिकतम power प्राप्त करने के लिए उच्च efficiency वाले Monocrystalline cells प्राथमिकता में रखे जाते हैं क्योंकि प्रति square meter अधिक output मिलता है। Amorphous thin-film कम efficiency के कारण अधिक area माँगेगा, 'कोई फर्क नहीं' गलत तर्क है, और CdTe विशेष रूप से बड़े ground-mounted installations हेतु अधिक उपयुक्त माना जाता है, सीमित area के लिए नहीं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q11",
+      "question": "Monocrystalline cells की एक सीमा (limitation) यह है कि इनकी manufacturing process में सामान्यतः क्या समस्या आती है?",
+      "options": [
+        "Manufacturing बहुत सस्ती और सरल होती है",
+        "Single crystal ingot को round rod से square wafer में काटते समय material का काफी हिस्सा waste होता है, जिससे cost बढ़ती है",
+        "इसमें silicon की आवश्यकता ही नहीं होती",
+        "इसमें कोई cutting process शामिल नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monocrystalline ingot गोल आकार का होता है, जिसे square/pseudo-square wafers में काटने पर corners का material waste होता है, जिससे cost और समय अधिक लगता है। यह process सस्ती-सरल नहीं है, silicon इसमें प्रमुख रूप से प्रयोग होता है, और cutting process इसमें आवश्यक रूप से शामिल है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q12",
+      "question": "Bifacial solar cells की विशेषता क्या होती है?",
+      "options": [
+        "ये केवल एक ही तरफ से light absorb कर सकते हैं",
+        "ये दोनों ओर (front और back) से light absorb करके अतिरिक्त energy generate कर सकते हैं",
+        "इनमें कोई semiconductor material नहीं होता",
+        "ये केवल night-time में काम करते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bifacial cells दोनों तरफ से (सामने की direct sunlight और पीछे से reflected/albedo light) light absorb कर सकते हैं, जिससे same footprint में अधिक energy मिलती है। साधारण cells केवल एक तरफ से light लेते हैं, bifacial cells में semiconductor material होता ही है, और ये day-time sunlight पर निर्भर करते हैं, night में काम नहीं करते।"
+    },
+    {
+      "id": "u9_types_solar_cells_q13",
+      "question": "Amorphous silicon (a-Si) thin-film cells की efficiency समय के साथ किस phenomenon के कारण घट सकती है?",
+      "options": [
+        "Staebler-Wronski effect (light-induced degradation)",
+        "Photosynthesis effect",
+        "Doppler effect",
+        "Coriolis effect"
+      ],
+      "correctIndex": 0,
+      "explanation": "Amorphous silicon cells में प्रारंभिक कुछ महीनों की light exposure से Staebler-Wronski effect के कारण उनकी efficiency में हल्की कमी (light-induced degradation) आती है, फिर यह स्थिर हो जाती है। Photosynthesis पौधों की process है, Doppler effect wave frequency से और Coriolis effect rotating systems से संबंधित है, इनका solar cell degradation से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q14",
+      "question": "किस प्रकार के solar cells को building-integrated photovoltaics (BIPV) जैसे curved या flexible applications के लिए अधिक उपयुक्त माना जाता है?",
+      "options": [
+        "Rigid monocrystalline wafers",
+        "Rigid polycrystalline wafers",
+        "Flexible thin-film cells",
+        "इनमें से कोई भी उपयुक्त नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Thin-film cells को flexible substrates पर बनाया जा सकता है, जिससे ये curved surfaces, windows या building materials में integrate करने के लिए उपयुक्त होते हैं। Rigid crystalline wafers (mono या poly) कठोर और भंगुर (brittle) होते हैं, इसलिए ये curved applications के लिए कम उपयुक्त हैं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q15",
+      "question": "Polycrystalline cells में grain boundaries (crystal grains के बीच की सीमाएँ) efficiency को किस प्रकार प्रभावित करती हैं?",
+      "options": [
+        "ये electron flow को बेहतर बनाकर efficiency बढ़ाती हैं",
+        "ये electron-hole recombination के sites के रूप में कार्य करती हैं जिससे efficiency थोड़ी कम हो जाती है",
+        "इनका efficiency से कोई संबंध नहीं होता",
+        "ये केवल cell का रंग बदलती हैं, performance पर कोई असर नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Grain boundaries पर crystal defects होते हैं जो electron-hole pairs के recombination centers की तरह कार्य करते हैं, जिससे कुछ carriers उपयोगी current में योगदान देने से पहले ही नष्ट हो जाते हैं और overall efficiency थोड़ी कम हो जाती है। इसलिए ये efficiency बढ़ाने वाली नहीं, घटाने वाली होती हैं, और इनका performance पर स्पष्ट प्रभाव होता है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q16",
+      "question": "Multi-junction (tandem) solar cells, जो अक्सर space applications में उपयोग होते हैं, किस सिद्धांत पर काम करते हैं?",
+      "options": [
+        "केवल एक ही bandgap वाली एक layer से पूरा spectrum absorb करते हैं",
+        "अलग-अलग bandgap वाली कई semiconductor layers को stack करके सौर spectrum के अलग-अलग हिस्सों को अधिक efficiently absorb करते हैं",
+        "ये केवल infrared light को reject करते हैं",
+        "ये किसी भी प्रकार की light absorb नहीं करते"
+      ],
+      "correctIndex": 1,
+      "explanation": "Multi-junction cells में अलग-अलग bandgap वाली कई layers को एक के ऊपर एक stack किया जाता है ताकि solar spectrum की विभिन्न wavelengths को अधिक efficiently absorb किया जा सके, जिससे बहुत उच्च efficiency (40% से अधिक) प्राप्त होती है। एक ही layer से पूरा spectrum कुशलता से absorb नहीं हो पाता, ये infrared को reject नहीं करते, और light अवश्य absorb करते हैं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q17",
+      "question": "किसी घर की छत पर limited space में अधिकतम possible power चाहिए और budget की बाध्यता कम है, तो कौन-सा cell type सबसे उपयुक्त होगा?",
+      "options": [
+        "Amorphous thin-film (कम efficiency)",
+        "Monocrystalline (उच्च efficiency, कम area में अधिक output)",
+        "साधारण polycrystalline (मध्यम efficiency)",
+        "कोई भी टाइप चलेगा क्योंकि area का महत्व नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब budget सीमा न हो लेकिन area सीमित हो, तब उच्चतम efficiency देने वाले Monocrystalline cells सबसे उपयुक्त रहते हैं क्योंकि वे प्रति unit area अधिकतम power देते हैं। Amorphous thin-film या polycrystalline उतनी efficiency नहीं देते, और सीमित area की स्थिति में area का महत्व अनदेखा नहीं किया जा सकता।"
+    },
+    {
+      "id": "u9_types_solar_cells_q18",
+      "question": "Poly-crystalline cells की manufacturing process में silicon को किस विधि से solidify किया जाता है?",
+      "options": [
+        "Czochralski single-crystal pulling से",
+        "Molten silicon को block/mould में डालकर धीरे-धीरे ठंडा (cast) करके",
+        "Silicon को केवल sunlight में सुखाकर",
+        "Silicon को freezing में बर्फ के साथ रखकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Polycrystalline silicon बनाने के लिए molten silicon को एक बड़े block/mould में डालकर धीरे-धीरे ठंडा किया जाता है, जिससे कई अलग-अलग crystal grains बनते हैं। Czochralski process monocrystalline के लिए है, sunlight में सुखाना या बर्फ के साथ freezing करना solidification की वास्तविक industrial process नहीं है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q19",
+      "question": "Thin-film cells का एक नुकसान यह है कि इन्हें समान power output देने के लिए crystalline cells की तुलना में क्या चाहिए होता है?",
+      "options": [
+        "कम area, क्योंकि इनकी efficiency अधिक होती है",
+        "अधिक installation area, क्योंकि इनकी efficiency कम होती है",
+        "बिल्कुल भी area की आवश्यकता नहीं",
+        "Installation area का इनके output से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thin-film cells की efficiency कम होने के कारण, समान power output प्राप्त करने के लिए crystalline (mono/poly) cells की तुलना में अधिक installation area की आवश्यकता होती है। कम area नहीं बल्कि अधिक area चाहिए, बिना area के output संभव नहीं, और area व output के बीच स्पष्ट संबंध है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q20",
+      "question": "Solar cell efficiency को मापने के लिए Standard Test Conditions (STC) में irradiance का मानक मान क्या रखा जाता है?",
+      "options": [
+        "100 W/m²",
+        "1000 W/m²",
+        "10 W/m²",
+        "10,000 W/m²"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard Test Conditions (STC) में cell/module की efficiency और rating मापने के लिए irradiance 1000 W/m² (1 sun), cell temperature 25°C, और Air Mass (AM) 1.5 spectrum मानक रूप से प्रयोग किए जाते हैं। 100, 10 या 10,000 W/m² STC के मानक मान नहीं हैं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q21",
+      "question": "यदि दो cells की efficiency अलग-अलग हो पर area समान हो, तो अधिक efficiency वाला cell समान irradiance में क्या करेगा?",
+      "options": [
+        "कम power उत्पन्न करेगा",
+        "अधिक power उत्पन्न करेगा",
+        "बिल्कुल बराबर power उत्पन्न करेगा",
+        "कोई power उत्पन्न नहीं करेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Efficiency दर्शाती है कि cell कितने प्रतिशत incident solar energy को electrical energy में बदल पाता है, इसलिए समान area और समान irradiance पर उच्च efficiency वाला cell अधिक power output देगा। कम power, बराबर power, या शून्य power वाले statements efficiency की मूल परिभाषा के विपरीत हैं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q22",
+      "question": "CdTe (Cadmium Telluride) thin-film modules के बड़े पैमाने पर उपयोग में किस पर्यावरणीय पहलू को ध्यान में रखा जाता है?",
+      "options": [
+        "Cadmium एक toxic heavy metal है, इसलिए disposal/recycling को सावधानी से handle करना ज़रूरी है",
+        "CdTe पूरी तरह गैर-विषैला (non-toxic) होता है, कोई सावधानी नहीं चाहिए",
+        "CdTe modules कभी खराब नहीं होते इसलिए disposal का सवाल ही नहीं उठता",
+        "Cadmium केवल food industry में प्रयोग होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cadmium एक toxic heavy metal माना जाता है, इसलिए CdTe modules के life-end पर उचित recycling और disposal practices अपनाना पर्यावरण सुरक्षा के लिए आवश्यक है। यह non-toxic नहीं है, modules भी अंततः जीवनकाल पूरा करके degrade होते हैं, और Cadmium का food industry से कोई संबंध नहीं, यह toxic metal solar/battery applications में प्रयुक्त होता है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q23",
+      "question": "Monocrystalline cells के corners आमतौर पर cut (चैम्फर्ड) क्यों दिखाई देते हैं?",
+      "options": [
+        "क्योंकि यह design सिर्फ सुंदरता के लिए बनाया जाता है",
+        "क्योंकि गोल silicon ingot से square wafer काटते समय कोनों पर material कम बचता है, इसलिए वे cut/rounded रह जाते हैं",
+        "क्योंकि इससे electrical output बढ़ जाता है",
+        "क्योंकि इससे cell का वजन बहुत बढ़ जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monocrystalline ingot cylindrical (गोल) होता है; जब इससे square-shaped wafers काटे जाते हैं, तो गोल आकार के कारण कोनों पर material उपलब्ध नहीं होता, इसलिए कोने cut/rounded रह जाते हैं — यह सुंदरता के लिए जान-बूझकर design नहीं बल्कि manufacturing की एक physical सीमा है। इसका electrical output बढ़ाने या वजन बढ़ाने से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q24",
+      "question": "Solar cell types की तुलना में temperature बढ़ने के प्रभाव (temperature coefficient) के संदर्भ में सामान्यतः क्या देखा जाता है?",
+      "options": [
+        "सभी प्रकार के cells का output temperature बढ़ने पर हमेशा बढ़ता है",
+        "अधिकतर crystalline silicon cells का output temperature बढ़ने पर घटता है (negative temperature coefficient), और यह thin-film प्रकारों में अपेक्षाकृत अलग हो सकता है",
+        "Temperature का किसी भी cell के output पर कोई असर नहीं होता",
+        "Temperature बढ़ने पर सभी cells स्थायी रूप से खराब हो जाते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिकतर crystalline silicon cells में temperature बढ़ने से output (विशेषकर voltage) में कमी आती है, यानी इनका negative temperature coefficient होता है, जबकि कुछ thin-film types में यह प्रभाव अपेक्षाकृत कम गंभीर होता है। सभी cells का output बढ़ना, कोई असर न होना, या स्थायी रूप से खराब होना — ये कथन तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q25",
+      "question": "किसी बड़े ground-mounted solar farm में जहाँ land cost अपेक्षाकृत कम हो, किस प्रकार के cell का चयन आर्थिक रूप से भी विचारणीय हो सकता है?",
+      "options": [
+        "केवल बहुत महंगे multi-junction space-grade cells",
+        "Cost-effective thin-film या polycrystalline modules, जहाँ efficiency की तुलना में area कम प्रतिबंध बने",
+        "कोई भी cell काम नहीं करेगा",
+        "केवल experimental laboratory cells"
+      ],
+      "correctIndex": 1,
+      "explanation": "जहाँ land उपलब्ध और सस्ती हो, वहाँ थोड़ी कम efficiency वाले पर सस्ते thin-film या polycrystalline modules का उपयोग आर्थिक रूप से लाभदायक हो सकता है क्योंकि अतिरिक्त area की भरपाई कम cost से हो जाती है। महंगे multi-junction space-grade cells व्यावहारिक ground installations के लिए cost-prohibitive हैं, और experimental lab cells commercial installation के लिए उपयुक्त नहीं होते।"
+    },
+    {
+      "id": "u9_types_solar_cells_q26",
+      "question": "PERC (Passivated Emitter and Rear Cell) तकनीक पारंपरिक crystalline cells की तुलना में efficiency किस प्रकार बढ़ाती है?",
+      "options": [
+        "Cell के पिछले हिस्से में एक passivation layer जोड़कर light reflection वापस अंदर भेजती है और recombination कम करती है",
+        "Cell के आगे के हिस्से को पूरी तरह metal से ढककर",
+        "Cell में doping पूरी तरह हटाकर",
+        "Cell को पानी में डुबोकर रखने से"
+      ],
+      "correctIndex": 0,
+      "explanation": "PERC तकनीक में rear surface पर एक passivation layer जोड़ी जाती है जो अनवशोषित light को वापस cell के अंदर reflect करती है और साथ ही rear surface recombination को कम करती है, जिससे मानक cells की तुलना में efficiency बढ़ती है। Front को पूरी तरह metal से ढकना light को रोक देगा, doping हटाना junction को खत्म कर देगा, और पानी में डुबोना PERC तकनीक से असंबंधित है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q27",
+      "question": "Polycrystalline solar panels को अक्सर 'multi-crystalline' भी क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि इनमें कई अलग-अलग छोटे crystal grains होते हैं, एक single crystal नहीं",
+        "क्योंकि इनमें कोई crystal structure ही नहीं होता",
+        "क्योंकि इन्हें कई अलग देशों में बनाया जाता है",
+        "क्योंकि इनमें कई अलग-अलग रंगों की coating होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Polycrystalline (multi-crystalline) cells में एक ही wafer के भीतर कई अलग-अलग orientation वाले छोटे silicon crystals (grains) मौजूद होते हैं, इसीलिए इन्हें 'multi-crystalline' कहा जाता है, यह मोनोक्रिस्टलाइन की single-crystal संरचना से अलग है। इनमें crystal structure अवश्य होता है, नामकरण का manufacturing location या रंग-coating से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q28",
+      "question": "Thin-film modules की degradation rate (समय के साथ output घटने की दर) crystalline silicon modules की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "Thin-film modules की degradation rate सामान्यतः कुछ अधिक होती है",
+        "Thin-film modules कभी degrade नहीं होते",
+        "Crystalline silicon modules की degradation rate हमेशा thin-film से अधिक होती है",
+        "दोनों की degradation rate में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "आमतौर पर thin-film modules (विशेषकर amorphous silicon) की degradation rate crystalline silicon modules की तुलना में अपेक्षाकृत अधिक होती है, इसलिए दीर्घकालिक warranty output भी थोड़ा कम रखी जाती है। ये कभी degrade न होने का दावा गलत है, crystalline की तुलना में कथन उल्टा है, और दोनों में स्पष्ट अंतर पाया जाता है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q29",
+      "question": "किसी विशेष application में जहाँ diffuse/low-light अधिक रहता है (जैसे बादलों वाला क्षेत्र), किस प्रकार के cells अपेक्षाकृत बेहतर perform कर सकते हैं?",
+      "options": [
+        "केवल high-concentration multi-junction cells",
+        "कुछ thin-film प्रकार (जैसे amorphous silicon), जो low-light conditions में अपेक्षाकृत बेहतर response दे सकते हैं",
+        "किसी भी प्रकार के cell पर low-light का कोई असर नहीं पड़ता",
+        "केवल bifacial cells जो केवल तेज़ धूप में काम करते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "कुछ thin-film technologies (जैसे amorphous silicon) diffuse और low-light conditions में crystalline cells की तुलना में अपेक्षाकृत अच्छा प्रदर्शन देती हैं, हालांकि overall peak efficiency कम रहती है। High-concentration multi-junction cells को केंद्रित direct sunlight चाहिए होती है, low-light का असर सभी cells पर पड़ता है, और bifacial cells low-light-specific तकनीक नहीं हैं।"
+    },
+    {
+      "id": "u9_types_solar_cells_q30",
+      "question": "Solar cell type चुनते समय किन तीन प्रमुख factors पर सामान्यतः विचार किया जाता है?",
+      "options": [
+        "केवल cell का रंग",
+        "Efficiency, cost, और available installation area/application requirement",
+        "केवल manufacturer का नाम",
+        "केवल cell कितनी पुरानी technology है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही cell type चुनने के लिए efficiency (कितनी power मिलेगी), cost (बजट), और उपलब्ध installation area तथा application की ज़रूरत — इन तीनों factors को संतुलित रूप से देखा जाता है। केवल रंग, manufacturer का नाम, या technology की उम्र देखना पर्याप्त निर्णय-आधार नहीं है।"
+    }
+  ]
+}

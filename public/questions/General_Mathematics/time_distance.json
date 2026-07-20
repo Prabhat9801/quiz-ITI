@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "time_distance",
+  "topicName": "Time and Distance",
+  "questions": [
+    {
+      "id": "math_time_distance_q1",
+      "question": "एक car 180 km की distance 3 hours में तय करती है। उसकी speed km/h में क्या है?",
+      "options": ["60 km/h", "50 km/h", "70 km/h", "80 km/h"],
+      "correctIndex": 0,
+      "explanation": "Speed = Distance/Time = 180/3 = 60 km/h। '50', '70' और '80 km/h' इस division से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_distance_q2",
+      "question": "72 km/h की speed को m/s में बदलें।",
+      "options": ["18 m/s", "20 m/s", "22 m/s", "25 m/s"],
+      "correctIndex": 1,
+      "explanation": "km/h से m/s में बदलने के लिए 5/18 से गुणा करते हैं, अतः 72×5/18 = 20 m/s। शेष options इस conversion से नहीं आते।"
+    },
+    {
+      "id": "math_time_distance_q3",
+      "question": "25 m/s की speed को km/h में बदलें।",
+      "options": ["80 km/h", "85 km/h", "90 km/h", "95 km/h"],
+      "correctIndex": 2,
+      "explanation": "m/s से km/h में बदलने के लिए 18/5 से गुणा करते हैं, अतः 25×18/5 = 90 km/h। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q4",
+      "question": "एक आदमी 5 km/h की speed से चलता है। 15 km की distance तय करने में उसे कितना time लगेगा?",
+      "options": ["2 hours", "2.5 hours", "4 hours", "3 hours"],
+      "correctIndex": 3,
+      "explanation": "Time = Distance/Speed = 15/5 = 3 hours। '2', '2.5' और '4 hours' इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_distance_q5",
+      "question": "एक train 45 km/h की speed से कोई distance 6 hours में तय करती है। यदि speed बढ़ाकर 54 km/h कर दी जाए, तो वही distance कितने hours में तय होगी?",
+      "options": ["5 hours", "6 hours", "4 hours", "7 hours"],
+      "correctIndex": 0,
+      "explanation": "Distance = 45×6 = 270 km। नई speed पर time = 270/54 = 5 hours। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_time_distance_q6",
+      "question": "एक व्यक्ति किसी distance को 20 km/h की speed से जाता है और 30 km/h की speed से वापस आता है। पूरी journey की average speed क्या होगी?",
+      "options": ["25 km/h", "24 km/h", "26 km/h", "20 km/h"],
+      "correctIndex": 1,
+      "explanation": "समान distance के लिए average speed = 2×20×30/(20+30) = 1200/50 = 24 km/h। शेष options इस formula से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_distance_q7",
+      "question": "एक car पहला आधा distance 40 km/h की speed से और दूसरा आधा 60 km/h की speed से तय करती है। पूरी journey की average speed क्या होगी?",
+      "options": ["45 km/h", "50 km/h", "48 km/h", "52 km/h"],
+      "correctIndex": 2,
+      "explanation": "Average speed = 2×40×60/(40+60) = 4800/100 = 48 km/h। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_time_distance_q8",
+      "question": "एक cyclist 100 km की distance 4 hours में तय करता है, कुछ भाग 20 km/h की speed से और शेष 30 km/h की speed से। बताएं कि उसने 20 km/h की speed से कितने hours यात्रा की?",
+      "options": ["1 hour", "1.5 hours", "2.5 hours", "2 hours"],
+      "correctIndex": 3,
+      "explanation": "मान लें 20 km/h से t1 hours और 30 km/h से t2 hours यात्रा की। t1+t2=4 और 20t1+30t2=100। हल करने पर t1=2 hours और t2=2 hours। शेष options इस equations से नहीं आते।"
+    },
+    {
+      "id": "math_time_distance_q9",
+      "question": "A और B की speeds का अनुपात 3:4 है। यदि A किसी distance को 2 hours में तय करता है, तो B वही distance कितने hours में तय करेगा?",
+      "options": ["1.5 hours", "2 hours", "1 hour", "2.5 hours"],
+      "correctIndex": 0,
+      "explanation": "समान distance के लिए time speed के व्युत्क्रम अनुपात में होता है, अतः time का अनुपात A:B = 4:3। A का 2 hours ratio 4 से मेल खाता है (unit=0.5), इसलिए B का time = 3×0.5 = 1.5 hours। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q10",
+      "question": "एक आदमी किसी distance को 15 km/h की speed से 40 minutes में तय करता है। वही distance 30 minutes में तय करने के लिए कितनी speed चाहिए?",
+      "options": ["18 km/h", "20 km/h", "22 km/h", "25 km/h"],
+      "correctIndex": 1,
+      "explanation": "Distance = 15×(40/60) = 10 km। 30 minutes (0.5 hour) में तय करने के लिए speed = 10/0.5 = 20 km/h चाहिए। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_distance_q11",
+      "question": "दो स्थान A और B एक-दूसरे से 300 km दूर हैं। एक car A से B की ओर 60 km/h की speed से चलती है और साथ ही दूसरी car B से A की ओर 40 km/h की speed से चलती है। दोनों कितने time बाद मिलेंगी?",
+      "options": ["2.5 hours", "4 hours", "3 hours", "3.5 hours"],
+      "correctIndex": 2,
+      "explanation": "विपरीत दिशा में आने के कारण relative speed = 60+40 = 100 km/h, अतः मिलने का time = 300/100 = 3 hours। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q12",
+      "question": "दो cars एक ही point से विपरीत दिशाओं में एक साथ चलना शुरू करती हैं, जिनकी speeds 50 km/h और 70 km/h हैं। कितने hours बाद वे 480 km दूर होंगी?",
+      "options": ["3 hours", "3.5 hours", "5 hours", "4 hours"],
+      "correctIndex": 3,
+      "explanation": "विपरीत दिशा में relative speed = 50+70 = 120 km/h, अतः time = 480/120 = 4 hours। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_time_distance_q13",
+      "question": "200m की एक race में A, B को 20m से हरा देता है। यदि A की speed 10 m/s है, तो B की speed क्या है?",
+      "options": ["9 m/s", "8 m/s", "9.5 m/s", "8.5 m/s"],
+      "correctIndex": 0,
+      "explanation": "A का पूरी 200m दौड़ने का time = 200/10 = 20s। उसी समय में B ने 180m (200-20) दौड़ी, अतः B की speed = 180/20 = 9 m/s। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q14",
+      "question": "100m की race में A, B को 25m का start देता है और फिर भी 5 seconds से जीत जाता है। यदि A की speed 10 m/s है, तो B की speed क्या है?",
+      "options": ["4 m/s", "5 m/s", "6 m/s", "4.5 m/s"],
+      "correctIndex": 1,
+      "explanation": "A का 100m दौड़ने का time = 100/10 = 10s। B को 75m (100-25) दौड़नी थी और उसने 10+5=15s लिए, अतः B की speed = 75/15 = 5 m/s। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q15",
+      "question": "1000m की race में A, B को 100m का start देता है और दोनों एक साथ finish line पर पहुँचते हैं (dead heat)। यदि A की speed 25 m/s है, तो B की speed क्या है?",
+      "options": ["20 m/s", "21 m/s", "22.5 m/s", "24 m/s"],
+      "correctIndex": 2,
+      "explanation": "A का 1000m दौड़ने का time = 1000/25 = 40s। इसी समय में B ने 900m (1000-100) दौड़ी, अतः B की speed = 900/40 = 22.5 m/s। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q16",
+      "question": "एक लड़का अपने घर से 5 km/h की speed से चलकर school 15 minutes देरी से पहुँचता है, जबकि 6 km/h की speed से चलकर वह 15 minutes पहले पहुँच जाता है। घर से school की distance कितनी है?",
+      "options": ["10 km", "12 km", "18 km", "15 km"],
+      "correctIndex": 3,
+      "explanation": "Distance = (S1×S2)/(S2-S1) × (total time difference in hours) = (5×6)/(6-5) × (30/60) = 30×0.5 = 15 km। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q17",
+      "question": "Stoppages को छोड़कर एक bus की speed 54 km/h है और stoppages सहित उसकी speed 45 km/h है। बस प्रति hour कितनी minutes के लिए रुकती है?",
+      "options": ["10 minutes", "12 minutes", "15 minutes", "8 minutes"],
+      "correctIndex": 0,
+      "explanation": "Speed में कमी = 54-45 = 9 km/h। प्रति hour रुकने का time = (9/54)×60 = 10 minutes। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q18",
+      "question": "एक car पहले 2 hours में 80 km/h की speed से और अगले 3 hours में 60 km/h की speed से चलती है। पूरी journey की average speed क्या है?",
+      "options": ["65 km/h", "68 km/h", "70 km/h", "72 km/h"],
+      "correctIndex": 1,
+      "explanation": "कुल distance = 80×2 + 60×3 = 160+180 = 340 km, कुल time = 5 hours, अतः average speed = 340/5 = 68 km/h। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q19",
+      "question": "यदि कोई व्यक्ति अपनी usual speed की 3/4 speed से चलता है, तो वह अपने office 20 minutes देरी से पहुँचता है। उसका usual time क्या है?",
+      "options": ["45 minutes", "50 minutes", "60 minutes", "75 minutes"],
+      "correctIndex": 2,
+      "explanation": "Speed अनुपात usual:new = 4:3 होने से time अनुपात new:usual = 4:3 होगा। यदि usual time = t है, तो new time = 4t/3, अंतर = t/3 = 20 minutes, अतः t = 60 minutes। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q20",
+      "question": "A को 360 km की distance तय करने में B से 3 hours अधिक लगते हैं। यदि A अपनी speed दोगुनी कर दे, तो वह B से 1 hour कम समय लेगा। A की original speed क्या है?",
+      "options": ["30 km/h", "36 km/h", "40 km/h", "45 km/h"],
+      "correctIndex": 3,
+      "explanation": "समीकरणों 360/a-360/b=3 और 360/b-180/a=1 को हल करने पर a=45 km/h मिलता है। शेष options इन equations को संतुष्ट नहीं करते।"
+    },
+    {
+      "id": "math_time_distance_q21",
+      "question": "एक policeman किसी चोर को 200m दूर से देखता है। चोर की speed 8 km/h और policeman की speed 10 km/h है। चोर को पकड़े जाने से पहले वह कितनी distance दौड़ चुका होगा?",
+      "options": ["800 m", "900 m", "750 m", "1000 m"],
+      "correctIndex": 0,
+      "explanation": "Relative speed = 10-8 = 2 km/h। 200m = 0.2 km gap को पूरा करने में time = 0.2/2 = 0.1 hour लगता है, इस दौरान चोर 8×0.1 = 0.8 km = 800 m दौड़ता है। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q22",
+      "question": "A और B एक ही समय पर 90 km दूर स्थित दो points से एक-दूसरे की ओर चलना शुरू करते हैं। A की speed 12 km/h और B की speed 18 km/h है। वे कितने hours बाद मिलेंगे?",
+      "options": ["2.5 hours", "3 hours", "3.5 hours", "4 hours"],
+      "correctIndex": 1,
+      "explanation": "Relative speed = 12+18 = 30 km/h, अतः मिलने का time = 90/30 = 3 hours। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q23",
+      "question": "एक car 450 km की distance 5 hours में तय करती है। उसकी speed m/s में क्या है?",
+      "options": ["20 m/s", "22 m/s", "25 m/s", "28 m/s"],
+      "correctIndex": 2,
+      "explanation": "Speed = 450/5 = 90 km/h, जिसे m/s में बदलने पर 90×5/18 = 25 m/s होता है। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q24",
+      "question": "दो cars की speeds का अनुपात 5:6 है। यदि दूसरी car 540 km की distance 6 hours में तय करती है, तो पहली car की speed क्या है?",
+      "options": ["60 km/h", "70 km/h", "80 km/h", "75 km/h"],
+      "correctIndex": 3,
+      "explanation": "दूसरी car की speed = 540/6 = 90 km/h, जो ratio 6 का एक unit = 15 km/h देती है, अतः पहली car (ratio 5) की speed = 5×15 = 75 km/h। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q25",
+      "question": "अपनी usual speed की 3/5 speed से चलने पर एक आदमी अपने office 10 minutes देरी से पहुँचता है। उसका usual time क्या है?",
+      "options": ["15 minutes", "20 minutes", "25 minutes", "30 minutes"],
+      "correctIndex": 0,
+      "explanation": "Speed अनुपात usual:new = 5:3 होने से time अनुपात new:usual = 5:3। यदि usual time = t हो, तो new time = 5t/3, अंतर = 2t/3 = 10 minutes, अतः t = 15 minutes। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q26",
+      "question": "एक व्यक्ति किसी distance को 6 km/h की speed से तय करता है और 15 minutes देरी से पहुँचता है। यदि वह 8 km/h की speed से चले, तो 15 minutes पहले पहुँच जाता है। Distance कितनी है?",
+      "options": ["10 km", "12 km", "14 km", "16 km"],
+      "correctIndex": 1,
+      "explanation": "Distance = (S1×S2)/(S2-S1) × (कुल time अंतर in hours) = (6×8)/(8-6) × 0.5 = 24×0.5 = 12 km। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q27",
+      "question": "Sound की speed 330 m/s है। 3.3 km दूर हो रहे किसी explosion की आवाज सुनने में कितना time लगेगा?",
+      "options": ["8 seconds", "9 seconds", "10 seconds", "12 seconds"],
+      "correctIndex": 2,
+      "explanation": "Time = Distance/Speed = 3300/330 = 10 seconds। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_time_distance_q28",
+      "question": "A और B की speeds का अनुपात 2:3 है। किसी distance को तय करने में A, B से 30 minutes अधिक समय लेता है। B को वह distance तय करने में कितना time लगेगा?",
+      "options": ["45 minutes", "50 minutes", "55 minutes", "60 minutes"],
+      "correctIndex": 3,
+      "explanation": "Time अनुपात A:B = 3:2 होगा। मान लें time_A=3x, time_B=2x, अंतर x=30 minutes, अतः time_B = 2×30 = 60 minutes। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q29",
+      "question": "एक car, city P से city Q तक 60 km/h की speed से जाती है और 40 km/h की speed से वापस आती है। यदि पूरी round trip में 5 hours लगते हैं, तो P और Q के बीच की distance कितनी है?",
+      "options": ["100 km", "110 km", "120 km", "130 km"],
+      "correctIndex": 0,
+      "explanation": "यदि distance d हो तो d/60+d/40=5। LCM 120 से 2d/120+3d/120=5, अतः 5d=600, d=120 km। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_time_distance_q30",
+      "question": "एक आदमी अपनी usual speed से कोई distance 40 minutes में तय करता है। यदि वह अपनी speed 25% बढ़ा दे, तो कितना time बचेगा?",
+      "options": ["6 minutes", "8 minutes", "10 minutes", "12 minutes"],
+      "correctIndex": 1,
+      "explanation": "नई speed = 1.25× usual speed, अतः नया time = 40/1.25 = 32 minutes। बचा हुआ time = 40-32 = 8 minutes। शेष options गलत हैं।"
+    }
+  ]
+}

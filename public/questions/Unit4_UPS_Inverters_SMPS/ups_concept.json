@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "ups_concept",
+  "topicName": "UPS Concept - UPS vs Inverter, Basic Components",
+  "questions": [
+    {
+      "id": "u4_ups_concept_q1",
+      "question": "UPS ka poora naam kya hai aur iska mool karya kya hota hai?",
+      "options": [
+        "Uninterruptible Power Supply - jo mains fail hone par bhi load ko lagbhag bina rukawat (no-break) ke continuous AC power deta hai",
+        "Universal Power Source - jo sirf DC appliances chalata hai",
+        "Under Power Supply - jo voltage kam karta hai",
+        "Uniform Power Switch - jo sirf relay switching karta hai"
+      ],
+      "correctIndex": 0,
+      "explanation": "UPS ka poora naam Uninterruptible Power Supply hai aur iska mool karya mains fail hone par load ko battery-inverter ke through lagbhag bina rukawat (no-break) ke continuous AC power dena hai। Option B galat hai kyonki UPS AC output deta hai sirf DC appliances tak seemit nahi; Option C stabilizer ka kaam hai; Option D UPS ke poore function ko sirf relay switching tak simit kar deta hai jo galat hai।"
+    },
+    {
+      "id": "u4_ups_concept_q2",
+      "question": "UPS aur inverter ke beech switchover time ke aadhar par mool antar kya hai?",
+      "options": [
+        "Dono ka switchover time bilkul barabar hota hai",
+        "UPS ka switchover time bahut kam (near zero, milliseconds se bhi kam) hota hai jabki inverter mein kuch milliseconds ka switching delay hota hai",
+        "Inverter ka switchover time UPS se kam hota hai",
+        "UPS mein koi switchover hi nahi hota, seedha mains chalta hai"
+      ],
+      "correctIndex": 1,
+      "explanation": "UPS aur inverter ka mool antar unke switchover time mein hai — UPS ka switchover time bahut kam (kuch milliseconds se bhi kam, near zero) hota hai jabki simple inverter mein switching delay kai milliseconds tak ho sakta hai, jisse computer jaise sensitive load restart ho sakte hain। Option A galat hai kyonki dono ka switchover time alag hota hai; Option C tathya ko ulta bata raha hai; Option D galat hai kyonki UPS mein bhi mains fail hone par internal switching hoti hai, bas wo itni tez hoti hai ki load ko mahsoos nahi hoti।"
+    },
+    {
+      "id": "u4_ups_concept_q3",
+      "question": "Ek UPS ke basic block diagram mein mains AC ko DC mein badalne wala block kaunsa hai?",
+      "options": [
+        "Inverter section",
+        "Static transfer switch",
+        "Rectifier-cum-charger",
+        "Bypass switch"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rectifier-cum-charger block mains se aane wali AC supply ko DC mein convert karta hai aur usi DC se battery ko charge rakhta hai। Option A inverter section DC ko wapas AC mein badalta hai, ulta kaam; Option B static transfer switch sirf supply paths ke beech switching karta hai, conversion nahi; Option D bypass switch load ko seedha mains se jodta hai, AC-DC conversion nahi karta।"
+    },
+    {
+      "id": "u4_ups_concept_q4",
+      "question": "UPS ke block diagram mein battery se DC ko wapas AC mein badalne ka kaam kaun karta hai?",
+      "options": [
+        "Rectifier",
+        "Charger",
+        "Static transfer switch",
+        "Inverter section"
+      ],
+      "correctIndex": 3,
+      "explanation": "Inverter section battery ki DC energy ko wapas regulated AC mein convert karke load ko supply karta hai, khaaskar jab mains available na ho। Option A rectifier AC ko DC mein badalta hai (ulta), Option B charger battery ko charge karta hai lekin AC nahi banata, Option C static transfer switch sirf supply source select karta hai, conversion nahi karta।"
+    },
+    {
+      "id": "u4_ups_concept_q5",
+      "question": "Static transfer switch (STS) UPS mein kya karta hai?",
+      "options": [
+        "Mains AC ko DC mein convert karta hai",
+        "Load ko inverter output aur bypass (raw mains) supply ke beech automatically switch karta hai",
+        "Battery ko charge karta hai",
+        "Sirf manual switch hai jo hath se operate hota hai"
+      ],
+      "correctIndex": 1,
+      "explanation": "Static transfer switch (STS) load ko normal roop se UPS ke inverter output se supply deta hai aur zaroorat padne par (jaise inverter fault ya overload) bina rukawat load ko bypass/raw mains supply par switch kar deta hai। Option A yeh kaam rectifier ka hai, Option C yeh kaam charger ka hai, Option D galat hai kyonki STS electronic/automatic switching device hota hai, sirf manual switch nahi।"
+    },
+    {
+      "id": "u4_ups_concept_q6",
+      "question": "Ek computer/server ko UPS se hi jodne ki salah kyon di jati hai, simple inverter se nahi?",
+      "options": [
+        "Inverter battery backup nahi deta",
+        "Inverter DC power deta hai jo computer chala hi nahi sakta",
+        "Inverter ke switching delay (kuch milliseconds) ke dauran server ka data corrupt ya system restart ho sakta hai, jabki UPS near-zero break dete hue continuous supply deta hai",
+        "UPS sirf AC 50Hz par kaam karta hai aur inverter DC par"
+      ],
+      "correctIndex": 2,
+      "explanation": "Server/computer ko UPS se jodne ki salah isliye di jaati hai kyonki inverter ke switchover ke dauran hone wala chhota sa delay bhi system ko restart ya data corrupt kar sakta hai, jabki UPS ka near-zero break output continuous rakhta hai। Option A galat hai kyonki achhe inverter bhi battery backup dete hain; Option B galat hai kyonki inverter bhi AC hi deta hai; Option D galat hai kyonki dono hi AC frequency par kaam karte hain, yeh unka antar nahi hai।"
+    },
+    {
+      "id": "u4_ups_concept_q7",
+      "question": "UPS mein rectifier-cum-charger block ka dohra (dual) karya kya hota hai?",
+      "options": [
+        "Mains AC ko DC mein badalna aur usi DC se battery ko charge rakhna",
+        "Battery se AC banana",
+        "Sirf voltage stabilize karna",
+        "Sirf frequency correct karna"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rectifier-cum-charger block ka dohra karya hota hai — mains AC ko DC mein badalna aur usi DC se battery ko lagataar charge rakhna taaki mains fail hone par battery turant use ho sake। Option B yeh kaam inverter ka hai, Option C stabilizer/servo circuit ka kaam hai, Option D frequency correction is block ka mool karya nahi hai।"
+    },
+    {
+      "id": "u4_ups_concept_q8",
+      "question": "Normal mains condition mein ek UPS ke andar basic power flow kis kram (sequence) mein hota hai?",
+      "options": [
+        "Mains -> seedha load, battery kabhi involve nahi hoti",
+        "Mains -> inverter -> battery -> load",
+        "Mains -> battery -> load, rectifier ka koi role nahi",
+        "Mains -> rectifier/charger -> DC bus (jisse battery charge hoti hai) -> inverter -> regulated AC load"
+      ],
+      "correctIndex": 3,
+      "explanation": "Normal mains condition mein UPS ke andar power ka basic flow hota hai — mains se AC aata hai, rectifier/charger ise DC mein badalkar DC bus banata hai jisse battery bhi charge hoti rehti hai, aur wahi DC inverter section dwara wapas regulated AC mein badalkar load ko diya jaata hai। Option A galat hai kyonki battery hamesha DC bus se judi rehti hai; Option B kram ulta hai; Option C galat hai kyonki rectifier ke bina battery direct charge nahi ho sakti।"
+    },
+    {
+      "id": "u4_ups_concept_q9",
+      "question": "Mains supply achanak fail ho jaye to UPS load ko supply dena band kyon nahi karta?",
+      "options": [
+        "Kyunki UPS mein bypass switch hamesha connected rehta hai",
+        "Kyunki rectifier khud hi AC generate karne lagta hai",
+        "Kyunki battery turant DC power deti hai jise inverter section AC mein badalkar load ko lagbhag bina rukawat ke supply karta rehta hai",
+        "Kyunki mains fail hone par frequency badal jaati hai"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mains fail hone par battery turant apni stored DC energy inverter section ko deti hai, jo use AC mein badalkar load ko lagbhag bina rukawat supply karta rehta hai — yahi UPS ki basic working principle hai। Option A galat hai kyonki bypass switch normal operation mein active nahi rehta; Option B rectifier khud AC generate nahi karta; Option D galat hai kyonki frequency badalna mains fail hone ka lakshan nahi hai।"
+    },
+    {
+      "id": "u4_ups_concept_q10",
+      "question": "Mains supply wapas aane par UPS mein kya hota hai?",
+      "options": [
+        "UPS hamesha ke liye battery se hi chalta rehta hai",
+        "Rectifier/charger phir se AC ko DC mein badalkar battery ko recharge karna shuru kar deta hai aur load ko regulated supply milti rahti hai",
+        "Inverter section band ho jata hai aur load ko supply milna ruk jata hai",
+        "Static transfer switch load ko permanently disconnect kar deta hai"
+      ],
+      "correctIndex": 1,
+      "explanation": "Jaise hi mains supply wapas aati hai, rectifier/charger phir se AC ko DC mein badalkar battery ko recharge karna shuru kar deta hai, aur load ko regulated supply bina rukawat milti rehti hai। Option A galat hai kyonki mains available hote hi wo hi mool source ban jaata hai; Option C galat hai kyonki inverter section band nahi hota, wo standby ya normal mode mein rehta hai; Option D galat hai kyonki STS load ko disconnect nahi, balki sahi source se jodta hai।"
+    },
+    {
+      "id": "u4_ups_concept_q11",
+      "question": "Ek office mein bar-bar chhote power cuts hote hain aur computers bina data loss ke chalte rehne chahiye. Is scenario ke liye UPS, simple inverter se better kyon hai?",
+      "options": [
+        "Kyonki inverter battery use nahi karta",
+        "Kyonki UPS sasta hota hai",
+        "Kyonki inverter frequency 60Hz par kaam karta hai",
+        "Kyonki UPS ka near-zero switchover time ensure karta hai ki computer/server bina restart hue chalta rahe, jabki inverter ke switching delay se system hang ya restart ho sakta hai"
+      ],
+      "correctIndex": 3,
+      "explanation": "UPS is scenario ke liye behtar hai kyonki uska near-zero switchover time yeh sunishchit karta hai ki computer/server bina restart hue chalta rahe, jabki simple inverter ke switching delay ke dauran system hang ya restart ho sakta hai jisse data loss ho sakta hai। Option A galat hai kyonki inverter bhi battery hi use karta hai; Option B galat hai kyonki cost yahan mool factor nahi, performance hai; Option C galat hai kyonki dono hi generally 50Hz AC par kaam karte hain।"
+    },
+    {
+      "id": "u4_ups_concept_q12",
+      "question": "UPS ke liye battery block ka mool karya kya hai?",
+      "options": [
+        "Mains fail hone par inverter ko DC energy supply karna taaki output AC continuous rahe",
+        "Mains voltage ko stabilize karna",
+        "AC ko seedha load tak pahunchana",
+        "Frequency ko 50Hz se 60Hz karna"
+      ],
+      "correctIndex": 0,
+      "explanation": "Battery block ka mool karya mains fail hone par inverter section ko DC energy supply karna hai taaki output AC bina rukawat continuous rahe। Option B yeh kaam stabilizer circuit ka hai, Option C battery seedha AC load ko nahi jodti (usse pehle inverter se conversion zaroori hai), Option D frequency conversion battery ka kaam nahi hai।"
+    },
+    {
+      "id": "u4_ups_concept_q13",
+      "question": "Data centers aur servers mein UPS ka upyog kyon zaroori mana jata hai?",
+      "options": [
+        "Kyonki UPS sabse sasta backup solution hai",
+        "Kyonki UPS bina kisi break ke regulated power deta hai jisse server crash, data corruption ya hardware damage se bacha ja sake",
+        "Kyonki UPS mains frequency ko badal deta hai",
+        "Kyonki UPS DC output deta hai jo server ke liye zaroori hai"
+      ],
+      "correctIndex": 1,
+      "explanation": "Data centers/servers mein UPS isliye zaroori mana jaata hai kyonki wo bina kisi break ke regulated power deta hai, jisse achanak power jaane par server crash, data corruption ya hardware damage se bacha ja sakta hai। Option A galat hai kyonki cost yahan mool wajah nahi, reliability hai; Option C UPS frequency nahi badalta; Option D galat hai kyonki server ko AC power chahiye, DC nahi।"
+    },
+    {
+      "id": "u4_ups_concept_q14",
+      "question": "Medical equipment (jaise ICU machines, ventilators) ke liye UPS ka use critical kyon maana jata hai?",
+      "options": [
+        "Kyonki UPS current ko kam kar deta hai",
+        "Kyonki UPS sirf DC current deta hai",
+        "Kyonki power fail hone par bhi bina interruption ke supply milti rehti hai, jo jeevan-rakshak upkaranon ke liye zaroori hai",
+        "Kyonki UPS device ki cost kam karta hai"
+      ],
+      "correctIndex": 2,
+      "explanation": "Medical equipment jaise ICU machines/ventilators ke liye UPS critical isliye maana jaata hai kyonki power fail hone par bhi bina interruption ke supply milti rehti hai, jo jeevan-rakshak upkaranon ke liye anivarya hai। Option A aur B UPS ke actual karya se mel nahi khate (current kam karna ya sirf DC dena), Option D cost UPS ke is critical application ka karan nahi hai।"
+    },
+    {
+      "id": "u4_ups_concept_q15",
+      "question": "Bypass switch UPS mein kis paristhiti mein activate kiya jata hai?",
+      "options": [
+        "Jab mains voltage bilkul normal ho aur koi fault na ho",
+        "Jab battery poori tarah charge ho",
+        "Jab load bahut kam ho",
+        "Jab inverter section mein fault ho ya maintenance/servicing ke dauran, taaki load ko seedha raw mains se bina rukawat supply mile"
+      ],
+      "correctIndex": 3,
+      "explanation": "Bypass switch tab activate kiya jaata hai jab UPS ke inverter section mein fault ho ya maintenance/servicing chal rahi ho, taaki load ko seedha raw mains supply se bina rukawat jod diya jaaye। Option A, B aur C aisi paristhitiyan hain jinmein bypass ki koi khaas zaroorat nahi hoti, kyonki inverter path normally kaam kar raha hota hai।"
+    },
+    {
+      "id": "u4_ups_concept_q16",
+      "question": "UPS aur inverter mein se kaunsa system 'no-break' ya 'zero transfer time' system kehlata hai?",
+      "options": [
+        "UPS, kyunki iska switchover itna kam hota hai ki load ko practically koi break mahsoos nahi hota",
+        "Inverter, kyunki wo bahut tez switch karta hai",
+        "Dono barabar no-break hote hain",
+        "Koi bhi nahi, dono mein hamesha bada break hota hai"
+      ],
+      "correctIndex": 0,
+      "explanation": "UPS ko 'no-break' ya 'zero transfer time' system kaha jaata hai kyonki iska switchover itna kam hota hai ki load ko practically koi power break mahsoos nahi hota। Option B galat hai kyonki inverter mein noticeable switching delay hota hai; Option C galat hai kyonki dono ka switchover time barabar nahi hota; Option D poori tarah galat hai kyonki UPS specifically kam-se-kam break dene ke liye design kiya jaata hai।"
+    },
+    {
+      "id": "u4_ups_concept_q17",
+      "question": "Ek simple inverter mein mains fail hone par load tak supply pahunchne mein switching delay kis wajah se hota hai?",
+      "options": [
+        "Kyonki inverter mein battery hi nahi hoti",
+        "Kyonki inverter AC ko seedha pass karta hai",
+        "Kyonki mains fail hone ka sensing, phir relay/changeover switch ka operate hona aur battery-inverter path activate hona kuch time (milliseconds se lekar tens of milliseconds) leta hai",
+        "Kyonki inverter frequency 100Hz par kaam karta hai"
+      ],
+      "correctIndex": 2,
+      "explanation": "Simple inverter mein mains fail hone ki sensing, phir relay/changeover switch ka operate hona aur battery-inverter path activate hona kuch samay (milliseconds se lekar tens of milliseconds tak) leta hai, isi wajah se switching delay hota hai। Option A galat hai kyonki inverter mein battery hoti hi hai, Option B galat hai kyonki inverter AC ko seedha pass nahi karta, Option D frequency se is delay ka koi sambandh nahi hai।"
+    },
+    {
+      "id": "u4_ups_concept_q18",
+      "question": "UPS ke 4 basic blocks mein se ek 'static transfer switch/bypass' hai; baaki teen mool blocks kaun-se hain?",
+      "options": [
+        "Voltmeter, ammeter aur fuse",
+        "Rectifier/charger, battery aur inverter section",
+        "Transformer, capacitor bank aur relay",
+        "Servo motor, variac aur brush"
+      ],
+      "correctIndex": 1,
+      "explanation": "UPS ke basic block diagram ke 3 mool blocks rectifier/charger, battery aur inverter section hote hain, jo static transfer switch/bypass ke saath milkar poora system banate hain। Option A, C aur D UPS ke mool functional blocks nahi hain, balki alag-alag components ya voltage stabilizer jaisi devices se sambandhit hain।"
+    },
+    {
+      "id": "u4_ups_concept_q19",
+      "question": "Agar UPS ke andar rectifier/charger block fail ho jaye (lekin battery poori tarah charged ho) to short-term mein kya hoga?",
+      "options": [
+        "Load ko battery se inverter ke through supply milti rahegi, lekin battery recharge nahi hogi aur backup time ke baad supply band ho jayegi",
+        "Load ko turant supply milna band ho jayega",
+        "Inverter section bhi fail ho jayega",
+        "Static transfer switch battery ko charge karne lagega"
+      ],
+      "correctIndex": 0,
+      "explanation": "Agar rectifier/charger fail ho jaaye lekin battery poori tarah charged ho, to load ko inverter ke through battery se supply milti rahegi, lekin battery recharge nahi hogi aur backup time khatam hote hi supply band ho jaayegi। Option B galat hai kyonki battery available hone tak turant supply band nahi hogi, Option C galat hai kyonki inverter section swayं fail nahi hota, Option D galat hai kyonki STS charging nahi karta, yeh charger ka kaam hai।"
+    },
+    {
+      "id": "u4_ups_concept_q20",
+      "question": "Ek UPS ka switchover time 4-6 milliseconds hai jabki ek inverter ka switchover time 15-20 milliseconds hai. Sensitive electronic equipment ke liye kaunsa zyada suitable hai aur kyon?",
+      "options": [
+        "Inverter, kyunki uska switchover time zyada hai",
+        "Dono barabar suitable hain",
+        "Koi bhi nahi, dono ka switchover time bahut zyada hai",
+        "UPS, kyonki uska switchover time bahut kam hai jisse sensitive equipment mein reset/malfunction ki sambhavna kam hoti hai"
+      ],
+      "correctIndex": 3,
+      "explanation": "UPS ka 4-6 ms switchover time, inverter ke 15-20 ms switchover time se kaafi kam hai, isliye sensitive electronic equipment ke liye UPS zyada suitable hai kyonki isse reset/malfunction ki sambhavna kam hoti hai। Option A tathya ko ulta bata raha hai, Option B galat hai kyonki dono ke switchover time mein spasht antar diya gaya hai, Option C galat hai kyonki dono hi practically usable range mein hain, bas UPS behtar hai।"
+    },
+    {
+      "id": "u4_ups_concept_q21",
+      "question": "Ek UPS ke block diagram mein 'DC bus' kis do blocks ke beech common link ka kaam karta hai?",
+      "options": [
+        "Static transfer switch aur bypass switch ke beech",
+        "Sirf load aur mains ke beech",
+        "Rectifier/charger-battery combination aur inverter section ke beech",
+        "Frequency meter aur voltmeter ke beech"
+      ],
+      "correctIndex": 2,
+      "explanation": "UPS ke block diagram mein 'DC bus' rectifier/charger-battery combination aur inverter section ke beech common link ka kaam karta hai, jahan se battery charge hoti hai aur inverter ko DC energy milti hai। Option A, B aur D is DC bus ke asli sthaan/karya se mel nahi khate।"
+    },
+    {
+      "id": "u4_ups_concept_q22",
+      "question": "UPS ki tulna mein inverter mein normal operation ke dauran (mains available hone par) load ko power kaise milti hai?",
+      "options": [
+        "Inverter mein bhi hamesha battery-inverter path se hi milti hai, mains directly involve nahi hoti",
+        "Zyadatar simple inverter systems mein mains directly (ya changeover relay ke through) load ko chalati hai aur battery sirf mains fail hone par kaam mein aati hai",
+        "Load ko kabhi bhi power nahi milti",
+        "Sirf DC power milti hai"
+      ],
+      "correctIndex": 1,
+      "explanation": "Zyadatar simple inverter systems mein normal condition mein mains directly (ya changeover relay ke through) load ko chalati hai, aur battery sirf mains fail hone par kaam mein aati hai। Option A UPS jaisi working describe karta hai, inverter ki nahi; Option C aur D spasht roop se galat hain kyonki normal operation mein load ko power milti hi hai aur wo AC hi hoti hai।"
+    },
+    {
+      "id": "u4_ups_concept_q23",
+      "question": "UPS applications mein telecom exchanges aur networking equipment ko UPS se jodne ka mukhya karan kya hai?",
+      "options": [
+        "Communication link continuous bani rahe, isliye power interruption se bachne ke liye regulated aur uninterrupted supply chahiye",
+        "UPS current ko kam kar deta hai",
+        "UPS frequency ko double kar deta hai",
+        "UPS sirf lighting load ke liye upyogi hai"
+      ],
+      "correctIndex": 0,
+      "explanation": "Telecom exchanges aur networking equipment ko UPS se jodne ka mukhya karan yeh hai ki communication link continuous bani rahe, isliye power interruption se bachne ke liye regulated aur uninterrupted supply zaroori hoti hai। Option B, C aur D UPS ke is application ke asli karan se mel nahi khate।"
+    },
+    {
+      "id": "u4_ups_concept_q24",
+      "question": "Ek UPS system mein 'inverter section' ka output waveform kaisa hota hai jo load ko diya jaata hai?",
+      "options": [
+        "Pure DC voltage",
+        "Sirf pulsating DC",
+        "Koi output nahi, sirf sensing signal",
+        "Regulated AC voltage (sine ya modified sine wave), jo mains ke jaisa hi appliances chala sake"
+      ],
+      "correctIndex": 3,
+      "explanation": "Inverter section ka output regulated AC voltage (sine ya modified sine wave) hota hai jo mains supply jaisa hi appliances ko chala sake। Option A aur B galat hain kyonki output DC ya pulsating DC nahi hota, Option C galat hai kyonki inverter section actual power output deta hai, sirf sensing signal nahi।"
+    },
+    {
+      "id": "u4_ups_concept_q25",
+      "question": "UPS aur inverter ki basic cost/complexity ki tulna mein UPS aam taur par mehenga kyon hota hai?",
+      "options": [
+        "Kyonki UPS mein battery nahi hoti",
+        "Kyonki UPS ka size bada hota hai",
+        "Kyonki UPS mein fast-sensing electronics, near-zero switchover technology aur zyada sophisticated control circuit lagta hai jo simple inverter mein nahi hota",
+        "Kyonki UPS sirf DC load ke liye banaya jaata hai"
+      ],
+      "correctIndex": 2,
+      "explanation": "UPS aam taur par isliye mehenga hota hai kyonki isme fast-sensing electronics, near-zero switchover technology aur zyada sophisticated control circuitry lagti hai, jo simple inverter mein nahi hoti। Option A galat hai kyonki UPS mein bhi battery hoti hai, Option B size mool karan nahi hai, Option D galat hai kyonki UPS AC load ke liye banaya jaata hai।"
+    },
+    {
+      "id": "u4_ups_concept_q26",
+      "question": "Agar ek UPS ka static transfer switch fault ho jaye, to sabse sambhavit samasya kya hogi?",
+      "options": [
+        "Battery ki capacity badh jayegi",
+        "Load ko inverter aur bypass supply ke beech sahi tarike se switch na karne ke karan power interruption ya damage ho sakta hai",
+        "Rectifier permanently band ho jayega",
+        "Mains voltage automatically double ho jayega"
+      ],
+      "correctIndex": 1,
+      "explanation": "Agar static transfer switch fault ho jaaye, to load ko inverter aur bypass supply ke beech sahi tarike se switch na karne ke karan power interruption ya connected equipment ko damage hone ki sambhavna badh jaati hai। Option A, C aur D is fault ke logical parinaam se mel nahi khate।"
+    },
+    {
+      "id": "u4_ups_concept_q27",
+      "question": "UPS system ke basic block diagram ko sahi kram mein kaise darshaya jaata hai?",
+      "options": [
+        "Load -> Battery -> Mains -> Inverter",
+        "Inverter -> Rectifier -> Mains -> Battery",
+        "Battery -> Mains -> Load -> Rectifier",
+        "Mains input -> Rectifier/Charger -> Battery (DC storage) -> Inverter -> Static transfer switch -> Load"
+      ],
+      "correctIndex": 3,
+      "explanation": "UPS ke basic block diagram ka sahi kram hota hai — Mains input se Rectifier/Charger, phir Battery (DC storage), uske baad Inverter aur antim mein Static transfer switch se hokar Load tak supply pahunchti hai। Option A, B aur C is logical kram ko galat tarike se darshate hain jo actual power flow se mel nahi khate।"
+    },
+    {
+      "id": "u4_ups_concept_q28",
+      "question": "Server room mein UPS lagate samay yeh dhyan diya jata hai ki UPS 'continuous regulated' power de. Iska matlab kya hai?",
+      "options": [
+        "Output voltage aur frequency dono stable rahen chahe mains mein fluctuation ya interruption ho",
+        "Sirf voltage high rakha jaye",
+        "Output sirf battery se milta rahe hamesha",
+        "Frequency har second badalti rahe"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Continuous regulated' power ka matlab hai ki output voltage aur frequency dono stable rahen, chahe mains mein fluctuation ho ya poori tarah interruption ho jaaye। Option B sirf voltage high rakhne tak seemit hai jo galat hai, Option C galat hai kyonki normal condition mein output mains-based hota hai battery-based nahi, Option D frequency ka baar-baar badalna to instability ka lakshan hai, regulation ka nahi।"
+    },
+    {
+      "id": "u4_ups_concept_q29",
+      "question": "UPS aur inverter dono hi battery-based backup solutions hain, phir bhi UPS ko 'critical load protection device' kyon mana jata hai jabki inverter ko 'general backup device'?",
+      "options": [
+        "Kyonki inverter battery use nahi karta",
+        "Kyonki UPS sirf ghar ke liye banaya jaata hai",
+        "Kyonki UPS near-zero switchover ke saath sensitive/critical loads (computers, medical, telecom) ko surakshit rakhta hai, jabki inverter ghar ke fan/light jaise general loads ke liye paryapt hai jahan chhoti si delay chal jaati hai",
+        "Kyonki inverter mein rectifier nahi hota"
+      ],
+      "correctIndex": 2,
+      "explanation": "UPS ko 'critical load protection device' isliye maana jaata hai kyonki uska near-zero switchover sensitive/critical loads (computers, medical equipment, telecom) ko surakshit rakhta hai, jabki inverter ghar ke fan/light jaise general loads ke liye paryapt hai jahan chhoti si delay chal jaati hai। Option A, B aur D in dono devices ke asli antar ko sahi tarike se nahi darshate।"
+    },
+    {
+      "id": "u4_ups_concept_q30",
+      "question": "Ek chhota business apne billing computers ke liye equipment khareed raha hai jisme power cut ke dauran bhi bina rukawat billing software chalta rahe. Unhe UPS ya inverter mein se kya lena chahiye aur kyon?",
+      "options": [
+        "Inverter lena chahiye kyonki wo sasta hota hai aur kaam bhi wahi karta hai",
+        "UPS lena chahiye kyonki uska switchover time itna kam hota hai ki computer band ya restart nahi hoga, jisse billing data safe rahega",
+        "Dono mein se koi bhi le sakte hain, koi fark nahi padta",
+        "Sirf battery kharidni chahiye, UPS ya inverter ki zaroorat nahi"
+      ],
+      "correctIndex": 1,
+      "explanation": "Is business ko UPS lena chahiye kyonki uska switchover time itna kam hota hai ki computer band ya restart nahi hoga, jisse chal raha billing software aur data surakshit rahega। Option A galat hai kyonki inverter mein switching delay ke karan computer restart ho sakta hai jo business ke liye nuksaandayak hai, Option C aur D is zarurat ke liye upyukt samadhan nahi bataate।"
+    }
+  ]
+}

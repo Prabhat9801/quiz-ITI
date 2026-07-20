@@ -1,0 +1,218 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "metals_nonmetals",
+  "topicName": "Metals and Non-metals",
+  "questions": [
+    {
+      "id": "chem_metals_nonmetals_q1",
+      "question": "धातु (metal) को हथौड़े से पीटकर पतली chadar (sheet) में बदलने के गुण को क्या कहते हैं?",
+      "options": ["Malleability", "Ductility", "Conductivity", "Brittleness"],
+      "correctIndex": 0,
+      "explanation": "धातु को पीटकर पतली sheet में ढालने का गुण Malleability कहलाता है, जैसे Gold (Au) और Silver (Ag) की foil बनाना। Ductility तार खींचने का गुण है, Conductivity ऊष्मा/विद्युत चालन से संबंधित है, और Brittleness तो non-metals का गुण है जो टूटने की प्रवृत्ति दर्शाता है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q2",
+      "question": "धातु को खींचकर पतले तार (wire) में बदलने के गुण को क्या कहते हैं?",
+      "options": ["Malleability", "Ductility", "Sonority", "Conductivity"],
+      "correctIndex": 1,
+      "explanation": "तार में खींचे जाने का गुण Ductility कहलाता है, जैसे Copper (Cu) से विद्युत तार बनाए जाते हैं। Malleability sheet बनाने का गुण है, Sonority टकराने पर आवाज़ से संबंधित है, और Conductivity ऊष्मा या विद्युत के प्रवाह से जुड़ा गुण है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q3",
+      "question": "निम्न में से कौन-सा metal सबसे अधिक malleable और ductile माना जाता है?",
+      "options": ["Iron (Fe)", "Zinc (Zn)", "Gold (Au)", "Sulphur (S)"],
+      "correctIndex": 2,
+      "explanation": "Gold (Au) इतना malleable और ductile है कि इसे बहुत पतली foil और महीन तार में बदला जा सकता है। Iron और Zinc इतने malleable/ductile नहीं हैं, और Sulphur तो एक brittle non-metal है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q4",
+      "question": "विद्युत (electricity) का सबसे अच्छा conductor कौन-सा metal माना जाता है?",
+      "options": ["Copper (Cu)", "Aluminium (Al)", "Iron (Fe)", "Silver (Ag)"],
+      "correctIndex": 3,
+      "explanation": "Silver (Ag) विद्युत का सबसे अच्छा conductor है, हालांकि महंगा होने के कारण wiring में सामान्यतः Copper (Cu) का उपयोग होता है। Aluminium और Iron, Silver की तुलना में कम conductive होते हैं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q5",
+      "question": "स्कूल की घंटी (bell) तथा musical instruments बनाने में metal के किस गुण का उपयोग होता है, जिसके कारण टकराने पर तेज़ और लंबी आवाज़ उत्पन्न होती है?",
+      "options": ["Sonority", "Lustre", "Malleability", "Ductility"],
+      "correctIndex": 0,
+      "explanation": "Metals में टकराने पर विशिष्ट और लंबी आवाज़ उत्पन्न करने का गुण Sonority कहलाता है, इसीलिए bells धातु से बनती हैं। Lustre चमक से, Malleability sheet बनाने से, और Ductility तार खींचने से संबंधित है, आवाज़ से नहीं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q6",
+      "question": "Non-metals सामान्यतः हथौड़े से पीटने पर टूट जाते हैं, इस गुण को क्या कहते हैं?",
+      "options": ["Malleability", "Brittleness", "Ductility", "Conductivity"],
+      "correctIndex": 1,
+      "explanation": "अधिकांश non-metals brittle होते हैं अर्थात पीटने पर चूर्ण या टुकड़ों में टूट जाते हैं, जैसे Sulphur (S)। Malleability और Ductility metals के गुण हैं, और Conductivity विद्युत/ऊष्मा प्रवाह से संबंधित है, टूटने से नहीं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q7",
+      "question": "निम्न में से कौन-सा non-metal होते हुए भी विद्युत का अच्छा conductor है?",
+      "options": ["Sulphur (S)", "Phosphorus (P)", "Graphite (carbon का allotrope)", "Iodine (I2)"],
+      "correctIndex": 2,
+      "explanation": "Graphite, carbon का एक allotrope है और non-metal होते हुए भी अपनी विशेष संरचना (free electrons) के कारण विद्युत का सुचालक है, इसीलिए इसे electrodes में उपयोग किया जाता है। Sulphur, Phosphorus और Iodine विद्युत के कुचालक (insulator) होते हैं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q8",
+      "question": "कौन-सा non-metal होते हुए भी चमकदार (lustrous) दिखाई देता है?",
+      "options": ["Sulphur (S)", "Carbon (C)", "Nitrogen (N2)", "Iodine (I2)"],
+      "correctIndex": 3,
+      "explanation": "Iodine (I2) एक अपवाद है जो non-metal होते हुए भी चमकदार (lustrous) क्रिस्टल के रूप में पाया जाता है। Sulphur पीला व dull, Carbon (graphite को छोड़कर) dull, और Nitrogen एक रंगहीन gas है, इनमें lustre नहीं होता।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q9",
+      "question": "Sodium (Na) के छोटे टुकड़े को पानी में डालने पर क्या observe होता है?",
+      "options": ["तेज़ी से क्रिया होकर NaOH और Hydrogen (H2) gas बनती है तथा उष्मा (heat) निकलती है", "कोई क्रिया नहीं होती", "बहुत धीमी गति से केवल H2 gas निकलती है", "केवल NaOH बनता है, कोई gas नहीं निकलती"],
+      "correctIndex": 0,
+      "explanation": "Na अत्यधिक reactive metal है, यह पानी से तेज़ी से क्रिया करके NaOH और H2 gas बनाता है और इतनी उष्मा निकलती है कि H2 कभी-कभी जल भी उठती है। शेष विकल्प इस अभिक्रिया की तीव्रता और उत्पादों को गलत तरीके से दर्शाते हैं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q10",
+      "question": "Magnesium (Mg) ठंडे पानी की तुलना में किसके साथ अधिक तेज़ी से क्रिया करता है?",
+      "options": ["ठंडे पानी के साथ ही सबसे तेज़ क्रिया करता है", "गर्म steam के साथ क्रिया करके MgO और Hydrogen (H2) बनाता है", "यह पानी या steam किसी से भी क्रिया नहीं करता", "यह केवल base के साथ क्रिया करता है, पानी से नहीं"],
+      "correctIndex": 1,
+      "explanation": "Mg ठंडे पानी से बहुत धीमी क्रिया करता है परंतु गर्म steam के साथ तेज़ी से क्रिया करके MgO और H2 gas बनाता है। पहला विकल्प तथ्यात्मक रूप से गलत है, और Mg पानी/steam दोनों से किसी हद तक क्रिया करता है इसलिए तीसरा व चौथा विकल्प भी गलत हैं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q11",
+      "question": "अधिकांश reactive metals dilute acid (जैसे dilute HCl) के साथ क्रिया करने पर क्या बनाते हैं?",
+      "options": ["Metal oxide और पानी", "केवल Hydrogen (H2) gas, कोई salt नहीं", "Salt और Hydrogen (H2) gas", "Metal hydroxide और oxygen"],
+      "correctIndex": 2,
+      "explanation": "Metal + dilute acid → Salt + H2 gas, जैसे Zn + HCl → ZnCl2 + H2। Metal oxide व पानी base की अभिक्रिया से संबंधित है, और acid से क्रिया में salt अवश्य बनता है इसलिए दूसरा विकल्प अधूरा है, चौथा विकल्प भी गलत उत्पाद दर्शाता है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q12",
+      "question": "अधिकांश metals, oxygen के साथ क्रिया करके सामान्यतः किस प्रकार का oxide बनाते हैं?",
+      "options": ["Acidic oxide", "Neutral oxide", "हमेशा Amphoteric oxide", "Basic oxide"],
+      "correctIndex": 3,
+      "explanation": "Metals oxygen से क्रिया करके सामान्यतः Basic oxide बनाते हैं, जैसे Na2O पानी में घुलकर क्षारीय (basic) घोल बनाता है। Acidic oxide non-metals बनाते हैं, Neutral oxide अपवाद स्वरूप कुछ ही (जैसे CO) बनते हैं, और सभी metal oxides amphoteric नहीं होते, केवल कुछ जैसे Al2O3, ZnO ही amphoteric होते हैं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q13",
+      "question": "Sulphur (S), oxygen में जलकर Sulphur dioxide (SO2) बनाता है। यह oxide पानी में घुलकर कैसा घोल बनाता है?",
+      "options": ["Acidic (अम्लीय)", "Basic (क्षारीय)", "Neutral (उदासीन)", "Amphoteric"],
+      "correctIndex": 0,
+      "explanation": "Non-metal oxides सामान्यतः acidic होते हैं; SO2 पानी में घुलकर H2SO3 (sulphurous acid) बनाता है जो अम्लीय है। Basic और Neutral गलत हैं क्योंकि non-metal oxide क्षारीय या उदासीन नहीं होता, और Amphoteric गुण केवल कुछ विशेष oxides (जैसे Al2O3) में मिलता है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q14",
+      "question": "Aluminium oxide (Al2O3) को amphoteric oxide क्यों कहा जाता है?",
+      "options": ["क्योंकि यह केवल acid से क्रिया करता है", "क्योंकि यह acid और base दोनों से क्रिया करके salt और पानी बनाता है", "क्योंकि यह केवल base से क्रिया करता है", "क्योंकि यह पानी में बिल्कुल नहीं घुलता, इसलिए इसे यह नाम मिला"],
+      "correctIndex": 1,
+      "explanation": "Al2O3 acid से क्रिया करके salt व पानी बनाता है (जैसे base की तरह व्यवहार) और साथ ही base से भी क्रिया करके salt व पानी बनाता है (जैसे acid की तरह व्यवहार), इसीलिए यह amphoteric है। केवल acid या केवल base से क्रिया करना amphoteric व्यवहार को पूरी तरह नहीं दर्शाता, और पानी में घुलनशीलता का इससे सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q15",
+      "question": "Reactivity series में सबसे ऊपर (सबसे अधिक reactive) कौन-सा metal आता है?",
+      "options": ["Copper (Cu)", "Iron (Fe)", "Potassium (K)", "Gold (Au)"],
+      "correctIndex": 2,
+      "explanation": "Potassium (K) reactivity series में सबसे ऊपर आता है और अत्यंत reactive होता है, यह पानी से भी विस्फोटक रूप से क्रिया करता है। Copper और Iron मध्यम reactive हैं, जबकि Gold (Au) सबसे कम reactive metals में से एक है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q16",
+      "question": "जब एक साफ Iron (Fe) की छड़ को नीले रंग के Copper Sulphate (CuSO4) के घोल में डाला जाता है, तो क्या observe होता है?",
+      "options": ["कोई परिवर्तन नहीं होता", "Iron घुलकर पूरी तरह गायब हो जाता है, कोई deposit नहीं बनता", "CuSO4, Fe से अधिक reactive होने के कारण कुछ नहीं होता", "घोल का रंग नीले से हल्का हरा हो जाता है और छड़ पर लाल-भूरे Copper (Cu) की परत जमा होती है"],
+      "correctIndex": 3,
+      "explanation": "Fe, Cu से अधिक reactive होने के कारण CuSO4 से Cu को displace कर देता है (Fe + CuSO4 → FeSO4 + Cu), जिससे घोल हल्का हरा हो जाता है और Cu जमा होता है। पहले तीन विकल्प इस displacement reaction के तथ्यों के विपरीत हैं क्योंकि Fe वास्तव में Cu से अधिक reactive है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q17",
+      "question": "निम्न में से कौन-से metals dilute acids से सामान्यतः क्रिया नहीं करते क्योंकि ये reactivity series में सबसे नीचे आते हैं?",
+      "options": ["Copper (Cu) और Silver (Ag)", "Zinc (Zn) और Iron (Fe)", "Sodium (Na) और Potassium (K)", "Magnesium (Mg) और Aluminium (Al)"],
+      "correctIndex": 0,
+      "explanation": "Cu और Ag reactivity series में सबसे नीचे होने के कारण dilute acids से Hydrogen gas मुक्त नहीं कर पाते। Zn, Fe, Mg, Al और Na, K तो काफी reactive metals हैं और dilute acids से आसानी से क्रिया कर H2 gas बनाते हैं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q18",
+      "question": "Ionic bond बनने के दौरान metal atom सामान्यतः क्या करता है?",
+      "options": ["Electron ग्रहण (gain) करता है", "Electron त्यागकर (लोसकर) धनायन (cation) बनाता है", "Electron को non-metal के साथ साझा (share) करता है", "कोई electron transfer नहीं होता, केवल electrostatic attraction होता है"],
+      "correctIndex": 1,
+      "explanation": "Metal atoms में valence electrons कम होते हैं, इसलिए वे electron त्यागकर स्थायी octet प्राप्त करते हैं और cation बनते हैं, जबकि non-metal electron ग्रहण करके anion बनता है। Electron ग्रहण करना non-metal का काम है, sharing covalent bond में होती है, और electron transfer के बिना ionic bond नहीं बनता।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q19",
+      "question": "NaCl बनने की प्रक्रिया में Sodium (Na) atom, Chlorine (Cl) atom को कितने electron स्थानांतरित करता है?",
+      "options": ["2 electrons", "0 electron, केवल sharing होती है", "1 electron", "7 electrons"],
+      "correctIndex": 2,
+      "explanation": "Na (2,8,1) अपना 1 बाहरी electron Cl (2,8,7) को देकर Na+ और Cl- बनाता है, जिससे दोनों का octet पूरा हो जाता है, इसीलिए 1 electron transfer होता है। 2 और 7 electrons transfer से octet पूरा नहीं होगा, और यह sharing नहीं बल्कि transfer आधारित ionic bond है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q20",
+      "question": "Iron में moisture और oxygen की उपस्थिति में जंग (rust, Fe2O3.xH2O) लगने की प्रक्रिया को क्या कहते हैं?",
+      "options": ["Ionization", "Sublimation", "Neutralization", "Corrosion"],
+      "correctIndex": 3,
+      "explanation": "Metal की सतह का moisture व oxygen जैसे environmental कारकों के कारण धीरे-धीरे क्षय होना Corrosion कहलाता है, Iron में इसे rusting कहते हैं। Ionization ions बनने की, Sublimation ठोस से सीधे gas बनने की, और Neutralization acid-base अभिक्रिया की प्रक्रिया है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q21",
+      "question": "Iron में जंग (rust) लगने के लिए कौन-सी दो चीज़ें आवश्यक रूप से चाहिए?",
+      "options": ["Moisture और Oxygen दोनों", "केवल तेज़ sunlight", "केवल उच्च तापमान (high temperature)", "केवल कोई acid"],
+      "correctIndex": 0,
+      "explanation": "Rusting के लिए Iron की सतह पर moisture (नमी) और oxygen दोनों का एक साथ होना आवश्यक है, तभी Fe2O3.xH2O बनता है। केवल sunlight, केवल high temperature या केवल acid से rusting नहीं होती, हालांकि acid जैसी परिस्थितियाँ corrosion को तेज़ जरूर कर सकती हैं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q22",
+      "question": "Corrosion को रोकने के तरीकों में से कौन-सी विधि वास्तव में उपयुक्त नहीं है?",
+      "options": ["सतह पर Painting करना", "Metal की सतह को हमेशा नमी और oxygen के सीधे संपर्क में गीला रखना", "Galvanizing (Zinc की परत चढ़ाना) करना", "Alloy बनाना, जैसे Stainless steel"],
+      "correctIndex": 1,
+      "explanation": "सतह को लगातार नमी और oxygen के संपर्क में रखना corrosion को बढ़ावा देता है, इसलिए यह उपयुक्त प्रतिरक्षण विधि नहीं है। Painting, Galvanizing और उपयुक्त Alloy बनाना, ये सभी metal की सतह को moisture-oxygen के सीधे संपर्क से बचाकर corrosion रोकते हैं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q23",
+      "question": "Iron की सतह पर Zinc (Zn) की पतली परत चढ़ाकर उसे corrosion से बचाने की प्रक्रिया को क्या कहते हैं?",
+      "options": ["Anodizing", "Electroplating with copper", "Galvanization", "Alloying"],
+      "correctIndex": 2,
+      "explanation": "Iron पर Zn की परत चढ़ाने की प्रक्रिया Galvanization कहलाती है, जो पाइप और छतों की चादरों में rusting रोकती है। Anodizing Aluminium पर लागू होती है, Electroplating with copper भिन्न metal की परत है, और Alloying तो धातुओं का मिश्रण बनाना है, कोई coating नहीं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q24",
+      "question": "Aluminium (Al) की सतह पर विद्युत-रासायनिक विधि से Al2O3 की मोटी सुरक्षा-परत चढ़ाने की प्रक्रिया को क्या कहते हैं?",
+      "options": ["Galvanization", "Corrosion", "Amalgamation", "Anodizing"],
+      "correctIndex": 3,
+      "explanation": "Al की सतह पर मोटी Al2O3 परत electrochemically चढ़ाने की प्रक्रिया Anodizing कहलाती है, जो Aluminium को अतिरिक्त corrosion-resistance देती है। Galvanization Zinc coating है, Corrosion तो क्षय की प्रक्रिया है खुद बचाव की नहीं, और Amalgamation metal का Mercury के साथ मिश्रण बनाना है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q25",
+      "question": "Copper (Cu) का उपयोग विद्युत तारों (electrical wires) में मुख्यतः किस गुण के कारण किया जाता है?",
+      "options": ["इसकी उत्तम electrical conductivity के कारण", "इसके उच्च melting point के कारण", "इसकी अधिक brittleness के कारण", "इसकी कम density के कारण"],
+      "correctIndex": 0,
+      "explanation": "Cu की उत्तम electrical conductivity और उचित cost इसे wiring के लिए आदर्श बनाती है। Melting point wiring के चयन का मुख्य कारण नहीं है, Cu brittle नहीं बल्कि ductile होता है, और इसकी density wiring के चयन का प्रमुख कारण नहीं है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q26",
+      "question": "Aluminium (Al) का उपयोग aircraft body तथा बर्तन बनाने में मुख्यतः किस गुण के कारण किया जाता है?",
+      "options": ["इसकी अधिक density के कारण", "इसके कम weight (हल्कापन) तथा अच्छे corrosion resistance के कारण", "इसके चुंबकीय (magnetic) गुण के कारण", "इसके कम melting point के कारण"],
+      "correctIndex": 1,
+      "explanation": "Al हल्का होने के साथ-साथ अपनी सतह पर Al2O3 की सुरक्षा-परत बनाकर corrosion resistant भी होता है, इसलिए यह aircraft व बर्तनों के लिए उपयुक्त है। Al वास्तव में कम density वाला metal है (ज्यादा नहीं), यह magnetic नहीं है, और melting point इसके चयन का मुख्य कारण नहीं है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q27",
+      "question": "निर्माण कार्य (construction) तथा tools बनाने में Iron (Fe) का व्यापक उपयोग मुख्यतः किस कारण होता है?",
+      "options": ["यह बहुत महंगा (expensive) है", "यह विद्युत का कुचालक (insulator) है", "यह मजबूत (strong) और अपेक्षाकृत सस्ता है", "यह बिना किसी treatment के पूर्णतः corrosion-resistant होता है"],
+      "correctIndex": 2,
+      "explanation": "Iron मजबूत, आसानी से उपलब्ध और सस्ता होने के कारण construction व tools में व्यापक रूप से उपयोग होता है। यह वास्तव में सस्ता है महंगा नहीं, यह विद्युत का सुचालक है कुचालक नहीं, और बिना treatment (जैसे galvanizing) के यह आसानी से जंग खा जाता है।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q28",
+      "question": "Nitrogen (N2) gas का सबसे बड़ा औद्योगिक उपयोग किसमें होता है?",
+      "options": ["Electrical wiring में", "Jewellery बनाने में", "Corrosion रोकने की coating में", "Fertilizers (जैसे ammonia और urea) बनाने में"],
+      "correctIndex": 3,
+      "explanation": "Nitrogen (N2) का उपयोग Haber process द्वारा ammonia बनाने में होता है जिससे fertilizers जैसे urea तैयार होते हैं। Electrical wiring और coating के लिए metals का उपयोग होता है, और Jewellery के लिए Gold, Silver जैसे metals प्रयुक्त होते हैं, N2 नहीं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q29",
+      "question": "Aluminium (Al) जब NaOH जैसे strong base के साथ क्रिया करता है, तो क्या बनता है?",
+      "options": ["Sodium aluminate और Hydrogen (H2) gas बनता है", "केवल Al2O3 बनता है, कोई gas नहीं निकलती", "कोई क्रिया नहीं होती क्योंकि metals base से क्रिया नहीं करते", "AlCl3 और पानी बनता है"],
+      "correctIndex": 0,
+      "explanation": "Al एक amphoteric metal है, यह base से भी क्रिया करता है: 2Al + 2NaOH + 2H2O → 2NaAlO2 + 3H2, अर्थात sodium aluminate और H2 gas बनते हैं। Al2O3 अकेला नहीं बनता, यह कथन गलत है कि metals base से क्रिया नहीं करते, और AlCl3 तो HCl से क्रिया का उत्पाद होता, NaOH से नहीं।"
+    },
+    {
+      "id": "chem_metals_nonmetals_q30",
+      "question": "Ionic compounds (जैसे NaCl) सामान्यतः किस अवस्था में विद्युत का चालन (conduct electricity) करते हैं?",
+      "options": ["केवल ठोस (solid) अवस्था में", "Molten अवस्था या aqueous solution में", "केवल gas अवस्था में", "वे किसी भी अवस्था में कभी conduct नहीं करते"],
+      "correctIndex": 1,
+      "explanation": "Ionic compounds ठोस अवस्था में ions जकड़े होने के कारण conduct नहीं करते, परंतु molten अवस्था या पानी में घुलने पर ions स्वतंत्र होकर विद्युत का चालन करते हैं। ठोस अवस्था में यह संभव नहीं, ये gas अवस्था में सामान्यतः उपस्थित नहीं होते, और यह कहना गलत है कि वे कभी conduct नहीं करते।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "chopper_circuits",
+  "topicName": "Chopper Circuits",
+  "questions": [
+    {
+      "id": "u4_chopper_circuits_q1",
+      "question": "एक Chopper circuit मूल रूप से क्या कार्य करता है?",
+      "options": [
+        "एक fixed DC input voltage को switching operation द्वारा एक variable/controlled DC output voltage में बदलता है",
+        "AC supply को DC में बदलता है",
+        "DC supply को AC में बदलता है",
+        "केवल voltage को measure करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chopper एक static power electronic device है जो एक high-speed switch (transistor/MOSFET/IGBT/thyristor) की on-off switching से fixed DC को अपेक्षित variable DC output में बदलता है। Option B rectifier का कार्य है, C inverter का कार्य है, और D मापन यंत्र (voltmeter) का काम है, chopper का नहीं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q2",
+      "question": "Chopper को कभी-कभी 'DC to DC converter' भी कहा जाता है क्योंकि यह किस प्रकार से बिजली शुल्क को नियंत्रित करता है?",
+      "options": [
+        "एक rectifier की तरह diode से AC को rectify करके",
+        "एक switching device को बार-बार on-off करके load को supply से जोड़ने-अलग करने के समय का अनुपात नियंत्रित करके",
+        "केवल resistance जोड़कर voltage drop करके",
+        "Transformer के turns ratio बदलकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Chopper switch को periodically on-off करता है, जिससे load को supply से जुड़े रहने का समय (Ton) और अलग रहने का समय (Toff) नियंत्रित होकर average output voltage control होता है। Option A rectifier की क्रिया है, C rheostatic control है जिसमें power loss ज्यादा होता है, D transformer आधारित control DC में लागू नहीं होता।"
+    },
+    {
+      "id": "u4_chopper_circuits_q3",
+      "question": "Chopper circuit में 'Duty cycle' (D) को कैसे परिभाषित किया जाता है?",
+      "options": [
+        "D = Toff / Ton",
+        "D = Ton / (Ton + Toff), जहाँ Ton switch के चालू रहने का समय और Toff बंद रहने का समय है",
+        "D = Output voltage / Frequency",
+        "D = केवल switching frequency"
+      ],
+      "correctIndex": 1,
+      "explanation": "Duty cycle switch के कुल समय-अवधि (T = Ton + Toff) में से चालू (Ton) रहने के समय के अनुपात को दर्शाता है, अर्थात D = Ton/T, जिसकी value 0 से 1 के बीच होती है। Option A उलटा अनुपात है, C और D duty cycle की सही परिभाषा नहीं देते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q4",
+      "question": "एक Step-down (Buck) chopper में output voltage और input voltage के बीच संबंध क्या होता है?",
+      "options": [
+        "Vo = Vin / (1 - D)",
+        "Vo, Vin से स्वतंत्र होता है",
+        "Vo हमेशा Vin से अधिक रहता है",
+        "Vo = D × Vin, अर्थात output हमेशा input से कम या बराबर रहता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Buck chopper में average output voltage, duty cycle के सीधे अनुपात में होता है: Vo = D × Vin। चूँकि D की अधिकतम value 1 होती है, इसलिए Vo, Vin से अधिक नहीं हो सकता। Option A boost chopper का सूत्र है, C बिल्कुल विपरीत सही है, D गलत है क्योंकि Vo सीधे D पर निर्भर करता है।"
+    },
+    {
+      "id": "u4_chopper_circuits_q5",
+      "question": "एक Step-up (Boost) chopper में output voltage का सूत्र क्या होता है?",
+      "options": [
+        "Vo = D × Vin",
+        "Vo = Vin × (1 - D)",
+        "Vo = Vin / (1 - D), जहाँ D, duty cycle है (0 ≤ D < 1)",
+        "Vo = Vin + D"
+      ],
+      "correctIndex": 2,
+      "explanation": "Boost chopper में inductor Ton के दौरान energy store करता है और Toff के दौरान उसे उच्च voltage पर load को देता है, जिससे Vo = Vin/(1-D) प्राप्त होता है, जो हमेशा Vin से अधिक या बराबर रहता है। Option A buck chopper का सूत्र है, B और D सही सूत्र नहीं हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q6",
+      "question": "एक Buck chopper को 220V DC input दिया गया है और duty cycle 0.4 रखा गया है। Output voltage लगभग कितना होगा?",
+      "options": [
+        "550 V",
+        "220 V",
+        "88 V",
+        "132 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck chopper के लिए Vo = D × Vin = 0.4 × 220 = 88 V होता है। Option A boost सूत्र (Vin/(1-D)) से मिलता-जुलता गलत मान है, C input voltage है जो output नहीं हो सकता (D<1 के कारण output कम होगा), D गणना से मेल नहीं खाता।"
+    },
+    {
+      "id": "u4_chopper_circuits_q7",
+      "question": "एक Boost chopper में input voltage 100V है और duty cycle 0.5 है। Output voltage कितना होगा?",
+      "options": [
+        "50 V",
+        "150 V",
+        "200 V",
+        "100 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "Boost chopper में Vo = Vin/(1-D) = 100/(1-0.5) = 100/0.5 = 200 V होता है। Option A buck सूत्र से मिलता है, B और D सही गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q8",
+      "question": "एक Inverting (Buck-Boost) chopper की मुख्य विशेषता क्या है?",
+      "options": [
+        "यह output की polarity को input के समान रखते हुए केवल magnitude बढ़ाता है",
+        "यह output voltage की polarity input की तुलना में उलट (reverse) देता है और magnitude को duty cycle के अनुसार input से कम या अधिक दोनों बनाया जा सकता है",
+        "यह केवल AC output देता है",
+        "इसमें कोई switching device नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buck-boost chopper में output की polarity input से उलटी हो जाती है और duty cycle के अनुसार Vo, Vin से कम भी हो सकता है और अधिक भी (Vo = D×Vin/(1-D)), इसलिए यह अत्यंत versatile होता है। Option A और C गलत विशेषताएँ बताते हैं, D स्पष्ट गलत है क्योंकि switching device अनिवार्य है।"
+    },
+    {
+      "id": "u4_chopper_circuits_q9",
+      "question": "Buck-boost chopper में output voltage का magnitude निकालने का सूत्र क्या होता है?",
+      "options": [
+        "Vo = Vin × D",
+        "Vo = Vin / D",
+        "Vo = (D × Vin) / (1 - D)",
+        "Vo = Vin - D"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck-boost chopper में inductor Ton के दौरान charge होता है और Toff में उलटी polarity से discharge होता है, जिससे Vo का magnitude = (D × Vin)/(1-D) प्राप्त होता है। जब D < 0.5 हो तो output, input से कम रहता है और D > 0.5 पर अधिक हो जाता है। Option A, B, D गलत सूत्र हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q10",
+      "question": "एक Buck-boost chopper में Vin = 60V और D = 0.6 है। Output voltage का magnitude लगभग कितना होगा?",
+      "options": [
+        "36 V",
+        "60 V",
+        "24 V",
+        "90 V"
+      ],
+      "correctIndex": 3,
+      "explanation": "Vo = (D × Vin)/(1-D) = (0.6 × 60)/(1-0.6) = 36/0.4 = 90 V होता है। Option A केवल D×Vin (buck जैसा) है, C और D सही सूत्र लगाने पर नहीं मिलते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q11",
+      "question": "Step-down chopper में जब switch 'ON' होता है, तब क्या होता है?",
+      "options": [
+        "Supply पूरी तरह disconnect हो जाती है",
+        "Supply directly inductor के माध्यम से load से जुड़ जाती है और inductor में current बढ़ता (energy store होता) है",
+        "केवल freewheeling diode conduct करता है",
+        "Output शून्य हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buck chopper में switch ON रहने पर supply, series inductor से होकर सीधे load को voltage देती है और inductor current linearly बढ़ता है (energy store होती है)। Switch OFF होने पर freewheeling diode conduct करता है (Option C उस स्थिति का वर्णन है), A और D गलत हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q12",
+      "question": "Step-down chopper में switch 'OFF' होने पर inductor का current किस path से प्रवाहित होता रहता है?",
+      "options": [
+        "Freewheeling diode के माध्यम से बंद loop में, जिससे load current लगातार बना रहे",
+        "Current तुरंत शून्य हो जाता है",
+        "Current supply की ओर वापस चला जाता है",
+        "Current केवल capacitor में जमा होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Switch OFF होने पर inductor अपने stored energy के कारण current को बनाए रखने की कोशिश करता है, और यह current freewheeling diode के माध्यम से load के साथ बंद loop बनाकर प्रवाहित होता रहता है, जिससे current continuous रहता है। Option B, C, D सही व्यवहार नहीं दर्शाते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q13",
+      "question": "Step-up (Boost) chopper में switch 'ON' रहने के दौरान inductor और diode की स्थिति क्या होती है?",
+      "options": [
+        "Inductor supply से जुड़कर energy store करता है और diode reverse bias होकर load को supply से अलग रखता है",
+        "Diode forward biased होकर पूरा current load को दे देता है",
+        "Inductor पूरी तरह disconnect रहता है",
+        "Capacitor discharge होकर supply को short कर देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Boost chopper में switch ON रहने पर supply-inductor-switch का लूप बनता है जिसमें inductor energy store करता है, जबकि diode reverse biased रहकर load-side capacitor को supply से अलग रखता है ताकि capacitor का discharge load को होता रहे। Option B, C, D सही operation नहीं दर्शाते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q14",
+      "question": "Step-up (Boost) chopper में switch 'OFF' होने पर क्या होता है?",
+      "options": [
+        "Inductor की stored energy, supply voltage के साथ जुड़कर diode के माध्यम से load और capacitor को उच्च voltage पर transfer होती है",
+        "Inductor की सारी energy नष्ट हो जाती है",
+        "Load को कोई current नहीं मिलता",
+        "Switch स्वयं short-circuit हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Switch OFF होते ही inductor अपनी collapsing magnetic field के कारण उच्च voltage उत्पन्न करता है जो supply voltage के साथ series में जुड़कर diode के जरिए load/capacitor को उच्च (boosted) voltage देता है, इसी कारण output, input से अधिक मिलता है। Option B, C, D सही व्यवहार नहीं हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q15",
+      "question": "Chopper circuit में inductor का मुख्य उद्देश्य क्या होता है?",
+      "options": [
+        "AC को DC में rectify करना",
+        "Energy को अस्थायी रूप से store करना और current में ripple को कम करके एक smooth continuous current बनाए रखना",
+        "Output voltage की polarity को उलटना",
+        "Switching frequency को मापना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inductor magnetic field के रूप में energy store करता है और switch on-off होने पर भी current में अचानक बदलाव को रोककर एक अपेक्षाकृत smooth (continuous) current प्रवाहित रखता है, जिससे ripple कम होती है। Option A, C, D inductor का मुख्य कार्य नहीं हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q16",
+      "question": "Chopper circuit में output के साथ filter capacitor क्यों लगाया जाता है?",
+      "options": [
+        "Freewheeling diode के स्थान पर काम करने के लिए",
+        "Switching frequency बढ़ाने के लिए",
+        "Duty cycle को स्वचालित रूप से बदलने के लिए",
+        "Output voltage की ripple को कम करके इसे अधिक smooth DC बनाने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Filter capacitor output pulsating DC में मौजूद ripple को absorb करके output को एक अधिक steady/smooth DC voltage में बदलता है, जो sensitive loads के लिए आवश्यक होता है। Option B, C, D capacitor के इस कार्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q17",
+      "question": "Chopper circuit में freewheeling diode के इस्तेमाल का मुख्य कारण क्या है?",
+      "options": [
+        "Input AC को rectify करना",
+        "Duty cycle को मापना",
+        "Output voltage की frequency बढ़ाना",
+        "Switch OFF होने पर inductive load के current को continuous path देना, जिससे high induced voltage से switch की सुरक्षा हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब switch अचानक OFF होता है तो inductor अपनी current बनाए रखने की कोशिश करता है; freewheeling diode इस current को एक safe path देता है, जिससे switch पर विनाशकारी उच्च voltage spike नहीं बनता। Option A, C, D freewheeling diode का कार्य नहीं हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q18",
+      "question": "Chopper में switching device के रूप में सामान्यतः किन semiconductor devices का उपयोग किया जाता है?",
+      "options": [
+        "केवल साधारण diode",
+        "केवल capacitor बैंक",
+        "Power transistor, MOSFET, IGBT या forced-commutated thyristor (SCR)",
+        "केवल resistor network"
+      ],
+      "correctIndex": 2,
+      "explanation": "Chopper में high-speed switching के लिए Power BJT, MOSFET, IGBT जैसे self-commutating devices या forced commutation circuit सहित thyristor (SCR) का उपयोग किया जाता है, क्योंकि इन्हें अपेक्षाकृत तेज़ गति से on-off किया जा सकता है। Option A, C, D switching devices नहीं हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q19",
+      "question": "Thyristor (SCR) आधारित chopper में transistor/MOSFET/IGBT आधारित chopper की तुलना में एक अतिरिक्त circuit की आवश्यकता क्यों पड़ती है?",
+      "options": [
+        "क्योंकि thyristor को हमेशा AC supply चाहिए होती है",
+        "क्योंकि thyristor एक बार trigger होने पर स्वयं turn-off नहीं होता, इसलिए इसे बंद करने के लिए forced commutation circuit चाहिए",
+        "क्योंकि thyristor में duty cycle नहीं होता",
+        "क्योंकि thyristor केवल AC को DC में बदलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thyristor गेट pulse से turn-on तो हो जाता है पर DC circuit में स्वयं turn-off नहीं होता (natural commutation संभव नहीं), इसलिए उसे बंद करने के लिए अलग से forced/auxiliary commutation circuit जोड़ना पड़ता है, जबकि transistor/MOSFET/IGBT gate/base signal हटाते ही turn-off हो जाते हैं। Option A, C, D गलत तर्क हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q20",
+      "question": "MOSFET और IGBT को modern chopper circuits में अधिक पसंद क्यों किया जाता है?",
+      "options": [
+        "क्योंकि ये केवल low frequency पर काम करते हैं",
+        "क्योंकि इनमें तेज switching speed, कम switching losses और आसान gate control होता है",
+        "क्योंकि इन्हें commutation circuit की सबसे ज्यादा जरूरत होती है",
+        "क्योंकि ये केवल AC circuits में उपयोगी हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "MOSFET/IGBT बहुत उच्च frequency पर तेजी से switch हो सकते हैं, इनकी switching losses कम होती हैं और इन्हें voltage-controlled gate signal से आसानी से चलाया जा सकता है, इसलिए modern choppers में इन्हें प्राथमिकता दी जाती है। Option A, C, D गलत तथ्य हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q21",
+      "question": "Chopper की switching frequency (f) और time period (T) में क्या संबंध है, और यदि Ton = 3 ms तथा Toff = 2 ms है तो duty cycle कितना होगा?",
+      "options": [
+        "f = 1/T; D = 0.4",
+        "f = T; D = 0.6",
+        "f = 1/T; D = 0.6",
+        "f = 1/T; D = 1.5"
+      ],
+      "correctIndex": 2,
+      "explanation": "T = Ton + Toff = 3+2 = 5 ms, और frequency f = 1/T होती है। Duty cycle D = Ton/T = 3/5 = 0.6। Option A गलत ratio देता है (Toff/T), Option B में f का सूत्र गलत है, Option D में D, 1 से अधिक नहीं हो सकता इसलिए गलत।"
+    },
+    {
+      "id": "u4_chopper_circuits_q22",
+      "question": "यदि एक chopper की switching frequency 1 kHz है, तो एक cycle का time period (T) कितना होगा?",
+      "options": [
+        "10 ms",
+        "1 second",
+        "1 µs",
+        "1 ms"
+      ],
+      "correctIndex": 3,
+      "explanation": "T = 1/f = 1/1000 = 0.001 s = 1 ms होता है। Option B, C, D सही गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q23",
+      "question": "Chopper control की 'Time Ratio Control (TRC)' विधि में duty cycle को किस प्रकार बदला जा सकता है?",
+      "options": [
+        "केवल Toff को स्थिर रखकर और Ton को बदलकर frequency बदल जाए (variable frequency control), या Ton व Toff दोनों को कुल period स्थिर रखते हुए बदलकर (constant frequency/PWM control)",
+        "केवल input voltage बदलकर",
+        "केवल load resistance बदलकर",
+        "duty cycle कभी नहीं बदला जा सकता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Time Ratio Control में या तो constant frequency रखकर Ton (pulse width) बदला जाता है (PWM/Constant frequency control), या फिर Ton को स्थिर रखकर कुल period T (और इसलिए frequency) बदला जाता है (Variable frequency control) — दोनों तरीकों से duty cycle नियंत्रित होता है। Option B, C, D chopper control की सही विधियाँ नहीं हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q24",
+      "question": "Constant frequency (PWM) type control की तुलना में variable frequency control का एक व्यावहारिक नुकसान क्या है?",
+      "options": [
+        "इसमें duty cycle बदला ही नहीं जा सकता",
+        "यह केवल AC output देता है",
+        "इसमें switching device की जरूरत नहीं होती",
+        "बदलती हुई frequency के कारण output filter (inductor-capacitor) की design करना कठिन होता है और audible noise की समस्या हो सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Variable frequency control में frequency व्यापक range में बदलती है, जिससे filter components की design जटिल हो जाती है और कुछ frequencies पर audible noise (शोर) उत्पन्न हो सकता है, इसलिए industry में प्रायः constant frequency PWM control अधिक पसंद किया जाता है। Option A, C, D गलत तर्क हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q25",
+      "question": "Chopper आधारित DC control, पारंपरिक rheostatic (series resistance) control की तुलना में अधिक efficient क्यों माना जाता है?",
+      "options": [
+        "क्योंकि chopper में switching device लगभग पूर्ण ON या पूर्ण OFF अवस्था में काम करता है, जिससे power loss बहुत कम होती है, जबकि rheostat में resistance में लगातार power की हानि (I²R loss) होती है",
+        "क्योंकि chopper में कोई switching device नहीं होती",
+        "क्योंकि rheostat में कोई power loss नहीं होती",
+        "क्योंकि chopper केवल AC पर काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Switching device (transistor/MOSFET/IGBT/SCR) ON अवस्था में बहुत कम voltage drop और OFF अवस्था में लगभग शून्य current रखता है, इसलिए power dissipation न्यूनतम रहती है; इसके विपरीत rheostatic control में series resistance में निरंतर I²R power loss होती रहती है। Option B, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q26",
+      "question": "Chopper circuits का उपयोग सबसे अधिक किस प्रकार के applications में होता है?",
+      "options": [
+        "केवल AC से AC voltage regulation में",
+        "केवल audio amplification में",
+        "DC series motor की speed control (जैसे electric traction/battery-operated vehicles) और DC power supplies में",
+        "केवल frequency measurement में"
+      ],
+      "correctIndex": 2,
+      "explanation": "Chopper circuit का सबसे आम application DC motor (जैसे electric traction, battery vehicles) की smooth speed control तथा switch-mode DC power supplies में variable regulated DC प्राप्त करना है। Option A, C, D chopper के actual applications नहीं हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q27",
+      "question": "एक battery से चलने वाले DC motor वाहन में chopper का उपयोग क्यों किया जाता है?",
+      "options": [
+        "Battery की frequency बदलने के लिए",
+        "केवल motor को बंद करने के लिए",
+        "Battery को AC में बदलने के लिए",
+        "Motor को दी जाने वाली average DC voltage को duty cycle बदलकर नियंत्रित करने के लिए, जिससे speed control सुचारू और अधिक efficient हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "Chopper duty cycle बदलकर motor को दी जाने वाली average DC voltage को smoothly control करता है, जिससे बिना अधिक ऊर्जा हानि के speed control संभव होता है — यह rheostatic control से अधिक efficient होता है। Option A, C, D गलत उद्देश्य बताते हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q28",
+      "question": "'Current limit control' चॉपर control की एक विधि है। इसमें duty cycle को किस आधार पर बदला जाता है?",
+      "options": [
+        "केवल एक निश्चित समय अंतराल पर, load current की परवाह किए बिना",
+        "Load current को एक ऊपरी और निचली सीमा के बीच रखने के लिए, जब current ऊपरी सीमा छूता है तो switch OFF और निचली सीमा पर पहुँचने पर ON किया जाता है",
+        "Output voltage को हमेशा शून्य रखने के लिए",
+        "Input voltage को स्थिर रखकर frequency को अनंत करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Current limit control में load current को दो सीमाओं (upper और lower limit) के बीच रखा जाता है — current ऊपरी सीमा तक पहुँचते ही switch OFF किया जाता है और निचली सीमा पर पहुँचते ही पुनः ON किया जाता है, जिससे current ripple एक निश्चित band में रहती है। Option A, C, D सही व्याख्या नहीं देते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q29",
+      "question": "Chopper circuit के 'continuous conduction mode' और 'discontinuous conduction mode' में मुख्य अंतर क्या है?",
+      "options": [
+        "Continuous mode में inductor current पूरे cycle में कभी शून्य नहीं होता, जबकि discontinuous mode में switch OFF अवधि के दौरान ही inductor current शून्य तक गिर जाता है",
+        "Continuous mode में कोई switching नहीं होती",
+        "Discontinuous mode में output voltage हमेशा input से अधिक होता है",
+        "दोनों mode में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Continuous conduction mode (CCM) में inductor current lगातार प्रवाहित रहता है और कभी शून्य तक नहीं गिरता, जबकि discontinuous conduction mode (DCM) में Toff के दौरान ही current शून्य हो जाता है और अगला cycle शुरू होने तक शून्य रहता है, जिससे output characteristics अलग हो जाते हैं। Option B, C, D गलत/भ्रामक कथन हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q30",
+      "question": "एक Step-up chopper से 12V battery input से लगभग 48V output चाहिए। आवश्यक duty cycle (D) लगभग कितनी होनी चाहिए?",
+      "options": [
+        "D = 0.5",
+        "D = 0.25",
+        "D = 4",
+        "D = 0.75"
+      ],
+      "correctIndex": 3,
+      "explanation": "Boost chopper सूत्र Vo = Vin/(1-D) से: 48 = 12/(1-D) ⇒ (1-D) = 12/48 = 0.25 ⇒ D = 1 - 0.25 = 0.75। Option B उलटा मान है, C, D सही समीकरण हल करने पर नहीं मिलते और D मान 1 से अधिक भी नहीं हो सकता।"
+    }
+  ]
+}

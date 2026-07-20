@@ -1,0 +1,368 @@
+{
+  "unit": "unit10",
+  "unitName": "LED Lights, LED/LCD TV and CCTV",
+  "topic": "tv_3d",
+  "topicName": "3D TV - Principle & Working, Active/Passive Technology",
+  "questions": [
+    {
+      "id": "u10_tv_3d_q1",
+      "question": "मनुष्य को गहराई (depth) का अनुभव किस प्रकार होता है, जो 3D TV के सिद्धांत का आधार है?",
+      "options": [
+        "प्रत्येक आँख थोड़े अलग angle से थोड़ी भिन्न image (binocular disparity) देखती है और brain दोनों को फ्यूज़ करके depth बनाता है",
+        "दोनों आँखें बिल्कुल समान image देखती हैं और brain उसे बड़ा कर देता है",
+        "केवल एक आँख काम करती है और दूसरी सहायक होती है",
+        "आँखों की pupil size से depth तय होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "मनुष्य की binocular vision में प्रत्येक आँख अलग स्थान पर होने के कारण थोड़ी भिन्न image देखती है (binocular disparity) और brain इन दोनों images को फ्यूज़ करके depth का अनुभव कराता है — यही 3D TV के सिद्धांत का आधार है, इसलिए option A सही है। दोनों आँखों की images वास्तव में भिन्न होती हैं, समान नहीं (B गलत); सामान्यतः दोनों आँखें साथ काम करती हैं, केवल एक सहायक नहीं होती (C गलत); और pupil size मुख्यतः brightness नियंत्रित करता है, depth perception से इसका सीधा संबंध नहीं (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q2",
+      "question": "मनुष्य की दोनों आँखों के बीच की दूरी, जिसके कारण प्रत्येक आँख को थोड़ी भिन्न image दिखती है, क्या कहलाती है?",
+      "options": [
+        "Focal length",
+        "Inter-pupillary distance (IPD) / eye separation, जो binocular parallax उत्पन्न करती है",
+        "Retinal persistence",
+        "Convergence angle only"
+      ],
+      "correctIndex": 1,
+      "explanation": "आँखों के बीच की दूरी को inter-pupillary distance (IPD)/eye separation कहते हैं, यही binocular parallax (दोनों आँखों की image में अंतर) उत्पन्न करती है, इसलिए option B सही है। Focal length lens का एक गुण है (A गलत), retinal persistence आँख की एक अलग घटना है जो motion/flicker perception से जुड़ी है, depth से नहीं (C गलत), और केवल convergence angle पूरी बात नहीं बताता क्योंकि मूल कारण eye separation है (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q3",
+      "question": "3D TV depth का भ्रम (illusion) उत्पन्न करने के लिए मूल रूप से क्या करता है?",
+      "options": [
+        "केवल brightness को दुगना कर देता है",
+        "एक ही image को थोड़ा बड़ा और छोटा करके दिखाता है",
+        "बाईं आँख (left eye) और दाईं आँख (right eye) के लिए दो थोड़ी अलग-अलग (slightly offset) images अलग-अलग भेजता है ताकि brain उन्हें binocular vision की तरह फ्यूज़ करे",
+        "केवल screen की refresh rate बढ़ा देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "3D TV बाईं और दाईं आँख के लिए दो थोड़ी अलग (slightly offset) images अलग-अलग भेजता है ताकि brain उन्हें binocular vision की तरह फ्यूज़ करके depth बनाए, इसलिए option C सही है। केवल brightness दुगनी करने (A) या एक ही image को बड़ा-छोटा करने (B) से वास्तविक parallax नहीं बनता, और केवल refresh rate बढ़ाने (D) से smoothness तो सुधरती है पर बिना दो अलग views के 3D प्रभाव नहीं मिलता।"
+    },
+    {
+      "id": "u10_tv_3d_q4",
+      "question": "3D content में कैमरे से ली गई बाईं और दाईं आँख की अलग-अलग तस्वीरों को सामान्यतः क्या कहा जाता है?",
+      "options": [
+        "Interlaced frames",
+        "Composite frames",
+        "Chroma frames",
+        "Left-eye view और right-eye view (stereo pair)"
+      ],
+      "correctIndex": 3,
+      "explanation": "बाईं और दाईं आँख की अलग-अलग कैमरा-तस्वीरों के जोड़े को stereo pair (left-eye view व right-eye view) कहा जाता है, इसलिए option D सही है। Interlaced frames (A) सामान्य video scanning से संबंधित है, composite frames (B) एक analog video signal type है, और chroma frames (C) जैसी कोई standard 3D term नहीं है — ये तीनों 3D image-pair को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u10_tv_3d_q5",
+      "question": "Active shutter 3D technology में TV screen पर frames किस प्रकार प्रदर्शित होते हैं?",
+      "options": [
+        "Left-eye frame और right-eye frame को बहुत तेज़ी से alternately (बारी-बारी से) full-resolution में display किया जाता है",
+        "Left और right eye के frames एक साथ (simultaneously) एक ही समय पर दिखाए जाते हैं",
+        "केवल left eye का frame हमेशा दिखता है",
+        "Screen को दो हिस्सों में बाँटकर ऊपर left और नीचे right frame दिखाया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Active shutter technology में left-eye और right-eye के frames बहुत तेज़ी से बारी-बारी (alternately) और प्रत्येक अपने full resolution में display होते हैं, इसलिए option A सही है। दोनों frames एक साथ (simultaneously) नहीं दिखाए जाते (B गलत), केवल left eye का frame हमेशा दिखाना 3D प्रभाव नहीं देगा (C गलत), और screen को ऊपर-नीचे बाँटना असल में एक अलग विधि है, active shutter की नहीं (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q6",
+      "question": "Active shutter 3D glasses के प्रत्येक lens में क्या होता है जो TV के frame के साथ synchronise होकर काम करता है?",
+      "options": [
+        "Fixed polarizing film जो कभी नहीं बदलता",
+        "एक LCD shutter जो electronically तेज़ी से खुलता-बंद होता है ताकि सही समय पर सही आँख के सामने पारदर्शी रहे",
+        "Coloured (red-cyan) filter",
+        "Simple glass lens बिना किसी electronics के"
+      ],
+      "correctIndex": 1,
+      "explanation": "Active shutter glasses के प्रत्येक lens में एक LCD shutter होता है जो electronically तेज़ी से खुलता-बंद होता है ताकि सही समय पर केवल सही आँख के सामने पारदर्शी (transparent) रहे, इसलिए option B सही है। Fixed polarizing film (A) passive technology में प्रयुक्त होती है, coloured red-cyan filter (C) anaglyph technique में उपयोग होता है, और simple glass lens बिना electronics के (D) active shutter का सिद्धांत बिल्कुल नहीं है।"
+    },
+    {
+      "id": "u10_tv_3d_q7",
+      "question": "Active shutter glasses TV के frame switching के साथ synchronise होने के लिए सामान्यतः किस signal का उपयोग करती हैं?",
+      "options": [
+        "केवल sound signal",
+        "Mains power line signal",
+        "IR (Infrared) या RF/Bluetooth signal जो TV से glasses को भेजा जाता है",
+        "Wi-Fi video streaming signal"
+      ],
+      "correctIndex": 2,
+      "explanation": "Active shutter glasses सामान्यतः IR (Infrared) या RF/Bluetooth signal के माध्यम से TV के साथ synchronise होती हैं ताकि shutter सही समय पर खुले-बंद हो, इसलिए option C सही है। Sound signal (A) या mains power line signal (B) sync के लिए प्रयुक्त नहीं होते, और Wi-Fi video streaming (D) content transfer के लिए है, glasses synchronisation के लिए नहीं।"
+    },
+    {
+      "id": "u10_tv_3d_q8",
+      "question": "Active shutter 3D glasses को काम करने के लिए किस चीज़ की आवश्यकता होती है, जो passive glasses में नहीं होती?",
+      "options": [
+        "Larger frame size",
+        "Coloured lens coating",
+        "Heavier glass material",
+        "Battery और electronic circuit (shutter driving व sync receiving के लिए)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Active shutter glasses को LCD shutter चलाने और sync signal प्राप्त करने के लिए battery व electronic circuit चाहिए, जो passive glasses में नहीं होता, इसलिए option D सही है। Frame size (A), coloured coating (B) या भारी glass material (C) active shutter की मूल आवश्यकता नहीं हैं।"
+    },
+    {
+      "id": "u10_tv_3d_q9",
+      "question": "Active shutter 3D technology का resolution के संदर्भ में मुख्य लाभ क्या है?",
+      "options": [
+        "प्रत्येक आँख को TV के full native resolution वाला पूरा frame मिलता है (क्योंकि frames अलग-अलग समय पर पूरे भेजे जाते हैं)",
+        "दोनों आँखों को मिलाकर केवल आधा resolution मिलता है",
+        "Resolution पूरी तरह horizontal lines पर निर्भर करता है",
+        "Resolution glasses के lens की गुणवत्ता पर निर्भर करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूँकि active shutter में frames अलग-अलग समय पर पूरे (पूर्ण resolution में) भेजे जाते हैं, इसलिए प्रत्येक आँख को TV का full native resolution मिलता है — यह इसका मुख्य लाभ है, अतः option A सही है। आधा resolution देना (B) passive technology की विशेषता है, resolution केवल horizontal lines पर निर्भर नहीं करता (C), और glasses के lens की गुणवत्ता resolution नहीं बल्कि clarity/sync को प्रभावित करती है (D)।"
+    },
+    {
+      "id": "u10_tv_3d_q10",
+      "question": "Active shutter 3D TV में देखी जाने वाली एक सामान्य समस्या 'crosstalk' या 'ghosting' किस कारण होती है?",
+      "options": [
+        "Screen की brightness बहुत अधिक होने से",
+        "LCD shutter के पूरी तरह बंद होने से पहले ही अगली आँख का frame शुरू हो जाने पर हल्की residual image (light leakage) दिखने से",
+        "Speaker की आवाज़ कम होने से",
+        "HDMI cable के लंबा होने से"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि LCD shutter अगली आँख के लिए पूरी तरह बंद होने से पहले ही अगला frame शुरू हो जाए, तो पिछली image की हल्की झलक (residual light leakage) दूसरी आँख तक पहुँच जाती है, जिसे crosstalk/ghosting कहते हैं — इसलिए option B सही है। Brightness अधिक होना (A), speaker की आवाज़ (C), या HDMI cable की लंबाई (D) का crosstalk से कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u10_tv_3d_q11",
+      "question": "Active shutter 3D system की एक प्रमुख कमी (drawback) क्या मानी जाती है?",
+      "options": [
+        "Glasses बहुत सस्ती और हल्की होती हैं",
+        "यह सामान्य 2D content के लिए विशेष रूप से बेहतर काम करता है",
+        "Glasses में battery, electronics और sync circuit होने से वे अपेक्षाकृत महँगी और भारी होती हैं, और brightness भी कुछ कम अनुभव होती है",
+        "इसमें glasses की आवश्यकता ही नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Active shutter glasses में battery, electronics और sync circuit होने से ये अपेक्षाकृत महँगी व भारी होती हैं, और शटर बंद रहने के समय के कारण brightness भी कुछ कम अनुभव होती है — यही इसकी प्रमुख कमी है, इसलिए option C सही है। ये सस्ती-हल्की नहीं होतीं (A गलत), यह technology विशेष रूप से 2D content के लिए नहीं बनी (B गलत), और इसमें glasses अनिवार्य रूप से चाहिए होती हैं (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q12",
+      "question": "Passive 3D technology मुख्यतः किस सिद्धांत पर आधारित है?",
+      "options": [
+        "Frames को तेज़ी से alternately switch करना",
+        "Red और cyan रंग के filters",
+        "Sound synchronisation से depth बनाना",
+        "Polarized light filters का उपयोग, जिससे left और right eye की images अलग-अलग polarization में screen से भेजी जाती हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Passive 3D technology polarized light filters के सिद्धांत पर काम करती है, जिसमें left और right eye की images अलग-अलग polarization में एक साथ screen से भेजी जाती हैं, इसलिए option D सही है। Frames को alternately switch करना (A) active shutter की विधि है, red-cyan filters (B) anaglyph technique में प्रयुक्त होते हैं, और sound synchronisation (C) से 3D depth नहीं बनता।"
+    },
+    {
+      "id": "u10_tv_3d_q13",
+      "question": "Passive 3D TV के panel में screen की horizontal lines को किस प्रकार व्यवस्थित किया जाता है?",
+      "options": [
+        "Odd lines एक प्रकार की (जैसे clockwise circular) polarization में और even lines दूसरी प्रकार की (anticlockwise) polarization में होती हैं, ताकि एक साथ दो views भेजी जा सकें",
+        "सभी lines एक ही polarization में होती हैं",
+        "केवल top half left eye के लिए और कोई polarization नहीं होती",
+        "Lines को हर सेकंड rearrange किया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Passive 3D panel में odd horizontal lines को एक प्रकार की (जैसे clockwise circular) polarization में और even lines को दूसरी प्रकार की (anticlockwise) polarization में रखा जाता है, ताकि एक साथ दो अलग views screen से भेजी जा सकें, इसलिए option A सही है। सभी lines का एक ही polarization में होना (B) दो views अलग नहीं कर सकता, केवल top half आबंटित करना (C) actual technique नहीं है, और lines को हर सेकंड बदलना (D) passive polarization का सिद्धांत नहीं है।"
+    },
+    {
+      "id": "u10_tv_3d_q14",
+      "question": "Passive 3D glasses में lens किस प्रकार के होते हैं?",
+      "options": [
+        "Battery-powered LCD shutter lens",
+        "साधारण polarized filter lens जिनमें कोई battery या electronics नहीं होती",
+        "IR receiver लगे हुए lens",
+        "Bluetooth module युक्त lens"
+      ],
+      "correctIndex": 1,
+      "explanation": "Passive 3D glasses में केवल साधारण polarized filter lens होते हैं जिनमें कोई battery या electronics नहीं होती, इसलिए option B सही है। Battery-powered LCD shutter lens (A), IR receiver (C) और Bluetooth module (D) — ये सभी active shutter glasses की विशेषताएँ हैं, passive की नहीं।"
+    },
+    {
+      "id": "u10_tv_3d_q15",
+      "question": "Passive 3D glasses का एक प्रमुख लाभ (advantage) क्या है?",
+      "options": [
+        "ये battery और electronics के कारण महँगी होती हैं",
+        "ये केवल active shutter TV के साथ काम करती हैं",
+        "ये हल्की, सस्ती होती हैं और इन्हें charge करने या sync करने की आवश्यकता नहीं होती",
+        "इनका resolution TV से दोगुना होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Passive glasses हल्की, सस्ती होती हैं और चूँकि इनमें कोई electronics नहीं, इन्हें charge करने या TV से sync करने की भी आवश्यकता नहीं होती — यही मुख्य लाभ है, इसलिए option C सही है। ये battery/electronics के कारण महँगी नहीं होतीं (A गलत), ये passive-panel TV के साथ काम करती हैं न कि active shutter TV के साथ (B गलत), और इनका resolution TV से दोगुना होने जैसी कोई बात नहीं है (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q16",
+      "question": "Passive 3D technology में resolution के संदर्भ में मुख्य समझौता (trade-off) क्या है?",
+      "options": [
+        "प्रत्येक आँख को पूरे panel का पूरा (full) vertical resolution मिलता है",
+        "Horizontal resolution आधा हो जाता है, vertical पूरा रहता है",
+        "Resolution पर कोई प्रभाव नहीं पड़ता",
+        "चूँकि odd/even lines अलग-अलग आँखों के लिए आबंटित होती हैं, इसलिए प्रत्येक आँख को प्रभावी रूप से आधा vertical resolution मिलता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "चूँकि odd और even lines क्रमशः अलग-अलग आँखों को आबंटित होती हैं, इसलिए प्रत्येक आँख को पैनल के प्रभावी vertical resolution का केवल आधा हिस्सा मिलता है — यही passive 3D का मुख्य trade-off है, इसलिए option D सही है। प्रत्येक आँख को full vertical resolution मिलना (A), केवल horizontal resolution घटना (B), या resolution पर कोई असर न होना (C) — ये तीनों passive technology के actual working से मेल नहीं खाते।"
+    },
+    {
+      "id": "u10_tv_3d_q17",
+      "question": "Passive 3D technology, active shutter की तुलना में viewing experience के संदर्भ में क्या लाभ देती है?",
+      "options": [
+        "इसमें wider viewing angle मिलता है और flicker/eye-strain कम होता है क्योंकि दोनों frames एक साथ लगातार display होते हैं",
+        "यह active shutter से अधिक flicker पैदा करती है",
+        "इसमें glasses के sync fail होने की समस्या सबसे अधिक होती है",
+        "इसमें brightness active shutter से हमेशा अधिक होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Passive 3D में दोनों frames एक साथ लगातार (simultaneously, अलग polarization में) display होते हैं, इसलिए इसमें wider viewing angle मिलता है और flicker/eye-strain active shutter की तुलना में कम होता है, अतः option A सही है। यह active shutter से अधिक flicker पैदा नहीं करता (B गलत), sync fail होने की समस्या मुख्यतः active shutter में होती है क्योंकि passive में glasses सिर्फ polarized होती हैं (C गलत), और brightness हमेशा अधिक होने की कोई गारंटी नहीं (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q18",
+      "question": "Active shutter और passive 3D technology की glasses की लागत (cost) की तुलना करें तो सही कथन क्या है?",
+      "options": [
+        "Active shutter glasses सस्ती और passive glasses महँगी होती हैं",
+        "Active shutter glasses (battery व electronics के कारण) महँगी होती हैं जबकि passive glasses (केवल polarized filter होने से) सस्ती होती हैं",
+        "दोनों की कीमत हमेशा बराबर होती है",
+        "Glasses की कीमत का technology से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Active shutter glasses में battery व electronics होने से वे महँगी होती हैं, जबकि passive glasses में केवल polarized filter होने से वे सस्ती होती हैं, इसलिए option B सही है। इसका उल्टा कहना (A) तथ्यात्मक रूप से गलत है, दोनों की कीमत बराबर नहीं होती (C गलत), और glasses की कीमत technology पर निर्भर करती है, इसलिए 'कोई संबंध नहीं' कहना भी गलत है (D)।"
+    },
+    {
+      "id": "u10_tv_3d_q19",
+      "question": "Battery requirement के आधार पर active और passive 3D glasses में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों को battery चाहिए",
+        "दोनों को battery नहीं चाहिए",
+        "Active shutter glasses को battery चाहिए (LCD shutter चलाने के लिए), जबकि passive glasses को battery की आवश्यकता नहीं",
+        "Passive glasses को battery चाहिए, active को नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Active shutter glasses को LCD shutter संचालित करने के लिए battery चाहिए, जबकि passive glasses में कोई electronics न होने से battery की आवश्यकता नहीं होती, इसलिए option C सही है। यह कहना कि दोनों को battery चाहिए (A) या दोनों को नहीं चाहिए (B) गलत है, और स्थिति को उल्टा बताना (D) भी तथ्यात्मक रूप से ग़लत है।"
+    },
+    {
+      "id": "u10_tv_3d_q20",
+      "question": "Full native resolution प्रति आँख (per eye resolution) की दृष्टि से active shutter और passive 3D की तुलना करें।",
+      "options": [
+        "Passive में प्रति आँख full resolution और active में आधा मिलता है",
+        "दोनों में resolution हमेशा समान रहता है",
+        "दोनों में resolution का कोई महत्व नहीं",
+        "Active shutter में प्रति आँख full resolution मिलता है जबकि passive में प्रति आँख आधा vertical resolution मिलता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Active shutter technology में प्रत्येक आँख को TV का full native resolution मिलता है, जबकि passive technology में प्रत्येक आँख को प्रभावी रूप से आधा vertical resolution मिलता है, इसलिए option D सही है। स्थिति को उल्टा बताना (A) तथ्यात्मक रूप से गलत है, दोनों में resolution समान होने (B) या इसका कोई महत्व न होने (C) की बात व्यावहारिक अनुभव से मेल नहीं खाती।"
+    },
+    {
+      "id": "u10_tv_3d_q21",
+      "question": "Active shutter 3D glasses के बारे में एक व्यावहारिक (practical) समस्या क्या मानी जाती है?",
+      "options": [
+        "प्रायः ये अपने ही TV brand/model के साथ synchronise करने के लिए बनाई जाती हैं, इसलिए अलग brand के TV पर वही glasses ठीक से काम नहीं कर सकतीं",
+        "ये सभी brands के TV के साथ बिना किसी setting के तुरंत काम करती हैं",
+        "इन्हें कभी चार्ज करने की आवश्यकता नहीं होती",
+        "ये केवल passive TV के साथ काम करती हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Active shutter glasses प्रायः अपने ही TV brand/model के sync signal (IR/RF protocol) के अनुसार बनाई जाती हैं, इसलिए अलग brand के TV के साथ वही glasses ठीक से काम नहीं कर सकतीं — यह एक व्यावहारिक समस्या है, अतः option A सही है। ये सभी brands पर तुरंत काम नहीं करतीं (B गलत), इन्हें battery चार्ज करनी पड़ती है (C गलत), और ये active shutter TV के लिए हैं, passive TV के लिए नहीं (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q22",
+      "question": "Passive 3D technology को active shutter की तुलना में 'wider viewing angle के लिए बेहतर' क्यों माना जाता है?",
+      "options": [
+        "क्योंकि इसमें glasses की आवश्यकता ही नहीं होती",
+        "क्योंकि polarization आधारित display में brightness/3D-effect पर angle का प्रभाव active shutter की sync-निर्भर विधि से कम पड़ता है और कई viewers आसानी से देख सकते हैं",
+        "क्योंकि यह केवल एक ही viewer के लिए काम करता है",
+        "क्योंकि इसका resolution active shutter से अधिक होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Passive display में polarization के कारण brightness और 3D प्रभाव पर viewing angle का असर active shutter की timing-निर्भर विधि की तुलना में कम पड़ता है, जिससे एक साथ कई दर्शक आसानी से 3D देख सकते हैं — इसलिए option B सही है। Passive TV में भी glasses चाहिए होते हैं (A गलत), यह एक से अधिक viewers के लिए उपयुक्त है, केवल एक के लिए नहीं (C गलत), और इसका resolution active shutter से अधिक नहीं बल्कि कम (आधा) होता है (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q23",
+      "question": "यदि passive 3D TV पर सामान्य 2D content बिना glasses के देखा जाए, तो सामान्यतः क्या अनुभव होता है?",
+      "options": [
+        "Picture बिल्कुल सामान्य दिखती है, कोई अंतर नहीं",
+        "TV काम करना बंद कर देता है",
+        "Panel की line-by-line polarization संरचना के कारण vertical resolution में हल्की कमी जैसा प्रभाव महसूस हो सकता है",
+        "रंग पूरी तरह गायब हो जाते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Passive 3D panel की line-by-line (odd/even) polarization संरचना स्थायी रूप से बनी रहती है, इसलिए सामान्य 2D content देखते समय भी vertical resolution में हल्की कमी जैसा प्रभाव महसूस हो सकता है, अतः option C सही है। Picture पर बिल्कुल कोई अंतर न होना (A), TV का बंद हो जाना (B), या रंगों का पूरी तरह गायब होना (D) — ये वास्तविक व्यवहार को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u10_tv_3d_q24",
+      "question": "Anaglyph 3D (red-cyan glasses वाली पुरानी तकनीक) में 3D प्रभाव कैसे प्राप्त किया जाता है?",
+      "options": [
+        "दो अलग-अलग LCD shutter lens से",
+        "Polarized circular filters से",
+        "IR sync signal से",
+        "Left-eye image को लाल (red) रंग के filter से और right-eye image को cyan रंग के filter से encode करके एक ही frame में मिलाया जाता है, glasses में लगे रंगीन filters इन्हें अलग-अलग आँखों तक पहुँचाते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Anaglyph 3D में left-eye image को red filter से और right-eye image को cyan filter से एन्कोड करके एक ही frame में मिलाया जाता है; glasses के रंगीन filters इन्हें अलग-अलग आँखों तक पहुँचाते हैं, इसलिए option D सही है। दो अलग LCD shutter lens (A) active shutter की विधि है, polarized circular filters (B) passive technology में प्रयुक्त होते हैं, और IR sync signal (C) का anaglyph से कोई संबंध नहीं — यह एक पूर्णतः optical/colour-based तरीका है।"
+    },
+    {
+      "id": "u10_tv_3d_q25",
+      "question": "Anaglyph (red-cyan) 3D technology की एक बड़ी सीमा (limitation) क्या है?",
+      "options": [
+        "रंगों (colour reproduction) में विकृति आ जाती है क्योंकि प्रत्येक आँख केवल एक रंग-चैनल के माध्यम से image देखती है, जिससे true colour अनुभव नहीं होता",
+        "इसे बहुत महँगे glasses चाहिए",
+        "इसमें battery की आवश्यकता होती है",
+        "यह आधुनिक active shutter से अधिक resolution देती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Anaglyph में चूँकि प्रत्येक आँख केवल एक रंग-चैनल (red या cyan) से filtered image देखती है, इसलिए वास्तविक रंगों का प्रजनन (colour reproduction) बिगड़ जाता है और true colour अनुभव नहीं मिलता — यह इसकी प्रमुख सीमा है, अतः option A सही है। Anaglyph glasses बहुत सस्ती (साधारण रंगीन plastic) होती हैं, महँगी नहीं (B गलत), इन्हें battery नहीं चाहिए (C गलत), और यह active shutter से अधिक resolution देने के बजाय रंग व गुणवत्ता में समझौता करती है (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q26",
+      "question": "Autostereoscopic 3D display का क्या अर्थ है?",
+      "options": [
+        "TV जो केवल active shutter glasses के साथ काम करता है",
+        "ऐसा 3D display जिसे बिना किसी glasses (glasses-free) के देखा जा सकता है, क्योंकि display स्वयं left व right eye की images को अलग-अलग दिशाओं में भेजता है",
+        "TV जो 3D content को स्वतः 2D में बदल देता है",
+        "TV जो केवल anaglyph glasses से काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Autostereoscopic display ऐसा 3D display है जिसे बिना किसी glasses के देखा जा सकता है क्योंकि display की संरचना स्वयं left और right eye की images को अलग-अलग दिशाओं में भेजती है, इसलिए option B सही है। यह active shutter glasses (A) या anaglyph glasses (D) पर निर्भर नहीं करता, और यह content को स्वतः 2D में बदलने वाला feature भी नहीं है (C गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q27",
+      "question": "Autostereoscopic 3D TV में प्रयुक्त होने वाली 'lenticular lens' तकनीक किस प्रकार काम करती है?",
+      "options": [
+        "यह screen पर polarizing filter की परत लगाती है जिसे glasses से देखा जाता है",
+        "यह IR signal से glasses को control करती है",
+        "Screen के सामने लगी सूक्ष्म (micro) उभरी हुई lens की array pixel की light को अलग-अलग angles में मोड़कर अलग-अलग दिशा में बैठे दर्शक की बाईं व दाईं आँख तक अलग-अलग image पहुँचाती है",
+        "यह केवल red-cyan filtering करती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Lenticular lens तकनीक में screen के सामने लगी सूक्ष्म उभरी हुई lens की array प्रत्येक pixel की light को अलग-अलग angles में मोड़ देती है, जिससे अलग-अलग स्थान पर बैठे दर्शक की बाईं और दाईं आँख तक अलग-अलग image पहुँचती है और glasses के बिना 3D प्रभाव मिलता है — इसलिए option C सही है। Polarizing filter layer glasses के साथ प्रयुक्त होती है (A गलत), IR signal से glasses control करना active shutter की विधि है (B गलत), और red-cyan filtering anaglyph technique है (D गलत)।"
+    },
+    {
+      "id": "u10_tv_3d_q28",
+      "question": "Autostereoscopic 3D display की एक अन्य तकनीक 'parallax barrier' कैसे काम करती है?",
+      "options": [
+        "Screen के आगे battery से चलने वाले shutter लगाकर",
+        "यह केवल TV की brightness घटाकर काम करती है",
+        "यह red और cyan रंग के filters का उपयोग करती है",
+        "Screen के आगे बारीक slits/barrier वाली एक परत लगाई जाती है जो प्रत्येक आँख को अलग-अलग pixel columns दिखाकर stereo प्रभाव देती है, glasses की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 3,
+      "explanation": "Parallax barrier तकनीक में screen के आगे बारीक slits/barrier वाली एक पतली परत लगाई जाती है जो प्रत्येक आँख को अलग-अलग pixel columns दिखाकर बिना glasses के stereo (3D) प्रभाव देती है, इसलिए option D सही है। Battery से चलने वाला shutter लगाना (A) active shutter जैसी विधि है, केवल brightness घटाना (B) parallax barrier का सिद्धांत नहीं, और red-cyan filters (C) anaglyph technique में प्रयुक्त होते हैं।"
+    },
+    {
+      "id": "u10_tv_3d_q29",
+      "question": "यदि एक active shutter 3D TV को प्रत्येक आँख के लिए flicker-free 60Hz की perceived refresh rate देनी है (left और right eye के frames बारी-बारी से भेजते हुए), तो TV का कुल panel refresh rate कम-से-कम कितना होना चाहिए?",
+      "options": [
+        "120 Hz (क्योंकि हर सेकंड 60 left-eye + 60 right-eye = कुल 120 frames भेजने होते हैं)",
+        "30 Hz",
+        "60 Hz",
+        "240 Hz हमेशा अनिवार्य है"
+      ],
+      "correctIndex": 0,
+      "explanation": "प्रत्येक आँख को flicker-free 60Hz अनुभव देने के लिए TV को कुल मिलाकर 60 (left) + 60 (right) = 120 frames प्रति सेकंड भेजने होंगे, अतः panel refresh rate कम-से-कम 120 Hz चाहिए, इसलिए option A सही है। 30 Hz (B) और 60 Hz (C) दोनों आँखों के लिए पर्याप्त कुल frames नहीं देंगे (प्रति आँख इनसे आधा ही मिलेगा), और 240 Hz (D) एक उच्च विकल्प हो सकता है पर न्यूनतम अनिवार्य आवश्यकता नहीं है।"
+    },
+    {
+      "id": "u10_tv_3d_q30",
+      "question": "120Hz active shutter 3D TV में glasses के प्रत्येक lens का shutter प्रति सेकंड लगभग कितनी बार खुलता-बंद (open-close cycle) होता है ताकि प्रत्येक आँख को 60 frames प्रति सेकंड मिलें?",
+      "options": [
+        "120 बार प्रति सेकंड",
+        "60 बार प्रति सेकंड (प्रत्येक lens केवल अपनी आँख वाले frame के समय खुलता है, कुल 60 openings प्रति सेकंड प्रति आँख)",
+        "30 बार प्रति सेकंड",
+        "1 बार प्रति सेकंड"
+      ],
+      "correctIndex": 1,
+      "explanation": "120Hz active shutter TV में कुल 120 frames प्रति सेकंड (60 left + 60 right) भेजे जाते हैं; प्रत्येक lens केवल अपनी आँख वाले frame के समय खुलता है, इसलिए प्रत्येक lens का shutter लगभग 60 बार प्रति सेकंड खुलता-बंद होता है ताकि उस आँख को 60 frames मिलें — अतः option B सही है। 120 बार (A) पूरे panel की frame rate है, न कि एक lens का, 30 बार (C) आधे frames ही देगा, और 1 बार प्रति सेकंड (D) व्यावहारिक रूप से कोई 3D प्रभाव नहीं देगा।"
+    }
+  ]
+}

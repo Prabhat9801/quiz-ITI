@@ -1,0 +1,368 @@
+{
+  "unit": "unit16",
+  "unitName": "Electro Pneumatics",
+  "topic": "input_elements",
+  "topicName": "Input Elements - Push-button Valves, Roller Lever Valves, Proximity Switches, Air Barriers",
+  "questions": [
+    {
+      "id": "u16_input_elements_q1",
+      "question": "Electro-pneumatic system में push-button valve का मुख्य कार्य क्या होता है?",
+      "options": [
+        "Cylinder की speed को regulate करना",
+        "Operator द्वारा manual actuation से electrical signal या pneumatic signal को initiate करना",
+        "Compressed air को cool करना",
+        "System की pressure को measure करके display करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Push-button valve एक manually operated input element है जिसे operator दबाकर electrical circuit को complete करता है या pneumatic pilot signal generate करता है, जिससे control sequence शुरू होती है। Option A cylinder की speed flow control valve से होती है, C यह cooling device नहीं है, D pressure measurement के लिए pressure gauge/switch इस्तेमाल होता है।"
+    },
+    {
+      "id": "u16_input_elements_q2",
+      "question": "Normally Open (NO) push-button switch की मुख्य विशेषता क्या है?",
+      "options": [
+        "Button दबाने पर circuit break हो जाता है",
+        "यह हमेशा current pass होने देता है चाहे दबाया जाए या नहीं",
+        "Rest position में circuit open रहता है और button दबाने पर contact close होकर circuit complete होता है",
+        "यह केवल pneumatic signal generate करता है, electrical नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "NO switch की rest condition में contacts खुले रहते हैं, actuation पर contacts close होते हैं जिससे current flow शुरू होता है। Option A NC (Normally Closed) switch का behaviour है, B गलत है क्योंकि actuation जरूरी है, D गलत है क्योंकि electro-pneumatic system में इसका electrical signal भी होता है।"
+    },
+    {
+      "id": "u16_input_elements_q3",
+      "question": "Roller lever valve (limit switch) किस प्रकार actuate होता है?",
+      "options": [
+        "Operator के manual push से",
+        "Compressed air के pressure drop से स्वतः",
+        "Cylinder की piston rod पर लगे cam या dog द्वारा mechanically actuate होकर",
+        "Timer के preset time पूरा होने पर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Roller lever valve एक mechanically actuated limit switch है जो cylinder stroke के दौरान piston rod के साथ लगे cam/dog से टकराकर actuate होता है और cylinder की end position detect करता है। Option A push-button का behaviour है, B यह pressure-sensing device नहीं, D यह timer का काम है।"
+    },
+    {
+      "id": "u16_input_elements_q4",
+      "question": "Roller lever valve में 'idle return roller' और 'normal roller lever' में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल समान होते हैं",
+        "Idle return roller केवल एक direction में actuate होता है और return stroke में free-wheel करता है जबकि normal roller lever दोनों directions में actuate करता है",
+        "Idle return roller केवल electrical signal देता है",
+        "Normal roller lever केवल proximity sensing के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Idle return (trip) roller lever valve एक ही direction में cam द्वारा actuate होता है और विपरीत direction में roller बिना actuation के pivot होकर वापस आ जाता है, जबकि normal roller lever दोनों directions में actuate हो जाता है। Options A, C, D इस functional अंतर को सही तरीके से नहीं बताते।"
+    },
+    {
+      "id": "u16_input_elements_q5",
+      "question": "Inductive proximity switch का कार्य सिद्धांत किस पर आधारित होता है?",
+      "options": [
+        "Light intensity में परिवर्तन पर",
+        "High-frequency oscillating magnetic field में metallic target आने से eddy currents उत्पन्न होकर oscillation amplitude में कमी आना",
+        "Air pressure में परिवर्तन पर",
+        "Capacitance में परिवर्तन के आधार पर किसी भी material को sense करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inductive proximity sensor एक coil द्वारा high-frequency magnetic field बनाता है; जब metallic (विशेषकर ferrous) object पास आता है तो eddy currents बनते हैं जिससे oscillator की amplitude कम होती है और यह target की presence detect करता है। Option A photoelectric sensor का सिद्धांत है, C pressure switch का, D capacitive proximity sensor का सिद्धांत है।"
+    },
+    {
+      "id": "u16_input_elements_q6",
+      "question": "Capacitive proximity switch की विशेष उपयोगिता किस स्थिति में होती है?",
+      "options": [
+        "केवल ferrous metal detect करने में",
+        "Non-metallic पदार्थ जैसे plastic, wood, liquid, powder आदि की presence detect करने में भी सक्षम होना",
+        "केवल compressed air की flow measure करने में",
+        "यह केवल high temperature environment में काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitive proximity sensor dielectric constant में परिवर्तन के आधार पर काम करता है इसलिए यह metallic के साथ-साथ non-metallic materials (plastic, liquid, powder) को भी detect कर सकता है। Option A inductive sensor की limitation है, C flow sensor का काम है, D तापमान से संबंधित विशेष claim गलत है।"
+    },
+    {
+      "id": "u16_input_elements_q7",
+      "question": "Photoelectric (optical) proximity sensor में 'through-beam' प्रकार किस principle पर कार्य करता है?",
+      "options": [
+        "Emitter और receiver अलग-अलग रखे जाते हैं और object द्वारा light beam interrupt होने पर detection होती है",
+        "Emitter और receiver एक ही housing में होते हैं और object से reflect हुई light को sense किया जाता है",
+        "यह magnetic field पर आधारित है",
+        "यह केवल metallic object detect करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Through-beam sensor में emitter और receiver विपरीत sides पर mounted होते हैं; जब object beam को block करता है तब receiver को signal न मिलने से detection होता है। Option B diffuse/retro-reflective type का सिद्धांत है, C inductive sensor का, D गलत है क्योंकि optical sensor material-independent है।"
+    },
+    {
+      "id": "u16_input_elements_q8",
+      "question": "Electro-pneumatic circuit में 'air barrier' (pneumatic proximity sensor / back-pressure sensor) किस सिद्धांत पर कार्य करता है?",
+      "options": [
+        "Nozzle से निकलने वाली air jet में object आने पर back-pressure में परिवर्तन को sense करके signal generate करना",
+        "Light beam interruption के आधार पर",
+        "Magnetic field के आधार पर",
+        "Electrical resistance में बदलाव के आधार पर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Air barrier sensor एक nozzle से लगातार air jet emit करता है; जब target nozzle के पास आता है तो air flow में रुकावट से back-pressure बढ़ता है, इस pressure change को sense करके signal दिया जाता है — यह non-contact contactless sensing है। Option B photoelectric sensor है, C inductive/magnetic sensor है, D resistive sensor की category है।"
+    },
+    {
+      "id": "u16_input_elements_q9",
+      "question": "Push-button valve में 'mushroom head' (emergency stop) push-button का मुख्य उपयोग क्या है?",
+      "options": [
+        "सामान्य start signal देने के लिए",
+        "Emergency situation में तुरंत पूरे system को stop करने और latch होकर बिना manual reset के दोबारा start न होने देने के लिए",
+        "केवल indication lamp जलाने के लिए",
+        "Cylinder की stroke length बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Emergency stop mushroom push-button बड़े size का होता है ताकि जल्दी दबाया जा सके, यह latching प्रकार का होता है जो दबाने के बाद स्वतः lock हो जाता है और twist/pull करके ही reset होता है, जिससे accidental restart रुकता है। Options A, C, D इसके safety function को दर्शाते नहीं।"
+    },
+    {
+      "id": "u16_input_elements_q10",
+      "question": "Selector switch (rotary selector) input element का उपयोग किस लिए किया जाता है?",
+      "options": [
+        "केवल एक cylinder को manually retract करने के लिए",
+        "दो या अधिक operating modes जैसे manual/automatic या forward/reverse के बीच चयन करने के लिए एक stable position वाला switch",
+        "System के pressure को measure करने के लिए",
+        "Air की moisture content कम करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Selector switch एक maintained (stable) contact device है जो अलग-अलग positions पर रहकर mode selection (जैसे manual/auto) प्रदान करता है, push-button की तरह momentary नहीं होता। Option A actuator solenoid valve का काम है, C pressure gauge का, D air dryer/filter का काम है।"
+    },
+    {
+      "id": "u16_input_elements_q11",
+      "question": "Reed switch based proximity sensor (magnetic sensor) आमतौर पर किस application में cylinder पर उपयोग होता है?",
+      "options": [
+        "Piston पर लगे permanent magnet की उपस्थिति को cylinder barrel के बाहर से sense कर piston की position detect करने के लिए",
+        "Air की temperature मापने के लिए",
+        "Flow rate control करने के लिए",
+        "केवल manual actuation के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Magnetic reed switch, non-ferrous (aluminium/brass) cylinder barrel के बाहर mount किया जाता है और piston के अंदर लगे magnet के पास आने पर contacts magnetically close हो जाते हैं, इस तरह बिना अंदर घुसे piston position sense होती है। Options B, C, D इसके actual function से मेल नहीं खाते।"
+    },
+    {
+      "id": "u16_input_elements_q12",
+      "question": "Push-button valve (pneumatic type, न कि electrical) में 3/2 way manually operated valve का 'normally closed' अर्थ क्या है?",
+      "options": [
+        "Rest position में port 1 से port 2 तक air flow blocked रहता है, actuation पर flow open हो जाता है",
+        "Rest position में air हमेशा बहती रहती है",
+        "यह केवल electrical contact है, pneumatic नहीं",
+        "यह हमेशा exhaust की स्थिति में locked रहता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Normally closed 3/2 push-button valve की rest position में supply port से output port तक air path बंद रहता है; button दबाने पर supply, output से connect होकर air flow करती है। Option B normally open valve के behaviour जैसा है, C गलत क्योंकि यह pneumatic valve है, D permanent locking का दावा गलत है।"
+    },
+    {
+      "id": "u16_input_elements_q13",
+      "question": "Two roller lever limit switches को cylinder के दोनों सिरों पर लगाने का उद्देश्य क्या है?",
+      "options": [
+        "केवल decoration के लिए",
+        "Cylinder की piston rod के extend और retract दोनों end positions को detect करके control circuit को feedback देना",
+        "Air की quantity कम करने के लिए",
+        "System का weight बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "एक limit switch cylinder के extended end पर तथा दूसरा retracted end पर लगाया जाता है ताकि automatic sequencing circuit को यह feedback मिले कि piston किस end position पर पहुँच गया है और अगला step trigger हो सके। Options A, C, D इसके functional purpose से असंबंधित हैं।"
+    },
+    {
+      "id": "u16_input_elements_q14",
+      "question": "Photoelectric sensor के 'diffuse reflective' type में detection किस प्रकार होती है?",
+      "options": [
+        "Emitter व receiver अलग-अलग दूर स्थानों पर होते हैं",
+        "Light सीधे object से टकराकर वापस reflect होकर उसी unit के receiver तक पहुँचती है, अलग reflector की जरूरत नहीं होती",
+        "यह केवल metallic object से काम करता है",
+        "यह हमेशा retro-reflector plate का प्रयोग करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Diffuse type sensor में target object स्वयं light को scatter करके वापस उसी sensor housing की तरफ reflect करता है, जिसे receiver detect करता है; अलग reflector की आवश्यकता नहीं होती। Option A through-beam का सिद्धांत है, C गलत क्योंकि यह किसी भी opaque surface से काम करता है, D retro-reflective type का वर्णन है।"
+    },
+    {
+      "id": "u16_input_elements_q15",
+      "question": "Electro-pneumatic input circuit में foot-operated push-button valve का प्रयोग मुख्यतः कब किया जाता है?",
+      "options": [
+        "जब operator के दोनों हाथ किसी अन्य कार्य (जैसे workpiece पकड़ना) में व्यस्त हों और signal देने के लिए पैर का उपयोग करना हो",
+        "केवल emergency stop के लिए",
+        "केवल pressure measurement के लिए",
+        "Cylinder की gति नियंत्रित करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Foot switch तब उपयोगी होता है जब operator के हाथ किसी काम में लगे हों (जैसे material hold करना), इसलिए foot pedal से start signal दिया जाता है। Option B mushroom emergency stop का काम है, C pressure gauge का, D flow control valve का कार्य है।"
+    },
+    {
+      "id": "u16_input_elements_q16",
+      "question": "Proximity switch चुनते समय 'sensing range' (nominal sensing distance) का ध्यान क्यों रखा जाता है?",
+      "options": [
+        "क्योंकि यह target material की cost निर्धारित करता है",
+        "क्योंकि इससे sensor की power consumption कम हो जाती है",
+        "क्योंकि target object को उतनी ही दूरी पर पास लाने पर ही sensor reliably signal देगा, अधिक दूरी पर detection fail हो सकता है",
+        "क्योंकि यह केवल AC supply के लिए जरूरी है"
+      ],
+      "correctIndex": 2,
+      "explanation": "प्रत्येक proximity sensor की एक rated sensing distance होती है; target को उस range के भीतर लाना जरूरी है वरना output signal generate नहीं होगा या unreliable होगा। Options A, B, D sensing range के वास्तविक तकनीकी महत्व को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_input_elements_q17",
+      "question": "3-wire proximity switch (PNP type) में तीन wires का कार्य क्या होता है?",
+      "options": [
+        "एक ground, एक AC line, एक neutral",
+        "एक wire supply positive (+V), एक supply negative/common (0V), और एक output signal wire load को जोड़ने के लिए",
+        "तीनों wires केवल indication LED के लिए होती हैं",
+        "इनमें से कोई wire की जरूरत नहीं, यह wireless है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PNP proximity switch में brown wire को +V supply, blue wire को 0V/common, और black wire को output signal (load की तरफ) से जोड़ा जाता है ताकि target detect होने पर output +V के बराबर हो जाए। Options A, C, D इस standard wiring configuration को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_input_elements_q18",
+      "question": "PNP और NPN प्रकार के proximity sensors में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों में कोई अंतर नहीं है",
+        "PNP sensor detection पर output को +V (positive) supply से connect करता है जबकि NPN sensor output को 0V (negative/common) से connect करता है",
+        "PNP केवल AC supply पर काम करता है, NPN केवल DC पर",
+        "NPN sensor केवल metal detect करता है, PNP सभी materials"
+      ],
+      "correctIndex": 1,
+      "explanation": "PNP (sourcing) sensor actuation पर output line पर positive voltage देता है, जबकि NPN (sinking) sensor actuation पर output line को common/ground से जोड़ देता है। Options A, C, D सही technical अंतर नहीं बताते, दोनों DC प्रकार के होते हैं।"
+    },
+    {
+      "id": "u16_input_elements_q19",
+      "question": "Electro-pneumatic control panel में push-button valve की जगह proximity switch का उपयोग करने का मुख्य लाभ क्या है?",
+      "options": [
+        "इसमें wiring की जरूरत नहीं होती",
+        "Contactless sensing के कारण mechanical wear-tear कम होता है और automatic/high-speed sequencing संभव होती है",
+        "यह हमेशा सस्ता होता है",
+        "इसे compressed air की जरूरत नहीं पड़ती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Proximity switch non-contact सिद्धांत पर काम करता है इसलिए mechanical wear नहीं होता और यह high cycle rate automatic operations के लिए उपयुक्त है, जबकि mechanical push-button/limit switch में physical contact व wear होता है। Options A, C, D तथ्यात्मक रूप से सही नहीं हैं।"
+    },
+    {
+      "id": "u16_input_elements_q20",
+      "question": "Roller lever valve में spring-return mechanism का उद्देश्य क्या है?",
+      "options": [
+        "Actuating force को कम करना",
+        "Cam/dog हटने के बाद roller lever और valve spool को स्वतः मूल (rest) position में वापस लाना",
+        "Air की flow rate बढ़ाना",
+        "Signal को delay करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "जैसे ही cam/dog roller के ऊपर से हटता है, internal spring valve spool को वापस उसकी original rest position में धकेल देता है ताकि valve अगली actuation के लिए तैयार रहे। Options A, C, D स्प्रिंग के वास्तविक कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u16_input_elements_q21",
+      "question": "Air barrier (jet sensor) का उपयोग सामान्यतः किन applications में अधिक किया जाता है?",
+      "options": [
+        "जहाँ metallic detection ही एकमात्र विकल्प हो",
+        "Fragile, hot, या contamination-sensitive components की counting/presence detection में जहाँ contact-type sensor उपयुक्त नहीं",
+        "केवल high pressure hydraulic circuits में",
+        "केवल manual operation में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Air barrier एक non-contact sensor है जो किसी भी material (metallic/non-metallic, नाजुक या गर्म वस्तु) की presence बिना छुए detect कर सकता है, इसलिए यह sensitive components की counting/detection में उपयोगी है। Options A, C, D इसकी वास्तविक applications को गलत तरीके से बताते हैं।"
+    },
+    {
+      "id": "u16_input_elements_q22",
+      "question": "Electro-pneumatic system में 'sensor' और 'actuator' के बीच मुख्य कार्यात्मक अंतर क्या है?",
+      "options": [
+        "दोनों एक ही कार्य करते हैं",
+        "Sensor input signal उत्पन्न करके control unit को स्थिति की जानकारी देता है जबकि actuator (जैसे cylinder) control signal के अनुसार physical work करता है",
+        "Sensor केवल output देता है, actuator input लेता है",
+        "Actuator केवल electrical signal उत्पन्न करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sensor (जैसे proximity switch, push-button) input side पर होता है और status/command signal generate करता है, जबकि actuator (cylinder, motor) उस signal के आधार पर mechanical output/work करता है। Options A, C, D input-output दिशा को उल्टा या गलत बताते हैं।"
+    },
+    {
+      "id": "u16_input_elements_q23",
+      "question": "Toggle switch (2-position maintained switch) push-button switch से किस प्रकार भिन्न है?",
+      "options": [
+        "Toggle switch की actuated स्थिति operator के हाथ हटाने के बाद भी बनी रहती है (latching), जबकि momentary push-button छोड़ते ही अपनी rest position में लौट आता है",
+        "दोनों बिल्कुल समान behaviour रखते हैं",
+        "Toggle switch केवल pneumatic signal देता है",
+        "Push-button switch हमेशा NC होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Toggle/selector switch maintained-contact प्रकार का होता है जो operate करने के बाद उसी स्थिति में रहता है जब तक दोबारा actuate न किया जाए, जबकि सामान्य momentary push-button छोड़ते ही spring द्वारा rest position में लौट आता है। Options B, C, D इस अंतर को गलत बताते हैं।"
+    },
+    {
+      "id": "u16_input_elements_q24",
+      "question": "Capacitive proximity sensor को liquid level detection में उपयोग करने का क्या कारण है?",
+      "options": [
+        "क्योंकि यह केवल ferrous metal ही detect कर सकता है",
+        "क्योंकि container की दीवार के बाहर से भी liquid के dielectric constant में परिवर्तन को sense कर सकता है",
+        "क्योंकि इसे compressed air की जरूरत होती है",
+        "क्योंकि यह केवल high temperature पर काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitive sensor non-metallic container की wall के बाहर लगाकर भी अंदर liquid की presence sense कर सकता है क्योंकि liquid का dielectric constant air से भिन्न होता है, जिससे sensor की capacitance बदल जाती है। Options A, C, D इसकी वास्तविक कार्यप्रणाली से मेल नहीं खाते।"
+    },
+    {
+      "id": "u16_input_elements_q25",
+      "question": "Roller lever valve की तुलना में plunger (push-type) actuated valve में मुख्य अंतर क्या है?",
+      "options": [
+        "Plunger valve सीधे linear push force से actuate होता है जबकि roller lever valve में rolling contact के कारण side motion से भी actuation संभव है, जिससे mechanical wear कम होता है",
+        "दोनों में कोई अंतर नहीं",
+        "Plunger valve केवल electrical signal देता है",
+        "Roller lever valve हमेशा manually operate होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Plunger actuator को सीधी axial force चाहिए होती है, जबकि roller lever, cam की tangential/sliding motion को भी smoothly rolling के जरिए accommodate कर लेता है, जिससे friction व wear कम होता है और यह high-speed cams के लिए बेहतर है। Options B, C, D सही तकनीकी अंतर प्रस्तुत नहीं करते।"
+    },
+    {
+      "id": "u16_input_elements_q26",
+      "question": "Electro-pneumatic circuit diagram में push-button की contact symbol में दो horizontal lines के बीच gap का क्या अर्थ होता है (NO contact)?",
+      "options": [
+        "यह short circuit को दर्शाता है",
+        "यह rest position में contacts के खुले (open) होने और actuation पर बंद होने को symbolically दर्शाता है",
+        "यह केवल pneumatic port को दर्शाता है",
+        "यह fuse को दर्शाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Electrical ladder diagram में NO contact symbol दो parallel lines के बीच gap के रूप में दिखाया जाता है जो यह बताता है कि rest position में circuit open है और actuation पर contacts close होकर circuit complete करते हैं। Options A, C, D इसका सही अर्थ नहीं देते।"
+    },
+    {
+      "id": "u16_input_elements_q27",
+      "question": "Ultrasonic proximity sensor किस सिद्धांत पर कार्य करता है?",
+      "options": [
+        "Magnetic field के परिवर्तन से",
+        "High-frequency sound waves emit करके object से टकराकर वापस आने में लगे समय (time-of-flight) के आधार पर distance/presence detect करना",
+        "Air pressure में गिरावट से",
+        "Dielectric constant में बदलाव से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ultrasonic sensor transducer से ultrasonic waves भेजता है और object से reflect होकर वापस आने में लगे समय को measure कर distance/presence निर्धारित करता है — यह transparent व non-metallic materials के लिए भी उपयोगी है। Option A inductive sensor का सिद्धांत है, C air barrier का, D capacitive sensor का सिद्धांत है।"
+    },
+    {
+      "id": "u16_input_elements_q28",
+      "question": "Roller lever limit switch के 'over-travel' feature का क्या महत्व है?",
+      "options": [
+        "यह valve की response time घटाता है",
+        "Cam द्वारा roller को actuation point से आगे भी थोड़ा और दबाया जा सकता है जिससे mechanical damage के बिना positioning tolerance मिलती है",
+        "यह केवल decoration के लिए होता है",
+        "यह sensor की sensing range बढ़ाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Over-travel एक safety margin है जो cam को actuation point पार करने के बाद भी थोड़ी अतिरिक्त गति देने की अनुमति देता है ताकि valve या roller को नुकसान न पहुंचे और slight positional variation सहन हो सके। Options A, C, D इसका सही उद्देश्य नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_input_elements_q29",
+      "question": "एक automatic packaging line में conveyor पर आने वाले box की उपस्थिति detect करने हेतु सबसे उपयुक्त contactless input element कौन-सा है?",
+      "options": [
+        "Manual push-button switch",
+        "Photoelectric (diffuse type) sensor या air barrier, जो बिना touch किए box की presence detect कर सके",
+        "Foot-operated valve",
+        "Toggle selector switch"
+      ],
+      "correctIndex": 1,
+      "explanation": "High-speed automatic conveyor lines में box की presence continuously व बिना contact detect करने हेतु photoelectric sensor या air barrier उपयुक्त हैं क्योंकि ये तेज़, wear-free व reliable detection देते हैं। Options A, C, D manual operator input elements हैं, automatic detection के लिए उपयुक्त नहीं।"
+    },
+    {
+      "id": "u16_input_elements_q30",
+      "question": "Input elements की reliability बढ़ाने के लिए electro-pneumatic panel में 'debouncing' की आवश्यकता क्यों पड़ती है?",
+      "options": [
+        "क्योंकि mechanical contacts (push-button, limit switch) actuation के समय कुछ milliseconds के लिए तेजी से make-break होकर false multiple pulses उत्पन्न कर सकते हैं, जिन्हें filter करना जरूरी होता है",
+        "क्योंकि air pressure हमेशा अस्थिर रहता है",
+        "क्योंकि यह केवल proximity sensors के लिए जरूरी है",
+        "क्योंकि यह cylinder की speed बढ़ाने के लिए किया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mechanical contact जब close/open होता है तो contact bounce के कारण कुछ ही milliseconds में कई बार तेज़ make-break हो सकता है, जिससे control circuit को गलत multiple signals मिल सकते हैं; debouncing circuit/logic इसे filter कर एक साफ signal देता है। Options B, C, D इस समस्या के सही कारण को नहीं दर्शाते।"
+    }
+  ]
+}

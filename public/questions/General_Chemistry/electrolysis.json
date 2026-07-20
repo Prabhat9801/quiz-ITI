@@ -1,0 +1,218 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "electrolysis",
+  "topicName": "Electrolysis",
+  "questions": [
+    {
+      "id": "chem_electrolysis_q1",
+      "question": "Electrolysis प्रक्रिया में किस प्रकार का पदार्थ current प्रवाहित करने पर decompose (आयनों में विभाजित) हो जाता है?",
+      "options": ["कोई भी ठोस धातु", "Electrolyte (जैसे molten NaCl या CuSO4 solution)", "शुद्ध distilled water अकेले", "कोई भी insulator"],
+      "correctIndex": 1,
+      "explanation": "Electrolyte वह यौगिक है जो molten या aqueous अवस्था में ions में dissociate होकर current प्रवाहित करने पर decompose होता है, जैसे molten NaCl या CuSO4 solution। ठोस धातु में electrons से conduction होता है, decomposition नहीं; शुद्ध distilled water स्वयं खराब conductor है (बिना impurity के); और insulator में current प्रवाहित ही नहीं होता।"
+    },
+    {
+      "id": "chem_electrolysis_q2",
+      "question": "Electrolytic cell में वह electrode जो external battery के positive terminal से जुड़ा होता है, उसे क्या कहते हैं?",
+      "options": ["Cathode", "Neutral electrode", "Anode", "Ground electrode"],
+      "correctIndex": 2,
+      "explanation": "जो electrode battery के positive terminal से जुड़ा होता है उसे anode कहते हैं और यहाँ oxidation होता है। Cathode negative terminal से जुड़ा होता है जहाँ reduction होता है, जबकि \"neutral electrode\" और \"ground electrode\" जैसे कोई मानक शब्द electrolysis में प्रयुक्त नहीं होते।"
+    },
+    {
+      "id": "chem_electrolysis_q3",
+      "question": "Electrolyte solution में cations (धनायन) electrolysis के दौरान किस electrode की ओर गति करते हैं?",
+      "options": ["Cathode की ओर", "Anode की ओर", "दोनों electrodes की ओर बराबर", "किसी भी दिशा में गति नहीं करते"],
+      "correctIndex": 0,
+      "explanation": "धनावेशित cations, ऋणावेशित cathode की ओर आकर्षित होकर वहाँ electrons ग्रहण कर reduce होते हैं। Anode की ओर anions जाते हैं, बराबर गति या स्थिर रहना गलत है क्योंकि electric field आयनों को दिशा देता है।"
+    },
+    {
+      "id": "chem_electrolysis_q4",
+      "question": "Electrolytic cell और Galvanic (voltaic) cell में मूल अंतर क्या है?",
+      "options": ["दोनों में spontaneous रासायनिक reaction से विद्युत ऊर्जा बनती है", "Electrolytic cell बिना किसी external source के कार्य करती है", "Galvanic cell में external battery से current देकर reaction कराई जाती है", "Electrolytic cell में external विद्युत ऊर्जा देकर non-spontaneous रासायनिक reaction कराई जाती है जबकि Galvanic cell रासायनिक ऊर्जा को विद्युत ऊर्जा में बदलती है"],
+      "correctIndex": 3,
+      "explanation": "Electrolytic cell में बाहरी स्रोत से विद्युत ऊर्जा देकर non-spontaneous reaction (electrolysis) कराई जाती है, जबकि Galvanic cell में spontaneous रासायनिक reaction से स्वयं विद्युत ऊर्जा उत्पन्न होती है। इसलिए option A गलत सामान्यीकरण है, B गलत है क्योंकि electrolytic cell को external source चाहिए ही होता है, और C भी उल्टा कथन है क्योंकि galvanic cell external current नहीं लेती।"
+    },
+    {
+      "id": "chem_electrolysis_q5",
+      "question": "Faraday के प्रथम नियम (First Law of Electrolysis) के अनुसार electrode पर जमा (deposit) हुए पदार्थ का द्रव्यमान (m) किसके समानुपाती होता है?",
+      "options": ["केवल समय (t) के", "प्रवाहित हुए कुल विद्युत आवेश (charge, Q = I×t) के", "केवल current (I) के", "electrode के क्षेत्रफल के"],
+      "correctIndex": 1,
+      "explanation": "Faraday के प्रथम नियम अनुसार m ∝ Q, अर्थात m = Z×I×t, यानि द्रव्यमान current और समय दोनों के गुणनफल (charge) के समानुपाती होता है। अकेले t या I से नहीं, और electrode का क्षेत्रफल इस नियम में सीधे शामिल नहीं है।"
+    },
+    {
+      "id": "chem_electrolysis_q6",
+      "question": "Faraday के द्वितीय नियम (Second Law of Electrolysis) के अनुसार, समान charge प्रवाहित करने पर विभिन्न electrolytes से जमा हुए पदार्थों के द्रव्यमान किसके समानुपाती होते हैं?",
+      "options": ["उनके chemical equivalent weight (E) के", "उनके atomic number के", "उनके melting point के", "उनके density के"],
+      "correctIndex": 0,
+      "explanation": "Faraday के द्वितीय नियम अनुसार समान charge पर m1/m2 = E1/E2, अर्थात deposited द्रव्यमान equivalent weight के समानुपाती होता है। Atomic number, melting point या density का इस नियम से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "chem_electrolysis_q7",
+      "question": "1 Faraday (F) आवेश (charge) का मान लगभग कितना होता है?",
+      "options": ["9650 coulomb", "1 coulomb", "96500 coulomb", "6.023×10^23 coulomb"],
+      "correctIndex": 2,
+      "explanation": "1 Faraday = 96500 coulomb प्रति mole electrons, जो 1 mole electrons (6.023×10^23 electrons) द्वारा वहन किया गया आवेश है। 9650 C इसका 1/10 है, 1 C बहुत छोटा मान है, और 6.023×10^23 तो Avogadro संख्या है coulomb नहीं।"
+    },
+    {
+      "id": "chem_electrolysis_q8",
+      "question": "Electrochemical equivalent (Z) की सही परिभाषा क्या है?",
+      "options": ["1 mole पदार्थ जमा करने के लिए आवश्यक charge", "1 second में प्रवाहित current", "electrolyte का equivalent weight ग्राम में", "1 coulomb आवेश प्रवाहित करने पर electrode पर जमा हुए पदार्थ का द्रव्यमान (ग्राम में)"],
+      "correctIndex": 3,
+      "explanation": "Electrochemical equivalent (Z) वह द्रव्यमान है जो 1 coulomb आवेश प्रवाहित करने पर electrode पर जमा होता है, अर्थात Z = E/96500। शेष विकल्प charge, current या equivalent weight की परिभाषाएँ हैं, Z की नहीं।"
+    },
+    {
+      "id": "chem_electrolysis_q9",
+      "question": "यदि किसी धातु का electrochemical equivalent Z = 0.001118 g/C है और 4A current को 1800 seconds तक electrolyte से प्रवाहित किया जाए, तो electrode पर जमा हुए धातु का द्रव्यमान लगभग कितना होगा (m = Z×I×t)?",
+      "options": ["4.03 g", "8.05 g", "2.01 g", "16.10 g"],
+      "correctIndex": 1,
+      "explanation": "m = Z×I×t = 0.001118 × 4 × 1800 ≈ 8.05 g। 4.03g तो आधा मान है (गलत गणना), 2.01g चौथाई है, और 16.10g दुगना है इसलिए ये सभी गलत हैं।"
+    },
+    {
+      "id": "chem_electrolysis_q10",
+      "question": "Electroplating प्रक्रिया में वस्तु (object) जिस पर coating करनी होती है, उसे electrolytic cell में किस रूप में रखा जाता है?",
+      "options": ["Cathode के रूप में", "Anode के रूप में", "Electrolyte के रूप में", "External battery के रूप में"],
+      "correctIndex": 0,
+      "explanation": "Electroplating में जिस वस्तु पर धातु की परत चढ़ानी होती है उसे cathode बनाया जाता है ताकि solution के cations वहाँ reduce होकर जमा हों। Anode पर वह शुद्ध धातु रखी जाती है जिसकी coating करनी है, electrolyte घोल होता है वस्तु नहीं, और battery केवल विद्युत स्रोत है।"
+    },
+    {
+      "id": "chem_electrolysis_q11",
+      "question": "Electrorefining of Copper प्रक्रिया में अशुद्ध (impure) Copper को cell में किस electrode के रूप में रखा जाता है?",
+      "options": ["Cathode", "Neutral electrode", "Anode", "यह केवल electrolyte में घुला रहता है, electrode नहीं बनता"],
+      "correctIndex": 2,
+      "explanation": "Electrorefining में impure Cu को anode बनाया जाता है जो oxidise होकर Cu2+ आयन के रूप में घुलता है, जबकि शुद्ध Cu की thin sheet को cathode बनाकर उस पर शुद्ध Cu जमा किया जाता है। \"Neutral electrode\" जैसा कोई शब्द मानक नहीं है और impure Cu ठोस electrode ही होता है, केवल घुला हुआ पदार्थ नहीं।"
+    },
+    {
+      "id": "chem_electrolysis_q12",
+      "question": "Copper के electrorefining में anode के नीचे जमा होने वाले कीमती अशुद्धियों (जैसे Ag, Au) के अवशेष को क्या कहते हैं?",
+      "options": ["Cathode deposit", "Electrolyte residue", "Slag", "Anode mud (या anode slime)"],
+      "correctIndex": 3,
+      "explanation": "Cu से अधिक noble धातुएँ (Ag, Au) oxidise नहीं होतीं और anode के नीचे ठोस रूप में जमा हो जाती हैं, इसे anode mud/slime कहा जाता है, जो एक महत्वपूर्ण byproduct है। Cathode deposit शुद्ध Cu होता है, electrolyte residue कोई मानक शब्द नहीं और slag धातुकर्म (smelting) की भट्टी से जुड़ा शब्द है, electrolysis का नहीं।"
+    },
+    {
+      "id": "chem_electrolysis_q13",
+      "question": "Aluminium के निष्कर्षण (extraction) हेतु Hall-Héroult process में molten Al2O3 (alumina) को किसके साथ मिलाकर उसका melting point कम किया जाता है?",
+      "options": ["साधारण जल", "NaCl", "Cryolite (Na3AlF6)", "Sulphuric acid (H2SO4)"],
+      "correctIndex": 2,
+      "explanation": "Cryolite (Na3AlF6) मिलाने से alumina का melting point काफी कम हो जाता है जिससे economical electrolysis संभव होती है। जल electrolysis को बाधित करता, NaCl अलग electrolyte है जो Al निष्कर्षण में प्रयुक्त नहीं होता, और H2SO4 इस process में उपयोग नहीं होता।"
+    },
+    {
+      "id": "chem_electrolysis_q14",
+      "question": "Aluminium extraction (Hall-Héroult process) में molten mixture के electrolysis से cathode पर क्या जमा होता है और anode पर मुख्यतः कौन-सी gas निकलती है?",
+      "options": ["Cathode पर Oxygen जमा होती है, anode पर molten Al निकलता है", "Cathode पर molten Aluminium जमा होता है, anode पर मुख्यतः CO2 gas निकलती है (carbon anode के जलने से)", "दोनों electrodes पर केवल Oxygen निकलती है", "Cathode पर Sodium जमा होता है"],
+      "correctIndex": 1,
+      "explanation": "Al3+ आयन cathode पर reduce होकर molten Aluminium बनाते हैं, जबकि anode पर बना Oxygen carbon anode के साथ reaction करके मुख्यतः CO2 gas बनाता है, जिससे carbon anode धीरे-धीरे नष्ट होता रहता है। Option A दिशा उल्टी बताता है, दोनों electrodes पर केवल Oxygen निकलना गलत है, और Sodium इस प्रक्रिया में जमा नहीं होता।"
+    },
+    {
+      "id": "chem_electrolysis_q15",
+      "question": "किसी electrolysis में 10A current 9650 seconds तक प्रवाहित किया जाता है। प्रवाहित कुल आवेश (charge, Faraday में) लगभग कितना होगा?",
+      "options": ["लगभग 1 Faraday (96500 C)", "लगभग 10 Faraday", "लगभग 0.1 Faraday", "लगभग 96.5 Faraday"],
+      "correctIndex": 0,
+      "explanation": "Q = I×t = 10 × 9650 = 96500 coulomb, जो ठीक 1 Faraday के बराबर है। शेष विकल्प गणना में 10 गुना, 1/10 या 96.5 गुना जैसी त्रुटियाँ दर्शाते हैं।"
+    },
+    {
+      "id": "chem_electrolysis_q16",
+      "question": "प्रश्न 15 की स्थिति में यदि यही 1 Faraday charge AgNO3 solution से प्रवाहित हो, तो कितना Silver (Ag, atomic weight = 108, valency = 1) cathode पर जमा होगा?",
+      "options": ["54 g", "216 g", "108 g", "10.8 g"],
+      "correctIndex": 2,
+      "explanation": "1 valency वाले Ag के लिए equivalent weight = atomic weight/valency = 108/1 = 108, और 1 Faraday आवेश ठीक 1 equivalent पदार्थ जमा करता है, अतः 108 g Ag जमा होगा। 54g आधा है (valency 2 मानने की त्रुटि), 216g दुगना और 10.8g दस गुना कम है।"
+    },
+    {
+      "id": "chem_electrolysis_q17",
+      "question": "यदि 1 Faraday आवेश CuSO4 solution से प्रवाहित किया जाए, तो Copper (Cu, atomic weight = 63.5, valency = 2) कितना जमा होगा?",
+      "options": ["63.5 g", "31.75 g", "127 g", "15.875 g"],
+      "correctIndex": 1,
+      "explanation": "Cu की valency 2 होने से equivalent weight = 63.5/2 = 31.75, और 1 Faraday ठीक 1 equivalent पदार्थ जमा करता है, अतः 31.75 g Cu जमा होगा। 63.5g तो पूरा atomic weight है (valency 1 मानने की त्रुटि), 127g दुगना और 15.875g आधा है।"
+    },
+    {
+      "id": "chem_electrolysis_q18",
+      "question": "प्रश्न 16 और 17 के आधार पर, समान charge (1 Faraday) प्रवाहित करने पर Ag और Cu के जमा हुए द्रव्यमानों का अनुपात (Ag:Cu) क्या दर्शाता है?",
+      "options": ["यह अनुपात केवल संयोग है, किसी नियम से संबंधित नहीं", "यह अनुपात हमेशा 1:1 होना चाहिए था", "यह अनुपात atomic weight के अनुपात के बराबर है", "यह अनुपात Faraday के द्वितीय नियम अनुसार उनके equivalent weights (108:31.75) के अनुपात के बराबर है"],
+      "correctIndex": 3,
+      "explanation": "Faraday के द्वितीय नियम अनुसार समान charge पर deposited द्रव्यमान equivalent weight के समानुपाती होते हैं, इसलिए Ag:Cu = 108:31.75। यह संयोग नहीं बल्कि नियम आधारित है, 1:1 होना गलत है क्योंकि equivalent weights भिन्न हैं, और यह atomic weight अनुपात (108:63.5) के बराबर नहीं बल्कि equivalent weight अनुपात के बराबर है।"
+    },
+    {
+      "id": "chem_electrolysis_q19",
+      "question": "Electrolysis में anode पर मुख्यतः कौन-सी रासायनिक प्रक्रिया (reaction) होती है?",
+      "options": ["Oxidation (electrons का त्याग)", "Reduction (electrons का ग्रहण)", "कोई रासायनिक प्रक्रिया नहीं होती", "केवल भौतिक परिवर्तन (physical change) होता है"],
+      "correctIndex": 0,
+      "explanation": "Anode पर anions या धातु स्वयं electrons त्यागकर oxidise होते हैं, इसलिए anode पर oxidation होता है। Cathode पर इसके विपरीत reduction होता है, और यह एक वास्तविक रासायनिक redox प्रक्रिया है, न कि केवल भौतिक परिवर्तन या \"कोई प्रक्रिया नहीं\"।"
+    },
+    {
+      "id": "chem_electrolysis_q20",
+      "question": "Electrolysis में cathode पर मुख्यतः कौन-सी प्रक्रिया होती है?",
+      "options": ["Oxidation", "Reduction (cations electrons ग्रहण करके तटस्थ परमाणु/धातु बनते हैं)", "Sublimation", "Neutralisation"],
+      "correctIndex": 1,
+      "explanation": "Cathode पर धनायन (cations) external circuit से electrons ग्रहण करके reduce होते हैं और तटस्थ परमाणु या धातु के रूप में जमा होते हैं। Oxidation anode पर होता है, sublimation ठोस से सीधे gas बनने की भौतिक प्रक्रिया है, और neutralisation acid-base प्रतिक्रिया से जुड़ा शब्द है।"
+    },
+    {
+      "id": "chem_electrolysis_q21",
+      "question": "जल (acidified water) के electrolysis में cathode और anode पर क्रमशः कौन-सी gases प्राप्त होती हैं?",
+      "options": ["दोनों electrodes पर Oxygen", "दोनों electrodes पर Hydrogen", "Cathode पर Oxygen, anode पर Hydrogen", "Cathode पर Hydrogen (H2), anode पर Oxygen (O2), लगभग 2:1 आयतन अनुपात में"],
+      "correctIndex": 3,
+      "explanation": "Acidified जल के electrolysis में H+ आयन cathode पर reduce होकर H2 gas बनाते हैं और anode पर पानी oxidise होकर O2 gas बनाती है, जिनका आयतन अनुपात लगभग 2:1 (H2:O2) होता है। दोनों electrodes पर समान gas बनना और दिशा उल्टी होना water electrolysis के तथ्यों से मेल नहीं खाता।"
+    },
+    {
+      "id": "chem_electrolysis_q22",
+      "question": "Molten NaCl के electrolysis में cathode पर कौन-सी धातु जमा होती है और anode पर कौन-सी gas निकलती है?",
+      "options": ["Cathode पर Sodium (Na) धातु, anode पर Chlorine (Cl2) gas", "Cathode पर Chlorine gas, anode पर Sodium धातु", "दोनों electrodes पर Sodium धातु", "दोनों electrodes पर Chlorine gas"],
+      "correctIndex": 0,
+      "explanation": "Molten NaCl में Na+ cathode पर reduce होकर Na धातु बनाता है और Cl- anode पर oxidise होकर Cl2 gas के रूप में निकलती है। शेष विकल्प electrodes की भूमिका को उल्टा या गलत दर्शाते हैं।"
+    },
+    {
+      "id": "chem_electrolysis_q23",
+      "question": "NaCl जैसे strong electrolyte और acetic acid जैसे weak electrolyte में मुख्य अंतर किस आधार पर होता है?",
+      "options": ["Strong electrolyte में कोई ions नहीं बनते", "Weak electrolyte पूरी तरह ions में dissociate होता है", "Strong electrolyte solution में लगभग पूर्णतः dissociate होकर अधिक ions व अधिक conductivity देता है, weak electrolyte आंशिक रूप से dissociate होता है", "दोनों में dissociation की मात्रा हमेशा समान होती है"],
+      "correctIndex": 2,
+      "explanation": "Strong electrolyte (जैसे NaCl) solution में लगभग पूर्णतः dissociate होकर अधिक conductivity देता है, जबकि weak electrolyte (जैसे acetic acid) केवल आंशिक रूप से dissociate होता है इसलिए कम conductivity देता है। शेष विकल्प dissociation की वास्तविक प्रकृति को उल्टा या गलत दर्शाते हैं।"
+    },
+    {
+      "id": "chem_electrolysis_q24",
+      "question": "निम्न में से कौन-सा पदार्थ non-electrolyte है, अर्थात molten या घुली अवस्था में भी current प्रवाहित नहीं होने देता?",
+      "options": ["Molten NaCl", "Sugar (glucose) का जलीय घोल", "Dilute H2SO4", "CuSO4 का जलीय घोल"],
+      "correctIndex": 1,
+      "explanation": "Sugar (glucose) पानी में घुलकर ions नहीं बनाता (covalent molecule के रूप में रहता है), इसलिए इसका घोल current प्रवाहित नहीं करता और यह non-electrolyte है। Molten NaCl, dilute H2SO4 और CuSO4 घोल — तीनों ions में dissociate होकर अच्छे electrolyte का व्यवहार करते हैं।"
+    },
+    {
+      "id": "chem_electrolysis_q25",
+      "question": "Steel वस्तुओं पर Chromium electroplating मुख्यतः किस उद्देश्य से की जाती है?",
+      "options": ["वस्तु का weight कम करने के लिए", "वस्तु को चुम्बकीय बनाने के लिए", "वस्तु की conductivity बढ़ाने के लिए", "जंग (corrosion) से बचाव और चमकदार, आकर्षक सतह प्राप्त करने के लिए"],
+      "correctIndex": 3,
+      "explanation": "Chromium plating एक कठोर, चमकदार और corrosion-resistant परत बनाती है जिससे steel वस्तुएँ जंग से बचती हैं और आकर्षक दिखती हैं। इससे वस्तु का वजन घटाना, चुम्बकीय बनाना, या conductivity बढ़ाना उद्देश्य नहीं है।"
+    },
+    {
+      "id": "chem_electrolysis_q26",
+      "question": "किसी spoon पर Silver electroplating करने के लिए electrolyte के रूप में सामान्यतः किस solution का प्रयोग किया जाता है?",
+      "options": ["AgNO3 का जलीय घोल", "NaCl का जलीय घोल", "केवल शुद्ध जल", "CuSO4 का जलीय घोल"],
+      "correctIndex": 0,
+      "explanation": "Silver electroplating में AgNO3 solution प्रयुक्त होता है क्योंकि इसमें Ag+ आयन उपलब्ध होते हैं जो cathode (spoon) पर reduce होकर Ag की परत बनाते हैं। NaCl या शुद्ध जल में Ag+ आयन उपलब्ध नहीं होते और CuSO4 Copper plating के लिए प्रयुक्त होता है।"
+    },
+    {
+      "id": "chem_electrolysis_q27",
+      "question": "किसी electrolysis में 30 minutes (1800 s) में cathode पर 5.33 g Copper जमा होता है (Z of Cu = 0.000329 g/C)। प्रवाहित current लगभग कितना था (I = m/(Z×t))?",
+      "options": ["3 A", "6 A", "9 A", "12 A"],
+      "correctIndex": 2,
+      "explanation": "I = m/(Z×t) = 5.33/(0.000329×1800) = 5.33/0.5922 ≈ 9 A। 3A, 6A और 12A इस गणना से मेल नहीं खाते और गलत charge/mass संबंध दर्शाते हैं।"
+    },
+    {
+      "id": "chem_electrolysis_q28",
+      "question": "Automobile battery को recharge करते समय, battery के अंदर होने वाली प्रक्रिया किस प्रकार की cell जैसी होती है?",
+      "options": ["Galvanic cell जैसी, क्योंकि रासायनिक ऊर्जा विद्युत ऊर्जा में बदलती है", "Electrolytic cell जैसी, क्योंकि बाहरी विद्युत ऊर्जा देकर non-spontaneous reverse reaction कराई जाती है", "यह कोई भी standard cell सिद्धांत नहीं दर्शाती", "यह केवल mechanical प्रक्रिया है, कोई रासायनिक reaction नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "Recharging के दौरान बाहरी charger से विद्युत ऊर्जा देकर battery के अंदर discharge के दौरान हुई spontaneous reaction को उल्टा (reverse) किया जाता है, यह electrolytic cell के सिद्धांत जैसा है। Discharge होते समय battery galvanic cell की तरह कार्य करती है (विकल्प A उस स्थिति के लिए सही होता, recharge के लिए नहीं), और यह वास्तविक रासायनिक redox प्रक्रिया है, केवल mechanical नहीं।"
+    },
+    {
+      "id": "chem_electrolysis_q29",
+      "question": "Faraday constant (F = 96500 C/mol) को किस प्रकार व्यक्त किया जा सकता है?",
+      "options": ["F = Avogadro संख्या ÷ electron का charge", "F केवल एक experimental स्थिरांक है जिसका electron charge से कोई संबंध नहीं", "F = electron का mass × Avogadro संख्या", "F = Avogadro संख्या (N_A) × एक electron पर charge (e), अर्थात F = N_A × e"],
+      "correctIndex": 3,
+      "explanation": "1 mole electrons का कुल आवेश = Avogadro संख्या × एक electron का charge, अर्थात F = N_A × e = 6.023×10^23 × 1.6×10^-19 C ≈ 96500 C। शेष विकल्प यह संबंध उल्टा, असंबंधित या गलत राशि (mass) के रूप में दर्शाते हैं।"
+    },
+    {
+      "id": "chem_electrolysis_q30",
+      "question": "Electrorefining द्वारा धातु शुद्धिकरण (जैसे Copper) की एक प्रमुख विशेषता (advantage) क्या है?",
+      "options": ["इसमें कोई electrolyte प्रयुक्त नहीं होता", "यह अत्यंत उच्च शुद्धता (up to 99.9% से अधिक) की धातु प्राप्त करने की विधि है, जो electronic/electrical उपयोग हेतु उपयुक्त है", "इसमें धातु को केवल गर्म करके पिघलाया जाता है, कोई विद्युत धारा नहीं चाहिए", "यह विधि केवल non-metals के शुद्धिकरण हेतु प्रयुक्त होती है"],
+      "correctIndex": 1,
+      "explanation": "Electrorefining से बहुत उच्च शुद्धता (>99.9%) वाली धातु प्राप्त होती है जो electrical wiring जैसे कार्यों हेतु आवश्यक है, क्योंकि impurities anode mud में अलग रह जाती हैं। इसमें electrolyte solution आवश्यक होता है, विद्युत धारा के बिना यह प्रक्रिया संभव नहीं, और यह धातुओं (metals) के शुद्धिकरण की विधि है, non-metals की नहीं।"
+    }
+  ]
+}

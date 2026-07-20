@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "pic_timers",
+  "topicName": "PIC Timers: Modes, PWM, Capture/Compare, Measurement",
+  "questions": [
+    {
+      "id": "u2_pic_timers_q1",
+      "question": "PIC16F का Timer0 module अपने default configuration में कितने bits का होता है?",
+      "options": ["16-bit", "8-bit", "10-bit", "12-bit"],
+      "correctIndex": 1,
+      "explanation": "Timer0 एक 8-bit timer/counter है इसलिए यह 0 से 255 तक count करता है और option B सही है। 16-bit वाला Timer1 है, 10-bit ADC resolution से related है और 12-bit यहाँ किसी timer से मेल नहीं खाता।"
+    },
+    {
+      "id": "u2_pic_timers_q2",
+      "question": "Timer0 का prescaler ratio किस register से set किया जाता है?",
+      "options": ["OPTION_REG", "INTCON", "TRISA", "STATUS"],
+      "correctIndex": 0,
+      "explanation": "Timer0 का prescaler PS0-PS2 bits OPTION_REG में होते हैं इसलिए option A सही है। INTCON interrupt control के लिए, TRISA port direction के लिए और STATUS flags के लिए है, prescaler set नहीं करते।"
+    },
+    {
+      "id": "u2_pic_timers_q3",
+      "question": "Timer0 जब counter mode में हो तो वह किसको count करता है?",
+      "options": ["Internal instruction cycle Fosc/4", "External pin (T0CKI) पर आने वाले pulses", "ADC conversions", "USART bytes"],
+      "correctIndex": 1,
+      "explanation": "Counter mode में Timer0 external T0CKI pin पर आने वाली transitions/pulses को count करता है, इसलिए option B सही है। Internal Fosc/4 को count करना timer mode है, ADC और USART का timer counting से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u2_pic_timers_q4",
+      "question": "Timer0 का timer mode select करने के लिए OPTION_REG का T0CS bit किस value पर होना चाहिए?",
+      "options": ["T0CS = 1", "T0CS = 0", "T0CS floating", "इसका timer mode से कोई संबंध नहीं"],
+      "correctIndex": 1,
+      "explanation": "T0CS (Timer0 Clock Source select) = 0 रखने पर internal clock चुना जाता है यानी timer mode, इसलिए option B सही है। T0CS = 1 external clock यानी counter mode देता है; bit floating नहीं होता और यह सीधे mode तय करता है।"
+    },
+    {
+      "id": "u2_pic_timers_q5",
+      "question": "Timer1 module PIC16F में कितने bits का होता है?",
+      "options": ["8-bit", "12-bit", "16-bit", "24-bit"],
+      "correctIndex": 2,
+      "explanation": "Timer1 एक 16-bit timer/counter है जो TMR1H और TMR1L रजिस्टर pair से बनता है, इसलिए option C सही है। 8-bit Timer0/Timer2 के लिए है और 12/24-bit PIC16F के इन timers में उपलब्ध नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q6",
+      "question": "Timer1 की एक खास विशेषता क्या है जो Timer0 में नहीं होती?",
+      "options": ["यह एक external 32.768 kHz crystal oscillator चला सकता है", "यह केवल 4-bit count करता है", "इसमें कोई interrupt नहीं होता", "यह PWM signal खुद generate करता है"],
+      "correctIndex": 0,
+      "explanation": "Timer1 का अपना oscillator input (T1OSO/T1OSI) होता है जिस पर 32.768 kHz crystal लगाकर इसे RTC/low-power timing के लिए इस्तेमाल किया जाता है, इसलिए option A सही है। यह 16-bit है, इसका अपना overflow interrupt होता है, और PWM generation CCP module करता है Timer1 नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q7",
+      "question": "Timer1 का 'gate' feature किस काम आता है?",
+      "options": ["Prescaler ratio बढ़ाने में", "एक external signal द्वारा timer के count को enable/disable कर pulse-width मापने में", "ADC को trigger करने में", "Watchdog reset में"],
+      "correctIndex": 1,
+      "explanation": "Timer1 gate mode में एक external pin का level timer के counting को control करता है जिससे किसी pulse की width मापी जा सकती है, इसलिए option B सही है। यह prescaler, ADC trigger या watchdog reset से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_pic_timers_q8",
+      "question": "Timer2 module की एक विशेषता क्या है जो इसे PWM के लिए उपयुक्त बनाती है?",
+      "options": ["इसमें केवल prescaler होता है", "इसमें prescaler और postscaler दोनों तथा एक period register PR2 होता है", "यह 16-bit है", "यह केवल counter mode में चलता है"],
+      "correctIndex": 1,
+      "explanation": "Timer2 8-bit है और इसमें prescaler, postscaler तथा period register PR2 होता है जिससे PWM की period तय होती है, इसलिए option B सही है। सिर्फ prescaler होना अधूरा है, यह 16-bit नहीं और counter mode में external count नहीं करता।"
+    },
+    {
+      "id": "u2_pic_timers_q9",
+      "question": "PWM mode में CCP module की PWM period किस register की value से तय होती है?",
+      "options": ["PR2", "CCPR1H", "ADRESH", "OPTION_REG"],
+      "correctIndex": 0,
+      "explanation": "PWM की period Timer2 के PR2 register की value से set होती है (period = (PR2+1)×4×Tosc×prescaler), इसलिए option A सही है। CCPR1H duty cycle से, ADRESH ADC result से और OPTION_REG Timer0 config से संबंधित है।"
+    },
+    {
+      "id": "u2_pic_timers_q10",
+      "question": "PWM mode में 10-bit duty cycle value कहाँ store होती है?",
+      "options": ["सिर्फ PR2 में", "CCPRxL के 8 bits और CCPxCON के 2 bits (DCxB1:DCxB0) में", "ADRESL में", "TMR2 में"],
+      "correctIndex": 1,
+      "explanation": "10-bit PWM duty cycle के ऊपरी 8 bits CCPRxL में और निचले 2 bits CCPxCON register के DCxB1:DCxB0 में रखे जाते हैं, इसलिए option B सही है। PR2 period तय करता है, ADRESL ADC का है और TMR2 count value रखता है।"
+    },
+    {
+      "id": "u2_pic_timers_q11",
+      "question": "CCP module का 'Capture' mode मुख्य रूप से किसलिए इस्तेमाल होता है?",
+      "options": ["एक निश्चित analog voltage produce करने के लिए", "किसी external event के समय Timer1 की value को record कर pulse-width/period मापने के लिए", "EEPROM लिखने के लिए", "Baud rate generate करने के लिए"],
+      "correctIndex": 1,
+      "explanation": "Capture mode में किसी input pin पर edge आने पर Timer1 की current value CCPRxH:CCPRxL में capture हो जाती है, जिससे pulse-width या period मापा जाता है, इसलिए option B सही है। बाकी options CCP capture के काम नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q12",
+      "question": "CCP का 'Compare' mode में क्या होता है?",
+      "options": ["Timer register की value एक preset CCPRx value से मेल खाने पर एक output action/interrupt trigger होता है", "ADC का result compare होता है", "दो ports की value swap होती है", "Watchdog timer reset होता है"],
+      "correctIndex": 0,
+      "explanation": "Compare mode में Timer1 की value लगातार CCPRx से compare होती है और मेल खाने पर output pin toggle/set/clear या interrupt generate होता है, इसलिए option A सही है। यह ADC, port swap या watchdog से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_pic_timers_q13",
+      "question": "Capture mode में pulse-width मापने के लिए आम तौर पर किस timer की value capture की जाती है?",
+      "options": ["Timer0", "Timer1", "Timer2", "Watchdog timer"],
+      "correctIndex": 1,
+      "explanation": "CCP capture mode 16-bit Timer1 की value को capture करता है इसलिए option B सही है। Timer0 और Timer2 8-bit हैं और CCP capture के लिए इस्तेमाल नहीं होते, watchdog timer तो timing measurement के लिए है ही नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q14",
+      "question": "Timer0 (8-bit) prescaler के बिना 1 MHz की instruction clock पर चल रहा है। इसे 0 से overflow (256 counts) होने में कितना समय लगेगा?",
+      "options": ["256 µs", "128 µs", "512 µs", "1 µs"],
+      "correctIndex": 0,
+      "explanation": "1 MHz clock का period 1 µs है और 8-bit timer 256 counts में overflow होता है, इसलिए 256 × 1 µs = 256 µs, यानी option A सही है। 128 µs आधा count मानने पर, 512 µs दोगुना और 1 µs एक ही count का समय है।"
+    },
+    {
+      "id": "u2_pic_timers_q15",
+      "question": "एक PIC 8 MHz crystal पर चल रहा है। Timer के लिए instruction cycle clock (Fosc/4) की frequency क्या होगी?",
+      "options": ["8 MHz", "4 MHz", "2 MHz", "1 MHz"],
+      "correctIndex": 2,
+      "explanation": "PIC में instruction cycle clock = Fosc/4 = 8 MHz / 4 = 2 MHz होता है, इसलिए option C सही है। 8 MHz खुद crystal frequency है, 4 MHz गलत division है और 1 MHz तब होता जब Fosc 4 MHz होता।"
+    },
+    {
+      "id": "u2_pic_timers_q16",
+      "question": "Timer0 पर 1:8 prescaler लगाने पर instruction clock 1 MHz है तो timer को एक बार increment होने में कितना समय लगेगा?",
+      "options": ["1 µs", "8 µs", "0.125 µs", "16 µs"],
+      "correctIndex": 1,
+      "explanation": "1:8 prescaler का मतलब हर 8 input pulses पर timer 1 बार बढ़ता है, इसलिए 1 µs × 8 = 8 µs, यानी option B सही है। 1 µs बिना prescaler का समय है, 0.125 µs उल्टी गणना है और 16 µs 1:16 के लिए होता।"
+    },
+    {
+      "id": "u2_pic_timers_q17",
+      "question": "Timer0 का overflow होने पर INTCON register का कौन सा flag bit set होता है?",
+      "options": ["TMR0IF", "GIE", "ADIF", "RBIF"],
+      "correctIndex": 0,
+      "explanation": "Timer0 के FFh से 00h पर overflow होते ही INTCON का TMR0IF (Timer0 Interrupt Flag) set होता है, इसलिए option A सही है। GIE global enable है flag नहीं, ADIF ADC का flag है और RBIF port-change का flag है।"
+    },
+    {
+      "id": "u2_pic_timers_q18",
+      "question": "Timer2 का postscaler किस काम आता है?",
+      "options": ["Timer2 के input clock को divide करने", "Timer2 के PR2-match events को divide कर interrupt की rate घटाने", "ADC को start करने", "duty cycle को double करने"],
+      "correctIndex": 1,
+      "explanation": "Postscaler, Timer2 के PR2 से match (overflow) events को 1:1 से 1:16 तक divide करके interrupt की frequency कम करता है, इसलिए option B सही है। Input clock divide करना prescaler का काम है; यह ADC या duty cycle से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q19",
+      "question": "PWM signal में यदi duty cycle register की value PR2 आधारित period value के बराबर हो जाए तो output कैसा होगा (लगभग)?",
+      "options": ["0% duty (हमेशा LOW)", "लगभग 100% duty (लगभग हमेशा HIGH)", "50% duty", "output बंद हो जाएगा"],
+      "correctIndex": 1,
+      "explanation": "जब duty cycle count period count के बराबर या अधिक हो तो output लगभग पूरे period HIGH रहता है यानी करीब 100% duty, इसलिए option B सही है। 0% तब जब duty value 0 हो, 50% आधी value पर और output कभी अपने-आप बंद नहीं होता।"
+    },
+    {
+      "id": "u2_pic_timers_q20",
+      "question": "Timer1 को external asynchronous counter mode में चलाने का क्या फायदा है?",
+      "options": ["यह Sleep mode के दौरान भी pulses count कर सकता है", "यह ADC की speed बढ़ाता है", "इससे Fosc अपने-आप double हो जाता है", "यह prescaler की जरूरत खत्म कर देता है"],
+      "correctIndex": 0,
+      "explanation": "Asynchronous counter mode में Timer1 internal clock से independent रहता है इसलिए CPU के Sleep में होने पर भी external pulses count कर सकता है, इसलिए option A सही है। यह ADC speed, Fosc या prescaler से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q21",
+      "question": "Frequency measurement के लिए एक सामान्य तरीका क्या है?",
+      "options": ["एक निश्चित समय (gate time) में आने वाले input pulses को counter mode में गिनना", "ADC से voltage पढ़ना", "PR2 register पढ़ना", "EEPROM की size देखना"],
+      "correctIndex": 0,
+      "explanation": "Frequency = counts / gate-time, इसलिए एक ज्ञात समय-खिड़की में external pulses को count करके frequency निकाली जाती है और option A सही है। ADC voltage पढ़ता है, PR2 PWM period का है और EEPROM size का इससे संबंध नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q22",
+      "question": "एक 8-bit timer count 200 (0xC8) पर है। overflow (256) तक पहुँचने के लिए और कितने counts चाहिए?",
+      "options": ["200", "56", "256", "128"],
+      "correctIndex": 1,
+      "explanation": "256 − 200 = 56 counts और चाहिए, इसलिए option B सही है। 200 current value है, 256 पूरा range है और 128 आधा range है, ये overflow तक बचे counts नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_timers_q23",
+      "question": "Timer0 का instruction clock 1 MHz है और prescaler 1:4 है। 8-bit timer को full overflow (256 counts) में कितना समय लगेगा?",
+      "options": ["256 µs", "512 µs", "1024 µs", "64 µs"],
+      "correctIndex": 2,
+      "explanation": "प्रत्येक timer increment 1 µs × 4 = 4 µs का है, और 256 counts के लिए 256 × 4 = 1024 µs लगेगा, इसलिए option C सही है। 256 µs बिना prescaler, 512 µs 1:2 के लिए और 64 µs गलत गणना है।"
+    },
+    {
+      "id": "u2_pic_timers_q24",
+      "question": "PWM की PR2 = 249, prescaler = 1 और Fosc = 4 MHz है। Tosc = 0.25 µs मानते हुए PWM period = (PR2+1)×4×Tosc×prescaler से period क्या होगी?",
+      "options": ["250 µs", "125 µs", "500 µs", "62.5 µs"],
+      "correctIndex": 0,
+      "explanation": "Period = (249+1) × 4 × 0.25 µs × 1 = 250 × 1 µs = 250 µs, इसलिए option A सही है। 125 µs, 500 µs और 62.5 µs गलत गुणा/भाग से आते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q25",
+      "question": "यदि किसी CCP module को Capture mode में 'every 4th rising edge' पर capture करने के लिए set किया जाए तो इसका मुख्य लाभ क्या है?",
+      "options": ["High-frequency signals पर interrupt load कम करना और औसत period मापना", "duty cycle बढ़ाना", "ADC resolution बढ़ाना", "Fosc कम करना"],
+      "correctIndex": 0,
+      "explanation": "हर चौथे edge पर capture करने से तेज signals में interrupts की संख्या घटती है और चार periods का औसत माप मिलता है, इसलिए option A सही है। यह duty cycle, ADC resolution या Fosc से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q26",
+      "question": "Timer1 का prescaler अधिकतम कितने ratio तक set किया जा सकता है?",
+      "options": ["1:2", "1:4", "1:8", "1:256"],
+      "correctIndex": 2,
+      "explanation": "Timer1 का prescaler 1:1, 1:2, 1:4 और अधिकतम 1:8 तक सेट होता है, इसलिए option C सही है। 1:2 और 1:4 मध्यवर्ती हैं जबकि 1:256 Timer0 का अधिकतम prescaler है Timer1 का नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q27",
+      "question": "Timer0 prescaler को अगर Watchdog Timer (WDT) को assign कर दिया जाए तो Timer0 पर क्या असर होगा?",
+      "options": ["Timer0 बिना prescaler (1:1) पर चलेगा", "Timer0 रुक जाएगा", "Timer0 16-bit बन जाएगा", "Timer0 counter mode में चला जाएगा"],
+      "correctIndex": 0,
+      "explanation": "एक ही prescaler को Timer0 या WDT में से किसी एक को assign किया जा सकता है; WDT को देने पर Timer0 प्रभावी रूप से 1:1 (no prescale) पर चलता है, इसलिए option A सही है। यह Timer0 को रोकता, 16-bit या counter mode नहीं बनाता।"
+    },
+    {
+      "id": "u2_pic_timers_q28",
+      "question": "Timer1 overflow होने पर कौन सा interrupt flag set होता है?",
+      "options": ["TMR0IF (INTCON में)", "TMR1IF (PIR1 में)", "ADIF (PIR1 में)", "RBIF (INTCON में)"],
+      "correctIndex": 1,
+      "explanation": "Timer1 का overflow flag TMR1IF होता है जो peripheral flag register PIR1 में रहता है, इसलिए option B सही है। TMR0IF Timer0 का, ADIF ADC का और RBIF port-change interrupt का flag है।"
+    },
+    {
+      "id": "u2_pic_timers_q29",
+      "question": "एक counter mode Timer0 पर 500 pulses 1 second में गिने गए। इनपुट signal की frequency क्या है?",
+      "options": ["250 Hz", "500 Hz", "1000 Hz", "5000 Hz"],
+      "correctIndex": 1,
+      "explanation": "Frequency = counts / time = 500 / 1 s = 500 Hz, इसलिए option B सही है। 250 Hz आधा, 1000 Hz दोगुना और 5000 Hz दस गुना है, जो गलत हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q30",
+      "question": "PWM resolution घटती है जब Fosc स्थिर रखते हुए PWM frequency बढ़ाई जाती है — इसका कारण क्या है?",
+      "options": ["PR2 की value घटानी पड़ती है जिससे duty cycle के लिए उपलब्ध count steps कम हो जाते हैं", "ADC clock बदल जाता है", "prescaler अपने-आप 1:256 हो जाता है", "Timer1 बंद हो जाता है"],
+      "correctIndex": 0,
+      "explanation": "अधिक PWM frequency के लिए छोटी period चाहिए यानी छोटी PR2 value, जिससे duty cycle को दर्शाने वाले steps घट जाते हैं और resolution कम हो जाती है, इसलिए option A सही है। यह ADC clock, prescaler auto-set या Timer1 से संबंधित नहीं।"
+    }
+  ]
+}

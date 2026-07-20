@@ -1,0 +1,368 @@
+{
+  "unit": "unit8",
+  "unitName": "Digital Panel Meter",
+  "topic": "matrix_display",
+  "topicName": "Dot Matrix Display vs Seven Segment - Row-Column Driving",
+  "questions": [
+    {
+      "id": "u8_matrix_display_q1",
+      "question": "Dot matrix display की basic construction क्या होती है?",
+      "options": [
+        "single continuous strip में arranged LEDs की एक लाइन",
+        "केवल 7 discrete segments जो digit के आकार में arranged हों",
+        "LEDs का एक array जो rows और columns में arranged होता है",
+        "single high-power LED के आगे color filter लगाकर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Dot matrix display में अनेक छोटे LEDs को rows और columns के रूप में arrange किया जाता है, जिससे विभिन्न combinations में उन्हें ON करके कोई भी character या pattern बनाया जा सकता है। Option A केवल एक linear arrangement है, option B seven segment display की construction है, और option C single LED से पूरा matrix नहीं बनता।"
+    },
+    {
+      "id": "u8_matrix_display_q2",
+      "question": "5x7 dot matrix module में total कितने LEDs (dots) होते हैं?",
+      "options": [
+        "35",
+        "49",
+        "12",
+        "64"
+      ],
+      "correctIndex": 0,
+      "explanation": "5x7 module में 5 columns और 7 rows होती हैं, इसलिए total LEDs = 5 × 7 = 35 होते हैं। 49 (option B) 7×7 arrangement के लिए होता, 12 (option C) बहुत कम है, और 64 (option D) 8×8 module के लिए सही है।"
+    },
+    {
+      "id": "u8_matrix_display_q3",
+      "question": "8x8 dot matrix module में total कितने LEDs होते हैं?",
+      "options": [
+        "16",
+        "64",
+        "32",
+        "100"
+      ],
+      "correctIndex": 1,
+      "explanation": "8x8 module में 8 rows और 8 columns होती हैं, इसलिए total LEDs = 8 × 8 = 64 होते हैं। 16 (A) और 32 (C) इस arrangement से कम हैं, और 100 (D) 10×10 arrangement के लिए होता जो standard 8x8 module नहीं है।"
+    },
+    {
+      "id": "u8_matrix_display_q4",
+      "question": "Seven segment display की तुलना में dot matrix display किस बात में मुख्य रूप से बेहतर है?",
+      "options": [
+        "यह हमेशा कम current लेता है",
+        "इसकी wiring seven segment से कम होती है",
+        "यह seven segment से सस्ता होता है",
+        "यह alphabets, special characters और graphics जैसे patterns भी दिखा सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Dot matrix display में हर LED को individually control किया जा सकता है, इसलिए यह digits के अलावा alphabets, special characters और simple graphics भी बना सकता है, जो seven segment display नहीं कर सकता। वास्तव में इसमें current खपत (A), wiring (B) और cost (C) सामान्यतः seven segment से अधिक ही होते हैं, इसलिए ये सही नहीं हैं।"
+    },
+    {
+      "id": "u8_matrix_display_q5",
+      "question": "Seven segment display मुख्यतः किसमें सीमित रहता है जबकि dot matrix display इस सीमा से मुक्त है?",
+      "options": [
+        "यह AC supply पर काम नहीं कर सकता",
+        "इसे current limiting resistor की जरूरत होती है",
+        "यह केवल numeric digits और कुछ सीमित letters तक ही सीमित रहता है",
+        "यह DC supply पर काम नहीं कर सकता"
+      ],
+      "correctIndex": 2,
+      "explanation": "Seven segment display की fixed 7-segment shape के कारण यह मुख्यतः 0-9 digits और कुछ सीमित letters (जैसे A, C, E, F) ही बना पाता है, जबकि dot matrix में हर LED individually control होने से पूरी alphanumeric range और symbols बन सकते हैं। Option A, B, D दोनों displays पर लागू होते हैं, इसलिए ये मुख्य अंतर नहीं हैं।"
+    },
+    {
+      "id": "u8_matrix_display_q6",
+      "question": "Dot matrix display में किसी character को display करने के लिए सामान्यतः कौन सी driving technique प्रयोग होती है?",
+      "options": [
+        "Row-column multiplexed scanning technique",
+        "सभी LEDs को स्थायी रूप से हमेशा ON रखकर static drive",
+        "केवल एक analog control voltage से पूरा pattern",
+        "कोई driving technique आवश्यक नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "बड़ी संख्या में LEDs को कम pins से control करने के लिए row-column multiplexed scanning technique प्रयोग होती है, जिसमें rows/columns को बारी-बारी scan किया जाता है। Static drive (B) में pins की संख्या बहुत बढ़ जाती, analog voltage (C) से individual LED pattern नहीं बनता, और driving technique के बिना (D) कोई pattern नहीं बन सकता।"
+    },
+    {
+      "id": "u8_matrix_display_q7",
+      "question": "Row-column scanning में एक instant पर सही स्थिति क्या होती है?",
+      "options": [
+        "सभी rows और सभी columns एक साथ activate रहती हैं",
+        "केवल एक row (या column) को activate किया जाता है और उसी समय corresponding column (या row) पर data दिया जाता है",
+        "कोई भी row/column कभी activate नहीं होती",
+        "पूरा module हमेशा OFF रहता है जब तक manual switch न दबाया जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Multiplexed scanning में एक समय पर केवल एक row (या column) activate की जाती है और उसी समय बाकी सभी columns (या rows) पर उस row के लिए जरूरी data दिया जाता है, फिर तेज़ी से अगली row पर जाया जाता है। Option A static drive है, C और D में display कभी काम ही नहीं करेगी।"
+    },
+    {
+      "id": "u8_matrix_display_q8",
+      "question": "Dot matrix module के अंदर internal wiring किस प्रकार की जाती है ताकि external pins कम रहें?",
+      "options": [
+        "हर एक LED के दोनों terminals अलग-अलग बाहर निकाले जाते हैं",
+        "module में कोई भी common connection नहीं होती",
+        "सिर्फ एक single wire पूरे module को control करता है",
+        "सभी LEDs की एक दिशा (जैसे rows) आपस में common और दूसरी दिशा (columns) आपस में common करके wire की जाती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Dot matrix module में एक दिशा के सभी LEDs (जैसे rows के anodes) आपस में common wire किए जाते हैं और दूसरी दिशा (columns के cathodes) भी आपस में common होती है, जिससे 5x7=35 LEDs को केवल 5+7=12 pins से control किया जा सकता है। Option A से pins बहुत अधिक बढ़ जातीं, B और C व्यावहारिक नहीं हैं।"
+    },
+    {
+      "id": "u8_matrix_display_q9",
+      "question": "LED dot matrix display को drive करने के लिए popular driver IC कौन सा है जो serial data input लेकर rows/columns को स्वयं multiplex करता है?",
+      "options": [
+        "IC 7447",
+        "IC 4511",
+        "MAX7219",
+        "IC 555 timer"
+      ],
+      "correctIndex": 2,
+      "explanation": "MAX7219 एक common-cathode LED display driver IC है जो serial interface से data लेकर स्वयं internal multiplexing करके 8x8 dot matrix (या 8-digit seven segment) को drive करता है। IC 7447 और 4511 (options A, B) seven segment BCD decoders हैं, और 555 timer (D) एक general-purpose timer IC है, dot matrix driver नहीं।"
+    },
+    {
+      "id": "u8_matrix_display_q10",
+      "question": "MAX7219 IC microcontroller से data किस प्रकार के interface द्वारा प्राप्त करता है?",
+      "options": [
+        "SPI जैसा serial interface (DIN, CLK, LOAD)",
+        "8-bit parallel data bus",
+        "केवल analog voltage input",
+        "wireless RF signal"
+      ],
+      "correctIndex": 0,
+      "explanation": "MAX7219 SPI जैसे serial interface (DIN, CLK, LOAD/CS pins) से data receive करता है, जिससे केवल 3-4 lines से पूरा 8x8 matrix control हो जाता है। Parallel bus (B) में कहीं अधिक pins चाहिए होते, analog voltage (C) से digital pattern नहीं बनता, और यह wireless (D) IC नहीं है।"
+    },
+    {
+      "id": "u8_matrix_display_q11",
+      "question": "Dot matrix display को flicker-free (बिना टिमटिमाए) दिखाने के लिए row/column scanning rate किस physiological principle के अनुसार पर्याप्त तेज़ रखी जाती है?",
+      "options": [
+        "Kirchhoff's current law",
+        "Persistence of vision",
+        "Doppler effect",
+        "Ohm's law"
+      ],
+      "correctIndex": 1,
+      "explanation": "Persistence of vision के अनुसार यदि images पर्याप्त तेज़ गति से बदली जाएँ तो मानव आँख उन्हें अलग-अलग न देखकर continuous/स्थिर मानती है, इसी सिद्धांत पर तेज़ scanning से flicker-free display दिखती है। Kirchhoff's law (A) और Ohm's law (D) electrical laws हैं, और Doppler effect (C) frequency shift से संबंधित है, इनका इस phenomenon से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u8_matrix_display_q12",
+      "question": "Persistence of vision के कारण मानव आँख दो अलग-अलग बदलती हुई images को कब continuous मानती है?",
+      "options": [
+        "जब images 1 Hz से भी कम rate पर बदलें",
+        "images कभी भी continuous नहीं मानी जातीं",
+        "जब images केवल manual switch से बदली जाएँ",
+        "जब images लगभग 50 Hz या उससे तेज़ rate पर बदली जाएँ"
+      ],
+      "correctIndex": 3,
+      "explanation": "मानव आँख को लगभग 50 Hz या उससे अधिक तेज़ refresh rate पर बदलती images continuous/स्थिर प्रतीत होती हैं, इसी कारण dot matrix scanning को इस range से तेज़ रखा जाता है। 1 Hz से कम rate (A) पर तो स्पष्ट flicker दिखेगा, option B गलत है क्योंकि तेज़ rate पर continuous ही दिखता है, और manual switching (C) का scanning rate से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u8_matrix_display_q13",
+      "question": "यदि किसी dot matrix display में row scanning rate बहुत धीमी (जैसे 5 Hz से कम) रखी जाए तो क्या observe होगा?",
+      "options": [
+        "display बिल्कुल sharp और steady दिखेगी",
+        "current खपत पूरी तरह शून्य हो जाएगी",
+        "display में flicker (टिमटिमाहट) दिखाई देगी",
+        "LEDs स्थायी रूप से खराब हो जाएँगे"
+      ],
+      "correctIndex": 2,
+      "explanation": "5 Hz जैसी धीमी scanning rate persistence of vision के लिए आवश्यक न्यूनतम rate (~50 Hz) से बहुत कम है, इसलिए आँख को row-to-row बदलाव अलग-अलग नज़र आएगा जिससे स्पष्ट flicker दिखेगी। इससे display steady (A) नहीं रहती, current खपत शून्य (B) नहीं होती, और सामान्यतः इससे LEDs खराब (D) नहीं होते।"
+    },
+    {
+      "id": "u8_matrix_display_q14",
+      "question": "Dot matrix LED module में प्रत्येक row/column line के साथ current limiting resistor लगाने का मुख्य कारण क्या है?",
+      "options": [
+        "LEDs से बहने वाले forward current को सुरक्षित सीमा में रखना",
+        "display का रंग बदलना",
+        "refresh rate बढ़ाना",
+        "module का weight कम करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "प्रत्येक LED की current-voltage characteristic के कारण बिना resistor के अत्यधिक current बहकर LED या driver IC खराब हो सकता है, इसलिए series current limiting resistor forward current को safe रेंज में रखता है। यह रंग (B) नहीं बदलता, refresh rate (C) तय नहीं करता, और weight (D) से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u8_matrix_display_q15",
+      "question": "LED dot matrix display की तुलना में LCD dot matrix display में मुख्य अंतर क्या है?",
+      "options": [
+        "LCD स्वयं प्रकाश (light) emit करती है",
+        "LED स्वयं प्रकाश emit करती है जबकि LCD परिवेशी प्रकाश को modulate करके कम power में काम करती है",
+        "दोनों में कोई तकनीकी अंतर नहीं होता",
+        "LCD को current limiting resistor की जरूरत होती है जबकि LED को नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "LED dot matrix में प्रत्येक dot स्वयं प्रकाश उत्सर्जित करने वाला LED होता है, जबकि LCD dot matrix ambient/backlight प्रकाश को liquid crystal cells के माध्यम से modulate करता है, इसलिए LCD की power खपत कम रहती है। Option A उल्टा कथन है, C गलत है क्योंकि दोनों technology में मौलिक अंतर है, और option D भी गलत है क्योंकि current limiting resistor LED के साथ प्रयोग होता है, LCD के साथ नहीं।"
+    },
+    {
+      "id": "u8_matrix_display_q16",
+      "question": "Dot matrix display का सबसे सामान्य और लोकप्रिय application कौन सा है?",
+      "options": [
+        "केवल fixed single digit की गिनती दिखाना",
+        "केवल AC voltage मापना",
+        "केवल temperature sensor के रूप में काम करना",
+        "scrolling message displays और alphanumeric signboards"
+      ],
+      "correctIndex": 3,
+      "explanation": "Dot matrix display की alphanumeric और graphics दिखाने की क्षमता के कारण इसका सबसे common application scrolling message displays, electronic signboards और advertisement boards में होता है। यह केवल single digit (A) दिखाने तक सीमित नहीं, यह स्वयं voltage मापने वाला sensor (B) नहीं है, और न ही यह एक temperature sensor (C) है।"
+    },
+    {
+      "id": "u8_matrix_display_q17",
+      "question": "यदि किसी Digital Panel Meter में केवल numeric value ही नहीं बल्कि units या messages (जैसे \"VOLT\", \"Err\") भी alphanumeric रूप में दिखाना हो, तो कौन सा display अधिक उपयुक्त रहेगा?",
+      "options": [
+        "Simple seven segment display",
+        "केवल एक single color LED indicator",
+        "Dot matrix display",
+        "केवल एक buzzer"
+      ],
+      "correctIndex": 2,
+      "explanation": "Dot matrix display प्रत्येक LED को individually control करके अक्षर और शब्द बना सकता है, इसलिए units या messages जैसे alphanumeric content दिखाने के लिए यह उपयुक्त है। Seven segment display (A) मुख्यतः digits तक सीमित है, single LED indicator (B) केवल ON/OFF status बता सकता है, और buzzer (D) एक audio output device है, display नहीं।"
+    },
+    {
+      "id": "u8_matrix_display_q18",
+      "question": "Seven segment display की तुलना में dot matrix display का एक प्रमुख disadvantage क्या है?",
+      "options": [
+        "इसकी driving circuit अधिक complex होती है और अधिक IO lines/wiring चाहिए",
+        "यह digits बिल्कुल भी नहीं दिखा सकता",
+        "इसमें current limiting resistor की आवश्यकता नहीं होती",
+        "इसकी brightness हमेशा शून्य रहती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "अधिक संख्या में LEDs और multiplexed row-column scanning के कारण dot matrix display की driving circuit seven segment की तुलना में अधिक complex होती है और इसे अधिक IO lines/driver stages चाहिए होते हैं। यह digits (B) भी आसानी से दिखा सकता है, इसमें भी resistor (C) चाहिए होता है, और brightness शून्य (D) नहीं बल्कि सामान्य रहती है।"
+    },
+    {
+      "id": "u8_matrix_display_q19",
+      "question": "Dot matrix display की cost seven segment display की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "हमेशा seven segment से कम",
+        "अधिक LEDs और complex driving circuitry के कारण सामान्यतः अधिक",
+        "cost का display technology से कोई संबंध नहीं",
+        "हमेशा शून्य (मुफ्त)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dot matrix display में LEDs की संख्या अधिक होती है और साथ ही driving/scanning circuitry भी complex होती है, इसलिए इसकी overall cost सामान्यतः seven segment display से अधिक रहती है। इसलिए option A और D गलत हैं, और cost का display technology से सीधा संबंध होता है, इसलिए option C भी गलत है।"
+    },
+    {
+      "id": "u8_matrix_display_q20",
+      "question": "Dot matrix display में LED का duty cycle (row/column के ON रहने के समय का अनुपात) बढ़ाने का average brightness पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "duty cycle का brightness से कोई संबंध नहीं",
+        "duty cycle बढ़ाने पर brightness हमेशा घटती है",
+        "duty cycle घटाने पर brightness हमेशा बढ़ती है",
+        "duty cycle बढ़ाने पर average brightness बढ़ती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "किसी LED का duty cycle बढ़ाने का मतलब है कि वह अधिक समय के लिए ON रहता है, जिससे उसका average current और average brightness भी बढ़ती है। इसलिए option A गलत है क्योंकि सीधा संबंध होता है, और options B व C इसके ठीक उल्टा (गलत) कथन हैं।"
+    },
+    {
+      "id": "u8_matrix_display_q21",
+      "question": "MAX7219 जैसी driver IC का उपयोग करने पर microcontroller पर IO pins की आवश्यकता dot matrix को direct control करने की तुलना में कैसी होती है?",
+      "options": [
+        "IO pins की आवश्यकता बहुत अधिक बढ़ जाती है",
+        "कोई IO pin ही नहीं चाहिए",
+        "बहुत कम IO pins (जैसे केवल 3 serial lines) से पूरा matrix control हो जाता है",
+        "IO pins की संख्या का driver IC से कोई संबंध नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "MAX7219 सारा row-column multiplexing internally handle करता है, इसलिए microcontroller को केवल DIN, CLK और LOAD जैसी कुछ serial lines चाहिए होती हैं, बजाय हर row/column के लिए अलग pin के। इसलिए pins बहुत बढ़ना (A) गलत है, कोई pin न चाहिए होना (B) गलत है क्योंकि serial control lines फिर भी चाहिए, और option D भी गलत है क्योंकि driver IC सीधे इस requirement को प्रभावित करता है।"
+    },
+    {
+      "id": "u8_matrix_display_q22",
+      "question": "Multiple MAX7219 driver ICs को एक साथ किस प्रकार जोड़कर बड़ा dot matrix display बनाया जा सकता है?",
+      "options": [
+        "उन्हें daisy-chain (cascade) में serial data line से जोड़कर",
+        "उन्हें कभी आपस में जोड़ा नहीं जा सकता",
+        "केवल parallel address bus से जोड़कर",
+        "केवल wireless तरीके से जोड़कर"
+      ],
+      "correctIndex": 0,
+      "explanation": "MAX7219 ICs को cascade/daisy-chain configuration में जोड़ा जा सकता है, जिसमें एक IC का data-out अगली IC के data-in से जुड़ता है, इससे बड़े scrolling display आसानी से बनते हैं। इसलिए न जोड़ पाना (B) गलत है, parallel address bus (C) इसकी standard cascading method नहीं है, और wireless connection (D) MAX7219 की सामान्य विधि नहीं है।"
+    },
+    {
+      "id": "u8_matrix_display_q23",
+      "question": "Dot matrix display में कोई alphabet character (जैसे 'A') बनाने के लिए क्या किया जाता है?",
+      "options": [
+        "सिर्फ एक single LED को permanently ON रखा जाता है",
+        "character के pattern के अनुसार specific columns में specific rows के LEDs को scanning के दौरान ON किया जाता है",
+        "पूरे module के सभी LEDs को हमेशा ON रखा जाता है",
+        "कोई भी LED ON नहीं किया जाता"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक character (जैसे 'A') के लिए एक predefined pattern होता है जिसमें बताया जाता है कि प्रत्येक column में कौन-कौन सी rows scanning के समय ON रहेंगी, इसी से character का आकार बनता है। एक single LED (A) से पूरा character नहीं बनता, सभी LEDs हमेशा ON रखने (C) से पूरा module जल जाएगा character नहीं दिखेगा, और कोई LED ON न करने (D) से कुछ भी नहीं दिखेगा।"
+    },
+    {
+      "id": "u8_matrix_display_q24",
+      "question": "यदि row-scanning approach में एक समय पर एक row activate होकर column data दिया जाए, और अगली row activate करने से पहले पिछली row को ठीक से बंद न किया जाए, तो क्या समस्या हो सकती है?",
+      "options": [
+        "display और अधिक sharp हो जाएगी",
+        "power consumption शून्य हो जाएगी",
+        "कोई समस्या नहीं होगी",
+        "गलत rows की LEDs भी glow हो सकती हैं जिससे pattern धुंधला/गलत (ghosting) दिखेगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "यदि पिछली row पूरी तरह OFF किए बिना अगली row activate की जाए तो एक साथ दो rows की LEDs current पाकर glow कर सकती हैं, जिससे pattern में unwanted LEDs जल जाती हैं और image धुंधली/गलत (ghosting) दिखती है। इसलिए display sharp होना (A), power शून्य होना (B), या कोई समस्या न होना (C) — ये सभी गलत हैं।"
+    },
+    {
+      "id": "u8_matrix_display_q25",
+      "question": "Dot matrix module में यदि rows common cathode side पर हों और columns current source (active HIGH) करते हों, तो किसी particular row को activate करने के लिए उस row line पर क्या किया जाता है?",
+      "options": [
+        "row line को floating रखा जाता है",
+        "row line पर high impedance रखी जाती है",
+        "row line को LOW (ground) किया जाता है ताकि current column से row की ओर बह सके",
+        "row line पर AC signal दिया जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "यदि columns active HIGH होकर current source करते हैं, तो current प्रवाह पूरा करने के लिए corresponding row line को LOW (ground के करीब) किया जाता है ताकि column से row की ओर current बह सके और वह LED glow करे। Floating (A) या high impedance (B) रखने पर current pathway पूरा नहीं होगा, और यह DC multiplexing operation है, AC signal (D) प्रयोग नहीं होता।"
+    },
+    {
+      "id": "u8_matrix_display_q26",
+      "question": "Dot matrix display की driving circuit में seven segment की तुलना में अधिक transistor/driver stages सामान्यतः क्यों चाहिए होते हैं?",
+      "options": [
+        "क्योंकि rows और columns दोनों की अलग-अलग multiplexed switching के लिए अधिक current sourcing/sinking की जरूरत होती है",
+        "क्योंकि dot matrix में LEDs ही नहीं होतीं",
+        "क्योंकि dot matrix को कभी current control नहीं करना पड़ता",
+        "क्योंकि seven segment में transistor का उपयोग निषिद्ध है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dot matrix में rows और columns दोनों तरफ अलग-अलग multiplexed lines होती हैं और प्रत्येक line को पर्याप्त current sink/source करने के लिए driver transistor चाहिए होते हैं, जिससे seven segment की तुलना में अधिक driver stages लगते हैं। Options B, C और D तथ्यात्मक रूप से गलत हैं क्योंकि dot matrix में LEDs भी होती हैं, current control भी आवश्यक होता है, और seven segment में transistor उपयोग वर्जित नहीं है।"
+    },
+    {
+      "id": "u8_matrix_display_q27",
+      "question": "Digital Panel Meter में scrolling message या alphanumeric unit दिखाने के लिए dot matrix display चुनने पर system में अतिरिक्त क्या जुड़ना पड़ता है?",
+      "options": [
+        "कुछ भी अतिरिक्त नहीं चाहिए",
+        "character pattern store करने और scanning control करने हेतु microcontroller/driver IC जैसा additional controller",
+        "केवल एक resistor पर्याप्त है, कोई controller नहीं चाहिए",
+        "केवल AC supply चाहिए, कोई digital control नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dot matrix में character patterns को store करने, scanning sequence generate करने और driving करने के लिए microcontroller अथवा MAX7219 जैसी driver IC आवश्यक होती है। इसलिए 'कुछ नहीं चाहिए' (A) गलत है, केवल resistor पर्याप्त होना (C) गलत है क्योंकि control logic चाहिए ही होता है, और केवल AC supply से बिना digital control (D) के pattern नहीं बन सकता।"
+    },
+    {
+      "id": "u8_matrix_display_q28",
+      "question": "5x7 dot matrix module में एक character प्रदर्शित करने के लिए एक character cell में सामान्यतः कितनी columns scan की जाती हैं?",
+      "options": [
+        "1 column",
+        "3 columns",
+        "7 columns",
+        "5 columns (जो 7-row pattern के साथ character बनाती हैं)"
+      ],
+      "correctIndex": 3,
+      "explanation": "5x7 module में एक character के लिए 5 columns और 7 rows होती हैं, इसलिए scanning में 5 columns को बारी-बारी scan करके, हर column पर corresponding 7-row data देकर character बनाया जाता है। 1 column (A) या 3 columns (B) से character पूरा नहीं बन पाएगा, और 7 columns (C) 5x7 arrangement में मौजूद ही नहीं हैं (7 तो rows की संख्या है)।"
+    },
+    {
+      "id": "u8_matrix_display_q29",
+      "question": "Dot matrix display की flexibility (graphics/animation जैसे patterns दिखाने की क्षमता) का मुख्य कारण क्या है?",
+      "options": [
+        "इसमें केवल 7 fixed segments होते हैं",
+        "इसमें एक ही LED होती है जिसका रंग बदलता है",
+        "प्रत्येक LED को स्वतंत्र रूप से individually ON/OFF किया जा सकता है जिससे कोई भी pattern बन सकता है",
+        "इसे कभी multiplex नहीं किया जाता"
+      ],
+      "correctIndex": 2,
+      "explanation": "Dot matrix में हर एक LED (dot) individually addressable होता है, इसलिए किसी भी combination में LEDs को ON/OFF करके numbers, alphabets, symbols और simple graphics/animations तक बनाए जा सकते हैं। यह fixed 7-segment shape (A) तक सीमित नहीं है, इसमें एक नहीं बल्कि अनेक LEDs होते हैं (B), और इसे flicker-free रखने के लिए multiplex किया ही जाता है (D)।"
+    },
+    {
+      "id": "u8_matrix_display_q30",
+      "question": "Trade/ITI स्तर पर, यदि किसी Digital Panel Meter में केवल 0-9 अंक ही दिखाने हैं और cost व simplicity प्राथमिकता है, तो seven segment display और dot matrix display में से किसे चुनना चाहिए?",
+      "options": [
+        "Seven segment display, क्योंकि यह digits के लिए सरल, सस्ता और कम wiring वाला है",
+        "Dot matrix display, क्योंकि यह हमेशा सस्ता होता है",
+        "दोनों में कोई फर्क नहीं पड़ता",
+        "कोई भी display उपयुक्त नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब केवल numeric digits (0-9) दिखाने हों तो seven segment display अपनी simple driving circuit, कम wiring और कम cost के कारण अधिक उपयुक्त विकल्प है, जबकि dot matrix की extra flexibility यहाँ अनावश्यक जटिलता जोड़ेगी। Dot matrix सस्ता होना (B) गलत तथ्य है, कोई फर्क न पड़ना (C) गलत है क्योंकि cost/complexity में स्पष्ट अंतर है, और दोनों में से कोई भी उपयुक्त न होना (D) भी गलत है।"
+    }
+  ]
+}

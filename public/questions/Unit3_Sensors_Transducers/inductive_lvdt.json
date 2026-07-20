@@ -1,0 +1,368 @@
+{
+  "unit": "unit3",
+  "unitName": "Sensors, Transducers and Applications",
+  "topic": "inductive_lvdt",
+  "topicName": "Inductive Transducers - Principle and LVDT",
+  "questions": [
+    {
+      "id": "u3_inductive_lvdt_q1",
+      "question": "Inductive transducer किस basic principle पर कार्य करता है?",
+      "options": [
+        "Coil की self-inductance या mutual-inductance में change होने पर, जो physical displacement के कारण होता है",
+        "Piezoelectric effect पर, जिसमें pressure से voltage उत्पन्न होती है",
+        "Photoelectric effect पर, जिसमें light intensity से current बदलता है",
+        "Thermoelectric effect पर, जिसमें temperature difference से EMF बनती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inductive transducer में displacement या physical parameter के कारण coil की self-inductance (L) या mutual-inductance (M) में change होता है, जिसे measure करके parameter की value निकाली जाती है। Option B piezoelectric transducer का principle है (pressure से voltage), Option C photoelectric effect है (light intensity से current) और Option D thermoelectric effect है (temperature difference से EMF) — ये सभी inductive principle से अलग हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q2",
+      "question": "LVDT का full form क्या है?",
+      "options": [
+        "Linear Voltage Differential Transformer",
+        "Linear Variable Differential Transformer",
+        "Low Voltage Diode Transistor",
+        "Load Variable Displacement Transducer"
+      ],
+      "correctIndex": 1,
+      "explanation": "LVDT का सही full form Linear Variable Differential Transformer है, जो एक inductive transducer है जो linear displacement को electrical output में convert करता है। Option A, C और D गलत expansions हैं जो actual device से match नहीं करते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q3",
+      "question": "LVDT में कितनी secondary windings होती हैं और वे किस प्रकार connect की जाती हैं?",
+      "options": [
+        "एक secondary winding, series-aiding में connect की जाती है",
+        "तीन secondary windings, parallel में connect की जाती हैं",
+        "दो secondary windings, series opposition (series opposing) में connect की जाती हैं",
+        "चार secondary windings, star configuration में connect की जाती हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "LVDT में दो identical secondary windings (S1 और S2) होती हैं जो series opposition में connect की जाती हैं ताकि null position पर output EMF zero हो। Option A, B और D गलत हैं क्योंकि LVDT का standard construction केवल दो secondary windings को series opposing में use करता है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q4",
+      "question": "LVDT की core किस material की बनी होती है?",
+      "options": [
+        "Ceramic insulator",
+        "Pure copper",
+        "Non-magnetic aluminium",
+        "Ferromagnetic material (जैसे nickel-iron alloy)"
+      ],
+      "correctIndex": 3,
+      "explanation": "LVDT की movable core soft ferromagnetic material (जैसे nickel-iron alloy) की बनी होती है ताकि magnetic coupling primary से secondary windings तक efficiently हो सके। Option A ceramic insulator होने के कारण magnetic coupling नहीं दे सकता, Option B copper conductor है magnetic core नहीं, और Option C aluminium non-magnetic होने से coupling प्रदान नहीं करेगा।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q5",
+      "question": "LVDT की null position पर output voltage की स्थिति क्या होती है?",
+      "options": [
+        "Output ideally zero होता है क्योंकि दोनों secondary EMFs एक दूसरे को cancel कर देती हैं",
+        "Output maximum होता है क्योंकि दोनों secondary EMFs add होती हैं",
+        "Output negative maximum होता है",
+        "Output infinite होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Null position पर core symmetrically दोनों secondary windings के बीच होता है, इसलिए दोनों में induced EMF equal होती है और series opposition के कारण net output ideally zero होता है। Option B और C गलत हैं क्योंकि EMFs subtract होती हैं add नहीं, और Option D physically असंभव है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q6",
+      "question": "जब LVDT का core null position से एक direction में move होता है, तो output signal की phase किस reference से compare होती है?",
+      "options": [
+        "Secondary winding S2 के saturation current से",
+        "Primary winding की excitation voltage (reference signal) से",
+        "Core की temperature से",
+        "External power supply की frequency से बिना किसी comparison के"
+      ],
+      "correctIndex": 1,
+      "explanation": "Output signal की phase को primary winding की excitation voltage (reference) से compare किया जाता है ताकि पता चले कि core null position से किस direction में move हुआ है (in-phase या 180° out-of-phase)। Option A saturation current से कोई direction information नहीं मिलती, Option C temperature unrelated parameter है और Option D भी गलत है क्योंकि comparison आवश्यक होता है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q7",
+      "question": "LVDT का output signal AC क्यों होता है और इसे DC में convert करने के लिए क्या use किया जाता है?",
+      "options": [
+        "AC output इसलिए होता है क्योंकि primary DC supply पर चलती है; इसे rectifier की जरूरत नहीं",
+        "Output हमेशा DC ही होता है, कोई conversion नहीं चाहिए",
+        "AC output इसलिए होता है क्योंकि core magnetic field रखता है; इसे demodulator (phase-sensitive detector) से DC में convert किया जाता है",
+        "Output AC होता है क्योंकि core स्थायी चुंबक (permanent magnet) है; इसे simple rectifier से convert किया जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "LVDT की primary winding को AC excitation दी जाती है, जिससे secondary में induced EMF भी AC होती है; direction (phase) की जानकारी के लिए इसे phase-sensitive demodulator से DC signal में convert किया जाता है। Option A गलत है क्योंकि primary AC पर चलती है, Option B गलत है क्योंकि raw output AC होता है, और Option D गलत है क्योंकि core permanent magnet नहीं बल्कि ferromagnetic material है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q8",
+      "question": "LVDT का characteristic curve (output voltage vs displacement) किस range में linear होता है?",
+      "options": [
+        "पूरी mechanical range में हमेशा perfectly linear",
+        "यह कभी linear नहीं होता, हमेशा exponential होता है",
+        "केवल maximum displacement पर linear होता है",
+        "केवल null position के आस-पास एक निश्चित operating range में approximately linear"
+      ],
+      "correctIndex": 3,
+      "explanation": "LVDT null position के आसपास एक limited linear range में design किया जाता है जहाँ output voltage displacement के लगभग directly proportional होता है; इस range के बाहर non-linearity बढ़ जाती है। Option A अवास्तविक है क्योंकि extreme ends पर linearity बिगड़ती है, Option B गलत है क्योंकि operating range में curve linear ही रहता है, और Option C गलत है क्योंकि maximum displacement पर linearity सबसे कम रहती है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q9",
+      "question": "LVDT को अन्य displacement transducers की तुलना में एक बड़ा advantage क्या देता है?",
+      "options": [
+        "यह contactless है इसलिए friction/wear नहीं होता, resulting in high resolution और long life",
+        "इसमें core और windings के बीच physical contact होता है जिससे friction बढ़ता है",
+        "यह केवल high temperature environments में काम करता है",
+        "इसे केवल DC signal से operate किया जा सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LVDT में core windings को touch नहीं करता (frictionless/contactless operation), इसलिए wear-and-tear कम होता है, resolution उच्च होता है और life लंबी होती है — यह resistive potentiometer जैसे contact-type transducers से बेहतर है। Option B गलत तथ्य बताता है, Option C अनावश्यक restriction लगाता है और Option D गलत है क्योंकि LVDT AC excitation से operate होता है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q10",
+      "question": "LVDT का उपयोग सामान्यतः किस प्रकार के measurement के लिए किया जाता है?",
+      "options": [
+        "केवल temperature measurement के लिए",
+        "Small linear displacement measurement के लिए (जैसे thickness gauging, position sensing)",
+        "Angular velocity measurement के लिए",
+        "Sound intensity measurement के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "LVDT का primary application small linear displacement measurement है, जैसे thickness gauging, position feedback in machine tools, और force/pressure measurement (via elastic elements जो displacement में convert होते हैं)। Option A, C और D LVDT की core capability से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q11",
+      "question": "Simple inductive transducer में air-gap change होने पर inductance पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Air-gap बढ़ने पर inductance बढ़ती है क्योंकि reluctance कम होती है",
+        "Air-gap का inductance पर कोई प्रभाव नहीं पड़ता",
+        "Air-gap बढ़ने पर inductance घटती है क्योंकि magnetic circuit की reluctance बढ़ जाती है",
+        "Air-gap केवल capacitance को प्रभावित करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Air-gap बढ़ने से magnetic circuit की reluctance बढ़ती है (क्योंकि air की permeability कम होती है), और चूँकि inductance reluctance के inversely proportional होती है, इसलिए inductance घट जाती है। Option A relationship को उल्टा बताता है, Option B गलत है क्योंकि air-gap का सीधा प्रभाव पड़ता है, और Option D irrelevant है क्योंकि यह inductive नहीं capacitive transducer की बात है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q12",
+      "question": "LVDT में core की length windings से लंबी क्यों रखी जाती है?",
+      "options": [
+        "ताकि core का weight कम हो जाए",
+        "ताकि manufacturing cost कम हो",
+        "इसका कोई technical कारण नहीं है, यह random design है",
+        "ताकि core पूरी measurement range में हमेशा दोनों windings को cover रख सके और linear output मिले"
+      ],
+      "correctIndex": 3,
+      "explanation": "Core की length windings से अधिक रखी जाती है ताकि displacement range में core हमेशा दोनों coils के coupling क्षेत्र में रहे, जिससे output linear और consistent बना रहे। Option A, B और C actual engineering reason को नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q13",
+      "question": "LVDT signal conditioning circuit में phase-sensitive demodulator (PSD) का मुख्य कार्य क्या है?",
+      "options": [
+        "AC output की magnitude और phase (direction) दोनों की जानकारी को DC signal में convert करना जिसमें polarity direction बताए",
+        "Output की frequency बढ़ाना",
+        "Signal को amplify करके directly speaker में भेजना",
+        "केवल noise को filter करना, direction की जानकारी नहीं देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "PSD, LVDT के AC output की amplitude (magnitude of displacement) और phase (direction of displacement, null से किस तरफ) दोनों information को एक DC signal में convert करता है जिसकी polarity direction बताती है। Option B, C और D PSD के actual function को सही ढंग से describe नहीं करते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q14",
+      "question": "एक LVDT से रीडिंग लेते समय core, null position से एक तरफ move हुआ और output secondary S1 में EMF, S2 से अधिक निकली। यदि core विपरीत दिशा में move करे, तो क्या observe होगा?",
+      "options": [
+        "S1 और S2 में EMF हमेशा बराबर रहेगी",
+        "S2 में EMF, S1 से अधिक होगी और net output की phase reverse हो जाएगी",
+        "Output zero रहेगा चाहे core किसी भी दिशा में जाए",
+        "केवल frequency change होगी, magnitude नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब core विपरीत direction में move करता है, तो अब core दूसरी secondary winding (S2) के करीब होगा जिससे S2 में EMF अधिक induced होगी और net output का phase primary excitation के सापेक्ष 180° reverse हो जाएगा। Option A और C null position की स्थिति है न कि displaced core की, और Option D गलत है क्योंकि magnitude भी बदलती है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q15",
+      "question": "LVDT का एक प्रमुख limitation क्या है?",
+      "options": [
+        "यह केवल rotary displacement measure कर सकता है",
+        "इसमें कोई moving part नहीं होता इसलिए यह sensitive नहीं होता",
+        "इसे temperature और stray magnetic fields से interference का सामना करना पड़ सकता है, और यह केवल AC excitation पर काम करता है",
+        "यह केवल digital output देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "LVDT temperature variations और external stray magnetic fields से affected हो सकता है, तथा इसे operate करने के लिए AC excitation supply और signal conditioning (demodulator) आवश्यक होता है, जो complexity बढ़ाता है। Option A गलत है क्योंकि यह linear displacement के लिए है, Option B तथ्यात्मक रूप से गलत है, और Option D गलत है क्योंकि raw output analog AC होता है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q16",
+      "question": "Mutual-inductance type inductive transducer किस प्रकार LVDT से related है?",
+      "options": [
+        "LVDT केवल self-inductance पर आधारित है, mutual-inductance का कोई role नहीं",
+        "Mutual-inductance transducer और LVDT पूरी तरह असंबंधित concepts हैं",
+        "LVDT capacitive coupling पर आधारित transducer है",
+        "LVDT स्वयं एक mutual-inductance type transducer है जिसमें core की position primary-secondary coupling को बदलती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "LVDT actually mutual-inductance के principle पर काम करता है — core की position primary तथा दो secondary windings के बीच mutual coupling (coefficient of coupling) को बदलती है, जिससे secondary EMF change होती है। Option A, B और C LVDT के actual working principle को गलत तरीके से describe करते हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q17",
+      "question": "LVDT में sensitivity (mV output per mm displacement per volt excitation) को किस प्रकार बढ़ाया जा सकता है?",
+      "options": [
+        "Excitation frequency और voltage को design limits के भीतर उचित रूप से बढ़ाकर",
+        "Core की length को हमेशा घटाकर",
+        "Windings की संख्या को घटाकर",
+        "Air-gap को अनियंत्रित रूप से बढ़ाकर"
+      ],
+      "correctIndex": 0,
+      "explanation": "LVDT की sensitivity को design limits के अंदर excitation voltage/frequency को optimize करके बढ़ाया जा सकता है, क्योंकि induced EMF, rate of change of flux (जो frequency और amplitude से related है) पर depend करती है। Option B, C और D actual design practice के विपरीत हैं और sensitivity घटा सकते हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q18",
+      "question": "Industrial applications में LVDT का उपयोग force या pressure measurement के लिए कैसे किया जाता है?",
+      "options": [
+        "LVDT सीधे force को बिना किसी mechanical element के measure करता है",
+        "Force/pressure को पहले किसी elastic element (जैसे diaphragm या spring) द्वारा displacement में convert किया जाता है, फिर LVDT उस displacement को measure करता है",
+        "LVDT केवल temperature measure कर सकता है, force नहीं",
+        "Force measurement के लिए LVDT का उपयोग असंभव है"
+      ],
+      "correctIndex": 1,
+      "explanation": "LVDT स्वयं displacement transducer है, इसलिए force या pressure को elastic sensing element (diaphragm, bourdon tube, spring) की सहायता से पहले proportional displacement में convert किया जाता है, जिसे LVDT measure करता है। Option A, C और D LVDT के indirect measurement principle को गलत तरीके से बताते हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q19",
+      "question": "LVDT construction में primary winding किस position पर होती है?",
+      "options": [
+        "दोनों secondary windings के एक तरफ बाहर",
+        "Core के बाहर separate housing में",
+        "दोनों secondary windings के बीच केंद्र में (centrally located)",
+        "Primary winding का कोई निश्चित position नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "LVDT में primary winding को दोनों secondary windings (S1 और S2) के बीच केंद्र में रखा जाता है ताकि core movement के अनुसार symmetric coupling मिल सके। Option A, B और D सही construction को नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q20",
+      "question": "यदि LVDT core, null position से 5 mm एक दिशा में move करता है और output 250 mV मिलता है, तो transducer की sensitivity क्या होगी (assume linear region)?",
+      "options": [
+        "1250 mV/mm",
+        "5 mV/mm",
+        "0.05 mV/mm",
+        "50 mV/mm"
+      ],
+      "correctIndex": 3,
+      "explanation": "Sensitivity = output voltage / displacement = 250 mV / 5 mm = 50 mV/mm। Option A, B और C गलत calculation या division reverse करने से आते हैं जो actual formula के अनुरूप नहीं हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q21",
+      "question": "Inductive proximity sensor (variable reluctance type) में target material के रूप में गैर-चुंबकीय (non-magnetic) material जैसे aluminium का उपयोग करने पर क्या होगा?",
+      "options": [
+        "Sensor की sensitivity/response ferrous material की तुलना में काफी कम या अलग होगी क्योंकि magnetic coupling कमजोर होती है",
+        "Sensor बिना किसी बदलाव के सामान्य रूप से काम करेगा जैसे ferrous material के साथ",
+        "Sensor तुरंत जल जाएगा",
+        "Sensor केवल non-magnetic materials के लिए ही design होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Simple inductive sensors मुख्यतः ferromagnetic materials के लिए optimize होते हैं क्योंकि वे magnetic flux path को प्रभावी रूप से बदलते हैं; non-magnetic materials के साथ response कमजोर या अलग होता है (eddy-current type sensors non-ferrous पर भी काम कर सकते हैं पर range कम होती है)। Option B गलत है क्योंकि response समान नहीं रहता, Option C अवास्तविक है, और Option D गलत तथ्य प्रस्तुत करता है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q22",
+      "question": "LVDT को Wheatstone bridge जैसे resistive transducers की तुलना में contact-free बनाने का क्या फायदा है?",
+      "options": [
+        "इससे output हमेशा digital मिलता है",
+        "इससे mechanical hysteresis और wear कम होता है, जिससे accuracy और repeatability में सुधार होता है",
+        "इससे transducer की cost हमेशा शून्य हो जाती है",
+        "इससे AC excitation की आवश्यकता समाप्त हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Contact-free (frictionless) operation के कारण mechanical wear और hysteresis effects कम होते हैं, जिससे LVDT की accuracy, repeatability और life बेहतर होती है। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q23",
+      "question": "LVDT signal में harmonics (distortion) मुख्यतः किस कारण से उत्पन्न हो सकते हैं?",
+      "options": [
+        "Core हमेशा perfectly linear behave करता है इसलिए harmonics कभी नहीं आते",
+        "केवल DC supply का उपयोग करने से",
+        "Excitation source की non-sinusoidal waveform और core की non-linear magnetic characteristics के कारण",
+        "Windings के रंग (color coding) के कारण"
+      ],
+      "correctIndex": 2,
+      "explanation": "यदि excitation supply pure sinusoidal न हो या core का magnetic material non-linear characteristics दिखाए (जैसे saturation), तो output में harmonics/distortion आ सकते हैं। Option A तथ्यात्मक रूप से गलत है, Option B irrelevant है क्योंकि LVDT AC पर चलता है, और Option D का कोई technical संबंध नहीं है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q24",
+      "question": "LVDT की तुलना में एक simple single-coil variable inductance transducer (जैसे variable air-gap type) की सबसे बड़ी सीमा क्या है?",
+      "options": [
+        "यह हमेशा LVDT से अधिक accurate होता है",
+        "इसमें कोई core नहीं होता",
+        "यह displacement measure ही नहीं कर सकता",
+        "इसका output null position पर zero नहीं होता और यह single-ended होने के कारण temperature व supply voltage variations के प्रति अधिक sensitive होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Single-coil variable inductance transducer में differential (push-pull) arrangement न होने के कारण यह supply voltage और temperature variations के प्रति अधिक sensitive होता है, और LVDT जैसा null-balance advantage नहीं मिलता। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q25",
+      "question": "LVDT को rotary (angular) displacement measurement के लिए modify किया जाए, तो उसे क्या कहा जाता है?",
+      "options": [
+        "RVDT (Rotary Variable Differential Transformer)",
+        "RTD (Resistance Temperature Detector)",
+        "LDR (Light Dependent Resistor)",
+        "PT100 sensor"
+      ],
+      "correctIndex": 0,
+      "explanation": "LVDT के angular displacement version को RVDT (Rotary Variable Differential Transformer) कहा जाता है, जो cam-shaped core का उपयोग करके angular position को measure करता है। Option B, C और D पूर्णतः भिन्न प्रकार के sensors हैं जिनका inductive displacement से कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q26",
+      "question": "LVDT excitation frequency को सामान्यतः power line frequency (50/60 Hz) से अधिक (जैसे 1 kHz - 10 kHz) क्यों रखा जाता है?",
+      "options": [
+        "ताकि transducer की cost कम हो जाए",
+        "ताकि transducer का dynamic response तेज हो सके और power line interference/noise कम प्रभाव डाले",
+        "ताकि core हमेशा saturate हो जाए",
+        "इसका कोई कारण नहीं, यह random choice है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Higher excitation frequency (kHz range) transducer की dynamic response (fast displacement changes को follow करने की क्षमता) को बेहतर बनाती है और 50/60 Hz power line noise के साथ interference/aliasing को कम करती है। Option A, C और D सही technical justification नहीं देते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q27",
+      "question": "यदि LVDT की दोनों secondary windings में turns की संख्या असमान (unequal) हो जाए (manufacturing defect के कारण), तो इसका क्या प्रभाव पड़ेगा?",
+      "options": [
+        "कोई प्रभाव नहीं पड़ेगा, output हमेशा perfect रहेगा",
+        "Core हमेशा एक तरफ चिपक जाएगा",
+        "Null position पर output zero नहीं रहेगा, बल्कि एक residual voltage (null voltage error) रहेगा",
+        "Primary winding जल जाएगी"
+      ],
+      "correctIndex": 2,
+      "explanation": "यदि secondary windings असमान turns की हों, तो symmetric position पर भी induced EMFs पूरी तरह cancel नहीं होंगी, जिससे null position पर एक small residual voltage (null voltage) रह जाता है, जो एक known error स्रोत है। Option A, B और D actual physical प्रभाव को सही तरीके से नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q28",
+      "question": "LVDT को infinite resolution वाला transducer क्यों माना जाता है?",
+      "options": [
+        "क्योंकि output केवल discrete digital steps में बदलता है",
+        "क्योंकि इसमें कोई electrical output नहीं होता",
+        "क्योंकि यह केवल बड़े displacement के लिए काम करता है",
+        "क्योंकि core की सबसे छोटी movement भी theoretically एक continuous, measurable voltage change उत्पन्न करती है (कोई quantization नहीं)"
+      ],
+      "correctIndex": 3,
+      "explanation": "LVDT एक analog transducer है जिसमें core की arbitrarily छोटी movement भी theoretically एक continuous, proportional voltage change देती है (electronic noise floor की सीमा तक), इसलिए इसे infinite resolution कहा जाता है, discrete steps में divide नहीं होता। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q29",
+      "question": "LVDT signal conditioning में एक साधारण rectifier (बिना phase-sensitive detection के) उपयोग करने पर क्या सीमा आएगी?",
+      "options": [
+        "यह displacement की magnitude तो देगा पर direction (null से किस तरफ core है) की जानकारी नहीं दे पाएगा",
+        "यह सटीक direction information दे देगा पर magnitude नहीं",
+        "इसमें कोई सीमा नहीं है, यह PSD जितना ही effective है",
+        "यह केवल AC output देगा, DC कभी नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "साधारण rectifier signal को rectify तो कर देगा (magnitude information देगा) लेकिन phase information को discard कर देगा, जिससे core की direction (null के किस तरफ है) पता नहीं चल पाएगी — इसके लिए phase-sensitive demodulator आवश्यक है। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q30",
+      "question": "LVDT का उपयोग एक weighing machine (load cell replacement) में किस प्रकार किया जा सकता है?",
+      "options": [
+        "Load को सीधे electrical signal में convert करके, बिना किसी mechanical deflection के",
+        "Load के कारण होने वाले elastic member (जैसे spring/cantilever) के deflection को LVDT core से couple करके, जिससे displacement, load के proportional होता है",
+        "LVDT का weighing applications में उपयोग संभव नहीं है",
+        "LVDT केवल temperature-based weighing में उपयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Weighing applications में load को पहले एक elastic member (spring/cantilever/proving ring) के deflection में convert किया जाता है, और उस deflection को LVDT core से mechanically couple किया जाता है ताकि output voltage load के proportional हो। Option A, C और D LVDT के indirect sensing principle के विपरीत हैं।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit15",
+  "unitName": "Servo Motor",
+  "topic": "servo_feedback",
+  "topicName": "Feedback Mechanism in Servo System - Closed-Loop Control",
+  "questions": [
+    {
+      "id": "u15_servo_feedback_q1",
+      "question": "Servo system में feedback mechanism का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Motor की speed को हमेशा zero रखना",
+        "Actual output (position/speed) को desired (reference) value से लगातार compare करके error को कम करना",
+        "Power supply की voltage को बढ़ाना",
+        "Motor का weight कम करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Feedback mechanism actual output को reference (desired) value से compare करके error signal generate करता है, जिसे controller द्वारा कम किया जाता है ताकि output desired value के करीब पहुँचे (Option B)। Option A, C, D feedback mechanism के actual कार्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q2",
+      "question": "Closed-loop control system, open-loop control system से किस प्रकार भिन्न है?",
+      "options": [
+        "Closed-loop में feedback नहीं होता जबकि open-loop में feedback होता है",
+        "Closed-loop में output को feedback के रूप में input से compare किया जाता है, जबकि open-loop में ऐसा नहीं होता",
+        "दोनों में कोई अंतर नहीं होता",
+        "Open-loop system हमेशा अधिक accurate होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Closed-loop system में output को sensor के through feedback करके input (reference) से compare किया जाता है, जबकि open-loop system में ऐसा कोई feedback path नहीं होता (Option B)। Option A तथ्यों को उल्टा बताता है, Option C ग़लत है, और Option D ग़लत है क्योंकि closed-loop system सामान्यतः अधिक accurate होता है।"
+    },
+    {
+      "id": "u15_servo_feedback_q3",
+      "question": "Servo motor में feedback के लिए सामान्यतः किन devices का उपयोग होता है?",
+      "options": [
+        "Only resistors",
+        "Encoder, resolver या tachogenerator जैसे sensing devices",
+        "केवल capacitor",
+        "केवल diode"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo systems में position या speed feedback के लिए encoder, resolver, या tachogenerator जैसे devices प्रयोग किए जाते हैं (Option B)। Option A, C, D ये components feedback sensing के लिए प्रयोग नहीं होते।"
+    },
+    {
+      "id": "u15_servo_feedback_q4",
+      "question": "Error signal (जो servo controller को feed होता है) कैसे calculate किया जाता है?",
+      "options": [
+        "Error = Reference input + Feedback signal",
+        "Error = Reference input − Feedback signal",
+        "Error = Reference input × Feedback signal",
+        "Error = Feedback signal / Reference input"
+      ],
+      "correctIndex": 1,
+      "explanation": "Error signal को Reference (desired) input में से Feedback (actual output) signal घटाकर निकाला जाता है, यानी Error = Reference − Feedback (Option B)। Option A, C, D गणितीय रूप से servo control theory में उपयोग होने वाले standard error calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q5",
+      "question": "Negative feedback servo system में क्या होता है यदि actual output, reference value से अधिक हो जाए?",
+      "options": [
+        "Error signal positive होकर output को और बढ़ाएगा",
+        "Error signal negative होकर controller output को कम करने की दिशा में काम करेगा ताकि output वापस reference के करीब आए",
+        "System पूरी तरह बंद हो जाएगा",
+        "Feedback signal का कोई प्रभाव नहीं पड़ेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि actual output reference से अधिक हो जाए, तो error (Reference − Feedback) negative हो जाता है, जिससे controller output को कम करने की दिशा में काम करता है ताकि system reference value के करीब वापस आए — यही negative feedback का सिद्धांत है (Option B)। Option A, C, D negative feedback की actual working से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q6",
+      "question": "Servo system में position feedback किस प्रकार के applications में सबसे ज़्यादा ज़रूरी होता है?",
+      "options": [
+        "जहाँ केवल on-off control चाहिए",
+        "CNC machines और robotic arms जैसे applications में जहाँ precise position control चाहिए",
+        "साधारण घरेलू पंखे में",
+        "साधारण bulb की switching में"
+      ],
+      "correctIndex": 1,
+      "explanation": "CNC machines, robotics arms जैसी applications में tool या arm की exact position जानना बेहद ज़रूरी होता है, इसलिए वहाँ precise position feedback आवश्यक है (Option B)। Option A, C, D ऐसी applications हैं जहाँ precise closed-loop position feedback आवश्यक नहीं होता।"
+    },
+    {
+      "id": "u15_servo_feedback_q7",
+      "question": "Tachogenerator servo system में मुख्यतः किस parameter का feedback देता है?",
+      "options": [
+        "Temperature",
+        "Speed (RPM) का feedback, जो output voltage के रूप में motor की rotational speed के proportional होता है",
+        "Only position",
+        "Only current"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tachogenerator motor की shaft speed के proportional एक analog voltage generate करता है, जो speed feedback के लिए प्रयोग होता है (Option B)। Option A, C, D tachogenerator के actual function से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q8",
+      "question": "Servo system में feedback loop की stability सुनिश्चित करने के लिए controller में सामान्यतः कौन सा नियंत्रण algorithm प्रयोग होता है?",
+      "options": [
+        "PID (Proportional-Integral-Derivative) controller",
+        "केवल एक साधारण switch",
+        "एक साधारण resistor network",
+        "केवल एक transformer"
+      ],
+      "correctIndex": 0,
+      "explanation": "Servo systems में error signal को process करके सही control action देने के लिए PID (Proportional-Integral-Derivative) controller प्रयोग किया जाता है, जो stability और accuracy दोनों प्रदान करता है (Option A)। Option B, C, D control algorithms नहीं हैं और इनसे stable feedback control संभव नहीं।"
+    },
+    {
+      "id": "u15_servo_feedback_q9",
+      "question": "Feedback के बिना (open-loop) servo जैसा system चलाने पर क्या समस्या हो सकती है?",
+      "options": [
+        "System हमेशा 100% accurate रहेगा",
+        "Load disturbance या external factors के कारण होने वाली error को system automatically correct नहीं कर पाएगा",
+        "System की cost हमेशा अधिक होगी",
+        "Motor कभी नहीं घूमेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Feedback के बिना system को यह पता नहीं चलता कि actual output, desired output से कितना अलग है, इसलिए load disturbances या external factors से आई error को automatically correct नहीं किया जा सकता (Option B)। Option A, C, D तथ्यात्मक रूप से ग़लत हैं क्योंकि open-loop system सामान्यतः कम accurate और अक्सर सस्ता होता है।"
+    },
+    {
+      "id": "u15_servo_feedback_q10",
+      "question": "Servo motor system में 'transducer' शब्द का प्रयोग किसके लिए होता है?",
+      "options": [
+        "जो device एक form of energy (जैसे mechanical position) को दूसरे रूप (जैसे electrical signal) में convert करती है, feedback के लिए",
+        "जो motor की winding को जलने से बचाती है",
+        "जो केवल power supply की frequency बढ़ाती है",
+        "जो motor का weight कम करती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transducer वह device है जो mechanical quantity (जैसे position, speed) को electrical signal में convert करती है, ताकि उसे feedback के रूप में controller को भेजा जा सके (Option A)। Option B, C, D transducer के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q11",
+      "question": "Servo feedback control loop में 'summing point' (या comparator) का क्या कार्य है?",
+      "options": [
+        "Power supply को on-off करना",
+        "Reference input और feedback signal को compare करके error signal उत्पन्न करना",
+        "Motor की winding को cool करना",
+        "Output shaft की speed को measure करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Summing point (comparator) पर reference input और feedback signal को compare किया जाता है और उनके अंतर से error signal generate होता है, जो आगे controller को भेजा जाता है (Option B)। Option A, C, D summing point की actual functionality नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q12",
+      "question": "एक servo system में यदि feedback path में sensor faulty हो जाए, तो क्या समस्या हो सकती है?",
+      "options": [
+        "System की accuracy और भी बढ़ जाएगी",
+        "गलत feedback signal के कारण controller गलत error signal calculate करेगा, जिससे system अनियंत्रित (unstable) या गलत output दे सकता है",
+        "System पर कोई असर नहीं पड़ेगा",
+        "Motor की speed हमेशा zero हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Faulty sensor गलत feedback signal भेजेगा, जिससे controller द्वारा calculate किया गया error सही नहीं होगा और system unstable हो सकता है या गलत output दे सकता है (Option B)। Option A, C, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q13",
+      "question": "Optical encoder को servo feedback के लिए प्रयोग करने का एक फ़ायदा क्या है?",
+      "options": [
+        "यह high resolution के साथ accurate position/speed information देता है",
+        "यह हमेशा temperature बढ़ाता है",
+        "यह केवल AC systems में काम करता है",
+        "इसे लगाने से motor का torque कम हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Optical encoder light pulses के माध्यम से high resolution position या speed information प्रदान करता है, जिससे accurate feedback मिलता है (Option A)। Option B, C, D optical encoder के actual गुणों से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q14",
+      "question": "Feedback control system में 'gain' का बढ़ना किस पर असर डालता है?",
+      "options": [
+        "केवल motor के color पर",
+        "System के response speed और stability दोनों पर - अधिक gain तेज़ response दे सकता है परंतु अत्यधिक gain से system unstable (oscillate) भी हो सकता है",
+        "केवल SIM card की connectivity पर",
+        "इसका कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Controller का gain बढ़ाने से system तेज़ी से error को correct कर सकता है, लेकिन बहुत अधिक gain से system oscillate करने लगता है और instability आ सकती है (Option B)। Option A, C, D gain के actual प्रभाव से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q15",
+      "question": "Servo feedback system में 'steady-state error' का क्या अर्थ है?",
+      "options": [
+        "System के start होने पर तुरंत आने वाली error",
+        "System के stable होने के बाद, लंबे समय तक बचा रहने वाला अंतर actual output और desired output के बीच",
+        "System के पूरी तरह बंद होने पर आने वाली error",
+        "केवल temperature से जुड़ी error"
+      ],
+      "correctIndex": 1,
+      "explanation": "Steady-state error वह residual अंतर है जो system के transient response खत्म होने और स्थिर (steady) होने के बाद भी actual output और desired output के बीच बचा रहता है (Option B)। Option A, C, D स्टेडी-स्टेट एरर की परिभाषा से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q16",
+      "question": "Servo system में 'proportional control' किस प्रकार काम करता है?",
+      "options": [
+        "Controller output error signal के proportional होता है, यानी error जितनी अधिक होगी correction भी उतना अधिक होगा",
+        "Controller output हमेशा constant रहता है चाहे error कुछ भी हो",
+        "Controller error को पूरी तरह ignore करता है",
+        "Controller केवल समय के साथ output बदलता है, error से independent"
+      ],
+      "correctIndex": 0,
+      "explanation": "Proportional control में controller output सीधे error signal के magnitude के proportional होता है, इसलिए error बढ़ने पर correction भी उसी अनुपात में बढ़ता है (Option A)। Option B, C, D proportional control की actual working को सही तरीके से नहीं दर्शाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q17",
+      "question": "Integral control (I) feedback system में क्यों जोड़ा जाता है?",
+      "options": [
+        "Steady-state error को खत्म करने के लिए, क्योंकि यह error के accumulated (समय के साथ जमा) मान पर काम करता है",
+        "System को अधिक noisy बनाने के लिए",
+        "Motor की speed को हमेशा zero करने के लिए",
+        "Feedback path को पूरी तरह हटाने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Integral control समय के साथ जमा हुए (accumulated) error पर काम करता है और उसे धीरे-धीरे कम करके steady-state error को खत्म करने में मदद करता है (Option A)। Option B, C, D integral control के actual उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q18",
+      "question": "Derivative control (D) feedback system में किस चीज़ को improve करने में मदद करता है?",
+      "options": [
+        "System के transient response और overshoot को कम करने में, क्योंकि यह error के change rate पर react करता है",
+        "System की cost को हमेशा कम करने में",
+        "केवल motor का weight कम करने में",
+        "Power supply की frequency बदलने में"
+      ],
+      "correctIndex": 0,
+      "explanation": "Derivative control error के rate of change (कितनी तेज़ी से error बदल रहा है) पर react करता है, जिससे system का transient response बेहतर होता है और overshoot कम होता है (Option A)। Option B, C, D derivative control के actual उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q19",
+      "question": "Servo system में 'overshoot' का क्या मतलब है?",
+      "options": [
+        "System का reference value तक कभी न पहुँच पाना",
+        "System के output का reference (desired) value को पार करके अस्थायी रूप से उससे अधिक चले जाना, इससे पहले कि वह स्थिर हो",
+        "System का पूरी तरह बंद हो जाना",
+        "Feedback path में सिग्नल का पूरी तरह गायब हो जाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Overshoot तब होता है जब system का output स्थिर होने से पहले temporarily desired (reference) value को पार करके उससे आगे निकल जाता है (Option B)। Option A, C, D overshoot की सही परिभाषा से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q20",
+      "question": "Feedback control loop में 'damping' का उद्देश्य क्या होता है?",
+      "options": [
+        "System की oscillations को कम करना और उसे जल्दी स्थिर (settle) करने में मदद करना",
+        "System की oscillations को बढ़ाना",
+        "Motor की winding को cool करना",
+        "SIM card की signal quality बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Damping system की oscillations को कम करके उसे जल्दी stable state (settling) में लाने में मदद करता है, जिससे स्थिरता (stability) बनी रहती है (Option A)। Option B, C, D damping के actual उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q21",
+      "question": "Servo system में 'null position' या 'balanced condition' किसे कहते हैं?",
+      "options": [
+        "जब motor अधिकतम speed पर घूम रहा हो",
+        "जब error signal शून्य (zero) हो, यानी actual output बिल्कुल reference value के बराबर हो",
+        "जब power supply बंद हो",
+        "जब feedback sensor disconnect हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Null या balanced condition तब होती है जब error signal zero हो जाता है, यानी feedback के बाद actual output बिल्कुल reference value के बराबर हो जाता है, इस स्थिति में controller कोई further correction नहीं भेजता (Option B)। Option A, C, D इस स्थिति की सही परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q22",
+      "question": "Digital servo system में feedback signal को controller तक भेजने से पहले सामान्यतः किस process से गुज़ारा जाता है?",
+      "options": [
+        "Analog-to-Digital Conversion (ADC), ताकि microcontroller/processor उसे process कर सके",
+        "इसे सीधे motor की winding में डाल दिया जाता है",
+        "इसे केवल battery में store कर दिया जाता है",
+        "इसे पूरी तरह discard कर दिया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Digital servo systems में sensor से आने वाला analog feedback signal (जैसे tachogenerator से) को ADC के through digital form में convert किया जाता है ताकि digital controller (microprocessor) उसे process कर सके (Option A)। Option B, C, D actual feedback processing से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q23",
+      "question": "Servo motor में velocity (speed) feedback loop, position feedback loop से किस प्रकार भिन्न भूमिका निभाता है?",
+      "options": [
+        "Velocity loop motor की rotational speed को नियंत्रित करता है जबकि position loop shaft की exact angular/linear location को नियंत्रित करता है",
+        "दोनों बिल्कुल एक ही काम करते हैं",
+        "Velocity loop केवल temperature control करता है",
+        "Position loop केवल current को control करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Velocity feedback loop motor की speed को नियंत्रित करने में मदद करता है जबकि position feedback loop shaft की exact position को नियंत्रित करने में मदद करता है — अक्सर servo systems में ये दोनों loops nested (cascade) रूप में साथ काम करते हैं (Option A)। Option B, C, D इनकी अलग-अलग भूमिकाओं को सही तरीके से नहीं बताते।"
+    },
+    {
+      "id": "u15_servo_feedback_q24",
+      "question": "'Cascade control' (nested loop) structure servo systems में क्यों प्रयोग किया जाता है?",
+      "options": [
+        "ताकि position, velocity और current जैसे अलग-अलग parameters के लिए अलग-अलग nested feedback loops बनाकर बेहतर control और stability प्राप्त की जा सके",
+        "ताकि feedback की ज़रूरत पूरी तरह खत्म हो जाए",
+        "ताकि system की cost हमेशा कम हो जाए",
+        "ताकि motor बिना power के चल सके"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cascade (nested loop) control structure में inner loop (जैसे current), middle loop (velocity), और outer loop (position) एक साथ काम करते हैं, जिससे fine-grained control और बेहतर stability मिलती है (Option A)। Option B, C, D cascade control के actual उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q25",
+      "question": "Feedback signal में noise आने पर servo system की performance पर क्या असर पड़ सकता है?",
+      "options": [
+        "System की accuracy और stability खराब हो सकती है, इसलिए filtering ज़रूरी होती है",
+        "Noise से system हमेशा और बेहतर काम करने लगता है",
+        "Noise का motor की winding पर कोई असर नहीं पड़ता, ना ही control पर",
+        "Noise केवल SIM card को प्रभावित करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Feedback signal में noise आने से controller गलत error calculate कर सकता है, जिससे system की accuracy और stability खराब हो सकती है, इसलिए signal को filter (जैसे low-pass filter) करना ज़रूरी होता है (Option A)। Option B, C, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q26",
+      "question": "Servo feedback system में 'sensitivity' का क्या मतलब है?",
+      "options": [
+        "System का input में मामूली बदलाव के प्रति output response की मात्रा",
+        "System का power consumption",
+        "Motor का weight",
+        "SIM card का network signal"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sensitivity यह दर्शाती है कि system input (reference या disturbance) में छोटे बदलाव के प्रति कितना response देता है — feedback control system की design में इसे संतुलित रखना ज़रूरी होता है (Option A)। Option B, C, D sensitivity की सही परिभाषा से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_servo_feedback_q27",
+      "question": "यदि servo feedback loop में gain बहुत कम रखा जाए, तो क्या हो सकता है?",
+      "options": [
+        "System बहुत तेज़ी से oscillate करने लगेगा",
+        "System का response धीमा हो सकता है और यह desired value तक पहुँचने में अधिक समय ले सकता है",
+        "System हमेशा unstable हो जाएगा",
+        "Feedback signal पूरी तरह गायब हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "बहुत कम gain से controller छोटी errors पर ज़्यादा तेज़ी से react नहीं करता, जिससे system का response sluggish (धीमा) हो जाता है और desired value तक पहुँचने में अधिक समय लगता है (Option B)। Option A, C, D सामान्यतः उच्च gain के प्रभावों से जुड़े हैं, कम gain से नहीं।"
+    },
+    {
+      "id": "u15_servo_feedback_q28",
+      "question": "Servo feedback system में 'dead band' (या dead zone) किसे कहते हैं?",
+      "options": [
+        "वह range जहाँ system हमेशा maximum output देता है",
+        "Error signal की वह छोटी range जिसमें controller कोई correction action नहीं लेता, ताकि छोटी-छोटी fluctuations पर अनावश्यक response न हो",
+        "वह जगह जहाँ motor पूरी तरह बंद हो जाता है",
+        "वह जगह जहाँ SIM card काम करना बंद कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dead band error signal की एक छोटी range होती है जिसके भीतर controller कोई corrective action नहीं लेता, ताकि छोटी fluctuations या sensor noise के कारण अनावश्यक rapid switching (hunting) न हो (Option B)। Option A, C, D dead band की सही परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q29",
+      "question": "Robotic arm में joint position feedback के fail होने (sensor disconnect) का practical परिणाम क्या हो सकता है?",
+      "options": [
+        "Arm हमेशा सही तरीके से काम करता रहेगा",
+        "Controller को actual joint position पता नहीं चलेगी, जिससे arm गलत दिशा में move हो सकता है या uncontrolled movement कर सकता है",
+        "Arm अपने आप power supply बदल लेगा",
+        "SIM card automatically activate हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Feedback sensor fail होने पर controller को actual joint position की सही जानकारी नहीं मिलेगी, जिससे control loop गलत निर्णय ले सकता है और arm अनियंत्रित (uncontrolled) या गलत दिशा में move कर सकता है, जो सुरक्षा के लिहाज से खतरनाक है (Option B)। Option A, C, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u15_servo_feedback_q30",
+      "question": "Overall, servo feedback mechanism (closed-loop control) का सबसे बड़ा फ़ायदा किस रूप में summarize किया जा सकता है?",
+      "options": [
+        "यह system को external disturbances और parameter variations के बावजूद desired output के करीब बनाए रखने में सक्षम बनाता है",
+        "यह हमेशा system की cost को कम करता है",
+        "यह feedback devices की ज़रूरत को पूरी तरह हटा देता है",
+        "यह motor की physical size को हमेशा बढ़ाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Feedback mechanism की सबसे बड़ी खूबी यह है कि यह external disturbances (जैसे load changes) और internal parameter variations के बावजूद actual output को desired (reference) value के करीब बनाए रखता है, जिससे accuracy और reliability बढ़ती है (Option A)। Option B, C, D closed-loop feedback के actual benefits का सही वर्णन नहीं करते।"
+    }
+  ]
+}

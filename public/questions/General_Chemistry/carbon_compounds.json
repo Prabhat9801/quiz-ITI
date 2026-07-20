@@ -1,0 +1,268 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "carbon_compounds",
+  "topicName": "Carbon and its Compounds",
+  "questions": [
+    {
+      "id": "chem_carbon_compounds_q1",
+      "question": "Carbon परमाणु (atom) covalent bonds ही क्यों बनाता है, ionic bonds क्यों नहीं?",
+      "options": [
+        "क्योंकि carbon हमेशा electrons ग्रहण करता है",
+        "क्योंकि carbon एक धातु (metal) है",
+        "क्योंकि carbon के पास कोई electron नहीं होता",
+        "क्योंकि carbon की valency 4 है और 4 electrons खोना या ग्रहण करना ऊर्जा की दृष्टि से कठिन है, इसलिए यह electrons share करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Carbon की valency 4 होने से यह 4 electrons पूरी तरह खोकर C4+ या ग्रहण करके C4- बनाने में बहुत अधिक ऊर्जा खर्च करेगा, इसलिए यह electrons share करके covalent bond बनाता है। Carbon धातु नहीं बल्कि अधातु (non-metal) है, इसमें 4 valence electrons होते हैं, और यह न केवल ग्रहण बल्कि share करता है, इसलिए बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q2",
+      "question": "Catenation किसे कहते हैं?",
+      "options": [
+        "carbon परमाणुओं की self-linking करके लंबी chains, branched chains या rings बनाने की क्षमता",
+        "दो भिन्न तत्वों के बीच bond बनने की प्रक्रिया",
+        "किसी compound का पानी में घुलना",
+        "electrons का nucleus से बाहर निकलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Catenation carbon परमाणुओं की स्वयं से स्वयं जुड़कर straight chain, branched chain या ring संरचनाएँ बनाने की विशेष क्षमता है, जो हजारों organic compounds बनाती है। शेष विकल्प catenation की परिभाषा नहीं दर्शाते।"
+    },
+    {
+      "id": "chem_carbon_compounds_q3",
+      "question": "Alkanes का general formula CnH2n+2 है। यदि किसी alkane में 6 carbon atoms (n=6) हैं, तो उसका molecular formula क्या होगा?",
+      "options": ["C6H12", "C6H10", "C6H14", "C6H16"],
+      "correctIndex": 2,
+      "explanation": "CnH2n+2 में n=6 रखने पर H की संख्या = 2(6)+2 = 14, अतः formula C6H14 (hexane) बनता है। C6H12 alkene का formula होगा, C6H10 alkyne श्रेणी के करीब है, और C6H16 गलत गणना है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q4",
+      "question": "Alkenes (unsaturated hydrocarbons जिनमें एक double bond होता है) का general formula CnH2n है। propene में 3 carbon atoms होते हैं, इसका molecular formula क्या होगा?",
+      "options": ["C3H8", "C3H4", "C3H6", "C3H10"],
+      "correctIndex": 2,
+      "explanation": "CnH2n में n=3 रखने पर H = 2(3) = 6, अतः C3H6 (propene) बनता है। C3H8 propane (alkane) है, C3H4 propyne (alkyne) के करीब है, और C3H10 valency नियमों के अनुसार संभव ही नहीं है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q5",
+      "question": "Alkynes (जिनमें एक triple bond होता है) का general formula CnH2n-2 है। सबसे सरल alkyne ethyne में 2 carbon atoms होते हैं, इसका molecular formula क्या होगा?",
+      "options": ["C2H6", "C2H4", "C2H2", "C2H8"],
+      "correctIndex": 2,
+      "explanation": "CnH2n-2 में n=2 रखने पर H = 2(2)-2 = 2, अतः C2H2 (ethyne) बनता है। C2H6 ethane (alkane) है, C2H4 ethene (alkene) है, और C2H8 किसी भी valency नियम के अनुसार संभव नहीं है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q6",
+      "question": "Saturated hydrocarbons (जैसे alkanes) और unsaturated hydrocarbons (जैसे alkenes, alkynes) में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों में कोई अंतर नहीं होता",
+        "Saturated hydrocarbons में double bond होता है",
+        "Unsaturated hydrocarbons में केवल single bonds होते हैं",
+        "Saturated hydrocarbons में केवल single covalent bonds होते हैं जबकि unsaturated में कम से कम एक double या triple bond होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Alkanes जैसे saturated hydrocarbons में carbon-carbon के बीच केवल single bonds होते हैं, जबकि alkenes व alkynes जैसे unsaturated hydrocarbons में क्रमशः double या triple bond मौजूद रहता है। शेष विकल्प इस परिभाषा को उल्टा या गलत ढंग से बताते हैं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q7",
+      "question": "Saturated और unsaturated hydrocarbons में अंतर पहचानने के लिए प्रयोगशाला में कौन-सा सरल test प्रयोग किया जाता है?",
+      "options": [
+        "Litmus paper test",
+        "Flame test केवल रंग देखने के लिए",
+        "Universal indicator test",
+        "Bromine water test (unsaturated hydrocarbon bromine water का भूरा रंग तुरंत discolor कर देता है)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Unsaturated hydrocarbons में double/triple bond होने से वे bromine water के साथ addition reaction करके उसका भूरा रंग तुरंत हटा देते हैं, जबकि saturated hydrocarbon ऐसा नहीं करता। Litmus व universal indicator acid-base परखने के लिए हैं, और अकेला flame test विश्वसनीय तरीका नहीं है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q8",
+      "question": "-OH (hydroxyl) functional group किस class of compounds की पहचान है?",
+      "options": ["Aldehyde", "Alcohol", "Ketone", "Carboxylic acid"],
+      "correctIndex": 1,
+      "explanation": "-OH यानी hydroxyl group alcohol की विशेष पहचान है, जैसे C2H5OH (ethanol)। Aldehyde में -CHO, ketone में >C=O, और carboxylic acid में -COOH group होता है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q9",
+      "question": "-CHO functional group किस class of organic compound में पाया जाता है?",
+      "options": ["Carboxylic acid", "Ketone", "Alcohol", "Aldehyde"],
+      "correctIndex": 3,
+      "explanation": "-CHO group aldehyde की पहचान है, जैसे HCHO (methanal)। Ketone में >C=O (दो carbon के बीच), alcohol में -OH, और carboxylic acid में -COOH group होता है, ये सभी -CHO से अलग हैं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q10",
+      "question": ">C=O group जब किसी carbon chain के बीच में (दो carbon atoms के बीच) जुड़ा होता है, तो वह compound किस class का कहलाता है?",
+      "options": ["Aldehyde", "Alcohol", "Ketone", "Carboxylic acid"],
+      "correctIndex": 2,
+      "explanation": "जब carbonyl group (>C=O) chain के बीच में स्थित होता है तो वह ketone कहलाता है, जैसे CH3COCH3 (propanone)। यदि यह chain के अंतिम carbon पर हो तो aldehyde (-CHO) बनता है, alcohol में -OH और carboxylic acid में -COOH होता है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q11",
+      "question": "-COOH functional group किस class of compound की पहचान करता है?",
+      "options": ["Alcohol", "Aldehyde", "Ketone", "Carboxylic acid"],
+      "correctIndex": 3,
+      "explanation": "-COOH group carboxylic acid की पहचान है, जैसे CH3COOH (acetic acid/ethanoic acid)। Alcohol में -OH, aldehyde में -CHO और ketone में >C=O (chain के मध्य में) group होता है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q12",
+      "question": "Homologous series किसे कहते हैं?",
+      "options": [
+        "compounds की एक series जिनका same functional group होता है और क्रमागत सदस्य CH2 इकाई से भिन्न होते हैं",
+        "compounds की series जिनमें कोई functional group नहीं होता",
+        "केवल एक ही compound के isomers",
+        "अलग-अलग functional groups वाले compounds का समूह"
+      ],
+      "correctIndex": 0,
+      "explanation": "Homologous series में सभी सदस्यों का functional group समान होता है और क्रमागत सदस्य molecular formula में CH2 तथा mass में 14 यूनिट से भिन्न होते हैं, जैसे alkane series। बाकी विकल्प इस अवधारणा को गलत ढंग से बताते हैं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q13",
+      "question": "Homologous series के दो क्रमागत (consecutive) सदस्यों के molecular mass में कितना अंतर होता है?",
+      "options": ["12 units", "14 units", "16 units", "18 units"],
+      "correctIndex": 1,
+      "explanation": "क्रमागत सदस्य एक-दूसरे से CH2 इकाई से भिन्न होते हैं, और CH2 का mass = 12+2(1) = 14 units होता है। 12, 16 और 18 गलत हैं क्योंकि ये क्रमशः केवल carbon, oxygen या पानी के mass के करीब हैं, CH2 के नहीं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q14",
+      "question": "Alkanes (saturated hydrocarbons) के IUPAC नाम में सामान्यतः कौन-सा suffix जोड़ा जाता है?",
+      "options": ["-ol", "-al", "-ane", "-one"],
+      "correctIndex": 2,
+      "explanation": "Saturated hydrocarbons (alkanes) के नाम में '-ane' suffix जोड़ा जाता है, जैसे methane, ethane। '-ol' alcohol, '-al' aldehyde, और '-one' ketone के लिए प्रयोग होते हैं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q15",
+      "question": "CH3-CH2-OH (ethanol) का IUPAC नाम बनाने में suffix किस नियम के अनुसार दिया गया है?",
+      "options": [
+        "-al suffix जो aldehyde दर्शाता है",
+        "-one suffix जो ketone दर्शाता है",
+        "-oic acid suffix जो carboxylic acid दर्शाता है",
+        "-ol suffix जो alcohol (-OH group) दर्शाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Ethanol में -OH group होने से IUPAC नाम में '-ol' suffix जुड़ता है। '-al' aldehyde, '-one' ketone और '-oic acid' carboxylic acid के लिए प्रयुक्त होते हैं, जो यहाँ लागू नहीं होते।"
+    },
+    {
+      "id": "chem_carbon_compounds_q16",
+      "question": "HCHO (methanal) के नाम में '-al' suffix किस functional group को दर्शाता है?",
+      "options": ["Alcohol (-OH)", "Aldehyde (-CHO)", "Ketone (>C=O)", "Carboxylic acid (-COOH)"],
+      "correctIndex": 1,
+      "explanation": "'-al' suffix aldehyde group (-CHO) को दर्शाता है, जैसे methanal (HCHO)। Alcohol के लिए '-ol', ketone के लिए '-one' और carboxylic acid के लिए '-oic acid' suffix प्रयुक्त होता है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q17",
+      "question": "CH3-CO-CH3 (propanone) के नाम में प्रयुक्त '-one' suffix किस functional group को इंगित करता है?",
+      "options": ["Ketone (>C=O)", "Aldehyde (-CHO)", "Alcohol (-OH)", "Carboxylic acid (-COOH)"],
+      "correctIndex": 0,
+      "explanation": "'-one' suffix ketone group (>C=O, chain के मध्य में) को इंगित करता है, जैसे propanone (CH3COCH3)। Aldehyde के लिए '-al', alcohol के लिए '-ol' और carboxylic acid के लिए '-oic acid' उपयुक्त suffix हैं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q18",
+      "question": "CH3COOH को IUPAC पद्धति में ethanoic acid कहा जाता है, इसमें '-oic acid' suffix किस functional group के कारण जुड़ा है?",
+      "options": ["-OH group", "-CHO group", "-COOH group", ">C=O group"],
+      "correctIndex": 2,
+      "explanation": "-COOH (carboxyl) group की उपस्थिति में IUPAC नाम में '-oic acid' suffix जुड़ता है, जैसे ethanoic acid (CH3COOH)। -OH alcohol, -CHO aldehyde, और >C=O ketone group को दर्शाते हैं, इनमें यह suffix नहीं जुड़ता।"
+    },
+    {
+      "id": "chem_carbon_compounds_q19",
+      "question": "Isomerism किसे कहते हैं?",
+      "options": [
+        "एक ही molecular formula परन्तु भिन्न-भिन्न structural arrangement वाले compounds का पाया जाना",
+        "समान structure परन्तु भिन्न molecular formula वाले compounds",
+        "केवल एक ही compound के दो नाम",
+        "दो भिन्न elements का एक साथ पाया जाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Isomerism वह परिघटना है जिसमें दो या अधिक compounds का molecular formula समान होते हुए भी उनकी structure (atoms की व्यवस्था) भिन्न होती है, जैसे butane के isomers। शेष विकल्प इस परिभाषा को गलत ढंग से प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q20",
+      "question": "C4H10 (butane) के कितने structural isomers संभव हैं?",
+      "options": ["1", "2", "3", "4"],
+      "correctIndex": 1,
+      "explanation": "C4H10 के 2 structural isomers होते हैं normal-butane (straight chain) और isobutane/2-methylpropane (branched chain), दोनों का molecular formula समान पर संरचना भिन्न है। 1, 3 या 4 isomers की संख्या गलत है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q21",
+      "question": "Methane (CH4) के complete combustion में यह पर्याप्त oxygen के साथ जलकर क्या बनाता है?",
+      "options": ["CO और H2", "CO2 और H2O", "केवल CO2", "केवल H2O"],
+      "correctIndex": 1,
+      "explanation": "Complete combustion में hydrocarbons पर्याप्त oxygen के साथ जलकर पूरी तरह carbon dioxide (CO2) और water (H2O) बनाते हैं तथा ऊष्मा व प्रकाश निकलता है। CO और H2 अधूरे दहन में बनते हैं, और अकेले CO2 या H2O बनना प्रतिक्रिया अधूरी दर्शाता है जबकि वास्तव में दोनों उत्पाद बनते हैं।"
+    },
+    {
+      "id": "chem_carbon_compounds_q22",
+      "question": "Saturated hydrocarbons सामान्यतः नीली (clean) flame से जलते हैं जबकि unsaturated hydrocarbons (अधिक carbon content के कारण) कैसी flame देते हैं?",
+      "options": ["पीली और धुएँदार (sooty) flame", "साफ नीली flame", "कोई flame नहीं", "हरी flame"],
+      "correctIndex": 0,
+      "explanation": "Unsaturated hydrocarbons में carbon percentage अधिक होने से incomplete combustion होता है जिससे पीली, धुएँदार (sooty) flame और unburnt carbon particles बनते हैं। Saturated hydrocarbons साफ नीली flame देते हैं, flame का न होना या हरी flame यहाँ लागू नहीं है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q23",
+      "question": "Ethanol (C2H5OH) को alkaline KMnO4 (एक oxidising agent) के साथ गर्म करने पर यह oxidise होकर क्या बनाता है?",
+      "options": ["Ethane", "Ethanoic acid (CH3COOH)", "Ethene", "Methanol"],
+      "correctIndex": 1,
+      "explanation": "Alkaline KMnO4 या acidified K2Cr2O7 जैसे oxidising agents alcohol को oxidise करके carboxylic acid बनाते हैं, यहाँ ethanol से ethanoic acid (CH3COOH) बनता है। Ethane व ethene हाइड्रोकार्बन हैं जो इस oxidation से नहीं बनते, और methanol एक भिन्न compound है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q24",
+      "question": "वनस्पति तेल (vegetable oil, जो unsaturated fat है) को Nickel catalyst की उपस्थिति में hydrogen के साथ अभिक्रिया कराकर ठोस vanaspati ghee (saturated fat) बनाने की प्रक्रिया क्या कहलाती है?",
+      "options": ["Substitution reaction", "Oxidation reaction", "Hydrogenation (addition reaction)", "Esterification reaction"],
+      "correctIndex": 2,
+      "explanation": "Unsaturated vegetable oil में Ni catalyst की उपस्थिति में H2 का addition होकर double bonds single bond में बदल जाते हैं, इसे hydrogenation कहते हैं जो एक addition reaction है। यह substitution, oxidation या esterification नहीं है क्योंकि इनमें क्रमशः atom का प्रतिस्थापन, oxygen जुड़ना या ester बनना होता है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q25",
+      "question": "Methane (CH4) की sunlight की उपस्थिति में Cl2 के साथ अभिक्रिया में hydrogen atoms एक-एक करके Cl atoms द्वारा replace होते हैं, यह किस प्रकार की अभिक्रिया है?",
+      "options": ["Addition reaction", "Substitution reaction", "Oxidation reaction", "Saponification reaction"],
+      "correctIndex": 1,
+      "explanation": "Saturated hydrocarbons में double/triple bond न होने से addition संभव नहीं, इसलिए sunlight में Cl2 से hydrogen atoms का Cl atoms द्वारा प्रतिस्थापन (substitution reaction) होता है, जैसे CH4+Cl2 → CH3Cl+HCl। Addition unsaturated compounds में होता है, oxidation में oxygen जुड़ता है, और saponification soap बनाने की प्रक्रिया है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q26",
+      "question": "रासायनिक रूप से साधारण soap क्या होता है?",
+      "options": [
+        "Long chain carboxylic acids (fatty acids) के sodium या potassium salts",
+        "केवल एक hydrocarbon",
+        "alcohol और water का मिश्रण",
+        "किसी ester का शुद्ध रूप"
+      ],
+      "correctIndex": 0,
+      "explanation": "Soap रासायनिक रूप से long chain fatty acids (carboxylic acids) के sodium या potassium salts होते हैं, जो saponification से बनते हैं। यह केवल hydrocarbon, alcohol-water का मिश्रण, या शुद्ध ester नहीं है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q27",
+      "question": "Vegetable oils या fats को NaOH के साथ गर्म करने पर soap और glycerol बनने की प्रक्रिया क्या कहलाती है?",
+      "options": ["Esterification", "Hydrogenation", "Saponification", "Fermentation"],
+      "correctIndex": 2,
+      "explanation": "Fats/oils (esters) को NaOH के साथ गर्म करने पर hydrolysis होकर soap (sodium salt of fatty acid) और glycerol बनते हैं, इसे saponification कहते हैं। Esterification इसके विपरीत ester बनाने की प्रक्रिया है, hydrogenation में H2 जुड़ता है, और fermentation शर्करा से alcohol बनाने की जैविक प्रक्रिया है।"
+    },
+    {
+      "id": "chem_carbon_compounds_q28",
+      "question": "Hard water (जिसमें Ca2+ और Mg2+ आयन होते हैं) में soap की तुलना में detergents बेहतर काम क्यों करते हैं?",
+      "options": [
+        "Detergents, soap की तुलना में अधिक महंगे होते हैं इसलिए",
+        "Detergents Ca2+/Mg2+ के साथ अघुलनशील scum (precipitate) नहीं बनाते, जबकि soap बनाता है",
+        "Detergents में कोई hydrocarbon chain नहीं होती",
+        "Hard water में soap detergents से तेज़ घुलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Soap के Ca2+/Mg2+ salts अघुलनशील होकर scum (झाग रहित precipitate) बनाते हैं जिससे सफाई कम होती है, जबकि detergents के salts hard water में भी घुलनशील रहते हैं। कीमत, hydrocarbon chain की अनुपस्थिति या soap के तेज़ घुलने जैसे विकल्प इस कारण को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "chem_carbon_compounds_q29",
+      "question": "पानी में soap, तेल/चिकनाई (grease) को कैसे हटाता है?",
+      "options": [
+        "Soap अणु micelle बनाते हैं जिनका hydrocarbon भाग तेल की बूँद को अंदर घेरता है और ionic भाग पानी की ओर रहकर उसे पायसीकृत (emulsify) कर देता है",
+        "Soap तेल को रासायनिक रूप से जला देता है",
+        "Soap पानी के साथ अभिक्रिया करके तेल को वाष्पित कर देता है",
+        "Soap तेल के अणुओं को तोड़कर CO2 और पानी बना देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Soap के molecule का hydrocarbon (non-polar) भाग तेल/चिकनाई से जुड़ता है जबकि ionic (polar) भाग पानी की ओर रहता है, जिससे micelle बनते हैं और तेल की बूँदें पानी में emulsify होकर धुल जाती हैं। तेल का जलना, वाष्पित होना या टूटकर CO2-पानी बनना यहाँ नहीं होता।"
+    },
+    {
+      "id": "chem_carbon_compounds_q30",
+      "question": "Ethanol (C2H5OH) और ethanoic acid (CH3COOH) को conc. H2SO4 की उपस्थिति में गर्म करने पर होने वाली अभिक्रिया से मीठी गंध वाला ester बनता है, यह अभिक्रिया क्या कहलाती है?",
+      "options": ["Oxidation", "Saponification", "Substitution", "Esterification"],
+      "correctIndex": 3,
+      "explanation": "Alcohol और carboxylic acid के बीच conc. H2SO4 (catalyst/dehydrating agent) की उपस्थिति में अभिक्रिया से मीठी गंध वाला ester और पानी बनना esterification कहलाता है। Oxidation में oxygen जुड़ता है, saponification में soap बनता है, और substitution में atoms का प्रतिस्थापन होता है, जो यहाँ लागू नहीं।"
+    }
+  ]
+}

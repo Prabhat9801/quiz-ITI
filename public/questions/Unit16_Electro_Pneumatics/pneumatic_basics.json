@@ -1,0 +1,368 @@
+{
+  "unit": "unit16",
+  "unitName": "Electro Pneumatics",
+  "topic": "pneumatic_basics",
+  "topicName": "Pneumatic Basics - Power Source, Properties of Compressed Air and Applications",
+  "questions": [
+    {
+      "id": "u16_pneumatic_basics_q1",
+      "question": "Pneumatic system में power transmission के लिए किस working medium का उपयोग किया जाता है?",
+      "options": [
+        "Compressed air",
+        "Hydraulic oil",
+        "Water",
+        "Molten metal"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pneumatic system में energy को transmit करने के लिए compressed air (दबाई गई हवा) को working medium के रूप में उपयोग किया जाता है। Hydraulic oil, hydraulic system में उपयोग होता है, water और molten metal pneumatic actuation के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q2",
+      "question": "Compressed air का एक प्रमुख लाभ यह है कि वह 'clean' medium है। इसका मुख्य कारण क्या है?",
+      "options": [
+        "यह हमेशा गर्म रहती है",
+        "leakage होने पर वह environment को oil से दूषित नहीं करती",
+        "यह electricity को conduct करती है",
+        "इसका pressure कभी नहीं गिरता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Compressed air में leakage होने पर केवल हवा बाहर निकलती है, जिससे hydraulic oil की तरह environment या product दूषित नहीं होता — इसलिए इसे food व pharma industry में पसंद किया जाता है। हवा हमेशा गर्म नहीं रहती, वह insulator है और pressure drop leakage/load से होता है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q3",
+      "question": "Pneumatic system का प्राथमिक power source (energy का मूल स्रोत) क्या होता है?",
+      "options": [
+        "Solenoid valve",
+        "Cylinder",
+        "Air compressor",
+        "Pressure gauge"
+      ],
+      "correctIndex": 2,
+      "explanation": "Air compressor वायुमंडलीय हवा को compress करके उच्च दबाव वाली compressed air बनाता है, जो पूरे pneumatic system का power source है। Solenoid valve केवल control करता है, cylinder actuator (output) है और pressure gauge केवल दबाव मापता है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q4",
+      "question": "Compressed air की तुलना में hydraulic system का एक विशिष्ट गुण क्या है?",
+      "options": [
+        "बहुत अधिक force और precise position control देना",
+        "बिल्कुल भी leakage न होना",
+        "हवा से हल्का होना",
+        "किसी भी माध्यम की आवश्यकता न होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hydraulic oil लगभग incompressible होने के कारण बहुत अधिक force और precise position control देता है, इसलिए भारी load में इसे चुना जाता है। Leakage वहाँ भी हो सकती है, oil हवा से भारी है और उसे भी medium (oil) चाहिए ही।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q5",
+      "question": "निम्न में से कौन-सा compressed air का गुण उसे 'compressible' बनाता है, जिससे pneumatic cylinder की exact intermediate position रोकना कठिन होता है?",
+      "options": [
+        "हवा electricity conduct करती है",
+        "हवा का volume दबाव बढ़ने पर घट जाता है",
+        "हवा का रंग नीला होता है",
+        "हवा का weight शून्य होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हवा compressible है अर्थात दबाव बढ़ने पर उसका volume घटता है (Boyle's law), इसलिए load बदलने पर वह spring की तरह व्यवहार करती है और exact mid-position पकड़ना कठिन होता है। हवा electricity conduct नहीं करती, वह रंगहीन है और उसका weight शून्य नहीं होता।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q6",
+      "question": "Pneumatic system का overload के प्रति कौन-सा गुण उसे safe बनाता है?",
+      "options": [
+        "यह overload होने पर आग पकड़ लेता है",
+        "यह overload होने पर बिना क्षतिग्रस्त हुए रुक जाता है (stall)",
+        "यह overload होने पर voltage बढ़ा देता है",
+        "यह overload में कभी नहीं रुकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pneumatic actuator overload पर बिना क्षति के केवल रुक (stall) जाता है क्योंकि हवा compress हो जाती है — यह इसकी सुरक्षा विशेषता है। यह आग नहीं पकड़ता (non-explosive), voltage से इसका संबंध नहीं, और overload में यह रुक ही जाता है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q7",
+      "question": "किसी hazardous (विस्फोटक गैस वाले) क्षेत्र में electrical motor की तुलना में pneumatic drive को क्यों प्राथमिकता दी जाती है?",
+      "options": [
+        "यह spark उत्पन्न नहीं करता, इसलिए explosion का खतरा नहीं",
+        "यह अधिक बिजली खर्च करता है",
+        "यह केवल पानी से चलता है",
+        "इसमें कोई moving part नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pneumatic drive में हवा से काम होता है और electrical spark नहीं बनता, इसलिए विस्फोटक (explosive) वातावरण में explosion का खतरा नहीं रहता। यह बिजली की जगह हवा उपयोग करता है, केवल पानी से नहीं चलता, और इसमें moving parts (piston आदि) होते हैं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q8",
+      "question": "Compressed air को 'storable' (संग्रहणीय) energy medium कहा जाता है क्योंकि—",
+      "options": [
+        "इसे battery में भरा जाता है",
+        "इसे air receiver/reservoir में संग्रहित कर बाद में उपयोग किया जा सकता है",
+        "यह बिना किसी टैंक के दीवार में रहती है",
+        "इसे तार के माध्यम से भेजा जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Compressed air को air receiver (reservoir) में संग्रहित किया जा सकता है और compressor बंद होने पर भी कुछ समय काम चल सकता है — यही storability है। यह battery में नहीं भरी जाती, storage के लिए टैंक चाहिए और यह तार से नहीं pipe से भेजी जाती है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q9",
+      "question": "निम्न में से कौन-सा pneumatic system का एक व्यावहारिक application (उपयोग) है?",
+      "options": [
+        "Automatic door opening व clamping fixtures",
+        "घर की wiring करना",
+        "पानी को गर्म करना",
+        "Radio signal भेजना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Automatic doors, clamping, material handling, packaging आदि pneumatic system के सामान्य applications हैं जहाँ तेज़ linear motion चाहिए। House wiring electrical काम है, पानी गर्म करना heating है और radio signal भेजना communication — ये pneumatic कार्य नहीं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q10",
+      "question": "Pneumatic actuator hydraulic actuator की तुलना में सामान्यतः तेज़ (fast) क्यों होते हैं?",
+      "options": [
+        "क्योंकि oil बहुत गाढ़ा होता है",
+        "क्योंकि हवा हल्की व कम viscous होती है इसलिए तेज़ी से प्रवाहित होती है",
+        "क्योंकि हवा में कोई pressure नहीं होता",
+        "क्योंकि actuator विद्युत से चलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हवा हल्की और कम viscous होने के कारण pipe में तेज़ी से बहती है, जिससे pneumatic cylinder की speed अधिक होती है। Oil का अधिक viscosity hydraulic को धीमा करता है, हवा में pressure होता ही है और pneumatic actuator हवा से चलता है, विद्युत से नहीं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q11",
+      "question": "Compressed air में मौजूद अवांछित moisture (नमी) system के लिए हानिकारक है क्योंकि—",
+      "options": [
+        "यह valves व cylinders में corrosion (जंग) और खराबी उत्पन्न करती है",
+        "यह हवा को तेज़ बना देती है",
+        "यह pressure को स्थिर रखती है",
+        "यह किसी प्रकार का प्रभाव नहीं डालती"
+      ],
+      "correctIndex": 0,
+      "explanation": "हवा में मौजूद नमी valves, cylinders व pipelines में corrosion, चिपकना और खराब operation पैदा करती है, इसलिए इसे dryer/filter से हटाया जाता है। यह हवा को तेज़ नहीं बनाती, pressure स्थिर नहीं रखती और इसका स्पष्ट हानिकारक प्रभाव होता है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q12",
+      "question": "Pneumatic power transmission की तुलना में electrical power transmission का एक लाभ क्या है?",
+      "options": [
+        "लंबी दूरी तक बहुत कम loss के साथ energy भेजना",
+        "कभी भी leakage न होना असंभव है",
+        "हमेशा अधिक force देना",
+        "किसी भी conductor की आवश्यकता न होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Electrical energy को तार के माध्यम से लंबी दूरी तक बहुत कम loss के साथ भेजा जा सकता है, जबकि compressed air में दूरी बढ़ने पर pressure loss अधिक होता है। बाकी विकल्प गलत हैं क्योंकि electrical में conductor आवश्यक है और force अनुप्रयोग पर निर्भर करता है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q13",
+      "question": "Boyle's law के अनुसार स्थिर temperature पर यदि गैस का pressure दोगुना कर दिया जाए तो उसका volume—",
+      "options": [
+        "दोगुना हो जाएगा",
+        "आधा रह जाएगा",
+        "अपरिवर्तित रहेगा",
+        "चार गुना हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Boyle's law के अनुसार स्थिर temperature पर P × V = constant होता है; pressure दोगुना करने पर volume आधा रह जाता है। इसीलिए compressed air का volume compression में घटता है। शेष विकल्प इस व्युत्क्रम (inverse) संबंध के विरुद्ध हैं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q14",
+      "question": "Pneumatic system में हवा को compress करने पर उसका temperature क्यों बढ़ जाता है?",
+      "options": [
+        "क्योंकि हवा में जल भर जाता है",
+        "क्योंकि compression के दौरान हवा पर किया गया work heat में बदलता है",
+        "क्योंकि हवा ठंडी होकर फैलती है",
+        "क्योंकि दबाव घट जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Compression के समय हवा पर किया गया work heat energy में बदलता है, जिससे हवा गर्म हो जाती है — इसीलिए compressor के बाद after-cooler लगाया जाता है। हवा में जल भरने से नहीं, ठंडे होकर फैलने से नहीं, और दबाव तो बढ़ता है, घटता नहीं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q15",
+      "question": "किसी pneumatic system में 'clean, dry और oil-free' हवा किस application के लिए अनिवार्य होती है?",
+      "options": [
+        "Food packaging व pharmaceutical process",
+        "केवल भारी mining कार्य",
+        "सड़क खोदने वाले hammer",
+        "पुराने engine की धुलाई"
+      ],
+      "correctIndex": 0,
+      "explanation": "Food व pharmaceutical process में हवा का सीधे उत्पाद से संपर्क हो सकता है, इसलिए वहाँ clean, dry और oil-free हवा अनिवार्य है। Mining hammers और road-breaking में सामान्य industrial हवा भी चल जाती है, इसलिए वे इतने संवेदनशील नहीं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q16",
+      "question": "Pneumatic system का कौन-सा गुण उसे बार-बार on/off होने वाले automation में उपयुक्त बनाता है?",
+      "options": [
+        "इसमें बहुत भारी moving mass होती है",
+        "इसकी fast response और आसान speed control",
+        "इसका बहुत महँगा medium",
+        "इसका लगातार गर्म रहना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pneumatic actuators की fast response और throttle valve से आसान speed control उन्हें बार-बार on/off होने वाले automation के लिए उपयुक्त बनाती है। इसमें भारी mass नहीं होती, हवा सस्ता medium है और यह लगातार गर्म नहीं रहता।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q17",
+      "question": "एक pneumatic cylinder जो 6 bar pressure पर 20 cm² area के piston पर कार्य करता है, उस पर लगने वाला theoretical force लगभग कितना होगा? (1 bar ≈ 10 N/cm²)",
+      "options": [
+        "120 N",
+        "1200 N",
+        "12 N",
+        "12000 N"
+      ],
+      "correctIndex": 1,
+      "explanation": "Force = Pressure × Area = (6 × 10 N/cm²) × 20 cm² = 60 × 20 = 1200 N। यहाँ 1 bar को लगभग 10 N/cm² लिया गया है। शेष विकल्प इकाई/गुणा की गलती दर्शाते हैं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q18",
+      "question": "निम्न में से कौन pneumatic system का एक सीमांकन (limitation/नुकसान) है?",
+      "options": [
+        "हवा free में उपलब्ध होना",
+        "compressed air की तैयारी में ऊर्जा हानि होना (कम efficiency)",
+        "साफ-सुथरा medium होना",
+        "आग का कम खतरा होना"
+      ],
+      "correctIndex": 1,
+      "explanation": "हवा को compress करने में काफी ऊर्जा heat के रूप में नष्ट होती है, जिससे pneumatic system की overall efficiency कम रहती है — यह एक सीमा है। हवा free में मिलना, साफ medium और कम आग का खतरा तो इसके लाभ हैं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q19",
+      "question": "Pneumatic system में हवा के 'compressibility' गुण का एक व्यावहारिक लाभ क्या है?",
+      "options": [
+        "यह shock/impact को absorb कर cushioning प्रदान करती है",
+        "यह actuator को स्थायी रूप से जाम कर देती है",
+        "यह pressure को अनंत बना देती है",
+        "यह हवा को ठोस बना देती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "हवा compressible होने के कारण अचानक load या shock को अवशोषित (absorb) कर लेती है, जिससे cushioning मिलती है और झटके कम लगते हैं। यह actuator को जाम नहीं करती, pressure अनंत नहीं होता और हवा ठोस नहीं बनती।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q20",
+      "question": "Electro-pneumatic system में 'electro' भाग मुख्यतः किसके लिए उपयोग होता है?",
+      "options": [
+        "हवा को गर्म करने के लिए",
+        "control व signal processing (switches, solenoids, relays) के लिए",
+        "piston को rod से जोड़ने के लिए",
+        "compressed air बनाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Electro-pneumatics में electrical भाग (switches, sensors, relays, solenoids) control व signal processing करता है, जबकि power (actuation) pneumatic रहता है। हवा गर्म करना, piston जोड़ना या हवा बनाना electrical control का कार्य नहीं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q21",
+      "question": "किसी conveyor पर वस्तुओं को धकेलने (pushing/sorting) के लिए सामान्यतः किसका उपयोग किया जाता है?",
+      "options": [
+        "Pneumatic cylinder",
+        "Pressure gauge",
+        "Air filter",
+        "Silencer"
+      ],
+      "correctIndex": 0,
+      "explanation": "Conveyor पर वस्तुओं को धकेलने या sorting के लिए pneumatic cylinder उपयोग होता है क्योंकि वह तेज़ linear push देता है। Pressure gauge मापता है, air filter हवा साफ करता है और silencer exhaust शोर घटाता है — ये push नहीं करते।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q22",
+      "question": "Compressed air में 'safe against overload' गुण का अर्थ है कि—",
+      "options": [
+        "system voltage बढ़ने पर fuse उड़ जाता है",
+        "load अधिक होने पर actuator केवल रुकता है, जलता या टूटता नहीं",
+        "load अधिक होने पर हवा में विस्फोट होता है",
+        "load बढ़ने पर हवा की मात्रा शून्य हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Overload की स्थिति में pneumatic actuator केवल रुक जाता है (हवा compress होकर काम रोक देती है), बिना जले या टूटे — यही सुरक्षा है। Fuse electrical में होता है, हवा में विस्फोट नहीं होता और हवा की मात्रा शून्य नहीं होती।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q23",
+      "question": "Pneumatic actuator से exhaust की गई हवा को अंत में कहाँ छोड़ा जाता है?",
+      "options": [
+        "वापस compressor के tank में सीधे",
+        "वायुमंडल (atmosphere) में, प्रायः silencer के माध्यम से",
+        "hydraulic oil sump में",
+        "electrical panel में"
+      ],
+      "correctIndex": 1,
+      "explanation": "उपयोग के बाद exhaust हवा को silencer के माध्यम से वायुमंडल में छोड़ दिया जाता है क्योंकि हवा free व non-polluting है — यही pneumatic का सरल लाभ है। इसे सीधे tank, oil sump या electrical panel में नहीं भेजा जाता।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q24",
+      "question": "Hydraulic system की तुलना में pneumatic system की positioning accuracy सामान्यतः कम क्यों होती है?",
+      "options": [
+        "क्योंकि हवा compressible है जिससे load बदलने पर position 'spring' करती है",
+        "क्योंकि हवा में कोई pressure नहीं होता",
+        "क्योंकि pneumatic में piston नहीं होता",
+        "क्योंकि हवा oil से भारी होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "हवा compressible होने से load बदलने पर वह spring की तरह दब जाती है, जिससे exact intermediate position पकड़ना कठिन और accuracy कम रहती है। हवा में pressure होता है, pneumatic में piston होता है और हवा oil से हल्की होती है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q25",
+      "question": "निम्न में से किस उद्योग में pneumatic automation सामान्य रूप से उपयोग नहीं होता?",
+      "options": [
+        "Packaging व bottling plant",
+        "Automobile assembly line",
+        "underwater deep-sea welding का सीधा arc power source",
+        "Textile machinery"
+      ],
+      "correctIndex": 2,
+      "explanation": "Deep-sea welding का arc power source electrical होता है, pneumatic नहीं — इसलिए यह pneumatic का सामान्य application नहीं है। Packaging, automobile assembly और textile machinery में pneumatic actuation व्यापक रूप से उपयोग होता है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q26",
+      "question": "Pneumatic system में हवा को 'medium' के रूप में उपयोग करने का एक आर्थिक (economic) लाभ क्या है?",
+      "options": [
+        "हवा वायुमंडल से मुफ्त और असीमित मात्रा में उपलब्ध होती है",
+        "हवा खरीदने के लिए महँगा supplier चाहिए",
+        "हवा को हर बार recycle करना अनिवार्य है",
+        "हवा का भंडारण असंभव है"
+      ],
+      "correctIndex": 0,
+      "explanation": "हवा वायुमंडल से मुफ्त व असीमित मात्रा में मिलती है, केवल उसे compress करने की ऊर्जा लगती है — यही आर्थिक लाभ है। हवा खरीदनी नहीं पड़ती, exhaust को recycle करना अनिवार्य नहीं और उसे receiver में भंडारित किया जा सकता है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q27",
+      "question": "एक साधारण pneumatic system में energy का सही प्रवाह क्रम कौन-सा है?",
+      "options": [
+        "Cylinder → valve → compressor → atmosphere",
+        "Compressor → air preparation (FRL) → control valve → actuator (cylinder)",
+        "Actuator → compressor → gauge → valve",
+        "Valve → gauge → atmosphere → compressor"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही क्रम है: compressor हवा बनाता है → FRL से हवा तैयार होती है → control valve दिशा तय करता है → actuator (cylinder) कार्य करता है। शेष क्रम energy प्रवाह के तर्क के विरुद्ध हैं।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q28",
+      "question": "Pneumatic actuator की output motion सामान्यतः किस प्रकार की होती है?",
+      "options": [
+        "केवल विद्युत संकेत",
+        "linear (सीधी) या rotary (घूर्णी) यांत्रिक गति",
+        "केवल ध्वनि तरंग",
+        "केवल तापीय ऊर्जा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pneumatic actuator compressed air की energy को linear (cylinder) या rotary (air motor) यांत्रिक गति में बदलता है। यह विद्युत संकेत, ध्वनि तरंग या मात्र heat उत्पन्न नहीं करता — इसका उद्देश्य mechanical work है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q29",
+      "question": "Compressed air की 'transportability' का अर्थ है कि—",
+      "options": [
+        "इसे केवल एक ही स्थान पर उपयोग किया जा सकता है",
+        "इसे pipeline के माध्यम से कारखाने में विभिन्न स्थानों तक आसानी से पहुँचाया जा सकता है",
+        "इसे केवल battery में ले जाया जा सकता है",
+        "इसे स्थानांतरित करना असंभव है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Compressed air को pipeline के माध्यम से एक ही compressor से कारखाने के अनेक स्थानों (workstations) तक आसानी से पहुँचाया जा सकता है — यही transportability है। इसे battery में नहीं ले जाया जाता और इसका स्थानांतरण असंभव नहीं, बल्कि सरल है।"
+    },
+    {
+      "id": "u16_pneumatic_basics_q30",
+      "question": "किसी pneumatic riveting/clamping tool में तेज़ बार-बार होने वाली गति के लिए compressed air को क्यों चुना जाता है?",
+      "options": [
+        "क्योंकि यह fast, sturdy और आसानी से नियंत्रित होने वाला power source है",
+        "क्योंकि यह बिजली की तरह जल जाता है",
+        "क्योंकि यह oil की तरह गाढ़ा होता है",
+        "क्योंकि इसे किसी भी valve की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Compressed air fast, मजबूत (sturdy) और valves द्वारा आसानी से नियंत्रित होने वाला power source है, इसलिए बार-बार होने वाले riveting/clamping में इसे चुना जाता है। यह जलता नहीं, oil की तरह गाढ़ा नहीं और नियंत्रण के लिए valves आवश्यक होते हैं।"
+    }
+  ]
+}

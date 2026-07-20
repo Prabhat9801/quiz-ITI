@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "pic_serial_comm",
+  "topicName": "PIC Serial Communication: USART, I2C, SPI",
+  "questions": [
+    {
+      "id": "u2_pic_serial_comm_q1",
+      "question": "PIC के USART module में asynchronous mode किस विशेषता के कारण synchronous mode से अलग होता है?",
+      "options": ["इसमें अलग से clock line भेजी जाती है", "यह केवल half-duplex काम करता है", "data के साथ अलग clock line नहीं जाती, timing start/stop bit और baud rate से तय होती है", "यह केवल master के रूप में काम करता है"],
+      "correctIndex": 2,
+      "explanation": "Asynchronous mode में transmitter और receiver के बीच कोई अलग clock line नहीं जाती; synchronization start bit, stop bit और दोनों तरफ set किए गए समान baud rate से होती है, इसलिए option C सही है। Option A synchronous mode की बात है जहाँ clock भेजी जाती है। Option B गलत है क्योंकि async USART full-duplex है। Option D गलत है क्योंकि async mode में master/slave की अवधारणा लागू नहीं होती।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q2",
+      "question": "PIC USART में transmit होने वाला data byte किस register में लिखा जाता है?",
+      "options": ["TXREG", "RCREG", "SPBRG", "TXSTA"],
+      "correctIndex": 0,
+      "explanation": "TXREG (transmit register) में byte लिखने पर वह TSR के जरिए serially बाहर भेजा जाता है, इसलिए option A सही है। RCREG receive किया गया data रखता है। SPBRG baud rate generator का value रखता है। TXSTA transmit status और control bits का register है, इसमें data नहीं लिखा जाता।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q3",
+      "question": "PIC में receive किया गया serial data byte पढ़ने के लिए किस register को read किया जाता है?",
+      "options": ["TXREG", "SPBRG", "RCREG", "RCSTA"],
+      "correctIndex": 2,
+      "explanation": "RCREG (receive register) में incoming byte आता है और उसे पढ़कर data प्राप्त किया जाता है, इसलिए option C सही है। TXREG transmit के लिए है। SPBRG baud rate set करता है। RCSTA receive status/control bits रखता है (जैसे SPEN, CREN), उसमें actual data नहीं होता।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q4",
+      "question": "PIC USART का baud rate किस register में value लोड करके तय किया जाता है?",
+      "options": ["TXSTA", "RCSTA", "SPBRG", "PIR1"],
+      "correctIndex": 2,
+      "explanation": "SPBRG (Serial Port Baud Rate Generator) में लोड की गई value से baud rate निर्धारित होता है, इसलिए option C सही है। TXSTA और RCSTA control/status bits रखते हैं (जैसे BRGH, SPEN)। PIR1 interrupt flag register है जिसमें TXIF/RCIF होते हैं, baud rate value नहीं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q5",
+      "question": "Low speed asynchronous mode (BRGH=0) में baud rate का सूत्र Fosc/(64×(SPBRG+1)) है। यदि Fosc = 4 MHz और SPBRG = 25 है, तो approximate baud rate क्या होगा?",
+      "options": ["2400", "4800", "9600", "1200"],
+      "correctIndex": 0,
+      "explanation": "Baud = 4000000 / (64 × (25+1)) = 4000000 / (64 × 26) = 4000000 / 1664 ≈ 2404 ≈ 2400, इसलिए option A सही है। 4800, 9600 और 1200 इस SPBRG value के लिए गणना से मेल नहीं खाते; उनके लिए SPBRG की अलग value चाहिए होगी।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q6",
+      "question": "Low speed async mode में baud = Fosc/(64×(SPBRG+1)) दिया है। Fosc = 8 MHz पर 9600 baud के लिए SPBRG की approximate value क्या होनी चाहिए?",
+      "options": ["25", "12", "51", "103"],
+      "correctIndex": 1,
+      "explanation": "SPBRG = Fosc/(64×baud) − 1 = 8000000/(64×9600) − 1 = 8000000/614400 − 1 ≈ 13.02 − 1 ≈ 12, इसलिए option B (≈12) सही है। 25 लगभग 4800 baud (8 MHz पर) देता है, 51 और 103 उच्च Fosc या high-speed mode के लिए होते हैं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q7",
+      "question": "PIC USART में high baud rate चुनने के लिए TXSTA register का कौन-सा bit set किया जाता है?",
+      "options": ["SYNC", "BRGH", "SPEN", "CREN"],
+      "correctIndex": 1,
+      "explanation": "BRGH (High Baud Rate select) bit = 1 करने पर high-speed baud rate generator formula (Fosc/16) लागू होता है, इसलिए option B सही है। SYNC bit synchronous/asynchronous चुनता है। SPEN serial port enable करता है। CREN continuous receive enable करता है, ये baud rate speed select नहीं करते।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q8",
+      "question": "PIC USART async mode में 9-bit data transmission किस स्थिति में उपयोगी है?",
+      "options": ["केवल baud rate बढ़ाने के लिए", "address/data बताने या parity जैसे 9वें bit के उपयोग के लिए", "clock भेजने के लिए", "full-duplex को half-duplex बनाने के लिए"],
+      "correctIndex": 1,
+      "explanation": "9-bit mode में 9वाँ bit (TX9D/RX9D) address vs data पहचानने या parity के रूप में इस्तेमाल होता है, जो multi-drop networks में उपयोगी है, इसलिए option B सही है। यह baud rate नहीं बढ़ाता, clock नहीं भेजता, और duplex nature नहीं बदलता।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q9",
+      "question": "\"Full-duplex\" संचार का अर्थ क्या है जो PIC के async USART में उपलब्ध है?",
+      "options": ["एक समय में केवल एक दिशा में data", "एक ही समय में दोनों दिशाओं में data भेजना और प्राप्त करना", "केवल एक wire पर data", "बिना clock के data नहीं भेजा जा सकता"],
+      "correctIndex": 1,
+      "explanation": "Full-duplex में transmit (TX) और receive (RX) दोनों एक साथ अलग-अलग lines पर हो सकते हैं, इसलिए option B सही है। एक समय एक दिशा वाला संचार half-duplex होता है (option A)। एक wire वाला विवरण गलत है क्योंकि UART में TX और RX अलग होते हैं। Clock का शर्त async mode पर लागू नहीं होती।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q10",
+      "question": "PIC का MSSP module मुख्यतः किन दो serial protocols को support करता है?",
+      "options": ["UART और CAN", "SPI और I2C", "USB और Ethernet", "RS-232 और RS-485"],
+      "correctIndex": 1,
+      "explanation": "MSSP (Master Synchronous Serial Port) module SPI और I2C दोनों synchronous protocols को support करता है, इसलिए option B सही है। UART अलग USART module संभालता है। USB, Ethernet, CAN और RS-232/485 MSSP का भाग नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q11",
+      "question": "SPI संचार में master से slave की ओर data भेजने वाली line को सामान्यतः क्या कहते हैं?",
+      "options": ["SDI", "SDO", "SCK", "SS"],
+      "correctIndex": 1,
+      "explanation": "SDO (Serial Data Out) master का output होता है जो slave के SDI तक data भेजता है, इसलिए option B सही है। SDI (Serial Data In) master का input है। SCK clock line है। SS (Slave Select) किसी slave को चुनने के लिए है, ये data-out line नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q12",
+      "question": "SPI में एक से अधिक slaves को चुनने के लिए किस signal का उपयोग होता है?",
+      "options": ["SDA", "SCL", "SS (Slave Select / Chip Select)", "ACK"],
+      "correctIndex": 2,
+      "explanation": "SPI में प्रत्येक slave के लिए एक अलग SS/CS line होती है जिसे low करके उस slave को active किया जाता है, इसलिए option C सही है। SDA और SCL I2C की lines हैं, SPI की नहीं। ACK भी I2C का हिस्सा है, SPI में addressing/ACK नहीं होता।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q13",
+      "question": "SPI protocol की एक प्रमुख विशेषता क्या है जो उसे I2C से अलग करती है?",
+      "options": ["इसमें device addressing की जरूरत होती है", "यह केवल दो wires उपयोग करता है", "यह full-duplex है और addressing के बजाय अलग SS line से device चुनता है", "यह open-drain lines और pull-up resistors पर आधारित है"],
+      "correctIndex": 2,
+      "explanation": "SPI full-duplex है (SDO और SDI एक साथ) और device selection SS line से होता है, addressing से नहीं, इसलिए option C सही है। Addressing और open-drain/pull-up (options A, D) I2C की विशेषताएँ हैं। SPI दो नहीं, कम से कम तीन-चार wires (SDO, SDI, SCK और SS) उपयोग करता है, इसलिए option B गलत है।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q14",
+      "question": "I2C bus में कौन-सी दो lines का उपयोग होता है?",
+      "options": ["SDO और SDI", "SDA और SCL", "TX और RX", "SCK और SS"],
+      "correctIndex": 1,
+      "explanation": "I2C में केवल दो lines होती हैं: SDA (serial data) और SCL (serial clock), इसलिए option B सही है। SDO/SDI/SCK/SS SPI की lines हैं। TX/RX UART की lines हैं, I2C two-wire protocol है।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q15",
+      "question": "Standard I2C में device को उसके master द्वारा किस प्रकार पहचाना जाता है?",
+      "options": ["अलग chip-select pin से", "7-bit address भेजकर", "अलग clock line से", "baud rate मिलाकर"],
+      "correctIndex": 1,
+      "explanation": "I2C master, start condition के बाद 7-bit slave address bus पर भेजता है और सही address वाला slave respond करता है, इसलिए option B सही है। Chip-select pin SPI में होता है। I2C में एक ही SCL सभी devices के लिए साझा होती है, अलग clock line नहीं। Baud rate मिलाना UART async की बात है।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q16",
+      "question": "I2C में master किस signal से एक transaction की शुरुआत करता है?",
+      "options": ["SCL high रहते SDA का high-to-low transition (START condition)", "दोनों lines low करके", "ACK bit भेजकर", "stop bit भेजकर"],
+      "correctIndex": 0,
+      "explanation": "I2C START condition तब बनती है जब SCL high हो और SDA high से low हो जाए, इसलिए option A सही है। STOP condition इसका उल्टा (SCL high पर SDA low-to-high) होता है और transaction समाप्त करता है, शुरू नहीं। ACK data byte के बाद acknowledgement है, transaction start नहीं करता।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q17",
+      "question": "I2C में प्रत्येक byte भेजने के बाद receiver ACK bit के लिए SDA को क्या करता है?",
+      "options": ["SDA को high छोड़ देता है", "SDA को low खींचता है (ACK)", "SCL रोक देता है", "start condition दोहराता है"],
+      "correctIndex": 1,
+      "explanation": "सफल receive पर receiver 9वें clock पर SDA को low खींचकर ACK देता है, इसलिए option B सही है। SDA high छोड़ना NACK (no acknowledge) दर्शाता है (option A)। SCL रोकना clock stretching है, ACK नहीं। Start condition दोहराना repeated start है, byte-level acknowledgement नहीं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q18",
+      "question": "I2C की SDA और SCL lines open-drain क्यों होती हैं और उन्हें pull-up resistors की आवश्यकता क्यों होती है?",
+      "options": ["ताकि speed अधिकतम हो", "ताकि कई devices bus को safely share कर सकें और bus contention न हो, high state pull-up से बने", "ताकि full-duplex संभव हो", "ताकि clock की जरूरत न पड़े"],
+      "correctIndex": 1,
+      "explanation": "Open-drain output केवल line को low खींच सकता है; high state external pull-up resistor देता है, जिससे कई devices बिना short/contention के bus share कर सकते हैं, इसलिए option B सही है। Open-drain speed बढ़ाने के लिए नहीं है (बल्कि उच्च speed पर pull-up सीमा बनती है)। I2C half-duplex है, full-duplex नहीं। SCL clock फिर भी जरूरी है।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q19",
+      "question": "I2C संचार half-duplex क्यों माना जाता है?",
+      "options": ["क्योंकि इसमें दो अलग data lines हैं", "क्योंकि एक ही SDA line पर data एक समय में केवल एक ही दिशा में चलता है", "क्योंकि इसमें clock नहीं होता", "क्योंकि यह केवल 8-bit data भेजता है"],
+      "correctIndex": 1,
+      "explanation": "I2C में केवल एक द्विदिशात्मक SDA line होती है, इसलिए किसी क्षण data या तो master→slave या slave→master, एक ही दिशा में जाता है, यही half-duplex है, इसलिए option B सही है। दो अलग data lines होतीं तो full-duplex होता (option A गलत)। SCL clock line मौजूद है। 8-bit होना duplex से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q20",
+      "question": "SPI, I2C और UART की wires की संख्या के संदर्भ में कौन-सा कथन सही है?",
+      "options": ["I2C को सबसे अधिक wires चाहिए", "UART को हमेशा clock line चाहिए", "I2C केवल 2 wires उपयोग करता है जबकि SPI को कम-से-कम 3-4 और UART को 2 (TX, RX) चाहिए", "SPI केवल 1 wire पर काम करता है"],
+      "correctIndex": 2,
+      "explanation": "I2C सिर्फ 2 wires (SDA, SCL) पर multiple devices चलाता है, SPI को SDO, SDI, SCK और प्रत्येक slave हेतु SS चाहिए, और UART को TX व RX चाहिए, इसलिए option C सही है। I2C को सबसे अधिक नहीं बल्कि कम wires चाहिए। UART async में clock line नहीं होती। SPI 1 wire पर काम नहीं करता।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q21",
+      "question": "गति (speed) की दृष्टि से सामान्यतः कौन-सा protocol सबसे तेज माना जाता है?",
+      "options": ["I2C standard mode", "UART", "SPI", "तीनों की speed हमेशा समान होती है"],
+      "correctIndex": 2,
+      "explanation": "SPI आम तौर पर सबसे तेज है क्योंकि इसमें कम overhead और full-duplex dedicated lines होती हैं (Mbps में), इसलिए option C सही है। I2C standard mode (100 kbps) और UART अपेक्षाकृत धीमे हैं। तीनों की speed समान नहीं होती, इसलिए option D गलत है।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q22",
+      "question": "SPI में I2C की तरह addressing की आवश्यकता क्यों नहीं होती?",
+      "options": ["क्योंकि SPI में केवल एक ही device जुड़ सकता है", "क्योंकि प्रत्येक slave को अलग SS line से hardware रूप में चुना जाता है", "क्योंकि SPI केवल broadcast करता है", "क्योंकि SPI में master नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "SPI में master हर slave की dedicated SS line को low करके उसे चुनता है, इसलिए software addressing की जरूरत नहीं, यानी option B सही है। SPI में कई slaves जुड़ सकते हैं (option A गलत)। यह केवल broadcast नहीं करता। SPI में स्पष्ट master होता है (option D गलत)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q23",
+      "question": "PIC USART में serial port को enable करने के लिए RCSTA register का कौन-सा bit set किया जाता है?",
+      "options": ["SPEN", "TXEN", "SYNC", "BRGH"],
+      "correctIndex": 0,
+      "explanation": "SPEN (Serial Port Enable) bit = 1 करने पर USART के RX/TX pins serial port के रूप में कॉन्फ़िगर होते हैं, इसलिए option A सही है। TXEN transmit enable है (TXSTA में)। SYNC mode select करता है। BRGH baud rate speed चुनता है, ये port को enable नहीं करते।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q24",
+      "question": "PIC async transmission में यह जाँचने के लिए कि TXREG खाली है और नया byte लिखा जा सकता है, कौन-सा flag देखा जाता है?",
+      "options": ["RCIF", "TXIF", "OERR", "FERR"],
+      "correctIndex": 1,
+      "explanation": "TXIF flag set होने पर TXREG खाली होता है और नया byte भेजने के लिए तैयार होता है, इसलिए option B सही है। RCIF receive होने का flag है। OERR overrun error और FERR framing error दर्शाते हैं, transmit readiness नहीं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q25",
+      "question": "PIC receive में यदि RCREG समय पर नहीं पढ़ा जाए और तीसरा byte आ जाए तो कौन-सी error आती है?",
+      "options": ["Framing error (FERR)", "Overrun error (OERR)", "Parity error", "Start-bit error"],
+      "correctIndex": 1,
+      "explanation": "Receive FIFO भर जाने पर पुराना data समय पर पढ़ा न जाने से overrun error (OERR) आती है, इसलिए option B सही है। Framing error तब आती है जब stop bit सही न मिले। Parity error गलत parity पर आती है (PIC में hardware parity नहीं)। Start-bit error एक standard USART flag नहीं है।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q26",
+      "question": "I2C में repeated START condition का मुख्य उपयोग क्या है?",
+      "options": ["bus को permanently free करना", "STOP भेजे बिना direction बदलने या नए transfer के लिए दुबारा बस पर control बनाए रखना", "baud rate बदलना", "slave को reset करना"],
+      "correctIndex": 1,
+      "explanation": "Repeated START से master STOP दिए बिना bus पर control बनाए रखते हुए नया address/direction भेज सकता है (जैसे write के बाद read), इसलिए option B सही है। यह bus free नहीं करता (वह STOP करता है)। I2C में baud rate इस तरह नहीं बदलता और यह slave reset signal नहीं है।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q27",
+      "question": "SPI के clock polarity (CKP) और clock phase (CKE) settings किसलिए महत्वपूर्ण हैं?",
+      "options": ["baud rate तय करने के लिए", "master और slave के बीच data किस clock edge पर sample/shift हो यह तय करने के लिए", "addressing के लिए", "pull-up resistor के मान के लिए"],
+      "correctIndex": 1,
+      "explanation": "CKP (idle clock level) और CKE/phase मिलकर SPI mode तय करते हैं कि data किस clock edge पर latch और shift हो; master-slave दोनों का mode मेल खाना चाहिए, इसलिए option B सही है। ये baud rate नहीं तय करते, addressing SPI में नहीं होती, और pull-up I2C से संबंधित है।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q28",
+      "question": "UART के मुकाबले SPI और I2C \"synchronous\" कहलाते हैं क्योंकि—",
+      "options": ["वे अधिक data भेजते हैं", "उनमें master द्वारा एक साझा clock line (SCK/SCL) भेजी जाती है जिससे timing sync होती है", "वे केवल एक device से बात करते हैं", "वे हमेशा 9-bit data भेजते हैं"],
+      "correctIndex": 1,
+      "explanation": "SPI (SCK) और I2C (SCL) में master एक clock भेजता है जो data की timing को synchronize करता है, इसलिए ये synchronous हैं और option B सही है। UART async में ऐसी clock line नहीं होती। data-मात्रा, device संख्या या 9-bit data इसका कारण नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q29",
+      "question": "यदि किसी design में एक PCB पर बहुत सारे sensors कम-से-कम wires में जोड़ने हों और high speed जरूरी न हो, तो कौन-सा protocol सबसे उपयुक्त है?",
+      "options": ["SPI", "I2C", "UART", "RS-232"],
+      "correctIndex": 1,
+      "explanation": "I2C केवल दो wires (SDA, SCL) पर addressing के जरिए कई devices जोड़ता है, इसलिए कम wires और मध्यम speed वाले scenario के लिए option B सही है। SPI हर slave के लिए अलग SS wire माँगता है (अधिक wires)। UART/RS-232 आम तौर पर एक point-to-point link है, multi-device bus नहीं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q30",
+      "question": "PIC USART में TXSTA register का SYNC bit = 0 रखने का क्या अर्थ है?",
+      "options": ["synchronous master mode चुनना", "asynchronous mode चुनना", "high baud rate चुनना", "9-bit data enable करना"],
+      "correctIndex": 1,
+      "explanation": "SYNC = 0 asynchronous mode select करता है (SYNC = 1 synchronous), इसलिए option B सही है। Synchronous master mode के लिए SYNC = 1 और CSRC set करना पड़ता है। High baud rate BRGH bit से चुना जाता है और 9-bit data TX9/RX9 bits से enable होता है, SYNC से नहीं।"
+    }
+  ]
+}

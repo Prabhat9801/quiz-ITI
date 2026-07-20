@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "pic_memory",
+  "topicName": "PIC Memory Organization: Data Memory, Flash Program Memory & Return Address Stack",
+  "questions": [
+    {
+      "id": "u2_pic_memory_q1",
+      "question": "PIC16F mid-range devices में data memory (RAM) किस प्रकार से organize होती है?",
+      "options": ["सभी memory एक single flat linear space में होती है, बिना किसी banking के", "यह केवल external memory chip में होती है", "यह banked architecture में organize होती है जिसमें अलग-अलग banks होते हैं", "यह केवल stack के रूप में organize होती है"],
+      "correctIndex": 2,
+      "explanation": "PIC16F mid-range data memory को कई banks में organize किया जाता है और register file map के जरिए access किया जाता है, इसलिए option C सही है। यह flat linear space नहीं है, external memory पर निर्भर नहीं करती, और यह केवल stack तक सीमित नहीं है।"
+    },
+    {
+      "id": "u2_pic_memory_q2",
+      "question": "एक typical PIC16F mid-range device में data memory सामान्यतः कितने banks में divide होती है?",
+      "options": ["2 banks", "8 banks", "16 banks", "4 banks"],
+      "correctIndex": 3,
+      "explanation": "PIC16F mid-range devices में सामान्यतः data memory 4 banks (Bank 0 से Bank 3) में divide होती है जिन्हें STATUS register के bits से select किया जाता है, इसलिए option D सही है। 2, 8 और 16 banks इस typical architecture से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_memory_q3",
+      "question": "PIC16F में bank selection के लिए STATUS register के कौन-से bits उपयोग होते हैं?",
+      "options": ["RP1 और RP0", "C और Z", "IRP केवल", "OV और DC"],
+      "correctIndex": 0,
+      "explanation": "STATUS register के RP1:RP0 bits data memory bank select करने के लिए उपयोग होते हैं, इसलिए option A सही है। C, Z, DC arithmetic status flags हैं और IRP indirect addressing के लिए है, ये bank selection के मुख्य bits नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q4",
+      "question": "प्रत्येक data memory bank में Special Function Registers (SFRs) सामान्यतः किस भाग में स्थित होते हैं?",
+      "options": ["Bank के lower addresses में", "Bank के केवल upper addresses में हमेशा", "SFR कभी data memory bank में नहीं होते", "केवल external EEPROM में"],
+      "correctIndex": 0,
+      "explanation": "प्रत्येक bank के lower address locations में SFRs रखे जाते हैं जबकि ऊपरी भाग में General Purpose Registers (GPR) होते हैं, इसलिए option A सही है। बाकी options वास्तविक memory map को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_memory_q5",
+      "question": "GPR (General Purpose Register) area का मुख्य उपयोग क्या है?",
+      "options": ["यह केवल program memory address रखता है", "यह user program द्वारा data variables, counters आदि store करने के लिए उपयोग होने वाली RAM है", "यह केवल configuration bits रखता है", "यह केवल reset vector store करता है"],
+      "correctIndex": 1,
+      "explanation": "GPR area user-defined variables, counters और temporary data store करने के लिए उपयोग होने वाली general-purpose RAM है, इसलिए option B सही है। बाकी options GPR की भूमिका से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_memory_q6",
+      "question": "PIC में FSR और INDF registers किस addressing mode के लिए उपयोग होते हैं?",
+      "options": ["Immediate addressing", "Direct addressing केवल", "Indirect addressing", "Only I/O addressing"],
+      "correctIndex": 2,
+      "explanation": "FSR (File Select Register) एक pointer की तरह address रखता है और INDF के माध्यम से indirect addressing की जाती है, जिससे runtime पर address की गणना की जा सकती है, इसलिए option C सही है। बाकी addressing modes के लिए ये registers प्राथमिक साधन नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q7",
+      "question": "PIC architecture में W (Working) register data memory के संदर्भ में किस प्रकार कार्य करता है?",
+      "options": ["यह accumulator की तरह अधिकांश operations में एक operand व result रखता है", "यह केवल program memory का हिस्सा है", "यह केवल stack pointer के रूप में कार्य करता है", "यह केवल interrupt vector store करता है"],
+      "correctIndex": 0,
+      "explanation": "W register एक central accumulator-जैसा register है जो ALU operations में data memory locations के साथ data transfer व computation में उपयोग होता है, इसलिए option A सही है। बाकी roles W register से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q8",
+      "question": "PIC microcontroller में program memory किस technology की होती है (आधुनिक devices में)?",
+      "options": ["केवल battery-backed volatile RAM", "केवल mechanical punched cards", "केवल magnetic tape storage", "Flash memory – electrically erasable और reprogrammable"],
+      "correctIndex": 3,
+      "explanation": "आधुनिक PIC devices में program memory Flash technology की होती है जिसे electrically erase व reprogram किया जा सकता है, इसलिए option D सही है। बाकी options वास्तविक technology नहीं हैं जो PIC devices में उपयोग होती है।"
+    },
+    {
+      "id": "u2_pic_memory_q9",
+      "question": "PIC16F mid-range family में program memory word की width कितनी होती है?",
+      "options": ["8-bit", "14-bit", "16-bit", "32-bit"],
+      "correctIndex": 1,
+      "explanation": "PIC16F mid-range family में प्रत्येक program memory word 14-bit चौड़ा होता है, इसलिए option B सही है। 8-bit data bus width है, 16-bit PIC18F में उपयोग होती है, और 32-bit PIC में उपयोग नहीं होती।"
+    },
+    {
+      "id": "u2_pic_memory_q10",
+      "question": "PIC16F mid-range family में Program Counter (PC) की width कितनी होती है और यह अधिकतम कितनी program memory को address कर सकता है?",
+      "options": ["13-bit, 8K words तक", "8-bit, 256 bytes तक", "16-bit, 64K words तक", "21-bit, 2M words तक"],
+      "correctIndex": 0,
+      "explanation": "PIC16F mid-range में PC 13-bit चौड़ा होता है जिससे यह अधिकतम 8K words (2^13) तक program memory address कर सकता है, इसलिए option A सही है। 8-bit, 16-bit और 21-bit जैसी widths इस specific family की वास्तविक PC width नहीं हैं (21-bit PIC18F में मिलती है)।"
+    },
+    {
+      "id": "u2_pic_memory_q11",
+      "question": "PIC16F mid-range devices में hardware return address stack की depth सामान्यतः कितनी होती है?",
+      "options": ["4 levels", "16 levels", "31 levels", "8 levels"],
+      "correctIndex": 3,
+      "explanation": "PIC16F mid-range devices में hardware stack की depth 8 levels होती है जो CALL instructions के return address store करती है, इसलिए option D सही है। 4 और 16 levels गलत counts हैं, और 31 levels enhanced PIC18F family की विशेषता है।"
+    },
+    {
+      "id": "u2_pic_memory_q12",
+      "question": "PIC18F enhanced family में hardware stack की depth कितनी बढ़ा दी गई है?",
+      "options": ["4 levels तक", "8 levels तक (कोई बदलाव नहीं)", "31 levels तक", "2 levels तक"],
+      "correctIndex": 2,
+      "explanation": "PIC18F family में hardware stack को 31 levels तक बढ़ाया गया है ताकि deeper subroutine nesting और recursive calls बेहतर तरीके से handle हो सकें, इसलिए option C सही है। बाकी options इस enhancement को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_memory_q13",
+      "question": "classic PIC16F devices में यदि hardware stack की depth से अधिक CALL nesting हो जाए (stack overflow) तो क्या होता है?",
+      "options": ["Device automatically program memory को erase कर देता है", "पुराने return address को बिना किसी flag के overwrite कर दिया जाता है, जिससे गलत return हो सकता है", "यह हमेशा एक नया extra stack level automatically बना देता है", "इससे oscillator फ्रीक्वेंसी बदल जाती है"],
+      "correctIndex": 1,
+      "explanation": "classic mid-range PIC16F में stack overflow होने पर सबसे पुराना entry बिना किसी explicit flag के overwrite हो जाता है, जिससे program गलत address पर return कर सकता है, इसलिए option B सही है। बाकी options वास्तविक behavior को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_memory_q14",
+      "question": "PIC18F family में stack overflow/underflow की स्थिति को track करने के लिए क्या feature उपलब्ध है?",
+      "options": ["STKOVF और STKUNF जैसे status flag bits जो overflow/underflow की स्थिति दर्शाते हैं और optionally reset भी trigger कर सकते हैं", "कोई भी tracking feature उपलब्ध नहीं है", "केवल manual polling से कभी पता नहीं चलता", "यह केवल external hardware से पता चलता है"],
+      "correctIndex": 0,
+      "explanation": "PIC18F में STKOVF/STKUNF जैसे status bits होते हैं जो stack overflow या underflow की स्थिति में set होकर सूचना देते हैं, और configuration के अनुसार reset भी trigger कर सकते हैं, इसलिए option A सही है। बाकी options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q15",
+      "question": "hardware return address stack का मुख्य कार्य क्या है?",
+      "options": ["यह data variables को store करने के लिए है", "यह केवल interrupt priority store करता है", "यह केवल ADC result store करता है", "CALL instruction execute होने पर return address को store करना और RETURN/RETLW पर उसे वापस PC में restore करना"],
+      "correctIndex": 3,
+      "explanation": "जब CALL या interrupt होता है तब वर्तमान PC value stack में push होती है, और RETURN/RETLW/RETFIE पर वही address pop करके PC में restore की जाती है, इसलिए option D सही है। बाकी options stack के actual उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_memory_q16",
+      "question": "classic mid-range PIC (जैसे PIC16F) में hardware stack को क्या directly program द्वारा data की तरह access (push/pop as general data) किया जा सकता है?",
+      "options": ["हाँ, इसे किसी भी साधारण data register की तरह पूरी तरह freely access किया जा सकता है", "नहीं, classic mid-range PIC में stack एक dedicated hardware resource है जिसे application data storage के लिए सीधे उपयोग नहीं किया जाता", "यह केवल ADC data store करने के लिए उपयोग होता है", "यह data memory के Bank 3 में स्थित एक साधारण RAM array है"],
+      "correctIndex": 1,
+      "explanation": "classic mid-range PIC में hardware stack एक dedicated, सीमित-purpose resource है जो मुख्यतः return addresses के लिए है, इसे साधारण data storage की तरह freely access नहीं किया जाता, इसलिए option B सही है। बाकी options इसकी सीमाओं को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_memory_q17",
+      "question": "RETLW instruction data memory/program memory के संदर्भ में किस उद्देश्य के लिए उपयोगी है?",
+      "options": ["यह केवल oscillator को restart करता है", "यह केवल WDT को clear करता है", "यह केवल interrupt को disable करता है", "यह subroutine से return करते समय W register में literal value डालकर वापस आता है, जो lookup table जैसी technique में उपयोगी है"],
+      "correctIndex": 3,
+      "explanation": "RETLW subroutine से return करते हुए एक literal constant को W register में load करता है, जिससे program memory में stored lookup table से values प्राप्त की जा सकती हैं, इसलिए option D सही है। बाकी options RETLW की actual functionality से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_memory_q18",
+      "question": "PIC16F के प्रत्येक data memory bank में सामान्यतः एक 'common RAM area' (जैसे 0x70-0x7F) क्यों रखा जाता है?",
+      "options": ["ताकि यह क्षेत्र सभी banks में समान रूप से mapped हो और bank switching की आवश्यकता के बिना commonly used variables access किए जा सकें", "ताकि यह क्षेत्र केवल SFRs के लिए reserved रहे", "ताकि यह क्षेत्र program memory का हिस्सा बन जाए", "ताकि यह क्षेत्र केवल interrupt vector के लिए हो"],
+      "correctIndex": 0,
+      "explanation": "common RAM area सभी banks में एक जैसे address पर mapped होता है, जिससे frequently used variables को बिना bank switch किए access किया जा सकता है, इसलिए option A सही है। बाकी options इस area के actual उद्देश्य को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_memory_q19",
+      "question": "PIC16F87X जैसे devices में on-chip data EEPROM (non-volatile data memory) का क्या उपयोग है?",
+      "options": ["यह केवल program instructions store करता है", "यह केवल stack के रूप में कार्य करता है", "यह केवल oscillator configuration रखता है", "यह power off होने पर भी data (जैसे calibration values, settings) को स्थायी रूप से store रखने के लिए byte-addressable non-volatile memory है"],
+      "correctIndex": 3,
+      "explanation": "data EEPROM एक अलग byte-addressable non-volatile memory है जो power cycle के बाद भी data retain रखती है, जैसे calibration या user settings के लिए, इसलिए option D सही है। बाकी options इसकी वास्तविक भूमिका नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q20",
+      "question": "PIC में on-chip data EEPROM को access करने के लिए कौन-से registers मुख्यतः उपयोग होते हैं?",
+      "options": ["केवल STATUS और OPTION register", "केवल TMR0 और TMR1", "EECON1, EECON2, EEDATA और EEADR registers", "केवल PORTB और PORTC"],
+      "correctIndex": 2,
+      "explanation": "data EEPROM read/write operations EECON1 (control), EECON2 (unlock sequence), EEDATA (data) और EEADR (address) registers के माध्यम से किए जाते हैं, इसलिए option C सही है। बाकी options EEPROM access से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q21",
+      "question": "flash program memory की typical erase/write endurance (write cycles) लगभग कितनी होती है?",
+      "options": ["लगभग 100 cycles", "लगभग 1,000 cycles", "लगभग 100,000 cycles (typical rating)", "अनंत (unlimited) cycles"],
+      "correctIndex": 2,
+      "explanation": "flash program memory की typical endurance rating लगभग 100,000 erase/write cycles होती है, इसलिए option C सही है। 100 और 1,000 cycles बहुत कम मान हैं, और कोई भी flash memory truly unlimited cycles नहीं देती।"
+    },
+    {
+      "id": "u2_pic_memory_q22",
+      "question": "PIC flash program memory का typical data retention period (बिना power के भी data बने रहने की अवधि) क्या माना जाता है?",
+      "options": ["केवल कुछ घंटे", "केवल 1 दिन", "40 वर्षों से अधिक (typical industry specification)", "यह data बिल्कुल retain नहीं करती"],
+      "correctIndex": 2,
+      "explanation": "flash memory manufacturers सामान्यतः 40 वर्ष से अधिक की data retention specify करते हैं, इसलिए option C सही है। कुछ घंटे या 1 दिन जैसे मान बहुत कम हैं, और flash memory अपनी non-volatile nature के कारण data retain करती है।"
+    },
+    {
+      "id": "u2_pic_memory_q23",
+      "question": "PIC में Harvard architecture (अलग program और data memory buses) का data memory से जुड़ा एक प्रमुख लाभ क्या है?",
+      "options": ["इससे data memory पूरी तरह हट जाती है", "program memory और data memory को अलग-अलग width व simultaneously access किया जा सकता है, जिससे performance बढ़ता है", "इससे केवल external memory ही उपयोग की जा सकती है", "इससे data memory की size हमेशा शून्य हो जाती है"],
+      "correctIndex": 1,
+      "explanation": "अलग buses होने से CPU एक ही समय में instruction fetch (program memory से) और data access (data memory से) कर सकता है, जिससे throughput बढ़ता है, इसलिए option B सही है। बाकी options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q24",
+      "question": "यदि किसी program में device की physical program memory size से बाहर के address को access किया जाए, तो सामान्यतः क्या होता है?",
+      "options": ["वह address हमेशा valid data return करता है", "device स्वतः reset हो जाता है", "यह हमेशा एक compile-time error देता है", "unimplemented memory locations से पढ़ने पर सामान्यतः 0 या अपरिभाषित (all-zero जैसा) मान मिलता है"],
+      "correctIndex": 3,
+      "explanation": "physical size से बाहर के unimplemented program memory locations को access करने पर सामान्यतः 0 जैसा unimplemented/undefined value read होता है, इसलिए option D सही है। बाकी options इस स्थिति के वास्तविक behavior से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_memory_q25",
+      "question": "PIC16F mid-range devices में Reset vector किस program memory address पर स्थित होता है?",
+      "options": ["0000h", "0004h", "0008h", "1FFFh"],
+      "correctIndex": 0,
+      "explanation": "PIC16F mid-range devices में execution reset के बाद 0000h address से शुरू होती है, इसलिए option A सही है। 0004h interrupt vector है, और 0008h व 1FFFh standard reset vector address नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q26",
+      "question": "PIC16F mid-range devices में Interrupt vector किस program memory address पर स्थित होता है?",
+      "options": ["0000h", "0004h", "0010h", "2000h"],
+      "correctIndex": 1,
+      "explanation": "PIC16F mid-range devices में interrupt occur होने पर control 0004h address पर jump करता है, इसलिए option B सही है। 0000h reset vector है, और 0010h व 2000h standard interrupt vector address नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q27",
+      "question": "PIC16F mid-range devices में GOTO/CALL instructions के साथ PCLATH register की आवश्यकता क्यों पड़ती है?",
+      "options": ["क्योंकि GOTO/CALL का literal field सीमित bits का होता है, इसलिए Program Counter के ऊपरी bits को set करने के लिए PCLATH उपयोग होता है (paging)", "PCLATH केवल ADC operations के लिए है", "PCLATH केवल WDT को control करता है", "PCLATH केवल data EEPROM address रखता है"],
+      "correctIndex": 0,
+      "explanation": "GOTO/CALL instructions का address field सीमित होता है, इसलिए program memory paging के लिए PCLATH के bits PC के ऊपरी bits में copy होते हैं, इसलिए option A सही है। बाकी options PCLATH की actual भूमिका से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_memory_q28",
+      "question": "PIC16F74 microcontroller की कुल data memory (सभी banks मिलाकर, GPR + SFR) approximately कितनी होती है?",
+      "options": ["64 bytes", "128 bytes", "192 bytes", "1 KB"],
+      "correctIndex": 2,
+      "explanation": "PIC16F74 में सभी banks मिलाकर लगभग 192 bytes data memory (GPR + SFR) उपलब्ध होती है, इसलिए option C सही है। 64 और 128 bytes इससे कम हैं, और 1 KB इस specific device की actual capacity से अधिक है।"
+    },
+    {
+      "id": "u2_pic_memory_q29",
+      "question": "RAM (data memory) और Flash (program memory) के बीच मुख्य अंतर क्या है?",
+      "options": ["दोनों बिल्कुल समान होते हैं और कोई अंतर नहीं है", "RAM हमेशा non-volatile होती है और Flash हमेशा volatile होती है", "दोनों केवल external chip में होती हैं, on-chip कभी नहीं", "RAM volatile होती है (power जाने पर data खो जाता है) जबकि Flash non-volatile होती है (power जाने पर भी program data बना रहता है)"],
+      "correctIndex": 3,
+      "explanation": "RAM volatile memory है जो power off होने पर data खो देती है, जबकि Flash non-volatile memory है जो power off होने पर भी program code को retain रखती है, इसलिए option D सही है। बाकी statements तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u2_pic_memory_q30",
+      "question": "PIC memory organization में indirect addressing की आवश्यकता किस स्थिति में सबसे अधिक उपयोगी होती है?",
+      "options": ["जब address compile time पर fixed रहता है और कभी नहीं बदलता", "जब किसी array या table के elements को runtime पर calculated address (जैसे loop counter के आधार पर) से access करना हो", "जब केवल एक single fixed register access करना हो", "जब केवल program memory को erase करना हो"],
+      "correctIndex": 1,
+      "explanation": "indirect addressing (FSR/INDF के जरिए) तब सबसे उपयोगी होती है जब array जैसी data structure के elements को runtime पर calculated address से access करना हो, जैसे loop के माध्यम से, इसलिए option B सही है। बाकी options indirect addressing के मुख्य use-case को सही ढंग से नहीं दर्शाते।"
+    }
+  ]
+}

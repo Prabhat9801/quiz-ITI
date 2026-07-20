@@ -1,0 +1,218 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "heat",
+  "topicName": "Heat",
+  "questions": [
+    {
+      "id": "phy_heat_q1",
+      "question": "Heat energy का SI unit क्या है?",
+      "options": ["Joule (J)", "Calorie (cal)", "Kelvin (K)", "Watt (W)"],
+      "correctIndex": 0,
+      "explanation": "Heat भी एक form of energy है, इसलिए इसका SI unit Joule (J) होता है। Calorie भी heat की एक unit है पर SI unit नहीं है; Kelvin temperature की unit है और Watt power (energy per second) की unit है, heat energy की नहीं।"
+    },
+    {
+      "id": "phy_heat_q2",
+      "question": "25°C temperature को Fahrenheit scale में convert करने पर कितना होगा (F = 9/5 × C + 32 का उपयोग करें)?",
+      "options": ["45°F", "77°F", "86°F", "41°F"],
+      "correctIndex": 1,
+      "explanation": "F = (9/5) × 25 + 32 = 45 + 32 = 77°F होता है। 45°F formula का सिर्फ पहला हिस्सा है (32 जोड़े बिना), 86°F और 41°F गलत calculation से आते हैं।"
+    },
+    {
+      "id": "phy_heat_q3",
+      "question": "-73°C temperature को Kelvin scale में बदलने पर (K = C + 273) कितना होगा?",
+      "options": ["273 K", "246 K", "200 K", "346 K"],
+      "correctIndex": 2,
+      "explanation": "K = -73 + 273 = 200 K होता है। 273 K तो 0°C होता है, 246 K और 346 K गलत addition/subtraction से आते हैं।"
+    },
+    {
+      "id": "phy_heat_q4",
+      "question": "Water का triple point Kelvin scale में किस temperature पर होता है?",
+      "options": ["0 K", "100 K", "373.16 K", "273.16 K"],
+      "correctIndex": 3,
+      "explanation": "Water का triple point 273.16 K (0.01°C) पर होता है, जहाँ solid, liquid और gas तीनों phases equilibrium में रहते हैं। 0 K absolute zero है, 100 K बहुत low temperature है, और 373.16 K पानी का boiling point (100°C) के करीब है, triple point नहीं।"
+    },
+    {
+      "id": "phy_heat_q5",
+      "question": "बहुत low temperature (जैसे -60°C) मापने के लिए mercury thermometer की जगह alcohol thermometer का उपयोग क्यों किया जाता है?",
+      "options": ["Mercury का freezing point alcohol से ज्यादा high होता है, इसलिए बहुत low temperature पर mercury जम (freeze) जाता है", "Alcohol mercury से सस्ता होता है", "Alcohol का boiling point बहुत high होता है", "Mercury एक insulator है"],
+      "correctIndex": 0,
+      "explanation": "Mercury का freezing point लगभग -39°C होता है, इसलिए इससे कम temperature पर mercury जम जाता है और thermometer काम नहीं करता, जबकि alcohol का freezing point लगभग -115°C होता है। Price, boiling point और insulator होना इसका कारण नहीं है।"
+    },
+    {
+      "id": "phy_heat_q6",
+      "question": "Absolute zero temperature Celsius scale में लगभग कितना होता है?",
+      "options": ["0°C", "-273.15°C", "-100°C", "273°C"],
+      "correctIndex": 1,
+      "explanation": "Absolute zero, जिस पर molecular motion theoretically न्यूनतम होती है, Celsius scale में -273.15°C के बराबर है (0 K)। 0°C पानी का freezing point है, -100°C और 273°C गलत values हैं।"
+    },
+    {
+      "id": "phy_heat_q7",
+      "question": "Specific heat capacity की सही definition क्या है?",
+      "options": ["किसी पदार्थ का total heat content", "किसी पदार्थ का boiling point", "किसी पदार्थ के unit mass का temperature 1°C (या 1 K) बढ़ाने के लिए आवश्यक heat energy", "किसी पदार्थ की thermal conductivity"],
+      "correctIndex": 2,
+      "explanation": "Specific heat capacity वह heat energy है जो किसी पदार्थ के unit mass (जैसे 1 kg) का temperature 1°C बढ़ाने के लिए चाहिए (Q = mcΔT)। Total heat content, boiling point और thermal conductivity अलग-अलग concepts हैं, specific heat नहीं।"
+    },
+    {
+      "id": "phy_heat_q8",
+      "question": "2 kg पानी (specific heat = 4200 J/kg°C) का temperature 10°C बढ़ाने के लिए कितनी heat energy चाहिए?",
+      "options": ["42000 J", "8400 J", "4200 J", "84000 J"],
+      "correctIndex": 3,
+      "explanation": "Q = mcΔT = 2 × 4200 × 10 = 84000 J होता है। बाकी options गलत multiplication (mass, specific heat या ΔT को छोड़कर) से आते हैं।"
+    },
+    {
+      "id": "phy_heat_q9",
+      "question": "पानी का specific heat capacity (4200 J/kg°C) अधिकतर common substances से ज्यादा होता है। इसी वजह से car radiator के cooling system में coolant के रूप में पानी का उपयोग क्यों किया जाता है?",
+      "options": ["पानी बिना ज्यादा temperature change के अधिक heat absorb/release कर सकता है (अच्छा coolant होता है)", "पानी सस्ता होता है", "पानी transparent होता है", "पानी heavy होता है"],
+      "correctIndex": 0,
+      "explanation": "High specific heat की वजह से पानी कम temperature rise में ज्यादा heat absorb कर सकता है, इसलिए यह engine को effectively cool करता है। Cost, transparency और weight इसका scientific कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_heat_q10",
+      "question": "500 g किसी पदार्थ (specific heat = 0.4 cal/g°C) का temperature 5°C बढ़ाने के लिए कितनी heat चाहिए?",
+      "options": ["500 cal", "1000 cal", "2000 cal", "100 cal"],
+      "correctIndex": 1,
+      "explanation": "Q = mcΔT = 500 × 0.4 × 5 = 1000 cal होता है। बाकी options गलत multiplication से आते हैं।"
+    },
+    {
+      "id": "phy_heat_q11",
+      "question": "Same mass वाले दो अलग-अलग पदार्थों को समान heat energy दी जाए, तो जिस पदार्थ का specific heat ज्यादा होगा, उसका temperature rise कैसा होगा?",
+      "options": ["ज्यादा होगा", "same रहेगा", "कम होगा", "zero हो जाएगा"],
+      "correctIndex": 2,
+      "explanation": "Q = mcΔT से, अगर Q और m same हैं तो ΔT, c के inversely proportional होता है — यानी high specific heat वाले पदार्थ का temperature कम बढ़ेगा। बाकी options इस inverse relation के विपरीत हैं।"
+    },
+    {
+      "id": "phy_heat_q12",
+      "question": "Calorimetry के principle (heat lost = heat gained) के अनुसार, 100 g गर्म पानी (80°C) को 200 g ठंडे पानी (20°C) में मिलाया जाता है। Mixture का final temperature (समान specific heat मानकर) लगभग क्या होगा?",
+      "options": ["20°C", "30°C", "50°C", "40°C"],
+      "correctIndex": 3,
+      "explanation": "Heat lost = heat gained: 100(80-T) = 200(T-20) से 8000-100T = 200T-4000, यानी 12000 = 300T, तो T = 40°C। बाकी options equation को सही तरीके से solve नहीं करते।"
+    },
+    {
+      "id": "phy_heat_q13",
+      "question": "Latent heat की सही definition क्या है?",
+      "options": ["वह heat जो phase change (state change) के दौरान बिना temperature बदले absorb/release होती है", "वह heat जो सिर्फ solid को गर्म करती है", "वह heat जो सिर्फ gas में पाई जाती है", "वह heat जो कभी release नहीं होती"],
+      "correctIndex": 0,
+      "explanation": "Latent heat वह ऊर्जा है जो solid-liquid-gas के बीच state change के दौरान molecules की internal structure बदलने में खर्च होती है, जिससे temperature स्थिर रहता है। बाकी options latent heat की वास्तविक परिभाषा नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_heat_q14",
+      "question": "Ice का latent heat of fusion 336 J/g है। 100 g ice को 0°C पर melt करने के लिए कितनी heat चाहिए?",
+      "options": ["3360 J", "33600 J", "336000 J", "33.6 J"],
+      "correctIndex": 1,
+      "explanation": "Q = mL = 100 × 336 = 33600 J होता है। बाकी options decimal place की गलत गणना से आते हैं।"
+    },
+    {
+      "id": "phy_heat_q15",
+      "question": "पानी का latent heat of vaporization लगभग 2260 J/g है। 50 g पानी को 100°C पर पूरी तरह steam में बदलने के लिए कितनी heat चाहिए?",
+      "options": ["22600 J", "45200 J", "113000 J", "226000 J"],
+      "correctIndex": 2,
+      "explanation": "Q = mL = 50 × 2260 = 113000 J होता है। बाकी options mass या L की गलत value से calculate हुए हैं।"
+    },
+    {
+      "id": "phy_heat_q16",
+      "question": "Phase change (जैसे ice से पानी बनना) के दौरान, heat देते रहने पर भी temperature constant क्यों रहता है?",
+      "options": ["क्योंकि heat absorb ही नहीं होती", "क्योंकि specific heat zero हो जाता है", "क्योंकि temperature measure नहीं किया जा सकता", "क्योंकि दी गई heat molecules के बीच bonds तोड़ने (structure बदलने) में use होती है, temperature बढ़ाने में नहीं"],
+      "correctIndex": 3,
+      "explanation": "Phase change के दौरान heat molecular bonds तोड़कर state बदलने में खर्च होती है (latent heat), इसलिए kinetic energy और temperature नहीं बढ़ते। बाकी options गलत और असंभव कथन हैं।"
+    },
+    {
+      "id": "phy_heat_q17",
+      "question": "100°C का steam, 100°C के boiling water से ज्यादा गंभीर (severe) burn क्यों देता है?",
+      "options": ["Steam अपने साथ extra latent heat of vaporization carry करता है जो skin पर condense होते समय release होती है", "Steam का temperature पानी से ज्यादा होता है", "Steam heavy होता है", "Steam में oxygen ज्यादा होता है"],
+      "correctIndex": 0,
+      "explanation": "दोनों का temperature 100°C ही होता है, पर steam condense होते समय अपनी extra latent heat (2260 J/g के आसपास) skin को दे देता है, जिससे ज्यादा damage होता है। बाकी options factually गलत हैं।"
+    },
+    {
+      "id": "phy_heat_q18",
+      "question": "Naphthalene balls (कपूर/camphor जैसे पदार्थ) हवा में बिना liquid बने धीरे-धीरे गायब हो जाते हैं। यह किस process का उदाहरण है?",
+      "options": ["Melting", "Sublimation", "Condensation", "Evaporation only (liquid से)"],
+      "correctIndex": 1,
+      "explanation": "जब कोई solid बिना liquid state से गुज़रे सीधे gas में बदलता है, तो उसे sublimation कहते हैं, जैसे naphthalene, camphor, dry ice। Melting solid से liquid बनना है, condensation gas से liquid बनना है, और evaporation liquid से gas बनने की process है।"
+    },
+    {
+      "id": "phy_heat_q19",
+      "question": "Thermal expansion में linear expansion coefficient (α) किसे define करता है?",
+      "options": ["Volume में change per degree", "Area में change per degree", "Unit temperature rise पर length में होने वाला fractional change", "Mass में change per degree"],
+      "correctIndex": 2,
+      "explanation": "Linear expansion coefficient α, unit temperature rise के लिए length में होने वाले fractional change (ΔL/L0 प्रति °C) को दर्शाता है। Volume और area expansion अलग coefficients (γ और β) से जुड़े होते हैं, और mass temperature से नहीं बदलता।"
+    },
+    {
+      "id": "phy_heat_q20",
+      "question": "एक metal rod की length 2 m है, जिसका linear expansion coefficient α = 12 × 10⁻⁶ per °C है। अगर temperature 50°C बढ़ाया जाए, तो rod की length में कितनी वृद्धि (increase) होगी?",
+      "options": ["0.6 mm", "2.4 mm", "0.12 mm", "1.2 mm"],
+      "correctIndex": 3,
+      "explanation": "ΔL = L0αΔT = 2 × 12×10⁻⁶ × 50 = 1.2×10⁻³ m = 1.2 mm होता है। बाकी options गलत multiplication से आते हैं।"
+    },
+    {
+      "id": "phy_heat_q21",
+      "question": "Railway tracks के जोड़ों (joints) के बीच थोड़ा gap क्यों छोड़ा जाता है?",
+      "options": ["गर्मी में thermal expansion की वजह से rail की length बढ़ने के लिए जगह देने हेतु", "Rail का weight कम करने के लिए", "Sound कम करने के लिए", "पैसे बचाने के लिए"],
+      "correctIndex": 0,
+      "explanation": "गर्मी में temperature बढ़ने से rails thermal expansion के कारण लंबी हो जाती हैं; अगर gap न छोड़ा जाए तो rails buckle (मुड़) सकती हैं। बाकी options इसका वास्तविक engineering कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_heat_q22",
+      "question": "Bimetallic strip दो अलग-अलग metals (जिनके expansion coefficients अलग होते हैं) से बनती है, और इसका उपयोग मुख्यतः किस device में होता है?",
+      "options": ["Ammeter", "Thermostat (temperature control switch)", "Voltmeter", "Capacitor"],
+      "correctIndex": 1,
+      "explanation": "अलग expansion rates की वजह से temperature बदलने पर bimetallic strip मुड़ती है, जिसका उपयोग thermostat जैसे automatic temperature-control switches में होता है। Ammeter, voltmeter और capacitor का काम thermal expansion पर आधारित नहीं है।"
+    },
+    {
+      "id": "phy_heat_q23",
+      "question": "पानी का anomalous expansion किस temperature range में होता है (यानी cooling के साथ volume बढ़ता है)?",
+      "options": ["100°C से 0°C", "50°C से 25°C", "4°C से 0°C", "-10°C से -20°C"],
+      "correctIndex": 2,
+      "explanation": "4°C से 0°C के बीच ठंडा करने पर पानी का volume घटने की बजाय बढ़ता है (density घटती है), इसे anomalous expansion of water कहते हैं; density 4°C पर maximum होती है। बाकी ranges सामान्य behaviour दिखाते हैं, anomalous नहीं।"
+    },
+    {
+      "id": "phy_heat_q24",
+      "question": "किसी solid के लिए volume expansion coefficient (γ) और linear expansion coefficient (α) के बीच सही संबंध क्या है?",
+      "options": ["γ = α", "γ = 2α", "γ = α/3", "γ = 3α"],
+      "correctIndex": 3,
+      "explanation": "Solids के लिए, तीनों dimensions (length, breadth, height) equally expand होने के कारण volume expansion coefficient linear expansion coefficient का लगभग 3 गुना होता है (γ = 3α)। बाकी options गलत अनुपात दिखाते हैं (area expansion β = 2α होता है, volume नहीं)।"
+    },
+    {
+      "id": "phy_heat_q25",
+      "question": "Conduction (चालन) के द्वारा heat transfer कैसे होता है?",
+      "options": ["Direct contact में molecules के vibration/collision से, बिना material की bulk motion के", "Fluid particles की bulk movement से", "बिना medium के electromagnetic waves के through", "Sound waves के through"],
+      "correctIndex": 0,
+      "explanation": "Conduction में heat molecules के आपस में टकराने और vibration से एक जगह से दूसरी जगह transfer होती है, बिना material की bulk motion के — यह solids में मुख्य mode है। Fluid की bulk movement convection है, और बिना medium के transfer radiation है।"
+    },
+    {
+      "id": "phy_heat_q26",
+      "question": "Convection (संवहन) के द्वारा heat transfer मुख्यतः किस medium में होता है?",
+      "options": ["Solids में", "Liquids और gases (fluids) में fluid particles की bulk movement से", "Vacuum में", "किसी भी medium की जरूरत नहीं"],
+      "correctIndex": 1,
+      "explanation": "Convection में गर्म fluid particles खुद ऊपर उठकर या move करके heat carry करते हैं, इसलिए यह liquids और gases में होता है। Solids में particles free move नहीं कर सकते; vacuum में कोई fluid ही नहीं होता, इसलिए convection संभव नहीं।"
+    },
+    {
+      "id": "phy_heat_q27",
+      "question": "Sun की heat vacuum (जहाँ कोई medium नहीं) के through Earth तक किस process से पहुँचती है?",
+      "options": ["Conduction", "Convection", "Radiation", "Diffusion"],
+      "correctIndex": 2,
+      "explanation": "Radiation में heat electromagnetic waves के रूप में बिना किसी medium के भी travel कर सकती है, इसीलिए sun की heat vacuum से होकर earth तक पहुँचती है। Conduction और convection के लिए medium ज़रूरी है, और diffusion particles का mixing है, heat transfer mode नहीं।"
+    },
+    {
+      "id": "phy_heat_q28",
+      "question": "इनमें से कौन-सा पदार्थ heat का सबसे अच्छा (best) conductor है?",
+      "options": ["Wood", "Air", "Rubber", "Silver"],
+      "correctIndex": 3,
+      "explanation": "Silver metals में सबसे अच्छा thermal conductor होता है क्योंकि इसमें free electrons आसानी से heat carry करते हैं। Wood, air और rubber सभी poor conductors (insulators) हैं।"
+    },
+    {
+      "id": "phy_heat_q29",
+      "question": "Land breeze और sea breeze बनने का मुख्य कारण क्या है?",
+      "options": ["Land और sea के differential heating/cooling की वजह से बनने वाली convection currents", "पानी के through conduction", "चाँद से आने वाली radiation", "Sound waves"],
+      "correctIndex": 0,
+      "explanation": "दिन में land जल्दी गर्म होकर हवा को ऊपर उठाती है और सागर से ठंडी हवा उसकी जगह लेती है (sea breeze); रात में उल्टा होता है (land breeze) — यह convection currents की वजह से होता है। Conduction, radiation और sound इसका कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_heat_q30",
+      "question": "Thermos flask (vacuum flask) की double wall के बीच vacuum क्यों रखा जाता है?",
+      "options": ["Weight कम करने के लिए", "Conduction और convection के through होने वाले heat loss को रोकने के लिए (vacuum में medium नहीं होता)", "Colour अच्छा दिखाने के लिए", "Cost कम करने के लिए"],
+      "correctIndex": 1,
+      "explanation": "Vacuum में कोई medium न होने से conduction और convection दोनों possible नहीं होते, जिससे अंदर की heat बाहर नहीं जा पाती (silvered walls radiation भी कम करती हैं)। Weight, colour और cost इसके पीछे का scientific कारण नहीं हैं।"
+    }
+  ]
+}

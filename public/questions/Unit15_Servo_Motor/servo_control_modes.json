@@ -1,0 +1,368 @@
+{
+  "unit": "unit15",
+  "unitName": "Servo Motor",
+  "topic": "servo_control_modes",
+  "topicName": "Servo Control Modes - Speed, Position, Torque/Current Control",
+  "questions": [
+    {
+      "id": "u15_servo_control_modes_q1",
+      "question": "Servo motor के 'position control mode' का मुख्य उद्देश्य क्या होता है?",
+      "options": [
+        "Motor की केवल speed को constant रखना",
+        "Motor shaft को exact desired angular/linear position पर पहुँचाना और वहीं hold करना",
+        "Motor की current को zero करना",
+        "Motor को केवल एक direction में घुमाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Position control mode में motor shaft को exact target position पर पहुँचाकर वहीं accurately hold किया जाता है, जैसा CNC machines और robots में जरूरी होता है। Speed constant रखना speed mode का कार्य है, current zero करना या केवल एक direction में घुमाना position control का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q2",
+      "question": "Servo motor के 'speed control mode' में controller किस quantity को reference के रूप में लेता है?",
+      "options": [
+        "Desired position (angle)",
+        "Desired speed (RPM)",
+        "Desired torque (Nm)",
+        "Desired temperature"
+      ],
+      "correctIndex": 1,
+      "explanation": "Speed control mode में controller को reference के रूप में desired speed (RPM) दी जाती है और feedback speed से compare करके motor की speed control होती है। Position, torque और temperature इस mode की reference quantity नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_control_modes_q3",
+      "question": "Servo motor के 'torque/current control mode' में किस quantity को सीधे control किया जाता है?",
+      "options": [
+        "Shaft की angular position",
+        "Motor का armature/stator current, जो torque के समानुपाती होता है",
+        "Motor की supply frequency केवल",
+        "Encoder की resolution"
+      ],
+      "correctIndex": 1,
+      "explanation": "Torque/current control mode में motor का armature (DC motor) या stator current (AC servo) directly control किया जाता है क्योंकि torque current के समानुपाती होता है (T ∝ I)। Position control अलग mode है, supply frequency अकेली current control नहीं है, और encoder resolution feedback device की property है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q4",
+      "question": "किस application में servo motor का 'torque control mode' सबसे अधिक उपयुक्त है?",
+      "options": [
+        "Conveyor की exact positioning के लिए",
+        "Tension control applications जैसे winding/unwinding machines में",
+        "CNC machine के tool को exact point पर रोकने के लिए",
+        "Elevator की exact floor positioning के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Torque control mode winding/unwinding जैसे tension control applications में उपयुक्त है, जहाँ material पर constant tension बनाए रखना जरूरी होता है, न कि exact position या speed। Positioning applications (conveyor, CNC, elevator) के लिए position control mode अधिक उपयुक्त है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q5",
+      "question": "Position control mode में control loop की संरचना (cascade) में position loop किस loop के बाहर होता है?",
+      "options": [
+        "Speed loop के बाहर, जो current loop के बाहर होता है",
+        "Position loop सबसे inner loop होता है",
+        "Position loop और current loop एक ही होते हैं",
+        "Position control में कोई loop structure नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cascade control structure में सबसे inner loop current loop होता है, उसके बाहर speed loop, और सबसे बाहर position loop होता है, ताकि प्रत्येक loop अपनी respective quantity को control करे। Position loop inner नहीं है, position और current loop अलग-अलग होते हैं, और यह structure हर servo position control में मौजूद होता है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q6",
+      "question": "Servo motor में position control के लिए feedback किस device से लिया जाता है?",
+      "options": [
+        "Thermocouple",
+        "Encoder या resolver जो shaft की exact angular position बताते हैं",
+        "Pressure sensor",
+        "Flow meter"
+      ],
+      "correctIndex": 1,
+      "explanation": "Position feedback के लिए encoder (incremental/absolute) या resolver का उपयोग होता है, जो shaft की exact angular position की जानकारी controller को देते हैं। Thermocouple, pressure sensor और flow meter position feedback devices नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_control_modes_q7",
+      "question": "Servo motor के speed control mode में यदि load का effect ignore कर दिया जाए तो output पर क्या असर पड़ता है?",
+      "options": [
+        "Speed हमेशा exact reference पर रहेगी, कोई फर्क नहीं",
+        "Load बदलने पर speed में droop आ सकता है यदि compensation न हो",
+        "Motor स्वतः बंद हो जाएगा",
+        "Encoder काम करना बंद कर देगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि closed loop compensation properly tuned न हो या load effect ignore हो, तो load बदलने पर actual speed में droop (गिरावट) आ सकती है। Speed हमेशा exact नहीं रहती अगर proper compensation न हो, motor स्वतः बंद नहीं होता और encoder काम करना बंद नहीं करता।"
+    },
+    {
+      "id": "u15_servo_control_modes_q8",
+      "question": "Torque control mode में यदि reference torque बहुत अधिक set कर दिया जाए और load कम हो, तो क्या हो सकता है?",
+      "options": [
+        "Motor की speed uncontrolled रूप से बढ़ सकती है (runaway की संभावना)",
+        "Motor बिल्कुल स्थिर रहेगा",
+        "Feedback signal reverse हो जाएगा",
+        "Motor की current zero हो जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "Torque control mode में speed को सीधे control नहीं किया जाता, इसलिए अगर load कम हो और torque reference अधिक हो, तो motor की speed uncontrolled रूप से बढ़ सकती है, इसीलिए speed limit safety feature जरूरी होता है। Motor स्थिर नहीं रहेगा, feedback reverse नहीं होता और current zero नहीं होती।"
+    },
+    {
+      "id": "u15_servo_control_modes_q9",
+      "question": "CNC machine के X, Y, Z axis movement के लिए servo motor का कौन सा control mode उपयोग होता है?",
+      "options": [
+        "Torque control mode",
+        "Position control mode",
+        "Open loop control mode",
+        "Manual control mode केवल"
+      ],
+      "correctIndex": 1,
+      "explanation": "CNC machine में tool को exact coordinates पर पहुँचाने के लिए position control mode का उपयोग होता है, जिसमें accurate positioning feedback जरूरी है। Torque control tension applications के लिए है, open loop precision नहीं देता और manual control automated CNC operation में उपयुक्त नहीं है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q10",
+      "question": "Servo motor के speed control mode का उपयोग किस typical application में होता है?",
+      "options": [
+        "Winding tension control",
+        "Conveyor belt की constant speed maintain करना",
+        "Robot arm को exact angle पर रोकना",
+        "Load पर exact constant force लगाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Speed control mode का उपयोग उन applications में होता है जहाँ constant speed maintain करना जरूरी है, जैसे conveyor belt drives। Winding tension torque control का उदाहरण है, exact angle पर रोकना position control है, और constant force लगाना भी torque control का उदाहरण है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q11",
+      "question": "Servo drive में 'position command' किस रूप में दिया जा सकता है?",
+      "options": [
+        "केवल voice command से",
+        "Pulse train, analog voltage या digital communication (जैसे fieldbus) के माध्यम से",
+        "केवल manual switch से",
+        "केवल temperature sensor से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Position command modern servo drives में pulse train (step/direction), analog voltage signal, या digital fieldbus communication (EtherCAT, CANopen आदि) के माध्यम से दिया जा सकता है। Voice command, manual switch और temperature sensor position command देने के मानक तरीके नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_control_modes_q12",
+      "question": "Position control mode में 'following error' (या position error) किसे कहते हैं?",
+      "options": [
+        "Motor की rated voltage",
+        "Commanded position और actual feedback position के बीच का instantaneous difference",
+        "Motor की winding resistance",
+        "Feedback cable की length"
+      ],
+      "correctIndex": 1,
+      "explanation": "Following error commanded position और actual (feedback) position के बीच किसी भी instant पर मौजूद difference है, जो positioning accuracy को दर्शाता है। Rated voltage, winding resistance और cable length इससे संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_control_modes_q13",
+      "question": "Torque control mode में torque command सामान्यतः किस signal के रूप में दिया जाता है?",
+      "options": [
+        "Analog voltage signal (जैसे 0-10V या ±10V) जो desired torque के proportional होता है",
+        "केवल mechanical lever से",
+        "केवल pulse train से जो position दर्शाता है",
+        "केवल audio signal से"
+      ],
+      "correctIndex": 0,
+      "explanation": "Torque control mode में torque command सामान्यतः analog voltage (जैसे ±10V) के रूप में दिया जाता है, जो desired torque value के proportional होता है। Mechanical lever, pulse train (जो position के लिए है) और audio signal टॉर्क कमांड के मानक तरीके नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_control_modes_q14",
+      "question": "Servo motor के तीनों control modes (position, speed, torque) में सबसे inner (fastest) loop कौन सा common होता है?",
+      "options": [
+        "Position loop",
+        "Speed loop",
+        "Current (torque) loop",
+        "Communication loop"
+      ],
+      "correctIndex": 2,
+      "explanation": "तीनों modes में current (torque) loop सबसे inner और fastest loop होता है, क्योंकि speed और position loop भी अंततः current loop के through ही motor को control करते हैं। Position और speed loop बाहर होते हैं, और 'communication loop' कोई standard control loop नहीं है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q15",
+      "question": "Robot arm के joint को precise angle पर रोकने के लिए कौन सा control mode उपयुक्त है?",
+      "options": [
+        "Torque control mode केवल",
+        "Position control mode",
+        "Speed control mode केवल",
+        "कोई भी mode उपयुक्त नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Robot arm के joint को exact angle पर रोकने के लिए position control mode उपयुक्त है क्योंकि इसमें accurate positioning feedback के आधार पर control होता है। Torque और speed control mode स्वयं exact positioning नहीं देते।"
+    },
+    {
+      "id": "u15_servo_control_modes_q16",
+      "question": "Servo motor में 'hybrid control' (जैसे speed से position mode में switch) किस स्थिति में उपयोग होता है?",
+      "options": [
+        "जब application में अलग-अलग phases पर अलग control quantity जरूरी हो, जैसे पहले speed से approach फिर position पर stop",
+        "जब motor को कभी चलाना ही न हो",
+        "जब feedback device हटाना हो",
+        "जब motor की winding बदलनी हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "कुछ applications में motor पहले speed control में तेज़ी से approach करता है और फिर target के पास आकर position control mode में switch होकर accurately रुकता है। Motor न चलाना, feedback हटाना या winding बदलना hybrid control का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q17",
+      "question": "Position control mode में overshoot होने पर क्या समस्या हो सकती है?",
+      "options": [
+        "Motor हमेशा exact target पर रुकेगा, कोई समस्या नहीं",
+        "Tool/load target position से आगे जाकर mechanical damage या accuracy loss कर सकता है",
+        "Feedback device automatically ठीक हो जाएगा",
+        "Motor की current हमेशा zero हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Position overshoot होने पर tool या load target position से आगे निकल सकता है, जिससे precision machining में error या mechanical collision/damage हो सकता है। यह exact stopping नहीं दर्शाता, feedback device automatically ठीक नहीं होता और current zero नहीं होती।"
+    },
+    {
+      "id": "u15_servo_control_modes_q18",
+      "question": "Speed control mode में 'speed limit' parameter किस लिए set किया जाता है?",
+      "options": [
+        "Motor को maximum permissible speed से ऊपर जाने से रोकने के लिए, safety और mechanical limit के अनुसार",
+        "Motor की winding बदलने के लिए",
+        "Feedback resolution बढ़ाने के लिए",
+        "Motor की body ठंडी करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Speed limit parameter motor को उसकी mechanical/electrical maximum permissible speed से ऊपर जाने से रोकता है, जिससे safety बनी रहती है। Winding बदलना, feedback resolution बढ़ाना और body cooling इससे असंबंधित हैं।"
+    },
+    {
+      "id": "u15_servo_control_modes_q19",
+      "question": "Torque control mode में torque limit को exceed होने से रोकने के लिए क्या किया जाता है?",
+      "options": [
+        "Current limit set किया जाता है क्योंकि torque current के proportional होता है",
+        "Feedback device disconnect किया जाता है",
+        "Motor की winding बदली जाती है",
+        "Encoder की resolution घटाई जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूँकि torque current के proportional होता है (T ∝ I), इसलिए current limit set करके torque को एक safe maximum value तक सीमित किया जाता है। Feedback disconnect करना, winding बदलना या encoder resolution घटाना torque limiting के तरीके नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_control_modes_q20",
+      "question": "Servo motor के position control mode में 'homing' operation का उद्देश्य क्या है?",
+      "options": [
+        "Motor की winding को साफ करना",
+        "Machine को एक known reference position पर लाकर position counting को reset/calibrate करना",
+        "Motor की current permanently बढ़ाना",
+        "Feedback cable बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Homing operation से machine axis को एक known reference (home) position पर लाया जाता है, ताकि position counting सही तरीके से reset/calibrate हो सके, विशेषकर incremental encoder वाले systems में। यह winding साफ करने, current permanently बढ़ाने या cable बदलने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q21",
+      "question": "किस control mode में motor की output shaft पर लगने वाला load torque सीधे controller को known/set किया जाता है, न कि measure?",
+      "options": [
+        "Position control mode",
+        "Speed control mode",
+        "Torque control mode में torque command सेट होती है, actual load torque feedback से measure होता है न कि set",
+        "इनमें से कोई नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Torque control mode में controller को desired torque (command) दिया जाता है, जबकि actual output load torque को current feedback से indirectly measure किया जाता है — motor उतना current देने की कोशिश करता है जो command torque के अनुरूप हो। Position और speed control mode में control quantity torque नहीं, position या speed होती है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q22",
+      "question": "Servo control modes में से किस mode में सबसे कम dynamic response time अपेक्षित होता है (fastest loop)?",
+      "options": [
+        "Position control loop",
+        "Speed control loop",
+        "Current/torque control loop",
+        "तीनों का response time हमेशा बराबर होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Current/torque loop सबसे fast dynamic response देता है क्योंकि यह सबसे inner loop होता है और electrical time constant सबसे कम होता है; speed loop उससे धीमा और position loop सबसे धीमा (outer loop) होता है। तीनों का response time बराबर नहीं होता।"
+    },
+    {
+      "id": "u15_servo_control_modes_q23",
+      "question": "एक pick-and-place robot में gripper को exact जगह पर पकड़ने और रखने के लिए मुख्यतः कौन सा control mode उपयोग होता है?",
+      "options": [
+        "Torque control mode",
+        "Position control mode",
+        "Speed control mode केवल",
+        "Open loop control केवल"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pick-and-place robot में gripper को exact coordinates पर पहुँचाना जरूरी होता है, इसलिए position control mode उपयोग होता है जो accurate positioning feedback पर आधारित होता है। Torque और speed control अकेले exact positioning नहीं देते, और open loop precision नहीं देता।"
+    },
+    {
+      "id": "u15_servo_control_modes_q24",
+      "question": "Servo motor में 'mode switching' के दौरान (जैसे speed से position) किस बात का ध्यान रखना जरूरी है?",
+      "options": [
+        "Mode switch के समय bumpless transfer हो ताकि sudden jerk या instability न आए",
+        "Feedback device को हमेशा disconnect रखना",
+        "Motor की winding बदल देना",
+        "Current limit को हमेशा zero रखना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mode switching के समय bumpless transfer सुनिश्चित करना जरूरी है ताकि control variables में sudden discontinuity न आए, जिससे mechanical jerk या instability से बचा जा सके। Feedback disconnect रखना, winding बदलना या current limit zero रखना mode switching की सही practice नहीं है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q25",
+      "question": "Servo motor के winding/unwinding tension control application में यदि केवल position control mode उपयोग किया जाए तो क्या समस्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी, यह सबसे उपयुक्त तरीका है",
+        "Material पर tension exact control नहीं हो पाएगा क्योंकि position control tension को directly नहीं manage करता",
+        "Motor स्वतः बंद हो जाएगा",
+        "Feedback device काम करना बंद कर देगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Position control mode shaft की exact position पर focus करता है, जबकि tension control के लिए torque को नियंत्रित करना जरूरी है ताकि material पर consistent tension बना रहे; इसलिए position control tension applications के लिए उपयुक्त नहीं है। Motor बंद नहीं होता और feedback device काम करना बंद नहीं करता।"
+    },
+    {
+      "id": "u15_servo_control_modes_q26",
+      "question": "Servo drive में external analog input से torque command देने पर, यदि input 0V हो तो torque command क्या होगा (bipolar ±10V configuration में)?",
+      "options": [
+        "Maximum positive torque",
+        "Zero torque command",
+        "Maximum negative torque",
+        "Torque command अनियंत्रित (undefined) रहेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bipolar ±10V analog torque command configuration में 0V इनपुट का अर्थ है zero torque command, जबकि +10V maximum positive और -10V maximum negative torque को दर्शाता है। यह undefined नहीं रहता क्योंकि यह एक linear mapping है।"
+    },
+    {
+      "id": "u15_servo_control_modes_q27",
+      "question": "Servo motor के speed control mode में यदि reference speed को अचानक (step change) बदल दिया जाए, तो अच्छी tuning के साथ system कैसा response देगा?",
+      "options": [
+        "System हमेशा unstable हो जाएगा",
+        "System जल्दी और बिना अधिक overshoot के नई speed पर settle होगा",
+        "System कभी भी नई speed तक नहीं पहुँचेगा",
+        "Feedback signal पूरी तरह गायब हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "अच्छी tuning (उचित P, I, D gains) के साथ system step change के बाद जल्दी और minimum overshoot के साथ नई reference speed पर settle होता है। Poor tuning में ही unstable response या oscillation आता है, system नई speed तक जरूर पहुँचता है और feedback गायब नहीं होता।"
+    },
+    {
+      "id": "u15_servo_control_modes_q28",
+      "question": "Position control mode में 'in-position window' parameter किसे दर्शाता है?",
+      "options": [
+        "Motor की rated current",
+        "वह tolerance range जिसके अंदर actual position आने पर 'positioning complete' signal मिलता है",
+        "Feedback cable की मोटाई",
+        "Motor की body का तापमान"
+      ],
+      "correctIndex": 1,
+      "explanation": "In-position window एक tolerance band है, जिसके भीतर actual position पहुँचने पर drive 'positioning complete/in-position' signal output करता है, ताकि अगला operation शुरू हो सके। Rated current, cable मोटाई और body temperature इससे असंबंधित हैं।"
+    },
+    {
+      "id": "u15_servo_control_modes_q29",
+      "question": "Servo motor के torque control mode में यदि motor को externally block (jam) कर दिया जाए, तो सामान्यतः क्या होगा (safe limits के भीतर)?",
+      "options": [
+        "Motor commanded torque के अनुसार current देता रहेगा, पर shaft नहीं घूमेगा (locked rotor जैसी स्थिति)",
+        "Motor turn करना बंद करके पूरी तरह off हो जाएगा तुरंत",
+        "Feedback device automatically टूट जाएगा",
+        "Current हमेशा zero हो जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "Torque control mode में motor commanded torque के अनुरूप current देने की कोशिश करता है; यदि shaft externally blocked है तो motor locked rotor की स्थिति में torque apply करता रहेगा जब तक protection trip न हो। Motor स्वतः off नहीं होता (जब तक protection सक्रिय न हो), feedback device टूटता नहीं और current zero नहीं होती।"
+    },
+    {
+      "id": "u15_servo_control_modes_q30",
+      "question": "Servo motor selection में control mode चुनते समय सबसे महत्वपूर्ण factor क्या होता है?",
+      "options": [
+        "Motor का रंग",
+        "Application की requirement — exact position चाहिए, constant speed चाहिए, या constant torque/tension चाहिए",
+        "Motor की supply cable की length",
+        "Operator की पसंद बिना application requirement देखे"
+      ],
+      "correctIndex": 1,
+      "explanation": "Control mode selection application की actual requirement पर निर्भर करता है — यदि exact positioning चाहिए तो position mode, constant speed के लिए speed mode, और constant torque/tension के लिए torque mode उपयुक्त है। Motor का रंग, cable length या बिना requirement देखे operator की पसंद उचित selection criteria नहीं हैं।"
+    }
+  ]
+}

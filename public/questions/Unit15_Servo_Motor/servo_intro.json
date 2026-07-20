@@ -1,0 +1,368 @@
+{
+  "unit": "unit15",
+  "unitName": "Servo Motor",
+  "topic": "servo_intro",
+  "topicName": "Servo Motor - Introduction, AC/DC Servo, Characteristics & Applications",
+  "questions": [
+    {
+      "id": "u15_servo_intro_q1",
+      "question": "Servo Motor का मुख्य उद्देश्य किसी system में क्या नियंत्रित करना होता है?",
+      "options": [
+        "केवल voltage को constant रखना",
+        "position, velocity और acceleration को accurately control करना",
+        "केवल frequency को बढ़ाना",
+        "केवल power factor को सुधारना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo Motor एक closed-loop feedback system के साथ काम करके angular या linear position, velocity और acceleration को accurately control करता है। Option A सिर्फ voltage regulator का काम है, C frequency converter का, और D power factor correction का — ये servo का उद्देश्य नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q2",
+      "question": "एक सामान्य servo system में feedback device (जैसे encoder/resolver) का मुख्य कार्य क्या होता है?",
+      "options": [
+        "motor को supply देना",
+        "actual position/speed की जानकारी controller को वापस भेजना",
+        "motor की winding को ठंडा करना",
+        "input AC को DC में बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Feedback device rotor की actual position या speed को माप कर controller को वापस भेजता है, जिससे error की गणना होती है। Option A drive/amplifier करता है, C cooling system का काम है, और D rectifier का कार्य है।"
+    },
+    {
+      "id": "u15_servo_intro_q3",
+      "question": "AC servo motor की तुलना में DC servo motor की एक प्रमुख विशेषता क्या है?",
+      "options": [
+        "इसमें commutator और brushes के कारण maintenance अधिक होती है",
+        "यह कभी भी torque उत्पन्न नहीं करता",
+        "यह केवल three-phase supply पर चलता है",
+        "इसमें कोई magnetic field नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "पारंपरिक DC servo motor में commutator और brushes होते हैं जिससे wear-and-tear और maintenance बढ़ती है। Option B गलत है क्योंकि यह torque देता है, C गलत है क्योंकि DC motor DC supply पर चलता है, और D गलत है क्योंकि field आवश्यक है।"
+    },
+    {
+      "id": "u15_servo_intro_q4",
+      "question": "AC servo motor सामान्यतः किस प्रकार का होता है?",
+      "options": [
+        "केवल single-phase induction motor",
+        "अधिकतर two-phase induction या synchronous (PMSM/BLDC) type",
+        "केवल universal motor",
+        "केवल series wound DC motor"
+      ],
+      "correctIndex": 1,
+      "explanation": "AC servo motors आमतौर पर two-phase induction type (control winding + reference winding) या आधुनिक अनुप्रयोगों में permanent magnet synchronous (PMSM/BLDC) type होते हैं। Option A अधूरा है, C universal motor servo के लिए उपयुक्त नहीं, और D DC motor है।"
+    },
+    {
+      "id": "u15_servo_intro_q5",
+      "question": "AC servo motor के rotor को हल्का और कम inertia वाला क्यों बनाया जाता है?",
+      "options": [
+        "ताकि उसकी कीमत बढ़े",
+        "ताकि तेज़ acceleration और अच्छा dynamic response मिले",
+        "ताकि वह अधिक गर्म हो",
+        "ताकि उसे supply की आवश्यकता न पड़े"
+      ],
+      "correctIndex": 1,
+      "explanation": "कम rotor inertia से motor तेज़ी से accelerate/decelerate कर सकता है, जिससे fast और accurate dynamic response मिलता है। Option A, C, D तकनीकी रूप से गलत हैं; कम inertia का उद्देश्य performance सुधारना है।"
+    },
+    {
+      "id": "u15_servo_intro_q6",
+      "question": "एक अच्छे servo motor की torque-speed characteristic आदर्श रूप से कैसी होनी चाहिए?",
+      "options": [
+        "linear और negative slope वाली (speed बढ़ने पर torque घटे)",
+        "पूरी तरह positive slope वाली",
+        "constant torque पर infinite speed",
+        "torque और speed में कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Servo motor की torque-speed characteristic linear और negative slope वाली होनी चाहिए ताकि stable control और अच्छा damping मिले। Positive slope (option B) instability देता है, C अव्यावहारिक है, और D गलत है।"
+    },
+    {
+      "id": "u15_servo_intro_q7",
+      "question": "AC servo motor में rotor resistance ऊँची रखने का मुख्य कारण क्या है?",
+      "options": [
+        "efficiency बढ़ाने के लिए",
+        "linear torque-speed characteristic और positive damping प्राप्त करने के लिए",
+        "motor का आकार बढ़ाने के लिए",
+        "commutation सुधारने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "उच्च rotor resistance से torque-speed वक्र linear और negative slope वाला बनता है जिससे positive damping मिलता है और system stable रहता है। Option A गलत है (resistance से loss बढ़ता है), C अप्रासंगिक, और D DC motor से संबंधित है।"
+    },
+    {
+      "id": "u15_servo_intro_q8",
+      "question": "निम्न में से कौन-सा servo motor का एक विशिष्ट औद्योगिक अनुप्रयोग है?",
+      "options": [
+        "घरेलू ceiling fan चलाना",
+        "CNC machine के axis को precise position पर ले जाना",
+        "साधारण water pump चलाना",
+        "domestic tube light जलाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "CNC machines में servo motor tool/axis को precise position पर ले जाने के लिए उपयोग होता है क्योंकि यहाँ accuracy महत्वपूर्ण है। Option A, C में सामान्य induction motor पर्याप्त है और D lighting load है जिसका motor से संबंध नहीं।"
+    },
+    {
+      "id": "u15_servo_intro_q9",
+      "question": "Robotics में servo motor का उपयोग मुख्यतः किसलिए होता है?",
+      "options": [
+        "केवल decoration के लिए",
+        "joints और arms की precise angular position नियंत्रित करने के लिए",
+        "battery को charge करने के लिए",
+        "केवल sound उत्पन्न करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Robotic arms और joints को exact angle पर घुमाने के लिए servo motor का उपयोग होता है क्योंकि यह position feedback के साथ काम करता है। बाकी विकल्प servo के कार्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q10",
+      "question": "DC servo motor में armature-controlled विधि की तुलना में field-controlled विधि की एक कमी क्या है?",
+      "options": [
+        "इसमें response आमतौर पर धीमा होता है क्योंकि field circuit की time constant अधिक होती है",
+        "यह कभी काम ही नहीं करती",
+        "इसमें feedback की आवश्यकता नहीं होती",
+        "इसमें torque उत्पन्न नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Field-controlled DC servo motor में field winding की inductance/time constant अधिक होने से response धीमा होता है, इसलिए armature control अधिक प्रचलित है। Option B, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q11",
+      "question": "Servo motor और साधारण induction motor में मुख्य अंतर क्या है?",
+      "options": [
+        "servo motor में सटीक position/speed control के लिए feedback और matching drive होता है",
+        "servo motor कभी घूमता ही नहीं",
+        "induction motor में rotor नहीं होता",
+        "दोनों में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Servo motor को dedicated drive और feedback के साथ चलाया जाता है ताकि precise position/speed control हो, जबकि साधारण induction motor open-loop चलता है। Option B, C, D स्पष्ट रूप से गलत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q12",
+      "question": "AC servo motor के two-phase induction type में 'reference winding' और 'control winding' के बीच phase difference सामान्यतः कितना रखा जाता है?",
+      "options": [
+        "0°",
+        "90°",
+        "180°",
+        "45°"
+      ],
+      "correctIndex": 1,
+      "explanation": "Two-phase AC servo motor में rotating magnetic field बनाने के लिए reference और control winding के बीच 90° का phase difference रखा जाता है। 0° या 180° (option A, C) rotating field नहीं देते और 45° मानक नहीं है।"
+    },
+    {
+      "id": "u15_servo_intro_q13",
+      "question": "AC servo motor में control winding पर मिलने वाले voltage को घटाने से मोटर के व्यवहार पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "torque और speed घट जाती है",
+        "torque बढ़ जाती है",
+        "मोटर बिल्कुल प्रभावित नहीं होती",
+        "मोटर उल्टी दिशा में overspeed करती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Control winding का voltage घटाने पर rotating field कमजोर होता है, जिससे उत्पन्न torque और speed कम हो जाती है — यही servo control का आधार है। Option B उलटा है, C गलत है, D निराधार है।"
+    },
+    {
+      "id": "u15_servo_intro_q14",
+      "question": "BLDC (Brushless DC) servo motor को brushed DC servo पर क्यों प्राथमिकता दी जाती है?",
+      "options": [
+        "क्योंकि इसमें brushes/commutator नहीं होते, जिससे maintenance कम और reliability अधिक होती है",
+        "क्योंकि यह अधिक शोर करता है",
+        "क्योंकि इसे supply की आवश्यकता नहीं होती",
+        "क्योंकि इसमें कोई electronic control नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "BLDC servo में electronic commutation होने से brushes/commutator की जरूरत नहीं पड़ती, इसलिए maintenance कम और life व reliability अधिक होती है। Option B, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q15",
+      "question": "Servo motor को अक्सर 'high torque-to-inertia ratio' वाला बनाया जाता है क्योंकि—",
+      "options": [
+        "इससे मोटर धीमा response देता है",
+        "इससे तेज़ acceleration और सटीक positioning संभव होती है",
+        "इससे मोटर की कीमत घटती है",
+        "इससे feedback की जरूरत खत्म हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "High torque-to-inertia ratio से मोटर कम समय में तेज़ी से गति बदल सकता है, जिससे fast dynamic response और accurate positioning मिलती है। Option A उलटा है, C अप्रासंगिक, और D गलत है।"
+    },
+    {
+      "id": "u15_servo_intro_q16",
+      "question": "एक servo motor की nameplate पर 'rated torque' 3 N·m और 'peak torque' 9 N·m लिखा है। Peak torque का अर्थ क्या है?",
+      "options": [
+        "मोटर हमेशा 9 N·m देता है",
+        "मोटर थोड़े समय (short duration) के लिए 9 N·m तक दे सकता है, continuous नहीं",
+        "मोटर कभी 9 N·m नहीं दे सकता",
+        "rated और peak torque हमेशा बराबर होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Peak torque वह अधिकतम torque है जो मोटर केवल थोड़े समय (जैसे acceleration के दौरान) दे सकता है; continuous रूप से rated torque (3 N·m) ही सुरक्षित है। Option A, C, D तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q17",
+      "question": "निम्न में से कौन-सा factor AC servo motor को low inertia देने में योगदान करता है?",
+      "options": [
+        "बहुत भारी solid rotor",
+        "पतला, लंबा (drag-cup या hollow) rotor design",
+        "बहुत बड़ा commutator",
+        "अधिक संख्या में brushes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Drag-cup या पतले लंबे rotor design से rotor का mass और inertia कम होता है, जिससे fast response मिलता है। Option A inertia बढ़ाता है, C और D AC servo (जो brushless है) में लागू नहीं होते।"
+    },
+    {
+      "id": "u15_servo_intro_q18",
+      "question": "Servo motor system में 'servo' शब्द मूल रूप से किस लैटिन शब्द से आया है और उसका आशय क्या है?",
+      "options": [
+        "'servus' अर्थात 'slave/servant' — जो command का अनुसरण करता है",
+        "'servo' अर्थात 'तेज़ गति'",
+        "'servo' अर्थात 'बिना control'",
+        "'servo' अर्थात 'high voltage'"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Servo' लैटिन 'servus' (servant/slave) से बना है, जो दर्शाता है कि मोटर command signal का पालन करता है। बाकी विकल्प व्युत्पत्ति और अर्थ दोनों की दृष्टि से गलत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q19",
+      "question": "एक servo motor को 5000 RPM पर 2 N·m torque उत्पन्न करते हुए output mechanical power लगभग कितनी होगी? (P = 2πNT/60)",
+      "options": [
+        "लगभग 1047 W",
+        "लगभग 105 W",
+        "लगभग 10470 W",
+        "लगभग 52 W"
+      ],
+      "correctIndex": 0,
+      "explanation": "P = 2πNT/60 = 2 × 3.1416 × 5000 × 2 / 60 ≈ 1047 W। Option B और D दशमलव स्थान की गलती हैं और C 10 गुना बड़ा गलत मान है।"
+    },
+    {
+      "id": "u15_servo_intro_q20",
+      "question": "AC servo motor का उपयोग low power instrument servo applications में क्यों उपयुक्त माना जाता है?",
+      "options": [
+        "क्योंकि इसमें brushes नहीं होते और यह smooth, low-noise operation देता है",
+        "क्योंकि यह भारी और धीमा होता है",
+        "क्योंकि इसमें बहुत अधिक sparking होती है",
+        "क्योंकि इसे feedback की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "AC servo motor brushless होता है, इसलिए sparking नहीं, कम noise और smooth operation मिलता है — यह instrument-grade servo के लिए उपयुक्त है। Option B, C, D इसके गुणों के विपरीत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q21",
+      "question": "DC servo motor में permanent magnet field का उपयोग करने का एक लाभ क्या है?",
+      "options": [
+        "field supply की आवश्यकता समाप्त हो जाती है और efficiency बेहतर होती है",
+        "मोटर कभी घूमता नहीं",
+        "torque शून्य हो जाता है",
+        "इसमें armature की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Permanent magnet field DC servo में अलग से field excitation supply की जरूरत नहीं पड़ती, जिससे copper loss कम और efficiency बेहतर होती है। Option B, C, D तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q22",
+      "question": "Servo motor की 'holding torque' किसे कहते हैं?",
+      "options": [
+        "मोटर के rest (stationary) रहते हुए किसी बाहरी load को स्थिर स्थिति में बनाए रखने वाला torque",
+        "मोटर की अधिकतम speed",
+        "मोटर का starting current",
+        "मोटर की winding resistance"
+      ],
+      "correctIndex": 0,
+      "explanation": "Holding torque वह torque है जो मोटर को किसी commanded position पर स्थिर रखते हुए बाहरी बल का प्रतिरोध करता है। Option B speed है, C current है, D resistance है — इनका holding torque से सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u15_servo_intro_q23",
+      "question": "निम्न में से कौन-सा servo motor का अनुप्रयोग नहीं है?",
+      "options": [
+        "antenna positioning system",
+        "camera auto-focus mechanism",
+        "domestic incandescent bulb की चमक",
+        "printer के print-head की movement"
+      ],
+      "correctIndex": 2,
+      "explanation": "Antenna positioning, camera focus और printer head — सभी में precise motion control के लिए servo का उपयोग होता है। Incandescent bulb की चमक विशुद्ध resistive lighting है, इसमें servo motor का कोई कार्य नहीं।"
+    },
+    {
+      "id": "u15_servo_intro_q24",
+      "question": "AC servo motor की speed-torque characteristic को नियंत्रित करने के लिए सामान्यतः किस winding का voltage बदला जाता है?",
+      "options": [
+        "reference (fixed) winding",
+        "control winding",
+        "damper winding",
+        "field winding"
+      ],
+      "correctIndex": 1,
+      "explanation": "AC servo motor में reference winding constant voltage पर रहती है और control winding का voltage (amplitude/phase) बदल कर torque व speed नियंत्रित किया जाता है। Option A fixed रहती है, C और D two-phase AC servo के standard control element नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q25",
+      "question": "किसी servo system में 'bandwidth' अधिक होने का क्या अर्थ है?",
+      "options": [
+        "system तेज़ी से बदलते command signals का अनुसरण कर सकता है",
+        "system बहुत धीमा है",
+        "system केवल DC signal पर काम करता है",
+        "system में कोई feedback नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "उच्च bandwidth का अर्थ है कि servo तेज़ी से बदलते input/command को accurately follow कर सकता है, यानी fast response। Option B उलटा है, C और D bandwidth की परिभाषा से असंबंधित हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q26",
+      "question": "Permanent Magnet Synchronous Motor (PMSM) आधारित AC servo में rotor position सटीकता के लिए क्या आवश्यक होता है?",
+      "options": [
+        "rotor position feedback (encoder/resolver) के अनुसार electronic commutation",
+        "mechanical commutator और carbon brushes",
+        "कोई भी feedback नहीं",
+        "केवल manual switching"
+      ],
+      "correctIndex": 0,
+      "explanation": "PMSM servo में stator currents को rotor position (encoder/resolver से प्राप्त) के अनुसार electronically commutate किया जाता है ताकि सही torque बने। Option B brushed motor की विशेषता है, C और D PMSM operation के लिए अपर्याप्त हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q27",
+      "question": "Servo motor को चुनते समय 'inertia matching' का ध्यान क्यों रखा जाता है?",
+      "options": [
+        "load inertia और motor inertia का अनुपात उचित रखने से stable और responsive control मिलता है",
+        "इससे मोटर की कीमत तय होती है",
+        "इससे supply frequency बदल जाती है",
+        "इसका performance से कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि load inertia मोटर की inertia की तुलना में बहुत अधिक हो तो control अस्थिर और oscillatory हो सकता है; उचित inertia matching से stable, responsive performance मिलती है। Option B, C, D तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q28",
+      "question": "एक brushed DC servo motor में back-EMF का महत्व क्या है?",
+      "options": [
+        "यह speed के समानुपाती होता है और speed control व feedback में उपयोगी है",
+        "यह हमेशा शून्य रहता है",
+        "यह supply voltage को नष्ट कर देता है",
+        "इसका speed से कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "DC servo motor में back-EMF (Eb ∝ N) speed के समानुपाती होती है, इसलिए इसे मापकर speed का अनुमान/control किया जा सकता है। Option B, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q29",
+      "question": "Servo motor के लिए 'cogging torque' कम रखना क्यों वांछनीय है?",
+      "options": [
+        "ताकि rotor smooth घूमे और low-speed पर jerky motion न हो",
+        "ताकि मोटर बिल्कुल न घूमे",
+        "ताकि efficiency शून्य हो जाए",
+        "ताकि feedback की आवश्यकता समाप्त हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cogging torque कम होने से rotor की गति smooth रहती है और विशेषकर low speed पर jerky/uneven movement नहीं होती, जो precision applications के लिए महत्वपूर्ण है। Option B, C, D निराधार हैं।"
+    },
+    {
+      "id": "u15_servo_intro_q30",
+      "question": "किसी servo motor की efficiency 80% है और वह 1000 W electrical input लेता है। output mechanical power लगभग कितनी होगी?",
+      "options": [
+        "1250 W",
+        "800 W",
+        "200 W",
+        "1000 W"
+      ],
+      "correctIndex": 1,
+      "explanation": "Efficiency = output/input, इसलिए output = 0.80 × 1000 = 800 W। Option A input को output मानकर उल्टा गणना है, C loss (200 W) है output नहीं, और D input के बराबर है जो efficiency<100% में असंभव है।"
+    }
+  ]
+}

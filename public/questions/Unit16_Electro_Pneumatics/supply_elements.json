@@ -1,0 +1,368 @@
+{
+  "unit": "unit16",
+  "unitName": "Electro Pneumatics",
+  "topic": "supply_elements",
+  "topicName": "Supply Elements - Compressor, Reservoir, Pressure Regulating Valve & FRL Unit",
+  "questions": [
+    {
+      "id": "u16_supply_elements_q1",
+      "question": "Pneumatic system में 'supply elements' शब्द किन components को मिलाकर बनता है?",
+      "options": [
+        "केवल actuators और cylinders",
+        "Compressor, receiver (reservoir), pressure regulating valve और FRL unit जैसे components जो साफ, dry और सही pressure की air उपलब्ध कराते हैं",
+        "केवल sensors और switches",
+        "केवल electrical wiring components"
+      ],
+      "correctIndex": 1,
+      "explanation": "Supply elements वे components हैं जो air को generate, store, clean और regulate करके control व actuating elements तक पहुँचाने के लिए तैयार करते हैं, जिनमें compressor, receiver, FRL unit शामिल हैं। Actuators output elements हैं, sensors input elements हैं, और electrical wiring अलग category है।"
+    },
+    {
+      "id": "u16_supply_elements_q2",
+      "question": "Reciprocating compressor में suction valve और delivery valve क्रमशः कब खुलते हैं?",
+      "options": [
+        "Suction valve piston के downward stroke पर खुलता है और delivery valve upward (compression) stroke पर खुलता है",
+        "दोनों हमेशा एक साथ खुले रहते हैं",
+        "Suction valve upward stroke पर और delivery valve downward stroke पर खुलता है",
+        "दोनों हमेशा बंद रहते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Piston के नीचे जाने पर cylinder में vacuum बनता है जिससे suction valve खुलकर air अंदर आती है, और piston के ऊपर जाने पर air compress होकर delivery valve से बाहर निकलती है। बाकी options actual working sequence के विपरीत हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q3",
+      "question": "Air reservoir (receiver tank) का size design करते समय मुख्यतः किस factor को consider किया जाता है?",
+      "options": [
+        "Tank का रंग",
+        "Compressor की FAD capacity, peak demand और acceptable pressure fluctuation",
+        "Tank बनाने वाली company का नाम",
+        "केवल tank की height"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reservoir sizing में compressor की delivery capacity, system की peak air demand और allowable pressure variation को ध्यान में रखा जाता है ताकि पर्याप्त buffer capacity मिल सके। रंग, company नाम, या केवल height जैसे factors technical design से असंबंधित हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q4",
+      "question": "Pressure regulating valve (pressure reducing valve) FRL unit में किस स्थान पर लगाई जाती है?",
+      "options": [
+        "Filter से पहले",
+        "Filter के बाद और lubricator से पहले",
+        "Lubricator के बाद, सबसे अंत में",
+        "Actuator के अंदर"
+      ],
+      "correctIndex": 1,
+      "explanation": "FRL unit में air flow की दिशा में सबसे पहले Filter आता है (contaminants हटाने हेतु), उसके बाद Regulator (downstream pressure को constant set value पर बनाए रखने हेतु), और अंत में Lubricator आता है। इसलिए regulator filter के बाद और lubricator से पहले होता है।"
+    },
+    {
+      "id": "u16_supply_elements_q5",
+      "question": "Pressure regulating valve का मुख्य कार्य क्या है?",
+      "options": [
+        "Air को filter करना",
+        "Downstream pressure को supply pressure में उतार-चढ़ाव होने पर भी लगभग constant बनाए रखना",
+        "Air में lubricant मिलाना",
+        "Air की direction बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pressure regulating valve एक adjustable spring-loaded diaphragm mechanism से supply pressure में उतार-चढ़ाव होने पर भी output (downstream) pressure को एक set value पर स्थिर रखती है, जिससे components को consistent working pressure मिलती है। Filtering, lubrication और direction change अलग components के कार्य हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q6",
+      "question": "Lubricator (oil fog lubricator) unit air में oil mist क्यों मिलाता है?",
+      "options": [
+        "Air का pressure बढ़ाने के लिए",
+        "Valves और cylinders के moving parts को lubricate करके friction व wear कम करने के लिए",
+        "Air को साफ करने के लिए",
+        "Air का temperature कम करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lubricator compressed air में fine oil mist मिलाता है जो valves और cylinders के internal moving parts तक पहुँचकर उन्हें lubricate करता है, जिससे friction और wear कम होता है तथा component life बढ़ती है। Pressure बढ़ाना regulator का काम है, cleaning filter का, और cooling से इसका कोई सम्बन्ध नहीं।"
+    },
+    {
+      "id": "u16_supply_elements_q7",
+      "question": "FRL unit में filter बाहर से आने वाली air में से मुख्यतः क्या हटाता है?",
+      "options": [
+        "Dust particles, moisture और अन्य solid contaminants",
+        "Air का oxygen content",
+        "Air का pressure",
+        "Air का flow rate"
+      ],
+      "correctIndex": 0,
+      "explanation": "Filter compressed air में मौजूद dust particles, rust के टुकड़े और condensed moisture को अलग करता है ताकि downstream components damage न हों। Oxygen content, pressure या flow rate हटाना filter का कार्य नहीं है।"
+    },
+    {
+      "id": "u16_supply_elements_q8",
+      "question": "Pressure gauge जो pressure regulating valve के साथ लगा होता है, किस काम के लिए होता है?",
+      "options": [
+        "Air का temperature दिखाने के लिए",
+        "Set/output pressure को visually indicate करने के लिए ताकि operator उसे monitor कर सके",
+        "Air flow की direction दिखाने के लिए",
+        "Motor की speed दिखाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pressure gauge regulator से output होने वाले pressure को numerically दिखाता है ताकि operator आवश्यकतानुसार regulator को adjust कर सके और सही working pressure सुनिश्चित कर सके। Temperature, flow direction या motor speed दिखाना इसका कार्य नहीं है।"
+    },
+    {
+      "id": "u16_supply_elements_q9",
+      "question": "Compressor की intake side पर air intake filter क्यों लगाया जाता है?",
+      "options": [
+        "ताकि compressor में प्रवेश करने वाली atmospheric air में मौजूद dust particles compressor cylinder/rotor को damage न करें",
+        "ताकि air का pressure तुरंत बढ़ जाए",
+        "ताकि motor की speed कम हो जाए",
+        "ताकि air electrically charged हो जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Intake filter atmospheric air में मौजूद dust व अन्य particles को compressor में प्रवेश करने से पहले हटाता है, जिससे cylinder walls, piston rings या rotor को abrasive wear से बचाया जा सके। Pressure बढ़ाना, motor speed या electrical charging से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u16_supply_elements_q10",
+      "question": "यदि pressure regulating valve की set value बहुत अधिक रख दी जाए, तो actuator व valves पर क्या प्रभाव पड़ सकता है?",
+      "options": [
+        "कोई प्रभाव नहीं पड़ेगा",
+        "Excessive pressure से seals और components पर अत्यधिक stress पड़ सकता है और premature failure हो सकती है",
+        "System की air खत्म हो जाएगी",
+        "Compressor बंद हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "अत्यधिक high set pressure से actuators, seals और valves पर design limit से ज्यादा stress पड़ता है, जिससे leakage, seal damage या premature component failure हो सकती है। यह air खत्म होने या compressor बंद होने का कारण सीधे नहीं बनता।"
+    },
+    {
+      "id": "u16_supply_elements_q11",
+      "question": "Reservoir tank में pressure gauge और safety valve के अलावा drain cock भी क्यों दिया जाता है?",
+      "options": [
+        "Tank के अंदर जमा हुए moisture/condensate को periodically निकालने के लिए",
+        "Tank को हल्का बनाने के लिए",
+        "Tank के अंदर pressure बढ़ाने के लिए",
+        "Compressor की motor ठंडी करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Drain cock का उपयोग tank के bottom में इकट्ठा हुए condensed water को समय-समय पर निकालने के लिए किया जाता है ताकि internal corrosion और contamination रोका जा सके। Weight कम करना, pressure बढ़ाना या motor cooling इसका उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u16_supply_elements_q12",
+      "question": "Electro-pneumatic system में compressor motor को start/stop करने के लिए किस supply element component का उपयोग होता है?",
+      "options": [
+        "Flow control valve",
+        "Pressure switch जो tank pressure sense करके motor को ON/OFF करता है",
+        "Shuttle valve",
+        "Non-return valve"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pressure switch receiver tank का pressure sense करके preset upper limit पर motor को OFF और lower limit पर वापस ON करता है, इस प्रकार यह energy efficient automatic control प्रदान करता है। Flow control valve, shuttle valve और non-return valve control valve elements हैं, supply side motor control के लिए नहीं।"
+    },
+    {
+      "id": "u16_supply_elements_q13",
+      "question": "Diaphragm-type pressure regulating valve में diaphragm के एक तरफ spring force और दूसरी तरफ outlet pressure कैसे संतुलित होते हैं?",
+      "options": [
+        "जब outlet pressure बढ़ता है, diaphragm spring force के विरुद्ध move करता है और valve opening कम करके flow restrict करता है, जिससे pressure स्थिर रहता है",
+        "Diaphragm हमेशा स्थिर रहता है, कोई movement नहीं होता",
+        "Spring force का diaphragm पर कोई असर नहीं पड़ता",
+        "Outlet pressure हमेशा zero रहता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Regulator में diaphragm outlet pressure और spring force के बीच balance बनाकर काम करता है — outlet pressure बढ़ने पर diaphragm spring को दबाता है जिससे valve opening कम होकर flow restrict होती है और pressure set value पर वापस आ जाता है। बाकी options operation को गलत बताते हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q14",
+      "question": "Air receiver का material और construction किस प्रकार का होना चाहिए?",
+      "options": [
+        "पतली plastic sheet से बना हो",
+        "High-pressure के लिए designed steel/metal pressure vessel जो relevant safety codes के अनुसार tested हो",
+        "Cardboard का बना हो",
+        "Wood से बना हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Air receiver एक pressure vessel होता है जो सामान्यतः steel से बनाया जाता है और उसे pressure testing व safety standards के अनुसार certified किया जाता है ताकि working pressure सुरक्षित रूप से handle हो सके। Plastic, cardboard या wood high pressure applications के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q15",
+      "question": "FRL unit में यदि lubricator को गलत तरीके से filter से पहले लगा दिया जाए तो क्या समस्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी",
+        "Oil mist filter element में जमा होकर filter की efficiency कम कर सकता है, जिससे contaminants ठीक से नहीं हटेंगे",
+        "Air pressure तुरंत शून्य हो जाएगा",
+        "Compressor बंद हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि lubricator filter से पहले लगाया जाए तो oil mist filter media में जमा होकर उसकी filtering capacity को कम कर सकता है, जिससे contaminants सही तरीके से नहीं हट पाएंगे — इसीलिए सही sequence Filter → Regulator → Lubricator रखा जाता है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q16",
+      "question": "Rotary vane compressor की तुलना reciprocating compressor से करने पर rotary vane compressor का एक फायदा क्या है?",
+      "options": [
+        "यह ज्यादा vibration पैदा करता है",
+        "इसमें continuous rotary motion होने से delivery अपेक्षाकृत smooth होती है और compact design संभव होता है",
+        "यह केवल high pressure के लिए बना होता है",
+        "इसमें कोई moving parts नहीं होते"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rotary vane compressor में rotor के अंदर vanes की continuous rotary motion से smooth air delivery मिलती है और design अपेक्षाकृत compact होता है, जबकि reciprocating compressor pulsating delivery देता है। बाकी options गलत statements हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q17",
+      "question": "Air receiver tank पर लगा pressure relief (safety) valve किस principle पर कार्य करता है?",
+      "options": [
+        "जब tank pressure set value से अधिक हो जाता है, spring force के विरुद्ध valve खुलकर excess air atmosphere में release करता है",
+        "यह हमेशा खुला रहता है",
+        "यह temperature sense करके काम करता है, pressure से नहीं",
+        "यह motor की current sense करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Safety/relief valve एक spring-loaded valve होता है जो tank pressure के spring force से अधिक हो जाने पर automatically खुल जाता है और excess pressure release करके tank को damage से बचाता है। यह हमेशा खुला नहीं रहता और temperature या current sense नहीं करता।"
+    },
+    {
+      "id": "u16_supply_elements_q18",
+      "question": "Micro-mist lubricator में oil की मात्रा (drip rate) को adjust करने के लिए क्या दिया जाता है?",
+      "options": [
+        "एक adjustable needle valve/screw जो oil drip rate control करता है",
+        "एक coil जो electric current से control होता है",
+        "एक pressure switch",
+        "एक roller lever"
+      ],
+      "correctIndex": 0,
+      "explanation": "Lubricator में एक adjustable needle valve (screw) होता है जिससे oil drip rate को manually adjust किया जा सकता है ताकि आवश्यकतानुसार सही मात्रा में oil mist air में मिले। Coil, pressure switch और roller lever lubrication control के लिए उपयोग नहीं होते।"
+    },
+    {
+      "id": "u16_supply_elements_q19",
+      "question": "Compressor के discharge line में non-return (check) valve क्यों लगाई जाती है?",
+      "options": [
+        "ताकि receiver tank की compressed air compressor की तरफ वापस (back flow) न आ सके जब compressor बंद हो",
+        "ताकि air का pressure कम हो जाए",
+        "ताकि air में lubricant मिल सके",
+        "ताकि motor की speed बढ़ जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Check valve compressor बंद होने पर tank की high-pressure air को compressor की ओर वापस बहने से रोकती है, जिससे compressor components सुरक्षित रहते हैं और अगली बार start होने पर unnecessary load नहीं पड़ता। Pressure कम करना, lubrication या speed बढ़ाना इसका कार्य नहीं है।"
+    },
+    {
+      "id": "u16_supply_elements_q20",
+      "question": "Supply pressure में अचानक gिरावट (sudden drop) आने पर pressure regulating valve किस प्रकार respond करती है?",
+      "options": [
+        "यह output pressure को constant बनाए रखने की कोशिश करती है जब तक supply pressure regulator के minimum operating requirement से ऊपर रहे",
+        "यह तुरंत टूट जाती है",
+        "यह output pressure को बहुत ज्यादा बढ़ा देती है",
+        "इसका कोई असर output pressure पर नहीं पड़ता चाहे supply कितना भी कम हो जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pressure regulator एक निश्चित minimum differential तक supply pressure में गिरावट को compensate करके output pressure को stable रख सकती है, लेकिन यदि supply pressure regulator की न्यूनतम आवश्यकता से नीचे चला जाए तो output pressure भी गिरने लगता है। बाकी options गलत व्याख्या हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q21",
+      "question": "Air-cooled और water-cooled compressor में मुख्य अंतर क्या है?",
+      "options": [
+        "Air-cooled compressor ambient air से ठंडा होता है जबकि water-cooled compressor में circulating water से heat हटाई जाती है, जो प्रायः बड़े/high-capacity compressors में उपयोग होती है",
+        "दोनों में कोई अंतर नहीं है",
+        "Water-cooled compressor केवल vacuum बनाता है",
+        "Air-cooled compressor को water की जरूरत होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Air-cooled compressors में fins/fan से ambient air द्वारा cooling होती है, जो छोटे/medium capacity units के लिए उपयुक्त है, जबकि water-cooled compressors में जल परिसंचरण से बेहतर heat dissipation होता है, जो large industrial compressors में common है। बाकी options गलत definitions हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q22",
+      "question": "FRL unit के regulator में बना हुआ छोटा exhaust/vent port किस स्थिति में air release करता है?",
+      "options": [
+        "जब downstream pressure set value से अधिक हो जाए, तो diaphragm के जरिए excess pressure को इस vent से बाहर निकाला जाता है (relieving type regulator में)",
+        "यह हमेशा air release करता रहता है",
+        "यह केवल compressor बंद होने पर काम करता है",
+        "इसका कोई function नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Relieving-type pressure regulator में एक small vent होता है जो तब खुलता है जब downstream pressure set value से अधिक हो जाता है, जिससे excess pressure atmosphere में release होकर output फिर से set value पर आ जाता है। यह हमेशा active नहीं रहता और सिर्फ compressor बंद होने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u16_supply_elements_q23",
+      "question": "Screw compressor में lubricating oil injection का एक प्रमुख उद्देश्य क्या है?",
+      "options": [
+        "Rotors के बीच sealing बनाना, cooling करना और lubrication देना जिससे efficiency और life बेहतर हो",
+        "Air का pressure तुरंत शून्य करना",
+        "Air में oxygen मात्रा बढ़ाना",
+        "Motor की current कम करना बिना किसी technical कारण के"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oil-injected screw compressor में oil rotors के बीच clearance seal करता है, compression heat को absorb करके cool करता है, और moving parts को lubricate करता है — इससे volumetric efficiency और component life दोनों बेहतर होते हैं। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q24",
+      "question": "Pressure regulating valve की setting को field में कैसे adjust किया जाता है?",
+      "options": [
+        "Top पर लगे adjusting knob/screw को घुमाकर spring tension बदलकर, जिससे output pressure set value बदलती है",
+        "Valve को पूरी तरह खोलकर नई valve लगाकर",
+        "Motor की speed बदलकर",
+        "Compressor का brand बदलकर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Regulator के ऊपर एक adjusting knob/screw होता है जिसे घुमाने से अंदर की spring tension बदलती है, जिससे diaphragm पर force बदलकर desired output pressure set की जा सकती है। बाकी options practically अनुचित तरीके हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q25",
+      "question": "Air dryer (refrigerant type) supply elements में क्यों जोड़ा जाता है, विशेषकर जहाँ high-quality dry air चाहिए?",
+      "options": [
+        "ताकि compressed air का dew point कम हो और moisture-sensitive applications (जैसे electronics, paint spraying) में समस्या न आए",
+        "ताकि air का pressure तुरंत दोगुना हो जाए",
+        "ताकि compressor की speed बढ़ जाए",
+        "ताकि air electrically conduct करने लगे"
+      ],
+      "correctIndex": 0,
+      "explanation": "Refrigerant dryer compressed air को ठंडा करके उसमें मौजूद अतिरिक्त moisture condense करके अलग करता है, जिससे air का dew point कम हो जाता है — यह उन applications में जरूरी है जहाँ moisture से नुकसान हो सकता है। Pressure दोगुना करना, compressor speed या electrical conduction dryer का कार्य नहीं है।"
+    },
+    {
+      "id": "u16_supply_elements_q26",
+      "question": "Reservoir tank को ground level से थोड़ा ऊँचा और support legs पर क्यों रखा जाता है?",
+      "options": [
+        "ताकि देखने में अच्छा लगे",
+        "ताकि tank के नीचे लगे drain valve से आसानी से condensate निकाला जा सके और maintenance सुविधाजनक हो",
+        "ताकि tank हल्का महसूस हो",
+        "ताकि compressor बंद रह सके"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tank को थोड़ा ऊँचा रखने से नीचे लगे drain valve तक पहुँचना और condensate निकालना आसान होता है, साथ ही inspection व maintenance भी सुविधाजनक हो जाता है। यह सिर्फ दिखावे, हल्केपन के अहसास या compressor बंद रखने के लिए नहीं होता।"
+    },
+    {
+      "id": "u16_supply_elements_q27",
+      "question": "Two compressors को parallel में जोड़कर operate करने का एक फायदा क्या होता है?",
+      "options": [
+        "एक compressor fail होने पर भी दूसरा backup के रूप में काम कर सकता है और variable demand को बेहतर तरीके से पूरा किया जा सकता है",
+        "दोनों compressors हमेशा एक साथ fail हो जाते हैं",
+        "इससे system की pressure हमेशा zero हो जाती है",
+        "इससे air की quality खराब हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Parallel configuration में यदि एक compressor maintenance में हो या fail हो जाए तो दूसरा compressor supply जारी रख सकता है, और variable demand की स्थिति में जरूरत अनुसार एक या दोनों compressors चलाए जा सकते हैं, जिससे reliability और efficiency दोनों बढ़ती हैं। बाकी options गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q28",
+      "question": "FRL unit के filter bowl (transparent bowl) में जमा पानी को निकालने के लिए क्या दिया जाता है?",
+      "options": [
+        "Manual या automatic drain valve, bowl के नीचे",
+        "एक coil जो electric signal से पानी हटाता है",
+        "एक roller lever",
+        "एक pressure gauge"
+      ],
+      "correctIndex": 0,
+      "explanation": "Filter bowl के bottom में manual drain cock या automatic float-type drain valve दिया जाता है जिससे जमा हुआ condensate periodically या automatically निकाला जा सके। Coil, roller lever और pressure gauge drain करने के लिए नहीं होते।"
+    },
+    {
+      "id": "u16_supply_elements_q29",
+      "question": "एक pneumatic workshop में compressor का FAD 1000 LPM है और system की average consumption 700 LPM है, तो शेष capacity का क्या फायदा है?",
+      "options": [
+        "यह extra capacity peak demand को पूरा करने और receiver को तेजी से recharge करने में मदद करती है",
+        "यह capacity पूरी तरह बर्बाद हो जाती है, कोई फायदा नहीं",
+        "इससे compressor हमेशा बंद रहेगा",
+        "इससे system pressure zero हो जाएगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "FAD और actual average consumption के बीच का margin (1000−700=300 LPM) peak demand periods को handle करने तथा receiver tank को जल्दी recharge करने के लिए उपयोगी होता है, जिससे pressure fluctuation कम होती है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u16_supply_elements_q30",
+      "question": "Complete supply section (compressor से लेकर FRL unit तक) में air प्रवाह का सही क्रम क्या है?",
+      "options": [
+        "Lubricator → Compressor → Receiver → Filter → Regulator",
+        "Compressor → Receiver (with after-cooler/separator) → main line filter/dryer → Pressure regulating valve (with local FRL: Filter → Regulator → Lubricator) → Control/Actuating elements",
+        "Regulator → Compressor → Lubricator → Filter → Receiver",
+        "Filter → Compressor → Lubricator → Regulator → Receiver"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard flow क्रम है: Compressor air generate करता है → Receiver tank में store व cool होती है → main line में filtering/drying होती है → आगे local FRL unit (Filter→Regulator→Lubricator) से गुजरकर सही pressure व साफ air control/actuating elements तक पहुँचती है। बाकी options क्रम को गलत रूप से बदलते हैं।"
+    }
+  ]
+}

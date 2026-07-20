@@ -1,0 +1,218 @@
+{
+  "unit": "unit10",
+  "unitName": "LED Lights, LED/LCD TV and CCTV",
+  "topic": "tv_interfaces",
+  "topicName": "TV Interfaces - HDMI, USB, RGB",
+  "questions": [
+    {
+      "id": "u10_tv_interfaces_q1",
+      "question": "HDMI (High Definition Multimedia Interface) की सबसे बड़ी विशेषता क्या है जो इसे पुराने AV connectors से अलग बनाती है?",
+      "options": ["यह केवल audio signal transmit करता है", "यह digital video और audio signal दोनों को एक ही cable में transmit करता है", "यह केवल analog video signal transmit करता है", "इसे केवल computer monitor के लिए बनाया गया है"],
+      "correctIndex": 1,
+      "explanation": "HDMI की मुख्य खासियत यह है कि यह एक ही cable में high-quality digital video और multi-channel audio दोनों को साथ ले जाता है, इसलिए option B सही है। यह केवल audio या केवल analog video नहीं ले जाता, और यह TV, set-top box, DVD player आदि सभी devices के लिए प्रयुक्त होता है, केवल monitor के लिए नहीं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q2",
+      "question": "HDMI cable के माध्यम से signal transmission digital format में होने का मुख्य लाभ क्या है?",
+      "options": ["digital signal होने से analog-to-digital conversion की आवश्यकता नहीं पड़ती और picture quality में loss नहीं होता", "digital signal cable को हल्का बना देता है", "digital signal के कारण cable की लंबाई असीमित हो जाती है", "digital signal automatically audio को amplify कर देता है"],
+      "correctIndex": 0,
+      "explanation": "चूँकि HDMI signal शुरू से अंत तक digital रहता है, इसलिए बार-बार analog-digital conversion से होने वाली quality loss नहीं होती, इसलिए option A सही है। cable का वजन, लंबाई की सीमा और audio amplification digital होने से सीधे संबंधित नहीं हैं — बल्कि लंबी cable में तो digital signal भी कमज़ोर हो सकता है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q3",
+      "question": "एक standard HDMI Type A connector में कुल कितने pins होते हैं?",
+      "options": ["15", "9", "19", "24"],
+      "correctIndex": 2,
+      "explanation": "Standard HDMI Type A connector में कुल 19 pins होते हैं जो video, audio, control (जैसे CEC) और power/ground signals ले जाते हैं, इसलिए option C सही है। 15 pins पुराने VGA D-sub connector के हैं, 9 पुराने serial/कुछ पुराने video connectors के हैं, और 24 pins dual-link DVI-D connector में होते हैं, HDMI में नहीं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q4",
+      "question": "HDMI connectors के Type A, Type C और Type D में मुख्य अंतर क्या है?",
+      "options": ["Type A audio नहीं देता जबकि C और D देते हैं", "ये आकार (size) में भिन्न हैं — Type A standard/full-size, Type C mini और Type D micro होता है", "Type A केवल 4K के लिए है, C और D केवल 1080p के लिए", "Type C और D में HDCP support नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "Type A, C और D सभी में मूल रूप से समान signal होते हैं, इनका मुख्य अंतर connector के भौतिक आकार में है — Type A full-size TV/set-top box के लिए, Type C (mini) मध्यम आकार के portable devices और Type D (micro) सबसे छोटे devices के लिए, इसलिए option B सही है। ऑडियो सभी types देते हैं, resolution support connector type पर नहीं बल्कि HDMI version पर निर्भर करता है, और HDCP सभी types में लागू हो सकता है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q5",
+      "question": "HDMI 2.0 version की तुलना में पुराने HDMI 1.3/1.4 version में क्या मुख्य कमी थी जिसे बाद के versions में सुधारा गया?",
+      "options": ["HDMI 1.3/1.4 audio ले जाने में सक्षम नहीं था", "HDMI 1.3/1.4 में connector का आकार बड़ा था", "HDMI 1.3/1.4 केवल analog signal भेजता था", "HDMI 1.3/1.4 का bandwidth कम था जिससे यह उच्च resolution (जैसे पूर्ण 4K@60Hz) को अच्छी तरह support नहीं करता था"],
+      "correctIndex": 3,
+      "explanation": "HDMI versions जैसे-जैसे बढ़ते गए, उनका data bandwidth बढ़ता गया, जिससे higher resolution और उच्च frame rate जैसे 4K@60Hz बेहतर तरीके से support होने लगा — पुराने versions में यह bandwidth सीमित था, इसलिए option D सही है। HDMI 1.3/1.4 भी audio ले जाता था, connector आकार version से नहीं connector type से तय होता है, और HDMI शुरू से ही digital signal है, analog नहीं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q6",
+      "question": "HDMI ARC (Audio Return Channel) feature का मुख्य उपयोग क्या है?",
+      "options": ["TV से audio signal को उसी HDMI cable के माध्यम से वापस soundbar/AV receiver को भेजना, अलग optical/audio cable की आवश्यकता के बिना", "TV की video quality को 4K तक बढ़ाना", "TV को USB pendrive से connect करना", "TV की power supply को नियंत्रित करना"],
+      "correctIndex": 0,
+      "explanation": "ARC feature यह सुविधा देता है कि TV का built-in audio (जैसे TV apps का sound) उसी HDMI cable से वापस soundbar या AV receiver को भेजा जा सके, जिससे अलग optical audio cable की आवश्यकता नहीं पड़ती, इसलिए option A सही है। यह video resolution बढ़ाने, USB connectivity या power control से संबंधित नहीं है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q7",
+      "question": "HDMI में प्रयुक्त HDCP (High-bandwidth Digital Content Protection) का उद्देश्य क्या है?",
+      "options": ["video resolution को बढ़ाना", "copyrighted digital content (जैसे Blu-ray movie) की unauthorized copying/recording रोकना", "audio quality सुधारना", "cable की लंबाई बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "HDCP एक encryption-based protection system है जो copyrighted high-definition content को unauthorized तरीके से copy या record होने से रोकता है, इसलिए option B सही है। यह resolution, audio quality या cable length से कोई सीधा संबंध नहीं रखता — ये अलग-अलग parameters हैं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q8",
+      "question": "HDMI cable की लंबाई अधिक (जैसे 20-25 मीटर से अधिक) बढ़ाने पर सामान्यतः क्या समस्या आ सकती है?",
+      "options": ["audio पूरी तरह बंद हो जाता है पर video ठीक चलता है", "cable का रंग बदल जाता है", "digital signal में attenuation के कारण picture flickering, dropout या signal loss हो सकता है, इसलिए लंबी दूरी के लिए booster/repeater या fiber HDMI का उपयोग करते हैं", "HDCP automatically बंद हो जाता है"],
+      "correctIndex": 2,
+      "explanation": "अत्यधिक लंबी standard copper HDMI cable में digital signal कमज़ोर (attenuate) हो जाता है जिससे picture में dropout या flickering आ सकता है, इसलिए इतनी दूरी के लिए booster/repeater या fiber-optic HDMI cable प्रयोग किए जाते हैं — option C सही है। audio-only बंद होना, रंग बदलना या HDCP का अपने आप बंद होना सामान्य कारण नहीं हैं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q9",
+      "question": "यदि किसी HDMI version की maximum bandwidth 18 Gbps है, तो यह किस प्रकार के video content को comfortably support कर सकता है?",
+      "options": ["4K resolution को उच्च frame rate (जैसे 4K@60Hz) के साथ support कर सकता है", "केवल standard definition (SD) video", "केवल audio, कोई video नहीं", "केवल black and white video"],
+      "correctIndex": 0,
+      "explanation": "18 Gbps जैसा high bandwidth 4K resolution को अच्छे frame rate (जैसे 60Hz) पर बिना compression-loss के support करने के लिए पर्याप्त है, इसलिए option A सही है। इतना उच्च bandwidth केवल SD video के लिए ज़रूरत से कहीं ज़्यादा है, और HDMI में audio के साथ-साथ video भी ज़रूर होता है — रंग की कोई सीमा नहीं होती।"
+    },
+    {
+      "id": "u10_tv_interfaces_q10",
+      "question": "पुराने television setup में video के लिए component/composite cables और audio के लिए अलग RCA cables लगाने पड़ते थे। HDMI ने इस झंझट को कैसे कम किया?",
+      "options": ["HDMI ने audio cable को पूरी तरह हटाकर mute कर दिया", "HDMI में video signal analog ही रहता है, केवल audio digital हो गया", "HDMI ने cable का रंग एक जैसा कर दिया", "HDMI एक ही cable में digital video और multi-channel digital audio दोनों को साथ ले जाता है, जिससे अलग audio cables की आवश्यकता समाप्त हो गई"],
+      "correctIndex": 3,
+      "explanation": "HDMI का design ही ऐसा है कि एक ही cable में digital video के साथ multi-channel digital audio भी embed रहता है, जिससे अलग-अलग audio/video cables लगाने की ज़रूरत खत्म हो गई, इसलिए option D सही है। HDMI audio को mute नहीं करता, इसका video भी digital ही है analog नहीं, और cable का रंग इस सुविधा से संबंधित नहीं है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q11",
+      "question": "HDMI द्वारा video/audio data transmit करने के लिए प्रयुक्त तकनीक को क्या कहा जाता है, जो signal को noise से सुरक्षित रखते हुए high-speed digital data भेजती है?",
+      "options": ["AM modulation", "TMDS (Transition Minimized Differential Signaling)", "FM modulation", "PAM (केवल audio के लिए Pulse Amplitude Modulation)"],
+      "correctIndex": 1,
+      "explanation": "HDMI high-speed digital data भेजने के लिए TMDS (Transition Minimized Differential Signaling) तकनीक प्रयोग करता है, जो differential signaling के माध्यम से noise और interference को कम करती है, इसलिए option B सही है। AM और FM modulation पुराने analog broadcasting में प्रयोग होते हैं, और PAM HDMI की मुख्य transmission तकनीक नहीं है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q12",
+      "question": "HDMI Type C (Mini HDMI) connector का उपयोग सामान्यतः किन devices में किया जाता है?",
+      "options": ["बड़े LED TV panels में", "मुख्य set-top box में", "compact devices जैसे camcorder और कुछ tablets में, जहाँ full-size Type A connector फिट नहीं होता", "केवल audio receivers में"],
+      "correctIndex": 2,
+      "explanation": "Type C (Mini HDMI) आकार में Type A से छोटा होता है और इसलिए यह camcorder, tablet जैसे compact portable devices में प्रयोग होता है जहाँ full-size connector के लिए जगह नहीं होती, इसलिए option C सही है। बड़े TV panels, set-top box और मुख्य audio receivers में सामान्यतः full-size Type A connector ही दिया जाता है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q13",
+      "question": "HDMI Type D (Micro HDMI) connector किन devices के लिए डिज़ाइन किया गया है?",
+      "options": ["smartphones और अन्य बहुत छोटे portable devices, जहाँ जगह सबसे कम होती है", "बड़े LED TV panels", "desktop computer का मुख्य graphics card", "CCTV DVR की मुख्य output"],
+      "correctIndex": 0,
+      "explanation": "Type D (Micro HDMI) सबसे छोटा HDMI connector है और इसे smartphones जैसे अत्यंत compact devices के लिए बनाया गया है, इसलिए option A सही है। बड़े TV panels, desktop graphics cards और DVR की मुख्य output में सामान्यतः बड़े Type A connector का उपयोग होता है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q14",
+      "question": "एक ही source (जैसे set-top box) को TV से HDMI cable द्वारा जोड़ने पर picture quality, पुराने composite (yellow RCA) cable की तुलना में बेहतर क्यों मिलती है?",
+      "options": ["HDMI cable मोटा होता है", "composite cable में audio नहीं होता", "HDMI का रंग काला होता है", "HDMI digital signal को बिना किसी analog conversion loss के भेजता है, जबकि composite एक analog, कम bandwidth वाला single combined signal है"],
+      "correctIndex": 3,
+      "explanation": "HDMI पूर्णतः digital signal होने के कारण बिना किसी conversion loss के picture भेजता है, जबकि composite video एक ही तार पर सारी जानकारी मिलाकर (combine करके) कम bandwidth वाला analog signal भेजता है, जिससे quality घटती है — इसलिए option D सही है। cable की मोटाई या रंग quality तय नहीं करते, और composite में audio अलग RCA cables (सफेद/लाल) से आता है, यह इसकी लोअर quality का कारण नहीं है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q15",
+      "question": "आजकल अधिकांश नए HDMI-enabled TV और set-top box किस प्रकार के resolution को support करने में सक्षम हैं?",
+      "options": ["केवल 480p standard definition", "Full HD 1080p तथा नए versions में Ultra HD 4K तक", "केवल black-white analog signal", "केवल audio, कोई भी resolution नहीं"],
+      "correctIndex": 1,
+      "explanation": "नए HDMI-enabled devices Full HD 1080p और आगे के versions में 4K Ultra HD जैसे उच्च resolutions को अच्छी तरह support करते हैं, इसलिए option B सही है। HDMI केवल SD (480p) या black-white signal तक सीमित नहीं है, और यह video के साथ-साथ audio भी ले जाता है, केवल audio नहीं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q16",
+      "question": "आधुनिक LED/LCD TV में दिए गए USB port का एक सामान्य उपयोग क्या है?",
+      "options": ["TV की backlight को नियंत्रित करना", "TV का remote control जोड़ना", "pendrive में रखी photo, video और music files को बिना किसी computer के सीधे TV पर play करना", "CCTV camera को सीधे बिजली देना"],
+      "correctIndex": 2,
+      "explanation": "TV का USB port मुख्यतः pendrive या external storage से photo, video और music files सीधे TV की built-in media player के ज़रिए play करने के लिए प्रयोग होता है, बिना किसी अलग computer की आवश्यकता के — इसलिए option C सही है। backlight control, remote connection और CCTV को power देना USB port के सामान्य कार्य नहीं हैं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q17",
+      "question": "TV manufacturer अक्सर customers को USB port के माध्यम से क्या सुविधा प्रदान करते हैं?",
+      "options": ["USB flash drive में firmware file डालकर TV के software/firmware को update करने की सुविधा", "USB से TV का backlight बदलने की सुविधा", "USB से TV का panel replace करने की सुविधा", "USB से TV की HDMI port संख्या बढ़ाने की सुविधा"],
+      "correctIndex": 0,
+      "explanation": "बहुत से TVs में USB port के ज़रिए firmware upgrade की सुविधा दी जाती है, जिसमें firmware file को pendrive में डालकर TV में लगाया जाता है और TV उसे स्वयं install कर लेता है, इसलिए option A सही है। backlight बदलना, panel replace करना या HDMI ports की संख्या बढ़ाना software update से संभव नहीं, ये hardware कार्य हैं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q18",
+      "question": "TV के USB port से जुड़े external device (जैसे pendrive) को सामान्यतः कितना voltage और सीमित current मिलता है?",
+      "options": ["लगभग 12V, असीमित current", "लगभग 230V AC सीधे", "लगभग 0V, केवल data transfer", "लगभग 5V DC, तथा current सामान्यतः कुछ सौ mA (जैसे USB 2.0 में लगभग 500mA) तक सीमित"],
+      "correctIndex": 3,
+      "explanation": "USB standard के अनुसार port से लगभग 5V DC output मिलता है और current एक निश्चित सीमा (USB 2.0 में लगभग 500mA) तक सीमित रहता है ताकि port और devices सुरक्षित रहें, इसलिए option D सही है। 12V या सीधे 230V AC USB standard में नहीं दिया जाता, और USB port केवल data ही नहीं, power भी देता है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q19",
+      "question": "USB 2.0 और USB 3.0 के बीच सबसे प्रमुख अंतर क्या है?",
+      "options": ["USB 3.0 केवल audio file चला सकता है", "USB 3.0 की data transfer speed (लगभग 5 Gbps) USB 2.0 (लगभग 480 Mbps) की तुलना में बहुत अधिक होती है", "USB 2.0 अधिक तेज़ होता है", "दोनों की speed बिल्कुल समान होती है"],
+      "correctIndex": 1,
+      "explanation": "USB 3.0 की theoretical data transfer speed लगभग 5 Gbps होती है जबकि USB 2.0 की केवल लगभग 480 Mbps होती है, यानी USB 3.0 काफी तेज़ है, इसलिए option B सही है। यह अंतर केवल audio files तक सीमित नहीं, USB 2.0 धीमा होता है न कि तेज़, और दोनों की speed बराबर नहीं होती।"
+    },
+    {
+      "id": "u10_tv_interfaces_q20",
+      "question": "USB 3.0 port/connector को उसके USB 2.0 से अलग पहचानने के लिए सामान्यतः किस रंग का प्रयोग किया जाता है?",
+      "options": ["लाल (red)", "हरा (green)", "नीला (blue), भीतर के plastic insert में", "पीला (yellow)"],
+      "correctIndex": 2,
+      "explanation": "USB 3.0 ports को पहचानने के लिए industry में सामान्यतः port के भीतरी plastic भाग पर नीला (blue) रंग प्रयोग किया जाता है, इसलिए option C सही है। लाल, हरा और पीला रंग USB 3.0 की standard पहचान नहीं हैं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q21",
+      "question": "VGA/RGB analog video interface में video signal को किस प्रकार transmit किया जाता है?",
+      "options": ["Red, Green और Blue के लिए अलग-अलग analog signal lines के साथ-साथ अलग horizontal sync और vertical sync signals द्वारा", "केवल एक ही combined digital signal द्वारा", "केवल audio signal के रूप में", "infrared wireless signal द्वारा"],
+      "correctIndex": 0,
+      "explanation": "VGA/RGB interface में Red, Green, Blue के लिए अलग-अलग analog signal lines होती हैं, साथ ही अलग horizontal sync और vertical sync signals भी भेजे जाते हैं ताकि display सही तरीके से picture बना सके, इसलिए option A सही है। यह एक digital combined signal नहीं, केवल audio नहीं, और wireless infrared भी नहीं है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q22",
+      "question": "VGA/RGB connection में picture quality किस बात पर सबसे अधिक निर्भर करती है, क्योंकि यह एक analog interface है?",
+      "options": ["TV के remote control पर", "USB port की speed पर", "HDCP की उपस्थिति पर", "cable की लंबाई और गुणवत्ता (shielding) पर, क्योंकि analog signal में noise और degradation आसानी से आ सकता है"],
+      "correctIndex": 3,
+      "explanation": "चूँकि VGA एक analog interface है, इसमें cable जितनी लंबी और कम-shielded होगी उतना ही signal में noise व degradation आने की संभावना रहती है, इससे picture quality प्रभावित होती है — इसलिए option D सही है। remote control, USB speed और HDCP का VGA picture quality से कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q23",
+      "question": "मानक VGA connector में सामान्यतः कितने pins होते हैं और वे किस आकार में व्यवस्थित होते हैं?",
+      "options": ["19 pins, single row में", "15 pins, तीन पंक्तियों (rows) में पाँच-पाँच करके (D-sub type)", "8 pins, गोलाकार व्यवस्था में", "24 pins, दो पंक्तियों में"],
+      "correctIndex": 1,
+      "explanation": "मानक VGA connector एक D-sub type connector है जिसमें कुल 15 pins तीन पंक्तियों में, प्रत्येक में पाँच-पाँच करके व्यवस्थित होते हैं, इसलिए option B सही है। 19 pins HDMI के हैं, 8 pins गोलाकार arrangement किसी सामान्य VGA का नहीं, और 24 pins DVI-D connector का है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q24",
+      "question": "VGA/RGB cable से PC को पुराने monitor/TV से जोड़ने पर audio सुनने के लिए क्या आवश्यक है?",
+      "options": ["कुछ नहीं, VGA cable में ही audio channel होता है", "HDCP को enable करना", "एक अलग audio cable (जैसे 3.5mm jack या RCA) लगानी पड़ती है, क्योंकि VGA केवल video signal ले जाता है", "USB port से audio जोड़ना अनिवार्य है"],
+      "correctIndex": 2,
+      "explanation": "VGA केवल analog video signal (RGB + sync) ले जाता है, इसमें कोई audio channel नहीं होता, इसलिए audio सुनने के लिए एक अलग audio cable जोड़नी पड़ती है — इसलिए option C सही है। VGA में built-in audio channel नहीं है, HDCP HDMI से जुड़ी copy-protection है VGA से नहीं, और USB port audio जोड़ने का अनिवार्य या मानक तरीका नहीं है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q25",
+      "question": "HDMI और VGA/RGB interface के बीच सबसे मौलिक (fundamental) अंतर क्या है?",
+      "options": ["HDMI digital signal में video और audio दोनों एक साथ ले जाता है, जबकि VGA केवल analog video signal ले जाता है और audio के लिए अलग cable चाहिए", "VGA में अधिक pins होते हैं इसलिए वह बेहतर है", "HDMI केवल audio के लिए है", "VGA digital है और HDMI analog है"],
+      "correctIndex": 0,
+      "explanation": "सबसे मूल अंतर यह है कि HDMI digital interface है जो video और audio दोनों को एक साथ carry करता है, जबकि VGA एक पुराना analog interface है जो केवल video signal ले जाता है और audio के लिए अलग cable की आवश्यकता होती है — इसलिए option A सही है। अधिक pins होने का मतलब बेहतर होना नहीं, HDMI सिर्फ audio तक सीमित नहीं है, और वास्तव में VGA analog है और HDMI digital है, इसका उल्टा नहीं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q26",
+      "question": "Component video (YPbPr) interface, composite video (single yellow RCA) की तुलना में बेहतर picture quality क्यों देता है?",
+      "options": ["क्योंकि component में audio भी शामिल रहता है", "क्योंकि component digital signal है जबकि composite analog है", "क्योंकि component में केवल एक ही तार का प्रयोग होता है", "क्योंकि component signal को luminance और color information के लिए तीन अलग-अलग signals (Y, Pb, Pr) में विभाजित करता है, जबकि composite सभी जानकारी को एक ही combined signal में भेजता है जिससे quality घटती है"],
+      "correctIndex": 3,
+      "explanation": "Component video signal को Y (luminance), Pb और Pr (color difference signals) — तीन अलग तारों में विभाजित करता है, जिससे interference कम होता है और quality बेहतर रहती है, जबकि composite सब कुछ एक ही तार पर मिला देता है — इसलिए option D सही है। component में audio शामिल नहीं होता (अलग cable चाहिए), component भी वास्तव में analog signal है (digital नहीं), और यह एक नहीं बल्कि तीन तारों का प्रयोग करता है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q27",
+      "question": "S-video interface, composite video की तुलना में बेहतर quality कैसे देता है?",
+      "options": ["S-video पूरी तरह digital signal है", "S-video luminance (Y) और chrominance (C) signals को दो अलग-अलग lines में भेजता है, जिससे composite की तुलना में कम signal interference होता है, हालांकि यह component जितना बेहतर नहीं", "S-video में audio भी शामिल रहता है", "S-video HDMI से भी तेज़ है"],
+      "correctIndex": 1,
+      "explanation": "S-video, luminance (Y) और chrominance (colour, C) को दो अलग signal lines में भेजता है, जिससे composite की तुलना में interference कम होता है, हालांकि यह component video जितनी गुणवत्ता नहीं देता — इसलिए option B सही है। S-video भी वास्तव में analog interface है (digital नहीं), इसमें audio शामिल नहीं होता, और यह HDMI से गुणवत्ता व speed में तुलना में पीछे रहता है, आगे नहीं।"
+    },
+    {
+      "id": "u10_tv_interfaces_q28",
+      "question": "पुराने legacy AV (Audio-Video) RCA input में सामान्यतः कितने cables/connectors होते हैं और वे क्या ले जाते हैं?",
+      "options": ["एक ही cable, केवल video", "पाँच cables, केवल video", "तीन RCA connectors — पीला (composite video), सफेद (left audio) और लाल (right audio)", "दो cables, दोनों audio के लिए"],
+      "correctIndex": 2,
+      "explanation": "पारंपरिक AV RCA input में तीन connectors होते हैं — पीला composite video के लिए, सफेद left audio और लाल right audio के लिए — इसलिए option C सही है। यह एक अकेला video-only cable नहीं, पाँच cables वाला सेटअप नहीं, और केवल दो audio cables वाला सिस्टम भी नहीं है (इसमें video भी शामिल रहता है)।"
+    },
+    {
+      "id": "u10_tv_interfaces_q29",
+      "question": "composite video (single yellow RCA cable) में video signal quality सबसे कम क्यों मानी जाती है, component और S-video की तुलना में?",
+      "options": ["क्योंकि इसमें luminance और chrominance दोनों जानकारी को एक ही तार पर मिलाकर (combine करके) भेजा जाता है, जिससे colour bleeding और कम sharpness जैसी समस्याएँ आती हैं", "क्योंकि composite digital signal है", "क्योंकि composite में audio भी video के साथ मिला होता है", "क्योंकि composite HDMI जैसा ही होता है"],
+      "correctIndex": 0,
+      "explanation": "Composite video में luminance और chrominance दोनों जानकारी को एक ही signal/तार में मिलाकर भेजा जाता है, जिससे colour bleeding और sharpness में कमी जैसी समस्याएँ आती हैं — इसलिए option A सही है। Composite वास्तव में analog है, digital नहीं; इसमें audio अलग RCA cables (सफेद/लाल) से जाता है, video के साथ मिला हुआ नहीं होता; और यह HDMI जैसा digital, उच्च-गुणवत्ता वाला interface कतई नहीं है।"
+    },
+    {
+      "id": "u10_tv_interfaces_q30",
+      "question": "किसी LED TV के USB port में pendrive लगाकर TV पर video file play करते समय, यदि उसी pendrive को किसी PC में लगाया जाए तो सामान्यतः क्या होगा?",
+      "options": ["PC pendrive को पढ़ ही नहीं पाएगा", "pendrive अपने आप delete हो जाएगा", "TV और USB port की playback क्षमता के बावजूद, PC सामान्य USB mass storage device की तरह pendrive की सभी files को पढ़ और access कर सकता है, क्योंकि pendrive की file system (जैसे FAT32) universal होती है", "pendrive की सारी files का format बदल जाता है"],
+      "correctIndex": 2,
+      "explanation": "TV का USB port सामान्यतः standard file systems (जैसे FAT32) को ही read करता है, इसलिए वही pendrive किसी भी PC में सामान्य USB storage device की तरह ठीक से पढ़ी जा सकती है, इसलिए option C सही है। TV में उपयोग करने से pendrive PC के लिए unreadable नहीं होती, न ही data delete होता है, और सामान्य playback से files का format अपने आप नहीं बदलता।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "vfd_control",
+  "topicName": "VFD, V/f Control, 3-Phase Motor Speed Control & Solar VFD for Pumps",
+  "questions": [
+    {
+      "id": "u14_vfd_control_q1",
+      "question": "VFD (Variable Frequency Drive) द्वारा 3-phase induction motor की speed control करने का मूल सिद्धांत क्या है?",
+      "options": [
+        "Supply frequency को बदलकर synchronous speed (Ns = 120f/P) को बदलना",
+        "Motor की winding resistance बदलना",
+        "Motor के poles की संख्या yearly बदलना",
+        "केवल motor का voltage बढ़ाना बिना frequency बदले"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Induction motor की synchronous speed Ns = 120f/P होती है; VFD supply frequency (f) को बदलकर motor की speed को व्यापक range में नियंत्रित करता है। Winding resistance या pole संख्या को operation के दौरान बदलना व्यावहारिक नहीं है, और केवल voltage बदलने से flux असंतुलित हो जाएगा।"
+    },
+    {
+      "id": "u14_vfd_control_q2",
+      "question": "V/f (Volts per Hertz) control में voltage और frequency को किस प्रकार बदला जाता है?",
+      "options": [
+        "Voltage को constant रखकर केवल frequency बदली जाती है",
+        "Frequency के अनुपात में voltage को भी बदला जाता है ताकि V/f अनुपात लगभग constant रहे और air-gap flux स्थिर रहे",
+        "Frequency को constant रखकर केवल voltage बदली जाती है",
+        "दोनों को बेतरतीब ढंग से independent रखा जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: V/f control में motor का air-gap flux (जो लगभग V/f के अनुपात में होता है) स्थिर रखने के लिए frequency के साथ-साथ voltage को भी proportionally बदला जाता है, जिससे rated torque क्षमता बनी रहे। Voltage constant रखने या केवल voltage बदलने से flux असंतुलित हो जाएगा (saturation या weak flux)।"
+    },
+    {
+      "id": "u14_vfd_control_q3",
+      "question": "यदि V/f control में rated frequency से नीचे (जैसे 50 Hz से 25 Hz) चलाते समय voltage को proportionally न घटाया जाए, तो क्या समस्या होगी?",
+      "options": [
+        "Motor की speed बढ़ जाएगी",
+        "Motor बिल्कुल नहीं चलेगा",
+        "Air-gap flux rated value से अधिक बढ़ जाएगा जिससे core saturation, अधिक magnetizing current और अत्यधिक heating होगी",
+        "Power factor में कोई परिवर्तन नहीं होगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Frequency घटाने पर यदि voltage उसी अनुपात में न घटाई जाए तो V/f अनुपात व flux बढ़ जाता है, जिससे core saturation, अत्यधिक magnetizing current और overheating होती है। यह speed नहीं बढ़ाएगा, motor चलेगा (पर असुरक्षित स्थिति में), और power factor भी प्रभावित होगा।"
+    },
+    {
+      "id": "u14_vfd_control_q4",
+      "question": "VFD में 'base speed' (base frequency, सामान्यतः 50 Hz) से ऊपर operate करने पर V/f control किस प्रकार बदलता है?",
+      "options": [
+        "Base frequency से ऊपर भी voltage को frequency के साथ proportionally बढ़ाया जाता रहता है",
+        "Base frequency से ऊपर motor automatically बंद हो जाता है",
+        "Base frequency से ऊपर operate करना संभव ही नहीं है",
+        "Base frequency से ऊपर voltage को rated (maximum) value पर constant रखा जाता है जबकि frequency आगे बढ़ती रहती है, जिससे flux व torque घटते हैं (constant power region / field weakening)"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: चूँकि voltage को rated value से ऊपर नहीं बढ़ाया जा सकता (insulation सीमा), base speed से ऊपर voltage constant (rated) रखी जाती है जबकि frequency बढ़ती रहती है, जिससे flux व torque कम होते जाते हैं परंतु power लगभग constant रहती है (constant power region, field weakening जैसा DC motor में)। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q5",
+      "question": "V/f control का 'constant torque region' किस frequency range में होता है?",
+      "options": [
+        "Zero frequency से base frequency (rated frequency) तक, जहाँ V/f अनुपात constant रखकर rated flux व torque क्षमता बनाए रखी जाती है",
+        "Base frequency से ऊपर",
+        "केवल rated frequency पर ही",
+        "यह range motor की size पर निर्भर नहीं करता"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Zero से base (rated) frequency तक V/f अनुपात लगभग constant रखा जाता है जिससे flux constant रहे और motor rated torque (constant torque capability) दे सके — इसे constant torque region कहा जाता है। Base frequency से ऊपर constant power (field weakening) region होता है।"
+    },
+    {
+      "id": "u14_vfd_control_q6",
+      "question": "बहुत कम frequency (जैसे near zero Hz) पर operate करते समय V/f control में stator resistance (IR) drop की भरपाई के लिए क्या किया जाता है?",
+      "options": [
+        "Voltage को शून्य कर दिया जाता है",
+        "एक अतिरिक्त 'voltage boost' (low-frequency voltage compensation) जोड़ी जाती है ताकि stator resistance drop के कारण कम होने वाला flux/torque की भरपाई हो सके",
+        "Frequency को नकारात्मक कर दिया जाता है",
+        "Motor को disconnect कर दिया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: बहुत कम frequency पर applied voltage भी कम होती है, जिससे stator resistance (IR) drop का प्रभाव अनुपातिक रूप से अधिक हो जाता है और flux/starting torque कम हो जाता है; इसकी भरपाई के लिए VFD में 'voltage boost' parameter set किया जाता है। बाकी विकल्प व्यावहारिक नहीं हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q7",
+      "question": "VFD के माध्यम से motor speed control का एक प्रमुख लाभ पारंपरिक star-delta या autotransformer starting की तुलना में क्या है?",
+      "options": [
+        "Starting current में कोई कमी नहीं होती",
+        "VFD केवल fixed speed पर चलाता है",
+        "Smooth, stepless speed control के साथ-साथ controlled/low starting current और high starting torque दोनों प्राप्त होते हैं",
+        "VFD में कोई protection feature नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: VFD low frequency से शुरू करके धीरे-धीरे frequency बढ़ाता है, जिससे starting current नियंत्रित रहती है परंतु rated flux के कारण उचित starting torque भी मिलता है, साथ ही stepless (continuously variable) speed control संभव होता है। Star-delta/autotransformer में केवल कुछ fixed steps ही मिलते हैं। बाकी विकल्प VFD के लाभ को गलत बताते हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q8",
+      "question": "V/f control में 'slip compensation' feature का उद्देश्य क्या है?",
+      "options": [
+        "Motor की rated voltage बढ़ाना",
+        "Motor को उल्टी दिशा में चलाना",
+        "DC link voltage को कम करना",
+        "Load बढ़ने पर होने वाली slip के कारण actual speed में कमी की भरपाई के लिए output frequency को थोड़ा बढ़ाकर speed को reference के करीब बनाए रखना"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Open-loop V/f control में load बढ़ने पर slip बढ़ जाती है जिससे actual motor speed reference से कम हो जाती है; slip compensation feature estimated slip के अनुसार frequency को थोड़ा बढ़ाकर speed regulation सुधारता है। यह voltage बढ़ाने, DC link घटाने या दिशा बदलने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_vfd_control_q9",
+      "question": "Open-loop V/f control और closed-loop (encoder feedback सहित) vector/FOC control में मुख्य अंतर क्या है?",
+      "options": [
+        "Closed-loop vector control में speed/position feedback की मदद से torque व flux को independently precisely control किया जाता है, जिससे low speed पर भी high accuracy व dynamic response मिलती है, जबकि open-loop V/f में यह सटीकता नहीं होती",
+        "दोनों में कोई अंतर नहीं है",
+        "Open-loop V/f control में feedback sensor लगाना अनिवार्य है",
+        "Closed-loop vector control केवल DC motor में प्रयोग होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Vector/FOC (Field Oriented Control) में feedback (encoder/estimated) की सहायता से stator current के torque व flux producing components को अलग-अलग नियंत्रित किया जाता है, जिससे उच्च precision व fast dynamic response मिलती है; open-loop V/f में ऐसा precise control नहीं होता, विशेषकर low speed पर। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q10",
+      "question": "VFD में 'acceleration time' और 'deceleration time' parameters किसे नियंत्रित करते हैं?",
+      "options": [
+        "Motor की rated voltage को",
+        "Motor को start से रुकी हुई अवस्था से reference speed तक पहुँचने (acceleration) और speed से रुकने तक (deceleration) में लगने वाला समय, जिससे current व mechanical jerk नियंत्रित होते हैं",
+        "DC link capacitor की size को",
+        "Rectifier के diode rating को"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Acceleration/deceleration time parameters यह निर्धारित करते हैं कि motor कितनी तेजी से speed बदले; उचित समय सेट करने से starting/stopping के दौरान current spikes व mechanical shock नियंत्रित रहते हैं। यह voltage rating, capacitor size या diode rating से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_vfd_control_q11",
+      "question": "यदि VFD में deceleration time बहुत कम (aggressive) सेट किया जाए, तो क्या समस्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी",
+        "Motor की starting torque बढ़ जाएगी",
+        "Motor का regenerated energy DC link में जल्दी जमा होकर overvoltage trip कर सकता है, यदि उचित braking resistor/chopper न हो",
+        "Rectifier automatically bypass हो जाएगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: बहुत तेज deceleration में motor जल्दी से load की kinetic energy को वापस भेजता है (regeneration), जिससे DC link voltage तेजी से बढ़ता है; यदि braking resistor/chopper पर्याप्त न हो तो drive overvoltage fault पर trip कर सकती है। बाकी विकल्प गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q12",
+      "question": "VFD का उपयोग करके centrifugal pump की speed को rated speed के 80% पर चलाने पर, affinity laws के अनुसार pump की flow rate किस अनुपात में बदलती है?",
+      "options": [
+        "Flow rate speed के वर्ग के अनुपात में बदलती है",
+        "Flow rate speed के घन (cube) के अनुपात में बदलती है",
+        "Flow rate speed से पूर्णतः स्वतंत्र रहती है",
+        "Flow rate लगभग speed के सीधे अनुपात (linear) में बदलती है, अर्थात लगभग 80% हो जाएगी"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Centrifugal pump affinity laws के अनुसार flow rate (Q) speed (N) के सीधे अनुपात में बदलती है (Q ∝ N), इसलिए speed 80% होने पर flow rate भी लगभग 80% होगी। Head (H) speed के वर्ग के अनुपात में और power (P) speed के घन के अनुपात में बदलती है, न कि flow rate।"
+    },
+    {
+      "id": "u14_vfd_control_q13",
+      "question": "उपरोक्त प्रश्न के संदर्भ में, यदि pump की speed 80% कर दी जाए, तो motor द्वारा खींची गई power affinity law (P ∝ N³) के अनुसार लगभग कितनी होगी (rated power के सापेक्ष)?",
+      "options": [
+        "लगभग 51% (0.8³ ≈ 0.512 × rated power)",
+        "लगभग 80% (0.8 × rated power)",
+        "लगभग 100% (कोई बदलाव नहीं)",
+        "लगभग 64% (0.8² × rated power)"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Power affinity law के अनुसार P ∝ N³; speed 0.8 (80%) होने पर power अनुपात 0.8³ = 0.512, यानी लगभग 51% rated power होगी। यही कारण है कि centrifugal pump/fan applications में speed थोड़ी भी घटाने से power में बड़ी बचत होती है — यह VFD के energy-saving लाभ का मुख्य आधार है। अन्य विकल्प गलत अनुपात दर्शाते हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q14",
+      "question": "Solar VFD (solar-powered pump drive) में सामान्य grid-connected VFD की तुलना में एक मुख्य अतिरिक्त feature क्या होता है?",
+      "options": [
+        "यह हमेशा fixed frequency पर चलता है",
+        "यह DC input (solar PV panels से) को स्वीकार करता है और MPPT (Maximum Power Point Tracking) algorithm के साथ उपलब्ध solar power के अनुसार motor की frequency/speed को automatically adjust करता है",
+        "इसमें inverter की आवश्यकता नहीं होती",
+        "यह केवल single-phase AC motor के लिए बनाया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Solar VFD/solar pump controller सीधे PV array से DC input लेता है (rectifier की आवश्यकता नहीं) और MPPT algorithm के जरिए बदलती solar irradiance के अनुसार अधिकतम उपलब्ध power extract करते हुए pump motor की frequency/speed को adjust करता है। यह fixed frequency पर नहीं चलता और inverter अभी भी आवश्यक है क्योंकि motor को AC output चाहिए।"
+    },
+    {
+      "id": "u14_vfd_control_q15",
+      "question": "Solar VFD आधारित water pumping system में बादल छाने (cloud cover) से solar irradiance अचानक कम हो जाने पर controller क्या करता है?",
+      "options": [
+        "Motor को पूर्ण rated speed पर बनाए रखने की कोशिश करता है चाहे supply power कम हो जाए",
+        "यह तुरंत पूरे system को permanently बंद कर देता है",
+        "उपलब्ध कम power के अनुसार motor की frequency/speed को स्वतः घटा देता है ताकि DC link voltage collapse न हो और pump चलता रहे (यदि power बहुत कम हो तो सुरक्षित रूप से रुक जाए)",
+        "यह बादल छाने का पता ही नहीं लगा सकता"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Solar irradiance घटने पर PV array से उपलब्ध power भी घट जाती है; MPPT आधारित solar VFD DC link voltage को स्थिर रखने के लिए motor frequency/speed को dynamically कम कर देता है ताकि pump यथासंभव कम speed पर चलता रहे, और यदि power अपर्याप्त हो जाए तो नियंत्रित रूप से रुक जाता है। पूर्ण rated speed बनाए रखना संभव नहीं, permanent बंद होना गलत है, और यह irradiance परिवर्तन का पता लगाता है।"
+    },
+    {
+      "id": "u14_vfd_control_q16",
+      "question": "3-phase induction motor की speed control की विधियों में VFD (V/f control) को पारंपरिक pole-changing method से बेहतर क्यों माना जाता है?",
+      "options": [
+        "क्योंकि VFD केवल दो fixed speeds देता है जैसे pole-changing motor",
+        "क्योंकि VFD केवल DC motor के लिए उपयुक्त है",
+        "क्योंकि pole-changing method में कोई winding परिवर्तन की आवश्यकता नहीं होती",
+        "क्योंकि VFD continuously variable (stepless) speed range देता है जबकि pole-changing केवल कुछ निश्चित discrete speeds तक सीमित रहता है और विशेष winding की आवश्यकता होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Pole-changing (Dahlander आदि) winding में केवल कुछ discrete speed steps (जैसे 2:1 अनुपात) संभव होते हैं और विशेष winding आवश्यक है, जबकि VFD standard motor के साथ frequency बदलकर continuously variable speed range देता है। बाकी विकल्प गलत तुलना करते हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q17",
+      "question": "VFD में 'multi-pump control' (जैसे 2 या 3 pumps को एक साथ VFD/PLC से control करना) में 'lead-lag' concept का उद्देश्य क्या है?",
+      "options": [
+        "Demand के अनुसार एक pump को VFD (lead) से variable speed पर और बाकी को fixed speed (lag) पर चलाकर, तथा सभी pumps की running hours को equalize (rotate) करके wear को balance करना",
+        "सभी pumps को हमेशा एक साथ full speed पर चलाना",
+        "केवल एक pump को स्थायी रूप से चलाना और बाकी को कभी न चलाना",
+        "Pumps के बीच कोई communication न रखना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Multi-pump lead-lag control में demand के अनुसार एक (lead) pump को VFD से variable speed पर fine control किया जाता है और आवश्यकता बढ़ने पर अन्य (lag) pumps fixed speed पर जोड़े जाते हैं; साथ ही lead/lag भूमिका rotate की जाती है ताकि सभी pumps पर wear समान रूप से बंटे। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q18",
+      "question": "VFD आधारित pump control में 'dry run protection' का क्या कार्य है?",
+      "options": [
+        "Motor को हमेशा उच्च speed पर चलाना",
+        "पानी की कमी/low flow की स्थिति (जब pump बिना पर्याप्त पानी के चल रहा हो) को sense कर motor को बंद करना ताकि pump/seal को नुकसान न हो",
+        "Solar panel की cleaning करना",
+        "DC link voltage बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Dry run की स्थिति में pump बिना पर्याप्त पानी/flow के चलता है जिससे seal व impeller को नुकसान हो सकता है; VFD/controller current, pressure या flow sensor के feedback से इस स्थिति को detect कर motor को protect करने हेतु बंद कर देता है। बाकी विकल्प इस protection के कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_vfd_control_q19",
+      "question": "V/f control विधि से चलने वाले induction motor की low speed (near zero Hz) पर torque उत्पादन क्षमता, rated speed की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "Low speed पर torque क्षमता rated speed से अधिक होती है",
+        "Speed का torque क्षमता से कोई संबंध नहीं होता",
+        "Voltage boost के बिना low speed पर stator IR drop के प्रभावी होने के कारण torque क्षमता कम हो जाती है, जिसे appropriate voltage boost से आंशिक रूप से सुधारा जा सकता है",
+        "Low speed पर torque हमेशा शून्य हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Low frequency पर applied voltage भी कम होती है, जिससे stator resistance drop का प्रभाव सापेक्षिक रूप से बढ़ जाता है और flux/torque कम हो जाता है; उचित voltage boost parameter सेट कर इस कमी को कुछ हद तक ठीक किया जाता है, फिर भी open-loop V/f से closed-loop vector control जितना low-speed performance नहीं मिलता। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q20",
+      "question": "VFD में 'skip frequency' (frequency avoidance band) parameter का उपयोग किस लिए किया जाता है?",
+      "options": [
+        "Motor को हमेशा एक fixed frequency पर locked रखने के लिए",
+        "Rectifier के diode को protect करने के लिए",
+        "DC link voltage बढ़ाने के लिए",
+        "System की mechanical resonance frequency से बचने के लिए एक निश्चित frequency band को output range से बाहर रखने के लिए, ताकि उस range में लगातार चलने से vibration/resonance न हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: कुछ mechanical systems (pump/fan assembly) की एक विशेष frequency पर resonance होती है जिससे अत्यधिक vibration होता है; skip frequency parameter उस specific band को continuous operation range से बाहर रखता है (drive उस range से तुरंत गुजर जाता है, वहाँ स्थिर नहीं रहता)। बाकी विकल्प इसके उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_vfd_control_q21",
+      "question": "एक 4-pole, 50 Hz induction motor का synchronous speed क्या है, और VFD से इसे 40 Hz पर चलाने पर नया synchronous speed लगभग क्या होगा?",
+      "options": [
+        "1500 RPM पर 50 Hz; 40 Hz पर लगभग 1200 RPM",
+        "3000 RPM पर 50 Hz; 40 Hz पर लगभग 2400 RPM",
+        "1000 RPM पर 50 Hz; 40 Hz पर लगभग 800 RPM",
+        "750 RPM पर 50 Hz; 40 Hz पर लगभग 600 RPM"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Ns = 120f/P = 120×50/4 = 1500 RPM (50 Hz पर); 40 Hz पर Ns = 120×40/4 = 1200 RPM। यह दर्शाता है कि frequency के सीधे अनुपात में synchronous speed बदलती है (1500 × 40/50 = 1200)। बाकी विकल्प गलत pole संख्या या गणना पर आधारित हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q22",
+      "question": "VFD driven motor में 'PID setpoint control' (जैसे pressure माध्यम से pump speed control) में VFD किस प्रकार कार्य करता है?",
+      "options": [
+        "यह केवल manual speed reference पर काम करता है",
+        "Built-in PID controller feedback sensor (जैसे pressure transmitter) से actual value की तुलना desired setpoint से करके motor frequency को automatically adjust करता है ताकि process variable setpoint पर बना रहे",
+        "यह केवल on/off control करता है, कोई proportional adjustment नहीं",
+        "यह केवल DC motor के लिए उपलब्ध feature है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: कई modern VFDs में built-in PID controller होता है जो feedback (जैसे discharge pressure) की तुलना setpoint से कर error के अनुसार output frequency adjust करता है, जिससे बिना बाहरी PLC के भी closed-loop process control (constant pressure pumping आदि) संभव होता है। बाकी विकल्प इस feature को गलत बताते हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q23",
+      "question": "VFD के 'V/f curve' में यदि 'fan/pump quadratic torque characteristic' selection की जाए, तो यह किन loads के लिए उपयुक्त होती है?",
+      "options": [
+        "Constant torque loads जैसे conveyor या crusher के लिए",
+        "Elevator/hoist जैसे constant power load के लिए",
+        "Variable torque loads जैसे centrifugal pump/fan के लिए, जहाँ torque लगभग speed के वर्ग (N²) के अनुपात में बदलता है और energy saving के लिए voltage को speed के अनुसार अधिक घटाया जाता है",
+        "Winder application के लिए जहाँ torque उल्टे अनुपात में होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Centrifugal pump/fan में load torque लगभग speed के वर्ग (N²) के अनुपात में बदलता है (quadratic torque); VFD का quadratic/variable-torque V/f curve इस characteristic का लाभ उठाते हुए कम speed पर voltage को linear V/f से अधिक कम करता है, जिससे अतिरिक्त energy saving होती है। बाकी विकल्प अलग प्रकार के load हैं जिन्हें constant torque V/f curve चाहिए।"
+    },
+    {
+      "id": "u14_vfd_control_q24",
+      "question": "VFD driven 3-phase motor में यदि motor की दिशा (direction) उल्टी करनी हो (forward से reverse), तो VFD आंतरिक रूप से क्या करता है?",
+      "options": [
+        "DC link voltage की polarity उलट देता है",
+        "Rectifier को बंद कर देता है",
+        "Motor के winding connections को physically बदल देता है",
+        "Inverter की switching sequence बदलकर output के किन्हीं दो phases का phase sequence आपस में बदल देता है (जैसे R-Y-B से R-B-Y), जिससे rotating magnetic field की दिशा उल्टी हो जाती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: VFD बिना किसी physical rewiring के, inverter की switching pattern में दो output phases का sequence आपस में बदल कर rotating magnetic field और motor की दिशा उल्टी कर देता है (जैसे contactor-based star-delta control में manually किया जाता है)। DC link polarity या rectifier बंद होना इससे संबंधित नहीं हैं, और physical rewiring की आवश्यकता नहीं होती।"
+    },
+    {
+      "id": "u14_vfd_control_q25",
+      "question": "Solar VFD आधारित pumping system में battery/grid backup की तुलना में केवल solar-direct (battery रहित) system का एक मुख्य लाभ और एक मुख्य सीमा क्या है?",
+      "options": [
+        "लाभ: battery की आवश्यकता व maintenance नहीं; सीमा: pumping केवल दिन के समय व पर्याप्त sunlight उपलब्ध होने पर ही संभव है",
+        "लाभ: यह रात में भी बिना किसी अतिरिक्त उपकरण के चल सकता है; सीमा: यह अधिक महंगा है",
+        "लाभ: यह हमेशा constant speed देता है; सीमा: यह केवल AC motor को support नहीं करता",
+        "इसमें कोई लाभ या सीमा नहीं है, यह grid-connected VFD जैसा ही है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Battery-less solar-direct pumping system में battery की खरीद, maintenance व replacement लागत नहीं होती जो एक बड़ा लाभ है, परंतु इसकी सीमा यह है कि pumping केवल दिन में जब पर्याप्त solar irradiance उपलब्ध हो तभी संभव है, रात या cloudy conditions में यह काम नहीं करेगा जब तक storage tank/reservoir द्वारा compensate न किया जाए। बाकी विकल्प गलत तथ्य बताते हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q26",
+      "question": "V/f control based VFD में 'auto-tuning' या 'motor parameter identification' feature का उद्देश्य क्या है?",
+      "options": [
+        "Motor की rated voltage को permanently बढ़ाना",
+        "Connected motor के actual stator resistance, leakage inductance जैसे parameters को स्वतः measure/estimate करके control algorithm को उस विशेष motor के अनुसार optimize करना",
+        "DC link capacitor को replace करना",
+        "Rectifier diode की rating बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Auto-tuning के दौरान VFD एक छोटा सा test (motor को बिना घुमाए या हल्का घुमाकर) करके connected motor के actual electrical parameters (stator resistance आदि) का अनुमान लगाता है, जिससे voltage boost, slip compensation जैसी settings उस specific motor के लिए optimize हो जाती हैं और control performance बेहतर होता है। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_vfd_control_q27",
+      "question": "Constant torque load (जैसे conveyor) पर VFD से speed control करते समय V/f curve किस प्रकार की रखनी चाहिए?",
+      "options": [
+        "Quadratic (fan/pump type) V/f curve",
+        "V/f अनुपात को speed बढ़ने के साथ घटाते जाना",
+        "Linear V/f curve, ताकि पूरी speed range में लगभग constant flux व rated torque क्षमता उपलब्ध रहे",
+        "Voltage को शून्य पर स्थिर रखना"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Constant torque load के लिए पूरी speed range में rated torque क्षमता उपलब्ध रहनी चाहिए, इसलिए standard linear V/f curve (जिसमें V/f अनुपात लगभग constant रहता है) उपयुक्त है। Quadratic curve variable torque (pump/fan) loads के लिए है, जबकि voltage शून्य रखने का कोई अर्थ नहीं है।"
+    },
+    {
+      "id": "u14_vfd_control_q28",
+      "question": "VFD में 'jog' (inching) function का उपयोग किस उद्देश्य के लिए किया जाता है?",
+      "options": [
+        "Motor को स्थायी रूप से high speed पर locked रखने के लिए",
+        "Solar panel की cleaning cycle चलाने के लिए",
+        "DC link voltage मापने के लिए",
+        "Maintenance/positioning जैसे कार्यों में, button दबाए रहने पर motor को कम speed पर थोड़ी देर के लिए चलाने और छोड़ते ही रोकने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Jog/inching function से operator button दबाए रखने पर motor कम speed पर थोड़ी दूरी/समय के लिए चलता है और button छोड़ते ही रुक जाता है, जो fine positioning या maintenance जांच में उपयोगी है। यह high speed locking, voltage measurement या panel cleaning से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_vfd_control_q29",
+      "question": "Solar VFD driven submersible pump प्रणाली में panel की rated capacity (kWp) motor की rated power से कम रखने पर सामान्यतः क्या परिणाम होगा?",
+      "options": [
+        "Peak sunlight में भी motor शायद अपनी पूरी rated speed/capacity तक नहीं पहुँच पाएगा, क्योंकि उपलब्ध solar power motor की full rated power से कम है",
+        "Motor हमेशा rated speed पर चलेगा चाहे कितनी भी irradiance हो",
+        "System बिल्कुल काम नहीं करेगा",
+        "Motor की rated voltage automatically बढ़ जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: यदि PV array की rated capacity motor की rated power से कम है, तो best sunlight conditions में भी उपलब्ध power सीमित रहेगी, जिससे controller motor को कम frequency/speed पर ही चला पाएगा और motor अपनी पूरी rated capacity तक नहीं पहुँचेगा। System पूरी तरह काम करना बंद नहीं करेगा, बल्कि reduced capacity पर चलेगा, और rated voltage automatically नहीं बढ़ती।"
+    },
+    {
+      "id": "u14_vfd_control_q30",
+      "question": "VFD आधारित speed control से पारंपरिक mechanical throttling valve (constant speed pump पर) की तुलना में energy बचत क्यों अधिक होती है?",
+      "options": [
+        "क्योंकि throttling valve में flow कम करने के लिए motor की speed सीधे कम होती है",
+        "क्योंकि throttling valve में motor लगभग full speed व full power पर चलता रहता है जबकि flow valve resistance से कम किया जाता है (energy waste), परंतु VFD में flow कम करने के लिए motor speed व power दोनों वास्तव में (affinity law अनुसार घन में) कम हो जाते हैं",
+        "क्योंकि VFD में motor कभी भी बंद नहीं होता",
+        "क्योंकि throttling valve में कोई pressure drop नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Throttling valve से flow कम करने पर motor लगभग rated speed व power पर ही चलता रहता है जबकि अतिरिक्त energy valve resistance में waste होती है; इसके विपरीत VFD flow कम करने के लिए motor की speed कम करता है, जिससे affinity law (P ∝ N³) के अनुसार power खपत काफी अधिक घट जाती है और वास्तविक energy saving होती है। बाकी विकल्प गलत तर्क देते हैं।"
+    }
+  ]
+}

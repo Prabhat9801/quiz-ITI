@@ -1,0 +1,368 @@
+{
+  "unit": "unit9",
+  "unitName": "Solar Power Renewable Energy Systems",
+  "topic": "solar_cell_materials",
+  "topicName": "Materials Used for Solar Cells (Silicon, Doping)",
+  "questions": [
+    {
+      "id": "u9_solar_cell_materials_q1",
+      "question": "Solar cells बनाने के लिए सबसे अधिक प्रयोग होने वाला semiconductor material कौन-सा है?",
+      "options": [
+        "Silicon (Si)",
+        "Copper (Cu)",
+        "Aluminium (Al)",
+        "Iron (Fe)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Silicon (Si) एक abundant semiconductor material है जिसमें उपयुक्त bandgap (लगभग 1.1 eV) होता है, इसलिए यह solar cells के लिए सबसे अधिक प्रयोग होता है। Copper, Aluminium और Iron conductors/metals हैं, semiconductor नहीं, इसलिए ये PV effect के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q2",
+      "question": "Pure silicon को solar cell के लिए उपयोगी बनाने के लिए उसमें क्या प्रक्रिया की जाती है?",
+      "options": [
+        "Oxidation",
+        "Doping",
+        "Annealing केवल पानी में",
+        "Painting"
+      ],
+      "correctIndex": 1,
+      "explanation": "Doping process में pure (intrinsic) silicon में impurity atoms मिलाए जाते हैं ताकि उसमें free charge carriers बढ़ें और p-type या n-type semiconductor बने। Oxidation silicon की सतह पर SiO2 layer बनाने की प्रक्रिया है, Annealing heat-treatment है, और Painting का semiconductor properties से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q3",
+      "question": "N-type silicon layer बनाने के लिए silicon में कौन-सा impurity element मिलाया जाता है?",
+      "options": [
+        "Boron (B)",
+        "Phosphorus (P)",
+        "Gallium (Ga)",
+        "Indium (In)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phosphorus (P) एक pentavalent (5 valence electrons वाला) element है, जो silicon में extra free electron प्रदान करके n-type semiconductor बनाता है। Boron, Gallium और Indium trivalent elements हैं जो p-type semiconductor बनाते हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q4",
+      "question": "P-type silicon layer बनाने के लिए silicon में सामान्यतः कौन-सा impurity mila जाता है?",
+      "options": [
+        "Boron (B)",
+        "Phosphorus (P)",
+        "Arsenic (As)",
+        "Antimony (Sb)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Boron (B) trivalent element है जिसमें 3 valence electrons होते हैं, silicon में मिलाने पर यह holes (majority carriers) बढ़ाकर p-type semiconductor बनाता है। Phosphorus, Arsenic और Antimony pentavalent elements हैं जो n-type semiconductor बनाते हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q5",
+      "question": "Silicon को pentavalent impurity के साथ dope करने पर उसमें majority charge carrier क्या होता है?",
+      "options": [
+        "Holes",
+        "Free electrons",
+        "Protons",
+        "Neutrons"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pentavalent impurity (जैसे Phosphorus) मिलाने पर एक extra electron बच जाता है जो loosely bonded होता है और free electron के रूप में majority carrier बनता है। Holes p-type में majority carrier होते हैं, जबकि protons और neutrons nucleus के अंदर fixed particles होते हैं, ये charge carrier की तरह conduct नहीं करते।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q6",
+      "question": "Silicon को trivalent impurity के साथ dope करने पर उसमें majority charge carrier क्या बनता है?",
+      "options": [
+        "Free electrons",
+        "Holes",
+        "Photons",
+        "Neutrinos"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trivalent impurity (जैसे Boron) मिलाने पर covalent bond में एक electron की कमी रह जाती है, जिससे hole बनता है और यह majority carrier बन जाता है। Free electrons n-type में majority carrier होते हैं, जबकि photons light के particles हैं और neutrinos का semiconductor doping से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q7",
+      "question": "Intrinsic silicon (बिना doping के pure silicon) की conductivity practical solar cell के लिए क्यों पर्याप्त नहीं होती?",
+      "options": [
+        "इसमें बहुत ज़्यादा free charge carriers होते हैं",
+        "इसमें बहुत कम free charge carriers होते हैं जिससे current flow सीमित रहता है",
+        "यह light को पूरी तरह reflect कर देती है",
+        "यह केवल infrared light absorb करती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Intrinsic (undoped) silicon में free charge carriers की संख्या बहुत कम होती है, इसलिए इसकी conductivity कम रहती है और उपयोगी current उत्पन्न करने के लिए doping ज़रूरी होती है। Options A, C और D तथ्यात्मक रूप से गलत हैं क्योंकि intrinsic silicon में carriers कम होते हैं और यह visible spectrum की light भी absorb करता है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q8",
+      "question": "Solar cell में p-n junction बनाने के लिए silicon wafer की किस प्रकार layers रखी जाती हैं?",
+      "options": [
+        "दोनों layers n-type",
+        "दोनों layers p-type",
+        "एक p-type और एक n-type layer एक-दूसरे के संपर्क में",
+        "केवल एक ही layer, दो अलग metals की"
+      ],
+      "correctIndex": 2,
+      "explanation": "Solar cell का काम p-n junction पर आधारित है, इसलिए एक p-type layer और एक n-type layer को आपस में जोड़ा जाता है जिससे junction पर depletion region और built-in electric field बनता है। दोनों layers एक ही type की होने पर junction नहीं बनेगा, और option D भी galat है क्योंकि यह metal-metal contact है, semiconductor junction नहीं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q9",
+      "question": "Monocrystalline silicon solar cells बनाने के लिए silicon को किस विधि से grow किया जाता है?",
+      "options": [
+        "Czochralski process",
+        "Electroplating",
+        "Anodizing",
+        "Galvanizing"
+      ],
+      "correctIndex": 0,
+      "explanation": "Czochralski process में molten silicon से single crystal silicon ingot खींचा (pull) जाता है, जिसे बाद में thin wafers में काटा जाता है — यह monocrystalline cells के लिए प्रयोग होती है। Electroplating, Anodizing और Galvanizing metal-coating processes हैं, silicon crystal growth से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q10",
+      "question": "Silicon के अलावा thin-film solar cells में प्रयोग होने वाला एक common material कौन-सा है?",
+      "options": [
+        "Cadmium Telluride (CdTe)",
+        "Cast iron",
+        "Stainless steel",
+        "Mild steel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cadmium Telluride (CdTe) thin-film solar cells के लिए प्रयोग होने वाला एक प्रमुख semiconductor material है जिसमें high light-absorption coefficient होता है। Cast iron, stainless steel और mild steel structural metals हैं, ये semiconductor properties नहीं रखते।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q11",
+      "question": "Amorphous silicon (a-Si) thin-film cells में silicon की atomic structure किस प्रकार की होती है?",
+      "options": [
+        "पूर्णतया crystalline और ordered",
+        "Non-crystalline और disordered atomic arrangement",
+        "केवल liquid अवस्था में",
+        "केवल gas अवस्था में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Amorphous silicon में atoms का कोई long-range ordered crystal structure नहीं होता, यह disordered (non-crystalline) arrangement में होता है, जिससे यह thin, flexible layer के रूप में deposit किया जा सकता है। Crystalline silicon (mono/poly) में ordered structure होता है, और liquid/gas states solar cell material की ठोस thin film में लागू नहीं होतीं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q12",
+      "question": "Solar cell के top surface पर anti-reflective coating किस उद्देश्य से लगाई जाती है?",
+      "options": [
+        "Cell का weight बढ़ाने के लिए",
+        "Incident light के reflection को कम करके अधिकतम light absorption सुनिश्चित करने के लिए",
+        "Cell को waterproof बनाने के लिए",
+        "Cell का color बदलने के लिए मात्र decoration हेतु"
+      ],
+      "correctIndex": 1,
+      "explanation": "Anti-reflective coating सतह से light के reflection loss को कम करती है ताकि अधिकतम photons cell के अंदर absorb होकर electricity उत्पन्न करें, जिससे efficiency बढ़ती है। Weight बढ़ाना, waterproofing और mere decoration इस coating के मुख्य उद्देश्य नहीं हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q13",
+      "question": "Silicon को solar cell material के रूप में चुनने का एक मुख्य कारण क्या है?",
+      "options": [
+        "यह पृथ्वी पर बहुतायत (abundant) में उपलब्ध है और इसकी processing technology well-established है",
+        "यह पानी में आसानी से घुल जाता है",
+        "यह केवल रात में काम करता है",
+        "इसका melting point सबसे कम है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Silicon पृथ्वी की crust में दूसरा सबसे अधिक abundant element है और इसकी semiconductor manufacturing technology (जैसा IC industry में प्रयोग होती है) पहले से well-developed है, इसलिए यह cost-effective choice है। यह पानी में नहीं घुलता, दिन में sunlight से ही काम करता है, और इसका melting point काफी उच्च (लगभग 1414°C) होता है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q14",
+      "question": "Solar cell में metal contacts (front और back electrodes) किस उद्देश्य से लगाए जाते हैं?",
+      "options": [
+        "Sunlight को absorb करने के लिए",
+        "Generated current को बाहरी circuit तक ले जाने के लिए",
+        "Cell का temperature control करने के लिए",
+        "Cell को mechanically मजबूत बनाने के लिए मात्र"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metal contacts (front grid और rear contact) p-n junction में उत्पन्न electric current को collect करके बाहरी load circuit तक पहुँचाने का काम करते हैं। Sunlight absorption semiconductor layer का काम है, temperature control अलग thermal management से होता है, और mechanical strength गौण (secondary) उद्देश्य है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q15",
+      "question": "Polycrystalline silicon wafer में monocrystalline की तुलना में क्या विशेषता होती है?",
+      "options": [
+        "यह single, continuous crystal structure से बनता है",
+        "यह कई छोटे-छोटे silicon crystals (grains) से मिलकर बनता है",
+        "इसमें कोई silicon नहीं होता",
+        "यह पूरी तरह amorphous होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Polycrystalline silicon कई छोटे grains (crystals) को पिघलाकर mould में ठंडा करके बनाया जाता है, जिससे grain boundaries बनती हैं। Monocrystalline single continuous crystal होता है, silicon इसमें अवश्य होता है, और यह amorphous नहीं बल्कि crystalline (multi-grain) होता है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q16",
+      "question": "Silicon का bandgap लगभग कितना होता है, जो इसे solar radiation absorb करने के लिए उपयुक्त बनाता है?",
+      "options": [
+        "लगभग 1.1 eV",
+        "लगभग 10 eV",
+        "लगभग 0.001 eV",
+        "लगभग 100 eV"
+      ],
+      "correctIndex": 0,
+      "explanation": "Silicon का bandgap लगभग 1.1 eV है, जो solar spectrum की अधिकांश useful wavelengths की photon energy से मेल खाता है, इसलिए यह efficient absorption देता है। 10 eV, 0.001 eV और 100 eV वास्तविक silicon bandgap से बहुत दूर हैं और व्यावहारिक नहीं हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q17",
+      "question": "Gallium Arsenide (GaAs) solar cells का प्रमुख उपयोग किस क्षेत्र में होता है जहाँ high efficiency और cost कोई बड़ी बाधा नहीं होती?",
+      "options": [
+        "Domestic rooftop installations",
+        "Space satellites और aerospace applications",
+        "साधारण garden lights",
+        "Toy solar cars"
+      ],
+      "correctIndex": 1,
+      "explanation": "GaAs cells उच्च efficiency देते हैं परंतु महंगे होते हैं, इसलिए इनका उपयोग मुख्यतः space satellites जैसे high-value applications में होता है जहाँ efficiency और weight critical हैं। Domestic rooftops, garden lights और toys में cost-effective silicon cells प्रयोग होते हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q18",
+      "question": "Doping की प्रक्रिया में impurity atoms की मात्रा (concentration) silicon की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "बहुत अधिक, लगभग 50%",
+        "बहुत कम, प्रति million silicon atoms में कुछ ही impurity atoms",
+        "Silicon के बराबर अनुपात में",
+        "Impurity, silicon से अधिक मात्रा में डाली जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Doping में impurity atoms की concentration बहुत कम रखी जाती है (typically parts per million स्तर पर) ताकि desired electrical properties मिलें बिना crystal structure को अधिक disturb किए। 50%, बराबर अनुपात, या impurity को silicon से अधिक डालना व्यावहारिक doping practice नहीं है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q19",
+      "question": "Silicon wafer की मोटाई (thickness) आमतौर पर solar cell manufacturing में किस range में रखी जाती है?",
+      "options": [
+        "लगभग 1-2 meter",
+        "लगभग 150-200 micrometer",
+        "लगभग 10 centimeter",
+        "लगभग 1 kilometer"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cost कम करने और material बचाने के लिए silicon wafers को बहुत पतला (लगभग 150-200 micrometer) काटा जाता है, फिर भी वे पर्याप्त light absorb कर लेते हैं। Meter, centimeter या kilometer range व्यावहारिक wafer thickness से कहीं अधिक बड़े हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q20",
+      "question": "Back Surface Field (BSF) layer solar cell में किस उद्देश्य से बनाई जाती है?",
+      "options": [
+        "Cell के पिछले हिस्से में additional electric field बनाकर electron-hole recombination कम करना",
+        "Cell को ज़्यादा भारी बनाना",
+        "Cell का रंग गहरा करना",
+        "Sunlight को पूरी तरह block करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "BSF layer rear side पर highly doped region बनाकर एक additional built-in field उत्पन्न करती है, जो minority carriers को rear contact की ओर recombine होने से रोकती है और efficiency बढ़ाती है। यह वजन बढ़ाने, रंग बदलने या light block करने के लिए नहीं बनाई जाती।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q21",
+      "question": "Texturing (surface texturing) process silicon wafer की सतह पर क्यों की जाती है?",
+      "options": [
+        "सतह को पूरी तरह smooth और flat बनाने के लिए",
+        "सतह पर micro-pyramids बनाकर light trapping बढ़ाने और reflection कम करने के लिए",
+        "Wafer को पतला करने के लिए",
+        "Wafer को चुम्बकीय बनाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Texturing से सतह पर सूक्ष्म pyramid जैसी structures बनती हैं जो incident light को बार-बार reflect कराकर अधिक light को cell के अंदर trap कर लेती हैं, जिससे absorption बढ़ती है। यह सतह को smooth बनाने, thin करने या magnetic गुण देने के लिए नहीं की जाती।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q22",
+      "question": "Extrinsic semiconductor (doped semiconductor) और intrinsic semiconductor (pure) में मूल अंतर क्या है?",
+      "options": [
+        "Extrinsic में कोई impurity नहीं होती जबकि intrinsic में होती है",
+        "Extrinsic में जान-बूझकर impurity मिलाई जाती है जबकि intrinsic pure होता है",
+        "दोनों में कोई अंतर नहीं होता",
+        "Intrinsic semiconductor केवल metals से बनते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Extrinsic semiconductor में conductivity control करने हेतु जान-बूझकर impurity (doping) मिलाई जाती है, जबकि intrinsic semiconductor बिना किसी बाहरी impurity के pure रूप में होता है। इसलिए option A उलटा है, दोनों में मौलिक अंतर है, और intrinsic semiconductor metals से नहीं बल्कि pure Si/Ge जैसे elements से बनते हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q23",
+      "question": "Solar cell manufacturing में raw material के रूप में प्रयोग होने वाली silica (SiO2) को शुद्ध silicon में बदलने के लिए किस प्रकार की process अपनाई जाती है?",
+      "options": [
+        "Simple filtration",
+        "High-temperature reduction और purification process (जैसे Siemens process)",
+        "केवल पानी से धोना",
+        "Freezing"
+      ],
+      "correctIndex": 1,
+      "explanation": "Silica sand से solar-grade शुद्ध silicon प्राप्त करने के लिए high-temperature reduction (carbon के साथ) और आगे Siemens process जैसी purification steps अपनाई जाती हैं। साधारण filtration, पानी से धोना या freezing से इतनी उच्च purity प्राप्त नहीं होती।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q24",
+      "question": "Solar-grade silicon की purity (शुद्धता) सामान्यतः कितनी उच्च होनी चाहिए?",
+      "options": [
+        "लगभग 50% pure",
+        "लगभग 99.9999% (six-nines) pure",
+        "लगभग 10% pure",
+        "Purity की कोई आवश्यकता नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solar cells की अच्छी electrical performance के लिए silicon को बहुत उच्च purity (लगभग 99.9999%, यानी 'six nines') तक शुद्ध करना पड़ता है ताकि unwanted impurities charge carriers की गति में बाधा न डालें। 50% या 10% purity बहुत कम है और 'purity की आवश्यकता नहीं' कथन गलत है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q25",
+      "question": "Cadmium Telluride (CdTe) और Silicon आधारित cells की तुलना में CdTe cells का एक फायदा क्या है?",
+      "options": [
+        "CdTe cells बहुत कम light-absorption रखते हैं",
+        "CdTe में उच्च light-absorption coefficient होने से बहुत पतली film से भी पर्याप्त absorption हो जाता है",
+        "CdTe cells कभी degrade नहीं होते",
+        "CdTe cells silicon से सस्ते semiconductor material नहीं हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "CdTe का light-absorption coefficient काफी अधिक होता है, इसलिए बहुत पतली film (कुछ micrometer) से भी अधिकांश light absorb हो जाती है, जिससे material की खपत कम होती है। CdTe cells में absorption कम नहीं बल्कि अधिक है, ये भी अन्य cells की तरह समय के साथ degrade होते हैं, और यह silicon से material cost में भिन्न (आमतौर पर कम खर्चीला) होता है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q26",
+      "question": "Silicon wafer में p-n junction के दोनों तरफ doping concentration में अंतर होने से junction पर क्या बनता है जो PV effect के लिए आवश्यक है?",
+      "options": [
+        "Magnetic field",
+        "Built-in electric field (depletion region)",
+        "Sound wave",
+        "Chemical bond टूटना"
+      ],
+      "correctIndex": 1,
+      "explanation": "P-n junction बनने पर electrons और holes की diffusion से एक depletion region बनता है जिसमें built-in electric field होता है — यही field light से उत्पन्न electron-hole pairs को अलग करके current उत्पन्न करने में मदद करता है। Magnetic field, sound wave और chemical bond टूटना PV effect के मूल कारण नहीं हैं।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q27",
+      "question": "Perovskite जैसे नए materials solar cell research में क्यों लोकप्रिय हो रहे हैं?",
+      "options": [
+        "क्योंकि वे बहुत महंगे और भारी हैं",
+        "क्योंकि इनमें कम cost में उच्च efficiency और आसान fabrication की संभावना है",
+        "क्योंकि इनमें कोई light absorption नहीं होता",
+        "क्योंकि इनका उपयोग केवल underwater applications में होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Perovskite materials में अपेक्षाकृत सस्ती manufacturing process से उच्च efficiency प्राप्त होने की संभावना है, इसलिए ये research में लोकप्रिय हैं। ये न तो महंगे-भारी होने के कारण लोकप्रिय हैं, न ही light absorption रहित हैं, और इनका underwater उपयोग से कोई विशेष संबंध नहीं है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q28",
+      "question": "Solar cell में front metal grid को पूरी सतह पर पूर्णतः cover करके नहीं बल्कि पतली lines के रूप में क्यों बनाया जाता है?",
+      "options": [
+        "ताकि cell सस्ता दिखे",
+        "ताकि maximum sunlight cell की semiconductor सतह तक पहुँच सके जबकि current collection भी हो सके",
+        "ताकि cell भारी हो जाए",
+        "इसका कोई तकनीकी कारण नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अगर पूरी सतह metal से ढक दी जाए तो sunlight semiconductor तक नहीं पहुँच पाएगी, इसलिए thin grid lines बनाई जाती हैं जो current collect करने के साथ-साथ अधिकतम light भी गुजरने देती हैं। यह design decoration, वजन बढ़ाने के लिए नहीं बल्कि optical व electrical दोनों आवश्यकताओं को संतुलित करने के लिए है।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q29",
+      "question": "Doping के कारण n-type silicon में minority carriers क्या होते हैं?",
+      "options": [
+        "Holes",
+        "Free electrons",
+        "Protons",
+        "Neutrons"
+      ],
+      "correctIndex": 0,
+      "explanation": "N-type semiconductor में free electrons majority carrier होते हैं जबकि holes की संख्या बहुत कम होती है, इसलिए holes minority carrier कहलाते हैं। Free electrons majority carrier हैं, और protons/neutrons nucleus के भीतर होते हैं, ये semiconductor conduction में carrier नहीं माने जाते।"
+    },
+    {
+      "id": "u9_solar_cell_materials_q30",
+      "question": "Solar cell material चुनते समय किस गुण को सबसे अधिक महत्व दिया जाता है ताकि visible sunlight का अधिकतम भाग absorb हो सके?",
+      "options": [
+        "Material का उपयुक्त bandgap जो solar spectrum की energy से मेल खाए",
+        "Material का रंग सफेद होना",
+        "Material का चुम्बकीय होना",
+        "Material का पानी में घुलनशील होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Material का bandgap ऐसा होना चाहिए जो solar spectrum की अधिकांश photon energies से मेल खाए, तभी अधिकतम absorption और efficient electron-hole pair generation संभव है। रंग सफेद होना, चुम्बकीय गुण या पानी में घुलनशीलता का PV performance से कोई सीधा संबंध नहीं है।"
+    }
+  ]
+}

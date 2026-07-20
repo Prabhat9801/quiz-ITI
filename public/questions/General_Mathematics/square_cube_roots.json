@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "square_cube_roots",
+  "topicName": "Square and Cube Roots",
+  "questions": [
+    {
+      "id": "math_square_cube_roots_q1",
+      "question": "√169 का मान ज्ञात करें।",
+      "options": ["13", "12", "14", "15"],
+      "correctIndex": 0,
+      "explanation": "13×13 = 169, इसलिए √169 = 13। 12²=144, 14²=196 और 15²=225, ये सभी 169 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q2",
+      "question": "∛512 का मान ज्ञात करें।",
+      "options": ["6", "8", "10", "12"],
+      "correctIndex": 1,
+      "explanation": "8×8×8 = 512, इसलिए ∛512 = 8। 6³=216, 10³=1000 और 12³=1728, ये 512 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q3",
+      "question": "√225 का मान ज्ञात करें।",
+      "options": ["12", "14", "15", "18"],
+      "correctIndex": 2,
+      "explanation": "15×15 = 225, इसलिए √225 = 15। 12²=144, 14²=196 और 18²=324, ये 225 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q4",
+      "question": "∛343 का मान ज्ञात करें।",
+      "options": ["5", "6", "6.5", "7"],
+      "correctIndex": 3,
+      "explanation": "7×7×7 = 343, इसलिए ∛343 = 7। 5³=125, 6³=216 और 6.5³≈274.6, ये 343 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q5",
+      "question": "√0.0009 का मान ज्ञात करें।",
+      "options": ["0.03", "0.3", "0.003", "0.9"],
+      "correctIndex": 0,
+      "explanation": "0.03 × 0.03 = 0.0009, इसलिए √0.0009 = 0.03। 0.3²=0.09, 0.003²=0.000009 और 0.9²=0.81, ये 0.0009 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q6",
+      "question": "√(196/256) को simplest form में simplify करें।",
+      "options": ["6/8", "7/8", "7/16", "14/8"],
+      "correctIndex": 1,
+      "explanation": "√196 = 14 और √256 = 16, इसलिए √(196/256) = 14/16 = 7/8 (simplest form में)। बाकी options या तो simplify नहीं हुए हैं या गलत values हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q7",
+      "question": "∛(-125) का मान ज्ञात करें।",
+      "options": ["5", "-4", "-5", "-6"],
+      "correctIndex": 2,
+      "explanation": "cube root negative संख्याओं के लिए negative हो सकता है: (-5)×(-5)×(-5) = -125, इसलिए ∛(-125) = -5। 5, -4 और -6, cube करने पर -125 नहीं देते।"
+    },
+    {
+      "id": "math_square_cube_roots_q8",
+      "question": "√576 का मान ज्ञात करें।",
+      "options": ["22", "23", "24", "26"],
+      "correctIndex": 2,
+      "explanation": "24×24 = 576, इसलिए √576 = 24। 22²=484, 23²=529 और 26²=676, ये 576 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q9",
+      "question": "यदि x² = 441 है, तो x का positive मान ज्ञात करें।",
+      "options": ["21", "20", "19", "22"],
+      "correctIndex": 0,
+      "explanation": "21×21 = 441, इसलिए x = 21। 20²=400, 19²=361 और 22²=484, ये 441 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q10",
+      "question": "1024 का square root ज्ञात करें।",
+      "options": ["28", "36", "40", "32"],
+      "correctIndex": 3,
+      "explanation": "32×32 = 1024, इसलिए √1024 = 32। 28²=784, 36²=1296 और 40²=1600, ये 1024 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q11",
+      "question": "∛1728 का मान ज्ञात करें।",
+      "options": ["10", "11", "12", "14"],
+      "correctIndex": 2,
+      "explanation": "12×12×12 = 1728, इसलिए ∛1728 = 12। 10³=1000, 11³=1331 और 14³=2744, ये 1728 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q12",
+      "question": "√50 को simplest radical form में simplify करें।",
+      "options": ["2√25", "10√5", "5√5", "5√2"],
+      "correctIndex": 3,
+      "explanation": "50 = 25×2, इसलिए √50 = √25×√2 = 5√2। बाकी options में factorization सही तरीके से नहीं की गई है (जैसे 2√25 वास्तव में 2×5=10 के बराबर है, न कि √50 के)।"
+    },
+    {
+      "id": "math_square_cube_roots_q13",
+      "question": "√0.0625 का मान ज्ञात करें।",
+      "options": ["0.25", "0.025", "2.5", "0.125"],
+      "correctIndex": 0,
+      "explanation": "0.25 × 0.25 = 0.0625, इसलिए √0.0625 = 0.25। 0.025²=0.000625, 2.5²=6.25 और 0.125²=0.015625, ये 0.0625 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q14",
+      "question": "division method से 7921 का square root ज्ञात करें।",
+      "options": ["87", "91", "93", "89"],
+      "correctIndex": 3,
+      "explanation": "89×89 = 7921, इसलिए √7921 = 89। 87²=7569, 91²=8281 और 93²=8649, ये 7921 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q15",
+      "question": "∛0.008 का मान ज्ञात करें।",
+      "options": ["0.02", "0.2", "0.4", "2"],
+      "correctIndex": 1,
+      "explanation": "0.2 × 0.2 × 0.2 = 0.008, इसलिए ∛0.008 = 0.2। 0.02³=0.000008, 0.4³=0.064 और 2³=8, ये 0.008 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q16",
+      "question": "√70 किन दो consecutive integers के बीच स्थित है?",
+      "options": ["6 and 7", "7 and 8", "9 and 10", "8 and 9"],
+      "correctIndex": 3,
+      "explanation": "8² = 64 और 9² = 81। चूँकि 64 < 70 < 81, इसलिए √70, 8 और 9 के बीच स्थित है। बाकी options की range में 70 नहीं आता (जैसे 7²=49 और 8²=64, दोनों 70 से छोटे हैं)।"
+    },
+    {
+      "id": "math_square_cube_roots_q17",
+      "question": "√18 × √2 को simplify करें।",
+      "options": ["6", "8", "9", "12"],
+      "correctIndex": 0,
+      "explanation": "√18 × √2 = √(18×2) = √36 = 6। बाकी options इस multiplication से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_square_cube_roots_q18",
+      "question": "यदि x³ = 2744 है, तो x का मान ज्ञात करें।",
+      "options": ["12", "14", "16", "18"],
+      "correctIndex": 1,
+      "explanation": "14×14×14 = 2744, इसलिए x = 14। 12³=1728, 16³=4096 और 18³=5832, ये 2744 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q19",
+      "question": "√(0.16 × 0.36) का मान ज्ञात करें।",
+      "options": ["0.2", "0.22", "0.24", "0.28"],
+      "correctIndex": 2,
+      "explanation": "0.16 × 0.36 = 0.0576, और √0.0576 = 0.24 (क्योंकि 0.24×0.24=0.0576)। वैकल्पिक रूप से √0.16 × √0.36 = 0.4 × 0.6 = 0.24। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_square_cube_roots_q20",
+      "question": "9261 का cube root ज्ञात करें।",
+      "options": ["19", "20", "21", "22"],
+      "correctIndex": 2,
+      "explanation": "21×21×21 = 9261, इसलिए ∛9261 = 21। 19³=6859, 20³=8000 और 22³=10648, ये 9261 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q21",
+      "question": "√(144/49) को simplify करें।",
+      "options": ["12/7", "14/7", "12/9", "7/12"],
+      "correctIndex": 0,
+      "explanation": "√144 = 12 और √49 = 7, इसलिए √(144/49) = 12/7। बाकी options इस calculation से मेल नहीं खाते या फ्रैक्शन उल्टा (inverted) है।"
+    },
+    {
+      "id": "math_square_cube_roots_q22",
+      "question": "वह सबसे छोटी संख्या ज्ञात करें जिससे 48 को गुणा करने पर वह एक perfect square बन जाए।",
+      "options": ["2", "3", "4", "6"],
+      "correctIndex": 1,
+      "explanation": "48 = 2⁴×3। यहाँ 2⁴ पहले से ही perfect square है, पर 3 का power 1 है (odd), इसलिए 48 को 3 से गुणा करने पर 144 = 2⁴×3² = 12² मिलता है, जो perfect square है। 2, 4 और 6 से गुणा करने पर भी result perfect square नहीं बनता।"
+    },
+    {
+      "id": "math_square_cube_roots_q23",
+      "question": "वह सबसे छोटी संख्या ज्ञात करें जिससे 72 को divide करने पर वह एक perfect cube बन जाए।",
+      "options": ["4", "8", "9", "12"],
+      "correctIndex": 2,
+      "explanation": "72 = 2³×3²। यहाँ 2³ पहले से perfect cube है, पर 3² को हटाना जरूरी है इसलिए 72 को 9 से divide करने पर 8 = 2³ मिलता है, जो perfect cube है। 4, 8 और 12 से divide करने पर result perfect cube नहीं बनता।"
+    },
+    {
+      "id": "math_square_cube_roots_q24",
+      "question": "√2.25 का मान ज्ञात करें।",
+      "options": ["1.05", "1.2", "1.35", "1.5"],
+      "correctIndex": 3,
+      "explanation": "1.5 × 1.5 = 2.25, इसलिए √2.25 = 1.5। 1.05²=1.1025, 1.2²=1.44 और 1.35²=1.8225, ये 2.25 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q25",
+      "question": "यदि √x = 17 है, तो x का मान ज्ञात करें।",
+      "options": ["289", "278", "296", "306"],
+      "correctIndex": 0,
+      "explanation": "दोनों पक्षों का square करने पर x = 17² = 289। 278, 296 और 306, 17 का square नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q26",
+      "question": "∛(64 × 27) का मान ज्ञात करें।",
+      "options": ["10", "12", "14", "16"],
+      "correctIndex": 1,
+      "explanation": "64×27 = 1728, और ∛1728 = 12 (चूँकि 12×12×12=1728)। वैकल्पिक रूप से ∛64 × ∛27 = 4 × 3 = 12। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_square_cube_roots_q27",
+      "question": "वह सबसे छोटी संख्या ज्ञात करें जिसे 1750 में जोड़ने पर वह एक perfect square बन जाए।",
+      "options": ["10", "12", "14", "18"],
+      "correctIndex": 2,
+      "explanation": "42² = 1764, जो 1750 से सबसे नज़दीकी बड़ा perfect square है। 1764 - 1750 = 14, इसलिए 14 जोड़ना होगा। 10, 12 और 18 जोड़ने पर result perfect square नहीं बनता।"
+    },
+    {
+      "id": "math_square_cube_roots_q28",
+      "question": "√3 × √27 को simplify करें।",
+      "options": ["3", "6", "3√3", "9"],
+      "correctIndex": 3,
+      "explanation": "√3 × √27 = √(3×27) = √81 = 9। बाकी options इस multiplication और simplification से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_square_cube_roots_q29",
+      "question": "∛0.000216 का मान ज्ञात करें।",
+      "options": ["0.6", "0.006", "0.16", "0.06"],
+      "correctIndex": 3,
+      "explanation": "0.06 × 0.06 × 0.06 = 0.000216, इसलिए ∛0.000216 = 0.06। 0.6³=0.216, 0.006³ बहुत छोटा और 0.16³=0.004096, ये सभी 0.000216 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_square_cube_roots_q30",
+      "question": "यदि किसी संख्या का square root 0.6 है, तो वह संख्या क्या है?",
+      "options": ["0.09", "0.36", "0.6", "1.2"],
+      "correctIndex": 1,
+      "explanation": "0.6 × 0.6 = 0.36, इसलिए वह संख्या 0.36 है। 0.09, 0.6 और 1.2, 0.6 का square नहीं हैं।"
+    }
+  ]
+}

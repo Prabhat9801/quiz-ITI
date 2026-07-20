@@ -1,0 +1,368 @@
+{
+  "unit": "unit16",
+  "unitName": "Electro Pneumatics",
+  "topic": "compressed_air",
+  "topicName": "Compressed Air - Generation, Storage, Transmission & Measurement",
+  "questions": [
+    {
+      "id": "u16_compressed_air_q1",
+      "question": "Compressed air प्रणाली में air compressor का मुख्य कार्य क्या होता है?",
+      "options": [
+        "Atmospheric air को दबाकर उसका pressure बढ़ाना और potential energy के रूप में store करना",
+        "Air में मौजूद moisture को पूरी तरह हटाना",
+        "Air का temperature कम करना ताकि वह liquid बन जाए",
+        "Air को electrically charge करना ताकि वह actuator चला सके"
+      ],
+      "correctIndex": 0,
+      "explanation": "Air compressor atmospheric air लेकर उसे mechanically compress करता है जिससे उसका pressure बढ़ जाता है और वह energy store करने में सक्षम हो जाती है, जिसे बाद में pneumatic system में use किया जाता है। Option B moisture removal का काम dryer/filter का है, Option C liquefaction एक अलग process है, और Option D गलत है क्योंकि air electrically charge नहीं होती।"
+    },
+    {
+      "id": "u16_compressed_air_q2",
+      "question": "Pneumatic systems में pressure मापने की standard SI unit क्या है?",
+      "options": [
+        "Pascal (Pa)",
+        "Newton (N)",
+        "Joule (J)",
+        "Watt (W)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pressure = Force/Area होता है और इसकी SI unit Pascal (Pa) है, जबकि practical pneumatic work में इसे प्रायः bar या PSI में भी express किया जाता है। Newton force की unit है, Joule energy/work की unit है, और Watt power की unit है, ये pressure को measure नहीं करते।"
+    },
+    {
+      "id": "u16_compressed_air_q3",
+      "question": "1 bar pressure लगभग कितने PSI (pounds per square inch) के बराबर होता है?",
+      "options": [
+        "10 PSI",
+        "14.5 PSI",
+        "20 PSI",
+        "30 PSI"
+      ],
+      "correctIndex": 1,
+      "explanation": "1 bar ≈ 14.5 PSI होता है क्योंकि 1 bar = 100,000 Pa और 1 PSI ≈ 6894.76 Pa, इस conversion से लगभग 14.5 PSI मिलता है। बाकी options (10, 20, 30 PSI) गलत conversion values हैं जो actual calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "u16_compressed_air_q4",
+      "question": "Air receiver (storage tank) को pneumatic system में लगाने का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Compressed air को filter करना",
+        "Compressor की motor speed control करना",
+        "Compressed air को store करके pressure fluctuations को कम करना और demand पूरी करना",
+        "Air को electrically insulate करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Air receiver compressed air का buffer store होता है जो sudden demand के समय pressure drop रोकता है और compressor की cycling frequency कम करता है। Filtering का काम filter unit करता है, motor speed control अलग control circuit से होता है, और electrical insulation का यहाँ कोई सम्बन्ध नहीं है।"
+    },
+    {
+      "id": "u16_compressed_air_q5",
+      "question": "Reciprocating compressor और rotary screw compressor में मुख्य structural अंतर क्या है?",
+      "options": [
+        "दोनों में कोई अंतर नहीं होता",
+        "Reciprocating compressor में piston-cylinder arrangement होता है जबकि rotary screw compressor में intermeshing screws (rotors) होते हैं",
+        "Rotary screw compressor केवल vacuum बनाने के लिए use होता है",
+        "Reciprocating compressor केवल liquids compress करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reciprocating compressor में piston की up-down motion से air compress होती है, जबकि rotary screw compressor में दो intermeshing helical rotors air को compress करते हैं जिससे smooth व continuous output मिलता है। Option A गलत है क्योंकि working principle अलग है, C और D गलत definitions हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q6",
+      "question": "Compressed air की transmission के लिए pipeline layout में slight slope (gradient) क्यों रखा जाता है?",
+      "options": [
+        "Pipe की cost कम करने के लिए",
+        "Condensate (moisture) को drain point की तरफ बहने देने के लिए",
+        "Air flow की speed बढ़ाने के लिए",
+        "Pipe को हल्का बनाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pipeline में गिरता slope condensed moisture को drain points तक बहने में मदद करता है, जिससे pipeline के अंदर water accumulation नहीं होता और downstream components corrosion से बचते हैं। Cost, flow speed या weight से इस slope का कोई प्रत्यक्ष सम्बन्ध नहीं है।"
+    },
+    {
+      "id": "u16_compressed_air_q7",
+      "question": "Two-stage compression का उपयोग single-stage की तुलना में कब किया जाता है?",
+      "options": [
+        "जब बहुत low pressure चाहिए हो",
+        "जब higher pressure ratio चाहिए और compression के दौरान heat कम करके efficiency बढ़ानी हो",
+        "जब air को केवल filter करना हो",
+        "जब compressor को बिना motor के चलाना हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Two-stage compression में air को दो चरणों में compress किया जाता है और बीच में intercooler से ठंडा किया जाता है, जिससे higher pressure ratio efficiently प्राप्त होता है और compression heat कम होती है। Low pressure के लिए single stage काफी है, filtering व motor-less operation का इससे कोई संबंध नहीं।"
+    },
+    {
+      "id": "u16_compressed_air_q8",
+      "question": "Pneumatic system में FRL unit में 'D' यानी dryer किस समस्या को दूर करने के लिए use होता है?",
+      "options": [
+        "Air में मौजूद moisture (नमी) कम करने के लिए",
+        "Air pressure बढ़ाने के लिए",
+        "Air flow की direction बदलने के लिए",
+        "Actuator की speed control करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dryer compressed air में मौजूद moisture को हटाता है ताकि valves और actuators में corrosion तथा malfunction न हो। Pressure बढ़ाना regulator का काम है, direction change DCV का कार्य है, और speed control flow control valve से होता है।"
+    },
+    {
+      "id": "u16_compressed_air_q9",
+      "question": "Gauge pressure और absolute pressure में क्या संबंध होता है?",
+      "options": [
+        "Absolute pressure = Gauge pressure − Atmospheric pressure",
+        "Absolute pressure = Gauge pressure + Atmospheric pressure",
+        "दोनों हमेशा बराबर होते हैं",
+        "Gauge pressure हमेशा negative होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Absolute pressure हमेशा gauge pressure और atmospheric pressure के योग के बराबर होता है (Pabs = Pgauge + Patm), क्योंकि gauge pressure atmospheric pressure के reference से measure होता है। Option A का sign गलत है, C और D सामान्यतः सही नहीं होते।"
+    },
+    {
+      "id": "u16_compressed_air_q10",
+      "question": "एक pneumatic pipeline में यदि pipe का diameter कम कर दिया जाए तो air velocity और pressure drop पर क्या प्रभाव पड़ेगा (constant flow rate पर)?",
+      "options": [
+        "Velocity कम होगी और pressure drop भी कम होगा",
+        "Velocity बढ़ेगी और pressure drop भी बढ़ेगा",
+        "दोनों में कोई परिवर्तन नहीं होगा",
+        "Velocity बढ़ेगी लेकिन pressure drop कम होगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Continuity equation के अनुसार constant flow rate पर diameter घटाने से cross-section area कम होती है जिससे velocity बढ़ती है, और बढ़ी हुई velocity के कारण friction losses के कारण pressure drop भी बढ़ जाता है। इसलिए A, C और D गलत हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q11",
+      "question": "Industrial pneumatic applications में सामान्यतः working pressure किस range में रखी जाती है?",
+      "options": [
+        "0.1 से 0.5 bar",
+        "5 से 8 bar",
+        "50 से 80 bar",
+        "500 bar से ऊपर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard industrial pneumatic systems सामान्यतः 5 से 8 bar range में operate होते हैं क्योंकि यह range component life और energy efficiency के बीच अच्छा balance देता है। 0.1-0.5 bar बहुत low है (near vacuum region), जबकि 50-80 bar और उससे ऊपर hydraulic systems की typical range है, pneumatic की नहीं।"
+    },
+    {
+      "id": "u16_compressed_air_q12",
+      "question": "Compressed air की storage के लिए air receiver tank में safety valve क्यों लगाई जाती है?",
+      "options": [
+        "Tank का weight कम करने के लिए",
+        "Tank के अंदर pressure तय limit से अधिक होने पर automatically air release करने के लिए",
+        "Air को गर्म करने के लिए",
+        "Compressor की speed बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Safety (relief) valve tank के अंदर excessive pressure build-up होने पर automatically खुलकर air release करती है, जिससे tank explosion जैसी दुर्घटना रुकती है। यह weight, heating या compressor speed से संबंधित नहीं है।"
+    },
+    {
+      "id": "u16_compressed_air_q13",
+      "question": "Centrifugal compressor मुख्यतः किस principle पर कार्य करता है?",
+      "options": [
+        "Piston की reciprocating motion पर",
+        "Rotating impeller द्वारा air को kinetic energy देकर फिर उसे pressure energy में convert करने पर",
+        "केवल gravity पर",
+        "Chemical reaction पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Centrifugal compressor में high-speed rotating impeller air को kinetic energy देता है, जिसे diffuser section में pressure energy में convert किया जाता है। Reciprocating motion positive displacement compressors की विशेषता है, gravity और chemical reaction का यहाँ कोई role नहीं है।"
+    },
+    {
+      "id": "u16_compressed_air_q14",
+      "question": "Compressed air distribution network में 'ring main' layout का मुख्य फायदा क्या है?",
+      "options": [
+        "यह सबसे सस्ता layout होता है",
+        "Air दोनों दिशाओं से supply मिलती है जिससे pressure drop कम और supply अधिक reliable होती है",
+        "इसमें कोई joints नहीं होते",
+        "इसमें compressor की जरूरत नहीं पड़ती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ring main layout में pipeline एक loop बनाती है जिससे किसी भी point पर air दोनों दिशाओं से पहुँच सकती है, इससे pressure drop कम होता है और reliability बढ़ती है। यह सबसे सस्ता layout नहीं है, joints होते ही हैं, और compressor फिर भी जरूरी है।"
+    },
+    {
+      "id": "u16_compressed_air_q15",
+      "question": "Adiabatic compression के दौरान air का temperature क्यों बढ़ता है?",
+      "options": [
+        "क्योंकि compression के दौरान कोई heat exchange environment से नहीं होता और सारा work air के internal energy में बदल जाता है",
+        "क्योंकि air में chemical reaction होती है",
+        "क्योंकि compressor motor गर्म होती है",
+        "क्योंकि atmospheric pressure बढ़ जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Adiabatic process में system और surrounding के बीच heat transfer नहीं होता, इसलिए compression में किया गया work पूरी तरह internal energy बढ़ाता है जिससे temperature rise होता है। यह chemical reaction, motor heating, या atmospheric pressure change के कारण नहीं होता।"
+    },
+    {
+      "id": "u16_compressed_air_q16",
+      "question": "Water separator (moisture separator) pneumatic circuit में कहाँ लगाया जाता है?",
+      "options": [
+        "Actuator के बाद exhaust line में",
+        "Compressor और receiver tank के बाद, FRL unit से पहले main line में",
+        "Solenoid coil के अंदर",
+        "Electrical control panel में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Water separator compressor के बाद main distribution line में लगाया जाता है ताकि air components तक पहुँचने से पहले उसमें से moisture और condensate अलग हो जाए। Exhaust line, solenoid coil और electrical panel इसकी सही location नहीं हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q17",
+      "question": "1 kg/cm² pressure लगभग कितने bar के बराबर होता है?",
+      "options": [
+        "लगभग 0.98 bar",
+        "लगभग 10 bar",
+        "लगभग 100 bar",
+        "लगभग 1000 bar"
+      ],
+      "correctIndex": 0,
+      "explanation": "1 kg/cm² ≈ 0.981 bar होता है, यह conversion practical pneumatic calculations में common है। 10, 100 और 1000 bar गलत conversion values हैं जो actual relation से मेल नहीं खाते।"
+    },
+    {
+      "id": "u16_compressed_air_q18",
+      "question": "Dew point compressed air quality में क्या दर्शाता है?",
+      "options": [
+        "वह temperature जिस पर air में मौजूद water vapor condense होकर liquid बनने लगती है",
+        "Air का pressure level",
+        "Compressor की motor rating",
+        "Pipeline का diameter"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dew point वह temperature है जिस पर compressed air में मौजूद water vapor saturate होकर condense होने लगती है; लो dew point मतलब सूखी air, जो quality control में महत्वपूर्ण parameter है। यह pressure, motor rating या pipe diameter से सम्बंधित नहीं है।"
+    },
+    {
+      "id": "u16_compressed_air_q19",
+      "question": "Free air delivery (FAD) से क्या तात्पर्य है?",
+      "options": [
+        "Compressor द्वारा delivered air की मात्रा जिसे intake conditions (atmospheric temperature व pressure) पर convert किया गया हो",
+        "Compressor में बिना cost के मिलने वाली air",
+        "केवल exhaust हुई air की मात्रा",
+        "Compressor की rated motor power"
+      ],
+      "correctIndex": 0,
+      "explanation": "FAD compressor की actual delivery capacity है जिसे atmospheric (intake) conditions पर equivalent volume के रूप में express किया जाता है, यह compressor performance evaluate करने का standard parameter है। बाकी options FAD की सही definition नहीं देते।"
+    },
+    {
+      "id": "u16_compressed_air_q20",
+      "question": "Pneumatic system में air filter का primary function क्या है?",
+      "options": [
+        "Air का pressure बढ़ाना",
+        "Air में मौजूद dust particles और contaminants को हटाना",
+        "Air की direction control करना",
+        "Air को गर्म करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Filter compressed air में मौजूद solid contaminants (dust, rust particles) को हटाता है ताकि valves और actuators को damage से बचाया जा सके। Pressure बढ़ाना regulator का काम है, direction control DCV करता है, और heating इसका function नहीं है।"
+    },
+    {
+      "id": "u16_compressed_air_q21",
+      "question": "एक pneumatic system में अगर pipeline में leakage हो तो इसका system efficiency पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Efficiency बढ़ेगी क्योंकि air जल्दी निकल जाएगी",
+        "Efficiency घटेगी क्योंकि compressor को अधिक बार चलना पड़ेगा जिससे energy loss बढ़ेगा",
+        "कोई प्रभाव नहीं पड़ेगा",
+        "केवल noise बढ़ेगा, efficiency अपरिवर्तित रहेगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Leakage से pressure लगातार गिरता है जिससे compressor को बार-बार चलना पड़ता है, इससे energy consumption बढ़ता है और overall system efficiency कम हो जाती है। बाकी options तकनीकी रूप से गलत हैं क्योंकि leakage का असर सीधे energy loss पर पड़ता है।"
+    },
+    {
+      "id": "u16_compressed_air_q22",
+      "question": "Intercooler compressor system में किस purpose के लिए use होता है?",
+      "options": [
+        "Compressor की motor को ठंडा रखने के लिए",
+        "Compression के stages के बीच air का temperature कम करने के लिए ताकि efficiency बढ़े",
+        "Air को filter करने के लिए",
+        "Pipeline की leakage रोकने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Intercooler multi-stage compression में stages के बीच air ठंडा करता है, जिससे next stage में compression work कम होता है और overall efficiency improve होती है। Motor cooling, filtering और leakage prevention इसका कार्य नहीं है।"
+    },
+    {
+      "id": "u16_compressed_air_q23",
+      "question": "Reciprocating compressor की तुलना में rotary screw compressor का एक प्रमुख फायदा क्या है?",
+      "options": [
+        "यह ज्यादा vibration और noise पैदा करता है",
+        "यह smooth, continuous और pulsation-free air delivery देता है",
+        "यह केवल low pressure के लिए उपयुक्त है",
+        "इसमें कोई moving parts नहीं होते"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rotary screw compressor में continuous rotary motion होने से air delivery smooth और pulsation-free रहती है, जबकि reciprocating compressor में piston strokes के कारण pulsating delivery होती है। Option A, C, D गलत statements हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q24",
+      "question": "Pressure switch compressor circuit में किस काम के लिए लगाया जाता है?",
+      "options": [
+        "Air को filter करने के लिए",
+        "Receiver tank में pressure एक निश्चित upper limit पर पहुँचने पर compressor motor को automatically OFF/ON करने के लिए",
+        "Direction control के लिए",
+        "Actuator की speed बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pressure switch tank pressure को sense करके preset upper limit पर compressor motor बंद और lower limit पर वापस चालू करता है, जिससे energy बचती है और system safe रहता है। Filtering, direction control और speed control इसके कार्य नहीं हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q25",
+      "question": "Compressed air generation में isothermal compression का फायदा क्या माना जाता है?",
+      "options": [
+        "इसमें compression के दौरान temperature लगातार बढ़ता जाता है",
+        "इसमें temperature स्थिर रहने से theoretically न्यूनतम work input की आवश्यकता होती है",
+        "इसमें air liquid में बदल जाती है",
+        "इसमें कोई heat transfer नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Isothermal compression में constant temperature बनाए रखने के लिए continuous cooling की जाती है, जिससे theoretically सबसे कम work input लगता है — यही इसका ideal advantage है। Option A adiabatic process का लक्षण है, C और D गलत statements हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q26",
+      "question": "Pneumatic pipeline sizing करते समय किस factor को ध्यान में रखना सबसे जरूरी है?",
+      "options": [
+        "Pipe का रंग",
+        "Required flow rate, working pressure और acceptable pressure drop",
+        "Pipe बनाने वाली company का नाम",
+        "Pipe की length हमेशा zero रखना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pipeline sizing में flow rate, working pressure और allowable pressure drop प्रमुख design factors हैं ताकि system efficiently और बिना excessive losses के काम करे। Pipe का रंग, company का नाम, या zero length जैसे factors technically irrelevant हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q27",
+      "question": "Compressed air storage tank में drain valve क्यों दी जाती है?",
+      "options": [
+        "Tank के अंदर जमा हुए condensed water को समय-समय पर बाहर निकालने के लिए",
+        "Tank का pressure बढ़ाने के लिए",
+        "Air की direction बदलने के लिए",
+        "Compressor की speed control करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Drain valve tank के bottom में जमा हुए condensate/moisture को periodically निकालने के लिए दी जाती है ताकि corrosion और contamination न हो। Pressure बढ़ाना, direction control और speed control इसका कार्य नहीं है।"
+    },
+    {
+      "id": "u16_compressed_air_q28",
+      "question": "यदि working pressure 6 bar से बढ़ाकर 8 bar कर दी जाए, तो actuator द्वारा दिया गया force कैसे बदलेगा (piston area समान रहने पर)?",
+      "options": [
+        "Force कम होगा",
+        "Force बढ़ेगा क्योंकि Force = Pressure × Area के अनुसार pressure बढ़ने पर force बढ़ता है",
+        "Force में कोई परिवर्तन नहीं होगा",
+        "Force शून्य हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Actuator force की गणना Force = Pressure × Piston Area से होती है, इसलिए piston area constant रहने पर pressure बढ़ाने से force सीधे proportionally बढ़ता है। बाकी options इस basic relation के विपरीत हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q29",
+      "question": "Compressed air का उपयोग hydraulic fluid की तुलना में pneumatic systems में क्यों प्रचलित है?",
+      "options": [
+        "Air free उपलब्ध, compressible, clean और आसानी से atmosphere में exhaust की जा सकती है",
+        "Air hydraulic fluid से ज्यादा viscous है",
+        "Air कभी compress नहीं होती",
+        "Air का उपयोग केवल high precision applications में होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Compressed air atmosphere से freely उपलब्ध होती है, इसे directly exhaust किया जा सकता है (return line की जरूरत नहीं), और यह clean होती है — यही कारण pneumatic systems की popularity का है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u16_compressed_air_q30",
+      "question": "Multi-stage compression में after-cooler का मुख्य कार्य क्या है?",
+      "options": [
+        "Compressor की motor को बंद करना",
+        "Final compression के बाद air का temperature कम करके moisture को condense करना ताकि receiver में सूखी air जाए",
+        "Air pressure को शून्य करना",
+        "Pipeline की direction बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "After-cooler final compression stage के बाद air को cool करता है जिससे उसमें मौजूद water vapor condense होकर moisture separator में अलग हो जाती है, इससे receiver tank में अपेक्षाकृत सूखी air जमा होती है। Motor बंद करना, pressure शून्य करना या direction बदलना इसका कार्य नहीं है।"
+    }
+  ]
+}

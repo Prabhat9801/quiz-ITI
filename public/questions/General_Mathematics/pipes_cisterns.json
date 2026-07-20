@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "pipes_cisterns",
+  "topicName": "Pipes and Cisterns",
+  "questions": [
+    {
+      "id": "math_pipes_cisterns_q1",
+      "question": "पाइप A किसी टंकी को 10 hours में भर सकता है और पाइप B उसी टंकी को 15 hours में भर सकता है। यदि दोनों पाइप एक साथ खोल दिए जाएँ, तो टंकी कितने समय में पूरी भर जाएगी?",
+      "options": ["6 hours", "5 hours", "7 hours", "10 hours"],
+      "correctIndex": 0,
+      "explanation": "पाइप A की rate = 1/10 tank/hour और पाइप B की rate = 1/15 tank/hour। दोनों साथ = 1/10 + 1/15 = 3/30 + 2/30 = 5/30 = 1/6 tank/hour, अर्थात टंकी 6 hours में भर जाएगी। '5 hours', '7 hours' और '10 hours' individual pipes के समय के करीब हैं पर सही combined rate नहीं देते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q2",
+      "question": "पाइप A किसी cistern को 6 hours में भर सकता है जबकि पाइप B उसी cistern को 12 hours में खाली कर सकता है। यदि दोनों पाइप एक साथ खोल दिए जाएँ, तो खाली cistern कितने समय में भर जाएगी?",
+      "options": ["10 hours", "12 hours", "14 hours", "16 hours"],
+      "correctIndex": 1,
+      "explanation": "Net filling rate = 1/6 - 1/12 = 2/12 - 1/12 = 1/12 tank/hour, इसलिए cistern 12 hours में भरेगी। '10', '14' और '16 hours' गलत हैं क्योंकि ये net rate 1/12 के अनुरूप नहीं हैं।"
+    },
+    {
+      "id": "math_pipes_cisterns_q3",
+      "question": "तीन पाइप A, B और C किसी टंकी को क्रमशः 12 hours, 18 hours और 9 hours में भर सकते हैं। यदि तीनों पाइप एक साथ खोल दिए जाएँ, तो टंकी कितने समय में भर जाएगी?",
+      "options": ["3 hours", "5 hours", "4 hours", "6 hours"],
+      "correctIndex": 2,
+      "explanation": "Combined rate = 1/12 + 1/18 + 1/9। LCM 36 लेने पर = 3/36 + 2/36 + 4/36 = 9/36 = 1/4 tank/hour, इसलिए टंकी 4 hours में भर जाएगी। शेष options इस LCM calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q4",
+      "question": "एक पाइप किसी टंकी का 1/4 हिस्सा 3 hours में भर देता है। इसी rate से पूरी टंकी भरने में कुल कितना समय लगेगा?",
+      "options": ["9 hours", "10 hours", "15 hours", "12 hours"],
+      "correctIndex": 3,
+      "explanation": "1/4 भाग भरने में 3 hours लगते हैं, इसलिए पूरा tank (4 गुना भाग) भरने में 3×4 = 12 hours लगेंगे। '9', '10' और '15 hours' proportional calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q5",
+      "question": "दो पाइप A और B एक साथ खोलने पर किसी टंकी को 6 hours में भर देते हैं। यदि पाइप A अकेले टंकी को 10 hours में भरता है, तो पाइप B अकेले कितने समय में टंकी भरेगा?",
+      "options": ["15 hours", "12 hours", "18 hours", "20 hours"],
+      "correctIndex": 0,
+      "explanation": "B की rate = 1/6 - 1/10 = 5/30 - 3/30 = 2/30 = 1/15 tank/hour, इसलिए B अकेला 15 hours में टंकी भरेगा। '12', '18' और '20 hours' इस subtraction से नहीं आते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q6",
+      "question": "एक पाइप किसी टंकी को सामान्यतः 20 hours में भर देता है, लेकिन तली में एक leak होने के कारण टंकी को भरने में 25 hours लग जाते हैं। यदि टंकी पूरी भरी हो, तो अकेला leak उसे कितने समय में खाली कर देगा?",
+      "options": ["80 hours", "100 hours", "120 hours", "150 hours"],
+      "correctIndex": 1,
+      "explanation": "Pipe rate = 1/20, leak के साथ effective rate = 1/25। Leak rate = 1/20 - 1/25 = 5/100 - 4/100 = 1/100 tank/hour, इसलिए leak अकेला टंकी को 100 hours में खाली करेगा। अन्य options इस subtraction से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q7",
+      "question": "पाइप A 12 hours में 3 समान टंकियाँ भर सकता है और पाइप B एक टंकी को 6 hours में भर सकता है। यदि दोनों पाइप एक साथ एक टंकी भरने के लिए खोले जाएँ, तो टंकी कितने समय में भरेगी?",
+      "options": ["2 hours 12 minutes", "2 hours 30 minutes", "2 hours 24 minutes", "3 hours"],
+      "correctIndex": 2,
+      "explanation": "पाइप A 12 hours में 3 टंकियाँ भरता है, इसलिए 1 टंकी भरने में A को 4 hours लगते हैं, यानी A की rate = 1/4। B की rate = 1/6। Combined rate = 1/4 + 1/6 = 3/12 + 2/12 = 5/12, इसलिए समय = 12/5 = 2.4 hours = 2 hours 24 minutes। अन्य options यह सही division नहीं देते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q8",
+      "question": "पाइप A किसी टंकी को 6 hours में भरता है और पाइप B उसी टंकी को 8 hours में भरता है। दोनों को एक साथ खोला गया, परन्तु 2 hours बाद पाइप B बंद कर दिया गया। शेष टंकी भरने में पाइप A को अकेले कितना और समय लगेगा?",
+      "options": ["1 hour 30 minutes", "2 hours", "3 hours", "2 hours 30 minutes"],
+      "correctIndex": 3,
+      "explanation": "2 hours में दोनों पाइपों से भरा भाग = 2×(1/6+1/8) = 2×(4/24+3/24) = 2×7/24 = 7/12। शेष भाग = 1 - 7/12 = 5/12। अब सिर्फ A (rate 1/6) से भरने में समय = (5/12)÷(1/6) = 5/12×6 = 30/12 = 2.5 hours = 2 hours 30 minutes। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q9",
+      "question": "एक टंकी में पाइप A 12 hours में पानी भर सकता है जबकि पाइप B 20 hours में पूरी टंकी खाली कर सकता है। यदि दोनों पाइप एक साथ खोल दिए जाएँ, तो खाली टंकी कितने समय में भर जाएगी?",
+      "options": ["30 hours", "25 hours", "35 hours", "40 hours"],
+      "correctIndex": 0,
+      "explanation": "Net rate = 1/12 - 1/20 = 5/60 - 3/60 = 2/60 = 1/30 tank/hour, इसलिए टंकी 30 hours में भरेगी। '25', '35' और '40 hours' गलत subtraction का परिणाम हैं।"
+    },
+    {
+      "id": "math_pipes_cisterns_q10",
+      "question": "पाइप A, पाइप B से दोगुनी efficiency से काम करता है। यदि दोनों पाइप एक साथ मिलकर किसी टंकी को 10 hours में भर देते हैं, तो पाइप A अकेला टंकी कितने समय में भरेगा?",
+      "options": ["12 hours", "15 hours", "18 hours", "20 hours"],
+      "correctIndex": 1,
+      "explanation": "माना B की rate = x तो A की rate = 2x। साथ में rate = 3x = 1/10 => x = 1/30। A की rate = 2/30 = 1/15, इसलिए A अकेला 15 hours में टंकी भरेगा। '12', '18' और '20 hours' इस ratio calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q11",
+      "question": "एक पाइप किसी टंकी का 2/5 भाग 8 hours में भर देता है। इसी rate से शेष भाग भरने में कितना समय और लगेगा?",
+      "options": ["10 hours", "14 hours", "12 hours", "16 hours"],
+      "correctIndex": 2,
+      "explanation": "2/5 भाग भरने में 8 hours लगते हैं, इसलिए rate = (2/5)/8 = 1/20 tank/hour। शेष भाग = 3/5, इसे भरने में समय = (3/5)÷(1/20) = (3/5)×20 = 12 hours। अन्य options proportion से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q12",
+      "question": "तीन पाइप A, B और C किसी टंकी को क्रमशः 6 hours, 8 hours और 12 hours में भर सकते हैं। यदि तीनों एक साथ खोल दिए जाएँ, तो टंकी कितने समय में भरेगी?",
+      "options": ["2 hours 20 minutes", "3 hours", "2 hours 30 minutes", "2 hours 40 minutes"],
+      "correctIndex": 3,
+      "explanation": "Combined rate = 1/6 + 1/8 + 1/12। LCM 24 लेने पर = 4/24 + 3/24 + 2/24 = 9/24 = 3/8 tank/hour, इसलिए समय = 8/3 hours = 2 hours 40 minutes। अन्य options इस LCM sum से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q13",
+      "question": "पाइप A अकेला किसी टंकी को 15 hours में भरता है। जब A और B दोनों साथ खोले जाते हैं, तो टंकी 6 hours में भर जाती है। पाइप B अकेला टंकी कितने समय में भरेगा?",
+      "options": ["10 hours", "12 hours", "14 hours", "9 hours"],
+      "correctIndex": 0,
+      "explanation": "B की rate = 1/6 - 1/15 = 5/30 - 2/30 = 3/30 = 1/10, इसलिए B अकेला 10 hours में टंकी भरेगा। '12', '14' और '9 hours' इस subtraction से नहीं आते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q14",
+      "question": "पाइप A, पाइप B से दोगुनी rate से पानी भरता है। जब दोनों साथ खोले जाते हैं, तो टंकी 8 hours में भर जाती है। पाइप B अकेला टंकी कितने समय में भरेगा?",
+      "options": ["20 hours", "24 hours", "28 hours", "30 hours"],
+      "correctIndex": 1,
+      "explanation": "माना B की rate = x, A की rate = 2x। Combined rate = 3x = 1/8 => x = 1/24, इसलिए B अकेला 24 hours में टंकी भरेगा। शेष options इस ratio से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q15",
+      "question": "एक टंकी आधी (1/2) भरी हुई है। पाइप A इसे 9 hours में पूरा भर सकता है जबकि पाइप B पूरी भरी टंकी को 6 hours में खाली कर सकता है। यदि दोनों पाइप एक साथ खोल दिए जाएँ, तो आधी भरी टंकी कितने समय में पूरी तरह खाली हो जाएगी?",
+      "options": ["6 hours", "12 hours", "9 hours", "10 hours"],
+      "correctIndex": 2,
+      "explanation": "Net rate (खाली होने की दिशा में) = 1/6 - 1/9 = 3/18 - 2/18 = 1/18 tank/hour। आधी टंकी (1/2 भाग) खाली होने में समय = (1/2)÷(1/18) = (1/2)×18 = 9 hours। अन्य options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q16",
+      "question": "पाइप A किसी टंकी को 12 hours में भर सकता है और पाइप B उसी टंकी को 15 hours में भर सकता है। दोनों पाइप बारी-बारी से 1-1 hour के लिए खोले जाते हैं (पहले A, फिर B, और इसी क्रम में), तो टंकी पूरी भरने में कुल कितना समय लगेगा?",
+      "options": ["12 hours 45 minutes", "13 hours", "13 hours 30 minutes", "13 hours 15 minutes"],
+      "correctIndex": 3,
+      "explanation": "हर 2-hour cycle में भरा भाग = 1/12 + 1/15 = 5/60 + 4/60 = 9/60 = 3/20। 6 पूरे cycles (12 hours) में भरा भाग = 6×3/20 = 18/20 = 9/10, शेष = 1/10। 13वें hour में A चलता है (rate 1/12 = 5/60), जिसके बाद कुल भरा भाग = 9/10 + 1/12 = 54/60+5/60 = 59/60, शेष = 1/60। इसके बाद B (rate 1/15 = 4/60) चलता है, शेष 1/60 भरने में समय = (1/60)÷(4/60) = 1/4 hour = 15 minutes। कुल समय = 12 + 1 + 0.25 = 13 hours 15 minutes। अन्य options यह exact cycle calculation नहीं देते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q17",
+      "question": "पाइप A और पाइप B दोनों किसी टंकी को अलग-अलग 4-4 hours में भर सकते हैं। यदि दोनों पाइप एक साथ खोल दिए जाएँ, तो टंकी कितने समय में भरेगी?",
+      "options": ["2 hours", "3 hours", "4 hours", "2.5 hours"],
+      "correctIndex": 0,
+      "explanation": "Combined rate = 1/4 + 1/4 = 1/2 tank/hour, इसलिए टंकी 2 hours में भर जाएगी। बराबर rate वाले दो pipes साथ मिलकर हमेशा आधा समय लेते हैं। '3', '4' और '2.5 hours' गलत हैं।"
+    },
+    {
+      "id": "math_pipes_cisterns_q18",
+      "question": "एक टंकी में दो inlet pipes हैं जो इसे क्रमशः 10 hours और 15 hours में भर सकते हैं, और एक outlet pipe है जो पूरी टंकी को 6 hours में खाली कर सकता है। यदि तीनों पाइप एक साथ खोल दिए जाएँ (टंकी खाली अवस्था से शुरू), तो क्या होगा?",
+      "options": ["20 hours में भर जाएगी", "टंकी कभी नहीं भरेगी (never fills)", "24 hours में भर जाएगी", "30 hours में भर जाएगी"],
+      "correctIndex": 1,
+      "explanation": "Combined rate = 1/10 + 1/15 - 1/6। LCM 30 लेने पर = 3/30 + 2/30 - 5/30 = 0/30 = 0, अर्थात net rate शून्य है, इसलिए टंकी खाली अवस्था से शुरू होकर कभी नहीं भरेगी (inflow और outflow बराबर हैं)। '20', '24' और '30 hours' गलत हैं क्योंकि net rate zero ही आता है।"
+    },
+    {
+      "id": "math_pipes_cisterns_q19",
+      "question": "पाइप A, पाइप B से तीन गुना (3 times) तेज़ रफ़्तार से टंकी भरता है। यदि दोनों साथ मिलकर टंकी को 15 hours में भर देते हैं, तो पाइप A अकेला कितने समय में टंकी भरेगा?",
+      "options": ["15 hours", "18 hours", "20 hours", "24 hours"],
+      "correctIndex": 2,
+      "explanation": "माना B की rate = x, A की rate = 3x। Combined rate = 4x = 1/15 => x = 1/60। A की rate = 3/60 = 1/20, इसलिए A अकेला 20 hours में टंकी भरेगा। '15', '18' और '24 hours' इस ratio calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q20",
+      "question": "एक टंकी में inlet pipe उसे 8 hours में भर सकता है और outlet pipe उसे 12 hours में खाली कर सकता है। यदि टंकी खाली अवस्था में दोनों पाइप एक साथ खोल दिए जाएँ, तो टंकी कितने समय में भर जाएगी?",
+      "options": ["18 hours", "20 hours", "22 hours", "24 hours"],
+      "correctIndex": 3,
+      "explanation": "Net rate = 1/8 - 1/12 = 3/24 - 2/24 = 1/24 tank/hour, इसलिए टंकी 24 hours में भरेगी। '18', '20' और '22 hours' इस subtraction से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q21",
+      "question": "दो पाइप किसी cistern को क्रमशः 14 hours और 16 hours में भर सकते हैं। दोनों को एक साथ खोला गया, परन्तु तली में leak होने के कारण cistern भरने में normal समय से 32 minutes अधिक लगे। यदि cistern पूरी भरी हो, तो अकेला leak उसे कितने समय में खाली कर देगा?",
+      "options": ["112 hours", "98 hours", "124 hours", "106 hours"],
+      "correctIndex": 0,
+      "explanation": "बिना leak, combined rate = 1/14 + 1/16 = 8/112 + 7/112 = 15/112, अर्थात normal समय = 112/15 hours ≈ 7 hours 28 minutes। Leak के साथ समय = 7 hours 28 minutes + 32 minutes = 8 hours, यानी effective rate = 1/8। Leak rate = 15/112 - 1/8 = 15/112 - 14/112 = 1/112, इसलिए leak अकेला 112 hours में cistern खाली करेगा। अन्य options इस precise calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q22",
+      "question": "एक पाइप सामान्यतः किसी टंकी को 6 hours में भर देता है, लेकिन तली में leak होने के कारण टंकी भरने में 9 hours लग जाते हैं। अकेला leak टंकी को कितने समय में खाली कर देगा?",
+      "options": ["15 hours", "18 hours", "20 hours", "24 hours"],
+      "correctIndex": 1,
+      "explanation": "Pipe rate = 1/6, leak के साथ effective rate = 1/9। Leak rate = 1/6 - 1/9 = 3/18 - 2/18 = 1/18, इसलिए leak अकेला 18 hours में टंकी खाली करेगा। '15', '20' और '24 hours' गलत subtraction का परिणाम हैं।"
+    },
+    {
+      "id": "math_pipes_cisterns_q23",
+      "question": "एक टंकी में दो fill pipes A और B क्रमशः 20 hours और 30 hours में टंकी भर सकते हैं, जबकि एक drain pipe C पूरी टंकी को 15 hours में खाली कर सकता है। यदि तीनों पाइप एक साथ खोल दिए जाएँ (टंकी खाली अवस्था से), तो टंकी कितने समय में भरेगी?",
+      "options": ["48 hours", "54 hours", "60 hours", "66 hours"],
+      "correctIndex": 2,
+      "explanation": "Combined rate = 1/20 + 1/30 - 1/15। LCM 60 लेने पर = 3/60 + 2/60 - 4/60 = 1/60 tank/hour, इसलिए टंकी 60 hours में भरेगी। '48', '54' और '66 hours' इस LCM calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q24",
+      "question": "पाइप A अकेला किसी टंकी को 6 hours में भर सकता है। आधी टंकी भरने के बाद, A जैसी rate वाले तीन और समान पाइप खोल दिए जाते हैं (अब कुल 4 पाइप काम कर रहे हैं)। टंकी को पूरी तरह भरने में कुल कितना समय लगेगा?",
+      "options": ["3 hours 30 minutes", "4 hours", "3 hours 15 minutes", "3 hours 45 minutes"],
+      "correctIndex": 3,
+      "explanation": "A की rate = 1/6 tank/hour, इसलिए आधी टंकी (1/2) भरने में समय = (1/2)÷(1/6) = 3 hours। अब 4 पाइप (rate 4×1/6 = 2/3) शेष आधी टंकी भरेंगे, समय = (1/2)÷(2/3) = 3/4 hour = 45 minutes। कुल समय = 3 hours + 45 minutes = 3 hours 45 minutes। अन्य options इस दो-चरण calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q25",
+      "question": "एक पाइप किसी टंकी का 2/3 भाग 10 hours में भर देता है। इसी rate से पूरी टंकी भरने में कुल कितना समय लगेगा?",
+      "options": ["15 hours", "12 hours", "18 hours", "20 hours"],
+      "correctIndex": 0,
+      "explanation": "Rate = (2/3)/10 = 2/30 = 1/15 tank/hour, इसलिए पूरी टंकी भरने में 15 hours लगेंगे। '12', '18' और '20 hours' इस proportion से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q26",
+      "question": "एक टंकी में पाइप A 5 hours में और पाइप B 10 hours में टंकी भर सकते हैं, जबकि पाइप C पूरी टंकी को 20 hours में खाली कर सकता है। यदि तीनों पाइप एक साथ खोल दिए जाएँ, तो टंकी कितने समय में भरेगी?",
+      "options": ["3 hours", "4 hours", "5 hours", "6 hours"],
+      "correctIndex": 1,
+      "explanation": "Combined rate = 1/5 + 1/10 - 1/20। LCM 20 लेने पर = 4/20 + 2/20 - 1/20 = 5/20 = 1/4 tank/hour, इसलिए टंकी 4 hours में भरेगी। '3', '5' और '6 hours' इस LCM calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q27",
+      "question": "दो पाइप किसी टंकी को क्रमशः 20 minutes और 30 minutes में भर सकते हैं। दोनों पाइप एक साथ खोले गए, लेकिन कुछ समय बाद दूसरा पाइप बंद कर दिया गया ताकि टंकी कुल 18 minutes में भर जाए। दूसरे पाइप को कितने minutes बाद बंद करना चाहिए?",
+      "options": ["2 minutes", "4 minutes", "3 minutes", "5 minutes"],
+      "correctIndex": 2,
+      "explanation": "माना दोनों पाइप x minutes साथ चलते हैं, फिर सिर्फ पहला पाइप शेष (18-x) minutes चलता है। समीकरण: x(1/20+1/30) + (18-x)(1/20) = 1। LCM 60 लेने पर: 5x + 54 - 3x = 60 => 2x = 6 => x = 3, इसलिए दूसरा पाइप 3 minutes बाद बंद करना चाहिए। अन्य options यह समीकरण संतुष्ट नहीं करते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q28",
+      "question": "एक टंकी में पाइप A 12 hours में भर सकता है और पाइप B 20 hours में पूरी टंकी खाली कर सकता है। दोनों पाइप एक साथ खोले गए, और 6 hours बाद पाइप B बंद कर दिया गया। शेष टंकी भरने में पाइप A को अकेले कितना और समय लगेगा?",
+      "options": ["8 hours 24 minutes", "9 hours", "9 hours 12 minutes", "9 hours 36 minutes"],
+      "correctIndex": 3,
+      "explanation": "6 hours में net भरा भाग = 6×(1/12-1/20) = 6×(5/60-3/60) = 6×2/60 = 12/60 = 1/5। शेष भाग = 4/5। अब सिर्फ A (rate 1/12) से भरने में समय = (4/5)÷(1/12) = (4/5)×12 = 48/5 = 9.6 hours = 9 hours 36 minutes। अन्य options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_pipes_cisterns_q29",
+      "question": "पाइप A, पाइप B से तीन गुना (3 times) तेज़ है और B की तुलना में टंकी भरने में 40 hours कम समय लेता है। दोनों पाइप एक साथ मिलकर टंकी कितने समय में भरेंगे?",
+      "options": ["15 hours", "12 hours", "18 hours", "20 hours"],
+      "correctIndex": 0,
+      "explanation": "माना B अकेला t hours लेता है, तो A अकेला t/3 hours लेता है (3 times तेज़)। t - t/3 = 40 => 2t/3 = 40 => t = 60, इसलिए B = 60 hours और A = 20 hours। साथ में rate = 1/60 + 1/20 = 1/60+3/60 = 4/60 = 1/15, इसलिए दोनों साथ 15 hours में टंकी भरेंगे। '12', '18' और '20 hours' गलत हैं।"
+    },
+    {
+      "id": "math_pipes_cisterns_q30",
+      "question": "एक टंकी में पाइप A 8 hours में भर सकता है और पाइप B 10 hours में खाली कर सकता है। टंकी खाली अवस्था में दोनों पाइप एक साथ 4 hours के लिए खोले जाते हैं, फिर पाइप A बंद कर दिया जाता है। शेष टंकी को पाइप B अकेला कितने समय में खाली कर देगा?",
+      "options": ["45 minutes", "1 hour", "1 hour 15 minutes", "1 hour 30 minutes"],
+      "correctIndex": 1,
+      "explanation": "4 hours में net भरा भाग = 4×(1/8-1/10) = 4×(5/40-4/40) = 4×1/40 = 4/40 = 1/10। A बंद होने के बाद सिर्फ B (rate 1/10 per hour) यह 1/10 भाग खाली करेगा, समय = (1/10)÷(1/10) = 1 hour। अन्य options इस calculation से मेल नहीं खाते।"
+    }
+  ]
+}

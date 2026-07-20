@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "trigonometry",
+  "topicName": "Trigonometry (Ratios, Identities, Heights & Distances)",
+  "questions": [
+    {
+      "id": "math_trigonometry_q1",
+      "question": "sin30° का value ज्ञात करें।",
+      "options": ["1/2", "1/√2", "√3/2", "1"],
+      "correctIndex": 0,
+      "explanation": "Standard trigonometric table के अनुसार sin30° = 1/2। '1/√2' sin45°, '√3/2' sin60° और '1' sin90° के लिए है।"
+    },
+    {
+      "id": "math_trigonometry_q2",
+      "question": "cos60° का value ज्ञात करें।",
+      "options": ["1", "1/2", "√3/2", "0"],
+      "correctIndex": 1,
+      "explanation": "Standard table के अनुसार cos60° = 1/2। '1' cos0°, '√3/2' cos30° और '0' cos90° को represent करता है।"
+    },
+    {
+      "id": "math_trigonometry_q3",
+      "question": "tan45° का value ज्ञात करें।",
+      "options": ["0", "1/√3", "1", "√3"],
+      "correctIndex": 2,
+      "explanation": "tan45° = sin45°/cos45° = (1/√2)/(1/√2) = 1। '0' tan0°, '1/√3' tan30° और '√3' tan60° के लिए है।"
+    },
+    {
+      "id": "math_trigonometry_q4",
+      "question": "sin90° का value ज्ञात करें।",
+      "options": ["0", "1/2", "1/√2", "1"],
+      "correctIndex": 3,
+      "explanation": "Standard table के अनुसार sin90° = 1। '0' sin0°, '1/2' sin30° और '1/√2' sin45° के लिए है।"
+    },
+    {
+      "id": "math_trigonometry_q5",
+      "question": "cos0° का value ज्ञात करें।",
+      "options": ["1", "0", "1/2", "√3/2"],
+      "correctIndex": 0,
+      "explanation": "Standard table के अनुसार cos0° = 1। '0' cos90°, '1/2' cos60° और '√3/2' cos30° को represent करता है।"
+    },
+    {
+      "id": "math_trigonometry_q6",
+      "question": "tan60° का value ज्ञात करें।",
+      "options": ["1", "1/√3", "√3", "0"],
+      "correctIndex": 2,
+      "explanation": "tan60° = sin60°/cos60° = (√3/2)/(1/2) = √3। '1' tan45°, '1/√3' tan30° और '0' tan0° के लिए है।"
+    },
+    {
+      "id": "math_trigonometry_q7",
+      "question": "sin45° का value ज्ञात करें।",
+      "options": ["1/2", "√3/2", "1/√2", "1"],
+      "correctIndex": 2,
+      "explanation": "Standard table के अनुसार sin45° = 1/√2। '1/2' sin30°, '√3/2' sin60° और '1' sin90° को represent करता है।"
+    },
+    {
+      "id": "math_trigonometry_q8",
+      "question": "cos45° का value ज्ञात करें।",
+      "options": ["1/2", "0", "√3/2", "1/√2"],
+      "correctIndex": 3,
+      "explanation": "Standard table के अनुसार cos45° = 1/√2। '1/2' cos60°, '0' cos90° और '√3/2' cos30° के लिए है।"
+    },
+    {
+      "id": "math_trigonometry_q9",
+      "question": "tan30° का value ज्ञात करें।",
+      "options": ["1/√3", "1", "√3", "0"],
+      "correctIndex": 0,
+      "explanation": "tan30° = sin30°/cos30° = (1/2)/(√3/2) = 1/√3। '1' tan45°, '√3' tan60° और '0' tan0° को represent करता है।"
+    },
+    {
+      "id": "math_trigonometry_q10",
+      "question": "cot45° का value ज्ञात करें।",
+      "options": ["0", "1", "√3", "1/√3"],
+      "correctIndex": 1,
+      "explanation": "cot45° = 1/tan45° = 1/1 = 1। '0' cot90°, '√3' cot30° और '1/√3' cot60° के लिए है।"
+    },
+    {
+      "id": "math_trigonometry_q11",
+      "question": "sec60° का value ज्ञात करें।",
+      "options": ["1", "√2", "2", "2/√3"],
+      "correctIndex": 2,
+      "explanation": "sec60° = 1/cos60° = 1/(1/2) = 2। '1' sec0°, '√2' sec45° और '2/√3' sec30° को represent करता है।"
+    },
+    {
+      "id": "math_trigonometry_q12",
+      "question": "cosec30° का value ज्ञात करें।",
+      "options": ["1", "√2", "2/√3", "2"],
+      "correctIndex": 3,
+      "explanation": "cosec30° = 1/sin30° = 1/(1/2) = 2। '1' cosec90°, '√2' cosec45° और '2/√3' cosec60° के लिए है।"
+    },
+    {
+      "id": "math_trigonometry_q13",
+      "question": "किसी angle θ के लिए sin²θ + cos²θ का value क्या होता है?",
+      "options": ["0", "1", "2", "tan θ"],
+      "correctIndex": 1,
+      "explanation": "यह एक fundamental trigonometric identity है: sin²θ + cos²θ = 1, जो सभी values of θ के लिए सत्य है। '0', '2' और 'tan θ' इस identity को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_trigonometry_q14",
+      "question": "किसी angle θ के लिए 1 + tan²θ किसके बराबर होता है?",
+      "options": ["cosec²θ", "sec²θ", "cot²θ", "sin²θ"],
+      "correctIndex": 1,
+      "explanation": "Pythagorean identity के अनुसार 1 + tan²θ = sec²θ। 'cosec²θ' 1+cot²θ के बराबर है, जबकि 'cot²θ' और 'sin²θ' इस identity से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "math_trigonometry_q15",
+      "question": "किसी angle θ के लिए 1 + cot²θ किसके बराबर होता है?",
+      "options": ["sin²θ", "cos²θ", "cosec²θ", "sec²θ"],
+      "correctIndex": 2,
+      "explanation": "Pythagorean identity के अनुसार 1 + cot²θ = cosec²θ। 'sec²θ' 1+tan²θ के बराबर है, और 'sin²θ', 'cos²θ' इस identity से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trigonometry_q16",
+      "question": "यदि किसी acute angle θ के लिए sinθ = 3/5 है, तो cosθ का value ज्ञात करें।",
+      "options": ["3/4", "4/5", "5/4", "3/5"],
+      "correctIndex": 1,
+      "explanation": "यह 3-4-5 right triangle है जहाँ perpendicular=3, hypotenuse=5, अतः base = √(5²-3²) = √16 = 4, इसलिए cosθ = base/hypotenuse = 4/5। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trigonometry_q17",
+      "question": "यदि किसी acute angle θ के लिए cosθ = 5/13 है, तो sinθ का value ज्ञात करें।",
+      "options": ["12/13", "5/12", "13/12", "5/13"],
+      "correctIndex": 0,
+      "explanation": "यह 5-12-13 right triangle है जहाँ base=5, hypotenuse=13, अतः perpendicular = √(13²-5²) = √144 = 12, इसलिए sinθ = perpendicular/hypotenuse = 12/13। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trigonometry_q18",
+      "question": "यदि किसी acute angle θ के लिए tanθ = 3/4 है, तो sinθ का value ज्ञात करें।",
+      "options": ["4/5", "3/4", "4/3", "3/5"],
+      "correctIndex": 3,
+      "explanation": "tanθ = 3/4 से perpendicular=3, base=4, hypotenuse = √(3²+4²) = √25 = 5, इसलिए sinθ = perpendicular/hypotenuse = 3/5। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_trigonometry_q19",
+      "question": "यदि sinA = 1/2 है (0° < A < 90°), तो angle A ज्ञात करें।",
+      "options": ["15°", "45°", "30°", "60°"],
+      "correctIndex": 2,
+      "explanation": "Standard table के अनुसार sin30° = 1/2, इसलिए A = 30°। '15°' और '45°', '60°' पर sin की value अलग होती है।"
+    },
+    {
+      "id": "math_trigonometry_q20",
+      "question": "यदि tanA = 1 है (0° < A < 90°), तो angle A ज्ञात करें।",
+      "options": ["30°", "60°", "90°", "45°"],
+      "correctIndex": 3,
+      "explanation": "Standard table के अनुसार tan45° = 1, इसलिए A = 45°। '30°' पर tan = 1/√3, '60°' पर tan = √3 और '90°' पर tan undefined होता है।"
+    },
+    {
+      "id": "math_trigonometry_q21",
+      "question": "एक tower की तली से 20 m दूर स्थित एक point से tower के top का angle of elevation 60° है। tower की height ज्ञात करें।",
+      "options": ["20√3 m", "20 m", "10√3 m", "40 m"],
+      "correctIndex": 0,
+      "explanation": "यदि height = h, तो tanθ = h/distance से tan60° = h/20 => h = 20×tan60° = 20√3 m। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trigonometry_q22",
+      "question": "एक ladder ज़मीन से 60° का angle बनाती है और उसकी length 10 m है। ladder wall पर कितनी height तक पहुँचती है?",
+      "options": ["5 m", "5√3 m", "10 m", "5√2 m"],
+      "correctIndex": 1,
+      "explanation": "height = ladder length × sinθ = 10×sin60° = 10×(√3/2) = 5√3 m। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_trigonometry_q23",
+      "question": "एक tower की height 50 m है। tower के top से नीचे ज़मीन पर स्थित एक car का angle of depression 30° है। car की tower के base से distance ज्ञात करें।",
+      "options": ["50 m", "50/√3 m", "100 m", "50√3 m"],
+      "correctIndex": 3,
+      "explanation": "angle of depression के alternate angle से tan30° = height/distance => distance = height/tan30° = 50×√3 = 50√3 m। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trigonometry_q24",
+      "question": "यदि किसी pole की height उसकी shadow की length के बराबर है, तो sun का angle of elevation ज्ञात करें।",
+      "options": ["30°", "60°", "90°", "45°"],
+      "correctIndex": 3,
+      "explanation": "height = shadow होने पर tanθ = height/shadow = 1, अतः θ = 45°। '30°' और '60°' पर tan की value 1 से भिन्न है, और '90°' पर shadow शून्य होगी।"
+    },
+    {
+      "id": "math_trigonometry_q25",
+      "question": "एक pole की height 10 m है और उसकी shadow की length 10√3 m है। sun का angle of elevation ज्ञात करें।",
+      "options": ["30°", "45°", "60°", "90°"],
+      "correctIndex": 0,
+      "explanation": "tanθ = height/shadow = 10/(10√3) = 1/√3, इसलिए θ = 30° (चूँकि tan30° = 1/√3)। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trigonometry_q26",
+      "question": "एक cliff की height 100 m है। cliff के top से समुद्र में एक boat का angle of depression 45° है। boat की cliff के base से distance ज्ञात करें।",
+      "options": ["50 m", "100 m", "100√3 m", "100/√3 m"],
+      "correctIndex": 1,
+      "explanation": "tan45° = height/distance = 1, अतः distance = height = 100 m। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_trigonometry_q27",
+      "question": "किसी angle θ के लिए sec²θ - tan²θ का value क्या होता है?",
+      "options": ["0", "2", "1", "-1"],
+      "correctIndex": 2,
+      "explanation": "Pythagorean identity 1+tan²θ = sec²θ को rearrange करने पर sec²θ - tan²θ = 1 प्राप्त होता है, जो सभी θ के लिए सत्य है। '0', '2' और '-1' इस identity को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_trigonometry_q28",
+      "question": "किसी angle θ के लिए cosec²θ - cot²θ का value क्या होता है?",
+      "options": ["-1", "0", "2", "1"],
+      "correctIndex": 3,
+      "explanation": "Pythagorean identity 1+cot²θ = cosec²θ को rearrange करने पर cosec²θ - cot²θ = 1 प्राप्त होता है, जो सभी θ के लिए सत्य है। '-1', '0' और '2' गलत हैं।"
+    },
+    {
+      "id": "math_trigonometry_q29",
+      "question": "यदि किसी angle θ (0° < θ < 90°) के लिए sinθ = cosθ है, तो θ ज्ञात करें।",
+      "options": ["30°", "45°", "60°", "90°"],
+      "correctIndex": 1,
+      "explanation": "sinθ = cosθ होने पर tanθ = 1, अतः θ = 45° (चूँकि केवल 45° पर sin और cos बराबर होते हैं)। बाकी options पर sinθ ≠ cosθ होता है।"
+    },
+    {
+      "id": "math_trigonometry_q30",
+      "question": "एक kite की string की length 40 m है और वह ज़मीन के साथ 30° का angle बनाती है। kite की ज़मीन से height ज्ञात करें।",
+      "options": ["40 m", "10 m", "20√3 m", "20 m"],
+      "correctIndex": 3,
+      "explanation": "height = string length × sinθ = 40×sin30° = 40×(1/2) = 20 m। बाकी options इस calculation से मेल नहीं खाते।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit13",
+  "unitName": "PLC",
+  "topic": "plc_evolution",
+  "topicName": "Evolution of Control Technology - Relay Logic vs PLC",
+  "questions": [
+    {
+      "id": "u13_plc_evolution_q1",
+      "question": "PLC (Programmable Logic Controller) का आविष्कार मुख्य रूप से किस industry की जरूरत को पूरा करने के लिए हुआ था, जहाँ relay-based control panels को बार-बार बदलना पड़ता था?",
+      "options": [
+        "Automobile (car manufacturing) industry",
+        "Textile industry",
+        "Food processing industry",
+        "Pharmaceutical industry"
+      ],
+      "correctIndex": 0,
+      "explanation": "PLC की शुरुआत 1968 में General Motors (automobile industry) की माँग से हुई, क्योंकि हर model change पर hard-wired relay panels को दोबारा wire करना बहुत महँगा और समय-लेने वाला था। Textile, food और pharmaceutical industries में भी बाद में PLC का उपयोग हुआ, पर मूल जरूरत automobile assembly lines से आई थी।"
+    },
+    {
+      "id": "u13_plc_evolution_q2",
+      "question": "Relay logic control की तुलना में PLC का सबसे बड़ा advantage क्या है जब control logic को बदलना हो?",
+      "options": [
+        "Relay बदलने से logic बदलती है",
+        "केवल software (program) बदलकर logic बदली जा सकती है, wiring वैसी ही रहती है",
+        "हर बार नया control panel बनाना पड़ता है",
+        "Power supply बदलनी पड़ती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC में control logic program (ladder) के रूप में memory में रहती है, इसलिए wiring को बदले बिना केवल program edit करके logic बदली जा सकती है। Relay logic में हर बदलाव के लिए physical wiring को दोबारा करना पड़ता है, इसलिए option A, C और D relay system की सीमाएँ दर्शाते हैं, न कि PLC का फायदा।"
+    },
+    {
+      "id": "u13_plc_evolution_q3",
+      "question": "पारंपरिक relay logic panel में एक बड़ी समस्या यह होती है कि इसमें बहुत सारे moving contacts होते हैं। इसका मुख्य परिणाम क्या है?",
+      "options": [
+        "बहुत तेज switching speed",
+        "Contacts घिसने से reliability कम और maintenance ज्यादा",
+        "कम power खपत",
+        "Programming आसान हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Relay में mechanical moving contacts arcing और घिसाव (wear) के कारण समय के साथ खराब होते हैं, जिससे reliability घटती है और maintenance बढ़ता है। PLC में switching solid-state तरीके से होती है इसलिए यह समस्या नहीं आती; option A, C और D relay की खूबियाँ नहीं बल्कि गलत दावे हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q4",
+      "question": "control technology के विकास क्रम में सही sequence कौन-सा है?",
+      "options": [
+        "PLC → Relay logic → Microprocessor → Solid-state logic",
+        "Relay logic → Solid-state (transistor) logic → PLC → PC-based control",
+        "Microprocessor → Relay logic → PLC",
+        "PLC → PC-based control → Relay logic"
+      ],
+      "correctIndex": 1,
+      "explanation": "Control technology पहले electromechanical relay logic से शुरू हुई, फिर solid-state/transistor based logic आई, उसके बाद programmable PLC और अंत में PC-based (SCADA/soft-PLC) control विकसित हुआ। बाकी विकल्पों में क्रम उलट-पुलट है, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q5",
+      "question": "PLC में control logic को स्थायी रूप से physical wiring के बजाय किस रूप में store किया जाता है?",
+      "options": [
+        "Program के रूप में memory में",
+        "Relay contacts के रूप में",
+        "Fuse के रूप में",
+        "Terminal block के रूप में"
+      ],
+      "correctIndex": 0,
+      "explanation": "PLC में logic एक program (जैसे ladder diagram) के रूप में इसकी memory में store रहती है, जिसे CPU बार-बार execute करता है। Relay contacts, fuse और terminal block केवल hardware components हैं जो logic store नहीं करते, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q6",
+      "question": "एक assembly line में जहाँ बार-बार product model बदलता है, वहाँ relay panel की तुलना में PLC लगाने का सबसे बड़ा आर्थिक फायदा क्या है?",
+      "options": [
+        "Copper wire महँगा हो जाता है",
+        "बार-बार re-wiring की लागत बचती है क्योंकि केवल program बदलना होता है",
+        "Electricity bill शून्य हो जाता है",
+        "Operator की जरूरत खत्म हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Model बदलने पर PLC में केवल program modify करना होता है, जिससे re-wiring की भारी लागत और downtime बचता है — यही मूल आर्थिक कारण था जिससे PLC अपनाया गया। Electricity पूरी तरह शून्य नहीं होती और operator की जरूरत रहती है, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q7",
+      "question": "निम्न में से कौन-सा relay logic का नुकसान (disadvantage) है, जिसे PLC दूर करता है?",
+      "options": [
+        "बहुत छोटा size और हल्का weight",
+        "Fault diagnosis आसान होना",
+        "बड़ा panel size, अधिक wiring और कठिन troubleshooting",
+        "Program आसानी से बदलना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Relay logic panels बड़े होते हैं, उनमें बहुत wiring होती है और fault खोजना कठिन होता है — इन सभी को PLC कम कर देता है। छोटा size, आसान diagnosis और program बदलना relay के गुण नहीं बल्कि PLC के फायदे हैं, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q8",
+      "question": "PLC को \"Programmable\" कहा जाता है क्योंकि —",
+      "options": [
+        "इसे बार-बार re-wire करना पड़ता है",
+        "इसकी control logic को user program करके बदल सकता है",
+        "यह केवल एक fixed कार्य कर सकता है",
+        "इसमें कोई memory नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Programmable\" का अर्थ है कि user अपनी जरूरत के अनुसार control logic को program (लिख/बदल) सकता है। Re-wiring की जरूरत नहीं होती, यह fixed कार्य तक सीमित नहीं होता और इसमें memory अवश्य होती है, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q9",
+      "question": "relay logic और PLC दोनों में एक बात समान होती है — दोनों किस आधार पर control decision लेते हैं?",
+      "options": [
+        "Analog voltage level पर",
+        "Input conditions (ON/OFF) की logic पर",
+        "केवल temperature पर",
+        "Battery voltage पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "दोनों systems input की ON/OFF (logical) स्थितियों के अनुसार outputs को control करते हैं — PLC इसे software में करता है, relay hardware में। यह केवल analog voltage, temperature या battery voltage पर आधारित नहीं होता, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q10",
+      "question": "PLC शब्द का पूर्ण रूप (full form) क्या है?",
+      "options": [
+        "Programmable Logic Controller",
+        "Power Line Controller",
+        "Programmable Line Circuit",
+        "Process Load Controller"
+      ],
+      "correctIndex": 0,
+      "explanation": "PLC का पूर्ण रूप Programmable Logic Controller है, जो programmable memory में store logic द्वारा machines को control करता है। बाकी विकल्प मनगढ़ंत विस्तार हैं और तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q11",
+      "question": "relay logic panel में fault खोजना (troubleshooting) कठिन क्यों होता है, जबकि PLC में आसान?",
+      "options": [
+        "Relay में कोई wiring नहीं होती",
+        "Relay panel में सैकड़ों hard-wired connections होते हैं जिन्हें manually trace करना पड़ता है",
+        "PLC में कोई diagnostic सुविधा नहीं होती",
+        "Relay panel में LED indicator नहीं जल सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Relay panel में बहुत सारे hard-wired connections होते हैं जिन्हें एक-एक करके trace करना पड़ता है, जिससे troubleshooting कठिन होती है। इसके विपरीत PLC में status indicators और diagnostic tools होते हैं जो fault खोजना आसान बनाते हैं, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q12",
+      "question": "आधुनिक PLC में relay logic की तुलना में कौन-सी अतिरिक्त क्षमता होती है, जो सिर्फ ON/OFF से आगे है?",
+      "options": [
+        "केवल on/off switching",
+        "Arithmetic, timer, counter, PID जैसे advanced functions",
+        "केवल fuse protection",
+        "केवल manual switching"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC arithmetic, comparison, timer, counter और PID control जैसे advanced functions कर सकता है, जो साधारण relay logic में संभव नहीं। केवल on/off, fuse या manual switching relay स्तर की सीमित क्षमताएँ हैं, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q13",
+      "question": "एक process में 50 relays और timers का उपयोग हो रहा है। इसे PLC में बदलने पर panel size पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Panel size बहुत बढ़ जाएगा",
+        "Panel size काफी घट जाएगा क्योंकि logic software में आ जाती है",
+        "Panel size में कोई फर्क नहीं पड़ता",
+        "PLC लगाने से wiring दोगुनी हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC में timers, relays आदि की logic software में आ जाती है, इसलिए भौतिक components और wiring घट जाती है और panel size काफी कम हो जाता है। यह size बढ़ाता नहीं और wiring दोगुनी नहीं करता, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q14",
+      "question": "relay based control की तुलना में PLC की switching speed कैसी होती है?",
+      "options": [
+        "बहुत धीमी (seconds में)",
+        "बहुत तेज (milliseconds या microseconds में) क्योंकि solid-state है",
+        "समान (कोई फर्क नहीं)",
+        "PLC switching कर ही नहीं सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC का processing solid-state होता है, इसलिए switching और logic execution milliseconds/microseconds में होती है, जबकि mechanical relay contacts धीमे होते हैं। इसलिए A (धीमी), C (समान) और D (नहीं कर सकता) गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q15",
+      "question": "किस कारण से PLC को industrial environment (धूल, कंपन, तापमान) के लिए उपयुक्त माना जाता है?",
+      "options": [
+        "इसे साधारण घरेलू PC की तरह design किया जाता है",
+        "इसे rugged, industrial-grade बनाया जाता है ताकि कठोर परिस्थितियाँ सह सके",
+        "यह केवल air-conditioned room में चलता है",
+        "इसमें कोई protection नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC को rugged, industrial-grade construction में बनाया जाता है ताकि यह धूल, कंपन, तापमान और electrical noise सह सके। यह साधारण घरेलू PC जैसा नहीं होता और केवल AC room तक सीमित नहीं, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q16",
+      "question": "relay logic को कभी-कभी \"hard-wired logic\" कहा जाता है क्योंकि —",
+      "options": [
+        "इसकी logic wiring से तय होती है और बदलने के लिए wiring बदलनी पड़ती है",
+        "इसमें कोई wire नहीं होता",
+        "यह केवल software में होती है",
+        "यह wireless काम करती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Relay logic \"hard-wired\" कहलाती है क्योंकि इसका व्यवहार physical wiring से तय होता है और बदलाव के लिए wiring को भौतिक रूप से बदलना पड़ता है। यह software या wireless आधारित नहीं है और इसमें wire होते ही हैं, इसलिए B, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q17",
+      "question": "PLC आने से पहले जटिल sequential control के लिए किन components का व्यापक उपयोग होता था?",
+      "options": [
+        "Microcontrollers और LCD",
+        "Relays, timers, counters और drum sequencers",
+        "Optical fibers",
+        "Solar panels"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC से पहले sequential control के लिए relays, mechanical timers, counters और drum sequencers का उपयोग होता था। Microcontroller बाद में आए, जबकि optical fiber और solar panel control logic से संबंधित नहीं, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q18",
+      "question": "PLC की memory में program को store रखने का एक बड़ा लाभ यह है कि —",
+      "options": [
+        "Program हर बार बिजली जाने पर मिट जाता है और फिर से लिखना पड़ता है",
+        "एक ही program को copy करके कई machines में डाला जा सकता है, standardization आसान",
+        "Program कभी बदला नहीं जा सकता",
+        "Program केवल कागज पर रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC में program non-volatile memory में रह सकता है और उसे copy करके समान machines में लोड किया जा सकता है, जिससे standardization और तेजी आती है। Program बिजली जाने पर मिटता नहीं (non-volatile), बदला जा सकता है और memory में रहता है कागज पर नहीं, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q19",
+      "question": "निम्न में से कौन-सा कथन relay logic और PLC की तुलना में सही है?",
+      "options": [
+        "Relay logic में documentation और logic समझना PLC की तुलना में आसान होता है",
+        "PLC में expansion (और I/O जोड़ना) relay panel की तुलना में आसान होता है",
+        "Relay panel में program editing की सुविधा होती है",
+        "PLC में wiring relay से हमेशा अधिक होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC में modular design के कारण I/O modules जोड़कर expansion आसान होता है, जबकि relay panel बढ़ाने के लिए भारी re-wiring चाहिए। बड़े relay panel समझना कठिन होता है, relay में program editing नहीं होती और PLC आमतौर पर wiring घटाता है, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q20",
+      "question": "किसी छोटी सी on/off control के लिए (जैसे एक pump को एक switch से चलाना) relay का उपयोग PLC की तुलना में क्यों बेहतर हो सकता है?",
+      "options": [
+        "Relay बहुत महँगा होता है",
+        "इतने साधारण कार्य के लिए PLC लगाना अनावश्यक और महँगा होता है, relay सस्ता व सरल है",
+        "Relay programming बहुत कठिन है",
+        "PLC इतना छोटा कार्य नहीं कर सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "बहुत साधारण on/off कार्य के लिए PLC लगाना over-engineering है; ऐसे में एक सस्ता relay ही पर्याप्त और किफायती है। Relay सस्ता होता है, उसमें programming नहीं होती और PLC छोटे कार्य भी कर सकता है (पर आवश्यक नहीं), इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q21",
+      "question": "PLC का उपयोग करने से किसी plant के downtime में कमी आने का मुख्य कारण क्या है?",
+      "options": [
+        "इसमें कोई fault कभी नहीं आता",
+        "तेज fault diagnosis और program द्वारा जल्दी सुधार से repair समय घटता है",
+        "यह बिना बिजली के चलता है",
+        "इसमें कोई output नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC के diagnostic indicators और आसान program modification से fault जल्दी पहचानकर सुधारा जा सकता है, जिससे downtime घटता है। PLC में fault आ सकते हैं, यह बिजली से चलता है और इसमें outputs होते हैं, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q22",
+      "question": "\"soft-wired\" logic का अर्थ, जो PLC में प्रयोग होता है, क्या है?",
+      "options": [
+        "Logic को software program द्वारा परिभाषित करना, hardware wiring द्वारा नहीं",
+        "बहुत पतले (soft) copper wire का उपयोग",
+        "Logic को कागज पर लिखना",
+        "बिना बिजली के logic चलाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Soft-wired\" का अर्थ है कि connections और logic software (program) द्वारा तय होते हैं, physical hard-wiring से नहीं। यह wire की मोटाई, कागज या बिना-बिजली से संबंधित नहीं, इसलिए B, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q23",
+      "question": "किसी automated bottling plant में conveyor, filling, capping और labeling के sequential control के लिए PLC सबसे उपयुक्त क्यों है?",
+      "options": [
+        "क्योंकि यह केवल एक ही output दे सकता है",
+        "क्योंकि यह कई inputs/outputs को समयबद्ध sequence में आसानी से control और बदल सकता है",
+        "क्योंकि इसमें कोई timer नहीं होता",
+        "क्योंकि यह केवल analog signals पढ़ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC कई inputs और outputs को timers/counters के साथ समयबद्ध sequence में control कर सकता है और जरूरत पड़ने पर program बदलकर sequence बदल सकता है, इसलिए sequential automation के लिए आदर्श है। यह एक ही output तक सीमित नहीं, timers रखता है और digital+analog दोनों संभालता है, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q24",
+      "question": "relay logic की तुलना में PLC में scalability (आगे विस्तार) की सुविधा किसके कारण मिलती है?",
+      "options": [
+        "Fixed non-expandable design के कारण",
+        "Modular I/O और expansion racks जोड़ने की क्षमता के कारण",
+        "केवल fuse बदलने से",
+        "Battery जोड़ने से"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC में modular design होने से जरूरत के अनुसार अतिरिक्त I/O modules या expansion racks जोड़े जा सकते हैं, जिससे scalability मिलती है। Fixed design विस्तार रोकता है, और fuse/battery का scalability से संबंध नहीं, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q25",
+      "question": "PLC आने से पहले relay panels में ladder wiring diagrams बनाए जाते थे। PLC ने इसी अवधारणा को किस रूप में अपनाया?",
+      "options": [
+        "Ladder logic programming के रूप में",
+        "Optical fiber के रूप में",
+        "Assembly language के रूप में केवल",
+        "किसी भी graphical रूप में नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "PLC ने relay ladder wiring की परिचित अवधारणा को Ladder Logic (LD) programming के रूप में अपनाया, ताकि electricians आसानी से समझ सकें। यह optical fiber से असंबंधित है, केवल assembly तक सीमित नहीं और graphical रूप में ही मुख्यतः दिखती है, इसलिए B, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q26",
+      "question": "किसी pharmaceutical batch process में जहाँ कड़े documentation और परिवर्तन-नियंत्रण की जरूरत होती है, relay panel की तुलना में PLC का लाभ क्या है?",
+      "options": [
+        "Logic कागज पर छिपी रहती है",
+        "Program को software में documented, version-controlled और आसानी से audit किया जा सकता है",
+        "इसमें कोई record नहीं रहता",
+        "Logic बदलना असंभव होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC program को software में documented और version-controlled रखा जा सकता है, जिससे audit और परिवर्तन-नियंत्रण आसान होता है — regulated industries के लिए यह महत्वपूर्ण है। यह record रखता है और logic बदली जा सकती है, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q27",
+      "question": "एक कथन: \"PLC ने relay को पूरी तरह अप्रचलित (obsolete) कर दिया है।\" यह कथन —",
+      "options": [
+        "पूरी तरह सही है, relay कहीं उपयोग नहीं होते",
+        "पूरी तरह सही नहीं है; छोटे/साधारण कार्यों और interfacing में relay आज भी उपयोगी हैं",
+        "सही है क्योंकि relay बनते ही नहीं",
+        "सही है क्योंकि relay महँगे होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC ने जटिल control में relay panels की जगह ली, पर छोटे on/off कार्यों और PLC output को high-power load से interface करने में relays आज भी व्यापक रूप से उपयोग होते हैं। इसलिए relay अप्रचलित नहीं हुए और A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q28",
+      "question": "PLC के आने से control system design में एक बड़ा बदलाव यह आया कि —",
+      "options": [
+        "Design हमेशा hardware में fixed हो गया",
+        "Design का बड़ा हिस्सा hardware से हटकर software/programming की ओर चला गया (flexibility बढ़ी)",
+        "Wiring की मात्रा बहुत बढ़ गई",
+        "Control असंभव हो गया"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC ने control design का बड़ा हिस्सा software में स्थानांतरित कर दिया, जिससे flexibility बढ़ी और परिवर्तन आसान हुए। Design fixed नहीं हुआ, wiring घटी और control अधिक सक्षम हुआ, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q29",
+      "question": "relay logic और PLC को एक साथ चलाना (hybrid) व्यवहार में क्यों देखा जाता है?",
+      "options": [
+        "क्योंकि PLC काम ही नहीं करता",
+        "PLC control logic संभालता है जबकि relays/contactors भारी loads को switch और safety interlock देते हैं",
+        "क्योंकि relay तेज होता है",
+        "क्योंकि दोनों में कोई अंतर नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "व्यवहार में PLC decision/logic संभालता है और उसके outputs relays/contactors के जरिए भारी motors/heaters को switch करते हैं तथा safety interlocking देते हैं — इसलिए hybrid उपयोग आम है। PLC काम करता है, relay तेज नहीं होता और दोनों में स्पष्ट अंतर है, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_evolution_q30",
+      "question": "निम्न में से PLC को relay logic पर वरीयता देने का कौन-सा कारण सही नहीं है?",
+      "options": [
+        "आसान program modification",
+        "कम wiring और छोटा panel",
+        "हर साधारण single on/off कार्य के लिए भी अनिवार्य रूप से सस्ता होना",
+        "बेहतर diagnostics और reliability"
+      ],
+      "correctIndex": 2,
+      "explanation": "PLC हर साधारण single on/off कार्य के लिए सबसे सस्ता विकल्प नहीं होता — ऐसे में एक relay सस्ता पड़ता है; इसलिए यह कथन गलत है (और यही \"सही नहीं\" वाला उत्तर है)। आसान program modification, कम wiring और बेहतर diagnostics/reliability PLC के वास्तविक फायदे हैं, इसलिए A, B, D सही फायदे हैं।"
+    }
+  ]
+}

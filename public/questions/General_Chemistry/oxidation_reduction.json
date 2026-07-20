@@ -1,0 +1,303 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "oxidation_reduction",
+  "topicName": "Oxidation and Reduction",
+  "questions": [
+    {
+      "id": "chem_oxidation_reduction_q1",
+      "question": "Modern electronic concept के अनुसार oxidation की सही परिभाषा क्या है?",
+      "options": [
+        "किसी atom, ion या molecule द्वारा electrons खोना (loss of electrons)",
+        "किसी atom, ion या molecule द्वारा electrons ग्रहण करना (gain of electrons)",
+        "केवल oxygen के साथ संयोग होना",
+        "केवल hydrogen का निकलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Modern electronic concept के अनुसार oxidation में species electrons खोता है, जैसे Na -> Na+ + e-। Option 1 reduction की परिभाषा है, option 2 केवल classical (oxygen-based) पुरानी परिभाषा है जो सीमित है, और option 3 भी अधूरी classical परिभाषा है जो सभी redox reactions पर लागू नहीं होती।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q2",
+      "question": "Reduction की modern electronic परिभाषा के अनुसार किसी species में क्या होता है?",
+      "options": [
+        "Electrons का loss होकर oxidation number बढ़ता है",
+        "Electrons का gain होकर oxidation number घटता है",
+        "केवल oxygen जुड़ता है",
+        "केवल proton जुड़ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reduction में species electrons ग्रहण करता है जिससे उसका oxidation number घटता है, जैसे Cu2+ + 2e- -> Cu। Option 0 oxidation है, option 2 पुरानी classical (सीमित) परिभाषा है, और proton जुड़ना reduction से संबंधित नहीं है।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q3",
+      "question": "किसी redox reaction में oxidation और reduction के बारे में कौन-सा कथन सही है?",
+      "options": [
+        "Oxidation और reduction हमेशा अलग-अलग, स्वतंत्र reactions में होते हैं",
+        "केवल oxidation अकेले होता है, reduction आवश्यक नहीं",
+        "Oxidation और reduction हमेशा एक साथ होते हैं, एक species electrons खोता है तो दूसरा ग्रहण करता है",
+        "केवल metals में oxidation होता है, non-metals में नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Redox reaction में electron transfer के कारण oxidation और reduction हमेशा साथ-साथ होते हैं क्योंकि एक species के छोड़े electrons दूसरी species ग्रहण करती है। शेष विकल्प इस साथ-साथ होने वाले सिद्धांत को गलत तरीके से तोड़ते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q4",
+      "question": "किसी free (uncombined) element जैसे Zn, O2 या Cl2 में उसके atoms की oxidation number कितनी होती है?",
+      "options": ["0", "+1", "-1", "+2"],
+      "correctIndex": 0,
+      "explanation": "किसी free element के atom की oxidation number सदैव शून्य (0) होती है क्योंकि उसमें electrons का कोई net transfer नहीं हुआ है, जैसे Zn, O2, Cl2 में। शेष विकल्प केवल संयुक्त (combined) अवस्था में विशेष elements के लिए लागू होते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q5",
+      "question": "अधिकांश compounds में oxygen की oxidation number सामान्यतः क्या होती है (peroxides को छोड़कर)?",
+      "options": ["-1", "-2", "+2", "0"],
+      "correctIndex": 1,
+      "explanation": "सामान्य compounds जैसे H2O, FeO, CO2 में oxygen की oxidation number -2 होती है। -1 केवल peroxides (जैसे H2O2) में होती है, +2 और 0 सामान्य नियमों के विपरीत हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q6",
+      "question": "अधिकांश compounds में hydrogen की oxidation number सामान्यतः क्या होती है (metal hydrides को छोड़कर)?",
+      "options": ["-1", "0", "+2", "+1"],
+      "correctIndex": 3,
+      "explanation": "सामान्य compounds जैसे H2O, HCl में hydrogen की oxidation number +1 होती है। -1 केवल metal hydrides (जैसे NaH) में होती है, 0 free element के लिए और +2 hydrogen के लिए संभव नहीं है।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q7",
+      "question": "Oxidizing agent की सही परिभाषा क्या है?",
+      "options": [
+        "वह पदार्थ जो स्वयं oxidised होकर दूसरे को reduce करता है",
+        "वह पदार्थ जो केवल electrons देता है",
+        "वह पदार्थ जो reaction में कोई परिवर्तन नहीं करता",
+        "वह पदार्थ जो स्वयं reduced होकर दूसरे पदार्थ को oxidise करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Oxidizing agent दूसरे पदार्थ से electrons ग्रहण करके स्वयं reduced होता है और दूसरे पदार्थ को oxidise कर देता है, जैसे KMnO4। 'स्वयं oxidised होकर दूसरे को reduce करना' असल में reducing agent का व्यवहार है, 'केवल electrons देना' भी reducing agent की विशेषता है, और 'कोई परिवर्तन न करना' गलत है क्योंकि oxidizing agent स्वयं रासायनिक रूप से बदलता है।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q8",
+      "question": "Reducing agent के बारे में कौन-सा कथन सही है?",
+      "options": [
+        "यह स्वयं oxidised होकर दूसरे पदार्थ को reduce करता है",
+        "यह स्वयं reduced होकर दूसरे पदार्थ को oxidise करता है",
+        "यह केवल electrons ग्रहण करता है",
+        "यह reaction की दर को केवल तेज करता है, participate नहीं करता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reducing agent दूसरे पदार्थ को electrons देकर उसे reduce करता है और स्वयं oxidised हो जाता है, जैसे H2, C, CO। Option 1 oxidizing agent का व्यवहार है, option 2 गलत दिशा है, और option 3 catalyst जैसा behavior है जो redox agent से अलग है।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q9",
+      "question": "निम्नलिखित में से कौन-सा एक शक्तिशाली (strong) oxidizing agent माना जाता है?",
+      "options": [
+        "H2 (Hydrogen gas)",
+        "C (Carbon)",
+        "CO (Carbon monoxide)",
+        "KMnO4 (Potassium permanganate)"
+      ],
+      "correctIndex": 3,
+      "explanation": "KMnO4 उच्च oxidation state (Mn +7) के कारण easily reduced होकर strong oxidizing agent का कार्य करता है। H2, C और CO सामान्यतः reducing agents के रूप में कार्य करते हैं क्योंकि वे स्वयं आसानी से oxidised हो जाते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q10",
+      "question": "धातुकर्म (metallurgy) में iron oxide (Fe2O3) को धातु में बदलने हेतु किसे reducing agent के रूप में प्रयोग किया जाता है?",
+      "options": [
+        "O2 (Oxygen gas)",
+        "KMnO4",
+        "CO (Carbon monoxide)",
+        "Cl2 (Chlorine gas)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Blast furnace में CO, Fe2O3 से oxygen हटाकर Fe बनाता है और स्वयं CO2 में oxidise हो जाता है, इसलिए यह reducing agent है। O2, KMnO4 और Cl2 स्वयं strong oxidizing agents हैं, reducing नहीं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q11",
+      "question": "Iron की rusting (जंग लगना) रासायनिक रूप से किस प्रकार की प्रक्रिया है?",
+      "options": [
+        "केवल एक physical परिवर्तन जिसमें कोई नया पदार्थ नहीं बनता",
+        "Iron का reduction जिसमें electrons ग्रहण होते हैं",
+        "एक endothermic प्रक्रिया जिसमें कोई redox परिवर्तन नहीं होता",
+        "Iron के oxidation की एक धीमी (slow oxidation) प्रक्रिया जिसमें Fe2O3 बनता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Rusting में Fe, moisture और O2 की उपस्थिति में धीरे-धीरे oxidised होकर hydrated Fe2O3 (rust) बनाता है, यह slow oxidation का उदाहरण है। यह वास्तव में एक नया पदार्थ (Fe2O3) बनाने वाला chemical परिवर्तन है इसलिए 'केवल physical परिवर्तन' गलत है, इसमें Fe electrons खोता है (oxidation) न कि reduction, और यह स्पष्ट redox प्रक्रिया है इसलिए 'कोई redox परिवर्तन नहीं' भी गलत है।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q12",
+      "question": "Iron की rusting की मुख्य chemical equation 4Fe + 3O2 -> 2Fe2O3 में कौन oxidised होता है?",
+      "options": [
+        "O2 oxidised होता है",
+        "Fe oxidised होता है",
+        "दोनों Fe और O2 समान रूप से केवल reduced होते हैं",
+        "कोई भी oxidised नहीं होता, केवल mixing होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "इस reaction में Fe की oxidation number 0 से बढ़कर +3 हो जाती है (Fe2O3 में), इसलिए Fe oxidised होता है, जबकि O2 reduced होकर O2- बनता है। इसलिए option 0, 2 और 3 गलत हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q13",
+      "question": "Reaction Zn + CuSO4 -> ZnSO4 + Cu में कौन-सी species reducing agent के रूप में कार्य करती है?",
+      "options": [
+        "Cu2+ ions",
+        "SO4^2- ions",
+        "Zn (Zinc metal)",
+        "Cu (Copper metal)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Zn अपने electrons Cu2+ को देकर स्वयं Zn2+ में oxidise हो जाता है, इसलिए यह reducing agent है, जबकि Cu2+ oxidizing agent के रूप में reduced होकर Cu बनता है। SO4^2- केवल spectator ion है और Cu अंतिम product है, agent नहीं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q14",
+      "question": "उपरोक्त reaction Zn + CuSO4 -> ZnSO4 + Cu में oxidizing agent कौन है?",
+      "options": [
+        "Zn",
+        "ZnSO4",
+        "CuSO4 (विशेषतः Cu2+ ion)",
+        "Cu metal"
+      ],
+      "correctIndex": 2,
+      "explanation": "CuSO4 में उपस्थित Cu2+ ion electrons ग्रहण करके Cu में reduced होता है, इसलिए यह oxidizing agent है। Zn reducing agent है, ZnSO4 product है, और Cu final reduced product है, agent नहीं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q15",
+      "question": "Reaction Cu + 2AgNO3 -> Cu(NO3)2 + 2Ag में electron transfer के बारे में क्या सही है?",
+      "options": [
+        "Ag+ ions, Cu को electrons देते हैं",
+        "कोई electron transfer नहीं होता, केवल atoms का आदान-प्रदान होता है",
+        "Cu, electrons ग्रहण करके reduced होता है",
+        "Cu, प्रत्येक Ag+ ion को 1-1 electron देकर स्वयं Cu2+ में oxidise होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Cu अपने 2 electrons दो Ag+ ions को देता है (प्रत्येक को 1 electron), जिससे Cu, Cu2+ में oxidise होता है और Ag+, Ag में reduced होता है। यह स्पष्ट electron transfer वाली redox reaction है, इसलिए 'Ag+ का Cu को electrons देना' दिशा में उल्टा है, 'कोई electron transfer न होना' और 'Cu का electrons ग्रहण करना' दोनों गलत हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q16",
+      "question": "H2SO4 (Sulphuric acid) में Sulphur (S) की oxidation number कितनी होती है?",
+      "options": ["+4", "+6", "-2", "+2"],
+      "correctIndex": 1,
+      "explanation": "H2SO4 में H की oxidation number +1 (कुल +2) और O की -2 (कुल -8) होती है; उदासीन compound में योग शून्य होना चाहिए, अतः S = -(+2-8) = +6। अन्य options गलत calculation पर आधारित हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q17",
+      "question": "KMnO4 (Potassium permanganate) में Mn की oxidation number कितनी है?",
+      "options": ["+7", "+4", "+2", "+6"],
+      "correctIndex": 0,
+      "explanation": "KMnO4 में K = +1, O = -2 (4 atoms = -8); उदासीन compound हेतु +1 + Mn -8 = 0, अतः Mn = +7। यही उच्च oxidation state KMnO4 को strong oxidizing agent बनाती है, अन्य options गलत हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q18",
+      "question": "Na2O में Sodium (Na) की oxidation number क्या है?",
+      "options": ["+2", "-1", "+1", "0"],
+      "correctIndex": 2,
+      "explanation": "Na2O में O = -2; उदासीन compound हेतु 2(Na) + (-2) = 0, अतः Na = +1, जो Sodium की सामान्य valency/oxidation state भी है। शेष options गलत गणना दर्शाते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q19",
+      "question": "FeO और Fe2O3 में Iron (Fe) की oxidation number क्रमशः क्या होती है?",
+      "options": ["+2 और +3", "+3 और +2", "+2 और +2", "+3 और +3"],
+      "correctIndex": 0,
+      "explanation": "FeO में O=-2 होने से Fe=+2 होता है, जबकि Fe2O3 में 2Fe + 3(-2)=0 से Fe=+3 होता है। यह दिखाता है कि Iron एक से अधिक oxidation states (variable oxidation state) दर्शा सकता है, शेष options गलत मान देते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q20",
+      "question": "HCl और Cl2 में Chlorine (Cl) की oxidation number क्रमशः क्या है?",
+      "options": ["-1 और -1", "-1 और 0", "0 और -1", "+1 और 0"],
+      "correctIndex": 1,
+      "explanation": "HCl में H=+1 होने से Cl=-1 होता है, जबकि free element Cl2 में oxidation number सदैव 0 होती है। इसलिए सही उत्तर -1 और 0 है, शेष options में से कोई भी दोनों values सही नहीं दर्शाता।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q21",
+      "question": "Reaction Fe + CuSO4 -> FeSO4 + Cu में कौन oxidised होता है और कौन reduced होता है?",
+      "options": [
+        "Fe reduced होता है, Cu2+ oxidised होता है",
+        "Fe oxidised होता है, Cu2+ reduced होता है",
+        "दोनों केवल oxidised होते हैं",
+        "दोनों केवल reduced होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fe अपनी oxidation number 0 से +2 करके electrons खोता है (oxidation), जबकि Cu2+ अपनी oxidation number +2 से 0 करके electrons ग्रहण करता है (reduction)। इसलिए option 1 सही है, शेष options electron transfer की विपरीत दिशा या असंभव स्थिति दर्शाते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q22",
+      "question": "Reaction 2Mg + O2 -> 2MgO के संदर्भ में कौन-सा कथन सही है?",
+      "options": [
+        "Mg reduced होता है क्योंकि यह oxygen से जुड़ता है",
+        "O2 oxidised होता है",
+        "Mg oxidised होकर Mg2+ बनाता है और O2 reduced होकर O2- बनाता है",
+        "इस reaction में कोई electron transfer नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mg अपने 2 electrons देकर Mg2+ बनता है (oxidation number 0 से +2), जबकि O2 electrons ग्रहण करके O2- बनता है (0 से -2), यह classical redox उदाहरण है। शेष विकल्प electron transfer की दिशा या उपस्थिति को गलत बताते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q23",
+      "question": "H2O2 (Hydrogen peroxide) में प्रत्येक Oxygen atom की oxidation number कितनी होती है?",
+      "options": ["-2", "0", "+1", "-1"],
+      "correctIndex": 3,
+      "explanation": "Peroxides में oxygen की oxidation number अपवाद स्वरूप -1 होती है (सामान्य compounds के -2 के विपरीत), क्योंकि H2O2 में O-O bond होता है जो electrons साझा करता है। यही कारण है कि H2O2 दोहरी (oxidizing तथा reducing दोनों) प्रकृति दिखाता है, शेष options सामान्य compounds या free element पर लागू होते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q24",
+      "question": "H2S और SO2 में Sulphur (S) की oxidation number क्रमशः क्या है?",
+      "options": ["-2 और +4", "+2 और -4", "-2 और -4", "+4 और -2"],
+      "correctIndex": 0,
+      "explanation": "H2S में H=+1(x2)=+2, अतः S=-2; SO2 में O=-2(x2)=-4, अतः S=+4। इस प्रकार Sulphur H2S में सबसे कम और SO2 में अपेक्षाकृत उच्च oxidation state दर्शाता है, शेष options गलत गणना पर आधारित हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q25",
+      "question": "Iron की वस्तुओं पर Zinc (Zn) की परत चढ़ाकर (galvanization) rusting को रोका जाता है, इसका मुख्य कारण क्या है?",
+      "options": [
+        "Zn, Fe की तुलना में अधिक आसानी से oxidise होकर Fe को oxidation से बचाता है (sacrificial protection)",
+        "Zn, Fe को reduce कर देता है इसलिए rusting नहीं होती",
+        "Zn रासायनिक रूप से पूर्णतः inert होता है इसलिए कोई reaction नहीं होती",
+        "Zn, oxygen को completely absorb कर लेता है इसलिए वातावरण में O2 ही नहीं बचता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Zn, Fe से अधिक क्रियाशील होने के कारण स्वयं पहले oxidise होकर एक sacrificial anode की तरह कार्य करता है, जिससे Fe की oxidation रुक जाती है। Option 1 और 2 गलत हैं क्योंकि Zn स्वयं reaction करता है (inert नहीं), और option 3 अवैज्ञानिक व्याख्या है।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q26",
+      "question": "किसी उदासीन (neutral) compound में सभी atoms की oxidation numbers का योग कितना होता है?",
+      "options": ["हमेशा +1", "हमेशा -1", "हमेशा शून्य (0)", "compound के आकार पर निर्भर करता है"],
+      "correctIndex": 2,
+      "explanation": "नियमानुसार किसी उदासीन compound में सभी atoms की oxidation numbers का बीजगणितीय योग शून्य होता है, जबकि किसी polyatomic ion में यह योग ion के net charge के बराबर होता है। इसलिए +1, -1 या 'आकार पर निर्भर' जैसे विकल्प गलत हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q27",
+      "question": "SO4^2- ion में सभी atoms की oxidation numbers का योग क्या होगा?",
+      "options": ["0", "+2", "-2", "+6"],
+      "correctIndex": 2,
+      "explanation": "Polyatomic ion में oxidation numbers का योग उस ion के net charge के बराबर होता है, यहाँ charge -2 है इसलिए योग भी -2 होगा। 0 केवल उदासीन compounds के लिए नियम है, +2 charge के विपरीत चिन्ह है, और +6 केवल S की individual oxidation number है, योग नहीं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q28",
+      "question": "HNO3 (Nitric acid) में Nitrogen (N) की oxidation number कितनी है?",
+      "options": ["+3", "-3", "+1", "+5"],
+      "correctIndex": 3,
+      "explanation": "HNO3 में H=+1, O=-2(x3)=-6; उदासीन compound हेतु 1 + N - 6 = 0, अतः N = +5, जो Nitrogen की सर्वाधिक (maximum) oxidation state है। शेष options गलत गणना दर्शाते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q29",
+      "question": "किसी redox reaction में electron transfer की दिशा के संदर्भ में कौन-सा कथन सही है?",
+      "options": [
+        "Electrons हमेशा reducing agent से oxidizing agent की ओर प्रवाहित होते हैं",
+        "Electrons हमेशा oxidizing agent से reducing agent की ओर प्रवाहित होते हैं",
+        "Electrons का प्रवाह दोनों दिशाओं में समान रूप से होता है",
+        "Redox reaction में electrons का कोई वास्तविक प्रवाह नहीं होता, केवल ऊर्जा का स्थानांतरण होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reducing agent electrons खोता है (oxidised होता है) और वे electrons oxidizing agent द्वारा ग्रहण किए जाते हैं (जो reduced होता है), इसलिए प्रवाह reducing agent से oxidizing agent की ओर होता है। शेष विकल्प दिशा या प्रकृति को गलत बताते हैं।"
+    },
+    {
+      "id": "chem_oxidation_reduction_q30",
+      "question": "Reaction Zn + 2HCl -> ZnCl2 + H2 में Zn और H+ के oxidation number परिवर्तन के आधार पर कौन-सा कथन सही है?",
+      "options": [
+        "Zn की oxidation number 0 से घटकर -2 होती है",
+        "H की oxidation number +1 से घटकर 0 होती है, अर्थात H+ reduced होता है और Zn oxidised होता है",
+        "Zn और H दोनों की oxidation number में कोई परिवर्तन नहीं होता",
+        "Cl की oxidation number बदलती है जबकि Zn और H अपरिवर्तित रहते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Zn की oxidation number 0 से +2 होती है (oxidation) जबकि H की +1 से 0 होती है (reduction, H2 गैस बनना), यह स्पष्ट redox reaction है। Cl की oxidation number इस reaction में -1 पर अपरिवर्तित रहती है (spectator), इसलिए options 0, 2 और 3 गलत हैं।"
+    }
+  ]
+}

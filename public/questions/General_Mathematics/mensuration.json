@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "mensuration",
+  "topicName": "Mensuration (Area, Perimeter, Volume, Surface Area)",
+  "questions": [
+    {
+      "id": "math_mensuration_q1",
+      "question": "एक rectangle की length 12 cm और breadth 7 cm है। उसका area ज्ञात करें।",
+      "options": ["84 cm²", "80 cm²", "88 cm²", "90 cm²"],
+      "correctIndex": 0,
+      "explanation": "Area = length×breadth = 12×7 = 84 cm²। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_mensuration_q2",
+      "question": "एक rectangle की length 15 cm और breadth 10 cm है। उसका perimeter ज्ञात करें।",
+      "options": ["45 cm", "50 cm", "55 cm", "60 cm"],
+      "correctIndex": 1,
+      "explanation": "Perimeter = 2(l+b) = 2(15+10) = 50 cm। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_mensuration_q3",
+      "question": "एक square की side 9 cm है। उसका area ज्ञात करें।",
+      "options": ["72 cm²", "78 cm²", "81 cm²", "90 cm²"],
+      "correctIndex": 2,
+      "explanation": "Area = side² = 9² = 81 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q4",
+      "question": "एक square की side 14 cm है। उसका perimeter ज्ञात करें।",
+      "options": ["48 cm", "50 cm", "52 cm", "56 cm"],
+      "correctIndex": 3,
+      "explanation": "Perimeter = 4×side = 4×14 = 56 cm। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_mensuration_q5",
+      "question": "एक triangle का base 10 cm और height 8 cm है। उसका area ज्ञात करें।",
+      "options": ["40 cm²", "36 cm²", "44 cm²", "48 cm²"],
+      "correctIndex": 0,
+      "explanation": "Area = (1/2)×base×height = (1/2)×10×8 = 40 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q6",
+      "question": "एक triangle की sides 3 cm, 4 cm और 5 cm हैं। Heron's formula का उपयोग करके उसका area ज्ञात करें।",
+      "options": ["5 cm²", "6 cm²", "7 cm²", "8 cm²"],
+      "correctIndex": 1,
+      "explanation": "s = (3+4+5)/2 = 6, Area = √(s(s-a)(s-b)(s-c)) = √(6×3×2×1) = √36 = 6 cm²। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_mensuration_q7",
+      "question": "एक circle की radius 7 cm है (π = 22/7 लें)। उसका area ज्ञात करें।",
+      "options": ["144 cm²", "150 cm²", "154 cm²", "160 cm²"],
+      "correctIndex": 2,
+      "explanation": "Area = πr² = (22/7)×7² = (22/7)×49 = 154 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q8",
+      "question": "एक circle की radius 14 cm है (π = 22/7 लें)। उसका circumference ज्ञात करें।",
+      "options": ["80 cm", "84 cm", "86 cm", "88 cm"],
+      "correctIndex": 3,
+      "explanation": "Circumference = 2πr = 2×(22/7)×14 = 88 cm। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_mensuration_q9",
+      "question": "एक parallelogram का base 12 cm और height 5 cm है। उसका area ज्ञात करें।",
+      "options": ["60 cm²", "55 cm²", "65 cm²", "70 cm²"],
+      "correctIndex": 0,
+      "explanation": "Area = base×height = 12×5 = 60 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q10",
+      "question": "एक rhombus की diagonals 10 cm और 16 cm हैं। उसका area ज्ञात करें।",
+      "options": ["70 cm²", "80 cm²", "90 cm²", "100 cm²"],
+      "correctIndex": 1,
+      "explanation": "Area = (1/2)×d1×d2 = (1/2)×10×16 = 80 cm²। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_mensuration_q11",
+      "question": "एक trapezium की parallel sides 10 cm और 14 cm हैं तथा height 6 cm है। उसका area ज्ञात करें।",
+      "options": ["66 cm²", "70 cm²", "72 cm²", "76 cm²"],
+      "correctIndex": 2,
+      "explanation": "Area = (1/2)×(a+b)×h = (1/2)×(10+14)×6 = (1/2)×24×6 = 72 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q12",
+      "question": "एक cube की side 5 cm है। उसका volume ज्ञात करें।",
+      "options": ["100 cm³", "110 cm³", "120 cm³", "125 cm³"],
+      "correctIndex": 3,
+      "explanation": "Volume = side³ = 5³ = 125 cm³। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_mensuration_q13",
+      "question": "एक cube की side 6 cm है। उसका total surface area ज्ञात करें।",
+      "options": ["216 cm²", "200 cm²", "220 cm²", "224 cm²"],
+      "correctIndex": 0,
+      "explanation": "Total Surface Area = 6×side² = 6×6² = 6×36 = 216 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q14",
+      "question": "एक cuboid की length 8 cm, breadth 5 cm और height 4 cm है। उसका volume ज्ञात करें।",
+      "options": ["150 cm³", "160 cm³", "170 cm³", "180 cm³"],
+      "correctIndex": 1,
+      "explanation": "Volume = l×b×h = 8×5×4 = 160 cm³। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_mensuration_q15",
+      "question": "एक cuboid की length 6 cm, breadth 4 cm और height 3 cm है। उसका total surface area ज्ञात करें।",
+      "options": ["100 cm²", "104 cm²", "108 cm²", "112 cm²"],
+      "correctIndex": 2,
+      "explanation": "TSA = 2(lb+bh+hl) = 2(24+12+18) = 2×54 = 108 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q16",
+      "question": "एक cylinder की radius 7 cm और height 10 cm है (π = 22/7 लें)। उसका volume ज्ञात करें।",
+      "options": ["1400 cm³", "1480 cm³", "1520 cm³", "1540 cm³"],
+      "correctIndex": 3,
+      "explanation": "Volume = πr²h = (22/7)×7²×10 = (22/7)×49×10 = 1540 cm³। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_mensuration_q17",
+      "question": "एक cylinder की radius 7 cm और height 10 cm है (π = 22/7 लें)। उसका curved surface area ज्ञात करें।",
+      "options": ["440 cm²", "420 cm²", "460 cm²", "480 cm²"],
+      "correctIndex": 0,
+      "explanation": "Curved Surface Area = 2πrh = 2×(22/7)×7×10 = 440 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q18",
+      "question": "एक cylinder की radius 7 cm और height 10 cm है (π = 22/7 लें)। उसका total surface area ज्ञात करें।",
+      "options": ["720 cm²", "748 cm²", "760 cm²", "780 cm²"],
+      "correctIndex": 1,
+      "explanation": "TSA = 2πr(h+r) = 2×(22/7)×7×(10+7) = 44×17 = 748 cm²। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_mensuration_q19",
+      "question": "एक cone की radius 6 cm और height 7 cm है (π = 22/7 लें)। उसका volume ज्ञात करें।",
+      "options": ["240 cm³", "252 cm³", "264 cm³", "276 cm³"],
+      "correctIndex": 2,
+      "explanation": "Volume = (1/3)πr²h = (1/3)×(22/7)×36×7 = (1/3)×22×36 = 264 cm³। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q20",
+      "question": "एक cone की radius 3 cm और height 4 cm है। उसकी slant height ज्ञात करें।",
+      "options": ["3 cm", "4 cm", "6 cm", "5 cm"],
+      "correctIndex": 3,
+      "explanation": "Slant height l = √(r²+h²) = √(9+16) = √25 = 5 cm। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_mensuration_q21",
+      "question": "एक cone की radius 7 cm और slant height 10 cm है (π = 22/7 लें)। उसका curved surface area ज्ञात करें।",
+      "options": ["220 cm²", "200 cm²", "240 cm²", "260 cm²"],
+      "correctIndex": 0,
+      "explanation": "Curved Surface Area = πrl = (22/7)×7×10 = 220 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q22",
+      "question": "एक cone की radius 7 cm और slant height 10 cm है (π = 22/7 लें)। उसका total surface area ज्ञात करें।",
+      "options": ["360 cm²", "374 cm²", "390 cm²", "400 cm²"],
+      "correctIndex": 1,
+      "explanation": "TSA = πrl+πr² = 220+(22/7×49) = 220+154 = 374 cm²। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_mensuration_q23",
+      "question": "एक sphere की radius 7 cm है (π = 22/7 लें)। उसका surface area ज्ञात करें।",
+      "options": ["600 cm²", "608 cm²", "616 cm²", "624 cm²"],
+      "correctIndex": 2,
+      "explanation": "Surface Area = 4πr² = 4×(22/7)×49 = 616 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q24",
+      "question": "एक sphere की radius 21 cm है (π = 22/7 लें)। उसका volume ज्ञात करें।",
+      "options": ["37000 cm³", "37800 cm³", "38500 cm³", "38808 cm³"],
+      "correctIndex": 3,
+      "explanation": "Volume = (4/3)πr³ = (4/3)×(22/7)×21³ = (4/3)×(22/7)×9261 = 38808 cm³। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_mensuration_q25",
+      "question": "एक hemisphere की radius 21 cm है (π = 22/7 लें)। उसका volume ज्ञात करें।",
+      "options": ["19404 cm³", "19000 cm³", "19800 cm³", "20000 cm³"],
+      "correctIndex": 0,
+      "explanation": "Hemisphere का volume, sphere के volume का आधा होता है। Sphere का volume = 38808 cm³ (radius 21 cm पर), अतः Hemisphere का volume = 38808/2 = 19404 cm³। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q26",
+      "question": "एक hemisphere की radius 7 cm है (π = 22/7 लें)। उसका curved surface area ज्ञात करें।",
+      "options": ["300 cm²", "308 cm²", "316 cm²", "324 cm²"],
+      "correctIndex": 1,
+      "explanation": "Curved Surface Area = 2πr² = 2×(22/7)×49 = 308 cm²। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_mensuration_q27",
+      "question": "एक hemisphere की radius 7 cm है (π = 22/7 लें)। उसका total surface area ज्ञात करें।",
+      "options": ["440 cm²", "450 cm²", "462 cm²", "470 cm²"],
+      "correctIndex": 2,
+      "explanation": "Total Surface Area = 3πr² = 3×(22/7)×49 = 462 cm²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q28",
+      "question": "एक rectangular park की length 20 m और breadth 15 m है। park के चारों ओर बाहर की तरफ 2 m चौड़ा path बनाया गया है। उस path का area ज्ञात करें।",
+      "options": ["120 m²", "136 m²", "146 m²", "156 m²"],
+      "correctIndex": 3,
+      "explanation": "Path सहित बाहरी dimensions = (20+2×2)×(15+2×2) = 24×19 = 456 m², park का area = 20×15 = 300 m², इसलिए path का area = 456-300 = 156 m²। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_mensuration_q29",
+      "question": "एक कमरे की length 6 m, breadth 5 m और height 4 m है। उसकी चारों दीवारों (four walls) का area ज्ञात करें।",
+      "options": ["88 m²", "92 m²", "96 m²", "100 m²"],
+      "correctIndex": 0,
+      "explanation": "Area of four walls = 2h(l+b) = 2×4×(6+5) = 8×11 = 88 m²। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_mensuration_q30",
+      "question": "एक cuboid की length 3 cm, breadth 4 cm और height 12 cm है। उसकी diagonal की length ज्ञात करें।",
+      "options": ["12 cm", "13 cm", "14 cm", "15 cm"],
+      "correctIndex": 1,
+      "explanation": "Diagonal = √(l²+b²+h²) = √(9+16+144) = √169 = 13 cm। बाकी options इस calculation से नहीं आते।"
+    }
+  ]
+}

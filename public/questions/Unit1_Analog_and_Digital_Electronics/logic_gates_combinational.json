@@ -1,0 +1,368 @@
+{
+  "unit": "unit1",
+  "unitName": "Analog and Digital Electronics circuits",
+  "topic": "logic_gates_combinational",
+  "topicName": "Logic Gates & Combinational Circuits",
+  "questions": [
+    {
+      "id": "u1_logic_gates_combinational_q1",
+      "question": "एक 2-input AND gate का output कब high (1) होता है?",
+      "options": [
+        "जब कम से कम एक input high हो",
+        "जब दोनों inputs high हों",
+        "जब दोनों inputs low हों",
+        "जब दोनों inputs अलग-अलग हों"
+      ],
+      "correctIndex": 1,
+      "explanation": "AND gate का output तभी 1 होता है जब उसके सभी inputs 1 हों, इसलिए दोनों inputs high होने पर ही output high मिलता है। 'कम से कम एक high' OR gate की शर्त है, 'दोनों low' पर output 0 रहता है, और 'inputs अलग-अलग' XOR की स्थिति है।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q2",
+      "question": "OR gate की truth table के अनुसार output 0 केवल तभी होता है जब —",
+      "options": [
+        "सभी inputs 0 हों",
+        "कोई एक input 1 हो",
+        "सभी inputs 1 हों",
+        "inputs की संख्या विषम हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "OR gate का output तभी 0 होता है जब उसके सारे inputs 0 हों; किसी भी एक input के 1 होने पर output 1 हो जाता है। इसलिए बाकी विकल्प गलत हैं क्योंकि एक input 1 होते ही output high हो जाता है।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q3",
+      "question": "NOT gate (inverter) का मुख्य कार्य क्या है?",
+      "options": [
+        "दो inputs को जोड़ना",
+        "input signal को amplify करना",
+        "input के logic level को उलट देना (invert)",
+        "output को high impedance पर रखना"
+      ],
+      "correctIndex": 2,
+      "explanation": "NOT gate अपने single input के logic level को उलट देता है, यानी 0 को 1 और 1 को 0 बना देता है। यह inputs को जोड़ता नहीं और न ही signal amplify करता है; high impedance state tri-state buffer से संबंधित है।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q4",
+      "question": "किन दो gates को universal gate कहा जाता है क्योंकि इनसे कोई भी logic function बनाया जा सकता है?",
+      "options": [
+        "AND और OR",
+        "NAND और NOR",
+        "XOR और XNOR",
+        "NOT और AND"
+      ],
+      "correctIndex": 1,
+      "explanation": "NAND और NOR को universal gate कहते हैं क्योंकि अकेले इन्हीं में से किसी एक gate की मदद से AND, OR, NOT समेत सभी logic functions बनाए जा सकते हैं। AND-OR, XOR-XNOR या NOT-AND के जोड़े को अकेले सब कुछ बनाने के लिए universal नहीं माना जाता।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q5",
+      "question": "एक single NAND gate के दोनों inputs को आपस में जोड़ (short) देने पर वह किस gate की तरह कार्य करता है?",
+      "options": [
+        "AND gate",
+        "OR gate",
+        "NOT gate",
+        "XOR gate"
+      ],
+      "correctIndex": 2,
+      "explanation": "जब NAND gate के दोनों inputs को एक साथ जोड़ दिया जाए तो output A NAND A = NOT A हो जाता है, इसलिए यह NOT gate (inverter) की तरह काम करता है। AND बनाने के लिए NAND के बाद एक और inverter चाहिए, जबकि OR और XOR के लिए कई NAND gates की जरूरत होती है।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q6",
+      "question": "2-input XOR gate का output high (1) कब होता है?",
+      "options": [
+        "जब दोनों inputs समान हों",
+        "जब दोनों inputs high हों",
+        "जब दोनों inputs अलग-अलग (भिन्न) हों",
+        "जब दोनों inputs low हों"
+      ],
+      "correctIndex": 2,
+      "explanation": "XOR gate का output तभी 1 होता है जब उसके दोनों inputs भिन्न (एक 0 और एक 1) हों। inputs समान होने पर—चाहे दोनों 0 हों या दोनों 1—output 0 रहता है, इसलिए बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q7",
+      "question": "2-input XNOR gate को अक्सर किस नाम से भी जाना जाता है?",
+      "options": [
+        "equality detector (समानता जाँचक)",
+        "difference detector",
+        "priority encoder",
+        "level shifter"
+      ],
+      "correctIndex": 0,
+      "explanation": "XNOR gate का output तभी 1 होता है जब दोनों inputs समान हों, इसलिए इसे equality detector कहते हैं। difference detector का व्यवहार XOR का है, जबकि priority encoder और level shifter अलग circuits हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q8",
+      "question": "half adder में Sum output के लिए Boolean expression क्या होता है (inputs A और B)?",
+      "options": [
+        "Sum = A AND B",
+        "Sum = A OR B",
+        "Sum = A XOR B",
+        "Sum = A NAND B"
+      ],
+      "correctIndex": 2,
+      "explanation": "half adder में Sum = A XOR B होता है क्योंकि जब दोनों bits भिन्न हों तभी sum bit 1 बनता है। A AND B तो Carry का expression है, और OR तथा NAND sum को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q9",
+      "question": "half adder में Carry output किस gate से प्राप्त होता है (inputs A और B)?",
+      "options": [
+        "Carry = A XOR B",
+        "Carry = A AND B",
+        "Carry = A OR B",
+        "Carry = NOT A"
+      ],
+      "correctIndex": 1,
+      "explanation": "half adder में Carry = A AND B होता है, क्योंकि carry तभी 1 बनता है जब दोनों inputs 1 हों। XOR तो Sum देता है, OR गलत carry देगा और NOT A का इससे कोई संबंध नहीं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q10",
+      "question": "एक full adder में कुल कितने inputs और कितने outputs होते हैं?",
+      "options": [
+        "2 inputs और 2 outputs",
+        "3 inputs और 2 outputs",
+        "2 inputs और 1 output",
+        "3 inputs और 3 outputs"
+      ],
+      "correctIndex": 1,
+      "explanation": "full adder में 3 inputs (A, B और Carry-in) तथा 2 outputs (Sum और Carry-out) होते हैं। 2 inputs वाला circuit half adder होता है, इसलिए बाकी विकल्प संख्या की दृष्टि से गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q11",
+      "question": "full adder में Sum output का सही Boolean expression क्या है (inputs A, B, Cin)?",
+      "options": [
+        "Sum = A AND B AND Cin",
+        "Sum = A OR B OR Cin",
+        "Sum = A XOR B XOR Cin",
+        "Sum = (A AND B) OR Cin"
+      ],
+      "correctIndex": 2,
+      "explanation": "full adder में Sum = A XOR B XOR Cin होता है, क्योंकि तीनों bits का odd parity ही sum bit तय करता है। AND या OR वाले expressions sum के बजाय अन्य functions देते हैं, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q12",
+      "question": "full adder में inputs A=1, B=1, Cin=1 होने पर Sum और Carry-out क्रमशः क्या होंगे?",
+      "options": [
+        "Sum = 1, Carry-out = 1",
+        "Sum = 0, Carry-out = 0",
+        "Sum = 1, Carry-out = 0",
+        "Sum = 0, Carry-out = 1"
+      ],
+      "correctIndex": 0,
+      "explanation": "1+1+1 = 3 यानी binary में 11, इसलिए Sum = 1 और Carry-out = 1 होता है। Sum = A XOR B XOR Cin = 1 और तीनों में से कम से कम दो के 1 होने पर Carry-out = 1 बनता है, अतः बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q13",
+      "question": "एक multiplexer (MUX) का मुख्य कार्य क्या है?",
+      "options": [
+        "एक input को कई outputs में बाँटना",
+        "कई inputs में से किसी एक को चुनकर single output पर भेजना",
+        "binary को decimal में बदलना",
+        "data को store करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "MUX एक data selector है जो कई inputs में से select lines द्वारा चुने गए किसी एक input को single output पर भेजता है। एक input को कई outputs में बाँटना demultiplexer का काम है, और conversion तथा storage अलग circuits करते हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q14",
+      "question": "एक 8:1 multiplexer में कितनी select lines की आवश्यकता होती है?",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "2^n inputs के लिए n select lines चाहिए; यहाँ 2^n = 8 यानी n = 3, इसलिए 3 select lines की जरूरत होती है। 2 select lines से 4 inputs और 4 lines से 16 inputs select होते, अतः वे गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q15",
+      "question": "यदि किसी multiplexer में 4 select lines हैं, तो उसमें अधिकतम कितने data inputs हो सकते हैं?",
+      "options": [
+        "8",
+        "16",
+        "4",
+        "32"
+      ],
+      "correctIndex": 1,
+      "explanation": "n select lines के लिए inputs की संख्या 2^n होती है; यहाँ n = 4 तो inputs = 2^4 = 16 होते हैं। इसलिए 8, 4 या 32 गलत हैं क्योंकि वे 2^4 के बराबर नहीं हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q16",
+      "question": "demultiplexer (DEMUX) किस दृष्टि से multiplexer के विपरीत कार्य करता है?",
+      "options": [
+        "यह कई inputs को एक output में जोड़ता है",
+        "यह single input को select lines द्वारा चुने गए कई outputs में से किसी एक पर भेजता है",
+        "यह केवल data को invert करता है",
+        "यह high impedance state उत्पन्न करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "DEMUX एक input को लेकर select lines के अनुसार कई outputs में से किसी एक पर भेजता है, जो MUX का उल्टा है। कई inputs को एक output में लाना MUX का काम है, जबकि inverting और high impedance अलग concepts हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q17",
+      "question": "एक 1:16 demultiplexer में कितनी select lines होनी चाहिए?",
+      "options": [
+        "3",
+        "8",
+        "4",
+        "16"
+      ],
+      "correctIndex": 2,
+      "explanation": "1 से 16 outputs चुनने के लिए 2^n = 16 चाहिए, यानी n = 4 select lines। 3 lines से केवल 8 और 8 या 16 lines इससे कहीं अधिक outputs को address करतीं, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q18",
+      "question": "tri-state buffer के output में सामान्य 0 और 1 के अतिरिक्त कौन-सी तीसरी state होती है?",
+      "options": [
+        "negative voltage state",
+        "high impedance (Hi-Z) state",
+        "oscillating state",
+        "floating ground state"
+      ],
+      "correctIndex": 1,
+      "explanation": "tri-state buffer में logic 0 और 1 के अलावा तीसरी state high impedance (Hi-Z) होती है, जिसमें output circuit से प्रभावी रूप से disconnect हो जाता है। negative voltage, oscillating या floating ground इसकी परिभाषित states नहीं हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q19",
+      "question": "tri-state buffer का output high impedance state में कब जाता है?",
+      "options": [
+        "जब input 1 हो",
+        "जब enable line inactive (disabled) हो",
+        "जब input 0 हो",
+        "जब power supply high हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "tri-state buffer तभी सामान्य output देता है जब उसकी enable line active हो; enable inactive होने पर output high impedance (Hi-Z) में चला जाता है, चाहे input कुछ भी हो। इसीलिए केवल input 0 या 1 या power supply से यह state तय नहीं होती।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q20",
+      "question": "NAND gate का output 0 केवल किस स्थिति में होता है?",
+      "options": [
+        "जब सभी inputs 1 हों",
+        "जब सभी inputs 0 हों",
+        "जब कोई एक input 1 हो",
+        "जब inputs भिन्न हों"
+      ],
+      "correctIndex": 0,
+      "explanation": "NAND, AND का उल्टा है, इसलिए जब सभी inputs 1 हों तभी उसका output 0 होता है; बाकी सभी स्थितियों में output 1 रहता है। अतः सभी 0 होने पर या कोई एक 1 होने पर output 1 ही मिलेगा।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q21",
+      "question": "NOR gate का output 1 केवल किस स्थिति में होता है?",
+      "options": [
+        "जब सभी inputs 1 हों",
+        "जब कोई एक input 1 हो",
+        "जब सभी inputs 0 हों",
+        "जब inputs की संख्या सम हो"
+      ],
+      "correctIndex": 2,
+      "explanation": "NOR, OR का उल्टा है, इसलिए इसका output तभी 1 होता है जब सारे inputs 0 हों। किसी भी एक input के 1 होते ही output 0 हो जाता है, अतः बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q22",
+      "question": "यदि किसी AND gate के एक input पर लगातार logic 1 दिया जाए, तो output दूसरे input B के सापेक्ष क्या होगा?",
+      "options": [
+        "हमेशा 0",
+        "हमेशा 1",
+        "B के बराबर (output = B)",
+        "B का उल्टा (NOT B)"
+      ],
+      "correctIndex": 2,
+      "explanation": "AND gate में 1 AND B = B होता है, क्योंकि 1 के साथ AND करने पर दूसरा input ज्यों-का-त्यों pass हो जाता है। इसलिए output हमेशा 0 या 1 नहीं रहेगा और न ही invert होगा।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q23",
+      "question": "यदि XOR gate के एक input पर logic 1 दिया जाए, तो दूसरे input A के सापेक्ष output कैसा व्यवहार करेगा?",
+      "options": [
+        "output = A (buffer की तरह)",
+        "output = NOT A (inverter की तरह)",
+        "output हमेशा 1",
+        "output हमेशा 0"
+      ],
+      "correctIndex": 1,
+      "explanation": "XOR में A XOR 1 = NOT A होता है, इसलिए एक input 1 रखने पर gate controllable inverter की तरह काम करता है। यदि दूसरा input 0 होता तब output = A मिलता, इसलिए बाकी विकल्प इस स्थिति में गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q24",
+      "question": "Boolean expression Y = (A AND B) OR (NOT A AND C) में A=0, B=1, C=1 रखने पर Y का मान क्या होगा?",
+      "options": [
+        "0",
+        "1",
+        "high impedance",
+        "अपरिभाषित"
+      ],
+      "correctIndex": 1,
+      "explanation": "A=0 रखने पर (A AND B) = 0 और (NOT A AND C) = (1 AND 1) = 1 होता है, इसलिए Y = 0 OR 1 = 1। यह एक साधारण combinational output है, अतः न तो 0, न high impedance और न ही अपरिभाषित होगा।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q25",
+      "question": "एक 2-input NAND gate के output को एक inverter (NOT) से जोड़ने पर पूरा circuit किस single gate के समान कार्य करता है?",
+      "options": [
+        "AND gate",
+        "OR gate",
+        "NOR gate",
+        "XOR gate"
+      ],
+      "correctIndex": 0,
+      "explanation": "NAND का output NOT(A AND B) होता है; इसे फिर से invert करने पर NOT(NOT(A AND B)) = A AND B मिलता है, यानी यह AND gate की तरह काम करता है। इसलिए यह OR, NOR या XOR के समान नहीं होगा।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q26",
+      "question": "किसी combinational circuit की मुख्य विशेषता क्या है?",
+      "options": [
+        "output केवल वर्तमान inputs पर निर्भर करता है, पिछली state पर नहीं",
+        "output pichhli state (memory) पर निर्भर करता है",
+        "इसमें clock signal अनिवार्य होता है",
+        "यह data को store कर सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "combinational circuit में output केवल उसी क्षण के inputs पर निर्भर करता है, उसमें कोई memory नहीं होती। पिछली state पर निर्भरता, clock की अनिवार्यता और data storage—ये sequential circuits (जैसे flip-flop) की विशेषताएँ हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q27",
+      "question": "दो 2-input NOR gates का उपयोग करके OR gate बनाने के लिए क्या करना पड़ता है?",
+      "options": [
+        "एक ही NOR gate पर्याप्त है",
+        "पहले NOR के output को दूसरे NOR (inverter की तरह जुड़े) से invert करना",
+        "दोनों NOR gates के inputs को short करना",
+        "NOR gates से OR बनाना असंभव है"
+      ],
+      "correctIndex": 1,
+      "explanation": "पहला NOR gate NOT(A OR B) देता है; इसके बाद एक और NOR को inverter की तरह (दोनों inputs जोड़कर) लगाकर उसे फिर invert करने पर A OR B मिल जाता है। एक अकेला NOR तो NOR ही रहेगा, और NOR universal होने के कारण OR बनाना असंभव नहीं है।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q28",
+      "question": "एक 4:1 multiplexer में select lines S1 S0 = 10 (binary) होने पर कौन-सा data input output पर भेजा जाएगा?",
+      "options": [
+        "input D0",
+        "input D1",
+        "input D2",
+        "input D3"
+      ],
+      "correctIndex": 2,
+      "explanation": "select lines का binary मान S1 S0 = 10 यानी decimal में 2 होता है, इसलिए MUX input D2 को output पर भेजता है। 00, 01 और 11 क्रमशः D0, D1 और D3 को चुनते हैं, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q29",
+      "question": "XOR gate के दोनों inputs को आपस में जोड़ (A XOR A) देने पर output क्या होगा?",
+      "options": [
+        "हमेशा 1",
+        "हमेशा 0",
+        "A के बराबर",
+        "high impedance"
+      ],
+      "correctIndex": 1,
+      "explanation": "A XOR A हमेशा 0 होता है क्योंकि किसी भी value के साथ स्वयं का XOR समान inputs देता है और XOR समान inputs पर 0 output करता है। इसलिए output न तो हमेशा 1, न A के बराबर और न high impedance होगा।"
+    },
+    {
+      "id": "u1_logic_gates_combinational_q30",
+      "question": "एक full adder को दो half adders और एक अतिरिक्त gate से बनाया जाता है; दोनों half adders के carry outputs को किस gate से जोड़कर अंतिम Carry-out प्राप्त किया जाता है?",
+      "options": [
+        "AND gate",
+        "OR gate",
+        "XOR gate",
+        "NOT gate"
+      ],
+      "correctIndex": 1,
+      "explanation": "full adder में दोनों half adders से मिले दो carry signals को OR gate से जोड़कर अंतिम Carry-out बनाया जाता है। यहाँ Sum के लिए XOR प्रयोग होता है, पर carry combine करने के लिए OR ही उपयुक्त है, इसलिए AND, XOR या NOT गलत हैं।"
+    }
+  ]
+}

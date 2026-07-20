@@ -1,0 +1,368 @@
+{
+  "unit": "unit15",
+  "unitName": "Servo Motor",
+  "topic": "servo_speed_control",
+  "topicName": "Speed Control of Servo Motors (Closed Loop)",
+  "questions": [
+    {
+      "id": "u15_servo_speed_control_q1",
+      "question": "Servo motor की speed control में closed loop system का मुख्य उद्देश्य क्या होता है?",
+      "options": [
+        "Motor का weight कम करना",
+        "Actual speed की feedback लेकर उसे desired speed के बराबर बनाए रखना",
+        "Motor की winding resistance बढ़ाना",
+        "Motor को केवल एक ही direction में चलाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Closed loop speed control में tachogenerator या encoder द्वारा actual speed की feedback ली जाती है और उसे reference speed से compare करके error signal के अनुसार motor की speed adjust की जाती है। Option A, C और D closed loop control का उद्देश्य नहीं हैं, बल्कि ये design या mechanical पहलू हैं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q2",
+      "question": "Servo motor की speed control में उपयोग होने वाले feedback device का नाम क्या है जो shaft की rotational speed को voltage signal में बदलता है?",
+      "options": [
+        "Thermocouple",
+        "Strain gauge",
+        "Tachogenerator",
+        "Photodiode"
+      ],
+      "correctIndex": 2,
+      "explanation": "Tachogenerator shaft की rotational speed के proportional एक voltage signal generate करता है, जो speed feedback के रूप में controller को भेजा जाता है। Thermocouple temperature मापता है, strain gauge mechanical strain मापता है और photodiode light intensity को detect करता है — इनका speed feedback से कोई सम्बन्ध नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q3",
+      "question": "Closed loop speed control system में error signal किसे कहा जाता है?",
+      "options": [
+        "Reference speed और feedback speed के बीच का difference",
+        "Motor की rated voltage",
+        "Motor की supply frequency",
+        "Motor की rated current"
+      ],
+      "correctIndex": 0,
+      "explanation": "Error signal reference (desired) speed और actual feedback speed के बीच का difference होता है, जिसे controller amplify करके motor की speed correct करने के लिए उपयोग करता है। Rated voltage, supply frequency और rated current motor की fixed characteristics हैं, error signal नहीं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q4",
+      "question": "यदि closed loop servo speed control system में feedback path disconnect हो जाए, तो system किस प्रकार काम करेगा?",
+      "options": [
+        "System बेहतर accuracy से काम करेगा",
+        "System open loop की तरह काम करेगा और speed regulation खराब होगी",
+        "Motor automatically बंद हो जाएगा",
+        "Motor की speed स्वतः constant रहेगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Feedback path disconnect होने पर system open loop control में बदल जाता है, जिसमें load variation के कारण speed regulation खराब हो जाती है क्योंकि error correction नहीं होता। Motor बंद नहीं होता, बल्कि uncontrolled रूप से चलता है, इसलिए accuracy बेहतर नहीं बल्कि खराब होती है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q5",
+      "question": "Servo drive में speed loop किस controller के साथ काम करता है जो error को कम करने के लिए proportional और integral action provide करता है?",
+      "options": [
+        "PID controller (विशेषकर PI controller)",
+        "Zener diode regulator",
+        "Simple diode rectifier",
+        "Capacitor bank"
+      ],
+      "correctIndex": 0,
+      "explanation": "Speed loop में सामान्यतः PI (Proportional-Integral) controller उपयोग होता है जो steady-state error को minimum करता है और fast response देता है। Zener diode voltage regulation के लिए है, diode rectifier AC को DC में बदलता है और capacitor bank reactive power correction के लिए है — ये speed control से सीधे सम्बंधित नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q6",
+      "question": "Servo motor की speed control में cascade control structure में सबसे inner loop कौन सा होता है?",
+      "options": [
+        "Position loop",
+        "Current (torque) loop",
+        "Speed loop",
+        "Temperature loop"
+      ],
+      "correctIndex": 1,
+      "explanation": "Servo drive के cascade control structure में सबसे inner loop current (torque) loop होता है जो सबसे तेज़ response देता है, उसके बाहर speed loop और सबसे बाहर position loop होता है। Temperature loop control structure का हिस्सा नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q7",
+      "question": "Servo motor की speed control में load बढ़ने पर closed loop system क्या प्रतिक्रिया देता है?",
+      "options": [
+        "Motor को permanently बंद कर देता है",
+        "Speed को increase करने के लिए current/torque बढ़ाकर compensate करता है",
+        "Voltage supply को reverse कर देता है",
+        "Feedback signal को ignore कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Load बढ़ने पर actual speed कम हो जाती है, error signal बढ़ता है और controller motor current/torque बढ़ाकर speed को reference value पर वापस लाता है। Motor बंद नहीं होता, voltage reverse नहीं होता और feedback ignore नहीं होता — यही तो closed loop control की विशेषता है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q8",
+      "question": "AC servo motor की speed control के लिए मुख्यतः किस technique का उपयोग किया जाता है?",
+      "options": [
+        "Manual rheostat control",
+        "Vector control (field oriented control) with PWM inverter",
+        "Star-delta starter",
+        "Auto-transformer starter"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modern AC servo motors में vector control (field oriented control) के साथ PWM inverter का उपयोग होता है जो precise और fast speed/torque control देता है। Star-delta starter, rheostat control और auto-transformer starter induction motors की starting के लिए उपयोग होते हैं, precise servo speed control के लिए नहीं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q9",
+      "question": "DC servo motor की speed, armature voltage से किस प्रकार संबंधित होती है (constant field के साथ)?",
+      "options": [
+        "Speed armature voltage के व्युत्क्रमानुपाती (inversely proportional) होती है",
+        "Speed armature voltage के समानुपाती (directly proportional) होती है",
+        "Speed का armature voltage से कोई संबंध नहीं होता",
+        "Speed हमेशा constant रहती है चाहे voltage बदले"
+      ],
+      "correctIndex": 1,
+      "explanation": "Constant field flux के साथ DC motor की speed armature voltage के directly proportional होती है (N ∝ Va), इसीलिए armature voltage control द्वारा speed control किया जाता है। बाकी options इस मौलिक relationship को गलत बताते हैं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q10",
+      "question": "Servo speed control system में overshoot कम करने के लिए किस parameter को tune किया जाता है?",
+      "options": [
+        "Motor का physical size",
+        "PI/PID controller के gain parameters (Kp, Ki, Kd)",
+        "Motor की winding का रंग",
+        "Motor bearing का material"
+      ],
+      "correctIndex": 1,
+      "explanation": "PI/PID controller के gain parameters (Kp, Ki, Kd) को tune करके speed response का overshoot, settling time और stability control किया जाता है। Motor का physical size, winding का रंग और bearing material control performance को इस तरह प्रभावित नहीं करते।"
+    },
+    {
+      "id": "u15_servo_speed_control_q11",
+      "question": "Closed loop servo speed control में 'set point' शब्द किसका सूचक है?",
+      "options": [
+        "Motor की actual measured speed",
+        "Desired या reference speed value जो operator/PLC द्वारा दी जाती है",
+        "Motor की winding temperature",
+        "Feedback sensor का output voltage"
+      ],
+      "correctIndex": 1,
+      "explanation": "Set point वह desired/reference speed value है जो user, PLC या controller द्वारा दी जाती है, जिससे actual speed compare होती है। Actual measured speed feedback signal है, winding temperature अलग parameter है और sensor output भी feedback का हिस्सा है, set point नहीं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q12",
+      "question": "Servo motor की speed control accuracy बढ़ाने के लिए feedback resolution (जैसे encoder pulses per revolution) का क्या प्रभाव होता है?",
+      "options": [
+        "Resolution बढ़ने से accuracy घटती है",
+        "Resolution बढ़ने से accuracy बढ़ती है क्योंकि finer speed measurement possible होता है",
+        "Resolution का accuracy से कोई संबंध नहीं",
+        "Resolution केवल motor की cost बढ़ाता है, accuracy पर असर नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Encoder resolution (pulses per revolution) बढ़ने पर speed measurement finer और अधिक precise होता है, जिससे closed loop control की accuracy बढ़ती है। बाकी options इस technical fact को गलत तरीके से प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q13",
+      "question": "Servo motor speed control में 'droop' किसे कहते हैं?",
+      "options": [
+        "Motor की winding का जलना",
+        "Load बढ़ने पर speed में होने वाली slight गिरावट, जो poor regulation दर्शाती है",
+        "Motor का शुरू में overshoot करना",
+        "Motor का reverse direction में घूमना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Droop वह slight speed reduction है जो load बढ़ने पर होती है और यह system की speed regulation quality को दर्शाती है — droop जितना कम, regulation उतना अच्छा। Winding जलना, overshoot और reverse rotation अलग-अलग faults/behaviors हैं, droop नहीं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q14",
+      "question": "Servo drive की speed control loop में bandwidth बढ़ाने का क्या फायदा होता है?",
+      "options": [
+        "System की response धीमी हो जाती है",
+        "System तेज़ी से speed changes को track कर पाता है, यानी faster dynamic response मिलता है",
+        "Motor की size कम हो जाती है",
+        "Feedback device की जरूरत खत्म हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Speed loop bandwidth बढ़ाने से system तेजी से command changes को follow कर पाता है, जिससे dynamic response बेहतर होता है। Bandwidth बढ़ने से response धीमी नहीं होती, motor size नहीं बदलता और feedback device की जरूरत हमेशा रहती है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q15",
+      "question": "Servo motor की speed control में 'ramp time' का क्या अर्थ होता है?",
+      "options": [
+        "Motor की rated power",
+        "Motor को एक speed से दूसरी speed तक पहुँचने में लगने वाला समय (acceleration/deceleration time)",
+        "Motor की winding resistance",
+        "Motor का cooling time"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ramp time वह समय है जिसमें motor smoothly एक speed value से दूसरी speed value तक accelerate या decelerate होता है, जिससे jerk और mechanical stress कम होते हैं। Rated power, winding resistance और cooling time अलग parameters हैं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q16",
+      "question": "Servo speed control में 'zero speed clamp' feature का क्या उपयोग होता है?",
+      "options": [
+        "Motor को उच्च speed पर locked रखना",
+        "जब reference speed zero के करीब हो तो motor को precisely stationary hold करना",
+        "Motor की current बढ़ाना",
+        "Motor की direction बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Zero speed clamp feature तब activate होता है जब reference speed zero के near हो, ताकि motor बिना drift किए precisely position पर hold रहे। यह high speed locking, current बढ़ाने या direction बदलने का काम नहीं करता।"
+    },
+    {
+      "id": "u15_servo_speed_control_q17",
+      "question": "Servo motor speed control में torque limit set करने का उद्देश्य क्या है?",
+      "options": [
+        "Motor की speed को हमेशा zero रखना",
+        "Overload की स्थिति में motor और mechanical parts को damage से बचाना",
+        "Motor की rated voltage बदलना",
+        "Feedback signal को amplify करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Torque limit set करने से overload की स्थिति में excessive current/torque को restrict किया जाता है, जिससे motor windings और mechanical coupling को नुकसान से बचाया जा सकता है। यह speed को zero रखने, rated voltage बदलने या feedback amplify करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q18",
+      "question": "Servo speed control system में 'speed feedforward' का उपयोग किस उद्देश्य से किया जाता है?",
+      "options": [
+        "Feedback loop को पूरी तरह हटाने के लिए",
+        "Tracking error को कम करने और dynamic response improve करने के लिए, feedback के अतिरिक्त",
+        "Motor की insulation बढ़ाने के लिए",
+        "Motor को reverse चलाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Speed feedforward, feedback control के साथ मिलकर command signal को सीधे control loop में जोड़ता है ताकि tracking error कम हो और response तेज़ हो, यह feedback को replace नहीं करता। Insulation बढ़ाना या reverse चलाना feedforward का कार्य नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q19",
+      "question": "Servo motor की speed control में 'hunting' problem किस कारण होती है?",
+      "options": [
+        "Controller gain बहुत कम होने के कारण",
+        "Controller gain बहुत अधिक होने के कारण system oscillate करने लगता है",
+        "Feedback device की absence के कारण",
+        "Motor की body को earth न करने के कारण"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब controller gain बहुत अधिक होता है तो system speed को reference के आस-पास बार-बार oscillate (hunt) करने लगता है, जिससे stability खराब होती है। कम gain hunting का कारण नहीं बल्कि sluggish response देता है; feedback absence अलग समस्या है और earthing safety से जुड़ी है, hunting से नहीं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q20",
+      "question": "Servo motor speed control में इस्तेमाल होने वाला PWM (Pulse Width Modulation) किस काम आता है?",
+      "options": [
+        "Motor को केवल braking के लिए इस्तेमाल करना",
+        "Inverter द्वारा variable voltage/frequency generate करके motor speed control करना",
+        "Motor की winding को cool करना",
+        "Motor की weight कम करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "PWM technique का उपयोग inverter में variable voltage और frequency generate करने के लिए होता है, जिससे AC/DC servo motor की speed precisely control होती है। यह braking, cooling या weight reduction के लिए नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q21",
+      "question": "Servo speed control loop में steady state error को खत्म करने के लिए कौन सा controller term महत्वपूर्ण है?",
+      "options": [
+        "Proportional term (P)",
+        "Integral term (I)",
+        "Derivative term (D)",
+        "Feedforward term केवल"
+      ],
+      "correctIndex": 1,
+      "explanation": "Integral term (I) accumulated error को समय के साथ जोड़कर steady state error को शून्य के करीब लाता है। Proportional term error के अनुपात में response देता है पर पूरी तरह steady state error खत्म नहीं करता, derivative term rate of change पर काम करता है, और feedforward अकेले feedback error खत्म नहीं करता।"
+    },
+    {
+      "id": "u15_servo_speed_control_q22",
+      "question": "Servo motor के speed control में 'jog mode' का क्या उपयोग है?",
+      "options": [
+        "Motor को permanently high speed पर चलाना",
+        "Setup/testing के दौरान motor को manually low speed पर temporarily चलाना",
+        "Motor की insulation test करना",
+"Motor की current rating बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Jog mode का उपयोग setup, alignment या testing के दौरान motor को manually, temporarily और आमतौर पर low speed पर चलाने के लिए किया जाता है। यह permanent high speed operation, insulation test या current rating बदलने का साधन नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q23",
+      "question": "Servo speed control में tachogenerator के स्थान पर आजकल अधिकतर किस feedback device का उपयोग होता है?",
+      "options": [
+        "Encoder या resolver, जो speed को derivative रूप में calculate करते हैं",
+        "Simple push button",
+        "Voltmeter सीधे मोटर टर्मिनल पर",
+        "Ammeter सीधे मोटर टर्मिनल पर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Modern servo systems में encoder या resolver का उपयोग position feedback के लिए होता है, और उसी position signal को differentiate करके speed feedback निकाली जाती है, जिससे अलग tachogenerator की जरूरत कम हो जाती है। Push button, voltmeter और ammeter speed feedback devices नहीं हैं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q24",
+      "question": "Servo motor की speed control में 'S-curve profile' का उपयोग क्यों किया जाता है?",
+      "options": [
+        "Motor की speed को अचानक बदलने के लिए",
+        "Acceleration/deceleration को smooth बनाकर mechanical jerk और vibration कम करने के लिए",
+        "Motor की current को अनियंत्रित बढ़ाने के लिए",
+        "Feedback signal को बंद करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "S-curve speed profile acceleration और deceleration के दौरान jerk को smooth करता है, जिससे mechanical stress, vibration और noise कम होते हैं। यह अचानक speed change, uncontrolled current increase या feedback बंद करने के लिए नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q25",
+      "question": "Servo speed control में यदि Kp (proportional gain) बहुत कम रखा जाए तो क्या होगा?",
+      "options": [
+        "System बहुत तेज़ी से oscillate करेगा",
+        "System का response धीमा (sluggish) होगा और error को ठीक करने में देरी होगी",
+        "Motor जल जाएगा तुरंत",
+        "Feedback signal पूरी तरह गायब हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "बहुत कम Kp रखने पर system error correction में धीमा (sluggish) हो जाता है और speed को reference तक पहुँचने में अधिक समय लगता है। तेज़ oscillation उच्च gain से होता है, motor तुरंत नहीं जलता और feedback signal गायब नहीं होता।"
+    },
+    {
+      "id": "u15_servo_speed_control_q26",
+      "question": "Servo motor की speed control में 'load inertia mismatch' का क्या प्रभाव पड़ सकता है?",
+      "options": [
+        "System हमेशा बेहतर stable होगा",
+        "System में oscillation, poor tuning और response instability हो सकती है",
+        "Motor की efficiency automatically बढ़ जाएगी",
+        "Feedback device की जरूरत खत्म हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि load inertia motor की rated inertia से बहुत ज्यादा mismatch हो, तो control loop tuning कठिन हो जाती है और system में oscillation या instability आ सकती है। यह stability बढ़ाने, efficiency बढ़ाने या feedback जरूरत खत्म करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q27",
+      "question": "Servo speed control में 'speed regulation' शब्द का क्या मतलब होता है?",
+      "options": [
+        "No-load speed और full-load speed के बीच का प्रतिशत अंतर",
+        "Motor की rated voltage",
+        "Motor की winding का diameter",
+        "Motor की starting torque"
+      ],
+      "correctIndex": 0,
+      "explanation": "Speed regulation, no-load speed और full-load speed के बीच के percentage difference को दर्शाता है, जो बताता है कि load बदलने पर speed कितनी स्थिर रहती है। Rated voltage, winding diameter और starting torque अलग parameters हैं, speed regulation नहीं।"
+    },
+    {
+      "id": "u15_servo_speed_control_q28",
+      "question": "Closed loop servo speed control, open loop control की तुलना में किस प्रकार बेहतर है?",
+      "options": [
+        "Closed loop system सस्ता होता है इसलिए बेहतर है",
+        "Closed loop system load disturbance और parameter variation के बावजूद speed accuracy बनाए रखता है",
+        "Closed loop system में feedback device की जरूरत नहीं होती",
+        "Closed loop system हमेशा open loop से धीमा काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Closed loop system feedback के माध्यम से error को लगातार correct करता है, जिससे load disturbance और parameter variation में भी speed accuracy बनी रहती है, जो open loop में संभव नहीं होता। Cost, feedback की absence या धीमा होना closed loop की विशेषता नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q29",
+      "question": "Servo motor speed control में 'auto-tuning' feature का क्या कार्य है?",
+      "options": [
+        "Motor की body का रंग बदलना",
+        "Load inertia के अनुसार controller gains (P, I, D) को automatically optimum set करना",
+        "Motor की supply voltage manually बदलना",
+        "Motor को permanently disable करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Auto-tuning feature drive को connected load की inertia और characteristics अनुसार controller gains को स्वतः optimum मान पर set करने की सुविधा देता है, जिससे manual tuning की जटिलता कम होती है। यह body का रंग, supply voltage या motor disable करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u15_servo_speed_control_q30",
+      "question": "Servo motor की speed control में यदि derivative gain (Kd) उचित मात्रा में जोड़ा जाए तो क्या प्रभाव होता है?",
+      "options": [
+        "Overshoot और oscillation कम होकर system अधिक damped हो जाता है",
+        "Steady state error पूरी तरह खत्म हो जाता है",
+        "System का response हमेशा unstable हो जाता है",
+        "Motor की current rating बढ़ जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Derivative gain (Kd) error के rate of change पर प्रतिक्रिया देकर overshoot और oscillation कम करता है, जिससे system अधिक damped और stable होता है। Steady state error खत्म करना मुख्यतः integral term का काम है, उचित Kd system को unstable नहीं करता, और यह current rating नहीं बदलता।"
+    }
+  ]
+}

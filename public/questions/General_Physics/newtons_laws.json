@@ -1,0 +1,218 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "newtons_laws",
+  "topicName": "Newton's Laws of Motion",
+  "questions": [
+    {
+      "id": "phy_newtons_laws_q1",
+      "question": "Newton's first law of motion को और किस नाम से जाना जाता है?",
+      "options": ["law of momentum", "law of inertia (जड़त्व का नियम)", "law of acceleration", "law of action-reaction"],
+      "correctIndex": 1,
+      "explanation": "पहला नियम बताता है कि कोई वस्तु अपनी अवस्था बनाए रखती है जब तक कोई external force न लगे, यही inertia है, इसलिए option 1 सही है। law of acceleration दूसरा नियम और law of action-reaction तीसरा नियम है।"
+    },
+    {
+      "id": "phy_newtons_laws_q2",
+      "question": "Force का SI unit क्या है?",
+      "options": ["newton", "dyne", "joule", "kg"],
+      "correctIndex": 0,
+      "explanation": "Force = mass × acceleration = kg·m/s² = newton, इसलिए option 0 सही है। dyne CGS system का force unit है, joule energy का unit है और kg mass का unit है।"
+    },
+    {
+      "id": "phy_newtons_laws_q3",
+      "question": "Newton's second law के अनुसार force (F) किसके बराबर होता है?",
+      "options": ["m/a", "a/m", "ma", "m + a"],
+      "correctIndex": 2,
+      "explanation": "दूसरे नियम के अनुसार F = mass × acceleration = ma, इसलिए option 2 सही है। m/a, a/m और m+a किसी भी सही force सूत्र को नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q4",
+      "question": "1 newton कितने dyne के बराबर होता है?",
+      "options": ["10²", "10³", "10⁴", "10⁵"],
+      "correctIndex": 3,
+      "explanation": "1 N = 1 kg·m/s² = 1000 g × 100 cm/s² = 10⁵ g·cm/s² = 10⁵ dyne, इसलिए option 3 सही है। बाकी घातें इस रूपांतरण गणना से मेल नहीं खातीं।"
+    },
+    {
+      "id": "phy_newtons_laws_q5",
+      "question": "Linear momentum (p) का सूत्र क्या है?",
+      "options": ["m/v", "mv", "½mv", "v/m"],
+      "correctIndex": 1,
+      "explanation": "Momentum = mass × velocity = mv, इसलिए option 1 सही है। ½mv² kinetic energy का सूत्र है (½mv नहीं), और m/v व v/m का कोई भौतिक अर्थ momentum के लिए नहीं है।"
+    },
+    {
+      "id": "phy_newtons_laws_q6",
+      "question": "Momentum का SI unit क्या है?",
+      "options": ["kg·m/s", "kg·m/s²", "kg/(m·s)", "N·s²"],
+      "correctIndex": 0,
+      "explanation": "Momentum = mass × velocity = kg × m/s = kg·m/s (जो N·s के भी बराबर है), इसलिए option 0 सही है। kg·m/s² force (newton) का unit है, बाकी दोनों किसी standard quantity से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q7",
+      "question": "Newton's third law of motion क्या कहता है?",
+      "options": ["हर क्रिया कम प्रतिक्रिया उत्पन्न करती है", "प्रतिक्रिया क्रिया से अधिक होती है", "हर action के बराबर व विपरीत दिशा में reaction होता है", "action और reaction एक ही वस्तु पर लगते हैं"],
+      "correctIndex": 2,
+      "explanation": "तीसरा नियम कहता है कि प्रत्येक action का समान परिमाण व विपरीत दिशा में reaction होता है, इसलिए option 2 सही है। action और reaction परिमाण में बराबर होते हैं (कम या अधिक नहीं) और ये दो अलग-अलग वस्तुओं पर लगते हैं।"
+    },
+    {
+      "id": "phy_newtons_laws_q8",
+      "question": "5 kg द्रव्यमान की वस्तु को 2 m/s² का acceleration देने के लिए कितना force चाहिए?",
+      "options": ["2 N", "5 N", "7 N", "10 N"],
+      "correctIndex": 3,
+      "explanation": "F = ma = 5 kg × 2 m/s² = 10 N, इसलिए option 3 सही है। बाकी मान गलत हैं क्योंकि वे mass और acceleration के गुणनफल से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q9",
+      "question": "Friction force (f) का सूत्र क्या है? (N = normal reaction, μ = coefficient of friction)",
+      "options": ["f = μ/N", "f = μN", "f = N/μ", "f = μ + N"],
+      "correctIndex": 1,
+      "explanation": "Friction force = coefficient of friction × normal reaction = μN, इसलिए option 1 सही है। μ/N, N/μ और μ+N सही friction सूत्र नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q10",
+      "question": "किसी सतह पर limiting static friction और kinetic friction में सामान्यतः कौन बड़ा होता है?",
+      "options": ["limiting static friction", "kinetic friction", "दोनों बराबर", "शून्य"],
+      "correctIndex": 0,
+      "explanation": "किसी वस्तु को गति में लाने के लिए limiting static friction को पार करना पड़ता है और यह kinetic friction से बड़ा होता है, इसलिए option 0 सही है। दोनों बराबर या शून्य होना सामान्य परिस्थिति में गलत है।"
+    },
+    {
+      "id": "phy_newtons_laws_q11",
+      "question": "2 kg द्रव्यमान की वस्तु 5 m/s के वेग से चल रही है; इसका momentum कितना है?",
+      "options": ["2.5 kg·m/s", "5 kg·m/s", "10 kg·m/s", "20 kg·m/s"],
+      "correctIndex": 2,
+      "explanation": "p = mv = 2 kg × 5 m/s = 10 kg·m/s, इसलिए option 2 सही है। बाकी मान mass और velocity के सही गुणनफल से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q12",
+      "question": "किसी वस्तु की inertia मुख्यतः किस पर निर्भर करती है?",
+      "options": ["velocity", "force", "shape", "mass"],
+      "correctIndex": 3,
+      "explanation": "अधिक mass वाली वस्तु की inertia अधिक होती है, इसलिए inertia mass पर निर्भर करती है और option 3 सही है। velocity, force या shape inertia के मूल माप को निर्धारित नहीं करते।"
+    },
+    {
+      "id": "phy_newtons_laws_q13",
+      "question": "0.5 kg की वस्तु का वेग 0 से बढ़कर 4 m/s हो जाता है; उस पर लगा impulse कितना है?",
+      "options": ["1 N·s", "2 N·s", "4 N·s", "8 N·s"],
+      "correctIndex": 1,
+      "explanation": "Impulse = change in momentum = m(v − u) = 0.5 × (4 − 0) = 2 N·s, इसलिए option 1 सही है। बाकी मान इस momentum परिवर्तन से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q14",
+      "question": "एक वस्तु uniform velocity से सीधी रेखा में चल रही है; उस पर net force कितना होगा?",
+      "options": ["शून्य", "बढ़ता हुआ", "mg के बराबर", "ma के बराबर"],
+      "correctIndex": 0,
+      "explanation": "Uniform velocity का अर्थ है acceleration शून्य, इसलिए F = ma = 0, यानी net force शून्य; अतः option 0 सही है। mg या ma शून्य acceleration की स्थिति में net force नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q15",
+      "question": "Coefficient of friction (μ) को friction force (f) और normal reaction (N) के रूप में कैसे व्यक्त करते हैं?",
+      "options": ["N/f", "N·f", "f/N", "f·N"],
+      "correctIndex": 2,
+      "explanation": "μ = friction force/normal reaction = f/N, इसलिए option 2 सही है। N/f इसका उल्टा है, और N·f तथा f·N गुणनफल हैं जो μ की परिभाषा से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q16",
+      "question": "Rocket का propulsion (आगे बढ़ना) मुख्यतः किस सिद्धांत पर आधारित है?",
+      "options": ["first law", "law of inertia", "universal gravitation", "conservation of momentum (third law)"],
+      "correctIndex": 3,
+      "explanation": "Rocket गर्म गैसें पीछे की ओर फेंकता है और प्रतिक्रिया में आगे बढ़ता है, जो conservation of momentum तथा तीसरे नियम पर आधारित है, इसलिए option 3 सही है। first law/inertia केवल अवस्था बनाए रखने और gravitation आकर्षण से संबंधित हैं।"
+    },
+    {
+      "id": "phy_newtons_laws_q17",
+      "question": "1000 kg की एक कार 2 m/s² की दर से मंद (decelerate) हो रही है; उस पर retarding force कितना है?",
+      "options": ["1000 N", "2000 N", "500 N", "4000 N"],
+      "correctIndex": 1,
+      "explanation": "F = ma = 1000 kg × 2 m/s² = 2000 N, इसलिए option 1 सही है। बाकी मान mass और deceleration के गुणनफल से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q18",
+      "question": "Newton's second law को momentum के रूप में कैसे लिखते हैं?",
+      "options": ["F = Δp/Δt", "F = p·t", "F = p/t²", "F = m/Δp"],
+      "correctIndex": 0,
+      "explanation": "दूसरा नियम कहता है कि force momentum के परिवर्तन की दर के बराबर है, अर्थात F = Δp/Δt, इसलिए option 0 सही है। बाकी रूप momentum के परिवर्तन की दर को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q19",
+      "question": "2 kg की वस्तु पर 10 N का force लगाया जाता है; उत्पन्न acceleration कितना होगा?",
+      "options": ["2 m/s²", "2.5 m/s²", "5 m/s²", "20 m/s²"],
+      "correctIndex": 2,
+      "explanation": "a = F/m = 10 N / 2 kg = 5 m/s², इसलिए option 2 सही है। बाकी मान force और mass के सही अनुपात से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q20",
+      "question": "निम्न में से कौन-सा तरीका friction को कम करता है?",
+      "options": ["वजन बढ़ाना", "सतह को खुरदरा करना", "पहिये हटाना", "lubricant का उपयोग करना"],
+      "correctIndex": 3,
+      "explanation": "Lubricant सतहों के बीच एक परत बनाकर friction कम करता है, इसलिए option 3 सही है। वजन बढ़ाना और सतह को खुरदरा करना friction बढ़ाते हैं, और पहिये हटाने से rolling friction का लाभ समाप्त हो जाता है।"
+    },
+    {
+      "id": "phy_newtons_laws_q21",
+      "question": "किसी वस्तु का weight (W) किसके बराबर होता है? (m = mass, g = gravitational acceleration)",
+      "options": ["mg", "m/g", "mg²", "g/m"],
+      "correctIndex": 0,
+      "explanation": "Weight पृथ्वी द्वारा लगाया गया गुरुत्वाकर्षण बल है, W = mg, इसलिए option 0 सही है। m/g, mg² और g/m सही weight सूत्र नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q22",
+      "question": "5 kg की वस्तु का weight कितना होगा? (g = 10 m/s²)",
+      "options": ["5 N", "50 N", "0.5 N", "500 N"],
+      "correctIndex": 1,
+      "explanation": "W = mg = 5 kg × 10 m/s² = 50 N, इसलिए option 1 सही है। बाकी मान mass और g के गुणनफल से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q23",
+      "question": "किसी वस्तु पर दो बराबर और विपरीत forces लगते हैं; उसका net acceleration क्या होगा?",
+      "options": ["बढ़ेगा", "दुगना होगा", "शून्य", "आधा होगा"],
+      "correctIndex": 2,
+      "explanation": "बराबर व विपरीत forces एक-दूसरे को निरस्त कर देते हैं, net force शून्य होने से acceleration भी शून्य होता है, इसलिए option 2 सही है। बढ़ना, दुगना या आधा होना गलत है क्योंकि परिणामी force शून्य है।"
+    },
+    {
+      "id": "phy_newtons_laws_q24",
+      "question": "0.2 kg की एक गेंद 10 m/s से दीवार से टकराकर उसी चाल 10 m/s से वापस लौटती है; momentum में परिवर्तन कितना है?",
+      "options": ["1 kg·m/s", "2 kg·m/s", "3 kg·m/s", "4 kg·m/s"],
+      "correctIndex": 3,
+      "explanation": "Δp = m(v − (−u)) = 0.2 × (10 + 10) = 0.2 × 20 = 4 kg·m/s, इसलिए option 3 सही है। दिशा उलटने के कारण वेगों को जोड़ा जाता है; बाकी मान इस गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q25",
+      "question": "Friction force हमेशा किस दिशा में कार्य करता है?",
+      "options": ["relative motion के विपरीत दिशा में", "motion की दिशा में", "motion के लंबवत", "किसी भी यादृच्छिक दिशा में"],
+      "correctIndex": 0,
+      "explanation": "Friction गति का विरोध करता है, इसलिए यह हमेशा relative motion के विपरीत दिशा में लगता है और option 0 सही है। यह गति की दिशा में, लंबवत या यादृच्छिक दिशा में नहीं लगता।"
+    },
+    {
+      "id": "phy_newtons_laws_q26",
+      "question": "एक वस्तु पर दाईं ओर 20 N और बाईं ओर 12 N force लगता है; net force कितना है?",
+      "options": ["4 N", "8 N", "32 N", "12 N"],
+      "correctIndex": 1,
+      "explanation": "Net force = 20 N − 12 N = 8 N (दाईं ओर), इसलिए option 1 सही है। 32 N दोनों को जोड़ने की गलती है, और बाकी मान भी सही अंतर से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q27",
+      "question": "अचानक बस के रुकने पर यात्री आगे की ओर झुक जाता है; यह किसके कारण होता है?",
+      "options": ["reaction force", "gravity", "inertia (जड़त्व)", "friction"],
+      "correctIndex": 2,
+      "explanation": "यात्री का शरीर गति की अवस्था बनाए रखना चाहता है, यही inertia of motion है, इसलिए option 2 सही है। reaction force, gravity या friction इस आगे झुकने का मूल कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_newtons_laws_q28",
+      "question": "4 kg की वस्तु विराम से 3 m/s² के acceleration से 2 s तक चलती है; 2 s बाद उसका momentum कितना होगा?",
+      "options": ["6 kg·m/s", "12 kg·m/s", "18 kg·m/s", "24 kg·m/s"],
+      "correctIndex": 3,
+      "explanation": "पहले v = u + at = 0 + 3 × 2 = 6 m/s, फिर p = mv = 4 × 6 = 24 kg·m/s, इसलिए option 3 सही है। बाकी मान इस दो-चरणीय गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_newtons_laws_q29",
+      "question": "Static friction को self-adjusting (स्वयं समायोजित) क्यों कहा जाता है?",
+      "options": ["यह लगाए गए force के अनुसार एक सीमा तक बदलता रहता है", "यह हमेशा constant रहता है", "यह mass पर निर्भर नहीं करता", "यह हमेशा शून्य रहता है"],
+      "correctIndex": 0,
+      "explanation": "जब तक वस्तु गति में नहीं आती, static friction लगाए गए force के बराबर होकर स्वयं को समायोजित करता है (एक अधिकतम सीमा तक), इसलिए option 0 सही है। यह न constant है, न शून्य, और normal reaction के माध्यम से mass पर निर्भर करता है।"
+    },
+    {
+      "id": "phy_newtons_laws_q30",
+      "question": "2 kg की वस्तु 3 m/s से चलकर विराम में स्थित 1 kg की वस्तु से टकराकर उससे चिपक जाती है; conservation of momentum के अनुसार उनकी common velocity कितनी होगी?",
+      "options": ["1 m/s", "1.5 m/s", "2 m/s", "3 m/s"],
+      "correctIndex": 2,
+      "explanation": "टकराव से पहले कुल momentum = 2 × 3 + 1 × 0 = 6 kg·m/s; बाद में कुल mass = 3 kg, तो common velocity = 6/3 = 2 m/s, इसलिए option 2 सही है। बाकी मान इस momentum संरक्षण गणना से मेल नहीं खाते।"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "periodic_classification",
+  "topicName": "Periodic Classification of Elements",
+  "questions": [
+    {
+      "id": "chem_periodic_classification_q1",
+      "question": "आधुनिक periodic law के अनुसार elements के गुण किसके आवर्ती (periodic) function होते हैं?",
+      "options": ["Atomic mass", "Atomic number", "Number of neutrons", "Valency"],
+      "correctIndex": 1,
+      "explanation": "Modern periodic law (Moseley द्वारा प्रस्तुत) के अनुसार elements के भौतिक व रासायनिक गुण उनके atomic number के आवर्ती function होते हैं। Atomic mass Mendeleev के पुराने law का आधार था, neutrons की संख्या तथा valency सीधे periodicity तय नहीं करते।"
+    },
+    {
+      "id": "chem_periodic_classification_q2",
+      "question": "Mendeleev ने अपनी periodic law elements के किस गुण के आधार पर प्रस्तुत की थी?",
+      "options": ["Atomic mass", "Atomic number", "केवल valency", "केवल atomic radius"],
+      "correctIndex": 0,
+      "explanation": "Mendeleev periodic law के अनुसार elements के गुण उनके atomic mass के आवर्ती function होते हैं, और उन्होंने elements को बढ़ते atomic mass के क्रम में व्यवस्थित किया था। Atomic number आधारित law बाद में modern periodic table में आया, केवल valency या atomic radius इस law का आधार नहीं थे।"
+    },
+    {
+      "id": "chem_periodic_classification_q3",
+      "question": "Modern periodic table में कुल कितने periods (क्षैतिज पंक्तियाँ) होते हैं?",
+      "options": ["6", "8", "7", "9"],
+      "correctIndex": 2,
+      "explanation": "Modern periodic table में कुल 7 periods होते हैं (Period 1 से Period 7 तक)। 6, 8 और 9 गलत संख्याएँ हैं जो वास्तविक structure से मेल नहीं खातीं।"
+    },
+    {
+      "id": "chem_periodic_classification_q4",
+      "question": "Modern periodic table में कुल कितने groups (ऊर्ध्वाधर स्तंभ) होते हैं?",
+      "options": ["8", "16", "17", "18"],
+      "correctIndex": 3,
+      "explanation": "IUPAC प्रणाली के अनुसार modern periodic table में कुल 18 groups (1 से 18 तक) होते हैं। 8 पुरानी Mendeleev प्रणाली से संबंधित संख्या है, जबकि 16 और 17 गलत हैं।"
+    },
+    {
+      "id": "chem_periodic_classification_q5",
+      "question": "किसी element का period number मुख्यतः क्या दर्शाता है?",
+      "options": ["Valence electrons की संख्या", "Shells (energy levels) की संख्या", "Protons की संख्या", "Neutrons की संख्या"],
+      "correctIndex": 1,
+      "explanation": "Period number उस atom में मौजूद shells (energy levels) की संख्या दर्शाता है, जैसे Period 3 के elements में 3 shells होती हैं। Valence electrons group से जुड़े होते हैं, protons atomic number देते हैं, और neutrons का period से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q6",
+      "question": "Group 1 (alkali metals) के elements, जैसे Sodium (Na), की सामान्य valency कितनी होती है?",
+      "options": ["1", "2", "7", "8"],
+      "correctIndex": 0,
+      "explanation": "Group 1 के elements की valence shell में 1 electron होता है जिसे खोकर वे +1 ion बनाते हैं, इसलिए इनकी valency 1 होती है। 2 group 2 की, 7 halogens की, और 8 valency के रूप में संभव नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q7",
+      "question": "Group 2 (alkaline earth metals) के elements, जैसे Magnesium (Mg), की सामान्य valency कितनी होती है?",
+      "options": ["1", "3", "2", "4"],
+      "correctIndex": 2,
+      "explanation": "Group 2 के elements की valence shell में 2 electrons होते हैं जिन्हें खोकर वे +2 ion बनाते हैं, अतः valency 2 होती है। 1 group 1 की, 3 group 13/15 से संबंधित और 4 group 14 की valency है।"
+    },
+    {
+      "id": "chem_periodic_classification_q8",
+      "question": "Group 17 (halogens) के elements, जैसे Chlorine (Cl), की सामान्य valency कितनी होती है?",
+      "options": ["2", "3", "0", "1"],
+      "correctIndex": 3,
+      "explanation": "Halogens की valence shell में 7 electrons होते हैं, octet पूरा करने के लिए केवल 1 electron चाहिए, इसलिए valency 1 होती है। 2, 3 अन्य groups की valency हैं और 0 noble gases की विशेषता है।"
+    },
+    {
+      "id": "chem_periodic_classification_q9",
+      "question": "Group 18 (noble gases) के elements, जैसे Neon (Ne) और Argon (Ar), की valency सामान्यतः कितनी होती है?",
+      "options": ["1", "0", "2", "8"],
+      "correctIndex": 1,
+      "explanation": "Noble gases की valence shell पहले से पूर्ण (octet) होती है, इसलिए इन्हें electron लेने या देने की आवश्यकता नहीं होती और इनकी valency 0 मानी जाती है। 1, 2 अन्य groups की valency हैं और 8 केवल valence electrons की संख्या है, valency नहीं।"
+    },
+    {
+      "id": "chem_periodic_classification_q10",
+      "question": "Group 14 के elements, जैसे Carbon (C) और Silicon (Si), की सामान्य valency कितनी होती है?",
+      "options": ["4", "2", "6", "8"],
+      "correctIndex": 0,
+      "explanation": "Group 14 के elements की valence shell में 4 electrons होते हैं, ये 4 electrons share करके valency 4 दर्शाते हैं। 2 group 2/16 से जुड़ा, 6 group 16 के valence electrons की संख्या है, और 8 valency के रूप में संभव नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q11",
+      "question": "एक period में बाएँ से दाएँ जाने पर atomic radius में सामान्यतः क्या परिवर्तन होता है?",
+      "options": ["बढ़ता है, क्योंकि shells की संख्या बढ़ती है", "बढ़ता है, क्योंकि nuclear charge घटता है", "घटता है, क्योंकि nuclear charge बढ़ने से electrons अधिक मजबूती से खिंचते हैं", "कोई परिवर्तन नहीं होता"],
+      "correctIndex": 2,
+      "explanation": "एक period में बाएँ से दाएँ जाने पर shells की संख्या समान रहती है जबकि nuclear charge बढ़ता है, जिससे electrons नाभिक की ओर अधिक खिंचते हैं और atomic radius घटता है। Option A shells बढ़ने की गलत बात कहता है, B nuclear charge घटने की गलत बात, और D परिवर्तन को नकारता है जो सही नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q12",
+      "question": "किसी group में ऊपर से नीचे जाने पर atomic radius में सामान्यतः क्या परिवर्तन होता है?",
+      "options": ["घटता है", "कोई परिवर्तन नहीं होता", "पहले बढ़ता है फिर घटता है", "बढ़ता है, क्योंकि नई shells जुड़ती जाती हैं"],
+      "correctIndex": 3,
+      "explanation": "Group में नीचे जाने पर नई shells जुड़ती हैं जिससे नाभिक और सबसे बाहरी electron के बीच दूरी बढ़ती है, अतः atomic radius बढ़ता है। घटने या अपरिवर्तित रहने की बात गलत है, और 'पहले बढ़ना फिर घटना' जैसा कोई असामान्य pattern सामान्य trend नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q13",
+      "question": "एक period में बाएँ से दाएँ जाने पर ionization energy में सामान्यतः क्या trend देखा जाता है?",
+      "options": ["घटती है", "बढ़ती है, क्योंकि nuclear charge बढ़ने से electrons अधिक मजबूती से बंधे रहते हैं", "कोई परिवर्तन नहीं होता", "पहले घटती है फिर बढ़ती है"],
+      "correctIndex": 1,
+      "explanation": "Period में दाईं ओर जाने पर nuclear charge बढ़ता है और atomic radius घटता है, जिससे बाहरी electron को हटाना कठिन हो जाता है, अतः ionization energy बढ़ती है। घटने या अपरिवर्तित रहने की बात गलत है, और असामान्य उतार-चढ़ाव सामान्य overall trend नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q14",
+      "question": "किसी group में ऊपर से नीचे जाने पर ionization energy का सामान्य trend क्या है?",
+      "options": ["घटती है, क्योंकि atomic radius और shielding effect बढ़ने से बाहरी electron कम मजबूती से बंधा रहता है", "बढ़ती है", "कोई परिवर्तन नहीं होता", "पहले बढ़ती है फिर घटती है"],
+      "correctIndex": 0,
+      "explanation": "Group में नीचे जाने पर shells और shielding effect बढ़ने से बाहरी electron नाभिक से दूर व कमजोर रूप से बंधा रहता है, अतः ionization energy घटती है। बढ़ने या अपरिवर्तित रहने की बात इस trend के विपरीत है, और असामान्य उतार-चढ़ाव सामान्य pattern नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q15",
+      "question": "electronegativity का एक period में बाएँ से दाएँ trend कैसा होता है?",
+      "options": ["घटती है", "कोई निश्चित trend नहीं होता", "बढ़ती है", "पहले बढ़ती है फिर घटती है"],
+      "correctIndex": 2,
+      "explanation": "Period में दाईं ओर जाने पर nuclear charge बढ़ने और atomic radius घटने से atoms bonding electrons को अधिक मजबूती से आकर्षित करते हैं, अतः electronegativity बढ़ती है। घटने या कोई trend न होने की बात गलत है, और असामान्य उतार-चढ़ाव इसका सामान्य pattern नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q16",
+      "question": "electronegativity का किसी group में ऊपर से नीचे trend कैसा होता है?",
+      "options": ["बढ़ती है", "कोई परिवर्तन नहीं होता", "पहले घटती है फिर बढ़ती है", "घटती है"],
+      "correctIndex": 3,
+      "explanation": "Group में नीचे जाने पर atomic radius बढ़ने से नाभिक का bonding electrons पर आकर्षण कमजोर पड़ जाता है, इसलिए electronegativity घटती है। बढ़ने या अपरिवर्तित रहने की बात गलत है, और असामान्य उतार-चढ़ाव सामान्य overall trend को सही तरीके से नहीं दर्शाता।"
+    },
+    {
+      "id": "chem_periodic_classification_q17",
+      "question": "एक period में बाएँ से दाएँ जाने पर metallic character में क्या परिवर्तन होता है?",
+      "options": ["बढ़ता है", "घटता है, जबकि non-metallic character बढ़ता है", "कोई परिवर्तन नहीं होता", "पहले घटता है फिर बढ़ता है"],
+      "correctIndex": 1,
+      "explanation": "Period में दाईं ओर जाने पर ionization energy और electronegativity बढ़ने से elements electron खोने की बजाय पकड़े रखने या ग्रहण करने की प्रवृत्ति दिखाते हैं, अतः metallic character घटता है और non-metallic character बढ़ता है। बढ़ने या अपरिवर्तित रहने की बात इस trend के विपरीत है।"
+    },
+    {
+      "id": "chem_periodic_classification_q18",
+      "question": "किसी group में ऊपर से नीचे जाने पर metallic character में क्या परिवर्तन होता है?",
+      "options": ["बढ़ता है", "घटता है", "कोई परिवर्तन नहीं होता", "शून्य हो जाता है"],
+      "correctIndex": 0,
+      "explanation": "Group में नीचे जाने पर ionization energy घटने से elements आसानी से electron खोकर धनायन बना पाते हैं, अतः metallic character बढ़ता है। घटने या अपरिवर्तित रहने की बात गलत है, और metallic character शून्य होने जैसी कोई स्थिति सामान्यतः नहीं आती।"
+    },
+    {
+      "id": "chem_periodic_classification_q19",
+      "question": "s-block elements की पहचान किस आधार पर की जाती है?",
+      "options": ["Valence electrons केवल d subshell में होते हैं", "Valence electrons केवल f subshell में होते हैं", "अंतिम (differentiating) electron s subshell में प्रवेश करता है, जैसे Group 1 और Group 2 elements", "ये सभी noble gases होते हैं"],
+      "correctIndex": 2,
+      "explanation": "s-block elements वे होते हैं जिनमें अंतिम (differentiating) electron s subshell में प्रवेश करता है, इसमें Group 1 और Group 2 के elements आते हैं। d subshell में electron आना d-block, f subshell में आना f-block की पहचान है, और noble gases सामान्यतः p-block में आते हैं।"
+    },
+    {
+      "id": "chem_periodic_classification_q20",
+      "question": "p-block elements कौन-से groups में आते हैं?",
+      "options": ["Group 1 और 2", "Group 3 से 12", "केवल Group 18", "Group 13 से 18"],
+      "correctIndex": 3,
+      "explanation": "p-block में वे elements आते हैं जिनका अंतिम electron p subshell में प्रवेश करता है, ये Group 13 से 18 तक फैले होते हैं। Group 1-2 s-block, Group 3-12 d-block हैं, और केवल Group 18 कहना अधूरा है क्योंकि यह p-block का केवल एक भाग है।"
+    },
+    {
+      "id": "chem_periodic_classification_q21",
+      "question": "d-block (transition) elements किन groups में स्थित होते हैं?",
+      "options": ["Group 1-2, ये अत्यधिक क्रियाशील धातु हैं", "Group 3-12, इनमें अंतिम electron d subshell में प्रवेश करता है", "Group 13-18, ये अधातु हैं", "ये सभी noble gases हैं"],
+      "correctIndex": 1,
+      "explanation": "d-block elements Group 3 से 12 में स्थित होते हैं और इनमें differentiating electron d subshell में प्रवेश करता है, जैसे Iron (Fe), Copper (Cu)। Group 1-2 s-block, Group 13-18 मुख्यतः p-block हैं, और noble gases इनसे अलग p-block का हिस्सा हैं।"
+    },
+    {
+      "id": "chem_periodic_classification_q22",
+      "question": "f-block elements (lanthanides और actinides) को periodic table में सामान्यतः कैसे दर्शाया जाता है?",
+      "options": ["मुख्य तालिका के नीचे अलग से दो पंक्तियों में", "Group 1 में", "Group 18 में", "d-block के साथ मिलाकर एक ही स्थान पर"],
+      "correctIndex": 0,
+      "explanation": "जगह बचाने और तालिका को संक्षिप्त रखने के लिए f-block elements (lanthanides व actinides) को मुख्य periodic table के नीचे दो अलग पंक्तियों में दर्शाया जाता है। Group 1 alkali metals, Group 18 noble gases के लिए है, और इन्हें d-block में मिलाना संरचना के अनुरूप नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q23",
+      "question": "Mendeleev ने अपनी periodic table में elements को किस क्रम में व्यवस्थित किया था?",
+      "options": ["घटते atomic number के क्रम में", "घटते valency के क्रम में", "बढ़ते atomic mass के क्रम में", "बढ़ते atomic radius के क्रम में"],
+      "correctIndex": 2,
+      "explanation": "Mendeleev ने elements को उनके बढ़ते atomic mass के क्रम में व्यवस्थित किया और समान गुणों वाले elements को एक ही column में रखा। Atomic number आधारित क्रम बाद में modern periodic table में आया, और valency या atomic radius Mendeleev के मूल क्रम का आधार नहीं थे।"
+    },
+    {
+      "id": "chem_periodic_classification_q24",
+      "question": "Mendeleev की periodic table की एक प्रमुख सीमा (limitation) क्या थी?",
+      "options": ["Group और period की कोई अवधारणा नहीं थी", "सभी elements को धातु मान लिया गया था", "valency की कोई अवधारणा प्रयोग नहीं की गई", "Isotopes को उचित स्थान नहीं दिया जा सका क्योंकि table atomic mass पर आधारित थी"],
+      "correctIndex": 3,
+      "explanation": "चूँकि Mendeleev की table atomic mass पर आधारित थी, समान atomic mass परन्तु भिन्न गुणों वाले isotopes को उचित स्थान देना कठिन था, जो इसकी एक बड़ी सीमा थी। Group-period की अवधारणा तो मौजूद थी, सभी elements धातु नहीं माने गए थे, और valency का उपयोग elements को classify करने में किया गया था।"
+    },
+    {
+      "id": "chem_periodic_classification_q25",
+      "question": "Magnesium (Mg, Z=12) का electronic configuration 2,8,2 है। यह periodic table के किस period में स्थित है?",
+      "options": ["Period 2", "Period 3", "Period 4", "Period 1"],
+      "correctIndex": 1,
+      "explanation": "Mg के atom में कुल 3 shells (K, L, M) हैं, और period number shells की संख्या के बराबर होता है, इसलिए यह Period 3 में स्थित है। Period 2 में 2 shells, Period 4 में 4 shells होतीं, और Period 1 में केवल 1 shell होती है, जो यहाँ लागू नहीं होता।"
+    },
+    {
+      "id": "chem_periodic_classification_q26",
+      "question": "Aluminium (Al, Z=13) का electronic configuration 2,8,3 है। इसमें 3 valence electrons होने से यह किस group में आता है?",
+      "options": ["Group 13", "Group 3", "Group 15", "Group 18"],
+      "correctIndex": 0,
+      "explanation": "Al के 3 valence electrons p-block में इसे Group 13 में रखते हैं (main group elements के लिए group संख्या valence electrons से संबंधित होती है)। Group 3 d-block से जुड़ा है, Group 15 में 5 valence electrons होते हैं, और Group 18 में पूर्ण octet (8 valence electrons) होता है।"
+    },
+    {
+      "id": "chem_periodic_classification_q27",
+      "question": "Sodium (Na, Z=11) और Chlorine (Cl, Z=17) एक ही Period 3 में हैं। इनमें से किसका atomic radius बड़ा है?",
+      "options": ["Cl का, क्योंकि इसमें अधिक electrons हैं", "दोनों का radius समान होता है", "Na का, क्योंकि period में बाईं ओर होने से nuclear charge कम है और electrons कम मजबूती से खिंचते हैं", "Cl का, क्योंकि यह अधातु है"],
+      "correctIndex": 2,
+      "explanation": "एक ही period में बाईं ओर स्थित Na का nuclear charge Cl से कम होता है, इसलिए इसके electrons कम मजबूती से खिंचते हैं और atomic radius बड़ा रहता है, जबकि Cl दाईं ओर होने से छोटा रहता है। अधिक electrons होना अकेले radius नहीं बढ़ाता, दोनों का radius असमान है, और अधातु होना radius बड़ा होने का कारण नहीं है।"
+    },
+    {
+      "id": "chem_periodic_classification_q28",
+      "question": "Sodium (Na) और Chlorine (Cl) दोनों Period 3 में हैं। इनमें से किसकी ionization energy अधिक होती है?",
+      "options": ["Na की, क्योंकि यह धातु है", "दोनों की ionization energy समान होती है", "यह तय नहीं किया जा सकता", "Cl की, क्योंकि period में दाईं ओर nuclear charge अधिक होने से electron निकालना कठिन होता है"],
+      "correctIndex": 3,
+      "explanation": "Cl, period में दाईं ओर स्थित होने से अधिक nuclear charge और छोटे atomic radius के कारण इसका electron निकालना कठिन होता है, इसलिए इसकी ionization energy Na से अधिक होती है। Na धातु होने से इसकी ionization energy वास्तव में कम होती है, दोनों की energy असमान है, और यह trend से स्पष्ट रूप से तय किया जा सकता है।"
+    },
+    {
+      "id": "chem_periodic_classification_q29",
+      "question": "किसी element का अंतिम (differentiating) electron 3d subshell में प्रवेश करता है। यह element periodic table के किस block में आएगा?",
+      "options": ["s-block", "d-block", "p-block", "f-block"],
+      "correctIndex": 1,
+      "explanation": "जब अंतिम electron d subshell (यहाँ 3d) में प्रवेश करता है, तो वह element d-block (transition elements) में आता है, जैसे Iron (Fe)। s-block में last electron s subshell में, p-block में p subshell में, और f-block में f subshell में जाता है।"
+    },
+    {
+      "id": "chem_periodic_classification_q30",
+      "question": "Modern periodic table में Period 1 में कुल कितने elements होते हैं?",
+      "options": ["2", "8", "18", "32"],
+      "correctIndex": 0,
+      "explanation": "Period 1 में केवल K shell (n=1) भरती है जिसमें अधिकतम 2 electrons समा सकते हैं, इसलिए इसमें केवल Hydrogen और Helium यानी 2 elements होते हैं। 8 elements Period 2/3 में, 18 Period 4/5 में, और 32 Period 6 में होते हैं (lanthanides सहित)।"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "unit": "unit6",
+  "unitName": "Cable Harnessing & Connectors",
+  "topic": "db_connectors_ethernet",
+  "topicName": "DB Connectors & Ethernet",
+  "questions": [
+    {
+      "id": "u6_db_connectors_ethernet_q1",
+      "question": "DB9 connector में कुल कितने pins होते हैं?",
+      "options": ["9 pins", "15 pins", "25 pins", "37 pins"],
+      "correctIndex": 0,
+      "explanation": "DB9 D-subminiature connector में 9 pins होते हैं (2 rows में 5+4), इसलिए option 0 सही है। 15 pins DB15 में, 25 pins DB25 में और 37 pins DB37 में होते हैं, इसलिए option 1, 2, 3 गलत हैं।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q2",
+      "question": "D-subminiature connector में male और female को कैसे पहचाना जाता है?",
+      "options": ["Male में holes, female में pins", "Male में pins, female में holes (sockets)", "दोनों में केवल holes", "रंग से पहचान होती है"],
+      "correctIndex": 1,
+      "explanation": "Male connector में उभरे हुए pins होते हैं जबकि female connector में उनके matching holes/sockets होते हैं — option 1 सही। Male में holes और female में pins कहना उल्टा है (option 0 गलत), दोनों में केवल holes नहीं होते (option 2 गलत), और पहचान physical pins/holes से होती है, रंग से नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q3",
+      "question": "पुराने PC serial (RS-232) COM port के लिए सामान्यतः कौन-सा connector प्रयोग होता था?",
+      "options": ["DB37", "DB25 या DB9", "RJ45", "BNC"],
+      "correctIndex": 1,
+      "explanation": "RS-232 serial port के लिए DB25 और बाद में DB9 connector आम था — option 1 सही। DB37 विशेष uses में मिलता है, आम serial port में नहीं (option 0 गलत), RJ45 Ethernet/networking का है (option 2 गलत), और BNC coaxial connector है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q4",
+      "question": "10Base-T Ethernet में 'T' का अर्थ क्या है?",
+      "options": ["Thick coaxial", "Twisted pair cable", "Terminator", "Telephone only"],
+      "correctIndex": 1,
+      "explanation": "10Base-T में 'T' twisted pair copper cable को दर्शाता है और यह 10 Mbps baseband पर चलता है — option 1 सही। Thick coaxial 10Base5 है (option 0 गलत), 'T' terminator या telephone को नहीं दर्शाता (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q5",
+      "question": "10Base2 और 10Base5 में मुख्य अंतर क्या है?",
+      "options": ["10Base2 fiber, 10Base5 twisted pair", "दोनों coaxial हैं पर segment length अलग (~185m vs ~500m)", "दोनों की speed अलग है", "10Base5 wireless है"],
+      "correctIndex": 1,
+      "explanation": "10Base2 (thin coax) की अधिकतम segment length लगभग 185m और 10Base5 (thick coax) की लगभग 500m होती है, दोनों 10 Mbps पर चलते हैं — option 1 सही। दोनों coaxial हैं, fiber या twisted pair नहीं (option 0 गलत), speed दोनों की 10 Mbps ही है (option 2 गलत), और 10Base5 wireless नहीं है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q6",
+      "question": "दो PC को सीधे (बिना switch/hub के) Ethernet से जोड़ने के लिए कौन-सी cable चाहिए (Auto-MDIX न हो तो)?",
+      "options": ["Straight-through cable", "Crossover cable", "Rollover cable", "Coaxial cable"],
+      "correctIndex": 1,
+      "explanation": "PC-to-PC जैसे like-to-like (same type MDI) devices को जोड़ने के लिए crossover cable चाहिए ताकि transmit और receive pins आपस में बदल जाएँ — option 1 सही। Straight-through unlike devices (PC-switch) के लिए है (option 0 गलत), rollover console connection का है (option 2 गलत), और coaxial यहाँ लागू नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q7",
+      "question": "एक PC को switch के normal port से जोड़ने के लिए सामान्यतः कौन-सी cable उपयुक्त है?",
+      "options": ["Crossover cable", "Straight-through cable", "Rollover cable", "Null modem cable"],
+      "correctIndex": 1,
+      "explanation": "PC (MDI) और switch (MDI-X) unlike devices हैं, इसलिए straight-through cable उपयुक्त है — option 1 सही। Crossover like-to-like devices के लिए होता है (option 0 गलत), rollover और null modem serial console/serial link के लिए हैं, Ethernet data link के लिए नहीं (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q8",
+      "question": "Crossover cable में किन pin जोड़ों को आपस में swap किया जाता है (10/100 Mbps में)?",
+      "options": ["Pins 1-2 और 3-4", "Pins 1-3 और 2-6", "Pins 4-5 और 7-8", "Pins 1-8 और 2-7"],
+      "correctIndex": 1,
+      "explanation": "10/100 Mbps Ethernet crossover में transmit pair (1,2) और receive pair (3,6) को swap किया जाता है, यानी pin 1 से 3 और 2 से 6 — option 1 सही। बाकी विकल्प गलत pin combinations हैं क्योंकि data 1,2,3,6 pins पर ही होता है, 4,5,7,8 पर नहीं (option 0, 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q9",
+      "question": "Auto-MDIX feature का मुख्य लाभ क्या है?",
+      "options": ["Cable की speed बढ़ा देता है", "Straight-through या crossover, दोनों cable को स्वतः सही ढंग से handle करता है", "Cable की length बढ़ा देता है", "Power supply देता है"],
+      "correctIndex": 1,
+      "explanation": "Auto-MDIX port अपने आप transmit/receive pins को adjust कर लेता है, इसलिए straight-through या crossover किसी भी cable से connection बन जाता है — option 1 सही। यह speed या length नहीं बढ़ाता (option 0, 2 गलत), और power देना PoE का काम है, Auto-MDIX का नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q10",
+      "question": "RJ45 connector में कुल कितने pins/positions होते हैं?",
+      "options": ["4", "6", "8", "10"],
+      "correctIndex": 2,
+      "explanation": "RJ45 एक 8-position 8-contact (8P8C) connector है जिसमें 8 pins होते हैं, इसीलिए यह Ethernet twisted pair cable में प्रयोग होता है — option 2 सही। 4 और 6 pins छोटे connectors (जैसे RJ11 में 6) के हैं और 10 pins RJ45 में नहीं होते (option 0, 1, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q11",
+      "question": "दो switches को आपस में सीधे जोड़ने के लिए (uplink port न हो और Auto-MDIX न हो तो) कौन-सी cable चाहिए?",
+      "options": ["Straight-through", "Crossover", "Rollover", "Fiber patch केवल"],
+      "correctIndex": 1,
+      "explanation": "Switch-to-switch like-to-like connection है, इसलिए crossover cable चाहिए — option 1 सही। Straight-through केवल unlike devices के लिए काम करता (option 0 गलत), rollover console के लिए है (option 2 गलत), और fiber अनिवार्य नहीं जब copper से भी जुड़ सकते हैं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q12",
+      "question": "10Base-F standard किस माध्यम का उपयोग करता है?",
+      "options": ["Thin coaxial cable", "Fiber optic cable", "Twisted pair", "Wireless radio"],
+      "correctIndex": 1,
+      "explanation": "10Base-F में 'F' fiber optic को दर्शाता है और यह 10 Mbps पर optical fiber पर चलता है — option 1 सही। Thin coax 10Base2 है (option 0 गलत), twisted pair 10Base-T है (option 2 गलत), और यह wireless नहीं है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q13",
+      "question": "MDI और MDI-X में मूल अंतर क्या दर्शाता है?",
+      "options": ["दोनों में transmit-receive pins की व्यवस्था एक जैसी है", "MDI-X में transmit और receive pins internally crossed होते हैं", "MDI केवल fiber में होता है", "MDI-X केवल coaxial में होता है"],
+      "correctIndex": 1,
+      "explanation": "MDI-X (जैसे switch port) में internally transmit और receive pairs पहले से crossed होते हैं, इसलिए PC (MDI) से straight-through cable काम कर जाती है — option 1 सही। दोनों की व्यवस्था अलग होती है (option 0 गलत), और MDI/MDI-X copper twisted pair से जुड़े हैं, केवल fiber या coaxial से नहीं (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q14",
+      "question": "DB25 connector में कितने pins होते हैं?",
+      "options": ["9", "15", "25", "37"],
+      "correctIndex": 2,
+      "explanation": "DB25 में 25 pins होते हैं जो दो rows (13+12) में व्यवस्थित रहते हैं और parallel/serial ports में प्रयोग होते थे — option 2 सही। 9 pins DB9 में, 15 DB15 में और 37 DB37 में होते हैं (option 0, 1, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q15",
+      "question": "एक router को switch से जोड़ने के लिए (Auto-MDIX न हो तो) आमतौर पर कौन-सी cable लगती है?",
+      "options": ["Crossover cable", "Straight-through cable", "Rollover cable", "Null modem cable"],
+      "correctIndex": 1,
+      "explanation": "Router और switch को unlike devices माना जाता है, इसलिए इन्हें straight-through cable से जोड़ा जाता है — option 1 सही। Crossover like-to-like (router-router या switch-switch) के लिए होता है (option 0 गलत), rollover console access के लिए और null modem serial link के लिए है (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q16",
+      "question": "Standard straight-through cable में एक सिरे का pin 1, दूसरे सिरे के किस pin से जुड़ता है?",
+      "options": ["Pin 3", "Pin 1", "Pin 8", "Pin 6"],
+      "correctIndex": 1,
+      "explanation": "Straight-through cable में दोनों सिरे same wiring standard follow करते हैं, इसलिए pin 1 से pin 1 जुड़ता है (1-1, 2-2, ... 8-8) — option 1 सही। Pin 1 का pin 3 से जुड़ना crossover cable की विशेषता है (option 0 गलत), और 8 या 6 से जुड़ना गलत है (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q17",
+      "question": "10Base-T में एक node और hub/switch के बीच अधिकतम cable length लगभग कितनी होती है?",
+      "options": ["100 meter", "185 meter", "500 meter", "1000 meter"],
+      "correctIndex": 0,
+      "explanation": "10Base-T twisted pair में एक segment/link की अधिकतम length लगभग 100 meter होती है — option 0 सही। 185m 10Base2 का, 500m 10Base5 का और 1000m इनमें से किसी twisted pair का नहीं (option 1, 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q18",
+      "question": "10Base-T Ethernet में transmit के लिए कौन-से pins प्रयोग होते हैं (T568B के अनुसार)?",
+      "options": ["Pins 4 और 5", "Pins 1 और 2", "Pins 7 और 8", "Pins 3 और 6"],
+      "correctIndex": 1,
+      "explanation": "10/100 Mbps Ethernet में transmit pair pins 1 और 2 होता है जबकि receive pair pins 3 और 6 होता है — option 1 सही। Pins 3-6 receive के लिए हैं (option 3 गलत), और pins 4-5, 7-8 इस speed में data के लिए उपयोग नहीं होते (option 0, 2 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q19",
+      "question": "10Base5 (thick Ethernet) में stations जोड़ने के लिए किस उपकरण का प्रयोग होता था जो cable में 'tap' करता है?",
+      "options": ["RJ45 jack", "Vampire tap (MAU/transceiver)", "DB9 splitter", "Fiber coupler"],
+      "correctIndex": 1,
+      "explanation": "10Base5 thick coaxial में station को जोड़ने के लिए vampire tap के साथ MAU/transceiver का प्रयोग होता था जो cable में सीधे tap करता है — option 1 सही। RJ45 twisted pair का है (option 0 गलत), DB9 serial connector है (option 2 गलत), और fiber coupler optical fiber के लिए है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q20",
+      "question": "Crossover cable बनाने के लिए एक सिरा T568A और दूसरा T568B के अनुसार बनाया जाता है। इसका मुख्य उद्देश्य क्या है?",
+      "options": ["cable को लंबा करना", "एक सिरे का transmit pair दूसरे सिरे के receive pair से मिलाना", "shielding बढ़ाना", "voltage बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "एक सिरा T568A व दूसरा T568B रखने से transmit pair (1,2) दूसरे सिरे के receive pair (3,6) से जुड़ जाता है, यही crossover का उद्देश्य है — option 1 सही। इससे length नहीं बढ़ती (option 0 गलत), न ही shielding या voltage से इसका संबंध है (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q21",
+      "question": "DB15 connector किस सामान्य पुराने interface में प्रयोग होता था?",
+      "options": ["VGA monitor और joystick/game port या AUI", "USB port", "HDMI port", "SATA drive"],
+      "correctIndex": 0,
+      "explanation": "DB15 (15 pins) VGA (HD-15), game/joystick port और Ethernet AUI जैसे interfaces में प्रयोग होता था — option 0 सही। USB, HDMI और SATA अलग तरह के आधुनिक connectors हैं और D-sub नहीं हैं (option 1, 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q22",
+      "question": "यदि दोनों ports Auto-MDIX support करते हों तो PC-to-PC connection के लिए क्या सही है?",
+      "options": ["केवल crossover ही चलेगा", "straight-through या crossover, कोई भी cable चल जाएगी", "कोई cable नहीं चलेगी", "केवल fiber चलेगी"],
+      "correctIndex": 1,
+      "explanation": "Auto-MDIX होने पर port स्वयं pins adjust कर लेता है, इसलिए straight-through या crossover कोई भी cable काम कर जाती है — option 1 सही। इसलिए 'केवल crossover' अनिवार्य नहीं (option 0 गलत), connection बनेगा ज़रूर (option 2 गलत), और copper cable से भी चल जाएगा, केवल fiber ज़रूरी नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q23",
+      "question": "'10' in 10Base-T किसका सूचक है?",
+      "options": ["10 meter length", "10 Mbps data rate", "10 connectors", "10 volt signal"],
+      "correctIndex": 1,
+      "explanation": "10Base-T में '10' का अर्थ 10 Mbps data rate है, 'Base' baseband signaling और 'T' twisted pair को दर्शाता है — option 1 सही। यह length, connectors या voltage का सूचक नहीं है (option 0, 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q24",
+      "question": "Baseband signaling ('Base' in 10Base-T) का क्या अर्थ है?",
+      "options": ["एक ही समय पर कई frequency channels", "पूरा cable bandwidth एक single digital signal के लिए प्रयोग होता है", "केवल analog transmission", "wireless transmission"],
+      "correctIndex": 1,
+      "explanation": "Baseband में पूरे cable की bandwidth एक single digital signal के transmission के लिए प्रयोग होती है (कोई frequency division नहीं) — option 1 सही। कई frequency channels broadband का लक्षण है (option 0 गलत), baseband digital है केवल analog नहीं (option 2 गलत), और यह wired concept है, wireless नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q25",
+      "question": "DB37 connector की एक विशेषता क्या है?",
+      "options": ["इसमें 9 pins होते हैं", "इसमें 37 pins होते हैं और high-density signal applications में प्रयोग होता है", "यह RJ45 का दूसरा नाम है", "यह केवल fiber में लगता है"],
+      "correctIndex": 1,
+      "explanation": "DB37 में 37 pins होते हैं और यह अधिक signal lines वाले industrial/data acquisition applications में प्रयोग होता है — option 1 सही। 9 pins DB9 में होते हैं (option 0 गलत), यह RJ45 नहीं है (option 2 गलत), और यह copper pin connector है, fiber-only नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q26",
+      "question": "Ethernet twisted pair cable में wires को pairs में twist करने का मुख्य कारण क्या है?",
+      "options": ["cable को सुंदर दिखाना", "electromagnetic interference (EMI) और crosstalk कम करना", "current बढ़ाना", "cable सस्ता बनाना"],
+      "correctIndex": 1,
+      "explanation": "Wires को twist करने से external EMI और आपसी crosstalk काफी कम हो जाता है क्योंकि noise दोनों wires पर बराबर पड़कर cancel हो जाता है — option 1 सही। यह सुंदरता या current बढ़ाने के लिए नहीं होता (option 0, 2 गलत), और twisting cost घटाने का उपाय नहीं है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q27",
+      "question": "किसी switch को दूसरे switch के dedicated 'uplink' port से जोड़ते समय सामान्यतः किस cable की आवश्यकता होती है?",
+      "options": ["Crossover cable", "Straight-through cable", "Rollover cable", "कोई भी नहीं, wireless होता है"],
+      "correctIndex": 1,
+      "explanation": "Uplink port internally cross किया हुआ होता है (MDI जैसा behaviour देता है), इसलिए उससे straight-through cable से दूसरा switch जुड़ जाता है — option 1 सही। सामान्य port से जोड़ने पर crossover चाहिए होता, पर uplink port पर नहीं (option 0 गलत), rollover console के लिए है (option 2 गलत), और यह wired connection है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q28",
+      "question": "RS-232 serial communication में DB9 connector पर pin 2 और pin 3 सामान्यतः किसके लिए होते हैं?",
+      "options": ["Ground और power", "RXD (receive) और TXD (transmit) data lines", "केवल shielding", "clock और reset"],
+      "correctIndex": 1,
+      "explanation": "DB9 RS-232 में pin 2 आमतौर पर RXD (receive data) और pin 3 TXD (transmit data) होता है — option 1 सही। Ground pin 5 पर होता है (option 0 गलत), shielding shell/pin से जुड़ी होती है (option 2 गलत), और RS-232 async होने से dedicated clock/reset lines नहीं होतीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q29",
+      "question": "Straight-through और crossover cable के चयन का सामान्य नियम क्या है (Auto-MDIX न हो तो)?",
+      "options": ["like-to-like devices के लिए straight-through, unlike के लिए crossover", "unlike devices के लिए straight-through, like-to-like के लिए crossover", "हमेशा crossover", "हमेशा straight-through"],
+      "correctIndex": 1,
+      "explanation": "नियम है: unlike devices (PC-switch, router-switch) के लिए straight-through और like-to-like devices (PC-PC, switch-switch) के लिए crossover — option 1 सही। Option 0 इसका उल्टा है इसलिए गलत, और हमेशा एक ही प्रकार की cable उपयोग करना नियम नहीं है (option 2, 3 गलत)।"
+    },
+    {
+      "id": "u6_db_connectors_ethernet_q30",
+      "question": "1000Base-T (Gigabit) Ethernet 10/100 Mbps की तुलना में कितने twisted pairs का उपयोग करता है?",
+      "options": ["केवल 1 pair", "केवल 2 pairs", "सभी 4 pairs", "कोई pair नहीं, coaxial"],
+      "correctIndex": 2,
+      "explanation": "1000Base-T (Gigabit) चारों twisted pairs (सभी 8 wires) का उपयोग bidirectional transmission के लिए करता है, जबकि 10/100 Mbps केवल 2 pairs (pins 1,2,3,6) use करते हैं — option 2 सही। इसलिए 1 या 2 pairs कहना गलत है (option 0, 1 गलत), और यह twisted pair copper पर चलता है, coaxial पर नहीं (option 3 गलत)।"
+    }
+  ]
+}

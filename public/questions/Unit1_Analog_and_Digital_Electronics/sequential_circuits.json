@@ -1,0 +1,218 @@
+{
+  "unit": "unit1",
+  "unitName": "Analog and Digital Electronics circuits",
+  "topic": "sequential_circuits",
+  "topicName": "Sequential Circuits - Flip-Flops, Counters & Registers",
+  "questions": [
+    {
+      "id": "u1_sequential_circuits_q1",
+      "question": "SR flip-flop में कौन सी input स्थिति forbidden (invalid) मानी जाती है?",
+      "options": ["S=0, R=0", "S=0, R=1", "S=1, R=0", "S=1, R=1"],
+      "correctIndex": 3,
+      "explanation": "SR flip-flop में S=R=1 होने पर दोनों output Q और Q' एक साथ 0 हो जाते हैं, जो complementary शर्त का उल्लंघन करता है, इसलिए यह forbidden state है। S=R=0 hold (no change) state है, S=0 R=1 reset और S=1 R=0 set देता है, ये सभी valid हैं।"
+    },
+    {
+      "id": "u1_sequential_circuits_q2",
+      "question": "JK flip-flop, SR flip-flop की तुलना में कौन सी मुख्य समस्या दूर करता है?",
+      "options": ["Invalid (forbidden) state की समस्या", "Power consumption की समस्या", "Clock की आवश्यकता", "Propagation delay पूरी तरह"],
+      "correctIndex": 0,
+      "explanation": "JK flip-flop में J=K=1 को feedback के द्वारा toggle operation में बदल दिया जाता है, जिससे SR की invalid state समाप्त हो जाती है। यह power या propagation delay को खत्म नहीं करता, और clock तो इसे भी चाहिए।"
+    },
+    {
+      "id": "u1_sequential_circuits_q3",
+      "question": "JK flip-flop में J=K=1 की स्थिति में output का क्या व्यवहार होता है?",
+      "options": ["Output हमेशा 0 रहता है", "Output हमेशा 1 रहता है", "Output toggle (उलट) हो जाता है", "Output अपरिवर्तित रहता है"],
+      "correctIndex": 2,
+      "explanation": "J=K=1 पर प्रत्येक clock pulse के साथ output अपनी पिछली state के विपरीत हो जाता है, यानी toggle करता है। स्थायी 0 या 1 गलत है क्योंकि यह टॉगल करता रहता है, और no-change तो J=K=0 पर होता है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q4",
+      "question": "Race-around condition किस flip-flop में और किस input स्थिति में होती है?",
+      "options": ["D flip-flop में D=1 पर", "SR flip-flop में S=0, R=0 पर", "JK flip-flop में J=K=1 पर", "T flip-flop में T=0 पर"],
+      "correctIndex": 2,
+      "explanation": "Race-around condition JK flip-flop में तब होती है जब J=K=1 हो और clock pulse की चौड़ाई propagation delay से अधिक हो, जिससे output एक ही pulse में कई बार toggle कर जाता है। D और T flip-flop की दी गई स्थितियाँ इससे संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u1_sequential_circuits_q5",
+      "question": "Race-around condition को दूर करने का सबसे प्रचलित उपाय कौन सा है?",
+      "options": ["Clock frequency बढ़ाना", "Master-slave या edge-triggered configuration का उपयोग", "अधिक flip-flop जोड़ना", "Resistor का मान बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "Master-slave या edge triggering के द्वारा output केवल clock edge पर एक ही बार बदलता है, जिससे एक pulse में बार-बार toggle नहीं होता और race-around रुक जाती है। Frequency बढ़ाने से समस्या और बढ़ेगी, बाकी विकल्प असंबंधित हैं।"
+    },
+    {
+      "id": "u1_sequential_circuits_q6",
+      "question": "D flip-flop के output Q का मान clock edge पर क्या होता है?",
+      "options": ["Input D के बराबर", "Input D का complement", "हमेशा 1", "पिछली state के बराबर"],
+      "correctIndex": 0,
+      "explanation": "D flip-flop में output D input को follow करता है, यानी clock edge पर Q = D हो जाता है, इसीलिए इसे data या delay flip-flop कहते हैं। Complement, स्थायी 1 या no-change इसका व्यवहार नहीं है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q7",
+      "question": "D flip-flop का सामान्यतः किस रूप में उपयोग होता है?",
+      "options": ["Oscillator के रूप में", "Amplifier के रूप में", "Latch / delay तत्व के रूप में", "Rectifier के रूप में"],
+      "correctIndex": 2,
+      "explanation": "D flip-flop input को एक clock तक रोककर रखता है और उसे follow करता है, इसलिए इसका उपयोग data latch और delay element के रूप में होता है। Oscillator, amplifier और rectifier analog/अलग कार्य हैं जो D flip-flop नहीं करता।"
+    },
+    {
+      "id": "u1_sequential_circuits_q8",
+      "question": "T flip-flop में output किस स्थिति में toggle करता है?",
+      "options": ["T=0 पर", "T=1 पर", "Clock=0 पर", "किसी भी स्थिति में नहीं"],
+      "correctIndex": 1,
+      "explanation": "T (toggle) flip-flop में T=1 होने पर प्रत्येक clock pulse के साथ output उलट जाता है, जबकि T=0 पर output अपरिवर्तित रहता है। इसीलिए T=1 सही उत्तर है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q9",
+      "question": "JK flip-flop को T flip-flop में बदलने के लिए क्या करना चाहिए?",
+      "options": ["J और K को अलग-अलग रखना", "J=K=0 रखना", "J और K को आपस में जोड़कर एक ही T input बनाना", "K को ground करना"],
+      "correctIndex": 2,
+      "explanation": "जब JK के दोनों inputs को जोड़ दिया जाता है (J=K=T) तो T=1 पर toggle और T=0 पर hold होता है, जो ठीक T flip-flop का व्यवहार है। अलग रखने या 0/ground करने से toggle क्रिया नहीं मिलती।"
+    },
+    {
+      "id": "u1_sequential_circuits_q10",
+      "question": "MOD-16 (0 से 15 तक गिनने वाले) counter के लिए कितने flip-flop आवश्यक हैं?",
+      "options": ["3", "4", "5", "16"],
+      "correctIndex": 1,
+      "explanation": "flip-flop की संख्या = ceil(log2 N) = ceil(log2 16) = 4, क्योंकि 2^4 = 16 states देता है। 3 flip-flop केवल 8 states, 5 अनावश्यक और 16 गलत गणना है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q11",
+      "question": "Decade counter में कितनी states होती हैं और यह किन मानों तक गिनता है?",
+      "options": ["16 states, 0 से 15", "10 states, 0 से 9", "8 states, 0 से 7", "10 states, 1 से 10"],
+      "correctIndex": 1,
+      "explanation": "Decade counter MOD-10 counter है जो 0 से 9 तक कुल 10 states गिनकर फिर 0 पर रीसेट हो जाता है। यह 0 से शुरू होता है, इसलिए 1 से 10 वाला विकल्प गलत है और 16/8 states भी गलत हैं।"
+    },
+    {
+      "id": "u1_sequential_circuits_q12",
+      "question": "Decade counter बनाने के लिए न्यूनतम कितने flip-flop चाहिए?",
+      "options": ["3", "4", "5", "10"],
+      "correctIndex": 1,
+      "explanation": "10 states के लिए ceil(log2 10) = 4 flip-flop चाहिए क्योंकि 3 flip-flop केवल 8 states (0-7) देते हैं जो अपर्याप्त है और 4 flip-flop 16 तक जा सकते हैं जिनमें से 10 का उपयोग होता है। 5 या 10 अनावश्यक हैं।"
+    },
+    {
+      "id": "u1_sequential_circuits_q13",
+      "question": "MOD-N counter में flip-flop की संख्या ज्ञात करने का सूत्र क्या है?",
+      "options": ["N × 2", "N / 2", "ceil(log2 N)", "2^N"],
+      "correctIndex": 2,
+      "explanation": "n flip-flop 2^n states बना सकते हैं, इसलिए N states के लिए सबसे छोटा n = ceil(log2 N) होता है। बाकी सूत्र states और flip-flop के सही गणितीय संबंध को नहीं दर्शाते।"
+    },
+    {
+      "id": "u1_sequential_circuits_q14",
+      "question": "Ripple counter को asynchronous counter क्यों कहा जाता है?",
+      "options": ["सभी flip-flop एक ही clock से trigger होते हैं", "प्रत्येक flip-flop पिछले flip-flop के output से trigger होता है", "इसमें कोई clock नहीं होता", "सभी output एक साथ बदलते हैं"],
+      "correctIndex": 1,
+      "explanation": "Ripple counter में केवल पहला flip-flop external clock से चलता है और आगे का प्रत्येक flip-flop पिछले के output से trigger होता है, इसलिए clock क्रमशः ripple करता है और यह asynchronous कहलाता है। समान clock वाला और एक-साथ बदलने वाला व्यवहार synchronous counter का है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q15",
+      "question": "Asynchronous (ripple) counter की synchronous counter की तुलना में मुख्य कमी क्या है?",
+      "options": ["अधिक flip-flop की आवश्यकता", "cumulative propagation delay के कारण गति धीमी", "clock की आवश्यकता नहीं", "अधिक states गिनना संभव नहीं"],
+      "correctIndex": 1,
+      "explanation": "Ripple counter में delay एक के बाद एक जुड़ता जाता है, जिससे उच्च frequency पर गति कम और गलत गिनती का खतरा रहता है। flip-flop की संख्या दोनों में समान रह सकती है और states गिनने में कोई मूल सीमा नहीं है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q16",
+      "question": "किसी counter को 0 से 100 तक (कुल 101 मान) गिनने के लिए कम से कम कितने flip-flop चाहिए?",
+      "options": ["6", "7", "8", "10"],
+      "correctIndex": 1,
+      "explanation": "0 से 100 तक कुल 101 states हैं, ceil(log2 101) = 7 क्योंकि 2^6 = 64 अपर्याप्त और 2^7 = 128 पर्याप्त है। इसलिए 7 flip-flop चाहिए; 6 कम पड़ेंगे और 8/10 अनावश्यक हैं।"
+    },
+    {
+      "id": "u1_sequential_circuits_q17",
+      "question": "SISO shift register में 4-bit data को पूरी तरह भरने में कितने clock pulse लगते हैं?",
+      "options": ["1", "2", "4", "8"],
+      "correctIndex": 2,
+      "explanation": "SISO (Serial-In Serial-Out) में data एक-एक bit करके प्रवेश करता है, इसलिए 4-bit register भरने में 4 clock pulse लगते हैं। 1 या 2 पर्याप्त नहीं और 8 अनावश्यक है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q18",
+      "question": "किस प्रकार का shift register समानांतर (parallel) data को एक साथ load करके serial रूप में बाहर देता है?",
+      "options": ["SISO", "SIPO", "PISO", "PIPO"],
+      "correctIndex": 2,
+      "explanation": "PISO (Parallel-In Serial-Out) में सभी bits एक साथ load होकर फिर serial रूप में shift होकर बाहर निकलते हैं, इसलिए यह parallel-to-serial रूपांतरण करता है। SIPO इसका उल्टा है, SISO पूर्णतः serial और PIPO पूर्णतः parallel है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q19",
+      "question": "Shift register में प्रत्येक clock pulse पर data का क्या होता है?",
+      "options": ["एक position आगे shift होता है", "मिट (clear) जाता है", "दोगुना हो जाता है", "अपरिवर्तित रहता है"],
+      "correctIndex": 0,
+      "explanation": "Shift register में हर clock pulse पर संग्रहित data एक bit position आगे (या पीछे) खिसकता है, यही इसका मूल कार्य है। यह data को न मिटाता है, न दोगुना करता है और न अपरिवर्तित रखता है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q20",
+      "question": "Sequential circuit, combinational circuit से किस प्रकार भिन्न है?",
+      "options": ["इसमें कोई gate नहीं होता", "इसका output केवल वर्तमान input पर निर्भर करता है", "इसका output वर्तमान input के साथ-साथ पिछली state (memory) पर भी निर्भर करता है", "इसमें clock की आवश्यकता कभी नहीं होती"],
+      "correctIndex": 2,
+      "explanation": "Sequential circuit में feedback और memory तत्व (flip-flop) होते हैं, इसलिए output वर्तमान input और पिछली state दोनों पर निर्भर करता है। केवल वर्तमान input पर निर्भरता combinational circuit का गुण है, और अधिकांश sequential circuits को clock चाहिए होता है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q21",
+      "question": "एक 3-bit ripple counter अधिकतम कितनी states तक गिन सकता है?",
+      "options": ["3", "6", "8", "9"],
+      "correctIndex": 2,
+      "explanation": "3 flip-flop के साथ 2^3 = 8 states (0 से 7) संभव हैं, इसलिए यह 8 तक गिनता है। 3, 6 या 9 states 3-bit binary counter की सही क्षमता नहीं हैं।"
+    },
+    {
+      "id": "u1_sequential_circuits_q22",
+      "question": "Flip-flop के asynchronous inputs preset और clear का मुख्य कार्य क्या है?",
+      "options": ["Clock की गति नियंत्रित करना", "clock की परवाह किए बिना output को सीधे set या reset करना", "data को shift करना", "toggle rate बढ़ाना"],
+      "correctIndex": 1,
+      "explanation": "Preset और clear asynchronous inputs हैं जो clock को अनदेखा करते हुए output को तुरंत क्रमशः 1 (set) या 0 (reset) कर देते हैं। ये clock गति, data shifting या toggle rate को नियंत्रित नहीं करते।"
+    },
+    {
+      "id": "u1_sequential_circuits_q23",
+      "question": "Master-slave JK flip-flop में output कब update होता है?",
+      "options": ["Clock के rising edge/level पर master, और trailing edge पर slave (output)", "किसी भी समय लगातार", "केवल preset लगने पर", "clock के स्थिर होने पर कभी नहीं"],
+      "correctIndex": 0,
+      "explanation": "Master-slave configuration में master clock के एक स्तर/edge पर input पढ़ता है और slave विपरीत edge पर उसे output में स्थानांतरित करता है, जिससे एक pulse में केवल एक बार बदलाव होता है और race-around रुकती है। लगातार या मनमाने समय पर बदलाव इसका व्यवहार नहीं है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q24",
+      "question": "SR flip-flop में S=0, R=0 input पर output क्या होगा?",
+      "options": ["Set (Q=1)", "Reset (Q=0)", "पिछली state बनी रहती है (no change)", "Invalid"],
+      "correctIndex": 2,
+      "explanation": "S=R=0 पर कोई set या reset संकेत नहीं होता, इसलिए flip-flop अपनी पिछली state को बनाए रखता है, यह hold या memory state है। Set S=1 R=0 पर, reset S=0 R=1 पर और invalid S=R=1 पर होता है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q25",
+      "question": "MOD-10 और MOD-16 counter दोनों के लिए flip-flop की संख्या समान (4) क्यों होती है?",
+      "options": ["क्योंकि दोनों में states की संख्या समान है", "क्योंकि 4 flip-flop से 10 और 16 दोनों states 2^4=16 की सीमा में आ जाती हैं", "क्योंकि counters हमेशा 4 flip-flop से बनते हैं", "क्योंकि MOD संख्या का flip-flop से कोई संबंध नहीं"],
+      "correctIndex": 1,
+      "explanation": "4 flip-flop अधिकतम 16 states देते हैं, इसलिए MOD-16 (16 states) और MOD-10 (10 states, जिसमें अतिरिक्त states को skip किया जाता है) दोनों 4 flip-flop में समा जाते हैं। दोनों में states समान नहीं हैं और MOD संख्या तथा flip-flop में स्पष्ट संबंध है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q26",
+      "question": "JK flip-flop में J=1, K=0 input पर clock के बाद output क्या होगा?",
+      "options": ["Q=1 (set)", "Q=0 (reset)", "Toggle", "No change"],
+      "correctIndex": 0,
+      "explanation": "JK flip-flop में J=1, K=0 पर output set होकर Q=1 हो जाता है, ठीक जैसे SR में S=1, R=0। J=0 K=1 पर reset, J=K=1 पर toggle और J=K=0 पर no change होता है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q27",
+      "question": "एक 4-bit SIPO shift register में data कैसे प्रवेश और निकास करता है?",
+      "options": ["Serial में प्रवेश, serial में निकास", "Serial में प्रवेश, parallel में निकास", "Parallel में प्रवेश, serial में निकास", "Parallel में प्रवेश, parallel में निकास"],
+      "correctIndex": 1,
+      "explanation": "SIPO (Serial-In Parallel-Out) में data एक-एक bit करके serial रूप में भरता है और फिर सभी bits एक साथ parallel रूप में बाहर निकलते हैं, इसलिए यह serial-to-parallel converter है। बाकी विकल्प SISO, PISO और PIPO के व्यवहार हैं।"
+    },
+    {
+      "id": "u1_sequential_circuits_q28",
+      "question": "किसी synchronous counter में सभी flip-flop की एक विशेषता क्या होती है?",
+      "options": ["सभी अलग-अलग clock से चलते हैं", "सभी एक ही common clock से एक साथ trigger होते हैं", "किसी को भी clock नहीं मिलता", "केवल अंतिम flip-flop को clock मिलता है"],
+      "correctIndex": 1,
+      "explanation": "Synchronous counter में सभी flip-flop एक ही common clock से एक साथ trigger होते हैं, जिससे propagation delay जुड़ता नहीं और गति तेज रहती है। अलग-अलग या ripple रूप में clock मिलना asynchronous counter की विशेषता है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q29",
+      "question": "एक flip-flop कितने bit की सूचना संग्रहित कर सकता है?",
+      "options": ["1 bit", "2 bit", "4 bit", "8 bit"],
+      "correctIndex": 0,
+      "explanation": "प्रत्येक flip-flop एक bistable device है जो केवल 0 या 1, यानी 1 bit जानकारी संग्रहित करता है। अधिक bits संग्रहित करने के लिए कई flip-flop मिलाकर register बनाना पड़ता है।"
+    },
+    {
+      "id": "u1_sequential_circuits_q30",
+      "question": "यदि किसी counter में 5 flip-flop हों, तो वह अधिकतम कितने अलग-अलग states गिन सकता है?",
+      "options": ["10", "16", "25", "32"],
+      "correctIndex": 3,
+      "explanation": "n flip-flop 2^n states देते हैं, इसलिए 5 flip-flop 2^5 = 32 states (0 से 31) गिन सकते हैं। 10 (5×2), 16 (2^4) और 25 (5×5) गलत गणनाएँ हैं।"
+    }
+  ]
+}

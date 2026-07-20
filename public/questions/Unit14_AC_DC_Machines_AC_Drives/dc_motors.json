@@ -1,0 +1,218 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "dc_motors",
+  "topicName": "DC Motors",
+  "questions": [
+    {
+      "id": "u14_dc_motors_q1",
+      "question": "एक DC Motor का कार्य किस principle पर आधारित है, जब current-carrying conductor को magnetic field में रखा जाता है?",
+      "options": ["उस पर एक mechanical force लगती है (Fleming's left-hand rule)", "उसमें voltage induce होती है (Faraday's law)", "उसका resistance बढ़ जाता है", "उसमें कोई effect नहीं होता"],
+      "correctIndex": 0,
+      "explanation": "सही: current-carrying conductor को magnetic field में रखने पर उस पर mechanical force लगती है जिसकी direction Fleming's left-hand rule से मिलती है, यही motor का आधार है। Faraday's law/voltage induce होना generator (या back-emf) का principle है। Resistance बढ़ना या कोई effect न होना गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q2",
+      "question": "DC Motor में back-emf (Eb) का मान किस formula से मिलता है?",
+      "options": ["Eb = V + IaRa", "Eb = PΦZN/60A", "Eb = IaRa − V", "Eb = ΦZN/P"],
+      "correctIndex": 1,
+      "explanation": "सही: Eb = PΦZN/60A, जहाँ P = poles, Φ = flux, Z = conductors, N = speed, A = parallel paths। Eb = V + IaRa गलत है क्योंकि motor में Eb = V − IaRa होता है। बाकी formula galat arrangement हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q3",
+      "question": "एक DC shunt motor में supply voltage V = 220 V, armature current Ia = 20 A और armature resistance Ra = 0.5 Ω है। back-emf Eb कितनी होगी?",
+      "options": ["230 V", "210 V", "200 V", "220 V"],
+      "correctIndex": 1,
+      "explanation": "सही: Eb = V − IaRa = 220 − 20×0.5 = 220 − 10 = 210 V। 230 V तब आता अगर IaRa जोड़ते (यह generator का case है)। 200 V और 220 V गलत calculation हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q4",
+      "question": "DC Motor में torque (T) किन quantities के समानुपाती (proportional) होता है?",
+      "options": ["केवल speed N के", "flux Φ और armature current Ia के गुणनफल के", "केवल voltage V के", "armature resistance Ra के"],
+      "correctIndex": 1,
+      "explanation": "सही: T ∝ ΦIa, अर्थात torque flux और armature current दोनों पर निर्भर करता है। Speed, voltage या Ra से torque सीधे proportional नहीं होता; ये गलत विकल्प हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q5",
+      "question": "DC series motor में field winding और armature का connection किस प्रकार होता है?",
+      "options": ["field winding armature के parallel (shunt) में", "field winding armature के series में, इसलिए field current = armature current", "field winding एक अलग DC source से", "field winding बिल्कुल नहीं होती"],
+      "correctIndex": 1,
+      "explanation": "सही: series motor में field winding armature के series में होती है, इसलिए field current = armature current (Ise = Ia)। Shunt connection shunt motor का है, separate source separately excited का, और field winding का न होना गलत है।"
+    },
+    {
+      "id": "u14_dc_motors_q6",
+      "question": "DC series motor को कभी भी no-load (बिना load) पर क्यों नहीं चलाना चाहिए?",
+      "options": ["क्योंकि यह रुक जाएगा", "क्योंकि flux बहुत बढ़ जाएगा", "क्योंकि load कम होने पर speed खतरनाक रूप से बहुत बढ़ जाती है (runaway)", "क्योंकि back-emf zero हो जाएगी"],
+      "correctIndex": 2,
+      "explanation": "सही: series motor में N ∝ 1/Ia (लगभग), no-load पर Ia बहुत कम, flux कम, इसलिए speed dangerously high हो जाती है और motor mechanically fail हो सकता है। रुकना, flux बढ़ना, या Eb zero होना गलत है — असल में उल्टा होता है।"
+    },
+    {
+      "id": "u14_dc_motors_q7",
+      "question": "किस DC motor की speed-torque characteristic hyperbolic (उच्च starting torque, load बढ़ने पर speed तेजी से गिरना) होती है?",
+      "options": ["DC shunt motor", "DC series motor", "separately excited motor", "differential compound motor"],
+      "correctIndex": 1,
+      "explanation": "सही: series motor में T ∝ Ia² (unsaturated) और N ∝ 1/Ia से characteristic hyperbolic होती है — high starting torque, load पर speed तेजी से गिरती है। Shunt/separately excited की speed लगभग constant रहती है; differential compound का व्यवहार अलग है।"
+    },
+    {
+      "id": "u14_dc_motors_q8",
+      "question": "DC shunt motor को 'constant speed motor' क्यों कहा जाता है?",
+      "options": ["क्योंकि flux load के साथ तेजी से बदलता है", "क्योंकि field को constant voltage मिलता है जिससे flux लगभग constant रहता है और speed no-load से full-load तक थोड़ा ही गिरती है", "क्योंकि इसका starting torque बहुत ऊँचा होता है", "क्योंकि इसमें कोई armature reaction नहीं होती"],
+      "correctIndex": 1,
+      "explanation": "सही: shunt field सीधे constant supply से जुड़ता है, flux लगभग constant रहता है, इसलिए load बढ़ने पर speed में केवल थोड़ी गिरावट आती है — इसे constant speed motor कहते हैं। High starting torque series motor की विशेषता है; flux का तेजी बदलना और armature reaction का न होना गलत है।"
+    },
+    {
+      "id": "u14_dc_motors_q9",
+      "question": "एक DC motor में back-emf (Eb) की क्या भूमिका होती है?",
+      "options": ["यह supply voltage को बढ़ाती है", "यह armature current को नियंत्रित/limit करती है क्योंकि Ia = (V − Eb)/Ra", "यह field flux उत्पन्न करती है", "इसका कोई उपयोग नहीं"],
+      "correctIndex": 1,
+      "explanation": "सही: Eb, applied voltage का विरोध करती है और Ia = (V − Eb)/Ra के अनुसार armature current को self-regulate करती है — load बढ़ने पर speed व Eb घटती है, Ia बढ़ता है। Eb voltage बढ़ाती नहीं, न ही flux बनाती है; इसका उपयोग न होना गलत है।"
+    },
+    {
+      "id": "u14_dc_motors_q10",
+      "question": "DC motor के commutator और brushes का मुख्य कार्य क्या है?",
+      "options": ["field flux बढ़ाना", "armature की winding में current को इस प्रकार बदलना (reverse) कि torque की direction एक ही बनी रहे और motor लगातार घूमे", "back-emf को zero करना", "speed को measure करना"],
+      "correctIndex": 1,
+      "explanation": "सही: commutator + brushes मिलकर mechanical rectifier का काम करते हैं जो armature conductors में current की direction सही समय पर बदलकर unidirectional torque बनाए रखते हैं। ये flux बढ़ाने, Eb zero करने या speed measure करने का काम नहीं करते।"
+    },
+    {
+      "id": "u14_dc_motors_q11",
+      "question": "एक DC motor 500 rpm पर 100 V back-emf देती है। यदि flux constant रहे और speed 750 rpm हो जाए, तो back-emf कितनी होगी?",
+      "options": ["100 V", "150 V", "125 V", "75 V"],
+      "correctIndex": 1,
+      "explanation": "सही: constant flux पर Eb ∝ N, इसलिए Eb2 = 100 × (750/500) = 150 V। 125 V और 75 V गलत ratio से हैं; 100 V का मतलब speed न बदलना होता।"
+    },
+    {
+      "id": "u14_dc_motors_q12",
+      "question": "DC series motor मुख्यतः किन applications में प्रयोग होती है?",
+      "options": ["lathe और drilling machine जहाँ constant speed चाहिए", "electric traction, cranes और hoists जहाँ high starting torque चाहिए", "fans और blowers", "precision instruments"],
+      "correctIndex": 1,
+      "explanation": "सही: series motor का starting torque बहुत ऊँचा होता है, इसलिए electric traction, cranes, hoists, trolleys में उपयोग होती है। Lathe/drilling और fans/blowers के लिए shunt motor (constant speed) उपयुक्त है; precision instruments series motor के लिए उपयुक्त नहीं।"
+    },
+    {
+      "id": "u14_dc_motors_q13",
+      "question": "cumulative compound DC motor में series field और shunt field के flux किस प्रकार होते हैं?",
+      "options": ["एक दूसरे के विरोध में (opposing)", "एक ही दिशा में जुड़कर total flux बढ़ाते हैं (aiding)", "series field का कोई flux नहीं होता", "दोनों flux हमेशा शून्य रहते हैं"],
+      "correctIndex": 1,
+      "explanation": "सही: cumulative compound में series field flux और shunt field flux एक ही direction में add होते हैं (aiding), जिससे load पर torque बढ़ता है और no-load पर shunt field speed को सुरक्षित रखता है। Opposing flux differential compound में होता है; बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q14",
+      "question": "एक DC motor का armature current 25 A और flux के साथ torque 50 N·m है। यदि flux वही रहे और Ia 40 A हो जाए, तो torque लगभग कितना होगा?",
+      "options": ["50 N·m", "80 N·m", "31.25 N·m", "40 N·m"],
+      "correctIndex": 1,
+      "explanation": "सही: constant flux पर T ∝ Ia, इसलिए T2 = 50 × (40/25) = 80 N·m। 31.25 N·m तब आता अगर current घटता; 50 और 40 गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q15",
+      "question": "DC motor की speed N निम्न में से किस संबंध द्वारा दी जाती है?",
+      "options": ["N ∝ Eb × Φ", "N ∝ Eb/Φ", "N ∝ Φ/Eb", "N ∝ Ia × Ra"],
+      "correctIndex": 1,
+      "explanation": "सही: Eb = PΦZN/60A से N ∝ Eb/Φ मिलता है, अर्थात speed back-emf के समानुपाती और flux के व्युत्क्रमानुपाती है। यही कारण है कि flux घटाने पर speed बढ़ती है। बाकी संबंध गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q16",
+      "question": "differential compound DC motor की एक विशेषता क्या है?",
+      "options": ["load बढ़ने पर series flux, shunt flux के विरोध में होकर net flux घटाता है, जिससे speed लगभग constant या थोड़ी बढ़ भी सकती है", "इसका starting torque series motor से भी अधिक होता है", "यह no-load पर runaway होता है", "इसमें केवल series field होती है"],
+      "correctIndex": 0,
+      "explanation": "सही: differential compound में series flux, shunt flux के opposite होता है, load पर net flux घटता है जिससे speed drop नगण्य या speed बढ़ने की प्रवृत्ति होती है (कम stable)। इसका starting torque कम होता है, यह runaway नहीं होता (shunt field मौजूद), और इसमें दोनों fields होती हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q17",
+      "question": "किसी DC motor में gross mechanical power (armature द्वारा विकसित) किसके बराबर होती है?",
+      "options": ["V × Ia", "Ia² × Ra", "Eb × Ia", "V × Eb"],
+      "correctIndex": 2,
+      "explanation": "सही: armature में विकसित mechanical power = Eb × Ia होती है। V × Ia कुल input power (armature) है, Ia²Ra copper loss है, और V × Eb का कोई भौतिक अर्थ नहीं है।"
+    },
+    {
+      "id": "u14_dc_motors_q18",
+      "question": "DC shunt motor की speed regulation आमतौर पर series motor की तुलना में कैसी होती है?",
+      "options": ["बहुत खराब (poor)", "अच्छी (good), क्योंकि no-load से full-load तक speed थोड़ा ही बदलती है", "series motor जैसी ही", "हमेशा 100%"],
+      "correctIndex": 1,
+      "explanation": "सही: shunt motor में flux constant रहने से speed regulation अच्छी (कम %) होती है। Series motor में speed load के साथ बहुत बदलती है इसलिए उसकी regulation poor होती है। 'series जैसी' और '100%' गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q19",
+      "question": "एक 4-pole DC motor में wave winding है (A = 2), Z = 500 conductors, Φ = 0.02 Wb, N = 600 rpm. back-emf Eb कितनी होगी?",
+      "options": ["100 V", "200 V", "50 V", "400 V"],
+      "correctIndex": 1,
+      "explanation": "सही: Eb = PΦZN/60A = (4×0.02×500×600)/(60×2) = 24000/120 = 200 V। wave winding में A = 2 लेने पर यही मान आता है। 100 V तब आता अगर lap winding (A = P = 4) लेते; 50 V और 400 V गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q20",
+      "question": "DC motor start करते समय starting current बहुत अधिक क्यों होता है?",
+      "options": ["क्योंकि starting पर flux बहुत अधिक होता है", "क्योंकि start पर speed = 0, इसलिए back-emf Eb = 0 और Ia = V/Ra बहुत बड़ा हो जाता है", "क्योंकि armature resistance बहुत बड़ा होता है", "क्योंकि supply voltage दोगुनी हो जाती है"],
+      "correctIndex": 1,
+      "explanation": "सही: start पर N = 0 इसलिए Eb = 0, और Ia = (V − Eb)/Ra = V/Ra; चूँकि Ra बहुत छोटा है, यह current rated का कई गुना होता है — इसीलिए starter की जरूरत होती है। बाकी विकल्प गलत हैं (Ra छोटा है, voltage दोगुनी नहीं होती)।"
+    },
+    {
+      "id": "u14_dc_motors_q21",
+      "question": "DC motor में armature core को laminated (पतली परतों में) क्यों बनाया जाता है?",
+      "options": ["torque बढ़ाने के लिए", "eddy current losses कम करने के लिए", "back-emf बढ़ाने के लिए", "brushes की घिसाई कम करने के लिए"],
+      "correctIndex": 1,
+      "explanation": "सही: laminated core insulated पतली परतों में बना होता है ताकि eddy currents का मार्ग टूटे और eddy current loss घटे। यह torque या Eb बढ़ाने या brush wear से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_dc_motors_q22",
+      "question": "एक DC series motor में यदि load current आधा (half) कर दिया जाए (magnetic saturation से पहले), तो torque लगभग कैसे बदलेगा?",
+      "options": ["आधा रह जाएगा", "एक-चौथाई (1/4) रह जाएगा क्योंकि T ∝ Ia²", "दोगुना हो जाएगा", "अपरिवर्तित रहेगा"],
+      "correctIndex": 1,
+      "explanation": "सही: series motor में Φ ∝ Ia (saturation से पहले), इसलिए T ∝ ΦIa ∝ Ia²। current आधा होने पर torque (1/2)² = 1/4 रह जाता है। 'आधा' तब होता अगर T ∝ Ia; बाकी गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q23",
+      "question": "DC motor में armature reaction का मुख्य प्रभाव क्या होता है?",
+      "options": ["main field flux को विकृत (distort) और कमजोर करना, तथा neutral plane को shift करना", "supply voltage बढ़ाना", "armature resistance को शून्य करना", "commutator को बड़ा करना"],
+      "correctIndex": 0,
+      "explanation": "सही: armature current द्वारा उत्पन्न flux main field को distort व weaken करता है और magnetic neutral axis shift कर देता है, जिससे commutation में समस्या और sparking होती है (interpoles से सुधारा जाता है)। बाकी विकल्प armature reaction से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q24",
+      "question": "एक DC shunt motor: V = 250 V, Ra = 0.2 Ω, no-load पर Ia = 5 A. armature में विकसित back-emf लगभग कितनी है?",
+      "options": ["251 V", "249 V", "250 V", "240 V"],
+      "correctIndex": 1,
+      "explanation": "सही: Eb = V − IaRa = 250 − 5×0.2 = 250 − 1 = 249 V। 251 V तब जब IaRa जोड़ते; 250 V तब जब drop नजरअंदाज करते; 240 V गलत calculation है।"
+    },
+    {
+      "id": "u14_dc_motors_q25",
+      "question": "DC motor के field winding (shunt) की एक विशेषता क्या है?",
+      "options": ["मोटे तार के कम turns, low resistance", "पतले तार के बहुत अधिक turns, high resistance ताकि field current कम रहे", "इसमें कोई insulation नहीं होता", "यह हमेशा armature के series में होती है"],
+      "correctIndex": 1,
+      "explanation": "सही: shunt field पूरी supply voltage पर जुड़ती है, इसलिए इसे पतले तार के बहुत अधिक turns व high resistance से बनाते हैं ताकि field current और copper loss कम रहे। मोटे तार-कम turns series field की विशेषता है; बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q26",
+      "question": "यदि किसी running DC shunt motor का field circuit अचानक खुल (open) जाए, तो क्या होगा?",
+      "options": ["motor तुरंत रुक जाएगा", "flux लगभग शून्य होने से speed खतरनाक रूप से बहुत बढ़ जाएगी (over-speed/runaway)", "कोई प्रभाव नहीं", "back-emf बहुत बढ़ जाएगी और current शून्य हो जाएगा"],
+      "correctIndex": 1,
+      "explanation": "सही: N ∝ 1/Φ, field open होने पर flux residual मात्र रह जाता है, इसलिए motor की speed बहुत बढ़ जाती है (dangerous runaway)। इसीलिए field failure protection रखते हैं। motor रुकता नहीं, प्रभावहीन नहीं, और Eb बढ़ने के बजाय speed बढ़ती है।"
+    },
+    {
+      "id": "u14_dc_motors_q27",
+      "question": "एक DC motor 220 V supply पर 10 kW mechanical power देती है। यदि दक्षता (efficiency) 80% है, तो supply से ली गई current लगभग कितनी होगी?",
+      "options": ["45.5 A", "56.8 A", "36.4 A", "50 A"],
+      "correctIndex": 1,
+      "explanation": "सही: input power = output/η = 10000/0.8 = 12500 W; I = P/V = 12500/220 ≈ 56.8 A। 45.5 A तब आता अगर output को ही input मान लेते (10000/220); 36.4 और 50 गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q28",
+      "question": "DC series motor और shunt motor दोनों को एक ही load पर चलाने पर starting torque के बारे में क्या सही है?",
+      "options": ["shunt motor का starting torque अधिक होता है", "series motor का starting torque अधिक होता है क्योंकि T ∝ Ia² तक बढ़ता है", "दोनों का बराबर होता है", "दोनों का starting torque शून्य होता है"],
+      "correctIndex": 1,
+      "explanation": "सही: series motor में start पर high current से flux भी बढ़ता है (T ∝ Ia²), इसलिए starting torque बहुत अधिक होता है; shunt motor में flux constant रहता है (T ∝ Ia) इसलिए कम। इसीलिए traction में series motor पसंद की जाती है। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_dc_motors_q29",
+      "question": "DC motor में 'brushes' सामान्यतः किस material के बनाए जाते हैं और क्यों?",
+      "options": ["shudh copper, क्योंकि यह सस्ता है", "carbon/graphite, क्योंकि यह self-lubricating है, commutator को कम घिसाता है और अच्छा sliding contact देता है", "steel, क्योंकि यह मजबूत है", "rubber, क्योंकि यह insulator है"],
+      "correctIndex": 1,
+      "explanation": "सही: brushes carbon/graphite से बनते हैं क्योंकि यह self-lubricating होता है, commutator की घिसाई कम करता है और अच्छा electrical sliding contact देता है। Copper/steel commutator को घिस देंगे; rubber insulator है इसलिए current नहीं ले जा सकता।"
+    },
+    {
+      "id": "u14_dc_motors_q30",
+      "question": "एक DC motor की rated speed 1000 rpm है और no-load speed 1050 rpm है। इसका speed regulation कितना है?",
+      "options": ["5%", "4.76%", "10%", "50%"],
+      "correctIndex": 0,
+      "explanation": "सही: speed regulation = (N(no-load) − N(full-load))/N(full-load) × 100 = (1050 − 1000)/1000 × 100 = 5%। 4.76% तब आता अगर no-load को हर में रखते (गलत formula); 10% और 50% गलत हैं।"
+    }
+  ]
+}

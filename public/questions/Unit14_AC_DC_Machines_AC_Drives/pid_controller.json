@@ -1,0 +1,368 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "pid_controller",
+  "topicName": "PID Controller (P, I, D Actions) & Tuning Basics",
+  "questions": [
+    {
+      "id": "u14_pid_controller_q1",
+      "question": "PID controller में 'error' शब्द का क्या अर्थ है?",
+      "options": [
+        "Desired setpoint (SP) और actual process variable (PV/feedback) के बीच का अंतर",
+        "Controller की internal hardware fault",
+        "Motor की rated current",
+        "Sensor की calibration date"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Error (e) = Setpoint (SP) − Process Variable (PV); यही signal PID controller को बताता है कि actual value desired value से कितनी दूर है, और इसी के आधार पर controller output adjust करता है। बाकी विकल्प error की परिभाषा से असंबंधित हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q2",
+      "question": "Proportional (P) action में controller output, error के साथ किस प्रकार संबंधित होता है?",
+      "options": [
+        "Output, error के time-integral के अनुपात में होता है",
+        "Output, वर्तमान error के सीधे अनुपात (proportional) में होता है: Output = Kp × e(t)",
+        "Output, error के rate of change के अनुपात में होता है",
+        "Output, error से पूर्णतः स्वतंत्र होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Proportional action में controller output वर्तमान instant के error के सीधे अनुपात में होता है, Output = Kp × e(t), जहाँ Kp proportional gain है। Time-integral वाला व्यवहार Integral action का है और rate of change वाला Derivative action का है।"
+    },
+    {
+      "id": "u14_pid_controller_q3",
+      "question": "यदि केवल Proportional (P) controller का उपयोग किया जाए (कोई I या D action नहीं), तो एक प्रमुख सीमा क्या रहती है?",
+      "options": [
+        "Response बहुत धीमी हो जाती है और कभी steady-state तक नहीं पहुँचती",
+        "System हमेशा unstable हो जाता है",
+        "एक स्थायी 'steady-state error' (offset) रह जाता है, विशेषकर load disturbance की उपस्थिति में",
+        "Output हमेशा शून्य रहता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: शुद्ध P controller में output बनाने के लिए कुछ न कुछ error बचा रहना आवश्यक होता है (क्योंकि Output = Kp × e), इसलिए एक स्थायी offset/steady-state error रह जाता है जिसे P gain बढ़ाकर कम तो किया जा सकता है पर पूरी तरह समाप्त नहीं किया जा सकता। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q4",
+      "question": "Integral (I) action, PID controller में मुख्यतः किस समस्या को दूर करने के लिए जोड़ी जाती है?",
+      "options": [
+        "System के response time को धीमा करने के लिए",
+        "Overshoot को हमेशा बढ़ाने के लिए",
+        "High frequency noise को amplify करने के लिए",
+        "Steady-state error (offset) को समय के साथ जमा हुए error को integrate करके धीरे-धीरे शून्य करने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Integral action, error को समय के साथ integrate (संचित) करती है — जब तक error शून्य नहीं होता तब तक integral term बढ़ता रहता है और output को इतना बदलता है कि अंततः steady-state error शून्य हो जाए। यह response को जानबूझकर धीमा करने, noise amplify करने या हमेशा overshoot बढ़ाने के लिए नहीं है।"
+    },
+    {
+      "id": "u14_pid_controller_q5",
+      "question": "Integral gain (Ki) को बहुत अधिक रखने पर system के response पर क्या प्रभाव पड़ सकता है?",
+      "options": [
+        "Overshoot व oscillation बढ़ सकता है, और system unstable होने की संभावना बढ़ जाती है (integral windup सहित)",
+        "Response और अधिक stable व smooth हो जाएगा",
+        "Steady-state error हमेशा के लिए स्थिर हो जाएगा",
+        "System की speed of response पूरी तरह शून्य हो जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: बहुत अधिक Ki से controller error को बहुत आक्रामक रूप से integrate करता है, जिससे overshoot, oscillation बढ़ जाते हैं और integral windup (output saturation में फंसना) जैसी समस्याएँ आ सकती हैं, यहाँ तक कि system अस्थिर हो सकता है। बाकी विकल्प गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q6",
+      "question": "Derivative (D) action, error के किस पहलू पर प्रतिक्रिया देती है?",
+      "options": [
+        "Error के absolute (वर्तमान) मान पर",
+        "Error के परिवर्तन की दर (rate of change, de/dt) पर, जिससे यह भविष्य की प्रवृत्ति का अनुमान लगाकर तुरंत प्रतिक्रिया देती है",
+        "Error के इतिहास के योग (cumulative sum) पर",
+        "Derivative action का error से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Derivative action, Output = Kd × de/dt के अनुसार error के rate of change पर आधारित होती है, जिससे यह error में तेजी से हो रहे बदलाव को पहले ही भांपकर तुरंत corrective action देती है (predictive/anticipatory action)। Absolute value पर P action और cumulative sum पर I action प्रतिक्रिया देती है।"
+    },
+    {
+      "id": "u14_pid_controller_q7",
+      "question": "Derivative (D) action जोड़ने का मुख्य लाभ क्या है?",
+      "options": [
+        "यह steady-state error को पूरी तरह समाप्त कर देती है",
+        "यह हमेशा response को तेज करके अधिक oscillation पैदा करती है",
+        "यह system के transient response को सुधारती है — overshoot व settling time घटाकर response को अधिक damped/stable बनाती है",
+        "यह controller की cost को कम करती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Derivative action error में तेजी से हो रहे बदलाव को पहले ही sense कर brake जैसा प्रभाव डालती है, जिससे overshoot व settling time कम होते हैं और response अधिक stable/damped बनता है। Steady-state error हटाना Integral action का कार्य है, यह जानबूझकर oscillation नहीं बढ़ाती, और cost से इसका सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u14_pid_controller_q8",
+      "question": "Derivative action का एक प्रमुख नुकसान (drawback) क्या है, विशेषकर noisy feedback signal की स्थिति में?",
+      "options": [
+        "यह steady-state error बढ़ा देती है",
+        "यह overshoot को हमेशा बढ़ा देती है",
+        "यह system को हमेशा धीमा कर देती है",
+        "यह high-frequency measurement noise को amplify कर देती है, जिससे controller output में अनावश्यक तेज उतार-चढ़ाव (jitter) आ सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: चूँकि Derivative action, error के rate of change पर काम करती है, यह high-frequency noise (जो तेजी से बदलता है) को भी amplify कर देती है, जिससे actuator/controller output में अवांछित उतार-चढ़ाव हो सकता है; इसलिए व्यवहार में इसके साथ एक low-pass filter प्रयोग किया जाता है। बाकी विकल्प इसके नुकसान को सही ढंग से नहीं बताते।"
+    },
+    {
+      "id": "u14_pid_controller_q9",
+      "question": "PID controller का पूर्ण output समीकरण किस प्रकार लिखा जाता है (Kp, Ki, Kd तीनों gains सहित)?",
+      "options": [
+        "Output = Kp × e(t) + Ki × ∫e(t)dt + Kd × de(t)/dt",
+        "Output = Kp × e(t) केवल",
+        "Output = Kd × de(t)/dt केवल",
+        "Output = Ki × e(t)²"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: पूर्ण PID controller output तीनों actions का योग होता है — Proportional term (Kp×e), Integral term (Ki×∫e dt) और Derivative term (Kd×de/dt); इनका combined effect ही PID control कहलाता है। बाकी विकल्प केवल आंशिक या गलत समीकरण दर्शाते हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q10",
+      "question": "एक AC drive में PID controller का उपयोग किस प्रकार के application के लिए किया जाता है (जैसे pressure/temperature/flow control)?",
+      "options": [
+        "केवल motor की rated voltage set करने के लिए",
+        "Process variable (जैसे pipeline pressure, tank level, या temperature) की feedback लेकर उसे desired setpoint पर बनाए रखने हेतु motor की speed/frequency को automatically adjust करने के लिए",
+        "Rectifier की firing angle को manually set करने के लिए",
+        "केवल motor की direction बदलने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: VFD में built-in PID controller किसी process variable (pressure, level, flow, temperature आदि) की feedback को setpoint से तुलना कर error के अनुसार motor की speed/frequency adjust करता है, जिससे बिना बाहरी PLC के भी closed-loop process control (जैसे constant pressure pumping) संभव होता है। बाकी विकल्प इसके प्रयोग से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pid_controller_q11",
+      "question": "PID controller में Proportional gain (Kp) बहुत अधिक (high) रखने पर क्या होगा?",
+      "options": [
+        "Response बहुत धीमी और sluggish हो जाएगी",
+        "Steady-state error automatically शून्य हो जाएगा",
+        "System का response तेज होगा परंतु overshoot व oscillation बढ़ सकता है, और अत्यधिक high Kp पर system unstable भी हो सकता है",
+        "Derivative action स्वतः bypass हो जाएगी"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Kp बढ़ाने से response तेज होता है (rise time घटता है) परंतु बहुत अधिक Kp पर overshoot व oscillation बढ़ जाते हैं, और अत्यधिक high gain पर system instability की ओर भी जा सकता है। यह steady-state error को पूरी तरह शून्य नहीं करता (वह I action का काम है) और D action को bypass नहीं करता।"
+    },
+    {
+      "id": "u14_pid_controller_q12",
+      "question": "PID tuning में 'Ziegler-Nichols' विधि किस approach पर आधारित है?",
+      "options": [
+        "यह पूरी तरह random trial-and-error पर आधारित है, कोई systematic steps नहीं",
+        "यह केवल simulation software द्वारा ही संभव है, manual tuning असंभव है",
+        "यह केवल Integral gain को manually adjust करने पर आधारित है",
+        "पहले केवल P gain बढ़ाकर 'ultimate gain (Ku)' और उस पर होने वाले sustained oscillation की 'ultimate period (Pu)' निकाली जाती है, फिर इनसे Kp, Ki, Kd के मान standard formulae से calculate किए जाते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Ziegler-Nichols (closed-loop) method में केवल Proportional gain को तब तक बढ़ाया जाता है जब तक system में sustained (constant amplitude) oscillation न शुरू हो जाए; उस gain को ultimate gain (Ku) तथा oscillation के period को ultimate period (Pu) कहते हैं, फिर मानक formula से Kp, Ki, Kd निकाले जाते हैं। बाकी विकल्प इस विधि को गलत ढंग से बताते हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q13",
+      "question": "PID tuning process में यदि system response में बहुत अधिक overshoot और oscillation दिखाई दे, तो सामान्यतः tuning में क्या समायोजन किया जाना चाहिए?",
+      "options": [
+        "Proportional gain (Kp) और/या Integral gain (Ki) को कम करना, या Derivative gain (Kd) को उचित मात्रा में बढ़ाना",
+        "Proportional gain को अधिकतम कर देना",
+        "Integral gain को अनंत (infinite) कर देना",
+        "सभी gains को शून्य कर देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: अत्यधिक overshoot/oscillation आमतौर पर बहुत अधिक Kp या Ki के कारण होता है; इन्हें उचित मात्रा में घटाना या Kd को थोड़ा बढ़ाकर damping प्रदान करना response को stable बनाता है। Gain को अधिकतम या अनंत करना समस्या को और बढ़ाएगा, और सभी gains शून्य करने से control ही समाप्त हो जाएगा।"
+    },
+    {
+      "id": "u14_pid_controller_q14",
+      "question": "यदि PID controlled system में response बहुत धीमी (sluggish) हो और settling में बहुत समय लग रहा हो, तो सामान्यतः क्या करना उचित होगा?",
+      "options": [
+        "Proportional gain (Kp) को घटाना",
+        "Proportional gain (Kp) और/या Integral gain (Ki) को थोड़ा बढ़ाना ताकि response तेज हो, साथ ही stability बनाए रखने के लिए overshoot को monitor करना",
+        "Derivative gain को अनंत करना",
+        "Setpoint को शून्य कर देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: धीमी response को तेज करने के लिए सामान्यतः Kp या Ki को सावधानीपूर्वक बढ़ाया जाता है ताकि system तेजी से setpoint की ओर पहुँचे, परंतु इसके साथ overshoot व stability पर नजर रखनी चाहिए क्योंकि अत्यधिक बढ़ाने से oscillation हो सकता है। Kp घटाना response को और धीमा करेगा, और बाकी विकल्प अव्यावहारिक हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q15",
+      "question": "'Integral windup' (reset windup) की समस्या कब उत्पन्न होती है?",
+      "options": [
+        "जब Derivative gain शून्य हो",
+        "जब Proportional gain बहुत कम हो",
+        "जब actuator (जैसे motor/valve) अपनी physical सीमा (saturation) पर पहुँच जाए परंतु error अभी भी उपस्थित हो, जिससे integral term असीमित रूप से बढ़ता रहता है और बाद में overshoot/धीमी recovery होती है",
+        "जब setpoint कभी नहीं बदला जाए"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: जब controller output actuator की physical limit (जैसे 100% speed या valve पूर्ण खुला) पर saturate हो जाता है परंतु error अभी भी मौजूद रहता है, तो integral term लगातार बढ़ता रहता है (windup); जब error की दिशा पलटती है तो output को वापस सामान्य range में आने में देरी होती है, जिससे बड़ा overshoot होता है। इसे रोकने के लिए 'anti-windup' logic प्रयोग होती है। बाकी विकल्प इस समस्या के कारण को गलत बताते हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q16",
+      "question": "'Anti-windup' feature, PID controller में क्या कार्य करता है?",
+      "options": [
+        "यह Proportional gain को permanently शून्य कर देता है",
+        "यह setpoint को automatically बदल देता है",
+        "यह Derivative action को हमेशा activate रखता है",
+        "जब controller output saturation में हो, तब integral term के आगे संचय (accumulation) को रोकता/सीमित करता है ताकि saturation से बाहर आने पर अनावश्यक overshoot न हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Anti-windup logic यह sense करती है कि controller output actuator limit पर saturate हो चुका है, और ऐसी स्थिति में integral term के आगे बढ़ने को रोक देती है, जिससे saturation खत्म होने पर controller तुरंत सामान्य response दे सके, न कि पहले जमा हुए बड़े integral value के कारण overshoot करे। बाकी विकल्प इसके कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_pid_controller_q17",
+      "question": "PID control में 'setpoint' (SP) शब्द का अर्थ क्या है?",
+      "options": [
+        "Desired/target value जिसे process variable को प्राप्त करना है (जैसे desired pressure = 5 bar)",
+        "Sensor का actual measured value",
+        "Controller की internal clock frequency",
+        "Motor की rated current"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Setpoint वह desired/target value है जिसे process variable (PV) को प्राप्त करना है — जैसे desired tank pressure 5 bar; controller SP व actual PV के बीच के error को कम करने का प्रयास करता है। Sensor का measured value PV कहलाता है, न कि SP।"
+    },
+    {
+      "id": "u14_pid_controller_q18",
+      "question": "'Process Variable (PV)' और 'Manipulated Variable (MV)' में क्या अंतर है?",
+      "options": [
+        "दोनों एक ही चीज़ हैं",
+        "PV वह actual measured quantity है जिसे control करना है (जैसे speed/pressure), जबकि MV वह quantity है जिसे controller adjust करता है ताकि PV को setpoint पर लाया जा सके (जैसे motor की frequency/voltage)",
+        "PV केवल DC signals होते हैं जबकि MV केवल AC signals होते हैं",
+        "MV हमेशा constant रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: PV वह controlled quantity है जिसे feedback सेंसर से मापा जाता है (जैसे actual pressure), जबकि MV वह variable है जिसे controller द्वारा वास्तव में adjust किया जाता है (जैसे VFD की output frequency) ताकि PV setpoint के करीब आए। बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q19",
+      "question": "एक temperature control application में यदि केवल P और I action का उपयोग हो (PI controller, बिना D), तो इसका सामान्य कारण क्या हो सकता है?",
+      "options": [
+        "क्योंकि Derivative action हमेशा अनिवार्य होती है",
+        "क्योंकि PI controller में steady-state error कभी दूर नहीं होता",
+        "क्योंकि temperature जैसे slow-changing, noisy process signals में Derivative action noise को amplify कर सकती है और अतिरिक्त लाभ के बिना अस्थिरता ला सकती है, इसलिए इसे अक्सर छोड़ दिया जाता है",
+        "क्योंकि P और I actions साथ में काम ही नहीं कर सकते"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: कई slow व noisy processes (जैसे temperature) में Derivative action noise के प्रति संवेदनशील होकर अनावश्यक control action पैदा कर सकती है; इसलिए ऐसे applications में अक्सर सरल व robust PI controller ही पर्याप्त होता है। D action अनिवार्य नहीं है, PI से steady-state error दूर होता है (I action के कारण), और P व I साथ काम करते हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q20",
+      "question": "PID controller के 'proportional band (PB)' और 'proportional gain (Kp)' में क्या संबंध होता है?",
+      "options": [
+        "दोनों बिल्कुल असंबंधित parameters हैं",
+        "PB केवल Derivative action से संबंधित है",
+        "PB हमेशा Kp के बराबर होता है",
+        "Proportional band, gain का व्युत्क्रम (inverse) अनुपाती होता है — PB बढ़ाने पर gain कम होता है और PB घटाने पर gain बढ़ता है (PB% = 100/Kp के रूप में संबंधित)"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Proportional band (जो % में व्यक्त किया जाता है) proportional gain का व्युत्क्रम-अनुपाती होता है (approximately PB% = 100/Kp); PB बढ़ाने का मतलब है gain कम करना (कम sensitive response), और PB घटाने का मतलब है gain बढ़ाना (अधिक sensitive response)। बाकी विकल्प गलत संबंध बताते हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q21",
+      "question": "VFD में built-in PID controller का उपयोग करके 'constant pressure pumping system' कैसे कार्य करता है?",
+      "options": [
+        "Pressure sensor से feedback लेकर, actual pressure और desired setpoint pressure के अंतर के अनुसार VFD मोटर की frequency को घटाता-बढ़ाता है ताकि discharge pressure लगभग constant बना रहे चाहे demand (flow) बदलती रहे",
+        "यह हमेशा motor को fixed 50 Hz पर चलाता रहता है",
+        "यह केवल valve को manually operate करता है",
+        "यह pressure sensor का उपयोग बिल्कुल नहीं करता"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Constant pressure pumping में एक pressure transmitter feedback देता है; VFD का internal PID controller actual pressure की तुलना setpoint से कर error के अनुसार motor frequency adjust करता है — demand बढ़ने पर frequency बढ़ती है और demand घटने पर घटती है, जिससे discharge pressure setpoint के आसपास स्थिर रहती है। बाकी विकल्प इसके कार्यविधि को गलत बताते हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q22",
+      "question": "PID tuning के दौरान 'trial and error' (manual tuning) की सामान्य क्रमबद्ध विधि क्या होती है?",
+      "options": [
+        "पहले Kd को अधिकतम कर देना, फिर Kp व Ki को कभी न बदलना",
+        "पहले केवल Kp बढ़ाकर उचित response तक लाना, फिर steady-state error हटाने के लिए Ki जोड़ना, और अंत में overshoot/oscillation कम करने के लिए आवश्यकतानुसार Kd जोड़ना",
+        "तीनों gains को यादृच्छिक (random) रूप से एक साथ बदलते रहना",
+        "पहले Ki को शून्य से अनंत तक सीधे बढ़ा देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: सामान्य manual tuning approach में पहले केवल Kp को समायोजित कर उचित speed of response प्राप्त की जाती है, फिर बचे हुए steady-state error को दूर करने के लिए Ki जोड़ी जाती है, और यदि overshoot/oscillation अधिक हो तो नियंत्रित मात्रा में Kd जोड़ी जाती है। बाकी विकल्प व्यवस्थित tuning approach नहीं हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q23",
+      "question": "यदि PID controlled speed loop में 'reverse acting' और 'direct acting' control का चयन गलत हो जाए (जैसे heating के बजाय cooling application में), तो क्या समस्या होगी?",
+      "options": [
+        "कोई फर्क नहीं पड़ेगा, controller स्वतः सही कर लेगा",
+        "System हमेशा तुरंत setpoint पर स्थिर हो जाएगा",
+        "Controller error की दिशा को गलत समझकर output को उल्टी दिशा में बदलेगा, जिससे error बढ़ता जाएगा और system अस्थिर/अनियंत्रित हो सकता है (positive feedback जैसा प्रभाव)",
+        "यह केवल Derivative action को प्रभावित करेगा, बाकी ठीक रहेगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: 'Direct acting' और 'reverse acting' का गलत selection करने पर controller output error को कम करने के बजाय बढ़ाने की दिशा में काम करने लगता है (negative feedback की जगह positive feedback जैसा व्यवहार), जिससे system अस्थिर हो सकता है या error लगातार बढ़ सकता है। यह स्वतः ठीक नहीं होता और सिर्फ D action को प्रभावित नहीं करता।"
+    },
+    {
+      "id": "u14_pid_controller_q24",
+      "question": "PID controller के output signal को actuator (जैसे VFD के speed reference) तक पहुँचाने के लिए सामान्यतः किस प्रकार का signal प्रयोग होता है?",
+      "options": [
+        "केवल mechanical signal",
+        "केवल light signal (optical)",
+        "केवल audio signal",
+        "Standard analog signal जैसे 4-20 mA या 0-10V, या digital communication protocol (जैसे Modbus)"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Industrial PID controller अपना output सामान्यतः standard analog current/voltage signal (4-20 mA, 0-10V) या digital fieldbus/communication protocol (जैसे Modbus RTU) के रूप में VFD के speed reference input को भेजता है। Mechanical, audio या optical signal इस उद्देश्य के लिए प्रयोग नहीं होते।"
+    },
+    {
+      "id": "u14_pid_controller_q25",
+      "question": "PID control में 'dead band' (dead zone) parameter सेट करने का क्या उद्देश्य है?",
+      "options": [
+        "एक छोटी error range के भीतर controller को कोई action न लेने देना, ताकि छोटे sensor noise/fluctuations के कारण actuator में बार-बार अनावश्यक hunting/wear न हो",
+        "System को पूर्णतः बंद कर देना",
+        "Proportional gain को हमेशा शून्य करना",
+        "Setpoint को स्वतः बदलते रहना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Dead band एक छोटी error range निर्धारित करता है जिसके भीतर controller कोई corrective action नहीं लेता, जिससे measurement noise या मामूली fluctuation के कारण actuator (valve/motor) में बार-बार अनावश्यक adjustment (hunting) व mechanical wear कम होता है। यह system को बंद नहीं करता और gain को शून्य नहीं करता।"
+    },
+    {
+      "id": "u14_pid_controller_q26",
+      "question": "PID tuning में 'settling time' शब्द किसे दर्शाता है?",
+      "options": [
+        "वह समय जब controller को power दी जाती है",
+        "वह समय जिसमें response, setpoint के एक निश्चित tolerance band (जैसे ±2% या ±5%) के भीतर स्थायी रूप से आ जाए",
+        "वह समय जब system अधिकतम overshoot पर पहुँचता है",
+        "वह समय जिसमें sensor की calibration होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Settling time वह समय है जिसमें system response किसी परिवर्तन (जैसे setpoint step) के बाद setpoint के एक निर्धारित tolerance band के भीतर स्थायी रूप से (बिना बड़े oscillation के) आ जाता है। Peak overshoot का समय अलग parameter (peak time) है, और बाकी विकल्प settling time से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q27",
+      "question": "एक conveyor speed control system में यदि load अचानक बढ़ जाए (disturbance) और PID controller ठीक से tuned हो, तो अपेक्षित response क्या होगी?",
+      "options": [
+        "Speed permanently setpoint से नीचे रहेगी, कभी वापस नहीं आएगी",
+        "System तुरंत बंद हो जाएगा",
+        "Speed थोड़ी देर के लिए setpoint से विचलित होगी, परंतु PID action (विशेषकर Integral) के कारण कुछ समय में वापस setpoint के करीब आ जाएगी",
+        "Setpoint स्वतः बदल जाएगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: अच्छी tuned PID system में load disturbance के कारण अस्थायी रूप से error उत्पन्न होता है, परंतु Proportional action तुरंत correction देती है और Integral action धीरे-धीरे बचे हुए steady-state error को समाप्त कर speed को वापस setpoint के करीब ले आती है। स्थायी विचलन, तुरंत बंद होना या setpoint का स्वतः बदलना गलत परिणाम हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q28",
+      "question": "PID controller में 'sample time' (scan time/loop update rate) का क्या महत्व है?",
+      "options": [
+        "इसका PID control performance से कोई लेना-देना नहीं है",
+        "यह हमेशा 24 घंटे होता है",
+        "यह केवल motor की rated power निर्धारित करता है",
+        "यह वह interval है जिस पर controller feedback को पढ़कर error की गणना कर नया output update करता है; बहुत धीमा sample time तेज़ी से बदलते process के लिए अपर्याप्त control दे सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Sample time वह अंतराल है जिस पर controller loop चलता है (feedback पढ़ना, error calculate करना, output update करना); यदि यह process की dynamics के सापेक्ष बहुत धीमा हो तो controller तेजी से बदलते disturbance को समय पर पकड़ नहीं पाएगा और control performance खराब होगा। बाकी विकल्प इसके महत्व से असंबंधित हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q29",
+      "question": "PID control में 'Bumpless transfer' (auto/manual mode switch) feature का उद्देश्य क्या है?",
+      "options": [
+        "Manual से auto mode (या इसके विपरीत) में switch करते समय controller output में अचानक बड़ा उछाल (bump/jerk) न आने देना, ताकि transition smooth रहे",
+        "Motor को permanently बंद करना",
+        "Sensor की calibration स्वतः बदलना",
+        "Setpoint को स्थायी रूप से लॉक करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Bumpless transfer feature यह सुनिश्चित करता है कि control mode बदलते समय (manual से auto या auto से manual) controller output अचानक बड़ा परिवर्तन न दिखाए, बल्कि transition smooth व सुरक्षित रहे, जिससे process पर झटका न लगे। बाकी विकल्प इसके उद्देश्य को गलत बताते हैं।"
+    },
+    {
+      "id": "u14_pid_controller_q30",
+      "question": "VFD driven fan/pump system में PID controller का उपयोग करते समय, यदि feedback sensor (जैसे pressure transmitter) fail हो जाए, तो एक अच्छी design practice क्या होनी चाहिए?",
+      "options": [
+        "Controller को बिना किसी protection के अनियंत्रित रूप से maximum speed पर चलने देना",
+        "Sensor fail होने की स्थिति (जैसे signal 4 mA से नीचे या out-of-range) को detect कर alarm देना और motor को सुरक्षित पूर्वनिर्धारित speed पर या safe stop पर ले जाना",
+        "Setpoint को स्वतः अत्यधिक बढ़ा देना",
+        "इस स्थिति को नजरअंदाज करना क्योंकि यह महत्वपूर्ण नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Feedback sensor fail होने पर (जैसे 4-20 mA signal टूटना/out-of-range होना) एक अच्छी design में यह fault detect होकर alarm generate करना चाहिए और motor को safe pre-defined speed पर रखना या सुरक्षित रूप से रोकना चाहिए ताकि गलत feedback के आधार पर PID अनियंत्रित action न ले। अनियंत्रित maximum speed या इसे नजरअंदाज करना असुरक्षित practice है।"
+    }
+  ]
+}

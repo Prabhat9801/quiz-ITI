@@ -1,0 +1,132 @@
+SYLLABUS FOR INSTRUCTOR
+(ELECTRONIC MECHANIC/MCHANIC RADIO& TV)
+
+
+Trade Concerned Syllabus:
+
+Unit1: Analog and Digital Electronics circuits
+Introduction to transistors, working principle of transistors, transistors CB, CE, CC amplifiers, RC coupled amplifiers, Darlington amplifiers. Op amp and its applications- inverting, non-inverting summing amplifiers, zero crossing detector, instrumentation amplifiers, RC and Wein-bridge oscillator, R-2R ladder DAC, weighted DAC using Op-amp. Astable and monostable multi-vibrators using 555 IC Logic gates, adder circuits, Flip flops, decade counter, multiplexer and demultiplexer, shift registers, tri-state buffers.
+
+Unit2: Microcontroller (8051) & PIC MICROCONTROLLERS
+Differentiate microcontroller with microprocessor. Introduction to 8051 Microcontroller, architecture, pin details, the bus system and I/O ports. Different variants of 8051 & their resources. Register banks & their functioning, SFRs & their configuration for different applications. Function of different ICs used in the Microcontroller Kit. Interfacing of memory to the microcontroller. Internal hardware resources of microcontroller and utilization of on chip resources. Instruction set, addressing modes. Availability of assembly software & complier for 8051. Application of microcontroller in domestic, consumer & industries. Comparative study of 8051 with 8052.
+PIC-Microcontroller: Introduction to PIC microcontroller. PIC16 F74 microcontroller outline. CISC, RISC and applications. Study of 16F/18F series of PIC Family of microcontrollers. Difference between microcontrollers. Special features of PIC like OSC options, power on reset, power up timer, watch dog timer, brownout reset, low voltage programming. Memory organization of PIC (data memory, flash memory and return address stack). Interrupt vectors and reset vectors. I/O ports and their controlled registers. Parallel slave port mode and its importance. Timers/counters in different modes. Timer as “TI clocks”. Timers for measuring Pulse widths and frequencies, timers as PWM outputs. Timer for capture and compare operations of watch dog timer concept. Peripheral interrupts and their applications. ON CHIP peripheral resources like comparators, ADC, AUSART, I2C and SPI interfaces. PICs instruction set. I/O ports and their configuration. Serial communication with USART/I2C/SPI. PIC C-programming basics.
+
+Unit3: Sensors, Transducers and Applications
+Basics of passive and active transducers. Role, selection and characteristics of transducer. Standard outputs- 3-15 PSI, 4-20 mA and 1-5 V difference and advantages.
+Resistive transducer: Strain gauges – principle, gauge factor, types of strain, disadvantages, applications. Load cell - uses, working of strain gauge load cell, applications. Working principle of RTD, advantages and disadvantages. Thermistors – salient features –operating range, composition, advantages and disadvantages. Thermocouples – basic principle – commonly used combinations, operating range, advantages and disadvantages.
+Inductive Transducer: Principle of operation of inductive transducers, advantages and disadvantages, applications. Principle of operation of LVDT- its advantages and disadvantages, applications.
+Capacitive transducer: Principle and operation of capacitive transducers, advantages and disadvantages, applications.
+Proximity sensors: Applications, working principles of limit switch, capacitive and inductive, IR proximity sensors.
+
+Unit4: UPS, Invertors, SMPS
+Concept and block diagram of manual & automatic and servo voltage stabilizer. o/p voltage adjustment, voltage off systems, study of different types of relays used in stabilizers, study of electronic circuit commonly using buck and boost concept. Block Diagram of Switch mode power supplies (SMPS) and their working principles. Various types of chopper circuits- step-up, step down, inverting types. Introduction to DC-DC Converters. The principle of converting DC- DC, block diagrams and their pin outs. Applications of DC-DC converters. ICs used for generation, power rating and change over period of inverter. Block diagram of inverter. Installation of inverters. Protection circuits used in inverters- battery level, over load, over charging etc. Principle and working of three phase inverter circuits. Installation of single phase & three phase inverters. Concept of UPS, Difference between Inverters and UPS. Basic block diagram of UPS & operation principle of rectifier, battery, inverter, static transfer switch. Types of UPS: OFF line UPS/ON line UPS, line interactive UPS & their comparisons. UPS specification, load Power factor & types of indications and protections. UPS circuit description & working of control circuits, power circuits, alarm circuits, & indicator circuits.
+
+
+Unit5: SMD Soldering and De-soldering
+Introduction to surface mount technology – advantages Surface Mount components and packages, Introduction to SMD assemblies. Soldering of SM assemblies – Reflow soldering. SMD package sizes (popular codes, sizes), solder paste (flux), Soldering of SM assemblies – Reflow soldering. SMD package sizes (popular codes, sizes), SOT (small outline transistor), power rating etc) of- resistors, capacitors, SOD (small outline diodes), MELF (metal electrode leadless face), SOT (small outline transistor). Tips for selection of hardware, Inspection of SM.
+Rework and Repair of Printed Circuit board assemblies: Introduction to rework and repair concepts. Types of conformal coating and its removal methods. Rework of through hole and surface mounted soldered joints. Repair of damaged track Repair of damaged pad Repair of Plated through hole Repair of solder mask, Soldering /de-soldering of identification of Programmable Gate Array (PGA) packages. Soldering / De-soldering of above PGA components. Cold/Continuity check of PCBs. Identification of lose /dry solders, broken tracks on printed wiring assemblies.
+
+Unit6: Cable harnessing & Connectors
+Cable signal diagram conventions. Classification of electronic cables as per the application w.r.t. insulation, gauge, current capacity, flexibility etc. Capacities of insulated conductors, different types of connector & their terminations to the cables. Male / Female type DB connectors, Ethernet 10 Base cross over cables and pin out assignments, UTP and STP, SCTP Cables, Cable trays.
+Different types of connectors: Servo 0.1 connectors, FTP, RCA, BNC, HDMI. Audio/video connectors like XLR, RCA (PHONO),6.3mm PHONO,3.5/2.5mm PHONO, BANTAM, SPEAKON, DIN, mini DIN, RF connectors, USB, Fire wire, EDGE/ATS-SATA Connectors, VGA, DVI connectors, MIDI etc. PIN OUTS Of-Serial port (RS 232 etc), parallel port (25 pin & 36 pin), Ethernet port (EIA/TIA 568A/B), Cross pin concept), Register Jack (RJ11, RJ14, RJ25, RJ48C/X), VGA, S-video, PDMI, MIDI etc.
+
+Unit7: Computer Hardware, OS, MS office Networking
+Basic blocks of a computer, concept of Hardware and software, I/O devices, keyboard, types of mouse and their working, Different types of printers, their function and inter-connection and their advantages. Function of HDD, DVD. Various ports in the computer. POST Booting concept. Windows O.S. Starting windows and its operation, file management using explorer. Display & sound properties, screen savers, font management, installation of program, setting and using of control panel, application of accessories, various IT tools and applications, Components of desktop.
+MS word: Menu bar, standard tool bar, saving, copying, deleting & retrieving files, page setting, editing, formatting, advance features i.e. highlighting, cut & paste, subscript & superscript drawing features, mail merging, Hyperlink, tables and borders, printing of document etc.
+Excel: Worksheet basics, data entry and formulae. Moving data in worksheet using tool bars and menu bars, Formatting and calculations, printing worksheet, creating multiple work sheets, creating charts, changing chart types, adding titles, legends and gridlines, colouring charts, printing charts, placing charts in a word file.
+Introduction to power point: Basics of preparing slides, different design aspects of slides, animation with slides etc. Concept of Internet: Browsers, Websites, search engines, email, chatting and messenger service. Downloading Data and program files etc.
+Computer Networking: Network features, Network topologies, protocols- TCP/IP, UDP, FTP, models, types, network components, network medias, Specification and standards, types of cables, UTP, STP, Coaxial cables, Network components like hub, Ethernet switch, router, NIC Cards, connectors, media and firewall. Difference between PC & Server, Operating system: NOS-features, types etc. identify physical topology of a network and members of the network. Future trends in laptop technology and tablets, phablet including their communication with Wi-Fi/Bluetooth technology, cloud computing.
+
+Unit8: Digital panel Meter
+Different types of seven segment displays, decoders and driver ICs for them. Concept of multiplexing and its advantages. Block diagrams of 7106 and 7107 and their configuration for different measurements. Use of DPM (Digital Panel Meter) with seven segment displays to display different voltage & current signals. Principles of working of LCD. Different sizes of LCDs. Decoder/Driver ICs used with LCDs and their pin-out diagrams. Matrix display, advantages and disadvantages over 7 segments, block diagram of driving circuits. Use of DPM (Digital Panel Meter) with LCD to display different voltage & current signals.
+
+Unit9: Solar Power Renewable Energy Systems
+Need for renewable energy sources, Solar energy as a renewable resource. Materials used for solar cells. Principle of conversion of solar light into electricity. Basics of photovoltaics cell. Types of solar cells. Mono crystalline and poly crystalline PV cells. Define Components like Solar cell Module, panel and Arrays. Factors that influence the output of a PV module. SPV systems and the key benefits. Difference between SPV and conventional power. Define solar charge controller or regulator and its role. Safety precautions while working with solar systems.
+
+Unit10: LED Lights, LED/LCD TV and CCTV
+Types of LED panels used in various lighting applications. Specifications of LED lamps. Stacking of LEDs. Driving of LED stacks. Types of LED drivers and selecting procedure.
+Difference between a conventional CTV with LCD & LED plasma TVs. Principle of LCD and LED TV and function of its different section. Basic principle and working of 3D TV. Need of backlight, and difference between CCFL, HCFL, Backlight LED, Edge LED IPS panels and their features. Different types of interfaces like HDMI, USB, RGB etc with latest TVs. CCTV system and its working principle. Applications of various external decoders like set top box, digital multimedia player, smart box (web player), BD/DVD Player.
+TV Remote Control: Types, parts and functions, IR Code transmitter and IR Code Receiver, Working principle, operation of remote control. Difference between IR and RF Remote control. Different adjustments, general faults in Remote Control. Introduction to video wall displays.
+
+Unit11: Cell phones
+Introduction to mobile communication, concept cell site, hand off, frequency reuse, block diagram and working of cell phones, cell phone features, GSM and CDMA technology. Use IEMI number to trace lost misplaced mobile phone.
+
+Unit12: Domestic appliances, washing machine, microwave oven, purifier, immersion heater
+Microwave oven: Different types of ovens, study the various functions of Oven, Block diagram of microwave oven. Electrical wiring diagram of microwave oven. Microwave generation system-circuit, description & working, working of Power supply.
+Washing M/c: different types of machines, washing techniques, (Block diagram) parts of manual, semi-automatic and fully automatic machines, basic working principle of manual, semi-automatic and fully automatic machines. Study the working of motors, different types of timers, power supply circuits.
+Vacuum cleaner: working principle, main parts of Vacuum cleaner, study of different features of the machine, study & working of motor used, electronic circuit, power supply.
+Various parts & functions of Mixer/Grinder, speed control circuit & auto over load protector. Principle of electric iron: parts of steam iron, thermostat heat controls.
+Working principal of RO and UV: type of water purifiers. Different components of water purifier, consumables required, most frequently occurring faults and their remedial procedures referring to the manual.
+Principal of Immersion heater: parts of immersion heater, Insulation in immersion heater.
+Working principal of Induction cook top, study of different features of machine. Types of induction tubes, study of different component of induction cook top, Fault identification, Heat sinking in induction cook top.
+
+Unit13: PLC
+Evolution of control technology. Advantages of PLCs. Modular architecture of PLCs, concept of input and output modules (analog & digital), rack, chassis etc. working principle of PLCs. Difference between small, micro, and RACK PLCs. Selection of PLC based on IOs, memory, clock speed, power supply etc. Various modules and addressing Wiring of field devices to various modules, interpretation of indications on CPU and other modules. Specification of PLC Modules. Implementation of relays, timers and counters using PLCs. Difference between PLC programs-ladder logic, functional block diagram, instructional set etc. Small example programs using ladder PLC control and display using HMI and its configuration.
+
+Unit14: Electrical control of AC/DC machines
+Fundamentals of AC single & 3 phase Induction motors, synchronous speed, slip, rotor frequency, torque – speed characteristics, Starters used for Induction motors, speed control of Induction motors. Types of motors: Advantages & Disadvantages among each other’s.
+DC Motors: types, working, torque speed characteristics, starting of DC Motors & change the DOR, 3 point and 4-point Starters, speed control of DC motor, Field flux control & armature current control. Brushless DC Motors. Advantages of stepper motor.
+Introduction to EMI, EMC, grounding and electrical leakages.
+
+AC Drives
+Different power electronic components for switching: MOSFET, IGBT, opto- coupling devices.
+Block diagram of AC Drive (Sources of supply – Converter/Rectifier – DC Link – Inverter –Motor Load) 1 phase & 3 phase rectifier circuits, Inverter: 1 phase Inverter, 3 phase Inverter.
+
+Switching circuit, Sequence and Switching timing control, PWM Technique & Switching Devices.
+Microprocessor / Microcontroller, VFD (Variable Frequency Drive) VV VF Control – (3 phase induction motor) Speed control.
+Solar power VFD inverter for controlling the water pumps.
+Introduction of PID controller. Installation of AC Drive / Siemens Micro master Drive – MM-420/440
+Commissioning / Quick commissioning of MM –420/440 Micro – Master Drive –
+Programming (Parameterization).
+
+Unit15: Servo Motor
+Introduction to Servo Motors, Speed control of Servo motors, Introduction to Servo drives. Speed control in Industrial applications, Position control in Industrial applications, Types of Speed control modes, Speed controller, Position controller, Torque/Current controller. Feedback mechanism in Servo system. Resolvers. Incremental and absolute encoder.
+
+Unit16: Electro Pneumatics
+Adjust the pressure as per the requirements. Introduction to pneumatic power source and measure of compressed air, storage and transmission of compressed air, applications of pneumatics in the industries. Symbols of different pneumatic and electro pneumatic components. Various supply elements such as compressors, reservoir, pressure regulating valve, service unit etc. Various input elements such as push-button valves, roller lever valves, proximity switches, air barriers etc. Various pneumatic control elements, processing elements such as directional control valves, shuttle valves, non-return valves, pressure control valves, timers and sequencers etc. Function and application of solenoid valves limit switches, memory valves, pressure dependent valves and time dependent valves.
+
+General Math/Science Syllabus:
+Mathematics:
+*   Real Numbers
+*   HCF & LCM
+*   Algebra
+*   Geometry
+*   Square and Cube roots
+*   Average
+*   Problems on Ages
+*   Percentage
+*   Profit and Loss
+*   Ratio and Proportion
+*   Time and work
+*   Pipes and cisterns
+*   Time and distance
+*   Problems on trains
+*   Boats and streams
+*   Simple and Compound Interest
+*   Mensuration
+*   Trigonometry
+
+Physics:
+*   Unit & Dimension
+*   Newtons Law Motion
+*   Work, Energy & Power
+*   Gravitation
+*   Pressure
+*   Sound Wave
+*   Heat
+*   Optics
+*   Current Electricity
+
+Chemistry:
+*   Matter and its state
+*   Atomic structure
+*   Chemical bonding
+*   Periodic classification of element.
+*   Oxidation and reduction
+*   Acids, base, and salts
+*   Behaviour of gases
+*   Electrolysis
+*   Carbon and its compound
+*   Metallurgy
+*   Metals and non-metals
+*   Chemical Reactions

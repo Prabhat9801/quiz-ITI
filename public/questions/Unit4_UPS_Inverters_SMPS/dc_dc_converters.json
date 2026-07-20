@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "dc_dc_converters",
+  "topicName": "DC-DC Converters",
+  "questions": [
+    {
+      "id": "u4_dc_dc_converters_q1",
+      "question": "DC-DC converter का मुख्य कार्य क्या होता है?",
+      "options": [
+        "AC supply को सीधे DC में rectify करना",
+        "सिर्फ frequency को बदलना बिना voltage को छुए",
+        "Battery को पूरी तरह disconnect करना जब load न हो",
+        "एक DC voltage level को दूसरे DC voltage level (ज़्यादा, कम या उल्टी polarity) में efficiently convert करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "DC-DC converter का मुख्य काम एक DC voltage को efficiently दूसरे DC voltage level में बदलना है, चाहे वह level कम हो, ज़्यादा हो या उसकी polarity उल्टी हो (Option D)। Option A rectifier का काम है जो AC को DC बनाता है, Option B ग़लत है क्योंकि DC में frequency का concept लागू नहीं होता, और Option C एक protection feature हो सकता है, पर यह DC-DC conversion नहीं है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q2",
+      "question": "Buck converter में output voltage input voltage की तुलना में कैसा होता है?",
+      "options": [
+        "Output voltage हमेशा input voltage से कम होता है",
+        "Output voltage हमेशा input voltage से ज़्यादा होता है",
+        "Output voltage input के बराबर और polarity उल्टी होती है",
+        "Output voltage input से independent होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Buck converter एक step-down converter है, इसलिए इसका output voltage हमेशा input voltage से कम होता है (Option A)। Option B boost converter का व्यवहार है, Option C buck-boost (inverting) converter जैसा behavior है और यह भी सही नहीं क्योंकि magnitude बराबर नहीं होती, तथा Option D ग़लत है क्योंकि output duty cycle के through input पर depend करता है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q3",
+      "question": "Boost converter का प्रमुख उपयोग किसमें होता है?",
+      "options": [
+        "Output voltage को input से कम करने में",
+        "AC signal को filter करने में",
+        "Output voltage को input voltage से अधिक बनाने के लिए, जैसे battery-powered devices में",
+        "Frequency को measure करने में"
+      ],
+      "correctIndex": 2,
+      "explanation": "Boost converter एक step-up converter है जिसका उपयोग output voltage को input voltage से अधिक बनाने के लिए किया जाता है, जैसे low-voltage battery से higher voltage पाना (Option C)। Option A buck converter का काम है, Option B और D DC-DC conversion से संबंधित functions नहीं हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q4",
+      "question": "Buck-boost converter की सबसे खास विशेषता क्या है?",
+      "options": [
+        "यह केवल step-down operation करता है",
+        "यह output voltage को input से अधिक या कम दोनों बना सकता है, साथ ही polarity भी invert करता है",
+        "यह सिर्फ AC-DC conversion करता है",
+        "इसमें कोई switching element नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buck-boost converter output voltage को input से अधिक या कम दोनों बना सकता है और साथ ही output polarity को invert भी कर देता है, जो इसकी सबसे खास विशेषता है (Option B)। Option A केवल buck converter पर लागू होता है, Option C ग़लत है क्योंकि यह DC-DC converter है ना कि AC-DC, और Option D ग़लत है क्योंकि switching element (जैसे MOSFET) इसका core part होता है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q5",
+      "question": "Buck converter में duty cycle (D) और output voltage (Vo) का input voltage (Vin) के साथ संबंध कौन सा सही है?",
+      "options": [
+        "Vo = Vin / D",
+        "Vo = Vin × D",
+        "Vo = Vin + D",
+        "Vo = Vin - D"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buck converter में Vo = Vin × D होता है, जहाँ D, 0 और 1 के बीच duty cycle है, इसलिए Vo हमेशा Vin से कम या बराबर रहता है (Option B)। Option A boost converter के relation जैसा है, Option C और D गणितीय रूप से DC-DC converter की averaging theory से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q6",
+      "question": "Boost converter में Vo और Vin के बीच सही सूत्र (formula) कौन सा है?",
+      "options": [
+        "Vo = Vin × D",
+        "Vo = Vin × (1 - D)",
+        "Vo = Vin / (1 - D)",
+        "Vo = Vin - D"
+      ],
+      "correctIndex": 2,
+      "explanation": "Boost converter का सूत्र Vo = Vin / (1 - D) है, जिससे स्पष्ट होता है कि duty cycle बढ़ने पर output voltage input से अधिक होता जाता है (Option C)। Option A buck converter का सूत्र है, Option B और D गणितीय रूप से boost topology को सही तरीके से represent नहीं करते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q7",
+      "question": "एक Buck converter में Vin = 24V और duty cycle D = 0.4 है। Output voltage (Vo) कितना होगा?",
+      "options": [
+        "6 V",
+        "9.6 V",
+        "40 V",
+        "60 V"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vo = Vin × D = 24 × 0.4 = 9.6 V (Option B)। Option A गणना में गलत multiplication से मिलता है, Option C और D boost converter जैसी गणना का परिणाम हैं जो यहाँ लागू नहीं होती।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q8",
+      "question": "एक Boost converter में Vin = 12V और duty cycle D = 0.5 है। Output voltage (Vo) कितना होगा?",
+      "options": [
+        "6 V",
+        "18 V",
+        "24 V",
+        "12 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "Vo = Vin / (1 - D) = 12 / (1 - 0.5) = 12 / 0.5 = 24 V (Option C)। Option A buck converter की गणना जैसा है, Option B और D सही formula अप्लाई ना करने से मिलने वाले गलत परिणाम हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q9",
+      "question": "DC-DC converters में switching element के रूप में सामान्यतः कौन सा device प्रयोग होता है?",
+      "options": [
+        "Zener diode",
+        "MOSFET या transistor",
+        "Capacitor",
+        "Resistor"
+      ],
+      "correctIndex": 1,
+      "explanation": "DC-DC converters में high-frequency switching के लिए MOSFET या power transistor प्रयोग होता है क्योंकि यह तेज़ी से on-off हो सकता है (Option B)। Option A voltage regulation के लिए प्रयोग होता है, Option C energy storage element है, और Option D सिर्फ current को limit करता है — ये switching नहीं कर सकते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q10",
+      "question": "Buck converter में inductor का मुख्य कार्य क्या है?",
+      "options": [
+        "Output voltage को amplify करना",
+        "AC ripple को पूरी तरह हटाना बिना किसी energy storage के",
+        "Energy को store करके current को smooth बनाना जब switch off हो",
+        "Input voltage को measure करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck converter में inductor switch on रहने पर energy store करता है और switch off होने पर उसे release करता है, जिससे load current smooth बना रहता है (Option C)। Option A यह voltage को amplify नहीं करता बल्कि average करता है, Option B ग़लत है क्योंकि inductor energy storage element है, और Option D यह measurement device नहीं है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q11",
+      "question": "Buck converter में output के पास capacitor क्यों लगाया जाता है?",
+      "options": [
+        "Output voltage ripple को कम करके smooth DC प्रदान करने के लिए",
+        "Input current को बढ़ाने के लिए",
+        "Switching frequency को कम करने के लिए",
+        "MOSFET को गर्म होने से बचाने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Output capacitor voltage ripple को filter करके smooth DC output देता है (Option A)। Option B, C, D — capacitor का इन कार्यों से सीधा संबंध नहीं है; ये अन्य components या design parameters से संबंधित हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q12",
+      "question": "Continuous Conduction Mode (CCM) में inductor current का व्यवहार कैसा होता है?",
+      "options": [
+        "Inductor current हमेशा zero रहता है",
+        "Inductor current पूरे switching cycle में कभी भी zero तक नहीं गिरता",
+        "Inductor current हर cycle में शुरुआत में zero से बढ़ता है और वापस zero पर आता है",
+        "Inductor current केवल switch off होने पर बहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "CCM में inductor current पूरे switching cycle के दौरान कभी zero तक नहीं गिरता, यानी यह continuous रहता है (Option B)। Option A ग़लत है क्योंकि तब converter काम ही नहीं करेगा, Option C Discontinuous Conduction Mode (DCM) का वर्णन है, और Option D ग़लत है क्योंकि current switch on और off दोनों states में बहता है बस path अलग होता है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q13",
+      "question": "Discontinuous Conduction Mode (DCM) कब होता है?",
+      "options": [
+        "जब load current इतना कम हो कि inductor current cycle के दौरान zero तक गिर जाए",
+        "जब load बहुत भारी (heavy) हो",
+        "जब switching frequency बहुत अधिक हो",
+        "जब input voltage स्थिर (constant) हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "DCM तब होता है जब load current कम होने के कारण inductor current cycle के अंत से पहले ही zero तक गिर जाता है और कुछ समय के लिए zero पर रुका रहता है (Option A)। Option B आमतौर पर CCM की ओर ले जाता है, Option C और D सीधे तौर पर conduction mode निर्धारित नहीं करते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q14",
+      "question": "PWM (Pulse Width Modulation) का DC-DC converters में क्या उपयोग है?",
+      "options": [
+        "Output frequency को permanently fix करने के लिए",
+        "Switching element के on-time (duty cycle) को नियंत्रित करके output voltage regulate करने के लिए",
+        "Input AC supply को measure करने के लिए",
+        "Capacitor की value बदलने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "PWM technique duty cycle को control करके switch के on-time को adjust करती है, जिससे output voltage को नियंत्रित (regulate) किया जाता है (Option B)। Option A, C, D सीधे PWM के core purpose से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q15",
+      "question": "Buck-boost converter में output polarity input की तुलना में कैसी होती है?",
+      "options": [
+        "Output polarity input के समान रहती है",
+        "Output polarity input के विपरीत (inverted) होती है",
+        "Output polarity हर cycle में बदलती रहती है",
+        "Output में कोई polarity नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inverting buck-boost converter में inductor और switch की topology के कारण output voltage की polarity input की तुलना में उल्टी (inverted) हो जाती है (Option B)। Option A buck या boost converter के लिए सही है, Option C और D तकनीकी रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q16",
+      "question": "Linear regulator की तुलना में switching (DC-DC) regulator का प्रमुख फ़ायदा क्या है?",
+      "options": [
+        "यह हमेशा सस्ता होता है",
+        "इसमें कोई heat generate नहीं होता",
+        "इसकी efficiency अधिक होती है क्योंकि excess voltage को heat में dissipate नहीं करना पड़ता",
+        "इसे design करना linear regulator से आसान है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Switching regulator में energy को switch on-off करके transfer किया जाता है, इसलिए excess voltage को resistive heat के रूप में waste नहीं करना पड़ता, जिससे efficiency अधिक होती है (Option C)। Option A हमेशा सत्य नहीं, Option B ग़लत है क्योंकि switching losses से कुछ heat फिर भी generate होती है, और Option D ग़लत है क्योंकि switching converter का design जटिल होता है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q17",
+      "question": "SEPIC (Single-Ended Primary-Inductor Converter) topology की खासियत क्या है?",
+      "options": [
+        "यह केवल step-down operation कर सकता है",
+        "यह output polarity को input के समान रखते हुए step-up और step-down दोनों कर सकता है",
+        "इसमें inductor की आवश्यकता नहीं होती",
+        "यह केवल AC-DC conversion के लिए प्रयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SEPIC converter output voltage की polarity को input के समान (non-inverted) रखते हुए output को input से अधिक या कम दोनों बना सकता है (Option B)। Option A केवल buck का गुण है, Option C ग़लत है क्योंकि इसमें दो inductors होते हैं, और Option D ग़लत है क्योंकि यह DC-DC converter है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q18",
+      "question": "Cuk converter की एक विशेष पहचान क्या है?",
+      "options": [
+        "यह capacitor के माध्यम से energy transfer करता है और output polarity invert करता है",
+        "इसमें कोई switch नहीं होता",
+        "यह केवल AC voltage के लिए काम करता है",
+        "इसकी output ripple हमेशा शून्य होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cuk converter में energy transfer मुख्यतः एक series capacitor के माध्यम से होती है (inductor के बजाय), और output की polarity input से उल्टी होती है (Option A)। Option B, C, D तकनीकी रूप से ग़लत हैं क्योंकि switch, DC operation और कुछ ripple हमेशा मौजूद रहते हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q19",
+      "question": "DC-DC converters का उपयोग laptop, mobile charger जैसे applications में क्यों किया जाता है?",
+      "options": [
+        "क्योंकि यह AC voltage को सीधे उपयोग करने देता है",
+        "क्योंकि यह अलग-अलग DC voltage levels (जैसे battery voltage से processor/IC के लिए required voltage) को efficiently प्रदान करता है",
+        "क्योंकि यह सिर्फ frequency conversion करता है",
+        "क्योंकि इसमें कोई semiconductor device नहीं लगता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Laptop और mobile charger में विभिन्न ICs और circuits को अलग-अलग DC voltage levels चाहिए होते हैं, जिन्हें DC-DC converter battery voltage से efficiently generate करता है (Option B)। Option A, C, D DC-DC converter के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q20",
+      "question": "Isolated DC-DC converter (जैसे flyback converter) और non-isolated converter (जैसे buck converter) में मुख्य अंतर क्या है?",
+      "options": [
+        "Isolated converter में transformer के माध्यम से input और output के बीच electrical isolation होती है",
+        "Isolated converter में कोई switching नहीं होती",
+        "Non-isolated converter हमेशा AC output देता है",
+        "दोनों में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Isolated converters में transformer का प्रयोग होता है जो input और output side के बीच electrical isolation प्रदान करता है, जो सुरक्षा और high-voltage applications के लिए ज़रूरी है (Option A)। Option B ग़लत है क्योंकि switching दोनों में होती है, Option C ग़लत है क्योंकि output DC ही रहता है, और Option D स्पष्ट रूप से ग़लत है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q21",
+      "question": "Flyback converter मुख्यतः किस प्रकार का converter है?",
+      "options": [
+        "एक isolated buck-boost प्रकार का converter जिसमें transformer प्रयोग होता है",
+        "एक non-isolated buck converter",
+        "एक pure linear regulator",
+        "एक AC-AC converter"
+      ],
+      "correctIndex": 0,
+      "explanation": "Flyback converter buck-boost topology पर आधारित एक isolated converter है जिसमें transformer energy storage और isolation दोनों प्रदान करता है (Option A)। Option B, C, D flyback converter की actual working से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q22",
+      "question": "DC-DC converter की efficiency (η) को किस सूत्र से निकाला जाता है?",
+      "options": [
+        "η = Pin / Pout × 100%",
+        "η = (Pout / Pin) × 100%",
+        "η = Pin - Pout",
+        "η = Pout + Pin"
+      ],
+      "correctIndex": 1,
+      "explanation": "किसी भी power converter की efficiency η = (Pout / Pin) × 100% से निकाली जाती है, जहाँ Pout हमेशा Pin से कम या बराबर होता है (Option B)। Option A उल्टा है और 100% से अधिक ग़लत परिणाम देगा, Option C और D efficiency की सही परिभाषा नहीं है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q23",
+      "question": "एक DC-DC converter की Pin = 50W और Pout = 40W है। इसकी efficiency कितनी होगी?",
+      "options": [
+        "50%",
+        "80%",
+        "90%",
+        "125%"
+      ],
+      "correctIndex": 1,
+      "explanation": "η = (Pout/Pin) × 100% = (40/50) × 100% = 80% (Option B)। Option A, C गणना में त्रुटि से मिलते हैं, और Option D असंभव है क्योंकि efficiency 100% से अधिक नहीं हो सकती।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q24",
+      "question": "Switching frequency बढ़ाने का DC-DC converter के size पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Inductor और capacitor की size बढ़ानी पड़ती है",
+        "Inductor और capacitor की size कम हो सकती है, जिससे converter compact होता है",
+        "Switching frequency का component size पर कोई असर नहीं होता",
+        "Converter की efficiency हमेशा 100% हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Switching frequency बढ़ने पर energy storage की ज़रूरत हर cycle में कम होती है, जिससे inductor और capacitor की values छोटी रखी जा सकती हैं और converter compact बनता है (Option B)। Option A इसका उल्टा है, Option C ग़लत है, और Option D अव्यावहारिक (unrealistic) है क्योंकि switching losses बढ़ने से efficiency घट भी सकती है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q25",
+      "question": "DC-DC converter में feedback loop का क्या उद्देश्य है?",
+      "options": [
+        "Output voltage को sense करके duty cycle adjust करना ताकि output stable रहे",
+        "Input voltage को permanently disconnect करना",
+        "Switching frequency को zero करना",
+        "Load resistance को measure करके उसे बदलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Feedback loop output voltage को sense करता है और उसकी तुलना reference voltage से करके duty cycle को adjust करता है, जिससे load या input variations के बावजूद output stable रहता है (Option A)। Option B, C, D feedback loop के actual कार्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q26",
+      "question": "Buck converter में यदि load current अचानक बढ़ जाए तो duty cycle का क्या होगा (closed-loop control में)?",
+      "options": [
+        "Duty cycle घट जाएगा ताकि voltage और गिरे",
+        "Duty cycle बढ़ जाएगा ताकि output voltage को regulated स्तर पर बनाए रखा जा सके",
+        "Duty cycle हमेशा constant रहेगा चाहे load कुछ भी हो",
+        "Converter बंद हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Load current बढ़ने से output voltage गिरने की प्रवृत्ति होती है, जिसे feedback control loop sense करके duty cycle को बढ़ा देता है ताकि output voltage regulated स्तर पर वापस आ जाए (Option B)। Option A उल्टी दिशा में गलत adjustment है, Option C open-loop system में हो सकता है पर closed-loop में नहीं, और Option D सामान्यतः तब तक नहीं होता जब तक कोई fault ना हो।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q27",
+      "question": "DC-DC converters में diode (freewheeling diode) का buck converter में क्या कार्य है?",
+      "options": [
+        "Output voltage को amplify करना",
+        "Switch off होने पर inductor current के लिए एक path प्रदान करना",
+        "Input current को block करना हमेशा के लिए",
+        "Capacitor को charge होने से रोकना"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब main switch off होता है, तब freewheeling diode inductor के current को continue flow करने के लिए एक path देता है, जिससे current अचानक interrupt नहीं होता (Option B)। Option A, C, D diode के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q28",
+      "question": "Synchronous buck converter, non-synchronous (diode-based) buck converter से किस प्रकार बेहतर है?",
+      "options": [
+        "इसमें diode की जगह एक दूसरा controlled MOSFET प्रयोग होता है जिससे conduction losses कम होते हैं और efficiency बढ़ती है",
+        "इसमें कोई inductor नहीं होता",
+        "यह केवल AC applications में प्रयोग होता है",
+        "इसकी switching frequency हमेशा zero होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Synchronous buck converter में freewheeling diode के बजाय एक दूसरा switch (MOSFET) प्रयोग किया जाता है, जिसका forward voltage drop diode से कम होता है, इसलिए conduction losses कम होकर efficiency बढ़ती है (Option A)। Option B, C, D तकनीकी रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q29",
+      "question": "किस स्थिति में buck-boost या SEPIC जैसे converters का चयन buck या boost converter की जगह किया जाता है?",
+      "options": [
+        "जब हमेशा output, input से बहुत अधिक ही रहना हो",
+        "जब हमेशा output, input से बहुत कम ही रहना हो",
+        "जब input voltage variable हो और output कभी input से कम तो कभी अधिक हो सकता हो (जैसे battery discharge के दौरान)",
+        "जब कोई regulation की आवश्यकता ही न हो"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck-boost या SEPIC converters तब उपयोगी होते हैं जब input voltage (जैसे battery का discharging voltage) समय के साथ बदलता है और output voltage कभी input से कम तो कभी अधिक होने की स्थिति आ सकती है (Option C)। Option A केवल boost converter के लिए पर्याप्त है, Option B केवल buck converter के लिए पर्याप्त है, और Option D अव्यावहारिक स्थिति है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q30",
+      "question": "DC-DC converter डिज़ाइन करते समय ripple voltage को कम रखना क्यों ज़रूरी है?",
+      "options": [
+        "क्योंकि इससे converter का weight बढ़ता है",
+        "क्योंकि sensitive electronic loads (जैसे microcontrollers, ICs) को clean और stable DC supply चाहिए होती है ताकि malfunction न हो",
+        "क्योंकि ripple voltage से switching frequency अपने आप बढ़ जाती है",
+        "क्योंकि इससे input current हमेशा zero हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक ripple voltage sensitive digital circuits और ICs के गलत operation या noise का कारण बन सकती है, इसलिए output को clean और stable रखना ज़रूरी है (Option B)। Option A, C, D ripple voltage के तकनीकी प्रभावों से मेल नहीं खाते।"
+    }
+  ]
+}

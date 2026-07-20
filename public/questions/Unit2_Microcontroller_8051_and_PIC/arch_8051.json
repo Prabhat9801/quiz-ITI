@@ -1,0 +1,368 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "arch_8051",
+  "topicName": "8051 Architecture & Pin Details",
+  "questions": [
+    {
+      "id": "u2_arch_8051_q1",
+      "question": "8051 microcontroller के block diagram में CPU के अलावा एक ही chip पर कौन-कौन से main blocks integrated होते हैं?",
+      "options": [
+        "RAM, ROM, I/O ports, timers/counters और serial port",
+        "केवल ALU और accumulator",
+        "केवल external memory interface",
+        "केवल power supply circuit"
+      ],
+      "correctIndex": 0,
+      "explanation": "8051 के block diagram में CPU के साथ internal RAM, ROM, चार I/O ports, दो timers/counters, serial port और interrupt control unit एक ही chip पर integrated होते हैं, इसलिए option A सही है। केवल ALU/accumulator, external memory interface या power supply circuit पूरा block diagram नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_arch_8051_q2",
+      "question": "8051 microcontroller एक standard DIP package में कुल कितने pins के साथ आता है?",
+      "options": [
+        "28 pins",
+        "40 pins",
+        "32 pins",
+        "44 pins"
+      ],
+      "correctIndex": 1,
+      "explanation": "8051 का सामान्य DIP package 40-pin होता है जिसमें power, ports, control signals और oscillator pins शामिल होते हैं, इसलिए option B सही है। 28, 32 और 44 pins अन्य controllers/packages (जैसे PIC या PLCC) के लिए common हो सकते हैं, पर standard 8051 DIP के लिए नहीं।"
+    },
+    {
+      "id": "u2_arch_8051_q3",
+      "question": "8051 में Vcc (power supply) किस pin number पर दिया जाता है?",
+      "options": [
+        "Pin 20",
+        "Pin 30",
+        "Pin 40",
+        "Pin 1"
+      ],
+      "correctIndex": 2,
+      "explanation": "40-pin 8051 में pin 40, Vcc (+5V supply) के लिए है, इसलिए option C सही है। Pin 20 ground (Vss) है, pin 30 ALE है, और pin 1 Port 1 का P1.0 है, ये Vcc नहीं हैं।"
+    },
+    {
+      "id": "u2_arch_8051_q4",
+      "question": "8051 में ground (Vss) किस pin number पर connect होता है?",
+      "options": [
+        "Pin 40",
+        "Pin 31",
+        "Pin 9",
+        "Pin 20"
+      ],
+      "correctIndex": 3,
+      "explanation": "Pin 20, Vss यानी ground के लिए निर्धारित है, इसलिए option D सही है। Pin 40 Vcc है, pin 31 EA है और pin 9 RST pin है, ये ground pin नहीं हैं।"
+    },
+    {
+      "id": "u2_arch_8051_q5",
+      "question": "ALE (Address Latch Enable) signal का मुख्य कार्य क्या है?",
+      "options": [
+        "Port 0 पर multiplexed lower-order address और data को अलग (demultiplex) करने के लिए latch signal देना",
+        "external memory access को पूरी तरह disable करना",
+        "microcontroller को reset करना",
+        "crystal oscillator को चलाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "ALE, external memory access के दौरान Port 0 पर आने वाले multiplexed address/data में से lower byte address को external latch (जैसे 74LS373) में latch कराता है, इसलिए option A सही है। यह external memory access disable नहीं करता, reset या oscillator control से इसका सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u2_arch_8051_q6",
+      "question": "8051 microcontroller में ALE signal किस pin number पर उपलब्ध होता है?",
+      "options": [
+        "Pin 29",
+        "Pin 30",
+        "Pin 31",
+        "Pin 9"
+      ],
+      "correctIndex": 1,
+      "explanation": "ALE, pin 30 पर उपलब्ध होता है, इसलिए option B सही है। Pin 29 PSEN है, pin 31 EA है और pin 9 RST है, ये ALE नहीं हैं।"
+    },
+    {
+      "id": "u2_arch_8051_q7",
+      "question": "यदि EA (External Access) pin को GND से जोड़ दिया जाए तो 8051 कैसे व्यवहार करेगा?",
+      "options": [
+        "यह पूरी तरह internal ROM से ही program execute करेगा",
+        "यह reset हो जाएगा और कभी नहीं चलेगा",
+        "यह पूरी तरह external program memory से fetch करेगा, internal ROM ignore होगी",
+        "Serial port बंद हो जाएगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "EA=0 (GND) करने पर CPU internal ROM को पूरी तरह ignore कर हमेशा external program memory से instructions fetch करता है, इसलिए option C सही है। EA=Vcc होने पर internal ROM प्राथमिकता से प्रयोग होती है; EA का reset या serial port से सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u2_arch_8051_q8",
+      "question": "यदि EA pin को Vcc से जोड़ा जाए और chip में internal ROM उपलब्ध हो, तो program execution कहाँ से शुरू होता है?",
+      "options": [
+        "केवल external ROM से",
+        "RAM से सीधे",
+        "यह कोई असर नहीं डालता",
+        "internal ROM से, और आवश्यकता पड़ने पर internal ROM की सीमा के बाद external memory का प्रयोग होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "EA=1 पर 8051 पहले internal ROM का उपयोग करता है और internal ROM की address range समाप्त होने पर आवश्यकता होने पर external memory की ओर जाता है, इसलिए option D सही है। केवल external ROM का प्रयोग EA=0 पर होता है, program directly RAM से नहीं चलता, और EA का असर स्पष्ट रूप से program memory selection पर पड़ता है।"
+    },
+    {
+      "id": "u2_arch_8051_q9",
+      "question": "EA (External Access) pin, 40-pin 8051 में किस pin number पर स्थित है?",
+      "options": [
+        "Pin 31",
+        "Pin 29",
+        "Pin 30",
+        "Pin 32"
+      ],
+      "correctIndex": 0,
+      "explanation": "EA pin, pin 31 पर स्थित है, इसलिए option A सही है। Pin 29 PSEN, pin 30 ALE है और pin 32, Port 0 का एक data/address pin है, ये EA नहीं हैं।"
+    },
+    {
+      "id": "u2_arch_8051_q10",
+      "question": "PSEN (Program Store Enable) signal का उपयोग मुख्यतः किसके लिए होता है?",
+      "options": [
+        "external data RAM को enable करने के लिए",
+        "external program memory (ROM) को read करने के लिए control signal देना",
+        "internal timers को start करने के लिए",
+        "crystal frequency set करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "PSEN active-low signal है जो केवल external program memory (ROM) से instruction fetch करते समय assert होता है, इसलिए option B सही है। external data RAM access के लिए RD/WR signals प्रयोग होते हैं, timers या crystal frequency से PSEN का संबंध नहीं है।"
+    },
+    {
+      "id": "u2_arch_8051_q11",
+      "question": "external program memory access के दौरान एक machine cycle में PSEN signal कितनी बार active होता है?",
+      "options": [
+        "एक बार",
+        "चार बार",
+        "दो बार",
+        "यह कभी active नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "External ROM से fetch करते समय PSEN प्रत्येक machine cycle में दो बार active (low) होता है क्योंकि उस cycle में दो bytes fetch किए जाते हैं, इसलिए option C सही है। एक बार या चार बार active होना मानक व्यवहार नहीं है, और internal ROM access में PSEN का उपयोग नहीं होता।"
+    },
+    {
+      "id": "u2_arch_8051_q12",
+      "question": "जब 8051 केवल internal ROM से program execute कर रहा हो, तब PSEN signal की स्थिति क्या रहती है?",
+      "options": [
+        "यह लगातार active रहता है",
+        "यह ALE के साथ हमेशा toggle होता है",
+        "यह Vcc pin को short कर देता है",
+        "यह activate नहीं होता (high रहता है)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Internal ROM से program चलने पर external program memory access की आवश्यकता नहीं होती, अतः PSEN activate नहीं होता और high बना रहता है, इसलिए option D सही है। यह लगातार active नहीं रहता, ALE से independent है, और pins को short करने जैसा कोई प्रभाव नहीं डालता।"
+    },
+    {
+      "id": "u2_arch_8051_q13",
+      "question": "8051 microcontroller को reset करने के लिए RST pin पर सामान्यतः कैसा signal दिया जाना चाहिए?",
+      "options": [
+        "कम-से-कम 2 machine cycles के लिए HIGH",
+        "स्थायी रूप से LOW",
+        "एक negative pulse जो केवल 1 clock तक रहे",
+        "इसे हमेशा floating छोड़ना चाहिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "8051 का reset active-HIGH है और उसे reliably reset करने के लिए RST pin को कम-से-कम 2 machine cycles तक HIGH रखना आवश्यक है, इसलिए option A सही है। स्थायी LOW या केवल एक clock की negative pulse पर्याप्त नहीं, और pin को floating छोड़ना unreliable operation देगा।"
+    },
+    {
+      "id": "u2_arch_8051_q14",
+      "question": "8051 में RST (Reset) pin किस pin number पर होता है?",
+      "options": [
+        "Pin 18",
+        "Pin 9",
+        "Pin 19",
+        "Pin 29"
+      ],
+      "correctIndex": 1,
+      "explanation": "RST, pin 9 पर स्थित active-high input है, इसलिए option B सही है। Pin 18 और 19 XTAL2/XTAL1 (oscillator) हैं, और pin 29 PSEN है, ये reset pin नहीं हैं।"
+    },
+    {
+      "id": "u2_arch_8051_q15",
+      "question": "8051 microcontroller को reset करने के बाद Program Counter (PC) का प्रारंभिक मान क्या होता है?",
+      "options": [
+        "FFFFH",
+        "0030H",
+        "0000H",
+        "आखिरी executed instruction का address"
+      ],
+      "correctIndex": 2,
+      "explanation": "Reset के बाद PC को 0000H पर initialize किया जाता है ताकि execution memory location 0000H से शुरू हो, इसलिए option C सही है। FFFFH या 0030H मानक reset vector नहीं हैं, और reset पर पुराना PC मान preserve नहीं होता।"
+    },
+    {
+      "id": "u2_arch_8051_q16",
+      "question": "8051 में crystal oscillator को जोड़ने के लिए XTAL1 और XTAL2 pins किस pin numbers पर उपलब्ध होते हैं?",
+      "options": [
+        "Pin 9 और 10",
+        "Pin 30 और 31",
+        "Pin 39 और 40",
+        "Pin 18 और 19"
+      ],
+      "correctIndex": 3,
+      "explanation": "XTAL2 pin 18 पर और XTAL1 pin 19 पर होते हैं जिनसे crystal तथा दो capacitors जोड़कर on-chip oscillator circuit पूरा किया जाता है, इसलिए option D सही है। बाकी pin जोड़े reset, ALE/EA या Vcc/P0 से संबंधित हैं, oscillator से नहीं।"
+    },
+    {
+      "id": "u2_arch_8051_q17",
+      "question": "8051 आधारित systems में serial communication के लिए सामान्यतः किस crystal frequency का प्रयोग किया जाता है ताकि standard baud rates आसानी से प्राप्त हो सकें?",
+      "options": [
+        "11.0592 MHz",
+        "10 MHz",
+        "12.5 MHz",
+        "20.48 MHz"
+      ],
+      "correctIndex": 0,
+      "explanation": "11.0592 MHz crystal का प्रयोग इसलिए किया जाता है क्योंकि यह timer division के बाद 9600, 4800 जैसी standard baud rates बिना किसी error के generate कर देता है, इसलिए option A सही है। 10, 12.5 और 20.48 MHz से baud rate calculation में significant error आता है।"
+    },
+    {
+      "id": "u2_arch_8051_q18",
+      "question": "यदि 8051 को 12 MHz crystal के साथ चलाया जाए और एक machine cycle में 12 clock periods लगते हों, तो एक machine cycle का समय लगभग कितना होगा?",
+      "options": [
+        "0.5 µs",
+        "1 µs",
+        "2 µs",
+        "12 µs"
+      ],
+      "correctIndex": 1,
+      "explanation": "12 MHz पर एक clock period = 1/12 MHz ≈ 0.0833 µs; 12 clock periods से एक machine cycle = 12 × 0.0833 µs ≈ 1 µs, इसलिए option B सही है। 0.5 µs, 2 µs और 12 µs इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_arch_8051_q19",
+      "question": "8051 के block diagram में Accumulator (A) का प्राथमिक कार्य क्या है?",
+      "options": [
+        "केवल stack pointer का कार्य करना",
+        "केवल external memory address रखना",
+        "अधिकतर arithmetic और logic operations के लिए primary register का कार्य करना",
+        "केवल serial data buffer का कार्य करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Accumulator अधिकांश ALU operations (add, subtract, logical, आदि) में एक operand और result store करने वाला मुख्य register है, इसलिए option C सही है। यह stack pointer, address register या serial buffer का कार्य नहीं करता (वे क्रमशः SP, DPTR और SBUF द्वारा किए जाते हैं)।"
+    },
+    {
+      "id": "u2_arch_8051_q20",
+      "question": "8051 microcontroller के block diagram में ALU (Arithmetic Logic Unit) का मुख्य कार्य क्या है?",
+      "options": [
+        "केवल crystal की frequency control करना",
+        "केवल interrupt priority तय करना",
+        "केवल serial data भेजना",
+        "arithmetic (add, subtract) और logical (AND, OR) operations perform करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "ALU processor का वह भाग है जो सभी arithmetic और logical operations perform करता है, इसलिए option D सही है। Frequency control oscillator circuit, interrupt priority IE/IP registers और serial data transmission serial port द्वारा किया जाता है, ALU द्वारा नहीं।"
+    },
+    {
+      "id": "u2_arch_8051_q21",
+      "question": "40-pin 8051 में Port 0 (P0) की एक विशेष बात क्या है जो इसे Port 1, 2, 3 से अलग बनाती है?",
+      "options": [
+        "external memory का प्रयोग करने पर यह multiplexed lower-order address/data bus का कार्य करता है",
+        "यह हमेशा केवल input के लिए होता है",
+        "इसमें कोई pull-up resistor नहीं लगती (open-drain) फिर भी external pull-up की जरूरत नहीं",
+        "यह केवल interrupt inputs के लिए reserved है"
+      ],
+      "correctIndex": 0,
+      "explanation": "External memory से interfacing करते समय Port 0, address के lower byte और data दोनों को time-multiplexed रूप में carry करता है, और इसका output open-drain होने के कारण external pull-up resistors की आवश्यकता पड़ती है, इसलिए option A सही है। यह केवल input नहीं, केवल interrupt के लिए भी reserved नहीं।"
+    },
+    {
+      "id": "u2_arch_8051_q22",
+      "question": "external memory का प्रयोग करते समय Port 2 (P2) किस उद्देश्य के लिए प्रयोग होता है?",
+      "options": [
+        "केवल serial communication के लिए",
+        "higher-order address byte (A8-A15) प्रदान करने के लिए",
+        "केवल timer input capture के लिए",
+        "केवल reset signal देने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "External memory interfacing में Port 2, address bus के higher-order byte (A8 से A15) के रूप में कार्य करता है, इसलिए option B सही है। Serial communication के लिए Port 3 (RxD/TxD) प्रयोग होता है, timer capture या reset से Port 2 का सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u2_arch_8051_q23",
+      "question": "Port 3 (P3) की सबसे प्रमुख विशेषता क्या है?",
+      "options": [
+        "यह केवल analog input pins प्रदान करता है",
+        "यह केवल Vcc और GND देता है",
+        "इसके pins पर alternate functions जैसे INT0, INT1, T0, T1, RxD, TxD, RD, WR उपलब्ध होते हैं",
+        "यह केवल internal ROM address करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Port 3 के प्रत्येक pin के साथ एक dedicated alternate function (external interrupts, timer inputs, serial RxD/TxD, external memory RD/WR) जुड़ा होता है, इसलिए option C सही है। 8051 में built-in analog input pins नहीं होते, Power pins P3 पर नहीं होते, और internal ROM address bus की जरूरत नहीं पड़ती।"
+    },
+    {
+      "id": "u2_arch_8051_q24",
+      "question": "8051 microcontroller में Program Counter (PC) की bit-width कितनी है, जिससे यह अधिकतम कितनी memory address कर सकता है?",
+      "options": [
+        "8-bit, 256 bytes",
+        "12-bit, 4 KB",
+        "20-bit, 1 MB",
+        "16-bit, 64 KB"
+      ],
+      "correctIndex": 3,
+      "explanation": "8051 का PC 16-bit होता है, इसलिए यह 2^16 = 64 KB program memory address कर सकता है, अतः option D सही है। 8-bit (256B) या 12-bit (4KB) पर्याप्त address range नहीं देते, और 20-bit PC 8051 में नहीं होता।"
+    },
+    {
+      "id": "u2_arch_8051_q25",
+      "question": "8051 के block diagram में Interrupt Control Unit का मुख्य कार्य क्या है?",
+      "options": [
+        "विभिन्न interrupt sources को enable/disable करना और priority के अनुसार CPU तक पहुँचाना",
+        "crystal oscillator को start करना",
+        "केवल Port 0 को configure करना",
+        "केवल ROM की content erase करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Interrupt Control Unit (IE, IP registers सहित) विभिन्न interrupt sources को enable/disable करता है और priority के आधार पर उन्हें CPU तक पहुँचाता है, इसलिए option A सही है। Oscillator start करना clock circuit का कार्य है, Port 0 configuration अलग है, और ROM erase करना interrupt control का कार्य नहीं।"
+    },
+    {
+      "id": "u2_arch_8051_q26",
+      "question": "8051 में on-chip oscillator के साथ crystal के अतिरिक्त सामान्यतः कौन-से components जोड़े जाते हैं?",
+      "options": [
+        "एक बड़ा electrolytic capacitor केवल Vcc पर",
+        "दो छोटे capacitors (लगभग 30 pF प्रत्येक) XTAL1 और XTAL2 से ground के बीच",
+        "एक transformer XTAL1 pin पर",
+        "एक relay XTAL2 pin पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Crystal के साथ आमतौर पर दो छोटे capacitors (लगभग 30 pF) XTAL1 और XTAL2 pins से ground के बीच जोड़े जाते हैं ताकि stable oscillation मिले, इसलिए option B सही है। बड़ा electrolytic capacitor, transformer या relay oscillator circuit का सामान्य हिस्सा नहीं हैं।"
+    },
+    {
+      "id": "u2_arch_8051_q27",
+      "question": "8051 आधारित board में external memory का प्रयोग न करने पर (EA=Vcc, सारा code internal ROM में) Port 0 और Port 2 का उपयोग किस प्रकार बदल जाता है?",
+      "options": [
+        "वे केवल address/data bus की तरह fixed रहते हैं, general I/O के लिए उपयोग नहीं हो सकते",
+        "वे स्वतः disable हो जाते हैं",
+        "वे साधारण bidirectional general-purpose I/O ports की तरह प्रयोग हो सकते हैं",
+        "वे केवल serial communication के लिए उपलब्ध होते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "External memory का उपयोग न करने पर Port 0 और Port 2, address/data bus के रूप में प्रयोग नहीं होते और साधारण general-purpose I/O ports की तरह free होकर उपलब्ध रहते हैं, इसलिए option C सही है। वे disable नहीं होते और केवल serial communication तक सीमित नहीं रहते।"
+    },
+    {
+      "id": "u2_arch_8051_q28",
+      "question": "8051 microcontroller में CPU के block diagram में मौजूद PSW (Program Status Word) register का उद्देश्य क्या है?",
+      "options": [
+        "external memory address रखना",
+        "crystal frequency store करना",
+        "केवल stack pointer की value रखना",
+        "carry, auxiliary carry, overflow, parity जैसे status flags तथा register bank select bits रखना"
+      ],
+      "correctIndex": 3,
+      "explanation": "PSW में carry (CY), auxiliary carry (AC), overflow (OV), parity (P) जैसे flags और register bank select bits (RS1, RS0) होते हैं, इसलिए option D सही है। यह address bus, crystal frequency या stack pointer store नहीं करता (वे क्रमशः DPTR/PC, oscillator circuit और SP द्वारा handle होते हैं)।"
+    },
+    {
+      "id": "u2_arch_8051_q29",
+      "question": "8051 microcontroller का block diagram किस श्रेणी के architecture को दर्शाता है जिसमें program memory और data memory के लिए अलग-अलग address spaces होते हैं?",
+      "options": [
+        "मूलतः Harvard architecture (separate program और data memory spaces)",
+        "पूर्ण रूप से von Neumann architecture (एकल common memory space)",
+        "इसमें कोई भी memory architecture लागू नहीं होती",
+        "यह केवल analog architecture है"
+      ],
+      "correctIndex": 0,
+      "explanation": "8051 Harvard architecture पर आधारित है जिसमें program memory (ROM) और data memory (RAM) के लिए separate address spaces और separate buses होते हैं, इसलिए option A सही है। यह single common memory space वाला pure von Neumann नहीं है, और यह digital architecture है, analog नहीं।"
+    },
+    {
+      "id": "u2_arch_8051_q30",
+      "question": "एक 8051 board को design करते समय RST pin को reliably HIGH करने के लिए सामान्यतः किस साधारण circuit का प्रयोग किया जाता है?",
+      "options": [
+        "केवल एक LED, बिना resistor के",
+        "एक RC (resistor-capacitor) power-on reset circuit जो शुरुआत में RST को कुछ समय के लिए HIGH रखे",
+        "एक transformer आधारित circuit",
+        "एक बड़ा inductor केवल RST pin पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power-on पर RST pin को reliably कुछ समय के लिए HIGH रखने हेतु सामान्यतः एक simple RC circuit (capacitor और resistor) प्रयोग होता है, इसलिए option B सही है। बिना resistor के LED, transformer आधारित circuit या केवल inductor मानक/सुरक्षित reset circuit नहीं हैं।"
+    }
+  ]
+}

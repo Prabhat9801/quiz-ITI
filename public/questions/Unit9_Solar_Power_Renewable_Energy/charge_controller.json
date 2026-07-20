@@ -1,0 +1,368 @@
+{
+  "unit": "unit9",
+  "unitName": "Solar Power Renewable Energy Systems",
+  "topic": "charge_controller",
+  "topicName": "Charge Controller/Regulator - PWM vs MPPT, Overcharge Protection",
+  "questions": [
+    {
+      "id": "u9_charge_controller_q1",
+      "question": "Solar PV system में charge controller (regulator) का मूल कार्य क्या है?",
+      "options": [
+        "PV array से आने वाली voltage/current को नियंत्रित (regulate) करना ताकि battery को सही तरीके से चार्ज किया जा सके तथा overcharging रुके",
+        "AC को DC में बदलना",
+        "Battery की जगह स्वयं ऊर्जा उत्पन्न करना",
+        "केवल light जलाना बंद करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Charge controller PV array से मिलने वाली voltage/current को नियंत्रित कर battery को सुरक्षित रूप से चार्ज करता है और overcharging/deep-discharge से बचाता है। AC-DC conversion inverter का काम है, controller स्वयं ऊर्जा उत्पन्न नहीं करता, और यह केवल lights जलाने-बंद करने का device नहीं है।"
+    },
+    {
+      "id": "u9_charge_controller_q2",
+      "question": "PV panel को बिना charge controller के सीधे battery से जोड़ना क्यों जोखिमपूर्ण माना जाता है?",
+      "options": [
+        "Direct connection से कोई खतरा नहीं",
+        "Panel की higher voltage/current battery को लगातार overcharge कर सकती है और उसकी life कम कर सकती है",
+        "Direct connection हमेशा battery को तुरंत पूरी तरह चार्ज कर देता है सुरक्षित रूप से",
+        "Direct connection से AC output मिलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "बिना controller के panel की voltage/current battery की जरूरत से अधिक हो सकती है, जिससे battery निरंतर overcharge होकर damage हो सकती है और उसकी life घट जाती है। 'कोई खतरा नहीं' या 'सुरक्षित रूप से पूरा चार्ज होना' गलत हैं, और direct connection से AC नहीं मिलता, PV output DC ही रहता है।"
+    },
+    {
+      "id": "u9_charge_controller_q3",
+      "question": "Solar charge controllers को मुख्यतः किन दो प्रकारों में बाँटा जाता है?",
+      "options": [
+        "AC controller और DC controller",
+        "Analog controller और Digital controller केवल",
+        "PWM (Pulse Width Modulation) और MPPT (Maximum Power Point Tracking)",
+        "Series controller और Parallel controller"
+      ],
+      "correctIndex": 2,
+      "explanation": "Solar charge controllers मुख्यतः PWM (Pulse Width Modulation) और MPPT (Maximum Power Point Tracking) प्रकार के होते हैं, जो चार्जिंग की विधि तथा efficiency में भिन्न होते हैं। शेष categories (AC/DC, analog/digital, series/parallel) मानक industry classification नहीं हैं।"
+    },
+    {
+      "id": "u9_charge_controller_q4",
+      "question": "Charge controller के संदर्भ में 'PWM' का पूर्ण रूप क्या है?",
+      "options": [
+        "Power With Maximum",
+        "Panel Wiring Mode",
+        "Peak Watt Meter",
+        "Pulse Width Modulation"
+      ],
+      "correctIndex": 3,
+      "explanation": "PWM का पूर्ण रूप Pulse Width Modulation है, जिसमें rapid switching द्वारा average current/voltage नियंत्रित किया जाता है। शेष विकल्प केवल भ्रामक शब्दजाल हैं जो कोई standard technical term नहीं दर्शाते।"
+    },
+    {
+      "id": "u9_charge_controller_q5",
+      "question": "Charge controller के संदर्भ में 'MPPT' का पूर्ण रूप क्या है?",
+      "options": [
+        "Maximum Power Point Tracking",
+        "Module Power Protection Terminal",
+        "Minimum Power Point Tracker",
+        "Maximum Panel Temperature Trip"
+      ],
+      "correctIndex": 0,
+      "explanation": "MPPT का पूर्ण रूप Maximum Power Point Tracking है, जो panel के I-V curve पर उस बिंदु को track करता है जहाँ power अधिकतम हो। शेष options वास्तविक technical अर्थ को गलत ढंग से प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "u9_charge_controller_q6",
+      "question": "PWM charge controller मूलतः किस सिद्धांत पर कार्य करता है?",
+      "options": [
+        "यह DC-DC conversion द्वारा voltage को step-down/step-up करके adjust करता है",
+        "Panel और battery को सीधे जोड़कर rapid on/off switching द्वारा current को नियंत्रित करता है, जिससे output voltage लगभग battery voltage तक clamp हो जाता है",
+        "यह केवल AC signal उत्पन्न करता है",
+        "यह panel के voltage को हमेशा दोगुना कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PWM controller panel को battery से लगभग सीधे जोड़ता है और rapid switching (on/off) द्वारा average current को नियंत्रित करता है, जिससे output voltage battery voltage के करीब clamp हो जाता है। DC-DC step conversion MPPT का सिद्धांत है, PWM AC नहीं बनाता, और यह voltage को दोगुना नहीं करता।"
+    },
+    {
+      "id": "u9_charge_controller_q7",
+      "question": "MPPT charge controller मूलतः किस सिद्धांत पर कार्य करता है?",
+      "options": [
+        "यह केवल on/off switching करता है, कोई conversion नहीं करता",
+        "यह हमेशा battery voltage को panel voltage जितना बढ़ा देता है बिना किसी tracking के",
+        "यह panel के I-V curve पर continuously maximum power point को track करता है और DC-DC conversion द्वारा उस power को battery के अनुकूल voltage/current में बदलता है",
+        "यह केवल temperature को नियंत्रित करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "MPPT controller लगातार panel के I-V curve की निगरानी करके maximum power point ढूँढता है और फिर DC-DC converter द्वारा उस उपलब्ध power को battery की जरूरत के अनुसार उपयुक्त voltage/current में बदलता है। यह केवल on/off switching नहीं (वह PWM है), बिना tracking के voltage नहीं बढ़ाता, और यह temperature control device नहीं है।"
+    },
+    {
+      "id": "u9_charge_controller_q8",
+      "question": "MPPT controller का PWM की तुलना में मुख्य लाभ किस स्थिति में सबसे अधिक स्पष्ट होता है?",
+      "options": [
+        "MPPT हमेशा PWM से सस्ता होता है",
+        "MPPT का efficiency से कोई संबंध नहीं",
+        "MPPT केवल छोटे systems में उपयोगी होता है, बड़े में नहीं",
+        "जब panel का Vmp battery voltage से काफी अधिक हो, तब MPPT अतिरिक्त voltage को extra current में बदलकर PWM की तुलना में अधिक ऊर्जा (लगभग 20-30% तक अधिक) प्राप्त कर सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब panel का operating voltage battery voltage से काफी अधिक हो, MPPT उस अतिरिक्त voltage को उपयोगी अतिरिक्त current में बदलकर अधिक ऊर्जा निकाल सकता है, जबकि PWM में यह अतिरिक्त voltage बर्बाद हो जाता है। MPPT आमतौर पर PWM से सस्ता नहीं बल्कि महँगा होता है, इसका efficiency से सीधा संबंध है, और यह बड़े systems में भी उतना ही (या अधिक) उपयोगी होता है।"
+    },
+    {
+      "id": "u9_charge_controller_q9",
+      "question": "किस स्थिति में PWM controller एक practical तथा cost-effective विकल्प माना जाता है?",
+      "options": [
+        "जब panel और battery की voltage में बड़ा अंतर हो",
+        "PWM हर स्थिति में MPPT से बेहतर है",
+        "PWM का उपयोग केवल AC systems में होता है",
+        "जब panel का voltage rating battery voltage के काफी करीब हो (जैसे 12V nominal panel के साथ 12V battery), वहाँ छोटे व सस्ते systems में PWM पर्याप्त तथा cost-effective होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब panel और battery voltage लगभग मेल खाते हों, तो MPPT की extra voltage-to-current conversion क्षमता का बहुत लाभ नहीं मिलता, इसलिए ऐसे छोटे systems में सस्ता PWM उपयुक्त रहता है। बड़े voltage अंतर में MPPT बेहतर रहता है, PWM हर स्थिति में बेहतर नहीं, और यह DC battery-charging systems के लिए है, AC systems के लिए नहीं।"
+    },
+    {
+      "id": "u9_charge_controller_q10",
+      "question": "'MPPT controllers सामान्यतः PWM controllers की तुलना में अधिक महँगे होते हैं' — यह कथन कितना सही है और क्यों?",
+      "options": [
+        "सही, क्योंकि MPPT में अधिक जटिल electronics (DC-DC converter, microcontroller) होते हैं",
+        "MPPT हमेशा PWM से सस्ता होता है",
+        "दोनों की कीमत हमेशा बराबर होती है",
+        "कीमत का design जटिलता से कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "MPPT controllers में DC-DC converter, tracking algorithm चलाने वाला microcontroller तथा अतिरिक्त components होते हैं, जिससे उनकी manufacturing cost और अंततः कीमत PWM की तुलना में अधिक होती है। शेष options इस design जटिलता तथा cost के स्पष्ट संबंध को नकारते हैं, जो गलत है।"
+    },
+    {
+      "id": "u9_charge_controller_q11",
+      "question": "Charge controller की 'overcharge protection' feature किस प्रकार कार्य करती है?",
+      "options": [
+        "यह हमेशा charging current को अधिकतम स्तर पर बनाए रखता है चाहे battery पूरी चार्ज हो चुकी हो",
+        "Overcharge protection केवल inverter में होती है",
+        "जब battery voltage एक निर्धारित (regulation) सीमा तक पहुँच जाए, तो controller charging current को कम कर देता है या रोक देता है ताकि overcharging न हो",
+        "यह केवल battery के तापमान को मापता है, charging control नहीं करता"
+      ],
+      "correctIndex": 2,
+      "explanation": "Overcharge protection में जैसे ही battery voltage निर्धारित regulation setpoint तक पहुँचता है, controller charging current को कम कर देता है या रोक देता है ताकि battery को नुकसान न पहुँचे। 'हमेशा maximum current' गलत है (यह overcharge का कारण बनेगा), यह feature inverter में नहीं controller में होती है, और यह केवल तापमान मापने तक सीमित नहीं।"
+    },
+    {
+      "id": "u9_charge_controller_q12",
+      "question": "Charge controller की 'Low Voltage Disconnect (LVD)' feature (deep discharge protection) किस प्रकार कार्य करती है?",
+      "options": [
+        "यह load को हमेशा जुड़ा रखता है चाहे battery voltage कितना भी गिर जाए",
+        "यह केवल panel को disconnect करता है, load को नहीं",
+        "Deep discharge protection charging बढ़ाने के लिए होती है",
+        "जब battery voltage एक निर्धारित low सीमा से नीचे गिर जाए, तो LVD feature load को battery से disconnect कर देता है ताकि battery अत्यधिक discharge न हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "LVD feature battery voltage के एक critical निम्न स्तर तक गिरने पर connected load को automatically disconnect कर देता है, जिससे battery को deep discharge से बचाया जाता है। Load को हमेशा जोड़े रखना deep discharge का कारण बनेगा, यह panel disconnection के लिए नहीं है, और इसका charging बढ़ाने से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u9_charge_controller_q13",
+      "question": "Charge controllers में battery charging सामान्यतः किन तीन मुख्य stages में होती है?",
+      "options": [
+        "Bulk, Absorption और Float — ये तीन मुख्य charging stages हैं",
+        "केवल एक ही constant stage होती है पूरे process में",
+        "Series और Parallel stages",
+        "High और Low stages केवल दो"
+      ],
+      "correctIndex": 0,
+      "explanation": "आधुनिक charge controllers सामान्यतः Bulk, Absorption तथा Float — इन तीन stages में charging करते हैं, जो battery की life तथा efficient charging सुनिश्चित करते हैं। एक constant stage, series/parallel stages, या केवल दो stages जैसे विकल्प वास्तविक charging algorithm को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u9_charge_controller_q14",
+      "question": "Charging की 'Bulk stage' में controller किस प्रकार व्यवहार करता है?",
+      "options": [
+        "इस stage में charging बिल्कुल बंद रहती है",
+        "इस stage में controller battery को उपलब्ध अधिकतम current से तेज़ी से चार्ज करता है जब तक voltage regulation setpoint तक न पहुँच जाए",
+        "इस stage में केवल trickle current दिया जाता है",
+        "इस stage में load automatically disconnect हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bulk stage में controller उपलब्ध अधिकतम current से battery को तेज़ी से चार्ज करता है जब तक कि voltage निर्धारित regulation setpoint तक न पहुँच जाए। Charging बंद रहना, केवल trickle current देना, या load का disconnect होना — ये bulk stage की विशेषताएँ नहीं हैं (वे अन्य stages/conditions से संबंधित हैं)।"
+    },
+    {
+      "id": "u9_charge_controller_q15",
+      "question": "Charging की 'Absorption stage' में controller किस प्रकार व्यवहार करता है?",
+      "options": [
+        "इस stage में current को अधिकतम स्तर पर स्थिर रखा जाता है",
+        "इस stage में voltage तेज़ी से बढ़ता रहता है बिना किसी limit के",
+        "इस stage में voltage को स्थिर (constant) setpoint पर रखा जाता है जबकि current धीरे-धीरे कम (taper) होता जाता है जैसे-जैसे battery पूर्णतः चार्ज होती है",
+        "इस stage में controller पूरी तरह बंद हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Absorption stage में voltage एक निश्चित setpoint पर स्थिर रखा जाता है जबकि battery पूर्णतः चार्ज होते-होते current स्वतः कम (taper) होता जाता है। Current को अधिकतम पर स्थिर रखना, voltage को बिना limit बढ़ाना, या controller का पूरी तरह बंद होना absorption stage का सही वर्णन नहीं है।"
+    },
+    {
+      "id": "u9_charge_controller_q16",
+      "question": "Charging की 'Float stage' का उद्देश्य क्या है?",
+      "options": [
+        "इस stage में battery को जानबूझकर तेज़ी से discharge किया जाता है",
+        "इस stage में voltage bulk stage से भी अधिक रखा जाता है",
+        "Float stage केवल night time में सक्रिय होता है",
+        "इस stage में battery को fully-charged अवस्था में बनाए रखने के लिए एक कम (lower), स्थिर trickle voltage दिया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Float stage में battery पूर्णतः चार्ज हो चुकी होती है, इसलिए उसे उस अवस्था में बनाए रखने के लिए एक अपेक्षाकृत कम, स्थिर trickle voltage दिया जाता है ताकि over-charging न हो। Jaanboojhkar discharge करना गलत उद्देश्य है, float voltage bulk से अधिक नहीं बल्कि कम होता है, और यह night में नहीं बल्कि charging cycle पूरा होने पर day-time में भी active रहता है।"
+    },
+    {
+      "id": "u9_charge_controller_q17",
+      "question": "रात में या बिना sunlight की स्थिति में battery से panel की ओर current बहने से रोकने के लिए protection क्यों ज़रूरी है?",
+      "options": [
+        "रात में जब panel voltage battery voltage से कम हो जाता है, तो बिना protection के battery का current वापस panel की ओर बहकर battery को discharge कर सकता है",
+        "रात में यह panel को अतिरिक्त गर्म करने के लिए होता है",
+        "इसका रात के operation से कोई संबंध नहीं",
+        "यह केवल दिन में जरूरी होता है जब panel active हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "रात को जब panel voltage battery voltage से कम हो जाता है, panel एक load की तरह व्यवहार कर सकता है और battery का current उसकी ओर बहकर अनावश्यक रूप से battery को discharge कर सकता है, इसलिए यह protection ज़रूरी है। Panel को गर्म करना गलत उद्देश्य है, इसका रात के operation से सीधा संबंध है, और दिन में यह समस्या तब नहीं होती जब panel स्वयं current उत्पन्न कर रहा हो।"
+    },
+    {
+      "id": "u9_charge_controller_q18",
+      "question": "'अधिकांश आधुनिक PWM/MPPT controllers में reverse current protection built-in internal electronic switching द्वारा होती है, इसलिए अलग बाहरी blocking diode की आवश्यकता प्रायः नहीं रहती' — यह कथन कितना सही है?",
+      "options": [
+        "गलत, हर controller के साथ हमेशा एक अलग बाहरी diode अनिवार्य रूप से जोड़ना पड़ता है",
+        "सही, अधिकांश आधुनिक controllers में यह protection built-in electronic switching द्वारा होती है",
+        "Reverse current protection केवल पुराने controllers में होती है नए में कभी नहीं",
+        "यह feature केवल inverter में पाया जाता है, controller में नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "आधुनिक solid-state controllers प्रायः internal switching (MOSFETs आदि) के माध्यम से ही reverse current को रोक देते हैं, जिससे अलग external blocking diode की सामान्यतः आवश्यकता नहीं रहती। 'हमेशा अनिवार्य external diode' गलत है, यह feature पुराने में नहीं बल्कि नए controllers में अधिक common है, और यह feature controller का ही हिस्सा है, inverter का नहीं।"
+    },
+    {
+      "id": "u9_charge_controller_q19",
+      "question": "कुछ advanced charge controllers में मौजूद 'temperature compensation' feature क्या कार्य करता है?",
+      "options": [
+        "यह केवल controller के अपने internal temperature को मापता है, battery से कोई संबंध नहीं",
+        "यह feature charging voltage को हमेशा स्थिर रखता है चाहे तापमान कुछ भी हो",
+        "यह battery के तापमान के अनुसार charging voltage setpoint को स्वतः समायोजित (adjust) करता है ताकि extreme temperatures में सही चार्जिंग हो",
+        "Temperature compensation का उद्देश्य केवल cooling fan चलाना है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Temperature compensation feature battery के actual तापमान के अनुसार charging voltage setpoint को adjust करता है, क्योंकि extreme गर्मी या ठंड में battery की optimal charging voltage बदल जाती है। यह controller के अपने temperature तक सीमित नहीं (battery temperature relevant है), voltage को 'हमेशा स्थिर' रखना इस feature के विपरीत है, और इसका cooling fan से कोई सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u9_charge_controller_q20",
+      "question": "यदि charge controller की current rating, PV array के actual output current से कम (undersized) हो, तो क्या समस्या हो सकती है?",
+      "options": [
+        "Undersized controller हमेशा सामान्य रूप से बिना किसी समस्या के काम करता रहेगा",
+        "Undersized controller automatically अपनी rating बढ़ा लेता है",
+        "Controller का size केवल दिखावे के लिए मायने रखता है",
+        "यदि controller की current rating array के actual output current से कम हो, तो controller पर अत्यधिक load पड़ने से वह overheat होकर क्षतिग्रस्त हो सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Undersized controller पर उसकी rated क्षमता से अधिक current गुजरने से वह overheat हो सकता है, जिससे components को नुकसान पहुँच सकता है या controller fail हो सकता है। यह 'बिना किसी समस्या' काम नहीं करेगा, controller स्वतः अपनी rating नहीं बढ़ा सकता, और सही sizing केवल दिखावे का विषय नहीं बल्कि safety की आवश्यकता है।"
+    },
+    {
+      "id": "u9_charge_controller_q21",
+      "question": "Charge controller select करते समय उसकी current rating के लिए सामान्य sizing rule of thumb क्या है?",
+      "options": [
+        "Controller की current rating को array/system के maximum expected current से अधिक (जैसे लगभग 25% safety margin सहित) चुना जाना चाहिए",
+        "Controller की rating हमेशा array की rating से कम रखनी चाहिए",
+        "Controller की rating का array की current से कोई संबंध नहीं",
+        "Controller को हमेशा सबसे सस्ता, बिना rating जांचे खरीदना चाहिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Safety और reliability के लिए controller की current rating को array के maximum expected current से अधिक (सामान्यतः लगभग 25% या उससे अधिक margin सहित) चुना जाता है ताकि overload न हो। Rating को array से कम रखना खतरनाक है, दोनों में स्पष्ट संबंध है, और rating जांचे बिना खरीदना असुरक्षित practice है।"
+    },
+    {
+      "id": "u9_charge_controller_q22",
+      "question": "Charge controller पर लगे LCD/LED indicators सामान्यतः क्या जानकारी दिखाते हैं?",
+      "options": [
+        "केवल current समय (घड़ी) दिखाते हैं",
+        "Battery की state of charge, वर्तमान charging mode (bulk/absorption/float) तथा किसी fault की स्थिति",
+        "केवल installer का नाम दिखाते हैं",
+        "इनका कोई functional उद्देश्य नहीं, केवल सजावट है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Controller के indicators सामान्यतः battery की state of charge, current charging stage तथा किसी fault/warning की स्थिति दिखाते हैं, जिससे user system की स्थिति समझ सके। घड़ी दिखाना, installer का नाम, या केवल सजावट — ये इनका वास्तविक उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u9_charge_controller_q23",
+      "question": "Charge controller पर मौजूद 'load output' terminal का क्या उपयोग है?",
+      "options": [
+        "यह केवल AC loads के लिए होता है",
+        "इसका load protection से कोई संबंध नहीं",
+        "यह DC loads को सीधे battery से जोड़ने की सुविधा देता है तथा साथ में Low Voltage Disconnect (LVD) जैसी protection भी प्रदान करता है",
+        "यह केवल panel को जोड़ने के लिए होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Load output terminal DC loads (जैसे lights, DC fans) को battery से जोड़ने की सुविधा देता है और साथ में LVD जैसी protection भी लागू करता है ताकि battery deep-discharge न हो। यह AC loads के लिए नहीं (DC-based systems में यह DC output है), इसका load protection से सीधा संबंध है, और यह panel connection के लिए अलग terminal है।"
+    },
+    {
+      "id": "u9_charge_controller_q24",
+      "question": "यदि किसी MPPT controller के साथ ऐसा PV array जोड़ दिया जाए जिसका open-circuit voltage controller की maximum rated input voltage से अधिक हो, तो क्या हो सकता है?",
+      "options": [
+        "इससे कोई नुकसान नहीं होता, controller automatically adjust कर लेता है",
+        "यह केवल controller की दक्षता बढ़ा देता है",
+        "यह केवल battery को सुरक्षित रखने में मदद करता है",
+        "यदि array का open-circuit voltage controller की maximum rated input voltage से अधिक हो, तो controller की internal electronics क्षतिग्रस्त हो सकती हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "MPPT controllers की एक निश्चित maximum input voltage limit होती है, और यदि array का Voc उससे अधिक हो जाए तो internal components (जैसे MOSFETs) पर अत्यधिक voltage stress पड़ने से वे क्षतिग्रस्त हो सकते हैं। 'कोई नुकसान नहीं' गलत है, इससे दक्षता नहीं बढ़ती बल्कि खतरा बढ़ता है, और यह battery को सुरक्षित रखने की बजाय controller को ही खतरे में डालता है।"
+    },
+    {
+      "id": "u9_charge_controller_q25",
+      "question": "Charge controller में सही battery type (जैसे lead-acid, lithium-ion) select करना क्यों ज़रूरी है?",
+      "options": [
+        "सही battery type select करना ज़रूरी है ताकि controller उपयुक्त charging voltage तथा algorithm का उपयोग करे",
+        "Battery type setting का charging से कोई संबंध नहीं",
+        "सभी battery types के लिए एक ही चार्जिंग algorithm पर्याप्त है",
+        "Battery type setting केवल display की भाषा बदलती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "अलग-अलग battery chemistries (lead-acid, lithium-ion आदि) की optimal charging voltage तथा algorithm अलग होते हैं, इसलिए सही type select करने से controller battery के अनुकूल तरीके से चार्ज करता है, जिससे life और safety दोनों बेहतर रहती है। यह setting charging को सीधे प्रभावित करती है, सभी types के लिए एक जैसा algorithm उपयुक्त नहीं, और इसका display भाषा से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_charge_controller_q26",
+      "question": "किसी charge controller पर लिखी rating '12V/24V, 20A' का क्या अर्थ है?",
+      "options": [
+        "इसका मतलब है controller की कीमत ₹1220 है",
+        "यह दर्शाता है कि controller किन nominal system voltages (12V/24V) पर काम कर सकता है तथा वह अधिकतम कितना current (20A) संभाल सकता है",
+        "यह केवल controller के weight को दर्शाता है",
+        "इसका कोई तकनीकी अर्थ नहीं, केवल model number है"
+      ],
+      "correctIndex": 1,
+      "explanation": "यह rating दर्शाती है कि controller 12V या 24V nominal system voltage पर काम कर सकता है और अधिकतम 20A तक current handle कर सकता है, जो sizing के लिए महत्वपूर्ण जानकारी है। यह कीमत, weight, या केवल model number नहीं दर्शाती, यह specific electrical rating है।"
+    },
+    {
+      "id": "u9_charge_controller_q27",
+      "question": "एक PV panel जिसका Vmp = 18V तथा Imp = 5A (लगभग 90W) है, को एक MPPT controller के माध्यम से 12V battery से जोड़ा गया है। Losses को नज़रअंदाज़ करते हुए, battery की ओर approximately कितना current मिलेगा?",
+      "options": [
+        "ठीक 5A (Imp के बराबर)",
+        "लगभग 7.5A (चूंकि MPPT power को लगभग conserve करता है: 90W ÷ 12V ≈ 7.5A)",
+        "लगभग 18A",
+        "लगभग 90A"
+      ],
+      "correctIndex": 1,
+      "explanation": "MPPT converter power को लगभग conserve करता है (P = V×I), इसलिए 90W panel power को 12V battery voltage पर बदलने पर current ≈ 90W ÷ 12V ≈ 7.5A मिलेगा, जो panel के 5A से अधिक है। 'ठीक 5A' PWM जैसे behaviour को दर्शाता है (MPPT का लाभ नहीं दिखाता), 18A और 90A गलत गणना पर आधारित हैं।"
+    },
+    {
+      "id": "u9_charge_controller_q28",
+      "question": "'PWM charge controller में output current लगभग panel के current जितना ही रहता है, यह current को बढ़ाकर (boost) नहीं देता जैसे MPPT आंशिक रूप से करता है' — यह कथन कितना सही है?",
+      "options": [
+        "सही, PWM में output current लगभग panel के current जितना ही रहता है, यह current को बढ़ाकर (boost) नहीं देता",
+        "गलत, PWM हमेशा current को कई गुना बढ़ा देता है",
+        "PWM output current हमेशा शून्य होता है",
+        "PWM का current output panel से पूरी तरह असंबंधित होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "PWM controller panel को battery से सीधे जोड़ता है (केवल switching करता है), इसलिए output current लगभग panel के current जितना ही रहता है और उसमें कोई DC-DC boost नहीं होता जैसा MPPT में देखा जाता है। शेष options गलत हैं: PWM current को कई गुना नहीं बढ़ाता, output शून्य नहीं होता (जब panel active हो), और यह panel के current पर ही निर्भर करता है।"
+    },
+    {
+      "id": "u9_charge_controller_q29",
+      "question": "सही charge controller का चयन तथा उसका उचित उपयोग, battery की life बढ़ाने में किस प्रकार मदद करता है?",
+      "options": [
+        "यह overcharging तथा deep-discharge दोनों को रोककर battery की life बढ़ाने में मदद करता है, जो battery degradation के मुख्य कारण हैं",
+        "Controller का battery life से कोई संबंध नहीं होता",
+        "Controller केवल battery का रंग बनाए रखता है",
+        "Controller battery की physical size बदल देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Overcharging और deep-discharge battery degradation के दो प्रमुख कारण हैं, और सही controller इन दोनों को नियंत्रित करके battery की life को काफी हद तक बढ़ा देता है। शेष options controller के वास्तविक तकनीकी योगदान को नज़रअंदाज़ करते हैं।"
+    },
+    {
+      "id": "u9_charge_controller_q30",
+      "question": "Solar PV system में charge controller की भूमिका को सबसे उपयुक्त रूप से किस प्रकार summarize किया जा सकता है?",
+      "options": [
+        "Charge controller केवल एक साधारण on/off switch है जिसका कोई अन्य कार्य नहीं",
+        "Charge controller PV array और battery के बीच एक बुद्धिमान (intelligent) interface है जो safe, efficient charging सुनिश्चित करता है और battery को overcharge/deep-discharge से बचाता है",
+        "Charge controller की भूमिका केवल सौंदर्यशास्त्र (aesthetics) से जुड़ी है",
+        "Charge controller पूरी तरह inverter का ही एक part है, अलग device नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Charge controller PV array और battery के बीच एक intelligent interface की तरह कार्य करता है जो charging stages को manage करता है, efficiency बनाए रखता है, और battery को overcharge व deep-discharge दोनों से सुरक्षित रखता है। यह केवल साधारण on/off switch नहीं है, इसकी भूमिका सौंदर्यशास्त्र से संबंधित नहीं, और यह inverter से अलग एक स्वतंत्र device है।"
+    }
+  ]
+}

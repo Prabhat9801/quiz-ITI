@@ -1,0 +1,368 @@
+{
+  "unit": "unit16",
+  "unitName": "Electro Pneumatics",
+  "topic": "solenoid_valves",
+  "topicName": "Solenoid Valves, Limit Switches, Memory Valves, Pressure/Time-dependent Valves",
+  "questions": [
+    {
+      "id": "u16_solenoid_valves_q1",
+      "question": "Solenoid valve में 'solenoid' शब्द वास्तव में किस component को संदर्भित करता है?",
+      "options": [
+        "Valve की body में बनी pneumatic ports की arrangement",
+        "एक electromagnetic coil जो energize होने पर plunger/armature पर magnetic force लगाकर उसे move करती है",
+        "Valve के अंदर लगा spring",
+        "Valve पर लगा pressure gauge"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solenoid एक coil of wire होती है जिसमें current प्रवाहित होने पर electromagnetic field बनता है, यह field एक ferromagnetic plunger (armature) को अपनी ओर खींचता है, जिससे valve spool/poppet mechanically move होता है। Options A, C, D valve के अन्य भाग हैं, solenoid नहीं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q2",
+      "question": "Direct-acting solenoid valve में solenoid energize होने पर क्या होता है?",
+      "options": [
+        "Solenoid केवल एक pilot air signal उत्पन्न करता है जो main spool move करता है",
+        "Solenoid का plunger सीधे मुख्य valve seat/spool को move करके flow path खोलता या बंद करता है",
+        "Valve automatically pressure बढ़ा देता है",
+        "Timer countdown शुरू हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Direct-acting solenoid valve में armature/plunger सीधे मुख्य seat या spool से जुड़ा होता है, इसलिए energize होते ही यह सीधे main flow path को open/close कर देता है, बिना किसी intermediate pilot stage के। Option A pilot-operated valve का वर्णन है, C, D सही कार्य नहीं हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q3",
+      "question": "Pilot-operated (servo-assisted) solenoid valve में छोटे solenoid की भूमिका क्या होती है?",
+      "options": [
+        "यह सीधे बड़े main spool को move करता है",
+        "यह केवल एक छोटा pilot valve operate करता है, जिसका output pressure signal मुख्य spool को move करने के लिए diaphragm/piston पर लगता है",
+        "यह केवल indication देता है",
+        "यह पूरे system का pressure regulate करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़े flow-capacity वाले valves में spool को move करने हेतु अधिक force चाहिए होता है जो एक छोटे solenoid से संभव नहीं; इसलिए solenoid केवल small pilot valve को actuate करता है, जिससे निकलने वाला pilot air pressure main spool/diaphragm पर लगकर उसे move कराता है। Option A direct-acting valve का वर्णन है, C, D गलत हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q4",
+      "question": "Solenoid coil को उसकी rated voltage से अधिक AC voltage पर लगातार operate करने से क्या समस्या हो सकती है?",
+      "options": [
+        "Coil ठंडी हो जाएगी",
+        "अत्यधिक current प्रवाहित होकर coil overheating व insulation burn-out (जल जाना) हो सकता है",
+        "Valve की response speed धीमी होगी लेकिन कोई नुकसान नहीं",
+        "Air pressure अपने आप कम हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rated voltage से अधिक voltage देने पर coil में अत्यधिक current बहता है जिससे resistive heating बढ़ती है और insulation जल सकती है, जिससे coil permanently damage हो सकती है। Options A, C, D तथ्यात्मक रूप से सही नहीं हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q5",
+      "question": "AC solenoid में 'shading ring' (shading coil) का उद्देश्य क्या है?",
+      "options": [
+        "Coil की resistance बढ़ाना",
+        "AC supply की zero-crossing के समय armature की chatter/humming (vibration) को रोकने के लिए एक time-shifted secondary flux उत्पन्न करना",
+        "Valve के exhaust port को बड़ा करना",
+        "Air की moisture हटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "AC solenoid में मुख्य flux हर आधे cycle में zero होता है, जिससे armature vibrate (chatter/hum) कर सकता है; shading ring एक phase-shifted (delayed) secondary flux उत्पन्न कर इस vibration को कम करती है और armature को firmly seated रखती है। Options A, C, D इसका वास्तविक कार्य नहीं है।"
+    },
+    {
+      "id": "u16_solenoid_valves_q6",
+      "question": "DC solenoid valves, AC solenoid valves की तुलना में सामान्यतः किस विशेषता के लिए बेहतर माने जाते हैं?",
+      "options": [
+        "अधिक noise उत्पन्न करने के लिए",
+        "Switching के दौरान armature की chatter/noise कम होना और यदि armature फंस जाए तो जलने की संभावना कम होना (क्योंकि current, AC की तरह पूरी तरह inrush पर निर्भर नहीं)",
+        "अधिक cost होने के लिए",
+        "केवल high pressure applications में इस्तेमाल होने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "DC solenoid, AC की तुलना में अधिक smooth तथा quiet operation देता है और armature stuck होने की स्थिति में भी AC solenoid जितना तेजी से जलने का खतरा नहीं रहता क्योंकि DC में inrush current की समस्या नहीं होती। Options A, C, D गलत तुलनात्मक तथ्य हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q7",
+      "question": "Memory valve (bistable/double solenoid valve) में 'memory' शब्द का क्या अभिप्राय है?",
+      "options": [
+        "Valve internally एक digital memory chip रखता है जो program store करता है",
+        "एक बार momentary electrical pulse देकर spool को switch करने पर, valve pulse हटने के बाद भी उस अंतिम switched position को mechanically बनाए रखता है",
+        "Valve हमेशा rest position में लौट आता है",
+        "यह केवल pressure को store करता है, position को नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Memory (bistable) valve की एक विशेष mechanical/pneumatic detent व्यवस्था होती है जो spool को momentary pulse के बाद भी उसी अंतिम स्थिति में locked रखती है, जब तक विपरीत solenoid pulse न दिया जाए — यह 'memory' कहलाती है। Option A गलत analogy है, C monostable valve का व्यवहार है, D अधूरा वर्णन है।"
+    },
+    {
+      "id": "u16_solenoid_valves_q8",
+      "question": "Memory valve का उपयोग करने से control circuit में एक बड़ा लाभ क्या मिलता है?",
+      "options": [
+        "Solenoid को हमेशा energized रखना पड़ता है, जिससे अधिक reliable होता है",
+        "Solenoid को केवल momentary pulse देनी होती है (continuous energization की जरूरत नहीं), जिससे power की खपत कम होती है और coil की life बढ़ती है",
+        "Valve बिना electricity के भी switch हो जाता है",
+        "यह हमेशा manual actuation की जगह लेता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि memory valve mechanically अपनी position hold कर लेता है, इसलिए solenoid को position बनाए रखने के लिए लगातार energized रखने की जरूरत नहीं पड़ती, केवल एक छोटी pulse काफी होती है; इससे power consumption घटती है व coil overheating का खतरा कम होता है। Options A, C, D सही technical लाभ को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q9",
+      "question": "Limit switch (mechanically actuated electrical switch) का electro-pneumatic circuit में मुख्य उपयोग क्या है?",
+      "options": [
+        "Air pressure को नियंत्रित करना",
+        "Cylinder/moving part की एक निश्चित physical position पर पहुँचने का feedback electrical signal के रूप में control circuit को देना",
+        "Solenoid coil की voltage बदलना",
+        "Timer की delay set करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Limit switch cylinder की rod, table या किसी moving mechanism की end/intermediate position पर mechanically actuate होकर contact change करता है, जिससे control circuit को उस position पर पहुँचने की सूचना electrical signal के रूप में मिलती है, जो अगले step को trigger करने में उपयोग होती है। Options A, C, D इसका सही कार्य नहीं हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q10",
+      "question": "NC (normally closed) limit switch और NO (normally open) limit switch में मूलभूत अंतर क्या है?",
+      "options": [
+        "NC switch rest position में contact बंद (closed/conducting) रखता है और actuate होने पर खुल जाता है, जबकि NO switch rest position में खुला रहता है और actuate होने पर बंद हो जाता है",
+        "दोनों rest position में बंद रहते हैं",
+        "NC switch केवल AC पर काम करता है",
+        "NO switch कभी actuate नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "NC limit switch की rest condition में internal contacts जुड़े (closed) रहते हैं, actuator दबाने पर ये खुल जाते हैं; इसके विपरीत NO switch rest में खुला रहता है और actuation पर बंद होता है। Options B, C, D इस मूलभूत परिभाषा को सही नहीं बताते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q11",
+      "question": "Limit switch को cylinder की end position detect करने के लिए लगाते समय 'over-travel protection' क्यों आवश्यक होता है?",
+      "options": [
+        "क्योंकि इससे switch की cost कम होती है",
+        "क्योंकि यदि cam/dog actuation point से आगे भी थोड़ा travel करे तो switch या उसके internal mechanism को नुकसान न पहुँचे, इसके लिए switch में एक तयशुदा additional travel allowance होता है",
+        "क्योंकि इससे electrical rating बदल जाती है",
+        "क्योंकि इससे solenoid का current कम होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Real applications में exact stopping position में थोड़ी variation हो सकती है, इसलिए limit switch को इस तरह design किया जाता है कि actuation के बाद भी कुछ अतिरिक्त travel (over-travel) को सहन कर सके, ताकि mechanical damage न हो। Options A, C, D इसके सही तकनीकी कारण को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q12",
+      "question": "Pressure-dependent valve (जैसे pressure switch/sequence valve) 'time-dependent valve' (जैसे pneumatic timer) से किस मूल सिद्धांत में भिन्न होता है?",
+      "options": [
+        "Pressure-dependent valve किसी set pressure value तक पहुँचने पर switch करता है, जबकि time-dependent valve एक निर्धारित समय अवधि बीतने पर switch करता है, चाहे pressure कुछ भी हो",
+        "दोनों केवल pressure के आधार पर काम करते हैं",
+        "दोनों केवल time के आधार पर काम करते हैं",
+        "Pressure-dependent valve में कोई actuation आवश्यक नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pressure-dependent (sequence) valve का switching threshold pressure value पर आधारित होता है (जैसे जब pilot pressure 5 bar तक पहुँचे), जबकि time-dependent (timer) valve का switching एक fixed elapsed time पर आधारित होता है — दोनों के trigger करने का मापदंड मूल रूप से भिन्न है। Options B, C, D गलत सामान्यीकरण करते हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q13",
+      "question": "Sequence valve (pressure-operated) एक clamp-then-drill circuit में किस प्रकार कार्य करता है?",
+      "options": [
+        "यह drilling cylinder को clamp cylinder से पहले चलाता है",
+        "यह तब तक बंद रहता है जब तक clamp cylinder द्वारा workpiece पर पूरी pilot pressure (set value) न पहुँच जाए; उसके बाद ही यह drilling cylinder को signal pass करता है, जिससे clamping सुनिश्चित होने के बाद ही drilling शुरू होती है",
+        "यह केवल time के आधार पर दोनों cylinders को चलाता है",
+        "यह हमेशा दोनों cylinders को साथ-साथ चलाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sequence valve की setting इस तरह होती है कि जब तक clamp cylinder workpiece को पूरी तरह पकड़कर pilot line में set pressure न बना दे, तब तक valve बंद रहता है; pressure पहुँचते ही यह next stage (drilling cylinder) को signal देता है, जिससे safety व proper sequencing सुनिश्चित होती है। Options A, C, D गलत sequencing बताते हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q14",
+      "question": "Time-dependent (timer-based) valve का उपयोग करने का एक संभावित नुकसान क्या हो सकता है, जब actual process समय load के अनुसार बदलता हो?",
+      "options": [
+        "Timer कभी गलत नहीं होता",
+        "यदि actual mechanical motion, timer के preset time से पहले या बाद में पूरा हो, तो fixed-time sequencing असंगत (inconsistent) या असुरक्षित हो सकती है, जबकि position/pressure-based feedback अधिक विश्वसनीय होता है",
+        "Timer हमेशा actual position को sense करता है",
+        "इसमें कोई solenoid जरूरी नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि load, friction या air pressure में variation के कारण actual cylinder movement का समय बदल सकता है, इसलिए एक fixed preset timer कभी-कभी वास्तविक completion से पहले या बाद में अगला step trigger कर सकता है; इसके विपरीत limit switch/pressure switch जैसी feedback-based sequencing अधिक reliable मानी जाती है। Options A, C, D गलत हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q15",
+      "question": "3/2 way single solenoid valve में जब solenoid coil burn हो जाए (open circuit), तो valve किस position में रहेगा?",
+      "options": [
+        "Coil burn होने पर भी valve last actuated position में रहेगा",
+        "Spring की force द्वारा valve अपनी default (normally closed या normally open, जैसा भी design हो) rest position में बना रहेगा क्योंकि magnetic force अनुपस्थित होगी",
+        "Valve random रूप से switch करता रहेगा",
+        "Valve permanently locked होकर किसी भी दिशा में move नहीं करेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Single solenoid spring-return valve में यदि coil fail हो जाए तो कोई magnetic force उत्पन्न नहीं होगी, इसलिए internal spring valve को उसकी fail-safe rest position में बनाए रखेगा। Option A double solenoid (memory) valve का behaviour है, C, D सही नहीं हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q16",
+      "question": "Solenoid valve चुनते समय 'duty cycle' rating का ध्यान रखना क्यों जरूरी है?",
+      "options": [
+        "क्योंकि यह केवल valve के रंग को दर्शाता है",
+        "क्योंकि यह बताता है कि coil को कितनी देर तक continuously energized रखा जा सकता है बिना overheating के; 100% duty cycle rated coil को लगातार ON रखा जा सकता है जबकि कम rated coil को intermittent duty पर ही चलाना चाहिए",
+        "क्योंकि इससे air की quality बदलती है",
+        "क्योंकि यह केवल pressure rating से संबंधित है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Duty cycle rating यह दर्शाती है कि coil कितने समय तक बिना नुकसान के energized रह सकती है; 100% duty cycle coil को continuous ON रखा जा सकता है (जैसे memory valve की तुलना में single solenoid जिसे hold करना पड़े), जबकि कम duty cycle rating वाली coil को intermittent (थोड़े समय के लिए) ही चलाना चाहिए वरना overheating होगी। Options A, C, D इसका सही अर्थ नहीं देते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q17",
+      "question": "Limit switch में 'wobble stick' (whisker) actuator प्रकार का प्रयोग किस स्थिति में किया जाता है?",
+      "options": [
+        "जब actuating cam पूरी तरह fixed single direction से आए",
+        "जब object अलग-अलग दिशाओं से या अनिश्चित angle से आ सकता है, तब flexible rod किसी भी दिशा से झुककर switch को actuate कर देता है",
+        "जब केवल pneumatic signal चाहिए, electrical नहीं",
+        "जब switch को pressure measurement के लिए use करना हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Wobble stick actuator एक flexible rod होता है जो लगभग किसी भी दिशा से आने वाले object द्वारा झुकाए जाने पर switch actuate कर देता है, इसलिए यह ऐसी applications में उपयोगी है जहाँ object का approach angle निश्चित नहीं होता। Options A, C, D इसकी सही application को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q18",
+      "question": "Electro-pneumatic circuit में freewheeling diode (flyback diode) को DC solenoid coil के समानांतर (parallel) क्यों लगाया जाता है?",
+      "options": [
+        "Coil की resistance बढ़ाने के लिए",
+        "Coil de-energize होते समय collapsing magnetic field के कारण उत्पन्न high voltage spike को safe path देकर nearby electronic components (जैसे relay contacts, PLC output) को नुकसान से बचाने के लिए",
+        "Coil को अधिक तेजी से energize करने के लिए",
+        "Air pressure को regulate करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inductive load (solenoid coil) जब de-energize होता है तो collapsing magnetic field एक high-voltage back-EMF spike उत्पन्न करता है; flyback diode इस spike के लिए एक circulating current path देकर इसे safely dissipate करता है, जिससे controlling relay/transistor/PLC output की सुरक्षा होती है। Options A, C, D इसका सही उद्देश्य नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q19",
+      "question": "Memory (bistable) valve में internal detent mechanism (mechanical latch) की भूमिका क्या है?",
+      "options": [
+        "यह valve को हमेशा vibrate करता रहता है",
+        "यह spool को दोनों में से किसी एक end position पर mechanically पकड़कर रखता है, जब तक विपरीत दिशा से पर्याप्त force (pilot signal या solenoid pulse) न मिले",
+        "यह केवल air filter का कार्य करता है",
+        "यह coil की resistance को measure करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Detent एक mechanical arrangement (जैसे spring-loaded ball या over-centre mechanism) है जो spool को उसकी last-switched position में hold करता है जब तक विपरीत तरफ से sufficient actuating force न आए, इस तरह valve बिना निरंतर supply signal के अपनी position बनाए रखता है। Options A, C, D इसकी सही भूमिका नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q20",
+      "question": "Proximity-type limit switch (जैसे inductive/capacitive) की तुलना में mechanical (roller lever) limit switch का एक नुकसान क्या है?",
+      "options": [
+        "यह contactless होता है",
+        "इसमें mechanical contact व wear-tear होता है, जिससे समय के साथ contacts घिस सकते हैं और high-speed या high-cycle applications में जल्दी खराब हो सकते हैं",
+        "यह केवल electrical signal generate करता है",
+        "इसकी cost हमेशा proximity switch से अधिक होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mechanical limit switch में physical contact (roller/cam) के कारण wear-tear होता है, जिससे high-frequency operation में इसकी life proximity sensor की तुलना में कम हो सकती है, जो contactless होता है। Option A proximity switch की विशेषता है (mechanical switch की नहीं), C, D सही तुलनात्मक तथ्य नहीं हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q21",
+      "question": "एक 5/2 way double solenoid memory valve वाले electro-pneumatic circuit में यदि control power supply अचानक बंद हो जाए, तो cylinder की स्थिति पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Cylinder तुरंत मूल (home) position में वापस आ जाएगा",
+        "Valve अपनी last-switched (memory held) position में बना रहेगा, इसलिए power off होने के बावजूद cylinder वहीं रुका रहेगा जहाँ वह उस समय था",
+        "Cylinder oscillate करने लगेगा",
+        "System automatically restart हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि memory valve mechanical detent द्वारा अपनी अंतिम switched position बनाए रखता है, इसलिए power supply जाने पर भी valve position नहीं बदलती और cylinder उसी स्थिति में स्थिर रहता है, जब तक विपरीत solenoid को दोबारा signal न मिले। Options A, C, D single solenoid spring-return valve जैसा या गलत व्यवहार दर्शाते हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q22",
+      "question": "Solenoid valve की body पर अंकित 'Cv value' (flow coefficient) किस बात को दर्शाती है?",
+      "options": [
+        "Valve की operating voltage",
+        "Valve के through उस flow capacity को जो एक निर्धारित pressure drop पर पास हो सकती है — अधिक Cv value का अर्थ है अधिक flow क्षमता",
+        "Valve की response time in seconds",
+        "Coil की resistance in ohms"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cv (flow coefficient) valve की flow-passing capacity को दर्शाता है — किसी निश्चित pressure drop पर valve से कितनी flow rate pass हो सकती है; इसका उपयोग सही valve size select करने में होता है। Options A, C, D गलत parameters को दर्शाते हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q23",
+      "question": "Limit switch की contact rating (जैसे 5A, 250V AC) से अधिक load सीधे उससे control करने पर क्या समस्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी, यह हमेशा safe है",
+        "Contacts पर excessive current से arcing व overheating होकर contacts जल्दी खराब (pitted/welded) हो सकते हैं",
+        "Switch की response speed तेज़ हो जाएगी",
+        "Air pressure automatically कम हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rated current से अधिक load सीधे switch contacts से control करने पर contact make/break के समय अत्यधिक arcing होती है, जिससे contacts pit या weld होकर जल्दी खराब हो जाते हैं; इसलिए बड़े load को control करने के लिए relay/contactor का प्रयोग किया जाता है। Options A, C, D गलत हैं।"
+    },
+    {
+      "id": "u16_solenoid_valves_q24",
+      "question": "Electro-pneumatic circuit में 'indicator lamp' को solenoid coil के parallel में लगाने का एक सामान्य उद्देश्य क्या है?",
+      "options": [
+        "Coil की current खपत कम करने के लिए",
+        "Operator को visual feedback देना कि solenoid वर्तमान में energized है या नहीं, जिससे troubleshooting और monitoring आसान हो",
+        "Air pressure को measure करने के लिए",
+        "Timer की delay बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Indicator lamp solenoid के parallel में लगाकर यह visually दिखाया जाता है कि कौन-सा solenoid वर्तमान में energized है, जिससे operator या technician को system की status समझने और fault diagnosis करने में सुविधा होती है। Options A, C, D इसका सही उद्देश्य नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q25",
+      "question": "Pressure-dependent memory valve (pressure-actuated pilot valve जो detent के जरिए position hold करे) किस प्रकार की application में प्रयुक्त होता है?",
+      "options": [
+        "जहाँ केवल समय आधारित control चाहिए",
+        "जहाँ एक निश्चित pilot pressure स्तर पहुँचने पर valve permanently (जब तक अगला signal न आए) switch होकर बना रहे, जैसे pressure-based clamping confirmation के बाद अगले operation को lock करना",
+        "जहाँ केवल manual actuation चाहिए",
+        "जहाँ air की quality control करनी हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pressure-dependent memory valve pilot pressure के एक निश्चित threshold पर actuate होकर अपनी position को detent के जरिए तब तक बनाए रखता है जब तक विपरीत दिशा से signal न मिले, यह उन applications में उपयोगी है जहाँ pressure-confirmation आधारित sequencing और साथ ही position को retain करना जरूरी हो। Options A, C, D इसके सही उपयोग को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q26",
+      "question": "Solenoid valve में armature (plunger) के गाइड tube में 'non-magnetic sleeve' (जैसे stainless steel) का उपयोग क्यों किया जाता है?",
+      "options": [
+        "क्योंकि इससे valve सस्ता बनता है",
+        "ताकि magnetic flux केवल armature तक केंद्रित रहे और sleeve स्वयं चुंबकित होकर flux को short-circuit न करे, जिससे actuating force effective रहे",
+        "क्योंकि यह air pressure को बढ़ा देता है",
+        "क्योंकि यह coil की voltage rating बदल देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Non-magnetic sleeve (जैसे austenitic stainless steel) coil के magnetic flux को short-circuit होने से रोकता है ताकि पूरा flux armature को move करने में उपयोग हो, जिससे solenoid अधिक efficient रूप से कार्य करे। Options A, C, D इसका सही कारण नहीं बताते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q27",
+      "question": "एक automation circuit में delayed OFF pneumatic timer valve का उपयोग किस उद्देश्य से किया जा सकता है?",
+      "options": [
+        "Input signal मिलते ही तुरंत output बंद करने के लिए",
+        "Input signal हटने के बाद भी output को कुछ समय तक चालू (extended) रखने के लिए, जैसे किसी cooling fan या lamp को cycle पूरा होने के बाद भी कुछ देर तक चलाए रखना",
+        "केवल pressure regulate करने के लिए",
+        "केवल direction control के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Delayed OFF (OFF-delay) timer input हटने के बाद भी output को preset समय तक ON बनाए रखता है, जो ऐसे applications में उपयोगी है जहाँ main signal हटने के बाद भी किसी component (जैसे cooling) को कुछ समय अतिरिक्त चलाना जरूरी हो। Options A, C, D इसके सही उपयोग को नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q28",
+      "question": "Limit switch तथा proximity switch दोनों को एक ही cylinder की end-position sensing के लिए redundant (double) रूप से लगाने का एक कारण क्या हो सकता है?",
+      "options": [
+        "क्योंकि इससे circuit की cost कम होती है",
+        "Critical/safety applications में एक sensor fail होने की स्थिति में दूसरा sensor backup के रूप में सही feedback दे सके, जिससे reliability बढ़े",
+        "क्योंकि दोनों sensors का काम बिल्कुल अलग है और उन्हें साथ रखना अनिवार्य नियम है",
+        "क्योंकि इससे cylinder की speed बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Critical automation या safety-related applications में redundancy के सिद्धांत पर दो अलग तकनीक (mechanical व contactless) वाले sensors एक साथ लगाए जाते हैं ताकि एक sensor की failure की स्थिति में भी सही position feedback मिलती रहे और गलत सीक्वेंसिंग से बचा जा सके। Options A, C, D सही तकनीकी कारण नहीं देते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q29",
+      "question": "Solenoid valve तथा उससे जुड़े control circuit में 'surge suppressor' (RC snubber या MOV) का उपयोग AC solenoid के साथ क्यों किया जाता है?",
+      "options": [
+        "Coil की voltage rating बदलने के लिए",
+        "Coil de-energize होने पर उत्पन्न transient voltage spike को absorb करके nearby relay contacts व electronic components को protect करने के लिए, ठीक वैसे जैसे DC coil में flyback diode काम करता है",
+        "Air pressure को नियंत्रित करने के लिए",
+        "केवल indication के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "AC solenoid coil में flyback diode का उपयोग संभव नहीं होता (क्योंकि AC bidirectional है), इसलिए RC snubber circuit या MOV (metal oxide varistor) का उपयोग करके de-energization के समय उत्पन्न voltage transient को absorb किया जाता है, जिससे controlling contacts की life बढ़ती है। Options A, C, D इसका सही उद्देश्य नहीं दर्शाते।"
+    },
+    {
+      "id": "u16_solenoid_valves_q30",
+      "question": "एक electro-pneumatic bottle-filling automation में, bottle की सही position detect करने हेतु limit switch की जगह photoelectric proximity sensor उपयोग करने का क्या तार्किक कारण होगा?",
+      "options": [
+        "क्योंकि photoelectric sensor bottle को touch किए बिना, बिना किसी mechanical wear के तथा high-speed पर reliably detect कर सकता है, जो contact-based limit switch की तुलना में तेज व अधिक durable है",
+        "क्योंकि limit switch कभी काम नहीं करता",
+        "क्योंकि photoelectric sensor को compressed air चाहिए होती है",
+        "क्योंकि limit switch केवल manual operation के लिए बनाया गया है"
+      ],
+      "correctIndex": 0,
+      "explanation": "High-speed automatic bottle-filling lines में non-contact photoelectric sensor बिना physical contact के bottle की presence detect कर सकता है, जिससे mechanical wear-tear नहीं होता और यह mechanical limit switch की तुलना में तेज़ व अधिक टिकाऊ (durable) साबित होता है उच्च cycle rate applications में। Options B, C, D तथ्यात्मक रूप से गलत हैं।"
+    }
+  ]
+}

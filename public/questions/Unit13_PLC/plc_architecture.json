@@ -1,0 +1,368 @@
+{
+  "unit": "unit13",
+  "unitName": "PLC",
+  "topic": "plc_architecture",
+  "topicName": "PLC Architecture - CPU, I/O Modules, Rack, Chassis, Power Supply",
+  "questions": [
+    {
+      "id": "u13_plc_architecture_q1",
+      "question": "PLC के internal architecture में CPU (Central Processing Unit) का मुख्य कार्य क्या होता है?",
+      "options": [
+        "केवल field devices को power supply देना",
+        "User program को execute करना और input data के आधार पर output decisions लेना",
+        "केवल physical wiring को support करना",
+        "केवल cooling fan को चलाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "CPU PLC का 'दिमाग' होता है जो memory में stored ladder program को execute करता है, input status पढ़ता है और logic के अनुसार output को control करता है। Option A power supply module का काम है, C व D CPU के functional कार्य नहीं हैं।"
+    },
+    {
+      "id": "u13_plc_architecture_q2",
+      "question": "Modular PLC architecture में 'rack' या 'chassis' का क्या उद्देश्य होता है?",
+      "options": [
+        "यह केवल decoration के लिए होता है",
+        "यह program को store करता है",
+        "यह विभिन्न modules (CPU, I/O, power supply) को mechanically mount करने और आपस में connect करने का आधार देता है",
+        "यह केवल cooling के लिए इस्तेमाल होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rack/chassis एक physical structure है जिसमें slots होते हैं और इसमें CPU module, I/O modules तथा power supply module को mount किया जाता है, साथ ही यह internal bus के जरिए इन्हें आपस में जोड़ता है। Program storage memory का काम है, cooling अलग heat-sink/fan arrangement से होता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q3",
+      "question": "PLC में Input Module का मुख्य कार्य क्या है?",
+      "options": [
+        "Field sensors/switches से आने वाले signals को receive करके उन्हें CPU के लिए उपयुक्त logic level signal में convert करना",
+        "Motor को directly चलाना",
+        "Program को permanently store करना",
+        "पूरे system की power supply generate करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Input module field side (sensors, push buttons, limit switches) से आने वाले real-world signals (जैसे 24V DC या 230V AC) को receive करके उन्हें CPU के internal logic levels में convert करता है, अक्सर opto-isolation के साथ। Motor चलाना output module/actuator का काम है, program storage memory unit करता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q4",
+      "question": "PLC का Output Module मुख्य रूप से किस काम के लिए जिम्मेदार होता है?",
+      "options": [
+        "CPU से आए logic signals को field actuators (motor, solenoid, lamp) को चलाने योग्य signal में convert करना",
+        "Field sensors से data पढ़ना",
+        "Program को edit करना",
+        "Ladder diagram को display करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Output module CPU द्वारा process किए गए logic result को field devices जैसे contactor, solenoid valve, indicator lamp आदि को on/off करने के लिए उपयुक्त voltage/current signal में convert करता है। Data पढ़ना input module का काम है, program editing programming device से होती है।"
+    },
+    {
+      "id": "u13_plc_architecture_q5",
+      "question": "PLC system में Power Supply Module का प्राथमिक कार्य क्या है?",
+      "options": [
+        "Ladder logic को execute करना",
+        "AC mains supply को CPU व अन्य modules के लिए आवश्यक regulated DC voltage (जैसे 5V, 24V) में convert करना",
+        "Field wiring को directly control करना",
+        "Communication protocol को handle करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power supply module incoming AC supply (110V/230V) को rectify व regulate करके CPU, memory और I/O circuits के लिए जरूरी stable DC voltage देता है। Logic execution CPU करता है, communication अलग communication module/port संभालता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q6",
+      "question": "Modular PLC architecture की तुलना में fixed (compact) PLC architecture की एक प्रमुख सीमा क्या है?",
+      "options": [
+        "इसमें I/O count को आवश्यकतानुसार बढ़ाना कठिन होता है क्योंकि सभी modules एक ही housing में fixed होते हैं",
+        "इसमें CPU नहीं होता",
+        "यह ज्यादा महँगा होता है",
+        "इसमें power supply की जरूरत नहीं पड़ती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fixed/compact PLC में CPU, I/O और power supply एक ही single housing में built-in होते हैं, इसलिए I/O count को expand करना सीमित या असंभव होता है, जबकि modular PLC में जरूरत अनुसार rack में additional I/O modules जोड़े जा सकते हैं। CPU तो हर PLC में होता है और power supply भी हमेशा जरूरी है।"
+    },
+    {
+      "id": "u13_plc_architecture_q7",
+      "question": "PLC के internal bus (backplane bus) का क्या कार्य है?",
+      "options": [
+        "यह field devices को directly power देता है",
+        "यह rack में लगे CPU और विभिन्न I/O modules के बीच data तथा power का आदान-प्रदान करने का माध्यम है",
+        "यह केवल mechanical support देता है",
+        "यह programming software को store करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Backplane bus rack के slots के बीच electrical connections प्रदान करता है जिससे CPU module I/O modules के साथ data exchange कर सके और आवश्यक power भी distribute हो सके। Field devices को power अलग power supply/wiring से मिलती है, software storage memory में होता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q8",
+      "question": "PLC memory के 'Program Memory' भाग में क्या store रहता है?",
+      "options": [
+        "केवल input signals की temporary values",
+        "User द्वारा लिखा गया ladder logic/application program",
+        "केवल output devices की wiring diagram",
+        "केवल power supply की rating"
+      ],
+      "correctIndex": 1,
+      "explanation": "Program memory में user का लिखा हुआ control logic (ladder diagram/instructions) permanently या semi-permanently store होता है जिसे CPU बार-बार scan करता है। Input/output values data memory में temporarily रहती हैं, wiring diagram या rating memory का हिस्सा नहीं होते।"
+    },
+    {
+      "id": "u13_plc_architecture_q9",
+      "question": "PLC architecture में 'Data Memory' या 'Data Table' का उपयोग किसके लिए होता है?",
+      "options": [
+        "Ladder program के instructions को store करने के लिए",
+        "Input status, output status, timer/counter values जैसी runtime data को temporarily store करने के लिए",
+        "Power supply rating store करने के लिए",
+        "केवल CPU की clock speed store करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Data memory (data table) में current input states, output states, timer/counter accumulated values जैसी runtime information रखी जाती है जो scan के दौरान लगातार update होती रहती है। Program instructions program memory में स्थायी रूप से store होते हैं।"
+    },
+    {
+      "id": "u13_plc_architecture_q10",
+      "question": "PLC में I/O module की 'addressing' architecture किस बात पर निर्भर करती है?",
+      "options": [
+        "केवल CPU की clock speed पर",
+        "Rack number, slot number और उस slot में module के अंदर terminal/channel number पर",
+        "केवल power supply की wattage पर",
+        "केवल programming software के version पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modular PLC architecture में हर I/O point का unique address उसकी rack position, slot position और module के अंदर channel number से बनता है, जिससे program में उस specific input/output को reference किया जा सके। Clock speed, wattage या software version addressing से सीधा संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u13_plc_architecture_q11",
+      "question": "Discrete (Digital) Input Module किस प्रकार के signals को handle करता है?",
+      "options": [
+        "0-10V या 4-20mA जैसे continuously varying analog signals",
+        "केवल ON/OFF (two-state) signals जैसे push button, limit switch",
+        "केवल motor speed feedback signals",
+        "केवल temperature की continuous reading"
+      ],
+      "correctIndex": 1,
+      "explanation": "Discrete/digital input module केवल दो states (ON या OFF, 1 या 0) वाले signals को accept करता है जैसे push button, proximity switch, limit switch। Continuously varying signals (0-10V, 4-20mA) को analog input module handle करता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q12",
+      "question": "Analog Input Module का उपयोग किन field devices के साथ किया जाता है?",
+      "options": [
+        "केवल push button switches के साथ",
+        "Pressure transmitter, temperature transmitter जैसे उपकरण जो continuously varying signal (जैसे 4-20mA) देते हैं",
+        "केवल indicator lamps के साथ",
+        "केवल limit switches के साथ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Analog input module continuous range signal (जैसे 4-20mA या 0-10V) देने वाले transmitters (pressure, temperature, level) से data प्राप्त करके उसे digital value में convert करता है ताकि CPU उसे process कर सके। Push button और limit switch discrete signals देते हैं।"
+    },
+    {
+      "id": "u13_plc_architecture_q13",
+      "question": "PLC architecture में Input/Output modules और CPU के बीच electrical isolation (जैसे opto-isolator) देने का मुख्य कारण क्या है?",
+      "options": [
+        "Program को तेज़ी से execute करने के लिए",
+        "Field side की noise, voltage spikes या fault से CPU और logic circuitry को सुरक्षित रखने के लिए",
+        "केवल cost कम करने के लिए",
+        "Memory की size बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Opto-isolation field devices से आने वाले electrical noise, surge या accidental high voltage से sensitive CPU/logic circuits को protect करती है। यह program speed, cost या memory size से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q14",
+      "question": "एक typical modular PLC rack में यदि CPU module slot 0 में हो, तो बाकी slots में सामान्यतः क्या लगाया जाता है?",
+      "options": [
+        "केवल decorative cover plates",
+        "Power supply module तथा विभिन्न digital/analog I/O modules और communication modules",
+        "केवल additional CPU modules",
+        "केवल cooling fans"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rack के बाकी slots में जरूरत के अनुसार power supply, digital input/output modules, analog I/O modules और communication interface modules लगाए जाते हैं ताकि system की functionality बढ़ाई जा सके। एक rack में सामान्यतः एक ही active CPU काफी होता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q15",
+      "question": "PLC architecture में 'System Bus' और 'I/O Bus' में क्या अंतर है?",
+      "options": [
+        "दोनों बिल्कुल एक ही चीज़ हैं",
+        "System bus CPU के internal components को जोड़ता है जबकि I/O bus CPU को external I/O modules के साथ data exchange के लिए जोड़ता है",
+        "System bus केवल power देता है, I/O bus कुछ नहीं करता",
+        "I/O bus केवल programming device को जोड़ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "System bus CPU के internal parts (processor, memory) को आपस में जोड़ता है, जबकि I/O bus (backplane) CPU module को rack में लगे विभिन्न I/O modules से communicate करने देता है ताकि data transfer हो सके। ये अलग-अलग functional layers हैं, समान नहीं।"
+    },
+    {
+      "id": "u13_plc_architecture_q16",
+      "question": "PLC में 'Communication Module' या 'Communication Port' का क्या उद्देश्य है?",
+      "options": [
+        "Field actuators को directly power देना",
+        "PLC को programming device, HMI, SCADA या अन्य PLCs के साथ network के माध्यम से data आदान-प्रदान करने में सक्षम बनाना",
+        "केवल input signals को filter करना",
+        "केवल memory backup रखना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Communication module/port (जैसे RS-232, RS-485, Ethernet) PLC को computer, HMI panel, SCADA system या दूसरे PLCs से जोड़कर data exchange और networking को संभव बनाता है। Actuators को power output module देता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q17",
+      "question": "PLC architecture में 'Programming Device' (जैसे laptop/hand-held programmer) की भूमिका क्या है?",
+      "options": [
+        "यह permanently PLC का हिस्सा बनकर हर समय logic execute करता रहता है",
+        "इसका उपयोग ladder program लिखने, download करने, monitor करने और troubleshoot करने के लिए किया जाता है, बाद में इसे disconnect भी किया जा सकता है",
+        "यह केवल power supply देता है",
+        "यह field devices को directly control करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Programming device का उपयोग program बनाने, CPU में download करने और runtime में monitor/troubleshoot करने के लिए किया जाता है; एक बार program CPU में load हो जाने पर programming device को हटाया भी जा सकता है क्योंकि execution CPU स्वयं करता है। यह permanent execution भाग नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q18",
+      "question": "PLC architecture में Battery Backup (या Capacitor backup) की जरूरत मुख्यतः किसलिए होती है?",
+      "options": [
+        "Field devices को power देने के लिए",
+        "Power failure होने पर RAM में stored program तथा retentive data values को खोने से बचाने के लिए",
+        "CPU की processing speed बढ़ाने के लिए",
+        "Analog signals को digital में convert करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब PLC का main power off हो जाता है, तो battery/capacitor backup volatile RAM में मौजूद program और retentive timer/counter data को बनाए रखता है ताकि power restore होने पर data loss न हो। यह field device power, processing speed या signal conversion से सीधे संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q19",
+      "question": "Compact/Fixed PLC architecture (जैसे small automation applications में प्रयुक्त) में CPU, memory, I/O और power supply किस प्रकार होते हैं?",
+      "options": [
+        "सभी अलग-अलग racks में अलग-अलग स्थान पर होते हैं",
+        "सभी एक ही single housing/enclosure में built-in होते हैं",
+        "केवल CPU और memory होते हैं, I/O नहीं होता",
+        "केवल power supply होती है, बाकी सब बाहर होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fixed/compact PLC architecture में CPU, memory, fixed संख्या के I/O points और power supply सब कुछ एक ही single compact housing में integrated होते हैं, जिससे यह छोटी automation applications के लिए economical बनता है। Modular architecture में ये अलग-अलग units में होते हैं।"
+    },
+    {
+      "id": "u13_plc_architecture_q20",
+      "question": "PLC architecture में CPU module के अंदर 'Microprocessor/Microcontroller' के अलावा और कौन सा घटक आम तौर पर मौजूद होता है?",
+      "options": [
+        "केवल field wiring terminals",
+        "Memory chips (RAM/ROM/EEPROM) जो program और data store करते हैं",
+        "केवल motor winding",
+        "केवल mechanical relay contacts"
+      ],
+      "correctIndex": 1,
+      "explanation": "CPU module में microprocessor के साथ-साथ memory chips (RAM program/data के लिए, ROM/EEPROM firmware और permanent program के लिए) होते हैं जो logic execution के लिए आवश्यक हैं। Field wiring terminals I/O modules में होते हैं।"
+    },
+    {
+      "id": "u13_plc_architecture_q21",
+      "question": "PLC के 'Rack' में मौजूद 'slots' की संख्या सीमित होने का क्या प्रभाव होता है?",
+      "options": [
+        "इसका कोई प्रभाव नहीं पड़ता",
+        "यह decide करता है कि उस rack में अधिकतम कितने I/O modules जोड़े जा सकते हैं, आवश्यकता से अधिक होने पर additional rack/expansion rack जोड़ना पड़ता है",
+        "यह केवल CPU की clock speed को प्रभावित करता है",
+        "यह केवल power consumption को कम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक rack में सीमित संख्या में slots होते हैं जो अधिकतम module count तय करते हैं; अधिक I/O की जरूरत होने पर expansion rack जोड़कर capacity बढ़ाई जाती है। Slot संख्या clock speed या power consumption को सीधे प्रभावित नहीं करती।"
+    },
+    {
+      "id": "u13_plc_architecture_q22",
+      "question": "PLC architecture में Output Module के 'Relay type output' और 'Transistor type output' में क्या मुख्य अंतर है?",
+      "options": [
+        "दोनों बिल्कुल समान होते हैं",
+        "Relay output AC/DC दोनों load चला सकता है पर switching speed कम होती है, जबकि transistor output तेज़ switching देता है पर सामान्यतः केवल DC load के लिए उपयुक्त होता है",
+        "Relay output केवल analog signals के लिए है",
+        "Transistor output केवल high power motors के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Relay output versatile होता है (AC और DC दोनों load चला सकता है) पर mechanical होने के कारण switching speed सीमित होती है; transistor output high-speed switching देता है पर सामान्यतः DC load तक सीमित रहता है। ये दोनों discrete output types हैं, analog signals से संबंधित नहीं।"
+    },
+    {
+      "id": "u13_plc_architecture_q23",
+      "question": "PLC architecture में redundant CPU या redundant power supply लगाने का उद्देश्य क्या है?",
+      "options": [
+        "Program को धीमा execute करने के लिए",
+        "किसी एक CPU/power supply के fail होने पर दूसरा automatically काम संभाल ले, जिससे critical process बिना रुके चलता रहे",
+        "केवल cost बढ़ाने के लिए",
+        "Memory size घटाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Critical industrial processes में redundancy (backup CPU/power supply) इसलिए रखी जाती है ताकि main unit fail होने पर backup unit तुरंत उसकी जगह ले ले और production बिना रुके चलती रहे। यह execution speed को धीमा नहीं करता, बल्कि reliability बढ़ाता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q24",
+      "question": "PLC architecture में 'Expansion Rack' या 'Remote I/O Rack' का क्या फायदा है?",
+      "options": [
+        "इससे CPU की processing speed कम हो जाती है",
+        "यह main rack से दूर स्थित field devices को जोड़ने और कुल I/O capacity बढ़ाने की सुविधा देता है",
+        "इससे केवल power consumption बढ़ती है, कोई फायदा नहीं",
+        "यह केवल programming software को store करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Expansion/remote I/O rack का उपयोग तब किया जाता है जब field devices main control panel से दूर हों या main rack के slots भर चुके हों; यह communication link के जरिए main CPU से जुड़कर system की कुल I/O capacity को बढ़ाता है। यह CPU speed को कम नहीं करता।"
+    },
+    {
+      "id": "u13_plc_architecture_q25",
+      "question": "PLC architecture में 'Status Indicator LEDs' (जैसे RUN, FAULT, I/O status) का क्या उपयोग है?",
+      "options": [
+        "यह केवल decoration के लिए होते हैं",
+        "यह CPU और I/O modules की operating condition (जैसे running, faulted, individual channel ON/OFF) को visually दर्शाते हैं जिससे quick diagnosis हो सके",
+        "यह field devices को power देते हैं",
+        "यह program को automatically edit करते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Status LEDs technician को बिना programming device जोड़े ही quickly बता देते हैं कि CPU run mode में है या fault में, और कौन सा input/output channel active है, जिससे troubleshooting आसान होती है। ये power देने या program edit करने का काम नहीं करते।"
+    },
+    {
+      "id": "u13_plc_architecture_q26",
+      "question": "PLC architecture में CPU module का 'Scan' operation किस memory के data पर निर्भर करता है?",
+      "options": [
+        "केवल power supply module की rating पर",
+        "Input image table (input status) और program memory में stored ladder logic पर",
+        "केवल rack के rंग पर",
+        "केवल communication cable की length पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "CPU scan के दौरान input image table से current input status पढ़ता है और program memory में stored ladder logic को execute करके output image table update करता है। Power rating, rack का रंग या cable length scan operation को logically प्रभावित नहीं करते।"
+    },
+    {
+      "id": "u13_plc_architecture_q27",
+      "question": "PLC architecture में 'Fuse' या 'Circuit Breaker' प्रत्येक module/rack में क्यों दिया जाता है?",
+      "options": [
+        "Program execution तेज़ करने के लिए",
+        "Over-current या short-circuit की स्थिति में module और wiring को नुकसान से बचाने के लिए",
+        "Memory capacity बढ़ाने के लिए",
+        "Analog signal को amplify करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fuse/circuit breaker over-current या short-circuit fault की स्थिति में तुरंत circuit को disconnect करके module, wiring और connected devices को damage से बचाते हैं। इनका program speed, memory या signal amplification से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q28",
+      "question": "PLC architecture में 'Backplane connector' का क्या कार्य है?",
+      "options": [
+        "यह field devices को directly जोड़ता है",
+        "यह प्रत्येक module को rack के internal bus से mechanically तथा electrically जोड़ता है ताकि data व power flow हो सके",
+        "यह केवल cosmetic cover होता है",
+        "यह केवल cooling के लिए हवा देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Backplane connector हर slot में module को insert करते ही rack के internal bus से जोड़ देता है, जिससे उस module तक power पहुँचे और वह CPU के साथ data exchange कर सके। Field devices सीधे field wiring terminals से जुड़ते हैं, connector से नहीं।"
+    },
+    {
+      "id": "u13_plc_architecture_q29",
+      "question": "आधुनिक PLC architecture में 'Real Time Clock (RTC)' module की क्या भूमिका होती है?",
+      "options": [
+        "यह field actuators को control करता है",
+        "यह system को accurate date व time information देता है जिसका उपयोग scheduling, logging और time-stamped events के लिए किया जाता है",
+        "यह केवल analog signal filter करता है",
+        "यह केवल power supply को regulate करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RTC module PLC को सटीक current date/time देता है जिसका उपयोग time-based scheduling (जैसे रोज़ाना निश्चित समय पर machine start), event logging और alarm time-stamping में होता है। यह actuators को नहीं चलाता और signal filtering या power regulation से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q30",
+      "question": "PLC architecture में overall system की reliability बढ़ाने के लिए 'Isolated Power Supply' modules field I/O से अलग क्यों रखे जाते हैं?",
+      "options": [
+        "ताकि field side में होने वाली voltage fluctuation या noise, CPU और internal circuitry को प्रभावित न कर सके",
+        "ताकि program execution तेज हो जाए",
+        "ताकि memory capacity बढ़ जाए",
+        "ताकि rack का वजन कम हो जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Field side पर motors, contactors आदि से उत्पन्न electrical noise या voltage spikes को isolated power supply design internal CPU/logic circuitry तक पहुँचने से रोकता है, जिससे system reliable रहता है। यह execution speed, memory size या weight से संबंधित नहीं है।"
+    }
+  ]
+}

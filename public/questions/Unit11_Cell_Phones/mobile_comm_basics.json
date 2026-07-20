@@ -1,0 +1,368 @@
+{
+  "unit": "unit11",
+  "unitName": "Cell Phones",
+  "topic": "mobile_comm_basics",
+  "topicName": "Mobile Communication Basics - Simplex/Duplex, Uplink/Downlink, Bands",
+  "questions": [
+    {
+      "id": "u11_mobile_comm_basics_q1",
+      "question": "Mobile communication में जब एक ही समय पर दोनों तरफ (both parties) बात कर सकते हैं, तो यह किस प्रकार का communication mode कहलाता है?",
+      "options": [
+        "Full duplex",
+        "Simplex",
+        "Half duplex",
+        "Broadcast mode"
+      ],
+      "correctIndex": 0,
+      "explanation": "Full duplex में दोनों users एक साथ transmit और receive कर सकते हैं, जैसे सामान्य mobile call। Simplex में communication केवल एक ही दिशा में होता है (जैसे radio broadcast)। Half duplex में दोनों दिशा में बात होती है पर एक समय में केवल एक ही (जैसे walkie-talkie)। Broadcast mode एक से अनेक (one-to-many) होता है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q2",
+      "question": "एक walkie-talkie जिसमें बात करने के लिए PTT (Push To Talk) button दबाना पड़ता है और एक समय में केवल एक ही व्यक्ति बोल सकता है, वह किस communication mode का उदाहरण है?",
+      "options": [
+        "Full duplex",
+        "Simplex",
+        "Half duplex",
+        "Multiplex"
+      ],
+      "correctIndex": 2,
+      "explanation": "Walkie-talkie half duplex है क्योंकि transmission दोनों दिशा में संभव है पर एक समय में केवल एक ही तरफ। Full duplex में दोनों एक साथ बात कर सकते हैं। Simplex केवल एक-दिशीय होता है जैसे TV/radio। Multiplex एक ही channel पर कई signals भेजने की तकनीक है, यह mode नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q3",
+      "question": "Cellular system में mobile handset से base station (tower) की ओर जाने वाले signal path को क्या कहते हैं?",
+      "options": [
+        "Downlink",
+        "Uplink",
+        "Sidelink",
+        "Backhaul"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mobile से base station की ओर जाने वाला link uplink (reverse link) कहलाता है। Downlink इसके विपरीत base station से mobile की ओर होता है। Sidelink दो devices के बीच सीधा link है (जैसे D2D)। Backhaul base station को core network से जोड़ने वाला link होता है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q4",
+      "question": "Base station से mobile handset की ओर आने वाला signal path किस नाम से जाना जाता है?",
+      "options": [
+        "Uplink",
+        "Reverse link",
+        "Downlink",
+        "Feedback link"
+      ],
+      "correctIndex": 2,
+      "explanation": "Base station से mobile की तरफ आने वाला link downlink (forward link) कहलाता है। Uplink और reverse link दोनों mobile से base station की ओर के link के नाम हैं। Feedback link एक control शब्द है, यह standard cellular link नाम नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q5",
+      "question": "GSM 900 band में uplink frequency range लगभग कितनी होती है?",
+      "options": [
+        "935–960 MHz",
+        "890–915 MHz",
+        "1710–1785 MHz",
+        "1805–1880 MHz"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM 900 में uplink (mobile से BTS) 890–915 MHz होता है और downlink 935–960 MHz होता है। 1710–1785 MHz तथा 1805–1880 MHz क्रमशः GSM 1800 (DCS) के uplink और downlink हैं, इसलिए वे यहाँ गलत हैं।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q6",
+      "question": "GSM 900 band में uplink और downlink frequencies के बीच का duplex spacing (gap) कितना होता है?",
+      "options": [
+        "45 MHz",
+        "20 MHz",
+        "95 MHz",
+        "10 MHz"
+      ],
+      "correctIndex": 0,
+      "explanation": "GSM 900 में downlink (935–960) और uplink (890–915) के corresponding channels के बीच 45 MHz का duplex spacing होता है (935−890 = 45)। 95 MHz duplex spacing GSM 1800 का है। 20 MHz और 10 MHz यहाँ लागू नहीं होते।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q7",
+      "question": "एक FDD (Frequency Division Duplex) system में uplink और downlink को अलग करने के लिए किसका उपयोग होता है?",
+      "options": [
+        "अलग-अलग time slots",
+        "अलग-अलग frequency bands",
+        "अलग-अलग spreading codes",
+        "अलग-अलग antennas केवल"
+      ],
+      "correctIndex": 1,
+      "explanation": "FDD में uplink और downlink को अलग-अलग frequency bands देकर separate किया जाता है, जिससे दोनों एक साथ चल सकें। अलग time slots का उपयोग TDD (Time Division Duplex) में होता है। Spreading codes CDMA में users को अलग करते हैं। केवल अलग antenna होना duplexing का आधार नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q8",
+      "question": "Mobile handset में एक ही antenna से एक साथ transmit और receive करते समय uplink और downlink signals को अलग रखने के लिए कौन सा component लगाया जाता है?",
+      "options": [
+        "Mixer",
+        "Duplexer",
+        "Attenuator",
+        "Modulator"
+      ],
+      "correctIndex": 1,
+      "explanation": "Duplexer एक ही antenna पर transmit और receive paths को अलग रखता है ताकि powerful transmit signal, sensitive receiver को नुकसान न पहुँचाए। Mixer frequency conversion करता है, attenuator signal level घटाता है, और modulator information को carrier पर बैठाता है — इनमें से कोई duplexing नहीं करता।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q9",
+      "question": "Simplex communication का सबसे सटीक उदाहरण निम्न में से कौन सा है?",
+      "options": [
+        "Mobile phone call",
+        "Walkie-talkie",
+        "FM radio broadcast सुनना",
+        "Video conferencing"
+      ],
+      "correctIndex": 2,
+      "explanation": "FM radio broadcast सुनना simplex है क्योंकि signal केवल एक ही दिशा में (station से listener) जाता है, listener वापस नहीं भेजता। Mobile call और video conferencing full duplex हैं। Walkie-talkie half duplex है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q10",
+      "question": "GSM 1800 (DCS 1800) band में downlink frequency range लगभग कितनी होती है?",
+      "options": [
+        "1710–1785 MHz",
+        "1805–1880 MHz",
+        "890–915 MHz",
+        "824–849 MHz"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM 1800 में downlink 1805–1880 MHz होता है जबकि uplink 1710–1785 MHz है। 890–915 MHz GSM 900 का uplink है और 824–849 MHz पुराने CDMA/800 band का uplink है, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q11",
+      "question": "Modulation का मुख्य उद्देश्य mobile communication में क्या है?",
+      "options": [
+        "Low-frequency information signal को high-frequency carrier पर बैठाकर लंबी दूरी तक भेजना",
+        "Signal की power पूरी तरह समाप्त करना",
+        "केवल battery बचाना",
+        "SIM card को activate करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Modulation में low-frequency baseband/information signal को high-frequency carrier पर बैठाया जाता है ताकि छोटी antenna से efficient radiation और लंबी दूरी तक transmission संभव हो। यह power समाप्त नहीं करता, न ही केवल battery बचाने या SIM activate करने के लिए होता है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q12",
+      "question": "Cellular communication में 'channel' शब्द का अर्थ मुख्यतः क्या है?",
+      "options": [
+        "Battery का एक terminal",
+        "Communication के लिए allocate किया गया एक frequency/time/code resource",
+        "SIM card का slot",
+        "Display का एक pixel"
+      ],
+      "correctIndex": 1,
+      "explanation": "Channel वह allocated resource है (frequency band, time slot या code) जिस पर एक communication link चलता है। Battery terminal, SIM slot या display pixel का communication channel से कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q13",
+      "question": "TDD (Time Division Duplex) system में uplink और downlink को कैसे अलग किया जाता है?",
+      "options": [
+        "अलग frequency bands द्वारा",
+        "एक ही frequency पर अलग-अलग time slots द्वारा",
+        "अलग antenna colours द्वारा",
+        "अलग battery voltage द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "TDD में uplink और downlink एक ही frequency का उपयोग करते हैं पर अलग-अलग time slots में बारी-बारी से transmit करते हैं। अलग frequency bands का उपयोग FDD में होता है। Antenna colour या battery voltage से duplexing का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q14",
+      "question": "Radio wave की frequency और wavelength के बीच क्या संबंध है (c = fλ)?",
+      "options": [
+        "दोनों एक-दूसरे के directly proportional हैं",
+        "दोनों एक-दूसरे के inversely proportional हैं",
+        "दोनों का कोई संबंध नहीं",
+        "Frequency बढ़ने पर wavelength भी बढ़ती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "c = fλ में प्रकाश की गति c स्थिर होने से frequency (f) और wavelength (λ) inversely proportional हैं — frequency बढ़ने पर wavelength घटती है। इसलिए 'directly proportional' और 'frequency बढ़ने पर wavelength भी बढ़ती है' गलत हैं, और 'कोई संबंध नहीं' भी गलत है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q15",
+      "question": "यदि किसी mobile carrier की frequency 900 MHz है, तो उसकी wavelength लगभग कितनी होगी (c = 3×10^8 m/s)?",
+      "options": [
+        "0.33 m",
+        "3.3 m",
+        "33 m",
+        "0.033 m"
+      ],
+      "correctIndex": 0,
+      "explanation": "λ = c/f = (3×10^8) / (900×10^6) = 0.333 m यानी लगभग 0.33 m। 3.3 m तब मिलता जब frequency 90 MHz होती; 33 m और 0.033 m गणना में error हैं।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q16",
+      "question": "GSM में एक RF carrier की channel bandwidth कितनी होती है?",
+      "options": [
+        "1.25 MHz",
+        "200 kHz",
+        "5 MHz",
+        "25 kHz"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM प्रत्येक RF carrier के लिए 200 kHz channel bandwidth उपयोग करता है, जिसे TDMA द्वारा 8 time slots में बाँटा जाता है। 1.25 MHz CDMA (IS-95) की bandwidth है, 5 MHz WCDMA/3G की है, और 25 kHz पुराने analog systems से जुड़ी है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q17",
+      "question": "Mobile communication में higher frequency bands (जैसे 1800 MHz) का 900 MHz की तुलना में एक मुख्य नुकसान क्या है?",
+      "options": [
+        "कम data capacity",
+        "कम coverage range (signal जल्दी attenuate होता है)",
+        "अधिक wavelength",
+        "SIM card काम नहीं करता"
+      ],
+      "correctIndex": 1,
+      "explanation": "उच्च frequency signals तेजी से attenuate होते हैं और obstacles में कम penetrate करते हैं, इसलिए 1800 MHz की coverage range 900 MHz से कम होती है। High frequency data capacity कम नहीं बल्कि अधिक देती है; wavelength कम होती है (अधिक नहीं); SIM की कार्यक्षमता frequency band से स्वतंत्र है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q18",
+      "question": "एक analog signal को digital form में बदलने की प्रक्रिया, जो mobile में voice को process करने के लिए आवश्यक है, क्या कहलाती है?",
+      "options": [
+        "Modulation",
+        "Rectification",
+        "Analog-to-Digital Conversion (ADC)",
+        "Amplification"
+      ],
+      "correctIndex": 2,
+      "explanation": "Voice जैसे analog signal को digital bits में बदलने की process को ADC कहते हैं। Modulation information को carrier पर बैठाता है, rectification AC को DC में बदलता है, और amplification signal की strength बढ़ाता है — इनमें से कोई analog-to-digital रूपांतरण नहीं करता।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q19",
+      "question": "GSM में voice को digitize करके भेजा जाता है जबकि पुराने 1G systems में voice किस रूप में भेजी जाती थी?",
+      "options": [
+        "Digital packets में",
+        "Analog (FM modulated) रूप में",
+        "SMS text में",
+        "Optical fiber pulses में"
+      ],
+      "correctIndex": 1,
+      "explanation": "1G systems (जैसे AMPS) voice को analog FM modulation के रूप में भेजते थे। GSM (2G) से voice digital हुई। SMS text और optical fiber pulses 1G voice के माध्यम नहीं थे, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q20",
+      "question": "Mobile handset में received signal बहुत कमजोर होने पर उसे उपयोग योग्य बनाने के लिए receiver का कौन सा stage उसे मजबूत करता है?",
+      "options": [
+        "Low Noise Amplifier (LNA)",
+        "Duplexer",
+        "SIM interface",
+        "Vibrator motor"
+      ],
+      "correctIndex": 0,
+      "explanation": "LNA antenna से आने वाले अत्यंत कमजोर signal को कम noise जोड़ते हुए amplify करता है, जो receiver का पहला महत्वपूर्ण stage है। Duplexer केवल TX/RX paths अलग करता है, SIM interface subscriber data संभालता है, और vibrator motor alert देता है — ये signal amplify नहीं करते।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q21",
+      "question": "Electromagnetic spectrum में mobile communication के लिए मुख्यतः किस frequency range का उपयोग होता है?",
+      "options": [
+        "Audio frequency (20 Hz–20 kHz)",
+        "Microwave/UHF range (सैकड़ों MHz से कुछ GHz)",
+        "X-ray range",
+        "Extremely Low Frequency (ELF) range"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mobile communication मुख्यतः UHF/microwave range (लगभग 800 MHz से कुछ GHz) में होती है, जो efficient antenna आकार और अच्छी capacity देती है। Audio और ELF frequencies बहुत कम हैं, और X-ray range ionizing तथा communication के लिए अनुपयुक्त है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q22",
+      "question": "FDMA (Frequency Division Multiple Access) में विभिन्न users को कैसे अलग किया जाता है?",
+      "options": [
+        "प्रत्येक user को अलग frequency band देकर",
+        "प्रत्येक user को अलग time slot देकर",
+        "प्रत्येक user को अलग code देकर",
+        "सभी users एक ही frequency साझा करके"
+      ],
+      "correctIndex": 0,
+      "explanation": "FDMA में प्रत्येक user को एक अलग frequency band आवंटित किया जाता है। अलग time slot देना TDMA है, अलग code देना CDMA है, और सभी users का एक ही frequency साझा करना multiple access का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q23",
+      "question": "Mobile handset की transmit power को कम रखने का एक प्रमुख कारण क्या है?",
+      "options": [
+        "Display को उज्ज्वल करना",
+        "Battery की बचत और अन्य cells में interference कम करना",
+        "SIM card गर्म रखना",
+        "Ringtone तेज करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "कम transmit power से battery की खपत घटती है और पास की दूसरी cells में interference भी कम होता है, इसलिए power control किया जाता है। Display brightness, SIM temperature या ringtone volume का transmit power से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q24",
+      "question": "Half duplex और full duplex में मुख्य अंतर क्या है?",
+      "options": [
+        "Half duplex में एक ही समय दोनों बात कर सकते हैं, full duplex में नहीं",
+        "Full duplex में एक ही समय दोनों बात कर सकते हैं, half duplex में एक समय में एक ही",
+        "दोनों बिल्कुल समान हैं",
+        "Full duplex केवल simplex का दूसरा नाम है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Full duplex में दोनों users एक साथ transmit/receive कर सकते हैं, जबकि half duplex में एक समय में केवल एक ही तरफ। पहला option उल्टा कथन है। दोनों समान नहीं हैं और full duplex simplex का दूसरा नाम नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q25",
+      "question": "किसी cellular band में guard band का मुख्य उद्देश्य क्या होता है?",
+      "options": [
+        "Battery को guard करना",
+        "आसपास के channels/bands के बीच interference रोकना",
+        "SIM की security बढ़ाना",
+        "Antenna की length बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Guard band दो adjacent channels या bands के बीच का खाली spectrum है जो interference (overlap) को रोकता है। यह battery, SIM security या antenna length से संबंधित नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q26",
+      "question": "GSM 900 में एक carrier को TDMA द्वारा कितने time slots में बाँटा जाता है, जिससे एक साथ कई users समर्थित होते हैं?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "2"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM में प्रत्येक 200 kHz carrier को TDMA द्वारा 8 time slots में बाँटा जाता है, अतः एक carrier पर 8 users (channels) समर्थित होते हैं। 4, 16 और 2 GSM के standard slot count नहीं हैं।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q27",
+      "question": "Mobile signal जब building के अंदर या पहाड़ के पीछे भी कुछ हद तक पहुँच जाता है, यह किस wave property के कारण होता है?",
+      "options": [
+        "Diffraction और reflection",
+        "केवल modulation",
+        "केवल battery power",
+        "SIM authentication"
+      ],
+      "correctIndex": 0,
+      "explanation": "Radio waves diffraction (किनारों पर मुड़ना) और reflection/scattering के कारण obstacles के पीछे भी पहुँच जाती हैं। Modulation केवल information बैठाने की process है, battery power range तय करने में सहायक है पर wave का मुड़ना नहीं समझाता, और SIM authentication propagation से असंबंधित है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q28",
+      "question": "Cellular communication में 'bandwidth' अधिक होने का सामान्य लाभ क्या है?",
+      "options": [
+        "कम data rate",
+        "अधिक data rate (अधिक जानकारी प्रति सेकंड)",
+        "कम coverage हमेशा",
+        "Battery जल्दी खत्म न होना निश्चित"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक bandwidth का अर्थ अधिक data rate होता है, यानी प्रति सेकंड अधिक जानकारी। इसलिए 'कम data rate' गलत है। Coverage मुख्यतः frequency और power पर निर्भर करता है, और battery life bandwidth से सीधे तय नहीं होती।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q29",
+      "question": "Uplink frequency को downlink से आमतौर पर कम रखने का एक व्यावहारिक कारण क्या है?",
+      "options": [
+        "Mobile handset कम frequency पर कम power में transmit कर battery बचाता है (कम path loss)",
+        "SIM card केवल कम frequency समझता है",
+        "Display कम frequency पर चमकता है",
+        "इसका कोई कारण नहीं, यह random है"
+      ],
+      "correctIndex": 0,
+      "explanation": "कम frequency पर path loss कम होता है, जिससे battery-चालित handset uplink में कम power लगाकर भी signal पहुँचा सकता है — इसलिए uplink को अक्सर कम frequency दी जाती है। SIM, display या randomness से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_mobile_comm_basics_q30",
+      "question": "एक mobile call के दौरान voice और control information दोनों को एक ही समय पर संभालने के लिए system किसका उपयोग करता है?",
+      "options": [
+        "अलग-अलग traffic channels और control channels",
+        "केवल एक ही channel जो सब कुछ करता है",
+        "SIM card का serial number",
+        "Battery voltage variation"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cellular system voice के लिए traffic channels और signaling/management के लिए अलग control channels उपयोग करता है, जिससे call और उससे जुड़ी control जानकारी एक साथ संभलती है। केवल एक ही channel सब करने वाला कथन गलत है, और SIM serial number या battery voltage इस कार्य से असंबंधित हैं।"
+    }
+  ]
+}

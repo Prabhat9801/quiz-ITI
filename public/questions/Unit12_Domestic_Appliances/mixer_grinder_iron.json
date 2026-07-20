@@ -1,0 +1,368 @@
+{
+  "unit": "unit12",
+  "unitName": "Domestic Appliances",
+  "topic": "mixer_grinder_iron",
+  "topicName": "Mixer Grinder & Electric/Steam Iron - Universal Motor, Speed Control & Thermostat",
+  "questions": [
+    {
+      "id": "u12_mixer_grinder_iron_q1",
+      "question": "Mixer grinder में motion produce करने के लिए सामान्यतः किस प्रकार की motor प्रयोग की जाती है?",
+      "options": [
+        "Universal motor",
+        "Squirrel cage induction motor",
+        "Synchronous motor",
+        "Shaded pole motor"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mixer grinder में Universal motor प्रयोग होती है क्योंकि यह AC और DC दोनों supply पर चल सकती है और high speed (लगभग 15000-20000 RPM) आसानी से देती है। Squirrel cage induction motor low speed पर heavy loads के लिए उपयुक्त है, Synchronous motor constant speed applications में प्रयोग होती है, और Shaded pole motor छोटे fans जैसी low torque applications में प्रयोग होती है — ये mixer के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q2",
+      "question": "Universal motor को यह नाम क्यों दिया गया है?",
+      "options": [
+        "क्योंकि यह केवल AC supply पर चलती है",
+        "क्योंकि यह केवल DC supply पर चलती है",
+        "क्योंकि यह AC और DC दोनों supply पर समान रूप से काम कर सकती है",
+        "क्योंकि यह सभी voltage levels पर बिना control के चलती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Universal motor को यह नाम इसलिए मिला है क्योंकि इसकी series-wound construction के कारण यह AC और DC दोनों supply पर काम कर सकती है। Option A और B इसे केवल एक type की supply तक सीमित करते हैं जो गलत है, और Option D गलत है क्योंकि high speed के कारण इसे उचित control की आवश्यकता होती है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q3",
+      "question": "Universal motor की construction में मुख्यतः कौन-कौन से भाग होते हैं?",
+      "options": [
+        "केवल stator और capacitor",
+        "Stator (field winding), Rotor (armature) और Commutator-brush assembly",
+        "केवल permanent magnet rotor",
+        "केवल slip rings और brushes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Universal motor में stator पर field winding, rotor पर armature winding, तथा commutator-brush assembly होती है जो current को armature में उचित दिशा में भेजती है। Capacitor का प्रयोग single-phase induction motors में होता है, permanent magnet rotor brushless DC motors में मिलता है, और slip rings synchronous/induction motors की विशेषता है — ये universal motor की मुख्य पहचान नहीं हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q4",
+      "question": "Mixer grinder में field winding और armature winding किस प्रकार जुड़ी होती हैं?",
+      "options": [
+        "Parallel (shunt) में",
+        "Series में",
+        "बिल्कुल अलग-अलग circuits में",
+        "Star connection में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Universal motor series-wound होती है, अर्थात field winding और armature winding series में जुड़ी होती हैं जिससे high starting torque मिलता है। Shunt connection DC motors में होता है, अलग circuits होने पर motor काम नहीं करेगी, और Star connection 3-phase systems से संबंधित है — ये सभी गलत हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q5",
+      "question": "Mixer grinder की speed control किस विधि से की जाती है?",
+      "options": [
+        "Motor की winding बदलकर",
+        "Series resistance/regulator या tapped field winding द्वारा voltage/current control करके",
+        "Rotor की दिशा बदलकर",
+        "केवल blade का size बदलकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Speed control के लिए series resistance regulator, tapped field winding, या electronic (TRIAC based) circuit द्वारा motor को मिलने वाले effective voltage/current को control किया जाता है जिससे speed कम-ज्यादा होती है। Winding बदलना practical नहीं है, दिशा बदलने से speed नहीं बदलती (केवल rotation direction), और blade size से motor की electrical speed control नहीं होती।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q6",
+      "question": "मॉडर्न mixer grinder में electronic speed control के लिए सामान्यतः किस component का प्रयोग होता है?",
+      "options": [
+        "Zener diode",
+        "TRIAC (Triode for Alternating Current)",
+        "Photo diode",
+        "LED"
+      ],
+      "correctIndex": 1,
+      "explanation": "TRIAC AC power को phase-control (firing angle बदलकर) द्वारा नियंत्रित करता है जिससे motor को मिलने वाला RMS voltage कम-ज्यादा होकर speed control होती है। Zener diode voltage regulation के लिए, photo diode light sensing के लिए, और LED indication के लिए प्रयोग होते हैं — ये speed control नहीं करते।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q7",
+      "question": "Mixer grinder में overload protector (thermal cut-out) का मुख्य कार्य क्या है?",
+      "options": [
+        "Motor की speed बढ़ाना",
+        "Motor को अत्यधिक current/heat से होने वाले नुकसान से बचाना",
+        "Blade को तेज़ करना",
+        "Voltage को stabilize करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Overload protector एक thermal या bimetallic device है जो motor जाम होने या अत्यधिक load के कारण अधिक current बहने पर circuit को automatically break कर देता है, जिससे winding जलने से बचती है। यह speed नहीं बढ़ाता, blade को sharp नहीं करता, और voltage stabilize करने का काम voltage stabilizer का है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q8",
+      "question": "Mixer grinder का overload protector सामान्यतः किस सिद्धांत पर कार्य करता है?",
+      "options": [
+        "Piezoelectric effect",
+        "Bimetallic strip का heat से bend होकर contact तोड़ना",
+        "Magnetic induction",
+        "Capacitive coupling"
+      ],
+      "correctIndex": 1,
+      "explanation": "Overload protector में bimetallic strip होती है जो अत्यधिक current से गरम होकर मुड़ जाती है और circuit के contacts को अलग कर देती है, जिससे supply cut हो जाती है। Piezoelectric effect pressure sensors में, magnetic induction transformers/motors में, और capacitive coupling signal transfer में प्रयोग होता है — ये overload protection का सिद्धांत नहीं हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q9",
+      "question": "मिक्सर motor यदि जाम (jam) हो जाए और अत्यधिक गरम होने लगे, तो सबसे पहले कौन सा safety device operate होगा?",
+      "options": [
+        "Speed regulator",
+        "Overload protector/thermal cut-out",
+        "Capacitor",
+        "Commutator"
+      ],
+      "correctIndex": 1,
+      "explanation": "Motor jam होने पर current असामान्य रूप से बढ़ जाता है, जिससे overload protector (thermal cut-out) heat sense करके circuit तोड़ देता है और motor को जलने से बचाता है। Speed regulator केवल speed control करता है, capacitor फिल्टरिंग में सहायक होता है, और commutator current direction बदलने का कार्य करता है — ये protection device नहीं हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q10",
+      "question": "मिक्सर grinder की blade assembly (jar coupling) किस प्रकार motor shaft से जुड़ी रहती है?",
+      "options": [
+        "Belt drive द्वारा",
+        "Direct coupling द्वारा shaft पर fitted drive coupler से",
+        "Gear box द्वारा",
+        "Chain drive द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mixer grinder में motor shaft पर एक drive coupler लगा होता है जो jar के bottom coupling से direct जुड़कर blade को घुमाता है, जिससे high speed सीधे transfer होती है। Belt, gear box, और chain drive बड़ी machines में torque transmission के लिए प्रयोग होते हैं, mixer में नहीं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q11",
+      "question": "साधारण (non-steam) electric iron मुख्यतः किस सिद्धांत पर कार्य करती है?",
+      "options": [
+        "Resistive heating element द्वारा उत्पन्न heat को sole plate तक conduct करना",
+        "Induction heating द्वारा सीधे कपड़े को गरम करना",
+        "Microwave radiation द्वारा",
+        "Peltier effect द्वारा ठंडा करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Electric iron में एक resistive heating element (Nichrome wire) current प्रवाहित होने पर heat उत्पन्न करता है, जो conduction द्वारा sole plate तक पहुँचकर कपड़ों को press करती है। Induction heating धातु के बर्तनों (जैसे induction cooktop) में प्रयोग होता है, microwave radiation cooking में, और Peltier effect cooling devices में प्रयोग होता है — ये iron का सिद्धांत नहीं हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q12",
+      "question": "Electric iron की heating element सामान्यतः किस material की बनी होती है?",
+      "options": [
+        "Copper",
+        "Nichrome (Nickel-Chromium alloy)",
+        "Aluminium",
+        "Pure Iron"
+      ],
+      "correctIndex": 1,
+      "explanation": "Nichrome alloy की high resistivity और high melting point के कारण यह heating elements के लिए आदर्श है, यह oxidation resistant भी है। Copper और Aluminium अच्छे conductors हैं इसलिए कम resistance के कारण अधिक heat नहीं देते, और Pure Iron जल्दी oxidize होकर टूट जाता है — ये heating element के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q13",
+      "question": "Electric iron में thermostat का मुख्य कार्य क्या है?",
+      "options": [
+        "Sole plate का temperature set value पर automatically control करना",
+        "Iron की weight बढ़ाना",
+        "Steam उत्पन्न करना",
+        "Current को AC से DC में बदलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thermostat bimetallic strip के माध्यम से sole plate के temperature को sense करके set value पर पहुँचने पर circuit को on/off करता रहता है, जिससे desired temperature maintain रहता है। Weight बढ़ाना, steam उत्पन्न करना, या AC को DC में बदलना thermostat के कार्य नहीं हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q14",
+      "question": "Iron के thermostat में bimetallic strip किस सिद्धांत पर कार्य करती है?",
+      "options": [
+        "दो अलग-अलग coefficients of thermal expansion वाली धातुओं के जुड़े होने से heat पर strip का मुड़ना",
+        "Magnetic repulsion द्वारा",
+        "Electrostatic attraction द्वारा",
+        "Chemical reaction द्वारा"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bimetallic strip में दो भिन्न-भिन्न धातुएं (जैसे brass और invar) जुड़ी होती हैं जिनके thermal expansion coefficients अलग होते हैं; गरम होने पर एक धातु दूसरी से अधिक फैलती है जिससे strip मुड़ती है और contact तोड़ देती है। Magnetic repulsion, electrostatic attraction और chemical reaction thermostat की कार्यविधि नहीं हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q15",
+      "question": "Iron में temperature selector dial (fabric selector) किस प्रकार temperature control में सहायता करता है?",
+      "options": [
+        "यह thermostat की spring tension/contact gap को adjust करके cut-off temperature सेट करता है",
+        "यह सीधे current की frequency बदलता है",
+        "यह sole plate का material बदल देता है",
+        "यह केवल indicator light चलाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Temperature selector dial thermostat की bimetallic contact की tension/gap को mechanically adjust करता है जिससे अलग-अलग fabric के लिए अलग cut-off temperature मिलती है। Frequency बदलना, sole plate material बदलना, या केवल light चलाना selector dial का कार्य नहीं है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q16",
+      "question": "Steam iron और साधारण dry iron में मुख्य अंतर क्या है?",
+      "options": [
+        "Steam iron में water tank और steam vents होते हैं जो भाप बनाकर कपड़ों को नम व soft करते हैं",
+        "Steam iron की heating element नहीं होती",
+        "Steam iron में thermostat नहीं होता",
+        "Steam iron केवल DC पर चलती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Steam iron में एक water tank होता है जिससे पानी heating chamber में जाकर steam में बदलता है और sole plate के vents से बाहर निकलकर कपड़ों को नम कर wrinkles हटाने में सहायता करता है। Steam iron में भी heating element और thermostat होते हैं, और यह AC supply पर ही चलती है — अतः अन्य options गलत हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q17",
+      "question": "Steam iron में water को steam में बदलने के लिए heat कहाँ से मिलती है?",
+      "options": [
+        "एक अलग chemical reaction से",
+        "उसी main heating element/steam chamber से जो sole plate को गरम करता है",
+        "बाहरी boiler से",
+        "Solar panel से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Steam iron में water को छोटे-छोटे holes/steam chamber के माध्यम से hot sole plate के पास भेजा जाता है जहाँ वही main heating element की heat पानी को steam में बदल देती है। इसके लिए कोई अलग chemical reaction, बाहरी boiler, या solar panel की आवश्यकता नहीं होती।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q18",
+      "question": "Iron के sole plate के लिए सामान्यतः कौन सा material प्रयोग होता है ताकि heat समान रूप से फैले?",
+      "options": [
+        "Plastic",
+        "Cast aluminium या stainless steel जिस पर non-stick/ceramic coating होती है",
+        "Rubber",
+        "Wood"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sole plate cast aluminium या stainless steel से बनती है क्योंकि ये heat को uniformly conduct करते हैं और इन पर coating लगाकर smooth gliding व non-stick surface मिलती है। Plastic, rubber और wood heat resistant नहीं होते और उच्च तापमान पर पिघल/जल सकते हैं, अतः ये sole plate के लिए अनुपयुक्त हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q19",
+      "question": "Iron के pilot/indicator lamp का क्या कार्य होता है?",
+      "options": [
+        "यह बताता है कि heating element को supply मिल रही है या thermostat ने circuit काट दिया है",
+        "यह steam उत्पन्न करता है",
+        "यह sole plate को साफ करता है",
+        "यह motor को चलाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Indicator lamp thermostat contact के साथ series/parallel में जुड़ा होता है और यह user को दिखाता है कि heating element currently ON है या thermostat ने temperature पूरी होने पर supply काट दी है। यह steam नहीं बनाता, sole plate साफ नहीं करता, और iron में कोई motor नहीं होती जिसे यह चलाए।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q20",
+      "question": "यदि electric iron ठीक से गरम नहीं हो रही परंतु supply cord सही है, तो सबसे संभावित fault क्या हो सकता है?",
+      "options": [
+        "Heating element (nichrome coil) का टूटना/open-circuit होना या thermostat का faulty होना",
+        "Room की lighting कम होना",
+        "बाहर का तापमान अधिक होना",
+        "Iron का रंग बदलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि cord ठीक है फिर भी heat नहीं मिल रही तो सामान्यतः heating element open-circuit हो गया है या thermostat contacts खराब/जाम हो गए हैं, जिससे current प्रवाहित नहीं होता। Room lighting, बाहरी तापमान और iron का रंग heating से कोई संबंध नहीं रखते।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q21",
+      "question": "Mixer grinder में यदि motor बहुत ज़्यादा sparking (चिंगारी) कर रही है, तो इसका मुख्य कारण सामान्यतः क्या होता है?",
+      "options": [
+        "Commutator और brushes का worn-out/dirty होना",
+        "Jar का सही से fit ना होना",
+        "Blade का blunt होना",
+        "Regulator का रंग फीका होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Universal motor में commutator-brush assembly current direction बदलने के लिए घर्षण में रहती है; brushes घिस जाने या commutator की surface dirty/pitted होने पर अत्यधिक sparking होती है। Jar का fit ना होना केवल operation रोकता है, blade का blunt होना grinding quality प्रभावित करता है, और regulator का रंग फीका होना electrical fault नहीं है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q22",
+      "question": "Mixer grinder के speed regulator (TRIAC based) में फेज़ नियंत्रण (phase control) से क्या प्राप्त होता है?",
+      "options": [
+        "Supply की frequency में परिवर्तन",
+        "AC waveform के प्रत्येक cycle में conduction angle बदलकर motor को मिलने वाले average voltage/power में परिवर्तन",
+        "DC supply का उत्पादन",
+        "Motor की polarity का उलटना"
+      ],
+      "correctIndex": 1,
+      "explanation": "TRIAC आधारित phase control में firing angle को adjust करके प्रत्येक AC half-cycle में conduction का समय बदला जाता है, जिससे motor को प्रभावी average voltage/power कम-ज्यादा मिलता है और speed नियंत्रित होती है। Frequency में कोई परिवर्तन नहीं होता, DC उत्पन्न नहीं होती, और polarity उलटने से motor की rotation direction का इससे कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q23",
+      "question": "Mixer grinder की motor की high speed (लगभग 18000-20000 RPM) की आवश्यकता क्यों होती है?",
+      "options": [
+        "क्योंकि blades को खाद्य पदार्थों को प्रभावी ढंग से काटने/पीसने के लिए उच्च cutting speed चाहिए",
+        "क्योंकि motor का size छोटा रखना है इसलिए speed महत्वहीन है",
+        "क्योंकि high speed से current की खपत कम होती है",
+        "क्योंकि high speed से noise कम होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "खाद्य पदार्थों को बारीक पीसने/काटने के लिए blades को उच्च RPM पर घूमना आवश्यक है ताकि प्रभावी cutting force उत्पन्न हो सके, इसलिए small size की high-speed universal motor प्रयोग होती है। Speed का motor size से सीधा संबंध महत्वहीन नहीं है, high speed से current की खपत सामान्यतः बढ़ती है, और high speed से noise भी बढ़ता है — ये गलत तर्क हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q24",
+      "question": "Mixer grinder में safety interlock switch (jar/lid के साथ) का उद्देश्य क्या है?",
+      "options": [
+        "यह motor को तभी चालू होने देता है जब jar/lid सही से lock हो",
+        "यह motor की speed बढ़ाता है",
+        "यह current को AC से DC में बदलता है",
+        "यह thermostat का कार्य करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Safety interlock switch तब तक circuit complete नहीं होने देती जब तक jar या lid सही स्थिति में locked ना हो, जिससे दुर्घटना से बचाव होता है। यह speed नहीं बढ़ाता, current type नहीं बदलता, और thermostat का कार्य (temperature control) भी नहीं करता।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q25",
+      "question": "Electric iron में earthing (grounding) की आवश्यकता मुख्यतः किस कारण होती है?",
+      "options": [
+        "Sole plate को चमकाने के लिए",
+        "Insulation fail होने पर body में आने वाले leakage current को सुरक्षित रूप से earth में भेजने के लिए",
+        "Steam उत्पन्न करने की क्षमता बढ़ाने के लिए",
+        "Heating speed बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Earthing insulation fail होने की स्थिति में metal body पर आए fault/leakage current को safe path देकर user को electric shock से बचाती है। यह sole plate चमकाने, steam capacity बढ़ाने, या heating speed बढ़ाने का कार्य नहीं करती।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q26",
+      "question": "यदि universal motor को rated voltage से अधिक voltage पर चलाया जाए, तो सामान्यतः क्या होगा?",
+      "options": [
+        "Motor की speed और torque कम हो जाएंगे",
+        "Motor की speed बढ़ेगी और अत्यधिक heating/winding damage का खतरा बढ़ेगा",
+        "Motor बिना किसी प्रभाव के सामान्य रूप से चलेगी",
+        "Motor की frequency बदल जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rated voltage से अधिक voltage देने पर current भी बढ़ता है जिससे speed और heat दोनों बढ़ जाते हैं, जिससे winding insulation जलने या commutator damage का खतरा रहता है। Speed कम नहीं होती, बिना प्रभाव के चलना असंभव है, और motor की frequency supply frequency पर निर्भर करती है, voltage पर नहीं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q27",
+      "question": "Mixer grinder में carbon brushes का प्रयोग किसलिए किया जाता है?",
+      "options": [
+        "Rotor को cool रखने के लिए",
+        "Commutator के साथ sliding contact बनाकर armature तक current पहुँचाने के लिए",
+        "Speed control करने के लिए",
+        "Jar को घुमाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Carbon brushes commutator की सतह पर sliding contact बनाकर stationary supply से current को rotating armature winding तक पहुँचाते हैं। यह rotor को cool नहीं रखते, speed control brushes का कार्य नहीं है (यह regulator करता है), और jar को घुमाना motor shaft व coupler का कार्य है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q28",
+      "question": "Steam iron में यदि steam vents में mineral deposits (scale) जम जाएं, तो क्या समस्या होगी?",
+      "options": [
+        "Iron की steam output कम हो जाएगी और vents block हो सकते हैं",
+        "Iron अचानक तेज़ चलने लगेगी",
+        "Thermostat हमेशा के लिए off हो जाएगा",
+        "Sole plate का रंग हमेशा के लिए बदल जाएगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hard water के उपयोग से mineral scale जमकर steam vents को block कर देती है जिससे steam output कम हो जाता है या completely बंद हो सकता है, इसलिए distilled/soft water उपयोग की सलाह दी जाती है। इससे iron की speed (जो iron में होती ही नहीं) प्रभावित नहीं होती, thermostat स्थायी रूप से off नहीं होता, और sole plate का रंग स्थायी रूप से नहीं बदलता।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q29",
+      "question": "Automatic (thermostatic) electric iron और non-automatic iron में मुख्य अंतर क्या है?",
+      "options": [
+        "Automatic iron में thermostat होता है जो temperature को स्वतः control करता है, non-automatic में manual control होता है",
+        "Automatic iron में motor होती है",
+        "Non-automatic iron में steam होता है और automatic में नहीं",
+        "दोनों में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Automatic iron में thermostat लगा होता है जो set temperature पर पहुँचने पर supply को स्वतः काट/जोड़ देता है, जबकि non-automatic (साधारण पुरानी) iron में ऐसा कोई automatic control नहीं होता और user को manually supply off करनी पड़ती है। Iron में motor नहीं होती, steam automatic या non-automatic दोनों प्रकार की iron में हो सकता है, और दोनों में स्पष्ट अंतर होता है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q30",
+      "question": "Mixer grinder और electric iron दोनों में उपयोग होने वाला common safety/protective उपाय कौन सा है?",
+      "options": [
+        "Fuse/thermal protector द्वारा overcurrent से सुरक्षा तथा proper earthing",
+        "दोनों में समान motor का प्रयोग",
+        "दोनों में समान thermostat का प्रयोग",
+        "दोनों में समान jar का प्रयोग"
+      ],
+      "correctIndex": 0,
+      "explanation": "दोनों appliances में fuse या thermal cut-out protector द्वारा overcurrent/overheating से सुरक्षा दी जाती है और metal body की proper earthing से shock से बचाव किया जाता है। Iron में motor नहीं होती (केवल mixer में), mixer में thermostat नहीं होता (केवल iron में), और jar केवल mixer grinder का भाग है, iron में नहीं।"
+    }
+  ]
+}

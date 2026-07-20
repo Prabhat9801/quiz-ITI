@@ -1,0 +1,368 @@
+{
+  "unit": "unit13",
+  "unitName": "PLC",
+  "topic": "plc_wiring_addressing",
+  "topicName": "PLC Wiring - Field Devices, Sinking/Sourcing, Module Addressing",
+  "questions": [
+    {
+      "id": "u13_plc_wiring_addressing_q1",
+      "question": "PLC के 'Sourcing' input wiring configuration में current किस दिशा में प्रवाहित होता है?",
+      "options": [
+        "Current field device से निकलकर PLC input module में प्रवेश करता है",
+        "PLC input module current (positive supply) को field device की ओर supply करता है, यानी PLC current का source है",
+        "Sourcing में कोई current प्रवाह नहीं होता",
+        "Sourcing केवल AC supply के लिए होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sourcing configuration में PLC input module current source (positive/+ve terminal) की तरह कार्य करता है और current को sensor की ओर supply करता है। Option A यह sinking को दर्शाता है, C और D गलत हैं क्योंकि sourcing में current flow होता है और यह DC applications के लिए common है।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q2",
+      "question": "'Sinking' input configuration में PLC input terminal किस प्रकार कार्य करता है?",
+      "options": [
+        "PLC input terminal current को absorb करता है (current sensor से PLC की ओर बहता है), इसलिए इसे 'sink' कहा जाता है",
+        "PLC input terminal current supply करता है",
+        "Sinking में voltage हमेशा शून्य रहता है",
+        "Sinking केवल analog signals के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sinking configuration में current sensor (जो current source होता है, जैसे PNP sensor) से निकलकर PLC input में प्रवेश करता है, यानी PLC current को absorb (sink) करता है। Option B sourcing को दर्शाता है, C और D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q3",
+      "question": "एक PNP type proximity sensor को PLC के साथ जोड़ते समय किस type के input module का उपयोग करना उचित रहेगा?",
+      "options": [
+        "Sourcing PLC input (जो sinking-type NPN जैसा output लेता है) के बजाय, PNP sensor के लिए Sinking-type PLC input module उपयुक्त रहेगा क्योंकि PNP sensor current source होता है",
+        "PNP sensor के लिए हमेशा AC input module चाहिए",
+        "PNP sensor को PLC से जोड़ना संभव ही नहीं है",
+        "PNP sensor के लिए कोई भी random module चलेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "PNP sensor स्वयं current source (sourcing device) होता है, इसलिए इसके साथ Sinking-type PLC input module (जो current को absorb करे) उपयुक्त रहता है। Options B, C, D तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q4",
+      "question": "PLC के Digital Output module में 'Relay Output' और 'Transistor Output' में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे होते हैं",
+        "Relay output AC व DC दोनों load switch कर सकता है पर switching speed धीमी होती है, जबकि transistor output केवल DC load के लिए होता है पर high-speed switching देता है",
+        "Relay output केवल analog signals के लिए होता है",
+        "Transistor output केवल manual switches के लिए होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Relay output versatile होता है (AC/DC दोनों) लेकिन mechanical होने से switching speed कम होती है, जबकि transistor output high-speed switching देता है पर सिर्फ DC loads के लिए उपयुक्त है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q5",
+      "question": "PLC field wiring करते समय field devices (जैसे limit switch, push button) के लिए किस gauge/size की wire और proper terminal marking क्यों जरूरी है?",
+      "options": [
+        "क्योंकि इसका PLC operation से कोई संबंध नहीं",
+        "सही wire gauge current rating के अनुसार safety सुनिश्चित करता है और proper terminal marking troubleshooting व future maintenance को आसान बनाता है",
+        "क्योंकि wire का रंग PLC की memory capacity बढ़ाता है",
+        "क्योंकि marking केवल दिखावे के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही wire gauge current rating के अनुसार safety सुनिश्चित करता है (overheating से बचाव) और proper terminal marking troubleshooting व maintenance को आसान बनाती है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q6",
+      "question": "PLC में 'Module Addressing' का क्या मतलब है, जैसे किसी input को 'I:0/0' या '%I0.0' नाम दिया जाना?",
+      "options": [
+        "यह केवल PLC का serial number है",
+        "यह एक unique reference है जो बताता है कि कौन सा physical I/O point (slot/module/channel के अनुसार) program में किस logic से जुड़ा है",
+        "यह field device की कीमत बताता है",
+        "इसका PLC programming से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Module addressing एक unique identifier होता है जो slot number, module number और channel number के आधार पर physical I/O point को ladder logic program से जोड़ता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q7",
+      "question": "Rack-based modular PLC में यदि Slot 0 में CPU, Slot 1 में Input module और Slot 2 में Output module लगा है, तो addressing की typical convention क्या होगी?",
+      "options": [
+        "Address हमेशा random होते हैं, कोई convention नहीं होती",
+        "Address आमतौर पर slot number और उसके अंदर terminal/channel number पर आधारित होता है, जैसे Slot 1 के input 3 के लिए 'I:1/3'",
+        "Address केवल CPU के slot number पर निर्भर करता है",
+        "Addressing केवल analog modules के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modular PLC में addressing convention slot number और उस slot के अंदर specific terminal/channel number पर आधारित होती है, जिससे हर I/O point unique रूप से identify होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q8",
+      "question": "PLC panel में AC power wiring और DC signal wiring को अलग-अलग cable trays या conduits में क्यों बिछाया जाता है?",
+      "options": [
+        "क्योंकि इसका कोई तकनीकी कारण नहीं, केवल पुरानी परंपरा है",
+        "क्योंकि AC power lines से electromagnetic interference (EMI/noise) उत्पन्न हो सकता है जो low-voltage DC signal lines में false signals पैदा कर सकता है",
+        "क्योंकि AC और DC wires का रंग हमेशा अलग होना चाहिए",
+        "क्योंकि इससे PLC की memory बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "AC power lines high electromagnetic interference (EMI) उत्पन्न कर सकती हैं जो पास की low-level DC signal wires में noise induce करके false triggering कर सकती हैं, इसलिए इन्हें अलग routing में रखा जाता है। बाकी options गलत तर्क हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q9",
+      "question": "एक 2-wire proximity sensor को PLC input module से जोड़ते समय किस बात का ध्यान रखना जरूरी है?",
+      "options": [
+        "Sensor की load current PLC input की rated current range में होनी चाहिए, और polarity (यदि DC है) सही रखनी चाहिए",
+        "2-wire sensor को कभी भी PLC से नहीं जोड़ा जा सकता",
+        "Polarity का 2-wire sensor में कोई महत्व नहीं",
+        "2-wire sensor हमेशा 3-phase supply चाहता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "2-wire sensors के साथ leakage current और load current की compatibility PLC input की rated range के अनुसार जांचनी चाहिए, तथा DC devices में सही polarity बनाए रखना जरूरी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q10",
+      "question": "PLC output module से एक solenoid valve coil को drive करते समय 'Flyback/Freewheeling diode' या 'MOV' लगाने की जरूरत क्यों पड़ती है?",
+      "options": [
+        "इससे कोई फायदा नहीं होता",
+        "Inductive load (coil) के switch OFF होने पर उत्पन्न होने वाले voltage spike से output module के transistor/relay contacts को नुकसान से बचाने के लिए",
+        "इससे solenoid की speed बढ़ जाती है",
+        "यह केवल decoration के लिए लगाया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inductive loads (coils, solenoids) के OFF होने पर back-EMF/voltage spike उत्पन्न होता है, जिससे output devices (transistor/relay) को नुकसान हो सकता है, इसे रोकने के लिए flyback diode या MOV suppressor लगाया जाता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q11",
+      "question": "PLC input module wiring में 'Common (COM)' terminal का क्या कार्य होता है?",
+      "options": [
+        "यह field devices के group के लिए एक common return path (supply या ground) प्रदान करता है",
+        "यह केवल एक decorative terminal है, कोई कार्य नहीं",
+        "यह केवल analog signal के लिए उपयोग होता है",
+        "यह PLC की clock speed control करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "COM terminal input/output points के एक group के लिए common return path (जैसे 24V या 0V) प्रदान करता है ताकि सभी devices की circuit complete हो सके। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q12",
+      "question": "यदि एक PLC input module में गलती से sourcing type sensor को sinking-configured module से जोड़ दिया जाए, तो क्या होगा?",
+      "options": [
+        "Signal properly read नहीं होगा या input false रहेगा क्योंकि current path/polarity match नहीं करेगा",
+        "PLC automatically configuration adjust कर लेगा और सामान्य काम करेगा",
+        "Output module अपने आप बदल जाएगा",
+        "इससे PLC की memory बढ़ जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sourcing और sinking configuration mismatch होने पर current path सही तरीके से पूरा नहीं होता, जिससे input signal false रहता है या ठीक से detect नहीं होता। PLC खुद configuration adjust नहीं करता, इसलिए B, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q13",
+      "question": "PLC में 'Local I/O' और 'Remote I/O' addressing में मुख्य अंतर क्या है?",
+      "options": [
+        "Local I/O वह होता है जो CPU के साथ ही रैक में लगा होता है, जबकि Remote I/O communication network (जैसे Ethernet/IP, Profibus) के जरिए दूर स्थित racks/panels में जुड़ा होता है",
+        "दोनों बिल्कुल एक जैसे हैं",
+        "Remote I/O केवल analog modules के लिए होता है",
+        "Local I/O केवल output devices के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Local I/O CPU के साथ same rack में मौजूद होता है, जबकि Remote I/O communication network के माध्यम से physically दूर स्थित locations से जुड़ता है, जिसकी addressing में network node number भी शामिल होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q14",
+      "question": "PLC output wiring में एक ही output terminal से सीधे high current motor (जैसे 5A से अधिक) को चलाना क्यों उचित नहीं माना जाता?",
+      "options": [
+        "क्योंकि PLC output contacts की current rating सीमित होती है, इसलिए motor को external contactor/relay के जरिए control करना चाहिए",
+        "इसमें कोई समस्या नहीं, direct connection हमेशा सुरक्षित है",
+        "क्योंकि motor को PLC से जोड़ना कानूनी रूप से मना है",
+        "क्योंकि इससे PLC की programming language बदल जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "PLC output modules की current rating सीमित (आमतौर पर 1-2A तक) होती है, इसलिए high current loads जैसे motors को external contactor/relay के माध्यम से control किया जाता है ताकि output module सुरक्षित रहे। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q15",
+      "question": "PLC I/O wiring diagram में 'Terminal Block Numbering' और 'Wire Ferrule Numbering' का उद्देश्य क्या है?",
+      "options": [
+        "इसका कोई तकनीकी उद्देश्य नहीं",
+        "यह wiring को organized रखने और future troubleshooting/fault finding में समय बचाने में मदद करता है",
+        "यह केवल PLC की price बढ़ाने के लिए है",
+        "यह केवल analog signals के लिए जरूरी है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Terminal block और ferrule numbering से wiring व्यवस्थित रहती है और fault finding व maintenance के दौरान सही wire को जल्दी पहचानने में मदद मिलती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q16",
+      "question": "PLC सिस्टम में 'Isolated Input Module' का उपयोग किस स्थिति में किया जाता है?",
+      "options": [
+        "जब field circuit को PLC internal circuit से electrically अलग रखना जरूरी हो, ताकि noise/ground fault से CPU सुरक्षित रहे",
+        "जब कोई isolation की जरूरत ही न हो",
+        "केवल जब PLC को बंद रखना हो",
+        "केवल decoration के उद्देश्य से"
+      ],
+      "correctIndex": 0,
+      "explanation": "Isolated input module optocoupler आदि की मदद से field side और CPU side को electrically अलग रखता है, जिससे noise, surge या ground fault की स्थिति में CPU सुरक्षित रहता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q17",
+      "question": "यदि एक analog input module 4-20mA signal receive कर रहा है और wiring में shielded cable इस्तेमाल नहीं किया गया, तो क्या समस्या आ सकती है?",
+      "options": [
+        "कोई समस्या नहीं आएगी",
+        "Electromagnetic interference (EMI) के कारण signal में noise आ सकता है जिससे गलत reading मिल सकती है",
+        "PLC अपने आप shielded cable में बदल जाएगा",
+        "Signal automatic रूप से 100% accurate हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Unshielded cable में EMI noise induce हो सकती है, खासकर लंबी distance पर, जिससे analog signal में error आ सकता है, इसलिए shielded twisted-pair cable इस्तेमाल की जाती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q18",
+      "question": "PLC addressing में 'Byte', 'Word' और 'Bit' addressing (जैसे Q0.0, Q0.1... Q1.0) का क्रम किस logic पर आधारित है?",
+      "options": [
+        "यह पूरी तरह random होता है",
+        "प्रत्येक byte में सामान्यतः 8 bits होते हैं (0 से 7), इसलिए byte 0 के bit 0-7 भरने के बाद अगला byte (1) शुरू होता है, जो binary addressing structure को दर्शाता है",
+        "Word addressing केवल analog output के लिए होती है",
+        "Bit addressing केवल CPU के internal use के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Standard addressing में एक byte में 8 bits (0-7) होते हैं, इसलिए byte 0 के सभी bits भरने के बाद अगला byte number शुरू होता है (जैसे Q0.7 के बाद Q1.0), यह binary memory structure पर आधारित है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q19",
+      "question": "PLC panel में earthing (grounding) को field wiring से पहले properly check करना क्यों जरूरी है?",
+      "options": [
+        "क्योंकि proper earthing electrical shock से सुरक्षा देती है और noise/static charge को safely discharge करती है",
+        "क्योंकि earthing का PLC की performance से कोई संबंध नहीं",
+        "क्योंकि earthing केवल decoration के लिए होती है",
+        "क्योंकि इससे PLC की memory capacity बढ़ती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Proper earthing operators को electrical shock से बचाती है और साथ ही noise/static charge को safely ground में discharge करके equipment व signal को protect करती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q20",
+      "question": "एक system में सभी digital output devices 24V DC पर काम कर रहे हैं और एक नया device गलती से 230V AC पर wire कर दिया गया, output module transistor type है। परिणाम क्या होगा?",
+      "options": [
+        "कोई नुकसान नहीं होगा, transistor output 230V AC भी handle कर लेगा",
+        "Transistor output module permanently damage हो सकता है क्योंकि यह केवल DC voltage के लिए rated होता है",
+        "PLC अपने आप voltage को 24V में convert कर लेगा",
+        "इससे केवल display की brightness बदलेगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Transistor output module केवल rated DC voltage के लिए design किया गया होता है; इसमें गलती से AC voltage जोड़ने पर module permanently damage हो सकता है। बाकी options गलत और असुरक्षित धारणाएं हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q21",
+      "question": "PLC में 'Expansion Module Addressing' करते समय, यदि Slot 3 में नया analog module जोड़ा जाए, तो पुराने modules की addressing पर क्या प्रभाव पड़ सकता है (यदि auto-addressing configured न हो)?",
+      "options": [
+        "कोई असर नहीं पड़ता, addressing हमेशा fix रहती है",
+        "यदि addressing sequential/slot-based हो तो बाद के slots के address shift हो सकते हैं, इसलिए program में addresses दोबारा verify करना जरूरी है",
+        "पुराने modules अपने आप काम करना बंद कर देंगे",
+        "Addressing का PLC program से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slot-based addressing में बीच में नया module जोड़ने पर आगे के slots की addressing shift हो सकती है, इसलिए expansion के बाद existing ladder logic में addresses को verify और update करना जरूरी होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q22",
+      "question": "PLC सिस्टम में 'Sinking' और 'Sourcing' शब्द मुख्य रूप से किस प्रकार के supply system में इस्तेमाल होते हैं?",
+      "options": [
+        "AC supply systems में",
+        "DC supply systems में, क्योंकि current flow की direction और polarity यहाँ स्पष्ट रूप से परिभाषित होती है",
+        "केवल three-phase systems में",
+        "इनका किसी भी supply type से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sinking/sourcing concept मुख्य रूप से DC systems में लागू होता है जहाँ current flow की direction (source या sink) polarity के आधार पर स्पष्ट रूप से define होती है। AC में यह concept उस तरह लागू नहीं होता, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q23",
+      "question": "PLC input wiring में 'Debounce time' या 'Input filter time' सेट करने का क्या उद्देश्य है?",
+      "options": [
+        "Mechanical switch/contact bounce के कारण उत्पन्न होने वाले false multiple signals को filter करना, ताकि PLC केवल stable signal को पढ़े",
+        "इससे PLC की clock speed बढ़ जाती है",
+        "इसका input wiring से कोई संबंध नहीं",
+        "यह केवल output devices के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mechanical switches (push button, limit switch) में contact bounce के कारण थोड़े समय में कई false transitions हो सकते हैं, input filter/debounce time इन्हें filter करके केवल stable signal PLC तक पहुंचाता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q24",
+      "question": "PLC output module से जुड़े indicator lamp की wiring में 'load current' और module की 'rated output current' का मिलान क्यों जरूरी है?",
+      "options": [
+        "इसका कोई महत्व नहीं",
+        "यदि load current, rated current से अधिक हो तो output contact/transistor overheat होकर damage हो सकता है",
+        "इससे केवल lamp की brightness कम होती है",
+        "यह केवल analog output के लिए लागू होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि connected load का current, output module की rated current से अधिक हो जाता है तो output device (relay contact या transistor) overheat होकर स्थायी रूप से damage हो सकता है, इसलिए मिलान जरूरी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q25",
+      "question": "PLC panel wiring में 'Numbering Scheme Documentation' (wiring diagram + address list) को अपडेट रखना क्यों जरूरी माना जाता है?",
+      "options": [
+        "क्योंकि updated documentation से किसी भी नए technician को troubleshooting और modification में आसानी होती है",
+        "क्योंकि documentation का PLC operation से कोई संबंध नहीं",
+        "क्योंकि यह केवल कानूनी formality है, कोई practical फायदा नहीं",
+        "क्योंकि इससे PLC की speed बढ़ जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Updated wiring diagram और address list होने से कोई भी नया technician आसानी से system को समझकर troubleshooting व modification कर सकता है, जिससे समय और गलतियां दोनों कम होती हैं। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q26",
+      "question": "PLC में 'NPN' और 'PNP' sensor की wiring में मुख्य फर्क क्या होता है?",
+      "options": [
+        "दोनों में कोई फर्क नहीं होता",
+        "NPN sensor activate होने पर 0V (ground) को output line में connect करता है (sinking device), जबकि PNP sensor activate होने पर +V को output line में connect करता है (sourcing device)",
+        "NPN केवल AC devices के लिए है और PNP केवल motors के लिए",
+        "PNP sensor कभी भी PLC से नहीं जोड़ा जा सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "NPN sensor sinking device होता है जो activate होने पर output को ground (0V) से जोड़ता है, जबकि PNP sensor sourcing device होता है जो output को +V supply से जोड़ता है। इस अंतर के अनुसार सही PLC input module चुनना जरूरी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q27",
+      "question": "PLC I/O wiring में fuse या circuit breaker लगाने का उद्देश्य क्या है?",
+      "options": [
+        "इसका कोई तकनीकी उद्देश्य नहीं",
+        "Short circuit या overload की स्थिति में wiring और module को नुकसान से बचाने तथा fire hazard को रोकने के लिए",
+        "इससे PLC की processing speed बढ़ जाती है",
+        "यह केवल analog signals के लिए जरूरी है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fuse/circuit breaker short circuit या overload की स्थिति में automatically circuit को disconnect करके wiring, modules और fire hazard से सुरक्षा प्रदान करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q28",
+      "question": "PLC में 'Point Addressing' और 'Group Addressing' में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे होते हैं",
+        "Point addressing हर individual I/O terminal को अलग unique address देता है, जबकि group addressing कई related points को एक साथ एक logical group में संबोधित करता है (जैसे byte या word स्तर पर)",
+        "Group addressing केवल output devices के लिए होती है",
+        "Point addressing केवल analog modules के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Point addressing हर individual terminal को अलग unique address देती है, जबकि group addressing संबंधित multiple points को byte/word स्तर पर एक साथ handle करने के लिए होती है, जिससे programming में सुविधा होती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q29",
+      "question": "PLC field wiring में 'Twisted Pair Cable' का उपयोग signal wires के लिए क्यों किया जाता है?",
+      "options": [
+        "क्योंकि इससे wire की price कम हो जाती है",
+        "क्योंकि twisted pair external electromagnetic interference के प्रभाव को cancel करने में मदद करता है, जिससे signal quality बेहतर रहती है",
+        "क्योंकि इससे PLC की memory बढ़ जाती है",
+        "क्योंकि twisted pair केवल power supply के लिए होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Twisted pair cable में wires को आपस में twist करने से दोनों wires पर induced EMI लगभग बराबर और opposite होकर cancel हो जाता है, जिससे signal integrity बनी रहती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q30",
+      "question": "यदि किसी digital input module का एक channel physically damaged हो जाए, तो addressing की दृष्टि से क्या practical solution अपनाया जा सकता है?",
+      "options": [
+        "पूरे PLC को हमेशा के लिए बदलना ही एकमात्र solution है",
+        "उस device को किसी available spare channel के address पर rewire करके program में उस नए address को update किया जा सकता है",
+        "Damaged channel अपने आप ठीक हो जाएगा",
+        "Addressing को बदलने की कोई जरूरत नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि कोई channel damaged हो जाए तो device को किसी working spare channel में rewire करके ladder logic में उस नए address को update किया जा सकता है, जिससे पूरा module/PLC बदलने की जरूरत नहीं पड़ती। बाकी options अव्यावहारिक हैं।"
+    }
+  ]
+}

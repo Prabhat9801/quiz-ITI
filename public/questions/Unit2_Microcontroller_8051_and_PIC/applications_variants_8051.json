@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "applications_variants_8051",
+  "topicName": "8051 vs 8052, Variants & Applications",
+  "questions": [
+    {
+      "id": "u2_applications_variants_8051_q1",
+      "question": "8052 microcontroller में internal RAM का size 8051 की तुलना में कितना होता है?",
+      "options": ["256 bytes", "128 bytes", "512 bytes", "64 bytes"],
+      "correctIndex": 0,
+      "explanation": "8052 में 256 bytes internal RAM होती है जबकि मूल 8051 में केवल 128 bytes होती है, इसलिए option A सही है। 128 bytes 8051 का मान है, जबकि 512 bytes और 64 bytes किसी भी standard variant का मान नहीं हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q2",
+      "question": "8052 microcontroller में on-chip program ROM का size कितना होता है?",
+      "options": ["4 KB", "8 KB", "16 KB", "2 KB"],
+      "correctIndex": 1,
+      "explanation": "8052 में 8 KB on-chip ROM होती है जबकि मूल 8051 में केवल 4 KB होती है, इसलिए option B सही है। 4 KB मूल 8051 की ROM है, और 16 KB व 2 KB किसी standard 8052 variant का मान नहीं हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q3",
+      "question": "8052 में 8051 की तुलना में कौन-सा अतिरिक्त hardware timer उपलब्ध होता है?",
+      "options": ["Timer 0", "Timer 1", "Timer 2", "Watchdog only"],
+      "correctIndex": 2,
+      "explanation": "8052 में Timer 0 और Timer 1 के साथ एक अतिरिक्त 16-bit Timer 2 भी होता है, इसलिए option C सही है। Timer 0 और Timer 1 दोनों variants में common हैं, और यह केवल watchdog timer नहीं बल्कि पूरा general-purpose Timer 2 है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q4",
+      "question": "8052 में कुल interrupt sources की संख्या 8051 की तुलना में कितनी है?",
+      "options": ["5 (समान)", "8", "4", "6 (एक अतिरिक्त Timer 2 interrupt के साथ)"],
+      "correctIndex": 3,
+      "explanation": "8051 में 5 interrupt sources होते हैं, जबकि 8052 में Timer 2 overflow/capture interrupt जुड़ने से यह संख्या 6 हो जाती है, इसलिए option D सही है। option A गलत है क्योंकि संख्या समान नहीं रहती, और 8 व 4 गलत counts हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q5",
+      "question": "8031 microcontroller की मुख्य विशेषता क्या है जो इसे 8051 से अलग बनाती है?",
+      "options": ["इसमें on-chip ROM नहीं होती, program external memory से चलता है", "इसमें extra RAM है", "यह केवल RISC architecture use करता है", "यह 16-bit data bus रखता है"],
+      "correctIndex": 0,
+      "explanation": "8031 में कोई internal program ROM नहीं होती, इसलिए program code external EPROM/memory chip से fetch किया जाता है, इसलिए option A सही है। यह RAM बढ़ाने वाला variant नहीं है, यह RISC नहीं बल्कि CISC-जैसी 8051 core पर ही आधारित है, और data bus 8-bit ही रहता है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q6",
+      "question": "8751 microcontroller में program memory किस technology की होती है?",
+      "options": ["Mask ROM", "UV-erasable EPROM", "Flash EEPROM", "Battery-backed RAM"],
+      "correctIndex": 1,
+      "explanation": "8751 में UV light से erase होने वाली EPROM (Erasable Programmable ROM) होती है जिसे quartz window से UV expose करके erase किया जाता है, इसलिए option B सही है। Mask ROM factory-programmed 8051 versions में होती है, Flash EEPROM बाद के 89C51 जैसे variants में आई, और battery-backed RAM program storage के लिए प्रयोग नहीं होती।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q7",
+      "question": "AT89C51 microcontroller में program memory किस type की होती है?",
+      "options": ["UV-EPROM", "Mask ROM", "Flash memory (electrically erasable)", "OTP ROM only"],
+      "correctIndex": 2,
+      "explanation": "AT89C51 में Flash memory होती है जिसे electrically erase और reprogram किया जा सकता है बिना UV light के, इसलिए option C सही है। UV-EPROM पुराने 8751 में थी, Mask ROM केवल factory द्वारा एक बार लिखी जाती है, और OTP का अर्थ one-time-programmable है जो Flash से अलग concept है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q8",
+      "question": "AT89C51 microcontroller को कौन-सी कंपनी बनाती है?",
+      "options": ["Intel", "Microchip", "Texas Instruments", "Atmel"],
+      "correctIndex": 3,
+      "explanation": "AT89C51 का 'AT' prefix Atmel कंपनी को दर्शाता है जिसने Flash-based 8051 variants बनाए, इसलिए option D सही है। Intel ने मूल 8051 विकसित किया था, Microchip PIC microcontrollers बनाती है, और Texas Instruments अलग microcontroller/DSP families बनाती है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q9",
+      "question": "8752 microcontroller किन दो variants की विशेषताओं को जोड़ता है?",
+      "options": ["8052 + EPROM technology (8751 जैसी)", "8051 + 8031", "8051 + external RAM only", "8031 + Flash only"],
+      "correctIndex": 0,
+      "explanation": "8752, 8052 की enhanced architecture (256 bytes RAM, Timer 2) को EPROM-based program memory (जैसे 8751) के साथ जोड़ता है, इसलिए option A सही है। बाकी options इसकी वास्तविक combination को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q10",
+      "question": "washing machine जैसे domestic appliance में 8051 microcontroller का मुख्य उपयोग क्या है?",
+      "options": ["High-speed graphics processing", "Wash, rinse और spin cycles की timing व sequencing control", "Internet data transmission", "Audio amplification"],
+      "correctIndex": 1,
+      "explanation": "washing machine में microcontroller अलग-अलग cycles (wash, rinse, spin) की timing, sensor inputs और motor control को sequence करता है, इसलिए option B सही है। यह graphics processing, internet communication या audio amplification के लिए प्रयोग नहीं होता क्योंकि यह basic embedded control application है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q11",
+      "question": "microwave oven में 8051-based control system मुख्यतः किस कार्य के लिए उपयोग होता है?",
+      "options": ["Wireless networking", "3D image rendering", "Cooking time, power level और door-interlock की control", "High-frequency signal amplification"],
+      "correctIndex": 2,
+      "explanation": "microwave oven में microcontroller keypad input लेकर cooking time व power level set करता है और door safety interlock को monitor करता है, इसलिए option C सही है। wireless networking, 3D rendering और RF signal amplification इस application से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q12",
+      "question": "air conditioner के remote control receiver section में microcontroller का मुख्य कार्य क्या है?",
+      "options": ["High voltage AC switching", "Video signal processing", "Battery charging management", "IR signal को decode करके compressor व fan control करना"],
+      "correctIndex": 3,
+      "explanation": "AC receiver unit में microcontroller infrared remote से आए coded signal को decode कर temperature setting व fan speed के अनुसार compressor और fan को control करता है, इसलिए option D सही है। high voltage AC switching relay/triac द्वारा होती है न कि सीधे microcontroller द्वारा, और video processing व battery charging इस context में लागू नहीं होते।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q13",
+      "question": "digital camera में embedded microcontroller की एक प्रमुख भूमिका क्या होती है?",
+      "options": ["Button inputs, LCD display और memory card control को manage करना", "High-power motor drive", "Long-distance wireless base station operation", "Industrial robot welding"],
+      "correctIndex": 0,
+      "explanation": "digital camera में microcontroller user buttons को read करता है, LCD status display चलाता है और memory card interface को manage करता है, इसलिए option A सही है। motor drive, wireless base station और robotic welding इस consumer application के दायरे में नहीं आते।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q14",
+      "question": "mobile phone charger में सुरक्षा हेतु उपयोग होने वाला microcontroller-based feature कौन-सा है?",
+      "options": ["Video decoding", "Overcharge और overheat protection monitoring", "3D graphics acceleration", "High-frequency radar processing"],
+      "correctIndex": 1,
+      "explanation": "smart charger में microcontroller voltage/current व temperature sensor की मदद से overcharge और overheat की स्थिति को detect कर charging बंद करता है, इसलिए option B सही है। बाकी options चार्जर की protection functionality से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q15",
+      "question": "CD/DVD player में microcontroller किस उद्देश्य के लिए servo control करता है?",
+      "options": ["Wi-Fi router configuration के लिए", "AC power generation के लिए", "Disc rotation speed और laser head positioning को नियंत्रित करने के लिए", "Battery cell balancing के लिए"],
+      "correctIndex": 2,
+      "explanation": "CD/DVD player में microcontroller spindle motor की rotation speed और optical pickup head की radial positioning को servo loop के जरिए control करता है, इसलिए option C सही है। बाकी options इस application से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q16",
+      "question": "industrial motor speed control में 8051 microcontroller किस technique का प्रयोग सामान्यतः करता है?",
+      "options": ["Pure analog resistor divider", "Manual switch toggling only", "Direct AC mains switching बिना control के", "PWM (Pulse Width Modulation) द्वारा average voltage control"],
+      "correctIndex": 3,
+      "explanation": "motor speed control में microcontroller PWM signal generate कर driver circuit के जरिए motor को दिया गया average voltage/current नियंत्रित करता है, इसलिए option D सही है। analog resistor divider या manual switching precise digital control प्रदान नहीं करते, और बिना control के direct switching से speed control संभव नहीं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q17",
+      "question": "industrial temperature control system में microcontroller किस प्रकार की control strategy लागू कर सकता है?",
+      "options": ["Bang-bang या PID जैसे closed-loop algorithms", "केवल fixed hardware wiring", "केवल manual dial adjustment", "कोई control नहीं, केवल display"],
+      "correctIndex": 0,
+      "explanation": "temperature sensor feedback लेकर microcontroller bang-bang (on/off) या PID जैसे closed-loop control algorithm software में implement कर सकता है, इसलिए option A सही है। fixed wiring और manual adjustment automated feedback control नहीं देते, और microcontroller का काम केवल display तक सीमित नहीं है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q18",
+      "question": "elevator (lift) control system में microcontroller किस कार्य के लिए प्रमुखतः उपयोग होता है?",
+      "options": ["Television broadcasting", "Floor call requests, door timing और motor sequencing को manage करना", "Wireless mesh networking protocol design", "Audio equalizer tuning"],
+      "correctIndex": 1,
+      "explanation": "lift controller में microcontroller floor button requests को priority अनुसार process कर door open/close timing और hoist motor की sequencing को नियंत्रित करता है, इसलिए option B सही है। बाकी options का elevator control से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q19",
+      "question": "robotic arm control में stepper motor को चलाने के लिए 8051 microcontroller आमतौर पर क्या generate करता है?",
+      "options": ["Continuous sine wave AC signal", "Only static DC voltage", "Sequenced step pulses उचित order और timing के साथ", "Random digital noise"],
+      "correctIndex": 2,
+      "explanation": "stepper motor को घुमाने के लिए microcontroller coils को सही sequence और timing में step pulses देता है जिससे precise angular movement होता है, इसलिए option C सही है। continuous sine wave AC motors के लिए है, static DC voltage से stepping नहीं होती, और random noise से कोई नियंत्रित गति संभव नहीं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q20",
+      "question": "automotive ABS (Anti-lock Braking System) में microcontroller मुख्यतः किस input के आधार पर काम करता है?",
+      "options": ["Fuel tank level sensor only", "AC voltage from mains", "Radio antenna signal strength", "Wheel speed sensors के signals"],
+      "correctIndex": 3,
+      "explanation": "ABS controller प्रत्येक wheel के speed sensor से data लेकर wheel lock-up की स्थिति detect करता है और brake pressure को modulate करता है, इसलिए option D सही है। fuel level, mains AC और radio signal इस safety-critical application से असंबंधित हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q21",
+      "question": "automotive engine management system में microcontroller किस parameter को नियंत्रित करने में सहायक होता है?",
+      "options": ["Fuel injection timing और ignition timing", "Car radio volume only", "Seat belt color indicator", "Windshield wiper blade material"],
+      "correctIndex": 0,
+      "explanation": "engine control unit (ECU) sensors से RPM, temperature व oxygen data लेकर fuel injection timing और spark ignition timing को optimize करता है, इसलिए option A सही है। बाकी options engine management की core functionality से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q22",
+      "question": "embedded systems में 8051 जैसे single-chip microcontroller को प्राथमिकता देने का मुख्य कारण क्या है?",
+      "options": ["यह हमेशा supercomputer जितनी processing power देता है", "यह CPU, RAM, ROM, I/O सभी को एक ही chip में देकर low-cost dedicated control solution देता है", "यह केवल desktop operating systems चलाने के लिए बना है", "इसमें कोई I/O port नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "8051 एक single-chip solution है जिसमें CPU, memory और I/O integrated होते हैं, जिससे dedicated embedded applications के लिए यह compact व सस्ता समाधान बनता है, इसलिए option B सही है। यह supercomputer स्तर की processing नहीं देता, desktop OS चलाने के लिए डिज़ाइन नहीं है, और इसमें built-in I/O ports होते ही हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q23",
+      "question": "traffic light controller application में 8051 microcontroller मुख्यतः किस कार्य को handle करता है?",
+      "options": ["Vehicle GPS tracking", "Satellite communication", "Red-yellow-green lights की timed sequencing", "Weather forecasting calculation"],
+      "correctIndex": 2,
+      "explanation": "traffic light controller में microcontroller timer-based logic से red, yellow, green lights को निश्चित sequence व duration में on/off करता है, इसलिए option C सही है। GPS tracking, satellite communication और weather forecasting इस simple sequencing application से असंबंधित हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q24",
+      "question": "8051-based data acquisition system में microcontroller की भूमिका मुख्यतः क्या होती है?",
+      "options": ["केवल AC मुख्य आपूर्ति को on/off करना", "केवल mechanical assembly करना", "Physical printing कार्य करना", "Sensor signals को ADC के माध्यम से पढ़कर process व store करना"],
+      "correctIndex": 3,
+      "explanation": "data acquisition system में microcontroller external ADC या built-in ADC से sensor readings प्राप्त कर उन्हें process, display या store करता है, इसलिए option D सही है। बाकी options data acquisition की core functionality नहीं हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q25",
+      "question": "microcontroller-based embedded application और general-purpose microprocessor-based computer application में मुख्य अंतर क्या है?",
+      "options": ["Embedded application किसी specific dedicated task के लिए होता है जबकि computer general-purpose multiple tasks करता है", "दोनों बिल्कुल समान होते हैं", "Microprocessor में कभी RAM की आवश्यकता नहीं होती", "Embedded systems केवल supercomputers में उपयोग होते हैं"],
+      "correctIndex": 0,
+      "explanation": "microcontroller-based embedded system किसी विशेष dedicated function (जैसे washing machine control) के लिए design होता है जबकि microprocessor-based PC विभिन्न general-purpose software run करने के लिए बनता है, इसलिए option A सही है। बाकी statements तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q26",
+      "question": "8052 में program memory addressing की external capacity 8051 की तुलना में कैसी होती है?",
+      "options": ["8052 में external addressing 128 KB तक होती है", "दोनों 8051 और 8052 में external memory addressing capacity 64 KB तक समान रहती है (16-bit address bus)", "8052 external memory access ही नहीं करता", "8052 में केवल 1 KB तक external memory access संभव है"],
+      "correctIndex": 1,
+      "explanation": "8051 और 8052 दोनों में 16-bit address bus होने के कारण external program व data memory addressing 64 KB तक समान रहती है, इसलिए option B सही है। 128 KB या 1 KB जैसे मान गलत हैं, और 8052 भी external memory access पूर्णतः support करता है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q27",
+      "question": "DS89C450 जैसे high-speed 8051 variant की मुख्य विशेषता क्या है?",
+      "options": ["इसमें कोई clock oscillator नहीं होता", "यह केवल 4-bit data bus पर काम करता है", "यह मूल 8051 की तुलना में काफी तेज instruction execution speed देता है", "इसमें कोई program memory नहीं होती"],
+      "correctIndex": 2,
+      "explanation": "Dallas Semiconductor का DS89C450 optimized core design के कारण प्रति instruction cycle count कम करके मूल 8051 से कई गुना तेज execution देता है, इसलिए option C सही है। यह oscillator के साथ ही काम करता है, 8-bit data bus रखता है (4-bit नहीं), और इसमें on-chip program memory होती है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q28",
+      "question": "Philips (अब NXP) द्वारा निर्मित 80C51 series variant की विशेषता क्या है?",
+      "options": ["यह केवल mechanical relay आधारित है", "इसमें microcontroller core ही नहीं होता", "यह केवल analog signal ही process कर सकता है", "यह CMOS technology पर आधारित low-power variant है"],
+      "correctIndex": 3,
+      "explanation": "80C51 series CMOS (Complementary Metal Oxide Semiconductor) technology में बना है जिससे यह HMOS वाले मूल 8051 से कम power खपत करता है, इसलिए option D सही है। बाकी options तथ्यात्मक रूप से गलत हैं क्योंकि यह पूरी तरह digital microcontroller core रखता है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q29",
+      "question": "security alarm system application (keypad + sensor + siren) में 8051 microcontroller का कार्य क्या है?",
+      "options": ["Keypad input verify करना, door/window sensors पढ़ना और siren को trigger करना", "केवल satellite images capture करना", "केवल high-definition video render करना", "केवल AC power grid को synchronize करना"],
+      "correctIndex": 0,
+      "explanation": "security system में microcontroller keypad से entered code verify करता है, sensors की status monitor करता है और unauthorized entry पर siren activate करता है, इसलिए option A सही है। बाकी options इस application के दायरे से बाहर हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q30",
+      "question": "किसी embedded application के लिए 8051 का उपयुक्त variant चुनते समय मुख्यतः किन factors पर ध्यान दिया जाता है?",
+      "options": ["Chip का केवल रंग और आकार", "Required program/data memory size, execution speed और available peripherals (जैसे extra timer)", "केवल packaging की कीमत, बिना technical requirement देखे", "Manufacturer का logo design"],
+      "correctIndex": 1,
+      "explanation": "variant selection में आवश्यक ROM/RAM size, speed requirement और peripherals (जैसे 8052 का extra Timer 2) जैसे technical factors महत्वपूर्ण होते हैं, इसलिए option B सही है। रंग, आकार, केवल कीमत या logo design तकनीकी चयन का आधार नहीं होते।"
+    }
+  ]
+}

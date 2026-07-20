@@ -1,0 +1,368 @@
+{
+  "unit": "unit10",
+  "unitName": "LED Lights, LED/LCD TV and CCTV",
+  "topic": "backlight_types",
+  "topicName": "Backlight Types - CCFL, HCFL, Edge LED, Direct LED, IPS Panels",
+  "questions": [
+    {
+      "id": "u10_backlight_types_q1",
+      "question": "LCD panel स्वयं प्रकाश उत्पन्न क्यों नहीं कर पाता और उसे backlight की आवश्यकता क्यों पड़ती है?",
+      "options": [
+        "क्योंकि liquid crystal molecules और polarizers केवल external light को modulate/block करते हैं, स्वयं photon उत्पन्न (emit) नहीं करते",
+        "क्योंकि LCD में electroluminescence process होती है जो बहुत कम light देती है",
+        "क्योंकि LCD का response time बहुत धीमा होता है",
+        "क्योंकि LCD केवल DC supply पर काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCD, liquid crystal layer की orientation को voltage से बदलकर पहले से मौजूद प्रकाश को गुजरने या block करने का कार्य करता है — यह स्वयं photon emit नहीं करता, इसलिए इसके पीछे backlight लगाना आवश्यक होता है (option A सही)। Electroluminescence LED/OLED का गुण है, LCD का नहीं; response time एक अलग parameter है और इसका backlight की आवश्यकता से सीधा संबंध नहीं; और LCD की backlight-आवश्यकता का DC/AC operation से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u10_backlight_types_q2",
+      "question": "CCFL का पूरा नाम व इसके प्रकाश उत्पन्न करने का मूल सिद्धांत क्या है?",
+      "options": [
+        "Capacitor Coupled Fluorescent Lamp - capacitor द्वारा सीधे प्रकाश उत्पन्न करना",
+        "Cold Cathode Fluorescent Lamp - tube के अंदर mercury vapour का gas discharge होकर UV उत्पन्न होता है, जो phosphor coating से टकराकर visible light में बदलता है",
+        "Constant Current Fluorescent Lamp - current को हमेशा constant रखकर प्रकाश देना",
+        "Compact Cathode Filament Lamp - filament गर्म होकर प्रकाश देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "CCFL यानी Cold Cathode Fluorescent Lamp में mercury vapour discharge से UV प्रकाश बनता है जिसे tube की भीतरी phosphor coating visible light में बदल देती है, इसलिए option B सही है। Capacitor सीधे प्रकाश उत्पन्न नहीं करता, 'Constant Current' नाम गलत विस्तार है, और filament heating HCFL/incandescent की विशेषता है, CCFL की नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q3",
+      "question": "CCFL tube को जलाने (strike करने) के लिए एक high voltage AC inverter circuit की आवश्यकता क्यों होती है?",
+      "options": [
+        "क्योंकि CCFL किसी भी परिस्थिति में AC के अलावा किसी अन्य waveform पर काम नहीं कर सकता",
+        "क्योंकि इसके cathode को tube light की तरह पहले filament द्वारा गर्म (preheat) करना पड़ता है",
+        "क्योंकि cathode बिना preheating (cold) के होता है, इसलिए gas को ionize कर discharge शुरू करने हेतु काफी अधिक striking voltage चाहिए, जो inverter द्वारा step-up करके दिया जाता है",
+        "क्योंकि उच्च voltage से केवल phosphor coating की चमक बढ़ती है, cathode से इसका संबंध नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "CCFL में cathode को पहले से गर्म नहीं किया जाता (cold cathode), इसलिए gas को ionize करके discharge आरंभ करने के लिए inverter circuit low voltage को कई सौ/हज़ार volt AC में step-up करता है — यही option C सही बनाता है। Option A अधूरा तर्क है, preheating वाला mechanism HCFL का है न कि CCFL का, और high voltage cathode की striking क्रिया से संबंधित है न कि केवल phosphor की चमक से।"
+    },
+    {
+      "id": "u10_backlight_types_q4",
+      "question": "CCFL tube के अंदर लगी phosphor coating का मुख्य कार्य क्या है?",
+      "options": [
+        "यह tube के अंदर mercury vapour के दबाव को नियंत्रित करती है",
+        "यह tube को केवल यांत्रिक सहारा (mechanical support) देती है",
+        "यह tube में लगने वाली high striking voltage को कम करने का कार्य करती है",
+        "यह mercury discharge से उत्पन्न ultraviolet (UV) प्रकाश को अवशोषित करके visible (सफेद) प्रकाश में बदल देती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Mercury discharge से मुख्यतः अदृश्य UV प्रकाश निकलता है; tube की भीतरी दीवार पर लगी phosphor coating इस UV को absorb करके visible white light में convert करती है, इसलिए option D सही है। यह गैस का दबाव नियंत्रित नहीं करती, केवल mechanical support देने के लिए नहीं होती, और सीधे striking voltage को कम करने का कार्य नहीं करती।"
+    },
+    {
+      "id": "u10_backlight_types_q5",
+      "question": "CCFL में प्रकाश उत्पन्न करने के लिए tube के अंदर मुख्यतः कौन-सा gas/vapour तथा कौन-सी प्रक्रिया होती है?",
+      "options": [
+        "कम दाब की mercury vapour तथा inert gas (जैसे argon) में gas discharge होता है, जिससे ultraviolet उत्पन्न होता है",
+        "शुद्ध oxygen gas को उच्च दाब पर जलाया जाता है",
+        "filament को गर्म करके thermal (incandescent जैसी) emission की जाती है",
+        "एक semiconductor junction में electroluminescence द्वारा प्रकाश बनता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "CCFL tube में कम दाब पर mercury vapour तथा argon जैसी inert gas होती है, जिसमें high voltage से discharge होकर UV प्रकाश बनता है — यही option A को सही बनाता है। Oxygen जलाना, thermal filament emission और semiconductor junction electroluminescence — ये सभी अलग-अलग प्रकाश स्रोतों (incandescent, LED) के सिद्धांत हैं, CCFL के नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q6",
+      "question": "पुरानी (older generation) LCD TVs में CCFL backlight को panel के पीछे किस प्रकार arrange किया जाता था?",
+      "options": [
+        "केवल एक single tube पूरे panel के लिए पर्याप्त मानी जाती थी",
+        "कई CCFL tubes को panel के पीछे समानांतर पंक्तियों (या कुछ designs में किनारों) पर लगाया जाता था ताकि पूरे screen पर प्रकाश समान रूप से फैले",
+        "tubes को केवल चारों corners में लगाया जाता था",
+        "tubes को केवल screen के top edge पर एक साथ लगाया जाता था"
+      ],
+      "correctIndex": 1,
+      "explanation": "पूरे screen पर समान brightness के लिए कई CCFL tubes panel के पीछे समानांतर पंक्तियों में (या कुछ मॉडलों में किनारों पर) लगाई जाती थीं, इसलिए option B सही है। एक single tube बड़े screen को समान रूप से रोशन नहीं कर सकती, और केवल corners या केवल top edge पर लगाने से पूरी screen पर uniform प्रकाश नहीं मिल पाता।"
+    },
+    {
+      "id": "u10_backlight_types_q7",
+      "question": "CCFL backlight वाले LCD TV की मोटाई (thickness), LED backlight वाले TV की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "दोनों की मोटाई बिल्कुल बराबर होती है",
+        "CCFL वाला TV सामान्यतः LED वाले से पतला होता है",
+        "CCFL वाला TV सामान्यतः अधिक मोटा (thicker) होता है, क्योंकि glass tubes और उनकी arrangement के लिए अधिक जगह चाहिए होती है",
+        "मोटाई backlight के प्रकार पर निर्भर ही नहीं करती"
+      ],
+      "correctIndex": 2,
+      "explanation": "CCFL tubes काँच की बनी होती हैं और उन्हें पर्याप्त जगह व frame चाहिए होता है, इसलिए CCFL backlight वाला TV सामान्यतः LED backlight वाले पतले TVs की तुलना में मोटा होता है (option C सही)। दोनों की मोटाई बराबर नहीं होती, CCFL LED से पतला नहीं होता, और मोटाई backlight technology पर निर्भर करती ही है।"
+    },
+    {
+      "id": "u10_backlight_types_q8",
+      "question": "CCFL backlight की power consumption, LED backlight की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "CCFL की power consumption LED से बहुत कम होती है",
+        "दोनों की power consumption बराबर होती है",
+        "CCFL में power consumption लगभग शून्य होती है",
+        "CCFL की power consumption अधिक होती है, क्योंकि gas discharge व inverter circuit में अतिरिक्त losses होते हैं और इसकी luminous efficacy LED से कम है"
+      ],
+      "correctIndex": 3,
+      "explanation": "CCFL में high voltage inverter की losses और gas discharge प्रक्रिया की कम efficacy के कारण समान brightness के लिए यह LED से अधिक power लेती है, इसलिए option D सही है। यह LED से कम खपत नहीं करती, दोनों बराबर नहीं होतीं, और power consumption शून्य होना असंभव है क्योंकि tube व inverter दोनों को supply चाहिए।"
+    },
+    {
+      "id": "u10_backlight_types_q9",
+      "question": "CCFL tube की एक प्रमुख कमी (drawback) क्या है जिसके कारण इसका उपयोग घटता जा रहा है?",
+      "options": [
+        "समय के साथ इसकी brightness धीरे-धीरे कम (gradual dimming) होती जाती है और इसमें मौजूद mercury पर्यावरण के लिए हानिकारक है",
+        "यह केवल एक ही रंग (single colour) का प्रकाश दे पाती है",
+        "इसे किसी भी परिस्थिति में dim नहीं किया जा सकता",
+        "इसमें कोई gas बिल्कुल नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "CCFL में उपयोग या समय बढ़ने के साथ luminous output धीरे-धीरे घटता है और इसमें मौजूद mercury disposal के समय पर्यावरण के लिए हानिकारक होता है, इसलिए LED का प्रचलन बढ़ा — यही option A को सही बनाता है। यह white/broad-spectrum प्रकाश देती है न कि single colour, इसे dimming circuits से हल्का dim किया जा सकता है, और इसमें mercury vapour गैस अनिवार्य रूप से मौजूद होती है।"
+    },
+    {
+      "id": "u10_backlight_types_q10",
+      "question": "HCFL का पूरा नाम क्या है और इसकी मूल विशेषता क्या है?",
+      "options": [
+        "High Current Fluorescent Lamp - यह बहुत अधिक current पर चलती है",
+        "Hot Cathode Fluorescent Lamp - इसमें cathode को साधारण tube light के heater filament की तरह पहले गर्म (preheat) किया जाता है",
+        "Horizontal Cathode Fluorescent Lamp - tube को हमेशा horizontal रखा जाता है",
+        "Half Cathode Fluorescent Lamp - इसमें केवल आधा cathode उपयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "HCFL यानी Hot Cathode Fluorescent Lamp में cathode को साधारण tube light के filament heater की तरह पहले गर्म किया जाता है ताकि thermionic emission आसान हो, इसलिए option B सही है। शेष तीन विस्तार (High Current, Horizontal Cathode, Half Cathode) गलत और भ्रामक नाम हैं, इनका HCFL शब्द से कोई वास्तविक संबंध नहीं है।"
+    },
+    {
+      "id": "u10_backlight_types_q11",
+      "question": "HCFL का starting (जलने का) mechanism CCFL से किस प्रकार भिन्न होता है?",
+      "options": [
+        "HCFL में भी CCFL जैसा cold cathode होता है, दोनों में कोई अंतर नहीं",
+        "HCFL को केवल DC supply चाहिए जबकि CCFL को केवल AC",
+        "HCFL में cathode filament को पहले गर्म किया जाता है (साधारण tube light जैसा thermionic emission) जिससे अपेक्षाकृत कम striking voltage पर्याप्त होता है, जबकि CCFL में cold cathode होने से high striking voltage चाहिए",
+        "HCFL बिना किसी gas के काम करती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "HCFL में filament को गर्म करने से electrons आसानी से निकलते हैं इसलिए कम striking voltage से discharge शुरू हो जाता है, जबकि CCFL में cathode ठंडा होने से gas को ionize करने हेतु उच्च voltage चाहिए — इसलिए option C सही है। दोनों में cathode अलग-अलग तरह के होते हैं (एक जैसे नहीं), दोनों ही AC पर संचालित होती हैं, और दोनों में ही mercury/gas मौजूद रहती है।"
+    },
+    {
+      "id": "u10_backlight_types_q12",
+      "question": "HCFL का उपयोग सामान्यतः कहाँ अधिक देखा जाता था?",
+      "options": [
+        "छोटे mobile phone displays में",
+        "handheld LED torch में",
+        "CCTV camera के IR LED illuminator में",
+        "कुछ बड़े आकार के older CRT/LCD monitors व displays में, जहाँ अधिक luminance की आवश्यकता होती थी"
+      ],
+      "correctIndex": 3,
+      "explanation": "HCFL heated cathode के कारण अपेक्षाकृत अधिक luminance दे पाती है, इसलिए इसे कुछ बड़े older monitors/displays में उपयोग किया गया, जिससे option D सही है। छोटे mobile displays, LED torch और CCTV के IR LED illuminator — इनमें से किसी में भी HCFL tube का प्रयोग नहीं होता, ये पूर्णतः भिन्न प्रकाश स्रोत उपयोग करते हैं।"
+    },
+    {
+      "id": "u10_backlight_types_q13",
+      "question": "CCFL और HCFL में मुख्य अंतर बताने वाला सही कथन कौन-सा है?",
+      "options": [
+        "HCFL में cathode को heater filament द्वारा गर्म किया जाता है जबकि CCFL में cathode बिना किसी heating (cold) के काम करता है",
+        "दोनों में cathode को बिल्कुल समान रूप से गर्म किया जाता है",
+        "CCFL में filament heater होता है परंतु HCFL में नहीं होता",
+        "दोनों में mercury vapour बिल्कुल नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "मूल भेद यही है कि HCFL में cathode heater से preheated होता है जबकि CCFL में cathode cold रहता है, इसलिए option A सही है। दोनों में cathode समान रूप से गर्म नहीं होते, filament heater वास्तव में HCFL में होता है न कि CCFL में (option C उल्टा है), और दोनों तकनीकों में ही mercury vapour मौजूद होती है।"
+    },
+    {
+      "id": "u10_backlight_types_q14",
+      "question": "luminance (brightness output) और lifespan की दृष्टि से CCFL व HCFL की सामान्य तुलना क्या मानी जाती है?",
+      "options": [
+        "CCFL की luminance HCFL से हमेशा अधिक तथा life हमेशा कम होती है",
+        "HCFL, heated cathode के कारण सामान्यतः higher luminance दे सकती है परंतु filament heater के घिसाव से इसकी life तुलनात्मक रूप से CCFL जितनी लंबी नहीं मानी जाती, जबकि CCFL की life लंबी होती है पर luminance सीमित रहती है",
+        "दोनों की life और luminance बिल्कुल एक समान होती है",
+        "HCFL की life व्यावहारिक रूप से अनंत (infinite) मानी जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Heated cathode से HCFL अधिक emission/luminance दे सकती है पर filament के बार-बार गर्म होने से घिसाव होता है जिससे life अपेक्षाकृत कम आँकी जाती है, जबकि CCFL में cold cathode के कारण filament wear नहीं होता इसलिए life लंबी पर luminance सीमित रहती है — यह option B को सही बनाता है। दोनों में luminance-life का संबंध उल्टा नहीं है, दोनों बराबर नहीं हैं, और किसी भी lamp की life अनंत नहीं होती।"
+    },
+    {
+      "id": "u10_backlight_types_q15",
+      "question": "Edge LED backlight technology में LEDs को panel में मुख्यतः कहाँ लगाया जाता है?",
+      "options": [
+        "पूरे panel के पीछे, एक matrix के रूप में फैलाकर",
+        "केवल screen के ठीक center में",
+        "panel के किनारों (edges - जैसे top/bottom या sides) पर, बीच में नहीं",
+        "screen के पीछे बिल्कुल नहीं, केवल बाहरी casing में"
+      ],
+      "correctIndex": 2,
+      "explanation": "Edge LED backlight में LEDs पूरे panel के पीछे न होकर केवल किनारों (edges) पर लगाई जाती हैं और वहाँ से प्रकाश को अंदर की ओर फैलाया जाता है, इसलिए option C सही है। पूरे पीछे matrix में LEDs लगाना Direct LED (Full Array) की पहचान है, केवल center में LED लगाने से uniform प्रकाश नहीं मिलेगा, और screen के पीछे बिल्कुल न होना गलत है क्योंकि किनारों पर तो LEDs पैनल से जुड़ी ही होती हैं।"
+    },
+    {
+      "id": "u10_backlight_types_q16",
+      "question": "Edge LED backlight में light guide plate (diffuser plate) का क्या कार्य है?",
+      "options": [
+        "LED junctions को ठंडा रखना (cooling)",
+        "high striking voltage उत्पन्न करना",
+        "tube के अंदर mercury vapour के दबाव को नियंत्रित करना",
+        "किनारों पर लगे LEDs से आने वाले प्रकाश को अपवर्तन/परावर्तन द्वारा पूरे panel क्षेत्र में समान रूप से (evenly) फैलाना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Light guide plate किनारे की LEDs से आने वाले सीमित प्रकाश को internal reflection व scattering के माध्यम से पूरे screen क्षेत्र में समान रूप से distribute करती है, इसलिए option D सही है। यह LED cooling के लिए नहीं (वह कार्य heat sink का है), high voltage उत्पन्न करने के लिए नहीं (वह CCFL inverter का कार्य है), और mercury vapour जैसी कोई चीज़ इसमें होती ही नहीं है क्योंकि यह LED backlight से संबंधित है।"
+    },
+    {
+      "id": "u10_backlight_types_q17",
+      "question": "Edge LED backlight तकनीक ने TV design में मुख्यतः क्या संभव बनाया?",
+      "options": [
+        "TV को बहुत पतला (slim) बनाना, क्योंकि LEDs केवल किनारों पर लगती हैं और पीछे बड़ी जगह की आवश्यकता नहीं होती",
+        "TV की power consumption को पूर्णतः शून्य करना",
+        "बिना किसी screen glass के image दिखाना",
+        "CCFL की तुलना में भी अधिक मोटाई की आवश्यकता उत्पन्न करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूँकि LEDs केवल पतले किनारों पर लगती हैं और light guide plate द्वारा प्रकाश फैलाया जाता है, panel के पीछे मोटी tube arrangement की ज़रूरत नहीं रहती — इससे बहुत slim TVs बनाना संभव हुआ, यही option A को सही बनाता है। Power consumption शून्य नहीं होती, screen glass अभी भी आवश्यक है, और यह तकनीक मोटाई बढ़ाने के बजाय घटाती है।"
+    },
+    {
+      "id": "u10_backlight_types_q18",
+      "question": "Edge LED backlight से जुड़ी एक सामान्य समस्या (common issue) क्या मानी जाती है?",
+      "options": [
+        "यह हमेशा पूरे screen पर perfectly uniform brightness ही देती है",
+        "light guide plate द्वारा प्रकाश के असमान वितरण के कारण edge glow (किनारों पर अतिरिक्त चमक) या light bleed जैसी uneven brightness की समस्या हो सकती है",
+        "इसमें mercury contamination की समस्या होती है",
+        "इसमें cathode heater के जलने की समस्या होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "क्योंकि प्रकाश केवल किनारों से आकर plate द्वारा फैलाया जाता है, इसलिए किनारों के पास अधिक चमक (edge glow) या असमान distribution के कारण light bleed जैसी समस्याएँ आम हैं — इसलिए option B सही है। यह हमेशा perfectly uniform नहीं होती (यही तो समस्या है), इसमें mercury होती ही नहीं (वह CCFL में होती है), और cathode heater जैसी कोई चीज़ LED backlight में होती ही नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q19",
+      "question": "Direct LED (Full Array) backlight में LEDs को किस प्रकार लगाया जाता है?",
+      "options": [
+        "केवल panel के top edge पर एक पंक्ति में",
+        "केवल panel के bottom edge पर",
+        "पूरे panel के पीछे एक matrix/array के रूप में, सीधे पूरे display क्षेत्र को cover करते हुए",
+        "panel से बाहर, एक अलग external box में"
+      ],
+      "correctIndex": 2,
+      "explanation": "Direct LED (Full Array) backlight में LEDs को पूरे panel के पीछे एक grid/matrix के रूप में लगाया जाता है ताकि पूरा display area सीधे cover हो जाए, इसलिए option C सही है। केवल top edge, केवल bottom edge पर LEDs लगाना Edge LED design की पहचान है, न कि Direct LED की, और LEDs को external box में लगाना backlight का कार्य ही पूरा नहीं करेगा।"
+    },
+    {
+      "id": "u10_backlight_types_q20",
+      "question": "Direct LED (Full Array) backlight में 'local dimming' का क्या अर्थ है?",
+      "options": [
+        "पूरे panel के सभी LEDs को हमेशा एक साथ पूर्ण brightness पर रखना",
+        "एक ही बार में पूरा backlight पूरी तरह बंद कर देना",
+        "LEDs की brightness समय के साथ बदलना, परंतु अलग-अलग zones की कोई अवधारणा न होना",
+        "panel के अलग-अलग zones की LEDs को स्वतंत्र रूप से dim या bright किया जाना, ताकि dark areas में backlight कम करके गहरा black तथा bright areas में पर्याप्त प्रकाश दिया जा सके, जिससे overall contrast बेहतर हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "Local dimming में पूरे backlight को zones में बाँटकर हर zone की brightness स्वतंत्र रूप से नियंत्रित की जाती है ताकि dark scenes में गहरा black और bright scenes में तेज़ प्रकाश मिले, जिससे contrast बेहतर होता है — यही option D को सही बनाता है। पूरे panel को हमेशा एक ही brightness पर रखना local dimming नहीं है, पूरा backlight बंद करना अलग बात है, और zones की अवधारणा के बिना brightness बदलना local dimming नहीं कहलाता।"
+    },
+    {
+      "id": "u10_backlight_types_q21",
+      "question": "Direct LED (Full Array) backlight वाले TVs, Edge LED backlight वाले TVs की तुलना में सामान्यतः कैसे होते हैं?",
+      "options": [
+        "तुलनात्मक रूप से थोड़े मोटे (thicker) होते हैं परंतु local dimming zones अधिक होने के कारण बेहतर contrast/black level व picture quality देते हैं",
+        "Edge LED backlight वाले TVs से हमेशा अधिक पतले होते हैं",
+        "इनमें वास्तव में कोई LED उपयोग नहीं होती",
+        "इनकी picture quality Edge LED backlight वाले TVs से हमेशा खराब होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LEDs पूरे पीछे matrix में फैली होने से Direct LED TVs अपेक्षाकृत मोटे होते हैं, परंतु अधिक व सटीक local dimming zones के कारण ये बेहतर contrast व black level देते हैं, इसलिए option A सही है। ये Edge LED से पतले नहीं होते, इनमें LEDs वास्तव में उपयोग होती हैं, और सामान्यतः इनकी picture quality Edge LED से बेहतर मानी जाती है, खराब नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q22",
+      "question": "Edge LED और Direct LED (Full Array) backlight की तुलना में कौन-सा कथन सही है?",
+      "options": [
+        "Edge LED में local dimming zones Direct LED से अधिक सटीक (precise) होते हैं",
+        "Direct LED में LEDs पूरे पीछे फैले होने से local dimming zones अधिक प्रभावी व सटीक होते हैं, जबकि Edge LED पतला design देता है पर local dimming उतना सटीक नहीं होता",
+        "दोनों तकनीकों में किसी भी प्रकार का कोई अंतर नहीं है",
+        "Edge LED हमेशा higher-end TVs में तथा Direct LED हमेशा सस्ते TVs में उपयोग होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि Direct LED में LEDs पूरे display क्षेत्र के पीछे फैली होती हैं, इसलिए ज़्यादा व अधिक सटीक dimming zones बनाए जा सकते हैं, जबकि Edge LED पतला design तो देती है पर सीमित किनारों की LEDs के कारण dimming उतनी सटीक नहीं होती — यही option B को सही बनाता है। Option A उल्टा कथन है, दोनों में स्पष्ट अंतर है, और व्यवहार में प्रायः Edge LED सस्ते/slim TVs में तथा Direct LED higher-end TVs में अधिक उपयोग होती है, इसका उल्टा नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q23",
+      "question": "IPS (In-Plane Switching) panel technology में liquid crystal molecules किस प्रकार switch (align) होते हैं?",
+      "options": [
+        "molecules glass की सतह के लंबवत (perpendicular) घूमते हैं",
+        "molecules की कोई निश्चित alignment ही नहीं होती",
+        "molecules glass की सतह के समानांतर (in-plane, parallel to glass) घूमते/align होते हैं, वर्टिकल (vertical) switching के बजाय",
+        "molecules पूरी तरह स्थिर रहते हैं, किसी भी voltage पर कभी नहीं घूमते"
+      ],
+      "correctIndex": 2,
+      "explanation": "IPS का मूल सिद्धांत यही है कि liquid crystal molecules ग्लास की सतह के समानांतर (in-plane) घूमते हैं न कि सामान्य TN panels की तरह vertical दिशा में, इसलिए option C सही है। Perpendicular switching TN panels की विशेषता है, molecules की कोई निश्चित alignment न होना गलत है क्योंकि IPS में भी नियंत्रित alignment होता है, और molecules का बिल्कुल न घूमना तो display को काम करने से ही रोक देगा।"
+    },
+    {
+      "id": "u10_backlight_types_q24",
+      "question": "IPS panel technology का सबसे प्रमुख लाभ (advantage) क्या माना जाता है?",
+      "options": [
+        "सबसे तेज़ response time",
+        "सबसे अधिक contrast ratio",
+        "सबसे कम manufacturing cost",
+        "व्यापक (wide) viewing angles पर भी रंग व contrast में न्यूनतम बदलाव, यानी बेहतर color consistency"
+      ],
+      "correctIndex": 3,
+      "explanation": "IPS panels की सबसे प्रमुख खूबी यह है कि इन्हें अलग-अलग कोणों से देखने पर भी रंग व contrast लगभग समान बने रहते हैं, इसलिए option D सही है। सबसे तेज़ response time TN panels की, और उच्च contrast ratio सामान्यतः VA panels की पहचान मानी जाती है, जबकि IPS निर्माण जटिलता के कारण सबसे सस्ती technology भी नहीं है।"
+    },
+    {
+      "id": "u10_backlight_types_q25",
+      "question": "IPS panels wide viewing angle पर भी बेहतर color consistency क्यों दे पाते हैं?",
+      "options": [
+        "क्योंकि liquid crystal की in-plane switching की वजह से अलग-अलग viewing angles से light modulation लगभग समान रहता है, TN panels के vertical alignment जैसी विकृति (colour shift) नहीं होती",
+        "क्योंकि IPS panel में backlight की आवश्यकता ही नहीं होती",
+        "क्योंकि IPS panel में कोई polarizer उपयोग नहीं होता",
+        "क्योंकि IPS panel हमेशा OLED technology का ही एक रूप होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "In-plane switching के कारण अलग-अलग दिशाओं से देखने पर liquid crystal द्वारा प्रकाश का modulation लगभग एक-सा रहता है, इसलिए colour shift कम होता है — यही option A को सही बनाता है। IPS भी एक LCD variant है इसलिए इसे backlight चाहिए ही होता है, polarizer LCD की मूल आवश्यकता है (यह भी इसमें होता है), और IPS, OLED का रूप नहीं बल्कि एक अलग LCD panel technology है।"
+    },
+    {
+      "id": "u10_backlight_types_q26",
+      "question": "IPS panel की एक सामान्य कमी (trade-off) क्या मानी जाती है?",
+      "options": [
+        "IPS का viewing angle TN/VA panels से खराब होता है",
+        "IPS panels का contrast ratio तथा response time सामान्यतः TN/VA panels की तुलना में थोड़ा कम/धीमा माना जाता है",
+        "IPS panel में backlight की बिल्कुल आवश्यकता नहीं होती",
+        "IPS panel केवल black and white (monochrome) display ही दे सकता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "व्यापक viewing angle के लाभ के बदले IPS panels का contrast ratio व response time सामान्यतः TN/VA panels से कुछ कम/धीमा रहता है, इसलिए option B सही है। IPS का viewing angle वास्तव में TN/VA से बेहतर होता है (उल्टा नहीं), इसे भी backlight चाहिए होता है, और IPS panels पूर्ण colour display देने में सक्षम होते हैं, monochrome तक सीमित नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q27",
+      "question": "TN (Twisted Nematic) panel की मुख्य विशेषता क्या है?",
+      "options": [
+        "liquid crystal molecules glass के समानांतर (in-plane) घूमते हैं",
+        "यह हमेशा IPS panel से बेहतर viewing angle देता है",
+        "liquid crystal molecules vertical (glass के लंबवत) घूमते हैं, जिससे response time तेज़ होता है परंतु viewing angle संकरा (narrow) रहता है और angle बदलने पर रंग/contrast में विकृति आती है",
+        "इसमें किसी भी प्रकार का liquid crystal उपयोग नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "TN panels में liquid crystal molecules glass के लंबवत घूमते हैं जिससे switching तेज़ होती है (fast response) लेकिन viewing angle सीमित रहता है और कोण बदलने पर रंग बिगड़ जाता है, इसलिए option C सही है। In-plane switching IPS की पहचान है, TN की नहीं; इसका viewing angle IPS से बेहतर नहीं बल्कि कमज़ोर होता है; और TN भी एक liquid crystal आधारित panel ही है।"
+    },
+    {
+      "id": "u10_backlight_types_q28",
+      "question": "VA (Vertical Alignment) panel को IPS व TN की तुलना में किस विशेषता के लिए जाना जाता है?",
+      "options": [
+        "सबसे तेज़ response time के लिए",
+        "सबसे व्यापक (widest) viewing angle के लिए",
+        "backlight की आवश्यकता बिल्कुल न होने के लिए",
+        "सामान्यतः उच्च contrast ratio व गहरे black levels के लिए, जबकि इसका viewing angle TN से बेहतर परंतु IPS से सामान्यतः कम होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "VA panels में liquid crystal alignment ऐसा होता है कि ये बहुत गहरे black व उच्च contrast ratio दे पाते हैं, viewing angle में ये TN से बेहतर पर IPS से आमतौर पर कमतर रहते हैं — यही option D को सही बनाता है। सबसे तेज़ response time सामान्यतः TN की पहचान है, सबसे व्यापक viewing angle IPS की खासियत मानी जाती है, और VA भी एक LCD variant होने से इसे backlight आवश्यक होता है।"
+    },
+    {
+      "id": "u10_backlight_types_q29",
+      "question": "LCD/LED TV की screen मंद (dim) दिखाई दे रही है परंतु image स्पष्ट रूप से दिख रहा है, तो इसका मुख्य कारण प्रायः क्या हो सकता है?",
+      "options": [
+        "backlight की कुछ LEDs/tubes खराब हो गई हैं या driver/inverter circuit की output कम हो गई है, जिससे कुल brightness घट गई है",
+        "LCD panel का glass टूट गया है",
+        "video processing IC पूरी तरह खराब हो गया है",
+        "TV के speaker की wiring में समस्या आ गई है"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब image तो सही दिखता है पर पूरी screen मंद हो, तो सामान्यतः backlight source (कुछ LEDs/tubes) या उसे चलाने वाला driver/inverter circuit कमज़ोर हो जाता है, जिससे कुल brightness घट जाती है — इसलिए option A सही है। Glass टूटने पर सामान्यतः visible physical damage/lines दिखेंगी, video processing IC खराब होने पर image ही विकृत/गायब होगा न कि केवल मंद, और speaker की समस्या से केवल audio प्रभावित होता है, brightness से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q30",
+      "question": "TV की screen पूरी तरह काली (dark) दिख रही है परंतु torch light से नज़दीक से देखने पर screen पर हल्की सी image दिखाई देती है — इससे क्या पता चलता है?",
+      "options": [
+        "LCD panel पूरी तरह खराब (dead) हो चुका है",
+        "backlight (LEDs/tubes या उनका driver/inverter circuit) खराब है जबकि LCD panel और video signal ठीक से काम कर रहे हैं, इसलिए torch की रोशनी में image दिख जाता है",
+        "TV का speaker खराब हो गया है",
+        "remote control की battery खत्म हो गई है"
+      ],
+      "correctIndex": 1,
+      "explanation": "टॉर्च की रोशनी में हल्की image दिखना सिद्ध करता है कि LCD panel अपनी pixel-modulation ठीक से कर रहा है और video signal भी सही है, केवल backlight (source या driver/inverter) काम नहीं कर रहा — यही diagnostic test option B को सही बनाता है। यदि panel पूरी तरह dead होता तो torch से भी कोई image न दिखता; speaker और remote की battery का brightness या image से कोई संबंध नहीं है, वे केवल audio व control से जुड़े हैं।"
+    }
+  ]
+}

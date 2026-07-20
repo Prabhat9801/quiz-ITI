@@ -1,0 +1,368 @@
+{
+  "unit": "unit3",
+  "unitName": "Sensors, Transducers and Applications",
+  "topic": "strain_gauge_loadcell",
+  "topicName": "Strain Gauge & Load Cell - Gauge Factor, Types of Strain, Wheatstone Bridge",
+  "questions": [
+    {
+      "id": "u3_strain_gauge_loadcell_q1",
+      "question": "Strain gauge किस principle पर कार्य करता है?",
+      "options": [
+        "Piezoelectric effect पर",
+        "किसी conductor के strain होने पर उसके resistance में परिवर्तन (piezoresistive effect) पर",
+        "Photoelectric effect पर",
+        "Thermoelectric effect पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Strain gauge, conductor की length, area और resistivity में mechanical deformation के कारण होने वाले परिवर्तन के फलस्वरूप resistance change को measure करता है, इसे piezoresistive effect कहते हैं। Piezoelectric effect crystal में charge generate करता है, photoelectric light से संबंधित है, और thermoelectric effect temperature difference से voltage पैदा करता है — ये सभी अलग principles हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q2",
+      "question": "Strain gauge का 'Gauge Factor (GF)' किसे दर्शाता है?",
+      "options": [
+        "Gauge की physical length",
+        "Resistance में fractional change और strain (ΔL/L) के अनुपात को",
+        "Applied force की मात्रा को सीधे",
+        "Gauge का cost factor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gauge Factor = (ΔR/R) / (ΔL/L), यानी resistance में होने वाला fractional change strain के fractional change से कितना गुना है, यह gauge की sensitivity बताता है। बाकी options gauge factor की सही परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q3",
+      "question": "सामान्य metallic (wire/foil type) strain gauge का Gauge Factor लगभग कितना होता है?",
+      "options": [
+        "लगभग 0.5",
+        "लगभग 2",
+        "लगभग 50",
+        "लगभग 200"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metallic strain gauges (wire या foil type) का Gauge Factor typically लगभग 2 होता है, जबकि semiconductor strain gauges का GF बहुत अधिक (50-200) होता है क्योंकि उनमें piezoresistive effect ज्यादा प्रबल होता है। इसलिए option A बहुत कम, C व D semiconductor gauge के values हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q4",
+      "question": "Semiconductor strain gauge, metallic strain gauge की तुलना में किस विशेषता के लिए जाना जाता है?",
+      "options": [
+        "बहुत कम sensitivity और उच्च linearity",
+        "बहुत उच्च Gauge Factor (sensitivity) लेकिन ज्यादा temperature sensitivity और non-linearity",
+        "पूरी तरह temperature-independent output",
+        "इसमें कोई resistance change नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Semiconductor strain gauges (जैसे silicon-based) में gauge factor बहुत अधिक (50-200) होता है जिससे high sensitivity मिलती है, लेकिन इनमें temperature effect और non-linearity metallic gauges से ज्यादा होती है। बाकी options विपरीत या गलत गुण बताते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q5",
+      "question": "'Strain' को engineering में किस प्रकार परिभाषित किया जाता है?",
+      "options": [
+        "Applied force की मात्रा",
+        "Deformation (change in length) और original length का अनुपात (ΔL/L)",
+        "Material का density",
+        "Material का temperature coefficient"
+      ],
+      "correctIndex": 1,
+      "explanation": "Strain = ΔL/L, यानी किसी material की original length के सापेक्ष उसमें हुए deformation का अनुपात, जो एक dimensionless quantity है। Force को स्वयं stress या load कहा जाता है, न कि strain; density और temperature coefficient असंबंधित properties हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q6",
+      "question": "जब कोई material खींचा (stretch) जाता है और उसकी length बढ़ती है, तो उसमें उत्पन्न strain को क्या कहते हैं?",
+      "options": [
+        "Compressive strain",
+        "Tensile (positive) strain",
+        "Shear strain",
+        "Torsional strain"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब material की length बढ़ती है (stretching), तो उसे tensile strain या positive strain कहते हैं। Compressive strain तब होता है जब length घटती है (squeezing), shear strain angular deformation से, और torsional strain twisting से संबंधित होता है।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q7",
+      "question": "जब कोई material दबाव (compression) में आकर छोटा हो जाता है, तो उत्पन्न strain को क्या कहा जाता है?",
+      "options": [
+        "Tensile strain",
+        "Compressive (negative) strain",
+        "Positive strain",
+        "Elastic strain केवल tension में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Material की length घटने (compression के कारण) पर उत्पन्न strain को compressive या negative strain कहते हैं, जो tensile (positive) strain के विपरीत होता है। अन्य options इस स्थिति को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q8",
+      "question": "Strain gauge को measurement के लिए किस electrical circuit में मुख्यतः जोड़ा जाता है?",
+      "options": [
+        "RC oscillator circuit",
+        "Wheatstone bridge circuit",
+        "Astable multivibrator circuit",
+        "Common-emitter amplifier circuit"
+      ],
+      "correctIndex": 1,
+      "explanation": "Strain gauge की resistance में होने वाला बहुत छोटा परिवर्तन accurately measure करने के लिए Wheatstone bridge circuit इस्तेमाल होता है, जो resistance change को measurable voltage में convert करता है। बाकी circuits strain measurement के लिए मानक विधि नहीं हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q9",
+      "question": "एक balanced Wheatstone bridge में strain gauge लगाने पर strain के कारण bridge किस स्थिति में जाता है?",
+      "options": [
+        "Bridge हमेशा balanced ही रहता है",
+        "Bridge unbalanced हो जाता है जिससे एक output voltage (differential) उत्पन्न होता है",
+        "Bridge short-circuit हो जाता है",
+        "Bridge की frequency बदल जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब strain gauge की resistance strain के कारण बदलती है, तो Wheatstone bridge का balance बिगड़ जाता है (unbalanced होता है) जिससे output terminals के बीच एक proportional voltage difference उत्पन्न होता है, जिसे measure करके strain calculate किया जाता है। बाकी options गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q10",
+      "question": "Strain gauge based bridge circuits में 'quarter bridge', 'half bridge' और 'full bridge' configurations में मुख्य अंतर क्या है?",
+      "options": [
+        "इनमें केवल supply voltage अलग होता है",
+        "इनमें bridge के कितने arms पर active strain gauge लगे हैं, यह अलग होता है (1, 2 या 4 gauges)",
+        "इनका कोई तकनीकी अंतर नहीं होता",
+        "ये केवल AC और DC supply के आधार पर अलग होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Quarter bridge में एक arm पर, half bridge में दो arms पर, और full bridge में चारों arms पर active strain gauges लगे होते हैं, जिससे sensitivity और temperature compensation में अंतर आता है (full bridge सबसे अधिक sensitive व temperature-compensated होता है)। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q11",
+      "question": "Full bridge configuration, quarter bridge की तुलना में क्यों बेहतर मानी जाती है?",
+      "options": [
+        "यह सस्ती होती है",
+        "यह अधिक sensitivity देती है और temperature effects को automatically cancel करती है",
+        "इसमें wiring कम लगती है",
+        "इसमें कोई strain gauge नहीं लगती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Full bridge में चार active gauges opposite arms में इस प्रकार लगाई जाती हैं कि output sensitivity कई गुना बढ़ जाती है और temperature के कारण होने वाला resistance change सभी arms में समान रूप से cancel हो जाता है। बाकी options गलत तर्क देते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q12",
+      "question": "Load cell का मूल कार्य क्या है?",
+      "options": [
+        "Temperature को measure करना",
+        "Applied force/weight को strain gauge के माध्यम से electrical signal में convert करना",
+        "Light intensity को measure करना",
+        "Flow rate को measure करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Load cell एक transducer है जिसमें strain gauges एक elastic metal body (जैसे beam या column) पर bonded होते हैं; applied weight/force से body में strain उत्पन्न होता है जिसे strain gauges electrical signal में बदल देते हैं। बाकी options load cell के कार्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q13",
+      "question": "Load cell में strain gauges को elastic element (जैसे metal beam) पर किस विधि से लगाया जाता है?",
+      "options": [
+        "Soldering से जोड़ते हैं",
+        "Special adhesive (bonding agent) से bond किया जाता है ताकि strain सीधे transfer हो सके",
+        "केवल clip से पकड़ा जाता है",
+        "Magnetic force से attach किया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Strain gauge को metal element पर strong adhesive/bonding agent से चिपकाया जाता है ताकि element में होने वाला हर सूक्ष्म deformation बिना किसी slip के gauge तक transfer हो सके, जिससे accurate measurement मिले। बाकी methods (soldering, clip, magnetic) उपयुक्त bonding technique नहीं हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q14",
+      "question": "Load cell में typically चार strain gauges इस्तेमाल करके full Wheatstone bridge क्यों बनाई जाती है?",
+      "options": [
+        "क्योंकि चार gauges सस्ती पड़ती हैं",
+        "इससे high sensitivity, better linearity और temperature compensation मिलता है",
+        "क्योंकि एक gauge काम नहीं करती",
+        "यह केवल design को complex बनाने के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Load cells में full bridge configuration इसलिए इस्तेमाल होती है ताकि tension और compression दोनों arms को एक साथ use करके output sensitivity बढ़े और temperature-induced errors cancel हो जाएं, जिससे accurate weight measurement मिले। बाकी options गलत कारण बताते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q15",
+      "question": "एक strain gauge का unstrained resistance 120 ohm है और Gauge Factor 2 है। यदि strain 0.001 (ΔL/L) लगाई जाए, तो resistance में परिवर्तन (ΔR) कितना होगा?",
+      "options": [
+        "0.12 ohm",
+        "0.24 ohm",
+        "1.2 ohm",
+        "2.4 ohm"
+      ],
+      "correctIndex": 1,
+      "explanation": "ΔR = GF x strain x R = 2 x 0.001 x 120 = 0.24 ohm। यह formula GF = (ΔR/R)/strain से सीधे निकलता है। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q16",
+      "question": "Load cell में 'creep' error किस कारण से होती है?",
+      "options": [
+        "Load cell पर constant load लगे रहने पर समय के साथ output में धीरे-धीरे drift होना (material की visco-elastic property के कारण)",
+        "Load cell का तेज़ी से टूटना",
+        "Temperature में तुरंत बदलाव",
+        "Wiring में short circuit"
+      ],
+      "correctIndex": 0,
+      "explanation": "Creep error तब होता है जब load cell पर एक constant weight लंबे समय तक रखा रहे और material की visco-elastic properties के कारण output signal समय के साथ धीरे-धीरे drift (change) करता है, बिना load बदले। बाकी options creep की सही व्याख्या नहीं करते।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q17",
+      "question": "Strain gauge material चुनते समय किस property का होना सबसे महत्वपूर्ण है?",
+      "options": [
+        "उच्च thermal conductivity, कम resistivity",
+        "स्थिर (stable) Gauge Factor, कम temperature coefficient of resistance और अच्छी fatigue life",
+        "उच्च magnetic permeability",
+        "Radioactive properties"
+      ],
+      "correctIndex": 1,
+      "explanation": "एक अच्छे strain gauge material (जैसे Constantan या Karma alloy) में stable gauge factor, low temperature coefficient of resistance (ताकि temperature errors कम हों) और अच्छी fatigue life होनी चाहिए ताकि बार-बार loading में भी accuracy बनी रहे। बाकी properties असंबंधित हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q18",
+      "question": "Load cell का 'rated capacity' किसे दर्शाता है?",
+      "options": [
+        "उसका physical size",
+        "अधिकतम load जिसे वह accurately और सुरक्षित रूप से measure कर सकता है",
+        "उसकी cost",
+        "उसका color code"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rated capacity, load cell की maximum weight/force limit होती है जिस तक वह specified accuracy के साथ सुरक्षित रूप से काम कर सकता है; इससे अधिक load देने पर permanent damage या inaccuracy हो सकती है। बाकी options rated capacity से असंबंधित हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q19",
+      "question": "Weighing scale में एक single-point load cell का उपयोग करने का फायदा क्या है?",
+      "options": [
+        "इसमें कई load cells combine करनी पड़ती हैं",
+        "यह platform पर किसी भी position पर weight रखने पर लगभग समान accurate reading देता है (off-center loading compensation)",
+        "यह केवल center में रखे weight को measure करता है",
+        "यह temperature से पूरी तरह अप्रभावित रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Single-point load cell को इस तरह design किया जाता है कि platform के किसी भी corner या position पर weight रखने पर भी लगभग वही accurate reading मिले, यानी यह off-center loading error को compensate करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q20",
+      "question": "Hydraulic load cell, strain-gauge based load cell से किस principle में भिन्न है?",
+      "options": [
+        "यह applied force द्वारा उत्पन्न hydraulic fluid pressure को measure करता है, resistance change को नहीं",
+        "यह भी resistance change पर काम करता है",
+        "इसमें कोई sensing element नहीं होता",
+        "यह केवल temperature measure करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hydraulic load cell में applied force एक piston/diaphragm के माध्यम से confined fluid पर pressure डालता है, जिसे pressure sensor से measure किया जाता है, जबकि strain gauge load cell direct resistance change पर आधारित होता है — दोनों अलग sensing principles हैं। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q21",
+      "question": "Strain gauge circuit में 'temperature compensation' की आवश्यकता क्यों होती है?",
+      "options": [
+        "क्योंकि temperature से gauge resistance और gauge factor दोनों प्रभावित होते हैं, जिससे measurement error आ सकता है",
+        "क्योंकि temperature से strain gauge टूट जाता है",
+        "क्योंकि temperature signal को amplify करता है",
+        "इसकी कोई आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Temperature में बदलाव से gauge material का resistance स्वयं बदल सकता है (apparent strain), जिसे actual mechanical strain से अलग करना जरूरी है; इसलिए dummy gauge या bridge configuration से temperature compensation किया जाता है। बाकी options गलत कारण देते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q22",
+      "question": "Wheatstone bridge में 'dummy gauge' का उपयोग किस उद्देश्य से किया जाता है?",
+      "options": [
+        "Bridge की sensitivity कम करने के लिए",
+        "Temperature compensation के लिए, जो active gauge जैसी ही temperature conditions में रहती है पर strain से unaffected रहती है",
+        "Signal को amplify करने के लिए",
+        "Bridge का wiring आसान करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dummy gauge को active gauge के पास (same temperature environment में) लगाया जाता है लेकिन इस प्रकार कि उस पर mechanical strain का प्रभाव न पड़े; इससे केवल temperature के कारण होने वाला resistance change cancel हो जाता है। बाकी options गलत उद्देश्य बताते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q23",
+      "question": "एक rectangular metal beam पर strain gauge लगाकर cantilever load cell बनाई गई है। Load बढ़ाने पर beam की upper surface tension में और lower surface compression में आती है। इस स्थिति में gauges किस प्रकार लगानी चाहिए?",
+      "options": [
+        "दोनों surfaces पर कोई gauge न लगाएं",
+        "Upper surface पर tensile-sensing और lower surface पर compressive-sensing gauges bridge के opposite arms में लगाएं",
+        "केवल beam के side पर एक gauge काफी है",
+        "गेज़ की position से कोई फर्क नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cantilever beam में opposite surfaces पर विपरीत strain (एक tensile, एक compressive) होता है; इन्हें bridge के opposite arms में लगाने से output signal additive होता है और sensitivity व temperature compensation दोनों बेहतर होते हैं। बाकी options गलत approach हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q24",
+      "question": "Load cell की output signal को आमतौर पर किस unit में specify किया जाता है?",
+      "options": [
+        "Ohm प्रति kg",
+        "mV/V (millivolt output प्रति volt excitation) rated capacity पर",
+        "Hertz",
+        "Lumens"
+      ],
+      "correctIndex": 1,
+      "explanation": "Load cell की sensitivity को आमतौर पर mV/V में specify किया जाता है, जैसे 2 mV/V का मतलब है कि rated capacity पर, प्रत्येक volt excitation के लिए 2 mV output मिलेगा। बाकी units load cell की output specification के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q25",
+      "question": "एक load cell का rated output 2 mV/V है और उसे 10V excitation दी गई है। Rated (full) capacity पर output voltage कितना होगा?",
+      "options": [
+        "2 mV",
+        "10 mV",
+        "20 mV",
+        "200 mV"
+      ],
+      "correctIndex": 2,
+      "explanation": "Output = sensitivity x excitation voltage = 2 mV/V x 10V = 20 mV। यह पूर्ण rated capacity load पर मिलने वाला अधिकतम output है। बाकी options गलत calculation से आते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q26",
+      "question": "Strain gauge का 'transverse sensitivity' किससे संबंधित समस्या है?",
+      "options": [
+        "Gauge का primary (axial) strain direction के अलावा perpendicular direction के strain के प्रति भी थोड़ा sensitive होना",
+        "Gauge का पूरी तरह temperature-independent होना",
+        "Gauge की physical breaking strength",
+        "Gauge की cost"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transverse sensitivity एक अवांछित (undesirable) effect है जिसमें gauge अपनी मुख्य measuring axis के अलावा perpendicular (transverse) direction के strain के प्रति भी कुछ हद तक sensitive होता है, जिससे measurement में छोटी error आ सकती है। बाकी options इसकी सही व्याख्या नहीं करते।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q27",
+      "question": "Industrial weighing systems में load cell से मिलने वाला mV-level signal, आगे processing के लिए किस डिवाइस को दिया जाता है?",
+      "options": [
+        "Direct digital display को बिना किसी processing के",
+        "Instrumentation amplifier / weighing indicator को, जो signal को amplify व digitize करता है",
+        "Direct AC motor को",
+        "सीधे pneumatic actuator को"
+      ],
+      "correctIndex": 1,
+      "explanation": "Load cell का बहुत छोटा mV-level output signal accurately process करने के लिए instrumentation amplifier से amplify किया जाता है और फिर ADC के through digital weighing indicator पर display किया जाता है। बाकी options तकनीकी रूप से galat हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q28",
+      "question": "एक strain gauge को beam की neutral axis पर लगाने पर उसे कोई strain signal क्यों नहीं मिलेगा?",
+      "options": [
+        "क्योंकि neutral axis पर bending के दौरान न tension होती है न compression, यहां net strain zero होता है",
+        "क्योंकि gauge वहां काम नहीं करता",
+        "क्योंकि neutral axis पर temperature ज्यादा होता है",
+        "क्योंकि वहां resistance infinite हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bending की स्थिति में beam की neutral axis वह layer होती है जहां fiber की length में कोई बदलाव नहीं होता (न elongation, न compression), इसलिए वहां strain zero होता है और gauge कोई meaningful signal नहीं दे पाएगा; इसीलिए gauges को surface (जहां strain maximum हो) पर लगाया जाता है। बाकी options गलत कारण बताते हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q29",
+      "question": "Load cell में 'hysteresis error' का क्या अर्थ है?",
+      "options": [
+        "Loading और unloading करते समय समान load value पर अलग-अलग output मिलना",
+        "Load बढ़ाने पर output का हमेशा शून्य रहना",
+        "Temperature बढ़ने से load cell का टूट जाना",
+        "Load cell की rated capacity का बदल जाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hysteresis error तब होता है जब same load value पर, load बढ़ाते समय (loading path) और load घटाते समय (unloading path) की output values में अंतर आ जाता है, जो material की elastic properties के कारण होता है। बाकी options hysteresis की सही परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u3_strain_gauge_loadcell_q30",
+      "question": "एक digital weighing scale में उपयोग होने वाले load cell की सबसे उपयुक्त choice किस प्रकार की bridge configuration है, यदि high accuracy और automatic temperature compensation दोनों चाहिए?",
+      "options": [
+        "Quarter bridge (single active gauge)",
+        "Half bridge (two active gauges)",
+        "Full Wheatstone bridge (four active gauges in opposite arms)",
+        "कोई bridge इस्तेमाल न करें"
+      ],
+      "correctIndex": 2,
+      "explanation": "Full bridge configuration चार active strain gauges का उपयोग opposite arms में इस तरह करती है कि sensitivity maximum हो और temperature-induced resistance changes स्वतः cancel हो जाएं, इसलिए यह high accuracy digital weighing applications के लिए सबसे उपयुक्त है। Quarter व half bridge में sensitivity व compensation कम प्रभावी होता है।"
+    }
+  ]
+}

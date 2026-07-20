@@ -1,0 +1,368 @@
+{
+  "unit": "unit9",
+  "unitName": "Solar Power Renewable Energy Systems",
+  "topic": "solar_safety",
+  "topicName": "Safety Precautions in Solar PV Systems - Installation, Operation, Maintenance",
+  "questions": [
+    {
+      "id": "u9_solar_safety_q1",
+      "question": "Solar PV systems में DC wiring को AC wiring की तुलना में switching/interruption के मामले में अधिक खतरनाक क्यों माना जाता है?",
+      "options": [
+        "DC arc में AC जैसा natural zero-crossing नहीं होता, इसलिए एक बार बना arc अपने आप बुझता नहीं और लंबे समय तक बना रह सकता है, जिससे यह अधिक खतरनाक होता है",
+        "DC में कभी arc बनता ही नहीं",
+        "DC arc AC arc से हमेशा कमजोर होता है",
+        "DC का voltage हमेशा AC से कम होता है इसलिए यह पूरी तरह सुरक्षित है"
+      ],
+      "correctIndex": 0,
+      "explanation": "AC में voltage हर cycle में शून्य से गुजरता है (zero-crossing), जिससे arc स्वाभाविक रूप से बुझ जाता है, परंतु DC में ऐसा zero-crossing नहीं होता इसलिए बना हुआ arc स्थिर रहकर अधिक नुकसान पहुँचा सकता है। DC में arc बनता है (यह false है कि नहीं बनता), यह हमेशा कमजोर नहीं होता, और DC voltage हमेशा कम नहीं होता, PV arrays में यह काफी उच्च भी हो सकता है।"
+    },
+    {
+      "id": "u9_solar_safety_q2",
+      "question": "दिन के समय सूर्य की रोशनी में solar panel को सामान्य switch की तरह पूरी तरह 'बंद' क्यों नहीं किया जा सकता?",
+      "options": [
+        "Panel को किसी भी switch से पूरी तरह बंद किया जा सकता है जैसे light bulb",
+        "जब तक sunlight panel पर पड़ती है, वह photovoltaic effect के कारण voltage उत्पन्न करता रहेगा, चाहे किसी switch की स्थिति कुछ भी हो",
+        "Panel रात-दिन दोनों समय बराबर voltage देता है",
+        "Panel में स्वयं कोई voltage generate करने की क्षमता ही नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Panel स्वयं एक source है — जब तक उस पर sunlight पड़ती है, वह photovoltaic effect से voltage उत्पन्न करता रहता है; कोई switch केवल circuit में उस voltage के प्रवाह को disconnect कर सकता है, panel के अंदर voltage generation को नहीं रोक सकता। यह light bulb की तरह पूरी तरह बंद नहीं होता, रात-दिन में समान voltage नहीं मिलता, और panel में voltage उत्पन्न करने की स्पष्ट क्षमता होती है।"
+    },
+    {
+      "id": "u9_solar_safety_q3",
+      "question": "Rooftop PV installation करते समय installer को कौन-सा PPE (Personal Protective Equipment) पहनना आवश्यक है?",
+      "options": [
+        "केवल sunglasses पहनना पर्याप्त है",
+        "किसी भी प्रकार के PPE की आवश्यकता नहीं होती",
+        "Safety harness, non-slip/insulated safety shoes, insulated gloves तथा hard hat जैसे PPE आवश्यक हैं",
+        "केवल सामान्य slippers पहनकर काम करना उचित है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rooftop पर height से गिरने तथा electrical shock दोनों खतरों से बचाव के लिए safety harness, non-slip/insulated shoes, insulated gloves और hard hat जैसे उचित PPE आवश्यक होते हैं। केवल sunglasses या slippers पर्याप्त सुरक्षा नहीं देते, और 'कोई PPE आवश्यक नहीं' कहना पूरी तरह असुरक्षित सलाह है।"
+    },
+    {
+      "id": "u9_solar_safety_q4",
+      "question": "Live PV wiring पर काम करते समय insulated tools का उपयोग क्यों आवश्यक है?",
+      "options": [
+        "इससे tools हल्के हो जाते हैं",
+        "इससे काम तेज़ी से होता है, सुरक्षा से कोई संबंध नहीं",
+        "यह केवल tools को जंग लगने से बचाने के लिए है",
+        "ताकि live PV wiring के साथ काम करते समय accidental electric shock या short circuit से बचा जा सके"
+      ],
+      "correctIndex": 3,
+      "explanation": "Insulated tools का handle current को technician के शरीर तक पहुँचने से रोकता है, जिससे accidental contact होने पर भी electric shock या short circuit का खतरा कम हो जाता है। यह tools का weight कम नहीं करता, गति बढ़ाने के लिए नहीं है, और इसका मुख्य उद्देश्य जंग रोकना नहीं बल्कि विद्युत सुरक्षा है।"
+    },
+    {
+      "id": "u9_solar_safety_q5",
+      "question": "PV system में लगे 'DC isolator switch' का सुरक्षा दृष्टि से क्या उद्देश्य है?",
+      "options": [
+        "यह PV array को शेष system (inverter/battery) से सुरक्षित रूप से disconnect करने की सुविधा देता है, विशेषकर maintenance के दौरान",
+        "यह केवल AC power को नियंत्रित करता है",
+        "इसका किसी safety कार्य से कोई संबंध नहीं",
+        "यह हमेशा जुड़ा रहना चाहिए, कभी खोलना नहीं चाहिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "DC isolator switch technician को maintenance या fault-finding के दौरान PV array को शेष system से सुरक्षित रूप से disconnect करने की सुविधा देता है, हालांकि यह ध्यान रहे कि array स्वयं sunlight में voltage उत्पन्न करता रहता है। यह AC को नहीं बल्कि DC side को नियंत्रित करता है, इसका safety से सीधा संबंध है, और maintenance के लिए इसे खोलना ही इसका उद्देश्य है।"
+    },
+    {
+      "id": "u9_solar_safety_q6",
+      "question": "PV array के metal frames की उचित grounding/earthing सुरक्षा दृष्टि से क्यों आवश्यक होती है?",
+      "options": [
+        "Grounding केवल appearance के लिए किया जाता है",
+        "यह किसी insulation fault की स्थिति में frame पर आने वाले fault current को सुरक्षित रूप से जमीन में प्रवाहित कर, उपयोगकर्ता को electric shock से बचाता है",
+        "Grounding से panel की efficiency बढ़ जाती है",
+        "Grounding की कोई आवश्यकता नहीं होती क्योंकि DC सुरक्षित है"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि किसी insulation fault के कारण live conductor frame को छू जाए, तो उचित grounding उस fault current को सुरक्षित रूप से earth में प्रवाहित कर देती है, जिससे frame को छूने वाले व्यक्ति को खतरनाक shock नहीं लगता। Grounding केवल दिखावे के लिए नहीं, यह efficiency नहीं बढ़ाती, और high-voltage DC systems में यह उतनी ही या अधिक महत्वपूर्ण होती है, DC कभी 'पूर्णतः सुरक्षित' नहीं माना जाता।"
+    },
+    {
+      "id": "u9_solar_safety_q7",
+      "question": "PV modules के बीच सही MC4 जैसे locking connectors का उपयोग सुरक्षा दृष्टि से क्यों महत्वपूर्ण है?",
+      "options": [
+        "सही locking connectors का उपयोग accidental disconnection, loose connection के कारण होने वाली arcing तथा moisture ingress को रोकता है",
+        "Locking connectors केवल installation को तेज़ करते हैं, सुरक्षा से कोई संबंध नहीं",
+        "किसी भी प्रकार के connector का उपयोग किया जा सकता है, फर्क नहीं पड़ता",
+        "Locking connectors केवल सौंदर्य के लिए होते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Properly locked connectors accidental disconnection, ढीले connection से होने वाली arcing, और moisture प्रवेश जैसी समस्याओं को रोकते हैं, जो सुरक्षा तथा reliability दोनों के लिए महत्वपूर्ण है। यह केवल installation तेज़ करने के लिए नहीं, हर तरह का connector उपयुक्त नहीं होता, और यह केवल सौंदर्य का विषय नहीं है।"
+    },
+    {
+      "id": "u9_solar_safety_q8",
+      "question": "PV system की wiring में ढीले (loose) या गलत connections से fire hazard किस प्रकार उत्पन्न हो सकता है?",
+      "options": [
+        "ढीले connections से केवल voltage थोड़ा कम होता है, कोई खतरा नहीं",
+        "Loose connections का fire risk से कोई संबंध नहीं होता",
+        "Loose connections केवल noise उत्पन्न करते हैं",
+        "ढीले या गलत connections arcing उत्पन्न कर सकते हैं, जो आस-पास के flammable material को आग लगा सकते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Loose या faulty connections पर contact resistance बढ़ने से arcing/sparking हो सकती है, जो आस-पास की सामग्री में आग लगाने के लिए पर्याप्त heat उत्पन्न कर सकती है। यह केवल voltage कम नहीं करता (यह एक गंभीर fire risk है), इसका fire risk से सीधा संबंध है, और यह केवल noise तक सीमित समस्या नहीं है।"
+    },
+    {
+      "id": "u9_solar_safety_q9",
+      "question": "PV DC systems में प्रयुक्त होने वाला Arc Fault Circuit Interrupter (AFCI) क्या कार्य करता है?",
+      "options": [
+        "यह DC wiring में उत्पन्न होने वाले खतरनाक arc faults को detect कर circuit को automatically interrupt कर देता है",
+        "इसका किसी fault detection से कोई संबंध नहीं",
+        "यह केवल AC circuits में उपयोग होता है, PV DC में कभी नहीं",
+        "यह केवल battery की voltage मापता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "AFCI wiring में उत्पन्न होने वाले खतरनाक series/parallel arc faults को detect करके circuit को automatically interrupt करता है, जिससे fire और shock hazard रुकता है। यह केवल voltage मापने वाला उपकरण नहीं है, इसका fault detection से सीधा संबंध है, और यह विशेष रूप से DC PV installations में भी प्रयुक्त होता है।"
+    },
+    {
+      "id": "u9_solar_safety_q10",
+      "question": "बारिश या गीली (wet) परिस्थितियों में PV system पर काम करने से क्यों बचना चाहिए?",
+      "options": [
+        "बारिश में काम करने से कोई अतिरिक्त खतरा नहीं होता",
+        "गीली सतह/त्वचा शरीर के through electric current प्रवाहित होने की संभावना तथा shock की गंभीरता को बढ़ा देती है",
+        "गीली परिस्थितियाँ केवल tools को जंग लगाती हैं, शॉक जोखिम नहीं बढ़ातीं",
+        "बारिश में काम करना हमेशा तेज़ होता है इसलिए प्राथमिकता दी जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "पानी अच्छा conductor होता है, इसलिए गीली सतह या त्वचा के कारण शरीर से होकर current प्रवाहित होने की संभावना तथा shock की गंभीरता दोनों बढ़ जाती हैं। 'कोई अतिरिक्त खतरा नहीं' गलत है, यह केवल tools की जंग तक सीमित नहीं, और गीली परिस्थितियों में काम करना सुरक्षा दृष्टि से प्राथमिकता नहीं दी जाती।"
+    },
+    {
+      "id": "u9_solar_safety_q11",
+      "question": "Solar PV maintenance में 'Lockout-Tagout (LOTO)' प्रक्रिया का क्या अर्थ है?",
+      "options": [
+        "यह केवल एक चेतावनी sticker लगाने की formality है जिसका कोई practical असर नहीं",
+        "LOTO का उद्देश्य केवल inventory record रखना है",
+        "Maintenance के दौरान isolators/switches को lock करके तथा tag लगाकर यह सुनिश्चित करना कि कोई अन्य व्यक्ति गलती से सिस्टम को दोबारा energize न कर दे",
+        "LOTO प्रक्रिया केवल बड़े industrial plants में लागू होती है, PV installation में नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "LOTO प्रक्रिया में maintenance करते समय isolators/switches को physically lock तथा tag किया जाता है ताकि कोई और व्यक्ति अनजाने में सिस्टम को दोबारा energize न कर दे, जिससे technician सुरक्षित रहे। यह केवल formality नहीं बल्कि practical सुरक्षा उपाय है, इसका उद्देश्य record रखना नहीं, और यह PV installations सहित हर बिजली कार्य में लागू होनी चाहिए, न कि केवल बड़े plants में।"
+    },
+    {
+      "id": "u9_solar_safety_q12",
+      "question": "Installation या maintenance के दौरान PV panel को अपारदर्शी (opaque) सामग्री से ढकने की सलाह क्यों दी जाती है?",
+      "options": [
+        "Cover लगाने से panel साफ रहता है, सुरक्षा से कोई संबंध नहीं",
+        "Cover लगाने से panel का voltage और अधिक बढ़ जाता है",
+        "Cover लगाना केवल सजावट के लिए किया जाता है",
+        "Opaque cover लगाने से panel पर sunlight नहीं पड़ती, जिससे उसका voltage generation अस्थायी रूप से कम/समाप्त हो जाता है और shock risk घटता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Opaque cover panel तक पहुँचने वाली sunlight को रोक देता है, जिससे photovoltaic voltage generation अस्थायी रूप से रुक जाता है या नगण्य हो जाता है, और technician के लिए shock risk कम हो जाता है। यह केवल सफाई या सजावट के लिए नहीं है, और यह voltage बढ़ाने की बजाय घटाने का काम करता है।"
+    },
+    {
+      "id": "u9_solar_safety_q13",
+      "question": "Rooftop पर ऊँचाई (height) पर काम करते समय गिरने (fall) से बचाव के लिए क्या उपाय अपनाया जाना चाहिए?",
+      "options": [
+        "Properly anchored safety harness तथा guardrails/toe-boards का उपयोग करना ताकि गिरने से बचा जा सके",
+        "Height पर काम करते समय किसी सुरक्षा उपाय की आवश्यकता नहीं होती",
+        "केवल सावधानी बरतना ही पर्याप्त है, कोई उपकरण नहीं चाहिए",
+        "Height safety केवल बड़ी buildings के लिए है, rooftop solar के लिए नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Height पर काम करते समय properly anchored safety harness तथा guardrails/toe-boards जैसे fall-protection उपाय अनिवार्य होते हैं ताकि गिरने की स्थिति में गंभीर चोट से बचा जा सके। केवल सावधानी बरतना अपर्याप्त है, कोई उपाय न लेना असुरक्षित है, और rooftop solar installations में भी fall risk उतना ही वास्तविक है जितना किसी अन्य ऊँची building में।"
+    },
+    {
+      "id": "u9_solar_safety_q14",
+      "question": "Lead-acid batteries को ठीक से ventilated area में रखना सुरक्षा दृष्टि से क्यों ज़रूरी है?",
+      "options": [
+        "Ventilation का उद्देश्य केवल battery को ठंडा रखना है, गैस से कोई संबंध नहीं",
+        "Charging के दौरान battery से निकलने वाली hydrogen gas विस्फोटक (explosive) हो सकती है, इसलिए proper ventilation ज़रूरी है",
+        "Battery से कोई gas नहीं निकलती, ventilation अनावश्यक है",
+        "Ventilation केवल battery की उम्र दिखाने के लिए किया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Charging प्रक्रिया के दौरान lead-acid batteries से hydrogen gas निकलती है, जो सीमित/बंद जगह में इकट्ठा होकर विस्फोटक mixture बना सकती है, इसलिए proper ventilation आवश्यक है। यह केवल cooling के लिए नहीं है, batteries वास्तव में gas छोड़ती हैं, और इसका battery की उम्र दिखाने से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u9_solar_safety_q15",
+      "question": "Lead-acid batteries को संभालते (handle करते) समय कौन-सी सावधानी बरतनी चाहिए?",
+      "options": [
+        "Battery के पास खुली flame रखना कोई समस्या नहीं है",
+        "Battery acid को बिना gloves के सीधे हाथ से छूना सुरक्षित है",
+        "Battery के पास sparks/खुली flame से बचना तथा acid-resistant gloves और eye protection पहनना",
+        "Battery संभालते समय किसी विशेष सावधानी की आवश्यकता नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Battery से निकलने वाली hydrogen gas sparks/flame से आग पकड़ सकती है, और acid त्वचा/आँखों को नुकसान पहुँचा सकता है, इसलिए sparks से बचाव तथा acid-resistant gloves व eye protection पहनना ज़रूरी है। खुली flame रखना खतरनाक है, acid को बिना gloves छूना असुरक्षित है, और 'कोई सावधानी नहीं' कहना गलत सलाह है।"
+    },
+    {
+      "id": "u9_solar_safety_q16",
+      "question": "Battery के दोनों terminals को कभी भी directly short-circuit (बिना resistance के जोड़ना) क्यों नहीं करना चाहिए?",
+      "options": [
+        "Short-circuit करने से battery की life बढ़ जाती है",
+        "इससे केवल थोड़ी sparking होती है, कोई खतरा नहीं",
+        "Short-circuit करने से battery तुरंत पूरी तरह चार्ज हो जाती है",
+        "इससे अत्यधिक (very high) current प्रवाहित हो सकता है जिससे explosion, आग या गंभीर जलन (burns) हो सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Direct short-circuit करने पर battery से अत्यधिक high current बहुत कम समय में प्रवाहित होता है, जिससे अत्यधिक heat, explosion, आग या गंभीर जलने जैसी दुर्घटनाएँ हो सकती हैं। यह battery की life बढ़ाने के बजाय उसे स्थायी नुकसान पहुँचाता है, यह 'केवल थोड़ी sparking' तक सीमित नहीं है, और यह चार्जिंग की प्रक्रिया नहीं है।"
+    },
+    {
+      "id": "u9_solar_safety_q17",
+      "question": "PV system की wiring में सही fuse/circuit breaker rating चुनने का सुरक्षा दृष्टि से क्या महत्व है?",
+      "options": [
+        "Fuse/circuit breaker का rating चुनना केवल दिखावे के लिए है",
+        "गलत rating का fuse लगाने से कोई असर नहीं पड़ता",
+        "यह wiring को अधिक (excess) current से बचाकर overheating तथा fire hazard को रोकता है",
+        "Fuse/circuit breaker केवल AC systems में ही आवश्यक है, DC PV systems में नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही rating का fuse/circuit breaker wiring में rated सीमा से अधिक current बहने पर circuit को तुरंत disconnect कर देता है, जिससे overheating और आग लगने का खतरा कम होता है। यह केवल दिखावा नहीं, गलत rating से गंभीर खतरा उत्पन्न होता है, और यह DC PV systems में भी अनिवार्य रूप से आवश्यक होता है।"
+    },
+    {
+      "id": "u9_solar_safety_q18",
+      "question": "PV systems में Surge Protection Device (SPD) लगाने का उद्देश्य क्या है?",
+      "options": [
+        "SPD का उद्देश्य केवल appearance सुधारना है",
+        "यह lightning strikes या switching के कारण उत्पन्न होने वाले voltage surges से equipment (inverter, controller आदि) को सुरक्षित रखता है",
+        "SPD का किसी protection कार्य से कोई संबंध नहीं",
+        "SPD केवल battery की charging बढ़ाने के लिए लगाया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SPD lightning strikes या switching transients के कारण उत्पन्न अचानक high-voltage surges को absorb/divert करके inverter, charge controller जैसे sensitive equipment को क्षति से बचाता है। यह appearance के लिए नहीं, इसका protection से सीधा संबंध है, और इसका battery चार्जिंग बढ़ाने से कोई लेना-देना नहीं है।"
+    },
+    {
+      "id": "u9_solar_safety_q19",
+      "question": "Array की wiring को conduit या cable ties से properly secure करना सुरक्षा दृष्टि से क्यों ज़रूरी है?",
+      "options": [
+        "Cables को खुला/ढीला छोड़ देना अधिक सुरक्षित माना जाता है",
+        "Conduit/cable ties का उद्देश्य केवल सुंदरता है",
+        "Securing wiring का किसी सुरक्षा पहलू से कोई संबंध नहीं",
+        "इससे cables की घर्षण (abrasion), कृंतकों (rodents) द्वारा कटने, तथा accidental disconnection से सुरक्षा मिलती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Properly secured cables घर्षण से insulation damage, कृंतकों द्वारा काटे जाने, तथा accidental खिंचाव/disconnection से सुरक्षित रहते हैं, जिससे shock और fire hazards कम होते हैं। ढीली cables छोड़ना अधिक असुरक्षित होता है, यह केवल सुंदरता का विषय नहीं है, और इसका सुरक्षा से स्पष्ट संबंध है।"
+    },
+    {
+      "id": "u9_solar_safety_q20",
+      "question": "PV system की wiring जोड़ते समय सही polarity (positive/negative) की जांच करना क्यों आवश्यक है?",
+      "options": [
+        "Polarity जांचने की कोई आवश्यकता नहीं, सभी उपकरण दोनों दिशाओं में समान रूप से काम करते हैं",
+        "Polarity केवल AC systems में महत्वपूर्ण है, DC PV wiring में नहीं",
+        "गलत polarity जोड़ने से केवल output थोड़ा कम होता है, नुकसान नहीं होता",
+        "Reverse polarity connection inverter, charge controller या battery को गंभीर रूप से क्षतिग्रस्त कर सकती है, इसलिए polarity जांचना आवश्यक है"
+      ],
+      "correctIndex": 3,
+      "explanation": "DC equipment (inverter, controller, battery) प्रायः polarity-sensitive होते हैं, इसलिए reverse connection internal components को गंभीर रूप से क्षतिग्रस्त कर सकता है या fire भी उत्पन्न कर सकता है। ये उपकरण दोनों दिशाओं में समान रूप से काम नहीं करते, polarity DC systems में विशेष रूप से महत्वपूर्ण होती है, और इसका प्रभाव केवल output कम होने तक सीमित नहीं, गंभीर क्षति संभव है।"
+    },
+    {
+      "id": "u9_solar_safety_q21",
+      "question": "किसी PV system में संदिग्ध fault होने पर troubleshooting शुरू करने से पहले सबसे पहला सुरक्षित step क्या होना चाहिए?",
+      "options": [
+        "पहले circuit को isolator/switch द्वारा सुरक्षित रूप से de-energize करना तथा multimeter से voltage जांचकर पुष्टि करना कि यह safe है",
+        "बिना isolate किए सीधे live wiring को छूकर जांच शुरू करना",
+        "Fault ढूँढने के लिए सीधे wires को काट देना बिना कोई जांच किए",
+        "किसी भी सुरक्षा जांच के बिना तुरंत मरम्मत शुरू कर देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सुरक्षित troubleshooting के लिए सबसे पहले circuit को उपयुक्त isolator से de-energize करना और फिर multimeter से confirm करना चाहिए कि कोई खतरनाक voltage मौजूद नहीं है, उसके बाद ही आगे काम करना चाहिए। बिना isolate किए live wiring छूना, बिना जांच wires काटना, या बिना किसी सुरक्षा जांच के मरम्मत शुरू करना — ये सभी अत्यंत खतरनाक practices हैं।"
+    },
+    {
+      "id": "u9_solar_safety_q22",
+      "question": "PV DC wiring के दो अलग-अलग polarity conductors (positive और negative) को एक साथ नंगे हाथों से छूना क्यों खतरनाक है?",
+      "options": [
+        "इसमें कोई खतरा नहीं क्योंकि DC voltage हमेशा कम होता है",
+        "इससे शरीर के through एक potential difference के कारण current प्रवाहित हो सकता है, जिससे गंभीर electric shock लग सकता है",
+        "इससे केवल हल्की झुनझुनी (tingling) महसूस होती है, कोई वास्तविक खतरा नहीं",
+        "यह केवल तभी खतरनाक है जब AC supply भी साथ में जुड़ी हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "दो अलग polarity conductors के बीच potential difference मौजूद होता है, और यदि शरीर दोनों को एक साथ छू ले तो उस potential difference के कारण शरीर से होकर current प्रवाहित हो सकता है, जिससे गंभीर shock लग सकता है। PV array का DC voltage अक्सर काफी उच्च (सैकड़ों volts तक) हो सकता है, यह केवल tingling तक सीमित नहीं, और यह खतरा AC की उपस्थिति पर निर्भर नहीं है।"
+    },
+    {
+      "id": "u9_solar_safety_q23",
+      "question": "Rooftop पर panels install करते समय overhead high-voltage power lines से उचित clearance (दूरी) बनाए रखना क्यों आवश्यक है?",
+      "options": [
+        "Overhead lines से दूरी बनाए रखने की कोई आवश्यकता नहीं होती",
+        "Overhead lines केवल शोर उत्पन्न करती हैं, कोई विद्युत खतरा नहीं",
+        "Overhead high-voltage lines के निकट काम करने से accidental contact के कारण गंभीर electrocution का खतरा रहता है, इसलिए सुरक्षित दूरी बनाए रखना आवश्यक है",
+        "Overhead lines से निकटता केवल installation को धीमा करती है, खतरे से कोई संबंध नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Overhead high-voltage lines के निकट काम करते समय ladders, panels, या tools के accidental contact से गंभीर electrocution हो सकती है, इसलिए मानक सुरक्षित clearance distance बनाए रखना अनिवार्य है। यह दूरी अनावश्यक नहीं है, ये lines केवल शोर नहीं बल्कि गंभीर electrical खतरा उत्पन्न करती हैं, और यह मुद्दा केवल installation की गति से नहीं बल्कि जीवन सुरक्षा से जुड़ा है।"
+    },
+    {
+      "id": "u9_solar_safety_q24",
+      "question": "किसी wiring को हाथ से छूने से पहले multimeter से voltage जांचने का क्या महत्व है?",
+      "options": [
+        "Multimeter का उपयोग केवल battery की सुंदरता जांचने के लिए होता है",
+        "Multimeter जांच की कोई आवश्यकता नहीं, अनुमान लगाना पर्याप्त है",
+        "Multimeter केवल AC circuits के लिए उपयोगी है, DC PV wiring के लिए नहीं",
+        "यह confirm करता है कि circuit वास्तव में de-energized है या कोई voltage मौजूद है, इस प्रकार accidental shock से बचाव होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Multimeter से actual voltage मापकर यह पुष्टि की जाती है कि circuit वाकई सुरक्षित (de-energized) है या नहीं, इस प्रकार यह accidental shock से बचाव में एक महत्वपूर्ण verification step है। यह केवल सुंदरता जांचने का उपकरण नहीं, केवल अनुमान लगाना असुरक्षित है, और यह DC circuits में भी उतना ही उपयोगी/आवश्यक है जितना AC में।"
+    },
+    {
+      "id": "u9_solar_safety_q25",
+      "question": "PV system installation में manufacturer के installation manual का सही ढंग से पालन करना सुरक्षा दृष्टि से क्यों महत्वपूर्ण है?",
+      "options": [
+        "इससे installation design ratings, wiring methods तथा safety requirements के अनुसार सही ढंग से होती है, जिससे hazards से बचाव होता है",
+        "हर installer अपने अनुभव के आधार पर मनमाने तरीके से काम कर सकता है, manual जरूरी नहीं",
+        "Manual का सुरक्षा से कोई सीधा संबंध नहीं होता",
+        "Manual केवल एक औपचारिकता है, इसे नज़रअंदाज़ किया जा सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Manufacturer का manual उपकरण की rated limits, अनुशंसित wiring methods तथा specific safety requirements की जानकारी देता है, जिसका पालन करने से गलत/असुरक्षित installation के कारण होने वाले hazards से बचा जा सकता है। Manual को औपचारिकता समझकर नज़रअंदाज़ करना, मनमाने तरीके अपनाना, या इसे सुरक्षा से असंबंधित मानना — ये सभी गलत तथा जोखिमपूर्ण दृष्टिकोण हैं।"
+    },
+    {
+      "id": "u9_solar_safety_q26",
+      "question": "Electrical कार्य के दौरान aluminium ladders के बजाय non-conductive fiberglass ladders का उपयोग क्यों प्राथमिकता दी जाती है?",
+      "options": [
+        "Aluminum ladders हमेशा अधिक सुरक्षित होते हैं क्योंकि वे हल्के होते हैं",
+        "Aluminum जैसे conductive ladders के माध्यम से बिजली का करंट प्रवाहित होकर गंभीर electric shock का खतरा पैदा कर सकता है, इसलिए non-conductive fiberglass ladder बेहतर विकल्प है",
+        "Ladder की सामग्री (material) का electrical safety से कोई संबंध नहीं होता",
+        "Fiberglass ladders का उपयोग केवल कीमत कम करने के लिए किया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि कोई conductive ladder (जैसे aluminium) accidental रूप से किसी live wire को छू जाए, तो वह current को technician के शरीर तक पहुँचा सकता है, इसलिए electrical कार्य में non-conductive fiberglass ladder सुरक्षित विकल्प माना जाता है। Aluminum ladders केवल हल्के होने से सुरक्षित नहीं बन जाते, ladder की सामग्री का electrical safety से स्पष्ट संबंध है, और fiberglass का चयन कीमत नहीं बल्कि सुरक्षा के लिए होता है।"
+    },
+    {
+      "id": "u9_solar_safety_q27",
+      "question": "यदि निरीक्षण के दौरान कोई PV module physically क्षतिग्रस्त (cracked/broken glass) पाया जाए, तो क्या किया जाना चाहिए?",
+      "options": [
+        "Damaged module को बिना किसी सावधानी के हाथों से उठाकर हटा देना चाहिए",
+        "Damaged module को उसी हालत में system में जुड़ा छोड़ देना चाहिए, कोई कार्रवाई ज़रूरी नहीं",
+        "उसे तुरंत isolate/disconnect कर बदलना (replace करना) चाहिए, तथा टूटे हुए glass को बिना उचित PPE के नंगे हाथों से नहीं छूना चाहिए",
+        "Cracked module हमेशा सामान्य रूप से सुरक्षित रहता है, कोई खतरा नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "क्षतिग्रस्त module में exposed live parts, टूटा glass तथा असामान्य current path होने का खतरा रहता है, इसलिए इसे तुरंत isolate कर उचित PPE के साथ ही संभाला जाना चाहिए और आवश्यकतानुसार बदलना चाहिए। बिना सावधानी हाथ लगाना, इसे सिस्टम में छोड़ देना, या इसे सुरक्षित मानना — ये सभी hazardous approach हैं।"
+    },
+    {
+      "id": "u9_solar_safety_q28",
+      "question": "Solar PV installations में समय-समय पर thermal imaging/inspection करने की सलाह क्यों दी जाती है?",
+      "options": [
+        "Thermal imaging का उद्देश्य केवल सुंदर तस्वीरें लेना है",
+        "Regular inspection की कोई आवश्यकता नहीं, एक बार installation के बाद कभी जांच न करें",
+        "यह loose connections, hotspots या faulty components को समय रहते detect करने में मदद करता है, जिससे बड़ी क्षति या fire से पहले ही सुधार किया जा सके",
+        "Thermal imaging केवल inverter की efficiency मापने के लिए उपयोग होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Thermal imaging असामान्य रूप से गर्म हो रहे connections, hotspots या faulty components को दृश्यमान बना देता है, जिससे समय रहते सुधार करके बड़ी क्षति या fire को रोका जा सकता है। यह केवल तस्वीरों के लिए नहीं, regular inspection ज़रूरी है, और यह केवल inverter efficiency तक सीमित नहीं, यह पूरे system की सुरक्षा जांच का हिस्सा है।"
+    },
+    {
+      "id": "u9_solar_safety_q29",
+      "question": "Solar PV सुरक्षा का एक मूल सिद्धांत यह है कि PV DC wiring को जब भी sunlight में हो, उसे कैसा माना जाना चाहिए?",
+      "options": [
+        "जब तक sunlight उपलब्ध है, PV wiring को हमेशा 'live' मानकर उचित PPE, isolation तथा grounding प्रक्रियाओं का पालन करना चाहिए",
+        "Sunlight होने पर भी PV wiring को हमेशा dead/safe माना जा सकता है",
+        "Safety प्रक्रियाओं का पालन केवल रात में करना पर्याप्त है",
+        "PV wiring की सुरक्षा जांच केवल साल में एक बार करनी चाहिए, अन्य समय बेपरवाह रहा जा सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब तक sunlight मौजूद है, PV array voltage उत्पन्न करता रहता है, इसलिए इसे हमेशा 'live' मानकर उचित PPE, isolation procedures तथा grounding का पालन किया जाना चाहिए, चाहे कोई switch open भी क्यों न हो। इसे dead/safe मानना गलत तथा खतरनाक है, safety प्रक्रियाएँ केवल रात तक सीमित नहीं (दिन में ही असली खतरा है), और सुरक्षा जांच को केवल साल में एक बार तक सीमित करना अपर्याप्त है।"
+    },
+    {
+      "id": "u9_solar_safety_q30",
+      "question": "Solar PV installation, operation और maintenance में overall सुरक्षा सुनिश्चित करने के लिए सबसे उपयुक्त approach क्या है?",
+      "options": [
+        "केवल एक ही सावधानी (जैसे केवल gloves पहनना) पर्याप्त मानी जा सकती है",
+        "PPE का उपयोग, उचित isolation/LOTO प्रक्रिया, सही grounding, और मौसम/height संबंधी सावधानियों का समुच्चय रूप से पालन करना ही solar PV कार्य में सुरक्षा सुनिश्चित करता है",
+        "Solar PV installation में safety measures वैकल्पिक (optional) हैं, अनिवार्य नहीं",
+        "Safety प्रक्रियाएँ केवल बड़े commercial projects के लिए ज़रूरी हैं, छोटे rooftop systems के लिए नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रभावी solar PV safety केवल किसी एक उपाय पर नहीं, बल्कि PPE, isolation/LOTO, grounding, weather तथा height सावधानियों जैसे सभी पहलुओं के सामूहिक व सुसंगत पालन पर निर्भर करती है। केवल एक सावधानी पर्याप्त नहीं, safety measures कभी वैकल्पिक नहीं होते, और ये सिद्धांत छोटे rooftop systems सहित हर आकार की installation पर समान रूप से लागू होते हैं।"
+    }
+  ]
+}

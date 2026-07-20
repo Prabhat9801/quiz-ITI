@@ -1,0 +1,218 @@
+{
+  "unit": "unit7",
+  "unitName": "Computer Hardware, OS, MS Office, Networking",
+  "topic": "ms_word",
+  "topicName": "MS Word - Menus, Formatting, Mail Merge & Tables",
+  "questions": [
+    {
+      "id": "u7_ms_word_q1",
+      "question": "MS Word में Mail Merge feature किस ribbon tab में उपलब्ध होता है, जिसकी मदद से एक ही letter को कई अलग-अलग recipients को personalize करके भेजा जा सकता है?",
+      "options": ["Mailings", "References", "Review", "View"],
+      "correctIndex": 0,
+      "explanation": "Mail Merge feature Mailings tab में होता है, जहाँ से Start Mail Merge, Select Recipients और Insert Merge Field जैसे options मिलते हैं। References tab में Table of Contents, Citations और Footnotes जैसे tools होते हैं। Review tab में Spelling & Grammar check, Track Changes और Comments होते हैं। View tab में document का Layout mode और Zoom control होता है।"
+    },
+    {
+      "id": "u7_ms_word_q2",
+      "question": "MS Word में selected text को Bold करने के लिए कौन-सा keyboard shortcut इस्तेमाल किया जाता है?",
+      "options": ["Ctrl+U", "Ctrl+B", "Ctrl+I", "Ctrl+E"],
+      "correctIndex": 1,
+      "explanation": "Ctrl+B shortcut text को bold (मोटा) बनाता है। Ctrl+U text के नीचे underline लगाता है, Ctrl+I text को italic (तिरछा) बनाता है और Ctrl+E paragraph को center align करता है।"
+    },
+    {
+      "id": "u7_ms_word_q3",
+      "question": "किसी document में text को तिरछा (slanted) रूप देने के लिए, यानी Italic effect apply करने के लिए कौन-सा shortcut key उपयोग होता है?",
+      "options": ["Ctrl+B", "Ctrl+U", "Ctrl+I", "Ctrl+J"],
+      "correctIndex": 2,
+      "explanation": "Ctrl+I text को italic बनाता है जिससे characters तिरछे दिखते हैं। Ctrl+B text को bold करता है, Ctrl+U underline लगाता है और Ctrl+J paragraph को justify align करता है।"
+    },
+    {
+      "id": "u7_ms_word_q4",
+      "question": "MS Word में किसी शब्द या वाक्य के नीचे एक line खींचने यानी Underline effect देने के लिए कौन-सा shortcut सही है?",
+      "options": ["Ctrl+I", "Ctrl+E", "Ctrl+B", "Ctrl+U"],
+      "correctIndex": 3,
+      "explanation": "Ctrl+U text को underline करता है। Ctrl+I italic effect देता है, Ctrl+E paragraph को center करता है और Ctrl+B text को bold बनाता है।"
+    },
+    {
+      "id": "u7_ms_word_q5",
+      "question": "रासायनिक सूत्र H2O लिखते समय संख्या '2' को normal text line से थोड़ा नीचे और छोटे size में दिखाने के लिए Home tab के Font group में कौन-सा formatting option use किया जाता है?",
+      "options": ["Subscript", "Superscript", "Strikethrough", "Text Highlight Color"],
+      "correctIndex": 0,
+      "explanation": "Subscript option (shortcut Ctrl+=) text को baseline से नीचे और छोटा दिखाता है, जैसे H2O में '2'। Superscript text को ऊपर उठाकर छोटा दिखाता है जैसे x2 में '2'। Strikethrough text के बीच में line खींचता है और Text Highlight Color text के पीछे background रंग भरता है।"
+    },
+    {
+      "id": "u7_ms_word_q6",
+      "question": "गणितीय expression x² लिखते समय '2' को normal text line से ऊपर और छोटे आकार में दिखाने के लिए कौन-सा formatting option तथा उसका shortcut सही है?",
+      "options": ["Subscript (Ctrl+=)", "Superscript (Ctrl+Shift+=)", "Bold (Ctrl+B)", "Change Case (Shift+F3)"],
+      "correctIndex": 1,
+      "explanation": "Superscript (Ctrl+Shift+=) character को baseline से ऊपर और छोटे size में दिखाता है, जैसे x² में '2'। Subscript (Ctrl+=) इसके विपरीत character को नीचे दिखाता है। Bold text को मोटा बनाता है और Change Case text के letters का case (upper/lower) बदलता है, इनका position से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_ms_word_q7",
+      "question": "किसी selected text का रंग (Font Color) बदलने का option MS Word के किस tab के किस group में मिलता है?",
+      "options": ["Insert tab के Illustrations group में", "Page Layout tab के Page Setup group में", "Home tab के Font group में", "View tab के Zoom group में"],
+      "correctIndex": 2,
+      "explanation": "Font Color option Home tab के Font group में 'A' अक्षर के नीचे रंगीन पट्टी के रूप में मिलता है, जिससे text का color बदला जा सकता है। Insert tab में Pictures, Shapes जैसे illustrations होते हैं। Page Layout tab में Margins, Orientation जैसे page settings होते हैं और View tab में Zoom व Layout modes होते हैं।"
+    },
+    {
+      "id": "u7_ms_word_q8",
+      "question": "किसी paragraph को page के बीचोंबीच (horizontally centered) align करने के लिए कौन-सा shortcut key सही है?",
+      "options": ["Ctrl+L", "Ctrl+R", "Ctrl+J", "Ctrl+E"],
+      "correctIndex": 3,
+      "explanation": "Ctrl+E paragraph को center align करता है। Ctrl+L text को left align करता है, Ctrl+R text को right align करता है और Ctrl+J text को justify करता है जिससे दोनों margins के साथ बराबर fit हो जाए।"
+    },
+    {
+      "id": "u7_ms_word_q9",
+      "question": "किसी paragraph की lines के बीच की दूरी (Line Spacing, जैसे 1.0, 1.5 या Double) बदलने का option Home tab के किस group में मिलता है?",
+      "options": ["Paragraph group", "Font group", "Styles group", "Editing group"],
+      "correctIndex": 0,
+      "explanation": "Line Spacing icon Home tab के Paragraph group में मिलता है, साथ ही Paragraph dialog box (launcher arrow) से भी exact spacing set की जा सकती है। Font group में font से जुड़े options जैसे size, bold, color होते हैं। Styles group में pre-defined heading/text styles होते हैं और Editing group में Find, Replace, Select होते हैं।"
+    },
+    {
+      "id": "u7_ms_word_q10",
+      "question": "MS Word में Mail Merge का मूल उद्देश्य क्या है?",
+      "options": ["केवल document की spelling और grammar check करना", "एक ही main document को अलग-अलग recipients के लिए, data source की जानकारी के आधार पर personalize करके कई copies तैयार करना", "document के pages की संख्या गिनना", "document में automatic table of contents बनाना"],
+      "correctIndex": 1,
+      "explanation": "Mail Merge feature एक single main document (जैसे letter template) को एक data source (जैसे names और addresses की list) से जोड़कर हर recipient के लिए personalized copy तैयार करता है। Spelling/grammar check Review tab के Spelling & Grammar tool से होता है, page count Word Count feature से मिलता है और table of contents References tab से बनता है।"
+    },
+    {
+      "id": "u7_ms_word_q11",
+      "question": "Mail Merge process में उस file को क्या कहा जाता है जिसमें recipients के names, addresses जैसी variable जानकारी list के रूप में रखी जाती है (जैसे Excel sheet)?",
+      "options": ["Main Document", "Merge Field", "Data Source", "Template File"],
+      "correctIndex": 2,
+      "explanation": "Data Source वह file (जैसे Excel worksheet या Access table) होती है जिसमें हर recipient की अलग-अलग जानकारी rows में stored होती है। Main Document वह letter/template होता है जिसमें common content होता है। Merge Field, main document में डाला गया placeholder होता है जो data source की column से जुड़ता है। Template File एक pre-designed document format होता है जो mail merge के लिए ज़रूरी नहीं।"
+    },
+    {
+      "id": "u7_ms_word_q12",
+      "question": "Mailings tab से Mail Merge शुरू करते समय, main document तैयार करने के बाद अगला step क्या होता है जिसमें आप data source (जैसे existing list या नई list) चुनते हैं?",
+      "options": ["Finish & Merge", "Insert Merge Field", "Preview Results", "Select Recipients"],
+      "correctIndex": 3,
+      "explanation": "Select Recipients step में user data source चुनता है — जैसे existing Excel/Outlook list use करना या नई list type करना। Insert Merge Field इसके बाद document में placeholders डालने के लिए होता है। Preview Results merge होने के बाद actual data दिखाने के लिए होता है और Finish & Merge अंत में सभी personalized documents तैयार करता है।"
+    },
+    {
+      "id": "u7_ms_word_q13",
+      "question": "MS Word document में नई Table insert करने के लिए किस ribbon tab का उपयोग किया जाता है?",
+      "options": ["Insert tab", "Home tab", "Page Layout tab", "Review tab"],
+      "correctIndex": 0,
+      "explanation": "Table insert करने का option Insert tab के Tables group में मिलता है, जहाँ rows और columns की संख्या चुनकर table बनाई जा सकती है। Home tab में text formatting tools होते हैं, Page Layout tab में margins/orientation जैसे page settings होते हैं और Review tab में spelling check व comments जैसे tools होते हैं।"
+    },
+    {
+      "id": "u7_ms_word_q14",
+      "question": "Table में दो या अधिक selected cells को जोड़कर एक बड़ा cell बनाने के लिए (Merge Cells option) कहाँ से इस्तेमाल किया जाता है?",
+      "options": ["Insert tab के Tables group से", "Table Tools के Layout tab (Merge group) से", "Home tab के Paragraph group से", "References tab के Captions group से"],
+      "correctIndex": 1,
+      "explanation": "Merge Cells option, table select करने पर दिखने वाले Table Tools के अंतर्गत Layout tab के Merge group में होता है। Insert tab केवल table बनाने के लिए है, Home tab के Paragraph group में alignment/indent जैसे options होते हैं और References tab के Captions group में Insert Caption जैसे tools होते हैं, cells merge करने से इनका संबंध नहीं है।"
+    },
+    {
+      "id": "u7_ms_word_q15",
+      "question": "अगर आप किसी table के एक cell को कई छोटे cells में तोड़ना (divide करना) चाहते हैं, तो इसके लिए कौन-सा option उपयोग होगा?",
+      "options": ["Merge Cells", "AutoFit", "Split Cells", "Distribute Rows"],
+      "correctIndex": 2,
+      "explanation": "Split Cells option (Table Tools > Layout tab) एक cell को user द्वारा दी गई संख्या के अनुसार कई rows/columns में विभाजित करता है। Merge Cells इसके विपरीत काम करता है यानी cells जोड़ता है। AutoFit table के column width को content या window के अनुसार adjust करता है और Distribute Rows सभी selected rows की height को बराबर करता है।"
+    },
+    {
+      "id": "u7_ms_word_q16",
+      "question": "किसी table की borders की style, thickness और shading (background color) बदलने के लिए Table Tools के अंतर्गत कौन-सा tab उपयोग किया जाता है?",
+      "options": ["Layout tab", "References tab", "Review tab", "Design tab"],
+      "correctIndex": 3,
+      "explanation": "Table Tools का Design tab, table की overall appearance जैसे Borders, Shading और pre-built Table Styles control करता है। Layout tab में rows/columns insert-delete, merge/split जैसे structural options होते हैं। References tab document-level citations और TOC के लिए है, और Review tab में spelling check व comments होते हैं, इनका table design से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u7_ms_word_q17",
+      "question": "किसी selected text या object पर Hyperlink insert करने के लिए कौन-सा keyboard shortcut सबसे common रूप से इस्तेमाल होता है?",
+      "options": ["Ctrl+K", "Ctrl+H", "Ctrl+L", "Ctrl+F"],
+      "correctIndex": 0,
+      "explanation": "Ctrl+K, Hyperlink insert करने का shortcut है जिससे link address (जैसे website URL या document के अंदर की location) जोड़ी जा सकती है। Ctrl+H, Find and Replace dialog खोलता है, Ctrl+L text को left align करता है और Ctrl+F, Find/Navigation pane खोलने के लिए है।"
+    },
+    {
+      "id": "u7_ms_word_q18",
+      "question": "Ribbon में Hyperlink command किस tab के Links group में स्थित होता है?",
+      "options": ["Home tab", "Insert tab", "Page Layout tab", "Mailings tab"],
+      "correctIndex": 1,
+      "explanation": "Hyperlink option Insert tab के Links group में मिलता है, जहाँ से web address, document के किसी हिस्से या email address को link किया जा सकता है। Home tab में मुख्यतः text formatting tools होते हैं, Page Layout tab में page-related settings होती हैं और Mailings tab mail merge से संबंधित होता है।"
+    },
+    {
+      "id": "u7_ms_word_q19",
+      "question": "किसी document के हर page के top में repeated content (जैसे company name) और bottom में page number डालने के लिए Header और Footer insert करने का option किस tab में मिलता है?",
+      "options": ["Home tab", "Design tab", "Insert tab", "Review tab"],
+      "correctIndex": 2,
+      "explanation": "Header और Footer insert करने का option Insert tab के Header & Footer group में मिलता है। Home tab में text formatting होती है, Design tab (जो template चुनने पर दिखता है) overall document theme से जुड़ा होता है और Review tab में spelling check व comments जैसे tools होते हैं।"
+    },
+    {
+      "id": "u7_ms_word_q20",
+      "question": "Document के top, bottom, left और right margins की size set करने का option किस ribbon tab में मिलता है?",
+      "options": ["Home tab", "Insert tab", "References tab", "Layout tab (Page Layout)"],
+      "correctIndex": 3,
+      "explanation": "Margins option Layout (Page Layout) tab के Page Setup group में मिलता है, जहाँ से pre-set margins चुने जा सकते हैं या Custom Margins set की जा सकती हैं। Home tab में text formatting tools होते हैं, Insert tab में tables, pictures, header-footer जैसे objects insert होते हैं और References tab citations व table of contents के लिए होता है।"
+    },
+    {
+      "id": "u7_ms_word_q21",
+      "question": "Document के pages को Portrait से Landscape (या इसके उल्टा) mode में बदलने के लिए कौन-सा option इस्तेमाल किया जाता है?",
+      "options": ["Layout tab का Orientation option", "Home tab का Change Styles option", "Insert tab का Shapes option", "Review tab का Compare option"],
+      "correctIndex": 0,
+      "explanation": "Orientation option Layout (Page Layout) tab के Page Setup group में होता है, जिससे page को Portrait (लंबवत) या Landscape (आड़ा) mode में set किया जा सकता है। Change Styles document का overall font/color theme बदलता है, Shapes document में drawing objects जोड़ता है और Compare, Review tab में दो documents की तुलना करने के लिए है।"
+    },
+    {
+      "id": "u7_ms_word_q22",
+      "question": "Document में किसी particular शब्द को ढूंढकर उसे दूसरे शब्द से automatically replace करने के लिए कौन-सा shortcut key उपयोग होता है?",
+      "options": ["Ctrl+F", "Ctrl+H", "Ctrl+G", "Ctrl+K"],
+      "correctIndex": 1,
+      "explanation": "Ctrl+H, Find and Replace dialog box खोलता है जिसमें Find what और Replace with दोनों fields होती हैं। Ctrl+F केवल Find/Navigation pane खोलता है (replace की सुविधा नहीं), Ctrl+G Go To dialog (किसी specific page/line पर जाने के लिए) खोलता है और Ctrl+K hyperlink insert करने के लिए है।"
+    },
+    {
+      "id": "u7_ms_word_q23",
+      "question": "पूरे document की Spelling and Grammar जाँच शुरू करने के लिए कौन-सी function key शॉर्टकट के रूप में इस्तेमाल होती है?",
+      "options": ["F5", "F2", "F7", "F12"],
+      "correctIndex": 2,
+      "explanation": "F7 key दबाने से Spelling and Grammar check dialog शुरू हो जाता है, जो Review tab में भी उपलब्ध है। F5 Find and Replace/Go To dialog खोलती है, F2 text को move करने के लिए (कुछ versions में) प्रयोग होती है और F12 Save As dialog खोलती है।"
+    },
+    {
+      "id": "u7_ms_word_q24",
+      "question": "MS Word में पहले से डिज़ाइन किए गए ready-made formats (जैसे resume, letter या invoice का layout) जो नया document बनाते समय उपयोग किए जा सकते हैं, उन्हें क्या कहा जाता है और ये कहाँ से मिलते हैं?",
+      "options": ["Styles, जो Home tab में मिलते हैं", "Themes, जो Design tab में मिलते हैं", "Macros, जो View tab में मिलते हैं", "Templates, जो File > New में मिलते हैं"],
+      "correctIndex": 3,
+      "explanation": "Templates pre-designed document formats होते हैं जो File > New में उपलब्ध होते हैं और resume, letter, invoice जैसे ready-made layouts देते हैं। Styles Home tab में text formatting के pre-set combinations होते हैं, Themes overall color/font scheme बदलते हैं (Design tab) और Macros repeated tasks को automate करने के लिए recorded actions होते हैं (View tab)।"
+    },
+    {
+      "id": "u7_ms_word_q25",
+      "question": "एक तैयार किए गए Word document को PDF format में save/export करने के लिए क्या तरीका सही है?",
+      "options": ["File > Save As (या Export) में जाकर Save as type में PDF चुनना", "Insert tab में जाकर PDF Object डालना", "Print दबाकर PDF printer का चयन करना अनिवार्य रूप से एकमात्र तरीका", "Review tab के Compare option से PDF बनाना"],
+      "correctIndex": 0,
+      "explanation": "File > Save As (या Export) में जाकर 'Save as type' dropdown से PDF चुनने पर document सीधे PDF format में save हो जाता है। Insert tab से Object insert करना अलग काम है (embed करना), किसी printer driver से PDF बनाना एक वैकल्पिक तरीका हो सकता है पर यह Word का built-in और मुख्य तरीका नहीं है, और Compare option दो documents की तुलना के लिए है, PDF बनाने से इसका संबंध नहीं है।"
+    },
+    {
+      "id": "u7_ms_word_q26",
+      "question": "MS Word की पुरानी file format (.doc) और नई file format (.docx) में मुख्य अंतर क्या है?",
+      "options": [".doc हमेशा PDF से बड़ी होती है जबकि .docx छोटी", ".docx, XML-based structure पर आधारित नई format है जबकि .doc पुराने Word versions (97-2003) की binary format है", ".doc केवल images के लिए है और .docx केवल text के लिए", ".docx में Mail Merge काम नहीं करता जबकि .doc में करता है"],
+      "correctIndex": 1,
+      "explanation": ".docx format (Word 2007 के बाद से) एक compressed XML-based structure पर आधारित है जो file size घटाती है और compatibility बेहतर करती है, जबकि .doc पुराने Word 97-2003 versions की binary format थी। File size, image/text की सीमा जैसा कोई नियम इन formats में नहीं है, और Mail Merge feature दोनों formats में समान रूप से काम करता है।"
+    },
+    {
+      "id": "u7_ms_word_q27",
+      "question": "किसी document को print करने के लिए Print dialog/Backstage view खोलने का shortcut key क्या है?",
+      "options": ["Ctrl+S", "Ctrl+N", "Ctrl+P", "Ctrl+O"],
+      "correctIndex": 2,
+      "explanation": "Ctrl+P दबाने से Print backstage view खुलता है जहाँ printer चुनना, pages की range, copies की संख्या जैसे options मिलते हैं। Ctrl+S document को save करता है, Ctrl+N नया blank document खोलता है और Ctrl+O किसी existing document को open करने के लिए है।"
+    },
+    {
+      "id": "u7_ms_word_q28",
+      "question": "किसी document में words, characters, paragraphs और lines की कुल संख्या जानने के लिए किस feature/tab का इस्तेमाल किया जाता है?",
+      "options": ["Insert tab का Text Box option", "Home tab का Styles group", "Page Layout tab का Paragraph group", "Review tab का Word Count option (या status bar)"],
+      "correctIndex": 3,
+      "explanation": "Word Count feature Review tab में मिलता है और document की window के नीचे status bar में भी words की संख्या लगातार दिखती रहती है। Text Box, document में separate text area जोड़ने के लिए है, Styles group text की pre-set formatting के लिए है और Page Layout tab का Paragraph group indent/spacing set करने के लिए है, इनका word गिनने से संबंध नहीं है।"
+    },
+    {
+      "id": "u7_ms_word_q29",
+      "question": "जब कई लोग मिलकर एक document edit करते हैं और हर व्यक्ति के किए गए insertions, deletions व formatting changes को अलग रंग में mark करके track करना हो, तो कौन-सा feature इस्तेमाल किया जाता है?",
+      "options": ["Track Changes (Review tab)", "AutoCorrect (File > Options)", "Mail Merge (Mailings tab)", "Table of Contents (References tab)"],
+      "correctIndex": 0,
+      "explanation": "Track Changes feature (Review tab में) हर editor द्वारा किए गए बदलावों को अलग-अलग रंग में highlight करके record करता है, जिन्हें बाद में accept या reject किया जा सकता है। AutoCorrect टाइपिंग की छोटी गलतियों को automatically ठीक करता है, Mail Merge personalized documents बनाने के लिए है और Table of Contents document की headings के आधार पर index तैयार करता है।"
+    },
+    {
+      "id": "u7_ms_word_q30",
+      "question": "जब किसी document के किसी particular हिस्से पर बिना उसे edit किए एक side note या suggestion जोड़नी हो (जो margin में एक balloon/box के रूप में दिखे), तो इसके लिए कौन-सा feature इस्तेमाल किया जाता है?",
+      "options": ["Track Changes", "New Comment (Review tab)", "Hyperlink", "Header & Footer"],
+      "correctIndex": 1,
+      "explanation": "New Comment feature (Review tab) document के किसी selected हिस्से पर margin में एक note/balloon जोड़ता है, जिससे actual content में बदलाव किए बिना feedback दिया जा सकता है। Track Changes, content में किए गए actual insertions/deletions को mark करता है (content बदलता है), Hyperlink किसी link को जोड़ता है और Header & Footer page के top/bottom में repeated content डालने के लिए है।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit7",
+  "unitName": "Computer Hardware, OS, MS Office, Networking",
+  "topic": "ms_excel",
+  "topicName": "MS Excel - Worksheet, Formulae, Cell References & Charts",
+  "questions": [
+    {
+      "id": "u7_ms_excel_q1",
+      "question": "MS Excel में Workbook और Worksheet के बीच क्या संबंध होता है?",
+      "options": [
+        "एक Workbook एक ऐसी file होती है जिसमें एक या एक से अधिक Worksheets हो सकती हैं",
+        "एक Workbook में केवल एक ही Worksheet हो सकती है",
+        "Worksheet, Workbook से बड़ी होती है और उसमें कई Workbooks होती हैं",
+        "Workbook और Worksheet दोनों एक ही चीज़ के अलग-अलग नाम हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Excel में Workbook एक file होती है (जैसे .xlsx) जिसके अंदर एक या अधिक Worksheets (tabs) होती हैं जहाँ data भरा जाता है, इसलिए Option A सही है। Option B गलत है क्योंकि एक Workbook में कई sheets हो सकती हैं। Option C गलत है क्योंकि यह संबंध उल्टा है, Workbook, Worksheets का container होती है। Option D गलत है क्योंकि दोनों अलग-अलग concepts हैं, समान नहीं।"
+    },
+    {
+      "id": "u7_ms_excel_q2",
+      "question": "Excel worksheet में किसी row और column के intersection point को क्या कहते हैं?",
+      "options": [
+        "Range",
+        "Cell",
+        "Sheet Tab",
+        "Formula Bar"
+      ],
+      "correctIndex": 1,
+      "explanation": "Row और column जहाँ मिलते हैं उस box को Cell कहा जाता है, जो data entry की सबसे छोटी unit है, इसलिए Option B सही है। Option A (Range) गलत है क्योंकि Range कई cells का समूह होता है (जैसे A1:A5)। Option C (Sheet Tab) गलत है क्योंकि यह worksheet के नाम वाला बटन होता है नीचे की तरफ। Option D (Formula Bar) गलत है क्योंकि वह ऊपर की पट्टी होती है जहाँ selected cell का content/formula दिखता है।"
+    },
+    {
+      "id": "u7_ms_excel_q3",
+      "question": "यदि किसी worksheet में column D और row 5 के intersection वाले cell को reference करना हो, तो उसका सही cell address क्या होगा?",
+      "options": [
+        "5D",
+        "R5C4",
+        "D5",
+        "D-5"
+      ],
+      "correctIndex": 2,
+      "explanation": "Excel में cell address हमेशा column letter के बाद row number लिखकर बनाया जाता है, इसलिए सही address D5 है (Option C)। Option A गलत क्रम में है क्योंकि पहले row number नहीं आता। Option B (R5C4) एक अलग R1C1 style reference है जो default Excel style नहीं है। Option D में hyphen का उपयोग गलत है, Excel address में hyphen नहीं लगता।"
+    },
+    {
+      "id": "u7_ms_excel_q4",
+      "question": "किसी worksheet में cell C1 में formula =A1+B1 लिखा गया है। यदि इस formula को copy करके cell C2 में paste किया जाए, तो वह automatically किस रूप में बदल जाएगा?",
+      "options": [
+        "=A1+B1 (कोई बदलाव नहीं होगा)",
+        "=$A$1+$B$1",
+        "=B1+A1",
+        "=A2+B2"
+      ],
+      "correctIndex": 3,
+      "explanation": "यह एक relative cell reference है, इसलिए जब formula को एक row नीचे copy किया जाता है तो row number भी एक बढ़ जाता है और यह =A2+B2 बन जाता है (Option D)। Option A गलत है क्योंकि relative reference copy होने पर बदलता है, बिना बदलाव के नहीं रहता। Option B तभी होता, अगर reference को absolute ($) रूप में लिखा गया होता। Option C गलत है क्योंकि copy करने पर operands का क्रम अपने आप नहीं बदलता।"
+    },
+    {
+      "id": "u7_ms_excel_q5",
+      "question": "Excel में $A$1 के रूप में लिखा गया cell reference किस प्रकार का reference कहलाता है?",
+      "options": [
+        "Absolute reference",
+        "Relative reference",
+        "Mixed reference",
+        "Named reference"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब column letter और row number दोनों के आगे dollar ($) sign लगा हो, जैसे $A$1, तो उसे Absolute reference कहते हैं जो copy/paste करने पर बिलकुल नहीं बदलता, इसलिए Option A सही है। Option B (Relative) में कोई $ sign नहीं होता। Option C (Mixed) में केवल column या केवल row के आगे $ लगा होता है, दोनों के आगे नहीं। Option D कोई मानक Excel शब्द नहीं है इस संदर्भ में, यह named range से अलग है।"
+    },
+    {
+      "id": "u7_ms_excel_q6",
+      "question": "Cell reference $A1 (यानी column के आगे $ लेकिन row number के आगे $ नहीं) को क्या कहा जाता है?",
+      "options": [
+        "Absolute reference",
+        "Mixed reference",
+        "Relative reference",
+        "Circular reference"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब reference में केवल column या केवल row के आगे $ sign लगा हो (जैसे $A1 या A$1), तो उसे Mixed reference कहते हैं, इसलिए Option B सही है। Option A गलत है क्योंकि Absolute reference में दोनों ($A$1) के आगे $ होता है। Option C गलत है क्योंकि Relative reference में कोई $ नहीं होता। Option D (Circular reference) एक error स्थिति है जब formula खुद अपने cell को refer करता है, यह reference type नहीं है।"
+    },
+    {
+      "id": "u7_ms_excel_q7",
+      "question": "किसी worksheet में A1 से A5 तक cells में क्रमशः 4, 8, 6, 10 और 2 values भरी हैं। Cell A6 में formula =SUM(A1:A5) लगाने पर क्या result आएगा?",
+      "options": [
+        "28",
+        "26",
+        "30",
+        "32"
+      ],
+      "correctIndex": 2,
+      "explanation": "4+8+6+10+2 = 30, इसलिए =SUM(A1:A5) का सही परिणाम 30 है (Option C)। Option A (28), Option B (26) और Option D (32) गलत addition के कारण गलत values हैं जो सही जोड़ से मेल नहीं खातीं।"
+    },
+    {
+      "id": "u7_ms_excel_q8",
+      "question": "Cells B1 से B4 में values 20, 30, 40 और 50 भरी हैं। Cell B5 में formula =AVERAGE(B1:B4) लगाने पर क्या result मिलेगा?",
+      "options": [
+        "140",
+        "25",
+        "40",
+        "35"
+      ],
+      "correctIndex": 3,
+      "explanation": "20+30+40+50=140 और चार values का average निकालने के लिए 140/4=35 होता है, इसलिए सही उत्तर 35 है (Option D)। Option A (140) वास्तव में SUM का परिणाम है, AVERAGE का नहीं। Option B (25) और Option C (40) गलत calculation के कारण गलत हैं।"
+    },
+    {
+      "id": "u7_ms_excel_q9",
+      "question": "किसी cell में formula =IF(A1>50,\"Pass\",\"Fail\") लिखा है और cell A1 में value 45 है। इस formula का result क्या होगा?",
+      "options": [
+        "Fail",
+        "Pass",
+        "45",
+        "TRUE"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूंकि 45, 50 से बड़ा नहीं है, इसलिए condition A1>50 FALSE होती है और IF function false वाला part यानी \"Fail\" return करता है (Option A)। Option B तभी आता जब A1 की value 50 से अधिक होती। Option C गलत है क्योंकि result में A1 की raw value नहीं बल्कि text दिखेगा। Option D गलत है क्योंकि formula में TRUE/FALSE दिखाने की बजाय custom text \"Pass\"/\"Fail\" return करने को कहा गया है।"
+    },
+    {
+      "id": "u7_ms_excel_q10",
+      "question": "Excel का =COUNT() function किसी selected range में केवल किस प्रकार की values को गिनता (count) है?",
+      "options": [
+        "केवल text वाली cells को",
+        "केवल numeric values वाली cells को",
+        "blank सहित सभी cells को",
+        "केवल formula वाली cells को"
+      ],
+      "correctIndex": 1,
+      "explanation": "=COUNT() function केवल उन cells को गिनता है जिनमें numeric (number) values होती हैं, text और blank cells को यह ignore करता है, इसलिए Option B सही है। Option A गलत है क्योंकि text cells गिनने के लिए COUNTA का उपयोग होता है। Option C गलत है क्योंकि blank cells COUNT में शामिल नहीं होतीं। Option D गलत है क्योंकि COUNT यह नहीं देखता कि value formula से आई है या सीधे type की गई है, बस वह numeric होनी चाहिए।"
+    },
+    {
+      "id": "u7_ms_excel_q11",
+      "question": "Cells D1 से D5 में values 12, 45, 9, 60 और 33 भरी हैं। Cell D6 में formula =MAX(D1:D5) लगाने पर क्या result आएगा?",
+      "options": [
+        "9",
+        "45",
+        "60",
+        "33"
+      ],
+      "correctIndex": 2,
+      "explanation": "दी गई values में सबसे बड़ी value 60 है, इसलिए =MAX(D1:D5) का result 60 होगा (Option C)। Option A (9) range की सबसे छोटी value है, MAX की नहीं। Option B (45) और Option D (33) भी range में मौजूद values हैं परन्तु ये सबसे बड़ी नहीं हैं।"
+    },
+    {
+      "id": "u7_ms_excel_q12",
+      "question": "उसी range D1:D5 (values 12, 45, 9, 60, 33) पर formula =MIN(D1:D5) लगाने पर क्या परिणाम मिलेगा?",
+      "options": [
+        "60",
+        "12",
+        "33",
+        "9"
+      ],
+      "correctIndex": 3,
+      "explanation": "दी गई values में सबसे छोटी value 9 है, इसलिए =MIN(D1:D5) का सही result 9 है (Option D)। Option A (60) range की सबसे बड़ी value है। Option B (12) और Option C (33) range में मौजूद हैं लेकिन सबसे छोटी value नहीं हैं।"
+    },
+    {
+      "id": "u7_ms_excel_q13",
+      "question": "VLOOKUP function के syntax =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) में col_index_num किस बात को दर्शाता है?",
+      "options": [
+        "table_array के अंदर से किस column number का data return करना है",
+        "वह row number जहाँ से search शुरू होगी",
+        "exact match चाहिए या approximate, यह तय करता है",
+        "lookup_value किस column में ढूंढा जाएगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "col_index_num यह बताता है कि table_array में match मिलने के बाद उसी row में से कौन-से column number का value return किया जाए, इसलिए Option A सही है। Option B गलत है क्योंकि row number VLOOKUP में अलग से नहीं दिया जाता, यह पूरे column में lookup_value ढूंढता है। Option C गलत है क्योंकि exact/approximate match को [range_lookup] argument (TRUE/FALSE) control करता है, col_index_num नहीं। Option D गलत है क्योंकि lookup_value हमेशा table_array के सबसे पहले (leftmost) column में ढूंढा जाता है, यह col_index_num से तय नहीं होता।"
+    },
+    {
+      "id": "u7_ms_excel_q14",
+      "question": "VLOOKUP formula में अगर [range_lookup] argument को FALSE set किया जाए, तो इसका क्या मतलब है?",
+      "options": [
+        "Function केवल approximate match ढूंढेगा",
+        "Function केवल exact match ढूंढेगा और न मिलने पर #N/A error देगा",
+        "Function पूरी table को sort कर देगा",
+        "Function lookup_value को ignore कर देगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "range_lookup को FALSE करने पर VLOOKUP केवल exact match ही स्वीकार करता है, अगर बिल्कुल वैसा ही value ना मिले तो #N/A error return करता है, इसलिए Option B सही है। Option A गलत है क्योंकि approximate match के लिए TRUE या value को खाली छोड़ा जाता है, FALSE के लिए नहीं। Option C गलत है क्योंकि VLOOKUP data को sort नहीं करता, बल्कि approximate match के लिए table का sorted होना ज़रूरी माना जाता है। Option D गलत है क्योंकि lookup_value को हमेशा ढूंढा जाता है, ignore नहीं किया जाता।"
+    },
+    {
+      "id": "u7_ms_excel_q15",
+      "question": "Cell A1 में \"Ram\" और cell B1 में \"Kumar\" लिखा है। Cell C1 में formula =CONCATENATE(A1,\" \",B1) लगाने पर क्या result मिलेगा?",
+      "options": [
+        "RamKumar",
+        "Kumar Ram",
+        "Ram Kumar",
+        "Ram,Kumar"
+      ],
+      "correctIndex": 2,
+      "explanation": "=CONCATENATE(A1,\" \",B1) दोनों cells के text को बीच में एक space डालकर जोड़ता है, इसलिए result \"Ram Kumar\" आएगा (Option C)। Option A गलत है क्योंकि उसमें space वाला भाग \" \" जोड़ा ही नहीं गया माना गया है। Option B गलत है क्योंकि CONCATENATE arguments को दिए गए क्रम में ही जोड़ता है, उल्टा नहीं करता। Option D गलत है क्योंकि formula में comma नहीं बल्कि space (\" \") का उपयोग किया गया है।"
+    },
+    {
+      "id": "u7_ms_excel_q16",
+      "question": "Excel में Function और Formula के बीच सबसे सही अंतर क्या है?",
+      "options": [
+        "Function और Formula बिलकुल एक ही चीज़ हैं, कोई अंतर नहीं",
+        "Formula हमेशा = से शुरू होता है जबकि Function कभी = से शुरू नहीं होता",
+        "Function केवल charts बनाने के लिए उपयोग होता है जबकि Formula data validation के लिए होता है",
+        "Formula एक user-defined expression होता है जबकि Function Excel में पहले से predefined एक built-in formula होता है जिसे formula के अंदर उपयोग किया जा सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Formula एक user द्वारा बनाई गई calculation expression होती है (जैसे =A1+B1), जबकि Function (जैसे SUM, AVERAGE) Excel में पहले से predefined एक ready-made calculation होता है जिसे formula के अंदर उपयोग किया जाता है, इसलिए Option D सही है। Option A गलत है क्योंकि दोनों में यह मूल अंतर होता है। Option B गलत है क्योंकि Function भी formula के अंदर = के साथ ही उपयोग होता है (जैसे =SUM(A1:A5))। Option C गलत है क्योंकि function और formula का चार्ट या validation से सीधा कोई संबंध नहीं है, ये calculation के लिए होते हैं।"
+    },
+    {
+      "id": "u7_ms_excel_q17",
+      "question": "यदि किसी data में यह दिखाना हो कि total sales में से हर product की हिस्सेदारी (proportion) कितने percentage में है, तो इसके लिए कौन-सा chart type सबसे उपयुक्त रहेगा?",
+      "options": [
+        "Pie Chart",
+        "Line Chart",
+        "Bar Chart",
+        "Scatter Chart"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pie Chart किसी whole (कुल) में से हर हिस्से का proportion/percentage दिखाने के लिए सबसे उपयुक्त होता है, इसलिए Option A सही है। Option B (Line Chart) समय के साथ trend दिखाने के लिए बेहतर होता है, proportion के लिए नहीं। Option C (Bar Chart) अलग-अलग categories के बीच values compare करने के लिए उपयोग होता है, proportion दिखाने के लिए उतना उपयुक्त नहीं। Option D (Scatter Chart) दो variables के बीच relationship दिखाने के लिए उपयोग होता है।"
+    },
+    {
+      "id": "u7_ms_excel_q18",
+      "question": "पिछले 12 महीनों में किसी company की बिक्री (sales) का trend दिखाने के लिए कौन-सा chart type सबसे उपयुक्त होगा?",
+      "options": [
+        "Pie Chart",
+        "Line Chart",
+        "Bar Chart",
+        "Doughnut Chart"
+      ],
+      "correctIndex": 1,
+      "explanation": "समय के साथ (जैसे महीने-दर-महीने) data में होने वाले बदलाव या trend को दिखाने के लिए Line Chart सबसे उपयुक्त होता है, इसलिए Option B सही है। Option A (Pie Chart) proportion दिखाने के लिए होता है, trend के लिए नहीं। Option C (Bar Chart) categories की तुलना के लिए उपयुक्त है परंतु trend दिखाने में Line Chart जितना स्पष्ट नहीं। Option D (Doughnut Chart) Pie Chart जैसा ही proportion दिखाता है, trend के लिए उपयुक्त नहीं।"
+    },
+    {
+      "id": "u7_ms_excel_q19",
+      "question": "Excel में किसी selected data range पर नया chart insert करने के लिए किस Ribbon tab का उपयोग किया जाता है?",
+      "options": [
+        "Home tab",
+        "Page Layout tab",
+        "Insert tab",
+        "Data tab"
+      ],
+      "correctIndex": 2,
+      "explanation": "नया chart बनाने के लिए Insert tab में जाकर Charts group से चाहा गया chart type चुना जाता है, इसलिए Option C सही है। Option A (Home tab) में formatting, font जैसे basic tools होते हैं, chart insert करने का option नहीं। Option B (Page Layout tab) page setup और printing से जुड़ा होता है। Option D (Data tab) sorting, filtering और data tools के लिए उपयोग होता है, chart insert करने के लिए नहीं।"
+    },
+    {
+      "id": "u7_ms_excel_q20",
+      "question": "अलग-अलग departments की monthly sales values को आपस में compare करके दिखाने के लिए कौन-सा chart type सबसे common और उपयुक्त माना जाता है?",
+      "options": [
+        "Pie Chart",
+        "Line Chart",
+        "Area Chart",
+        "Bar Chart"
+      ],
+      "correctIndex": 3,
+      "explanation": "अलग-अलग categories (जैसे departments) की values की सीधी तुलना करने के लिए Bar Chart सबसे common और स्पष्ट तरीका होता है, इसलिए Option D सही है। Option A (Pie Chart) proportion/हिस्सेदारी दिखाने के लिए होता है, सीधी तुलना के लिए उतना उपयुक्त नहीं। Option B (Line Chart) समय के साथ trend दिखाने के लिए बेहतर होता है। Option C (Area Chart) भी trend और volume दिखाता है, categories की सीधी तुलना के लिए Bar Chart अधिक उपयुक्त माना जाता है।"
+    },
+    {
+      "id": "u7_ms_excel_q21",
+      "question": "किसी worksheet में students के marks को सबसे अधिक से सबसे कम के क्रम में arrange करना है। इसके लिए कौन-सा sort order उपयोग करना होगा?",
+      "options": [
+        "Descending order",
+        "Ascending order",
+        "Alphabetical order",
+        "Random order"
+      ],
+      "correctIndex": 0,
+      "explanation": "सबसे अधिक value से शुरू करके सबसे कम value तक arrange करने के लिए Descending order का उपयोग किया जाता है, इसलिए Option A सही है। Option B (Ascending order) सबसे कम से सबसे अधिक की तरफ arrange करता है, यह उल्टा क्रम है। Option C (Alphabetical order) केवल text data के लिए प्रयोग होने वाला शब्द है, numeric marks arrange करने के लिए सही technical term नहीं। Option D (Random order) कोई standard sorting option नहीं है।"
+    },
+    {
+      "id": "u7_ms_excel_q22",
+      "question": "Excel में किसी बड़ी data list में से केवल वे rows दिखाना जो एक particular शर्त (condition) को पूरा करती हैं, बाकी rows को अस्थायी रूप से छिपाना - इस feature को क्या कहा जाता है?",
+      "options": [
+        "Sorting",
+        "Filtering",
+        "Freeze Panes",
+        "Data Validation"
+      ],
+      "correctIndex": 1,
+      "explanation": "किसी condition के आधार पर केवल matching rows दिखाना और बाकी को अस्थायी रूप से hide करना Filtering (AutoFilter) कहलाता है, इसलिए Option B सही है। Option A (Sorting) data को किसी क्रम में arrange करता है, rows को hide नहीं करता। Option C (Freeze Panes) scrolling के दौरान header rows/columns को स्थिर रखने के लिए होता है। Option D (Data Validation) cell में किस तरह का data allowed है यह control करता है, rows छिपाने का काम नहीं करता।"
+    },
+    {
+      "id": "u7_ms_excel_q23",
+      "question": "यदि किसी cell में value 0.25 भरी है और उसे 25% के रूप में दिखाना है, तो इसके लिए किस formatting option का उपयोग किया जाएगा?",
+      "options": [
+        "Currency format",
+        "Text Wrap",
+        "Percentage format",
+        "Merge Cells"
+      ],
+      "correctIndex": 2,
+      "explanation": "किसी decimal value को प्रतिशत के रूप में दिखाने के लिए Percentage format का उपयोग किया जाता है, जो 0.25 को 25% के रूप में display करता है, इसलिए Option C सही है। Option A (Currency format) value के आगे रुपये/डॉलर जैसे symbol लगाने के लिए होता है। Option B (Text Wrap) लंबे text को cell के अंदर कई lines में दिखाने के लिए उपयोग होता है। Option D (Merge Cells) कई cells को जोड़कर एक cell बनाने का feature है, formatting number से संबंधित नहीं।"
+    },
+    {
+      "id": "u7_ms_excel_q24",
+      "question": "एक worksheet में किसी table का heading एक साथ कई columns के ऊपर बीचोंबीच (centered) दिखाना है। इसके लिए कौन-सा feature सबसे उपयुक्त रहेगा?",
+      "options": [
+        "Freeze Panes",
+        "Sort & Filter",
+        "Data Validation",
+        "Merge & Center"
+      ],
+      "correctIndex": 3,
+      "explanation": "कई cells को आपस में जोड़कर एक बड़ा cell बनाना और उसमें content को center में दिखाना Merge & Center feature से होता है, इसलिए Option D सही है। Option A (Freeze Panes) scrolling के दौरान rows/columns को स्थिर रखने के लिए होता है, heading merge करने के लिए नहीं। Option B (Sort & Filter) data arrange और filter करने के लिए है। Option C (Data Validation) cell में valid data entry restrict करने के लिए उपयोग होता है।"
+    },
+    {
+      "id": "u7_ms_excel_q25",
+      "question": "किसी बहुत बड़ी worksheet में नीचे की तरफ scroll करते समय भी top row (headers) हमेशा screen पर दिखते रहें, इसके लिए कौन-सा feature उपयोग किया जाता है?",
+      "options": [
+        "Freeze Panes",
+        "Merge Cells",
+        "AutoFill",
+        "Data Validation"
+      ],
+      "correctIndex": 0,
+      "explanation": "Freeze Panes feature का उपयोग करके किसी row या column को fix किया जा सकता है ताकि scroll करते समय भी वह हमेशा दिखती रहे, इसलिए Option A सही है। Option B (Merge Cells) कई cells जोड़ने के लिए होता है, scrolling से संबंधित नहीं। Option C (AutoFill) पैटर्न के आधार पर data भरने का feature है। Option D (Data Validation) cell में valid input control करने के लिए होता है।"
+    },
+    {
+      "id": "u7_ms_excel_q26",
+      "question": "किसी cell के नीचे-दाएँ कोने पर मौजूद छोटे square (जिसे खींचकर पास की cells में पैटर्न के अनुसार data या series भरा जाता है) को क्या कहा जाता है?",
+      "options": [
+        "Name Box",
+        "Fill Handle",
+        "Formula Bar",
+        "Scroll Bar"
+      ],
+      "correctIndex": 1,
+      "explanation": "selected cell के नीचे दाएँ कोने पर दिखने वाला छोटा square Fill Handle कहलाता है, जिसे drag करने पर AutoFill feature series या pattern के अनुसार आसपास की cells को भर देता है, इसलिए Option B सही है। Option A (Name Box) worksheet के बाईं ओर ऊपर मौजूद box है जो selected cell का address दिखाता है। Option C (Formula Bar) selected cell का formula/content दिखाने वाली पट्टी है। Option D (Scroll Bar) worksheet को ऊपर-नीचे/दाएँ-बाएँ move करने के लिए होती है।"
+    },
+    {
+      "id": "u7_ms_excel_q27",
+      "question": "Cell A1 में value 5 और cell A2 में value 10 भरी है। अगर इन दोनों cells को select करके Fill Handle को नीचे A3 और A4 तक drag किया जाए, तो AutoFill किस पैटर्न के अनुसार values भरेगा?",
+      "options": [
+        "A3 और A4 दोनों खाली रह जाएँगी",
+        "A3=5, A4=10 (values बिना बदलाव के copy होंगी)",
+        "A3=15, A4=20 (यानी 5 के बढ़ते क्रम में series)",
+        "A3=10, A4=5 (values उल्टे क्रम में copy होंगी)"
+      ],
+      "correctIndex": 2,
+      "explanation": "जब दो cells में एक निश्चित अंतर (यहाँ 5 का difference, यानी 5 से 10) वाली values select करके Fill Handle drag की जाती है, तो Excel उसी पैटर्न को आगे बढ़ाते हुए series भरता है, इसलिए A3=15 और A4=20 आएगा (Option C)। Option A गलत है क्योंकि AutoFill cells को खाली नहीं छोड़ता। Option B तभी होता अगर दोनों selected cells में एक जैसी (same) value होती, यहाँ pattern अलग-अलग बढ़ता हुआ है। Option D गलत है क्योंकि AutoFill values को उल्टे क्रम में copy नहीं करता।"
+    },
+    {
+      "id": "u7_ms_excel_q28",
+      "question": "Excel में किसी cell range (जैसे A1:A10) को बार-बार लंबा reference लिखने की बजाय एक आसान शब्द जैसे \"Sales_Data\" देकर याद रखना है। इसके लिए किस feature का उपयोग किया जाता है?",
+      "options": [
+        "Freeze Panes",
+        "Conditional Formatting",
+        "Data Validation",
+        "Named Range (Name Box के माध्यम से)"
+      ],
+      "correctIndex": 3,
+      "explanation": "किसी cell या range को एक meaningful नाम देकर आसानी से formulas में उपयोग करने के feature को Named Range कहा जाता है, जिसे Name Box में नाम टाइप करके या Formulas tab से Define Name द्वारा बनाया जाता है, इसलिए Option D सही है। Option A (Freeze Panes) scrolling के दौरान rows/columns fix करने के लिए है। Option B (Conditional Formatting) किसी condition के आधार पर cells को अलग रंग/style देने के लिए होता है। Option C (Data Validation) cell में valid data restrict करने के लिए उपयोग होता है, नाम देने के लिए नहीं।"
+    },
+    {
+      "id": "u7_ms_excel_q29",
+      "question": "किसी cell में केवल 1 से 100 के बीच की numeric value ही enter हो सके, इसके लिए Data tab में कौन-सा feature उपयोग किया जाएगा?",
+      "options": [
+        "Data Validation",
+        "Sort & Filter",
+        "Remove Duplicates",
+        "Text to Columns"
+      ],
+      "correctIndex": 0,
+      "explanation": "Data Validation feature का उपयोग करके किसी cell में entry के लिए एक निश्चित range, list या condition set की जा सकती है, जैसे केवल 1 से 100 के बीच की value ही स्वीकार करना, इसलिए Option A सही है। Option B (Sort & Filter) data arrange और filter करने के लिए है। Option C (Remove Duplicates) एक जैसी repeated rows हटाने के लिए उपयोग होता है। Option D (Text to Columns) किसी एक column के data को किसी delimiter के आधार पर कई columns में बांटने के लिए होता है।"
+    },
+    {
+      "id": "u7_ms_excel_q30",
+      "question": "Cell B2 में formula =A2*$D$1 लिखा है जहाँ A2=8 और D1=5 है। इस formula को copy करके B3 में paste किया जाए (जहाँ A3=6 है, D1 अभी भी 5 ही है), तो B3 में क्या result आएगा?",
+      "options": [
+        "40",
+        "30",
+        "48",
+        "6"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूंकि $D$1 एक absolute reference है, copy करने पर यह नहीं बदलता और हमेशा D1 (value 5) को ही refer करता रहेगा, जबकि A2 एक relative reference होने के कारण B3 में A3 (value 6) बन जाएगा, इसलिए formula =A3*$D$1 = 6*5 = 30 होगा (Option B)। Option A (40) गलत calculation है (8*5 का परिणाम है, जो B2 का result होता, B3 का नहीं)। Option C (48) भी गलत multiplication परिणाम है। Option D (6) केवल A3 की value है, पूरे formula का result नहीं।"
+    }
+  ]
+}

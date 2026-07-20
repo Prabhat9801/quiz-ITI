@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "ratio_proportion",
+  "topicName": "Ratio and Proportion",
+  "questions": [
+    {
+      "id": "math_ratio_proportion_q1",
+      "question": "45:60 के ratio को simplest form में simplify करें।",
+      "options": ["3:4", "4:5", "2:3", "5:6"],
+      "correctIndex": 0,
+      "explanation": "45 और 60 दोनों को उनके HCF 15 से divide करने पर 3:4 मिलता है। बाकी options इस simplification से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q2",
+      "question": "Rs. 1200 को A और B के बीच 3:5 के ratio में divide करें। A का share ज्ञात करें।",
+      "options": ["400", "450", "500", "550"],
+      "correctIndex": 1,
+      "explanation": "कुल parts = 3+5 = 8, A का share = 1200×(3/8) = 450। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q3",
+      "question": "3, 5 और 12 का fourth proportional ज्ञात करें।",
+      "options": ["15", "18", "20", "24"],
+      "correctIndex": 2,
+      "explanation": "3:5 :: 12:x => x = (5×12)/3 = 20। बाकी options इस proportion को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_ratio_proportion_q4",
+      "question": "9 और 25 का mean proportional ज्ञात करें।",
+      "options": ["12", "13", "14", "15"],
+      "correctIndex": 3,
+      "explanation": "mean proportional = √(9×25) = √225 = 15। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q5",
+      "question": "यदि a:b = 2:3 और b:c = 4:5 है, तो a:b:c ज्ञात करें।",
+      "options": ["8:12:15", "2:3:5", "2:4:5", "6:9:15"],
+      "correctIndex": 0,
+      "explanation": "b को दोनों ratios में common बनाने के लिए a:b = 2:3 को 8:12 और b:c = 4:5 को 12:15 में बदलते हैं (b=12 common)। इसलिए a:b:c = 8:12:15। बाकी options में b common नहीं किया गया।"
+    },
+    {
+      "id": "math_ratio_proportion_q6",
+      "question": "दो संख्याओं का ratio 5:7 है और उनका sum 144 है। छोटी संख्या ज्ञात करें।",
+      "options": ["50", "60", "70", "80"],
+      "correctIndex": 1,
+      "explanation": "कुल parts = 5+7 = 12, एक part = 144/12 = 12। छोटी संख्या = 5×12 = 60। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q7",
+      "question": "4 और 12 का third proportional ज्ञात करें।",
+      "options": ["24", "30", "36", "40"],
+      "correctIndex": 2,
+      "explanation": "4:12 :: 12:x => x = 12²/4 = 36। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q8",
+      "question": "दो संख्याएँ 3:4 के ratio में हैं। यदि दोनों में 8 जोड़ दिया जाए, तो ratio 4:5 हो जाता है। वे संख्याएँ ज्ञात करें।",
+      "options": ["18, 24", "20, 28", "21, 28", "24, 32"],
+      "correctIndex": 3,
+      "explanation": "संख्याओं को 3x, 4x मानें। (3x+8)/(4x+8) = 4/5 => 5(3x+8) = 4(4x+8) => 15x+40 = 16x+32 => x = 8। संख्याएँ = 24, 32। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_ratio_proportion_q9",
+      "question": "यदि x:y = 3:4 है, तो (5x+2y):(3x-y) ज्ञात करें।",
+      "options": ["23:5", "20:5", "23:4", "19:5"],
+      "correctIndex": 0,
+      "explanation": "x=3, y=4 लेने पर 5x+2y = 15+8 = 23, और 3x-y = 9-4 = 5, इसलिए ratio = 23:5। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q10",
+      "question": "एक रकम को A, B और C के बीच 2:3:5 के ratio में divide किया जाता है। यदि C को A से Rs. 600 अधिक मिलते हैं, तो total sum ज्ञात करें।",
+      "options": ["1800", "2000", "2200", "2500"],
+      "correctIndex": 1,
+      "explanation": "C-A = (5-2) = 3 parts = 600 => एक part = 200। total parts = 2+3+5 = 10, total sum = 200×10 = 2000। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q11",
+      "question": "यदि 2A = 3B = 4C है, तो A:B:C ज्ञात करें।",
+      "options": ["4:3:6", "3:4:6", "6:4:3", "6:3:4"],
+      "correctIndex": 2,
+      "explanation": "माना 2A=3B=4C=k, तो A=k/2, B=k/3, C=k/4। इन्हें 12 से गुणा करके clear करने पर A:B:C = 6:4:3 मिलता है। बाकी options में यह अनुपात सही क्रम में नहीं है।"
+    },
+    {
+      "id": "math_ratio_proportion_q12",
+      "question": "A और B की ages का ratio 4:5 है। 6 साल बाद यह ratio 5:6 हो जाएगा। A की present age ज्ञात करें।",
+      "options": ["18", "20", "22", "24"],
+      "correctIndex": 3,
+      "explanation": "ages को 4x, 5x मानें। (4x+6)/(5x+6) = 5/6 => 6(4x+6) = 5(5x+6) => 24x+36 = 25x+30 => x = 6। A की present age = 4x = 24। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_ratio_proportion_q13",
+      "question": "यदि 5:x :: 20:36 है, तो x का मान ज्ञात करें।",
+      "options": ["9", "10", "11", "12"],
+      "correctIndex": 0,
+      "explanation": "5/x = 20/36 => x = (5×36)/20 = 9। बाकी options इस proportion को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_ratio_proportion_q14",
+      "question": "A, B और C एक business में 2:3:5 के ratio में investment करते हैं। यदि total profit Rs. 9000 है, तो B का share ज्ञात करें।",
+      "options": ["1800", "2700", "3600", "4500"],
+      "correctIndex": 1,
+      "explanation": "कुल parts = 2+3+5 = 10, B का share = 9000×(3/10) = 2700। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q15",
+      "question": "दो संख्याएँ 4:5 के ratio में हैं। यदि प्रत्येक में 10 जोड़ दिया जाए, तो ratio 5:6 हो जाता है। वे संख्याएँ ज्ञात करें।",
+      "options": ["30, 40", "35, 45", "40, 50", "45, 55"],
+      "correctIndex": 2,
+      "explanation": "संख्याओं को 4x, 5x मानें। (4x+10)/(5x+10) = 5/6 => 6(4x+10) = 5(5x+10) => 24x+60 = 25x+50 => x = 10। संख्याएँ = 40, 50। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_ratio_proportion_q16",
+      "question": "यदि a:b = 5:6 और b:c = 3:4 है, तो a:c ज्ञात करें।",
+      "options": ["3:4", "4:5", "5:6", "5:8"],
+      "correctIndex": 3,
+      "explanation": "a:b = 15:18 और b:c = 18:24 (b को 18 common बनाकर), इसलिए a:c = 15:24 = 5:8। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q17",
+      "question": "एक school में boys और girls का ratio 7:5 है। यदि boys की संख्या 210 है, तो girls की संख्या ज्ञात करें।",
+      "options": ["150", "140", "160", "170"],
+      "correctIndex": 0,
+      "explanation": "एक part = 210/7 = 30, girls = 5×30 = 150। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q18",
+      "question": "2:3 और 4:5 का compounded ratio ज्ञात करें।",
+      "options": ["6:15", "8:15", "8:10", "6:10"],
+      "correctIndex": 1,
+      "explanation": "compounded ratio = (2×4):(3×5) = 8:15। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q19",
+      "question": "एक bag में Rs. 1 और Rs. 2 के coins 3:5 के ratio में हैं। यदि Rs. 2 के coins की संख्या 40 है, तो Rs. 1 के coins की संख्या ज्ञात करें।",
+      "options": ["20", "22", "24", "28"],
+      "correctIndex": 2,
+      "explanation": "एक part = 40/5 = 8, Rs. 1 के coins = 3×8 = 24। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q20",
+      "question": "यदि x/2 = y/3 = z/5 है, तो x:y:z ज्ञात करें।",
+      "options": ["3:2:5", "2:5:3", "5:3:2", "2:3:5"],
+      "correctIndex": 3,
+      "explanation": "प्रत्येक ratio को common value k मानें: x=2k, y=3k, z=5k, इसलिए x:y:z = 2:3:5। बाकी options में क्रम गलत है।"
+    },
+    {
+      "id": "math_ratio_proportion_q21",
+      "question": "Rs. 2400 को A, B और C के बीच इस प्रकार divide करें कि A, B से दोगुना (twice) और B, C से तीन गुना (thrice) पाए। C का share ज्ञात करें।",
+      "options": ["240", "300", "360", "400"],
+      "correctIndex": 0,
+      "explanation": "माना C=x, तो B=3x, A=6x। total = x+3x+6x = 10x = 2400 => x = 240। इसलिए C का share = 240। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q22",
+      "question": "30% alcohol वाले solution को 60% alcohol वाले solution के साथ मिलाकर 50% का solution बनाना है। दोनों की quantities का ratio ज्ञात करें (30%:60%)।",
+      "options": ["2:1", "1:2", "1:3", "3:1"],
+      "correctIndex": 1,
+      "explanation": "alligation rule से ratio = (60-50):(50-30) = 10:20 = 1:2। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q23",
+      "question": "एक triangle की sides 3:4:5 के ratio में हैं और उसका perimeter 60 cm है। सबसे लंबी side की length ज्ञात करें।",
+      "options": ["15", "20", "25", "30"],
+      "correctIndex": 2,
+      "explanation": "कुल parts = 3+4+5 = 12, एक part = 60/12 = 5। सबसे लंबी side = 5×5 = 25 cm। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q24",
+      "question": "यदि (a+b):(a-b) = 5:1 है, तो a:b ज्ञात करें।",
+      "options": ["1:3", "2:3", "1:2", "3:2"],
+      "correctIndex": 3,
+      "explanation": "cross multiply करने पर a+b = 5(a-b) => a+b = 5a-5b => 6b = 4a => a/b = 6/4 = 3/2, इसलिए a:b = 3:2। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q25",
+      "question": "दो संख्याएँ 7:9 के ratio में हैं और उनका HCF 12 है। वे संख्याएँ ज्ञात करें।",
+      "options": ["84, 108", "72, 96", "96, 120", "70, 90"],
+      "correctIndex": 0,
+      "explanation": "चूँकि 7 और 9 आपस में coprime हैं, संख्याएँ 7×12=84 और 9×12=108 होंगी, जिनका HCF वास्तव में 12 है। बाकी options की संख्याओं का HCF 12 नहीं बनता या ratio 7:9 नहीं है।"
+    },
+    {
+      "id": "math_ratio_proportion_q26",
+      "question": "P और Q की present ages का ratio 3:4 है। 8 साल बाद यह ratio 4:5 हो जाएगा। Q की present age ज्ञात करें।",
+      "options": ["24", "32", "36", "40"],
+      "correctIndex": 1,
+      "explanation": "ages को 3x, 4x मानें। (3x+8)/(4x+8) = 4/5 => 5(3x+8) = 4(4x+8) => 15x+40 = 16x+32 => x = 8। Q की present age = 4x = 32। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_ratio_proportion_q27",
+      "question": "Rs. 6500 की एक रकम A, B और C के बीच 3:4:6 के ratio में divide की जाती है। C का share ज्ञात करें।",
+      "options": ["2000", "2500", "3000", "3500"],
+      "correctIndex": 2,
+      "explanation": "कुल parts = 3+4+6 = 13, एक part = 6500/13 = 500। C का share = 6×500 = 3000। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q28",
+      "question": "यदि x:y = 2:3 है, तो (3x+2y):(2x+5y) का मान ज्ञात करें।",
+      "options": ["10:17", "11:18", "12:17", "12:19"],
+      "correctIndex": 3,
+      "explanation": "x=2, y=3 लेने पर 3x+2y = 6+6 = 12, और 2x+5y = 4+15 = 19, इसलिए ratio = 12:19। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q29",
+      "question": "एक रकम को A, B, C और D के बीच 1:2:3:4 के ratio में divide किया जाता है। यदि D को A से Rs. 900 अधिक मिलते हैं, तो total sum ज्ञात करें।",
+      "options": ["2500", "2800", "3000", "3200"],
+      "correctIndex": 2,
+      "explanation": "D-A = (4-1) = 3 parts = 900 => एक part = 300। total parts = 1+2+3+4 = 10, total sum = 300×10 = 3000। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_ratio_proportion_q30",
+      "question": "दो संख्याओं का ratio 8:15 है और उनका LCM 120 है। वे संख्याएँ ज्ञात करें।",
+      "options": ["6, 15", "8, 15", "10, 15", "8, 20"],
+      "correctIndex": 1,
+      "explanation": "चूँकि 8 और 15 coprime हैं, संख्याओं को 8x, 15x मानने पर LCM = 8×15×x = 120x। दिया गया LCM 120 है, इसलिए x=1, यानी संख्याएँ 8 और 15 हैं। बाकी options इस ratio और LCM दोनों को एक साथ satisfy नहीं करते।"
+    }
+  ]
+}

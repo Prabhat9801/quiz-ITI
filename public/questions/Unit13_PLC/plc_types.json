@@ -1,0 +1,368 @@
+{
+  "unit": "unit13",
+  "unitName": "PLC",
+  "topic": "plc_types",
+  "topicName": "Types of PLC - Small, Micro, Rack PLCs, Fixed vs Modular",
+  "questions": [
+    {
+      "id": "u13_plc_types_q1",
+      "question": "PLC को size और I/O capacity के आधार पर classify करते समय 'Micro PLC' किस प्रकार की application के लिए उपयुक्त होती है?",
+      "options": [
+        "बहुत बड़े multi-plant automation systems के लिए जहाँ हज़ारों I/O points चाहिए",
+        "बहुत छोटी applications जिनमें सीमित I/O points (सामान्यतः 32 से कम) की जरूरत होती है, जैसे छोटी machine control",
+        "केवल data centers के servers control करने के लिए",
+        "केवल high-voltage power transmission के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Micro PLC compact size, कम cost और सीमित I/O points (आमतौर पर 32 या उससे कम) वाली छोटी automation applications जैसे simple machine control, conveyor control आदि के लिए उपयुक्त होती है। बड़े multi-plant systems के लिए बड़े rack-based PLC उपयोग होते हैं।"
+    },
+    {
+      "id": "u13_plc_types_q2",
+      "question": "'Small PLC' (जिसे compact PLC भी कहा जाता है) की एक विशेषता क्या है?",
+      "options": [
+        "इसमें I/O points की संख्या micro PLC से अधिक होती है (सामान्यतः कुछ दर्जन से 128 तक) और यह fixed या limited-expansion housing में आता है",
+        "इसमें कोई CPU नहीं होता",
+        "यह केवल analog signals ही handle कर सकता है",
+        "इसमें program store करने की क्षमता नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Small/compact PLC micro PLC से अधिक I/O points (सामान्यतः दर्जनों से लेकर लगभग 128 तक) support करता है और छोटी to मध्यम automation applications के लिए designed होता है, अक्सर limited expansion modules के साथ। हर PLC में CPU जरूर होता है।"
+    },
+    {
+      "id": "u13_plc_types_q3",
+      "question": "'Rack (Large/Modular) PLC' की सबसे बड़ी विशेषता क्या है?",
+      "options": [
+        "यह केवल एक ही fixed I/O configuration देता है",
+        "इसमें rack/chassis में अलग-अलग modules (CPU, I/O, communication, special function modules) को जरूरत अनुसार जोड़ा-हटाया जा सकता है, जिससे बहुत बड़े और flexible systems बनाए जा सकते हैं",
+        "यह केवल घरेलू उपकरणों के लिए बनाई जाती है",
+        "इसमें कभी analog I/O नहीं जोड़ा जा सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rack/modular PLC में अलग-अलग modules को rack के slots में डालकर system को जरूरत के अनुसार expand किया जा सकता है (हज़ारों I/O तक), जिससे यह बड़े industrial plants के लिए highly flexible और scalable बनता है। Fixed configuration की सीमा compact PLC में होती है।"
+    },
+    {
+      "id": "u13_plc_types_q4",
+      "question": "'Fixed (Compact/Brick) PLC' और 'Modular PLC' में मुख्य structural अंतर क्या है?",
+      "options": [
+        "Fixed PLC में CPU, I/O और power supply एक ही integrated housing में built-in होते हैं, जबकि Modular PLC में ये अलग-अलग modules के रूप में rack में जोड़े जाते हैं",
+        "दोनों बिल्कुल एक जैसे होते हैं",
+        "Fixed PLC में कभी input module नहीं होता",
+        "Modular PLC में कभी CPU नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fixed/compact PLC में सभी घटक (CPU, fixed संख्या के I/O, power supply) एक ही single unit में built-in रहते हैं, जिससे expansion सीमित रहती है; Modular PLC में हर घटक अलग module होता है जिसे rack में plug करके जरूरत अनुसार system बढ़ाया जा सकता है।"
+    },
+    {
+      "id": "u13_plc_types_q5",
+      "question": "Fixed PLC का एक प्रमुख फायदा क्या है, विशेषकर छोटी applications में?",
+      "options": [
+        "यह modular PLC से हमेशा ज्यादा महँगा होता है",
+        "यह compact, कम cost वाला और install करने में सरल होता है क्योंकि सब कुछ पहले से एक housing में assembled होता है",
+        "इसमें expansion की कोई सीमा नहीं होती",
+        "इसमें I/O points की संख्या असीमित होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fixed PLC छोटी automation tasks के लिए economical और सरल विकल्प है क्योंकि सभी जरूरी हिस्से पहले से ही एक single compact housing में assembled होते हैं, जिससे installation और wiring आसान हो जाती है। इसकी expansion क्षमता सीमित होती है, असीमित नहीं।"
+    },
+    {
+      "id": "u13_plc_types_q6",
+      "question": "Modular PLC का एक प्रमुख नुकसान (limitation) क्या हो सकता है, छोटी applications की तुलना में?",
+      "options": [
+        "यह हमेशा free होता है",
+        "इसकी initial cost और complexity fixed PLC की तुलना में अधिक हो सकती है, खासकर जब application बहुत छोटी हो",
+        "इसमें I/O बढ़ाना असंभव है",
+        "इसमें कभी power supply module नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modular PLC systems आमतौर पर अधिक costly और setup में थोड़ा complex होते हैं क्योंकि अलग-अलग modules खरीदने और assemble करने पड़ते हैं; बहुत छोटी applications के लिए यह जरूरत से ज्यादा (over-engineered) हो सकता है, जहाँ compact PLC ज्यादा economical है।"
+    },
+    {
+      "id": "u13_plc_types_q7",
+      "question": "किसी बड़े automobile assembly plant में जहाँ हज़ारों sensors और actuators को control करना हो, वहाँ सामान्यतः किस प्रकार की PLC पसंद की जाती है?",
+      "options": [
+        "Micro PLC, क्योंकि यह सबसे सस्ता है",
+        "Modular/Rack PLC, क्योंकि यह बड़ी संख्या में I/O modules और expansion racks support कर सकता है",
+        "किसी भी प्रकार की PLC नहीं चाहिए",
+        "केवल fixed PLC, क्योंकि इसमें expansion की जरूरत नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़े industrial plants में हज़ारों I/O points, विभिन्न प्रकार के special function modules और high processing power की जरूरत होती है, जो modular/rack PLC ही प्रदान कर सकती है क्योंकि इसे जरूरत अनुसार expand किया जा सकता है। Micro/fixed PLC इतनी बड़ी scale के लिए उपयुक्त नहीं।"
+    },
+    {
+      "id": "u13_plc_types_q8",
+      "question": "PLC के वर्गीकरण में 'Nano PLC' शब्द किसे संदर्भित करता है?",
+      "options": [
+        "सबसे बड़े और सबसे महँगे rack-based PLC को",
+        "सबसे छोटे आकार की PLC जो बहुत ही सीमित I/O (जैसे 10-20 points से कम) वाली बहुत छोटी automation tasks के लिए बनाई जाती है",
+        "केवल analog output modules को",
+        "केवल communication protocol को"
+      ],
+      "correctIndex": 1,
+      "explanation": "Nano PLC सबसे छोटी श्रेणी की PLC होती है जिसमें बहुत सीमित I/O points होते हैं और यह बहुत छोटी, simple automation tasks (जैसे small timer-based control) के लिए बनाई जाती है। यह rack-based large PLC के विपरीत है।"
+    },
+    {
+      "id": "u13_plc_types_q9",
+      "question": "'Fixed PLC' में यदि भविष्य में I/O points बढ़ाने की जरूरत पड़े, तो सामान्यतः क्या किया जाता है?",
+      "options": [
+        "केवल software update से I/O count बढ़ा दिया जाता है",
+        "कुछ fixed PLC models में सीमित expansion modules जोड़े जा सकते हैं, अन्यथा बड़ी capacity वाली दूसरी PLC unit से बदलना पड़ता है",
+        "PLC के अंदर CPU को खोलकर manually नए pins जोड़े जाते हैं",
+        "यह कभी संभव नहीं होता, चाहे कुछ भी हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "कुछ fixed/compact PLC models में सीमित संख्या में expansion I/O modules जोड़ने की सुविधा होती है, परंतु यह modular PLC जितनी flexible नहीं होती; बहुत अधिक I/O की जरूरत होने पर बड़ी modular PLC में migrate करना पड़ता है। केवल software update से hardware I/O नहीं बढ़ता।"
+    },
+    {
+      "id": "u13_plc_types_q10",
+      "question": "Small/Compact PLC में आमतौर पर built-in communication ports (जैसे RS-232/USB) होने का क्या फायदा है?",
+      "options": [
+        "इससे field devices को सीधे high voltage मिलता है",
+        "इससे programming device या HMI को directly PLC से जोड़कर program upload/download और monitoring की जा सकती है",
+        "इससे PLC का आकार बहुत बढ़ जाता है",
+        "इससे PLC कभी program store नहीं कर पाती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Built-in communication ports compact PLC को बिना अतिरिक्त communication module के, सीधे programming device (कंप्यूटर) या HMI से जोड़ने की सुविधा देते हैं, जिससे program transfer और monitoring आसान हो जाती है। यह field device power या memory से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_types_q11",
+      "question": "PLC प्रकारों की तुलना में, 'Micro PLC' और 'Rack PLC' के बीच processing power (CPU speed, memory) के मामले में सामान्यतः क्या अंतर होता है?",
+      "options": [
+        "दोनों में processing power हमेशा बराबर होती है",
+        "Micro PLC में सामान्यतः सीमित processing power व memory होती है, जबकि Rack PLC में बड़े, complex programs चलाने के लिए अधिक powerful CPU और memory उपलब्ध होती है",
+        "Micro PLC हमेशा Rack PLC से ज्यादा powerful होती है",
+        "Rack PLC में कोई memory ही नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Micro PLC छोटी, सरल applications के लिए बनाई जाती है इसलिए इसकी processing power व memory सीमित होती है; Rack PLC बड़े, complex control systems के लिए design होती है जिसमें अधिक powerful CPU, अधिक memory और advanced features होते हैं।"
+    },
+    {
+      "id": "u13_plc_types_q12",
+      "question": "एक छोटी bottling machine जिसमें केवल 20 input points और 10 output points चाहिए, वहाँ लागत-प्रभावी (cost-effective) विकल्प के रूप में क्या चुना जाना उपयुक्त होगा?",
+      "options": [
+        "एक बड़ी modular rack PLC जिसमें सैकड़ों I/O slots हों",
+        "एक Micro/Small (compact/fixed) PLC जो उस सीमित I/O count को economically पूरा कर सके",
+        "कोई भी PLC नहीं, केवल relay logic",
+        "एक data center server"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब I/O की जरूरत सीमित हो (जैसे 20 input, 10 output), तो Micro/Small compact PLC सबसे cost-effective और practical विकल्प है; बड़ी modular rack PLC का उपयोग करना over-engineering और अनावश्यक खर्च होगा।"
+    },
+    {
+      "id": "u13_plc_types_q13",
+      "question": "'Modular PLC' में अलग-अलग special function modules (जैसे high-speed counter module, PID controller module) जोड़ने की सुविधा किस बात को दर्शाती है?",
+      "options": [
+        "यह केवल decoration के लिए है",
+        "Modular PLC की flexibility और scalability को, जिससे application-specific advanced functions आसानी से जोड़े जा सकते हैं",
+        "यह दर्शाता है कि modular PLC में CPU नहीं होता",
+        "यह दर्शाता है कि modular PLC केवल घरेलू उपयोग के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modular architecture की खासियत यह है कि जरूरत अनुसार specialized function modules (high-speed counter, PID, weighing module आदि) को rack में जोड़ा जा सकता है, जो fixed PLC में सामान्यतः संभव नहीं होता। यह flexibility ही modular PLC का मुख्य लाभ है।"
+    },
+    {
+      "id": "u13_plc_types_q14",
+      "question": "PLC प्रकारों का चयन करते समय 'physical size और mounting space' किस प्रकार निर्णय को प्रभावित करती है?",
+      "options": [
+        "इसका PLC selection से कोई लेना-देना नहीं",
+        "यदि control panel में जगह सीमित हो, तो compact/fixed या micro PLC प्राथमिकता में आती हैं; जगह पर्याप्त होने पर बड़ी rack PLC भी विचार में ली जा सकती है",
+        "हमेशा सबसे बड़ी PLC ही चुननी चाहिए, चाहे जगह कितनी भी सीमित हो",
+        "Mounting space केवल power supply पर निर्भर करती है, PLC type पर नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Control panel में उपलब्ध जगह भी PLC type चुनने में एक महत्वपूर्ण factor है — सीमित जगह में compact/micro PLC उपयुक्त रहती है, जबकि पर्याप्त जगह और बड़ी I/O जरूरत होने पर rack-based modular PLC चुनी जाती है।"
+    },
+    {
+      "id": "u13_plc_types_q15",
+      "question": "'Fixed I/O PLC' में यदि किसी application में अलग-अलग प्रकार के signals (कुछ digital, कुछ analog) चाहिए हों, तो सामान्यतः क्या सीमा होती है?",
+      "options": [
+        "Fixed PLC हमेशा असीमित प्रकार के signals handle कर सकती है",
+        "Fixed PLC में built-in I/O types पहले से निर्धारित (fixed) होते हैं, इसलिए अगर जरूरत उससे अलग combination की हो तो यह सीमित पड़ सकती है",
+        "यह समस्या केवल modular PLC में होती है",
+        "Fixed PLC में कभी digital I/O नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fixed/compact PLC में I/O की संख्या और प्रकार (digital/analog mix) निर्माण के समय ही तय हो जाता है, इसलिए यदि application की जरूरत उस fixed combination से अलग हो तो यह सीमित साबित हो सकती है, जबकि modular PLC में जरूरत अनुसार अलग-अलग type के modules जोड़े जा सकते हैं।"
+    },
+    {
+      "id": "u13_plc_types_q16",
+      "question": "PLC वर्गीकरण के अनुसार 'Medium PLC' सामान्यतः किन applications के लिए उपयुक्त मानी जाती है?",
+      "options": [
+        "केवल सबसे छोटी घरेलू applications के लिए",
+        "मध्यम आकार की industrial applications के लिए जिनमें Micro PLC से अधिक I/O तथा Large Rack PLC से कम complexity चाहिए",
+        "केवल data centers के लिए",
+        "केवल mobile phones के अंदर उपयोग के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Medium PLC, Micro/Small PLC और बड़े Rack PLC के बीच की श्रेणी है — यह मध्यम I/O count, मध्यम processing requirement वाली industrial applications (जैसे मध्यम आकार की production lines) के लिए उपयुक्त होती है।"
+    },
+    {
+      "id": "u13_plc_types_q17",
+      "question": "Rack/Modular PLC में यदि CPU module fail हो जाए, तो fixed PLC की तुलना में repair/replace करना सामान्यतः कैसा होता है?",
+      "options": [
+        "पूरे system को फेंकना पड़ता है, कुछ भी replace नहीं हो सकता",
+        "केवल fail हुए CPU module को replace किया जा सकता है, बाकी I/O modules और wiring जस की तस रहती है; fixed PLC में पूरी unit ही बदलनी पड़ सकती है",
+        "यह दोनों में बिल्कुल समान होता है",
+        "Modular PLC में CPU कभी fail नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modular PLC का एक बड़ा फायदा यह है कि individual module (जैसे CPU) fail होने पर केवल उसी module को replace किया जा सकता है, बाकी wiring व अन्य modules अप्रभावित रहते हैं; जबकि fixed/compact PLC में CPU integrated होने के कारण अक्सर पूरी unit बदलनी पड़ती है।"
+    },
+    {
+      "id": "u13_plc_types_q18",
+      "question": "PLC types में 'Stackable I/O' concept, जो कुछ small/compact PLCs में मिलता है, किस बात को दर्शाता है?",
+      "options": [
+        "यह दर्शाता है कि compact PLC कभी expand नहीं हो सकती",
+        "यह compact PLC के base unit पर सीमित संख्या में अतिरिक्त I/O modules को 'stack' करके थोड़ा expansion की सुविधा देता है, बिना पूर्ण modular rack की जरूरत के",
+        "यह केवल analog output devices के लिए होता है",
+        "यह केवल power supply modules के लिए होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stackable I/O compact PLC को थोड़ी flexibility देता है — base unit के ऊपर सीमित संख्या में additional I/O modules जोड़े जा सकते हैं, जो full modular rack PLC जितनी बड़ी expansion तो नहीं देता पर fixed PLC से थोड़ा बेहतर scalability देता है।"
+    },
+    {
+      "id": "u13_plc_types_q19",
+      "question": "PLC selection में यदि किसी application की I/O जरूरत भविष्य में बढ़ने की संभावना अधिक हो, तो कौन सा PLC प्रकार दीर्घकालिक (long-term) दृष्टि से बेहतर होगा?",
+      "options": [
+        "Fixed/Compact PLC, क्योंकि इसकी expansion क्षमता ज्यादा होती है",
+        "Modular/Rack PLC, क्योंकि इसमें भविष्य में जरूरत अनुसार additional I/O modules आसानी से जोड़े जा सकते हैं",
+        "Nano PLC, क्योंकि यह सबसे छोटी होती है",
+        "इनमें से कोई भी उपयुक्त नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि भविष्य में I/O जरूरत बढ़ने की संभावना हो, तो modular/rack PLC बेहतर विकल्प है क्योंकि इसकी rack-based design future expansion के लिए flexibility देती है, जबकि fixed/nano PLC की expansion क्षमता सीमित या शून्य होती है।"
+    },
+    {
+      "id": "u13_plc_types_q20",
+      "question": "PLC classification में 'PLC brick' शब्द अक्सर किस प्रकार की PLC को refer करता है?",
+      "options": [
+        "एक बड़ी, कई racks वाली modular PLC को",
+        "एक compact, self-contained (fixed) PLC unit को, जिसमें CPU, I/O और power supply सब एक ही 'brick-like' single housing में हों",
+        "केवल एक communication module को",
+        "केवल एक HMI screen को"
+      ],
+      "correctIndex": 1,
+      "explanation": "'PLC brick' शब्द सामान्यतः एक compact, single-piece, self-contained fixed PLC unit के लिए प्रयोग होता है, जिसमें सारे जरूरी components एक ही housing में built-in होते हैं, जैसे ईंट (brick) का ठोस आकार। यह बड़ी modular rack PLC से अलग है।"
+    },
+    {
+      "id": "u13_plc_types_q21",
+      "question": "किसी छोटी workshop में एक ही machine की simple ON/OFF sequencing control करनी हो (जैसे कुछ motors को क्रम में चलाना), वहाँ कौन सी PLC सबसे उपयुक्त तथा economical होगी?",
+      "options": [
+        "एक बड़ी multi-rack modular PLC system जिसमें redundant CPU हो",
+        "एक Micro/Nano PLC जो सीमित I/O के साथ simple sequencing task आसानी से handle कर सके",
+        "कोई PLC नहीं, बल्कि एक supercomputer",
+        "एक SCADA server स्वयं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Simple sequencing जैसे छोटे कार्य के लिए एक Micro/Nano PLC पर्याप्त और cost-effective होती है; बड़ी redundant modular systems या supercomputer जैसी चीज़ें इस साधारण जरूरत के लिए अनावश्यक रूप से महँगी और complex होंगी।"
+    },
+    {
+      "id": "u13_plc_types_q22",
+      "question": "Fixed PLC की तुलना में Modular PLC में 'special function modules' जैसे PID controller module, weighing module जोड़ने की क्षमता क्यों ज्यादा होती है?",
+      "options": [
+        "क्योंकि modular PLC का rack एक standard backplane bus देता है जिसमें विभिन्न प्रकार के specialized modules plug किए जा सकते हैं",
+        "क्योंकि fixed PLC में कोई backplane bus नहीं होता, इसलिए वह कभी भी expand नहीं हो सकती",
+        "क्योंकि modular PLC में कोई CPU नहीं होता",
+        "क्योंकि यह पूरी तरह random है, कोई तकनीकी कारण नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Modular PLC का standard rack/backplane bus design विभिन्न specialized function modules को आसानी से plug करने की सुविधा देता है, जिससे system को application-specific advanced capabilities से लैस किया जा सकता है। Fixed PLC में यह integrated design के कारण सीमित रहता है।"
+    },
+    {
+      "id": "u13_plc_types_q23",
+      "question": "PLC types के संदर्भ में 'Distributed I/O' या 'Remote I/O rack' किस प्रकार की PLC architecture से जुड़ा concept है?",
+      "options": [
+        "यह केवल fixed/compact PLC में पाया जाता है",
+        "यह मुख्यतः Modular/Rack PLC systems से जुड़ा है, जहाँ field के पास अलग-अलग स्थानों पर I/O racks लगाकर communication link से main CPU से जोड़ा जाता है",
+        "यह केवल Nano PLC में पाया जाता है",
+        "इसका PLC architecture से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Distributed/Remote I/O concept modular/rack PLC architecture की विशेषता है, जहाँ बड़ी plant में field devices के पास स्थानीय I/O racks लगाकर communication network के जरिए केंद्रीय CPU से जोड़ा जाता है, जिससे wiring की लंबाई कम होती है। Fixed/Nano PLC में यह सुविधा सामान्यतः नहीं होती।"
+    },
+    {
+      "id": "u13_plc_types_q24",
+      "question": "PLC चयन में 'Scalability' शब्द का क्या अर्थ है?",
+      "options": [
+        "PLC का physical weight",
+        "PLC की क्षमता कि भविष्य में जरूरत पड़ने पर उसकी I/O संख्या, memory या functions को आसानी से बढ़ाया जा सके",
+        "PLC की केवल color coding",
+        "PLC की केवल brand value"
+      ],
+      "correctIndex": 1,
+      "explanation": "Scalability का अर्थ है PLC system को भविष्य की बढ़ती जरूरतों (अधिक I/O, अधिक memory, अधिक modules) के अनुसार आसानी से expand कर पाना। Modular PLC में scalability अधिक होती है जबकि fixed/nano PLC में यह सीमित होती है। यह weight, color या brand से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_types_q25",
+      "question": "एक बड़ी food processing plant जिसमें अलग-अलग सैकड़ों sensors, motors, valves एक साथ coordinate करने हैं, वहाँ किस प्रकार का architecture technically और economically ज्यादा उपयुक्त रहेगा?",
+      "options": [
+        "कई अलग-अलग Nano PLC जो आपस में जुड़ी न हों",
+        "एक centralized Modular/Rack PLC (या networked modular PLCs) जो बड़ी संख्या में I/O तथा complex coordination संभाल सके",
+        "केवल एक साधारण Fixed PLC जो केवल 16 I/O संभाले",
+        "PLC के बजाय केवल manual switches"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़ी और complex coordination वाली plants के लिए modular/rack PLC (जरूरत पड़ने पर आपस में networked) सबसे उपयुक्त है क्योंकि यह बड़ी I/O संख्या, advanced processing और future expansion को संभाल सकती है। अलग-अलग असंबद्ध Nano PLC या साधारण Fixed PLC इतनी बड़ी जटिलता के लिए अपर्याप्त होंगी।"
+    },
+    {
+      "id": "u13_plc_types_q26",
+      "question": "PLC के प्रकारों की तुलना में, cost (लागत) के दृष्टिकोण से सामान्य क्रम (कम से ज्यादा) क्या होता है?",
+      "options": [
+        "Rack/Modular PLC < Small PLC < Micro/Nano PLC",
+        "Micro/Nano PLC < Small (Compact/Fixed) PLC < Rack/Modular PLC",
+        "सभी की cost हमेशा बराबर होती है",
+        "Rack PLC हमेशा सबसे सस्ती होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सामान्यतः cost, complexity और capability बढ़ने के क्रम में Micro/Nano PLC सबसे सस्ती, उसके बाद Small/Compact/Fixed PLC, और सबसे महँगी व सक्षम Rack/Modular PLC होती है, क्योंकि यह अधिक I/O, अधिक processing power और flexibility प्रदान करती है।"
+    },
+    {
+      "id": "u13_plc_types_q27",
+      "question": "PLC types के संदर्भ में, यदि किसी application में केवल कुछ ही digital inputs/outputs चाहिए हों और cost सबसे बड़ी constraint हो, तो कौन सा प्रकार चुनना उचित होगा?",
+      "options": [
+        "एक बड़ी redundant modular rack PLC",
+        "एक सीधा-सादा Micro/Nano PLC जो सीमित I/O और कम cost में जरूरत पूरी करे",
+        "एक expensive SCADA-integrated PLC network",
+        "इनमें से कोई नहीं, task manual relay से करना ही बेहतर है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सीमित I/O और cost-sensitive application के लिए Micro/Nano PLC सबसे practical विकल्प है क्योंकि यह जरूरत के अनुसार पर्याप्त functionality कम लागत में देती है, जबकि redundant modular systems या SCADA network अनावश्यक रूप से महँगे होंगे।"
+    },
+    {
+      "id": "u13_plc_types_q28",
+      "question": "'Fixed PLC' में अगर कोई एक I/O terminal खराब (faulty) हो जाए, तो सामान्यतः क्या करना पड़ता है (modular PLC की तुलना में)?",
+      "options": [
+        "केवल वह terminal अलग से replace हो जाता है, बाकी unit वैसी ही रहती है — यह हमेशा modular PLC जैसा आसान है",
+        "चूँकि सब कुछ एक integrated unit में है, इसलिए अक्सर पूरी PLC unit को ही बदलना/repair करवाना पड़ता है, जबकि modular PLC में केवल वह specific I/O module बदला जा सकता है",
+        "कुछ भी करने की जरूरत नहीं, यह अपने आप ठीक हो जाता है",
+        "Fixed PLC में I/O terminals होते ही नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fixed/compact PLC में सभी I/O terminals एक ही integrated board/housing का हिस्सा होते हैं, इसलिए किसी terminal के खराब होने पर अक्सर पूरी unit को service/replace करना पड़ता है; modular PLC में सिर्फ वह specific faulty I/O module अलग से बदला जा सकता है, जो maintenance को आसान बनाता है।"
+    },
+    {
+      "id": "u13_plc_types_q29",
+      "question": "PLC वर्गीकरण में 'Hybrid' दृष्टिकोण (जैसे compact PLC + limited expansion modules) किस उद्देश्य से अपनाया जाता है?",
+      "options": [
+        "ताकि PLC कभी काम ही न करे",
+        "ताकि compact PLC की सरलता व कम लागत बनाए रखते हुए भी कुछ हद तक expansion (extra I/O) की सुविधा मिल सके, जो fully modular system से सस्ती हो",
+        "ताकि केवल analog signals block हो जाएँ",
+        "ताकि CPU को हटाया जा सके"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hybrid approach (जैसे compact PLC के साथ limited stackable expansion I/O) का उद्देश्य यह है कि छोटी-मध्यम applications में fixed PLC जितनी सादगी व किफायत बनी रहे, फिर भी थोड़ी बहुत भविष्य की I/O जरूरत को बिना पूरी तरह महँगी modular rack PLC खरीदे पूरा किया जा सके।"
+    },
+    {
+      "id": "u13_plc_types_q30",
+      "question": "PLC प्रकारों के चयन में निम्नलिखित में से कौन सा factor सबसे प्रासंगिक (relevant) है — I/O count, memory जरूरत, future expansion, और budget को एक साथ ध्यान में रखते हुए?",
+      "options": [
+        "केवल PLC का रंग",
+        "Application की वर्तमान व भविष्य की I/O तथा processing जरूरत के साथ-साथ available budget को संतुलित करके सही प्रकार (Nano/Micro/Small/Rack) का चयन करना",
+        "केवल PLC manufacturer का नाम",
+        "केवल PLC को कहाँ से खरीदा गया"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही PLC प्रकार चुनने के लिए वर्तमान I/O जरूरत, भविष्य में संभावित expansion, processing/memory requirement और उपलब्ध budget — इन सभी factors को संतुलित रूप से ध्यान में रखना जरूरी है, न कि केवल रंग, brand नाम या खरीद स्थान जैसी अप्रासंगिक बातों को।"
+    }
+  ]
+}

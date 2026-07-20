@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "percentage",
+  "topicName": "Percentage",
+  "questions": [
+    {
+      "id": "math_percentage_q1",
+      "question": "480 का 25% ज्ञात करें।",
+      "options": ["120", "110", "130", "140"],
+      "correctIndex": 0,
+      "explanation": "25% of 480 = (25/100)×480 = 120। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q2",
+      "question": "250 का कितना percent 75 होता है?",
+      "options": ["25%", "30%", "35%", "40%"],
+      "correctIndex": 1,
+      "explanation": "required percent = (75/250)×100 = 30%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q3",
+      "question": "यदि किसी संख्या का 40% 96 है, तो वह संख्या ज्ञात करें।",
+      "options": ["220", "230", "240", "250"],
+      "correctIndex": 2,
+      "explanation": "माना संख्या x है, तो 0.40x = 96 => x = 96/0.40 = 240। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_percentage_q4",
+      "question": "3/8 को percentage में express करें।",
+      "options": ["30%", "33.3%", "35%", "37.5%"],
+      "correctIndex": 3,
+      "explanation": "3/8 = 0.375 = 37.5%। बाकी options इस fraction के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_percentage_q5",
+      "question": "एक item की price Rs. 200 से बढ़कर Rs. 250 हो जाती है। percentage increase ज्ञात करें।",
+      "options": ["25%", "20%", "30%", "35%"],
+      "correctIndex": 0,
+      "explanation": "increase = 250-200 = 50, percentage increase = (50/200)×100 = 25%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q6",
+      "question": "एक संख्या को 20% कम करने पर वह 160 हो जाती है। मूल (original) संख्या ज्ञात करें।",
+      "options": ["180", "200", "220", "240"],
+      "correctIndex": 1,
+      "explanation": "माना original संख्या x है, तो 0.80x = 160 => x = 200। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_percentage_q7",
+      "question": "एक election में एक candidate को 60% votes मिले और वह 4800 votes से जीता। total votes ज्ञात करें।",
+      "options": ["20000", "22000", "24000", "26000"],
+      "correctIndex": 2,
+      "explanation": "winner को 60% और loser को 40% votes मिले, इसलिए अंतर = 20% of total = 4800 => total = 4800/0.20 = 24000। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q8",
+      "question": "यदि sugar की price 25% बढ़ जाती है, तो expenditure को unchanged रखने के लिए consumption में कितने percent की कमी करनी चाहिए?",
+      "options": ["25%", "22%", "18%", "20%"],
+      "correctIndex": 3,
+      "explanation": "reduction% = [increase/(100+increase)]×100 = (25/125)×100 = 20%। बाकी options इस formula से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q9",
+      "question": "4000 का 15% का 15% ज्ञात करें।",
+      "options": ["90", "85", "95", "100"],
+      "correctIndex": 0,
+      "explanation": "15% of 4000 = 600, फिर 15% of 600 = 90। बाकी options इस दो-चरण calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q10",
+      "question": "पास होने के लिए एक student को 40% marks चाहिए। उसे 210 marks मिले और वह 30 marks से fail हो गया। maximum marks ज्ञात करें।",
+      "options": ["550", "600", "650", "700"],
+      "correctIndex": 1,
+      "explanation": "passing marks = 210+30 = 240, जो maximum marks (M) का 40% है, इसलिए 0.40M = 240 => M = 600। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_percentage_q11",
+      "question": "एक town की population हर साल 10% बढ़ती है। यदि current population 22000 है, तो अगले साल की population ज्ञात करें।",
+      "options": ["23000", "23500", "24200", "25000"],
+      "correctIndex": 2,
+      "explanation": "अगले साल की population = 22000×1.10 = 24200। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q12",
+      "question": "एक class में 60% students boys हैं। यदि girls की संख्या 24 है, तो total students ज्ञात करें।",
+      "options": ["50", "55", "58", "60"],
+      "correctIndex": 3,
+      "explanation": "girls = 40% of total = 24, इसलिए total = 24/0.40 = 60। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q13",
+      "question": "एक संख्या को पहले 10% बढ़ाया गया, फिर 10% घटाया गया। net percentage change ज्ञात करें।",
+      "options": ["1% decrease", "1% increase", "No change", "2% decrease"],
+      "correctIndex": 0,
+      "explanation": "जब एक ही percent x से पहले बढ़ाया और फिर घटाया जाए, तो net change हमेशा -(x²/100)% होता है। यहाँ x=10, इसलिए net change = -(10×10/100)% = -1%, यानी 1% decrease। बाकी options इस formula से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q14",
+      "question": "यदि A की salary B से 20% अधिक है, तो B की salary A से कितने percent कम है?",
+      "options": ["15%", "16.67%", "18%", "20%"],
+      "correctIndex": 1,
+      "explanation": "माना B=100, तो A=120। B, A से कम = (20/120)×100 = 16.67%। ध्यान दें कि यह A के 20% अधिक होने के बराबर percent नहीं है क्योंकि base अलग है। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q15",
+      "question": "rice की price में 20% की कमी के कारण एक व्यक्ति Rs. 800 में 5 kg अधिक rice खरीद पाता है। reduced price per kg ज्ञात करें।",
+      "options": ["28", "30", "32", "35"],
+      "correctIndex": 2,
+      "explanation": "माना original price p है, reduced price 0.8p। 800/(0.8p) - 800/p = 5 => (800/p)×(1/0.8 - 1) = 5 => (800/p)×0.25 = 5 => p = 40। reduced price = 0.8×40 = Rs. 32 per kg। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q16",
+      "question": "एक school में 45% students girls हैं। यदि boys की संख्या 550 है, तो total students ज्ञात करें।",
+      "options": ["900", "950", "980", "1000"],
+      "correctIndex": 3,
+      "explanation": "boys = 55% of total = 550, इसलिए total = 550/0.55 = 1000। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q17",
+      "question": "एक machine की value हर साल 10% depreciate होती है। यदि present value Rs. 50000 है, तो 2 साल बाद इसकी value ज्ञात करें।",
+      "options": ["40500", "39500", "41000", "42000"],
+      "correctIndex": 0,
+      "explanation": "2 साल बाद value = 50000×0.9×0.9 = 40500। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q18",
+      "question": "एक संख्या को पहले 25% बढ़ाया गया, फिर 20% घटाया गया। net percentage change ज्ञात करें।",
+      "options": ["-5%", "0%", "5%", "-10%"],
+      "correctIndex": 1,
+      "explanation": "net factor = 1.25×0.80 = 1.00, यानी net change 0% है (कोई परिवर्तन नहीं)। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q19",
+      "question": "एक mixture में 60% water और शेष milk है। यदि mixture 25 litres है, तो milk की quantity ज्ञात करें।",
+      "options": ["8", "9", "10", "12"],
+      "correctIndex": 2,
+      "explanation": "milk = 40% of 25 = (40/100)×25 = 10 litres। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q20",
+      "question": "एक व्यक्ति अपनी income का 75% खर्च करता है। यदि उसकी income में 20% वृद्धि और expenditure में 10% वृद्धि होती है, तो उसकी savings में percentage वृद्धि ज्ञात करें।",
+      "options": ["30%", "40%", "45%", "50%"],
+      "correctIndex": 3,
+      "explanation": "माना income=100, expenditure=75, saving=25। नई income=120, नया expenditure=75×1.10=82.5, नई saving=120-82.5=37.5। वृद्धि = (37.5-25)/25×100 = 50%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q21",
+      "question": "एक संख्या का 30%, उसी संख्या के 20% से 50 अधिक है। वह संख्या ज्ञात करें।",
+      "options": ["500", "450", "550", "600"],
+      "correctIndex": 0,
+      "explanation": "माना संख्या x है, तो 0.30x - 0.20x = 50 => 0.10x = 50 => x = 500। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_percentage_q22",
+      "question": "दो संख्याएँ एक तीसरी संख्या से क्रमशः 20% और 50% अधिक हैं। पहली संख्या दूसरी संख्या का कितने percent है?",
+      "options": ["75%", "80%", "85%", "90%"],
+      "correctIndex": 1,
+      "explanation": "माना तीसरी संख्या x है, तो पहली = 1.20x और दूसरी = 1.50x। required percent = (1.20x/1.50x)×100 = 80%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q23",
+      "question": "एक village की current population 15000 है। यदि यह प्रतिवर्ष (per annum) 4% की दर से घटती है, तो 1 साल बाद population ज्ञात करें।",
+      "options": ["14000", "14200", "14400", "14600"],
+      "correctIndex": 2,
+      "explanation": "1 साल बाद population = 15000×0.96 = 14400। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q24",
+      "question": "एक दुकानदार अपने goods को cost price से 40% अधिक mark करता है और 10% का discount देता है। उसका gain percent ज्ञात करें।",
+      "options": ["20%", "24%", "25%", "26%"],
+      "correctIndex": 3,
+      "explanation": "माना CP=100, तो MP=140, discount 10% के बाद SP=140×0.90=126। gain = SP-CP = 26, gain% = 26%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q25",
+      "question": "यदि x, y का 150% है, तो y, x का कितने percent है?",
+      "options": ["66.67%", "60%", "70%", "75%"],
+      "correctIndex": 0,
+      "explanation": "x = 1.5y => y/x = 1/1.5 = 2/3 = 66.67%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q26",
+      "question": "एक exam में 72% students pass हुए। यदि 168 students fail हुए, तो कुल कितने students exam में बैठे?",
+      "options": ["560", "600", "640", "680"],
+      "correctIndex": 1,
+      "explanation": "fail% = 28%, इसलिए 0.28×total = 168 => total = 168/0.28 = 600। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q27",
+      "question": "एक संख्या को 30% बढ़ाने पर वह 260 हो जाती है। वह संख्या ज्ञात करें।",
+      "options": ["180", "190", "200", "210"],
+      "correctIndex": 2,
+      "explanation": "माना संख्या x है, तो 1.30x = 260 => x = 200। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_percentage_q28",
+      "question": "वह संख्या ज्ञात करें जिसका 20%, 160 के 25% के बराबर है।",
+      "options": ["150", "180", "190", "200"],
+      "correctIndex": 3,
+      "explanation": "160 का 25% = 40। माना संख्या x है, तो 0.20x = 40 => x = 200। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_percentage_q29",
+      "question": "A की income, B की income से 25% कम है। B की income, A की income से कितने percent अधिक है?",
+      "options": ["33.33%", "25%", "30%", "40%"],
+      "correctIndex": 0,
+      "explanation": "माना B=100, तो A=75। B, A से अधिक = (25/75)×100 = 33.33%। ध्यान दें base अलग होने के कारण यह 25% के बराबर नहीं है। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_percentage_q30",
+      "question": "एक article की price पहले 10% बढ़ाई गई, फिर 10% घटाई गई। यदि final price Rs. 495 है, तो original price ज्ञात करें।",
+      "options": ["490", "500", "505", "510"],
+      "correctIndex": 1,
+      "explanation": "net factor = 1.10×0.90 = 0.99। माना original price x है, तो 0.99x = 495 => x = 500। बाकी options इस equation को satisfy नहीं करते।"
+    }
+  ]
+}

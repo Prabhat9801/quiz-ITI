@@ -1,0 +1,368 @@
+{
+  "unit": "unit5",
+  "unitName": "SMD Soldering and De-soldering",
+  "topic": "pcb_repair_techniques",
+  "topicName": "PCB Repair Techniques - Damaged Track, Pad, Plated Through Hole, Solder Mask",
+  "questions": [
+    {
+      "id": "u5_pcb_repair_techniques_q1",
+      "question": "PCB पर एक copper track बीच में टूट जाए (broken track) तो सबसे common repair method क्या है?",
+      "options": [
+        "PCB को पूरी तरह फेंक देना",
+        "टूटे हुए track के दोनों सिरों को जोड़ते हुए एक thin copper wire या jumper wire soldering करना",
+        "उस track को paint से रंग देना",
+        "PCB को गर्म पानी में डुबोना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Broken track को repair करने के लिए दोनों टूटे सिरों के बीच एक पतली insulated copper jumper wire soldered की जाती है ताकि electrical continuity restore हो जाए। Option A economically अव्यवहारिक है, C और D electrical connection नहीं देते।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q2",
+      "question": "Track repair से पहले टूटी हुई track के दोनों सिरों को तैयार करने के लिए क्या किया जाता है?",
+      "options": [
+        "उन्हें scrape/clean करके oxide और solder mask हटाकर bare copper expose किया जाता है",
+        "उन पर paint की एक और layer चढ़ाई जाती है",
+        "उन्हें magnet से touch किया जाता है",
+        "कुछ भी तैयार करने की जरूरत नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Repair से पहले track के सिरों से solder mask और oxidation हटाकर bare, clean copper expose करना जरूरी है ताकि proper solder bonding हो सके। Options B, C, D bonding में मदद नहीं करते बल्कि प्रक्रिया में बाधा डालते हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q3",
+      "question": "यदि track का damage बहुत छोटा (hairline crack) है तो कौन-सी repair method उपयुक्त है?",
+      "options": [
+        "पूरे track को हटाकर नई track बिछाना",
+        "Conductive epoxy/silver-filled conductive paint से crack को bridge करना",
+        "Track को completely काट देना",
+        "PCB को पूरी तरह बदल देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "छोटे hairline crack के लिए conductive epoxy या silver conductive paint से crack को bridge करना पर्याप्त और economical solution है। Options A, C, D अनावश्यक रूप से बड़ा और महंगा approach हैं जो छोटे defect के लिए जरूरी नहीं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q4",
+      "question": "Lifted/damaged pad को repair करने की एक common technique क्या है?",
+      "options": [
+        "Pad वाली जगह पर नया copper foil pad epoxy adhesive से bond करके component lead को उससे solder करना",
+        "Component को बिना pad के हवा में लटकाकर solder करना",
+        "PCB को पूरी तरह जला देना",
+        "Pad की जगह प्लास्टिक टुकड़ा चिपकाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Lifted pad को repair करने के लिए एक नया copper foil pad, conductive/non-conductive epoxy से existing track से bond करके सही जगह पर लगाया जाता है, फिर component lead वहाँ solder होती है। Options B, C, D reliable electrical connection नहीं देते।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q5",
+      "question": "Pad lift होने का सबसे common कारण क्या होता है?",
+      "options": [
+        "PCB की उम्र बहुत ज्यादा होना",
+        "Excessive heat या mechanical force के साथ desoldering करना जिससे copper-to-laminate bond टूट जाता है",
+        "PCB का रंग हरा होना",
+        "Component का size छोटा होना"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक heat या जबरदस्ती खींचकर desoldering करने से copper pad और underlying laminate के बीच का adhesive bond टूट जाता है, जिससे pad lift हो जाता है। Options A, C, D pad lift का प्रत्यक्ष कारण नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q6",
+      "question": "Plated Through Hole (PTH) क्या होता है?",
+      "options": [
+        "PCB में drill किया गया hole जिसकी दीवार पर copper plating होती है ताकि दोनों layers electrically जुड़ें",
+        "एक hole जिसमें केवल mechanical mounting होती है, कोई electrical connection नहीं",
+        "PCB का decorative hole",
+        "एक hole जो केवल cooling के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Plated Through Hole में hole की internal wall पर copper plating होती है जो top और bottom (या multiple internal) layers के बीच electrical continuity प्रदान करती है। Options B, C, D PTH की मुख्य function को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q7",
+      "question": "PTH की copper plating अगर टूट जाए (broken barrel) तो इसका क्या effect होता है?",
+      "options": [
+        "PCB का रंग बदल जाता है",
+        "उस hole के through layers के बीच electrical continuity टूट जाती है, जिससे circuit open हो सकता है",
+        "PCB हल्का हो जाता है",
+        "कोई effect नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Broken PTH barrel के कारण layers के बीच connection टूट जाता है जिससे open circuit fault होता है, जो intermittent या permanent malfunction का कारण बन सकता है। Options A, C, D इसका सही प्रभाव नहीं बताते।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q8",
+      "question": "Damaged PTH को repair करने के लिए एक common तरीका क्या है?",
+      "options": [
+        "Hole में एक eyelet या rivet डालकर दोनों sides पर solder करना जिससे electrical path फिर से बने",
+        "Hole को पूरी तरह भर कर बंद कर देना",
+        "Hole के आसपास paint लगाना",
+        "PCB को हिला देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "PTH repair के लिए एक conductive eyelet (small metal tube/rivet) hole में डालकर दोनों तरफ soldered किया जाता है, जो layers के बीच electrical continuity फिर से स्थापित करता है। Options B, C, D electrical connection restore नहीं करते।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q9",
+      "question": "Multilayer PCB में internal layer के PTH connection को अगर eyelet से repair नहीं किया जा सकता, तो वैकल्पिक तरीका क्या है?",
+      "options": [
+        "External jumper wire से दोनों accessible layers को top/bottom से जोड़ना",
+        "PCB को हमेशा के लिए बेकार मान लेना, कोई solution नहीं",
+        "Hole को tape से ढक देना",
+        "Layer को हटा देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब internal layer तक physical access संभव न हो, तो top और bottom accessible points के बीच external jumper wire soldering से equivalent electrical path बनाया जाता है। Options B, C, D कोई functional repair प्रदान नहीं करते।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q10",
+      "question": "PTH repair से पहले hole के अंदर से पुराना solder और debris हटाने के लिए क्या इस्तेमाल किया जाता है?",
+      "options": [
+        "Desoldering pump/wick और drill bit से hole को साफ करना",
+        "Hole में पानी डालना",
+        "Hole को हथौड़े से पीटना",
+        "Hole में glue भर देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Desoldering pump, solder wick या fine drill bit से hole के अंदर से पुराना solder/debris साफ किया जाता है ताकि repair material properly bond कर सके। Options B, C, D hole को damage करेंगे या साफ नहीं करेंगे।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q11",
+      "question": "Solder mask (green/blue coating) क्षतिग्रस्त होने पर सबसे बड़ा risk क्या है?",
+      "options": [
+        "Exposed copper पर oxidation और नजदीकी tracks के बीच accidental solder bridging/short-circuit का खतरा",
+        "PCB हल्का हो जाना",
+        "PCB का temperature बढ़ जाना",
+        "PCB का आकार बदल जाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solder mask हटने से copper exposed होकर oxidize हो सकता है और आसपास की tracks के बीच accidental solder bridge बनने का खतरा बढ़ जाता है, जिससे short-circuit हो सकता है। Options B, C, D solder mask damage से संबंधित सही परिणाम नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q12",
+      "question": "Damaged solder mask को repair करने के लिए क्या इस्तेमाल किया जाता है?",
+      "options": [
+        "UV-curable solder mask repair pen/paint को damaged area पर apply करके UV light से cure करना",
+        "साधारण wall paint लगाना",
+        "Nail polish लगाना",
+        "Sticker चिपकाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solder mask repair pen/liquid जो UV-curable होती है, damaged area पर apply करके UV lamp से cure की जाती है, जो original solder mask जैसी insulating और protective properties देती है। Options B, C, D professional electronics repair के लिए उपयुक्त नहीं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q13",
+      "question": "Solder mask repair करने से पहले area को prepare करने में सबसे पहला step क्या है?",
+      "options": [
+        "Area को clean करके grease, flux residue और loose particles हटाना",
+        "सीधे बिना सफाई के coating लगा देना",
+        "Area को heat gun से बहुत ज्यादा गर्म करना",
+        "Area पर पानी डालना और छोड़ देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "अच्छी adhesion के लिए repair area को पहले IPA/solvent से साफ करना जरूरी है ताकि grease, dust और residue न रहे। Options B, C, D proper adhesion में बाधा डालते हैं और defect को बढ़ा सकते हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q14",
+      "question": "दो पास-पास की tracks अगर damage के कारण आपस में shorted हो जाएं, तो repair में सबसे पहले क्या किया जाता है?",
+      "options": [
+        "पूरे PCB को फेंक देना",
+        "Magnifier की सहायता से short का exact location पहचान कर वहाँ से excess copper/solder हटाकर isolation restore करना",
+        "पूरे PCB पर solder mask लगा देना बिना location पहचाने",
+        "Short को नज़रअंदाज़ करके circuit चालू कर देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Short को ठीक करने के लिए पहले magnification/continuity test से exact fault location पहचानना जरूरी है, फिर वहाँ से unwanted copper/solder हटाकर tracks के बीच isolation restore की जाती है। Options A, C, D प्रभावी या सुरक्षित repair नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q15",
+      "question": "Track repair में जम्पर वायर लगाते समय wire की length के बारे में सामान्य नियम क्या है?",
+      "options": [
+        "Wire जितनी लंबी हो उतना अच्छा",
+        "Wire को possible सबसे कम और सीधे रास्ते में रखना ताकि resistance और noise pickup कम रहे",
+        "Wire की length का कोई महत्व नहीं",
+        "Wire को हमेशा loop बनाकर लगाना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Jumper wire को छोटा और सीधा रखने से resistance, inductance और noise pickup कम होता है जिससे signal integrity बनी रहती है। Options A, C, D गलत practice हैं जो high-frequency circuits में समस्या पैदा कर सकते हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q16",
+      "question": "Multilayer PCB में internal track break होने पर सबसे reliable लेकिन costly repair method क्या है?",
+      "options": [
+        "Micro-drilling करके internal layer तक access बनाकर conductive filling/via repair करना",
+        "PCB को हमेशा के लिए बंद कर देना",
+        "PCB पर सिर्फ tape लगा देना",
+        "बाहरी तौर पर paint कर देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Internal layer break के लिए specialized micro-drilling और conductive via-fill technique से access बनाकर repair की जाती है, यह costly पर सबसे reliable method है, विशेषकर high-value boards के लिए। Options B, C, D functional repair प्रदान नहीं करते।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q17",
+      "question": "PCB pad repair के लिए इस्तेमाल होने वाला conductive epoxy किस स्थिति में पसंद किया जाता है?",
+      "options": [
+        "जब उच्च temperature soldering possible न हो या heat-sensitive area हो",
+        "जब हमेशा high current pass करना हो",
+        "जब component बहुत भारी हो",
+        "जब solder की कोई कमी न हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Conductive epoxy का उपयोग तब किया जाता है जब heat-sensitive components के पास soldering करना risky हो, क्योंकि epoxy बिना high temperature के cure हो जाती है। Options B, C, D इसके उपयोग का सही कारण नहीं बताते; high current applications के लिए traditional soldering ही बेहतर है।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q18",
+      "question": "Repair के बाद track/pad की continuity verify करने के लिए कौन-सा instrument इस्तेमाल होता है?",
+      "options": [
+        "Digital multimeter (continuity/resistance mode)",
+        "Thermometer",
+        "Barometer",
+        "Anemometer"
+      ],
+      "correctIndex": 0,
+      "explanation": "Repair के बाद multimeter के continuity या resistance mode से जांच की जाती है कि repaired path सही तरह conduct कर रहा है या नहीं। Options B, C, D तापमान, वायुदाब और हवा की गति मापने के instruments हैं, electrical continuity के लिए नहीं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q19",
+      "question": "PTH repair में eyelet डालने के बाद उसे PCB से securely जोड़ने के लिए क्या किया जाता है?",
+      "options": [
+        "Eyelet के दोनों ends को PCB pad से solder किया जाता है",
+        "Eyelet को केवल हाथ से दबाकर छोड़ दिया जाता है",
+        "Eyelet पर पानी डाला जाता है",
+        "Eyelet को magnet से चिपका दिया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Eyelet को insert करने के बाद उसके दोनों flanged ends को top और bottom pad से solder किया जाता है ताकि mechanical strength और electrical connection दोनों सुनिश्चित हों। Options B, C, D reliable connection नहीं बनाते।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q20",
+      "question": "एक badly damaged pad जहाँ कोई copper trace शेष नहीं बचा, वहाँ component को दोबारा functional connection देने के लिए क्या approach अपनाया जाता है?",
+      "options": [
+        "Nearby test point या via से fine jumper wire को directly component lead तक solder करना",
+        "उस component को बिना connection के छोड़ देना",
+        "Component को पूरी तरह हटाकर उसकी जगह खाली छोड़ देना",
+        "Component के ऊपर tape लगाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब pad पूरी तरह destroy हो जाए, तो nearby accessible point (via, test point, या दूसरे component का terminal) से fine jumper wire बना कर connection restore की जाती है। Options B, C, D circuit को incomplete/non-functional छोड़ते हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q21",
+      "question": "Repair किए गए track/pad के ऊपर protective coating लगाने का क्या फायदा है?",
+      "options": [
+        "इससे repair area moisture, dust और mechanical damage से सुरक्षित रहता है",
+        "इससे PCB का color स्थायी रूप से बदल जाता है",
+        "इससे electrical resistance बढ़ जाता है",
+        "इससे कोई फायदा नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Repair के बाद protective coating (solder mask repair pen, conformal coating) लगाने से वह area environmental factors और accidental physical damage से सुरक्षित रहता है, जिससे repair की longevity बढ़ती है। Options B, C, D गलत/असंबंधित परिणाम हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q22",
+      "question": "PCB track repair में अगर jumper wire का diameter मूल track की current carrying capacity से कम हो तो क्या हो सकता है?",
+      "options": [
+        "कोई फर्क नहीं पड़ेगा",
+        "Overheating होकर wire जल सकती है या insufficient current pass होगा, जिससे circuit malfunction हो सकता है",
+        "PCB का वजन कम हो जाएगा",
+        "Track automatically मोटी हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "अगर jumper wire का gauge जरूरी current rating से पतला हो, तो वह overheat होकर जल सकती है या voltage drop/malfunction का कारण बन सकती है, इसलिए wire gauge को original track की current capacity के अनुसार select करना जरूरी है। Options A, C, D गलत परिणाम हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q23",
+      "question": "Fine-pitch SMD pad के पास अगर आसपास का solder mask भी हट गया हो, तो repair में क्रम (sequence) क्या होना चाहिए?",
+      "options": [
+        "पहले pad/track repair करना, फिर solder mask repair करके insulation restore करना",
+        "पहले solder mask लगाकर फिर pad access बंद कर देना",
+        "दोनों साथ में बिना किसी क्रम के करना",
+        "क्रम का कोई महत्व नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "पहले electrical repair (track/pad) पूरी करके functionality verify की जाती है, फिर उसके ऊपर solder mask repair से insulation restore की जाती है। गलत क्रम अपनाने पर mask दोबारा हटाना पड़ेगा या access मुश्किल होगा, जो Options B, C, D में सही तरीके से नहीं समझाया गया।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q24",
+      "question": "Broken PTH को repair करते समय अगर eyelet उपलब्ध न हो, तो एक वैकल्पिक तरीका क्या है?",
+      "options": [
+        "Fine tinned copper wire को hole के through डालकर दोनों ends solder करना",
+        "Hole को permanently बंद कर देना",
+        "Hole के आसपास सिर्फ tape लगाना",
+        "PCB को गीला छोड़ देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Eyelet न होने पर एक fine tinned copper wire को hole से through करके दोनों तरफ soldered किया जा सकता है, जो electrical continuity restore कर देता है। Options B, C, D functional electrical repair प्रदान नहीं करते।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q25",
+      "question": "PCB repair के दौरान excessive drilling या scraping से track के आसपास fiberglass substrate को नुकसान क्यों नहीं पहुँचाना चाहिए?",
+      "options": [
+        "क्योंकि इससे PCB की mechanical strength और insulation properties कमजोर हो सकती हैं",
+        "क्योंकि fiberglass का रंग बदल जाता है",
+        "क्योंकि इससे PCB हल्का हो जाता है जो फायदेमंद है",
+        "कोई कारण नहीं है, कितना भी scrape करें फर्क नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "अत्यधिक scraping/drilling से PCB के base substrate (FR4 fiberglass) की mechanical integrity और insulation resistance कमजोर हो सकती है, जिससे board की reliability घटती है। Options B, C, D गलत या irrelevant परिणाम बताते हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q26",
+      "question": "Solder mask repair के बाद curing के लिए UV light exposure का समय क्यों महत्वपूर्ण है?",
+      "options": [
+        "कम या अधिक cure time से coating properly hard नहीं होगी या brittle हो सकती है",
+        "UV light से PCB का color हमेशा के लिए काला हो जाता है",
+        "UV light exposure time का कोई महत्व नहीं",
+        "अधिक समय देने से coating हमेशा पिघल जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Manufacturer-specified cure time का पालन जरूरी है — कम curing से coating soft/incomplete रहेगी, अधिक/गलत exposure से brittle होकर crack कर सकती है। Options B, C, D coating curing के actual behaviour को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q27",
+      "question": "Repaired PCB को production में वापस भेजने से पहले किस प्रकार का final test किया जाता है?",
+      "options": [
+        "Functional test और visual/continuity inspection दोनों करके यह सुनिश्चित करना कि repair सही काम कर रहा है",
+        "केवल PCB को देखकर पास कर देना",
+        "PCB को बिना जांचे भेज देना",
+        "केवल coating का रंग check करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Repair के बाद functional test (circuit को actually operate करके देखना) के साथ visual और continuity inspection करना जरूरी है ताकि repair पूरी तरह reliable हो। Options B, C, D quality assurance के लिए अपर्याप्त हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q28",
+      "question": "PCB track repair के दौरान 'through-hole via repair' और 'surface track repair' में मुख्य अंतर क्या है?",
+      "options": [
+        "Via repair layers के बीच vertical connection ठीक करता है, जबकि track repair surface पर horizontal path ठीक करता है",
+        "दोनों बिल्कुल एक जैसे होते हैं",
+        "Via repair केवल decoration के लिए है",
+        "Track repair केवल multilayer PCB में होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Via/PTH repair अलग-अलग layers के बीच vertical electrical connectivity को restore करता है, जबकि track repair एक ही layer की surface पर horizontal conductive path को ठीक करता है — दोनों की scope अलग है। Options B, C, D गलत generalisation हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q29",
+      "question": "PCB repair में इस्तेमाल होने वाला 'test point' किस काम आता है?",
+      "options": [
+        "यह एक accessible pad होता है जहाँ से multimeter/probe लगाकर signal या continuity चेक की जा सकती है",
+        "यह केवल decorative marking है",
+        "यह PCB का weight बढ़ाने के लिए है",
+        "इसका कोई electrical उपयोग नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Test point एक accessible exposed pad होता है जो troubleshooting और repair के दौरान signal measurement या continuity check के लिए probe access देता है। Options B, C, D test point के वास्तविक उपयोग को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pcb_repair_techniques_q30",
+      "question": "बहुत छोटे fine-pitch tracks पर repair करते समय soldering iron tip का size कैसा चुना जाता है?",
+      "options": [
+        "जितना बड़ा tip हो उतना अच्छा, size का कोई महत्व नहीं",
+        "Fine/micro tip चुना जाता है ताकि adjacent tracks पर accidental bridging या heat damage न हो",
+        "Flat wide chisel tip हमेशा इस्तेमाल होता है चाहे pitch कुछ भी हो",
+        "Tip size का track repair से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fine-pitch tracks के लिए fine/micro soldering tip उपयुक्त होता है जिससे precise heat application हो और आसपास की tracks पर bridging या thermal damage का खतरा कम रहे। Options A, C, D गलत practice हैं जो fine-pitch repair में defects पैदा कर सकते हैं।"
+    }
+  ]
+}

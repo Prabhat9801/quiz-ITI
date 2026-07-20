@@ -1,0 +1,218 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "pressure",
+  "topicName": "Pressure",
+  "questions": [
+    {
+      "id": "phy_pressure_q1",
+      "question": "Pressure को force और area के संबंध में कैसे परिभाषित किया जाता है?",
+      "options": ["Pressure = Force / Area", "Pressure = Force × Area", "Pressure = Area / Force", "Pressure = Force + Area"],
+      "correctIndex": 0,
+      "explanation": "Pressure = Force/Area (P = F/A) होता है। Force × Area गलत dimension देता है; Area/Force pressure का reciprocal (जैसे compressibility) जैसा है; Force + Area dimensionally असंगत (inconsistent) है।"
+    },
+    {
+      "id": "phy_pressure_q2",
+      "question": "Pressure का SI unit क्या है और यह किसके बराबर होता है?",
+      "options": ["Newton, जो kg·m/s^2 के बराबर है", "Pascal (Pa), जो N/m^2 के बराबर है", "Joule, जो N·m के बराबर है", "Watt, जो J/s के बराबर है"],
+      "correctIndex": 1,
+      "explanation": "Pressure का SI unit Pascal (Pa) है जो N/m^2 के बराबर होता है। Newton force की unit है; Joule energy/work की unit है; Watt power की unit है।"
+    },
+    {
+      "id": "phy_pressure_q3",
+      "question": "मानक atmospheric pressure (1 atm) का मान Pascal में लगभग कितना होता है?",
+      "options": ["1.013 × 10^3 Pa", "760 Pa", "1.013 × 10^5 Pa", "1.013 × 10^7 Pa"],
+      "correctIndex": 2,
+      "explanation": "1 atm ≈ 1.013 × 10^5 Pa (101325 Pa) होता है। 10^3 Pa बहुत कम मान है; 760 तो mmHg में मान है, Pa में नहीं; 10^7 Pa बहुत ज्यादा है।"
+    },
+    {
+      "id": "phy_pressure_q4",
+      "question": "Pascal's law के अनुसार किसी confined fluid पर लगाया गया external pressure कैसे transmit होता है?",
+      "options": ["केवल fluid की सतह (surface) पर", "केवल container की दीवारों पर", "केवल fluid के नीचे वाले हिस्से में", "पूरे fluid में हर दिशा में समान रूप से बिना कमी के"],
+      "correctIndex": 3,
+      "explanation": "Pascal's law कहता है कि confined fluid में लगाया गया pressure बिना किसी कमी के हर दिशा में समान रूप से transmit होता है। केवल surface, केवल walls या केवल नीचे तक सीमित रहना law के विपरीत है।"
+    },
+    {
+      "id": "phy_pressure_q5",
+      "question": "Hydraulic press/lift किस principle पर काम करती है?",
+      "options": ["Pascal's law", "Bernoulli's theorem", "Archimedes' principle", "Newton's third law"],
+      "correctIndex": 0,
+      "explanation": "Hydraulic press Pascal's law पर आधारित है जिसमें छोटे piston पर लगाया गया force बड़े piston पर बड़ा force उत्पन्न करता है। Bernoulli's theorem flowing fluids की energy से, Archimedes' principle buoyancy से, और Newton's third law action-reaction से संबंधित है।"
+    },
+    {
+      "id": "phy_pressure_q6",
+      "question": "यदि किसी surface पर 50 N का force 0.5 m^2 के area पर लगाया जाए, तो उस पर pressure कितना होगा?",
+      "options": ["25 Pa", "100 Pa", "10 Pa", "250 Pa"],
+      "correctIndex": 1,
+      "explanation": "P = F/A = 50/0.5 = 100 Pa होता है। 25 Pa, 10 Pa और 250 Pa गलत division/multiplication से आते हैं।"
+    },
+    {
+      "id": "phy_pressure_q7",
+      "question": "किसी liquid के अंदर एक बिंदु पर pressure (P = ρgh) में h क्या दर्शाता है?",
+      "options": ["Liquid का density", "container का total volume", "बिंदु की liquid की सतह से गहराई (depth)", "liquid का temperature"],
+      "correctIndex": 2,
+      "explanation": "सूत्र P = ρgh में h उस बिंदु की liquid की free surface से गहराई (depth) है। ρ density है इसलिए density को h नहीं कह सकते; volume और temperature इस formula में सीधे शामिल नहीं हैं।"
+    },
+    {
+      "id": "phy_pressure_q8",
+      "question": "किसी liquid में गहराई (depth) बढ़ने पर pressure कैसे बदलता है?",
+      "options": ["घटता है", "समान रहता है", "पहले बढ़ता फिर घटता है", "बढ़ता है"],
+      "correctIndex": 3,
+      "explanation": "P = ρgh के अनुसार depth h बढ़ने पर pressure directly proportional होकर बढ़ता है। घटना, समान रहना या पहले बढ़कर घटना इस linear relationship के विपरीत है।"
+    },
+    {
+      "id": "phy_pressure_q9",
+      "question": "एक जैसे liquid से भरे अलग-अलग shape के दो containers में समान depth पर pressure के बारे में क्या सत्य है?",
+      "options": ["दोनों में pressure समान होगा (shape पर निर्भर नहीं)", "container के shape पर निर्भर करता है", "चौड़े container में pressure अधिक होगा", "संकरे container में pressure अधिक होगा"],
+      "correctIndex": 0,
+      "explanation": "P = ρgh केवल density, g और depth पर निर्भर करता है, container के shape पर नहीं; इसलिए समान depth पर pressure बराबर रहता है। बाकी तीनों options shape को गलत तरीके से प्रभावी मानते हैं।"
+    },
+    {
+      "id": "phy_pressure_q10",
+      "question": "Atmospheric pressure मापने के लिए किस instrument का प्रयोग किया जाता है?",
+      "options": ["Manometer", "Barometer", "Ammeter", "Thermometer"],
+      "correctIndex": 1,
+      "explanation": "Barometer का उपयोग atmospheric pressure मापने के लिए होता है। Manometer gas/fluid के pressure difference मापता है, Ammeter current मापता है, और Thermometer temperature मापता है।"
+    },
+    {
+      "id": "phy_pressure_q11",
+      "question": "Manometer का मुख्य उपयोग किसलिए किया जाता है?",
+      "options": ["Temperature मापने के लिए", "Current मापने के लिए", "किसी gas या fluid के pressure (या pressure difference) मापने के लिए", "Density मापने के लिए"],
+      "correctIndex": 2,
+      "explanation": "Manometer किसी gas/fluid के pressure या दो बिंदुओं के बीच pressure difference मापने के काम आता है। Temperature, current और density मापने के लिए क्रमशः thermometer, ammeter और hydrometer उपयोग होते हैं।"
+    },
+    {
+      "id": "phy_pressure_q12",
+      "question": "समुद्र तल (sea level) पर standard atmospheric pressure mmHg में लगभग कितना होता है?",
+      "options": ["76 mmHg", "7600 mmHg", "7.6 mmHg", "760 mmHg"],
+      "correctIndex": 3,
+      "explanation": "Standard atmospheric pressure लगभग 760 mmHg के बराबर होता है (जो 1 atm ≈ 1.013×10^5 Pa के तुल्य है)। 76, 7600 और 7.6 दशमलव स्थान (decimal placement) की गलती से आते हैं।"
+    },
+    {
+      "id": "phy_pressure_q13",
+      "question": "Gauge pressure को absolute pressure और atmospheric pressure के संबंध में कैसे दर्शाया जाता है?",
+      "options": ["Gauge pressure = Absolute pressure − Atmospheric pressure", "Gauge pressure = Absolute pressure + Atmospheric pressure", "Gauge pressure = Atmospheric pressure − Absolute pressure", "Gauge pressure = Absolute pressure × Atmospheric pressure"],
+      "correctIndex": 0,
+      "explanation": "Gauge pressure = Absolute pressure − Atmospheric pressure होता है, यह वह pressure है जो atmosphere के ऊपर अतिरिक्त होता है। जोड़ना, उलटा घटाना या गुणा करना actual definition से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_pressure_q14",
+      "question": "Absolute pressure को gauge pressure और atmospheric pressure से कैसे प्राप्त किया जाता है?",
+      "options": ["Absolute pressure = Gauge pressure − Atmospheric pressure", "Absolute pressure = Gauge pressure + Atmospheric pressure", "Absolute pressure = Gauge pressure / Atmospheric pressure", "Absolute pressure = Atmospheric pressure / Gauge pressure"],
+      "correctIndex": 1,
+      "explanation": "Absolute pressure = Gauge pressure + Atmospheric pressure होता है, अर्थात vacuum को reference मानकर कुल pressure। घटाना, भाग देना या उल्टा भाग देना गलत सूत्र हैं।"
+    },
+    {
+      "id": "phy_pressure_q15",
+      "question": "Vacuum pressure किस स्थिति को दर्शाता है?",
+      "options": ["Pressure atmospheric pressure से अधिक होना", "Pressure बिल्कुल atmospheric pressure के बराबर होना", "Pressure atmospheric pressure से कम होना (negative gauge pressure)", "Pressure का शून्य से अनंत तक जाना"],
+      "correctIndex": 2,
+      "explanation": "Vacuum pressure तब कहा जाता है जब absolute pressure atmospheric pressure से कम हो, यानी gauge pressure negative होता है। Pressure का अधिक होना अलग स्थिति है, बराबर होना zero gauge pressure है, और चौथा option अस्पष्ट कथन है।"
+    },
+    {
+      "id": "phy_pressure_q16",
+      "question": "1 bar, Pascal में कितने के बराबर होता है?",
+      "options": ["10 Pa", "100 Pa", "10^3 Pa", "10^5 Pa"],
+      "correctIndex": 3,
+      "explanation": "1 bar = 10^5 Pa होता है, जो लगभग 1 atm के करीब है। 10, 100 और 10^3 Pa बहुत छोटे मान हैं जो bar की वास्तविक magnitude से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_pressure_q17",
+      "question": "1 Torr लगभग किसके बराबर माना जाता है?",
+      "options": ["1 mmHg", "1 Pascal", "1 atm", "1 bar"],
+      "correctIndex": 0,
+      "explanation": "1 Torr को लगभग 1 mmHg के बराबर माना जाता है (मूल रूप से mercury barometer से परिभाषित)। यह Pascal, atm या bar के सीधे बराबर नहीं है, ये बहुत बड़ी units हैं।"
+    },
+    {
+      "id": "phy_pressure_q18",
+      "question": "पानी (density = 1000 kg/m^3) से भरे एक tank में 10 m गहराई पर liquid column के कारण pressure (g = 9.8 m/s^2 लेते हुए) कितना होगा?",
+      "options": ["980 Pa", "98000 Pa", "9800 Pa", "9,80,000 Pa"],
+      "correctIndex": 1,
+      "explanation": "P = ρgh = 1000 × 9.8 × 10 = 98000 Pa होता है। बाकी options में 10 की power के हिसाब से decimal की गलती है।"
+    },
+    {
+      "id": "phy_pressure_q19",
+      "question": "किसी खुले tank में द्रव की सतह से h गहराई पर कुल (total) pressure के लिए सही सूत्र कौन-सा है?",
+      "options": ["P_total = ρgh", "P_total = P_atm − ρgh", "P_total = P_atm + ρgh", "P_total = P_atm × ρgh"],
+      "correctIndex": 2,
+      "explanation": "खुले tank में सतह पर atmospheric pressure काम करता है, इसलिए गहराई h पर कुल pressure P_total = P_atm + ρgh होता है। केवल ρgh liquid के कारण pressure है, कुल नहीं; घटाना या गुणा करना गलत है।"
+    },
+    {
+      "id": "phy_pressure_q20",
+      "question": "एक hydraulic lift में छोटे piston का area 10 cm^2 है जिस पर 20 N का force लगाया जाता है। यदि बड़े piston का area 100 cm^2 है, तो बड़े piston पर कितना force प्राप्त होगा (Pascal's law के अनुसार)?",
+      "options": ["2 N", "20 N", "2000 N", "200 N"],
+      "correctIndex": 3,
+      "explanation": "Pascal's law से F1/A1 = F2/A2, इसलिए F2 = F1 × (A2/A1) = 20 × (100/10) = 200 N। 2 N ratio उल्टा लेने से आता है, 20 N बिना scaling के same रखने से, और 2000 N extra zero जोड़ने की गलती से आता है।"
+    },
+    {
+      "id": "phy_pressure_q21",
+      "question": "बड़े dams को नीचे की तरफ (base पर) ऊपर से अधिक मोटा (thicker) क्यों बनाया जाता है?",
+      "options": ["क्योंकि गहराई बढ़ने पर पानी का pressure बढ़ता है, इसलिए नीचे अधिक strength चाहिए", "सिर्फ अच्छा दिखने के लिए", "क्योंकि ऊपर की तरफ पानी अधिक होता है", "dam की height कम करने के लिए"],
+      "correctIndex": 0,
+      "explanation": "गहराई बढ़ने के साथ pressure (P=ρgh) बढ़ता है, इसलिए dam के base पर पानी का pressure सबसे अधिक होता है और वहाँ अधिक मोटाई/strength चाहिए। सौंदर्य, ऊपर अधिक पानी होना, या height कम करना इसका सही कारण नहीं है।"
+    },
+    {
+      "id": "phy_pressure_q22",
+      "question": "Blood pressure को सामान्यतः किस unit में मापा जाता है?",
+      "options": ["Pascal (Pa)", "mmHg", "Newton (N)", "Bar"],
+      "correctIndex": 1,
+      "explanation": "Blood pressure को परंपरागत रूप से mmHg (millimetre of mercury) में मापा जाता है, जैसे 120/80 mmHg। Pascal SI unit है पर medically प्रचलित नहीं, Newton force की unit है और Bar इंडस्ट्रियल pressure में अधिक प्रयुक्त होता है।"
+    },
+    {
+      "id": "phy_pressure_q23",
+      "question": "Solid द्वारा लगाया गया pressure और fluid द्वारा लगाया गया pressure में मुख्य अंतर क्या है?",
+      "options": ["Solid pressure हर दिशा में समान रूप से transmit होता है, fluid का नहीं", "दोनों में कोई अंतर नहीं है", "Fluid pressure किसी point पर सभी दिशाओं में समान रूप से कार्य करता है, जबकि solid का pressure केवल applied direction में होता है", "Solid कभी pressure नहीं लगाता"],
+      "correctIndex": 2,
+      "explanation": "Fluids अपने particles की गतिशीलता के कारण किसी point पर pressure को सभी दिशाओं में समान रूप से transmit करते हैं, जबकि solid में force केवल जिस दिशा में लगाया जाता है उसी दिशा में कार्य करता है। पहला option उल्टा है; दूसरा और चौथा तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "phy_pressure_q24",
+      "question": "Boyle's law के अनुसार स्थिर temperature पर किसी गैस के pressure (P) और volume (V) के बीच क्या संबंध होता है?",
+      "options": ["P और V directly proportional होते हैं", "P, V के square के proportional होता है", "P और V के बीच कोई संबंध नहीं होता", "P और V inversely proportional होते हैं (P·V = constant)"],
+      "correctIndex": 3,
+      "explanation": "Boyle's law के अनुसार स्थिर temperature पर P·V = constant होता है, अर्थात pressure और volume inversely proportional होते हैं (volume घटने पर pressure बढ़ता है)। Directly proportional, square संबंध, या कोई संबंध न होना — ये Boyle's law के कथन से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_pressure_q25",
+      "question": "एक तेज (sharp) नोक वाली कील (nail) कुंद (blunt) कील की तुलना में सतह में आसानी से क्यों घुस जाती है, जबकि लगाया गया force समान हो?",
+      "options": ["Sharp nail का contact area कम होने से (P=F/A) pressure अधिक होता है", "Sharp nail का area अधिक होने से pressure अधिक होता है", "Sharp nail हल्की होती है", "Blunt nail में अधिक force लगता है"],
+      "correctIndex": 0,
+      "explanation": "P=F/A होने के कारण समान force पर जब contact area कम होता है (जैसे sharp nail की नोक) तो pressure बहुत अधिक हो जाता है, जिससे वह आसानी से घुस जाती है। दूसरा विकल्प area को उल्टा बताता है; weight और force की तुलना असंगत कारण हैं।"
+    },
+    {
+      "id": "phy_pressure_q26",
+      "question": "Pascal (Pa) को basic SI units में expand करने पर यह किसके बराबर होता है?",
+      "options": ["kg·m/s^2", "kg/(m·s^2)", "kg·m^2/s^2", "kg·m/s"],
+      "correctIndex": 1,
+      "explanation": "Pa = N/m^2 = (kg·m/s^2)/m^2 = kg/(m·s^2) होता है। पहला विकल्प Newton (force) की unit है, तीसरा Joule (energy) की unit है, और चौथा momentum जैसी dimension है, ये pressure के बराबर नहीं हैं।"
+    },
+    {
+      "id": "phy_pressure_q27",
+      "question": "Blood pressure मापने वाले उपकरण का सामान्य नाम क्या है?",
+      "options": ["Barometer", "Anemometer", "Sphygmomanometer", "Hygrometer"],
+      "correctIndex": 2,
+      "explanation": "Blood pressure मापने के उपकरण को Sphygmomanometer कहा जाता है। Barometer atmospheric pressure, Anemometer हवा की speed, और Hygrometer humidity मापने के लिए उपयोग होते हैं।"
+    },
+    {
+      "id": "phy_pressure_q28",
+      "question": "Pressure cooker में खाना जल्दी क्यों पकता है?",
+      "options": ["क्योंकि अंदर pressure घटने से पानी जल्दी उबलता है", "क्योंकि cooker की धातु heat को तेजी से absorb करती है", "क्योंकि cooker के अंदर vacuum बन जाता है", "क्योंकि अंदर pressure बढ़ने से पानी का boiling point बढ़ जाता है और खाना अधिक temperature पर पकता है"],
+      "correctIndex": 3,
+      "explanation": "Pressure cooker के sealed होने से अंदर steam pressure बढ़ता है, जिससे पानी का boiling point 100°C से अधिक हो जाता है और खाना उच्च temperature पर जल्दी पकता है। pressure घटने या vacuum बनने की बात गलत है, और metal का heat absorption मुख्य कारण नहीं है।"
+    },
+    {
+      "id": "phy_pressure_q29",
+      "question": "Syringe से fluid खींचते समय (piston पीछे खींचने पर) fluid syringe के अंदर क्यों आता है?",
+      "options": ["Syringe के अंदर pressure बाहर की तुलना में कम हो जाता है, इसलिए बाहरी (higher) pressure fluid को अंदर धकेलता है", "Syringe के अंदर pressure बाहर की तुलना में अधिक हो जाता है", "Fluid खुद ही ऊपर आ जाता है gravity के कारण", "Syringe के अंदर temperature बढ़ जाता है"],
+      "correctIndex": 0,
+      "explanation": "Piston पीछे खींचने पर syringe के अंदर का pressure कम हो जाता है, जिससे बाहर का अपेक्षाकृत अधिक pressure, fluid को अंदर धकेल देता है। दूसरा विकल्प उल्टा है, gravity और temperature इसमें मुख्य भूमिका नहीं निभाते।"
+    },
+    {
+      "id": "phy_pressure_q30",
+      "question": "2 m^2 के area पर 200 Pa का pressure उत्पन्न करने के लिए कितना force आवश्यक होगा?",
+      "options": ["100 N", "400 N", "800 N", "40 N"],
+      "correctIndex": 1,
+      "explanation": "F = P × A = 200 × 2 = 400 N होता है। 100 N गलत दिशा में भाग करने से, 800 N और 40 N गलत multiplication/division से प्राप्त होते हैं।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "registers_sfr_8051",
+  "topicName": "8051 Register Banks & SFRs",
+  "questions": [
+    {
+      "id": "u2_registers_sfr_8051_q1",
+      "question": "8051 microcontroller के internal RAM में कुल कितने register banks उपलब्ध होते हैं?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "8051 में कुल 4 register banks (Bank 0 से Bank 3) होते हैं, प्रत्येक में R0-R7 registers होते हैं, इसलिए option C सही है। 2 या 3 banks मानक संख्या नहीं है, और 8 banks 8051 में नहीं होते।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q2",
+      "question": "प्रत्येक register bank में कितने general-purpose registers (R0-R7) होते हैं?",
+      "options": [
+        "4",
+        "6",
+        "16",
+        "8"
+      ],
+      "correctIndex": 3,
+      "explanation": "प्रत्येक bank में 8 registers (R0 से R7) होते हैं, इसलिए option D सही है। 4, 6 या 16 registers प्रति bank standard संरचना नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q3",
+      "question": "Register Bank 0 (RB0) internal RAM की किस address range में स्थित होता है?",
+      "options": [
+        "00H से 07H",
+        "08H से 0FH",
+        "10H से 17H",
+        "18H से 1FH"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bank 0, addresses 00H से 07H पर स्थित होता है, इसलिए option A सही है। 08H-0FH Bank 1, 10H-17H Bank 2 और 18H-1FH Bank 3 की range है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q4",
+      "question": "Register Bank 3 (RB3) internal RAM की किस address range में स्थित होता है?",
+      "options": [
+        "00H से 07H",
+        "08H से 0FH",
+        "10H से 17H",
+        "18H से 1FH"
+      ],
+      "correctIndex": 3,
+      "explanation": "Bank 3, addresses 18H से 1FH पर स्थित होता है, इसलिए option D सही है। 00H-07H Bank 0, 08H-0FH Bank 1 और 10H-17H Bank 2 की range है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q5",
+      "question": "PSW (Program Status Word) register में कौन-से दो bits मिलकर यह तय करते हैं कि इस समय कौन-सा register bank active है?",
+      "options": [
+        "CY और AC",
+        "RS1 और RS0",
+        "OV और P",
+        "F0 और CY"
+      ],
+      "correctIndex": 1,
+      "explanation": "PSW के RS1 और RS0 bits मिलकर active register bank (Bank 0-3) select करते हैं, इसलिए option B सही है। CY, AC, OV, P और F0 अन्य status/user-flag bits हैं, वे bank selection नहीं करते।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q6",
+      "question": "यदि PSW में RS1=1 और RS0=0 सेट किया जाए, तो कौन-सा register bank active होगा?",
+      "options": [
+        "Bank 0",
+        "Bank 1",
+        "Bank 2",
+        "Bank 3"
+      ],
+      "correctIndex": 2,
+      "explanation": "RS1RS0 = 10 पर Bank 2 select होता है (00→Bank0, 01→Bank1, 10→Bank2, 11→Bank3), इसलिए option C सही है। Bank 0, Bank 1 और Bank 3 अन्य RS1RS0 combinations से चुने जाते हैं।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q7",
+      "question": "PSW register में CY (Carry) flag कब set होता है?",
+      "options": [
+        "arithmetic operation में bit 7 से carry/borrow generate होने पर",
+        "केवल reset के समय",
+        "केवल serial data भेजते समय",
+        "केवल timer overflow पर"
+      ],
+      "correctIndex": 0,
+      "explanation": "CY flag तब set होता है जब किसी addition में bit 7 से carry निकलता है या subtraction में borrow आता है, इसलिए option A सही है। Reset, serial transmission या timer overflow से CY का सीधा संबंध नहीं है (उनके लिए अलग flags/bits होते हैं)।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q8",
+      "question": "PSW register में AC (Auxiliary Carry) flag का प्रयोग मुख्यतः किसके लिए होता है?",
+      "options": [
+        "external interrupt पहचानने के लिए",
+        "BCD (Binary Coded Decimal) arithmetic में lower nibble से carry track करने के लिए",
+        "serial baud rate set करने के लिए",
+        "register bank select करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "AC flag तब set होता है जब bit 3 से bit 4 की ओर carry जाता है, जो मुख्यतः BCD adjust (DA A) जैसे operations में उपयोगी है, इसलिए option B सही है। external interrupt, baud rate या bank selection से AC का संबंध नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q9",
+      "question": "PSW register का P (Parity) bit किस बात को दर्शाता है?",
+      "options": [
+        "Accumulator में 1s की संख्या odd है या even, इसके आधार पर parity",
+        "power supply की polarity",
+        "PSEN pin की स्थिति",
+        "program memory का size"
+      ],
+      "correctIndex": 0,
+      "explanation": "P bit hardware द्वारा automatically set/clear होता है ताकि Accumulator में logic-1 bits की संख्या odd parity बनाए रखे (error-checking में उपयोगी), इसलिए option A सही है। यह power polarity, PSEN या program memory size से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q10",
+      "question": "8051 में 'B' register का सबसे सामान्य उपयोग किस instruction में होता है?",
+      "options": [
+        "केवल JUMP instructions में",
+        "केवल interrupt handling में",
+        "MUL AB और DIV AB जैसे multiply/divide operations में",
+        "केवल stack push में"
+      ],
+      "correctIndex": 2,
+      "explanation": "B register विशेष रूप से MUL AB (गुणा) और DIV AB (भाग) instructions में accumulator के साथ मिलकर प्रयोग होता है; अन्य समय यह general-purpose register की तरह भी उपयोग हो सकता है, इसलिए option C सही है। यह jump, interrupt handling या केवल stack push के लिए dedicated नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q11",
+      "question": "DPTR (Data Pointer) register की bit-width कितनी होती है और यह किन दो 8-bit registers से मिलकर बनता है?",
+      "options": [
+        "8-bit; केवल DPL से",
+        "16-bit; DPH और DPL से",
+        "32-bit; चार byte registers से",
+        "4-bit; केवल एक nibble से"
+      ],
+      "correctIndex": 1,
+      "explanation": "DPTR 16-bit register है जो DPH (उच्च byte) और DPL (निम्न byte) दो 8-bit registers से मिलकर बनता है, इसलिए option B सही है। यह न तो केवल 8-bit है, न 32-bit और न 4-bit।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q12",
+      "question": "DPTR register का मुख्य उपयोग किस उद्देश्य के लिए होता है?",
+      "options": [
+        "केवल interrupt priority सेट करने के लिए",
+        "केवल timer mode सेट करने के लिए",
+        "केवल serial baud rate generate करने के लिए",
+        "external data memory या program memory (MOVX/MOVC) को address करने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "DPTR मुख्यतः 16-bit address रखकर MOVX (external RAM access) और MOVC (lookup table access from ROM) instructions में प्रयोग होता है, इसलिए option D सही है। इसका interrupt priority, timer mode या baud rate generation से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q13",
+      "question": "8051 में Stack Pointer (SP) register की bit-width कितनी होती है?",
+      "options": [
+        "16-bit",
+        "8-bit",
+        "12-bit",
+        "32-bit"
+      ],
+      "correctIndex": 1,
+      "explanation": "SP एक 8-bit register है जो internal RAM में stack के top address को रखता है, इसलिए option B सही है। 16-bit, 12-bit या 32-bit चौड़ाई 8051 के SP के लिए नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q14",
+      "question": "8051 microcontroller में reset के बाद Stack Pointer (SP) का default (initial) मान क्या होता है?",
+      "options": [
+        "00H",
+        "07H",
+        "FFH",
+        "20H"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reset के बाद SP का default मान 07H होता है, जिससे पहला push register bank 1 (08H) से ऊपर होता है, इसलिए option B सही है। 00H, FFH या 20H मानक reset value नहीं हैं।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q15",
+      "question": "8051 में PUSH instruction execute होने पर SP (Stack Pointer) का व्यवहार कैसा होता है?",
+      "options": [
+        "SP को पहले decrement किया जाता है, फिर data store होता है",
+        "SP को पहले increment किया जाता है, फिर data store होता है",
+        "SP कभी नहीं बदलता",
+        "SP सीधे 00H हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "8051 में PUSH के दौरान पहले SP को increment किया जाता है और फिर उस नए address पर data store होता है, इसलिए option B सही है। यह decrement-पहले वाला नहीं है (यह x86 जैसे processors में common है), SP static नहीं रहता, और यह 00H पर reset नहीं होता।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q16",
+      "question": "TMOD (Timer Mode) register की एक प्रमुख विशेषता क्या है?",
+      "options": [
+        "यह bit-addressable SFR है",
+        "यह byte-addressable है (bit-addressable नहीं) और Timer 0 व Timer 1 दोनों के mode control bits रखता है",
+        "यह केवल serial port control करता है",
+        "यह केवल interrupt enable करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "TMOD एक byte-addressable (bit-addressable नहीं) SFR है जिसमें lower nibble Timer 0 और upper nibble Timer 1 के mode/gate/counter-timer select bits रखता है, इसलिए option B सही है। यह bit-addressable नहीं, और सीधे serial port या interrupt enable control नहीं करता (वे SCON/IE का कार्य है)।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q17",
+      "question": "TMOD register में GATE bit का कार्य क्या है?",
+      "options": [
+        "timer को external pin (INTx) के जरिए control करने की अनुमति देना",
+        "serial baud rate double करना",
+        "register bank select करना",
+        "power-down mode सेट करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "GATE bit=1 होने पर timer तभी चलता है जब TRx=1 हो और साथ ही corresponding external interrupt pin (INT0/INT1) भी HIGH हो, यानी external hardware से timer को gate किया जा सकता है, इसलिए option A सही है। बाकी विकल्प PCON/PSW के कार्य हैं, GATE bit के नहीं।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q18",
+      "question": "TMOD register में C/T bit का उद्देश्य क्या है?",
+      "options": [
+        "यह decide करता है कि timer, internal clock से timer मोड में या external pin pulses से counter मोड में चलेगा",
+        "यह serial data की parity सेट करता है",
+        "यह register bank select करता है",
+        "यह ALE signal generate करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "C/T bit=0 पर timer internal clock से 'timer' के रूप में और C/T=1 पर external pin (T0/T1) की pulses गिनकर 'counter' के रूप में कार्य करता है, इसलिए option A सही है। parity, bank select या ALE generation से इसका संबंध नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q19",
+      "question": "TCON (Timer Control) register के बारे में कौन-सा कथन सही है?",
+      "options": [
+        "यह byte-addressable है परंतु bit-addressable नहीं है",
+        "यह bit-addressable SFR है और इसमें TF0, TF1, TR0, TR1 जैसे bits होते हैं",
+        "यह केवल external memory access control करता है",
+        "यह केवल crystal frequency set करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "TCON bit-addressable SFR है जिसमें timer overflow flags (TF0, TF1), run control bits (TR0, TR1) और external interrupt edge/level bits (IE0, IE1, IT0, IT1) होते हैं, इसलिए option B सही है। यह external memory access या crystal frequency control नहीं करता।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q20",
+      "question": "TCON register में TR0 bit को सॉफ़्टवेयर से 1 करने का क्या परिणाम होता है?",
+      "options": [
+        "Timer 0 stop हो जाता है",
+        "Timer 0 start/run होने लगता है",
+        "Serial port reset हो जाता है",
+        "External interrupt disable हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "TR0=1 करने पर Timer 0 run करना शुरू कर देता है (bit clear करने पर रुक जाता है), इसलिए option B सही है। यह serial port reset या interrupt disable करने का कार्य नहीं करता, वह क्रमशः अन्य SFRs (SCON/IE) का कार्य है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q21",
+      "question": "TCON register में IT0 bit किसे control करता है?",
+      "options": [
+        "External Interrupt 0 (INT0) को edge-triggered या level-triggered mode में सेट करना",
+        "Timer 0 का overflow flag",
+        "Serial port का receive enable",
+        "Power-down mode enable"
+      ],
+      "correctIndex": 0,
+      "explanation": "IT0=1 पर INT0 falling-edge triggered और IT0=0 पर level-triggered (active-low level) माना जाता है, इसलिए option A सही है। Timer overflow flag TF0, receive enable REN (SCON) और power-down PD (PCON) अलग bits हैं।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q22",
+      "question": "SCON (Serial Control) register में SM0 और SM1 bits का उद्देश्य क्या है?",
+      "options": [
+        "Timer 2 का mode set करना",
+        "serial port का operating mode (mode 0 से mode 3) select करना",
+        "register bank select करना",
+        "watchdog timer enable करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "SM0 और SM1 मिलकर serial communication का mode (shift register, 8-bit UART variable baud, 9-bit UART fixed baud, 9-bit UART variable baud) चुनते हैं, इसलिए option B सही है। ये Timer 2 mode, register bank select या watchdog control से संबंधित नहीं हैं (8051 में मानक watchdog SFR भी नहीं होता)।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q23",
+      "question": "SCON register में REN bit को 1 करने का क्या प्रभाव होता है?",
+      "options": [
+        "Serial reception enable हो जाता है",
+        "Timer 1 reset हो जाता है",
+        "ALE signal disable हो जाता है",
+        "Accumulator clear हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "REN (Receive Enable) = 1 करने पर serial port receiver enable होकर incoming data accept करना शुरू करता है, इसलिए option A सही है। यह Timer 1, ALE या Accumulator से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q24",
+      "question": "SCON register में TI (Transmit Interrupt) flag किस समय set होता है?",
+      "options": [
+        "reset होने पर तुरंत",
+        "किसी byte की transmission पूरी होने पर",
+        "Timer 0 overflow पर",
+        "external interrupt आने पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "TI flag hardware द्वारा तब set किया जाता है जब एक byte की serial transmission पूरी हो जाती है, और इसे software से clear करना पड़ता है, इसलिए option B सही है। यह reset पर automatic set नहीं होता, और Timer 0 overflow या external interrupt से इसका कोई सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q25",
+      "question": "PCON (Power Control) register की एक प्रमुख विशेषता क्या है?",
+      "options": [
+        "यह bit-addressable SFR है",
+        "यह byte-addressable है (bit-addressable नहीं) और इसमें SMOD, power-down (PD), idle (IDL) जैसे bits होते हैं",
+        "यह केवल Timer 2 control करता है",
+        "यह केवल register bank select करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PCON byte-addressable SFR है जिसमें baud rate double करने वाला SMOD bit तथा power-saving modes के लिए PD और IDL bits होते हैं, इसलिए option B सही है। यह bit-addressable नहीं, और Timer 2 या bank select control नहीं करता।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q26",
+      "question": "PCON register में SMOD bit को 1 करने का क्या effect होता है?",
+      "options": [
+        "यह serial communication की baud rate को double कर देता है",
+        "यह Timer 0 को disable कर देता है",
+        "यह register bank बदल देता है",
+        "यह ALE signal को permanently बंद कर देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "SMOD=1 करने पर, Timer 1 आधारित baud rate generation में baud rate double हो जाती है (mode 1/3 में उपयोगी), इसलिए option A सही है। यह Timer 0 disable, bank change या ALE बंद करने का कार्य नहीं करता।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q27",
+      "question": "PCON register में PD (Power Down) bit को सेट करने पर microcontroller किस mode में जाता है?",
+      "options": [
+        "Idle mode (CPU रुकता है पर peripherals चलते रहते हैं)",
+        "Power-down mode (oscillator भी रुक जाता है, न्यूनतम current खपत)",
+        "यह केवल reset करता है",
+        "यह Timer mode बदल देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "PD=1 करने पर 8051 power-down mode में चला जाता है जिसमें oscillator भी बंद हो जाता है और current consumption सबसे कम होती है (बाहर आने के लिए केवल hardware reset), इसलिए option B सही है। CPU-केवल रुकना idle mode (IDL bit) है, यह reset नहीं करता और timer mode नहीं बदलता।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q28",
+      "question": "किसी program में temporary variables के लिए एक अलग register bank (जैसे Bank 1) इस्तेमाल करने का क्या फायदा है, खासकर interrupt service routine (ISR) में?",
+      "options": [
+        "R0-R7 को fast bank switch करके save किया जा सकता है, जिससे context-save/restore तेज़ और सरल हो जाता है",
+        "इससे ROM का size बढ़ जाता है",
+        "इससे crystal frequency बढ़ जाती है",
+        "इससे Port pins की संख्या बढ़ जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "ISR में अलग bank चुनकर (RS1RS0 बदलकर) मुख्य program के R0-R7 को stack पर push किए बिना ही सुरक्षित रखा जा सकता है, जिससे context switch तेज़ होता है, इसलिए option A सही है। इसका ROM size, crystal frequency या Port pins की संख्या से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q29",
+      "question": "8051 में Accumulator (A) और register B दोनों को एक साथ किस instruction में सीधे प्रयोग किया जाता है?",
+      "options": [
+        "MOV A, #data",
+        "MUL AB",
+        "SETB C",
+        "CLR A"
+      ],
+      "correctIndex": 1,
+      "explanation": "MUL AB instruction Accumulator (A) और register B के मान को गुणा करके परिणाम को A (lower byte) और B (higher byte) में रखता है, इसलिए option B सही है। MOV A,#data केवल Accumulator से संबंधित है, SETB C carry flag से, और CLR A केवल Accumulator clear करता है।"
+    },
+    {
+      "id": "u2_registers_sfr_8051_q30",
+      "question": "reset के बाद PSW register का मान सामान्यतः क्या होता है, जिसके कारण default रूप से कौन-सा register bank active रहता है?",
+      "options": [
+        "PSW = 00H, इसलिए default रूप से Bank 0 active रहता है",
+        "PSW = FFH, इसलिए Bank 3 active रहता है",
+        "PSW = 08H, इसलिए Bank 1 active रहता है",
+        "PSW का मान random होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reset पर PSW = 00H हो जाता है जिससे RS1RS0 = 00 होने के कारण डिफ़ॉल्ट रूप से Bank 0 active रहता है, इसलिए option A सही है। FFH या 08H reset value नहीं है, और PSW का मान reset के बाद random नहीं बल्कि निश्चित (00H) होता है।"
+    }
+  ]
+}

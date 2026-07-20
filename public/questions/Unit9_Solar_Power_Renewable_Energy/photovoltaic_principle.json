@@ -1,0 +1,368 @@
+{
+  "unit": "unit9",
+  "unitName": "Solar Power Renewable Energy Systems",
+  "topic": "photovoltaic_principle",
+  "topicName": "Photovoltaic Effect, Light to Electricity, PV Cell Working",
+  "questions": [
+    {
+      "id": "u9_photovoltaic_principle_q1",
+      "question": "Photovoltaic effect को सबसे सरल शब्दों में किस प्रकार परिभाषित किया जा सकता है?",
+      "options": [
+        "Heat energy को mechanical energy में बदलना",
+        "Light energy को सीधे electrical energy में बदलना",
+        "Electrical energy को chemical energy में बदलना",
+        "Sound energy को electrical energy में बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Photovoltaic effect वह phenomenon है जिसमें certain materials (semiconductors) पर light पड़ने से सीधे electrical voltage/current उत्पन्न होता है। Heat-to-mechanical conversion engines में होता है, electrical-to-chemical conversion battery charging में, और sound-to-electrical microphone में होता है — ये सभी अलग phenomena हैं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q2",
+      "question": "Photovoltaic effect की खोज सर्वप्रथम किस वैज्ञानिक ने की थी?",
+      "options": [
+        "Thomas Edison",
+        "Alexander Graham Bell",
+        "Edmond Becquerel",
+        "James Watt"
+      ],
+      "correctIndex": 2,
+      "explanation": "Edmond Becquerel ने 1839 में सबसे पहले photovoltaic effect का प्रेक्षण किया था जब उन्होंने electrolyte solution में electrodes पर light के प्रभाव को देखा। Thomas Edison का संबंध electric bulb/DC power से है, Alexander Graham Bell telephone से जुड़े हैं, और James Watt steam engine से संबंधित हैं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q3",
+      "question": "PV cell में light से electricity उत्पन्न होने के लिए सबसे पहला step क्या होता है?",
+      "options": [
+        "Photons का semiconductor material पर पड़ना और उनकी energy का absorb होना",
+        "Cell का temperature शून्य हो जाना",
+        "Cell में chemical reaction शुरू होना जैसे battery में",
+        "Metal contacts का पिघलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "PV cell की कार्यप्रणाली photons के semiconductor पर आपतित (incident) होकर उनकी energy absorb होने से शुरू होती है। Temperature शून्य होना ज़रूरी नहीं, PV effect chemical battery reaction से अलग एक physical/electronic process है, और metal contacts का पिघलना cell को नुकसान पहुँचाएगा, यह normal working नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q4",
+      "question": "जब कोई photon silicon के bandgap से अधिक energy लेकर आता है, तो वह किस प्रकार electron-hole pair बनाता है?",
+      "options": [
+        "Photon simply reflect हो जाता है बिना कोई असर डाले",
+        "Photon absorb होकर एक valence electron को conduction band में उछाल देता है, जिससे electron और hole दोनों बनते हैं",
+        "Photon cell को केवल गर्म करता है, कोई electron मुक्त नहीं होता",
+        "Photon cell के अंदर स्थायी रूप से फंस जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "पर्याप्त energy वाला photon absorb होकर valence band के electron को conduction band में उत्तेजित (excite) कर देता है, जिससे conduction band में free electron और valence band में एक hole (electron-hole pair) बनता है। यही मूल process है, केवल reflection, केवल heating, या photon का फंसना इस mechanism की सही व्याख्या नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q5",
+      "question": "P-n junction में बना depletion region तथा उसका built-in electric field, photo-generated electron-hole pairs पर क्या प्रभाव डालता है?",
+      "options": [
+        "यह electrons और holes को आपस में recombine करने पर मजबूर करता है",
+        "यह electrons को n-side की ओर और holes को p-side की ओर separate कर देता है, जिससे current बनता है",
+        "इसका कोई प्रभाव नहीं पड़ता",
+        "यह photons को वापस reflect कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Depletion region का built-in electric field electron-hole pairs को अलग कर देता है — electrons n-side की ओर और holes p-side की ओर drift करते हैं, जिससे external circuit में current प्रवाहित होने की क्षमता बनती है। यह recombination को बढ़ावा नहीं देता (बल्कि रोकता है), निष्प्रभावी नहीं है, और photons को reflect करने का काम coating का है, junction field का नहीं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q6",
+      "question": "PV cell द्वारा उत्पन्न voltage किस प्रकार का होता है जब वह किसी external load से जुड़ता है?",
+      "options": [
+        "Alternating Current (AC) voltage",
+        "Direct Current (DC) voltage",
+        "केवल pulsed square wave voltage",
+        "कोई voltage उत्पन्न नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solar PV cell अपने आप में एक DC source है क्योंकि p-n junction में charge carriers की gati एक निश्चित दिशा में होती है, जिससे DC voltage/current मिलती है। AC प्राप्त करने के लिए बाद में inverter का उपयोग किया जाता है, यह cell का प्रत्यक्ष output नहीं है, और pulsed square wave या 'कोई voltage नहीं' कथन गलत हैं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q7",
+      "question": "यदि आपतित photon की energy silicon के bandgap से कम हो, तो क्या होता है?",
+      "options": [
+        "Photon absorb होकर हमेशा electron-hole pair बनाएगा",
+        "Photon absorb नहीं होगा (transmit हो जाएगा) और उपयोगी electron-hole pair नहीं बनेगा",
+        "Photon cell को नष्ट कर देगा",
+        "Photon current की दिशा उलट देगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bandgap से कम energy वाला photon valence electron को conduction band में पहुँचाने के लिए पर्याप्त नहीं होता, इसलिए ऐसा photon आमतौर पर material से गुजर (transmit) जाता है और उपयोगी electricity उत्पन्न नहीं करता। यह हमेशा absorb नहीं होता, cell को नष्ट नहीं करता, और current की दिशा पलटने का इससे कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q8",
+      "question": "Photon की energy किस समीकरण द्वारा दी जाती है, जहाँ h Planck constant और f light की frequency है?",
+      "options": [
+        "E = mc²",
+        "E = h × f",
+        "E = IR",
+        "E = QV"
+      ],
+      "correctIndex": 1,
+      "explanation": "Photon की energy E = h × f (Planck's equation) द्वारा दी जाती है, जहाँ h Planck constant और f light की frequency है — frequency जितनी अधिक होगी, photon energy उतनी अधिक होगी। E = mc² mass-energy equivalence (Einstein) का सूत्र है, E = IR Ohm's law से संबंधित है, और E = QV electrostatic energy से जुड़ा सूत्र है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q9",
+      "question": "PV cell से बिना किसी external load जोड़े मिलने वाले maximum voltage को क्या कहते हैं?",
+      "options": [
+        "Short-circuit current (Isc)",
+        "Open-circuit voltage (Voc)",
+        "Fill factor",
+        "Series resistance"
+      ],
+      "correctIndex": 1,
+      "explanation": "Open-circuit voltage (Voc) वह maximum voltage है जो cell के terminals पर बिना किसी load (open circuit condition) में मिलता है। Short-circuit current (Isc) वह maximum current है जब terminals directly short किए जाएँ, fill factor cell की quality दर्शाने वाला parameter है, और series resistance cell की internal resistance है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q10",
+      "question": "PV cell के terminals को directly short करने (बिना resistance के जोड़ने) पर मिलने वाले maximum current को क्या कहते हैं?",
+      "options": [
+        "Open-circuit voltage (Voc)",
+        "Short-circuit current (Isc)",
+        "Maximum power point (Pmax)",
+        "Reverse saturation current"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब cell के दोनों terminals short-circuit किए जाते हैं (voltage शून्य), तब मिलने वाला current short-circuit current (Isc) कहलाता है, जो cell की light-generated current क्षमता दर्शाता है। Open-circuit voltage तब मिलता है जब कोई current न बहे, maximum power point वह बिंदु है जहाँ V×I अधिकतम हो, और reverse saturation current diode के dark characteristics से संबंधित है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q11",
+      "question": "PV cell की performance describe करने के लिए 'I-V characteristic curve' किन दो parameters के बीच संबंध दर्शाता है?",
+      "options": [
+        "Temperature और Time",
+        "Current (I) और Voltage (V)",
+        "Weight और Area",
+        "Colour और Reflectivity"
+      ],
+      "correctIndex": 1,
+      "explanation": "I-V characteristic curve cell के output current (I) और output voltage (V) के बीच संबंध दिखाता है, जिससे Isc, Voc, और maximum power point पहचाने जा सकते हैं। Temperature-Time, Weight-Area या Colour-Reflectivity जैसे parameters इस curve का सीधा विषय नहीं हैं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q12",
+      "question": "PV cell पर incident sunlight की intensity (irradiance) बढ़ने पर उत्पन्न current पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Current लगभग सीधे अनुपात में (proportionally) बढ़ता है",
+        "Current शून्य हो जाता है",
+        "Current हमेशा घट जाता है",
+        "Current पर कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "अधिक irradiance का मतलब है अधिक photons उपलब्ध होना, जिससे अधिक electron-hole pairs बनते हैं और output current लगभग सीधे proportional रूप से बढ़ता है। Current शून्य होना, घटना, या कोई प्रभाव न होना — ये सभी वास्तविक PV behaviour के विपरीत हैं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q13",
+      "question": "PV cell का temperature बढ़ने पर उसका output voltage (Voc) पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Voc में वृद्धि होती है",
+        "Voc में कमी आती है",
+        "Voc बिल्कुल स्थिर रहता है",
+        "Voc अचानक double हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Temperature बढ़ने से semiconductor की intrinsic carrier concentration बढ़ती है जिससे reverse saturation current बढ़ता है और परिणामस्वरूप Voc में कमी आती है — यह practical PV modules में एक जाना-पहचाना negative temperature coefficient है। Voc बढ़ना, स्थिर रहना, या double होना temperature प्रभाव की सही व्याख्या नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q14",
+      "question": "'Fill Factor' PV cell की किस विशेषता को दर्शाता है?",
+      "options": [
+        "Cell का actual weight कितना है",
+        "Cell की Voc × Isc की तुलना में actual maximum power output कितना अच्छा है, इसका माप",
+        "Cell में कितने रंग हैं",
+        "Cell को बनाने में कितना समय लगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fill Factor = (Vmp × Imp) / (Voc × Isc) होता है, जो दर्शाता है कि cell का actual maximum power output theoretical maximum (Voc × Isc) के कितना करीब है — यह cell की quality का महत्वपूर्ण indicator है। यह weight, रंग या manufacturing time से संबंधित नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q15",
+      "question": "Silicon solar cell में band gap से अधिक energy वाले photon की अतिरिक्त (excess) energy का क्या होता है?",
+      "options": [
+        "यह पूरी तरह electrical energy में बदल जाती है",
+        "अतिरिक्त energy मुख्यतः heat (thermal energy) के रूप में losses होती है",
+        "यह photon को negative charge दे देती है",
+        "यह cell का रंग स्थायी रूप से बदल देती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि photon energy bandgap से अधिक हो, तो electron को केवल bandgap जितनी energy मिलती है और शेष अतिरिक्त energy lattice vibrations के रूप में heat बनकर loss हो जाती है (thermalization loss)। यह पूरी तरह electrical energy में नहीं बदलती, photon को charge नहीं देती, और cell का रंग स्थायी रूप से नहीं बदलती।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q16",
+      "question": "Photovoltaic effect और Photoelectric effect में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल समान phenomena हैं",
+        "Photoelectric effect में electron material की सतह छोड़कर बाहर निकल जाता है, जबकि photovoltaic effect में electron material के अंदर ही एक junction के pas चला जाता है और voltage उत्पन्न होता है",
+        "Photovoltaic effect केवल gases में होता है",
+        "Photoelectric effect केवल solar cells में होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Photoelectric effect में light की energy से electron material की सतह से पूरी तरह बाहर निकल जाता है (जैसे vacuum tube में), जबकि photovoltaic effect में electron material के अंदर ही p-n junction के कारण अलग होकर voltage उत्पन्न करता है, बाहर नहीं निकलता। ये दोनों अलग phenomena हैं, gases से इनका सीधा संबंध नहीं, और photoelectric effect solar cells विशेष का phenomenon नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q17",
+      "question": "PV cell की electrical circuit को एक simplified model में किस प्रकार represent किया जाता है?",
+      "options": [
+        "एक current source parallel में एक diode के साथ (with series/shunt resistances)",
+        "केवल एक resistor",
+        "केवल एक inductor",
+        "केवल एक capacitor"
+      ],
+      "correctIndex": 0,
+      "explanation": "PV cell का equivalent circuit model एक current source (light-generated current) को एक diode के parallel में तथा साथ में series resistance (Rs) और shunt resistance (Rsh) के साथ दिखाया जाता है, जो junction और losses को represent करता है। केवल resistor, inductor या capacitor इस behaviour को सही ढंग से मॉडल नहीं कर सकते।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q18",
+      "question": "'Quantum efficiency' PV cell के संदर्भ में क्या दर्शाती है?",
+      "options": [
+        "Cell का weight प्रति unit area",
+        "Incident photons में से कितने प्रतिशत सफलतापूर्वक electron-hole pair में convert होकर current में योगदान देते हैं",
+        "Cell का manufacturing cost",
+        "Cell की मोटाई"
+      ],
+      "correctIndex": 1,
+      "explanation": "Quantum efficiency यह दर्शाती है कि cell पर पड़ने वाले photons में से कितना प्रतिशत सफलतापूर्वक collected electrons में परिवर्तित होकर current में योगदान करता है — यह material quality और design का महत्वपूर्ण indicator है। यह weight, cost या thickness से सीधे संबंधित parameter नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q19",
+      "question": "एक ideal PV cell में शून्य irradiance (अंधेरे) की स्थिति में उससे कितना current मिलेगा?",
+      "options": [
+        "अधिकतम current",
+        "लगभग शून्य current (केवल diode dark current)",
+        "Negative infinity current",
+        "Current हमेशा constant रहेगा चाहे light हो या न हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "बिना light (शून्य irradiance) के photon-generated current नहीं बनता, इसलिए PV cell से केवल diode के dark/leakage current जैसा नगण्य current मिलता है, उपयोगी power नहीं मिलती। अधिकतम current केवल high irradiance में मिलता है, negative infinity असंभव है, और current light पर निर्भर करता है, constant नहीं रहता।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q20",
+      "question": "PV cell में उत्पन्न current की दिशा (conventional current) किस दिशा में मानी जाती है जब cell external circuit से जुड़ा हो?",
+      "options": [
+        "N-type से बाहर होकर external circuit से होते हुए p-type में",
+        "P-type से बाहर होकर external circuit से होते हुए n-type में",
+        "Current की कोई निश्चित दिशा नहीं होती",
+        "Current केवल cell के अंदर घूमता रहता है, बाहर नहीं आता"
+      ],
+      "correctIndex": 1,
+      "explanation": "PV cell में photo-generated current की conventional दिशा p-type terminal से बाहर निकलकर external circuit से होते हुए n-type terminal में वापस लौटती है (cell एक source की तरह व्यवहार करता है)। Option A दिशा उलटी बताता है, current की निश्चित दिशा होती है, और cell external circuit को power देने के लिए ही डिज़ाइन किया जाता है, केवल अंदर नहीं घूमता।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q21",
+      "question": "Maximum Power Point (MPP) PV cell की I-V curve पर किस बिंदु को कहा जाता है?",
+      "options": [
+        "जहाँ voltage शून्य हो",
+        "जहाँ current × voltage (power) का गुणनफल सबसे अधिक हो",
+        "जहाँ current शून्य हो",
+        "जहाँ resistance अनंत हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "MPP वह बिंदु है जहाँ I-V curve पर current और voltage का गुणनफल (power = I×V) अधिकतम होता है, cell से अधिकतम power निकालने के लिए इसी बिंदु पर operate किया जाना चाहिए। Voltage शून्य होने पर short-circuit current मिलता है (power शून्य), current शून्य होने पर open-circuit voltage मिलता है (power फिर शून्य), और resistance अनंत होना open-circuit स्थिति है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q22",
+      "question": "PV cell का energy conversion efficiency किस सूत्र से परिभाषित होती है?",
+      "options": [
+        "Output electrical power ÷ Input solar power × 100%",
+        "Input solar power ÷ Output electrical power",
+        "Cell का weight ÷ Cell का area",
+        "Voc ÷ Isc"
+      ],
+      "correctIndex": 0,
+      "explanation": "PV cell efficiency = (उत्पन्न electrical power) ÷ (cell पर पड़ने वाली कुल solar power) × 100% के रूप में परिभाषित होती है, जो बताती है कि कितना incident sunlight उपयोगी electricity में बदला। शेष options वास्तविक efficiency परिभाषा नहीं दर्शाते, ये अन्य unrelated गणनाएँ हैं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q23",
+      "question": "एक standard silicon PV cell का typical practical efficiency लगभग किस range में होता है?",
+      "options": [
+        "15% से 22%",
+        "90% से 99%",
+        "50% से 60%",
+        "1% से 2%"
+      ],
+      "correctIndex": 0,
+      "explanation": "Commercial silicon-based solar cells की practical efficiency आमतौर पर 15% से 22% के बीच होती है, जबकि theoretical maximum limit (Shockley-Queisser) इससे अधिक है पर losses के कारण practically इतनी ही मिलती है। 90-99% अवास्तविक रूप से उच्च है, 50-60% लगभग किसी भी mainstream commercial silicon cell में उपलब्ध नहीं, और 1-2% बहुत ही कम efficiency मानी जाएगी।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q24",
+      "question": "PV cell में उत्पन्न current, incident irradiance के साथ-साथ किस अन्य factor पर भी सीधे निर्भर करता है?",
+      "options": [
+        "Cell की सतह का area (जितना अधिक area, उतना अधिक current, अन्य conditions समान रहने पर)",
+        "Cell का रंग हमेशा काला ही होना चाहिए",
+        "Cell का brand name",
+        "Cell को स्थापित करने वाले व्यक्ति की उम्र"
+      ],
+      "correctIndex": 0,
+      "explanation": "Current उत्पन्न होने के लिए उपलब्ध photons की संख्या cell के surface area पर निर्भर करती है — बड़े area वाले cell में समान irradiance पर अधिक photons पड़ते हैं, इसलिए अधिक current मिलता है। रंग काला होना अनिवार्य नहीं (केवल absorption बेहतर करता है), brand name और installer की उम्र का physics से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q25",
+      "question": "Silicon solar cell में electron-hole recombination होने से पहले उन्हें junction तक पहुँचाना क्यों ज़रूरी है?",
+      "options": [
+        "क्योंकि recombination होने पर carriers अपनी energy खोकर बिना current में योगदान दिए समाप्त हो जाते हैं",
+        "क्योंकि recombination से current और अधिक बढ़ जाता है",
+        "Recombination से cell का temperature कम हो जाता है",
+        "Recombination से cell की life बढ़ जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि electron-hole pair junction field तक पहुँचने से पहले ही आपस में recombine हो जाए, तो वह अपनी energy heat के रूप में खोकर बर्बाद हो जाता है और current में योगदान नहीं दे पाता, इसलिए recombination minimize करना ज़रूरी होता है। Recombination current बढ़ाने वाला नहीं बल्कि घटाने वाला factor है, और इसका temperature कम करने या cell life बढ़ाने से कोई सकारात्मक संबंध नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q26",
+      "question": "PV effect के काम करने के लिए material में कौन-सी मूल आवश्यकता होनी चाहिए?",
+      "options": [
+        "Material पूर्णतः insulator होना चाहिए",
+        "Material semiconductor होना चाहिए जिसमें उपयुक्त bandgap और p-n junction बनाया जा सके",
+        "Material पूर्णतः conductor (जैसे pure copper) होना चाहिए",
+        "Material तरल अवस्था में होना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "PV effect के लिए material semiconductor होना चाहिए जिसमें उपयुक्त bandgap हो और जिसमें p-n junction बनाकर built-in field उत्पन्न किया जा सके। पूर्ण insulator में free carriers लगभग नहीं होते, पूर्ण conductor में कोई bandgap नहीं होता (कोई junction नहीं बनेगा), और material का ठोस (solid) रूप में crystalline/thin-film होना practical है, तरल अवस्था में नहीं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q27",
+      "question": "बादल छाए (cloudy) दिन में PV cell/panel से बिजली उत्पादन पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "बिजली उत्पादन पूरी तरह बंद हो जाता है",
+        "Diffuse sunlight के कारण कुछ बिजली उत्पन्न होती है, पर clear sunny day की तुलना में यह कम होती है",
+        "बिजली उत्पादन clear day से अधिक हो जाता है",
+        "Panel स्वयं ही चार्ज होकर battery जैसा बन जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "बादलों की वजह से direct irradiance कम हो जाता है परंतु diffuse sunlight फिर भी उपलब्ध रहता है, इसलिए panel कम मात्रा में बिजली उत्पन्न करता रहता है, बंद नहीं होता। यह clear sunny day से अधिक बिजली नहीं देता, और panel खुद battery नहीं बनता, यह केवल current उत्पन्न करने वाला source है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q28",
+      "question": "Series resistance (Rs), जो PV cell के equivalent circuit में मौजूद रहती है, बढ़ने पर cell की performance पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Fill factor और output power में सुधार होता है",
+        "Fill factor और output power घट जाते हैं",
+        "Cell पूरी तरह काम करना बंद कर देती है",
+        "Series resistance का performance पर कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक series resistance से cell के अंदर I²R losses बढ़ते हैं, जिससे fill factor घटता है और अंततः useful output power कम हो जाता है। इसलिए यह performance को सुधारता नहीं बल्कि बिगाड़ता है; यह cell को पूरी तरह बंद नहीं करता, और इसका performance पर स्पष्ट नकारात्मक प्रभाव होता है, 'कोई प्रभाव नहीं' कथन गलत है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q29",
+      "question": "PV cell के काम करने के सिद्धांत में 'internal electric field' किस भाग से उत्पन्न होता है?",
+      "options": [
+        "External battery से",
+        "P-n junction पर बने depletion region से (बिना किसी बाहरी source के, built-in)",
+        "External AC supply से",
+        "Metal contacts के आपस में रगड़ने से"
+      ],
+      "correctIndex": 1,
+      "explanation": "PV cell में internal electric field p-n junction पर charge carriers की diffusion से स्वतः (built-in रूप में) बनता है, इसके लिए किसी बाहरी battery या supply की आवश्यकता नहीं होती। External battery या AC supply इस field का स्रोत नहीं है, और metal contacts आपस में रगड़ते नहीं हैं — यह गलत व्याख्या है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q30",
+      "question": "PV cell तकनीक को 'solid-state' device क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि इसमें कोई moving parts नहीं होते और यह ठोस (solid) semiconductor material से बना होता है",
+        "क्योंकि यह हमेशा solid (जमे हुए) पानी में रखा जाता है",
+        "क्योंकि इसमें बहुत सारे mechanical gears होते हैं",
+        "क्योंकि यह केवल ठोस अवस्था में battery के रूप में काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solar PV cell में कोई moving mechanical parts नहीं होते, यह केवल solid semiconductor material की layers से बना होता है जिसमें electron-level phenomena से बिजली बनती है, इसलिए इसे 'solid-state' device कहा जाता है। इसका पानी में रखने, gears होने, या battery जैसा काम करने से कोई संबंध नहीं है।"
+    }
+  ]
+}

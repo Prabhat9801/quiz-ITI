@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "inverters",
+  "topicName": "Inverters - Block Diagram, ICs, Power Rating, Installation",
+  "questions": [
+    {
+      "id": "u4_inverters_q1",
+      "question": "एक Inverter का मूल कार्य क्या होता है?",
+      "options": [
+        "Battery की DC supply को AC supply में convert करना ताकि AC appliances चलाए जा सकें",
+        "AC mains को rectify करके DC में बदलना",
+        "Input voltage को स्थिर (regulate) रखना",
+        "Battery को तेज़ी से charge करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inverter का मुख्य कार्य battery की DC power को oscillator, switching transistors और step-up transformer की सहायता से AC power में convert करना है, ताकि power cut के दौरान AC appliances चलाए जा सकें। Option B rectifier/charger का काम है, C voltage stabilizer करता है, D battery charger circuit का कार्य है, न कि inverter का मूल कार्य।"
+    },
+    {
+      "id": "u4_inverters_q2",
+      "question": "एक साधारण inverter के block diagram में signal/power प्रवाह का सही क्रम क्या होता है?",
+      "options": [
+        "Step-up transformer → Battery → Oscillator → Output",
+        "Battery → Oscillator/Driver stage → Switching transistors → Step-up transformer → Output filter",
+        "Output filter → Switching transistors → Battery → Oscillator",
+        "Oscillator → Battery → Output filter → Switching transistors"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही क्रम है: Battery DC देती है, Oscillator/Driver stage low-frequency switching signal बनाती है, Switching transistors इस signal से battery current को transformer primary में alternately switch करते हैं, Step-up transformer voltage बढ़ाता है, और अंत में Output filter waveform को smooth करता है। बाकी विकल्पों में क्रम उल्टा-पुल्टा और तार्किक रूप से गलत है।"
+    },
+    {
+      "id": "u4_inverters_q3",
+      "question": "Inverter में Oscillator stage का मुख्य कार्य क्या है?",
+      "options": [
+        "Battery को overcharge होने से बचाना",
+        "AC mains voltage को measure करना",
+        "एक निश्चित low frequency (जैसे 50 Hz) पर square wave switching signal उत्पन्न करना, जो switching transistors को drive करता है",
+        "Output waveform को harmonics-मुक्त करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Oscillator stage एक निश्चित frequency (आमतौर पर 50 Hz) की square wave pulses उत्पन्न करती है जो driver के माध्यम से switching transistors को alternately ON-OFF करने के लिए भेजी जाती है। Option A protection circuit का काम है, B mains sensing changeover circuit से जुड़ा है, D filter stage का कार्य है।"
+    },
+    {
+      "id": "u4_inverters_q4",
+      "question": "Inverter के switching transistors (power transistors/MOSFETs) का कार्य क्या है?",
+      "options": [
+        "Output voltage को measure करना",
+        "AC को rectify करके DC बनाना",
+        "Battery को charge करना",
+        "Oscillator से मिले signal के अनुसार battery current को transformer की primary winding के हिस्सों में alternately ON-OFF करके switch करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Switching transistors oscillator signal के अनुसार battery current को transformer की primary winding में बारी-बारी (alternately) prवाहित करते हैं, जिससे primary में एक बदलता हुआ (alternating) current बनता है और secondary में AC induce होती है। A मीटरिंग सर्किट, B rectifier, C charger का काम है, स्विचिंग transistors का नहीं।"
+    },
+    {
+      "id": "u4_inverters_q5",
+      "question": "Inverter में step-up transformer की आवश्यकता क्यों होती है?",
+      "options": [
+        "क्योंकि battery से मिली low DC-derived AC voltage (जैसे 12V) को घरेलू उपयोग योग्य high AC voltage (जैसे 220V) में बदलना जरूरी है",
+        "क्योंकि transformer battery को charge करता है",
+        "क्योंकि transformer frequency को दुगुना कर देता है",
+        "क्योंकि transformer output को DC में बदल देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Switching stage battery की low voltage (जैसे 12V/24V) से एक low-voltage AC generate करती है, जिसे step-up transformer 220V जैसी उपयोगी mains-level AC में convert करता है। B, C, D transformer के इस कार्य से मेल नहीं खाते — transformer न तो charging करता है, न frequency बदलता है, न ही DC output देता है।"
+    },
+    {
+      "id": "u4_inverters_q6",
+      "question": "Inverter output stage में filter circuit लगाने का उद्देश्य क्या है?",
+      "options": [
+        "Battery voltage बढ़ाना",
+        "Output waveform से अनावश्यक harmonics/spikes हटाकर उसे अपेक्षाकृत smooth बनाना",
+        "Switching transistors को ठंडा रखना",
+        "Mains frequency को मापना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Step-up transformer के बाद raw output में harmonics और sharp transitions होते हैं; filter (capacitor/inductor network) इन्हें कम करके waveform को अधिक smooth और उपयोग योग्य बनाता है। A battery का काम नहीं, C heat-sink का काम है, D frequency measurement से filter का संबंध नहीं।"
+    },
+    {
+      "id": "u4_inverters_q7",
+      "question": "CD4047 IC का inverter circuit में सामान्यतः किस रूप में उपयोग होता है?",
+      "options": [
+        "Voltage regulator के रूप में",
+        "Rectifier bridge के रूप में",
+        "Astable multivibrator (free-running oscillator) के रूप में, जो push-pull switching transistors के लिए square wave drive signal देता है",
+        "Battery charger controller के रूप में"
+      ],
+      "correctIndex": 2,
+      "explanation": "CD4047 एक low-power CMOS IC है जिसे astable mode में जोड़कर एक स्थिर आवृत्ति (जैसे 50 Hz) की square wave पैदा की जाती है, जो driver transistors के माध्यम से push-pull switching stage को चलाती है। A, B, D इस IC के सामान्य inverter application से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q8",
+      "question": "CD4047 आधारित inverter oscillator circuit में output frequency मुख्यतः किस पर निर्भर करती है?",
+      "options": [
+        "Battery की voltage पर",
+        "Load की wattage पर",
+        "Transformer के turns ratio पर",
+        "IC से जुड़े external timing resistor (R) और capacitor (C) के मान पर"
+      ],
+      "correctIndex": 3,
+      "explanation": "CD4047 astable multivibrator mode में external R और C components ही oscillation frequency निर्धारित करते हैं (एक standard formula के अनुसार); इन्हें सही चुनकर लगभग 50 Hz output प्राप्त किया जाता है। A battery voltage frequency तय नहीं करती, B load frequency से असंबंधित है, C turns ratio केवल output voltage तय करता है, frequency नहीं।"
+    },
+    {
+      "id": "u4_inverters_q9",
+      "question": "SG3524 जैसी PWM control IC को इनवर्टर सर्किट में उपयोग करने का मुख्य लाभ क्या है?",
+      "options": [
+        "यह switching duty cycle को control करके output AC voltage को regulate करने में मदद करती है",
+        "यह battery को सीधे high voltage पर charge करती है",
+        "यह केवल DC output देती है",
+        "यह mains frequency को 60 Hz से 50 Hz में बदलती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "SG3524 जैसी dedicated PWM control IC pulse-width modulation द्वारा switching transistors की duty cycle बदलती है, जिससे battery voltage घटने-बढ़ने पर भी inverter output लगभग स्थिर रहता है। B, C, D SG3524 के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q10",
+      "question": "Push-pull inverter configuration में दो switching transistors किस प्रकार कार्य करते हैं?",
+      "options": [
+        "दोनों हमेशा एक साथ ON रहते हैं",
+        "दोनों हमेशा एक साथ OFF रहते हैं",
+        "एक transistor center-tapped transformer की primary के एक आधे हिस्से को, और दूसरा transistor दूसरे आधे हिस्से को alternately (बारी-बारी) conduct कराता है",
+        "केवल एक ही transistor हमेशा काम करता है, दूसरा standby में रहता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Push-pull configuration में center-tapped primary के दो आधे हिस्सों को दो transistors बारी-बारी से conduct कराते हैं, जिससे primary में alternating current flow बनता है और secondary में AC induce होती है। A और B एक साथ conduction/non-conduction देंगे तो कोई useful AC नहीं बनेगी, D भी गलत है क्योंकि दोनों transistors equally काम करते हैं।"
+    },
+    {
+      "id": "u4_inverters_q11",
+      "question": "Push-pull inverter में center-tapped transformer का उपयोग क्यों किया जाता है?",
+      "options": [
+        "ताकि दो switching transistors बिना किसी bridge arrangement के primary winding के अलग-अलग आधे हिस्सों से बारी-बारी current प्रवाहित कर सकें",
+        "ताकि transformer का आकार बड़ा हो जाए",
+        "ताकि output DC में बदल जाए",
+        "ताकि battery तेजी से charge हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Center tap से primary winding दो हिस्सों में बँट जाती है, जिससे केवल दो transistors से ही alternate switching संभव हो जाती है और full-bridge जैसी चार switches की जरूरत नहीं पड़ती। B, C, D center-tapped transformer के प्रयोजन से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q12",
+      "question": "Half-bridge inverter की तुलना में full-bridge inverter circuit का मुख्य लाभ क्या है?",
+      "options": [
+        "Full-bridge में कोई transformer नहीं चाहिए",
+        "Full-bridge केवल DC load चला सकता है",
+        "Full-bridge में battery की जरूरत नहीं होती",
+        "Full-bridge चार switches का उपयोग करके पूरे battery voltage को transformer primary पर दोनों दिशाओं में लगाता है, जिससे अधिक output voltage/power मिलता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Full-bridge configuration में चार switches (transistors) diagonal जोड़ियों में ON होकर primary पर battery voltage को पूरी तरह दोनों polarity में apply करते हैं, जिससे half-bridge की तुलना में अधिक effective voltage/power मिलता है। A, B, C तकनीकी रूप से गलत कथन हैं।"
+    },
+    {
+      "id": "u4_inverters_q13",
+      "question": "Inverter की rating को VA (या kVA) में क्यों व्यक्त किया जाता है, केवल watt में क्यों नहीं?",
+      "options": [
+        "क्योंकि VA rating apparent power को दर्शाती है जो load के power factor को ध्यान में रखे बिना inverter की current handling क्षमता बताती है",
+        "क्योंकि VA rating हमेशा watt से कम होती है",
+        "क्योंकि inverter केवल resistive load के लिए बनाए जाते हैं",
+        "क्योंकि VA केवल DC circuits में उपयोग होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inverter को जोड़े गए विभिन्न AC loads (कुछ inductive, low power factor वाले) का current सुरक्षित रूप से देना होता है, इसलिए VA rating (V×I) से यह अंदाजा मिलता है कि inverter कितना current संभाल सकता है, चाहे actual watt (real power) load के power factor पर निर्भर हो कम भी हो। B गलत क्योंकि VA ≥ watt होता है, C गलत क्योंकि inverter inductive loads भी चलाते हैं, D गलत क्योंकि यह AC rating है।"
+    },
+    {
+      "id": "u4_inverters_q14",
+      "question": "एक घर में कुल load 500 W है और उसका औसत power factor 0.8 है। Inverter की न्यूनतम VA rating लगभग कितनी होनी चाहिए?",
+      "options": [
+        "500 VA",
+        "625 VA",
+        "400 VA",
+        "1000 VA"
+      ],
+      "correctIndex": 1,
+      "explanation": "VA rating = Watt / Power Factor = 500 / 0.8 = 625 VA होती है, क्योंकि real power (watt) हमेशा apparent power (VA) से power factor गुणा करने पर मिलता है, इसलिए VA, watt से अधिक होगी। 500 VA (A) power factor को नज़रअंदाज करता है, 400 VA (C) उल्टी गणना (500×0.8) है, 1000 VA (D) आवश्यकता से बहुत अधिक और अनावश्यक है।"
+    },
+    {
+      "id": "u4_inverters_q15",
+      "question": "घर के सभी उपकरणों के लिए inverter की rating चुनते समय, कुल load wattage जोड़ने के बाद आमतौर पर क्या अतिरिक्त कदम उठाया जाता है?",
+      "options": [
+        "Load wattage को आधा कर दिया जाता है",
+        "Frequency को दुगुना कर दिया जाता है",
+        "Motor जैसे loads के starting surge और भविष्य में load बढ़ने की संभावना के लिए लगभग 20-25% अतिरिक्त margin जोड़ा जाता है",
+        "Battery की voltage कम कर दी जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "व्यावहारिक रूप से सटीक calculated load rating के ऊपर एक safety margin (लगभग 20-25%) जोड़ा जाता है ताकि starting surge current और भविष्य में जोड़े जाने वाले उपकरण भी संभाले जा सकें। A, B, D इस चयन प्रक्रिया से असंबंधित और तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q16",
+      "question": "Ceiling fan, tube light जैसे resistive/simple inductive load के अलावा inverter selection में motor-driven appliances (जैसे mixer, pump) के लिए क्यों सावधानी बरती जाती है?",
+      "options": [
+        "क्योंकि motor शुरू होते समय अपनी running current से कई गुना अधिक starting (inrush) current लेता है, जिसे inverter को संभालना पड़ता है",
+        "क्योंकि motor केवल DC पर चलते हैं",
+        "क्योंकि motor कभी भी गरम नहीं होते",
+        "क्योंकि motor को कोई भी inverter बिना किसी margin के आसानी से चला सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Motor loads (जैसे pump, mixer, compressor) start होते समय running current से 3-7 गुना तक starting current खींच सकते हैं, इसलिए inverter की rating चुनते समय इस surge को ध्यान में रखना आवश्यक है। B, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q17",
+      "question": "Sine wave inverter के output की मुख्य विशेषता क्या है?",
+      "options": [
+        "इसका output waveform mains AC सप्लाई के sine wave के काफी नजदीक होता है, जिससे sensitive electronic उपकरण सुरक्षित रूप से चलते हैं",
+        "इसका output सीधा square shape का होता है",
+        "यह केवल resistive load के लिए बनाया जाता है",
+        "इसमें कोई switching transistor नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sine wave (pure sine wave) inverter अतिरिक्त circuitry (PWM + filtering) की मदद से एक smooth sinusoidal output देता है जो mains जैसा होता है, इसलिए computer, TV, medical equipment जैसे sensitive loads के लिए उपयुक्त है। B square wave inverter की विशेषता है, C और D गलत तथ्य हैं।"
+    },
+    {
+      "id": "u4_inverters_q18",
+      "question": "Square wave inverter के output के बारे में निम्न में से सही कथन कौन-सा है?",
+      "options": [
+        "इसका waveform mains sine wave जैसा बिल्कुल एक-जैसा होता है",
+        "इसमें उच्च harmonic content होता है और यह सबसे सरल व सस्ता circuit होता है, पर sensitive electronics के लिए उपयुक्त नहीं",
+        "इसमें कोई switching transistor नहीं होता",
+        "यह केवल three-phase supply के लिए बनाया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Square wave inverter अपेक्षाकृत सरल oscillator व switching circuit से बनता है, इसलिए सस्ता होता है, परंतु इसके output में harmonics अधिक होते हैं जो sensitive electronic उपकरणों को नुकसान पहुँचा सकते हैं। A गलत है क्योंकि sine wave से अलग होता है, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q19",
+      "question": "Modified sine wave (quasi-sine wave) inverter के output के बारे में क्या सही है?",
+      "options": [
+        "यह पूरी तरह square wave जैसा होता है",
+        "यह mains जैसा बिल्कुल pure sine wave देता है",
+        "यह steps में बना एक ऐसा waveform देता है जो sine wave का मोटा-मोटा approximation होता है, और लागत तथा quality दोनों में square व pure sine wave के बीच का होता है",
+        "इसमें filter circuit की कोई आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Modified sine wave output कुछ flat steps के साथ बनता है जो pure square wave से बेहतर पर pure sine wave से सस्ता समझौता होता है, इसलिए यह सामान्य घरेलू appliances (जैसे light, fan) के लिए ठीक रहता है। A और B extreme cases हैं जो modified sine wave पर लागू नहीं होते, D गलत है क्योंकि waveform shaping में filtering मदद करती है।"
+    },
+    {
+      "id": "u4_inverters_q20",
+      "question": "Pure sine wave inverter, square wave inverter की तुलना में महंगा क्यों होता है?",
+      "options": [
+        "क्योंकि इसमें battery की जरूरत नहीं होती",
+        "क्योंकि इसका output frequency कम होता है",
+        "क्योंकि इसमें कोई transformer नहीं लगता",
+        "क्योंकि इसे शुद्ध sinusoidal waveform बनाने के लिए अतिरिक्त PWM control circuitry और बेहतर output filter की आवश्यकता होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Sine wave shape प्राप्त करने के लिए अधिक जटिल PWM generation, अच्छी quality components और effective filtering आवश्यक होती है, जिससे लागत बढ़ जाती है। A, B, C तथ्यात्मक रूप से गलत हैं और लागत बढ़ने के वास्तविक कारण से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverters_q21",
+      "question": "Automatic changeover relay/switch का inverter system में मुख्य कार्य क्या होता है?",
+      "options": [
+        "Mains supply जाने पर load को स्वतः mains से हटाकर inverter output से जोड़ना, और mains वापस आने पर पुनः load को mains से जोड़ना",
+        "Battery को स्थायी रूप से charge करते रहना",
+        "Output voltage की harmonics कम करना",
+        "Inverter की frequency को नियंत्रित करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Automatic changeover relay mains supply की उपस्थिति sense करता है और power जाने पर तुरंत load को inverter output से जोड़ देता है, तथा mains लौटने पर वापस mains पर switch कर देता है, ताकि उपयोगकर्ता को manual हस्तक्षेप न करना पड़े। B, C, D changeover relay के कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q22",
+      "question": "Inverter में changeover relay का switching time (mains cut से inverter output आने तक का समय) कम रखना क्यों जरूरी है?",
+      "options": [
+        "ताकि battery जल्दी charge हो जाए",
+        "ताकि frequency बढ़ जाए",
+        "ताकि computer, Wi-Fi router जैसे उपकरण अचानक बंद होकर restart होने से बच सकें और काम में रुकावट न आए",
+        "ताकि transformer का आकार छोटा हो जाए"
+      ],
+      "correctIndex": 2,
+      "explanation": "यदि changeover में देरी हो तो sensitive digital उपकरण power interruption के कारण बंद होकर restart हो सकते हैं; इसलिए बहुत कम switching time (कुछ milliseconds) रखा जाता है ताकि निरंतर supply जैसा अनुभव मिले। A, B, D changeover time की इस आवश्यकता से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverters_q23",
+      "question": "Inverter installation में यह सुनिश्चित करना क्यों आवश्यक है कि mains supply और inverter output कभी भी एक साथ direct रूप से load से जुड़े हुए न रहें (proper interlocking)?",
+      "options": [
+        "ताकि battery जल्दी discharge हो जाए",
+        "ताकि दोनों supplies एक-दूसरे में backfeed न करें, जिससे inverter, mains लाइन या उससे जुड़े उपकरणों को नुकसान न पहुंचे",
+        "ताकि output waveform sine wave बन जाए",
+        "ताकि frequency automatically 50 Hz हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि mains और inverter output दोनों एक साथ लोड से जुड़ जाएँ, तो inverter का output mains में backfeed कर सकता है, जिससे inverter को नुकसान हो सकता है और यह line-workers के लिए भी खतरनाक हो सकता है; इसलिए proper interlocked changeover आवश्यक है। A, C, D इस safety आवश्यकता से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverters_q24",
+      "question": "Inverter battery को installation के समय बंद, हवा-रहित cabinet के बजाय हवादार (ventilated) स्थान पर रखने की सलाह क्यों दी जाती है?",
+      "options": [
+        "क्योंकि battery कभी गरम नहीं होती",
+        "क्योंकि इससे battery की rating बढ़ जाती है",
+        "क्योंकि यह inverter की frequency को स्थिर रखता है",
+        "क्योंकि charging के दौरान battery से hydrogen gas निकलती है, जो बंद व हवारहित जगह में जमा होकर आग/विस्फोट का खतरा बना सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Lead-acid battery चार्ज होते समय थोड़ी मात्रा में hydrogen gas छोड़ती है; बंद व वेंटिलेशन-रहित जगह में यह gas जमा होकर स्पार्क से आग/विस्फोट का खतरा बढ़ा सकती है, इसलिए हवादार स्थान जरूरी है। A, B, C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q25",
+      "question": "Inverter की body और घर की wiring की उचित earthing करने का मुख्य कारण क्या है?",
+      "options": [
+        "किसी leakage current की स्थिति में करंट को सुरक्षित रास्ते से जमीन में भेजकर उपयोगकर्ता को बिजली के झटके (shock) से बचाना",
+        "Battery को जल्दी charge करना",
+        "Output waveform को sine wave बनाना",
+        "Oscillator frequency को कम करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Proper earthing किसी fault की स्थिति में body पर आए leakage current को सुरक्षित रूप से जमीन में भेज देती है, जिससे उपयोगकर्ता को electric shock से बचाया जा सकता है — यह installation की एक अनिवार्य safety requirement है। B, C, D earthing के प्रयोजन से पूरी तरह असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverters_q26",
+      "question": "Inverter से जुड़ने वाली wiring (battery to inverter cable, inverter to load wiring) का साइज (gauge) चुनते समय मुख्य रूप से किस बात का ध्यान रखा जाता है?",
+      "options": [
+        "केवल wire का रंग",
+        "उस wiring से प्रवाहित होने वाले अधिकतम current को बिना अत्यधिक गरम हुए सुरक्षित रूप से संभालने की क्षमता (current-carrying capacity)",
+        "Battery का रंग",
+        "Inverter का वजन"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि wire का cross-section current के अनुसार पर्याप्त न हो, तो वह अत्यधिक गरम होकर insulation पिघला सकती है और आग का खतरा बढ़ा सकती है; इसलिए wiring gauge को अपेक्षित current rating के अनुसार चुना जाता है, विशेषकर battery-to-inverter cable में जहाँ current अधिक होता है। A, C, D तकनीकी रूप से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverters_q27",
+      "question": "Inverter और battery को tightly बंद, बिना वेंटिलेशन वाली almirah/cupboard में रखने से क्या समस्या हो सकती है?",
+      "options": [
+        "Inverter की efficiency अपने-आप 100% हो जाएगी",
+        "Frequency अपने-आप 60 Hz हो जाएगी",
+        "Heat और gases ठीक से बाहर न निकल पाने के कारण अंदर तापमान बढ़ सकता है, जिससे components की life घट सकती है और सुरक्षा जोखिम बढ़ सकता है",
+        "Battery की voltage automatically बढ़ जाएगी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Switching transistors, transformer और battery सभी ऑपरेशन के दौरान गर्मी छोड़ते हैं; अगर बंद जगह में उचित वेंटिलेशन न हो तो गर्मी और चार्जिंग के दौरान निकलने वाली gases जमा होकर components की life घटा सकती हैं और safety risk बढ़ा सकती हैं। A, B, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q28",
+      "question": "भारत जैसे देशों में घरेलू उपयोग के लिए बनाए गए inverter का output frequency आमतौर पर कितना रखा जाता है?",
+      "options": [
+        "25 Hz",
+        "100 Hz",
+        "400 Hz",
+        "लगभग 50 Hz, जो घरेलू mains supply की standard frequency से मेल खाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "भारत में mains supply की standard frequency 50 Hz है, इसलिए घरेलू inverter को भी 50 Hz output देने के लिए design किया जाता है ताकि जुड़े appliances (जैसे fan, clock) सही गति से काम करें। A, B, C भारतीय घरेलू mains standard से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q29",
+      "question": "एक inverter की rating 600 VA है और उससे जोड़े गए loads का औसत power factor लगभग 0.6 है। इस inverter से वास्तव में कितनी real power (watt) सुरक्षित रूप से ली जा सकती है?",
+      "options": [
+        "लगभग 360 W (600 × 0.6)",
+        "600 W, क्योंकि VA और watt हमेशा बराबर होते हैं",
+        "1000 W, क्योंकि VA को power factor से भाग देना होता है",
+        "0 W, क्योंकि कम power factor पर inverter काम ही नहीं करेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "Real power (Watt) = VA × Power Factor होता है, इसलिए 600 VA और 0.6 power factor पर वास्तविक उपयोग योग्य power लगभग 360 W ही मिलेगी, बाकी apparent power reactive component में चली जाती है। B गलत है क्योंकि pf<1 पर watt, VA से कम होता है; C में गणना उल्टी है; D गलत है क्योंकि कम pf पर inverter बंद नहीं होता, केवल watt output कम रहता है।"
+    },
+    {
+      "id": "u4_inverters_q30",
+      "question": "साधारण discrete transistor astable multivibrator की तुलना में CD4047 जैसी dedicated oscillator IC का inverter driver stage में उपयोग करने का मुख्य लाभ क्या है?",
+      "options": [
+        "इससे battery की जरूरत ही समाप्त हो जाती है",
+        "यह अधिक स्थिर (stable) frequency और सटीक duty cycle प्रदान करती है, जिससे transformer व switching transistors पर असंतुलित तनाव कम होता है",
+        "इससे output हमेशा pure sine wave बन जाता है",
+        "इससे step-up transformer की जरूरत खत्म हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "CD4047 जैसी IC-आधारित oscillator, temperature और component tolerance से कम प्रभावित होकर discrete transistor circuit की तुलना में अधिक स्थिर frequency और balanced duty cycle देती है, जिससे push-pull transistors व transformer पर असंतुलित (asymmetric) loading कम होती है। A, C, D तथ्यात्मक रूप से गलत हैं क्योंकि इनमें से कोई भी सीधे oscillator IC के उपयोग से नहीं होता।"
+    }
+  ]
+}

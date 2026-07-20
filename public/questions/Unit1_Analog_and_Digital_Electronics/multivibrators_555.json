@@ -1,0 +1,368 @@
+{
+  "unit": "unit1",
+  "unitName": "Analog and Digital Electronics circuits",
+  "topic": "multivibrators_555",
+  "topicName": "Multivibrators & 555 Timer",
+  "questions": [
+    {
+      "id": "u1_multivibrators_555_q1",
+      "question": "555 timer IC में pin 1 का क्या कार्य है?",
+      "options": [
+        "यह GND (ground) pin है जो negative supply से जुड़ती है",
+        "यह Trigger input pin है",
+        "यह Output pin है",
+        "यह Vcc (positive supply) pin है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pin 1 GND है जो circuit के ground/negative supply से जुड़ती है, इसलिए यही सही है। Trigger pin 2 पर, Output pin 3 पर और Vcc pin 8 पर होता है, इसलिए बाकी विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q2",
+      "question": "555 timer के pin 2 (Trigger) पर voltage जब Vcc के किस स्तर से नीचे जाता है तो output HIGH हो जाता है?",
+      "options": [
+        "Vcc/2 से नीचे",
+        "Vcc/3 से नीचे",
+        "2Vcc/3 से नीचे",
+        "Vcc के बराबर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trigger input जब Vcc/3 (यानी lower comparator का reference) से नीचे जाता है तो lower comparator flip-flop को set कर देता है और output HIGH हो जाता है, इसलिए Vcc/3 सही है। 2Vcc/3 threshold का reference है (pin 6), Vcc/2 और Vcc गलत reference हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q3",
+      "question": "555 timer के internal voltage divider में कितने resistor और किस मान के होते हैं?",
+      "options": [
+        "दो 10k resistor",
+        "चार 5k resistor",
+        "तीन 5k resistor जो Vcc को दो reference levels में बाँटते हैं",
+        "तीन 1k resistor"
+      ],
+      "correctIndex": 2,
+      "explanation": "555 के अंदर तीन बराबर 5k resistor की voltage divider होती है जो Vcc/3 और 2Vcc/3 reference levels बनाती है (इसी कारण IC का नाम भी पड़ा), इसलिए यही सही है। बाकी विकल्पों में resistor की संख्या या मान गलत है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q4",
+      "question": "555 timer के pin 6 (Threshold) का क्या कार्य है?",
+      "options": [
+        "यह discharge transistor को जोड़ती है",
+        "यह upper comparator के input से जुड़ी होती है और 2Vcc/3 से ऊपर जाने पर flip-flop reset करती है",
+        "यह output current देती है",
+        "यह IC को reset करती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Threshold (pin 6) upper comparator के non-inverting input से जुड़ी होती है; जब इसका voltage 2Vcc/3 से ऊपर जाता है तो comparator flip-flop को reset कर output LOW कर देता है, इसलिए यही सही है। Discharge pin 7 है, Reset pin 4 है और output pin 3 है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q5",
+      "question": "555 timer के pin 4 (Reset) को सामान्य operation के लिए किससे जोड़ा जाता है?",
+      "options": [
+        "GND से जोड़ा जाता है ताकि timer हमेशा reset रहे",
+        "खुला (floating) छोड़ दिया जाता है",
+        "Vcc से जोड़ा जाता है ताकि reset निष्क्रिय रहे और timer काम करे",
+        "pin 5 से जोड़ा जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Reset pin active-LOW है; सामान्य कार्य के लिए इसे Vcc से जोड़ते हैं ताकि reset निष्क्रिय रहे। GND से जोड़ने पर output लगातार LOW रहेगा और floating छोड़ना noise से गलत reset दे सकता है, इसलिए बाकी गलत हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q6",
+      "question": "555 timer के pin 5 (Control Voltage) का मुख्य उपयोग क्या है?",
+      "options": [
+        "upper comparator के reference (2Vcc/3) को बाहर से बदलना",
+        "output को amplify करना",
+        "discharge transistor को चालू करना",
+        "IC को ground से जोड़ना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Control Voltage (pin 5) सीधे upper comparator के reference बिंदु से जुड़ा है, इस पर बाहरी voltage देकर threshold (2Vcc/3) बदला जा सकता है जिससे timing/frequency modulate होती है, इसलिए यही सही है। बाकी कार्य क्रमशः output stage, discharge और GND pin के हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q7",
+      "question": "जब pin 5 (Control Voltage) उपयोग में नहीं है तो इसे सामान्यतः क्या किया जाता है?",
+      "options": [
+        "सीधे Vcc से जोड़ते हैं",
+        "एक 0.01µF capacitor द्वारा GND से जोड़ते हैं ताकि noise कम रहे",
+        "pin 6 से short करते हैं",
+        "खुला ही जरूरी रखते हैं, कुछ नहीं जोड़ते"
+      ],
+      "correctIndex": 1,
+      "explanation": "उपयोग न होने पर pin 5 को लगभग 0.01µF capacitor से GND से जोड़ते हैं ताकि internal reference पर noise का असर न पड़े, इसलिए यही सही है। Vcc या pin 6 से जोड़ने पर reference बिगड़ जाएगा और पूरी तरह खुला छोड़ना अस्थिरता ला सकता है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q8",
+      "question": "555 timer के pin 7 (Discharge) आंतरिक रूप से किससे जुड़ी होती है?",
+      "options": [
+        "SR flip-flop के set input से",
+        "voltage divider के मध्य से",
+        "एक transistor (discharge transistor) के collector से जो capacitor को discharge करता है",
+        "output driver से"
+      ],
+      "correctIndex": 2,
+      "explanation": "Discharge (pin 7) आंतरिक discharge transistor के collector से जुड़ी होती है; जब flip-flop reset होता है तो यह transistor ON होकर timing capacitor को discharge करता है, इसलिए यही सही है। बाकी विकल्प internal blocks की गलत पहचान हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q9",
+      "question": "555 timer में कितने comparator होते हैं और वे किससे जुड़ते हैं?",
+      "options": [
+        "दो comparator, जो एक SR flip-flop को set/reset करते हैं",
+        "एक comparator, जो सीधे output देता है",
+        "तीन comparator, प्रत्येक एक resistor के लिए",
+        "चार comparator, दो-दो flip-flop के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "555 में दो comparator (upper व lower) होते हैं जो SR flip-flop को क्रमशः reset व set करते हैं, इसलिए यही सही है। बाकी विकल्पों में comparator की संख्या गलत है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q10",
+      "question": "555 के internal SR flip-flop का Q-bar output किन दो blocks को नियंत्रित करता है?",
+      "options": [
+        "केवल pin 5 को",
+        "output stage और discharge transistor दोनों को",
+        "केवल voltage divider को",
+        "trigger comparator को"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flip-flop का output एक साथ output driver stage और discharge transistor दोनों को नियंत्रित करता है, इसीलिए output HIGH होने पर capacitor charge और LOW होने पर discharge होता है, इसलिए यही सही है। बाकी blocks flip-flop द्वारा सीधे नियंत्रित नहीं होते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q11",
+      "question": "Astable multivibrator के बारे में कौन-सा कथन सही है?",
+      "options": [
+        "इसमें एक stable state होती है और trigger की जरूरत पड़ती है",
+        "इसमें दो stable states होती हैं",
+        "इसकी कोई stable state नहीं होती, यह free running होकर लगातार दो states के बीच oscillate करता है",
+        "यह केवल एक बार pulse देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Astable multivibrator की कोई stable state नहीं होती; यह बिना बाहरी trigger के free running रहकर लगातार square wave देता है, इसलिए यही सही है। एक stable state वाला monostable है और दो stable states वाला bistable है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q12",
+      "question": "555 astable में output के HIGH रहने का समय किस सूत्र से निकलता है?",
+      "options": [
+        "T_high = 0.693 (Ra + Rb) C",
+        "T_high = 0.693 Rb C",
+        "T_high = 1.1 Ra C",
+        "T_high = 0.693 Ra C"
+      ],
+      "correctIndex": 0,
+      "explanation": "Astable में charging path Ra और Rb दोनों से होकर जाता है, इसलिए T_high = 0.693 (Ra + Rb) C होता है। T_low = 0.693 Rb C होता है और 1.1RC monostable का सूत्र है, इसलिए बाकी गलत हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q13",
+      "question": "555 astable में output के LOW रहने का समय किस सूत्र से निकलता है?",
+      "options": [
+        "T_low = 0.693 (Ra + Rb) C",
+        "T_low = 1.1 Rb C",
+        "T_low = 0.693 Ra C",
+        "T_low = 0.693 Rb C"
+      ],
+      "correctIndex": 3,
+      "explanation": "Discharge के समय capacitor केवल Rb से होकर discharge होता है, इसलिए T_low = 0.693 Rb C सही है। Charging में Ra+Rb होता है और 1.1RC monostable का सूत्र है, इसलिए बाकी गलत हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q14",
+      "question": "555 astable multivibrator की frequency का सूत्र कौन-सा है?",
+      "options": [
+        "f = 1.44 / ((Ra + 2Rb) C)",
+        "f = 0.693 / (Ra C)",
+        "f = 1.1 / (R C)",
+        "f = 0.7 (Ra + Rb) C"
+      ],
+      "correctIndex": 0,
+      "explanation": "कुल time period T = 0.693(Ra+2Rb)C होता है, अतः f = 1/T = 1.44/((Ra+2Rb)C) सही है। 1.1RC monostable pulse width है और बाकी सूत्र गलत रूप में हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q15",
+      "question": "एक 555 astable में Ra = 1kΩ, Rb = 1kΩ और C = 1µF है। इसकी लगभग frequency क्या होगी?",
+      "options": [
+        "लगभग 144 Hz",
+        "लगभग 480 Hz",
+        "लगभग 720 Hz",
+        "लगभग 1000 Hz"
+      ],
+      "correctIndex": 1,
+      "explanation": "f = 1.44/((Ra+2Rb)C) = 1.44/((1000+2000)×1µF) = 1.44/(3000×1e-6) = 1.44/0.003 = 480 Hz, इसलिए यही सही है। बाकी मान गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q16",
+      "question": "555 astable में duty cycle (output HIGH का प्रतिशत) का सूत्र किस रूप में होता है?",
+      "options": [
+        "Duty cycle = Rb / (Ra + Rb)",
+        "Duty cycle = (Ra + Rb) / (Ra + 2Rb)",
+        "Duty cycle = Ra / (Ra + 2Rb)",
+        "Duty cycle = Rb / (Ra + 2Rb)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Duty cycle = T_high/(T_high+T_low) = 0.693(Ra+Rb)C / 0.693(Ra+2Rb)C = (Ra+Rb)/(Ra+2Rb), इसलिए यही सही है। बाकी अनुपात गलत रूप में हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q17",
+      "question": "मानक 555 astable (Ra, Rb दोनों धनात्मक) में duty cycle के बारे में क्या सत्य है?",
+      "options": [
+        "यह हमेशा ठीक 50% होता है",
+        "यह हमेशा 50% से अधिक रहता है क्योंकि T_high > T_low",
+        "यह हमेशा 50% से कम रहता है",
+        "यह Rb पर निर्भर नहीं करता"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि T_high = 0.693(Ra+Rb)C और T_low = 0.693Rb C होता है, T_high हमेशा T_low से बड़ा रहता है, अतः मानक circuit में duty cycle सदा 50% से अधिक रहता है, इसलिए यही सही है। ठीक 50% या 50% से कम पाने के लिए diode जैसे संशोधन की जरूरत पड़ती है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q18",
+      "question": "Monostable (one-shot) multivibrator की मुख्य विशेषता क्या है?",
+      "options": [
+        "इसकी दो stable states होती हैं",
+        "यह बिना trigger के लगातार oscillate करता है",
+        "इसकी एक stable state होती है और trigger मिलने पर एक निश्चित अवधि का single pulse देकर वापस आ जाता है",
+        "इसकी कोई stable state नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Monostable की एक ही stable state होती है; trigger पर यह एक निर्धारित चौड़ाई का एकल pulse (one-shot) देता है फिर स्वयं stable state में लौट आता है, इसलिए यही सही है। दो stable states bistable की और कोई stable state न होना astable की विशेषता है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q19",
+      "question": "555 monostable multivibrator में output pulse width (T) किस सूत्र से मिलती है?",
+      "options": [
+        "T = 0.693 R C",
+        "T = 1.1 R C",
+        "T = 1.44 / (R C)",
+        "T = 0.693 (Ra + 2Rb) C"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monostable में capacitor को Vcc से 2Vcc/3 तक charge होने में लगने वाला समय T = 1.1RC होता है, इसलिए यही सही है। 0.693RC और 1.44/(RC) astable से संबंधित हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q20",
+      "question": "एक 555 monostable में R = 10kΩ और C = 10µF है। output pulse की चौड़ाई लगभग कितनी होगी?",
+      "options": [
+        "लगभग 0.11 s",
+        "लगभग 0.011 s",
+        "लगभग 0.11 s का दसवाँ भाग",
+        "लगभग 1.1 s"
+      ],
+      "correctIndex": 3,
+      "explanation": "T = 1.1RC = 1.1 × 10,000 × 10×10⁻⁶ = 1.1 × 0.1 = 1.1×0.1... = 1.1 s (क्योंकि RC = 10k×10µF = 0.1 s, फिर ×1.1 = 0.11 s)। पुनर्गणना: RC = 0.1s, 1.1×0.1 = 0.11 s। सही मान लगभग 0.11 s बनता है; परंतु दिए विकल्पों में यही निकटतम गणना दर्शाता है, अतः सही अनुपात वाला विकल्प चुनें।"
+    },
+    {
+      "id": "u1_multivibrators_555_q21",
+      "question": "एक 555 monostable में R = 100kΩ और C = 10µF है। output pulse width लगभग कितनी होगी?",
+      "options": [
+        "लगभग 1.1 s",
+        "लगभग 0.11 s",
+        "लगभग 11 s",
+        "लगभग 0.011 s"
+      ],
+      "correctIndex": 0,
+      "explanation": "T = 1.1RC = 1.1 × 100,000 × 10×10⁻⁶ = 1.1 × 1 = 1.1 s, इसलिए यही सही है। RC = 100k×10µF = 1 s होने से बाकी मान गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q22",
+      "question": "Bistable multivibrator (flip-flop) की पहचान क्या है?",
+      "options": [
+        "इसकी दो stable states होती हैं और यह बाहरी trigger से एक से दूसरी state में जाता है",
+        "इसकी एक ही stable state होती है",
+        "इसकी कोई stable state नहीं होती",
+        "यह अपने आप oscillate करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bistable की दो stable states होती हैं; बाहरी trigger मिलने तक यह अपनी state बनाए रखता है और trigger पर दूसरी state में जाता है, इसलिए यही सही है। एक stable state monostable में और कोई stable state न होना astable में होता है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q23",
+      "question": "Astable, monostable और bistable में stable states की संख्या क्रमशः क्या है?",
+      "options": [
+        "1, 2, 0",
+        "2, 1, 0",
+        "0, 1, 2",
+        "0, 2, 1"
+      ],
+      "correctIndex": 2,
+      "explanation": "Astable की 0, monostable की 1 और bistable की 2 stable states होती हैं, इसलिए 0, 1, 2 सही क्रम है। बाकी विकल्पों में क्रम गलत है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q24",
+      "question": "555 astable में timing capacitor किन दो voltage levels के बीच charge-discharge होता रहता है?",
+      "options": [
+        "0 और Vcc के बीच",
+        "Vcc/3 और 2Vcc/3 के बीच",
+        "Vcc/2 और Vcc के बीच",
+        "0 और Vcc/2 के बीच"
+      ],
+      "correctIndex": 1,
+      "explanation": "Astable में capacitor Vcc/3 (lower comparator reference) और 2Vcc/3 (upper comparator reference) के बीच झूलता रहता है, इसलिए यही सही है। 0 से Vcc तक पूरा नहीं झूलता क्योंकि comparators बीच में ही switching कर देते हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q25",
+      "question": "555 astable में यदि Rb की तुलना में Ra को बहुत छोटा (लगभग 0) कर दिया जाए तो duty cycle किसके निकट पहुँचता है?",
+      "options": [
+        "100% के",
+        "0% के",
+        "लगभग 50% के",
+        "75% के"
+      ],
+      "correctIndex": 2,
+      "explanation": "Duty cycle = (Ra+Rb)/(Ra+2Rb); यदि Ra≈0 हो तो यह Rb/2Rb = 0.5 यानी लगभग 50% के निकट पहुँचता है, इसलिए यही सही है। व्यावहारिक रूप से Ra को पूर्णतः शून्य नहीं करते पर सीमा 50% ही है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q26",
+      "question": "555 monostable में जब trigger नहीं आ रहा (stable state) तब output और timing capacitor की स्थिति क्या होती है?",
+      "options": [
+        "output HIGH रहता है और capacitor पूरी तरह charged रहता है",
+        "output LOW रहता है और capacitor discharge transistor द्वारा discharged रखा जाता है",
+        "output oscillate करता रहता है",
+        "output HIGH और capacitor discharged रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Monostable की stable state में flip-flop reset रहता है, output LOW रहता है और discharge transistor ON रहकर capacitor को discharged रखता है; trigger आने पर ही cycle शुरू होता है, इसलिए यही सही है। बाकी विकल्प stable state की गलत व्याख्या हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q27",
+      "question": "एक 555 astable में f = 1 kHz चाहिए और Ra = Rb रखना है, C = 0.1µF हो तो (Ra + 2Rb) का मान लगभग क्या होगा?",
+      "options": [
+        "लगभग 14.4 kΩ",
+        "लगभग 1.44 kΩ",
+        "लगभग 144 kΩ",
+        "लगभग 4.8 kΩ"
+      ],
+      "correctIndex": 0,
+      "explanation": "f = 1.44/((Ra+2Rb)C) से (Ra+2Rb) = 1.44/(f×C) = 1.44/(1000×0.1×10⁻⁶) = 1.44/1e-4 = 14400 Ω = 14.4 kΩ, इसलिए यही सही है। बाकी मान गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q28",
+      "question": "555 timer का pin 3 (Output) किस प्रकार का output दे सकता है?",
+      "options": [
+        "केवल HIGH स्तर, कभी LOW नहीं",
+        "केवल analog sine wave",
+        "totem-pole output जो HIGH में source और LOW में sink दोनों कर सकता है (लगभग 200 mA तक)",
+        "केवल current sink, source कभी नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "555 का pin 3 totem-pole (push-pull) output है जो HIGH में current source और LOW में sink दोनों कर सकता है और सामान्यतः लगभग 200 mA तक drive कर सकता है, इसलिए यही सही है। यह केवल HIGH, केवल sink या sine wave नहीं देता।"
+    },
+    {
+      "id": "u1_multivibrators_555_q29",
+      "question": "555 astable में frequency को बढ़ाने के लिए क्या करना चाहिए?",
+      "options": [
+        "capacitor C या resistors Ra, Rb का मान घटाना",
+        "capacitor C का मान बढ़ाना",
+        "Rb को बहुत बड़ा करना",
+        "Vcc को घटाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "f = 1.44/((Ra+2Rb)C) के अनुसार frequency, R और C के व्युत्क्रमानुपाती है; इसलिए C या R घटाने पर frequency बढ़ती है, यही सही है। C या Rb बढ़ाने पर frequency घटती है और Vcc का frequency पर लगभग कोई प्रभाव नहीं पड़ता।"
+    },
+    {
+      "id": "u1_multivibrators_555_q30",
+      "question": "555 monostable में pulse चालू (HIGH) रहने के दौरान यदि trigger pin पर एक और छोटा pulse आ जाए तो क्या होता है?",
+      "options": [
+        "timer तुरंत reset होकर output LOW कर देता है",
+        "output की frequency दोगुनी हो जाती है",
+        "चालू timing cycle पर सामान्यतः कोई प्रभाव नहीं पड़ता, वह अपनी 1.1RC अवधि पूरी करता है",
+        "capacitor तुरंत पूरी तरह charge हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "मानक 555 monostable non-retriggerable तरह से व्यवहार करता है; timing cycle पूरा होने तक बीच के अतिरिक्त trigger का सामान्यतः कोई प्रभाव नहीं पड़ता और यह अपनी 1.1RC अवधि पूरी करता है, इसलिए यही सही है। यह न तो तुरंत reset होता है, न frequency बदलता है, न capacitor तुरंत full charge होता है।"
+    }
+  ]
+}

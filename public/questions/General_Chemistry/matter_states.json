@@ -1,0 +1,218 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "matter_states",
+  "topicName": "Matter and its States",
+  "questions": [
+    {
+      "id": "chem_matter_states_q1",
+      "question": "पदार्थ की किस अवस्था (state) में particles के बीच intermolecular force सबसे अधिक होता है और particles केवल अपने स्थान पर vibrate करते हैं?",
+      "options": ["Solid", "Liquid", "Gas", "Plasma"],
+      "correctIndex": 0,
+      "explanation": "Solid में particles बहुत पास-पास और मजबूत intermolecular force से बंधे होते हैं, इसलिए वे केवल vibrate करते हैं। Liquid और Gas में force कमजोर होता है इसलिए particles गति करते हैं; Plasma आयनित gas है जिसमें force और कम होता है।"
+    },
+    {
+      "id": "chem_matter_states_q2",
+      "question": "किसी solid के सीधे gas में बदलने की process को क्या कहते हैं?",
+      "options": ["Melting", "Condensation", "Sublimation", "Freezing"],
+      "correctIndex": 2,
+      "explanation": "Sublimation में solid बिना liquid बने सीधे gas में बदलता है, जैसे Camphor और Iodine। Melting में solid से liquid, Condensation में gas से liquid, और Freezing में liquid से solid बनता है।"
+    },
+    {
+      "id": "chem_matter_states_q3",
+      "question": "kinetic theory के अनुसार temperature बढ़ाने पर particles की kinetic energy पर क्या प्रभाव पड़ता है?",
+      "options": ["घट जाती है", "बढ़ जाती है", "अपरिवर्तित रहती है", "पहले घटती फिर शून्य हो जाती है"],
+      "correctIndex": 1,
+      "explanation": "Temperature particles की average kinetic energy का माप है, इसलिए temperature बढ़ने पर kinetic energy बढ़ती है। घटना, अपरिवर्तित रहना या शून्य होना kinetic theory के विरुद्ध है।"
+    },
+    {
+      "id": "chem_matter_states_q4",
+      "question": "जिस निश्चित temperature पर कोई solid पिघलकर liquid बनता है, उसे क्या कहते हैं?",
+      "options": ["Boiling point", "Melting point", "Dew point", "Flash point"],
+      "correctIndex": 1,
+      "explanation": "Melting point वह temperature है जिस पर solid liquid में बदलता है। Boiling point पर liquid gas बनता है, Dew point पर vapour condense होता है, और Flash point ज्वलनशीलता से संबंधित है।"
+    },
+    {
+      "id": "chem_matter_states_q5",
+      "question": "एक वस्तु का mass 200 g और volume 25 cm3 है। इसका density क्या होगा?",
+      "options": ["5 g/cm3", "8 g/cm3", "0.125 g/cm3", "225 g/cm3"],
+      "correctIndex": 1,
+      "explanation": "Density = mass / volume = 200 / 25 = 8 g/cm3। विकल्प 5 और 0.125 गलत भाग से आते हैं, और 225 mass व volume जोड़ने की गलती है।"
+    },
+    {
+      "id": "chem_matter_states_q6",
+      "question": "gas की कौन-सी विशेषता है कि वह अपने container का पूरा आकार और volume ले लेती है?",
+      "options": ["Fixed shape और fixed volume", "Fixed shape पर variable volume", "न fixed shape न fixed volume", "Fixed volume पर variable shape"],
+      "correctIndex": 2,
+      "explanation": "Gas के particles बहुत दूर और स्वतंत्र होते हैं, इसलिए उसका न fixed shape होता है न fixed volume; वह container को पूरा भर देती है। Solid में दोनों fixed, liquid में volume fixed पर shape variable होता है।"
+    },
+    {
+      "id": "chem_matter_states_q7",
+      "question": "liquid के gas में बदलने की वह process जो केवल surface पर और किसी भी temperature पर होती है, क्या कहलाती है?",
+      "options": ["Boiling", "Evaporation", "Sublimation", "Diffusion"],
+      "correctIndex": 1,
+      "explanation": "Evaporation surface पर किसी भी temperature पर होने वाली धीमी process है। Boiling पूरे liquid में एक निश्चित temperature पर होती है, Sublimation solid से gas, और Diffusion particles के फैलने की process है।"
+    },
+    {
+      "id": "chem_matter_states_q8",
+      "question": "बर्फ (ice) के पानी में और फिर पानी के भाप में बदलने पर पदार्थ की chemical identity पर क्या प्रभाव पड़ता है?",
+      "options": ["बदल जाती है", "अपरिवर्तित रहती है क्योंकि यह physical change है", "आधी बदल जाती है", "नई compound बन जाती है"],
+      "correctIndex": 1,
+      "explanation": "Change of state एक physical change है, इसमें केवल particles की व्यवस्था बदलती है पर H2O का chemical composition वही रहता है। इसलिए नई compound नहीं बनती और identity अपरिवर्तित रहती है।"
+    },
+    {
+      "id": "chem_matter_states_q9",
+      "question": "melting और boiling के दौरान heat देने पर भी temperature स्थिर क्यों रहता है?",
+      "options": ["heat नष्ट हो जाती है", "heat latent heat के रूप में state बदलने में लगती है", "particles heat रोक देते हैं", "density बढ़ जाती है"],
+      "correctIndex": 1,
+      "explanation": "State change के समय दी गई heat, latent heat के रूप में intermolecular force तोड़ने में लगती है इसलिए temperature स्थिर रहता है। Heat नष्ट नहीं होती और particles heat रोक नहीं सकते।"
+    },
+    {
+      "id": "chem_matter_states_q10",
+      "question": "निम्न में से कौन-सा पदार्थ सामान्य दाब पर sublimation प्रदर्शित करता है?",
+      "options": ["Common salt (NaCl)", "Iron", "Naphthalene", "Glass"],
+      "correctIndex": 2,
+      "explanation": "Naphthalene सीधे solid से gas में बदलता है, यह sublimation का उदाहरण है। NaCl और Iron सामान्य दाब पर पहले melt होते हैं, जबकि Glass amorphous ठोस है जो नरम होकर पिघलता है।"
+    },
+    {
+      "id": "chem_matter_states_q11",
+      "question": "kinetic theory के अनुसार liquid के particles solid की तुलना में कैसे होते हैं?",
+      "options": ["अधिक व्यवस्थित और स्थिर", "थोड़े दूर और एक-दूसरे पर slide कर सकते हैं", "पूरी तरह स्वतंत्र और बहुत दूर", "गति रहित"],
+      "correctIndex": 1,
+      "explanation": "Liquid में particles solid से थोड़े दूर होते हैं और एक-दूसरे पर slide कर सकते हैं इसलिए liquid बहता है। पूरी तरह स्वतंत्र होना gas की विशेषता है, और गति रहित होना किसी भी अवस्था में नहीं होता।"
+    },
+    {
+      "id": "chem_matter_states_q12",
+      "question": "gas के condensation से बनी अवस्था कौन-सी होती है?",
+      "options": ["Solid", "Liquid", "Plasma", "एक और gas"],
+      "correctIndex": 1,
+      "explanation": "Condensation में gas ठंडा होकर liquid में बदलता है, जैसे भाप का पानी बनना। Solid बनाने के लिए deposition होती है, Plasma high energy अवस्था है और gas से gas condensation नहीं है।"
+    },
+    {
+      "id": "chem_matter_states_q13",
+      "question": "किसी liquid का boiling point उस दाब पर होता है जब उसका vapour pressure किसके बराबर हो जाता है?",
+      "options": ["शून्य", "atmospheric pressure", "अनंत", "density के बराबर"],
+      "correctIndex": 1,
+      "explanation": "Boiling तब होती है जब liquid का vapour pressure बाहरी atmospheric pressure के बराबर हो जाता है। शून्य या अनंत होना असंभव है और density दाब से भिन्न भौतिक राशि है।"
+    },
+    {
+      "id": "chem_matter_states_q14",
+      "question": "समान द्रव्यमान लेने पर किस अवस्था में पदार्थ का volume सामान्यतः सबसे अधिक होता है?",
+      "options": ["Solid", "Liquid", "Gas", "तीनों में समान"],
+      "correctIndex": 2,
+      "explanation": "Gas में particles सबसे दूर-दूर होते हैं इसलिए समान mass पर उसका volume सबसे अधिक और density सबसे कम होती है। Solid और Liquid में particles पास होने से volume कम रहता है।"
+    },
+    {
+      "id": "chem_matter_states_q15",
+      "question": "compressibility (संपीड्यता) किस अवस्था में सबसे अधिक होती है?",
+      "options": ["Solid", "Liquid", "Gas", "Solid और Liquid दोनों समान"],
+      "correctIndex": 2,
+      "explanation": "Gas में particles के बीच अधिक खाली स्थान होने से वह आसानी से compress हो जाती है। Solid और Liquid में particles पास होने से वे लगभग असंपीड्य रहते हैं।"
+    },
+    {
+      "id": "chem_matter_states_q16",
+      "question": "एक cube का किनारा 2 cm और mass 64 g है। इसका density क्या है?",
+      "options": ["8 g/cm3", "32 g/cm3", "16 g/cm3", "4 g/cm3"],
+      "correctIndex": 0,
+      "explanation": "Cube का volume = 2×2×2 = 8 cm3, इसलिए density = 64 / 8 = 8 g/cm3। 32 गलत रूप से किनारे को square मानने से, 16 और 4 गलत भाग से आते हैं।"
+    },
+    {
+      "id": "chem_matter_states_q17",
+      "question": "liquid के freeze होकर solid बनने की process को क्या कहते हैं?",
+      "options": ["Melting", "Freezing", "Vaporization", "Sublimation"],
+      "correctIndex": 1,
+      "explanation": "Freezing में liquid ठंडा होकर solid बनता है, जैसे पानी का बर्फ बनना। Melting इसका उल्टा है, Vaporization में liquid gas बनता है और Sublimation solid से सीधे gas।"
+    },
+    {
+      "id": "chem_matter_states_q18",
+      "question": "पदार्थ के particles के बीच खाली स्थान की उपस्थिति को कौन-सी घटना सबसे अच्छे से सिद्ध करती है?",
+      "options": ["Melting", "Diffusion", "Density", "Compression केवल solids में"],
+      "correctIndex": 1,
+      "explanation": "Diffusion में एक पदार्थ के particles दूसरे के बीच के खाली स्थान में फैल जाते हैं, जिससे intermolecular space सिद्ध होता है। Melting और density यह सीधे नहीं दिखाते, और solids में compression नगण्य होता है।"
+    },
+    {
+      "id": "chem_matter_states_q19",
+      "question": "जल का density लगभग 1 g/cm3 है। एक 500 cm3 पात्र को पूरा जल से भरने पर जल का द्रव्यमान लगभग कितना होगा?",
+      "options": ["50 g", "500 g", "5000 g", "0.5 g"],
+      "correctIndex": 1,
+      "explanation": "Mass = density × volume = 1 × 500 = 500 g। 50 और 5000 दशमलव त्रुटि से आते हैं और 0.5 गलत रूप से volume से भाग देने पर।"
+    },
+    {
+      "id": "chem_matter_states_q20",
+      "question": "gas को अत्यधिक ठंडा और दबाकर सीधे solid बनाने की process (बिना liquid बने) क्या कहलाती है?",
+      "options": ["Deposition", "Condensation", "Evaporation", "Melting"],
+      "correctIndex": 0,
+      "explanation": "Deposition में gas सीधे solid में बदलती है, यह sublimation का उल्टा है। Condensation में gas से liquid, Evaporation में liquid से gas और Melting में solid से liquid बनता है।"
+    },
+    {
+      "id": "chem_matter_states_q21",
+      "question": "किसी solid को गर्म करने पर उसके particles की गति और आपसी दूरी पर क्या प्रभाव पड़ता है?",
+      "options": ["गति और दूरी दोनों घटती हैं", "गति बढ़ती है और दूरी थोड़ी बढ़ती है", "केवल दूरी घटती है", "कोई परिवर्तन नहीं"],
+      "correctIndex": 1,
+      "explanation": "गर्म करने पर kinetic energy बढ़ने से particles तेज vibrate करते हैं और उनकी आपसी दूरी थोड़ी बढ़ती है, इसी से thermal expansion होता है। घटना या अपरिवर्तित रहना heating के प्रभाव के विपरीत है।"
+    },
+    {
+      "id": "chem_matter_states_q22",
+      "question": "समुद्र तल की तुलना में ऊँचे पहाड़ों पर पानी कम temperature पर उबलता है, इसका कारण क्या है?",
+      "options": ["वहाँ density अधिक होती है", "वहाँ atmospheric pressure कम होता है", "वहाँ latent heat अधिक होती है", "वहाँ पानी अशुद्ध होता है"],
+      "correctIndex": 1,
+      "explanation": "ऊँचाई पर atmospheric pressure कम होने से पानी का vapour pressure कम temperature पर ही उसके बराबर हो जाता है, इसलिए boiling point घट जाता है। Density, latent heat या अशुद्धता इसका मुख्य कारण नहीं हैं।"
+    },
+    {
+      "id": "chem_matter_states_q23",
+      "question": "निम्न में से कौन-सा जोड़ा (state → state) sublimation के अंतर्गत आता है?",
+      "options": ["Liquid → Gas", "Solid → Gas", "Gas → Liquid", "Solid → Liquid"],
+      "correctIndex": 1,
+      "explanation": "Sublimation में solid सीधे gas में बदलता है, इसलिए Solid → Gas सही है। Liquid → Gas vaporization, Gas → Liquid condensation और Solid → Liquid melting कहलाता है।"
+    },
+    {
+      "id": "chem_matter_states_q24",
+      "question": "Evaporation से cooling effect क्यों उत्पन्न होता है?",
+      "options": ["surface गर्म हो जाती है", "उच्च ऊर्जा वाले particles surface छोड़ देते हैं जिससे शेष liquid ठंडा होता है", "particles heat सोख कर रोक लेते हैं", "density बढ़ जाती है"],
+      "correctIndex": 1,
+      "explanation": "Evaporation में उच्च kinetic energy वाले particles surface से निकल जाते हैं, जिससे शेष liquid की average energy और temperature घट जाती है, यही cooling effect है। बाकी विकल्प इस ऊर्जा-हस्तांतरण को गलत बताते हैं।"
+    },
+    {
+      "id": "chem_matter_states_q25",
+      "question": "किसी पदार्थ की density अधिक होने का सामान्य अर्थ क्या है?",
+      "options": ["उसका द्रव्यमान कम है", "इकाई volume में अधिक द्रव्यमान भरा है", "उसका volume अधिक है", "उसमें particles दूर-दूर हैं"],
+      "correctIndex": 1,
+      "explanation": "Density = mass/volume, इसलिए अधिक density का अर्थ है इकाई volume में अधिक द्रव्यमान अर्थात particles पास-पास। कम द्रव्यमान, अधिक volume या दूर particles कम density दर्शाते हैं।"
+    },
+    {
+      "id": "chem_matter_states_q26",
+      "question": "एक ही पदार्थ की तीन अवस्थाओं में intermolecular force का सही घटता क्रम कौन-सा है?",
+      "options": ["Gas > Liquid > Solid", "Solid > Liquid > Gas", "Liquid > Solid > Gas", "Solid > Gas > Liquid"],
+      "correctIndex": 1,
+      "explanation": "Intermolecular force solid में सबसे अधिक और gas में सबसे कम होता है, इसलिए सही क्रम Solid > Liquid > Gas है। बाकी क्रम particles की व्यवस्था के विपरीत हैं।"
+    },
+    {
+      "id": "chem_matter_states_q27",
+      "question": "जब बर्फ 0 °C पर पिघल रही होती है तो दी गई heat किस काम आती है?",
+      "options": ["temperature बढ़ाने", "particles के बीच के bond तोड़कर state बदलने", "density बढ़ाने", "mass बढ़ाने"],
+      "correctIndex": 1,
+      "explanation": "0 °C पर दी गई latent heat of fusion particles के बीच के आकर्षण को तोड़कर solid को liquid में बदलती है, इसलिए temperature स्थिर रहता है। यह heat temperature, density या mass बढ़ाने में नहीं लगती।"
+    },
+    {
+      "id": "chem_matter_states_q28",
+      "question": "गैसों का सबसे अधिक diffuse होना उनकी किस विशेषता के कारण होता है?",
+      "options": ["particles का पास-पास होना", "particles की उच्च गति और अधिक अंतर-आणविक स्थान", "उच्च density", "मजबूत intermolecular force"],
+      "correctIndex": 1,
+      "explanation": "Gas particles की गति तेज और उनके बीच अधिक खाली स्थान होने से वे तेजी से diffuse होती हैं। पास-पास होना, उच्च density या मजबूत force gas की विशेषता नहीं हैं।"
+    },
+    {
+      "id": "chem_matter_states_q29",
+      "question": "किसी पदार्थ की fixed shape और fixed volume दोनों होना किस अवस्था की पहचान है?",
+      "options": ["Gas", "Liquid", "Solid", "Vapour"],
+      "correctIndex": 2,
+      "explanation": "Solid में particles मजबूती से जकड़े होने से उसका shape और volume दोनों fixed रहते हैं। Gas और Vapour का न shape न volume fixed होता, जबकि Liquid का केवल volume fixed होता है।"
+    },
+    {
+      "id": "chem_matter_states_q30",
+      "question": "80 g mass और 100 cm3 volume वाला एक पदार्थ पानी (density 1 g/cm3) में डालने पर क्या होगा?",
+      "options": ["डूब जाएगा क्योंकि density अधिक है", "तैरेगा क्योंकि density पानी से कम है", "घुल जाएगा", "पानी के साथ react करेगा"],
+      "correctIndex": 1,
+      "explanation": "पदार्थ की density = 80/100 = 0.8 g/cm3 जो पानी की 1 g/cm3 से कम है, इसलिए वह तैरेगा। density अधिक न होने से डूबना गलत है, और तैरना घुलने या react करने से भिन्न घटना है।"
+    }
+  ]
+}

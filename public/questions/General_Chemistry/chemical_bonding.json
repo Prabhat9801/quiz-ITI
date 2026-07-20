@@ -1,0 +1,218 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "chemical_bonding",
+  "topicName": "Chemical Bonding",
+  "questions": [
+    {
+      "id": "chem_chemical_bonding_q1",
+      "question": "ionic bond किस प्रकार बनता है?",
+      "options": ["electrons के साझा (sharing) से", "एक atom से दूसरे atom में electrons के स्थानांतरण (transfer) से", "protons के आदान-प्रदान से", "neutrons के साझा से"],
+      "correctIndex": 1,
+      "explanation": "Ionic bond में एक atom electrons खोता और दूसरा ग्रहण करता है, इस transfer से बने विपरीत ions आकर्षण से जुड़ते हैं। Sharing covalent bond में होता है, और protons या neutrons bonding में स्थानांतरित नहीं होते।"
+    },
+    {
+      "id": "chem_chemical_bonding_q2",
+      "question": "NaCl में Sodium (Na) और Chlorine (Cl) के बीच किस प्रकार का bond होता है?",
+      "options": ["Covalent bond", "Ionic bond", "Metallic bond", "Hydrogen bond"],
+      "correctIndex": 1,
+      "explanation": "Na अपना 1 electron Cl को देकर Na+ और Cl− बनाता है, जिनके बीच स्थिर विद्युत आकर्षण ionic bond बनाता है। Covalent में sharing, metallic धातुओं में और hydrogen bond एक दुर्बल अंतराआण्विक बल है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q3",
+      "question": "covalent bond किस प्रकार बनता है?",
+      "options": ["electrons के transfer से", "electrons के साझा (sharing) से", "ions के आकर्षण से", "मुक्त electrons के समुद्र से"],
+      "correctIndex": 1,
+      "explanation": "Covalent bond में दो atoms electrons के जोड़े साझा करके octet पूरा करते हैं, जैसे H2 और CH4 में। Transfer ionic bond में, ions का आकर्षण भी ionic और मुक्त electron समुद्र metallic bond में होता है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q4",
+      "question": "octet rule किस बात को संदर्भित करती है?",
+      "options": ["atoms 8 protons पाना चाहते हैं", "atoms अपनी बाहरी shell में 8 electrons पाकर स्थिर होना चाहते हैं", "atoms 8 bond बनाते हैं", "atoms 8 neutrons रखते हैं"],
+      "correctIndex": 1,
+      "explanation": "Octet rule के अनुसार atoms electrons के transfer या sharing द्वारा बाहरी shell में 8 electrons पूरा करके noble gas जैसी स्थिरता पाना चाहते हैं। यह protons, neutrons या bonds की संख्या से संबंधित नहीं है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q5",
+      "question": "H2O अणु में Oxygen और दो Hydrogen के बीच किस प्रकार के bond होते हैं?",
+      "options": ["दो ionic bonds", "दो covalent (साझा) bonds", "एक metallic bond", "तीन covalent bonds"],
+      "correctIndex": 1,
+      "explanation": "H2O में Oxygen प्रत्येक Hydrogen के साथ एक-एक electron जोड़ा साझा करता है, इसलिए दो covalent bonds बनते हैं। Ionic या metallic bond यहाँ नहीं होता और bonds की संख्या दो ही है, तीन नहीं।"
+    },
+    {
+      "id": "chem_chemical_bonding_q6",
+      "question": "metallic bond की सबसे अच्छी व्याख्या कौन-सी है?",
+      "options": ["ions का साझा", "धनात्मक ions के बीच मुक्त electrons के 'sea of electrons' का आकर्षण", "electrons का पूर्ण transfer", "neutrons का साझा"],
+      "correctIndex": 1,
+      "explanation": "Metallic bond में धातु के धनायन एक 'sea of delocalised electrons' में डूबे रहते हैं और इनका आकर्षण bond बनाता है, इसी से धातुएँ विद्युत का चालन करती हैं। पूर्ण transfer ionic और sharing covalent bond की विशेषता है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q7",
+      "question": "CH4 (Methane) में Carbon कितने covalent bonds बनाता है?",
+      "options": ["2", "3", "4", "1"],
+      "correctIndex": 2,
+      "explanation": "Carbon के बाहरी shell में 4 electrons होते हैं, जो 4 Hydrogen के साथ साझा होकर 4 covalent bonds बनाते हैं और octet पूरा करते हैं। इसलिए 2, 3 या 1 bond अपर्याप्त होंगे।"
+    },
+    {
+      "id": "chem_chemical_bonding_q8",
+      "question": "ionic compounds की सामान्यतः melting point कैसी होती है और क्यों?",
+      "options": ["कम, क्योंकि bond दुर्बल होते हैं", "उच्च, क्योंकि ions के बीच मजबूत विद्युत आकर्षण होता है", "शून्य के आसपास", "covalent से कम"],
+      "correctIndex": 1,
+      "explanation": "Ionic compounds में विपरीत ions के बीच मजबूत विद्युत आकर्षण को तोड़ने हेतु अधिक ऊर्जा चाहिए, इसलिए melting point उच्च होती है। दुर्बल bond या शून्य melting point उनकी प्रकृति के विपरीत है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q9",
+      "question": "जब दो atoms एक-एक electron जोड़ा साझा करते हैं तो कौन-सा bond बनता है?",
+      "options": ["Single covalent bond", "Double bond", "Triple bond", "Ionic bond"],
+      "correctIndex": 0,
+      "explanation": "एक साझा electron जोड़ा (2 electrons) single covalent bond बनाता है, जैसे H−H। दो जोड़े double, तीन जोड़े triple bond बनाते हैं, जबकि ionic bond में साझा नहीं transfer होता है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q10",
+      "question": "N2 अणु में दोनों Nitrogen atoms के बीच किस प्रकार का bond होता है?",
+      "options": ["Single bond", "Double bond", "Triple bond", "Ionic bond"],
+      "correctIndex": 2,
+      "explanation": "प्रत्येक Nitrogen को octet पूरा करने हेतु 3 electrons चाहिए, इसलिए वे 3 जोड़े साझा करके triple bond बनाते हैं, यही N2 को अत्यधिक स्थिर बनाता है। Single या double bond से octet पूरा नहीं होगा।"
+    },
+    {
+      "id": "chem_chemical_bonding_q11",
+      "question": "ionic compounds ठोस अवस्था में विद्युत का चालन क्यों नहीं करते?",
+      "options": ["उनमें ions नहीं होते", "ठोस में ions एक निश्चित स्थान पर बँधे होते हैं और मुक्त नहीं होते", "उनमें electrons नहीं होते", "वे धातु हैं"],
+      "correctIndex": 1,
+      "explanation": "ठोस ionic compound में ions crystal lattice में स्थिर होते हैं इसलिए charge प्रवाहित नहीं होता; पिघलने या घुलने पर ions मुक्त होकर चालन करते हैं। ions की अनुपस्थिति या धातु होना गलत कारण हैं।"
+    },
+    {
+      "id": "chem_chemical_bonding_q12",
+      "question": "MgCl2 में Magnesium और Chlorine का अनुपात 1:2 क्यों होता है?",
+      "options": ["Mg की valency 1 और Cl की 2 है", "Mg की valency 2 और Cl की 1 है", "दोनों की valency 2 है", "दोनों की valency 1 है"],
+      "correctIndex": 1,
+      "explanation": "Mg 2 electrons खोकर Mg2+ बनाता है और प्रत्येक Cl 1 electron लेकर Cl− बनाता है, इसलिए charge संतुलन हेतु 2 Cl चाहिए, अनुपात 1:2 होता है। शेष valency संयोजन इस सूत्र को नहीं देते।"
+    },
+    {
+      "id": "chem_chemical_bonding_q13",
+      "question": "Lewis structure (dot structure) में किन electrons को dots द्वारा दर्शाया जाता है?",
+      "options": ["सभी electrons", "केवल valence (बाहरी shell) electrons", "केवल भीतरी electrons", "protons"],
+      "correctIndex": 1,
+      "explanation": "Lewis structure में केवल valence electrons को dots से दर्शाया जाता है क्योंकि यही bonding में भाग लेते हैं। भीतरी electrons या protons को इसमें नहीं दिखाया जाता।"
+    },
+    {
+      "id": "chem_chemical_bonding_q14",
+      "question": "covalent compounds सामान्यतः पानी के मुकाबले किस प्रकार के विलायक (solvent) में अधिक घुलते हैं?",
+      "options": ["पानी जैसे polar solvent", "petrol/benzene जैसे non-polar organic solvent", "अम्लीय जल", "किसी में नहीं घुलते"],
+      "correctIndex": 1,
+      "explanation": "अधिकांश non-polar covalent compounds 'like dissolves like' नियम अनुसार non-polar organic solvents में घुलते हैं, जबकि ionic compounds polar जल में। इसलिए वे सामान्यतः पानी में कम घुलते हैं।"
+    },
+    {
+      "id": "chem_chemical_bonding_q15",
+      "question": "धातुएँ मुड़ने योग्य (malleable और ductile) क्यों होती हैं?",
+      "options": ["उनमें covalent bond होते हैं", "metallic bond में layers of ions मुक्त electrons के कारण खिसक सकती हैं बिना bond टूटे", "उनमें ionic bond होते हैं", "उनमें कोई bond नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "Metallic bond में delocalised electrons के कारण धनायनों की परतें आपस में खिसक जाती हैं और bond बना रहता है, इसलिए धातु पीटने और खींचने योग्य होती है। Ionic ठोस भंगुर होते हैं, यह धातुओं का व्यवहार नहीं।"
+    },
+    {
+      "id": "chem_chemical_bonding_q16",
+      "question": "O2 अणु में दोनों Oxygen atoms के बीच किस प्रकार का bond बनता है?",
+      "options": ["Single covalent bond", "Double covalent bond", "Ionic bond", "Triple bond"],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक Oxygen को octet हेतु 2 electrons चाहिए, इसलिए वे 2 जोड़े साझा करके double covalent bond बनाते हैं। Single bond से octet अधूरा रहेगा और ionic या triple bond O2 में नहीं होता।"
+    },
+    {
+      "id": "chem_chemical_bonding_q17",
+      "question": "किसी atom द्वारा electron खोने पर बनने वाले धनात्मक ion को क्या कहते हैं?",
+      "options": ["Anion", "Cation", "Isotope", "Radical"],
+      "correctIndex": 1,
+      "explanation": "Electron खोने पर धनावेशित ion अर्थात cation बनता है, जैसे Na+। Electron ग्रहण करने पर ऋणावेशित anion बनता है, जबकि isotope और radical भिन्न अवधारणाएँ हैं।"
+    },
+    {
+      "id": "chem_chemical_bonding_q18",
+      "question": "HCl एक covalent compound है फिर भी जल में विद्युत का चालन करता है, क्यों?",
+      "options": ["यह धातु है", "जल में यह H+ और Cl− ions में वियोजित हो जाता है", "इसमें मुक्त electrons होते हैं", "यह ठोस है"],
+      "correctIndex": 1,
+      "explanation": "यद्यपि HCl में covalent bond है, जल में घुलने पर यह H+ और Cl− ions में टूट जाता है जो charge प्रवाहित कर चालन करते हैं। धातु होना या मुक्त electrons इसका कारण नहीं हैं।"
+    },
+    {
+      "id": "chem_chemical_bonding_q19",
+      "question": "CaO (Calcium oxide) में किस प्रकार का bond होता है?",
+      "options": ["Covalent bond", "Ionic bond", "Metallic bond", "Hydrogen bond"],
+      "correctIndex": 1,
+      "explanation": "Ca 2 electrons खोकर Ca2+ और O 2 electrons लेकर O2− बनाता है, इनके आकर्षण से ionic bond बनता है। यहाँ sharing (covalent) या धातु का sea of electrons (metallic) नहीं होता।"
+    },
+    {
+      "id": "chem_chemical_bonding_q20",
+      "question": "CO2 अणु में Carbon और प्रत्येक Oxygen के बीच किस प्रकार का bond होता है?",
+      "options": ["Single bond", "Double bond", "Triple bond", "Ionic bond"],
+      "correctIndex": 1,
+      "explanation": "CO2 में Carbon प्रत्येक Oxygen के साथ 2 electron जोड़े साझा करता है, इसलिए दो double covalent bonds (O=C=O) बनते हैं। Single या triple bond से octet संतुलन नहीं बनता और यह ionic नहीं है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q21",
+      "question": "एक atom electron ग्रहण करके ऋणात्मक ion बनाता है, इसे क्या कहते हैं?",
+      "options": ["Cation", "Anion", "Proton", "Isotope"],
+      "correctIndex": 1,
+      "explanation": "Electron ग्रहण करने पर बनने वाला ऋणावेशित ion anion कहलाता है, जैसे Cl−। धनावेशित ion cation, proton nucleus का कण और isotope भिन्न न्यूट्रॉन वाला atom है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q22",
+      "question": "Hydrogen अणु (H2) में bond बनने का कारण क्या है?",
+      "options": ["दोनों H, electron transfer करते हैं", "दोनों H एक-एक electron साझा कर helium जैसा duplet पूरा करते हैं", "एक H दूसरे को proton देता है", "metallic bond बनता है"],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक Hydrogen के पास 1 electron है; दोनों एक जोड़ा साझा करके 2 electrons (Helium जैसा duplet) पूरा कर स्थिर होते हैं, यह covalent bond है। यहाँ transfer या metallic bond नहीं होता।"
+    },
+    {
+      "id": "chem_chemical_bonding_q23",
+      "question": "ionic bond बनने की सबसे अधिक संभावना किन दो प्रकार के elements के बीच होती है?",
+      "options": ["दो अधातु (non-metals)", "एक धातु (metal) और एक अधातु (non-metal)", "दो धातु", "दो noble gases"],
+      "correctIndex": 1,
+      "explanation": "धातु electrons खोकर cation और अधातु electrons लेकर anion बनाता है, इसलिए metal और non-metal के बीच ionic bond बनता है। दो non-metals covalent और दो metals metallic bond बनाते हैं; noble gases सामान्यतः bond नहीं बनाते।"
+    },
+    {
+      "id": "chem_chemical_bonding_q24",
+      "question": "covalent compounds की melting और boiling point सामान्यतः ionic compounds की तुलना में कैसी होती है?",
+      "options": ["अधिक", "कम", "बराबर", "अनंत"],
+      "correctIndex": 1,
+      "explanation": "Covalent अणुओं के बीच दुर्बल intermolecular forces होते हैं जिन्हें तोड़ने में कम ऊर्जा लगती है, इसलिए इनकी melting व boiling point ionic की तुलना में कम होती है। बराबर या अनंत होना गलत है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q25",
+      "question": "Na (2,8,1) और Cl (2,8,7) के बीच ionic bond बनने के बाद दोनों ions का electronic configuration किस noble gas जैसा हो जाता है?",
+      "options": ["दोनों Helium जैसे", "Na+ Neon जैसा और Cl− Argon जैसा", "दोनों Argon जैसे", "दोनों Neon जैसे"],
+      "correctIndex": 1,
+      "explanation": "Na 1 electron खोकर 2,8 (Neon जैसा) और Cl 1 electron लेकर 2,8,8 (Argon जैसा) बन जाता है, दोनों stable octet पाते हैं। इसलिए दोनों का एक ही noble gas जैसा होना गलत है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q26",
+      "question": "diamond और graphite में carbon के बीच किस प्रकार का bond होता है?",
+      "options": ["Ionic bond", "Covalent bond", "Metallic bond", "Hydrogen bond"],
+      "correctIndex": 1,
+      "explanation": "Diamond और graphite दोनों में carbon atoms एक-दूसरे के साथ electrons साझा करके covalent bond बनाते हैं। यहाँ ions या धातु का sea of electrons न होने से ionic व metallic bond नहीं होता।"
+    },
+    {
+      "id": "chem_chemical_bonding_q27",
+      "question": "किसी covalent bond में साझा electron जोड़ा असमान रूप से खिंचने पर bond कैसा बनता है?",
+      "options": ["Non-polar covalent", "Polar covalent", "पूर्ण ionic", "Metallic"],
+      "correctIndex": 1,
+      "explanation": "जब एक atom दूसरे की तुलना में साझा electrons को अधिक खींचता है (जैसे H−Cl में Cl अधिक), तो आंशिक charge बनने से polar covalent bond बनता है। समान खिंचाव non-polar, पूर्ण transfer ionic और sea of electrons metallic होता है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q28",
+      "question": "MgO का melting point NaCl से अधिक होने का मुख्य कारण क्या है?",
+      "options": ["MgO covalent है", "MgO में Mg2+ और O2− के उच्च charges के कारण आकर्षण अधिक मजबूत होता है", "NaCl में bond नहीं होता", "MgO में hydrogen bond होता है"],
+      "correctIndex": 1,
+      "explanation": "MgO में द्विसंयोजी Mg2+ और O2− ions का आकर्षण, NaCl के एकसंयोजी Na+, Cl− की तुलना में अधिक मजबूत होता है, इसलिए अधिक melting point। MgO ionic है, covalent या hydrogen bond वाला नहीं।"
+    },
+    {
+      "id": "chem_chemical_bonding_q29",
+      "question": "अधिकांश covalent molecular compounds विद्युत का चालन क्यों नहीं करते?",
+      "options": ["उनमें मुक्त ions या मुक्त electrons नहीं होते", "उनमें बहुत से protons होते हैं", "वे बहुत भारी होते हैं", "वे धातु होते हैं"],
+      "correctIndex": 0,
+      "explanation": "Covalent compounds उदासीन अणुओं से बने होते हैं जिनमें charge वहन करने वाले मुक्त ions या मुक्त electrons नहीं होते, इसलिए चालन नहीं होता। भारीपन या protons की संख्या इसका कारण नहीं है।"
+    },
+    {
+      "id": "chem_chemical_bonding_q30",
+      "question": "Nitrogen (2,5) और Hydrogen से बनने वाले NH3 में Nitrogen कितने covalent bonds बनाता है?",
+      "options": ["1", "2", "3", "5"],
+      "correctIndex": 2,
+      "explanation": "Nitrogen को octet पूरा करने हेतु 3 electrons चाहिए, इसलिए वह 3 Hydrogen के साथ 3 covalent bonds बनाकर NH3 बनाता है। 1 या 2 bond से octet अधूरा रहेगा और 5 इसके valence electrons की संख्या है, bonds की नहीं।"
+    }
+  ]
+}

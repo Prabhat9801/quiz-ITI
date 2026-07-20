@@ -1,0 +1,218 @@
+{
+  "unit": "unit1",
+  "unitName": "Analog and Digital Electronics circuits",
+  "topic": "transistor_amplifiers",
+  "topicName": "Transistor Amplifiers & Configurations",
+  "questions": [
+    {
+      "id": "u1_transistor_amplifiers_q1",
+      "question": "Common Emitter (CE) amplifier में input signal और output signal के बीच phase shift कितना होता है?",
+      "options": ["0 degree", "90 degree", "180 degree", "270 degree"],
+      "correctIndex": 2,
+      "explanation": "CE configuration में collector पर output, base पर लगे input से 180 degree out of phase (inverted) होता है। 0 degree यानी in-phase output CB और CC (emitter follower) का गुण है, इसलिए वे गलत हैं; 90 और 270 degree किसी भी basic transistor amplifier में नहीं होते।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q2",
+      "question": "Common Base (CB) configuration की current gain (alpha) के बारे में कौन सा कथन सही है?",
+      "options": ["यह हमेशा 1 से थोड़ी कम होती है", "यह beta के बराबर होती है", "यह 1 से बहुत अधिक होती है", "यह हमेशा शून्य होती है"],
+      "correctIndex": 0,
+      "explanation": "CB में current gain alpha = Ic/Ie होती है और चूँकि Ic हमेशा Ie से थोड़ा कम रहता है, alpha लगभग 0.95 से 0.99 यानी 1 से कम होती है। beta तो CE की current gain है जो 1 से बहुत अधिक होती है; 1 से बहुत अधिक या शून्य होना गलत है क्योंकि CB current amplify नहीं करता।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q3",
+      "question": "किस configuration को emitter follower कहा जाता है?",
+      "options": ["Common Base", "Common Emitter", "Common Collector", "Common Drain"],
+      "correctIndex": 2,
+      "explanation": "Common Collector (CC) configuration को emitter follower कहते हैं क्योंकि इसमें output emitter से लिया जाता है जो base के input voltage को follow करता है। CB और CE में output collector से लिया जाता है इसलिए वे गलत हैं; Common Drain एक FET term है, BJT configuration नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q4",
+      "question": "तीनों में से सबसे अधिक input impedance किस configuration की होती है?",
+      "options": ["Common Base", "Common Emitter", "Common Collector", "तीनों की समान"],
+      "correctIndex": 2,
+      "explanation": "Common Collector (emitter follower) की input impedance सबसे अधिक (कई दसियों से सैकड़ों kilo-ohm) होती है, इसीलिए यह buffering के लिए आदर्श है। CB की सबसे कम और CE की मध्यम होती है; तीनों समान नहीं होतीं क्योंकि उनकी input impedance में बड़ा अंतर होता है।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q5",
+      "question": "किस configuration की input impedance सबसे कम होती है?",
+      "options": ["Common Collector", "Common Emitter", "Common Base", "Darlington pair"],
+      "correctIndex": 2,
+      "explanation": "Common Base की input impedance सबसे कम (लगभग 20 से 50 ohm) होती है क्योंकि input low-resistance emitter junction पर लगाया जाता है। CC की सबसे अधिक, CE की मध्यम और Darlington pair की बहुत अधिक होती है, अतः वे विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q6",
+      "question": "एक Darlington pair के दो transistors के beta मान 50 और 80 हैं। overall current gain लगभग कितनी होगी?",
+      "options": ["130", "4000", "1.6", "40"],
+      "correctIndex": 1,
+      "explanation": "Darlington pair की overall beta दोनों beta का गुणनफल होती है, यानी 50 × 80 = 4000। 130 (जोड़) गलत है क्योंकि beta गुणित होते हैं जुड़ते नहीं; 1.6 केवल अनुपात है और 40 का कोई सही संबंध नहीं बनता।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q7",
+      "question": "RC-coupled amplifier में coupling capacitor का कार्य क्या है?",
+      "options": ["DC को block करना और AC signal को अगली stage तक pass करना", "emitter resistor को bypass करना", "base को DC bias देना", "collector supply voltage बढ़ाना"],
+      "correctIndex": 0,
+      "explanation": "Coupling capacitor एक stage की DC bias को block कर देता है परन्तु AC signal को अगली stage तक pass कर देता है, जिससे हर stage का DC operating point (Q-point) अलग बना रहता है। emitter resistor को bypass करना bypass capacitor का काम है, DC bias देना biasing resistors का, और supply voltage बढ़ाना capacitor का कार्य नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q8",
+      "question": "RC-coupled amplifier में low frequency पर voltage gain क्यों घट जाती है?",
+      "options": ["transistor की internal capacitance signal को short कर देती है", "coupling और bypass capacitors की reactance बढ़ जाती है", "emitter resistor का मान बढ़ जाता है", "supply voltage गिर जाती है"],
+      "correctIndex": 1,
+      "explanation": "Low frequency पर coupling और bypass capacitors की reactance (Xc = 1/2πfC) बड़ी हो जाती है जिससे वे signal को ठीक से pass नहीं कर पाते और gain घट जाती है। internal (junction) capacitance द्वारा signal short होना high frequency की घटना है; emitter resistor fixed रहता है और supply voltage एक DC मान है जो frequency से नहीं बदलता।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q9",
+      "question": "RC-coupled amplifier में high frequency पर gain क्यों घट जाती है?",
+      "options": ["coupling capacitor की reactance बड़ी हो जाती है", "inter-electrode और stray shunt capacitances signal को bypass कर देती हैं", "emitter bypass capacitor open हो जाता है", "DC bias खिसक कर cut-off में चला जाता है"],
+      "correctIndex": 1,
+      "explanation": "High frequency पर inter-electrode (junction) और stray shunt capacitances की reactance कम हो जाती है और वे AC signal को ground की ओर short (bypass) कर देती हैं, जिससे gain घटती है। coupling capacitor की reactance बड़ी होना low frequency effect है; bypass capacitor high freq पर open नहीं होता और DC bias signal frequency से नहीं खिसकता।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q10",
+      "question": "CE amplifier में emitter bypass capacitor का मुख्य उद्देश्य क्या है?",
+      "options": ["emitter से DC block करना", "AC negative feedback रोककर उच्च voltage gain बनाए रखना", "input impedance बढ़ाना", "collector junction को reverse bias करना"],
+      "correctIndex": 1,
+      "explanation": "Emitter bypass capacitor emitter resistor के across AC के लिए low-reactance path देता है जिससे AC negative feedback समाप्त होकर voltage gain अधिक बनी रहती है। यह DC block नहीं करता क्योंकि DC तो emitter resistor से बहता रहता है; यह effective input impedance घटाता है बढ़ाता नहीं, और reverse bias DC supply देती है capacitor नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q11",
+      "question": "High-impedance source और low-impedance load के बीच buffer के रूप में कौन सी configuration सबसे उपयुक्त है?",
+      "options": ["Common Emitter", "Common Base", "Common Collector", "Class B amplifier"],
+      "correctIndex": 2,
+      "explanation": "Common Collector (emitter follower) की input impedance अधिक और output impedance कम होती है तथा voltage gain लगभग 1 रहती है, जिससे यह आदर्श impedance-matching buffer है। CE की impedance मध्यम है और वह signal invert करता है; CB की input impedance बहुत कम है; Class B एक power amplifier class है, configuration नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q12",
+      "question": "Common Collector (emitter follower) की voltage gain लगभग कितनी होती है?",
+      "options": ["1 से बहुत अधिक", "लगभग 1 (परन्तु 1 से थोड़ी कम)", "ऋणात्मक और बड़ी", "शून्य"],
+      "correctIndex": 1,
+      "explanation": "Emitter follower में output emitter voltage input base voltage को follow करती है इसलिए voltage gain 1 से थोड़ी कम (लगभग 0.95 से 0.99) रहती है। यह 1 से बहुत अधिक नहीं होती क्योंकि CC voltage amplify नहीं करता; यह ऋणात्मक नहीं होती क्योंकि invert नहीं होता, और शून्य भी नहीं क्योंकि output input को follow करती है।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q13",
+      "question": "Common Collector configuration में current gain लगभग किसके बराबर होती है?",
+      "options": ["alpha (1 से कम)", "1 + beta", "1 / beta", "beta squared"],
+      "correctIndex": 1,
+      "explanation": "CC की current gain Ie/Ib = 1 + beta होती है क्योंकि emitter current, base current और collector current का योग होता है। alpha (1 से कम) CB की current gain है CC की नहीं; 1/beta का कोई भौतिक अर्थ नहीं और beta squared तो Darlington pair की gain है single CC stage की नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q14",
+      "question": "कौन सी configuration उच्च voltage gain, उच्च current gain और इसलिए सर्वाधिक power gain देती है, जिससे यह सबसे प्रचलित amplifier है?",
+      "options": ["Common Base", "Common Collector", "Common Emitter", "Emitter follower"],
+      "correctIndex": 2,
+      "explanation": "Common Emitter में voltage gain और current gain दोनों अधिक होने से power gain सबसे अधिक होती है, इसीलिए यह सबसे अधिक उपयोग होने वाला amplifier stage है। CB की current gain 1 से कम और CC की voltage gain 1 से कम होने से उनकी power gain कम रहती है; emitter follower तो CC ही है जिसमें voltage gain नहीं होती।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q15",
+      "question": "Common Base amplifier में input और output signal के बीच phase संबंध कैसा होता है?",
+      "options": ["180 degree out of phase", "90 degree out of phase", "in-phase (0 degree)", "अनियमित रूप से बदलता हुआ"],
+      "correctIndex": 2,
+      "explanation": "Common Base amplifier का output input के साथ in-phase (0 degree) होता है क्योंकि emitter input बढ़ने पर collector output भी उसी दिशा में बढ़ता है। 180 degree तो CE का गुण है; resistive amplifier 90 degree shift नहीं देता और phase संबंध स्थिर रहता है अनियमित नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q16",
+      "question": "CE configuration वाले एक transistor में base current 40 microamp और collector current 4 milliamp है। इसका beta कितना है?",
+      "options": ["100", "160", "0.01", "10"],
+      "correctIndex": 0,
+      "explanation": "Beta = Ic/Ib = 4 mA / 40 microamp = 4000 microamp / 40 microamp = 100। 160 इन मानों से नहीं बनता; 0.01 तो उल्टा अनुपात (Ib/Ic) है और गलत है; 10 सही भाग से 10 गुना कम है।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q17",
+      "question": "यदि किसी transistor की alpha = 0.98 है, तो उसका beta लगभग कितना होगा?",
+      "options": ["0.98", "49", "1.98", "98"],
+      "correctIndex": 1,
+      "explanation": "Beta = alpha / (1 - alpha) = 0.98 / (1 - 0.98) = 0.98 / 0.02 = 49। 0.98 तो alpha ही है beta नहीं; 1.98 जोड़ने से आता है जो गलत है; 98 तब आता जब 0.98 को गलत denominator 0.01 से भाग दिया जाए।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q18",
+      "question": "Darlington pair का मुख्य लाभ क्या है?",
+      "options": ["बहुत कम input impedance", "बहुत उच्च overall current gain और उच्च input impedance", "180 degree phase shift", "केवल high frequency पर कार्य करना"],
+      "correctIndex": 1,
+      "explanation": "Darlington pair बहुत उच्च overall current gain (दोनों beta का गुणनफल) और बहुत उच्च input impedance देता है, जिससे कमजोर signal से भी load चलाया जा सकता है। इसकी input impedance बहुत अधिक होती है कम नहीं; यह प्रायः emitter follower की तरह invert नहीं करता; और इसकी high-frequency response खराब होती है इसलिए यह केवल high frequency के लिए सीमित नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q19",
+      "question": "किस configuration में voltage gain 1 से अधिक परन्तु current gain 1 से कम होती है?",
+      "options": ["Common Emitter", "Common Collector", "Common Base", "Darlington pair"],
+      "correctIndex": 2,
+      "explanation": "Common Base में voltage gain 1 से अधिक होती है जबकि इसकी current gain (alpha) 1 से कम रहती है। CE में दोनों gain 1 से अधिक होती हैं; CC में current gain 1 से अधिक पर voltage gain 1 से कम यानी उल्टा pattern होता है; Darlington pair की current gain तो बहुत अधिक होती है।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q20",
+      "question": "RC-coupled amplifier की mid-frequency region में voltage gain कैसी रहती है?",
+      "options": ["स्थिर (constant) और अधिकतम", "तेजी से बढ़ती हुई", "तेजी से घटती हुई", "शून्य"],
+      "correctIndex": 0,
+      "explanation": "Mid-frequency band में gain स्थिर और अधिकतम रहती है क्योंकि coupling capacitor की reactance नगण्य रूप से कम और shunt capacitance की reactance अब भी बहुत बड़ी होती है, जिससे कोई भी signal को प्रभावित नहीं करता। तेजी से बढ़ना low-frequency क्षेत्र में और घटना high-frequency क्षेत्र में होता है; यहाँ gain शून्य नहीं बल्कि पूर्ण होती है।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q21",
+      "question": "कम input capacitance और अच्छी high-frequency response के कारण high-frequency applications में कौन सी configuration उपयुक्त मानी जाती है?",
+      "options": ["Common Emitter", "Common Collector", "Common Base", "Darlington pair"],
+      "correctIndex": 2,
+      "explanation": "Common Base में input capacitance कम होती है और यह Miller effect से अधिक प्रभावित नहीं होती, इसलिए इसकी high-frequency response अच्छी रहती है। CE में Miller effect high-frequency प्रदर्शन को बिगाड़ता है; CC मुख्यतः buffering के लिए है; और Darlington pair की high-frequency response उसके धीमे दूसरे transistor के कारण खराब होती है।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q22",
+      "question": "Common Collector (emitter follower) की output impedance कैसी होती है?",
+      "options": ["बहुत अधिक", "बहुत कम", "Common Base के बराबर", "अनंत"],
+      "correctIndex": 1,
+      "explanation": "Emitter follower की output impedance बहुत कम होती है, इसीलिए यह low-impedance load को प्रभावी रूप से drive कर सकता है। बहुत अधिक output impedance CB और CE का गुण है; यह CB के बराबर नहीं क्योंकि CB की output impedance अधिक होती है; और अनंत output impedance का अर्थ होता कि यह कोई current न दे पाता, जो गलत है।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q23",
+      "question": "RC-coupled amplifier में यदि emitter bypass capacitor हटा दिया जाए तो voltage gain पर क्या प्रभाव पड़ेगा?",
+      "options": ["बहुत बढ़ जाएगी", "AC negative feedback के कारण घट जाएगी", "बिल्कुल समान रहेगी", "अनंत हो जाएगी"],
+      "correctIndex": 1,
+      "explanation": "Bypass capacitor हटने पर AC signal current emitter resistor से बहता है जिससे negative feedback उत्पन्न होकर voltage gain घट जाती है। gain बढ़ती नहीं बल्कि घटती है; समान भी नहीं रहती क्योंकि un-bypassed emitter resistor gain को degenerate कर देता है; और negative feedback gain को घटाता है इसलिए यह अनंत कभी नहीं होगी।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q24",
+      "question": "beta = 100 वाले दो एक जैसे transistors को Darlington pair के रूप में जोड़ा गया है। overall current gain लगभग कितनी होगी?",
+      "options": ["200", "100", "10000", "50"],
+      "correctIndex": 2,
+      "explanation": "Darlington pair की overall beta दोनों beta का गुणनफल होती है, यानी 100 × 100 = 10000। 200 जोड़ने से आता है जो गलत है; 100 केवल एक transistor का beta है जिसमें गुणन प्रभाव छूट गया; और 50 का दिए गए आंकड़ों से कोई सही संबंध नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q25",
+      "question": "RC-coupled amplifier की frequency response curve सामान्यतः किसके सापेक्ष gain plot करके बनाई जाती है?",
+      "options": ["collector current", "logarithmic scale पर frequency", "supply voltage", "base current"],
+      "correctIndex": 1,
+      "explanation": "Frequency response में voltage gain को frequency के सापेक्ष plot किया जाता है, प्रायः logarithmic frequency scale पर ताकि low से high तक की विस्तृत range समेटी जा सके। इसे collector current (एक bias राशि), supply voltage (fixed DC मान) या base current (biasing से संबंधित) के सापेक्ष plot नहीं किया जाता।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q26",
+      "question": "input impedance को सबसे कम से सबसे अधिक क्रम में कौन सा set सही दर्शाता है?",
+      "options": ["CC, CE, CB", "CB, CE, CC", "CE, CB, CC", "CB, CC, CE"],
+      "correctIndex": 1,
+      "explanation": "बढ़ती input impedance का सही क्रम है CB (सबसे कम, कुछ दसियों ohm), फिर CE (मध्यम, लगभग 1 से 2 kilo-ohm), फिर CC (सबसे अधिक, कई दसियों kilo-ohm)। CC, CE, CB बिल्कुल उल्टा क्रम है; CE, CB, CC में CB को गलत रूप से CE के ऊपर रखा गया; और CB, CC, CE में CC और CE की अदला-बदली गलत है।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q27",
+      "question": "RC-coupled amplifier का bandwidth उन frequencies के बीच का अंतर होता है जहाँ gain अपने अधिकतम मान का कितना रह जाती है?",
+      "options": ["70.7% (0.707)", "50%", "10%", "100%"],
+      "correctIndex": 0,
+      "explanation": "Bandwidth lower और upper cut-off (half-power) frequencies के बीच मापा जाता है जहाँ gain अपने अधिकतम mid-band मान का 70.7% (0.707 यानी -3 dB) रह जाती है। 50% बिंदु standard cut-off को परिभाषित नहीं करता; 10% स्वीकृत -3 dB परिभाषा से बहुत आगे है; और 100% तो peak gain है, cut-off सीमा नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q28",
+      "question": "Common Base configuration में input किन terminals के बीच लगाया जाता है और output कहाँ से लिया जाता है?",
+      "options": ["base-emitter input, collector-base output", "emitter-base input, collector-base output", "base-collector input, emitter-base output", "collector-emitter input, base-emitter output"],
+      "correctIndex": 1,
+      "explanation": "CB में input signal emitter और (grounded) base के बीच लगाया जाता है, तथा output collector और base के बीच से लिया जाता है क्योंकि base दोनों के लिए common होता है। base-emitter input वाला विकल्प CB के emitter-driven input को नहीं दर्शाता; base-collector input में input और output terminals की भूमिकाएँ उलट गई हैं; और collector-emitter input किसी standard configuration से मेल नहीं खाता।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q29",
+      "question": "एक Common Base amplifier में emitter (input) current 2 mA और collector (output) current 1.96 mA है। इसकी current gain alpha कितनी है?",
+      "options": ["1.02", "0.98", "49", "2.0"],
+      "correctIndex": 1,
+      "explanation": "Alpha = Ic/Ie = 1.96 mA / 2 mA = 0.98, जो CB के लिए सही रूप से 1 से कम है। 1.02 तो उल्टा अनुपात (Ie/Ic) है जो 1 से अधिक है और alpha के लिए असंभव है; 49 संबंधित beta है alpha नहीं; और 2.0 केवल emitter current का मान (mA में) है, कोई gain नहीं।"
+    },
+    {
+      "id": "u1_transistor_amplifiers_q30",
+      "question": "single transistor की तुलना में Darlington pair का मुख्य नुकसान क्या है?",
+      "options": ["कम current gain", "अधिक base-emitter voltage drop (लगभग 1.4 V) और धीमी switching", "कम input impedance", "यह signal को invert करता है"],
+      "correctIndex": 1,
+      "explanation": "Darlington pair में दो base-emitter junctions series में होते हैं इसलिए इसे on होने के लिए लगभग 1.4 V (दो Vbe drops) चाहिए और यह धीरे off होता है, यही इसके मुख्य नुकसान हैं। इसकी current gain तो single transistor से कहीं अधिक होती है कम नहीं; input impedance भी बहुत अधिक होती है कम नहीं; और emitter follower के रूप में यह signal invert नहीं करता।"
+    }
+  ]
+}

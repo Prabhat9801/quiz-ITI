@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "geometry",
+  "topicName": "Geometry (Lines, Angles, Triangles, Circles)",
+  "questions": [
+    {
+      "id": "math_geometry_q1",
+      "question": "दो angles आपस में complementary हैं और उनमें से एक angle 35° है। दूसरा angle कितना होगा?",
+      "options": ["45°", "55°", "65°", "90°"],
+      "correctIndex": 1,
+      "explanation": "Complementary angles का योग 90° होता है, इसलिए दूसरा angle = 90° - 35° = 55°। 45°, 65° और 90° गलत हैं क्योंकि 35° के साथ जोड़ने पर वे 90° नहीं देते।"
+    },
+    {
+      "id": "math_geometry_q2",
+      "question": "एक angle 110° का है। इसका supplementary angle कितना होगा?",
+      "options": ["90°", "80°", "70°", "60°"],
+      "correctIndex": 2,
+      "explanation": "Supplementary angles का योग 180° होता है, अतः दूसरा angle = 180° - 110° = 70°। 90°, 80° और 60° गलत हैं क्योंकि 110° के साथ इनका योग 180° नहीं बनता।"
+    },
+    {
+      "id": "math_geometry_q3",
+      "question": "एक straight line पर तीन angles बने हैं जिनके माप 40°, 65° और x हैं। x का मान क्या है?",
+      "options": ["65°", "70°", "80°", "75°"],
+      "correctIndex": 3,
+      "explanation": "एक straight line पर बने सभी angles का योग 180° होता है, इसलिए x = 180° - 40° - 65° = 75°। बाकी विकल्प गलत हैं क्योंकि 40° + 65° + उनका योग 180° नहीं होता।"
+    },
+    {
+      "id": "math_geometry_q4",
+      "question": "दो lines एक-दूसरे को काटती हैं और बना एक angle 65° का है। इसके vertically opposite angle का माप क्या होगा?",
+      "options": ["65°", "115°", "25°", "130°"],
+      "correctIndex": 0,
+      "explanation": "Vertically opposite angles हमेशा बराबर होते हैं, इसलिए opposite angle भी 65° होगा। 115° तो इसका supplementary (adjacent) angle है, तथा 25° और 130° का इस स्थिति से कोई संबंध नहीं।"
+    },
+    {
+      "id": "math_geometry_q5",
+      "question": "एक triangle के दो angles 50° और 60° हैं। तीसरा angle कितना होगा?",
+      "options": ["60°", "70°", "80°", "110°"],
+      "correctIndex": 1,
+      "explanation": "Triangle के तीनों angles का योग 180° होता है, अतः तीसरा angle = 180° - 50° - 60° = 70°। 110° तो पहले दो का योग है, और 60°, 80° गलत हैं क्योंकि इनसे कुल योग 180° नहीं बनता।"
+    },
+    {
+      "id": "math_geometry_q6",
+      "question": "एक right-angled triangle के दो legs (perpendicular sides) 6 cm और 8 cm हैं। इसका hypotenuse कितना होगा?",
+      "options": ["12 cm", "14 cm", "10 cm", "100 cm"],
+      "correctIndex": 2,
+      "explanation": "Pythagoras theorem से hypotenuse = √(6² + 8²) = √(36 + 64) = √100 = 10 cm। 100 तो केवल sqrt निकालने से पहले का वर्ग है, और 12, 14 सीधे legs जोड़ने की गलती हैं।"
+    },
+    {
+      "id": "math_geometry_q7",
+      "question": "किसी circle के semicircle में बना angle (angle in a semicircle) कितना होता है?",
+      "options": ["45°", "60°", "120°", "90°"],
+      "correctIndex": 3,
+      "explanation": "Diameter द्वारा circle की परिधि पर बना angle हमेशा 90° (right angle) होता है, यह एक standard circle property है। 45°, 60° और 120° इस नियम के अनुसार सही नहीं हैं।"
+    },
+    {
+      "id": "math_geometry_q8",
+      "question": "एक right triangle का hypotenuse 13 cm और एक leg 5 cm है। दूसरा leg कितना होगा?",
+      "options": ["12 cm", "8 cm", "9 cm", "11 cm"],
+      "correctIndex": 0,
+      "explanation": "Pythagoras theorem से दूसरा leg = √(13² - 5²) = √(169 - 25) = √144 = 12 cm। 8, 9 और 11 गलत हैं क्योंकि उनका वर्ग 5² के साथ जोड़ने पर 169 नहीं देता।"
+    },
+    {
+      "id": "math_geometry_q9",
+      "question": "एक isosceles triangle का vertex angle 40° है। इसके प्रत्येक base angle का माप क्या होगा?",
+      "options": ["60°", "70°", "80°", "100°"],
+      "correctIndex": 1,
+      "explanation": "Isosceles triangle के दोनों base angles बराबर होते हैं, अतः प्रत्येक = (180° - 40°) ÷ 2 = 140° ÷ 2 = 70°। 60°, 80° और 100° गलत हैं क्योंकि इनसे कुल योग 180° नहीं बनता।"
+    },
+    {
+      "id": "math_geometry_q10",
+      "question": "एक equilateral triangle के प्रत्येक angle का माप कितना होता है?",
+      "options": ["45°", "50°", "60°", "90°"],
+      "correctIndex": 2,
+      "explanation": "Equilateral triangle के तीनों angles बराबर होते हैं, अतः प्रत्येक = 180° ÷ 3 = 60°। 45°, 50° और 90° गलत हैं क्योंकि तीन बराबर angles का योग तभी 180° होगा जब प्रत्येक 60° हो।"
+    },
+    {
+      "id": "math_geometry_q11",
+      "question": "एक triangle के दो interior opposite angles 45° और 65° हैं। इनके सामने का exterior angle कितना होगा?",
+      "options": ["90°", "100°", "120°", "110°"],
+      "correctIndex": 3,
+      "explanation": "Exterior angle theorem के अनुसार exterior angle = दो opposite interior angles का योग = 45° + 65° = 110°। 90°, 100° और 120° गलत हैं क्योंकि वे इस योग के बराबर नहीं हैं।"
+    },
+    {
+      "id": "math_geometry_q12",
+      "question": "दो parallel lines को एक transversal काटता है। एक corresponding angle 105° का है, तो उसका corresponding angle कितना होगा?",
+      "options": ["105°", "75°", "95°", "85°"],
+      "correctIndex": 0,
+      "explanation": "Parallel lines के साथ corresponding angles आपस में बराबर होते हैं, इसलिए दूसरा भी 105° होगा। 75° तो इसका supplementary (co-interior) angle है, और 95°, 85° का कोई आधार नहीं।"
+    },
+    {
+      "id": "math_geometry_q13",
+      "question": "दो parallel lines और एक transversal से बने co-interior (allied) angles में एक 120° है। दूसरा कितना होगा?",
+      "options": ["120°", "60°", "70°", "80°"],
+      "correctIndex": 1,
+      "explanation": "Co-interior angles supplementary होते हैं यानी उनका योग 180° होता है, अतः दूसरा = 180° - 120° = 60°। 120° तो alternate/corresponding स्थिति है, और 70°, 80° योग 180° नहीं देते।"
+    },
+    {
+      "id": "math_geometry_q14",
+      "question": "दो parallel lines को transversal काटता है। एक alternate angle 72° का है, तो दूसरा alternate angle कितना होगा?",
+      "options": ["108°", "18°", "72°", "90°"],
+      "correctIndex": 2,
+      "explanation": "Parallel lines में alternate angles बराबर होते हैं, इसलिए दूसरा भी 72° होगा। 108° इसका supplementary है, 18° इसका complementary है और 90° का कोई संबंध नहीं।"
+    },
+    {
+      "id": "math_geometry_q15",
+      "question": "एक circle की radius 7 cm है। इसका diameter कितना होगा?",
+      "options": ["7 cm", "21 cm", "49 cm", "14 cm"],
+      "correctIndex": 3,
+      "explanation": "Diameter = 2 × radius = 2 × 7 = 14 cm। 7 तो radius ही है, 49 तो radius का वर्ग है और 21 का कोई आधार नहीं।"
+    },
+    {
+      "id": "math_geometry_q16",
+      "question": "एक circle का diameter 18 cm है। इसकी radius कितनी होगी?",
+      "options": ["9 cm", "36 cm", "18 cm", "4.5 cm"],
+      "correctIndex": 0,
+      "explanation": "Radius = diameter ÷ 2 = 18 ÷ 2 = 9 cm। 36 तो diameter का दोगुना है, 18 स्वयं diameter है और 4.5 गलत भाग है।"
+    },
+    {
+      "id": "math_geometry_q17",
+      "question": "किसी circle पर खींची गई tangent, contact point पर radius के साथ कितने degree का angle बनाती है?",
+      "options": ["45°", "90°", "60°", "180°"],
+      "correctIndex": 1,
+      "explanation": "Tangent contact point पर radius के लंबवत (perpendicular) होती है, अतः यह 90° का angle बनाती है। 45°, 60° और 180° इस मूल circle property के अनुसार गलत हैं।"
+    },
+    {
+      "id": "math_geometry_q18",
+      "question": "एक triangle के तीन angles का अनुपात 1:2:3 है। सबसे बड़ा angle कितना होगा?",
+      "options": ["60°", "30°", "90°", "120°"],
+      "correctIndex": 2,
+      "explanation": "भागों का योग = 1+2+3 = 6, और कुल angle 180°, अतः एक भाग = 180° ÷ 6 = 30°। सबसे बड़ा angle = 3 × 30° = 90°। 30° सबसे छोटा है, 60° बीच का है और 120° योग 180° तोड़ देता है।"
+    },
+    {
+      "id": "math_geometry_q19",
+      "question": "किसी भी triangle के तीनों interior angles का योग कितना होता है?",
+      "options": ["90°", "270°", "360°", "180°"],
+      "correctIndex": 3,
+      "explanation": "यह एक मूल nियम है कि triangle के तीनों interior angles का योग सदैव 180° होता है। 90° एक right angle है, 360° एक पूर्ण घूर्णन है और 270° का कोई आधार नहीं।"
+    },
+    {
+      "id": "math_geometry_q20",
+      "question": "एक right triangle के दो legs 9 cm और 12 cm हैं। इसका hypotenuse कितना होगा?",
+      "options": ["15 cm", "21 cm", "18 cm", "13 cm"],
+      "correctIndex": 0,
+      "explanation": "Pythagoras theorem से hypotenuse = √(9² + 12²) = √(81 + 144) = √225 = 15 cm। 21 तो सीधे legs जोड़ने की गलती है, और 18, 13 का वर्ग 225 नहीं बनता।"
+    },
+    {
+      "id": "math_geometry_q21",
+      "question": "एक right-angled triangle में एक angle 90° और दूसरा 30° है। तीसरा angle कितना होगा?",
+      "options": ["45°", "60°", "70°", "50°"],
+      "correctIndex": 1,
+      "explanation": "तीनों angles का योग 180° होता है, अतः तीसरा = 180° - 90° - 30° = 60°। 45°, 70° और 50° गलत हैं क्योंकि इनसे कुल योग 180° नहीं बनता।"
+    },
+    {
+      "id": "math_geometry_q22",
+      "question": "किसी circle में सबसे लंबा chord क्या कहलाता है?",
+      "options": ["radius", "tangent", "diameter", "arc"],
+      "correctIndex": 2,
+      "explanation": "Circle का सबसे लंबा chord उसका diameter होता है जो केंद्र से होकर गुजरता है। radius आधा diameter है, tangent circle को केवल एक बिंदु पर छूती है और arc परिधि का एक भाग है।"
+    },
+    {
+      "id": "math_geometry_q23",
+      "question": "दो complementary angles आपस में बराबर हैं। प्रत्येक angle का माप क्या होगा?",
+      "options": ["30°", "60°", "90°", "45°"],
+      "correctIndex": 3,
+      "explanation": "Complementary का योग 90° होता है और दोनों बराबर हैं, अतः प्रत्येक = 90° ÷ 2 = 45°। 30°, 60° बराबर होने पर योग 90° नहीं देते और 90° तो पूरा योग है।"
+    },
+    {
+      "id": "math_geometry_q24",
+      "question": "दो supplementary angles आपस में बराबर हैं। प्रत्येक angle कितना होगा?",
+      "options": ["90°", "45°", "180°", "60°"],
+      "correctIndex": 0,
+      "explanation": "Supplementary का योग 180° होता है और दोनों बराबर हैं, अतः प्रत्येक = 180° ÷ 2 = 90°। 45° और 60° बराबर होने पर योग 180° नहीं देते, तथा 180° तो पूरा योग है।"
+    },
+    {
+      "id": "math_geometry_q25",
+      "question": "एक right triangle में एक angle 90° और दूसरा 55° है। तीसरा angle कितना होगा?",
+      "options": ["45°", "35°", "25°", "55°"],
+      "correctIndex": 1,
+      "explanation": "तीनों angles का योग 180° है, अतः तीसरा = 180° - 90° - 55° = 35°। 45°, 25° और 55° गलत हैं क्योंकि इनसे कुल योग 180° नहीं बनता।"
+    },
+    {
+      "id": "math_geometry_q26",
+      "question": "किस प्रकार के triangle में सभी sides की लंबाई अलग-अलग होती है?",
+      "options": ["equilateral triangle", "isosceles triangle", "scalene triangle", "right triangle"],
+      "correctIndex": 2,
+      "explanation": "Scalene triangle में तीनों sides की लंबाई भिन्न होती है। equilateral में सभी sides बराबर, isosceles में दो sides बराबर, और right triangle केवल एक 90° angle से पहचाना जाता है।"
+    },
+    {
+      "id": "math_geometry_q27",
+      "question": "किसी बिंदु के चारों ओर बने सभी angles का कुल योग कितना होता है?",
+      "options": ["90°", "180°", "270°", "360°"],
+      "correctIndex": 3,
+      "explanation": "एक बिंदु के चारों ओर का पूरा घूर्णन 360° होता है, इसलिए वहां बने सभी angles का योग 360° है। 90°, 180° और 270° केवल आंशिक घूर्णन दर्शाते हैं।"
+    },
+    {
+      "id": "math_geometry_q28",
+      "question": "एक right triangle का hypotenuse 25 cm और एक leg 7 cm है। दूसरा leg कितना होगा?",
+      "options": ["24 cm", "20 cm", "18 cm", "22 cm"],
+      "correctIndex": 0,
+      "explanation": "Pythagoras theorem से दूसरा leg = √(25² - 7²) = √(625 - 49) = √576 = 24 cm। 20, 18 और 22 गलत हैं क्योंकि उनका वर्ग 7² के साथ जोड़ने पर 625 नहीं देता।"
+    },
+    {
+      "id": "math_geometry_q29",
+      "question": "दो complementary angles का अनुपात 2:3 है। छोटा angle कितना होगा?",
+      "options": ["54°", "36°", "45°", "40°"],
+      "correctIndex": 1,
+      "explanation": "भागों का योग = 2+3 = 5, कुल 90°, अतः एक भाग = 90° ÷ 5 = 18°। छोटा angle = 2 × 18° = 36°। 54° बड़ा angle है, और 45°, 40° इस अनुपात के अनुसार गलत हैं।"
+    },
+    {
+      "id": "math_geometry_q30",
+      "question": "दो supplementary angles का अनुपात 4:5 है। बड़ा angle कितना होगा?",
+      "options": ["80°", "90°", "100°", "120°"],
+      "correctIndex": 2,
+      "explanation": "भागों का योग = 4+5 = 9, कुल 180°, अतः एक भाग = 180° ÷ 9 = 20°। बड़ा angle = 5 × 20° = 100°। 80° छोटा angle है, और 90°, 120° इस अनुपात के अनुसार गलत हैं।"
+    }
+  ]
+}

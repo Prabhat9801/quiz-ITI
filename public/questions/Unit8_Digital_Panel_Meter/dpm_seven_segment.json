@@ -1,0 +1,368 @@
+{
+  "unit": "unit8",
+  "unitName": "Digital Panel Meter",
+  "topic": "dpm_seven_segment",
+  "topicName": "DPM with Seven Segment Display for Voltage/Current & Ranging",
+  "questions": [
+    {
+      "id": "u8_dpm_seven_segment_q1",
+      "question": "Digital Panel Meter (DPM) के block diagram में measured voltage/current signal सबसे पहले किस block से होकर गुजरता है?",
+      "options": [
+        "Input attenuator/voltage divider",
+        "Seven segment display",
+        "BCD decoder",
+        "Power supply regulator"
+      ],
+      "correctIndex": 0,
+      "explanation": "DPM में incoming signal सबसे पहले input attenuator/voltage divider से गुजरता है जो उसे ADC (जैसे ICL7107) की range के अनुकूल स्तर पर scale करता है। Seven segment display (option B) और BCD decoder (option C) तो ADC के बाद final numeric output दिखाने के लिए आते हैं, तथा power supply regulator (option D) पूरे circuit को voltage देता है पर measured signal का path इससे होकर नहीं गुजरता।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q2",
+      "question": "DPM के block diagram में प्रयुक्त ADC (जैसे ICL7107) का मुख्य कार्य क्या है?",
+      "options": [
+        "AC को DC में rectify करना",
+        "analog voltage को digital count में convert करना",
+        "display की brightness control करना",
+        "segments को decode करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "ADC (Analog-to-Digital Converter) जैसे ICL7107 का मुख्य कार्य scaled analog input voltage को उसके अनुरूप digital count (BCD data) में convert करना है, जिसे बाद में display किया जाता है। AC-DC rectification (option A) एक अलग power supply function है, brightness control (option C) display driver से जुड़ा है, और segment decoding (option D) decoder/driver block का काम है, ADC का नहीं।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q3",
+      "question": "ICL7107 IC, जो कई DPM circuits में प्रयोग होता है, किस प्रकार का ADC है?",
+      "options": [
+        "Dual slope (integrating) ADC",
+        "Successive approximation ADC",
+        "Flash ADC",
+        "Sigma-delta ADC केवल"
+      ],
+      "correctIndex": 0,
+      "explanation": "ICL7107 एक dual slope (integrating) type ADC है, जो noise rejection में अच्छा होता है और DPM जैसे precision measurement applications के लिए उपयुक्त है। Successive approximation (option B) और flash ADC (option C) अलग architecture वाले तेज़ converters हैं जो सामान्य low-cost DPM में उपयोग नहीं होते, और sigma-delta (option D) भी ICL7107 का architecture नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q4",
+      "question": "अधिकतर low-cost DPM circuits (जैसे ICL7107 आधारित) में basic voltmeter section का full-scale input voltage सामान्यतः कितना design किया जाता है, जिसे बाद में divider से scale करते हैं?",
+      "options": [
+        "2V",
+        "20V",
+        "2mV",
+        "200mV"
+      ],
+      "correctIndex": 3,
+      "explanation": "ICL7107 आधारित DPM circuits में सबसे common basic full-scale range 200mV होती है, जिसे divider resistors लगाकर 2V, 20V, 200V जैसी higher ranges में scale किया जाता है। 2V, 20V (options A, B) उच्च ranges के उदाहरण हैं जबकि 2mV (option C) व्यावहारिक रूप से बहुत छोटा मान है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q5",
+      "question": "एक DPM का basic full-scale range 200mV है। इसे 200V range पर उपयोग के लिए voltage divider में measuring resistor R2 (जिसके सिरों से ADC को input मिलता है) = 1kΩ रखा गया है। Series resistor R1 का approximate मान क्या होना चाहिए ताकि 200V input पर ADC को ठीक 200mV मिले?",
+      "options": [
+        "1kΩ",
+        "999kΩ",
+        "10kΩ",
+        "100kΩ"
+      ],
+      "correctIndex": 1,
+      "explanation": "आवश्यक divider ratio = 200mV/200V = 1/1000 है, अर्थात R2/(R1+R2) = 1/1000। R2 = 1kΩ लेने पर R1+R2 = 1000kΩ, इसलिए R1 ≈ 999kΩ होगा। R1 = 1kΩ (A) रखने पर ratio बहुत बड़ा (1:2) होगा, जबकि 10kΩ (C) और 100kΩ (D) से divider ratio अपेक्षित 1:1000 से बहुत कम आएगा।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q6",
+      "question": "DPM को current (ammeter) measure करने के लिए काम में लेने हेतु इनपुट में मुख्यतः क्या जोड़ा जाता है?",
+      "options": [
+        "Shunt resistor (कम मान का, meter input के parallel में)",
+        "Series inductor",
+        "उच्च मान का series resistor मात्र",
+        "Capacitor filter मात्र"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ammeter mode में circuit की current को शंट resistor (बहुत कम resistance value) से होकर बहाया जाता है, जिसके आर-पार बनने वाला छोटा सा proportional voltage drop DPM का voltmeter section measure करता है। Series inductor (B) current-to-voltage conversion नहीं करता, high value series resistor (C) उच्च resistance के कारण circuit की current को काफी बदल देगा, और केवल capacitor filter (D) current sensing के लिए उपयुक्त नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q7",
+      "question": "एक DPM ammeter में full-scale current 10A मापने के लिए basic voltmeter range 200mV है। Shunt resistor का approximate मान क्या होना चाहिए?",
+      "options": [
+        "200 Ω",
+        "20 Ω",
+        "0.02 Ω",
+        "2 Ω"
+      ],
+      "correctIndex": 2,
+      "explanation": "Shunt resistance R = V/I = 0.2V / 10A = 0.02 Ω (20 mΩ) होगी, जिससे 10A बहने पर ठीक 200mV drop बनेगा जिसे DPM display करेगा। 200Ω, 20Ω और 2Ω (options A, B, D) बहुत अधिक values हैं जिनसे 10A पर drop कई volt हो जाएगा, जो basic 200mV range से बाहर होगा।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q8",
+      "question": "Ammeter shunt selection में प्रयुक्त शब्द 'burden voltage' का क्या अर्थ है?",
+      "options": [
+        "Supply voltage की rating",
+        "Decoder का output voltage",
+        "ADC reference voltage",
+        "Shunt के आर-पार पैदा होने वाला voltage drop जो measured circuit को प्रभावित कर सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Burden voltage वह छोटा voltage drop है जो current-sensing shunt के आर-पार बनता है; यदि यह बहुत अधिक हो तो यह measured circuit की working को प्रभावित कर सकता है, इसलिए shunt resistance को यथासंभव कम रखा जाता है। यह supply rating (A), decoder output (B), या ADC reference voltage (C) से संबंधित नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q9",
+      "question": "एक ammeter shunt की rating 50mV/5A है। यदि circuit में actual current 3A बह रहा है तो shunt के आर-पार voltage drop लगभग कितना होगा?",
+      "options": [
+        "30 mV",
+        "50 mV",
+        "15 mV",
+        "3 mV"
+      ],
+      "correctIndex": 0,
+      "explanation": "Shunt का voltage drop current के समानुपाती होता है: (50mV/5A) × 3A = 30mV। 50mV (B) तो पूरे 5A rated current पर आएगा, 15mV (C) और 3mV (D) प्रश्न में दिए गए proportion से मेल नहीं खाते।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q10",
+      "question": "DPM में 'ranging' शब्द का क्या तात्पर्य है?",
+      "options": [
+        "Display की brightness बदलना",
+        "अलग-अलग full-scale values (जैसे 200mV, 2V, 20V, 200V) चुनने की सुविधा",
+        "Power supply voltage बदलना",
+        "Decoder IC बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ranging से आशय है DPM में अलग-अलग full-scale measurement values (जैसे 200mV, 2V, 20V, 200V range) के बीच चयन करने की सुविधा, जो divider resistors बदलकर प्राप्त की जाती है। यह brightness (A), supply voltage (C) या decoder IC (D) बदलने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q11",
+      "question": "Manual ranging DPM में range बदलने के लिए सामान्यतः क्या किया जाता है?",
+      "options": [
+        "Internal microcontroller स्वयं चुनता है",
+        "Display स्वतः बदलता है",
+        "User द्वारा rotary switch/selector से divider resistors बदलना",
+        "ADC स्वयं adjust करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Manual ranging DPM में user rotary switch या selector के माध्यम से उचित divider resistor combination चुनता है ताकि सही range set हो। Options A, B, D auto-ranging जैसी automatic प्रक्रिया दर्शाते हैं, जो manual ranging में लागू नहीं होती।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q12",
+      "question": "Auto-ranging DPM में range selection किस प्रकार होती है?",
+      "options": [
+        "User manual switch से range select करता है",
+        "यह हमेशा fixed range पर रहता है",
+        "इसमें ranging होती ही नहीं",
+        "Internal circuitry input magnitude के अनुसार स्वतः उचित range/divider ratio चुनती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Auto-ranging DPM की internal circuitry input signal की magnitude को sense करके स्वतः उपयुक्त range/divider ratio select कर लेती है, बिना user के manual intervention के। Option A manual ranging का वर्णन है, जबकि options B और C auto-ranging DPM के actual व्यवहार से मेल नहीं खाते।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q13",
+      "question": "Auto-ranging DPM का मुख्य लाभ क्या है?",
+      "options": [
+        "User को range पहले से जानने या manually बदलने की जरूरत नहीं पड़ती",
+        "यह सस्ता होता है हमेशा",
+        "इसमें display नहीं होता",
+        "इसमें calibration जरूरी नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Auto-ranging DPM का मुख्य लाभ यह है कि user को measured value की सीमा पहले से अनुमानित करके manual range select करने की जरूरत नहीं पड़ती, meter स्वयं उपयुक्त range चुन लेता है। यह हमेशा सस्ता नहीं होता (B, बल्कि प्रायः अधिक costly होता है), इसमें display जरूर होता है (C गलत), और calibration फिर भी आवश्यक होती है (D गलत)।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q14",
+      "question": "DPM में range बदलने पर display पर decimal point की स्थिति भी क्यों बदलनी पड़ती है?",
+      "options": [
+        "Display को आकर्षक बनाने के लिए",
+        "यह दिखाने के लिए कि measured value किस magnitude (mV, V आदि) की range में है",
+        "Decoder IC को ठंडा रखने के लिए",
+        "केवल aesthetic कारण से"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब range बदलती है (जैसे 200mV से 20V) तो पढ़े गए count की वास्तविक magnitude भी बदल जाती है, इसलिए decimal point को उचित स्थान पर रखा जाता है ताकि reading सही रूप (जैसे 19.99V या 199.9mV) में दिखे। यह केवल aesthetic (A, D) कारण नहीं है और IC को ठंडा रखने (C) से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q15",
+      "question": "DPM के input में overvoltage protection के लिए सामान्यतः क्या लगाया जाता है?",
+      "options": [
+        "बड़ा capacitor केवल",
+        "Seven segment display extra जोड़ना",
+        "Clamping diodes (input के दोनों सिरों पर)",
+        "कोई protection जरूरत नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Input terminals पर clamping diodes लगाई जाती हैं जो rated limit से अधिक (overvoltage) आने पर conduct करके अतिरिक्त voltage को supply rails की ओर diverting कर ADC व अन्य sensitive components को सुरक्षित रखती हैं। केवल capacitor (A) overvoltage से protection नहीं देता, अतिरिक्त display (B) से कोई protection नहीं मिलती, और protection आवश्यक होती है (D गलत)।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q16",
+      "question": "DPM के input protection diodes किस स्थिति में conduct करके circuit को बचाते हैं?",
+      "options": [
+        "सामान्य measurement के दौरान हमेशा",
+        "जब power supply OFF हो",
+        "जब display blank हो",
+        "जब input voltage rated limit से अधिक (overvoltage) हो जाए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Protection diodes सामान्यतः OFF (non-conducting) रहती हैं और केवल तभी conduct करती हैं जब input voltage rated safe limit से अधिक हो जाए, जिससे अतिरिक्त current सुरक्षित मार्ग से बहकर ADC को बचाती है। सामान्य measurement में (A) वे conduct नहीं करतीं, power OFF होने (B) या display blank होने (C) का diode के conduction से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q17",
+      "question": "DPM की 'accuracy' specification सामान्यतः किस रूप में दी जाती है?",
+      "options": [
+        "±(% of reading + counts) के रूप में",
+        "केवल watts में",
+        "केवल ohm में",
+        "केवल Hz में"
+      ],
+      "correctIndex": 0,
+      "explanation": "DPM की accuracy आमतौर पर ±(percentage of reading + कुछ counts/digits) के रूप में specify की जाती है, जैसे ±(0.5% rdg + 1 digit), जो measurement के दोनों प्रकार के errors को दर्शाती है। Watts (B), ohm (C) और Hz (D) accuracy specify करने की standard units नहीं हैं।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q18",
+      "question": "DPM की 'resolution' का क्या अर्थ है?",
+      "options": [
+        "Display की physical size",
+        "सबसे छोटा मान जो display पर परिवर्तन के रूप में दिखाया जा सकता है (least significant count)",
+        "Power supply की rating",
+        "Shunt resistor का मान"
+      ],
+      "correctIndex": 1,
+      "explanation": "Resolution उस सबसे छोटे बदलाव को दर्शाती है जिसे DPM display पर numeric रूप से पहचान/दिखा सकता है, जो सीधे count की least significant digit से संबंधित है। Display का physical size (A), power supply rating (C) और shunt resistor value (D) resolution को परिभाषित नहीं करते।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q19",
+      "question": "एक 3.5 digit DPM का maximum count 1999 है और इसका basic range 200mV है। इस range पर resolution (least count) लगभग कितनी होगी?",
+      "options": [
+        "1 mV",
+        "10 mV",
+        "100 µV",
+        "1 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "Resolution = full-scale range / maximum count = 200mV / 1999 ≈ 0.1mV = 100µV होती है। 1mV (A) और 10mV (B) इससे काफी बड़े हैं, जबकि 1V (D) तो पूरे range से भी बड़ा है, इसलिए ये सही नहीं हैं।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q20",
+      "question": "'3.5 digit' DPM में '.5' (half) digit का क्या अर्थ है?",
+      "options": [
+        "यह digit 0-9 तक पूरी तरह count कर सकता है",
+        "यह digit decimal point दिखाता है",
+        "यह digit केवल negative sign दिखाता है",
+        "यह digit केवल 0 या 1 (सीमित range) दिखा सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Half digit पूरे 0-9 range के बजाय केवल सीमित मान (सामान्यतः 0 या 1) दिखा सकता है, जिससे 3 पूर्ण digits + यह half digit मिलकर maximum count 1999 बनाते हैं। पूरी तरह 0-9 count करना (A) पूर्ण digit का गुण है, decimal point (B) एक अलग LED होता है, और negative sign (C) polarity indicator से संबंधित है, half digit से नहीं।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q21",
+      "question": "DPM की specification में 'sample rate' या 'reading rate' क्या दर्शाता है?",
+      "options": [
+        "प्रति सेकंड कितनी बार ADC नया measurement लेकर display update करता है",
+        "Display की brightness",
+        "Shunt resistor का तापमान",
+        "Power supply की frequency"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sample/reading rate यह बताता है कि DPM का ADC प्रति सेकंड कितनी बार नया measurement (conversion) पूरा करके display को update करता है, जैसे 2-3 readings per second। यह brightness (B), shunt का तापमान (C) या supply frequency (D) से संबंधित parameter नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q22",
+      "question": "DPM के power supply arrangement में कुछ स्थितियों में single supply (+5V) के बजाय dual supply (जैसे ±5V) की आवश्यकता क्यों पड़ सकती है?",
+      "options": [
+        "Dual supply कभी जरूरी नहीं होती",
+        "कुछ ADC ICs (जैसे कुछ ICL7107 configurations) को negative supply rail चाहिए ताकि negative input voltage सही से measure हो",
+        "Single supply से कभी DPM नहीं बनता",
+        "Dual supply केवल display के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "कुछ ADC circuits, जैसे ICL7107 की traditional configuration, को दोनों polarity के input signals को सही से handle करने और internal analog circuitry (जैसे integrator) को ठीक से bias करने हेतु negative supply rail (dual supply) की आवश्यकता होती है। Option A और C गलत हैं क्योंकि dual supply कई designs में वास्तव में जरूरी होती है और single-supply DPM भी बनते हैं (आधुनिक single-supply versions उपलब्ध हैं); dual supply केवल display के लिए (D) नहीं बल्कि analog processing के लिए होती है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q23",
+      "question": "Analog panel meter (moving coil type) की तुलना में digital panel meter (DPM) का मुख्य लाभ क्या है?",
+      "options": [
+        "DPM में कोई calibration जरूरी नहीं",
+        "DPM हमेशा सस्ता होता है",
+        "DPM अधिक precise/direct numeric reading देता है और parallax error नहीं होता",
+        "DPM को power supply की जरूरत नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Moving coil analog meter में pointer की स्थिति पढ़ते समय viewing angle के कारण parallax error हो सकता है और resolution scale पर सीमित होती है, जबकि DPM सीधे numeric digits में precise reading देता है जिसमें parallax की समस्या नहीं होती। Calibration DPM में भी आवश्यक होती है (A गलत), यह हमेशा सस्ता नहीं होता (B गलत), और DPM को काम करने के लिए power supply चाहिए ही (D गलत)।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q24",
+      "question": "Analog moving coil panel meter की तुलना में DPM में measured value किस रूप में प्रदर्शित होती है?",
+      "options": [
+        "pointer/needle की position से",
+        "sound signal के रूप में",
+        "केवल graph के रूप में",
+        "seven segment display पर सीधे numeric digits के रूप में"
+      ],
+      "correctIndex": 3,
+      "explanation": "DPM measured value को seven segment display पर सीधे numeric digits के रूप में दिखाता है, जिसे पढ़ना आसान और सटीक होता है। Pointer/needle position (A) analog moving coil meter की विशेषता है, sound signal (B) और केवल graph (C) DPM का सामान्य output format नहीं हैं।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q25",
+      "question": "DPM में 'zero adjustment' या 'offset null' प्रक्रिया किसलिए की जाती है?",
+      "options": [
+        "Input में zero signal होने पर display को ठीक 0 (या 000) दिखाने हेतु offset error हटाने के लिए",
+        "Display की brightness बढ़ाने के लिए",
+        "Power consumption घटाने के लिए",
+        "Decimal point हटाने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Zero adjustment/offset null circuit में मौजूद किसी छोटे internal offset error को हटाता है ताकि जब input पर वास्तव में zero signal हो तो display भी ठीक 0 (या 000) दिखाए, अन्यथा एक constant error सभी readings में जुड़ जाएगा। यह brightness (B), power consumption (C) या decimal point हटाने (D) से संबंधित नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q26",
+      "question": "DPM की calibration प्रक्रिया में सामान्यतः क्या किया जाता है?",
+      "options": [
+        "Display का रंग set करना",
+        "किसी known accurate reference voltage/current लगाकर DPM की reading को उस known value से match करने हेतु trimpot/reference adjust करना",
+        "केवल power supply बदलना",
+        "Decoder IC बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Calibration में एक accurate known reference voltage/current source DPM को दिया जाता है और internal trimpot/reference adjust करके display की reading को उस known value के बराबर set किया जाता है ताकि measurement सटीक रहे। Display का रंग set करना (A) संभव नहीं है, केवल power supply बदलना (C) या decoder IC बदलना (D) calibration की प्रक्रिया नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q27",
+      "question": "यदि DPM के input में measured value उसकी selected range की full-scale limit से अधिक हो जाए तो display पर सामान्यतः क्या दिखता है?",
+      "options": [
+        "सामान्य numeric reading दिखती रहती है",
+        "Display बंद हो जाता है",
+        "Overload indication (जैसे केवल '1' या 'OL' blinking/flashing)",
+        "Decimal point गायब हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "जब input value selected range की full-scale limit को पार कर जाता है, तो अधिकतर DPMs overload indication दिखाते हैं जैसे केवल '1' दिखना या 'OL' blinking, ताकि user समझ सके कि range अपर्याप्त है। सामान्य numeric reading (A) तो overload में गलत होगी, display बंद होना (B) और केवल decimal point गायब होना (D) standard overload behaviour नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q28",
+      "question": "DPM की input impedance (voltmeter mode में) सामान्यतः कैसी रखी जाती है?",
+      "options": [
+        "बहुत अधिक (सामान्यतः कई MΩ) ताकि circuit से न्यूनतम current खींचे",
+        "बहुत कम (कुछ ohm)",
+        "शून्य",
+        "केवल AC के लिए defined"
+      ],
+      "correctIndex": 0,
+      "explanation": "DPM को voltmeter की तरह हमेशा circuit के parallel में जोड़ा जाता है, इसलिए इसकी input impedance बहुत अधिक (सामान्यतः कई MΩ) रखी जाती है ताकि यह measured circuit से न्यूनतम current खींचे और measurement पर प्रभाव न डाले। बहुत कम impedance (B) या शून्य (C) circuit की loading बढ़ा देंगे, और यह DC व AC दोनों measurement के लिए relevant है, केवल AC के लिए नहीं (D)।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q29",
+      "question": "DPM को ammeter mode में जोड़ते समय (शंट सहित) इसे circuit में किस प्रकार जोड़ा जाता है?",
+      "options": [
+        "circuit के parallel में सीधे",
+        "circuit के series में जिससे current शंट से होकर बहे और उसका voltage drop measure हो",
+        "यह किसी भी तरह जोड़ा जा सकता है",
+        "केवल AC supply में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ammeter mode में शंट resistor को circuit के series में जोड़ा जाता है ताकि पूरी measured current उससे होकर बहे और उत्पन्न छोटा सा voltage drop DPM द्वारा measure करके current के रूप में display किया जाए। Parallel connection (A) voltmeter mode के लिए होता है, और यह किसी भी तरह (C) या केवल AC supply में (D) जोड़ने से सही current sensing नहीं मिलेगी।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q30",
+      "question": "एक typical low-cost DPM specification में 'count 1999, 3.5 digit, accuracy ±0.5% rdg ±1 digit' दी गई है। यहाँ '±1 digit' का क्या अर्थ है?",
+      "options": [
+        "यह display की brightness variation है",
+        "यह power supply variation है",
+        "यह केवल decimal point की स्थिति है",
+        "यह least significant digit के बराबर एक अतिरिक्त uncertainty/error margin है जो reading में जुड़ सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "'±1 digit' का अर्थ है कि reading में percentage error के अतिरिक्त एक least significant digit के बराबर uncertainty भी जुड़ सकती है, जो digital counting/rounding से उत्पन्न होती है। यह brightness variation (A), power supply variation (B) या केवल decimal point की स्थिति (C) से संबंधित नहीं है।"
+    }
+  ]
+}

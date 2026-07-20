@@ -1,0 +1,368 @@
+{
+  "unit": "unit8",
+  "unitName": "Digital Panel Meter",
+  "topic": "seven_segment_displays",
+  "topicName": "Seven Segment Displays - Common Anode/Cathode & Decoder ICs",
+  "questions": [
+    {
+      "id": "u8_seven_segment_displays_q1",
+      "question": "एक common cathode seven segment display में किसी segment को ON (glow) करने के लिए उसके anode terminal पर कौन-सा logic level देना पड़ता है?",
+      "options": [
+        "Logic HIGH (1)",
+        "Logic LOW (0)",
+        "High impedance (Z)",
+        "Floating अवस्था"
+      ],
+      "correctIndex": 0,
+      "explanation": "Common cathode display में सभी LEDs के cathode आपस में जुड़कर ground से जुड़े होते हैं, इसलिए किसी segment को glow करने के लिए उसके anode पर logic HIGH देना पड़ता है ताकि forward current बहे। Option B (LOW) common anode के लिए सही होता है। Option C और D में current ही नहीं बहेगा, इसलिए segment OFF रहेगा।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q2",
+      "question": "एक standard seven segment display में decimal point को छोड़कर कुल कितने LED segments होते हैं?",
+      "options": [
+        "6 segments",
+        "7 segments",
+        "8 segments",
+        "9 segments"
+      ],
+      "correctIndex": 1,
+      "explanation": "Seven segment display में digit बनाने वाले 7 segments (a, b, c, d, e, f, g) होते हैं, इसीलिए इसे 'seven segment' कहा जाता है। decimal point (dp) एक अतिरिक्त 8वाँ LED होता है, पर वह digit segments में नहीं गिना जाता। इसलिए 6 (option A) कम है और 8 व 9 (option C, D) में dp को शामिल कर लिया गया है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q3",
+      "question": "BCD-to-seven segment decoder IC 7447 किस प्रकार के display को drive करने के लिए बनाया गया है?",
+      "options": [
+        "Common cathode display",
+        "LCD display",
+        "Common anode display",
+        "Dot matrix display"
+      ],
+      "correctIndex": 2,
+      "explanation": "IC 7447 के outputs active LOW होते हैं, यानी selected segment के लिए यह output को LOW करता है और current sink करता है; इसलिए यह common anode display को drive करता है (जहाँ segment LOW पर ON होता है)। Common cathode (option A) के लिए 7448 या 4511 उपयुक्त हैं। यह LCD (B) या dot matrix (D) के लिए नहीं है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q4",
+      "question": "BCD-to-seven segment decoder IC 4511 (CMOS) के outputs किस प्रकार के होते हैं, जिससे यह common cathode display drive करता है?",
+      "options": [
+        "Active LOW outputs",
+        "Active HIGH outputs",
+        "Open drain outputs",
+        "Tri-state केवल outputs"
+      ],
+      "correctIndex": 1,
+      "explanation": "IC 4511 के outputs active HIGH होते हैं और यह segment को drive करने के लिए current source करता है, इसीलिए यह common cathode display (जहाँ HIGH पर segment ON होता है) के साथ प्रयोग होता है। Active LOW (option A) 7447 जैसा common anode driver है। Open drain (C) और सिर्फ tri-state (D) 4511 का सामान्य output स्वरूप नहीं है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q5",
+      "question": "यदि किसी common anode seven segment display में a, b, c, d, g segments ON और f, e segments OFF हों, तो कौन-सा digit प्रदर्शित होगा?",
+      "options": [
+        "0",
+        "2",
+        "3",
+        "5"
+      ],
+      "correctIndex": 2,
+      "explanation": "digit '3' बनाने के लिए segments a, b, c, d और g ON होते हैं जबकि e और f OFF रहते हैं — यही स्थिति प्रश्न में दी गई है। digit '2' में e ON और c OFF रहता है, digit '5' में b OFF और f ON रहता है, तथा '0' में g OFF रहता है; इसलिए वे सही नहीं हैं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q6",
+      "question": "Seven segment display के प्रत्येक segment के साथ series में current limiting resistor क्यों जोड़ा जाता है?",
+      "options": [
+        "Display की brightness घटाने के लिए ही",
+        "LED से बहने वाले forward current को सुरक्षित सीमा में रखने के लिए",
+        "LED का color बदलने के लिए",
+        "Display की refresh rate बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक segment एक LED है और LED की current-voltage विशेषता के कारण बिना resistor के अत्यधिक current बहकर LED जल सकता है; इसलिए series resistor forward current को सुरक्षित रेटेड मान तक सीमित करता है। Brightness थोड़ी घटना (A) एक side-effect है पर मुख्य उद्देश्य protection है। Resistor न color बदलता है (C) और न refresh rate (D) तय करता है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q7",
+      "question": "IC 7447 में कौन-सा input pin सक्रिय होने पर सभी segments बलपूर्वक ON हो जाते हैं, जिससे display test किया जा सके?",
+      "options": [
+        "Lamp Test (LT) input",
+        "Ripple Blanking Input (RBI)",
+        "Blanking Input (BI)",
+        "Latch Enable input"
+      ],
+      "correctIndex": 0,
+      "explanation": "Lamp Test (LT) pin को LOW करने पर 7447 सभी 7 segments को ON कर देता है जिससे यह जाँचा जा सके कि कोई segment खराब तो नहीं। RBI (option B) leading zeros को blank करने के लिए है, BI (option C) सभी segments OFF करता है, और latch enable इनपुट डेटा को hold करने से संबंधित है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q8",
+      "question": "एक common cathode seven segment LED display को logic gates से सीधे drive करने के बजाय decoder/driver IC (जैसे 4511) उपयोग करने का मुख्य लाभ क्या है?",
+      "options": [
+        "इससे display का आकार छोटा हो जाता है",
+        "BCD input को सीधे segment pattern में बदल देता है और पर्याप्त drive current देता है",
+        "इससे display रंगीन हो जाती है",
+        "इससे supply voltage की आवश्यकता समाप्त हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Decoder/driver IC 4-bit BCD input को सीधे सही seven segment pattern में decode करता है और साथ ही segments को चलाने योग्य output drive current भी प्रदान करता है, जिससे अलग से gate circuit की जरूरत नहीं पड़ती। यह display का भौतिक आकार (A) नहीं बदलता, न रंग (C), और supply voltage तो फिर भी चाहिए ही (D)।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q9",
+      "question": "एक common anode display का common terminal सामान्यतः किससे जोड़ा जाता है?",
+      "options": [
+        "Ground (0V) से",
+        "किसी floating point से",
+        "Positive supply (Vcc) से",
+        "AC signal source से"
+      ],
+      "correctIndex": 2,
+      "explanation": "Common anode display में सभी LEDs के anode एक साथ जुड़े होते हैं और इस common terminal को positive supply (Vcc) से जोड़ा जाता है; फिर किसी segment को LOW करके उसे ON किया जाता है। Ground (option A) common cathode के लिए होता है। Floating (B) या AC source (D) से display ठीक से काम नहीं करेगा।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q10",
+      "question": "यदि किसी seven segment LED का forward voltage drop 2V है और supply 5V है, तथा वांछित segment current 10mA है, तो series resistor का लगभग मान क्या होगा?",
+      "options": [
+        "150 Ω",
+        "300 Ω",
+        "500 Ω",
+        "700 Ω"
+      ],
+      "correctIndex": 1,
+      "explanation": "Resistor का मान R = (Vsupply − Vf) / I = (5 − 2) / 0.01 = 3 / 0.01 = 300 Ω होता है। इसलिए सही उत्तर 300 Ω है। 150 Ω (A) मान लेने पर current लगभग 20mA हो जाएगा, जबकि 500 Ω और 700 Ω (C, D) से current 10mA से काफी कम रह जाएगा।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q11",
+      "question": "Seven segment display पर hexadecimal digit 'A' प्रदर्शित करने पर कौन-सा segment OFF रहता है?",
+      "options": [
+        "segment a",
+        "segment g",
+        "segment d",
+        "segment b"
+      ],
+      "correctIndex": 2,
+      "explanation": "hexadecimal 'A' दिखाने के लिए segments a, b, c, e, f और g ON रहते हैं जबकि नीचे का segment d OFF रहता है (यह उल्टे U जैसा दिखता है)। segment a, g और b (options A, B, D) तो 'A' में ON रहते हैं, इसलिए वे सही नहीं हैं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q12",
+      "question": "Multi-digit display में leading zeros (जैसे 007 में शुरुआती 0) को हटाने के लिए 7447 का कौन-सा feature प्रयोग होता है?",
+      "options": [
+        "Lamp Test (LT)",
+        "Ripple Blanking (RBI/RBO)",
+        "Latch Enable",
+        "Decimal Point control"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ripple Blanking Input/Output (RBI और RBO) की श्रृंखला leading zeros को अपने-आप blank कर देती है ताकि 007 के बजाय केवल 7 दिखे और display साफ लगे। Lamp Test (A) सभी segments ON करता है, Latch Enable (C) डेटा hold करता है, और decimal point control (D) दशमलव बिंदु से संबंधित है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q13",
+      "question": "Common cathode display को drive करने के लिए निम्न में से कौन-सा decoder IC सबसे उपयुक्त है?",
+      "options": [
+        "7447",
+        "4511",
+        "7445",
+        "7442"
+      ],
+      "correctIndex": 1,
+      "explanation": "IC 4511 CMOS BCD-to-seven segment latch/decoder/driver है जिसके active HIGH outputs common cathode display के लिए उपयुक्त हैं। 7447 (option A) common anode के लिए है। 7445 (C) BCD-to-decimal decoder/driver है और 7442 (D) BCD-to-decimal decoder है — ये seven segment display नहीं चलाते।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q14",
+      "question": "किसी seven segment display में यदि केवल b और c segments ON हों तो कौन-सा digit दिखेगा?",
+      "options": [
+        "1",
+        "7",
+        "4",
+        "0"
+      ],
+      "correctIndex": 0,
+      "explanation": "digit '1' केवल दाहिनी ओर के दो vertical segments b और c को ON करके बनाया जाता है। digit '7' में a segment भी ON होता है, digit '4' में f और g भी ON होते हैं, और '0' में तो b, c के अलावा a, d, e, f भी ON रहते हैं; इसलिए वे सही नहीं हैं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q15",
+      "question": "Seven segment display को common anode/common cathode की जगह matrix-रहित single digit रूप में क्यों बनाया जाता है, इसका मुख्य कारण क्या है?",
+      "options": [
+        "एक ही digit के सभी segments का एक common terminal share करना ताकि pins कम हों",
+        "अधिक रंग उत्पन्न करने के लिए",
+        "कम supply voltage पर चलाने के लिए",
+        "resistor की आवश्यकता समाप्त करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Common anode/cathode व्यवस्था में एक digit के सभी 7 (या 8) LEDs एक common terminal share करते हैं, जिससे अलग-अलग सभी LEDs के दोनों terminal बाहर निकालने की तुलना में कुल pins काफी कम हो जाते हैं। यह रंग (B) नहीं बढ़ाता, supply voltage (C) कम नहीं करता, और resistor की जरूरत (D) फिर भी बनी रहती है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q16",
+      "question": "IC 7447 के output segment lines किस प्रकार current handle करते हैं?",
+      "options": [
+        "वे current source करते हैं (HIGH देते हैं)",
+        "वे current sink करते हैं (LOW पर segment ON)",
+        "वे केवल high impedance रहते हैं",
+        "वे AC current देते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "7447 के outputs active LOW हैं और वे current sink करते हैं — यानी segment के anode को Vcc मिलता है और 7447 दूसरे सिरे को LOW करके current खींचता (sink) है, जिससे segment ON होता है। यह current source (A) नहीं करता, न सदैव high impedance रहता है (C), और यह DC operation है, AC नहीं (D)।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q17",
+      "question": "एक seven segment LED display की तुलना में LCD seven segment display की सबसे बड़ी विशेषता क्या है?",
+      "options": [
+        "यह बहुत अधिक current खींचती है",
+        "यह अत्यंत कम power में काम करती है",
+        "यह अंधेरे में स्वयं चमकती है",
+        "इसे supply की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "LCD seven segment display स्वयं प्रकाश उत्सर्जित नहीं करती बल्कि परिवेशी प्रकाश को नियंत्रित करती है, इसलिए यह LED की तुलना में बहुत कम power खींचती है — battery चालित meters में यही मुख्य लाभ है। यह अधिक current (A) नहीं लेती, अंधेरे में स्वयं नहीं चमकती (C) क्योंकि backlight चाहिए, और चलाने हेतु supply तो चाहिए ही (D)।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q18",
+      "question": "यदि किसी common cathode display के segment 'g' को कभी ON न किया जाए तो कौन-कौन से digits गलत दिखेंगे?",
+      "options": [
+        "केवल 0 और 1",
+        "2, 3, 4, 5, 6, 8, 9 जैसे digits",
+        "केवल 7",
+        "कोई भी digit प्रभावित नहीं होगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "segment g बीच का horizontal bar है जो 2, 3, 4, 5, 6, 8, 9 आदि सभी digits में आवश्यक है, इसलिए g खराब होने पर ये सभी गलत दिखेंगे। 0, 1 और 7 में g वैसे भी OFF रहता है, इसलिए वे प्रभावित नहीं होते — अतः option A, C गलत हैं और option D तो पूरी तरह गलत है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q19",
+      "question": "Digital Panel Meter में seven segment display के आगे decoder/driver से पहले सामान्यतः कौन-सा block होता है जो गिनती/डेटा को रोककर रखता है?",
+      "options": [
+        "Latch (data latch)",
+        "Oscillator",
+        "Rectifier",
+        "Heat sink"
+      ],
+      "correctIndex": 0,
+      "explanation": "Latch मापी गई count/data को स्थिर रखकर display तक भेजता है ताकि नई measurement के दौरान संख्या टिमटिमाए नहीं; कई decoder ICs (जैसे 4511) में यह latch अंदर ही होता है। Oscillator (B) timing देता है, rectifier (C) AC-to-DC करता है, और heat sink (D) ऊष्मा हटाता है — ये डेटा hold नहीं करते।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q20",
+      "question": "किसी seven segment display में 'decimal point' को नियंत्रित करने के लिए सामान्यतः क्या किया जाता है?",
+      "options": [
+        "उसे decoder IC segment output से चलाया जाता है",
+        "उसे एक अलग control line/resistor द्वारा सीधे drive किया जाता है",
+        "वह हमेशा ON रहता है",
+        "उसे चलाना संभव नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "decimal point (dp) एक अलग LED है जो सामान्य BCD decoder के 7 segment outputs में शामिल नहीं होता, इसलिए इसे प्रायः अलग control line और series resistor से सीधे drive किया जाता है ताकि सही स्थान पर दशमलव दिखे। इसलिए यह सामान्य decoder output से नहीं आता (A), हमेशा ON नहीं रहता (C), और इसे चलाना बिल्कुल संभव है (D)।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q21",
+      "question": "Seven segment LED display का सामान्य typical forward voltage प्रति segment लगभग कितना होता है?",
+      "options": [
+        "0.3 V",
+        "1.8 V से 2.2 V",
+        "5 V",
+        "12 V"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक segment एक सामान्य red/green LED है जिसका typical forward voltage लगभग 1.8V से 2.2V रहता है, इसीलिए 5V supply से चलाने पर series resistor की जरूरत पड़ती है। 0.3V (A) एक diode के लिए भी बहुत कम है, जबकि 5V (C) और 12V (D) एकल LED segment के forward drop के लिए बहुत अधिक हैं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q22",
+      "question": "IC 7448 और IC 7447 में मुख्य अंतर क्या है?",
+      "options": [
+        "7448 common cathode (active HIGH) और 7447 common anode (active LOW) drive करता है",
+        "दोनों केवल common anode drive करते हैं",
+        "7448 LCD और 7447 LED drive करता है",
+        "दोनों में कोई अंतर नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "7448 के outputs active HIGH होते हैं इसलिए यह common cathode display चलाता है, जबकि 7447 के outputs active LOW होते हैं इसलिए यह common anode display चलाता है — यही मुख्य अंतर है। इसलिए दोनों केवल common anode (B) या कोई अंतर न होना (D) गलत है, और यह LED बनाम LCD (C) का अंतर नहीं है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q23",
+      "question": "यदि BCD input 1001 (decimal 9) है और IC 4511 सामान्य रूप से काम कर रहा है, तो display पर क्या दिखेगा?",
+      "options": [
+        "digit 6",
+        "blank display",
+        "digit 9",
+        "letter A"
+      ],
+      "correctIndex": 2,
+      "explanation": "BCD 1001 का दशमलव मान 9 है, और 4511 इस valid BCD input को seven segment pattern में decode करके digit '9' दिखाता है। digit 6 (A) BCD 0110 के लिए होता है, blank (B) तब आता जब BI सक्रिय होता, और 'A' (D) hexadecimal होता जिसे मानक BCD decoder नहीं दिखाता।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q24",
+      "question": "Standard BCD-to-seven segment decoder (जैसे 7447/4511) में 1010 से 1111 (decimal 10–15) inputs देने पर सामान्यतः क्या होता है?",
+      "options": [
+        "वे A–F hexadecimal digits दिखाते हैं",
+        "वे blank या अपरिभाषित/अजीब pattern दिखाते हैं",
+        "IC जल जाता है",
+        "display उल्टा दिखता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "मानक BCD decoder केवल 0–9 के लिए designed है; 1010 से 1111 तक के inputs invalid BCD होते हैं, इसलिए 4511 इन्हें blank कर देता है और 7447 कुछ अपरिभाषित/अजीब segment patterns दिखाता है। ये A–F (option A) नहीं दिखाते क्योंकि वह hexadecimal decoder का काम है; IC जलता नहीं (C) और display उल्टा (D) नहीं होता।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q25",
+      "question": "एक seven segment display module में 'a' segment किस स्थिति पर होता है?",
+      "options": [
+        "सबसे ऊपर का horizontal segment",
+        "बीच का horizontal segment",
+        "सबसे नीचे का horizontal segment",
+        "बायाँ ऊपरी vertical segment"
+      ],
+      "correctIndex": 0,
+      "explanation": "मानक labelling में 'a' सबसे ऊपर वाला horizontal segment होता है, फिर घड़ी की दिशा में b, c, d, e, f और अंत में बीच का g आता है। बीच का horizontal (B) g है, सबसे नीचे का (C) d है, और बायाँ ऊपरी vertical (D) f है — इसलिए वे 'a' नहीं हैं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q26",
+      "question": "एक 4-digit seven segment LED display को static drive करने पर सबसे बड़ी कठिनाई क्या है?",
+      "options": [
+        "बहुत कम current लगती है",
+        "प्रत्येक digit के लिए अलग decoder/driver और अधिक connections चाहिए",
+        "display बहुत धीमी हो जाती है",
+        "digits उल्टे दिखते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Static (non-multiplexed) drive में हर digit को स्वयं का decoder/driver और अलग segment connections चाहिए, जिससे ICs, wiring और power अधिक लगती है — इसी कारण बड़े displays में multiplexing उपयोग होता है। यह कम current (A) नहीं लेता बल्कि अधिक लेता है, display धीमी (C) नहीं होती, और digits उल्टे (D) नहीं दिखते।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q27",
+      "question": "Seven segment display में 'blanking' का क्या अर्थ है?",
+      "options": [
+        "सभी आवश्यक segments को ON करना",
+        "किसी digit के सभी segments को OFF करके उसे खाली दिखाना",
+        "display का रंग बदलना",
+        "decimal point को ON करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Blanking का अर्थ है किसी digit के सभी segments को OFF कर देना ताकि वह स्थान खाली (blank) दिखे — यह leading zero suppression में उपयोगी है। सभी segments ON करना (A) तो lamp test है, रंग बदलना (C) संभव नहीं, और केवल decimal point ON करना (D) blanking नहीं है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q28",
+      "question": "एक common cathode seven segment display के segments को सुरक्षित रूप से microcontroller port pins से चलाने पर सामान्यतः क्या जोड़ना आवश्यक है?",
+      "options": [
+        "प्रत्येक segment line में series current limiting resistor",
+        "प्रत्येक segment में एक capacitor",
+        "एक बड़ा inductor",
+        "कुछ भी अतिरिक्त नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Microcontroller port pin सीमित current देता है और LED को direct जोड़ने पर अधिक current से pin या LED खराब हो सकता है, इसलिए प्रत्येक segment line में series current limiting resistor आवश्यक है। Capacitor (B) या inductor (C) यहाँ current सीमित नहीं करते, और बिना resistor (D) चलाना असुरक्षित है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q29",
+      "question": "Digital Panel Meter में seven segment display की तुलना में bar-graph LED display का मुख्य उपयोग किसमें होता है?",
+      "options": [
+        "सटीक numeric मान दिखाने में",
+        "किसी मान की अनुमानित/analog जैसी स्तर (level) झलक दिखाने में",
+        "समय दिखाने में",
+        "hexadecimal digits दिखाने में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bar-graph LED display कई LEDs की एक पंक्ति होती है जो किसी मान का अनुमानित analog जैसा स्तर (जैसे signal level या charge) दिखाती है, जबकि seven segment सटीक अंक (A) दिखाने के लिए बेहतर है। यह समय (C) या hexadecimal digits (D) दिखाने का विशेष साधन नहीं है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q30",
+      "question": "यदि किसी common anode seven segment display को गलती से common cathode driver (active HIGH outputs) से जोड़ा जाए तो क्या होगा?",
+      "options": [
+        "Display सामान्य रूप से सही digits दिखाएगी",
+        "Segments ON नहीं होंगे क्योंकि polarity गलत है",
+        "Display का रंग बदल जाएगा",
+        "Display की refresh rate बढ़ जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Common anode display को segment ON करने के लिए LOW चाहिए, पर active HIGH driver segment को HIGH देता है; anode पहले से Vcc पर है, इसलिए दोनों सिरों पर HIGH होने से कोई forward current नहीं बहेगा और segments OFF रहेंगे। इसलिए सही digits (A) नहीं दिखेंगे, रंग (C) या refresh rate (D) का इससे कोई संबंध नहीं।"
+    }
+  ]
+}

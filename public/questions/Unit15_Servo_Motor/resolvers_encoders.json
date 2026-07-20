@@ -1,0 +1,368 @@
+{
+  "unit": "unit15",
+  "unitName": "Servo Motor",
+  "topic": "resolvers_encoders",
+  "topicName": "Resolvers, Incremental Encoder, Absolute Encoder & Their Differences",
+  "questions": [
+    {
+      "id": "u15_resolvers_encoders_q1",
+      "question": "Resolver मूलतः किस प्रकार का device है?",
+      "options": [
+        "एक digital counting device",
+        "एक electromechanical (analog) transducer जो shaft की angular position को AC voltage signals में convert करता है",
+        "केवल एक resistor",
+        "केवल एक capacitor bank"
+      ],
+      "correctIndex": 1,
+      "explanation": "Resolver एक electromechanical transducer है जो rotating shaft की angular position को sine और cosine के रूप में analog AC voltage signals में convert करता है (Option B)। Option A digital devices (जैसे encoder) पर लागू होता है, Option C, D resolver की actual construction नहीं हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q2",
+      "question": "Resolver की construction basically किस device से मिलती-जुलती है?",
+      "options": [
+        "एक साधारण diode से",
+        "एक rotary transformer से, जिसमें एक rotor winding और दो stator windings (sine और cosine) होती हैं",
+        "एक साधारण switch से",
+        "एक LED से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Resolver की construction एक rotary transformer जैसी होती है, जिसमें rotor पर excitation winding होती है और stator पर 90 degree के angle पर दो windings (sine और cosine) होती हैं (Option B)। Option A, C, D resolver की actual construction से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q3",
+      "question": "Resolver से मिलने वाले output signals (sine और cosine) से shaft की कौन सी जानकारी निकाली जाती है?",
+      "options": [
+        "केवल temperature",
+        "Shaft का absolute angular position",
+        "केवल current की मात्रा",
+        "केवल battery voltage"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sine और cosine output signals के ratio (arctangent) से shaft की absolute angular position calculate की जाती है (Option B)। Option A, C, D resolver output से प्राप्त जानकारी नहीं है।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q4",
+      "question": "Resolver की एक बड़ी विशेषता (advantage) क्या है जो इसे harsh industrial environment के लिए उपयुक्त बनाती है?",
+      "options": [
+        "यह digital electronics पर पूरी तरह depend करता है",
+        "यह robust, rugged construction वाला होता है और उच्च temperature, vibration तथा dust के प्रति अधिक resistant होता है",
+        "इसे बार-बार calibrate करना पड़ता है",
+        "यह केवल कम speed पर काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Resolver की electromechanical (transformer-based) construction इसे high temperature, vibration और dust जैसी harsh conditions में भी reliable बनाती है, जिससे यह industrial और aerospace applications में लोकप्रिय है (Option B)। Option A, C, D resolver के actual गुणों से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q5",
+      "question": "Incremental encoder किस प्रकार का signal output देता है?",
+      "options": [
+        "यह shaft के घूमने पर pulses की एक series output करता है, जो relative position या speed को दर्शाती है",
+        "यह एक unique absolute code हर position के लिए output करता है",
+        "यह केवल DC voltage output करता है जो temperature दर्शाता है",
+        "यह कोई output नहीं देता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Incremental encoder shaft के rotation के साथ pulses की एक series generate करता है, जिन्हें count करके relative position या speed calculate की जाती है (Option A)। Option B absolute encoder का गुण है, Option C, D incremental encoder का actual कार्य नहीं है।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q6",
+      "question": "Incremental encoder में सामान्यतः कितने channels होते हैं (A, B और कभी-कभी Z)?",
+      "options": [
+        "केवल एक channel",
+        "दो मुख्य channels (A और B, जो 90 degree phase shifted होते हैं) और एक index/reference channel (Z)",
+        "पाँच channels",
+        "कोई channel नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Incremental encoder में सामान्यतः दो quadrature channels A और B होते हैं जो एक-दूसरे से 90 degree phase shifted होते हैं (direction detect करने के लिए), और एक अतिरिक्त Z (index) channel होता है जो हर एक पूरे revolution पर एक बार pulse देता है (Option B)। Option A, C, D encoder की actual construction से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q7",
+      "question": "Incremental encoder में channels A और B के बीच 90 degree का phase shift क्यों रखा जाता है?",
+      "options": [
+        "ताकि motor की temperature control हो सके",
+        "ताकि shaft के rotation की direction (clockwise या counter-clockwise) पता लगाई जा सके",
+        "ताकि power consumption बढ़े",
+        "इसका कोई विशेष कारण नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Channel A और B के बीच 90 degree का phase shift होने से यह पता चलता है कि कौन सा channel पहले high हुआ, जिससे shaft के rotation की direction (clockwise/counter-clockwise) निर्धारित की जा सकती है (Option B)। Option A, C, D इस phase shift के actual उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q8",
+      "question": "Incremental encoder की सबसे बड़ी सीमा (limitation) क्या है?",
+      "options": [
+        "यह पूरी तरह से अत्यधिक महंगा होता है",
+        "Power off होने या system restart होने पर यह absolute position की जानकारी खो देता है, जिसे दोबारा homing/referencing से प्राप्त करना पड़ता है",
+        "यह high speed पर काम नहीं कर सकता",
+        "इसमें कोई digital output नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Incremental encoder केवल relative movement count करता है, इसलिए power off होने पर वह अपनी current absolute position खो देता है, और restart पर दोबारा homing (reference point तक जाना) करना पड़ता है (Option B)। Option A, C, D incremental encoder की actual limitations नहीं हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q9",
+      "question": "Absolute encoder किस प्रकार incremental encoder से भिन्न होता है?",
+      "options": [
+        "Absolute encoder हर unique shaft position के लिए एक अलग unique digital code output करता है, जबकि incremental encoder केवल pulses count करता है",
+        "Absolute encoder केवल pulses output करता है",
+        "दोनों बिल्कुल एक जैसे काम करते हैं",
+        "Absolute encoder में कोई digital output नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Absolute encoder shaft की हर unique angular position के लिए एक unique digital code (जैसे binary या Gray code) output करता है, जिससे power off होने के बाद भी position की जानकारी तुरंत मिल जाती है, जबकि incremental encoder केवल relative pulses count करता है (Option A)। Option B, C, D दोनों प्रकार के encoders में स्पष्ट अंतर को नज़रअंदाज़ करते हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q10",
+      "question": "Absolute encoder का सबसे बड़ा फ़ायदा क्या है जो इसे critical applications के लिए उपयुक्त बनाता है?",
+      "options": [
+        "Power interruption के बाद भी यह तुरंत बता सकता है कि shaft किस exact position पर है, बिना homing की आवश्यकता के",
+        "यह हमेशा incremental encoder से सस्ता होता है",
+        "इसमें कोई codes नहीं होते",
+        "यह केवल कम resolution provide करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Absolute encoder की unique coding scheme के कारण power off/on होने पर भी shaft की exact position तुरंत पता चल जाती है, बिना दोबारा homing की ज़रूरत के — यह critical applications (जैसे robotics, CNC) के लिए बहुत उपयोगी है (Option A)। Option B, C, D absolute encoder के actual गुणों से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q11",
+      "question": "Absolute encoder में position की जानकारी सामान्यतः किस प्रकार के code में output होती है?",
+      "options": [
+        "केवल analog voltage",
+        "Binary code या Gray code के रूप में digital output",
+        "केवल sine wave",
+        "केवल temperature की units में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Absolute encoder shaft की position को binary या विशेष रूप से Gray code (जिसमें एक समय में केवल एक bit बदलता है, error कम करने के लिए) के रूप में digital output देता है (Option B)। Option A, C, D absolute encoder की actual output format नहीं है।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q12",
+      "question": "Gray code का absolute encoder में प्रयोग करने का मुख्य कारण क्या है?",
+      "options": [
+        "यह binary code से ज़्यादा complex होता है",
+        "इसमें एक समय पर केवल एक bit बदलता है, जिससे transition के दौरान reading error की संभावना कम होती है",
+        "यह केवल analog systems में प्रयोग होता है",
+        "इसका temperature से कोई संबंध है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gray code में consecutive values के बीच सिर्फ एक bit change होता है, इसलिए transition के दौरान multiple bits के एक साथ न बदलने से ambiguous या गलत reading की संभावना बहुत कम हो जाती है (Option B)। Option A, C, D Gray code के प्रयोग के actual कारण से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q13",
+      "question": "Single-turn absolute encoder और multi-turn absolute encoder में क्या अंतर है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे हैं",
+        "Single-turn केवल एक revolution के भीतर unique position देता है, जबकि multi-turn कई revolutions के across भी unique position track करता है",
+        "Single-turn हमेशा multi-turn से ज़्यादा accurate होता है",
+        "Multi-turn केवल AC systems में प्रयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Single-turn absolute encoder सिर्फ एक rotation (0-360 degree) के भीतर unique code देता है, जबकि multi-turn absolute encoder additional counting mechanism (जैसे gears या internal battery-backed counter) के ज़रिए कई revolutions में भी position को track कर पाता है (Option B)। Option A, C, D दोनों प्रकार के encoders के बीच के actual अंतर को सही तरीके से नहीं बताते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q14",
+      "question": "Optical incremental encoder में disc पर बने slots और light sensor का क्या कार्य है?",
+      "options": [
+        "जब shaft घूमता है, disc के slots के through light pass होने या रुकने से pulses generate होते हैं जिन्हें sensor detect करता है",
+        "यह disc temperature control करने के लिए होती है",
+        "यह motor की winding को cool करने के लिए होती है",
+        "इसका कोई संबंध position sensing से नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Optical incremental encoder में एक rotating disc पर slots (या patterns) होते हैं; जब shaft घूमता है, तब light source से आने वाली light disc के slots से गुज़रती या block होती है, जिसे photo sensor detect करके electrical pulses में बदलता है (Option A)। Option B, C, D इस mechanism की actual working से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q15",
+      "question": "Resolver और encoder (incremental/absolute) की output nature में मुख्य अंतर क्या है?",
+      "options": [
+        "Resolver analog (sine/cosine AC) signals देता है जबकि encoder digital pulses या digital codes देता है",
+        "दोनों बिल्कुल एक जैसे digital output देते हैं",
+        "Resolver केवल digital output देता है",
+        "Encoder केवल analog sine wave output देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Resolver एक analog device है जो sine और cosine के रूप में AC voltage signals output करता है, जबकि encoder (incremental या absolute) digital pulses या digital codes output करता है (Option A)। Option B, C, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q16",
+      "question": "Resolver, encoder की तुलना में temperature और vibration के प्रति कैसा होता है?",
+      "options": [
+        "Resolver आमतौर पर अधिक rugged होता है और extreme temperature व vibration को encoder से बेहतर सहन कर सकता है",
+        "Resolver हमेशा encoder से कम durable होता है",
+        "दोनों में कोई अंतर नहीं है",
+        "Resolver temperature से पूरी तरह अप्रभावित (unaffected) रहता है जबकि encoder भी अप्रभावित रहता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Resolver की simple, coil-based (transformer जैसी) construction के कारण यह high temperature और vibration को optical/electronic encoders की तुलना में बेहतर सहन कर सकता है, इसलिए harsh environments में resolver को प्राथमिकता दी जाती है (Option A)। Option B, C, D तथ्यात्मक रूप से ग़लत हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q17",
+      "question": "Resolver का उपयोग करने के लिए signal को process करने हेतु सामान्यतः किस additional device की आवश्यकता होती है?",
+      "options": [
+        "एक साधारण resistor",
+        "एक Resolver-to-Digital Converter (RDC), जो analog sine/cosine signals को digital position data में बदलता है",
+        "एक साधारण capacitor",
+        "इसकी कोई आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूंकि resolver का output analog (sine/cosine) होता है, इसलिए इसे digital controllers के साथ प्रयोग करने के लिए Resolver-to-Digital Converter (RDC) की आवश्यकता होती है जो analog signal को digital position value में convert करता है (Option B)। Option A, C, D इस काम के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q18",
+      "question": "Incremental encoder की resolution (जैसे pulses per revolution, PPR) किस बात को दर्शाती है?",
+      "options": [
+        "Motor का weight",
+        "एक पूरे revolution में encoder द्वारा generate किए जाने वाले pulses की संख्या, जो measurement की सूक्ष्मता (precision) को दर्शाती है",
+        "Motor की temperature rating",
+        "Power supply की voltage"
+      ],
+      "correctIndex": 1,
+      "explanation": "PPR (Pulses Per Revolution) यह दर्शाता है कि एक पूरे revolution में encoder कितने pulses generate करेगा — जितना अधिक PPR होगा, उतनी ही बारीक (fine) position/speed measurement संभव होगी (Option B)। Option A, C, D PPR की actual definition से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q19",
+      "question": "Z (index) channel, incremental encoder में किस काम के लिए उपयोगी है?",
+      "options": [
+        "यह temperature measure करता है",
+        "यह हर एक पूरे revolution में एक बार pulse देकर एक निश्चित reference (home) position प्रदान करता है",
+        "यह motor को हमेशा बंद कर देता है",
+        "यह केवल battery को charge करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Z (index) channel encoder shaft के एक पूरे revolution complete होने पर एक बार pulse output करता है, जिसे homing या reference position निर्धारित करने के लिए प्रयोग किया जाता है (Option B)। Option A, C, D Z channel के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q20",
+      "question": "किसी servo application में power failure के बाद तुरंत exact position जानने की आवश्यकता हो (जैसे CNC machine tool में), तो कौन सा feedback device अधिक उपयुक्त होगा?",
+      "options": [
+        "Incremental encoder, क्योंकि यह सस्ता होता है",
+        "Absolute encoder या resolver (with RDC), क्योंकि ये बिना homing के भी exact position तुरंत बता सकते हैं",
+        "कोई भी feedback device उपयुक्त नहीं है",
+        "केवल एक साधारण switch"
+      ],
+      "correctIndex": 1,
+      "explanation": "Absolute encoder (जो हर position के लिए unique code रखता है) या resolver (जो analog signal से absolute angle निकालने में सक्षम है) power failure के बाद भी बिना homing किए exact position तुरंत बता सकते हैं, इसलिए ऐसी applications में ये अधिक उपयुक्त हैं (Option B)। Option A, C, D इस requirement को पूरा नहीं करते क्योंकि incremental encoder को दोबारा reference लेना पड़ता है।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q21",
+      "question": "Resolver में rotor को excitation signal कैसे दिया जाता है (सामान्यतः brushless design में)?",
+      "options": [
+        "Direct DC supply से",
+        "एक rotary transformer के through, जिससे contact-less (brushless) power/signal transfer होता है",
+      "केवल एक switch के through",
+        "केवल SIM card के through"
+      ],
+      "correctIndex": 1,
+      "explanation": "Brushless resolver design में excitation signal rotor को एक अतिरिक्त rotary transformer के माध्यम से contact-less तरीके से transfer किया जाता है, जिससे brushes की wear-and-tear की समस्या खत्म हो जाती है (Option B)। Option A, C, D resolver की actual excitation विधि नहीं हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q22",
+      "question": "Incremental encoder की तुलना में absolute encoder की एक सामान्य कमी (trade-off) क्या हो सकती है?",
+      "options": [
+        "यह हमेशा कम resolution देता है",
+        "यह सामान्यतः अधिक complex construction और अधिक wiring/interface (जैसे ज़्यादा data lines) के कारण महंगा हो सकता है",
+        "इसमें कोई digital output नहीं होता",
+        "यह कभी भी exact position नहीं बता सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Absolute encoder में हर position के लिए unique code store/generate करने की आवश्यकता होती है, जिसके लिए अधिक complex internal design और अक्सर अधिक output lines या communication protocol चाहिए होता है, जिससे cost बढ़ सकती है (Option B)। Option A, C, D absolute encoder की actual limitations नहीं हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q23",
+      "question": "Magnetic (non-optical) encoders, optical encoders की तुलना में किस environment में बेहतर विकल्प हो सकते हैं?",
+      "options": [
+        "जहाँ dust, oil या moisture अधिक हो, वहाँ magnetic encoders अधिक robust विकल्प हो सकते हैं",
+        "जहाँ बिल्कुल साफ (clean room) environment हो",
+        "जहाँ केवल AC supply उपलब्ध हो",
+        "जहाँ कोई vibration न हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Optical encoders dust, oil या moisture के कारण अपने optical path के block होने से affected हो सकते हैं, जबकि magnetic encoders ऐसे contaminants के प्रति अधिक resistant होते हैं, इसलिए harsh/dirty environments में इन्हें प्राथमिकता दी जाती है (Option A)। Option B, C, D इस comparison के लिए relevant conditions नहीं हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q24",
+      "question": "Servo motor feedback के लिए resolver को चुनने का एक typical application area कौन सा है?",
+      "options": [
+        "Aerospace और automotive traction motors जैसे high-reliability, harsh-environment applications",
+        "केवल घरेलू पंखे",
+        "केवल mobile phone charger",
+        "केवल LED bulb"
+      ],
+      "correctIndex": 0,
+      "explanation": "Resolver की rugged construction और high-temperature tolerance के कारण इसे aerospace और automotive traction motor (जैसे electric vehicle) applications में feedback device के रूप में प्राथमिकता दी जाती है (Option A)। Option B, C, D typical resolver-based feedback applications नहीं हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q25",
+      "question": "Absolute encoder का उपयोग robotic joint में करने का एक व्यावहारिक फ़ायदा क्या है?",
+      "options": [
+        "Power cycle के बाद robot को दोबारा calibration/homing की आवश्यकता नहीं पड़ती, जिससे downtime कम होता है",
+        "इससे robot की battery life हमेशा बढ़ जाती है",
+        "इससे robot के joints का weight कम हो जाता है",
+        "इसका कोई व्यावहारिक फ़ायदा नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "चूंकि absolute encoder हर position के लिए unique code रखता है, इसलिए power off/on के बाद भी joint की exact position तुरंत पता चल जाती है, और दोबारा homing की आवश्यकता नहीं पड़ती, जिससे operational downtime कम होता है (Option A)। Option B, C, D absolute encoder के actual व्यावहारिक फ़ायदों से मेल नहीं खाते।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q26",
+      "question": "Incremental encoder से मिलने वाले pulses को count करके speed कैसे calculate की जाती है?",
+      "options": [
+        "एक निश्चित समय अंतराल में मिले pulses की संख्या और encoder की known resolution (PPR) का उपयोग करके",
+        "केवल pulses के रंग को देखकर",
+        "बिना किसी गणना के, सीधे display पर आता है",
+        "Speed calculate करना incremental encoder से संभव ही नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "एक निश्चित समय interval में मिलने वाले pulses की संख्या को encoder की known PPR (Pulses Per Revolution) से divide करके revolutions calculate की जाती हैं, और समय के साथ इसे divide करने पर RPM/speed प्राप्त होती है (Option A)। Option B, C, D speed calculation की actual विधि नहीं हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q27",
+      "question": "Resolver में sine और cosine winding output का ratio (arctangent) निकालने से क्या प्राप्त होता है?",
+      "options": [
+        "Motor का temperature",
+        "Shaft का exact angular position (angle), जो 0 से 360 degree के बीच होता है",
+        "Motor की current rating",
+        "Power supply की frequency"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sine और cosine outputs के ratio का arctangent निकालकर shaft की exact angular position (0 से 360 degree के बीच) calculate की जाती है, जो resolver का मूल उद्देश्य है (Option B)। Option A, C, D resolver output से प्राप्त होने वाली जानकारी नहीं है।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q28",
+      "question": "किसी system में यदि high-resolution की आवश्यकता हो लेकिन harsh environment (धूल, oil) भी हो, तो सामान्यतः किस प्रकार का feedback device चुना जाएगा?",
+      "options": [
+        "Sealed/rugged optical encoder या magnetic encoder जो high resolution के साथ-साथ environmental protection भी प्रदान करे",
+        "एक साधारण खुली (open) optical disc encoder बिना किसी sealing के",
+        "केवल एक switch",
+        "कोई feedback device नहीं चाहिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "ऐसी situations में engineers sealed/rugged optical encoders या magnetic encoders चुनते हैं जो high resolution भी दें और dust/oil से भी सुरक्षित रहें (Option A)। Option B ऐसी environment में जल्दी खराब हो सकता है, Option C, D आवश्यक resolution या feedback नहीं देंगे।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q29",
+      "question": "निम्नलिखित में से कौन सा कथन resolver, incremental encoder और absolute encoder की तुलना के संदर्भ में सही है?",
+      "options": [
+        "Resolver analog rugged device है, incremental encoder relative pulses देता है (power loss पर position खो देता है), और absolute encoder हर position पर unique digital code देता है (power loss पर भी position पता रहती है)",
+        "तीनों बिल्कुल एक ही सिद्धांत पर काम करते हैं",
+        "केवल incremental encoder ही position feedback दे सकता है, बाकी दोनों नहीं",
+        "Resolver केवल digital output देता है जबकि दोनों encoders analog output देते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "यह सही summarization है: resolver analog और rugged है, incremental encoder relative pulses पर आधारित है और power loss पर position information खो देता है, जबकि absolute encoder हर position के लिए unique code रखने के कारण power loss के बाद भी position तुरंत पता चल जाती है (Option A)। Option B, C, D इन तीनों devices की actual विशेषताओं और अंतरों को गलत तरीके से प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "u15_resolvers_encoders_q30",
+      "question": "Servo drive select करते समय feedback device (resolver/incremental encoder/absolute encoder) चुनने के लिए किन factors पर विचार किया जाना चाहिए?",
+      "options": [
+        "Environment conditions (temperature, dust, vibration), required accuracy/resolution, cost, और power-loss के बाद position information की आवश्यकता",
+        "केवल motor का रंग",
+        "केवल SIM card की उपलब्धता",
+        "केवल phone का brand"
+      ],
+      "correctIndex": 0,
+      "explanation": "Feedback device चुनते समय environment (harsh या clean), required resolution/accuracy, budget/cost, और यह ज़रूरत कि power-loss के बाद absolute position चाहिए या नहीं — इन सभी factors पर विचार करना ज़रूरी है ताकि सही device select हो सके (Option A)। Option B, C, D इस selection process से असंबंधित हैं।"
+    }
+  ]
+}

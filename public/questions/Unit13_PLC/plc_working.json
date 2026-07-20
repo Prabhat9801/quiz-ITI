@@ -1,0 +1,368 @@
+{
+  "unit": "unit13",
+  "unitName": "PLC",
+  "topic": "plc_working",
+  "topicName": "PLC Working Principle - Scan Cycle (Input/Program/Output Scan), Scan Time",
+  "questions": [
+    {
+      "id": "u13_plc_working_q1",
+      "question": "PLC के 'Scan Cycle' में सामान्यतः कितने मुख्य steps होते हैं और वे किस क्रम में होते हैं?",
+      "options": [
+        "तीन steps: Input Scan, Program (Logic) Scan, Output Scan — इसी क्रम में बार-बार दोहराए जाते हैं",
+        "केवल एक step: सीधे output update",
+        "दो steps: Power ON फिर Power OFF",
+        "चार steps जिसमें कोई निश्चित क्रम नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "PLC continuously तीन मुख्य steps के cycle में काम करता है — पहले सभी inputs की status पढ़ता है (Input Scan), फिर ladder program को execute करता है (Program Scan), और अंत में results के अनुसार outputs update करता है (Output Scan); यह cycle बार-बार repeat होता है। अन्य विकल्प वास्तविक scan process को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u13_plc_working_q2",
+      "question": "'Input Scan' के दौरान PLC क्या करता है?",
+      "options": [
+        "सभी output devices को on कर देता है",
+        "सभी connected input devices (sensors, switches) की current status पढ़कर उसे Input Image Table में store करता है",
+        "ladder logic को execute करता है",
+        "program को permanently erase करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Input scan में CPU field से जुड़े सभी input terminals की वर्तमान स्थिति (ON/OFF या analog value) पढ़ता है और उसे एक temporary memory area — Input Image Table — में copy करता है, ताकि program scan के दौरान consistent data मिले। Output on करना output scan में होता है।"
+    },
+    {
+      "id": "u13_plc_working_q3",
+      "question": "'Program Scan' (Logic Scan) चरण में क्या होता है?",
+      "options": [
+        "CPU field inputs को directly read करके तुरंत output देता है, बिना logic के",
+        "CPU Input Image Table की values का उपयोग करके ladder logic को rung-by-rung, top to bottom, left to right execute करता है और परिणाम Output Image Table में रखता है",
+        "CPU केवल power supply status check करता है",
+        "CPU केवल memory को erase करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Program scan में CPU stored input image data का उपयोग करके ladder diagram की प्रत्येक rung को क्रमानुसार (ऊपर से नीचे, बाएँ से दाएँ) evaluate करता है और result को Output Image Table में temporarily store करता है, जो बाद में output scan में field पर भेजा जाता है।"
+    },
+    {
+      "id": "u13_plc_working_q4",
+      "question": "'Output Scan' चरण का क्या कार्य है?",
+      "options": [
+        "Field inputs की status पढ़ना",
+        "Output Image Table में stored results को actual field output terminals पर transfer करना, जिससे actuators (motor, lamp, solenoid) control होते हैं",
+        "ladder program को compile करना",
+        "केवल battery backup check करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Output scan में program scan के दौरान calculate किए गए output image table के results को actual physical output terminals पर भेजा जाता है, जिससे connected actuators वास्तव में energize/de-energize होते हैं। Input पढ़ना input scan में होता है।"
+    },
+    {
+      "id": "u13_plc_working_q5",
+      "question": "PLC में 'Scan Time' किसे कहते हैं?",
+      "options": [
+        "केवल input scan में लगने वाला समय",
+        "एक पूरे scan cycle (input scan + program scan + output scan + overhead) को पूरा करने में लगने वाला कुल समय",
+        "केवल power supply को chargeहोने में लगने वाला समय",
+        "केवल HMI screen को refresh होने में लगने वाला समय"
+      ],
+      "correctIndex": 1,
+      "explanation": "Scan time एक complete cycle — input scan, program scan, output scan और housekeeping overhead — को पूरा करने में लगने वाले कुल समय को कहते हैं। इसे केवल किसी एक sub-step तक सीमित नहीं माना जाता।"
+    },
+    {
+      "id": "u13_plc_working_q6",
+      "question": "यदि ladder program में rungs की संख्या बढ़ा दी जाए, तो scan time पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Scan time घट जाएगा",
+        "Scan time पर कोई प्रभाव नहीं पड़ेगा",
+        "Scan time बढ़ जाएगा, क्योंकि CPU को ज्यादा instructions execute करने में अधिक समय लगेगा",
+        "Scan time शून्य हो जाएगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "Program scan में CPU को हर rung/instruction को evaluate करना पड़ता है; rungs की संख्या बढ़ने पर execution में अधिक समय लगता है, जिससे overall scan time बढ़ जाता है। यह प्रत्यक्ष रूप से program size से जुड़ा है, घटता नहीं।"
+    },
+    {
+      "id": "u13_plc_working_q7",
+      "question": "PLC का scan time सामान्यतः किस range में होता है?",
+      "options": [
+        "कुछ minutes से घंटों तक",
+        "कुछ milliseconds (जैसे 1ms से लेकर कुछ दसियों ms तक), program size और CPU speed पर निर्भर करते हुए",
+        "कई दिन",
+        "कुछ nanoseconds से भी कम, हमेशा fixed"
+      ],
+      "correctIndex": 1,
+      "explanation": "Typical PLC का scan time program की length, complexity, तथा CPU की processing speed पर निर्भर करते हुए सामान्यतः कुछ milliseconds होता है, जो fast industrial control के लिए पर्याप्त होता है। Minutes/घंटों में यह बहुत slow माना जाएगा।"
+    },
+    {
+      "id": "u13_plc_working_q8",
+      "question": "यदि scan time बहुत अधिक हो जाए (यानी CPU धीमा हो), तो किसी तेज़ी से बदलने वाले (fast pulse) input signal पर क्या समस्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी, हर signal हमेशा capture होगा",
+        "यदि input pulse scan time से कम duration का हो तो CPU उसे miss कर सकता है क्योंकि वह अगले input scan तक उसे नहीं पढ़ेगा",
+        "Output हमेशा तुरंत बदल जाएगा",
+        "Memory automatically दोगुनी हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि किसी fast-changing signal का pulse duration scan time से कम हो, तो संभव है कि वह pulse input scan के समय active न हो और CPU उसे miss कर दे, जिससे गलत operation हो सकता है। इसीलिए high-speed applications के लिए विशेष high-speed counter modules उपयोग होते हैं।"
+    },
+    {
+      "id": "u13_plc_working_q9",
+      "question": "PLC scan cycle में Input Image Table का उपयोग क्यों किया जाता है, न कि सीधे field input को हर instruction पर बार-बार पढ़ा जाता है?",
+      "options": [
+        "इससे scan के दौरान input values consistent रहती हैं और पूरा logic execution एक ही 'snapshot' पर आधारित रहता है, जिससे logical errors कम होते हैं",
+        "इससे केवल memory खाली रहती है",
+        "इससे field devices जल्दी खराब होते हैं",
+        "इससे program automatically edit हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Input image table एक snapshot की तरह काम करता है — एक बार scan शुरू होने पर पूरे program scan के दौरान input values fixed रहती हैं, जिससे same scan के अंदर logic में inconsistency (एक instruction में एक value, दूसरे में दूसरी) नहीं आती। यह field device life या memory खाली रखने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_working_q10",
+      "question": "PLC का 'Housekeeping' या 'Overhead' time scan cycle में क्या करता है?",
+      "options": [
+        "यह field devices को साफ करता है",
+        "इसमें CPU internal diagnostics, communication servicing और memory checks जैसे background tasks करता है जो actual scan time में जुड़ते हैं",
+        "यह केवल ladder logic को edit करता है",
+        "यह output modules को disconnect करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Housekeeping/overhead समय में CPU अपने internal diagnostics, communication port servicing, watchdog timer check आदि background tasks करता है, जो हर scan cycle में input/program/output scan के अतिरिक्त जुड़ता है। यह field devices की सफाई या logic editing से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_working_q11",
+      "question": "PLC में scan cycle को बार-बार repeat करने की process को क्या कहा जाता है?",
+      "options": [
+        "One-time execution",
+        "Continuous/Cyclic scanning",
+        "Manual scanning",
+        "Random scanning"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC power ON रहने तक scan cycle को continuously/cyclically दोहराता रहता है — इसे cyclic scanning कहते हैं, जिससे control action लगातार update होता रहता है। यह one-time या manual process नहीं है।"
+    },
+    {
+      "id": "u13_plc_working_q12",
+      "question": "ladder logic में एक rung के अंदर यदि दो या अधिक outputs हों, तो program scan के दौरान उन्हें किस क्रम में process किया जाता है?",
+      "options": [
+        "Random क्रम में",
+        "उस rung के अंदर बाएँ से दाएँ (left to right) क्रम में, जैसा program में लिखा गया है",
+        "हमेशा नीचे से ऊपर",
+        "दोनों outputs एक साथ, बिना किसी क्रम के"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ladder logic execution सामान्यतः rung के अंदर बाएँ से दाएँ (left to right) और overall program में ऊपर से नीचे (top to bottom) क्रम में होता है, जो ladder diagram में instructions के sequence से निर्धारित होता है। यह random या नीचे से ऊपर नहीं होता।"
+    },
+    {
+      "id": "u13_plc_working_q13",
+      "question": "यदि एक ही scan cycle में program के earlier rung में किसी output coil की value बदल दी जाए, तो बाद के rung में उस output की कौन सी value use होगी?",
+      "options": [
+        "हमेशा पुरानी (पिछले scan की) value",
+        "उसी current scan में अभी-अभी update हुई नई value (क्योंकि output image table उसी scan में तुरंत update हो जाता है)",
+        "Value हमेशा zero हो जाएगी",
+        "Value random हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब program scan के दौरान किसी output coil की स्थिति बदलती है तो output image table तुरंत update हो जाता है, और उसी scan में बाद के rungs इस नई (updated) value को ही read करते हैं। यह एक महत्वपूर्ण concept है जो ladder execution order को समझने में मदद करता है।"
+    },
+    {
+      "id": "u13_plc_working_q14",
+      "question": "PLC की 'Watchdog Timer' का scan cycle में क्या कार्य होता है?",
+      "options": [
+        "यह field devices को power देता है",
+        "यह monitor करता है कि scan cycle एक निश्चित समय सीमा के अंदर पूरा हो रहा है या नहीं; समय सीमा पार होने पर fault या shutdown alert देता है",
+        "यह केवल ladder logic को print करता है",
+        "यह केवल input modules को साफ करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Watchdog timer एक safety feature है जो scan cycle की duration को monitor करता है; यदि किसी वजह से program किसी loop में फँस जाए और scan समय सीमा से अधिक हो जाए तो watchdog timer fault trigger करके system को safe state में ले जाता है। यह power supply या printing से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_working_q15",
+      "question": "PLC के 'RUN' mode और 'PROGRAM (STOP)' mode में scan cycle के संबंध में क्या मुख्य अंतर है?",
+      "options": [
+        "RUN mode में scan cycle चलता है (input-program-output scan repeat होता है), जबकि PROGRAM mode में CPU logic execute नहीं करता, केवल editing की अनुमति देता है",
+        "दोनों modes में scan cycle बिल्कुल समान रहता है",
+        "PROGRAM mode में outputs हमेशा ON रहते हैं",
+        "RUN mode में inputs नहीं पढ़े जाते"
+      ],
+      "correctIndex": 0,
+      "explanation": "RUN mode में CPU निरंतर scan cycle चलाकर वास्तविक control operation करता है, जबकि PROGRAM/STOP mode में logic execution रुक जाता है और outputs सामान्यतः de-energized रहते हैं ताकि user safely program edit कर सके। दोनों modes समान नहीं होते।"
+    },
+    {
+      "id": "u13_plc_working_q16",
+      "question": "PLC scan cycle में 'Communication Servicing' (जैसे HMI/SCADA से data भेजना) किस stage में सामान्यतः होती है?",
+      "options": [
+        "यह कभी नहीं होती",
+        "यह sequential scan के अलावा background housekeeping/overhead भाग में होती है, ताकि external devices से data आदान-प्रदान हो सके",
+        "यह केवल field inputs पढ़ने के दौरान होती है",
+        "यह केवल power off होने पर होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Communication servicing (HMI, SCADA, अन्य PLC के साथ data exchange) housekeeping/overhead भाग में handle की जाती है ताकि यह main scan (input-program-output) को बाधित न करे, फिर भी scan time में जुड़ जाती है। यह power off स्थिति से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_working_q17",
+      "question": "यदि एक PLC का scan time 10ms है और उसे 1 second में machine को control करना है, तो उस 1 second में लगभग कितने scan cycles पूरे होंगे?",
+      "options": [
+        "लगभग 1 cycle",
+        "लगभग 10 cycles",
+        "लगभग 100 cycles (1000ms / 10ms = 100)",
+        "लगभग 1000 cycles"
+      ],
+      "correctIndex": 2,
+      "explanation": "1 second = 1000 milliseconds; यदि scan time 10ms है तो 1000/10 = 100 scan cycles उस 1 second में पूरे होंगे। यह एक सरल numerical calculation है जो scan frequency को दर्शाता है।"
+    },
+    {
+      "id": "u13_plc_working_q18",
+      "question": "PLC की working principle में 'Immediate Input/Output (I/O) Instructions' का उपयोग क्यों किया जाता है?",
+      "options": [
+        "ताकि किसी critical instruction के लिए normal scan cycle का इंतजार किए बिना तुरंत उसी समय field input पढ़ा जाए या output अपडेट किया जाए",
+        "ताकि scan cycle पूरी तरह बंद हो जाए",
+        "ताकि memory खाली हो जाए",
+        "ताकि केवल analog signals disable हों"
+      ],
+      "correctIndex": 0,
+      "explanation": "Immediate I/O instructions का उपयोग तब होता है जब किसी particular rung पर तुरंत सबसे latest field status चाहिए हो या output को तुरंत field पर भेजना हो, बिना सामान्य scan cycle के क्रम का इंतजार किए — यह critical/time-sensitive applications में उपयोगी है।"
+    },
+    {
+      "id": "u13_plc_working_q19",
+      "question": "Scan cycle के दौरान अगर CPU किसी fault (जैसे hardware error) का पता लगाए, तो सामान्यतः क्या होता है?",
+      "options": [
+        "CPU चुपचाप scan जारी रखता है, कुछ नहीं होता",
+        "CPU fault indicator ON करता है और सुरक्षा के लिए outputs को de-energize करके RUN mode से बाहर (Fault mode) चला जा सकता है",
+        "CPU automatically program को erase कर देता है",
+        "CPU power supply को बंद कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fault detection होने पर PLC सुरक्षा के लिए outputs को de-energize कर सकता है, fault LED indicate करता है और आगे scan रोककर fault mode में चला जाता है ताकि असुरक्षित operation न हो। यह program erase या power supply बंद करने जैसा नहीं है।"
+    },
+    {
+      "id": "u13_plc_working_q20",
+      "question": "PLC की working में 'First Scan' (power ON के तुरंत बाद पहला scan) में क्या विशेष होता है?",
+      "options": [
+        "कुछ खास नहीं, यह बाकी scans जैसा ही है",
+        "First scan bit (initialization bit) set होता है जिसका उपयोग program में initial values set करने या startup routines चलाने के लिए किया जाता है",
+        "First scan में outputs हमेशा permanently ON रहते हैं",
+        "First scan में inputs पढ़े ही नहीं जाते"
+      ],
+      "correctIndex": 1,
+      "explanation": "कई PLCs में एक special 'first scan' या 'always on for one scan' bit होता है जो केवल power-up के बाद पहले scan में true होता है; इसका उपयोग initial values, counters reset करने या startup logic execute करने के लिए किया जाता है। यह हर scan जैसा साधारण नहीं होता।"
+    },
+    {
+      "id": "u13_plc_working_q21",
+      "question": "PLC scan cycle में यदि program के अंदर एक बड़ा 'infinite loop' (जो normal ladder logic में नहीं होना चाहिए) गलती से आ जाए, तो क्या होगा?",
+      "options": [
+        "Scan cycle आराम से पूरा हो जाएगा",
+        "Scan cycle समय पर पूरा नहीं होगा, watchdog timer timeout होकर fault trigger करेगा",
+        "Output automatically सही हो जाएगा",
+        "Memory अपने आप बढ़ जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC ladder logic normally loop-free sequential scan पर आधारित होती है; यदि कोई faulty logic infinite loop बनाए तो scan समय पर पूरा नहीं हो पाएगा, जिससे watchdog timer timeout होकर fault alert देगा और सिस्टम को safe state में ले जाएगा।"
+    },
+    {
+      "id": "u13_plc_working_q22",
+      "question": "Program scan के दौरान CPU प्रत्येक rung को evaluate करते समय किस चीज़ का उपयोग input contacts की स्थिति जानने के लिए करता है?",
+      "options": [
+        "Output Image Table",
+        "Input Image Table में स्टोर की गई snapshot values",
+        "Power supply rating",
+        "Communication port की baud rate"
+      ],
+      "correctIndex": 1,
+      "explanation": "Program scan के दौरान CPU rung में मौजूद input contacts की स्थिति जानने के लिए scan की शुरुआत में लिए गए Input Image Table snapshot का उपयोग करता है, न कि सीधे field से हर instruction पर दोबारा पढ़ता है। Output image table outputs के लिए है।"
+    },
+    {
+      "id": "u13_plc_working_q23",
+      "question": "PLC scan cycle में 'Output Image Table' से actual output terminals तक values कब transfer होती हैं?",
+      "options": [
+        "Input scan के दौरान",
+        "Output scan चरण के दौरान, जब पूरा program scan complete हो चुका होता है",
+        "Program scan शुरू होते ही तुरंत",
+        "कभी transfer नहीं होतीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "पूरे program scan के complete होने के बाद, output scan चरण में output image table में calculated results को actual field output terminals पर भेजा जाता है ताकि actuators तदनुसार energize/de-energize हों। यह input scan के दौरान नहीं होता।"
+    },
+    {
+      "id": "u13_plc_working_q24",
+      "question": "PLC scan cycle की repetitive nature (बार-बार चलते रहना) के कारण एक बड़ा फायदा क्या है?",
+      "options": [
+        "Control system लगातार updated रहता है और field conditions में बदलाव के अनुसार लगातार response देता है",
+        "यह केवल एक बार run होकर हमेशा के लिए बंद हो जाता है",
+        "यह memory को हमेशा के लिए lock कर देता है",
+        "यह field devices की wiring बदल देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Continuous cyclic scanning के कारण PLC field की बदलती conditions (input changes) को लगातार detect करके real-time में output response अपडेट करता रहता है, जिससे dynamic control संभव होता है। यह one-time process नहीं है।"
+    },
+    {
+      "id": "u13_plc_working_q25",
+      "question": "PLC scan cycle में CPU द्वारा किए जाने वाले self-diagnostics (जैसे memory check, I/O check) को किस श्रेणी में गिना जाता है?",
+      "options": [
+        "Input scan",
+        "Program scan",
+        "Overhead/Housekeeping समय",
+        "Output scan"
+      ],
+      "correctIndex": 2,
+      "explanation": "Self-diagnostic checks (memory integrity, I/O module health आदि) मुख्य input-program-output scan के अतिरिक्त overhead/housekeeping समय में होती हैं, जो हर scan cycle की total duration में जुड़ जाती हैं। यह input या output scan का प्रत्यक्ष भाग नहीं है।"
+    },
+    {
+      "id": "u13_plc_working_q26",
+      "question": "PLC की working principle को समझने के लिए, यदि किसी push button को दबाया जाए ठीक उसी समय जब CPU अभी input scan पूरा कर चुका हो, तो उस button का effect कब दिखेगा?",
+      "options": [
+        "उसी scan में तुरंत",
+        "अगले scan cycle के input scan में, क्योंकि current scan का input image पहले ही ले लिया गया था",
+        "कभी नहीं दिखेगा",
+        "केवल power restart के बाद दिखेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि current scan का input image पहले ही capture हो चुका है, इसलिए उसी scan के बीच में हुआ बदलाव उस scan में effective नहीं होगा; इसका प्रभाव अगले scan cycle के input scan में दिखेगा। यह scan-based operation की एक स्वाभाविक limitation है।"
+    },
+    {
+      "id": "u13_plc_working_q27",
+      "question": "Scan time को कम रखना (fast scan) किस प्रकार की applications में विशेष रूप से जरूरी होता है?",
+      "options": [
+        "जहाँ केवल धीमी गति के manual switches का उपयोग हो",
+        "High-speed machining, fast pulse counting या तेज़ी से बदलने वाले process signals वाली applications में",
+        "जहाँ PLC को केवल एक बार program करना हो",
+        "जहाँ कोई output device ही न लगा हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "जिन applications में high-speed events (जैसे fast pulses, high-speed counting, quick sequencing) होते हैं, वहाँ छोटा scan time जरूरी है ताकि कोई event miss न हो और timely response मिले। धीमे manual switches में यह उतना critical नहीं होता।"
+    },
+    {
+      "id": "u13_plc_working_q28",
+      "question": "PLC scan cycle के तीन चरणों (Input-Program-Output) के अतिरिक्त overhead समय को जोड़कर बनने वाला कुल समय किसे कहा जाता है?",
+      "options": [
+        "Program Memory Size",
+        "Total Scan Time (Scan Cycle Time)",
+        "Power Supply Rating",
+        "I/O Count"
+      ],
+      "correctIndex": 1,
+      "explanation": "तीनों scan चरणों (input, program, output) और housekeeping/overhead समय को जोड़कर जो कुल duration मिलती है उसे Total Scan Time या Scan Cycle Time कहा जाता है, जो PLC की response speed दर्शाता है।"
+    },
+    {
+      "id": "u13_plc_working_q29",
+      "question": "PLC scan cycle में यदि CPU किसी particular rung को evaluate करते समय किसी internal (memory) bit का उपयोग करता है जो अभी उसी scan में पहले किसी दूसरे rung द्वारा बदला गया है, तो CPU कौन सी value उपयोग करेगा?",
+      "options": [
+        "पिछले scan की पुरानी value",
+        "उसी current scan में अभी update हुई नई value, क्योंकि internal memory bits तुरंत update हो जाते हैं",
+        "हमेशा zero",
+        "हमेशा random value"
+      ],
+      "correctIndex": 1,
+      "explanation": "Internal memory bits (जैसे auxiliary relays) program scan के दौरान तुरंत update हो जाते हैं, इसलिए बाद के rungs उस current scan में हुए latest update को ही read करते हैं — यह sequential top-to-bottom execution का प्रत्यक्ष परिणाम है।"
+    },
+    {
+      "id": "u13_plc_working_q30",
+      "question": "PLC working principle में CPU का scan cycle किस स्थिति में रुकता है (यानी बार-बार दोहराना बंद हो जाता है)?",
+      "options": [
+        "जब CPU को RUN mode से PROGRAM/STOP mode में डाला जाए या power supply बंद हो जाए",
+        "हर scan के बाद हमेशा रुक जाता है",
+        "यह कभी नहीं रुकता, RUN mode में भी और STOP mode में भी",
+        "केवल जब input devices disconnect कर दिए जाएँ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Scan cycle तब तक continuously चलता रहता है जब तक CPU RUN mode में है और power supply चालू है; CPU को STOP/PROGRAM mode में डालने या power OFF करने पर ही यह cyclic scanning रुकती है। यह हर scan के बाद अपने आप नहीं रुकता।"
+    }
+  ]
+}

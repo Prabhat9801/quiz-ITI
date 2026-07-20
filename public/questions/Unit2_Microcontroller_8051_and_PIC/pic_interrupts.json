@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "pic_interrupts",
+  "topicName": "PIC Interrupts: Vectors, Reset Vectors & Peripheral Interrupts",
+  "questions": [
+    {
+      "id": "u2_pic_interrupts_q1",
+      "question": "Mid-range PIC16F devices में interrupt vector किस address पर होता है?",
+      "options": ["0000H", "0004H", "0008H", "0018H"],
+      "correctIndex": 1,
+      "explanation": "PIC16F (mid-range) में interrupt आने पर program counter 0004H पर जाता है इसलिए option B सही है। 0000H reset vector है, 0008H और 0018H PIC18F के high/low priority vectors हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q2",
+      "question": "PIC16F में reset vector (power-on/reset पर program कहाँ से शुरू होता है) किस address पर है?",
+      "options": ["0000H", "0004H", "00FFH", "2007H"],
+      "correctIndex": 0,
+      "explanation": "Reset होने पर PIC का program counter 0000H पर जाता है इसलिए option A सही है। 0004H interrupt vector है, 00FFH सामान्य memory है और 2007H configuration word का address है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q3",
+      "question": "किसी भी interrupt को globally enable करने के लिए INTCON का कौन सा bit set करना अनिवार्य है?",
+      "options": ["PEIE", "GIE", "TMR0IE", "INTF"],
+      "correctIndex": 1,
+      "explanation": "GIE (Global Interrupt Enable) set किए बिना कोई भी interrupt CPU तक नहीं पहुँचता इसलिए option B सही है। PEIE केवल peripheral interrupts का master enable है, TMR0IE सिर्फ Timer0 का enable है और INTF एक flag है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q4",
+      "question": "Peripheral interrupts (जैसे ADC, USART, Timer1) को सामूहिक रूप से enable करने के लिए कौन सा bit जरूरी है?",
+      "options": ["GIE अकेला काफी है", "PEIE (और साथ में GIE)", "RBIE", "T0CS"],
+      "correctIndex": 1,
+      "explanation": "Peripheral interrupts के लिए GIE के साथ-साथ PEIE (Peripheral Interrupt Enable) भी set करना पड़ता है इसलिए option B सही है। अकेला GIE peripheral sources को enable नहीं करता, RBIE port-change के लिए और T0CS Timer0 clock select है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q5",
+      "question": "INTCON register में TMR0IF किसका flag है?",
+      "options": ["Timer0 overflow", "External INT pin edge", "RB port change", "ADC complete"],
+      "correctIndex": 0,
+      "explanation": "TMR0IF, Timer0 के overflow होने पर set होता है इसलिए option A सही है। External INT का flag INTF है, port change का RBIF और ADC का ADIF है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q6",
+      "question": "External interrupt आमतौर पर किस pin पर आता है (mid-range PIC16F)?",
+      "options": ["RA0", "RB0/INT", "RC7", "RE3"],
+      "correctIndex": 1,
+      "explanation": "External hardware interrupt RB0/INT pin पर लिया जाता है इसलिए option B सही है। RA0 आमतौर पर ADC/analog input, RC7 USART RX और RE3 MCLR/input के रूप में उपयोग होते हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q7",
+      "question": "External INT pin का interrupt किस edge पर trigger होगा, यह किस bit से चुना जाता है?",
+      "options": ["OPTION_REG का INTEDG bit", "STATUS का Z bit", "INTCON का GIE bit", "PIR1 का ADIF bit"],
+      "correctIndex": 0,
+      "explanation": "OPTION_REG का INTEDG bit तय करता है कि INT pin rising edge पर trigger होगा या falling edge पर, इसलिए option A सही है। Z flag zero result, GIE global enable और ADIF ADC flag है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q8",
+      "question": "RB port change interrupt किन pins की सामान्यतः निगरानी करता है?",
+      "options": ["RB0 केवल", "RB4-RB7", "RA0-RA3", "सभी 8 RC pins"],
+      "correctIndex": 1,
+      "explanation": "Port change (RBIE) interrupt आमतौर पर RB4-RB7 pins के level बदलने पर generate होता है इसलिए option B सही है। RB0 external INT के लिए है, RA और RC इस विशेष feature के लिए नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q9",
+      "question": "Timer1, ADC, USART और CCP जैसे peripheral interrupts के enable bits मुख्यतः किस register में होते हैं?",
+      "options": ["INTCON", "PIE1 (और PIE2)", "PIR1", "TRISB"],
+      "correctIndex": 1,
+      "explanation": "Peripheral interrupt enable bits PIE1/PIE2 registers में होते हैं इसलिए option B सही है। INTCON में core interrupts के bits, PIR1 में flags और TRISB port direction रखता है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q10",
+      "question": "Peripheral interrupt के flag bits (जैसे ADIF, TMR1IF, RCIF) किस register में मिलते हैं?",
+      "options": ["PIE1", "PIR1", "OPTION_REG", "STATUS"],
+      "correctIndex": 1,
+      "explanation": "Peripheral flags ADIF, TMR1IF, RCIF आदि PIR1 (Peripheral Interrupt Request) register में होते हैं इसलिए option B सही है। PIE1 उनके enable bits रखता है, OPTION_REG और STATUS का flags से संबंध नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q11",
+      "question": "ISR (Interrupt Service Routine) के अंत में interrupt flag के साथ आमतौर पर क्या करना जरूरी होता है?",
+      "options": ["Flag को software से clear करना ताकि वही interrupt बार-बार re-trigger न हो", "GIE को permanently disable करना", "reset करना", "TRIS register बदलना"],
+      "correctIndex": 0,
+      "explanation": "अधिकांश PIC flags hardware set करता है पर software को उन्हें clear करना पड़ता है, वरना ISR से लौटते ही वही interrupt फिर trigger हो जाएगा, इसलिए option A सही है। GIE permanent disable, reset या TRIS बदलना जरूरी नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q12",
+      "question": "जब कोई interrupt accept होता है तो mid-range PIC hardware GIE bit के साथ क्या करता है?",
+      "options": ["GIE को set कर देता है", "GIE को अपने-आप clear कर देता है ताकि nested interrupts रुक जाएँ", "GIE को नहीं छूता", "GIE को toggle करता रहता है"],
+      "correctIndex": 1,
+      "explanation": "Interrupt accept होते ही hardware GIE को अपने-आप clear कर देता है जिससे ISR के दौरान और interrupts नहीं आते; RETFIE पर यह फिर set हो जाता है, इसलिए option B सही है। बाकी विकल्प PIC के व्यवहार से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_interrupts_q13",
+      "question": "Context saving से क्या तात्पर्य है?",
+      "options": ["Program code को EEPROM में copy करना", "ISR में जाने से पहले W, STATUS जैसे important registers को save करना और लौटते समय restore करना", "Configuration word लिखना", "Baud rate save करना"],
+      "correctIndex": 1,
+      "explanation": "Context saving का मतलब है ISR के दौरान बदल सकने वाले W और STATUS जैसे registers को शुरू में save और अंत में restore करना ताकि main program सही चले, इसलिए option B सही है। बाकी विकल्प इसका अर्थ नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q14",
+      "question": "Mid-range PIC16F में कुल कितने interrupt vector होते हैं?",
+      "options": ["एक ही (single vector) सभी sources के लिए", "दो (high और low priority)", "आठ", "प्रत्येक source का अलग vector"],
+      "correctIndex": 0,
+      "explanation": "PIC16F में सभी interrupt sources एक ही common vector 0004H पर जाते हैं, इसलिए option A सही है। High/low priority वाले दो vectors PIC18F में होते हैं; PIC16F में हर source का अलग vector नहीं होता।"
+    },
+    {
+      "id": "u2_pic_interrupts_q15",
+      "question": "Single-vector PIC16F में ISR के अंदर सबसे पहले क्या करना पड़ता है?",
+      "options": ["Fosc बदलना", "flag bits को check कर पता लगाना कि interrupt किस source से आया", "ADC start करना", "Watchdog reset करना"],
+      "correctIndex": 1,
+      "explanation": "चूँकि सभी sources एक ही vector पर आते हैं, ISR में flags (जैसे TMR0IF, INTF, ADIF) की polling करके स्रोत की पहचान करनी पड़ती है, इसलिए option B सही है। बाकी विकल्प यह पहचान नहीं करते।"
+    },
+    {
+      "id": "u2_pic_interrupts_q16",
+      "question": "PIC18F devices में interrupt priority scheme में high-priority interrupt vector किस address पर होता है?",
+      "options": ["0000H", "0008H", "0018H", "0004H"],
+      "correctIndex": 1,
+      "explanation": "PIC18F में high-priority interrupt vector 0008H पर होता है इसलिए option B सही है। Low-priority 0018H पर, reset 0000H पर और 0004H PIC16F का single vector है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q17",
+      "question": "PIC18F में low-priority interrupt vector किस address पर होता है?",
+      "options": ["0008H", "0018H", "0000H", "0004H"],
+      "correctIndex": 1,
+      "explanation": "PIC18F में low-priority interrupt vector 0018H है इसलिए option B सही है। 0008H high-priority, 0000H reset और 0004H PIC16F से संबंधित है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q18",
+      "question": "Interrupt latency से क्या तात्पर्य है?",
+      "options": ["Interrupt event होने और ISR execute शुरू होने के बीच का समय", "ISR की कुल लंबाई", "Fosc की frequency", "Baud rate error"],
+      "correctIndex": 0,
+      "explanation": "Latency वह देरी है जो interrupt आने से लेकर पहला ISR instruction चलने तक लगती है, इसलिए option A सही है। यह ISR की लंबाई, Fosc या baud error नहीं है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q19",
+      "question": "एक peripheral interrupt (जैसे Timer1) को सफलतापूर्वक CPU तक पहुँचाने के लिए कौन-से bits set होने चाहिए?",
+      "options": ["सिर्फ TMR1IE", "GIE, PEIE और संबंधित enable bit TMR1IE", "सिर्फ GIE", "सिर्फ PR2"],
+      "correctIndex": 1,
+      "explanation": "Peripheral interrupt के लिए तीन स्तर चाहिए: GIE (global), PEIE (peripheral master) और source-specific TMR1IE, इसलिए option B सही है। अकेला TMR1IE या GIE अधूरा है और PR2 timing register है enable नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q20",
+      "question": "अगर GIE set है पर PEIE clear है, तो निम्न में से कौन सा interrupt फिर भी काम करेगा?",
+      "options": ["ADC (ADIE)", "USART receive (RCIE)", "Timer0 overflow (TMR0IE)", "Timer1 (TMR1IE)"],
+      "correctIndex": 2,
+      "explanation": "Timer0, INT और RB port-change core interrupts हैं जो सीधे INTCON में हैं और PEIE पर निर्भर नहीं, इसलिए PEIE clear होते हुए भी TMR0 interrupt चलेगा — option C सही है। ADC, USART और Timer1 peripheral हैं जिन्हें PEIE चाहिए।"
+    },
+    {
+      "id": "u2_pic_interrupts_q21",
+      "question": "Interrupt flag polling किसे कहते हैं?",
+      "options": ["Interrupt enable किए बिना software द्वारा बार-बार flag bit की जाँच करना", "GIE को set करना", "Vector table लिखना", "ADC clock set करना"],
+      "correctIndex": 0,
+      "explanation": "Polling में program बिना interrupt enable किए loop में flag (जैसे TMR0IF) को बार-बार check करता है और सही होने पर action लेता है, इसलिए option A सही है। बाकी विकल्प polling नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q22",
+      "question": "External INT pin का interrupt होने पर INTCON का कौन सा flag set होता है?",
+      "options": ["INTF", "TMR0IF", "RBIF", "GIE"],
+      "correctIndex": 0,
+      "explanation": "RB0/INT pin पर चयनित edge आने पर INTF (INT Flag) set होता है इसलिए option A सही है। TMR0IF Timer0 का, RBIF port change का और GIE global enable है flag नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q23",
+      "question": "RB port change interrupt का flag कौन सा है और इसे clear करने से पहले सामान्यतः क्या करना पड़ता है?",
+      "options": ["RBIF; PORTB को read करके mismatch condition समाप्त करनी पड़ती है", "TMR0IF; कुछ नहीं", "ADIF; ADCON0 पढ़ना", "INTF; TRISB बदलना"],
+      "correctIndex": 0,
+      "explanation": "Port change का flag RBIF है और इसे clear करने से पहले PORTB पढ़कर mismatch खत्म करना पड़ता है वरना flag फिर set हो जाता है, इसलिए option A सही है। बाकी विकल्प गलत flag/क्रिया बताते हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q24",
+      "question": "PIC18F के vectored priority scheme का polling की तुलना में एक फायदा क्या है?",
+      "options": ["High-priority events को low-priority से पहले तेजी से service किया जा सकता है", "Fosc अपने-आप बढ़ जाता है", "flags की जरूरत नहीं रहती", "ADC 16-bit बन जाता है"],
+      "correctIndex": 0,
+      "explanation": "Priority scheme में जरूरी (high-priority) interrupts को कम latency के साथ पहले service मिलता है जिससे real-time performance बेहतर होती है, इसलिए option A सही है। यह Fosc, flags हटाने या ADC resolution से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q25",
+      "question": "ISR से main program में लौटने के लिए PIC में कौन सा instruction प्रयोग होता है जो GIE को फिर से set भी कर देता है?",
+      "options": ["RETURN", "RETFIE", "RETLW", "GOTO"],
+      "correctIndex": 1,
+      "explanation": "RETFIE (Return From Interrupt) ISR से लौटते समय GIE को फिर से set कर देता है जिससे नए interrupts allow हो जाते हैं, इसलिए option B सही है। RETURN/RETLW सामान्य return हैं और GOTO जंप है, ये GIE restore नहीं करते।"
+    },
+    {
+      "id": "u2_pic_interrupts_q26",
+      "question": "USART data receive complete होने पर कौन सा peripheral flag set होता है?",
+      "options": ["TXIF", "RCIF", "ADIF", "TMR2IF"],
+      "correctIndex": 1,
+      "explanation": "USART में एक byte पूरी तरह receive होने पर RCIF (Receive Interrupt Flag) set होता है इसलिए option B सही है। TXIF transmit buffer खाली होने पर, ADIF ADC पर और TMR2IF Timer2 पर set होते हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q27",
+      "question": "किसी interrupt-driven डिजाइन में flag को clear करना 'भूल' जाने का सबसे संभावित परिणाम क्या है?",
+      "options": ["Program lock/continuous interrupt loop में फँस जाता है", "Fosc रुक जाता है", "EEPROM मिट जाती है", "ADC resolution बढ़ जाती है"],
+      "correctIndex": 0,
+      "explanation": "Flag clear न करने पर ISR से लौटते ही वही interrupt दोबारा trigger होगा और program लगातार ISR में फँसा रहेगा, इसलिए option A सही है। यह Fosc, EEPROM या ADC resolution को प्रभावित नहीं करता।"
+    },
+    {
+      "id": "u2_pic_interrupts_q28",
+      "question": "Interrupt vector 0004H और reset vector 0000H के बीच केवल कुछ ही locations होने के कारण आमतौर पर 0000H पर क्या रखा जाता है?",
+      "options": ["पूरा ISR", "एक GOTO instruction जो main program तक jump कराता है", "ADC data", "PWM period"],
+      "correctIndex": 1,
+      "explanation": "0000H और 0004H के बीच जगह बहुत कम है इसलिए reset vector पर आमतौर पर main code तक जाने वाला GOTO रखा जाता है, इसलिए option B सही है। पूरा ISR वहाँ नहीं समाता और ADC/PWM data code memory का हिस्सा नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q29",
+      "question": "यदि किसी peripheral का enable bit set है और उसका flag भी set हो जाता है पर interrupt नहीं आ रहा, तो सबसे संभावित कारण क्या है?",
+      "options": ["GIE या PEIE clear रह गया है", "Fosc बहुत अधिक है", "TRIS गलत है", "PR2 शून्य है"],
+      "correctIndex": 0,
+      "explanation": "Source enable + flag के बावजूद interrupt न आने का सामान्य कारण है master enables GIE (और peripheral के लिए PEIE) का clear रहना, इसलिए option A सही है। Fosc, TRIS या PR2 इस विशेष स्थिति के प्रत्यक्ष कारण नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q30",
+      "question": "Real-time response की दृष्टि से interrupt-based approach polling की तुलना में सामान्यतः क्यों बेहतर मानी जाती है?",
+      "options": ["CPU को हर समय flag check नहीं करना पड़ता, वह event होने पर ही तुरंत react करता है", "यह हमेशा कम memory लेता है", "इसमें flags नहीं होते", "यह Fosc घटा देता है"],
+      "correctIndex": 0,
+      "explanation": "Interrupt में CPU अन्य काम करता रहता है और event होने पर तुरंत ISR चलाता है, जिससे CPU समय बर्बाद किए बिना तेज response मिलता है, इसलिए option A सही है। यह हमेशा कम memory नहीं लेता, flags तब भी होते हैं और Fosc से संबंध नहीं।"
+    }
+  ]
+}

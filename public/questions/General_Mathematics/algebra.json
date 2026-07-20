@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "algebra",
+  "topicName": "Algebra (Linear/Quadratic Equations & Factorization)",
+  "questions": [
+    {
+      "id": "math_algebra_q1",
+      "question": "यदि 3x + 7 = 22 है, तो x का मान ज्ञात करें।",
+      "options": ["5", "4", "6", "7"],
+      "correctIndex": 0,
+      "explanation": "3x + 7 = 22 => 3x = 15 => x = 5। यही एकमात्र मान है जो equation को satisfy करता है; 4, 6 और 7 को substitute करने पर equation balance नहीं होता।"
+    },
+    {
+      "id": "math_algebra_q2",
+      "question": "यदि 2(x - 3) = x + 4 है, तो x का मान ज्ञात करें।",
+      "options": ["8", "10", "12", "14"],
+      "correctIndex": 1,
+      "explanation": "2(x-3) = x+4 => 2x - 6 = x + 4 => x = 10। 8, 12 और 14 को substitute करने पर बायाँ और दायाँ पक्ष equal नहीं होते।"
+    },
+    {
+      "id": "math_algebra_q3",
+      "question": "x² - 9 को factorize करें।",
+      "options": ["(x-9)(x+1)", "(x-3)(x-3)", "(x-3)(x+3)", "(x+9)(x-1)"],
+      "correctIndex": 2,
+      "explanation": "यह a²-b² identity का उदाहरण है जहाँ a=x, b=3, इसलिए x²-9 = (x-3)(x+3)। बाकी options को expand करने पर वे x²-9 नहीं देते, जैसे (x-3)(x-3) = x²-6x+9।"
+    },
+    {
+      "id": "math_algebra_q4",
+      "question": "x² + 7x + 12 को factorize करें।",
+      "options": ["(x+2)(x+6)", "(x+1)(x+12)", "(x+4)(x+4)", "(x+3)(x+4)"],
+      "correctIndex": 3,
+      "explanation": "हमें ऐसे दो numbers चाहिए जिनका sum 7 और product 12 हो, जो 3 और 4 हैं। इसलिए x²+7x+12 = (x+3)(x+4)। बाकी options expand करने पर अलग middle term या product देते हैं, जैसे (x+2)(x+6)=x²+8x+12 जिसमें middle term गलत है।"
+    },
+    {
+      "id": "math_algebra_q5",
+      "question": "quadratic equation x² - 5x + 6 = 0 के roots ज्ञात करें।",
+      "options": ["2 and 3", "1 and 6", "-2 and -3", "2 and -3"],
+      "correctIndex": 0,
+      "explanation": "x²-5x+6 = (x-2)(x-3) = 0 => x = 2 या x = 3। check: 2+3=5 (sum) और 2×3=6 (product), जो equation के coefficients से match करता है। बाकी options में sum या product coefficients से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_algebra_q6",
+      "question": "यदि x + y = 10 और x - y = 4 है, तो x और y के मान ज्ञात करें।",
+      "options": ["8, 2", "7, 3", "6, 4", "9, 1"],
+      "correctIndex": 1,
+      "explanation": "दोनों equations जोड़ने पर 2x = 14 => x = 7, फिर y = 10 - 7 = 3। check: x-y = 7-3 = 4, जो सही है। बाकी pairs पहले या दूसरे equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_algebra_q7",
+      "question": "(a+b)² - (a-b)² को simplify करें।",
+      "options": ["2ab", "a²+b²", "4ab", "2(a²+b²)"],
+      "correctIndex": 2,
+      "explanation": "(a+b)² = a²+2ab+b² और (a-b)² = a²-2ab+b²। इनका difference = 4ab। बाकी options इस expansion से मेल नहीं खाते; जैसे a²+b² दोनों squares का sum देता है, difference नहीं।"
+    },
+    {
+      "id": "math_algebra_q8",
+      "question": "4x² - 25 को factorize करें।",
+      "options": ["(4x-5)(x+5)", "(2x-25)(2x+1)", "(x-5)(4x+5)", "(2x-5)(2x+5)"],
+      "correctIndex": 3,
+      "explanation": "यह a²-b² identity है जहाँ a=2x, b=5, क्योंकि (2x)²=4x² और 5²=25। इसलिए 4x²-25 = (2x-5)(2x+5)। बाकी options expand करने पर 4x²-25 नहीं देते।"
+    },
+    {
+      "id": "math_algebra_q9",
+      "question": "यदि x/3 + x/6 = 3 है, तो x का मान ज्ञात करें।",
+      "options": ["6", "9", "12", "3"],
+      "correctIndex": 0,
+      "explanation": "common denominator 6 लेने पर 2x/6 + x/6 = 3 => 3x/6 = 3 => x/2 = 3 => x = 6। 9, 12 और 3 को substitute करने पर equation balance नहीं होता।"
+    },
+    {
+      "id": "math_algebra_q10",
+      "question": "एक number और उसके square का sum 42 है। वह positive number ज्ञात करें।",
+      "options": ["5", "6", "7", "8"],
+      "correctIndex": 1,
+      "explanation": "माना number x है, तो x + x² = 42 => x²+x-42 = 0 => (x+7)(x-6) = 0 => x = 6 या x = -7। positive number 6 है। check: 6+36=42 सही है। बाकी numbers इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_algebra_q11",
+      "question": "x² - 8x + 16 को factorize करें।",
+      "options": ["(x-2)(x-8)", "(x-8)(x+2)", "(x-4)²", "(x+4)²"],
+      "correctIndex": 2,
+      "explanation": "यहाँ sum -8 और product 16 चाहिए, जो -4 और -4 से मिलता है, इसलिए यह perfect square trinomial (x-4)² है। बाकी options expand करने पर x²-8x+16 नहीं देते, जैसे (x+4)² = x²+8x+16 जिसमें middle term का sign गलत है।"
+    },
+    {
+      "id": "math_algebra_q12",
+      "question": "यदि 5x - 3 = 3x + 9 है, तो x का मान ज्ञात करें।",
+      "options": ["3", "4", "5", "6"],
+      "correctIndex": 3,
+      "explanation": "5x - 3 = 3x + 9 => 2x = 12 => x = 6। 3, 4 और 5 को substitute करने पर बायाँ और दायाँ पक्ष equal नहीं होते।"
+    },
+    {
+      "id": "math_algebra_q13",
+      "question": "quadratic equation x² - 7x + 10 = 0 के roots ज्ञात करें।",
+      "options": ["2 and 5", "1 and 10", "-2 and -5", "3 and 4"],
+      "correctIndex": 0,
+      "explanation": "x²-7x+10 = (x-2)(x-5) = 0 => x = 2 या x = 5। check: sum = 7 और product = 10, जो equation के coefficients से मेल खाते हैं। बाकी options में sum या product गलत आता है।"
+    },
+    {
+      "id": "math_algebra_q14",
+      "question": "(x+2)(x+3) को simplify करें।",
+      "options": ["x²+6x+5", "x²+5x+6", "x²+5x+5", "x²+6x+6"],
+      "correctIndex": 1,
+      "explanation": "(x+2)(x+3) = x² + 3x + 2x + 6 = x² + 5x + 6। बाकी options में middle term या constant term की calculation गलत है।"
+    },
+    {
+      "id": "math_algebra_q15",
+      "question": "एक rectangle की length उसकी breadth से 3 अधिक है। यदि perimeter 34 cm है, तो breadth ज्ञात करें।",
+      "options": ["5", "6", "7", "8"],
+      "correctIndex": 2,
+      "explanation": "माना breadth = b, length = b+3। perimeter = 2(length+breadth) = 34 => l+b = 17 => (b+3)+b = 17 => 2b = 14 => b = 7। check: length = 10, perimeter = 2(10+7) = 34 सही है। बाकी values इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_algebra_q16",
+      "question": "a² - 2ab + b² को factorize करें।",
+      "options": ["(a+b)²", "a²-b²", "(a-b)(a+2b)", "(a-b)²"],
+      "correctIndex": 3,
+      "explanation": "यह perfect square trinomial identity है जहाँ middle term -2ab है, इसलिए a²-2ab+b² = (a-b)²। बाकी options expand करने पर यह expression नहीं देते; जैसे (a+b)² = a²+2ab+b² जिसमें middle term का sign अलग है।"
+    },
+    {
+      "id": "math_algebra_q17",
+      "question": "यदि 2x² = 32 है, तो x के मान ज्ञात करें।",
+      "options": ["±4", "±8", "±2", "±16"],
+      "correctIndex": 0,
+      "explanation": "2x² = 32 => x² = 16 => x = ±4। check: (±4)² = 16, और 2×16 = 32 सही है। बाकी options में square value 16 नहीं देते।"
+    },
+    {
+      "id": "math_algebra_q18",
+      "question": "यदि x = 2, equation x² - kx + 6 = 0 का एक root है, तो k का मान ज्ञात करें।",
+      "options": ["4", "5", "6", "7"],
+      "correctIndex": 1,
+      "explanation": "x=2 को substitute करने पर: 4 - 2k + 6 = 0 => 10 = 2k => k = 5। बाकी values को substitute करने पर equation zero नहीं होता।"
+    },
+    {
+      "id": "math_algebra_q19",
+      "question": "6x² + 11x + 3 को factorize करें।",
+      "options": ["(2x+1)(3x+3)", "(6x+1)(x+3)", "(3x+1)(2x+3)", "(3x+3)(2x+1)"],
+      "correctIndex": 2,
+      "explanation": "(3x+1)(2x+3) को expand करने पर 6x²+9x+2x+3 = 6x²+11x+3 मिलता है, जो सही है। बाकी options expand करने पर या तो अलग middle term देते हैं या common factor गलत तरीके से रखा गया है (जैसे (2x+1)(3x+3) में factor 3 common निकल जाना चाहिए था)।"
+    },
+    {
+      "id": "math_algebra_q20",
+      "question": "दो संख्याओं का sum 15 और product 56 है। वे संख्याएँ ज्ञात करें।",
+      "options": ["5 and 10", "6 and 9", "4 and 11", "7 and 8"],
+      "correctIndex": 3,
+      "explanation": "ये संख्याएँ equation x²-15x+56=0 के roots हैं, जो (x-7)(x-8)=0 से 7 और 8 आते हैं। check: 7+8=15 और 7×8=56, दोनों सही हैं। बाकी pairs sum या product satisfy नहीं करते।"
+    },
+    {
+      "id": "math_algebra_q21",
+      "question": "(a-b)(a+b) को simplify करें।",
+      "options": ["a²-b²", "a²+b²", "2ab", "a²-2ab+b²"],
+      "correctIndex": 0,
+      "explanation": "यह standard identity है: (a-b)(a+b) = a² - b², क्योंकि cross terms -ab और +ab cancel हो जाते हैं। बाकी options में यह cancellation सही तरीके से नहीं दर्शाया गया है।"
+    },
+    {
+      "id": "math_algebra_q22",
+      "question": "यदि 4x - 5 = 2x + 11 है, तो x का मान ज्ञात करें।",
+      "options": ["6", "8", "10", "12"],
+      "correctIndex": 1,
+      "explanation": "4x - 5 = 2x + 11 => 2x = 16 => x = 8। 6, 10 और 12 को substitute करने पर equation balance नहीं होता।"
+    },
+    {
+      "id": "math_algebra_q23",
+      "question": "x² - x - 12 को factorize करें।",
+      "options": ["(x-3)(x+4)", "(x-6)(x+2)", "(x-4)(x+3)", "(x-12)(x+1)"],
+      "correctIndex": 2,
+      "explanation": "हमें ऐसे दो numbers चाहिए जिनका sum -1 और product -12 हो, जो -4 और 3 हैं। इसलिए x²-x-12 = (x-4)(x+3)। बाकी options का middle term मेल नहीं खाता, जैसे (x-3)(x+4) = x²+x-12।"
+    },
+    {
+      "id": "math_algebra_q24",
+      "question": "एक पिता की age उसके बेटे की age की 3 गुना (3 times) है। 5 साल बाद पिता की age बेटे की age की दोगुनी से 25 साल अधिक हो जाएगी। बेटे की present age ज्ञात करें।",
+      "options": ["20", "25", "28", "30"],
+      "correctIndex": 3,
+      "explanation": "माना बेटा = x, पिता = 3x। 5 साल बाद: 3x+5 = 2(x+5)+25 => 3x+5 = 2x+35 => x = 30। check: बेटा 30, पिता 90, 5 साल बाद पिता 95 और 2×35+25 = 95, सही है। बाकी values equation satisfy नहीं करते।"
+    },
+    {
+      "id": "math_algebra_q25",
+      "question": "equation x² + 6x + 9 = 0 का root ज्ञात करें।",
+      "options": ["-3 (double root)", "3 and -3", "-3 and -6", "3 (double root)"],
+      "correctIndex": 0,
+      "explanation": "x²+6x+9 = (x+3)² = 0, इसलिए x = -3 एक double (repeated) root है। बाकी options में या तो गलत sign है या दो अलग roots दिखाए गए हैं, जबकि यह perfect square trinomial केवल एक repeated root देता है।"
+    },
+    {
+      "id": "math_algebra_q26",
+      "question": "9x² - 1 को factorize करें।",
+      "options": ["(9x-1)(x+1)", "(3x-1)(3x+1)", "(3x-1)²", "(9x+1)(x-1)"],
+      "correctIndex": 1,
+      "explanation": "यह a²-b² identity है जहाँ a=3x, b=1, इसलिए 9x²-1 = (3x-1)(3x+1)। बाकी options को expand करने पर 9x²-1 नहीं मिलता; जैसे (3x-1)² = 9x²-6x+1।"
+    },
+    {
+      "id": "math_algebra_q27",
+      "question": "यदि a+b = 8 और ab = 15 है, तो a² + b² का मान ज्ञात करें।",
+      "options": ["28", "30", "34", "38"],
+      "correctIndex": 2,
+      "explanation": "identity a²+b² = (a+b)² - 2ab का उपयोग करने पर a²+b² = 64 - 30 = 34। बाकी values इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_algebra_q28",
+      "question": "यदि x/4 + x/5 = 9 है, तो x का मान ज्ञात करें।",
+      "options": ["15", "18", "24", "20"],
+      "correctIndex": 3,
+      "explanation": "common denominator 20 लेने पर 5x/20 + 4x/20 = 9 => 9x/20 = 9 => x = 20। 15, 18 और 24 को substitute करने पर equation balance नहीं होता।"
+    },
+    {
+      "id": "math_algebra_q29",
+      "question": "एक number और उसके आधे (half) का अंतर 8 है। वह number ज्ञात करें।",
+      "options": ["14", "15", "18", "16"],
+      "correctIndex": 3,
+      "explanation": "माना number x है, तो x - x/2 = 8 => x/2 = 8 => x = 16। check: 16 - 8 = 8 सही है। बाकी values इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_algebra_q30",
+      "question": "x³ - x को factorize करें।",
+      "options": ["x²(x-1)", "x(x-1)(x+1)", "(x-1)(x+1)²", "x(x+1)²"],
+      "correctIndex": 1,
+      "explanation": "पहले common factor x निकालने पर x(x²-1) मिलता है, फिर x²-1 को a²-b² identity से (x-1)(x+1) में factorize करने पर पूर्ण answer x(x-1)(x+1) बनता है। बाकी options में या तो common factor गलत निकाला गया है या identity सही तरह से apply नहीं हुई है।"
+    }
+  ]
+}

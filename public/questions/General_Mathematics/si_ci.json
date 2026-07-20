@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "si_ci",
+  "topicName": "Simple and Compound Interest",
+  "questions": [
+    {
+      "id": "math_si_ci_q1",
+      "question": "Rs. 1000 के sum पर 5% वार्षिक rate से 2 years के लिए Simple Interest ज्ञात करें।",
+      "options": ["Rs. 100", "Rs. 90", "Rs. 110", "Rs. 120"],
+      "correctIndex": 0,
+      "explanation": "SI = (P×R×T)/100 = (1000×5×2)/100 = Rs. 100। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q2",
+      "question": "Rs. 900 के principal पर 3 years में Rs. 270 का Simple Interest मिलता है। rate of interest ज्ञात करें।",
+      "options": ["8%", "10%", "12%", "15%"],
+      "correctIndex": 1,
+      "explanation": "R = (SI×100)/(P×T) = (270×100)/(900×3) = 27000/2700 = 10%। बाकी options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_si_ci_q3",
+      "question": "8% वार्षिक rate पर 5 years में Rs. 800 Simple Interest मिलता है। Principal ज्ञात करें।",
+      "options": ["Rs. 1800", "Rs. 1900", "Rs. 2000", "Rs. 2100"],
+      "correctIndex": 2,
+      "explanation": "P = (SI×100)/(R×T) = (800×100)/(8×5) = 80000/40 = Rs. 2000। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q4",
+      "question": "Rs. 1500 के principal पर 6% वार्षिक rate से Rs. 270 Simple Interest प्राप्त होता है। time period ज्ञात करें।",
+      "options": ["2 years", "2.5 years", "4 years", "3 years"],
+      "correctIndex": 3,
+      "explanation": "T = (SI×100)/(P×R) = (270×100)/(1500×6) = 27000/9000 = 3 years। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q5",
+      "question": "Rs. 5000 के sum पर 4% वार्षिक rate से 3 years में Amount ज्ञात करें (Simple Interest के अनुसार)।",
+      "options": ["Rs. 5600", "Rs. 5400", "Rs. 5800", "Rs. 6000"],
+      "correctIndex": 0,
+      "explanation": "SI = (5000×4×3)/100 = Rs. 600, इसलिए Amount = P+SI = 5000+600 = Rs. 5600। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q6",
+      "question": "Rs. 2000 का sum 4 years में Simple Interest से बढ़कर Rs. 2400 हो जाता है। rate of interest ज्ञात करें।",
+      "options": ["4%", "5%", "6%", "7%"],
+      "correctIndex": 1,
+      "explanation": "SI = 2400-2000 = Rs. 400, R = (400×100)/(2000×4) = 40000/8000 = 5%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q7",
+      "question": "Rs. 1200 के sum पर 10% वार्षिक rate से 9 months के लिए Simple Interest ज्ञात करें।",
+      "options": ["Rs. 100", "Rs. 80", "Rs. 90", "Rs. 110"],
+      "correctIndex": 2,
+      "explanation": "9 months = 9/12 = 0.75 years, SI = (1200×10×0.75)/100 = Rs. 90। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q8",
+      "question": "किसी sum को Simple Interest पर दोगुना (double) होने में 8 years लगते हैं। rate of interest ज्ञात करें।",
+      "options": ["10%", "15%", "20%", "12.5%"],
+      "correctIndex": 3,
+      "explanation": "sum double होने पर SI = P होता है, अतः R = (SI×100)/(P×T) = (P×100)/(P×8) = 12.5%। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_si_ci_q9",
+      "question": "किसी sum को Simple Interest पर 3 गुना (treble) होने में 10 years लगते हैं। rate of interest ज्ञात करें।",
+      "options": ["20%", "15%", "25%", "30%"],
+      "correctIndex": 0,
+      "explanation": "sum 3 गुना होने पर Amount = 3P, इसलिए SI = 2P। R = (SI×100)/(P×T) = (2P×100)/(P×10) = 20%। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q10",
+      "question": "Rs. 6400 के principal पर 7.5% वार्षिक rate से 2 years के लिए Simple Interest ज्ञात करें।",
+      "options": ["Rs. 900", "Rs. 960", "Rs. 1000", "Rs. 1020"],
+      "correctIndex": 1,
+      "explanation": "SI = (6400×7.5×2)/100 = Rs. 960। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q11",
+      "question": "Rs. 4000 के sum पर 6% वार्षिक rate से 3 years का Simple Interest ज्ञात करें।",
+      "options": ["Rs. 680", "Rs. 700", "Rs. 720", "Rs. 740"],
+      "correctIndex": 2,
+      "explanation": "SI = (4000×6×3)/100 = Rs. 720। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q12",
+      "question": "एक sum Simple Interest पर 3 years में Rs. 1200 और 5 years में Rs. 1350 हो जाता है। Principal ज्ञात करें।",
+      "options": ["Rs. 900", "Rs. 925", "Rs. 950", "Rs. 975"],
+      "correctIndex": 3,
+      "explanation": "प्रति वर्ष SI = (1350-1200)/(5-3) = 75/2 = Rs. 75। अतः 3 years का SI = 75×3 = Rs. 225, और Principal = 1200-225 = Rs. 975। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q13",
+      "question": "किसी sum को Simple Interest पर 3 गुना (treble) होने में 25 years लगते हैं। rate of interest ज्ञात करें।",
+      "options": ["8%", "10%", "12%", "6%"],
+      "correctIndex": 0,
+      "explanation": "sum 3 गुना होने पर SI = 2P, अतः R = (2P×100)/(P×25) = 8%। बाकी options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q14",
+      "question": "एक sum पर 5% वार्षिक rate से 2 years में Simple Interest Rs. 50 है। Principal ज्ञात करें।",
+      "options": ["Rs. 450", "Rs. 500", "Rs. 550", "Rs. 600"],
+      "correctIndex": 1,
+      "explanation": "P = (SI×100)/(R×T) = (50×100)/(5×2) = 5000/10 = Rs. 500। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q15",
+      "question": "Rs. 7250 के principal पर 12% वार्षिक rate से 3 years के लिए Simple Interest ज्ञात करें।",
+      "options": ["Rs. 2550", "Rs. 2580", "Rs. 2610", "Rs. 2650"],
+      "correctIndex": 2,
+      "explanation": "SI = (7250×12×3)/100 = Rs. 2610। बाकी options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q16",
+      "question": "Rs. 3200 के sum पर 15% वार्षिक rate से 2 years के बाद Amount ज्ञात करें (Simple Interest के अनुसार)।",
+      "options": ["Rs. 4000", "Rs. 4080", "Rs. 4120", "Rs. 4160"],
+      "correctIndex": 3,
+      "explanation": "SI = (3200×15×2)/100 = Rs. 960, Amount = 3200+960 = Rs. 4160। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q17",
+      "question": "Rs. 500 का sum 4 years में Simple Interest से बढ़कर Rs. 600 हो जाता है। rate of interest ज्ञात करें।",
+      "options": ["5%", "6%", "7%", "8%"],
+      "correctIndex": 0,
+      "explanation": "SI = 600-500 = Rs. 100, R = (100×100)/(500×4) = 10000/2000 = 5%। बाकी options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q18",
+      "question": "किसी sum को Simple Interest पर दोगुना होने में 16 years लगते हैं। rate of interest ज्ञात करें।",
+      "options": ["6%", "6.25%", "6.5%", "7%"],
+      "correctIndex": 1,
+      "explanation": "sum double होने पर SI = P, अतः R = (P×100)/(P×16) = 6.25%। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q19",
+      "question": "Rs. 2500 के sum को 4% वार्षिक rate से 6 years के लिए invest किया जाता है। कुल Simple Interest ज्ञात करें।",
+      "options": ["Rs. 560", "Rs. 580", "Rs. 600", "Rs. 620"],
+      "correctIndex": 2,
+      "explanation": "SI = (2500×4×6)/100 = Rs. 600। बाकी options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q20",
+      "question": "किसी sum पर 12% वार्षिक rate से 2.5 years का Simple Interest, उसी sum के 1.5 years के Simple Interest से Rs. 300 अधिक है। sum (Principal) ज्ञात करें।",
+      "options": ["Rs. 2000", "Rs. 2200", "Rs. 2400", "Rs. 2500"],
+      "correctIndex": 3,
+      "explanation": "अतिरिक्त time = 2.5-1.5 = 1 year का SI अंतर Rs. 300 है, अतः (P×12×1)/100 = 300 => P = 30000/12 = Rs. 2500। शेष options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_si_ci_q21",
+      "question": "Rs. 2000 के principal पर 10% वार्षिक rate से 2 years के लिए Compound Interest (वार्षिक रूप से compounded) ज्ञात करें।",
+      "options": ["Rs. 420", "Rs. 400", "Rs. 440", "Rs. 460"],
+      "correctIndex": 0,
+      "explanation": "Amount = P(1+R/100)^T = 2000×(1.1)^2 = 2000×1.21 = Rs. 2420, इसलिए CI = 2420-2000 = Rs. 420। बाकी options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q22",
+      "question": "Rs. 1000 के sum पर 10% वार्षिक rate से 2 years के लिए Compound Interest और Simple Interest के बीच का अंतर ज्ञात करें।",
+      "options": ["Rs. 8", "Rs. 10", "Rs. 12", "Rs. 15"],
+      "correctIndex": 1,
+      "explanation": "2 years के लिए CI-SI का अंतर = P×(R/100)^2 = 1000×(10/100)^2 = 1000×0.01 = Rs. 10। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q23",
+      "question": "Rs. 5000 के principal पर 20% वार्षिक rate से 3 years के लिए Compound Interest (वार्षिक रूप से compounded) ज्ञात करें।",
+      "options": ["Rs. 3500", "Rs. 3600", "Rs. 3640", "Rs. 3700"],
+      "correctIndex": 2,
+      "explanation": "Amount = 5000×(1.2)^3 = 5000×1.728 = Rs. 8640, इसलिए CI = 8640-5000 = Rs. 3640। बाकी options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q24",
+      "question": "Rs. 10000 के sum पर 10% वार्षिक rate से 1 year के लिए compounded half-yearly Compound Interest ज्ञात करें।",
+      "options": ["Rs. 950", "Rs. 1000", "Rs. 1010", "Rs. 1025"],
+      "correctIndex": 3,
+      "explanation": "compounded half-yearly होने पर rate = 5% प्रति half-year और periods = 2, अतः Amount = 10000×(1.05)^2 = Rs. 11025, इसलिए CI = Rs. 1025। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q25",
+      "question": "Rs. 4000 के sum पर 10% वार्षिक rate से 1 year के लिए compounded quarterly Compound Interest ज्ञात करें (निकटतम Rs. तक)।",
+      "options": ["Rs. 415", "Rs. 400", "Rs. 430", "Rs. 450"],
+      "correctIndex": 0,
+      "explanation": "compounded quarterly होने पर rate = 2.5% प्रति quarter और periods = 4, अतः Amount = 4000×(1.025)^4 ≈ Rs. 4415, इसलिए CI ≈ Rs. 415। बाकी options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q26",
+      "question": "Rs. 15000 के principal पर 8% वार्षिक rate से 2 years के लिए Compound Interest (वार्षिक रूप से compounded) ज्ञात करें।",
+      "options": ["Rs. 2400", "Rs. 2496", "Rs. 2500", "Rs. 2600"],
+      "correctIndex": 1,
+      "explanation": "Amount = 15000×(1.08)^2 = 15000×1.1664 = Rs. 17496, इसलिए CI = 17496-15000 = Rs. 2496। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q27",
+      "question": "एक sum पर 8% वार्षिक rate से 2 years में Compound Interest और Simple Interest के बीच का अंतर Rs. 32 है। sum (Principal) ज्ञात करें।",
+      "options": ["Rs. 4500", "Rs. 4800", "Rs. 5000", "Rs. 5200"],
+      "correctIndex": 2,
+      "explanation": "2 years के लिए CI-SI का अंतर = P×(R/100)^2, अतः 32 = P×(8/100)^2 = P×0.0064 => P = 32/0.0064 = Rs. 5000। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_si_ci_q28",
+      "question": "Rs. 1000 के principal पर 10% वार्षिक rate से 3 years के लिए Compound Interest (वार्षिक रूप से compounded) ज्ञात करें।",
+      "options": ["Rs. 300", "Rs. 310", "Rs. 320", "Rs. 331"],
+      "correctIndex": 3,
+      "explanation": "Amount = 1000×(1.1)^3 = Rs. 1331, इसलिए CI = 1331-1000 = Rs. 331। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_si_ci_q29",
+      "question": "एक sum Compound Interest पर 2 years में Rs. 4840 और 3 years में Rs. 5324 हो जाता है। वार्षिक rate of interest ज्ञात करें।",
+      "options": ["10%", "8%", "12%", "15%"],
+      "correctIndex": 0,
+      "explanation": "3rd year का interest = 5324-4840 = Rs. 484, यह 2 years के Amount Rs. 4840 पर 1 year का interest है, अतः R = (484×100)/4840 = 10%। बाकी options गलत हैं।"
+    },
+    {
+      "id": "math_si_ci_q30",
+      "question": "Rs. 6400 के sum पर 5% वार्षिक rate से 2 years के लिए Compound Interest और Simple Interest के बीच का अंतर ज्ञात करें।",
+      "options": ["Rs. 12", "Rs. 16", "Rs. 20", "Rs. 24"],
+      "correctIndex": 1,
+      "explanation": "2 years के लिए CI-SI का अंतर = P×(R/100)^2 = 6400×(5/100)^2 = 6400×0.0025 = Rs. 16। शेष options इस calculation से मेल नहीं खाते।"
+    }
+  ]
+}

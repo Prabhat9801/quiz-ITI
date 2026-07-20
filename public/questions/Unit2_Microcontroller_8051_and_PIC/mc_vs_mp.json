@@ -1,0 +1,218 @@
+{
+  "unit": "unit2",
+  "unitName": "Microcontroller (8051) & PIC Microcontrollers",
+  "topic": "mc_vs_mp",
+  "topicName": "Microcontroller vs Microprocessor, Harvard vs Von Neumann",
+  "questions": [
+    {
+      "id": "u2_mc_vs_mp_q1",
+      "question": "एक single chip पर CPU के साथ-साथ RAM, ROM, timers और I/O ports भी on-chip होना किस device की मुख्य विशेषता है?",
+      "options": ["Microprocessor", "Microcontroller", "DRAM chip", "Coprocessor"],
+      "correctIndex": 1,
+      "explanation": "Microcontroller में CPU के साथ RAM, ROM, timers और I/O ports सभी एक ही chip पर integrated होते हैं, इसलिए option B सही है। Microprocessor में केवल CPU होता है और memory व peripherals external लगाने पड़ते हैं। DRAM chip केवल memory है, CPU नहीं। Coprocessor मुख्य CPU की गणना में सहायता करता है, यह complete system नहीं है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q2",
+      "question": "Microprocessor आधारित system में RAM, ROM और I/O interface किस प्रकार जोड़े जाते हैं?",
+      "options": ["सभी CPU के अंदर on-chip रहते हैं", "external chips के रूप में bus द्वारा जोड़े जाते हैं", "इनकी आवश्यकता ही नहीं होती", "केवल software में virtual रूप में"],
+      "correctIndex": 1,
+      "explanation": "Microprocessor में केवल CPU होता है, इसलिए RAM, ROM और I/O interface external chips के रूप में address/data bus द्वारा जोड़े जाते हैं, अतः option B सही है। Option A microcontroller पर लागू होता है। किसी भी computing system को memory व I/O की जरूरत होती है, इसलिए C गलत है। ये physical hardware होते हैं, केवल virtual नहीं, इसलिए D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q3",
+      "question": "किसी washing machine, microwave oven जैसे dedicated embedded product में सामान्यतः किसका उपयोग बेहतर माना जाता है?",
+      "options": ["Microcontroller", "General purpose microprocessor", "बड़ा server CPU", "GPU"],
+      "correctIndex": 0,
+      "explanation": "छोटे, कम लागत वाले dedicated embedded products में on-chip memory व peripherals के कारण Microcontroller बेहतर है, इसलिए option A सही है। General purpose microprocessor को external components चाहिए जिससे लागत व size बढ़ती है। Server CPU व GPU इन सरल कार्यों के लिए अत्यधिक शक्तिशाली व महंगे हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q4",
+      "question": "Microcontroller और Microprocessor की तुलना में लागत (cost) व external component की आवश्यकता के बारे में कौन-सा कथन सही है?",
+      "options": ["Microcontroller को अधिक external components चाहिए", "Microcontroller आधारित system की overall cost सामान्यतः कम होती है", "Microprocessor system हमेशा सस्ता होता है", "दोनों को समान बाहरी memory चाहिए"],
+      "correctIndex": 1,
+      "explanation": "Microcontroller में memory व peripherals on-chip होने से external components कम लगते हैं, जिससे complete system की overall cost कम रहती है, इसलिए option B सही है। इसी कारण A और D गलत हैं। Microprocessor system को अलग RAM/ROM/I/O चाहिए जिससे वह आमतौर पर महंगा पड़ता है, इसलिए C भी गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q5",
+      "question": "8051 जैसे microcontroller में program memory और data memory के लिए अलग-अलग address space तथा bus होना किस architecture को दर्शाता है?",
+      "options": ["Von Neumann architecture", "Harvard architecture", "RISC pipeline", "Multi-core architecture"],
+      "correctIndex": 1,
+      "explanation": "अलग program और data memory तथा अलग bus होना Harvard architecture की पहचान है, इसलिए option B सही है। Von Neumann में single shared memory व एक ही bus होता है। RISC pipeline instruction execution की technique है, memory संरचना नहीं। Multi-core में एक से अधिक CPU cores होते हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q6",
+      "question": "Von Neumann architecture की मुख्य विशेषता क्या है?",
+      "options": ["program और data के लिए अलग memory व bus", "program और data के लिए एक ही shared memory व एक common bus", "कोई memory नहीं होती", "केवल register में ही data रहता है"],
+      "correctIndex": 1,
+      "explanation": "Von Neumann architecture में program (instructions) और data एक ही shared memory में रहते हैं और एक common bus से access होते हैं, इसलिए option B सही है। अलग memory व bus Harvard की विशेषता है, अतः A गलत है। किसी भी computer को memory चाहिए इसलिए C गलत, और register केवल अस्थायी storage है, main memory का विकल्प नहीं, अतः D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q7",
+      "question": "Harvard architecture में fetch की गति Von Neumann की तुलना में अक्सर अधिक क्यों होती है?",
+      "options": ["इसमें clock frequency हमेशा अधिक होती है", "instruction और data को अलग bus पर एक साथ (parallel) access किया जा सकता है", "इसमें memory ही नहीं होती", "यह केवल assembly language चलाती है"],
+      "correctIndex": 1,
+      "explanation": "Harvard में अलग program व data bus होने से instruction fetch और data access एक साथ (parallel) हो सकते हैं, जिससे bus bottleneck घटता है और गति बढ़ती है, इसलिए option B सही है। clock frequency architecture पर निर्भर नहीं करती, अतः A गलत है। Harvard में memory अवश्य होती है इसलिए C गलत, और language का fetch गति से संबंध नहीं इसलिए D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q8",
+      "question": "Von Neumann architecture में जिस सीमा (bottleneck) की बात होती है, उसका मुख्य कारण क्या है?",
+      "options": ["एक ही bus से instruction और data दोनों बारी-बारी से लाना पड़ता है", "बहुत अधिक registers होना", "on-chip ROM का न होना", "अलग-अलग bus का होना"],
+      "correctIndex": 0,
+      "explanation": "Von Neumann में single common bus पर instruction और data दोनों बारी-बारी से आते हैं, जिससे एक समय पर केवल एक ही transfer संभव है, यही Von Neumann bottleneck है, इसलिए option A सही है। अधिक registers इसका कारण नहीं। ROM की उपस्थिति/अनुपस्थिति bottleneck का कारण नहीं। अलग bus तो Harvard में होता है जो bottleneck कम करता है, इसलिए D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q9",
+      "question": "निम्न में से कौन-सा device सामान्यतः microprocessor की श्रेणी में आता है?",
+      "options": ["8051", "8085", "PIC16F877", "AT89C51"],
+      "correctIndex": 1,
+      "explanation": "8085 एक general purpose microprocessor है जिसमें केवल CPU होता है, इसलिए option B सही है। 8051 और AT89C51 microcontrollers हैं जिनमें on-chip RAM/ROM/timers होते हैं। PIC16F877 भी एक microcontroller है। अतः केवल 8085 microprocessor श्रेणी में आता है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q10",
+      "question": "Embedded system की सबसे उपयुक्त परिभाषा कौन-सी है?",
+      "options": ["सामान्य कार्यों वाला desktop computer", "किसी बड़े product के अंदर एक निश्चित dedicated कार्य करने वाला computing system", "केवल एक display device", "internet का एक protocol"],
+      "correctIndex": 1,
+      "explanation": "Embedded system किसी बड़े product का हिस्सा होता है और एक निश्चित dedicated कार्य करता है, जैसे oven का controller, इसलिए option B सही है। Desktop general purpose होता है, dedicated नहीं। Display केवल output device है, पूरा system नहीं। Protocol communication का नियम है, computing system नहीं, इसलिए D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q11",
+      "question": "CPU के आंतरिक भाग ALU का मुख्य कार्य क्या है?",
+      "options": ["instructions को store करना", "arithmetic और logic operations करना", "clock pulse उत्पन्न करना", "I/O ports को power देना"],
+      "correctIndex": 1,
+      "explanation": "ALU (Arithmetic Logic Unit) addition, subtraction तथा AND, OR जैसे arithmetic व logic operations करता है, इसलिए option B सही है। instructions store करना memory का कार्य है। clock pulse oscillator circuit देता है। ports को power supply देती है, ALU नहीं, इसलिए बाकी options गलत हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q12",
+      "question": "CPU के भीतर instruction को decode करके अन्य units को नियंत्रण signal देने वाला भाग कौन-सा है?",
+      "options": ["Control Unit", "Accumulator", "Data bus", "Stack"],
+      "correctIndex": 0,
+      "explanation": "Control Unit instruction को decode करके ALU, memory व I/O को नियंत्रण (control) signals भेजता है, इसलिए option A सही है। Accumulator एक register है जो ALU के परिणाम रखता है। Data bus केवल data ले जाता है, नियंत्रण नहीं करता। Stack अस्थायी data storage के लिए memory का भाग है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q13",
+      "question": "Microcontroller में on-chip timers/counters होने का मुख्य लाभ क्या है?",
+      "options": ["बाहरी timer IC जोड़ने की आवश्यकता समाप्त हो जाती है", "CPU की clock frequency शून्य हो जाती है", "program memory अपने आप बढ़ जाती है", "I/O ports बंद हो जाते हैं"],
+      "correctIndex": 0,
+      "explanation": "on-chip timers/counters होने से delay, timing व counting कार्यों के लिए बाहरी timer IC नहीं जोड़ना पड़ता, जिससे design सरल व सस्ता होता है, इसलिए option A सही है। इससे clock frequency शून्य नहीं होती, न ही program memory अपने आप बढ़ती है, और I/O ports बंद नहीं होते, अतः बाकी options गलत हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q14",
+      "question": "यदि किसी design में बड़ी मात्रा में external memory, high processing power और flexibility की आवश्यकता हो, तो सामान्यतः किसे चुना जाता है?",
+      "options": ["साधारण 8-bit microcontroller", "Microprocessor आधारित system", "केवल एक logic gate", "एक साधारण relay"],
+      "correctIndex": 1,
+      "explanation": "अधिक external memory, उच्च processing power व flexibility की जरूरत वाले सामान्य-उद्देश्य कार्यों में Microprocessor आधारित system उपयुक्त है क्योंकि इसमें बाहरी memory व peripherals आसानी से बढ़ाए जा सकते हैं, इसलिए option B सही है। छोटा microcontroller सीमित on-chip memory वाला होता है। logic gate व relay computing device नहीं हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q15",
+      "question": "Microprocessor की तुलना में microcontroller को 'self-contained system' क्यों कहा जाता है?",
+      "options": ["क्योंकि इसमें केवल ALU होता है", "क्योंकि CPU, memory और I/O सभी एक ही chip पर मौजूद होते हैं", "क्योंकि इसे किसी भी power supply की जरूरत नहीं", "क्योंकि यह केवल high-level language चलाता है"],
+      "correctIndex": 1,
+      "explanation": "Microcontroller में CPU, RAM, ROM और I/O ports सभी एक ही chip पर होने से यह अपने आप में एक पूरा system बन जाता है, इसलिए इसे self-contained कहते हैं और option B सही है। केवल ALU होना गलत है। हर electronic device को power चाहिए, इसलिए C गलत। language का इससे संबंध नहीं, अतः D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q16",
+      "question": "8051 microcontroller की internal architecture किस प्रकार की है?",
+      "options": ["Von Neumann", "Harvard", "केवल analog", "पूर्णतः mechanical"],
+      "correctIndex": 1,
+      "explanation": "8051 में program (code) memory और data memory के लिए अलग address space व अलग access path होते हैं, इसलिए यह Harvard architecture का उदाहरण है और option B सही है। Von Neumann में shared memory होती है। यह digital device है, केवल analog नहीं, और यह electronic है, mechanical नहीं, अतः बाकी options गलत हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q17",
+      "question": "निम्न में से कौन-सा कथन microcontroller और microprocessor दोनों के लिए सत्य है?",
+      "options": ["दोनों में on-chip ROM होता है", "दोनों के अंदर एक CPU (ALU + control unit + registers) होता है", "दोनों में on-chip serial port होता है", "दोनों को कभी external memory नहीं चाहिए"],
+      "correctIndex": 1,
+      "explanation": "दोनों में एक CPU अवश्य होता है जिसमें ALU, control unit और registers शामिल हैं, इसलिए option B सही है। on-chip ROM और serial port सामान्यतः microcontroller में होते हैं, microprocessor में नहीं, अतः A और C गलत हैं। microprocessor को तो external memory चाहिए ही होती है, इसलिए D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q18",
+      "question": "Harvard architecture के कारण instruction और data की width (bit-size) के बारे में क्या संभव होता है?",
+      "options": ["दोनों की width हमेशा समान होनी अनिवार्य है", "instruction bus और data bus की width अलग-अलग रखी जा सकती है", "किसी की भी width तय नहीं की जा सकती", "width केवल software तय करता है"],
+      "correctIndex": 1,
+      "explanation": "अलग bus होने के कारण Harvard में instruction memory और data memory की width स्वतंत्र रूप से भिन्न रखी जा सकती है, इसलिए option B सही है। समान width अनिवार्य नहीं इसलिए A गलत। width design में निर्धारित होती है इसलिए C गलत। bus width hardware का गुण है, केवल software नहीं तय करता, अतः D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q19",
+      "question": "किसी सरल remote control या toy में microcontroller को प्राथमिकता देने का मुख्य कारण क्या है?",
+      "options": ["उच्च लागत और अधिक size", "कम लागत, छोटा size और कम power खपत", "अधिक external chips की आवश्यकता", "बहुत बड़ी external memory की जरूरत"],
+      "correctIndex": 1,
+      "explanation": "सरल उपकरणों में कम लागत, छोटा size और कम power खपत जरूरी होती है, जो on-chip integration के कारण microcontroller देता है, इसलिए option B सही है। microcontroller लागत व size घटाता है, बढ़ाता नहीं, इसलिए A गलत। external chips कम लगते हैं इसलिए C गलत, और ऐसे उपकरणों को बड़ी external memory की जरूरत नहीं होती, अतः D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q20",
+      "question": "Microprocessor system में एक 'system bus' सामान्यतः किन तीन प्रकार के bus का समूह होता है?",
+      "options": ["address bus, data bus और control bus", "power bus, serial bus और USB", "input bus, output bus और timer bus", "clock bus, reset bus और interrupt bus"],
+      "correctIndex": 0,
+      "explanation": "System bus में address bus (location भेजने), data bus (data transfer) और control bus (नियंत्रण signals) शामिल होते हैं, इसलिए option A सही है। बाकी options में दिए नाम या तो specific interfaces हैं या system bus की मानक तीन-श्रेणी संरचना का सही वर्णन नहीं करते, अतः वे गलत हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q21",
+      "question": "एक ही chip पर अधिक integration होने से microcontroller आधारित उत्पाद की reliability पर क्या प्रभाव पड़ता है?",
+      "options": ["बाहरी connections व solder joints कम होने से reliability बढ़ती है", "reliability हमेशा घट जाती है", "reliability पर कोई प्रभाव नहीं पड़ता", "chip तुरंत जल जाती है"],
+      "correctIndex": 0,
+      "explanation": "on-chip integration से बाहरी wiring, connectors व solder joints कम होते हैं, जिससे fault points घटते हैं और reliability बढ़ती है, इसलिए option A सही है। इसी कारण reliability घटती नहीं, अतः B और C गलत हैं। सही design में chip जलती नहीं, इसलिए D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q22",
+      "question": "Von Neumann architecture में program को data के रूप में memory में रखने से क्या लचीलापन (flexibility) मिलता है?",
+      "options": ["program को run-time में बदलना/load करना आसान होता है", "program कभी बदला नहीं जा सकता", "data बिल्कुल store नहीं होता", "केवल एक ही instruction रह सकती है"],
+      "correctIndex": 0,
+      "explanation": "Von Neumann में program भी memory में data की तरह store होता है, इसलिए अलग-अलग programs को आसानी से load व बदला जा सकता है, यही इसका लचीलापन है और option A सही है। program बदला जा सकता है इसलिए B गलत। data भी store होता है इसलिए C गलत, और memory में अनेक instructions रहती हैं, अतः D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q23",
+      "question": "निम्न में से कौन-सा peripheral सामान्यतः एक typical microcontroller में on-chip मिलता है परंतु सादे microprocessor में नहीं?",
+      "options": ["ALU", "on-chip serial communication port (UART)", "control unit", "program counter"],
+      "correctIndex": 1,
+      "explanation": "on-chip serial communication port (UART) microcontroller में built-in मिलता है जबकि सादे microprocessor में यह external जोड़ना पड़ता है, इसलिए option B सही है। ALU, control unit और program counter तो CPU के मूल भाग हैं जो microprocessor में भी होते हैं, अतः वे इस अंतर को नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q24",
+      "question": "एक system में CPU 4 bytes का data memory से लाने के बाद ही उसी bus से next instruction ला पाता है। यह किस architecture का व्यवहार दर्शाता है?",
+      "options": ["Harvard architecture", "Von Neumann architecture", "dual-port architecture", "पूर्णतः pipelined Harvard"],
+      "correctIndex": 1,
+      "explanation": "यहाँ data और instruction एक ही bus साझा कर रहे हैं और बारी-बारी से आते हैं, यही Von Neumann architecture (single shared bus) का लक्षण है, इसलिए option B सही है। Harvard में तो अलग bus होते जिससे दोनों एक साथ आ सकते, इसलिए A और D गलत हैं। dual-port memory अलग concept है जो यहाँ वर्णित single-bus व्यवहार से मेल नहीं खाता।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q25",
+      "question": "एक ही product में समान clock frequency पर सामान्यतः Harvard-आधारित microcontroller Von Neumann-आधारित design की तुलना में instruction throughput में कैसा रहता है?",
+      "options": ["हमेशा बहुत धीमा", "प्रायः बेहतर, क्योंकि fetch और data access overlap हो सकते हैं", "बिल्कुल समान, कोई अंतर नहीं", "काम ही नहीं करता"],
+      "correctIndex": 1,
+      "explanation": "Harvard में अलग bus होने से instruction fetch और data access overlap कर सकते हैं, जिससे समान clock पर प्रायः बेहतर throughput मिलता है, इसलिए option B सही है। इसी कारण A और C गलत हैं। Harvard design सामान्य रूप से काम करता है, इसलिए D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q26",
+      "question": "Microcontroller में I/O ports सीधे on-chip उपलब्ध होने का practical लाभ क्या है?",
+      "options": ["बाहरी switches, LED व sensors को सीधे जोड़ना आसान होता है", "chip को कभी program नहीं करना पड़ता", "power supply की आवश्यकता समाप्त हो जाती है", "clock की जरूरत नहीं रहती"],
+      "correctIndex": 0,
+      "explanation": "on-chip I/O ports होने से switches, LEDs और sensors जैसे बाहरी devices सीधे जोड़े जा सकते हैं, जिससे design सरल होता है, इसलिए option A सही है। chip को कार्य करने के लिए program तो करना ही पड़ता है, power व clock भी आवश्यक हैं, अतः बाकी options गलत हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q27",
+      "question": "General purpose computing (जैसे PC) में microprocessor को प्राथमिकता क्यों दी जाती है?",
+      "options": ["क्योंकि इसे कोई memory नहीं चाहिए", "क्योंकि यह high performance और बड़ी बाहरी memory के साथ अनेक प्रकार के कार्य कर सकता है", "क्योंकि इसमें सभी peripherals on-chip होते हैं", "क्योंकि यह केवल एक ही fixed program चला सकता है"],
+      "correctIndex": 1,
+      "explanation": "PC जैसे general purpose systems में विविध व भारी कार्यों के लिए high performance और बड़ी external memory चाहिए, जो microprocessor देता है, इसलिए option B सही है। इसे memory अवश्य चाहिए इसलिए A गलत। on-chip peripherals तो microcontroller की विशेषता है, अतः C गलत। microprocessor अनेक programs चलाता है, इसलिए D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q28",
+      "question": "किसी embedded design में 'बाहरी component count घटाना' किस चयन का सीधा परिणाम है?",
+      "options": ["microprocessor + अलग RAM/ROM चुनना", "अधिक on-chip integration वाला microcontroller चुनना", "अधिक connectors लगाना", "अलग-अलग timer व UART ICs जोड़ना"],
+      "correctIndex": 1,
+      "explanation": "अधिक on-chip integration वाला microcontroller चुनने से RAM, ROM, timers, UART आदि chip के अंदर आ जाते हैं और बाहरी component count घटता है, इसलिए option B सही है। microprocessor + अलग memory तथा अलग timer/UART ICs जोड़ने से component count बढ़ता है, अतः A और D गलत हैं। अधिक connectors लगाना भी count बढ़ाता है, इसलिए C गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q29",
+      "question": "Harvard architecture में CPU एक ही समय पर क्या-क्या कर सकता है?",
+      "options": ["केवल data पढ़ सकता है", "program memory से instruction fetch और data memory से data access एक साथ", "केवल एक instruction store कर सकता है", "कुछ भी parallel नहीं"],
+      "correctIndex": 1,
+      "explanation": "अलग program व data bus के कारण Harvard में CPU एक ही समय पर program memory से instruction fetch और data memory से data access दोनों कर सकता है, इसलिए option B सही है। यह केवल data पढ़ने तक सीमित नहीं, अतः A गलत। यह instruction store करने का नहीं बल्कि access का गुण है, इसलिए C गलत, और parallel access ही इसकी खूबी है, अतः D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q30",
+      "question": "निम्न में से किस अनुप्रयोग-जोड़ी में क्रमशः microcontroller और microprocessor का सबसे उपयुक्त चयन दर्शाया गया है?",
+      "options": ["Laptop के लिए microcontroller, temperature controller के लिए microprocessor", "Temperature controller के लिए microcontroller, general purpose laptop के लिए microprocessor", "दोनों कार्यों के लिए केवल microprocessor", "दोनों कार्यों के लिए केवल microcontroller"],
+      "correctIndex": 1,
+      "explanation": "छोटे dedicated कार्य (temperature controller) के लिए microcontroller और भारी general purpose कार्य (laptop) के लिए microprocessor उपयुक्त है, इसलिए option B सही है। option A में चयन उलटा है इसलिए गलत। दोनों कार्यों के लिए एक ही प्रकार चुनना उपयुक्तता की दृष्टि से सही नहीं, अतः C और D गलत हैं।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit9",
+  "unitName": "Solar Power Renewable Energy Systems",
+  "topic": "renewable_need",
+  "topicName": "Need for Renewable Energy & Solar as Renewable Resource",
+  "questions": [
+    {
+      "id": "u9_renewable_need_q1",
+      "question": "Renewable energy sources को \"renewable\" इसलिए कहा जाता है क्योंकि उनकी सबसे मुख्य विशेषता क्या है?",
+      "options": [
+        "वे प्राकृतिक रूप से बार-बार replenish हो जाते हैं और खत्म नहीं होते",
+        "उनका combustion कोई ऊष्मा (heat) नहीं देता",
+        "वे केवल रात में ही उपलब्ध रहते हैं",
+        "उनका उपयोग करने पर वे स्थायी रूप से समाप्त हो जाते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Renewable sources (solar, wind, hydro आदि) प्राकृतिक रूप से लगातार replenish होते रहते हैं, इसलिए वे व्यावहारिक रूप से अक्षय हैं। Option B गलत है क्योंकि biomass आदि combustion से heat देते हैं; Option C गलत है क्योंकि solar दिन में और wind/hydro किसी भी समय उपलब्ध हो सकते हैं; Option D fossil fuels जैसे non-renewable sources का गुण है, जो एक बार उपयोग होने पर समाप्त हो जाते हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q2",
+      "question": "निम्न में से कौन-सा source non-renewable (exhaustible) energy source है?",
+      "options": [
+        "Solar energy",
+        "Wind energy",
+        "Coal (कोयला)",
+        "Tidal energy"
+      ],
+      "correctIndex": 2,
+      "explanation": "Coal एक fossil fuel है जो लाखों वर्षों में बनता है और उपयोग होने पर पुनः जल्दी नहीं बनता, इसलिए यह non-renewable है। Solar, wind और tidal energy प्राकृतिक रूप से लगातार उपलब्ध रहने वाले renewable sources हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q3",
+      "question": "Solar energy को renewable resource मानने का मुख्य कारण क्या है?",
+      "options": [
+        "Sun की energy को battery में हमेशा के लिए store किया जा सकता है",
+        "Sun अरबों वर्षों तक लगातार radiation देता रहेगा, जो व्यावहारिक रूप से अक्षय है",
+        "Solar panel कभी खराब नहीं होते",
+        "Sunlight केवल कुछ ही देशों में मिलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sun अनुमानित रूप से लगभग 5 अरब वर्ष और चमकता रहेगा, इसलिए मानव समय-पैमाने पर उसकी energy अक्षय (inexhaustible) मानी जाती है — यही उसे renewable बनाता है। Option A गलत है क्योंकि battery storage सीमित और losses वाला होता है; Option C गलत है क्योंकि panels की एक finite life (~25 वर्ष) होती है; Option D गलत है क्योंकि sunlight लगभग पूरी पृथ्वी पर मिलता है।"
+    },
+    {
+      "id": "u9_renewable_need_q4",
+      "question": "Fossil fuels के जलने से पर्यावरण पर पड़ने वाला सबसे बड़ा दुष्प्रभाव क्या है?",
+      "options": [
+        "वायुमंडल में oxygen की मात्रा बढ़ जाती है",
+        "कोई प्रदूषण नहीं होता",
+        "CO2 जैसी greenhouse gases के उत्सर्जन से global warming बढ़ता है",
+        "पृथ्वी का तापमान घट जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Fossil fuels के combustion से CO2 और अन्य greenhouse gases निकलती हैं जो global warming व climate change बढ़ाती हैं। Option A उलटा है क्योंकि combustion oxygen खर्च करता है; Option B गलत है क्योंकि प्रदूषण अत्यधिक होता है; Option D भी गलत है क्योंकि greenhouse effect तापमान बढ़ाता है, घटाता नहीं।"
+    },
+    {
+      "id": "u9_renewable_need_q5",
+      "question": "निम्न में से कौन-सा जोड़ा दोनों renewable energy sources का सही उदाहरण है?",
+      "options": [
+        "Natural gas और Solar",
+        "Wind और Hydropower",
+        "Diesel और Coal",
+        "Petrol और Nuclear"
+      ],
+      "correctIndex": 1,
+      "explanation": "Wind और hydropower दोनों प्राकृतिक रूप से पुनः पूर्ति होने वाले renewable sources हैं। Option A में natural gas non-renewable है; Option C में diesel व coal दोनों fossil fuels हैं; Option D में petrol fossil fuel है और nuclear (uranium) भी exhaustible माना जाता है।"
+    },
+    {
+      "id": "u9_renewable_need_q6",
+      "question": "किसी देश द्वारा renewable energy अपनाने का एक प्रमुख आर्थिक (economic) लाभ क्या है?",
+      "options": [
+        "आयातित fossil fuels पर निर्भरता (import dependency) घटती है",
+        "बिजली की मांग स्वतः शून्य हो जाती है",
+        "सभी power plants को बंद करना पड़ता है",
+        "देश को अधिक कोयला आयात करना पड़ता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Renewable sources स्थानीय रूप से उपलब्ध होते हैं, इसलिए महंगे fossil fuels के आयात पर निर्भरता और विदेशी मुद्रा का व्यय घटता है। Option B गलत है क्योंकि मांग बनी रहती है; Option C अनावश्यक है; Option D उलटा है क्योंकि renewable अपनाने से कोयले का आयात घटता है, बढ़ता नहीं।"
+    },
+    {
+      "id": "u9_renewable_need_q7",
+      "question": "Solar energy का उपयोग ग्रिड से दूर स्थित (remote) गाँवों के लिए विशेष रूप से उपयुक्त क्यों माना जाता है?",
+      "options": [
+        "क्योंकि solar panel केवल शहरों में ही काम करते हैं",
+        "क्योंकि वहाँ लंबी transmission lines बिछाना महंगा होता है, जबकि solar को स्थानीय रूप से लगाया जा सकता है",
+        "क्योंकि remote क्षेत्रों में sunlight नहीं मिलता",
+        "क्योंकि solar system को चलाने के लिए grid की आवश्यकता होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Remote क्षेत्रों में grid से transmission line ले जाना महंगा और कठिन होता है; standalone solar system स्थानीय रूप से बिजली देकर यह समस्या हल करता है (decentralized generation)। Option A व C तथ्यात्मक रूप से गलत हैं; Option D गलत है क्योंकि off-grid solar बिना grid के काम करता है।"
+    },
+    {
+      "id": "u9_renewable_need_q8",
+      "question": "\"Energy crisis\" के संदर्भ में renewable energy को बढ़ावा देने की आवश्यकता का मुख्य कारण क्या है?",
+      "options": [
+        "Fossil fuel के भंडार सीमित (limited reserves) हैं और तेज़ी से घट रहे हैं",
+        "Renewable energy fossil fuel से महंगी और अनुपयोगी है",
+        "पृथ्वी पर coal की मात्रा असीमित है",
+        "बिजली की खपत हर साल घट रही है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fossil fuels के भंडार सीमित हैं और बढ़ती मांग के साथ तेज़ी से समाप्त हो रहे हैं, इसलिए दीर्घकालिक ऊर्जा सुरक्षा हेतु renewable sources आवश्यक हैं। Option B गलत है क्योंकि solar की लागत लगातार घट रही है; Option C व D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q9",
+      "question": "Solar energy को अंततः कहाँ से प्राप्त ऊर्जा माना जाता है?",
+      "options": [
+        "पृथ्वी के अंदरूनी core की heat से",
+        "Sun में होने वाली nuclear fusion reactions से",
+        "समुद्र की tidal तरंगों से",
+        "हवा के दबाव के अंतर से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sun में hydrogen के nuclear fusion से भारी मात्रा में ऊर्जा radiation के रूप में निकलती है, जिसे हम solar energy कहते हैं। Option A geothermal energy है; Option C tidal energy है; Option D wind energy का कारण है — ये अलग-अलग sources हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q10",
+      "question": "निम्न में से कौन-सा renewable energy का लाभ नहीं (disadvantage) है?",
+      "options": [
+        "यह प्रदूषण-रहित (clean) होती है",
+        "यह अक्षय (inexhaustible) होती है",
+        "इसका output मौसम और समय पर निर्भर करता है (intermittent)",
+        "यह fuel की आवर्ती लागत घटाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Renewable sources जैसे solar व wind का output मौसम, दिन-रात और मौसमी परिस्थितियों पर निर्भर होने के कारण अस्थिर (intermittent) रहता है — यह एक limitation है। Option A, B और D सभी renewable energy के लाभ हैं, इसलिए वे \"disadvantage\" नहीं हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q11",
+      "question": "Solar energy को harness करने की दो मुख्य तकनीकें कौन-सी हैं?",
+      "options": [
+        "Nuclear fission और fusion",
+        "Photovoltaic (PV) और solar thermal",
+        "Hydel और geothermal",
+        "Combustion और electrolysis"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solar energy को मुख्यतः दो तरीकों से उपयोग किया जाता है — Photovoltaic (सीधे light से electricity) और solar thermal (heat के रूप में, जैसे solar water heater)। Option A nuclear से संबंधित है; Option C अन्य renewable sources हैं; Option D रासायनिक प्रक्रियाएँ हैं, solar conversion नहीं।"
+    },
+    {
+      "id": "u9_renewable_need_q12",
+      "question": "एक solar photovoltaic system चलाने के लिए operation के दौरान किस fuel की आवश्यकता होती है?",
+      "options": [
+        "Diesel की",
+        "Coal की",
+        "किसी fuel की आवश्यकता नहीं — यह सीधे sunlight का उपयोग करता है",
+        "Natural gas की"
+      ],
+      "correctIndex": 2,
+      "explanation": "PV system सीधे sunlight को electricity में बदलता है, इसलिए operation में कोई fuel नहीं जलता और कोई आवर्ती fuel cost नहीं होती। Option A, B, D सभी fossil fuels हैं, जिनकी solar PV को आवश्यकता नहीं होती।"
+    },
+    {
+      "id": "u9_renewable_need_q13",
+      "question": "पर्यावरणीय दृष्टि से solar power plant की तुलना में thermal (coal) power plant की सबसे बड़ी कमी क्या है?",
+      "options": [
+        "Coal plant में कोई moving part नहीं होता",
+        "Coal plant भारी मात्रा में CO2 व राख (ash) उत्पन्न करता है, solar नहीं",
+        "Solar plant coal plant से अधिक प्रदूषण करता है",
+        "Coal plant पूरी तरह noise-free होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Coal plant जलने पर CO2, SOx, NOx और fly ash जैसे प्रदूषक छोड़ता है, जबकि solar PV operation के दौरान कोई emission नहीं करता। Option A गलत है क्योंकि coal plant में turbine जैसे कई moving parts होते हैं; Option C उलटा है; Option D भी गलत है क्योंकि thermal plant में शोर होता है।"
+    },
+    {
+      "id": "u9_renewable_need_q14",
+      "question": "\"Sustainable development\" के लक्ष्य को प्राप्त करने में renewable energy की भूमिका क्या है?",
+      "options": [
+        "यह भावी पीढ़ियों के लिए संसाधन बचाकर स्वच्छ ऊर्जा प्रदान करती है",
+        "यह संसाधनों को जल्दी समाप्त कर देती है",
+        "यह केवल प्रदूषण बढ़ाती है",
+        "इसका sustainable development से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sustainable development का अर्थ है वर्तमान की ज़रूरतें ऐसे पूरी करना कि भावी पीढ़ियों के संसाधन सुरक्षित रहें; renewable energy स्वच्छ व अक्षय होने से इस लक्ष्य को सहारा देती है। Option B व C fossil fuels के गुण हैं; Option D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u9_renewable_need_q15",
+      "question": "भारत में solar energy की क्षमता अधिक होने का मुख्य भौगोलिक कारण क्या है?",
+      "options": [
+        "भारत ध्रुवों (poles) के पास स्थित है",
+        "भारत को साल भर में बड़ी संख्या में clear sunny days और अच्छी solar irradiance मिलती है",
+        "भारत में कभी बादल नहीं होते",
+        "भारत में रात 20 घंटे की होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "भारत उष्णकटिबंधीय (tropical) क्षेत्र में स्थित है और यहाँ वर्ष में लगभग 300 sunny days व उच्च solar irradiance मिलती है, जिससे solar potential अधिक है। Option A गलत है क्योंकि भारत poles के पास नहीं है; Option C व D अवास्तविक अतिशयोक्तियाँ हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q16",
+      "question": "निम्न में से किसे \"clean energy\" या \"green energy\" कहा जाता है?",
+      "options": [
+        "Petrol से चलने वाला generator",
+        "Coal-fired power plant",
+        "Solar और wind से उत्पन्न बिजली",
+        "Diesel pump set"
+      ],
+      "correctIndex": 2,
+      "explanation": "Solar व wind से उत्पन्न बिजली में कोई harmful emission नहीं होता, इसलिए इन्हें clean/green energy कहा जाता है। Option A, B और D सभी fossil fuel आधारित हैं जो प्रदूषण करते हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q17",
+      "question": "Solar water heater किस सिद्धांत पर solar energy का उपयोग करता है?",
+      "options": [
+        "Photovoltaic effect द्वारा बिजली बनाकर",
+        "Solar thermal — sunlight की heat से पानी गरम करके",
+        "Nuclear fission से",
+        "Wind की गति से turbine घुमाकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solar water heater solar thermal तकनीक है जिसमें collector sunlight की heat को अवशोषित करके पानी गरम करता है — इसमें बिजली नहीं बनती। Option A PV cell का सिद्धांत है; Option C nuclear से संबंधित है; Option D wind energy है।"
+    },
+    {
+      "id": "u9_renewable_need_q18",
+      "question": "Non-renewable energy sources की तुलना में renewable sources की एक सामान्य प्रारंभिक (initial) कमी क्या होती है?",
+      "options": [
+        "इनकी initial installation लागत (capital cost) अपेक्षाकृत अधिक होती है",
+        "इनका fuel बहुत महंगा होता है",
+        "ये बहुत अधिक प्रदूषण करते हैं",
+        "इनका जीवनकाल कुछ ही महीनों का होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solar जैसे renewable systems की शुरुआती installation/capital cost अधिक होती है, हालाँकि बाद में fuel cost न के बराबर होती है। Option B गलत है क्योंकि sunlight मुफ्त है; Option C उलटा है क्योंकि ये स्वच्छ हैं; Option D गलत है क्योंकि solar panels ~25 वर्ष चलते हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q19",
+      "question": "यदि किसी क्षेत्र में डीज़ल जनरेटर की जगह solar PV लगाया जाए, तो दीर्घकाल में सबसे बड़ा लाभ क्या होगा?",
+      "options": [
+        "अधिक शोर और धुआँ",
+        "आवर्ती fuel cost और emission में भारी कमी",
+        "बिजली उत्पादन पूरी तरह बंद हो जाएगा",
+        "बार-बार fuel भरने की आवश्यकता बढ़ जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solar PV को sunlight मुफ्त मिलता है और operation में कोई fuel/emission नहीं होता, इसलिए diesel की तुलना में आवर्ती लागत और प्रदूषण दोनों घटते हैं। Option A व C उलटे हैं; Option D गलत है क्योंकि solar में fuel भरने की ज़रूरत ही नहीं होती।"
+    },
+    {
+      "id": "u9_renewable_need_q20",
+      "question": "निम्न में से कौन-सा कथन solar energy के बारे में सही है?",
+      "options": [
+        "Solar energy केवल रात में उपलब्ध होती है",
+        "Solar energy पृथ्वी पर आने वाली एक प्रमुख renewable resource है जो लगभग हर जगह उपलब्ध है",
+        "Solar energy को उपयोग करने पर वह समाप्त हो जाती है",
+        "Solar energy से केवल coal बनाया जा सकता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solar energy व्यापक रूप से उपलब्ध, अक्षय और renewable है, जो पृथ्वी पर लगभग हर स्थान पर पहुँचती है। Option A गलत है क्योंकि यह दिन में मिलती है; Option C गलत है क्योंकि यह renewable है; Option D निरर्थक कथन है।"
+    },
+    {
+      "id": "u9_renewable_need_q21",
+      "question": "Renewable energy अपनाने से किसी राष्ट्र की \"energy security\" कैसे बढ़ती है?",
+      "options": [
+        "विदेशी fuel के आयात पर निर्भरता घटाकर स्थानीय संसाधनों से ऊर्जा उपलब्ध कराकर",
+        "पूरी बिजली एक ही विदेशी कंपनी से खरीदकर",
+        "सभी power plants को बंद करके",
+        "केवल आयातित कोयले पर निर्भर रहकर"
+      ],
+      "correctIndex": 0,
+      "explanation": "स्थानीय रूप से उपलब्ध solar, wind आदि का उपयोग करने से आयातित fuel की आपूर्ति व कीमत के जोखिम कम होते हैं, जिससे energy security बढ़ती है। Option B, C, D निर्भरता बढ़ाते या ऊर्जा उपलब्धता घटाते हैं, इसलिए security नहीं देते।"
+    },
+    {
+      "id": "u9_renewable_need_q22",
+      "question": "\"Decentralized power generation\" में solar rooftop system किस प्रकार सहायक होता है?",
+      "options": [
+        "यह बिजली को एक ही बड़े केंद्रीय plant में उत्पन्न करता है",
+        "यह उपभोक्ता के स्थान पर ही बिजली उत्पन्न करता है, जिससे transmission losses घटते हैं",
+        "यह बिजली को केवल दूसरे देश भेजता है",
+        "यह grid को पूरी तरह अनुपयोगी बना देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rooftop solar उपभोग के स्थान पर ही बिजली बनाता है (distributed generation), जिससे लंबी transmission में होने वाले losses घटते हैं। Option A centralized generation का विवरण है; Option C व D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q23",
+      "question": "निम्न में से कौन-सा source biomass energy का उदाहरण है (जो एक renewable source है)?",
+      "options": [
+        "कच्चा petroleum",
+        "कृषि अवशेष (agricultural residue) और gobar gas",
+        "Uranium",
+        "Natural gas"
+      ],
+      "correctIndex": 1,
+      "explanation": "कृषि अवशेष व gobar (biogas) जैविक पदार्थों से प्राप्त biomass energy हैं, जो लगातार पुनः उत्पन्न होने के कारण renewable मानी जाती है। Option A व D fossil fuels हैं; Option C nuclear fuel है और non-renewable है।"
+    },
+    {
+      "id": "u9_renewable_need_q24",
+      "question": "Global warming को घटाने में solar energy का योगदान मुख्यतः किस कारण है?",
+      "options": [
+        "यह बिजली बनाते समय greenhouse gases उत्सर्जित नहीं करती",
+        "यह वायुमंडल में अधिक CO2 छोड़ती है",
+        "यह ozone परत को नष्ट करती है",
+        "यह coal से अधिक धुआँ देती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solar PV operation के दौरान कोई CO2 या अन्य greenhouse gas नहीं छोड़ती, इसलिए fossil fuels की जगह उपयोग करने पर उत्सर्जन घटता है और global warming पर अंकुश लगता है। Option B, C, D solar के विपरीत, प्रदूषणकारी विशेषताएँ हैं जो solar में नहीं पाई जातीं।"
+    },
+    {
+      "id": "u9_renewable_need_q25",
+      "question": "किसी घर में solar system के साथ battery storage लगाने की मुख्य आवश्यकता क्यों होती है?",
+      "options": [
+        "ताकि panel दिन में गरम न हों",
+        "ताकि दिन में उत्पन्न energy को store करके रात या बादलों के समय उपयोग किया जा सके",
+        "ताकि sunlight और तेज़ मिले",
+        "ताकि panel का voltage शून्य हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solar output केवल sunlight होने पर मिलता है, इसलिए battery दिन की अतिरिक्त energy store करती है ताकि रात/बादल के समय आपूर्ति बनी रहे — यह intermittency की समस्या हल करती है। Option A, C, D battery के कार्य से असंबंधित व अवैज्ञानिक हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q26",
+      "question": "निम्न में से कौन-सा कथन non-renewable energy sources के बारे में सत्य है?",
+      "options": [
+        "ये कभी समाप्त नहीं होते",
+        "इनका भंडार सीमित है और उपयोग से घटता जाता है",
+        "इनके उपयोग से कोई प्रदूषण नहीं होता",
+        "ये sunlight से लगातार बनते रहते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Non-renewable sources (coal, oil, gas, uranium) की मात्रा पृथ्वी पर सीमित है और उपयोग के साथ लगातार घटती है। Option A व D renewable का गुण दर्शाते हैं; Option C गलत है क्योंकि इनके combustion से प्रदूषण होता है।"
+    },
+    {
+      "id": "u9_renewable_need_q27",
+      "question": "Solar energy को \"free source of energy\" क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि solar panel मुफ्त मिलते हैं",
+        "क्योंकि sunlight प्रकृति से मुफ्त उपलब्ध होता है, उसके लिए कोई fuel bill नहीं देना पड़ता",
+        "क्योंकि सरकार बिजली का बिल माफ कर देती है",
+        "क्योंकि solar system को कोई maintenance नहीं चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sunlight प्रकृति से मुफ्त मिलता है, इसलिए solar में fuel की कोई आवर्ती लागत नहीं होती — यही कारण है कि इसे free source कहा जाता है। Option A गलत है क्योंकि panels खरीदने पड़ते हैं; Option C व D तथ्यात्मक रूप से गलत हैं (सिस्टम को initial cost व कुछ maintenance चाहिए)।"
+    },
+    {
+      "id": "u9_renewable_need_q28",
+      "question": "पवन (wind) और सौर (solar) दोनों को \"intermittent sources\" कहा जाता है, इसका अर्थ क्या है?",
+      "options": [
+        "ये स्थायी रूप से समाप्त हो जाते हैं",
+        "इनका output समय व मौसम के अनुसार बदलता रहता है, हमेशा स्थिर नहीं रहता",
+        "ये कभी बिजली नहीं देते",
+        "ये केवल fossil fuel के साथ ही काम करते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Intermittent का अर्थ है कि output रुक-रुककर व परिवर्तनशील होता है — solar रात में शून्य और wind हवा न चलने पर कम हो जाता है। Option A non-renewable का गुण है; Option C व D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u9_renewable_need_q29",
+      "question": "ऊर्जा संकट (energy crisis) से बचने के लिए दीर्घकालीन (long-term) सर्वोत्तम रणनीति क्या मानी जाती है?",
+      "options": [
+        "केवल कोयले पर और अधिक निर्भर रहना",
+        "Renewable sources की हिस्सेदारी बढ़ाना और energy conservation करना",
+        "बिजली का उपयोग पूरी तरह बंद कर देना",
+        "सारी बिजली आयात करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "अक्षय, स्वच्छ renewable sources का हिस्सा बढ़ाना और ऊर्जा की बचत (conservation) करना दीर्घकाल में टिकाऊ समाधान है। Option A सीमित संसाधन को और तेज़ी से घटाएगा; Option C व्यावहारिक नहीं; Option D निर्भरता बढ़ाकर energy security घटाता है।"
+    },
+    {
+      "id": "u9_renewable_need_q30",
+      "question": "निम्न में से कौन-सा सही क्रम बढ़ती हुई पर्यावरणीय स्वच्छता (cleanliness) के अनुसार है? (सबसे प्रदूषणकारी → सबसे स्वच्छ)",
+      "options": [
+        "Solar → Coal → Diesel",
+        "Coal → Diesel → Solar",
+        "Solar → Diesel → Coal",
+        "Diesel → Solar → Coal"
+      ],
+      "correctIndex": 1,
+      "explanation": "Coal सबसे अधिक प्रदूषणकारी, diesel उससे कम, और solar लगभग emission-free यानी सबसे स्वच्छ है — इसलिए Coal → Diesel → Solar सही क्रम है। बाकी विकल्पों में solar को बीच या शुरू में रखा गया है जो गलत है क्योंकि solar सबसे स्वच्छ है।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit13",
+  "unitName": "PLC",
+  "topic": "plc_selection",
+  "topicName": "PLC Selection - I/O Count, Memory, Clock Speed, Power Supply",
+  "questions": [
+    {
+      "id": "u13_plc_selection_q1",
+      "question": "किसी नए automation project के लिए PLC select करते समय सबसे पहले किस factor का आकलन करना जरूरी होता है ताकि आगे expansion के लिए जगह बची रहे?",
+      "options": [
+        "PLC की body का रंग और आकार",
+        "Total I/O count की present जरूरत के साथ future expansion के लिए 20-25% extra spare capacity",
+        "PLC manufacturer की advertisement",
+        "केवल programming software की कीमत"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC selection में I/O count का सही आकलन बहुत जरूरी है, इसलिए present जरूरत के साथ भविष्य के expansion हेतु 20-25% spare I/O capacity रखी जाती है। Option A और C selection से असंबंधित हैं, और option D सिर्फ software cost देखना अधूरा criteria है, hardware capacity को नजरअंदाज करता है।"
+    },
+    {
+      "id": "u13_plc_selection_q2",
+      "question": "PLC के 'Digital Input' और 'Digital Output' points की counting करते समय किस चीज़ को अलग-अलग गिना जाता है?",
+      "options": [
+        "केवल total wires की length",
+        "सभी field devices जैसे push buttons, limit switches, sensors (inputs) और solenoids, lamps, motors (outputs) को अलग categorize करके गिना जाता है",
+        "PLC का supply voltage",
+        "केवल programming language का प्रकार"
+      ],
+      "correctIndex": 1,
+      "explanation": "Digital I/O count में सभी field devices को input (sensing devices) और output (actuating devices) में categorize करके गिना जाता है ताकि सही module select हो सके। Option A, C, D I/O counting से कोई संबंध नहीं रखते।"
+    },
+    {
+      "id": "u13_plc_selection_q3",
+      "question": "यदि किसी application में analog sensors जैसे temperature transmitter (4-20mA) या pressure transducer इस्तेमाल हो रहे हैं, तो PLC selection में किस module की आवश्यकता अनिवार्य होगी?",
+      "options": [
+        "केवल Digital Input module",
+        "Analog Input module जो current/voltage signal को convert करके CPU तक भेज सके",
+        "केवल Relay Output module",
+        "Communication module केवल"
+      ],
+      "correctIndex": 1,
+      "explanation": "4-20mA या voltage signal देने वाले sensors के लिए Analog Input module चाहिए जो continuous signal को digital value में convert करता है। Digital I/O module केवल ON/OFF signals handle करता है, इसलिए A गलत है; C और D analog signal processing नहीं करते।"
+    },
+    {
+      "id": "u13_plc_selection_q4",
+      "question": "PLC की 'Program Memory' capacity (जैसे KB में) selection के समय किस बात पर निर्भर करती है?",
+      "options": [
+        "PLC के केस का material",
+        "Ladder logic program की complexity, number of rungs, instructions और future modifications की गुंजाइश पर",
+        "PLC को चलाने वाले operator की height",
+        "PLC panel में लगे fan का size"
+      ],
+      "correctIndex": 1,
+      "explanation": "Program memory की जरूरत program की complexity, rungs की संख्या और future modification की संभावना पर निर्भर करती है, इसलिए बड़े और complex logic के लिए अधिक memory वाला PLC चुना जाता है। बाकी options (A, C, D) memory sizing से असंबंधित हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q5",
+      "question": "PLC के 'Data Memory' (data table/registers) और 'Program Memory' में क्या मुख्य अंतर है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे होते हैं, कोई अंतर नहीं",
+        "Program Memory ladder logic instructions store करता है जबकि Data Memory process variables, timer/counter values और I/O status store करता है",
+        "Program Memory केवल power supply store करता है",
+        "Data Memory केवल PLC का weight बताता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Program Memory में user का ladder logic program store होता है, जबकि Data Memory में runtime values जैसे timer/counter accumulators, I/O status आदि रखे जाते हैं। Options A, C, D इस concept को गलत तरीके से दर्शाते हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q6",
+      "question": "PLC selection में 'Scan Time' और 'Clock Speed' (processor speed) का high-speed applications जैसे packaging machine में क्या महत्व है?",
+      "options": [
+        "इनका कोई महत्व नहीं होता",
+        "High clock speed low scan time देता है जिससे fast-moving process variables को तेजी से read-process-write किया जा सके, जो high-speed machines के लिए जरूरी है",
+        "Clock speed केवल display brightness तय करता है",
+        "Clock speed केवल PLC की price कम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "High clock speed से scan time कम होता है, जिससे fast process variables को accurately handle किया जा सकता है, यह high-speed applications के लिए जरूरी criteria है। Options A, C, D भ्रामक और गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q7",
+      "question": "एक industrial panel में PLC के लिए power supply select करते समय किस specification पर ध्यान देना जरूरी है?",
+      "options": [
+        "PLC का logo design",
+        "Input voltage range (जैसे 100-240V AC या 24V DC), current rating और power consumption of all modules",
+        "PLC keyboard का रंग",
+        "केवल cable की लंबाई"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power supply selection में input voltage range, current rating और सभी modules की total power consumption का ध्यान रखना जरूरी है ताकि supply overload न हो। बाकी options technical criteria नहीं हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q8",
+      "question": "यदि PLC का power supply module 2A रेटेड है और सभी I/O modules मिलकर 2.5A current draw कर रहे हैं, तो क्या समस्या होगी?",
+      "options": [
+        "कोई समस्या नहीं होगी, PLC सामान्य रूप से चलेगा",
+        "Power supply overload होकर voltage drop, malfunction या shutdown कर सकती है, इसलिए अधिक rated power supply select करनी चाहिए",
+        "PLC की speed अपने आप बढ़ जाएगी",
+        "PLC का program memory अपने आप बढ़ जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब load current, rated capacity से अधिक हो जाता है तो power supply overload होकर malfunction या shutdown कर सकती है, इसलिए हमेशा calculated load से अधिक rating की power supply चुनी जाती है। अन्य options गलत हैं क्योंकि overload से PLC सामान्य नहीं चलता।"
+    },
+    {
+      "id": "u13_plc_selection_q9",
+      "question": "PLC selection में 'Fixed (Compact) PLC' की तुलना में 'Modular PLC' किस स्थिति में बेहतर विकल्प होता है?",
+      "options": [
+        "जब I/O count fixed रहेगा और कभी बदलाव नहीं होगा",
+        "जब application बड़ी हो, I/O count बढ़ सकता है और अलग-अलग modules (analog, communication) जोड़ने की जरूरत हो सकती है",
+        "जब बजट न के बराबर हो और सिर्फ 5 I/O चाहिए",
+        "जब PLC को केवल एक बार उपयोग करके फेंकना हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modular PLC बड़े और बढ़ते हुए applications के लिए बेहतर है क्योंकि इसमें जरूरत अनुसार I/O modules, communication modules आदि add किए जा सकते हैं। Fixed PLC छोटे, non-expandable applications के लिए उपयुक्त है (option C में सही जवाब), इसलिए A, C, D इस context में गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q10",
+      "question": "PLC selection करते समय environmental conditions (जैसे temperature, humidity, dust) का ध्यान क्यों रखा जाता है?",
+      "options": [
+        "क्योंकि PLC की IP rating और operating temperature range harsh environment में reliable operation सुनिश्चित करती है",
+        "क्योंकि environment का PLC की programming language से सीधा संबंध है",
+        "क्योंकि इससे PLC का color बदल जाता है",
+        "इसका selection से कोई लेना-देना नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Environmental conditions के अनुसार सही IP rating और operating temperature range वाला PLC चुनना जरूरी है ताकि harsh conditions में भी reliable operation हो सके। Options B, C, D तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q11",
+      "question": "एक application में 40 digital inputs और 24 digital outputs चाहिए। यदि उपलब्ध PLC module में 32 inputs और 16 outputs प्रति module हैं, तो कितने ऐसे combined I/O modules की आवश्यकता होगी (न्यूनतम) ताकि दोनों requirement पूरी हो?",
+      "options": [
+        "1 module पर्याप्त है",
+        "2 modules की आवश्यकता होगी क्योंकि inputs (40) और outputs (24) दोनों single module की capacity से अधिक हैं",
+        "5 modules चाहिए",
+        "कोई module नहीं चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "एक module में 32 input और 16 output मिलते हैं; 40 input के लिए 2 module चाहिए (32+8) और 24 output के लिए भी 2 module (16+8), इसलिए overall 2 modules (यदि combined type हो और दूसरे में स्पेयर capacity उपयोग हो) पर्याप्त होंगे। Options A, C, D गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u13_plc_selection_q12",
+      "question": "PLC selection में 'Number of Communication Ports' (जैसे Ethernet, RS-232, RS-485) का महत्व क्या है?",
+      "options": [
+        "यह केवल PLC की outer body design तय करता है",
+        "यह decide करता है कि PLC अन्य devices जैसे HMI, SCADA, VFD, या दूसरे PLC से data communication कैसे करेगा",
+        "इसका PLC की memory से कोई संबंध नहीं",
+        "यह केवल PLC को गर्म होने से बचाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Communication ports की संख्या और प्रकार यह तय करते हैं कि PLC कितने external devices (HMI, SCADA, drives, अन्य PLC) से जुड़कर data exchange कर सकता है, यह networking जरूरतों के लिए critical selection criteria है। बाकी options असंबंधित हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q13",
+      "question": "यदि किसी plant में high-speed counting (जैसे encoder pulses गिनना) की जरूरत है, तो PLC selection में किस विशेष feature की तलाश करनी चाहिए?",
+      "options": [
+        "High Speed Counter (HSC) module या built-in high-speed counting input",
+        "केवल relay output module",
+        "केवल बड़ा display panel",
+        "केवल extra fan cooling"
+      ],
+      "correctIndex": 0,
+      "explanation": "Encoder जैसे high-frequency pulses गिनने के लिए normal digital input scan time पर्याप्त नहीं होता, इसलिए High Speed Counter (HSC) module या built-in HSC feature वाला PLC चुना जाता है। बाकी options इस आवश्यकता को पूरा नहीं करते।"
+    },
+    {
+      "id": "u13_plc_selection_q14",
+      "question": "PLC की 'Backup Battery' feature क्यों जरूरी मानी जाती है?",
+      "options": [
+        "यह PLC की speed को दोगुना कर देती है",
+        "Power failure की स्थिति में RAM में stored program और data (जैसे retentive values) को backup battery द्वारा सुरक्षित रखा जाता है",
+        "यह केवल display की brightness बढ़ाती है",
+        "इसका data retention से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Backup battery power failure के दौरान volatile RAM में stored program और retentive data को बनाए रखती है, ताकि power वापस आने पर data loss न हो। बाकी options गलत और भ्रामक हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q15",
+      "question": "PLC selection करते समय 'Scalability' (भविष्य में expansion की क्षमता) को ध्यान में रखना क्यों जरूरी है?",
+      "options": [
+        "क्योंकि production requirement बढ़ने पर बिना पूरा PLC बदले सिर्फ extra I/O modules जोड़े जा सकें, जिससे cost और downtime बचे",
+        "क्योंकि इससे PLC की color scheme बदल जाती है",
+        "क्योंकि इसका ladder logic syntax से कोई फर्क नहीं पड़ता",
+        "क्योंकि scalability सिर्फ मार्केटिंग शब्द है, इसका practical महत्व नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Scalability इसलिए महत्वपूर्ण है ताकि future में बढ़ती production requirements को बिना पूरा system बदले, केवल additional modules जोड़कर पूरा किया जा सके, जिससे cost व downtime दोनों बचते हैं। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q16",
+      "question": "दो PLC models में से एक में 8 KB program memory है और दूसरे में 32 KB। एक complex process जिसमें बहुत सारे nested logic, timers और subroutines हैं, उसके लिए कौन सा उपयुक्त रहेगा?",
+      "options": [
+        "8 KB वाला PLC क्योंकि वह सस्ता होगा",
+        "32 KB वाला PLC क्योंकि complex logic को store करने और future modification के लिए अधिक memory चाहिए",
+        "दोनों बराबर उपयुक्त हैं",
+        "इसका memory से कोई संबंध नहीं, केवल I/O count देखना चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Complex process में अधिक rungs, timers, counters, subroutines होने से program size बढ़ जाता है, इसलिए 32 KB जैसी higher memory वाला PLC उपयुक्त रहेगा ताकि program properly fit हो सके और future edits की गुंजाइश रहे। बाकी options गलत तर्क देते हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q17",
+      "question": "PLC selection में 'Response Time' (input change से output action तक का समय) किस प्रकार की application में सबसे critical factor होता है?",
+      "options": [
+        "Slow, batch-type processes जैसे water tank filling",
+        "High-speed motion control या safety-critical applications जैसे press machine का emergency stop",
+        "इसका किसी भी application में कोई महत्व नहीं",
+        "केवल decorative lighting control में"
+      ],
+      "correctIndex": 1,
+      "explanation": "High-speed motion control और safety-critical applications (जैसे emergency stop) में तेज response time अत्यंत जरूरी है ताकि accident या damage रोका जा सके। धीमी batch processes (option A) में response time उतना critical नहीं होता, इसलिए A, C, D गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q18",
+      "question": "एक PLC panel में 24V DC supply से चलने वाले sensors और 230V AC से चलने वाले contactors दोनों जुड़े हैं। PLC selection में इसे किस तरह handle किया जाना चाहिए?",
+      "options": [
+        "PLC I/O modules को उनकी rated voltage (24V DC input module, relay/AC output module) के अनुसार select करना चाहिए ताकि compatibility बनी रहे",
+        "सभी devices को एक ही module में बिना rating देखे जोड़ देना चाहिए",
+        "Voltage rating का PLC selection से कोई मतलब नहीं",
+        "केवल AC modules ही काफी हैं, DC की जरूरत नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "अलग-अलग voltage levels वाले devices के लिए उनके अनुरूप rated I/O modules select करना जरूरी है, अन्यथा equipment damage हो सकता है। Options B, C, D गलत और असुरक्षित practices दर्शाते हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q19",
+      "question": "PLC selection प्रक्रिया में 'Total Cost of Ownership' (TCO) में क्या-क्या शामिल किया जाता है?",
+      "options": [
+        "केवल PLC hardware की खरीद कीमत",
+        "Hardware cost, software licensing, training, maintenance, spare parts और future expansion cost सभी मिलाकर",
+        "केवल transportation charges",
+        "केवल बिजली का बिल"
+      ],
+      "correctIndex": 1,
+      "explanation": "TCO में केवल खरीद मूल्य ही नहीं, बल्कि software, training, maintenance, spares और future expansion जैसे सभी दीर्घकालिक खर्च शामिल होते हैं। Options A, C, D अधूरे और सीमित दृष्टिकोण दर्शाते हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q20",
+      "question": "यदि किसी application में 6 अलग-अलग analog sensors से data लेना है और भविष्य में 4 और जोड़े जा सकते हैं, तो selection के समय कम-से-कम कितने analog input channels वाला module चुनना उचित रहेगा?",
+      "options": [
+        "6 channel module ताकि अभी की जरूरत exactly पूरी हो",
+        "8 या अधिक channel वाला module ताकि भविष्य में 4 और sensors जोड़ने की गुंजाइश रहे",
+        "2 channel module पर्याप्त है",
+        "Analog channels की जरूरत ही नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Future expansion (4 अतिरिक्त sensors) को ध्यान में रखते हुए 8 या अधिक channel वाला module चुनना उचित है ताकि दोबारा hardware न बदलना पड़े। Option A केवल current जरूरत को देखता है, expansion को नहीं, इसलिए यह कम उपयुक्त है।"
+    },
+    {
+      "id": "u13_plc_selection_q21",
+      "question": "PLC selection में CPU के 'Word Size' (जैसे 16-bit या 32-bit processing) का क्या प्रभाव पड़ता है?",
+      "options": [
+        "Word size PLC का सिर्फ बाहरी रंग तय करता है",
+        "अधिक word size से processor बड़े numerical values और complex math operations को अधिक accuracy व speed से handle कर सकता है",
+        "Word size का data processing से कोई संबंध नहीं",
+        "Word size केवल cooling fan की speed तय करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़ा word size (जैसे 32-bit) processor को बड़े numbers और complex mathematical operations को अधिक तेजी व accuracy से process करने देता है, जो analog-heavy या calculation-intensive applications में जरूरी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q22",
+      "question": "एक बेकरी की automatic mixing machine में केवल 10 digital inputs और 6 digital outputs चाहिए, और भविष्य में expansion की कोई योजना नहीं है। इस केस के लिए सबसे economical selection क्या होगी?",
+      "options": [
+        "बड़ा modular rack-based PLC with 128 I/O capacity",
+        "Fixed/Compact PLC जिसमें आवश्यक 16 I/O (कुछ spare सहित) उपलब्ध हों, क्योंकि यह सस्ता और सरल है",
+        "Distributed Control System (DCS) पूरे प्लांट के लिए",
+        "कोई PLC नहीं, केवल manual relays"
+      ],
+      "correctIndex": 1,
+      "explanation": "छोटी, fixed जरूरत वाली application के लिए Fixed/Compact PLC economical और उपयुक्त है, जबकि बड़े modular PLC या DCS जैसी options (A, C) overkill और महंगी होंगी। Option D automation का उद्देश्य ही खत्म कर देता है।"
+    },
+    {
+      "id": "u13_plc_selection_q23",
+      "question": "PLC selection में 'Diagnostic LEDs' और 'Self-diagnostic features' का क्या फायदा होता है?",
+      "options": [
+        "इनका कोई तकनीकी फायदा नहीं, केवल दिखावे के लिए होते हैं",
+        "ये fault, I/O status और communication errors को जल्दी पहचानने में मदद करते हैं जिससे troubleshooting और maintenance समय कम होता है",
+        "ये केवल PLC का weight बढ़ाते हैं",
+        "ये केवल power consumption बढ़ाते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Diagnostic LEDs और self-diagnostic features faults तथा status को जल्दी identify करने में मदद करते हैं, जिससे downtime और troubleshooting time कम हो जाता है। बाकी options गलत और अप्रासंगिक हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q24",
+      "question": "PLC selection के दौरान 'Operating Temperature Range' (जैसे 0°C to 55°C) को check करना क्यों जरूरी है, खासकर foundry या boiler room जैसी जगहों के लिए?",
+      "options": [
+        "क्योंकि इन जगहों पर ambient temperature ज्यादा होती है और PLC को उस range में reliably काम करना चाहिए, वरना malfunction या permanent damage हो सकता है",
+        "क्योंकि temperature का PLC operation से कोई लेना-देना नहीं",
+        "क्योंकि इससे केवल PLC का color बदलता है",
+        "क्योंकि यह सिर्फ aesthetic factor है"
+      ],
+      "correctIndex": 0,
+      "explanation": "High ambient temperature वाले environments (foundry, boiler room) में PLC को उस temperature range में reliably operate करने के लिए rated होना चाहिए, अन्यथा components को नुकसान हो सकता है। बाकी options गलत तर्क देते हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q25",
+      "question": "PLC selection में 'Number of Programmable Timers/Counters' उपलब्ध होने की जांच क्यों जरूरी है?",
+      "options": [
+        "क्योंकि कुछ PLC models में limited number of timer/counter instances होते हैं और complex sequencing के लिए पर्याप्त संख्या चाहिए",
+        "क्योंकि timers और counters का selection से कोई संबंध नहीं",
+        "क्योंकि यह केवल display पर numbers दिखाने के लिए है",
+        "क्योंकि इसका power supply से सीधा संबंध है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Small PLC models में timer/counter instances सीमित होते हैं, जबकि complex sequencing applications में अधिक timers/counters चाहिए होते हैं, इसलिए यह जांचना आवश्यक selection criteria है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q26",
+      "question": "एक application में UPS backup नहीं है और बार-बार power fluctuation होती रहती है। PLC selection में इसके लिए कौन सा feature महत्वपूर्ण होगा?",
+      "options": [
+        "Wide input voltage tolerance range वाली power supply और brown-out protection feature",
+        "केवल बड़ा display screen",
+        "केवल extra communication ports",
+        "इसका power fluctuation से कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Power fluctuation वाली जगहों पर wide voltage tolerance और brown-out protection वाली power supply चुनना जरूरी है ताकि voltage dips में भी PLC सुरक्षित रूप से काम करे या ठीक से shutdown हो। बाकी options असंबंधित हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q27",
+      "question": "PLC selection में 'Software Compatibility' (programming software licensing और version support) पर विचार करना क्यों जरूरी है?",
+      "options": [
+        "क्योंकि गलत software चुनने पर existing programs को edit/upload/download करने में समस्या हो सकती है और training cost भी बढ़ सकती है",
+        "क्योंकि software का PLC hardware से कोई संबंध नहीं",
+        "क्योंकि software केवल decoration के लिए होता है",
+        "क्योंकि इसका maintenance cost से कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही programming software का चुनाव इसलिए जरूरी है ताकि existing और future programs आसानी से develop, edit और maintain किए जा सकें, वरना compatibility issues व अतिरिक्त training cost लग सकती है। बाकी options तर्कसंगत नहीं हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q28",
+      "question": "PLC selection करते समय 'Redundancy' feature (जैसे redundant CPU या power supply) किन applications में जरूरी माना जाता है?",
+      "options": [
+        "छोटी decorative lighting control में",
+        "Critical continuous-process plants जैसे power plant या chemical process जहाँ downtime से भारी नुकसान होता है",
+        "इसका किसी भी जगह कोई महत्व नहीं",
+        "केवल testing lab के demo projects में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Redundancy critical, continuous-process plants (power plant, chemical process) में जरूरी है जहाँ थोड़ी सी भी downtime बड़ा नुकसान कर सकती है। छोटी या demo applications (A, D) में यह अनावश्यक खर्च है, और C पूरी तरह गलत तर्क है।"
+    },
+    {
+      "id": "u13_plc_selection_q29",
+      "question": "यदि किसी PLC में 512 words की data memory उपलब्ध है और application को process values, timer/counter accumulators व flags के लिए लगभग 600 words चाहिए, तो क्या समस्या होगी?",
+      "options": [
+        "कोई समस्या नहीं होगी क्योंकि PLC automatically extra memory बना लेता है",
+        "Memory insufficient होने के कारण program compile/download में error आएगा, इसलिए अधिक data memory वाला PLC चुनना जरूरी है",
+        "PLC की clock speed अपने आप बढ़ जाएगी",
+        "PLC केवल आधा data ही process करेगा बिना किसी error के"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि data memory requirement (600 words), उपलब्ध capacity (512 words) से अधिक हो, तो program download/compile के समय memory overflow error आता है, इसलिए requirement के अनुसार पर्याप्त data memory वाला PLC select करना जरूरी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q30",
+      "question": "PLC selection के अंतिम चरण में 'Vendor Support और Spare Parts Availability' को क्यों महत्वपूर्ण criteria माना जाता है?",
+      "options": [
+        "क्योंकि इसका PLC की technical performance से कोई संबंध नहीं",
+        "क्योंकि breakdown होने पर तुरंत local support और spare parts मिलने से downtime कम होता है और production loss घटता है",
+        "क्योंकि यह केवल marketing के लिए महत्वपूर्ण है",
+        "क्योंकि इससे PLC की memory capacity बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अच्छा vendor support और आसानी से उपलब्ध spare parts breakdown की स्थिति में downtime को काफी कम कर देते हैं, जो production continuity के लिए जरूरी है। बाकी options तकनीकी रूप से गलत हैं।"
+    }
+  ]
+}

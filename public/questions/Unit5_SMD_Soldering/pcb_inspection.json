@@ -1,0 +1,368 @@
+{
+  "unit": "unit5",
+  "unitName": "SMD Soldering and De-soldering",
+  "topic": "pcb_inspection",
+  "topicName": "PCB Inspection - Cold/Continuity Check, Dry/Loose Solder, Broken Tracks",
+  "questions": [
+    {
+      "id": "u5_pcb_inspection_q1",
+      "question": "PCB inspection में 'continuity check' का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "यह verify करना कि दो points के बीच electrical path बिना break के मौजूद है",
+        "PCB का weight मापना",
+        "PCB का रंग check करना",
+        "PCB की कीमत निर्धारित करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Continuity check multimeter से यह verify करता है कि circuit के दो निर्धारित points के बीच अबाधित (uninterrupted) electrical path मौजूद है या नहीं, जो track break या open joint पहचानने में मदद करता है। Options B, C, D continuity check के उद्देश्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q2",
+      "question": "Continuity test करते समय multimeter की beep sound न आना क्या दर्शाता है?",
+      "options": [
+        "Circuit continuous है और कोई break नहीं है",
+        "उन दो points के बीच open circuit/break है, यानी continuity नहीं है",
+        "Battery कमजोर है इसलिए हमेशा beep नहीं आती",
+        "PCB का color गलत है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब multimeter beep नहीं करता तो इसका मतलब है कि probe किए गए दोनों points के बीच resistance बहुत अधिक (open circuit) है, यानी वहाँ break/discontinuity मौजूद है। Option A गलत है क्योंकि beep न आना discontinuity दर्शाता है, Options C, D इस situation का सही कारण नहीं हैं (हालांकि weak battery अलग समस्या हो सकती है, यह मुख्य indication नहीं)।"
+    },
+    {
+      "id": "u5_pcb_inspection_q3",
+      "question": "'Cold solder joint' किसे कहते हैं?",
+      "options": [
+        "एक ऐसा joint जो insufficient heat के कारण properly reflow नहीं हुआ, इसलिए dull, grainy दिखता है और weak/unreliable connection देता है",
+        "एक joint जो बहुत ज्यादा heat से perfectly shiny बना हो",
+        "एक joint जिसमें कोई solder नहीं लगा हो",
+        "एक joint जो केवल decoration के लिए बनाया गया हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cold solder joint तब बनता है जब soldering के दौरान पर्याप्त heat/time नहीं मिला, जिससे solder ठीक से metallurgically bond नहीं कर पाता, और joint dull/grainy दिखकर mechanically व electrically कमजोर होता है। Option B एक अच्छे joint का वर्णन करता है, C और D cold joint की सही परिभाषा नहीं देते।"
+    },
+    {
+      "id": "u5_pcb_inspection_q4",
+      "question": "एक अच्छे (good) solder joint की visual पहचान क्या होती है?",
+      "options": [
+        "Shiny, smooth surface और proper concave fillet shape",
+        "Dull, grainy और rough surface",
+        "बहुत मोटी गोल गेंद जैसी आकृति (excessive solder ball)",
+        "Cracked और uneven surface"
+      ],
+      "correctIndex": 0,
+      "explanation": "अच्छे solder joint में shiny, smooth surface होती है और concave fillet shape दिखती है जो proper wetting दर्शाती है। Options B, D cold/dry joint की पहचान हैं, और C excessive solder defect की पहचान है।"
+    },
+    {
+      "id": "u5_pcb_inspection_q5",
+      "question": "'Dry solder joint' और 'cold solder joint' में क्या संबंध है?",
+      "options": [
+        "दोनों शब्द अक्सर एक ही defect (insufficient bonding, weak/dull joint) को refer करने के लिए इस्तेमाल होते हैं",
+        "Dry joint केवल high temperature से बनता है, cold joint से इसका कोई संबंध नहीं",
+        "Dry joint सिर्फ मौसम की नमी से संबंधित है",
+        "दोनों पूरी तरह अलग-अलग unrelated defects हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Industry parlance में 'dry solder joint' और 'cold solder joint' प्रायः समान अर्थ में इस्तेमाल होते हैं — दोनों insufficient heat/improper bonding के कारण बनी weak, dull joint को दर्शाते हैं। Options B, C, D गलत/भ्रामक हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q6",
+      "question": "Dry/cold solder joint circuit में किस प्रकार की fault पैदा कर सकता है?",
+      "options": [
+        "Intermittent connection जो कभी काम करे कभी न करे, विशेषकर vibration या temperature change में",
+        "PCB का स्थायी रूप से जल जाना",
+        "PCB का रंग हमेशा के लिए बदल जाना",
+        "कोई फर्क नहीं पड़ता, circuit हमेशा normal काम करेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cold/dry joint में weak mechanical/electrical bond होता है, इसलिए vibration, thermal expansion/contraction से connection बीच-बीच में टूट सकता है, जिससे intermittent fault होती है। Options B, C, D इसके actual प्रभाव को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q7",
+      "question": "'Loose solder joint' का क्या अर्थ है?",
+      "options": [
+        "एक joint जो mechanically properly bonded नहीं है और component थोड़ा हिल/move कर सकता है",
+        "एक joint जो बहुत मजबूती से fixed है",
+        "एक joint जिसमें अत्यधिक flux लगा हो",
+        "एक joint जो केवल high current के लिए बनाया गया हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Loose solder joint में component या lead mechanically ठीक से secure नहीं होता, हल्के touch या vibration से भी हिल सकता है, जिससे connection अस्थिर रहता है। Options B, C, D loose joint की सही परिभाषा नहीं देते।"
+    },
+    {
+      "id": "u5_pcb_inspection_q8",
+      "question": "Loose solder joint को पहचानने के लिए एक practical (mechanical) test क्या है?",
+      "options": [
+        "Component lead को हल्के से probe/tweezers से gently दबाकर या हिलाकर देखना कि वह joint में move करता है या नहीं",
+        "PCB को पानी में डुबोना",
+        "PCB को हथौड़े से मारना",
+        "PCB का रंग देखना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Loose joint की पहचान के लिए lead को gently probe/tweezers से दबाकर या हिलाकर mechanical movement check किया जाता है — अगर हिलता है तो joint loose है। Options B, C, D सुरक्षित या effective test methods नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q9",
+      "question": "किसी PCB में power नहीं आ रहा और visual inspection में कोई obvious damage नहीं दिख रहा, तो अगला logical inspection step क्या होगा?",
+      "options": [
+        "Power path (fuse, connector, track) पर step-by-step continuity check करके break का पता लगाना",
+        "पूरे PCB को तुरंत scrap कर देना",
+        "बिना जांचे नया PCB मंगवा लेना",
+        "PCB को धूप में रख देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Visual inspection में fault न दिखने पर systematic continuity check (fuse से लेकर connectors, tracks तक) करके exact break location पहचानना logical अगला कदम है। Options B, C, D बिना root cause पहचाने अनावश्यक/अप्रभावी कदम हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q10",
+      "question": "Broken track की पहचान के लिए visual inspection के अलावा कौन-सा electrical test किया जाता है?",
+      "options": [
+        "Multimeter से track के दोनों सिरों के बीच continuity/resistance test",
+        "Track का temperature मापना",
+        "Track की लंबाई scale से मापना",
+        "Track का photograph लेना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Broken track confirm करने के लिए track के दोनों ends पर multimeter probe रखकर continuity/resistance check की जाती है — infinite resistance या no-beep break confirm करता है। Options B, C, D electrical continuity confirm नहीं करते।"
+    },
+    {
+      "id": "u5_pcb_inspection_q11",
+      "question": "PCB में hairline crack (बहुत बारीक टूटी हुई track) को पहचानना क्यों मुश्किल होता है?",
+      "options": [
+        "क्योंकि crack नंगी आँखों से लगभग अदृश्य होती है और track ऊपर से जुड़ी हुई दिख सकती है जबकि अंदर से टूटी होती है",
+        "क्योंकि crack का कोई electrical effect नहीं होता",
+        "क्योंकि crack हमेशा PCB के रंग को हरा कर देती है",
+        "क्योंकि crack हमेशा बहुत बड़ी और स्पष्ट होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hairline crack इतनी बारीक होती है कि visual inspection में track ऊपर से continuous दिख सकती है जबकि नीचे microscopic break हो, इसलिए magnification और continuity test से ही सही पहचान होती है। Options B, C, D गलत/भ्रामक कथन हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q12",
+      "question": "PCB inspection में 'resistance mode' और 'continuity (beep) mode' के उपयोग में क्या अंतर है?",
+      "options": [
+        "Resistance mode exact ohm value देता है (जो high-resistance connections भी दिखाता है), जबकि continuity mode केवल low-resistance पर beep करके quick pass/fail indication देता है",
+        "दोनों बिल्कुल एक ही काम करते हैं, कोई अंतर नहीं",
+        "Resistance mode केवल capacitor test करता है",
+        "Continuity mode केवल inductor test करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Resistance mode measured value (ohms) दिखाता है जिससे partial/high-resistance faults भी पकड़ में आते हैं, जबकि continuity/beep mode केवल एक threshold से नीचे resistance पर तुरंत audible signal देता है, जो quick checking के लिए उपयोगी है। Options B, C, D गलत तुलना करते हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q13",
+      "question": "एक joint में 'excessive solder' (अत्यधिक solder ball जैसी आकृति) inspection में किस समस्या का संकेत दे सकती है?",
+      "options": [
+        "यह आसपास की tracks/pads से short-circuit होने का खतरा बढ़ा सकती है",
+        "यह हमेशा एक perfect joint की निशानी है",
+        "यह PCB का weight कम करती है",
+        "इसका कोई electrical महत्व नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Excessive solder से आसपास के pads/leads के बीच अनचाहा bridging और short-circuit होने का खतरा रहता है, इसलिए inspection में इसे defect माना जाता है। Options B, C, D गलत निष्कर्ष हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q14",
+      "question": "PCB troubleshooting के दौरान 'power off' करके continuity test करना क्यों जरूरी है?",
+      "options": [
+        "क्योंकि powered circuit में continuity test करने से गलत reading आ सकती है और multimeter/circuit को नुकसान पहुँच सकता है",
+        "क्योंकि power on रहने से PCB का रंग बदल जाता है",
+        "इसका कोई कारण नहीं है, power on रहने से भी वही result आता है",
+        "क्योंकि power off करने से PCB हल्का हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Powered circuit में continuity mode से test करने पर circuit में मौजूद voltage/current के कारण गलत readings आ सकती हैं और multimeter को भी नुकसान पहुँच सकता है, इसलिए हमेशा power off करके ही continuity check की जाती है। Options B, C, D गलत हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q15",
+      "question": "'Dewetting' defect किसे कहते हैं जो inspection के दौरान पहचानी जाती है?",
+      "options": [
+        "वह स्थिति जहाँ solder pad पर पहले फैला लेकिन फिर सिकुड़कर irregular globules बना दे, जिससे thin coverage और exposed area रह जाए",
+        "वह स्थिति जब solder pad को पूरी तरह ठीक से coat करे",
+        "वह स्थिति जब कोई solder ही न लगाया गया हो",
+        "वह स्थिति जब PCB में कोई pad ही न हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dewetting में solder pad surface पर initially फैलता है लेकिन contamination/oxidation के कारण सिकुड़कर irregular islands बना देता है, जिससे कमजोर, unreliable joint बनता है। Options B, C, D dewetting की सही परिभाषा नहीं देते।"
+    },
+    {
+      "id": "u5_pcb_inspection_q16",
+      "question": "Continuity check के दौरान अगर multimeter एक बहुत high (लेकिन infinite नहीं) resistance value दिखाए, तो इसका संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Track में partial crack, corrosion या high resistance connection हो सकती है जो पूरी तरह open नहीं पर degraded है",
+        "Track पूरी तरह perfect है, कोई समस्या नहीं",
+        "Battery पूरी तरह dead है इसलिए ऐसा दिखा",
+        "PCB नया है इसलिए ऐसा normal है"
+      ],
+      "correctIndex": 0,
+      "explanation": "High पर non-infinite resistance value अक्सर partial crack, corrosion या degraded connection का संकेत देती है जो अभी पूरी तरह टूटी नहीं पर fault बनने की कगार पर हो सकती है। Options B, C, D गलत निष्कर्ष हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q17",
+      "question": "PCB inspection में magnifying glass/microscope के इस्तेमाल का मुख्य फायदा क्या है?",
+      "options": [
+        "Fine pitch components के joints में micro-cracks, dewetting, bridging जैसी defects को स्पष्ट रूप से देखा जा सकता है",
+        "इससे PCB का weight पता चलता है",
+        "इससे PCB की कीमत निर्धारित होती है",
+        "इसका कोई फायदा नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Magnification से fine-pitch SMD joints में micro-level defects (जो नंगी आँख से नहीं दिखतीं) स्पष्ट रूप से पहचानी जा सकती हैं, जिससे accurate diagnosis होता है। Options B, C, D magnifying inspection के actual लाभ को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q18",
+      "question": "Broken track की repair के बाद उसकी सफलता verify करने के लिए क्या किया जाता है?",
+      "options": [
+        "Repaired area पर continuity/resistance test करके यह सुनिश्चित करना कि path पूरी तरह restore हो गया है",
+        "केवल आँख से देखकर मान लेना कि ठीक हो गया",
+        "PCB को हिलाकर आवाज़ सुनना",
+        "किसी verification की जरूरत नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Repair के बाद continuity/resistance test से confirm किया जाता है कि electrical path सही तरह restore हुआ है, इससे reliable repair सुनिश्चित होता है। Options B, C, D पर्याप्त/objective verification नहीं देते।"
+    },
+    {
+      "id": "u5_pcb_inspection_q19",
+      "question": "एक intermittent fault (जो कभी-कभी आती है) को पकड़ने के लिए inspection में क्या technique अपनाई जा सकती है?",
+      "options": [
+        "PCB को हल्के से flex/move कराते हुए continuity test करना ताकि loose/cracked joint में temporary break simulate हो सके",
+        "PCB को पूरी तरह स्थिर रखकर सिर्फ एक बार test करना",
+        "PCB को गर्म पानी में डुबोना",
+        "Intermittent fault को पकड़ना असंभव है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Intermittent faults प्रायः loose/cracked joint के कारण होती हैं, इसलिए board को gently flex करते हुए continuity monitor करने से temporary break को capture किया जा सकता है। Options B, C, D प्रभावी तरीके नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q20",
+      "question": "PCB inspection standards (जैसे IPC-A-610) में solder joint को classify करने के लिए किन categories का उपयोग होता है?",
+      "options": [
+        "Acceptable, marginal (defect) और reject (defect) categories, जो joint के visual/dimensional criteria पर आधारित होती हैं",
+        "केवल 'अच्छा' और 'बुरा' दो ही categories",
+        "केवल color के आधार पर categories",
+        "कोई classification नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "IPC-A-610 जैसे standards joint quality को acceptable, process indicator (marginal), और defect (reject) categories में classify करते हैं जो fillet shape, wetting angle, voids आदि criteria पर आधारित हैं। Options B, C, D मान्यता प्राप्त standard classification नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q21",
+      "question": "Cold solder joint बनने का एक सामान्य कारण क्या है?",
+      "options": [
+        "Soldering iron का तापमान बहुत कम होना या joint पर पर्याप्त समय तक heat न दिया जाना",
+        "Soldering iron का तापमान बहुत अधिक होना",
+        "फ्लक्स का बिल्कुल इस्तेमाल न करना",
+        "Solder wire का diameter सही होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Insufficient iron temperature या कम dwell time के कारण solder ठीक से पिघलकर metallurgical bond नहीं बना पाता, जिससे cold joint बनता है। Option B अधिक तापमान अलग समस्या (overheating) पैदा करता है, C और D cold joint का सीधा कारण नहीं हैं (हालांकि flux न होना अलग issue बना सकता है, primary cause नहीं)।"
+    },
+    {
+      "id": "u5_pcb_inspection_q22",
+      "question": "Component lead और pad के बीच खराब mechanical fit (misalignment) rework के दौरान किस defect का कारण बन सकती है?",
+      "options": [
+        "Loose या incomplete solder joint जिसमें component स्थिर रूप से fixed नहीं होता",
+        "PCB का color बदल जाना",
+        "PCB हल्का हो जाना",
+        "कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "अगर lead pad से ठीक से align न हो तो solder सही तरह fillet नहीं बना पाता, जिससे joint mechanically loose और electrically unreliable रह सकता है। Options B, C, D सही परिणाम नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q23",
+      "question": "Inspection में 'tug test' (हल्के से खींचकर देखना) किस प्रकार के defect को पहचानने में मदद करता है?",
+      "options": [
+        "Loose solder joint जिसमें component का lead pad से मजबूती से bonded न होना",
+        "PCB का weight",
+        "PCB का invoice number",
+        "PCB का color"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tug test में component lead को tweezers से gently खींचकर देखा जाता है कि वह joint में move करता है या नहीं, इससे loose/weak joint की पहचान होती है। Options B, C, D इस test से असंबंधित हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q24",
+      "question": "PCB में एक track पर corrosion (जंग) लगने से continuity test में क्या परिणाम मिल सकता है?",
+      "options": [
+        "Resistance बढ़ सकता है या पूरी तरह open circuit दिखा सकता है, corrosion की गंभीरता पर निर्भर करता है",
+        "Continuity हमेशा perfect रहेगी",
+        "PCB हमेशा नया दिखेगा",
+        "कोई प्रभाव नहीं पड़ेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "Corrosion copper की conductivity को कम करता है, इसलिए हल्की corrosion में resistance बढ़ सकता है और गंभीर corrosion में पूरी तरह open circuit (कोई continuity नहीं) दिख सकता है। Options B, C, D गलत परिणाम हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q25",
+      "question": "PCB assembly की quality control में 'first article inspection' का क्या उद्देश्य है?",
+      "options": [
+        "Production run शुरू होने से पहले पहले sample board को detail से inspect करके यह सुनिश्चित करना कि process/design सही है",
+        "अंतिम बचे हुए board को inspect करना",
+        "केवल packaging inspect करना",
+        "Inspection की कोई जरूरत नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "First article inspection production run के शुरुआत में किया जाता है ताकि बड़ी मात्रा में defective boards बनने से पहले ही process/design की समस्याएं पकड़ी जा सकें। Options B, C, D गलत या अधूरी परिभाषा देते हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q26",
+      "question": "किसी PCB में एक component काम नहीं कर रहा और visual inspection में joint ठीक दिख रहा है, तो अगला कदम क्या होगा?",
+      "options": [
+        "Multimeter से उस joint की continuity/resistance और component की in-circuit value check करना",
+        "Component को तुरंत नए से बदल देना बिना जांचे",
+        "पूरे PCB को बदल देना",
+        "PCB को धूप में सुखाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Visual inspection में सब ठीक दिखने पर भी hidden defect (जैसे hairline crack या internal component failure) हो सकती है, इसलिए multimeter से continuity और component parameters actually measure करना जरूरी है। Options B, C, D बिना diagnosis के अनावश्यक कदम हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q27",
+      "question": "'Insufficient wetting' किस प्रकार की inspection defect है?",
+      "options": [
+        "जब solder pad/lead की पूरी सतह को ठीक से cover नहीं करता, जिससे weak bonding और unreliable joint बनता है",
+        "जब solder pad को अत्यधिक cover कर ले",
+        "जब कोई component ही न लगा हो",
+        "जब PCB का रंग बदल जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Insufficient wetting में solder lead/pad की surface को properly cover नहीं कर पाता (contamination, कम temperature, या insufficient flux के कारण), जिससे joint की bonding strength कम रहती है। Options B, C, D गलत परिभाषाएं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q28",
+      "question": "PCB inspection में यह सुनिश्चित करने के लिए कि दो अलग tracks आपस में shorted तो नहीं हैं, कौन-सा test किया जाता है?",
+      "options": [
+        "दोनों tracks के बीच continuity/resistance test — यदि beep आए या resistance बहुत low हो तो short इंगित होता है",
+        "PCB का weight compare करना",
+        "PCB का temperature मापना",
+        "PCB की उम्र देखना"
+      ],
+      "correctIndex": 0,
+      "explanation": "दो अलग tracks/nets के बीच अगर continuity test में beep आए या resistance बहुत low हो, तो यह unwanted short-circuit का संकेत देता है। Options B, C, D short-circuit पहचानने के relevant methods नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q29",
+      "question": "Cold/dry solder joint की repair के लिए क्या करना होता है?",
+      "options": [
+        "Joint को दोबारा proper temperature पर reflow करके, जरूरत हो तो थोड़ा fresh solder/flux add करके ठीक करना",
+        "Joint के ऊपर सिर्फ paint लगाना",
+        "Joint को हटाकर खाली छोड़ देना",
+        "Joint को ठंडे पानी से धोना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cold/dry joint को ठीक करने के लिए soldering iron से proper temperature पर दोबारा reflow किया जाता है, जरूरत पड़ने पर थोड़ी additional flux/solder मिलाकर एक अच्छा metallurgical bond बनाया जाता है। Options B, C, D प्रभावी repair नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q30",
+      "question": "PCB inspection रिपोर्ट में defect को document करना (जैसे location, type, severity) क्यों जरूरी है?",
+      "options": [
+        "ताकि quality trend track की जा सके, recurring problems पहचाने जा सकें और future rework/repair को guide किया जा सके",
+        "केवल कागजी formality के लिए, कोई वास्तविक उपयोग नहीं",
+        "PCB का color record करने के लिए",
+        "Documentation की कोई जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Detailed defect documentation से quality trends और recurring issues (जैसे किसी specific process step में बार-बार आने वाली defect) पहचानी जा सकती हैं, जो process improvement और future troubleshooting में मदद करता है। Options B, C, D गलत/निरर्थक कारण हैं।"
+    }
+  ]
+}

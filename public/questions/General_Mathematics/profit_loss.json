@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "profit_loss",
+  "topicName": "Profit and Loss",
+  "questions": [
+    {
+      "id": "math_profit_loss_q1",
+      "question": "एक दुकानदार एक article को Rs. 400 में खरीदता है और Rs. 480 में बेचता है। profit percent ज्ञात करें।",
+      "options": ["20%", "15%", "25%", "30%"],
+      "correctIndex": 0,
+      "explanation": "profit = 480-400 = 80, profit% = (80/400)×100 = 20%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q2",
+      "question": "एक article Rs. 690 में बेचा गया, जिसमें 8% का loss हुआ। उसका cost price ज्ञात करें।",
+      "options": ["720", "750", "780", "800"],
+      "correctIndex": 1,
+      "explanation": "SP = 0.92 × CP => CP = 690/0.92 = 750। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_profit_loss_q3",
+      "question": "एक article का cost price Rs. 850 है और उस पर 12% profit होता है। selling price ज्ञात करें।",
+      "options": ["932", "942", "952", "962"],
+      "correctIndex": 2,
+      "explanation": "SP = CP × 1.12 = 850 × 1.12 = 952। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q4",
+      "question": "एक व्यक्ति ने दो articles प्रत्येक Rs. 1200 में बेचे। एक पर उसे 20% gain हुआ और दूसरे पर 20% loss हुआ। उसका overall gain या loss percent ज्ञात करें।",
+      "options": ["4% gain", "No profit no loss", "2% loss", "4% loss"],
+      "correctIndex": 3,
+      "explanation": "जब दो वस्तुएँ समान selling price पर बेची जाएँ, एक पर x% gain और दूसरे पर x% loss हो, तो हमेशा net loss होता है, जो (x/10)²% के बराबर होता है। यहाँ x=20, इसलिए net loss = (20/10)² = 4%। 'No profit no loss' गलत धारणा है, और अन्य options calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q5",
+      "question": "एक article का marked price Rs. 1000 है। उस पर 15% का discount दिया जाता है। selling price ज्ञात करें।",
+      "options": ["850", "800", "900", "950"],
+      "correctIndex": 0,
+      "explanation": "SP = 1000 × (1 - 0.15) = 1000 × 0.85 = 850। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q6",
+      "question": "एक दुकानदार marked price पर 10% discount देता है और फिर भी 20% profit कमाता है। यदि cost price Rs. 500 है, तो marked price ज्ञात करें।",
+      "options": ["640", "666.67", "680", "700"],
+      "correctIndex": 1,
+      "explanation": "SP = CP × 1.20 = 600। यह SP marked price का 90% है, इसलिए MP = 600/0.90 = 666.67। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q7",
+      "question": "एक article को Rs. 720 में बेचने पर एक व्यक्ति को 10% का loss होता है। उसका cost price ज्ञात करें।",
+      "options": ["780", "790", "800", "820"],
+      "correctIndex": 2,
+      "explanation": "SP = 0.90 × CP => CP = 720/0.90 = 800। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_profit_loss_q8",
+      "question": "एक trader अपने goods को cost price से 25% अधिक mark करता है और marked price पर 12% का discount देता है। उसका gain percent ज्ञात करें।",
+      "options": ["6%", "8%", "9%", "10%"],
+      "correctIndex": 3,
+      "explanation": "माना CP=100, तो MP=125। discount 12% के बाद SP = 125×0.88 = 110। gain = 110-100 = 10, gain% = 10%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q9",
+      "question": "एक व्यक्ति 12 pens Rs. 100 में खरीदता है और उन्हें 10 pens Rs. 100 की दर से बेचता है। उसका gain percent ज्ञात करें।",
+      "options": ["20%", "15%", "25%", "30%"],
+      "correctIndex": 0,
+      "explanation": "12 pens का cost = Rs. 100। इन्हें 10 pens/Rs.100 की दर से बेचने पर SP = 12×(100/10) = 120। gain = 120-100 = 20, gain% = 20%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q10",
+      "question": "एक बेईमान (dishonest) दुकानदार cost price पर बेचने का दावा करता है, पर 1 kg के लिए 900 gm का weight इस्तेमाल करता है। उसका gain percent ज्ञात करें।",
+      "options": ["10%", "11.11%", "12%", "15%"],
+      "correctIndex": 1,
+      "explanation": "वास्तव में वह 900 gm देकर 1000 gm का पैसा लेता है, इसलिए gain% = [(1000-900)/900]×100 = 11.11%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q11",
+      "question": "15 articles का cost price, 12 articles के selling price के बराबर है। gain percent ज्ञात करें।",
+      "options": ["15%", "20%", "25%", "30%"],
+      "correctIndex": 2,
+      "explanation": "माना प्रत्येक article का CP = Re.1, तो 15×1 = 12×SP => SP = 15/12 = 1.25। gain = 0.25, gain% = 25%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q12",
+      "question": "एक दुकानदार ने एक article को Rs. 495 में बेचकर 10% gain कमाया। यदि वह इसे Rs. 450 में बेचता, तो उसका gain या loss percent क्या होता?",
+      "options": ["5% loss", "5% gain", "10% loss", "No profit no loss"],
+      "correctIndex": 3,
+      "explanation": "CP = 495/1.10 = 450। चूँकि Rs. 450 पर बेचना ही CP के बराबर है, इसलिए न कोई gain होगा न कोई loss। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q13",
+      "question": "एक article को 15% loss पर बेचा गया। यदि इसे Rs. 60 अधिक में बेचा जाता, तो 5% का gain होता। cost price ज्ञात करें।",
+      "options": ["300", "280", "320", "350"],
+      "correctIndex": 0,
+      "explanation": "माना CP=x। 0.85x + 60 = 1.05x => 60 = 0.20x => x = 300। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_profit_loss_q14",
+      "question": "एक दुकानदार Rs. 1500 marked price वाले article पर क्रमशः 20% और 10% के successive discounts देता है। final selling price ज्ञात करें।",
+      "options": ["1050", "1080", "1100", "1120"],
+      "correctIndex": 1,
+      "explanation": "SP = 1500×0.80×0.90 = 1080। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q15",
+      "question": "45 lemons Rs. 40 में बेचने पर 20% का loss होता है। 20% का gain पाने के लिए Rs. 24 में कितने lemons बेचने चाहिए?",
+      "options": ["15", "16", "18", "20"],
+      "correctIndex": 2,
+      "explanation": "45 lemons का CP = 40/0.80 = 50, प्रति lemon CP = 50/45 = 10/9। 20% gain के लिए n lemons का SP = 1.2×(10/9)×n = 24 => n = 24×9/12 = 18। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q16",
+      "question": "एक व्यक्ति ने एक table और chair Rs. 2000 में खरीदे। table को 10% profit पर और chair को 20% profit पर बेचने से कुल profit Rs. 260 हुआ। table की cost price ज्ञात करें।",
+      "options": ["1200", "1300", "1350", "1400"],
+      "correctIndex": 3,
+      "explanation": "माना table = T, chair = 2000-T। profit = 0.10T + 0.20(2000-T) = 260 => -0.10T + 400 = 260 => T = 1400। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_profit_loss_q17",
+      "question": "एक व्यक्ति एक article को 10% loss पर बेचता है। यदि वह इसे Rs. 66 अधिक में बेचता, तो उसे 10% का gain होता। cost price ज्ञात करें।",
+      "options": ["330", "300", "350", "360"],
+      "correctIndex": 0,
+      "explanation": "माना CP=x। 0.90x + 66 = 1.10x => 66 = 0.20x => x = 330। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_profit_loss_q18",
+      "question": "20% और 25% के दो successive discounts के बराबर single discount ज्ञात करें।",
+      "options": ["35%", "40%", "42%", "45%"],
+      "correctIndex": 1,
+      "explanation": "equivalent discount = 1 - (0.80×0.75) = 1 - 0.60 = 0.40, यानी 40%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q19",
+      "question": "एक retailer 40 kg rice Rs. 20 प्रति kg और 60 kg rice Rs. 25 प्रति kg पर खरीदता है, दोनों को मिलाकर mixture को Rs. 25 प्रति kg पर बेचता है। उसका profit percent ज्ञात करें (approximately)।",
+      "options": ["7%", "8%", "8.7%", "9.5%"],
+      "correctIndex": 2,
+      "explanation": "total cost = 40×20 + 60×25 = 800+1500 = 2300, total quantity = 100 kg, total SP = 100×25 = 2500। profit = 200, profit% = (200/2300)×100 ≈ 8.7%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q20",
+      "question": "एक व्यक्ति एक article को खरीदकर 5% gain पर बेचता है। यदि वह इसे 5% कम में खरीदता और Rs. 2 कम में बेचता, तो उसे 10% का gain होता। cost price ज्ञात करें।",
+      "options": ["350", "380", "390", "400"],
+      "correctIndex": 3,
+      "explanation": "माना CP=x, तो SP1=1.05x। नया CP=0.95x, नया SP=1.05x-2, और यह 10% gain देता है: 1.05x-2 = 1.10×0.95x = 1.045x => 0.005x = 2 => x = 400। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_profit_loss_q21",
+      "question": "एक व्यक्ति ने दो watches प्रत्येक Rs. 1980 में बेचीं। एक पर 10% gain हुआ और दूसरे पर 10% loss हुआ। उसका overall gain या loss percent ज्ञात करें।",
+      "options": ["1% loss", "1% gain", "No profit no loss", "2% loss"],
+      "correctIndex": 0,
+      "explanation": "जब समान SP पर एक वस्तु x% gain और दूसरी x% loss पर बेची जाए, तो हमेशा net loss = (x/10)% होता है। यहाँ x=10, इसलिए net loss = 1%। बाकी options इस नियम से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q22",
+      "question": "एक article का cost price Rs. 2400 है। यदि इसे 15% loss पर बेचा जाए, तो selling price ज्ञात करें।",
+      "options": ["1980", "2040", "2100", "2160"],
+      "correctIndex": 1,
+      "explanation": "SP = 2400×0.85 = 2040। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q23",
+      "question": "एक item का marked price Rs. 800 है। discount देने के बाद इसे Rs. 680 में बेचा जाता है। discount percent ज्ञात करें।",
+      "options": ["10%", "12%", "15%", "18%"],
+      "correctIndex": 2,
+      "explanation": "discount = 800-680 = 120, discount% = (120/800)×100 = 15%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q24",
+      "question": "एक व्यक्ति एक article को Rs. 600 में खरीदता है और उसे इस तरह बेचता है कि profit, selling price का 25% होता है। selling price ज्ञात करें।",
+      "options": ["720", "750", "780", "800"],
+      "correctIndex": 3,
+      "explanation": "माना SP=x, तो profit = 0.25x = x-600 => 0.75x = 600 => x = 800। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_profit_loss_q25",
+      "question": "20 articles को Rs. 300 में बेचने पर एक दुकानदार 20% gain कमाता है। एक article की cost price ज्ञात करें।",
+      "options": ["12.5", "13", "13.5", "14"],
+      "correctIndex": 0,
+      "explanation": "total CP = SP/1.20 = 300/1.20 = 250, प्रति article CP = 250/20 = 12.5। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q26",
+      "question": "एक दुकानदार marked price पर 10% discount देता है और फिर भी 8% profit कमाता है। यदि cost price Rs. 900 है, तो marked price ज्ञात करें।",
+      "options": ["1050", "1080", "1100", "1120"],
+      "correctIndex": 1,
+      "explanation": "SP = CP×1.08 = 972, यह MP का 90% है, इसलिए MP = 972/0.90 = 1080। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q27",
+      "question": "Rs. 640 में खरीदे गए article को Rs. 560 में बेचने पर loss percent ज्ञात करें।",
+      "options": ["10%", "11%", "12.5%", "15%"],
+      "correctIndex": 2,
+      "explanation": "loss = 640-560 = 80, loss% = (80/640)×100 = 12.5%। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q28",
+      "question": "एक trader एक item को cost price से 50% अधिक mark करता है और 20% discount के बाद बेचकर Rs. 100 का gain पाता है। cost price ज्ञात करें।",
+      "options": ["400", "450", "480", "500"],
+      "correctIndex": 3,
+      "explanation": "माना CP=x, तो MP=1.5x, SP = 1.5x×0.80 = 1.2x। gain = 0.2x = 100 => x = 500। बाकी options इस equation को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_profit_loss_q29",
+      "question": "एक व्यक्ति एक bicycle को Rs. 1400 में खरीदता है और 15% loss पर बेचता है। selling price ज्ञात करें।",
+      "options": ["1190", "1150", "1200", "1250"],
+      "correctIndex": 0,
+      "explanation": "SP = 1400×0.85 = 1190। बाकी options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_profit_loss_q30",
+      "question": "एक वस्तु को Rs. 250 में खरीदकर Rs. 300 में बेचा गया। profit percent ज्ञात करें।",
+      "options": ["15%", "20%", "25%", "30%"],
+      "correctIndex": 1,
+      "explanation": "profit = 300-250 = 50, profit% = (50/250)×100 = 20%। बाकी options इस calculation से मेल नहीं खाते।"
+    }
+  ]
+}

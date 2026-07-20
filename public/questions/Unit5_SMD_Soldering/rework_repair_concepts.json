@@ -1,0 +1,368 @@
+{
+  "unit": "unit5",
+  "unitName": "SMD Soldering and De-soldering",
+  "topic": "rework_repair_concepts",
+  "topicName": "Rework & Repair Concepts, Conformal Coating Types & Removal",
+  "questions": [
+    {
+      "id": "u5_rework_repair_concepts_q1",
+      "question": "Electronics manufacturing में 'rework' शब्द का क्या अर्थ है?",
+      "options": [
+        "PCB को शुरू से पूरी तरह नया design करना",
+        "किसी defective या misplaced component को हटाकर सही component या correct position में फिर से fit करना",
+        "PCB को केवल clean करना बिना किसी component को छुए",
+        "PCB को completely scrap कर देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rework का अर्थ है assembly के दौरान पाई गई defect (जैसे wrong component, misalignment, cold joint) को ठीक करना ताकि board specification के अनुसार काम करे। Option A नया design बनाना है, rework नहीं। Option C में कोई corrective action नहीं है इसलिए यह rework नहीं कहलाता। Option D scrap करना rework का उल्टा concept है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q2",
+      "question": "'Repair' और 'Rework' में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक ही process हैं",
+        "Repair केवल new manufacturing में होता है जबकि rework field failure में होता है",
+        "Rework production/assembly stage पर defect ठीक करता है, जबकि repair field में fail हो चुके board को working करने के लिए किया जाता है",
+        "Repair केवल mechanical parts के लिए होता है, electronics के लिए नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rework सामान्यतः manufacturing/assembly line पर inspection के तुरंत बाद किया जाता है, जबकि repair उस board पर किया जाता है जो field में इस्तेमाल होने के बाद fail हो गया हो। Option A गलत है क्योंकि दोनों की timing और context अलग है। Option B और D दोनों ही परिभाषा को उल्टा या गलत बताते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q3",
+      "question": "SMD rework station में component हटाने के लिए मुख्यतः किस heat source का उपयोग होता है?",
+      "options": [
+        "Hot air gun/rework station",
+        "साधारण gas torch",
+        "Cold chisel",
+        "Sand paper"
+      ],
+      "correctIndex": 0,
+      "explanation": "SMD components को बिना PCB को damage किए हटाने के लिए controlled temperature वाली hot air rework station का उपयोग होता है। Option B का temperature control नहीं होता जिससे board जल सकता है। Option C और D mechanical tools हैं, ये soldering heat provide नहीं करते।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q4",
+      "question": "Rework करते समय adjacent components को thermal damage से बचाने के लिए क्या इस्तेमाल किया जाता है?",
+      "options": [
+        "Heat shield / thermal barrier tape",
+        "Extra flux केवल",
+        "अधिक solder paste लगाना",
+        "Component को force से खींचना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Heat shield या Kapton tape जैसी thermal barrier पास के components को hot air से protect करती है ताकि वे melt या damage न हों। Option B flux protection नहीं देता, Option C thermal issue solve नहीं करता, और Option D mechanical damage का कारण बन सकता है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q5",
+      "question": "Conformal coating का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "PCB का weight बढ़ाना",
+        "PCB assembly को moisture, dust, chemicals और short circuit से protect करने के लिए thin protective layer देना",
+        "PCB की conductivity बढ़ाना",
+        "Components को हटाने में आसानी देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Conformal coating एक thin polymer layer होती है जो environmental contamination (moisture, dust, chemical) और accidental short-circuit से board को बचाती है। Option A इसका उद्देश्य नहीं है। Option C गलत है क्योंकि coating insulator होती है, conductor नहीं। Option D गलत है — coating हटाना बल्कि rework को कठिन बनाता है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q6",
+      "question": "निम्न में से कौन-सा conformal coating का एक प्रमुख प्रकार है?",
+      "options": [
+        "Acrylic (AR) coating",
+        "Cotton coating",
+        "Paper laminate coating",
+        "Rubber sole coating"
+      ],
+      "correctIndex": 0,
+      "explanation": "Acrylic Resin (AR) coating एक standard conformal coating type है जो आसानी से apply और rework होती है। Options B, C, D electronics conformal coating के मान्यता प्राप्त प्रकार नहीं हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q7",
+      "question": "Silicone (SR) conformal coating किस environment के लिए विशेष रूप से उपयुक्त मानी जाती है?",
+      "options": [
+        "बहुत low humidity वाले indoor environment के लिए",
+        "High temperature और flexibility की जरूरत वाले environment के लिए",
+        "केवल decorative purpose के लिए",
+        "केवल low-voltage battery cell के अंदर coating के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Silicone coating high temperature resistance और flexibility देती है, इसलिए यह thermal cycling वाले applications में पसंद की जाती है। Option A, C, D silicone coating की मुख्य विशेषता नहीं बताते।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q8",
+      "question": "Urethane (UR) conformal coating की विशेषता क्या है?",
+      "options": [
+        "यह chemical और abrasion resistance में बहुत अच्छी होती है पर removal में कठिन होती है",
+        "यह हमेशा water soluble होती है",
+        "इसे हटाना सबसे आसान coating है",
+        "यह केवल decorative रंग के लिए इस्तेमाल होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Urethane coating excellent chemical resistance और mechanical abrasion resistance देती है, लेकिन इसकी hardness के कारण rework/removal कठिन होता है। Option B, C, D urethane coating के actual गुणों के विपरीत हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q9",
+      "question": "Parylene conformal coating की application method अन्य coatings से किस तरह अलग है?",
+      "options": [
+        "यह brush से manually लगाई जाती है",
+        "यह spray gun से लगाई जाती है",
+        "यह vacuum deposition process द्वारा vapor form में uniform thin layer के रूप में जमती है",
+        "यह dip करके सुखाई जाती है जैसे paint"
+      ],
+      "correctIndex": 2,
+      "explanation": "Parylene coating vapor deposition process (vacuum chamber में) से apply होती है, जो एक uniform, pinhole-free thin film बनाती है। Options A, B, D सामान्य liquid coatings (acrylic, silicone, urethane) की application methods हैं, parylene की नहीं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q10",
+      "question": "Epoxy (ER) conformal coating का एक drawback क्या है?",
+      "options": [
+        "यह बहुत महंगी और rare material है",
+        "एक बार cure होने के बाद इसे रासायनिक रूप से हटाना बहुत कठिन होता है, rework लगभग असंभव सा हो जाता है",
+        "यह किसी भी temperature पर काम नहीं करती",
+        "इसे लगाने के लिए किसी उपकरण की जरूरत नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Epoxy coating hard और permanent होती है, cure होने के बाद इसे mechanically या chemically हटाना बहुत मुश्किल होता है, इसलिए rework कठिन हो जाता है। Options A, C, D epoxy coating की मुख्य समस्या को सही नहीं बताते।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q11",
+      "question": "Conformal coating हटाने के लिए इस्तेमाल की जाने वाली एक common physical/mechanical method कौन-सी है?",
+      "options": [
+        "Micro-abrasion / scraping tool से coating को धीरे-धीरे हटाना",
+        "PCB को पूरी तरह पानी में डुबो देना",
+        "PCB को magnet के पास रखना",
+        "PCB को freeze करके तोड़ देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Micro-abrasive pen या scraping tool से component के आसपास coating को सावधानी से हटाया जाता है ताकि rework किया जा सके। Option B, C, D coating हटाने की मान्यता प्राप्त तकनीकें नहीं हैं और board को damage कर सकती हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q12",
+      "question": "Conformal coating हटाने के लिए chemical solvent method में क्या ध्यान रखा जाता है?",
+      "options": [
+        "किसी भी solvent का बिना coating type जाने उपयोग कर लिया जाता है",
+        "coating के specific type (acrylic, silicone, urethane आदि) के अनुसार compatible solvent चुना जाता है",
+        "solvent का PCB material पर कोई असर नहीं पड़ता इसलिए सावधानी की जरूरत नहीं",
+        "solvent हमेशा हाथ से बिना gloves के लगाया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर coating type का chemical composition अलग होता है इसलिए उसे dissolve करने के लिए compatible solvent (जैसे urethane के लिए विशेष stripper) चुनना जरूरी है, वरना coating ठीक से नहीं निकलेगी या PCB को नुकसान होगा। Option A, C, D गलत safety practice और गलत understanding दर्शाते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q13",
+      "question": "Thermal (heat) method से conformal coating हटाते समय किस बात का risk रहता है?",
+      "options": [
+        "कोई risk नहीं होता",
+        "PCB का weight कम हो जाना",
+        "अधिक heat से nearby components और PCB substrate को थर्मल damage होने का risk",
+        "PCB का रंग स्थायी रूप से सुनहरा हो जाना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Heat gun/soldering iron से coating को soften करके हटाने में temperature सही control न होने पर adjacent components या laminate को thermal damage होने का खतरा रहता है। Option A गलत है क्योंकि risk मौजूद है, Options B, D निरर्थक/गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q14",
+      "question": "Conformal coating हटाने के बाद rework करके फिर से coating apply करने में सबसे important step क्या है?",
+      "options": [
+        "बिना cleaning के तुरंत नई coating लगा देना",
+        "Reworked area को flux residue और contamination से अच्छी तरह clean करना, फिर compatible coating दोबारा apply करना",
+        "PCB को सीधे पानी से धोकर सुखाना और coating न लगाना",
+        "पुरानी coating के ऊपर ही नई coating spray कर देना बिना सफाई के"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rework के बाद flux residue और dust को clean करना जरूरी है ताकि नई coating अच्छी तरह adhere हो सके और moisture protection बना रहे। Option A, C, D contamination के साथ या बिना protection के छोड़ देते हैं जिससे बाद में failure हो सकता है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q15",
+      "question": "IPC standards के अनुसार rework किए गए joint की quality को किससे verify किया जाता है?",
+      "options": [
+        "केवल आँख से देखकर अंदाज़ा लगाकर",
+        "Visual inspection (और जरूरत होने पर magnification/X-ray) से joint shape, wetting और defects check करके",
+        "PCB को हिला कर आवाज़ सुनकर",
+        "PCB का वजन तोल कर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Reworked joint की quality standard visual inspection criteria (fillet shape, wetting angle, absence of bridging/voids) से verify होती है, कभी-कभी X-ray/magnification का भी उपयोग होता है। Option A subjective और unreliable है, Options C, D कोई valid inspection method नहीं हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q16",
+      "question": "किसी component को rework के दौरान बार-बार desolder-resolder करने का PCB pad पर क्या दुष्प्रभाव हो सकता है?",
+      "options": [
+        "Pad की conductivity बढ़ जाती है",
+        "बार-बार heat cycles से pad lifting या copper trace के delamination का risk बढ़ जाता है",
+        "PCB की मोटाई बढ़ जाती है",
+        "कोई effect नहीं पड़ता, चाहे कितनी बार भी किया जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Repeated heating cycles से pad adhesion कमजोर होकर pad lifting या trace delamination हो सकता है, इसलिए rework की संख्या सीमित रखी जाती है। Option A, C गलत/असंभव परिणाम हैं, और Option D गलत है क्योंकि repeated heating का negative effect निश्चित रूप से पड़ता है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q17",
+      "question": "Rework station में temperature profile set करते समय component datasheet क्यों देखा जाता है?",
+      "options": [
+        "क्योंकि datasheet में component का price लिखा होता है",
+        "क्योंकि हर component की अपनी maximum allowable reflow temperature और time limit होती है जिसे पार करने से component damage हो सकता है",
+        "क्योंकि datasheet से PCB का color पता चलता है",
+        "datasheet देखने की कोई जरूरत नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर component का अपना thermal profile होता है (peak temperature, time above liquidus) जिसे exceed करने पर component permanently damage हो सकता है, इसलिए datasheet के अनुसार rework station सेट करना जरूरी है। Option A, C गलत जानकारी हैं और Option D गलत practice को बढ़ावा देता है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q18",
+      "question": "BGA जैसे component के rework में flux का क्या role होता है?",
+      "options": [
+        "Flux केवल decoration के लिए लगाया जाता है",
+        "Flux oxide layer हटाकर solder wetting को सुधारता है जिससे joint reliable बनता है",
+        "Flux component को ठंडा करने के लिए है",
+        "Flux PCB का color बदलने के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Flux metal surfaces की oxidation हटाकर solder को अच्छे से wet करने में मदद करता है, जिससे reliable solder joint बनता है, यह BGA जैसे hidden joint वाले components के rework में विशेष महत्वपूर्ण है। Options A, C, D flux के actual कार्य को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q19",
+      "question": "Rework के दौरान ESD (Electrostatic Discharge) precautions क्यों जरूरी हैं?",
+      "options": [
+        "क्योंकि ESD PCB का weight बढ़ा देता है",
+        "क्योंकि static charge से sensitive semiconductor devices permanently damage हो सकते हैं",
+        "क्योंकि ESD coating को रंगीन बना देता है",
+        "ESD का rework से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Static discharge sensitive ICs और semiconductor components को silently damage कर सकता है (बिना दिखे भी), इसलिए wrist strap, ESD mat जैसी precautions जरूरी हैं। Option A, C अर्थहीन हैं और Option D गलत है क्योंकि rework के दौरान handling में ESD risk रहता है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q20",
+      "question": "Conformal coating की thickness measure करने के लिए कौन-सा instrument common रूप से इस्तेमाल होता है?",
+      "options": [
+        "Coating thickness gauge (dry film thickness gauge)",
+        "Multimeter",
+        "Oscilloscope",
+        "Function generator"
+      ],
+      "correctIndex": 0,
+      "explanation": "Coating thickness gauge coating की dry film thickness को accurately measure करता है ताकि यह specification के अनुसार हो। Options B, C, D electrical measurement instruments हैं, coating thickness measure करने के लिए उपयुक्त नहीं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q21",
+      "question": "Rework के लिए इस्तेमाल होने वाला 'preheating' step किस उद्देश्य से किया जाता है?",
+      "options": [
+        "PCB को ठंडा करने के लिए",
+        "PCB और component का temperature धीरे-धीरे बढ़ाकर thermal shock को कम करने और uniform heating सुनिश्चित करने के लिए",
+        "PCB को coating देने के लिए",
+        "Solder paste को हटाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Preheating से PCB assembly का temperature gradually बढ़ता है जिससे sudden thermal shock (जो warping या cracking करे) कम होता है और rework area uniform temperature पर पहुँचता है। Option A उल्टा उद्देश्य है, C और D preheating का कार्य नहीं है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q22",
+      "question": "यदि conformal coating को हटाते समय गलत solvent चुन लिया जाए तो क्या समस्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी, सभी solvent एक जैसे काम करते हैं",
+        "PCB substrate, silkscreen या नजदीकी plastics को chemical damage हो सकता है",
+        "PCB स्वतः नया हो जाएगा",
+        "coating और मजबूत हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "गलत/incompatible solvent PCB laminate, silkscreen printing, connector plastics आदि को attack करके damage कर सकता है। Option A गलत generalisation है, Options C, D असंभव और गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q23",
+      "question": "Rework के बाद component की alignment/orientation दोबारा check करना क्यों जरूरी है?",
+      "options": [
+        "क्योंकि गलत orientation (जैसे polarized component उल्टा लगना) से circuit malfunction या damage हो सकता है",
+        "क्योंकि orientation से PCB का weight बदलता है",
+        "क्योंकि इससे coating का रंग बदलता है",
+        "orientation check करने की कोई जरूरत नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Diode, electrolytic capacitor, IC जैसे polarized/oriented components अगर उल्टे लग जाएं तो circuit काम नहीं करेगा या component/board damage हो सकता है, इसलिए rework के बाद verification जरूरी है। Option B, C अर्थहीन हैं और Option D गलत practice सुझाता है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q24",
+      "question": "Selective/localized conformal coating removal के लिए किस tool का उपयोग किया जाता है जो केवल एक छोटे component area तक सीमित रहे?",
+      "options": [
+        "पूरा PCB solvent में डुबो देना",
+        "Fine tip micro-abrasive pen या localized applicator brush से specific area पर ही solvent/abrasion apply करना",
+        "पूरे PCB को sand paper से रगड़ना",
+        "PCB को hammer से खटखटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Localized removal के लिए fine-tip abrasive pen या targeted brush का उपयोग होता है ताकि सिर्फ जरूरी component area की coating हटे, बाकी board की protection बनी रहे। Option A पूरे board की coating हटा देगा, Options C, D mechanical damage करेंगे।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q25",
+      "question": "Rework technician के लिए magnifying lamp/microscope का उपयोग करना क्यों फायदेमंद है?",
+      "options": [
+        "इससे fine pitch SMD joints, bridging और micro-cracks को accurately देखा जा सकता है",
+        "इससे PCB का weight पता चलता है",
+        "इससे solder paste की expiry date पता चलती है",
+        "इससे कोई फायदा नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fine pitch components (जैसे 0402, QFN) में defects नंगी आँखों से पकड़ना मुश्किल होता है, magnification से solder bridge, insufficient wetting, micro-crack जैसी defects clearly दिखती हैं। Options B, C, D magnification के actual उपयोग को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q26",
+      "question": "Rework के बाद PCB की final cleaning के लिए commonly किस solvent का इस्तेमाल होता है?",
+      "options": [
+        "Isopropyl Alcohol (IPA)",
+        "Petrol",
+        "Diesel",
+        "Kerosene"
+      ],
+      "correctIndex": 0,
+      "explanation": "Isopropyl Alcohol (IPA) flux residue और contamination हटाने के लिए safe और widely-used solvent है जो electronic components को नुकसान नहीं पहुँचाता। Options B, C, D flammable/corrosive fuels हैं जो electronics cleaning के लिए उपयुक्त नहीं और component को damage कर सकते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q27",
+      "question": "Conformal coating का 'humidity indicator card' या coating uniformity check किस बात को सुनिश्चित करता है?",
+      "options": [
+        "coating हर जगह uniform thickness में लगी है और कोई pinhole/gap नहीं है",
+        "PCB का final selling price सही है",
+        "component का manufacturing date सही है",
+        "solder paste की मात्रा सही है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Coating की uniformity check (UV light inspection आदि से) यह सुनिश्चित करता है कि पूरे board पर बिना gaps/pinholes के protective layer मौजूद है। Options B, C, D coating inspection से असंबंधित हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q28",
+      "question": "UV-curable conformal coating का एक फायदा क्या है?",
+      "options": [
+        "यह कभी cure नहीं होती",
+        "UV light के exposure से यह तेजी से cure होती है, जिससे production/rework time कम लगता है",
+        "इसे केवल sunlight में महीनों तक रखना पड़ता है",
+        "इसमें कोई protective गुण नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "UV-curable coating UV lamp exposure से सेकंडों में cure हो जाती है, जिससे throughput बढ़ता है और rework के बाद जल्दी दोबारा coating लगाई जा सकती है। Options A, C, D coating की वास्तविक विशेषताओं के विपरीत हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q29",
+      "question": "Rework documentation (जैसे rework log/traveler card) रखने का उद्देश्य क्या है?",
+      "options": [
+        "केवल कागजी formality के लिए, कोई उपयोग नहीं",
+        "किए गए rework का record रखना ताकि traceability, quality tracking और future troubleshooting आसान हो",
+        "PCB की coating का रंग record करने के लिए",
+        "Documentation की कोई जरूरत नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rework log में की गई rework activity, कारण और परिणाम record होते हैं जिससे traceability बनी रहती है और भविष्य में recurring issues की पहचान आसान होती है। Option A, C, D इसके actual उद्देश्य को गलत बताते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q30",
+      "question": "किसी high-value/critical board (जैसे aerospace/medical) की rework limit (rework cycles की अधिकतम संख्या) क्यों निर्धारित की जाती है?",
+      "options": [
+        "क्योंकि बार-बार rework से PCB material fatigue, pad damage और reliability में कमी का risk बढ़ता है",
+        "क्योंकि rework से PCB हल्का हो जाता है",
+        "क्योंकि rework limit केवल cost कम करने के लिए है, quality से कोई संबंध नहीं",
+        "rework limit की कोई जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "IPC standards और quality requirements के अनुसार critical boards पर rework cycles सीमित रखे जाते हैं क्योंकि हर cycle से material fatigue, pad lifting और long-term reliability में गिरावट का खतरा रहता है। Option B अर्थहीन है, C अधूरा/गलत कारण देता है और D गलत practice है।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "three_phase_inverter",
+  "topicName": "Three Phase Inverter",
+  "questions": [
+    {
+      "id": "u4_three_phase_inverter_q1",
+      "question": "एक Three Phase Inverter में DC को three-phase AC output में convert करने के लिए कुल कितने main switching devices (जैसे IGBTs) प्रयोग किए जाते हैं?",
+      "options": [
+        "6 (तीन legs में दो-दो switches)",
+        "4",
+        "3",
+        "8"
+      ],
+      "correctIndex": 0,
+      "explanation": "Three phase bridge inverter में तीन legs होती हैं (हर phase के लिए एक), और हर leg में एक upper तथा एक lower switch होता है, इस प्रकार कुल 6 switches (जैसे IGBTs) लगते हैं। 4 switches single-phase full-bridge में उपयोग होते हैं (option B), 3 switches से पूरी bridge leg पूरी नहीं होती (option C), और 8 switches standard three-phase bridge topology में नहीं लगते (option D)।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q2",
+      "question": "Three phase inverter के तीन output phases (R, Y, B) एक-दूसरे से विद्युतीय रूप से कितने डिग्री के phase shift पर होते हैं?",
+      "options": [
+        "180°",
+        "120°",
+        "90°",
+        "60°"
+      ],
+      "correctIndex": 1,
+      "explanation": "Balanced three-phase output बनाने के लिए तीनों output waveforms को एक-दूसरे से 120° electrical के बराबर shift रखा जाता है, ताकि 360° को तीन बराबर भागों में बाँटा जा सके। 180° (option A) दो-phase प्रणाली के लिए है, 90° और 60° (options C, D) standard three-phase spacing नहीं देते।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q3",
+      "question": "Three phase bridge inverter की एक leg (phase) में ऊपर वाला (upper) और नीचे वाला (lower) switch एक ही समय में ON क्यों नहीं किया जाता?",
+      "options": [
+        "क्योंकि frequency कम हो जाएगी",
+        "क्योंकि output DC हो जाएगा",
+        "क्योंकि इससे DC source में shoot-through (short-circuit) हो जाएगा",
+        "क्योंकि motor उलटा घूमने लगेगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "एक ही leg के upper और lower switch एक साथ ON होने पर DC bus सीधे short हो जाता है, जिसे shoot-through कहते हैं और यह switches को नुकसान पहुँचा सकता है, इसलिए दोनों के बीच dead time रखा जाता है। Frequency (option A), DC output (option B) और motor की rotation direction (option D) इस short-circuit समस्या से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q4",
+      "question": "180° conduction mode में three phase inverter का प्रत्येक switch एक cycle में कितने डिग्री तक conduct करता है, और किसी भी instant पर कुल कितने switches ON रहते हैं?",
+      "options": [
+        "120° तक conduct, 2 switches ON",
+        "90° तक conduct, 4 switches ON",
+        "360° तक conduct, 6 switches ON",
+        "180° तक conduct, किसी भी instant पर 3 switches ON रहते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "180° conduction mode में हर switch आधे cycle (180°) तक ON रहता है, और चूँकि तीनों legs के switches अलग-अलग समय पर switch होते हैं, किसी भी instant पर कुल 3 switches (हर leg से एक) conduct करते हैं। 120° तक conduction (option A) दूसरी mode है, 90°/360° तथा 4/6 switches ON (options B, C) 180° mode के व्यवहार से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q5",
+      "question": "120° conduction mode में किसी भी instant पर कुल कितने switches conduct करते हैं?",
+      "options": [
+        "2 switches (एक समय में केवल दो legs से एक-एक switch ON रहता है, तीसरी leg पूरी तरह off रहती है)",
+        "6 switches",
+        "3 switches",
+        "1 switch"
+      ],
+      "correctIndex": 0,
+      "explanation": "120° conduction mode में हर switch cycle के केवल 120° हिस्से में ही ON रहता है, जिससे किसी भी instant पर तीन में से केवल दो legs active होती हैं और कुल 2 switches conduct करते हैं, जबकि तीसरी leg दोनों switches off रहने से floating रहती है। 6 switches (option B) और 3 switches (option C) 180° mode जैसी स्थिति बताते हैं, तथा केवल 1 switch (option D) से balanced output नहीं मिल सकता।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q6",
+      "question": "180° conduction mode की तुलना में 120° conduction mode का एक मुख्य नुकसान क्या है?",
+      "options": [
+        "यह short-circuit से बचाव नहीं करता",
+        "Output voltage का utilization (fundamental RMS output) 180° mode से कम होता है",
+        "इसमें switches की संख्या बढ़ जाती है",
+        "यह केवल DC load चला सकता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "120° mode में किसी भी instant पर एक leg पूरी तरह off रहती है, जिससे उपलब्ध DC bus voltage का उपयोग 180° mode जितना प्रभावी ढंग से नहीं हो पाता और fundamental output voltage थोड़ा कम रहता है। दोनों modes shoot-through से बचाव देती हैं (option A गलत), switches की संख्या दोनों में समान (6) रहती है (option C गलत), और यह AC three-phase load चलाने के लिए है, केवल DC के लिए नहीं (option D गलत)।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q7",
+      "question": "एक single-phase full-bridge inverter और एक three-phase bridge inverter में switches की संख्या की तुलना करें।",
+      "options": [
+        "दोनों में 6-6 switches होते हैं",
+        "single-phase में 6 और three-phase में 4 switches होते हैं",
+        "single-phase full-bridge में 4 switches होते हैं जबकि three-phase bridge में 6 switches होते हैं",
+        "दोनों में 2-2 switches होते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Single-phase full-bridge inverter में एक H-bridge होता है जिसमें 4 switches पर्याप्त हैं, जबकि three-phase bridge inverter में तीन legs (6 switches) चाहिए ताकि तीन अलग-अलग, 120° shifted output phases मिल सकें। Option A और B switch-count की सही जोड़ी नहीं देते, और option D (2-2 switches) से किसी भी प्रकार का full bridge नहीं बनता।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q8",
+      "question": "Single-phase inverter और three-phase inverter के application के संदर्भ में कौन-सा कथन सही है?",
+      "options": [
+        "Three phase inverter केवल घरेलू LED bulb चलाने के लिए बनाया जाता है",
+        "Single-phase inverter बड़े industrial motor drives के लिए उपयुक्त है",
+        "दोनों की application बिल्कुल समान होती है, कोई अंतर नहीं",
+        "Single-phase inverter मुख्यतः छोटे घरेलू/office loads के लिए तथा three-phase inverter industrial three-phase motors एवं भारी loads के लिए उपयुक्त होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Single-phase inverter साधारण घरेलू/office loads (fan, light, small UPS) के लिए पर्याप्त होता है, जबकि बड़े industrial three-phase motors, pumps व compressors जैसे भारी loads के लिए three-phase inverter जरूरी होता है। Option A गलत है क्योंकि three-phase inverter छोटे LED bulb के लिए नहीं बनाया जाता, option B उलटा कथन है, और option C गलत है क्योंकि दोनों की typical applications अलग-अलग होती हैं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q9",
+      "question": "VFD (Variable Frequency Drive) में three-phase inverter का मुख्य कार्य क्या है?",
+      "options": [
+        "DC bus से output frequency व voltage बदलकर three-phase induction motor की speed व torque नियंत्रित करना",
+        "केवल battery को charge करना",
+        "AC mains को सीधे बिना बदले motor तक पहुँचाना",
+        "Motor की winding resistance बदलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "VFD में rectifier से बना DC bus, three-phase inverter section द्वारा जरूरी frequency और voltage वाले three-phase AC में बदला जाता है, जिससे induction motor की speed और torque नियंत्रित होते हैं (V/f control)। Battery charging (option B), mains को बिना बदले पास करना (option C) और winding resistance बदलना (option D) VFD के inverter section का कार्य नहीं है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q10",
+      "question": "Three phase inverter का control circuit single-phase inverter की तुलना में अधिक जटिल (complex) क्यों माना जाता है?",
+      "options": [
+        "क्योंकि इसमें कोई switch नहीं होता",
+        "क्योंकि इसमें 6 switches की gate driving, सही switching sequence और dead time के साथ synchronise करनी पड़ती है",
+        "क्योंकि frequency हमेशा शून्य रहती है",
+        "क्योंकि यह केवल DC output देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Three phase inverter में 6 switches को सही क्रम, 120° phase relationship और dead time के साथ चलाना पड़ता है ताकि shoot-through न हो और तीनों output phases सही ढंग से बनें, जिससे control logic जटिल हो जाता है। Option A तथ्यात्मक रूप से गलत है (switches होते हैं), option C और D भी गलत हैं क्योंकि frequency शून्य नहीं होती और output AC three-phase होता है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q11",
+      "question": "Three phase inverter installation में 'load balancing' का क्या अर्थ है और यह क्यों जरूरी है?",
+      "options": [
+        "तीनों phases पर current को लगभग एक जैसा रखना ताकि किसी एक phase/switch पर अधिक stress या असंतुलित heating न हो",
+        "केवल एक phase पर पूरा load डालना",
+        "Frequency को असंतुलित रखना",
+        "Load को हमेशा DC पर रखना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Load balancing का मतलब है कि तीनों phases पर current लगभग बराबर रखा जाए, जिससे किसी एक leg के switches अधिक गरम न हों और motor/load को असंतुलित (unbalanced) supply न मिले। एक ही phase पर पूरा load डालना (option B) असंतुलन को और बढ़ाता है, frequency असंतुलन (option C) से load balancing का संबंध नहीं, और option D गलत है क्योंकि यह AC three-phase system है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q12",
+      "question": "Three phase motor को three phase inverter से जोड़ते समय अगर output phase sequence (R-Y-B) गलत जोड़ दिया जाए तो क्या होगा?",
+      "options": [
+        "Motor बिल्कुल नहीं चलेगा",
+        "Inverter तुरंत जल जाएगा",
+        "Output frequency अपने-आप बदल जाएगी",
+        "Motor की rotation direction उलट (reverse) हो जाएगी"
+      ],
+      "correctIndex": 3,
+      "explanation": "Three phase supply की phase sequence motor की rotating magnetic field की दिशा तय करती है, इसलिए दो phases आपस में बदल जाने पर motor उलटी दिशा में घूमने लगता है, इसलिए installation में सही wiring जरूरी है। Motor का न चलना (option A) या inverter का जल जाना (option B) गलत sequence से सीधे तौर पर नहीं होता, और frequency (option C) sequence बदलने से नहीं बदलती।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q13",
+      "question": "Three phase inverter का output waveform single-phase inverter के output से किस प्रकार भिन्न होता है?",
+      "options": [
+        "Three phase inverter तीन output waveforms देता है जो एक-दूसरे से 120° shift में होते हैं, जबकि single-phase inverter केवल एक ही AC waveform देता है",
+        "दोनों बिल्कुल एक जैसे होते हैं",
+        "Three phase inverter का output हमेशा pure sine wave होता है और single-phase का हमेशा square wave",
+        "Single-phase inverter तीन outputs देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Three phase inverter तीन legs से तीन अलग-अलग, 120° shifted output waveforms देता है ताकि balanced three-phase supply बने, जबकि single-phase inverter केवल एक ही output waveform (एक phase) देता है। Option B गलत है क्योंकि output की संख्या व shift अलग है, option C गलत है क्योंकि दोनों types में waveform quasi-square/modified sine हो सकता है, और option D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q14",
+      "question": "Installation के समय three phase inverter में प्रत्येक leg के दो switches के बीच एक छोटा 'dead time' क्यों रखा जाता है?",
+      "options": [
+        "Output frequency बढ़ाने के लिए",
+        "ताकि switching के समय दोनों switches एक साथ ON होकर DC source को short-circuit न करें",
+        "Motor की speed घटाने के लिए",
+        "Battery की life बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Switching के transition के दौरान एक switch पूरी तरह off होने से पहले दूसरा ON हो सकता है, इसलिए दोनों के बीच एक छोटा dead time रखा जाता है ताकि दोनों एक साथ ON होकर DC bus को short न करें। Frequency बढ़ाना (option A), speed घटाना (option C) और battery life (option D) dead time के उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q15",
+      "question": "यदि three phase inverter का fundamental output frequency 50 Hz है, तो एक phase से दूसरे phase (120° shift) के बीच का time delay लगभग कितना होगा? (एक cycle = 20 ms)",
+      "options": [
+        "20 ms",
+        "10 ms",
+        "लगभग 6.67 ms (20 ms का 1/3 भाग)",
+        "3.33 ms"
+      ],
+      "correctIndex": 2,
+      "explanation": "120° shift पूरे cycle (360°) के 1/3 भाग के बराबर है, इसलिए time delay = 20 ms × (120/360) = 20/3 ≈ 6.67 ms होता है। 20 ms (option A) पूरा cycle है, 10 ms (option B) आधे cycle (180°) के बराबर है, और 3.33 ms (option D) 60° shift के बराबर है, 120° के लिए नहीं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q16",
+      "question": "Industrial high-power loads (जैसे बड़े pumps, compressors) के लिए three phase inverter को single-phase inverter से बेहतर क्यों माना जाता है?",
+      "options": [
+        "क्योंकि इसमें switches की संख्या कम होती है",
+        "क्योंकि यह केवल कम power पर काम करता है",
+        "क्योंकि इसकी wiring अधिक सरल होती है",
+        "क्योंकि यह अधिक power को अधिक efficiently, smoother torque तथा balanced current के साथ handle कर सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Three phase inverter द्वारा उत्पन्न balanced, 120° shifted three-phase supply industrial three-phase motors में smoother rotating field और स्थिर torque देती है, जिससे बड़ी power efficiently handle होती है। Switches कम होना (option A) गलत है (single-phase में कम, 4 होते हैं), कम power पर काम करना (option B) उलटा तथ्य है, और wiring सरल होना (option C) भी गलत है क्योंकि three-phase wiring अधिक जटिल होती है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q17",
+      "question": "Three phase inverter द्वारा चलाए जा रहे induction motor में smooth rotating magnetic field बनने का मुख्य कारण क्या है?",
+      "options": [
+        "तीनों output phases के बीच 120° का समान phase shift होना",
+        "Motor में केवल एक ही winding होना",
+        "Inverter का output शुद्ध DC होना",
+        "Output frequency का शून्य होना"
+      ],
+      "correctIndex": 0,
+      "explanation": "तीनों phases के बीच बराबर 120° phase shift होने से motor की stator windings में current क्रमवार तरीके से चढ़ता-उतरता है, जिससे एक smooth rotating magnetic field बनता है। Motor में केवल एक winding होना (option B) three-phase motor के लिए गलत है, output का DC होना (option C) गलत है क्योंकि inverter AC output देता है, और frequency शून्य होना (option D) motor को घूमने ही नहीं देगा।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q18",
+      "question": "एक balanced three phase system में यदि phase voltage 230V है, तो line-to-line voltage लगभग कितना होगा?",
+      "options": [
+        "230V",
+        "लगभग 398V (230 × √3)",
+        "115V",
+        "690V (230 × 3)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Balanced star-connected three-phase system में line voltage, phase voltage का √3 गुना होता है, इसलिए VLine = 230 × 1.732 ≈ 398V। 230V (option A) phase voltage ही है, 115V (option C) आधा है जो गलत सम्बन्ध है, और 690V (option D) साधारण 3 गुना करने से आता है जो सही सूत्र नहीं है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q19",
+      "question": "बड़े industrial three phase inverter (जैसे VFD) की installation में heatsink व cooling fan की व्यवस्था क्यों जरूरी होती है?",
+      "options": [
+        "Frequency बढ़ाने के लिए",
+        "Battery charge करने के लिए",
+        "उच्च power switching में IGBTs में उत्पन्न गर्मी को हटाकर उन्हें rated temperature के भीतर रखने के लिए",
+        "Motor की rotation direction बदलने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "उच्च power पर बार-बार switching होने से IGBTs में switching व conduction losses के कारण गर्मी बनती है, इसे heatsink व cooling fan द्वारा हटाकर devices को सुरक्षित temperature range में रखा जाता है। Frequency बढ़ाना (option A), battery charging (option B) और rotation direction बदलना (option D) cooling arrangement के उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q20",
+      "question": "Three phase inverter driven motor system में 'phase-loss protection' किसलिए दी जाती है?",
+      "options": [
+        "Output frequency मापने के लिए",
+        "Battery को overcharge होने से बचाने के लिए",
+        "DC bus voltage बढ़ाने के लिए",
+        "यदि कोई एक output phase खुला (open) हो जाए तो motor को असंतुलित current से होने वाले नुकसान से बचाने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "यदि किसी वजह से एक output phase खुल जाए तो motor को असंतुलित (unbalanced) current मिलती है जिससे winding गरम होकर जल सकती है, इसे रोकने के लिए phase-loss protection लगाई जाती है। Frequency मापना (option A), battery overcharge रोकना (option B) और DC bus voltage बढ़ाना (option C) phase-loss protection का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q21",
+      "question": "Three phase inverter, single-phase inverter की तुलना में installation के दौरान आमतौर पर अधिक स्थान (space), भारी wiring और अधिक cost क्यों माँगता है?",
+      "options": [
+        "क्योंकि इसमें अधिक switches, उच्च power rating के components और तीन phases की अलग wiring होती है",
+        "क्योंकि इसमें कोई switch नहीं होता",
+        "क्योंकि यह केवल DC पर काम करता है",
+        "क्योंकि इसकी frequency हमेशा शून्य होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Three phase inverter में single-phase की तुलना में अधिक switches (6 बनाम 4), उच्च current/voltage rating के components, अलग heatsinking और तीनों phases की अलग wiring/terminals होते हैं, जिससे space, wiring और cost अधिक लगते हैं। Option B तथ्यात्मक रूप से गलत है, option C गलत है क्योंकि यह AC output देता है, और option D गलत है क्योंकि frequency शून्य नहीं होती।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q22",
+      "question": "व्यावहारिक रूप से industrial VFDs में three-phase inverter के लिए कौन-सा conduction mode अधिक सामान्यतः प्रयोग होता है और क्यों?",
+      "options": [
+        "120° mode, क्योंकि इसमें switches ज्यादा गरम होते हैं",
+        "180° mode, क्योंकि यह बेहतर voltage utilization और अपेक्षाकृत सरल control देता है",
+        "दोनों में से किसी mode का भी उपयोग नहीं होता",
+        "केवल 60° mode उपयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "180° conduction mode में किसी भी instant पर 3 switches conduct करते हैं जिससे DC bus voltage का उपयोग बेहतर होता है और यह अधिकांश industrial VFDs में प्रयोग होता है। Switches ज्यादा गरम होना (option A) mode चुनने का सही कारण नहीं है, option C तथ्यात्मक रूप से गलत है क्योंकि दोनों modes प्रयोग होती हैं, और 60° mode (option D) standard three-phase inverter conduction mode नहीं है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q23",
+      "question": "यदि output frequency 50 Hz है और conduction mode 120° है, तो प्रत्येक switch एक cycle (20 ms) में कितने समय तक ON रहेगा?",
+      "options": [
+        "20 ms",
+        "15 ms",
+        "लगभग 6.67 ms (20 ms का 1/3 भाग, चूँकि 120°/360° = 1/3)",
+        "10 ms"
+      ],
+      "correctIndex": 2,
+      "explanation": "120° conduction का मतलब है switch पूरे 360° cycle के 120/360 = 1/3 भाग तक ON रहता है, इसलिए ON time = 20 ms × 1/3 ≈ 6.67 ms होता है। 20 ms (option A) पूरा cycle है, 15 ms (option B) 270° के बराबर है, और 10 ms (option D) 180° conduction mode के बराबर है, 120° के लिए नहीं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q24",
+      "question": "Three phase inverter का output quasi-square wave होने के कारण उसमें harmonics मौजूद होते हैं। Industrial motor drive में इनका प्रभाव कम करने के लिए क्या किया जाता है?",
+      "options": [
+        "Frequency को शून्य कर दिया जाता है",
+        "Switches की संख्या घटा दी जाती है",
+        "DC input बंद कर दिया जाता है",
+        "Motor की winding inductance तथा जरूरत पड़ने पर output filter/reactor harmonics को smooth करने में मदद करते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Motor की winding स्वयं एक inductive filter की तरह काम करती है और जरूरत पड़ने पर additional output reactor/filter harmonics को कम करके current waveform को अधिक smooth बना देते हैं। Frequency शून्य करना (option A), switches घटाना (option B) और DC input बंद करना (option C) harmonics कम करने के व्यावहारिक तरीके नहीं हैं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q25",
+      "question": "High power three phase inverter panel की installation करते समय proper earthing (grounding) क्यों अनिवार्य है?",
+      "options": [
+        "ताकि fault की स्थिति में leakage current सुरक्षित रूप से जमीन में जाए और operator व equipment सुरक्षित रहें",
+        "ताकि output frequency बढ़ जाए",
+        "ताकि motor उलटा घूमने लगे",
+        "ताकि DC bus voltage शून्य हो जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Proper earthing किसी insulation fault या leakage current की स्थिति में उसे सुरक्षित रास्ते से जमीन में भेजती है, जिससे operator को shock और equipment को नुकसान से बचाया जा सके। Frequency बढ़ना (option B), motor का उलटा घूमना (option C) और DC bus voltage शून्य होना (option D) earthing के उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q26",
+      "question": "Pump/fan जैसे load में fixed-speed motor को damper/throttle से control करने की तुलना में three phase inverter based VFD का मुख्य ऊर्जा लाभ क्या है?",
+      "options": [
+        "VFD हमेशा अधिक ऊर्जा खर्च करता है",
+        "VFD motor की speed व frequency को जरूरत अनुसार घटाकर काफी ऊर्जा (energy) की बचत करता है, जबकि damper/throttle control में motor पूरी speed पर चलकर ऊर्जा बर्बाद करता है",
+        "दोनों में ऊर्जा खपत बिल्कुल बराबर रहती है",
+        "VFD केवल single-phase load पर ही काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "VFD आधारित three phase inverter motor की speed को output frequency बदलकर सीधे जरूरत के अनुसार घटा देता है, जिससे motor पूरी speed पर चलकर damper/throttle से flow रोकने की तुलना में काफी कम ऊर्जा खर्च होती है। Option A उलटा तथ्य है, option C गलत है क्योंकि VFD में स्पष्ट ऊर्जा बचत होती है, और option D गलत है क्योंकि VFD three-phase motors के लिए है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q27",
+      "question": "180° conduction mode में एक पूरे cycle (360°) के दौरान कुल कितने अलग-अलग switching states (प्रत्येक 60° के अंतराल पर) आते हैं?",
+      "options": [
+        "3 states",
+        "12 states",
+        "6 states (हर 60° पर एक नया switching combination)",
+        "2 states"
+      ],
+      "correctIndex": 2,
+      "explanation": "180° conduction mode में हर 60° के बाद switches का कोई एक switch अपनी state बदलता है, इसलिए पूरे 360° cycle में कुल 6 अलग-अलग switching states (combinations) आती हैं। 3 states (option A) और 2 states (option D) आवश्यक switching combinations से कम हैं, जबकि 12 states (option B) मानक 180° mode में नहीं बनतीं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q28",
+      "question": "निम्न में से कौन-सा कथन single-phase और three-phase inverter की तुलना में सही है?",
+      "options": [
+        "Single-phase inverter में three-phase inverter से अधिक switches होते हैं",
+        "Three-phase inverter हमेशा single-phase inverter से सस्ता होता है",
+        "दोनों का control logic बिल्कुल समान जटिलता का होता है",
+        "Single-phase inverter साधारण control व कम switches के साथ छोटे loads के लिए है, जबकि three-phase inverter जटिल control व 6 switches के साथ बड़े industrial loads के लिए है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Single-phase inverter में 4 switches और सरल control logic होता है जो छोटे loads के लिए पर्याप्त है, जबकि three-phase inverter में 6 switches और जटिल synchronised control होता है जो बड़े industrial three-phase loads के लिए जरूरी है। Option A तथ्यात्मक रूप से उलटा है, option B गलत है क्योंकि three-phase inverter आमतौर पर महँगा होता है, और option C गलत है क्योंकि दोनों की control जटिलता अलग-अलग है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q29",
+      "question": "Three phase inverter चुनते समय उसकी current rating तीनों phases के अधिकतम असंतुलित (unbalanced) load current को ध्यान में रखकर क्यों निर्धारित की जानी चाहिए?",
+      "options": [
+        "ताकि सबसे अधिक loaded phase भी सुरक्षित सीमा के भीतर रहे और overheating/failure न हो",
+        "ताकि output frequency बढ़ जाए",
+        "ताकि motor उलटा घूमने लगे",
+        "ताकि DC bus voltage घट जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "व्यावहारिक installations में load हमेशा पूरी तरह balanced नहीं रहता, इसलिए inverter की rating सबसे अधिक loaded phase के current के अनुसार रखी जाती है ताकि वह switch/leg overheat या fail न हो। Frequency बढ़ना (option B), motor का उलटा घूमना (option C) और DC bus voltage घटना (option D) rating selection के कारण से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q30",
+      "question": "निम्न में से three phase inverter का एक प्रमुख फायदा (single-phase inverter की तुलना में) कौन-सा है?",
+      "options": [
+        "यह केवल छोटे घरेलू उपकरण चला सकता है",
+        "यह three-phase induction motors को balanced, smoother rotating field के साथ चलाकर बड़े industrial loads में बेहतर performance व efficiency देता है",
+        "इसमें switches की संख्या single-phase से कम होती है",
+        "इसमें किसी control circuit की जरूरत नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Three phase inverter तीनों phases के बीच सही 120° phase relationship बनाकर three-phase motors में smoother rotating field और बेहतर torque देता है, जिससे यह बड़े industrial loads के लिए अधिक efficient साबित होता है। Option A गलत है क्योंकि यह मुख्यतः बड़े/industrial loads के लिए है, option C गलत है क्योंकि इसमें single-phase (4) से अधिक (6) switches होते हैं, और option D स्पष्ट रूप से गलत है क्योंकि इसे जटिल control circuit चाहिए।"
+    }
+  ]
+}

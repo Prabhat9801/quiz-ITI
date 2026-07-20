@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "trains",
+  "topicName": "Problems on Trains",
+  "questions": [
+    {
+      "id": "math_trains_q1",
+      "question": "150m लंबी एक train किसी pole को 15 seconds में पार करती है। उसकी speed km/h में क्या है?",
+      "options": ["36 km/h", "40 km/h", "45 km/h", "30 km/h"],
+      "correctIndex": 0,
+      "explanation": "Pole पार करते समय train अपनी ही length तय करती है, अतः speed = 150/15 = 10 m/s = 10×18/5 = 36 km/h। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trains_q2",
+      "question": "240m लंबी एक train 72 km/h की speed से चल रही है। वह किसी pole को कितने time में पार करेगी?",
+      "options": ["10 s", "12 s", "14 s", "15 s"],
+      "correctIndex": 1,
+      "explanation": "Speed = 72 km/h = 20 m/s। Time = Length/Speed = 240/20 = 12 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q3",
+      "question": "54 km/h की speed से चल रही एक train किसी pole को 20 seconds में पार करती है। train की length क्या है?",
+      "options": ["280 m", "290 m", "300 m", "320 m"],
+      "correctIndex": 2,
+      "explanation": "Speed = 54 km/h = 15 m/s। Length = Speed×Time = 15×20 = 300 m। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_trains_q4",
+      "question": "210m लंबी एक train 60 km/h की speed से चल रही है। वह 90m लंबे एक platform को कितने time में पार करेगी?",
+      "options": ["15 s", "16 s", "20 s", "18 s"],
+      "correctIndex": 3,
+      "explanation": "Platform पार करते समय total distance = train length + platform length = 210+90 = 300 m। Speed = 60 km/h = 50/3 m/s। Time = 300/(50/3) = 18 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q5",
+      "question": "180m लंबी एक train 220m लंबे platform को 20 seconds में पार करती है। train की speed km/h में क्या है?",
+      "options": ["72 km/h", "70 km/h", "75 km/h", "68 km/h"],
+      "correctIndex": 0,
+      "explanation": "Total distance = 180+220 = 400 m। Speed = 400/20 = 20 m/s = 72 km/h। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trains_q6",
+      "question": "एक train 90 km/h की speed से चल रही है और 250m लंबे platform को 20 seconds में पार करती है। train की length क्या है?",
+      "options": ["230 m", "250 m", "270 m", "300 m"],
+      "correctIndex": 1,
+      "explanation": "Speed = 90 km/h = 25 m/s। Total distance = 25×20 = 500 m। train की length = 500-250 = 250 m। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q7",
+      "question": "एक train 300m लंबे platform को 21 seconds में और एक pole को 9 seconds में पार करती है। train की length क्या है?",
+      "options": ["200 m", "210 m", "225 m", "240 m"],
+      "correctIndex": 2,
+      "explanation": "यदि length L और speed v हो, तो L=9v और L+300=21v। दोनों समीकरणों से 9v+300=21v, अर्थात v=25 m/s और L=9×25=225 m। शेष options इस हल से नहीं आते।"
+    },
+    {
+      "id": "math_trains_q8",
+      "question": "उपरोक्त प्रश्न (Q7) की जानकारी के अनुसार (pole 9 seconds, platform 300m में 21 seconds), train की speed km/h में क्या है?",
+      "options": ["80 km/h", "85 km/h", "88 km/h", "90 km/h"],
+      "correctIndex": 3,
+      "explanation": "समीकरण हल करने पर v=25 m/s मिलता है, जो 25×18/5 = 90 km/h के बराबर है। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q9",
+      "question": "120m और 180m लंबी दो trains एक ही दिशा में parallel tracks पर क्रमशः 60 km/h और 42 km/h की speed से चल रही हैं। तेज train धीमी train को कितने time में पार करेगी?",
+      "options": ["60 s", "65 s", "70 s", "55 s"],
+      "correctIndex": 0,
+      "explanation": "समान दिशा होने के कारण relative speed = 60-42 = 18 km/h = 5 m/s। कुल distance = 120+180 = 300 m। Time = 300/5 = 60 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q10",
+      "question": "100m और 150m लंबी दो trains parallel tracks पर विपरीत दिशाओं में क्रमशः 40 km/h और 50 km/h की speed से चल रही हैं। वे एक-दूसरे को कितने time में पार करेंगी?",
+      "options": ["8 s", "10 s", "12 s", "9 s"],
+      "correctIndex": 1,
+      "explanation": "विपरीत दिशा होने के कारण relative speed = 40+50 = 90 km/h = 25 m/s। कुल distance = 100+150 = 250 m। Time = 250/25 = 10 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q11",
+      "question": "300m लंबी एक train 90 km/h की speed से चल रही है। वह platform पर खड़े एक आदमी को कितने time में पार करेगी?",
+      "options": ["10 s", "11 s", "12 s", "14 s"],
+      "correctIndex": 2,
+      "explanation": "आदमी को stationary point माना जाता है, अतः speed = 90 km/h = 25 m/s। Time = 300/25 = 12 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q12",
+      "question": "200m लंबी एक train 40 km/h की speed से चल रही है। वह train की विपरीत दिशा में 5 km/h से चल रहे एक आदमी को कितने time में पार करेगी?",
+      "options": ["14 s", "15 s", "16 s", "18 s"],
+      "correctIndex": 3,
+      "explanation": "विपरीत दिशा होने के कारण relative speed = 40+5 = 45 km/h = 12.5 m/s। Time = 200/12.5 = 16 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q13",
+      "question": "150m लंबी एक train 68 km/h की speed से चल रही है। वह train की ही दिशा में 8 km/h से दौड़ रहे एक आदमी को कितने time में पार करेगी?",
+      "options": ["9 s", "10 s", "11 s", "12 s"],
+      "correctIndex": 0,
+      "explanation": "समान दिशा होने के कारण relative speed = 68-8 = 60 km/h = 50/3 m/s। Time = 150/(50/3) = 9 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q14",
+      "question": "110m और 90m लंबी दो trains एक-दूसरे की ओर परस्पर विपरीत दिशा में क्रमशः 54 km/h और 36 km/h की speed से चल रही हैं। वे कितने time में एक-दूसरे को पार करेंगी?",
+      "options": ["7 s", "8 s", "9 s", "10 s"],
+      "correctIndex": 1,
+      "explanation": "Relative speed = 54+36 = 90 km/h = 25 m/s। कुल distance = 110+90 = 200 m। Time = 200/25 = 8 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q15",
+      "question": "प्रत्येक 120m लंबी दो trains विपरीत दिशाओं में चलते हुए एक-दूसरे को 8 seconds में पार करती हैं। यदि एक train दूसरी से दोगुनी speed से चल रही है, तो तेज train की speed km/h में क्या है?",
+      "options": ["60 km/h", "66 km/h", "70 km/h", "72 km/h"],
+      "correctIndex": 2,
+      "explanation": "कुल distance = 240 m, अतः relative speed = 240/8 = 30 m/s। यदि धीमी train की speed v और तेज train 2v हो, तो 3v=30, v=10 m/s। तेज train की speed = 20 m/s = 72 km/h। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q16",
+      "question": "एक train 500m लंबे bridge को 30 seconds में और 200m लंबे platform को 20 seconds में पार करती है। train की length क्या है?",
+      "options": ["350 m", "380 m", "400 m", "420 m"],
+      "correctIndex": 3,
+      "explanation": "यदि length L और speed v हो, तो L+500=30v और L+200=20v। घटाने पर 300=10v, v=30 m/s, और L=20×30-200=400 m। शेष options इस हल से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trains_q17",
+      "question": "उपरोक्त प्रश्न (Q16) की जानकारी के अनुसार, train की speed km/h में क्या है?",
+      "options": ["108 km/h", "100 km/h", "110 km/h", "96 km/h"],
+      "correctIndex": 0,
+      "explanation": "हल से v=30 m/s प्राप्त होता है, जो 30×18/5 = 108 km/h के बराबर है। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q18",
+      "question": "400m लंबी एक train, 600m लंबी दूसरी train को विपरीत दिशा में चलते हुए 20 seconds में पार करती है। यदि पहली train की speed 54 km/h है, तो दूसरी train की speed क्या है?",
+      "options": ["110 km/h", "118 km/h", "126 km/h", "132 km/h"],
+      "correctIndex": 1,
+      "explanation": "आवश्यक relative speed = (400+600)/20 = 50 m/s। पहली train की speed = 54 km/h = 15 m/s, अतः दूसरी train की speed = 50-15 = 35 m/s = 126 km/h। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q19",
+      "question": "48 km/h की speed से चल रही एक train, समान दिशा में 30 km/h से चल रही दूसरी train को 60 seconds में पार करती है। यदि पहली train की length 120m है, तो दूसरी train की length क्या है?",
+      "options": ["160 m", "170 m", "180 m", "200 m"],
+      "correctIndex": 2,
+      "explanation": "Relative speed = 48-30 = 18 km/h = 5 m/s। कुल distance = 5×60 = 300 m। दूसरी train की length = 300-120 = 180 m। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q20",
+      "question": "400m लंबी एक train किसी platform को पार करने में 40 seconds लेती है। यदि train की speed 54 km/h है, तो platform की length क्या है?",
+      "options": ["150 m", "180 m", "190 m", "200 m"],
+      "correctIndex": 3,
+      "explanation": "Speed = 54 km/h = 15 m/s। कुल distance = 15×40 = 600 m। Platform की length = 600-400 = 200 m। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q21",
+      "question": "एक आदमी platform पर खड़ा है। 210m लंबी एक train उसे 15 seconds में पार करती है। समान length की एक और train, जो दोगुनी speed से चल रही है, उसे कितने time में पार करेगी?",
+      "options": ["7.5 s", "8 s", "6 s", "9 s"],
+      "correctIndex": 0,
+      "explanation": "पहली train की speed = 210/15 = 14 m/s। दूसरी train की speed = 28 m/s, अतः time = 210/28 = 7.5 seconds। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q22",
+      "question": "दो trains stations A और B से, जो 300 km दूर हैं, एक साथ चलना शुरू करती हैं और एक-दूसरे की ओर क्रमशः 50 km/h और 70 km/h की speed से आती हैं। वे A से कितनी दूरी पर मिलेंगी?",
+      "options": ["100 km", "125 km", "150 km", "175 km"],
+      "correctIndex": 1,
+      "explanation": "Relative speed = 50+70 = 120 km/h, अतः मिलने का time = 300/120 = 2.5 hours। A से दूरी = 50×2.5 = 125 km। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q23",
+      "question": "108 km/h की speed से चल रही एक train, विपरीत दिशा में 72 km/h से चल रही दूसरी train को 6 seconds में पार करती है। यदि पहली train की length 100m है, तो दूसरी train की length क्या है?",
+      "options": ["180 m", "190 m", "200 m", "220 m"],
+      "correctIndex": 2,
+      "explanation": "Relative speed = 108+72 = 180 km/h = 50 m/s। कुल distance = 50×6 = 300 m। दूसरी train की length = 300-100 = 200 m। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q24",
+      "question": "130m लंबी एक train, platform पर खड़े एक आदमी को 6.5 seconds में पार करती है। train की speed km/h में क्या है?",
+      "options": ["60 km/h", "65 km/h", "68 km/h", "72 km/h"],
+      "correctIndex": 3,
+      "explanation": "Speed = 130/6.5 = 20 m/s = 72 km/h। शेष options इस calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_trains_q25",
+      "question": "240m लंबी एक train, समान दिशा में चल रही 260m लंबी दूसरी train को 50 seconds में पार करती है। यदि धीमी train की speed 30 km/h है, तो तेज train की speed क्या है?",
+      "options": ["66 km/h", "60 km/h", "64 km/h", "70 km/h"],
+      "correctIndex": 0,
+      "explanation": "Relative speed = (240+260)/50 = 10 m/s = 36 km/h। तेज train की speed = 30+36 = 66 km/h। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q26",
+      "question": "एक train, 100m लंबे platform को 20 seconds में और platform पर खड़े एक आदमी को 10 seconds में पार करती है। train की speed क्या है?",
+      "options": ["30 km/h", "36 km/h", "40 km/h", "45 km/h"],
+      "correctIndex": 1,
+      "explanation": "यदि length L और speed v हो, तो L=10v और L+100=20v। हल करने पर 10v+100=20v, अर्थात v=10 m/s = 36 km/h। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q27",
+      "question": "उपरोक्त प्रश्न (Q26) की जानकारी के अनुसार, train की length क्या है?",
+      "options": ["90 m", "95 m", "100 m", "110 m"],
+      "correctIndex": 2,
+      "explanation": "v=10 m/s होने पर L=10v=100 m। शेष options इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_trains_q28",
+      "question": "समान length की दो trains, विपरीत दिशाओं में क्रमशः 40 km/h और 32 km/h की speed से चलते हुए एक-दूसरे को 9 seconds में पार करती हैं। प्रत्येक train की length क्या है?",
+      "options": ["80 m", "85 m", "88 m", "90 m"],
+      "correctIndex": 3,
+      "explanation": "Relative speed = 40+32 = 72 km/h = 20 m/s। कुल distance = 20×9 = 180 m, जो दोनों trains की कुल length है, अतः प्रत्येक train की length = 180/2 = 90 m। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q29",
+      "question": "300m लंबी एक train किसी platform को 39 seconds में और किसी signal pole को 18 seconds में पार करती है। platform की length क्या है?",
+      "options": ["350 m", "360 m", "370 m", "380 m"],
+      "correctIndex": 0,
+      "explanation": "Speed = 300/18 = 50/3 m/s। platform सहित कुल distance = (50/3)×39 = 650 m, अतः platform की length = 650-300 = 350 m। शेष options गलत हैं।"
+    },
+    {
+      "id": "math_trains_q30",
+      "question": "एक train किसी pole को 15 seconds में और 100m लंबे platform को 25 seconds में पार करती है। train की length क्या है?",
+      "options": ["140 m", "150 m", "160 m", "170 m"],
+      "correctIndex": 1,
+      "explanation": "यदि length L और speed v हो, तो L=15v और L+100=25v। हल करने पर 15v+100=25v, अर्थात v=10 m/s और L=150 m। शेष options गलत हैं।"
+    }
+  ]
+}

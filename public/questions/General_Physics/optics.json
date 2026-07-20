@@ -1,0 +1,218 @@
+{
+  "unit": "physics",
+  "unitName": "Physics",
+  "topic": "optics",
+  "topicName": "Optics",
+  "questions": [
+    {
+      "id": "phy_optics_q1",
+      "question": "Reflection के laws के अनुसार incident ray, reflected ray और normal के बारे में सही कथन कौन-सा है?",
+      "options": ["Angle of incidence हमेशा angle of reflection से बड़ा होता है", "Incident ray, reflected ray और normal तीनों अलग-अलग planes में होते हैं", "Angle of incidence, angle of reflection के बराबर होता है और तीनों एक ही plane में होते हैं", "Reflected ray हमेशा surface के parallel होती है"],
+      "correctIndex": 2,
+      "explanation": "Laws of reflection के अनुसार angle of incidence = angle of reflection होता है, और incident ray, reflected ray तथा normal तीनों एक ही plane में होते हैं। बाकी options इन नियमों के विपरीत हैं।"
+    },
+    {
+      "id": "phy_optics_q2",
+      "question": "Plane mirror द्वारा बने image की characteristics क्या होती हैं?",
+      "options": ["Real, inverted और magnified", "Real, erect और diminished", "Virtual, inverted और same size", "Virtual, erect, laterally inverted और object जितना ही size का, mirror के पीछे उतनी ही दूरी पर"],
+      "correctIndex": 3,
+      "explanation": "Plane mirror हमेशा virtual, erect, laterally inverted (left-right उलटा) और object के बराबर size का image बनाता है, जो mirror के पीछे उतनी ही दूरी पर होता है जितनी object mirror के सामने है। बाकी options plane mirror की image properties से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_optics_q3",
+      "question": "एक object किसी plane mirror के सामने 5 m की दूरी पर रखा है। Image mirror के पीछे कितनी दूरी पर बनेगा?",
+      "options": ["5 m", "10 m", "2.5 m", "0 m"],
+      "correctIndex": 0,
+      "explanation": "Plane mirror में image की दूरी mirror के पीछे object की दूरी के बराबर होती है, इसलिए image 5 m की दूरी पर बनेगा। बाकी options इस बराबरी वाले नियम को गलत तरीके से लागू करते हैं।"
+    },
+    {
+      "id": "phy_optics_q4",
+      "question": "Ambulance के आगे 'AMBULANCE' शब्द उल्टा (mirror-image में) क्यों लिखा जाता है?",
+      "options": ["ताकि यह ज्यादा आकर्षक लगे", "ताकि यह धूप में चमके", "इसका कोई scientific कारण नहीं है", "ताकि आगे वाली गाड़ी के rearview mirror में यह laterally inverted होकर सही सीधा दिखे"],
+      "correctIndex": 3,
+      "explanation": "Plane mirror lateral inversion करता है, इसलिए अगर शब्द पहले से mirror-image (उल्टा) लिखा हो, तो आगे की गाड़ी के rearview mirror में देखने पर वह सही तरीके से पढ़ा जा सकता है। बाकी options इसका वास्तविक optics-based कारण नहीं हैं।"
+    },
+    {
+      "id": "phy_optics_q5",
+      "question": "दो plane mirrors एक-दूसरे से 90° के angle पर रखे हैं। Formula n = (360/θ) - 1 का उपयोग करके बताएं कि कुल कितने images बनेंगे?",
+      "options": ["2", "4", "3", "6"],
+      "correctIndex": 2,
+      "explanation": "n = (360/90) - 1 = 4 - 1 = 3 images बनेंगे। बाकी options formula को गलत तरीके से लागू करने पर आते हैं।"
+    },
+    {
+      "id": "phy_optics_q6",
+      "question": "Concave mirror के focal length (f) और radius of curvature (R) के बीच सही संबंध क्या है?",
+      "options": ["f = R", "f = 2R", "f = R/4", "f = R/2"],
+      "correctIndex": 3,
+      "explanation": "Spherical mirrors के लिए focal length, radius of curvature का आधा होता है (f = R/2), क्योंकि focus, pole और centre of curvature के बीच में स्थित होता है। बाकी options गलत अनुपात दिखाते हैं।"
+    },
+    {
+      "id": "phy_optics_q7",
+      "question": "एक concave mirror की focal length 10 cm है। एक object mirror से 30 cm दूर रखा है। Mirror formula (1/v + 1/u = 1/f, magnitudes में) का उपयोग करके image की दूरी (v) पता करें।",
+      "options": ["30 cm", "10 cm", "20 cm", "15 cm"],
+      "correctIndex": 3,
+      "explanation": "1/v = 1/f - 1/u = 1/10 - 1/30 = (3-1)/30 = 2/30 = 1/15, इसलिए v = 15 cm (real image mirror के सामने बनेगा)। बाकी options formula को गलत तरीके से solve करने पर आते हैं।"
+    },
+    {
+      "id": "phy_optics_q8",
+      "question": "Concave mirror का उपयोग shaving/makeup mirror या dentist's mirror के रूप में क्यों किया जाता है?",
+      "options": ["जब object pole और focus के बीच रखा जाता है, तो यह magnified virtual image बनाता है", "यह हमेशा image को diminish करता है", "यह light को reflect नहीं करता", "यह हमेशा real image बनाता है"],
+      "correctIndex": 0,
+      "explanation": "जब object concave mirror के pole और focus के बीच होता है, तो mirror एक बड़ा (magnified), virtual और erect image बनाता है, जो shaving या dental examination के लिए उपयोगी है। बाकी options concave mirror के इस विशेष behaviour को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_optics_q9",
+      "question": "Convex mirror द्वारा बना image हमेशा कैसा होता है?",
+      "options": ["Real, inverted और magnified", "Virtual, erect और diminished, जिससे field of view बढ़ जाता है", "Real, erect और same size", "Virtual, inverted और magnified"],
+      "correctIndex": 1,
+      "explanation": "Convex mirror हमेशा virtual, erect और diminished image बनाता है जिससे wide field of view मिलता है, इसीलिए इसे vehicle के side mirrors में उपयोग किया जाता है। बाकी options convex mirror की properties से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_optics_q10",
+      "question": "एक convex mirror की focal length 20 cm है। एक object mirror से 30 cm दूर रखा है। Mirror formula (magnitudes में) का उपयोग करके image की दूरी पता करें।",
+      "options": ["30 cm", "20 cm", "6 cm", "12 cm"],
+      "correctIndex": 3,
+      "explanation": "Convex mirror के लिए v = (u×f)/(u+f) = (30×20)/(30+20) = 600/50 = 12 cm, यानी image mirror के पीछे 12 cm पर virtual बनेगा। बाकी options formula को गलत तरीके से apply करने पर आते हैं।"
+    },
+    {
+      "id": "phy_optics_q11",
+      "question": "किसी mirror में image की magnification m = v/u होता है। यदि object की height 4 cm है, v = 20 cm और u = 10 cm है, तो image की height कितनी होगी?",
+      "options": ["8 cm", "4 cm", "2 cm", "40 cm"],
+      "correctIndex": 0,
+      "explanation": "m = v/u = 20/10 = 2, इसलिए image height = object height × m = 4 × 2 = 8 cm होगी। बाकी options magnification को गलत तरीके से लागू करने पर आते हैं।"
+    },
+    {
+      "id": "phy_optics_q12",
+      "question": "Concave mirror से infinity पर (बहुत दूर) real image पाने के लिए object को कहाँ रखा जाना चाहिए?",
+      "options": ["Pole पर", "Focus पर", "Centre of curvature पर", "Focus और pole के बीच"],
+      "correctIndex": 1,
+      "explanation": "जब object concave mirror के focus पर रखा जाता है, तो reflected rays parallel हो जाती हैं और image infinity पर (व्यावहारिक रूप से बहुत दूर) बनता है। Pole पर image नहीं बनता, centre of curvature पर image object जितनी दूरी पर same size का बनता है, और focus-pole के बीच रखने पर virtual magnified image बनता है।"
+    },
+    {
+      "id": "phy_optics_q13",
+      "question": "Refraction (अपवर्तन) की सही definition क्या है?",
+      "options": ["Light का एक ही medium में सीधा चलना", "Light का mirror से टकराकर वापस आना", "एक medium से दूसरे medium में जाते समय speed में बदलाव की वजह से light के मुड़ने की घटना", "Light का पूरी तरह absorb हो जाना"],
+      "correctIndex": 2,
+      "explanation": "Refraction वह घटना है जिसमें light एक medium से दूसरे medium में जाते समय अपनी speed बदलने के कारण अपनी दिशा (direction) बदल लेती है। पहला कथन straight-line propagation है, दूसरा reflection है, और चौथा absorption है — refraction नहीं।"
+    },
+    {
+      "id": "phy_optics_q14",
+      "question": "Snell's law के अनुसार दो mediums के refractive indices (n1, n2) और angles (θ1, θ2) के बीच सही संबंध क्या है?",
+      "options": ["n1 + θ1 = n2 + θ2", "n1/θ1 = n2/θ2", "n1 × n2 = θ1 × θ2", "n1 sinθ1 = n2 sinθ2"],
+      "correctIndex": 3,
+      "explanation": "Snell's law कहता है कि n1 sinθ1 = n2 sinθ2, जो दो mediums के बीच refraction को describe करता है। बाकी options गलत mathematical relations हैं जो Snell's law को नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_optics_q15",
+      "question": "किसी glass medium में light की speed 2×10⁸ m/s है (vacuum में speed = 3×10⁸ m/s)। Glass का refractive index (n = c/v) क्या होगा?",
+      "options": ["1.0", "0.67", "1.5", "2.0"],
+      "correctIndex": 2,
+      "explanation": "n = c/v = (3×10⁸)/(2×10⁸) = 1.5 होता है। बाकी options गलत division से आते हैं।"
+    },
+    {
+      "id": "phy_optics_q16",
+      "question": "Critical angle की सही definition क्या है?",
+      "options": ["Denser medium में वह angle of incidence जिसके लिए angle of refraction 90° होता है", "Rarer medium में वह angle जिस पर light पूरी तरह absorb हो जाती है", "वह angle जिस पर light सीधी बिना मुड़े निकल जाती है", "Mirror से टकराने वाला angle"],
+      "correctIndex": 0,
+      "explanation": "Critical angle वह angle of incidence (denser medium में) है जिसके लिए refracted ray, boundary के साथ 90° बना ले (यानी angle of refraction = 90°)। बाकी options critical angle की सही परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "phy_optics_q17",
+      "question": "Total Internal Reflection (TIR) होने के लिए कौन-सी condition जरूरी है?",
+      "options": ["Light rarer से denser medium में जाए और angle of incidence critical angle से कम हो", "Light denser से rarer medium में जाए और angle of incidence critical angle से ज्यादा हो", "Light हमेशा vacuum में चले", "Light का wavelength शून्य हो"],
+      "correctIndex": 1,
+      "explanation": "TIR तभी होता है जब light denser medium से rarer medium में जाए और angle of incidence, critical angle से अधिक हो — ऐसी स्थिति में light बाहर न निकलकर पूरी तरह वापस reflect हो जाती है। बाकी options TIR की conditions को सही नहीं बताते।"
+    },
+    {
+      "id": "phy_optics_q18",
+      "question": "Optical fiber किस principle पर काम करती है?",
+      "options": ["Simple reflection", "Total Internal Reflection (TIR)", "Diffraction", "Polarization"],
+      "correctIndex": 1,
+      "explanation": "Optical fiber में light core के अंदर बार-बार Total Internal Reflection से गुजरते हुए बिना बाहर निकले लंबी दूरी तक travel करती है। Simple reflection, diffraction और polarization optical fiber के काम करने का मुख्य आधार नहीं हैं।"
+    },
+    {
+      "id": "phy_optics_q19",
+      "question": "Convex (converging) lens parallel rays के साथ क्या करता है?",
+      "options": ["उन्हें diverge (फैला) कर देता है", "उन्हें पूरी तरह absorb कर लेता है", "उनकी दिशा बिल्कुल नहीं बदलता", "उन्हें एक focus point पर converge (केंद्रित) करता है"],
+      "correctIndex": 3,
+      "explanation": "Convex lens parallel rays को अपवर्तित करके एक बिंदु (principal focus) पर converge करता है, इसलिए इसे converging lens कहते हैं। Concave lens rays को diverge करता है, और बाकी options किसी भी lens का सही behaviour नहीं हैं।"
+    },
+    {
+      "id": "phy_optics_q20",
+      "question": "एक convex lens की focal length 10 cm है। एक object lens से 20 cm दूर (यानी 2f पर) रखा है। Lens formula का उपयोग करके image की दूरी (v) पता करें।",
+      "options": ["10 cm", "40 cm", "20 cm", "5 cm"],
+      "correctIndex": 2,
+      "explanation": "Lens formula (1/v - 1/u = 1/f) से, object 2f पर रखने पर image भी दूसरी तरफ 2f पर बनता है, यानी v = 20 cm (real, inverted, same size)। बाकी options इस standard result से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_optics_q21",
+      "question": "किसी lens की focal length 0.5 m है। Power of lens (P = 1/f, f meters में) कितनी होगी?",
+      "options": ["0.5 D", "5 D", "2 D", "20 D"],
+      "correctIndex": 2,
+      "explanation": "P = 1/f = 1/0.5 = 2 Diopter (D) होती है। बाकी options गलत division से आते हैं।"
+    },
+    {
+      "id": "phy_optics_q22",
+      "question": "Concave (diverging) lens हमेशा किस प्रकार का image बनाता है, और इसका उपयोग किसे correct करने के लिए होता है?",
+      "options": ["Real, magnified image; hypermetropia correct करने के लिए", "Virtual, erect, diminished image; myopia (near-sightedness) correct करने के लिए", "Real, inverted image; astigmatism correct करने के लिए", "Virtual, magnified image; presbyopia correct करने के लिए"],
+      "correctIndex": 1,
+      "explanation": "Concave lens हमेशा virtual, erect और diminished image बनाता है, और यह myopia (near-sightedness) को correct करने के लिए उपयोग होता है क्योंकि यह rays को थोड़ा diverge करके image को retina पर सही जगह ले आता है। बाकी options lens के behaviour या defect correction से मेल नहीं खाते।"
+    },
+    {
+      "id": "phy_optics_q23",
+      "question": "Hypermetropia (farsightedness/long-sightedness) को correct करने के लिए किस प्रकार के lens का उपयोग किया जाता है?",
+      "options": ["Concave (diverging) lens", "Plane mirror", "Cylindrical lens केवल", "Convex (converging) lens, क्योंकि यह image को retina पर लाने के लिए extra convergence देता है"],
+      "correctIndex": 3,
+      "explanation": "Hypermetropia में image retina के पीछे बनती है; convex lens rays को extra converge करके image को retina पर सही स्थान पर ले आता है। Concave lens myopia के लिए उपयोग होता है, plane mirror और cylindrical lens इस defect को correct नहीं करते।"
+    },
+    {
+      "id": "phy_optics_q24",
+      "question": "किसी lens की magnification m = v/u है। एक object की height 2 cm है, और v = 30 cm, u = 10 cm (magnitudes में) है। Image की height कितनी होगी?",
+      "options": ["2 cm", "3 cm", "6 cm", "60 cm"],
+      "correctIndex": 2,
+      "explanation": "m = v/u = 30/10 = 3, इसलिए image height = object height × m = 2 × 3 = 6 cm होगी। बाकी options इस calculation को गलत तरीके से करने पर आते हैं।"
+    },
+    {
+      "id": "phy_optics_q25",
+      "question": "Prism द्वारा white light को उसके सात रंगों (VIBGYOR) में अलग करने की प्रक्रिया को क्या कहते हैं?",
+      "options": ["Reflection", "Refraction only", "Dispersion", "Diffraction"],
+      "correctIndex": 2,
+      "explanation": "अलग-अलग wavelengths के अलग-अलग refractive index के कारण अलग angle से मुड़ने की वजह से white light अपने रंगों में अलग हो जाती है, इसे dispersion कहते हैं। Reflection और diffraction यह प्रक्रिया नहीं हैं, और सिर्फ refraction dispersion का पूरा कारण नहीं बताता।"
+    },
+    {
+      "id": "phy_optics_q26",
+      "question": "आसमान में Rainbow बनने का कारण क्या है?",
+      "options": ["Sunlight का पानी की बूंदों में refraction, dispersion और total internal reflection", "सिर्फ sound waves का reflection", "पानी की बूंदों में light का absorption", "Sunlight का सिर्फ diffraction"],
+      "correctIndex": 0,
+      "explanation": "Rainbow तब बनता है जब sunlight पानी की बूंदों में प्रवेश करते समय refract होती है, अंदर total internal reflection से गुजरती है, फिर बाहर निकलते समय फिर से refract और disperse होती है, जिससे रंग अलग दिखते हैं। बाकी options rainbow बनने की वास्तविक प्रक्रिया नहीं हैं।"
+    },
+    {
+      "id": "phy_optics_q27",
+      "question": "Myopia (near-sightedness) में आँख का image retina के सापेक्ष कहाँ बनता है, और इसे correct करने के लिए कौन-सा lens उपयोग होता है?",
+      "options": ["Retina के आगे; concave (diverging) lens से correct होता है", "Retina के पीछे; convex lens से correct होता है", "बिल्कुल retina पर; कोई lens की जरूरत नहीं", "Retina के आगे; convex lens से correct होता है"],
+      "correctIndex": 0,
+      "explanation": "Myopia में image retina के आगे बनता है (दूर की चीज़ें धुंधली दिखती हैं), जिसे concave (diverging) lens से correct किया जाता है ताकि image थोड़ा पीछे retina पर आ जाए। बाकी options defect के location या correction lens को गलत बताते हैं।"
+    },
+    {
+      "id": "phy_optics_q28",
+      "question": "सामान्य (normal) मनुष्य की आँख में retina पर बनने वाला image किस प्रकार का होता है?",
+      "options": ["Virtual, erect और magnified", "Real, inverted और diminished (जिसे brain सीधा interpret करता है)", "Virtual, inverted और same size", "Real, erect और magnified"],
+      "correctIndex": 1,
+      "explanation": "आँख का lens object का real, inverted और diminished image retina पर बनाता है, जिसे brain प्रोसेस करके सीधा (upright) महसूस कराता है। बाकी options आँख द्वारा बने image की वास्तविक nature नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_optics_q29",
+      "question": "Simple microscope (magnifying glass) में किस प्रकार के lens का उपयोग होता है और object कहाँ रखा जाता है?",
+      "options": ["Concave lens; object focus से बाहर रखा जाता है", "Convex lens; object pole और focus के बीच रखा जाता है, जिससे virtual magnified image मिलता है", "Convex lens; object infinity पर रखा जाता है", "Plane mirror; object किसी भी दूरी पर"],
+      "correctIndex": 1,
+      "explanation": "Simple microscope में एक convex lens का उपयोग होता है, और object को lens के focus के अंदर (pole व focus के बीच) रखा जाता है ताकि virtual, erect और magnified image मिल सके। बाकी options simple microscope की सही working को नहीं दर्शाते।"
+    },
+    {
+      "id": "phy_optics_q30",
+      "question": "Optical fiber communication में core का refractive index cladding से ज्यादा क्यों रखा जाता है?",
+      "options": ["ताकि light core-cladding boundary पर Total Internal Reflection से गुजरे और core के अंदर ही confined रहे", "ताकि light core में absorb हो जाए", "ताकि fiber ज्यादा मजबूत बने", "इसका refractive index से कोई संबंध नहीं है"],
+      "correctIndex": 0,
+      "explanation": "Core का refractive index cladding से ज्यादा रखने पर light denser (core) से rarer (cladding) medium की ओर जाती है और critical angle से ज्यादा angle पर Total Internal Reflection होकर light core में ही बनी रहती है, जिससे signal बिना loss के लंबी दूरी तक travel करता है। बाकी options गलत या असंबंधित कारण हैं।"
+    }
+  ]
+}

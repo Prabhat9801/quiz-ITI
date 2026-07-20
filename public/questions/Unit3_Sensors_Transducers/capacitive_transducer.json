@@ -1,0 +1,368 @@
+{
+  "unit": "unit3",
+  "unitName": "Sensors, Transducers and Applications",
+  "topic": "capacitive_transducer",
+  "topicName": "Capacitive Transducers - Principle and Applications",
+  "questions": [
+    {
+      "id": "u3_capacitive_transducer_q1",
+      "question": "Capacitive transducer किस basic physical relationship पर आधारित होता है?",
+      "options": [
+        "Parallel plate capacitor के capacitance की formula C = εA/d, जिसमें area, distance या dielectric बदलने से C change होती है",
+        "Coil की inductance L = N²μA/l पर",
+        "Resistor के R = ρl/A relationship पर",
+        "Semiconductor junction के forward voltage drop पर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Capacitive transducer parallel plate capacitor के principle C = εA/d पर काम करता है, जिसमें plates के बीच area (A), distance (d), या dielectric constant (ε) में change होने पर capacitance बदलती है, जिसे measurement के लिए use किया जाता है। Option B inductive transducer का principle है, Option C resistive transducer का है और Option D एक diode/transistor junction का characteristic है।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q2",
+      "question": "यदि capacitive transducer में plates के बीच की distance (d) बढ़ाई जाए (area और dielectric constant fixed रहते हुए), तो capacitance पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Capacitance बढ़ेगी क्योंकि C, d के directly proportional होती है",
+        "Capacitance घटेगी क्योंकि C, d के inversely proportional होती है",
+        "Capacitance पर कोई प्रभाव नहीं पड़ेगा",
+        "Capacitance infinite हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Formula C = εA/d के अनुसार capacitance distance (d) के inversely proportional होती है, इसलिए d बढ़ने पर C घटती है। Option A relationship को उल्टा बताता है, Option C गलत है क्योंकि d का direct प्रभाव पड़ता है, और Option D physically असंभव है।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q3",
+      "question": "Distance-variation type capacitive transducer किस प्रकार के measurement के लिए most suitable है?",
+      "options": [
+        "Rotary angle measurement के लिए",
+        "बड़ी distances जैसे किलोमीटर range के measurement के लिए",
+        "Small linear displacement (जैसे micrometer/nanometer range) measurement के लिए, विशेषतः pressure diaphragm applications में",
+        "केवल temperature measurement के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "Distance-variation capacitive transducer बहुत छोटे linear displacements (micrometer या nanometer range) को measure करने में high sensitivity देता है, इसलिए यह pressure sensors (diaphragm deflection measurement) जैसे applications में popular है। Option A के लिए area-variation type ज्यादा उपयुक्त है, Option B और D इसकी actual capability से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q4",
+      "question": "Area-variation type capacitive transducer (जैसे overlapping plates वाला) किस प्रकार के displacement measurement में अधिक linear response देता है?",
+      "options": [
+        "यह कभी linear response नहीं देता",
+        "केवल pressure measurement में उपयोगी है, displacement में नहीं",
+        "यह केवल temperature-based applications में उपयोग होता है",
+        "Small linear या angular displacement में जहाँ plate overlap area displacement के directly proportional बदलती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Area-variation capacitive transducer में plates के overlap area को displacement के साथ linearly बदला जाता है (चूंकि C, A के directly proportional होती है), इसलिए यह wider linear range में displacement/angular position measurement के लिए उपयुक्त होता है, distance-variation type से बेहतर linearity देता है large range में। Option A, B और C गलत तथ्य प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q5",
+      "question": "Dielectric-variation type capacitive transducer किस principle पर liquid level measurement करता है?",
+      "options": [
+        "Liquid स्तर बढ़ने से plates के बीच air के स्थान पर liquid (जिसका dielectric constant अलग होता है) आ जाता है, जिससे effective capacitance change होती है",
+        "Liquid का temperature बदलने से capacitance बदलती है",
+        "Liquid के flow rate से सीधा संबंध होता है, level से नहीं",
+        "Liquid level का capacitance पर कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dielectric-variation type capacitive level sensor में जैसे-जैसे liquid स्तर बढ़ता है, plates के बीच air (कम dielectric constant) की जगह liquid (अधिक dielectric constant, जैसे पानी का लगभग 80) ले लेता है, जिससे net capacitance बढ़ती है, और इस change से level निकाला जाता है। Option B, C और D actual working principle को गलत तरीके से बताते हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q6",
+      "question": "Capacitive transducer में dielectric constant (ε) का इकाई-रहित relative मान (relative permittivity, εr) किस पर निर्भर करता है?",
+      "options": [
+        "केवल plate के area पर",
+        "प्लेट्स के बीच स्थित material की प्रकृति पर (जैसे air, mica, liquid आदि)",
+        "केवल plates के बीच की distance पर",
+        "केवल applied voltage की frequency पर हमेशा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Relative permittivity (εr) plates के बीच रखे material (dielectric) की physical/chemical प्रकृति पर depend करती है — अलग materials (air ≈ 1, mica ≈ 5-6, water ≈ 80) की εr अलग होती है। Option A और C geometry parameters हैं जो capacitance को अलग तरीके से प्रभावित करते हैं, dielectric constant को नहीं, और Option D सामान्यतः गलत है क्योंकि εr material property है न कि frequency पर निर्भर (कुछ materials में frequency dependence हो सकती है पर यह primary factor नहीं)।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q7",
+      "question": "Capacitive transducer एक high input impedance वाला sensor क्यों माना जाता है?",
+      "options": [
+        "क्योंकि इसका output impedance बहुत अधिक होता है जो DC signals के लिए convenient है",
+        "इसका impedance से कोई संबंध नहीं है",
+        "क्योंकि capacitor DC को block करता है और उसकी impedance (Xc = 1/2πfC) frequency व capacitance पर depend करती है, जिससे measuring circuit में careful impedance matching चाहिए",
+        "क्योंकि यह हमेशा zero impedance प्रदान करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Capacitor की reactance Xc = 1/2πfC होती है, जो DC (f=0) पर infinite होती है, इसलिए capacitive transducer high impedance source होता है और इसके साथ उपयुक्त high input impedance वाला signal conditioning circuit (जैसे buffer amplifier) चाहिए ताकि loading error न हो। Option A, B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q8",
+      "question": "Capacitive transducer का एक प्रमुख advantage inductive transducer की तुलना में क्या है?",
+      "options": [
+        "इसमें कोई circuit की जरूरत ही नहीं होती",
+        "यह हमेशा magnetic field से unaffected रहता है इसलिए इसे कभी shield नहीं करना पड़ता",
+        "यह केवल high temperature applications में ही काम करता है",
+        "यह बहुत low power consumption के साथ high sensitivity और fast dynamic response देता है, विशेषतः छोटे displacements के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Capacitive transducers बहुत कम power में operate होते हैं, high sensitivity देते हैं (विशेषतः micrometer-range displacement के लिए) और fast dynamic response रखते हैं, जिससे precision measurement applications में इन्हें पसंद किया जाता है। Option A गलत है क्योंकि signal conditioning circuit आवश्यक होता है, Option B गलत है क्योंकि stray capacitance/electrical noise के लिए shielding फिर भी जरूरी होती है, और Option C एक अनावश्यक restriction है।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q9",
+      "question": "Capacitive transducer में stray capacitance (parasitic capacitance) एक समस्या क्यों मानी जाती है?",
+      "options": [
+        "यह measuring circuit में additional unwanted capacitance जोड़ देती है जिससे measurement में error आ सकता है, इसलिए proper shielding आवश्यक है",
+        "यह measurement को हमेशा अधिक accurate बना देती है",
+        "यह केवल inductive transducers में पाई जाती है, capacitive में नहीं",
+        "इसका कोई प्रभाव नहीं पड़ता क्योंकि capacitors हमेशा ideal होते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Stray/parasitic capacitance (जैसे leads, connectors के बीच) measuring capacitance के साथ parallel/series में जुड़कर readings को distort कर सकती है, इसलिए proper shielding और guard circuits का उपयोग किया जाता है ताकि accurate measurement हो सके। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q10",
+      "question": "Capacitive pressure transducer में diaphragm किस प्रकार measurement में सहायक होता है?",
+      "options": [
+        "Diaphragm एक fixed capacitor plate की तरह काम करता है जिसका कोई movement नहीं होता",
+        "Applied pressure के कारण diaphragm deflect होता है, जिससे fixed plate और diaphragm के बीच की distance बदलती है और capacitance change होती है",
+        "Diaphragm केवल temperature को measure करने में मदद करता है",
+        "Diaphragm का capacitance से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitive pressure sensor में diaphragm (जो एक movable capacitor plate की तरह कार्य करता है) पर pressure लगने से यह deflect होता है, जिससे fixed plate की ओर distance बदलती है और परिणामस्वरूप capacitance change होती है जिसे pressure के proportional रूप में measure किया जाता है। Option A, C और D actual working principle के विपरीत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q11",
+      "question": "यदि दो parallel plates के बीच area A = 0.01 m², distance d = 1 mm, और dielectric air (ε0 = 8.854×10⁻¹² F/m) हो, तो capacitance approximately कितनी होगी?",
+      "options": [
+        "8.854 pF",
+        "885.4 pF",
+        "88.54 pF",
+        "0.8854 pF"
+      ],
+      "correctIndex": 2,
+      "explanation": "C = ε0 A / d = (8.854×10⁻¹² × 0.01) / (1×10⁻³) = 8.854×10⁻¹¹ F = 88.54 pF। Option A, B और D गलत decimal placement या गलत calculation से आते हैं जो सही formula से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q12",
+      "question": "Capacitive transducers को AC excitation supply पर operate करने की आवश्यकता क्यों होती है, DC पर नहीं?",
+      "options": [
+        "क्योंकि AC supply capacitor को हमेशा permanently damage कर देती है",
+        "क्योंकि DC supply से capacitance की value negative हो जाती है",
+        "इसका कोई technical कारण नहीं है",
+        "क्योंकि DC पर capacitor fully charge होने के बाद कोई current flow नहीं होता, इसलिए measurable change प्राप्त करने के लिए AC bridge/oscillator circuits का उपयोग किया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Steady-state DC में capacitor पूरी तरह charge होकर current flow रोक देता है, इसलिए capacitance में change को measure करने के लिए AC excitation (जैसे bridge circuit या oscillator-based circuit) का उपयोग किया जाता है जिससे continuous signal मिले। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q13",
+      "question": "Capacitive transducer से मिलने वाले छोटे capacitance change को measure करने के लिए सामान्यतः किस circuit का उपयोग किया जाता है?",
+      "options": [
+        "AC bridge circuit (जैसे modified Wheatstone/Schering bridge) या resonant circuit",
+        "साधारण DC ammeter",
+        "Simple potentiometer arrangement",
+        "Thermocouple compensation circuit"
+      ],
+      "correctIndex": 0,
+      "explanation": "छोटे capacitance changes को accurately measure करने के लिए AC bridge circuits (जैसे Schering bridge) या resonant/oscillator-based circuits का उपयोग किया जाता है, जो capacitance को voltage/frequency change में convert करते हैं। Option B, C और D capacitive transducer के measurement के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q14",
+      "question": "Capacitive transducer humidity measurement (capacitive hygrometer) में किस principle पर काम करता है?",
+      "options": [
+        "Humidity का capacitance पर कोई प्रभाव नहीं पड़ता",
+        "Humidity बढ़ने से hygroscopic dielectric material moisture absorb करता है जिससे उसका dielectric constant बदलता है और capacitance change होती है",
+        "Humidity बढ़ने से plates की distance mechanically बहुत बढ़ जाती है",
+        "यह केवल pressure के आधार पर humidity measure करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitive humidity sensor में एक hygroscopic (moisture-absorbing) dielectric material use होता है, जिसकी dielectric constant relative humidity के साथ बदलती है, इससे sensor की capacitance change होती है जो humidity के proportional होती है। Option A, C और D actual principle से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q15",
+      "question": "Differential capacitive transducer (push-pull arrangement, जिसमें एक movable plate दो fixed plates के बीच होती है) का क्या फायदा है?",
+      "options": [
+        "इसमें कोई capacitance change नहीं होता",
+        "यह केवल एक ही direction में displacement measure कर सकता है",
+        "यह बेहतर linearity, higher sensitivity और temperature/supply variations के लिए बेहतर compensation देता है",
+        "इसकी sensitivity single capacitor arrangement से हमेशा कम होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Differential (push-pull) arrangement में एक capacitance बढ़ती है जबकि दूसरी घटती है, जिससे bridge circuit में output बेहतर linearity, अधिक sensitivity और common-mode disturbances (जैसे temperature) के लिए बेहतर cancellation देता है। Option A, B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q16",
+      "question": "Capacitive transducer का उपयोग proximity sensing में किस प्रकार होता है?",
+      "options": [
+        "यह target object की केवल color detect करता है",
+        "इसका proximity sensing से कोई संबंध नहीं है",
+        "यह केवल metal objects को detect कर सकता है, बाकी सभी materials के लिए insensitive है",
+        "जब कोई object (conductive या non-conductive, dielectric वाला) sensor के करीब आता है, तो sensor की effective capacitance बदल जाती है, जिससे object की presence detect होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Capacitive proximity sensor object के sensor plate के करीब आने पर effective dielectric/capacitance में change को detect करता है — यह metal के साथ-साथ non-metallic materials (जैसे plastic, wood, liquid) को भी detect कर सकता है, जो इसे inductive proximity sensor (जो केवल metals detect करता है) से अलग बनाता है। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q17",
+      "question": "Capacitive transducer में temperature variation से जुड़ी एक common error क्या है?",
+      "options": [
+        "Temperature change से dielectric material का εr और physical dimensions (जैसे plate spacing, thermal expansion) प्रभावित हो सकते हैं, जिससे readings में drift आता है",
+        "Temperature का capacitive transducer पर कोई प्रभाव कभी नहीं पड़ता",
+        "Temperature केवल inductive transducers को प्रभावित करता है",
+        "Temperature बढ़ने से capacitance हमेशा infinite हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Temperature change dielectric material के εr और structural dimensions (thermal expansion के कारण plate spacing/area) को प्रभावित कर सकता है, जिससे capacitance में unwanted drift आता है — इसे compensate करने के लिए differential design या temperature compensation circuits का उपयोग होता है। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q18",
+      "question": "यदि capacitive transducer में plate area A दोगुनी कर दी जाए (d और ε fixed), तो capacitance पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Capacitance आधी हो जाएगी",
+        "Capacitance दोगुनी हो जाएगी क्योंकि C, A के directly proportional है",
+        "Capacitance same रहेगी",
+        "Capacitance चार गुना हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "C = εA/d के अनुसार capacitance area (A) के directly proportional होती है, इसलिए A दोगुनी करने पर capacitance भी दोगुनी हो जाएगी (d और ε fixed रहने पर)। Option A relationship को उल्टा बताता है, Option C गलत है क्योंकि area का direct प्रभाव पड़ता है, और Option D गलत calculation है।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q19",
+      "question": "Capacitive transducer किस प्रकार के applications में inductive transducer की तुलना में अधिक उपयुक्त माना जाता है?",
+      "options": [
+        "High-temperature furnace measurement में जहाँ केवल metal targets होते हैं",
+        "केवल AC power line voltage measurement में",
+        "Very small displacement/micro-positioning measurement में जहाँ high resolution और fast response चाहिए",
+        "यह हमेशा inductive transducer से कमतर होता है सभी applications में"
+      ],
+      "correctIndex": 2,
+      "explanation": "Capacitive transducers बहुत छोटे displacements (micro/nano-positioning) के लिए high resolution और fast dynamic response देने में विशेष रूप से उपयुक्त होते हैं, जैसे semiconductor manufacturing में precision positioning। Option A, B और D actual comparative advantage को सही तरीके से नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q20",
+      "question": "Capacitive level sensor में यदि liquid conductive (जैसे saline water) हो, तो design में क्या ध्यान रखना पड़ता है?",
+      "options": [
+        "Conductive liquid के लिए किसी special design की जरूरत नहीं",
+        "Conductive liquid capacitive sensing के लिए पूरी तरह unsuitable है",
+        "Insulation से sensor काम करना बंद कर देगा",
+        "Conductive liquid के लिए probe को insulated (coated) करना पड़ता है ताकि liquid और probe के बीच short-circuit न हो और capacitor का एक plate liquid स्वयं act करे"
+      ],
+      "correctIndex": 3,
+      "explanation": "Conductive liquids के लिए probe को insulating coating से covered किया जाता है, जिससे liquid स्वयं एक capacitor plate की तरह कार्य करता है और insulation dielectric का काम करती है, जिससे short-circuit से बचाव होता है और accurate level sensing संभव होती है। Option A, B और C actual design practice से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q21",
+      "question": "Capacitive transducer में 'guard ring' (guard electrode) का उपयोग किस उद्देश्य से किया जाता है?",
+      "options": [
+        "Fringe field effects (edge effects) को कम करके अधिक uniform electric field और accurate capacitance measurement प्राप्त करने के लिए",
+        "केवल decorative purpose के लिए",
+        "Circuit की power consumption बढ़ाने के लिए",
+        "Capacitor को permanently short करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Guard ring plate के किनारों पर होने वाले fringing/edge effects को minimize करता है, जिससे electric field अधिक uniform रहता है और capacitance measurement की accuracy में सुधार होता है। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q22",
+      "question": "Capacitive transducer के output को measurable electrical signal में convert करने के लिए किस प्रकार की signal conditioning सामान्यतः उपयोग होती है?",
+      "options": [
+        "केवल simple diode rectification",
+        "Capacitance-to-voltage या capacitance-to-frequency converter circuits (जैसे oscillator-based या bridge-based circuits)",
+        "केवल mechanical gear arrangement",
+        "Thermocouple cold-junction compensation circuit"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitance change को उपयोगी electrical signal में convert करने के लिए capacitance-to-voltage converter या capacitance-to-frequency converter (जैसे astable multivibrator/oscillator जिसकी frequency capacitance पर depend करती है) circuits use किए जाते हैं। Option A, C और D इस उद्देश्य के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q23",
+      "question": "Capacitive transducer में non-linearity मुख्यतः किस प्रकार के design में अधिक पाई जाती है?",
+      "options": [
+        "Area-variation type में हमेशा",
+        "किसी भी type में non-linearity नहीं आती",
+        "Distance-variation (gap-variation) type में, क्योंकि C, d के inversely proportional (non-linear relationship) होती है",
+        "Dielectric-variation type में कभी non-linearity नहीं आती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Distance-variation type capacitive transducer में C = εA/d relationship के कारण output, displacement के साथ non-linear (hyperbolic) होता है, विशेषतः बड़े displacement range में; इसलिए इसे केवल छोटे range में ही approximately linear माना जाता है। Option A area-variation type में अपेक्षाकृत बेहतर linearity मिलती है, और Option B, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q24",
+      "question": "Capacitive touchscreen (projected capacitive technology) मानव उंगली को कैसे detect करता है?",
+      "options": [
+        "उंगली की गर्मी (heat) को detect करके touch पहचाना जाता है",
+        "उंगली का weight/pressure measure करके touch detect होता है",
+        "यह केवल light intensity के आधार पर touch detect करता है",
+        "उंगली एक conductor होने के कारण screen की grid electrodes के साथ मिलकर स्थानीय capacitance को बदल देती है, जिसे controller circuit द्वारा detect किया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Projected capacitive touchscreen में मानव शरीर की conductive प्रकृति के कारण जब उंगली screen को छूती है, तो grid electrodes के बीच local capacitance बदल जाती है, जिसे controller electronics measure करके touch location detect करते हैं। Option A, B और C अन्य प्रकार की technologies (resistive/infrared) से संबंधित हैं, capacitive touchscreen से नहीं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q25",
+      "question": "Capacitive transducer से बहुत छोटी capacitance values (picofarad range) को accurately measure करना क्यों challenging होता है?",
+      "options": [
+        "क्योंकि stray capacitance और cable capacitance जैसी parasitic effects, actual signal के comparable या उससे अधिक हो सकती हैं, जिससे measurement error आता है",
+        "क्योंकि picofarad values हमेशा negative होती हैं",
+        "क्योंकि इतनी छोटी values को मापने के लिए कोई circuit उपलब्ध नहीं है",
+        "क्योंकि यह केवल DC पर ही सही काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Small pF-range capacitance changes को measure करते समय connecting leads और circuit की stray/parasitic capacitance (जो actual sensor capacitance के comparable हो सकती है) significant error introduce कर सकती है, इसलिए shielded cables और guard circuits आवश्यक होते हैं। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q26",
+      "question": "Capacitive accelerometer (MEMS-based) में acceleration को कैसे sense किया जाता है?",
+      "options": [
+        "Acceleration केवल temperature sensor द्वारा measure होता है",
+        "Acceleration के कारण proof mass (movable plate) fixed plates के सापेक्ष move होता है, जिससे differential capacitance बदलती है जो acceleration के proportional होती है",
+        "Acceleration का capacitance से कोई संबंध नहीं होता",
+        "Proof mass हमेशा स्थिर रहता है चाहे कितना भी acceleration हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "MEMS capacitive accelerometer में एक micro-machined proof mass होता है जो acceleration के कारण fixed electrodes के सापेक्ष displace होता है, जिससे differential capacitance बदलती है और उससे acceleration की value निकाली जाती है। Option A, C और D actual working principle के विपरीत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q27",
+      "question": "Capacitive transducer में यदि दो dielectric materials (जैसे air और एक solid dielectric) series में plates के बीच रखे जाएं, तो overall capacitance पर क्या प्रभाव पड़ता है (series capacitors की तरह)?",
+      "options": [
+        "Overall capacitance individual capacitances के sum के बराबर हो जाती है",
+        "Overall capacitance पर कोई प्रभाव नहीं पड़ता",
+        "Overall capacitance series combination की तरह घटती है (reciprocal formula 1/C = 1/C1 + 1/C2 लागू होता है)",
+        "Overall capacitance हमेशा दोगुनी हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "जब दो dielectric layers plates के बीच series (एक के ऊपर एक) arrangement में होते हैं, तो प्रत्येक layer एक अलग capacitor की तरह व्यवहार करता है और ये series capacitors की तरह combine होते हैं, जिससे 1/C = 1/C1 + 1/C2 formula लागू होता है और overall capacitance individual values से कम होती है। Option A parallel combination का rule है, Option B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q28",
+      "question": "Capacitive transducers का उपयोग thickness measurement (जैसे sheet metal या film thickness gauging) में कैसे किया जाता है?",
+      "options": [
+        "यह केवल material के रंग को detect करता है, thickness को नहीं",
+        "Thickness measurement के लिए capacitive transducer कभी उपयोग नहीं होता",
+        "यह केवल liquid materials की thickness measure कर सकता है",
+        "Material की thickness dielectric की तरह plates के बीच काम करती है या gap को प्रभावित करती है, जिससे capacitance change material की thickness के अनुसार होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Non-contact capacitive thickness gauge में material sensor plate और एक reference plate के बीच gap या dielectric के रूप में कार्य करता है; thickness बदलने से effective capacitance बदलती है, जिससे material की thickness को accurately measure किया जा सकता है। Option A, B और C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q29",
+      "question": "Capacitive transducer तथा resistive potentiometer transducer की तुलना करने पर, capacitive transducer का एक स्पष्ट लाभ क्या है?",
+      "options": [
+        "इसमें कोई mechanical wiper contact नहीं होता, इसलिए contact wear/friction की समस्या नहीं आती और life लंबी होती है",
+        "यह हमेशा resistive transducer से सस्ता होता है",
+        "इसे कभी shielding की जरूरत नहीं पड़ती",
+        "यह केवल DC circuits में काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Resistive potentiometer में एक wiper contact mechanically slide करता है जिससे wear-and-tear होता है, जबकि capacitive transducer में non-contact (contactless) sensing होती है, जिससे mechanical wear की समस्या नहीं आती और operational life लंबी होती है। Option B एक general cost claim है जो हमेशा सत्य नहीं, Option C गलत है क्योंकि stray capacitance shielding जरूरी होती है, और Option D गलत है क्योंकि यह AC पर काम करता है।"
+    },
+    {
+      "id": "u3_capacitive_transducer_q30",
+      "question": "एक capacitive transducer based pressure sensor में यदि applied pressure बढ़ाई जाए और diaphragm fixed plate की ओर deflect करे, तो capacitance और output signal में क्या बदलाव आएगा (assume distance-variation type)?",
+      "options": [
+        "Capacitance और output दोनों unchanged रहेंगे",
+        "Distance घटने से capacitance बढ़ेगी, जिससे output signal (जो capacitance पर depend करता है) proportionally बदलेगा",
+        "Capacitance घटेगी क्योंकि pressure हमेशा capacitance कम करता है",
+        "Diaphragm का deflection capacitance को प्रभावित ही नहीं करता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Diaphragm के fixed plate की ओर deflect होने से plates के बीच की distance (d) घटती है, और चूँकि C = εA/d के अनुसार C, d के inversely proportional होती है, इसलिए capacitance बढ़ेगी और इस पर आधारित output signal भी उसी अनुपात में बदलेगा, जिससे pressure की value निकाली जा सकती है। Option A, C और D actual physical relationship के विपरीत हैं।"
+    }
+  ]
+}

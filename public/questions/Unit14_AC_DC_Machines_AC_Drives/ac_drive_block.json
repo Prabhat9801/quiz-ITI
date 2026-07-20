@@ -1,0 +1,368 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "ac_drive_block",
+  "topicName": "AC Drive Block Diagram (Supply-Rectifier-DC Link-Inverter-Motor), 1-phase & 3-phase",
+  "questions": [
+    {
+      "id": "u14_ac_drive_block_q1",
+      "question": "एक standard AC drive (VFD) के block diagram में power flow किस क्रम में होता है?",
+      "options": [
+        "Supply → Rectifier → DC link (filter) → Inverter → Motor",
+        "Motor → Inverter → DC link → Rectifier → Supply",
+        "Supply → Inverter → DC link → Rectifier → Motor",
+        "Supply → DC link → Rectifier → Inverter → Motor"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है कि AC drive में AC supply पहले rectifier (converter) में जाकर DC में बदलती है, फिर DC link (capacitor/filter) में smooth होती है, उसके बाद inverter इसे variable voltage variable frequency AC में बदलकर motor को देता है। बाकी विकल्पों में क्रम उल्टा या गलत है, जो actual power flow को नहीं दर्शाता।"
+    },
+    {
+      "id": "u14_ac_drive_block_q2",
+      "question": "AC drive के rectifier stage का मुख्य कार्य क्या है?",
+      "options": [
+        "AC supply को fixed frequency पर filter करना",
+        "Incoming AC supply को DC voltage में convert करना",
+        "AC voltage को variable frequency AC में बदलना",
+        "Motor की speed को सीधे control करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Rectifier (diode bridge या controlled thyristor bridge) AC input को DC output में convert करता है, जो आगे DC link में जाता है। Variable frequency AC बनाना inverter का काम है, और speed control पूरे drive system का परिणाम है, अकेले rectifier का नहीं।"
+    },
+    {
+      "id": "u14_ac_drive_block_q3",
+      "question": "DC link में मौजूद बड़ी capacitor bank (filter capacitor) का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Motor winding को insulate करना",
+        "Inverter switching frequency बढ़ाना",
+        "Rectified DC voltage को smooth/ripple-free बनाकर energy storage प्रदान करना",
+        "Supply voltage को step-down करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: DC link capacitor rectifier से मिली ripple युक्त DC को smooth करता है और instantaneous energy storage देता है ताकि inverter को stable DC मिले। यह insulation, switching frequency बढ़ाने या voltage step-down से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q4",
+      "question": "Inverter stage AC drive में क्या कार्य करता है?",
+      "options": [
+        "AC supply को सीधे DC में बदलना",
+        "Supply side पर power factor correction करना",
+        "Overcurrent से केवल rectifier को protect करना",
+        "DC link voltage से power switches (IGBT) की मदद से variable voltage variable frequency (VVVF) AC output बनाना"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Inverter DC link की DC voltage को IGBT जैसे power switches द्वारा PWM switching से VVVF AC output में बदलता है, जो motor को दिया जाता है ताकि speed व torque control हो सके। AC को DC बनाना rectifier का काम है, बाकी विकल्प भी गलत functions बताते हैं।"
+    },
+    {
+      "id": "u14_ac_drive_block_q5",
+      "question": "1-phase input AC drive और 3-phase input AC drive के rectifier section में मुख्य अंतर क्या होता है?",
+      "options": [
+        "1-phase drive में single-phase bridge rectifier (4 diode) होता है जबकि 3-phase drive में 3-phase bridge rectifier (6 diode) होता है",
+        "1-phase drive में rectifier नहीं होता",
+        "3-phase drive में DC link नहीं होता",
+        "दोनों में rectifier बिल्कुल समान संख्या में diode use करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: 1-phase input drive में single-phase full-bridge rectifier (आमतौर पर 4 diode) प्रयोग होता है जबकि 3-phase input drive में 3-phase full-bridge rectifier (6 diode) होता है क्योंकि इसमें तीन lines को rectify करना होता है। दोनों में rectifier और DC link आवश्यक हैं, और diode संख्या अलग होती है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q6",
+      "question": "एक 1-phase input, 3-phase output AC drive में output stage पर कितने motor terminals होते हैं और वे किस प्रकार की supply देते हैं?",
+      "options": [
+        "2 terminals, single-phase AC",
+        "3 terminals, balanced 3-phase VVVF AC (inverter द्वारा generate)",
+        "6 terminals, DC supply",
+        "1 terminal, ground reference"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: चाहे input supply 1-phase हो, अधिकांश छोटे VFD internally DC link से inverter के जरिए 3 output terminals पर balanced 3-phase VVVF AC generate करते हैं ताकि standard 3-phase induction motor चलाया जा सके। अन्य विकल्प output की सही प्रकृति नहीं बताते।"
+    },
+    {
+      "id": "u14_ac_drive_block_q7",
+      "question": "AC drive में 'converter' शब्द सामान्यतः किस block के लिए प्रयोग होता है?",
+      "options": [
+        "Inverter block के लिए",
+        "Motor winding के लिए",
+        "Rectifier (AC to DC conversion) block के लिए",
+        "Control/microprocessor board के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Industrial terminology में 'converter' अक्सर rectifier section को कहा जाता है जो AC को DC में convert करता है। Inverter को अलग से 'inverter' कहा जाता है, motor winding या control board इस शब्द से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u14_ac_drive_block_q8",
+      "question": "AC drive में braking chopper और braking resistor को किस block के साथ जोड़ा जाता है और क्यों?",
+      "options": [
+        "Rectifier के साथ, input current कम करने के लिए",
+        "Control card के साथ, parameter set करने के लिए",
+        "Motor terminal के साथ, torque बढ़ाने के लिए",
+        "DC link के साथ, regenerative braking के दौरान अतिरिक्त energy को dissipate करने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Motor braking के दौरान regenerated energy DC link voltage बढ़ा देती है; braking chopper इस अतिरिक्त energy को braking resistor से होकर dissipate करता है ताकि DC link overvoltage से trip न हो। यह rectifier, motor terminal या control card का प्रत्यक्ष कार्य नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q9",
+      "question": "AC drive में control/microprocessor unit का मुख्य कार्य क्या है?",
+      "options": [
+        "Inverter switches की PWM firing को नियंत्रित करना और feedback के आधार पर output frequency/voltage निर्धारित करना",
+        "AC supply को सीधे rectify करना",
+        "Motor bearing को lubricate करना",
+        "DC link capacitor को charge करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Control card/microprocessor VFD का 'brain' है जो reference speed, feedback signals और parameters के आधार पर PWM switching pattern generate करता है और inverter को control करता है। Rectifying, lubrication और capacitor charging अलग hardware blocks के कार्य हैं।"
+    },
+    {
+      "id": "u14_ac_drive_block_q10",
+      "question": "यदि AC drive के DC link में voltage असामान्य रूप से बढ़ जाए (overvoltage), तो इसका सबसे संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Input supply voltage बहुत कम होना",
+        "Motor का तेजी से deceleration/braking जिससे regenerated energy DC link में वापस आ रही हो",
+        "Motor की सामान्य running load",
+        "Rectifier diode का normal operation"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Fast deceleration या braking के दौरान motor generator की तरह कार्य कर regenerated energy DC link में भेजता है, जिससे voltage बढ़ जाती है; इसे control करने के लिए braking resistor/chopper चाहिए। कम input voltage और normal load DC link overvoltage का कारण नहीं बनते।"
+    },
+    {
+      "id": "u14_ac_drive_block_q11",
+      "question": "3-phase input AC drive में rectifier bridge में प्रयुक्त diode की संख्या सामान्यतः कितनी होती है?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: 3-phase full-wave bridge rectifier में प्रत्येक phase के लिए 2 diode (एक positive half, एक negative half) होते हैं, इस प्रकार कुल 6 diode होते हैं। 2 और 4 diode single-phase rectifier configurations से संबंधित हैं, 8 diode standard bridge में नहीं होते।"
+    },
+    {
+      "id": "u14_ac_drive_block_q12",
+      "question": "AC drive के block diagram में 'inverter' और 'motor' के बीच सीधा connection किस प्रकार का होता है?",
+      "options": [
+        "Single-phase AC connection हमेशा",
+        "DC connection",
+        "कोई विद्युत connection नहीं, केवल magnetic coupling",
+        "Inverter output terminals से motor के 3-phase stator winding terminals तक VVVF AC connection"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Inverter के output terminals सीधे motor के stator winding से जुड़े होते हैं और variable voltage variable frequency AC supply करते हैं जिससे motor की speed control होती है। यह DC connection नहीं है और magnetic coupling वाला statement गलत है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q13",
+      "question": "AC drive में EMI filter को किस स्थान पर लगाया जाता है और क्यों?",
+      "options": [
+        "Supply input side पर, high frequency switching noise को grid में जाने से रोकने के लिए",
+        "Motor terminal पर, torque सुधारने के लिए",
+        "DC link में, voltage बढ़ाने के लिए",
+        "Control card के अंदर, program store करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: EMI (Electro-Magnetic Interference) filter सामान्यतः supply input side पर लगाया जाता है ताकि inverter की high frequency PWM switching से उत्पन्न noise mains supply में वापस न जाए। यह torque, voltage बढ़ाने या programming से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q14",
+      "question": "Uncontrolled rectifier (diode bridge) और controlled rectifier (thyristor bridge) में क्या मुख्य अंतर है?",
+      "options": [
+        "दोनों बिल्कुल समान होते हैं",
+        "Uncontrolled rectifier में output DC voltage fixed होता है जबकि controlled rectifier में firing angle से DC voltage adjust किया जा सकता है",
+        "Controlled rectifier केवल AC output देता है",
+        "Uncontrolled rectifier में capacitor की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Diode based uncontrolled rectifier में output DC voltage input AC voltage के अनुसार fixed होता है, जबकि thyristor based controlled rectifier में firing angle बदलकर output DC voltage को regulate किया जा सकता है। बाकी विकल्प इन दोनों में अंतर सही ढंग से नहीं बताते।"
+    },
+    {
+      "id": "u14_ac_drive_block_q15",
+      "question": "AC drive में 'DC bus' और 'DC link' शब्द किस block को दर्शाते हैं?",
+      "options": [
+        "Motor stator winding",
+        "Input AC supply line",
+        "Rectifier और inverter के बीच का intermediate DC stage जिसमें capacitor/inductor filter होता है",
+        "Cooling fan circuit"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: DC bus/DC link, rectifier तथा inverter के बीच का intermediate stage है जिसमें filter capacitor (और कभी inductor) होता है जो smooth DC energy storage प्रदान करता है। यह motor winding, input AC line या cooling fan से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q16",
+      "question": "यदि AC drive के DC link capacitor में fault आ जाए, तो drive के operation पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "कोई प्रभाव नहीं पड़ेगा, motor सामान्य चलता रहेगा",
+        "Motor की speed स्वतः बढ़ जाएगी",
+        "Rectifier automatically bypass हो जाएगा",
+        "Inverter को stable DC नहीं मिलेगी जिससे output waveform खराब होगा या drive trip हो जाएगी"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: DC link capacitor के fault होने पर rectified DC properly smooth नहीं होगी, जिससे inverter को अस्थिर DC मिलेगी और output waveform विकृत हो सकता है या protection circuit drive को trip कर देगा। सामान्य operation, automatic bypass या speed बढ़ना गलत परिणाम हैं।"
+    },
+    {
+      "id": "u14_ac_drive_block_q17",
+      "question": "AC drive block diagram में feedback (जैसे speed sensor या current sensor) सामान्यतः किस block को दी जाती है?",
+      "options": [
+        "Control/microprocessor unit को",
+        "DC link capacitor को",
+        "Rectifier को",
+        "Input EMI filter को"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Speed या current sensor से feedback signal control/microprocessor unit को दी जाती है ताकि वह actual value की reference value से तुलना कर PWM pattern adjust कर सके (closed-loop control)। Rectifier, capacitor या EMI filter feedback process नहीं करते।"
+    },
+    {
+      "id": "u14_ac_drive_block_q18",
+      "question": "एक single-phase input VFD का उपयोग करते हुए 3-phase motor चलाने का मुख्य लाभ क्या है?",
+      "options": [
+        "यह 3-phase supply की तुलना में अधिक power देता है",
+        "जहाँ केवल single-phase mains उपलब्ध है वहाँ भी standard 3-phase induction motor को चलाया जा सकता है",
+        "यह rectifier को हटा देता है",
+        "यह DC link को अनावश्यक बना देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: कई छोटे installations में केवल single-phase supply उपलब्ध होती है; single-phase input VFD single-phase AC को rectify कर DC link बनाता है और inverter से balanced 3-phase output generate कर देता है जिससे 3-phase motor चलाया जा सकता है। यह अधिक power नहीं देता और rectifier/DC link को हटाता नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q19",
+      "question": "AC drive block diagram में 'output reactor' (line reactor) मोटर side में क्यों लगाया जाता है?",
+      "options": [
+        "Rectifier को protect करने के लिए",
+        "DC link voltage बढ़ाने के लिए",
+        "PWM switching से उत्पन्न voltage spikes और dv/dt को motor cable व winding पर कम करने के लिए",
+        "Control card को power supply देने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Output reactor inverter की fast switching (high dv/dt) से उत्पन्न voltage spikes को motor cable व winding insulation तक पहुँचने से पहले कम करता है, विशेषकर लंबी cable length में। यह rectifier protection, DC link voltage या control card supply से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q20",
+      "question": "AC drive में bypass contactor का उपयोग किस उद्देश्य के लिए किया जाता है?",
+      "options": [
+        "Motor को permanently disconnect करने के लिए",
+        "Rectifier को cool करने के लिए",
+        "DC link voltage मापने के लिए",
+        "Drive fault या maintenance के दौरान motor को सीधे mains supply पर चलाने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Bypass contactor emergency या maintenance स्थिति में drive को bypass करके motor को सीधे mains AC supply से जोड़ने की सुविधा देता है ताकि process न रुके। यह permanent disconnection, voltage measurement या cooling से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q21",
+      "question": "AC drive में rectifier stage के output पर आमतौर पर किस प्रकार का waveform मिलता है (filter से पहले)?",
+      "options": [
+        "Pulsating DC (ripple युक्त)",
+        "Pure sine wave AC",
+        "Square wave AC",
+        "बिल्कुल zero voltage"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Rectifier bridge AC को rectify करने पर pulsating/ripple युक्त DC output देता है, जिसे DC link filter capacitor smooth करता है। Pure sine wave AC, square wave AC या zero voltage rectifier के output को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u14_ac_drive_block_q22",
+      "question": "AC drive block diagram में 'inrush current limiting resistor/circuit' DC link में क्यों लगाया जाता है?",
+      "options": [
+        "Motor speed नियंत्रित करने के लिए",
+        "Power ON करते समय uncharged capacitor के कारण होने वाले बहुत अधिक initial charging current को सीमित करने के लिए",
+        "Output frequency बढ़ाने के लिए",
+        "Rectifier diode को हटाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Power ON करते समय DC link capacitor uncharged होने पर बहुत बड़ा inrush current खींच सकता है जो rectifier diode व फ्यूज को नुकसान पहुँचा सकता है; इसे सीमित करने के लिए soft-charge resistor/circuit प्रयोग होता है। यह speed, frequency या diode हटाने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q23",
+      "question": "AC drive में कूलिंग fan/heatsink किस block से जुड़े रहते हैं?",
+      "options": [
+        "केवल control card से",
+        "Input EMI filter से",
+        "Power section (rectifier व inverter में लगे power switches) से heat dissipate करने के लिए",
+        "केवल motor winding से"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Rectifier व inverter में लगे power semiconductor devices (diode, IGBT आदि) operation के दौरान heat generate करते हैं; heatsink व cooling fan इस heat को dissipate करते हैं ताकि devices safe temperature में रहें। Control card, EMI filter व motor winding इस cooling की मुख्य target नहीं हैं।"
+    },
+    {
+      "id": "u14_ac_drive_block_q24",
+      "question": "AC drive में 'operator panel/keypad' block का कार्य क्या है?",
+      "options": [
+        "AC को DC में convert करना",
+        "DC link ripple को filter करना",
+        "Motor winding को short करना",
+        "Parameter setting, monitoring और manual reference input की सुविधा देना"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: Operator panel/keypad user को drive parameters set करने, status/fault monitor करने और manual speed reference देने की सुविधा देता है, जो control unit के साथ interface करता है। AC-DC conversion, winding short करना या ripple filter करना इसके कार्य नहीं हैं।"
+    },
+    {
+      "id": "u14_ac_drive_block_q25",
+      "question": "AC drive में input rectifier और output inverter दोनों में IGBT का उपयोग करने पर (active front end / regenerative drive) क्या अतिरिक्त लाभ मिलता है?",
+      "options": [
+        "Braking के दौरान regenerated energy को वापस mains supply में भेजा जा सकता है (energy regeneration)",
+        "Motor की physical size घट जाती है",
+        "DC link की आवश्यकता समाप्त हो जाती है",
+        "Control card की आवश्यकता समाप्त हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Active front end (AFE) drive में rectifier भी IGBT आधारित bidirectional converter होता है, जो braking के दौरान regenerated energy को braking resistor में जलाने के बजाय वापस mains में भेज सकता है, जिससे energy saving होती है। यह motor size, DC link या control card की आवश्यकता को समाप्त नहीं करता।"
+    },
+    {
+      "id": "u14_ac_drive_block_q26",
+      "question": "AC drive के block diagram में फ्यूज या MCCB (input protection device) किस उद्देश्य के लिए लगाया जाता है?",
+      "options": [
+        "Motor की speed control करने के लिए",
+        "Short circuit या excessive fault current से rectifier व अन्य components को protect करने के लिए",
+        "DC link voltage बढ़ाने के लिए",
+        "PWM frequency set करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Input side पर लगा फ्यूज/MCCB short circuit या असामान्य फॉल्ट करंट की स्थिति में supply को disconnect कर rectifier और आगे के components को damage से बचाता है। यह speed control, DC link voltage बढ़ाने या PWM frequency setting से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q27",
+      "question": "AC drive में rectifier से DC link को जोड़ने वाले conductor में किस प्रकार की voltage उपस्थित रहती है?",
+      "options": [
+        "Variable frequency AC voltage",
+        "बिल्कुल zero voltage",
+        "लगभग constant/smoothed DC voltage",
+        "केवल pulsed square wave AC"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही: Rectifier का output filter capacitor से गुजरने के बाद DC link में लगभग constant/smoothed DC voltage रहती है, जो inverter को supply होती है। यह variable frequency AC, zero voltage या pulsed AC नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q28",
+      "question": "1-phase AC drive की तुलना में 3-phase AC drive में DC link voltage ripple की मात्रा सामान्यतः कैसी होती है?",
+      "options": [
+        "3-phase में ripple अधिक होती है",
+        "1-phase drive में कोई ripple होती ही नहीं",
+        "दोनों में ripple बिल्कुल समान होती है",
+        "3-phase में ripple कम होती है क्योंकि rectifier को अधिक बार AC waveform cross होने से DC output अपेक्षाकृत smoother मिलता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही: 3-phase rectifier में प्रति cycle अधिक rectification pulses (6-pulse) मिलते हैं, जिससे output DC अपेक्षाकृत smoother होता है और ripple कम होती है, जबकि single-phase rectifier (2-pulse) में ripple अधिक होती है। इसलिए विकल्प A, C व D गलत हैं।"
+    },
+    {
+      "id": "u14_ac_drive_block_q29",
+      "question": "AC drive के block diagram में 'gate driver circuit' किस block का हिस्सा माना जाता है?",
+      "options": [
+        "Control unit और inverter power switches के बीच का interface, जो control signal को power switch के लिए उपयुक्त voltage/current level में बदलता है",
+        "Rectifier का हिस्सा",
+        "Motor winding का हिस्सा",
+        "EMI filter का हिस्सा"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही: Gate driver circuit control unit से प्राप्त low-power logic signal को amplify कर IGBT/power switch के gate को चलाने योग्य voltage/current में बदलता है, यह control व power stage के बीच का पुल है। यह rectifier, motor winding या EMI filter का हिस्सा नहीं है।"
+    },
+    {
+      "id": "u14_ac_drive_block_q30",
+      "question": "AC drive के complete block diagram (supply-rectifier-DC link-inverter-motor) में यदि inverter fail हो जाए, तो सबसे संभावित परिणाम क्या होगा?",
+      "options": [
+        "Motor की speed automatically बढ़ जाएगी",
+        "Motor को उचित VVVF supply नहीं मिलेगी और drive fault/trip हो जाएगी या motor रुक जाएगा",
+        "Rectifier स्वयं ठीक हो जाएगा",
+        "DC link voltage शून्य हो जाएगी लेकिन motor सामान्य चलता रहेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही: Inverter fail होने पर motor को आवश्यक VVVF AC supply नहीं मिल पाएगी, जिससे protection logic drive को trip करेगी और motor रुक जाएगा। Speed बढ़ना, rectifier का स्वतः ठीक होना या motor का सामान्य चलते रहना गलत परिणाम हैं।"
+    }
+  ]
+}

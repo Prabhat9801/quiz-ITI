@@ -1,0 +1,368 @@
+{
+  "unit": "unit8",
+  "unitName": "Digital Panel Meter",
+  "topic": "lcd_driver_ics",
+  "topicName": "LCD Decoder/Driver ICs & Multiplex Drive",
+  "questions": [
+    {
+      "id": "u8_lcd_driver_ics_q1",
+      "question": "LCD (Liquid Crystal Display) को यदि DC logic level से सीधे लगातार drive किया जाए, तो उसमें कौन-सी permanent समस्या उत्पन्न हो सकती है?",
+      "options": [
+        "Electrolysis के कारण liquid crystal को permanent damage (staining/darkening) होता है",
+        "Response time बहुत तेज हो जाता है",
+        "Segment का contrast बढ़ जाता है",
+        "Power consumption घट जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCD का liquid crystal material यदि लंबे समय तक शुद्ध DC voltage से drive किया जाए तो उसमें electrochemical decomposition/electrolysis होकर permanent staining या darkening हो जाता है, इसलिए हमेशा AC square wave drive प्रयोग किया जाता है। Response time तेज होना (option 2), contrast बढ़ना (option 3) या power consumption घटना (option 4) — ये DC drive का वास्तविक प्रभाव नहीं हैं; असल में DC drive से display का जीवनकाल घटता है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q2",
+      "question": "LCD segments को सुरक्षित रूप से drive करने के लिए किस प्रकार के signal की आवश्यकता होती है?",
+      "options": [
+        "Pure DC voltage",
+        "AC square wave (low frequency) signal",
+        "High frequency sine wave केवल",
+        "Single narrow pulse"
+      ],
+      "correctIndex": 1,
+      "explanation": "LCD segments को हमेशा low-frequency AC square wave signal से drive किया जाता है ताकि liquid crystal में कोई net DC component न रहे और वह क्षतिग्रस्त न हो। Pure DC (option 1) से permanent damage होता है, sine wave (option 3) व्यवहारिक रूप से प्रयोग नहीं होता क्योंकि driver ICs digital square wave output देती हैं, और single pulse (option 4) से continuous drive संभव नहीं।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q3",
+      "question": "LCD driver circuit में 'backplane (BP)' electrode किस प्रकार कार्य करता है?",
+      "options": [
+        "यह केवल decimal point को control करता है",
+        "यह केवल mechanical support देता है",
+        "यह सभी segments के लिए common reference electrode है जिसके सापेक्ष हर segment का voltage compare होकर ON/OFF तय होता है",
+        "यह केवल supply filtering करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Backplane (BP) सभी segments के लिए common electrode की तरह कार्य करता है; प्रत्येक segment का ON/OFF होना इस बात से तय होता है कि उसका waveform BP waveform के सापेक्ष same phase में है या opposite phase में। यह decimal point control (option 1), mechanical support (option 2) या केवल supply filtering (option 4) नहीं करता।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q4",
+      "question": "यदि किसी LCD segment का drive waveform backplane (BP) waveform के exactly same phase (in-phase) में हो, तो वह segment कैसा दिखेगा?",
+      "options": [
+        "ON (dark) दिखेगा",
+        "आधी brightness पर glow करेगा",
+        "Flicker करेगा",
+        "OFF (clear/transparent) रहेगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब segment drive waveform backplane waveform के exactly same phase (in-phase) में होता है तो segment के दोनों टर्मिनलों के बीच प्रभावी (RMS) voltage लगभग शून्य रहता है, इसलिए वह OFF (clear) दिखता है। ON (dark) होना (option 1) तब होता है जब waveforms out-of-phase हों; आधी brightness (option 2) या flicker (option 3) सामान्य in-phase स्थिति में नहीं होते।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q5",
+      "question": "LCD segment को ON (dark) दिखाने के लिए उसका drive waveform backplane waveform के सापेक्ष कैसा होना चाहिए?",
+      "options": [
+        "Out-of-phase (180° अंतर से) होना चाहिए",
+        "Same phase (in-phase) होना चाहिए",
+        "Frequency दोगुनी होनी चाहिए",
+        "Amplitude आधा होना चाहिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Segment को ON (dark) दिखाने के लिए उसका drive waveform backplane waveform के सापेक्ष out-of-phase (180° अंतर) होना चाहिए, जिससे segment के आर-पार प्रभावी (RMS) voltage अधिकतम हो जाए। Same phase (option 2) में segment OFF रहता है; frequency दोगुनी करना (option 3) या amplitude आधा करना (option 4) phase relationship को नहीं बदलते।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q6",
+      "question": "CD4543 IC को मुख्यतः किस काम के लिए बनाया गया है?",
+      "options": [
+        "केवल audio amplifier के रूप में",
+        "BCD-to-seven segment latch/decoder/driver जो LCD और LED दोनों display drive कर सकता है",
+        "केवल power supply regulator के रूप में",
+        "केवल timer circuit के रूप में"
+      ],
+      "correctIndex": 1,
+      "explanation": "CD4543 एक CMOS BCD-to-seven segment latch/decoder/driver IC है जिसे विशेष रूप से इस प्रकार डिज़ाइन किया गया है कि यह LCD और LED दोनों प्रकार के seven segment displays को drive कर सके। यह न तो audio amplifier (option 1) है, न power regulator (option 3), न ही यह timer circuit (option 4) है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q7",
+      "question": "CD4543 IC में वह कौन-सा विशेष input pin है जो यह चुनने देता है कि IC किस प्रकार का display (LCD या LED) drive करे?",
+      "options": [
+        "Latch Enable (LE) pin",
+        "Blanking (BL) input",
+        "Phase (Ph) input",
+        "Lamp Test pin"
+      ],
+      "correctIndex": 2,
+      "explanation": "CD4543 में एक विशेष Phase (Ph) input pin होता है, जिसे उपयुक्त तरीके से जोड़कर IC को LCD (AC drive) या LED (DC drive) मोड में सेट किया जाता है। Latch Enable (option 1) डेटा hold करता है, Blanking (option 2) segments बंद करता है, और Lamp Test pin (option 4) 4543 में मौजूद नहीं होता जैसा 7447 में होता है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q8",
+      "question": "CD4543 में 'Phase (Ph)' input को LCD backplane drive signal से कैसे जोड़ा जाता है?",
+      "options": [
+        "उसे हमेशा ground से जोड़ा जाता है",
+        "उसे supply Vdd से स्थायी रूप से जोड़ा जाता है",
+        "उसे कभी नहीं जोड़ा जाता, यह unused रहता है",
+        "उसे उसी AC square wave signal से जोड़ा जाता है जो backplane को drive करता है, ताकि सही out-of-phase segment output बने"
+      ],
+      "correctIndex": 3,
+      "explanation": "LCD मोड में सही out-of-phase segment output बनाने के लिए CD4543 के Ph pin को उसी AC square wave signal से जोड़ा जाता है जो LCD backplane को drive कर रहा होता है; इससे अंदर का logic सही ढंग से in-phase/out-of-phase output तय करता है। इसे स्थायी रूप से ground (option 1) या Vdd (option 2) से जोड़ने पर LCD सही काम नहीं करेगी, और इसे unused (option 3) छोड़ना LCD मोड के लिए गलत है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q9",
+      "question": "MC14543 IC की तुलना CD4543 से करने पर निम्न में से कौन-सा कथन सही है?",
+      "options": [
+        "दोनों functionally समान BCD-to-7-segment latch/decoder/driver ICs हैं जो LCD/LED दोनों drive कर सकते हैं",
+        "MC14543 केवल audio ICs है",
+        "MC14543 LCD drive नहीं कर सकता",
+        "दोनों में कोई समानता नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "MC14543 और CD4543 दोनों functionally समान CMOS BCD-to-seven segment latch/decoder/driver ICs हैं जो LCD और LED दोनों प्रकार के displays को drive कर सकते हैं, बस निर्माता (Motorola/RCA आदि) अलग हैं। ये audio ICs (option 2) नहीं हैं, MC14543 भी LCD drive कर सकता है (इसलिए option 3 गलत), और दोनों में पर्याप्त समानता है (इसलिए option 4 गलत)।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q10",
+      "question": "ICL7136 IC को digital panel meter में मुख्यतः किस लिए प्रयोग किया जाता है?",
+      "options": [
+        "केवल power supply regulation के लिए",
+        "3½ digit A/D converter के रूप में जिसका output सीधे LCD display drive कर सके",
+        "केवल audio amplification के लिए",
+        "केवल RF signal processing के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "ICL7136 एक 3½ digit dual-slope A/D converter IC है जिसे विशेष रूप से LCD display को सीधे drive करने के लिए डिज़ाइन किया गया है, जिसका उपयोग digital panel meters में होता है। यह supply regulator (option 1), audio amplifier (option 3) या RF processing IC (option 4) नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q11",
+      "question": "ICL7211 IC का मुख्य उपयोग क्या है?",
+      "options": [
+        "यह एक audio power amplifier IC है",
+        "यह एक RF oscillator IC है",
+        "यह एक dedicated CMOS LCD display driver IC है, जो प्रायः ICL7106 जैसी A/D converter ICs के साथ मिलकर LCD को AC drive प्रदान करने हेतु प्रयोग होती है",
+        "यह केवल एक voltage regulator IC है"
+      ],
+      "correctIndex": 2,
+      "explanation": "ICL7211 एक dedicated CMOS LCD display driver IC है, जिसे प्रायः ICL7106 जैसी A/D converter ICs (जो मूलतः LED display drive हेतु बनी हैं) के साथ जोड़कर उपयोग किया जाता है ताकि उसी data से LCD को सही AC waveform के साथ drive किया जा सके। यह audio amplifier (option 1), RF oscillator (option 2) या केवल voltage regulator (option 4) नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q12",
+      "question": "Multi-digit LCD display में 'multiplex drive' तकनीक का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Display का रंग बदलना",
+        "Supply voltage बढ़ाना",
+        "Response time धीमा करना",
+        "प्रत्येक digit के लिए backplane और segment lines की संख्या घटाकर कुल interconnections/pins कम करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Multiplex drive तकनीक में कई digits के segments को समूहों में bank करके कुछ common backplane lines के माध्यम से समय-विभाजित (time-division) तरीके से drive किया जाता है, जिससे कुल interconnections/pins की संख्या बहुत घट जाती है — यही इसका मुख्य उद्देश्य है। यह display का रंग (option 1), supply voltage बढ़ाना (option 2) या response धीमा करना (option 3) नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q13",
+      "question": "'Static drive' (1/1 duty) LCD scheme में सामान्यतः कितने backplane होते हैं और यह किस प्रकार के display के लिए उपयुक्त है?",
+      "options": [
+        "एक ही common backplane, single/कम digit वाले सरल displays के लिए उपयुक्त",
+        "4 backplanes, बहु-digit displays के लिए",
+        "3 backplanes, केवल बड़े digital panel meters के लिए",
+        "कोई backplane नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Static drive (1/1 duty) में केवल एक common backplane होता है और प्रत्येक segment सीधे उससे संबंधित signal से drive होता है; यह सरल circuit वाले single/कम digit displays के लिए उपयुक्त है। 4 backplanes (option 2) या 3 backplanes (option 3) multiplexed schemes में होते हैं, और backplane के बिना (option 4) LCD काम ही नहीं करेगी।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q14",
+      "question": "'1/2 duty multiplex drive' scheme में सामान्यतः कितने backplane (BP) lines होती हैं?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "1/2 duty multiplex drive scheme में सामान्यतः 2 backplane (BP) lines प्रयोग होती हैं जिनके बीच digits के segments बाँट दिए जाते हैं, जिससे pin count कम होता है। 1 backplane (option 1) static drive है, जबकि 3 या 4 backplanes (option 3,4) उच्च duty multiplex schemes में प्रयोग होते हैं।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q15",
+      "question": "'1/3 duty multiplex drive' scheme में सामान्यतः कितने backplane (BP) lines और कितनी bias levels होती हैं?",
+      "options": [
+        "2 backplanes और 2 bias levels",
+        "1 backplane और 1 bias level",
+        "3 backplanes और सामान्यतः 1/3 bias scheme (voltage levels 0, 1/3 Vlcd, 2/3 Vlcd, Vlcd)",
+        "5 backplanes और 5 bias levels"
+      ],
+      "correctIndex": 2,
+      "explanation": "1/3 duty multiplex drive scheme में सामान्यतः 3 backplane lines होती हैं और आमतौर पर 1/3 bias scheme प्रयोग होता है जिसमें 0, 1/3 Vlcd, 2/3 Vlcd और Vlcd — ये चार voltage levels प्रयोग होते हैं। 2 backplanes (option 1), 1 backplane (option 2) या 5 backplanes (option 4) 1/3 duty scheme का सही वर्णन नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q16",
+      "question": "LCD multiplex drive में 'duty cycle' बढ़ने (जैसे 1/2 से 1/4 duty) पर selected/unselected segments के बीच RMS voltage discrimination पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Contrast में कोई परिवर्तन नहीं होता",
+        "Contrast असीमित रूप से बढ़ जाता है",
+        "Display पूरी तरह बंद हो जाती है",
+        "Selected और unselected segments के बीच RMS voltage का अंतर घटता है, जिससे contrast थोड़ा कम हो सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Duty cycle बढ़ने (जैसे अधिक digits को multiplex करने) पर selected और unselected segments के waveforms के बीच RMS voltage का अंतर घटता जाता है, जिससे contrast में कुछ कमी आ सकती है — यही multiplexed LCD की एक सीमा है। इसलिए contrast में कोई परिवर्तन न होना (option 1), असीमित बढ़ना (option 2), या display पूरी तरह बंद होना (option 3) सही नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q17",
+      "question": "LCD multiplexed drive में किसी segment का ON/OFF होना मुख्यतः किस पैरामीटर द्वारा निर्धारित होता है?",
+      "options": [
+        "Segment पर आने वाले waveform का RMS voltage, backplane के सापेक्ष",
+        "Segment और backplane waveforms के बीच केवल instantaneous voltage",
+        "केवल peak voltage, समय से स्वतंत्र",
+        "केवल DC average voltage"
+      ],
+      "correctIndex": 0,
+      "explanation": "Multiplexed LCD में किसी segment का ON/OFF होना उसके आर-पार आने वाले waveform के RMS (root mean square) voltage से तय होता है — यदि यह RMS एक निश्चित threshold से अधिक है तो segment ON दिखेगा। केवल instantaneous voltage (option 2), केवल peak voltage (option 3), या केवल DC average (option 4) से यह निर्णय सही ढंग से नहीं होता क्योंकि signal समय के साथ बदलता रहता है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q18",
+      "question": "यदि किसी multiplexed LCD में selected (ON) segment का RMS voltage 3V और unselected (OFF) segment का RMS voltage 1V है, तथा threshold voltage 2V है, तो कौन-सा segment glow (dark) दिखेगा?",
+      "options": [
+        "दोनों segments glow करेंगे",
+        "केवल selected segment glow (dark) दिखेगा क्योंकि इसका RMS 3V, threshold 2V से अधिक है",
+        "केवल unselected segment glow करेगा",
+        "कोई भी segment glow नहीं करेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि selected segment का RMS voltage (3V) threshold (2V) से अधिक है, इसलिए यह segment ON (dark) दिखेगा, जबकि unselected segment का RMS (1V) threshold से कम होने के कारण वह OFF रहेगा। इसलिए दोनों segments का glow करना (option 1), केवल unselected का glow करना (option 3), या कोई भी glow न करना (option 4) गलत है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q19",
+      "question": "LCD driver IC (जैसे CD4543) के output stage में segment drive signal generate करने के लिए सामान्यतः कौन-सा logic function प्रयोग होता है?",
+      "options": [
+        "AND gate",
+        "NAND gate केवल",
+        "Exclusive-OR (XOR/EXOR) gate, decoded segment data bit और backplane phase signal के बीच",
+        "NOT gate केवल"
+      ],
+      "correctIndex": 2,
+      "explanation": "LCD/LED driver IC (जैसे CD4543) के output stage में प्रत्येक segment output एक Exclusive-OR (XOR/EXOR) gate से आता है, जिसके दो inputs होते हैं — decoded segment data bit और backplane phase signal; इनके XOR से सही in-phase/out-of-phase AC waveform बनता है। साधारण AND (option 1), NAND (option 2) या NOT (option 4) gates से यह phase-based control संभव नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q20",
+      "question": "LCD driver IC में EXOR (Exclusive-OR) आधारित output stage का क्या लाभ है?",
+      "options": [
+        "यह केवल DC output देता है",
+        "यह केवल current amplification करता है, कोई logic नहीं",
+        "इसका कोई विशेष लाभ नहीं है",
+        "यह data bit और backplane phase signal को combine करके सही in-phase/out-of-phase AC segment waveform बना देता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "EXOR आधारित output stage data bit और backplane phase signal को combine करके स्वतः तय कर देता है कि segment waveform in-phase (OFF) रहे या out-of-phase (ON), जिससे सही AC drive आसानी से बन जाता है। यह केवल DC output (option 1) नहीं देता, यह सिर्फ current amplification (option 2) तक सीमित नहीं है, और इसका स्पष्ट लाभ है (इसलिए option 3 गलत)।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q21",
+      "question": "BCD-to-7-segment LCD driver IC (जैसे CD4543) में 'Latch Enable (LE)' input का क्या कार्य है?",
+      "options": [
+        "यह input BCD data को latch करके तब तक hold रखता है जब तक नया valid data न आए, जिससे display स्थिर रहे",
+        "यह display को permanently बंद कर देता है",
+        "यह केवल supply voltage नियंत्रित करता है",
+        "यह केवल decimal point control करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Latch Enable (LE) input सक्रिय/निष्क्रिय करके BCD input data को IC के अंदर latch (hold) कर लिया जाता है, ताकि measurement के दौरान बदलते हुए digital data के बावजूद display स्थिर व स्पष्ट दिखे। यह display को स्थायी रूप से बंद नहीं करता (option 2), सीधे supply voltage नियंत्रित नहीं करता (option 3), और decimal point control (option 4) इसका काम नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q22",
+      "question": "LCD decoder/driver IC में 'Blanking (BL)' input सक्रिय करने पर क्या होता है?",
+      "options": [
+        "सभी segments ON होकर lamp test करते हैं",
+        "सभी segments OFF होकर display खाली (blank) दिख जाती है, चाहे data कुछ भी हो",
+        "display का digit उलट जाता है",
+        "केवल decimal point ON होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Blanking (BL) input सक्रिय होने पर decoder IC सभी segment outputs को force करके OFF कर देता है, जिससे current data value चाहे जो भी हो, display खाली (blank) दिखती है — यह leading zero suppression आदि में उपयोगी है। Lamp test जैसा सभी segments ON होना (option 1), digit उल्टा होना (option 3), या केवल decimal point ON होना (option 4) blanking का प्रभाव नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q23",
+      "question": "Digital panel meter में LCD segment/backplane drive की typical AC frequency सामान्यतः किस range में रखी जाती है?",
+      "options": [
+        "10 MHz से 20 MHz",
+        "1 GHz से अधिक",
+        "30 Hz से 60 Hz (कम frequency, ताकि flicker न दिखे और power भी कम रहे)",
+        "0 Hz (DC)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Digital panel meters में LCD segment/backplane drive की AC frequency सामान्यतः लगभग 30 Hz से 60 Hz के बीच रखी जाती है, जो इतनी अधिक होती है कि आँखों को flicker न दिखे परंतु इतनी कम भी कि power consumption न्यूनतम रहे। 10 MHz–20 MHz (option 1) या 1 GHz (option 2) व्यवहारिक LCD drive frequencies नहीं हैं, और 0 Hz यानी DC (option 4) से permanent damage होता है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q24",
+      "question": "यदि LCD को drive करने वाली AC frequency बहुत कम (जैसे कुछ ही Hz) रख दी जाए तो क्या समस्या होगी?",
+      "options": [
+        "Display का power consumption असीमित बढ़ जाएगा",
+        "Segment permanently ON रहेगा",
+        "कोई प्रभाव नहीं पड़ेगा",
+        "आँखों को segments में flicker (टिमटिमाना) दिखने लगेगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "यदि drive frequency बहुत कम रखी जाए (जैसे कुछ ही Hz), तो मानव आँख segment के AC cycles के अनुसार बदलते contrast को अलग-अलग पहचान लेती है, जिससे visible flicker (टिमटिमाना) होने लगता है। Power consumption असीमित बढ़ना (option 1), segment permanently ON रहना (option 2), या कोई प्रभाव न पड़ना (option 3) कम frequency का सही परिणाम नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q25",
+      "question": "यदि LCD drive frequency को आवश्यकता से बहुत अधिक बढ़ा दिया जाए तो सामान्यतः क्या परिणाम होता है?",
+      "options": [
+        "Display का response/contrast प्रभावित हो सकता है तथा power consumption भी बढ़ सकती है",
+        "Flicker और बढ़ जाएगा",
+        "Display का जीवनकाल असीमित हो जाएगा",
+        "कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "बहुत अधिक frequency पर driver IC को अधिक बार switch होना पड़ता है जिससे dynamic power consumption बढ़ सकती है, और LCD का response/contrast भी प्रभावित हो सकता है क्योंकि liquid crystal molecules के पास पूरी तरह align होने के लिए पर्याप्त समय नहीं मिलता। Flicker और बढ़ना (option 2) उच्च frequency पर नहीं बल्कि निम्न frequency पर होता है; जीवनकाल असीमित होना (option 3) या कोई प्रभाव न पड़ना (option 4) सही नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q26",
+      "question": "Microcontroller से सीधे LCD segments drive करते समय सबसे महत्वपूर्ण सावधानी क्या रखनी चाहिए?",
+      "options": [
+        "सीधे DC logic HIGH/LOW स्थायी रूप से दिया जाए",
+        "Segment lines को backplane के सापेक्ष सही phase वाली AC square wave के रूप में toggle कराया जाए (software या dedicated driver IC द्वारा)",
+        "किसी waveform की जरूरत नहीं, केवल एक बार pulse देना काफी है",
+        "Microcontroller से LCD को कभी drive नहीं किया जा सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Microcontroller से LCD drive करते समय सबसे जरूरी बात यह है कि segment lines को (software द्वारा generate किए गए) backplane के सापेक्ष सही phase वाले AC square wave के रूप में लगातार toggle कराया जाए, अन्यथा DC bias से LCD क्षतिग्रस्त हो सकती है — इसके लिए dedicated driver IC का प्रयोग भी आम है। सीधे स्थायी DC HIGH/LOW (option 1) देना हानिकारक है, बिना waveform के केवल एक pulse (option 3) पर्याप्त नहीं, और microcontroller से LCD drive करना संभव है (इसलिए option 4 गलत)।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q27",
+      "question": "LED driver IC (जैसे 4511/7447) और LCD driver IC (जैसे CD4543) में मौलिक अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे output देते हैं",
+        "LCD driver केवल audio signal देता है",
+        "LED driver DC output (current sink/source) देता है जबकि LCD driver backplane के सापेक्ष AC square wave output देता है",
+        "LED driver केवल AC output देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "मूलभूत अंतर यह है कि LED driver IC (जैसे 4511/7447) segment को DC current देकर (source/sink करके) चलाता है, जबकि LCD driver IC segment और backplane के बीच AC square wave (phase-controlled) output देता है। दोनों के output एक जैसे नहीं होते (option 1), LCD driver audio signal नहीं देता (option 2), और LED driver AC नहीं बल्कि DC output देता है (इसलिए option 4 गलत)।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q28",
+      "question": "यदि किसी LCD segment पर गलती से लंबे समय तक शुद्ध DC bias रह जाए, तो glass/liquid crystal पर क्या स्थायी प्रभाव पड़ सकता है?",
+      "options": [
+        "Segment अधिक तेज चमकने लगेगा",
+        "Segment का color बदलकर हरा हो जाएगा",
+        "कोई स्थायी प्रभाव नहीं पड़ेगा",
+        "Segment हमेशा के लिए काला/धुंधला (permanently darkened/damaged) हो सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "यदि किसी LCD segment पर लंबे समय तक शुद्ध DC bias लगा रहे तो liquid crystal material में electrochemical/electrolytic क्रिया होकर वह हिस्सा स्थायी रूप से काला/धुंधला (permanently damaged) हो सकता है, जो वापस ठीक नहीं होता। Segment और तेज चमकना (option 1), रंग हरा होना (option 2), या कोई स्थायी प्रभाव न पड़ना (option 3) — ये DC bias के वास्तविक दुष्प्रभाव नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q29",
+      "question": "Digital panel meter में battery-powered/portable applications में seven-segment LED के बजाय LCD driver IC के साथ LCD display प्रयोग करने का मुख्य कारण क्या है?",
+      "options": [
+        "LCD की power consumption बहुत कम होती है जिससे battery life बढ़ती है",
+        "LCD अधिक current खींचती है",
+        "LCD अंधेरे में स्वयं चमकती है",
+        "LCD driver IC सस्ता नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCD अपनी प्रकृति से बहुत कम current खींचती है क्योंकि यह प्रकाश उत्सर्जित नहीं करती बल्कि केवल परिवेशी प्रकाश को नियंत्रित करती है, इसलिए battery-powered digital panel meters में power consumption घटाने हेतु LCD और उसके driver IC को प्राथमिकता दी जाती है। अधिक current खींचना (option 2), अंधेरे में स्वयं चमकना (option 3), या driver IC का महंगा होना (option 4) सही कारण नहीं हैं।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q30",
+      "question": "एक 3½ digit digital panel meter में LCD display को drive करने के लिए A/D converter IC (जैसे ICL7136) से सीधे segment/backplane signals लेने का मुख्य लाभ क्या है?",
+      "options": [
+        "इससे display की resolution घट जाती है",
+        "अलग से separate LCD driver IC/decoder जोड़ने की जरूरत नहीं पड़ती, जिससे circuit सरल व compact बनता है",
+        "इससे supply voltage बढ़ानी पड़ती है",
+        "इससे केवल DC output मिलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "ICL7136 जैसी A/D converter IC सीधे LCD-compatible segment/backplane AC output देती है, जिससे बाहर से अलग LCD driver/decoder IC जोड़ने की आवश्यकता नहीं पड़ती और पूरा circuit सरल, सस्ता व compact बन जाता है — यही digital panel meter डिज़ाइन में इसका बड़ा लाभ है। इससे resolution घटना (option 1), supply voltage बढ़ानी पड़ना (option 3), या केवल DC output मिलना (option 4) सही नहीं है।"
+    }
+  ]
+}

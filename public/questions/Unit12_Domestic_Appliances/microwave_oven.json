@@ -1,0 +1,368 @@
+{
+  "unit": "unit12",
+  "unitName": "Domestic Appliances",
+  "topic": "microwave_oven",
+  "topicName": "Microwave Oven - Types, Magnetron, Circuit & Power Supply",
+  "questions": [
+    {
+      "id": "u12_microwave_oven_q1",
+      "question": "Microwave oven में भोजन को गरम करने वाली microwaves किस component द्वारा उत्पन्न की जाती हैं?",
+      "options": [
+        "Magnetron",
+        "Transformer",
+        "Turntable motor",
+        "Thermostat"
+      ],
+      "correctIndex": 0,
+      "explanation": "Magnetron एक high-power vacuum tube है जो लगभग 2450 MHz की microwaves उत्पन्न करता है जो भोजन के water molecules को कंपित (vibrate) कर के heat पैदा करती हैं। Transformer केवल high voltage देता है, turntable motor भोजन को घुमाता है, और thermostat तापमान की सुरक्षा करता है — इनमें से कोई microwaves नहीं बनाता।"
+    },
+    {
+      "id": "u12_microwave_oven_q2",
+      "question": "एक domestic microwave oven में magnetron द्वारा उत्पन्न microwaves की operating frequency सामान्यतः कितनी होती है?",
+      "options": [
+        "50 Hz",
+        "900 MHz",
+        "2450 MHz",
+        "10 GHz"
+      ],
+      "correctIndex": 2,
+      "explanation": "Domestic microwave oven की standard frequency 2450 MHz (2.45 GHz) है, जिस पर water molecules अच्छी तरह से dielectric heating द्वारा गरम होते हैं। 50 Hz mains supply की frequency है, 900 MHz mobile band के करीब है, और 10 GHz radar range में आता है — ये cooking के लिए प्रयोग नहीं होतीं।"
+    },
+    {
+      "id": "u12_microwave_oven_q3",
+      "question": "Microwaves भोजन को किस सिद्धांत से गरम करती हैं?",
+      "options": [
+        "Conduction द्वारा धातु के बर्तन को गरम करके",
+        "Water molecules के dielectric heating (polar molecule vibration) द्वारा",
+        "Infrared radiation द्वारा सतह जलाकर",
+        "Convection currents द्वारा हवा गरम करके"
+      ],
+      "correctIndex": 1,
+      "explanation": "Microwaves भोजन में मौजूद polar water molecules को तेजी से oscillate कराती हैं जिससे molecular friction से heat उत्पन्न होती है (dielectric heating)। Conduction और convection सामान्य oven/heater में होते हैं, और infrared grill mode में उपयोग होता है परंतु microwave heating का मूल सिद्धांत नहीं है।"
+    },
+    {
+      "id": "u12_microwave_oven_q4",
+      "question": "Magnetron को चलाने के लिए आवश्यक high voltage (लगभग 2000 V) कौन-सा component प्रदान करता है?",
+      "options": [
+        "Low voltage control PCB",
+        "Turntable motor",
+        "High Voltage (HV) transformer",
+        "Door interlock switch"
+      ],
+      "correctIndex": 2,
+      "explanation": "HV transformer 230 V AC को लगभग 2000 V तक बढ़ाता है और साथ ही magnetron filament के लिए एक अलग low-voltage winding देता है। Control PCB timing संभालता है, turntable motor घुमाव देता है, और door interlock switch सुरक्षा के लिए है — ये HV उत्पन्न नहीं करते।"
+    },
+    {
+      "id": "u12_microwave_oven_q5",
+      "question": "Microwave oven के HV circuit में HV capacitor और HV diode मिलकर क्या कार्य करते हैं?",
+      "options": [
+        "Voltage को voltage doubler के रूप में लगभग दोगुना करके rectify करना",
+        "Frequency को घटाकर 50 Hz करना",
+        "Magnetron को ठंडा करना",
+        "Turntable की speed control करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "HV capacitor और HV diode मिलकर voltage doubler circuit बनाते हैं जो transformer के ~2000 V को rectify करके लगभग 4000 V DC magnetron को देते हैं। ये frequency नहीं बदलते, magnetron की cooling fan/heat sink द्वारा होती है, और turntable speed control से इनका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u12_microwave_oven_q6",
+      "question": "Solo type microwave oven और grill/convection type oven में मुख्य अंतर क्या है?",
+      "options": [
+        "Solo में केवल magnetron heating होती है जबकि convection में heating element/fan से baking व browning भी संभव है",
+        "Solo अधिक शक्तिशाली होता है और convection कमजोर होता है",
+        "Solo में turntable नहीं होता",
+        "दोनों में कोई अंतर नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Solo oven केवल microwave heating (reheat/cook) करता है, जबकि convection oven में अतिरिक्त heating element और fan होते हैं जिससे baking, grilling और browning भी संभव होती है। Power rating solo का कम या अधिक हो सकता है, turntable दोनों में हो सकता है, और अंतर स्पष्ट रूप से मौजूद है।"
+    },
+    {
+      "id": "u12_microwave_oven_q7",
+      "question": "Microwave oven में door खुलने पर magnetron की supply तुरंत बंद करने के लिए कौन-सा safety component प्रयोग होता है?",
+      "options": [
+        "Fuse",
+        "Turntable motor",
+        "Door interlock switches",
+        "Thermistor"
+      ],
+      "correctIndex": 2,
+      "explanation": "Door interlock (safety) switches दरवाज़ा खुलते ही magnetron circuit को तोड़ देते हैं ताकि microwave leakage से user सुरक्षित रहे। Fuse over-current से बचाता है, turntable motor भोजन घुमाता है, और thermistor तापमान sensing करता है — ये door interlock का कार्य नहीं करते।"
+    },
+    {
+      "id": "u12_microwave_oven_q8",
+      "question": "Magnetron के अंदर electrons को घुमावदार (spiral) path में गति कराने के लिए किसका उपयोग होता है?",
+      "options": [
+        "एक permanent magnet का magnetic field",
+        "एक capacitor का electric field",
+        "एक resistor का voltage drop",
+        "एक diode का rectification"
+      ],
+      "correctIndex": 0,
+      "explanation": "Magnetron में शक्तिशाली permanent magnets का magnetic field electrons को cathode से anode की ओर spiral (cycloidal) path में घुमाता है, जिससे resonant cavities में microwaves उत्पन्न होती हैं। Capacitor, resistor और diode HV power supply के भाग हैं, magnetron के अंदर electron गति नियंत्रित नहीं करते।"
+    },
+    {
+      "id": "u12_microwave_oven_q9",
+      "question": "Microwave oven का cooking chamber अंदर से धातु (metal) का बना होता है, इसका कारण क्या है?",
+      "options": [
+        "यह microwaves को reflect करके cavity के अंदर ही रोके रखता है",
+        "यह microwaves को absorb करके नष्ट कर देता है",
+        "यह भोजन को ठंडा रखता है",
+        "यह supply को rectify करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "धातु की दीवारें microwaves को reflect करती हैं जिससे energy cavity के अंदर बार-बार टकराकर भोजन तक पहुँचती है और बाहर leak नहीं होती। धातु microwaves absorb नहीं करती, cavity भोजन को गरम करती है ठंडा नहीं, और rectification power supply में होता है।"
+    },
+    {
+      "id": "u12_microwave_oven_q10",
+      "question": "Microwave oven का दरवाज़ा एक धातु की जाली (mesh/perforated screen) से बना होता है जबकि भोजन दिखता है। यह जाली किस कारण काम करती है?",
+      "options": [
+        "छिद्रों का आकार microwave wavelength से बहुत छोटा होने के कारण microwaves बाहर नहीं निकल पातीं",
+        "छिद्र microwaves को absorb कर लेते हैं",
+        "जाली भोजन को ठंडा रखती है",
+        "जाली केवल decoration के लिए होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "2450 MHz की wavelength लगभग 12 cm होती है, और door screen के छिद्र इससे बहुत छोटे होने के कारण microwaves बाहर नहीं निकल पातीं परंतु दृश्य प्रकाश (छोटी wavelength) आर-पार होकर भोजन दिखा देता है। जाली absorb नहीं करती, cooling से इसका संबंध नहीं, और यह safety का महत्वपूर्ण भाग है, केवल decoration नहीं।"
+    },
+    {
+      "id": "u12_microwave_oven_q11",
+      "question": "Magnetron से निकली microwaves को cavity तक पहुँचाने वाला रास्ता क्या कहलाता है?",
+      "options": [
+        "Waveguide",
+        "Heat sink",
+        "Turntable coupler",
+        "Filament winding"
+      ],
+      "correctIndex": 0,
+      "explanation": "Waveguide एक धातु का hollow channel है जो magnetron के antenna से microwaves को cooking cavity तक guide करता है। Heat sink magnetron को ठंडा करता है, turntable coupler घुमाव देता है, और filament winding magnetron के cathode को गरम करती है — ये microwaves guide नहीं करतीं।"
+    },
+    {
+      "id": "u12_microwave_oven_q12",
+      "question": "Microwave oven में stirrer fan (mode stirrer) का मुख्य कार्य क्या है?",
+      "options": [
+        "Magnetron की power बढ़ाना",
+        "Microwaves को cavity में समान रूप से बिखेरना (even distribution) ताकि भोजन एक-समान गरम हो",
+        "भोजन को घुमाना",
+        "HV capacitor को charge करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stirrer fan waveguide के मुख से आने वाली microwaves को reflect करके cavity में समान रूप से फैलाता है जिससे hot व cold spots कम हों। यह power नहीं बढ़ाता, भोजन घुमाना turntable का कार्य है, और capacitor charging HV circuit का हिस्सा है।"
+    },
+    {
+      "id": "u12_microwave_oven_q13",
+      "question": "एक microwave oven की rated output power 800 W है परंतु input power लगभग 1250 W है। इस अंतर का मुख्य कारण क्या है?",
+      "options": [
+        "Meter की गलती",
+        "Magnetron और transformer में losses (efficiency ~60-65%) के कारण",
+        "भोजन का प्रकार",
+        "Turntable की गति"
+      ],
+      "correctIndex": 1,
+      "explanation": "Magnetron की conversion efficiency लगभग 60-65% होती है, अतः 1250 W input में से लगभग 800 W ही useful microwave output बनता है, बाकी heat losses में जाता है। यह meter की गलती नहीं, न ही भोजन या turntable से input-output अंतर तय होता है।"
+    },
+    {
+      "id": "u12_microwave_oven_q14",
+      "question": "Microwave oven में power level (जैसे 50% power) कैसे नियंत्रित किया जाता है?",
+      "options": [
+        "Magnetron की frequency बदलकर",
+        "Magnetron को समय-समय पर ON/OFF (duty cycle) करके",
+        "HV transformer का voltage लगातार कम करके",
+        "Turntable की speed घटाकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिकांश domestic ovens में power level duty cycle से नियंत्रित होता है — magnetron निश्चित अंतराल में ON/OFF होता रहता है (जैसे 50% पर आधा समय ON)। Magnetron की frequency fixed रहती है, HV voltage सामान्यतः continuously variable नहीं होता, और turntable speed का power से संबंध नहीं।"
+    },
+    {
+      "id": "u12_microwave_oven_q15",
+      "question": "Microwave oven में धातु (metal) के बर्तन प्रयोग न करने की सलाह क्यों दी जाती है?",
+      "options": [
+        "धातु microwaves को reflect करती है जिससे arcing (sparking) व असमान heating हो सकती है",
+        "धातु microwaves को पूरी तरह absorb कर लेती है",
+        "धातु भोजन को ठंडा कर देती है",
+        "धातु magnetron की frequency बदल देती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "धातु के तीखे किनारे microwaves को reflect कर के charge concentrate करते हैं जिससे arcing/sparking हो सकती है, और भोजन ठीक से गरम नहीं होता व magnetron को नुकसान भी हो सकता है। धातु absorb नहीं करती, और यह frequency नहीं बदलती।"
+    },
+    {
+      "id": "u12_microwave_oven_q16",
+      "question": "Magnetron अत्यधिक गरम होने पर उसे नुकसान से बचाने के लिए कौन-सा सुरक्षा उपकरण लगा होता है?",
+      "options": [
+        "Door interlock switch",
+        "Turntable motor",
+        "Magnetron thermal cut-out (thermal protector)",
+        "Voltage doubler"
+      ],
+      "correctIndex": 2,
+      "explanation": "Magnetron पर लगा thermal cut-out (thermostat) अधिक तापमान पर supply काट देता है ताकि overheating से magnetron न जले। Door interlock दरवाज़े की सुरक्षा के लिए है, turntable घुमाव देता है, और voltage doubler HV बनाता है — ये overheating protection नहीं देते।"
+    },
+    {
+      "id": "u12_microwave_oven_q17",
+      "question": "Microwave oven के block diagram में सही signal/power flow क्रम कौन-सा है?",
+      "options": [
+        "Mains → Control PCB → Magnetron → HV Transformer → Cavity",
+        "Mains → HV Transformer → Voltage doubler → Magnetron → Waveguide → Cavity",
+        "Magnetron → Mains → Cavity → Waveguide",
+        "Cavity → Magnetron → Transformer → Mains"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही क्रम है: mains supply → HV transformer voltage बढ़ाता है → voltage doubler (capacitor+diode) high DC देता है → magnetron microwaves बनाता है → waveguide से cavity तक पहुँचती हैं। अन्य विकल्पों में components का क्रम गलत या उल्टा है।"
+    },
+    {
+      "id": "u12_microwave_oven_q18",
+      "question": "Microwave oven \"चलता है पर भोजन गरम नहीं होता\" — इसका सबसे संभावित कारण क्या है?",
+      "options": [
+        "Turntable motor खराब है",
+        "Magnetron या HV circuit (transformer/diode/capacitor) में fault है",
+        "Door glass गंदा है",
+        "Control panel की light मंद है"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि fan/light/turntable चल रहे हैं पर heating नहीं हो रही, तो दोष heating path में होता है — magnetron, HV transformer, HV diode या HV capacitor में से कोई खराब है। Turntable motor केवल घुमाव प्रभावित करता, गंदा glass या मंद light heating रोकते नहीं।"
+    },
+    {
+      "id": "u12_microwave_oven_q19",
+      "question": "Microwave oven servicing से पहले HV capacitor को discharge करना क्यों आवश्यक है?",
+      "options": [
+        "क्योंकि capacitor supply बंद होने के बाद भी घातक high voltage charge रोके रख सकता है",
+        "क्योंकि capacitor भोजन को गरम करता है",
+        "क्योंकि capacitor magnetron को ठंडा करता है",
+        "क्योंकि capacitor turntable को घुमाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "HV capacitor power off के बाद भी हजारों volt का charge रोक सकता है जो घातक झटका दे सकता है, इसलिए servicing से पहले उसे safely discharge करना ज़रूरी है। Capacitor न भोजन गरम करता, न magnetron ठंडा करता, न turntable घुमाता है।"
+    },
+    {
+      "id": "u12_microwave_oven_q20",
+      "question": "Magnetron के filament (heater) winding को HV winding से अलग रखने का कारण क्या है?",
+      "options": [
+        "Filament को केवल कुछ volt (low voltage) चाहिए जबकि anode को हजारों volt, इसलिए अलग-अलग windings लगती हैं",
+        "Filament को कोई voltage नहीं चाहिए",
+        "दोनों को समान voltage चाहिए",
+        "Filament turntable से जुड़ा होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Magnetron filament (cathode heater) को केवल कुछ volt (जैसे 3-4 V) at high current चाहिए ताकि thermionic emission हो, जबकि anode को हजारों volt चाहिए — इसलिए HV transformer में अलग filament winding होती है। Filament को voltage चाहिए, दोनों समान नहीं, और यह turntable से नहीं जुड़ा।"
+    },
+    {
+      "id": "u12_microwave_oven_q21",
+      "question": "Microwave oven में turntable (rotating glass plate) का उद्देश्य क्या है?",
+      "options": [
+        "Magnetron की cooling करना",
+        "भोजन को घुमाकर hot/cold spots कम करना ताकि heating एक-समान हो",
+        "Microwaves उत्पन्न करना",
+        "Door interlock को चलाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Turntable भोजन को धीरे-धीरे घुमाता है ताकि सभी हिस्से microwave field में आएं और even heating हो, hot व cold spots कम हों। यह cooling नहीं करता, microwaves magnetron बनाता है, और door interlock एक अलग switch है।"
+    },
+    {
+      "id": "u12_microwave_oven_q22",
+      "question": "Microwave oven के control section में timer और keypad किससे जुड़े होते हैं?",
+      "options": [
+        "सीधे magnetron anode से",
+        "Control PCB/microcontroller से जो relay के माध्यम से HV circuit को switch करता है",
+        "HV capacitor से",
+        "Waveguide से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Timer, keypad और display control PCB (microcontroller) से जुड़े होते हैं, जो user input के अनुसार relay चलाकर HV transformer/magnetron को ON/OFF करता है। ये सीधे magnetron anode, HV capacitor या waveguide से नहीं जुड़े होते क्योंकि वे high-voltage/RF भाग हैं।"
+    },
+    {
+      "id": "u12_microwave_oven_q23",
+      "question": "किसी microwave oven में empty (खाली) चलाने पर magnetron खराब होने का खतरा क्यों रहता है?",
+      "options": [
+        "क्योंकि absorb करने के लिए भोजन न होने पर reflected microwaves वापस magnetron में लौटकर उसे गरम व damage कर देती हैं",
+        "क्योंकि turntable बहुत तेज़ घूमता है",
+        "क्योंकि door open हो जाता है",
+        "क्योंकि supply voltage गिर जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "खाली cavity में microwaves absorb नहीं होतीं तो वे reflect होकर magnetron में लौटती हैं जिससे वह overheat होकर damage हो सकता है। Turntable speed, door या supply voltage empty-run damage का कारण नहीं हैं।"
+    },
+    {
+      "id": "u12_microwave_oven_q24",
+      "question": "Microwave oven का fuse बार-बार blow हो रहा है। सबसे संभावित कारणों में क्या शामिल है?",
+      "options": [
+        "Turntable glass टूटा है",
+        "Shorted HV diode, HV capacitor या magnetron के कारण over-current",
+        "Display की brightness अधिक है",
+        "Door glass पर धूल है"
+      ],
+      "correctIndex": 1,
+      "explanation": "बार-बार fuse उड़ने का सामान्य कारण HV circuit में short होता है — shorted HV diode, leaky HV capacitor या faulty magnetron over-current खींचते हैं जिससे fuse blow होता है। टूटा turntable, display brightness या धूल over-current उत्पन्न नहीं करते।"
+    },
+    {
+      "id": "u12_microwave_oven_q25",
+      "question": "Microwave oven में convection mode के दौरान भोजन को browning/baking के लिए heat किससे मिलती है?",
+      "options": [
+        "केवल magnetron से",
+        "अतिरिक्त heating element और fan द्वारा गरम हवा के circulation से",
+        "Turntable motor की गर्मी से",
+        "HV capacitor से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Convection mode में एक heating element हवा को गरम करता है और fan उसे cavity में circulate करता है जिससे baking व browning संभव होती है। Magnetron केवल microwave heating देता है, turntable motor और HV capacitor cooking heat स्रोत नहीं हैं।"
+    },
+    {
+      "id": "u12_microwave_oven_q26",
+      "question": "Magnetron के anode में बनी cavities (resonant cavities) का मुख्य कार्य क्या है?",
+      "options": [
+        "Electrons को ठंडा करना",
+        "एक निश्चित resonant frequency पर oscillation उत्पन्न करके microwaves बनाना",
+        "Supply को rectify करना",
+        "Filament को गरम करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Anode block में बनी resonant cavities LC circuit की तरह व्यवहार करती हैं और घूमते electrons के साथ interact करके एक निश्चित frequency (2450 MHz) पर oscillation यानी microwaves उत्पन्न करती हैं। ये cooling, rectification या filament heating नहीं करतीं।"
+    },
+    {
+      "id": "u12_microwave_oven_q27",
+      "question": "एक microwave oven 230 V, 50 Hz पर 1150 W input लेता है। इसकी लगभग full-load current कितनी होगी? (power factor ≈ 1 मानें)",
+      "options": [
+        "लगभग 2 A",
+        "लगभग 5 A",
+        "लगभग 10 A",
+        "लगभग 20 A"
+      ],
+      "correctIndex": 1,
+      "explanation": "I = P / V = 1150 / 230 = 5 A (लगभग)। इसलिए current लगभग 5 A होगी। 2 A बहुत कम, 10 A व 20 A बहुत अधिक हैं और गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u12_microwave_oven_q28",
+      "question": "Microwave oven में cooling fan किन components को ठंडा रखने के लिए ज़रूरी है?",
+      "options": [
+        "केवल door glass",
+        "Magnetron, HV transformer और control PCB",
+        "केवल turntable glass",
+        "केवल keypad"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cooling fan मुख्यतः magnetron (जो बहुत गरम होता है), HV transformer और electronics वाले भागों को ठंडा रखता है ताकि वे overheat होकर fail न हों। Door glass, turntable glass और keypad को active cooling की आवश्यकता नहीं होती।"
+    },
+    {
+      "id": "u12_microwave_oven_q29",
+      "question": "Microwave leakage (रिसाव) की जाँच किस उपकरण से की जाती है?",
+      "options": [
+        "Multimeter",
+        "Microwave leakage detector/survey meter",
+        "Megger",
+        "Tachometer"
+      ],
+      "correctIndex": 1,
+      "explanation": "Microwave leakage detector (survey meter) door व seams से निकलने वाली microwave energy को mW/cm² में मापता है ताकि सुरक्षा सीमा (जैसे 5 mW/cm²) की जाँच हो सके। Multimeter voltage/current, megger insulation, और tachometer speed मापता है — ये microwave leakage नहीं माप सकते।"
+    },
+    {
+      "id": "u12_microwave_oven_q30",
+      "question": "Microwave oven में HV diode की सही condition का परीक्षण करते समय सामान्य multimeter से पूरी तरह जाँच कठिन क्यों होती है?",
+      "options": [
+        "क्योंकि HV diode कई diodes की series से बना होता है और इसका forward voltage सामान्य multimeter की test voltage से अधिक होता है",
+        "क्योंकि diode में कोई junction नहीं होता",
+        "क्योंकि diode केवल AC पर काम करता है",
+        "क्योंकि diode turntable से जुड़ा होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "HV diode कई छोटे diodes की series stack होता है जिसका कुल forward voltage drop बहुत अधिक (कई सौ volt) होता है, इसलिए सामान्य multimeter की कम test voltage से यह हमेशा 'open' दिखा सकता है और सही परीक्षण के लिए high-voltage tester की आवश्यकता होती है। इसमें junction होते हैं, यह rectifier है (केवल AC पर नहीं चलता), और turntable से इसका संबंध नहीं।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit10",
+  "unitName": "LED Lights, LED/LCD TV and CCTV",
+  "topic": "external_decoders",
+  "topicName": "External Decoders - Set-Top Box, Digital Multimedia Player, Smart Box, BD/DVD Player",
+  "questions": [
+    {
+      "id": "u10_external_decoders_q1",
+      "question": "Set-Top Box (STB) का प्राथमिक कार्य क्या होता है?",
+      "options": [
+        "TV की internal backlight को नियंत्रित करना",
+        "Satellite या cable से प्राप्त encrypted और compressed signal को decode करके TV पर display होने योग्य audio-video signal में बदलना",
+        "TV की screen resolution को स्थायी रूप से बदलना",
+        "TV के speaker की आवाज़ को amplify करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "STB का मुख्य काम satellite/cable/DTH से आने वाले encrypted और compressed digital signal को receive करके उसे decode व decrypt करना और TV को दिखाने योग्य audio-video signal देना है, इसलिए option B सही है। Backlight control, resolution बदलना और speaker amplify करना TV के internal functions हैं, STB का कार्य नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q2",
+      "question": "STB के अंदर 'tuner' section का क्या कार्य है?",
+      "options": [
+        "Encrypted data को CAS keys द्वारा decrypt करना",
+        "Decoded audio-video को HDMI format में convert करना",
+        "Dish/cable से आने वाले broadcast signal में से user द्वारा चुने गए channel की RF frequency को select करना",
+        "Smart card से subscription verify करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Tuner incoming broadcast में से desired channel की RF frequency को select करता है, इसलिए option C सही है। Decryption CAM/smart card का काम है, HDMI conversion output stage में होता है, और subscription verify करना भी smart card से जुड़ा है, tuner से नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q3",
+      "question": "STB में 'demodulator' किसका कार्य करता है?",
+      "options": [
+        "Video signal को amplify करना",
+        "TV को infrared remote signal भेजना",
+        "STB की internal power supply को regulate करना",
+        "Tuner द्वारा चुने गए RF signal में से modulated digital data (baseband digital stream) को extract करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Demodulator carrier signal में से actual digital data stream को अलग करता है ताकि आगे decoder उसे process कर सके, इसलिए option D सही है। Video amplify करना, IR remote signal भेजना और power supply regulate करना demodulator के कार्य नहीं, बल्कि STB के अन्य अलग sections/circuits का काम है।"
+    },
+    {
+      "id": "u10_external_decoders_q4",
+      "question": "STB में CAM (Conditional Access Module) या smart card slot किस लिए प्रयोग होता है?",
+      "options": [
+        "Encrypted pay channels को उनकी subscription key के अनुसार decrypt करने के लिए",
+        "TV की screen size setting बदलने के लिए",
+        "HDMI cable को जोड़ने के लिए",
+        "WiFi password store करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Smart card/CAM में subscriber की decryption keys होती हैं जिनसे केवल subscribed encrypted channels ही decode होकर देखे जा सकते हैं, इसलिए option A सही है। Screen size setting TV menu से होती है, HDMI जोड़ने के लिए अलग port होता है, और WiFi password storage smart box जैसे devices का काम है, STB smart card का नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q5",
+      "question": "आधुनिक STB, TV से किन outputs के माध्यम से जुड़ सकता है?",
+      "options": [
+        "केवल USB port से",
+        "HDMI, Composite AV (RCA) या RF (coaxial) output से",
+        "केवल Bluetooth audio से",
+        "केवल Ethernet cable से audio-video signal भेजकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "STB को TV से जोड़ने के लिए सामान्यतः HDMI (digital), Composite AV/RCA (analog) या RF/coaxial जैसे output दिए जाते हैं, इसलिए option B सही है। USB केवल accessory/storage जोड़ने के लिए है, Bluetooth केवल कुछ audio devices के लिए प्रयोग होता है, और Ethernet सीधे TV को audio-video signal नहीं देता, वह केवल internet connectivity के लिए है।"
+    },
+    {
+      "id": "u10_external_decoders_q6",
+      "question": "DTH (Direct To Home) STB और cable operator के STB में मुख्य अंतर क्या है?",
+      "options": [
+        "DTH STB में कोई smart card नहीं होता",
+        "Cable STB में satellite dish और LNB अनिवार्य रूप से लगते हैं",
+        "DTH signal को satellite dish व LNB के माध्यम से प्राप्त करता है जबकि cable STB coaxial cable network से सीधे operator से signal लेता है",
+        "दोनों में कोई तकनीकी अंतर नहीं होता, केवल नाम अलग है"
+      ],
+      "correctIndex": 2,
+      "explanation": "DTH में signal satellite से dish व LNB द्वारा receive होकर STB तक जाता है, जबकि cable STB को operator के coaxial network से सीधे signal मिलता है, इसलिए option C सही है। दोनों में ही सामान्यतः smart card होता है, satellite dish केवल DTH में लगता है न कि cable STB में, और दोनों की signal-receiving technology वास्तव में अलग है।"
+    },
+    {
+      "id": "u10_external_decoders_q7",
+      "question": "Conditional Access System (CAS) का उद्देश्य क्या है?",
+      "options": [
+        "TV की picture quality सुधारना",
+        "STB की power consumption घटाना",
+        "HDMI signal को compress करना",
+        "केवल अधिकृत (subscribed) दर्शकों को ही smart card/keys के माध्यम से encrypted channels देखने की अनुमति देना"
+      ],
+      "correctIndex": 3,
+      "explanation": "CAS का काम यह सुनिश्चित करना है कि केवल valid subscription वाले users ही encrypted content को decrypt करके देख सकें, इसलिए option D सही है। Picture quality सुधारना, power consumption घटाना या HDMI signal compress करना CAS के कार्य नहीं हैं, ये अन्य technical aspects से संबंधित हैं।"
+    },
+    {
+      "id": "u10_external_decoders_q8",
+      "question": "STB के smart card में क्या store रहता है, जिससे operator subscriber की channel access को नियंत्रित कर पाता है?",
+      "options": [
+        "Subscriber की unique ID और subscription/decryption keys",
+        "TV का model number",
+        "HDMI port की resolution setting",
+        "WiFi router का password"
+      ],
+      "correctIndex": 0,
+      "explanation": "Smart card में subscriber की unique identity और decryption keys होती हैं जिनसे CAS यह तय करता है कि कौन-कौन से channels decode होकर दिखेंगे, इसलिए option A सही है। TV model number, HDMI resolution setting और WiFi password का smart card की channel access क्षमता से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u10_external_decoders_q9",
+      "question": "Digital multimedia player device मुख्य रूप से क्या कार्य करता है?",
+      "options": [
+        "केवल satellite channels को decode करना",
+        "USB, external HDD या network से video, audio और photo files (जैसे MP4, MP3, JPEG) को play करके TV पर दिखाना",
+        "TV की backlight को control करना",
+        "Cable operator से encrypted signal प्राप्त करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Digital multimedia player storage devices (USB/HDD) या network से media files read करके उन्हें decode करता है और TV पर play करता है, इसलिए option B सही है। Satellite channels decode करना STB का काम है, backlight control TV का internal function है, और encrypted cable signal प्राप्त करना भी STB से संबंधित है, multimedia player से नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q10",
+      "question": "एक digital multimedia player यदि किसी particular video file को play नहीं कर पा रहा, तो इसका सबसे संभावित कारण क्या है?",
+      "options": [
+        "TV का HDMI port खराब है",
+        "File का नाम बहुत लंबा है",
+        "Player में उस file के codec/format के लिए support नहीं है",
+        "Player का remote control काम नहीं कर रहा"
+      ],
+      "correctIndex": 2,
+      "explanation": "अलग-अलग media players केवल कुछ specific formats/codecs को ही support करते हैं, इसलिए यदि file का codec unsupported हो तो वह play नहीं होती — option C सही है। HDMI port खराब होने पर पूरी तरह कोई output नहीं आता, फाइल नाम की length play होने में बाधा नहीं डालती, और remote काम न करने से केवल control में दिक्कत होगी, playback में नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q11",
+      "question": "Multimedia player के संदर्भ में 'codec' शब्द का क्या अर्थ है?",
+      "options": [
+        "TV screen की resolution",
+        "STB का smart card",
+        "HDMI cable का प्रकार",
+        "वह algorithm/software जो audio-video data को compress (encode) और playback के समय decompress (decode) करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Codec (coder-decoder) media file के data को compress और उसे play करते समय वापस decompress करने की technique है, इसलिए option D सही है। Screen resolution, smart card और HDMI cable का प्रकार codec से पूरी तरह अलग concepts हैं।"
+    },
+    {
+      "id": "u10_external_decoders_q12",
+      "question": "Smart Box (Android TV Box) का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "एक साधारण (non-smart) TV को internet connectivity, apps और streaming क्षमता देकर उसे smart TV जैसा बना देना",
+        "TV की screen को भौतिक रूप से बड़ा दिखाना",
+        "TV के speaker की आवाज़ बढ़ाना",
+        "Satellite dish की जगह लेना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Smart box को HDMI के माध्यम से किसी भी normal TV से जोड़कर उसमें internet, Android apps और streaming जैसी smart features add की जाती हैं, इसलिए option A सही है। यह screen का भौतिक आकार नहीं बदलती, speaker volume बढ़ाना इसका कार्य नहीं, और यह satellite dish का विकल्प नहीं बल्कि एक अलग streaming device है।"
+    },
+    {
+      "id": "u10_external_decoders_q13",
+      "question": "अधिकतर smart boxes किस operating system पर आधारित होते हैं?",
+      "options": [
+        "Windows",
+        "Android",
+        "MS-DOS",
+        "केवल firmware, कोई OS नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिकतर smart TV boxes Android OS पर चलते हैं जिससे Play Store से apps install करके streaming व अन्य कार्य किए जा सकते हैं, इसलिए option B सही है। Windows सामान्यतः इन compact boxes में प्रयोग नहीं होता, MS-DOS बहुत पुराना text-based OS है जो multimedia के लिए उपयुक्त नहीं, और smart box एक पूर्ण OS पर ही चलता है, केवल firmware पर नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q14",
+      "question": "Smart box में internet access प्राप्त करने के लिए सामान्यतः कौन सा module होता है?",
+      "options": [
+        "केवल audio streaming के लिए Bluetooth module",
+        "FM radio receiver module",
+        "Built-in WiFi module (या Ethernet port), जिससे यह home network/internet से जुड़ता है",
+        "Satellite signal receive करने के लिए LNB"
+      ],
+      "correctIndex": 2,
+      "explanation": "Smart box internet से जुड़ने के लिए built-in WiFi module (कई में Ethernet port भी) का प्रयोग करता है, इसलिए option C सही है। Bluetooth module केवल कुछ wireless accessories के लिए है, FM radio receiver और LNB का smart box की internet connectivity से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u10_external_decoders_q15",
+      "question": "आधुनिक smart box remote में मिलने वाली advanced features में क्या शामिल होता है?",
+      "options": [
+        "केवल channel up/down बटन",
+        "केवल numeric keypad",
+        "केवल volume control बटन",
+        "Voice search तथा air-mouse (gyroscope आधारित pointer) जैसी features, जिससे apps में navigation आसान होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "आधुनिक smart box remotes में voice search और air-mouse जैसी features होती हैं जो app-based interface में navigation को सरल बनाती हैं, इसलिए option D सही है। Channel up/down, numeric keypad और volume control पारंपरिक STB/TV remotes की basic features हैं, ये smart box remote की विशिष्ट advanced capability नहीं हैं।"
+    },
+    {
+      "id": "u10_external_decoders_q16",
+      "question": "Smart box को TV से जोड़ने के लिए सबसे सामान्य connection कौन सा है?",
+      "options": [
+        "HDMI cable, जो digital audio और video दोनों एक साथ ले जाती है",
+        "केवल coaxial RF cable",
+        "केवल VGA cable",
+        "Parallel printer cable"
+      ],
+      "correctIndex": 0,
+      "explanation": "Smart box सामान्यतः HDMI cable के माध्यम से TV से जुड़ता है जो एक ही cable में high quality digital audio और video signal transmit करती है, इसलिए option A सही है। Coaxial RF पुराने analog connection के लिए है, VGA केवल analog video ले जाता है (audio नहीं), और parallel printer cable का AV transmission से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q17",
+      "question": "Smart box पर Netflix, YouTube जैसे streaming apps चलाने के लिए मुख्यतः क्या आवश्यक है?",
+      "options": [
+        "Satellite dish का सही alignment",
+        "Active internet connection और उस app की installation (Play Store के माध्यम से)",
+        "DVD disc डालना",
+        "Smart card का पंजीकरण (registration)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Streaming apps चलाने के लिए active internet connection तथा उस app का smart box में installed होना आवश्यक है, इसलिए option B सही है। Satellite dish alignment DTH STB के लिए है, DVD disc BD/DVD player से संबंधित है, और smart card registration cable/DTH STB में CAS से जुड़ा concept है, smart box streaming से नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q18",
+      "question": "Blu-ray Disc (BD) player, DVD player की तुलना में उच्च storage density किस कारण प्राप्त करता है?",
+      "options": [
+        "BD player में disc को दो गुना तेज़ motor speed से घुमाने से",
+        "BD disc, DVD disc से अधिक मोटी होने से",
+        "BD player में blue-violet laser (कम wavelength) का प्रयोग होता है जबकि DVD में red laser (अधिक wavelength) होता है, जिससे data अधिक सघनता (density) से store/read होता है",
+        "BD player में दो अलग laser pickup lens होने से"
+      ],
+      "correctIndex": 2,
+      "explanation": "Blue-violet laser की wavelength red laser से कम होती है, जिससे laser spot छोटा होकर disc पर data को अधिक घनत्व से पढ़ा-लिखा जा सकता है, इसलिए option C सही है। Motor speed, disc की thickness या दो pickup lens होना density बढ़ाने का वास्तविक कारण नहीं है।"
+    },
+    {
+      "id": "u10_external_decoders_q19",
+      "question": "Blu-ray player में प्रयुक्त laser का wavelength लगभग कितना होता है?",
+      "options": [
+        "लगभग 780 nm",
+        "लगभग 940 nm",
+        "लगभग 1000 nm",
+        "लगभग 405 nm"
+      ],
+      "correctIndex": 3,
+      "explanation": "Blu-ray player में blue-violet laser की wavelength लगभग 405 nm होती है, इसलिए option D सही है। 780 nm CD player के infrared-निकट laser की wavelength है, जबकि 940 nm और 1000 nm किसी standard optical disc laser के मान नहीं हैं।"
+    },
+    {
+      "id": "u10_external_decoders_q20",
+      "question": "DVD player में प्रयुक्त laser का wavelength लगभग कितना होता है, और इसका रंग कैसा होता है?",
+      "options": [
+        "लगभग 650 nm, red रंग का",
+        "लगभग 405 nm, blue-violet रंग का",
+        "लगभग 250 nm, ultraviolet",
+        "लगभग 850 nm, infrared"
+      ],
+      "correctIndex": 0,
+      "explanation": "DVD player red laser का प्रयोग करता है जिसकी wavelength लगभग 650 nm होती है, इसलिए option A सही है। 405 nm Blu-ray के blue-violet laser की wavelength है, 250 nm ultraviolet range में आता है जो standard optical disc players में प्रयोग नहीं होता, और 850 nm infrared range का मान है।"
+    },
+    {
+      "id": "u10_external_decoders_q21",
+      "question": "छोटी wavelength वाला laser (जैसे Blu-ray का blue-violet laser) DVD के red laser की तुलना में disc पर अधिक data क्यों store कर पाता है?",
+      "options": [
+        "क्योंकि blue laser अधिक गर्म होता है",
+        "छोटी wavelength के कारण laser beam का focused spot आकार में छोटा होता है, जिससे disc पर pits/tracks को अधिक पास-पास और छोटा रखा जा सकता है",
+        "क्योंकि blue laser की speed अन्य laser से अधिक होती है",
+        "क्योंकि blue laser disc को दो बार scan करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Wavelength जितनी कम होती है, laser का focused spot उतना ही छोटा होता है जिससे disc पर छोटे व सघन pits/tracks बनाकर अधिक data store किया जा सकता है, इसलिए option B सही है। Laser की heat, speed या दो बार scan करना इस higher density का वास्तविक physical कारण नहीं है — सभी लाइट, वास्तव में एक ही speed (light की speed) से चलती हैं।"
+    },
+    {
+      "id": "u10_external_decoders_q22",
+      "question": "एक single-layer DVD disc की typical storage capacity कितनी होती है?",
+      "options": [
+        "लगभग 700 MB",
+        "लगभग 25 GB",
+        "लगभग 4.7 GB",
+        "लगभग 50 GB"
+      ],
+      "correctIndex": 2,
+      "explanation": "Single-layer DVD की typical capacity लगभग 4.7 GB होती है, इसलिए option C सही है। 700 MB एक CD की capacity है, 25 GB single-layer Blu-ray की और 50 GB dual-layer Blu-ray की capacity है, DVD की नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q23",
+      "question": "एक single-layer Blu-ray Disc की typical storage capacity कितनी होती है?",
+      "options": [
+        "लगभग 4.7 GB",
+        "लगभग 700 MB",
+        "लगभग 8.5 GB",
+        "लगभग 25 GB"
+      ],
+      "correctIndex": 3,
+      "explanation": "Single-layer Blu-ray Disc की typical capacity लगभग 25 GB होती है, इसलिए option D सही है। 4.7 GB single-layer DVD की, 700 MB CD की और 8.5 GB dual-layer DVD की capacity है, single-layer Blu-ray की नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q24",
+      "question": "यदि single-layer DVD की capacity 4.7 GB और single-layer Blu-ray की capacity 25 GB है, तो Blu-ray की capacity DVD से लगभग कितनी गुना अधिक है?",
+      "options": [
+        "लगभग 5.3 गुना",
+        "लगभग 2 गुना",
+        "लगभग 10 गुना",
+        "लगभग 1.5 गुना"
+      ],
+      "correctIndex": 0,
+      "explanation": "25 ÷ 4.7 ≈ 5.3, अर्थात Blu-ray की capacity DVD से लगभग 5.3 गुना अधिक है, इसलिए option A सही है। 2 गुना, 10 गुना और 1.5 गुना दिए गए values के सही division से मेल नहीं खाते।"
+    },
+    {
+      "id": "u10_external_decoders_q25",
+      "question": "Dual-layer DVD और dual-layer Blu-ray disc की typical capacity क्रमशः कितनी होती है?",
+      "options": [
+        "4.7 GB और 25 GB",
+        "लगभग 8.5 GB और लगभग 50 GB",
+        "700 MB और 4.7 GB",
+        "25 GB और 100 GB"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dual-layer DVD की capacity लगभग 8.5 GB और dual-layer Blu-ray की capacity लगभग 50 GB होती है, इसलिए option B सही है। 4.7 GB व 25 GB single-layer values हैं, 700 MB CD की capacity है, और 100 GB standard single/dual-layer Blu-ray की typical capacity नहीं है (वह triple-layer/BDXL के करीब है)।"
+    },
+    {
+      "id": "u10_external_decoders_q26",
+      "question": "Blu-ray player, DVD player की तुलना में किस resolution तक video output दे सकता है?",
+      "options": [
+        "DVD भी Full HD तक सपोर्ट करता है, Blu-ray नहीं",
+        "दोनों केवल SD (Standard Definition) तक सीमित हैं",
+        "Blu-ray Full HD (1080p) और आधुनिक players 4K Ultra HD तक सपोर्ट करते हैं, जबकि DVD सामान्यतः SD resolution तक सीमित रहता है",
+        "दोनों केवल 4K तक सीमित हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Blu-ray की उच्च storage capacity के कारण यह Full HD और 4K तक high resolution video store व play कर सकता है, जबकि DVD अपनी कम capacity के कारण मुख्यतः SD resolution तक सीमित है, इसलिए option C सही है। शेष options DVD और Blu-ray की actual resolution क्षमता को गलत तरीके से दर्शाते हैं।"
+    },
+    {
+      "id": "u10_external_decoders_q27",
+      "question": "BD/DVD player में 'optical audio output (TOSLINK)' का क्या उपयोग है?",
+      "options": [
+        "Video signal को TV तक भेजना",
+        "Player को internet से जोड़ना",
+        "Smart card डालना",
+        "Digital surround sound (जैसे Dolby/DTS) signal को एक अलग optical cable के माध्यम से AV receiver/home theatre तक भेजना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Optical audio output केवल high-quality digital audio (जैसे Dolby/DTS surround sound) को अलग से AV receiver तक भेजने के लिए प्रयोग होता है, इसलिए option D सही है। Video भेजना HDMI/AV output का काम है, internet connectivity Ethernet/WiFi से जुड़ी है, और smart card slot STB से संबंधित है, BD/DVD player के optical audio output से नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q28",
+      "question": "BD/DVD player का HDMI output किस बात के लिए जाना जाता है?",
+      "options": [
+        "एक ही cable में digital video और digital audio दोनों को उच्च गुणवत्ता में एक साथ transmit करना",
+        "केवल analog video transmit करना",
+        "केवल power supply देना",
+        "केवल remote control signal भेजना"
+      ],
+      "correctIndex": 0,
+      "explanation": "HDMI एक single cable में high-definition digital video और audio दोनों को uncompressed/high quality में transmit करता है, इसलिए option A सही है। Analog video composite/RCA output का काम है, HDMI power supply के लिए नहीं होता, और यह remote control signal नहीं भेजता — वह infrared या RF remote का कार्य है।"
+    },
+    {
+      "id": "u10_external_decoders_q29",
+      "question": "पुराने TV से जोड़ने के लिए BD/DVD player या STB में दिया गया 'composite AV (RCA yellow/white/red)' output किस प्रकार का signal देता है?",
+      "options": [
+        "पूरी तरह digital signal, HDMI जैसा",
+        "Analog video (yellow) तथा analog stereo audio (white/red) signal, जो पुराने TVs के साथ compatible होता है",
+        "केवल optical digital audio",
+        "केवल WiFi signal"
+      ],
+      "correctIndex": 1,
+      "explanation": "Composite AV/RCA output analog video (yellow connector) और analog left-right audio (white/red connectors) देता है, जो पुराने non-HDMI TVs के साथ काम करता है, इसलिए option B सही है। यह HDMI जैसा digital signal नहीं है, ना ही optical digital audio या WiFi signal से इसका कोई संबंध है।"
+    },
+    {
+      "id": "u10_external_decoders_q30",
+      "question": "STB या smart box जैसे external decoder को HDMI port से TV में जोड़ने के बाद, output देखने के लिए TV पर क्या करना आवश्यक है?",
+      "options": [
+        "TV की factory reset करनी होगी",
+        "TV का firmware update करना होगा",
+        "TV की remote से 'Source/Input' button दबाकर उस corresponding HDMI input को select करना होगा",
+        "TV को restart करके फिर से antenna जोड़ना होगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "External decoder को जोड़ने के बाद TV पर उस specific HDMI input को Source/Input button से manually select करना पड़ता है ताकि TV उसी port का signal display करे, इसलिए option C सही है। Factory reset, firmware update या TV restart करके antenna जोड़ना — ये सामान्य external device connect करने के लिए आवश्यक कदम नहीं हैं।"
+    }
+  ]
+}

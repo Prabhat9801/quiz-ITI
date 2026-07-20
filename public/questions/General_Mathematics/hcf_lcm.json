@@ -1,0 +1,218 @@
+{
+  "unit": "general",
+  "unitName": "Mathematics",
+  "topic": "hcf_lcm",
+  "topicName": "HCF and LCM",
+  "questions": [
+    {
+      "id": "math_hcf_lcm_q1",
+      "question": "36 और 60 का HCF (Highest Common Factor) ज्ञात करें।",
+      "options": ["12", "6", "18", "24"],
+      "correctIndex": 0,
+      "explanation": "36 = 2²×3² और 60 = 2²×3×5। common prime factors की lowest power लेने पर HCF = 2²×3 = 12 आता है। 6 में factor 2² नहीं लिया गया, 18 में factor 5 गलती से शामिल है, और 24, 36 का factor ही नहीं है इसलिए HCF नहीं हो सकता।"
+    },
+    {
+      "id": "math_hcf_lcm_q2",
+      "question": "12 और 18 का LCM (Least Common Multiple) ज्ञात करें।",
+      "options": ["30", "36", "24", "48"],
+      "correctIndex": 1,
+      "explanation": "12 = 2²×3 और 18 = 2×3²। LCM में हर prime factor की highest power ली जाती है, इसलिए LCM = 2²×3² = 36। 30, 24 और 48, दोनों संख्याओं के common multiple नहीं हैं (जैसे 24, 18 से exactly divide नहीं होता)।"
+    },
+    {
+      "id": "math_hcf_lcm_q3",
+      "question": "48, 60 और 72 का HCF ज्ञात करें।",
+      "options": ["8", "10", "12", "16"],
+      "correctIndex": 2,
+      "explanation": "48 = 2⁴×3, 60 = 2²×3×5, 72 = 2³×3²। तीनों में common factor 2²×3 = 12 है। 8 और 16 में factor 3 शामिल नहीं है, और 10 किसी भी संख्या को exactly divide नहीं करता।"
+    },
+    {
+      "id": "math_hcf_lcm_q4",
+      "question": "15, 20 और 30 का LCM ज्ञात करें।",
+      "options": ["30", "45", "50", "60"],
+      "correctIndex": 3,
+      "explanation": "15 = 3×5, 20 = 2²×5, 30 = 2×3×5। highest powers लेने पर LCM = 2²×3×5 = 60। 30 केवल 15 और 30 का multiple है 20 का नहीं, 45 में factor 2 नहीं है, और 50 में factor 3 नहीं है।"
+    },
+    {
+      "id": "math_hcf_lcm_q5",
+      "question": "दो संख्याओं का product 2400 है और उनका HCF 20 है। उनका LCM ज्ञात करें।",
+      "options": ["120", "100", "140", "160"],
+      "correctIndex": 0,
+      "explanation": "किसी भी दो संख्याओं के लिए HCF × LCM = उन संख्याओं का product होता है। इसलिए LCM = 2400/20 = 120। 100, 140 और 160 इस सम्बन्ध को संतुष्ट नहीं करते (जैसे 20×100=2000≠2400)।"
+    },
+    {
+      "id": "math_hcf_lcm_q6",
+      "question": "दो संख्याओं का HCF 6 और LCM 210 है। यदि एक संख्या 42 है, तो दूसरी संख्या ज्ञात करें।",
+      "options": ["36", "30", "24", "20"],
+      "correctIndex": 1,
+      "explanation": "HCF × LCM = दोनों संख्याओं का product, इसलिए दूसरी संख्या = (6×210)/42 = 30। 36, 24 और 20 में से कोई भी 42 के साथ मिलकर HCF=6 और LCM=210 नहीं देता।"
+    },
+    {
+      "id": "math_hcf_lcm_q7",
+      "question": "वह सबसे बड़ी संख्या ज्ञात करें जो 70 और 125 को divide करने पर क्रमशः 5 और 8 remainder छोड़े।",
+      "options": ["9", "11", "13", "15"],
+      "correctIndex": 2,
+      "explanation": "remainder हटाने पर संख्याएँ (70-5)=65 और (125-8)=117 बनती हैं। इनका HCF ज्ञात करना है: 65 = 5×13, 117 = 3²×13, इसलिए HCF = 13। 9, 11 और 15, दोनों संख्याओं 65 और 117 को exactly divide नहीं करते।"
+    },
+    {
+      "id": "math_hcf_lcm_q8",
+      "question": "वह सबसे छोटी संख्या ज्ञात करें जिसे 12, 16, 24 और 36 से divide करने पर हर बार 7 remainder बचे।",
+      "options": ["143", "148", "150", "151"],
+      "correctIndex": 3,
+      "explanation": "पहले LCM(12,16,24,36) निकालते हैं: 12=2²×3, 16=2⁴, 24=2³×3, 36=2²×3², इसलिए LCM = 2⁴×3² = 144। required संख्या = 144+7 = 151। 143, 148 और 150 में से किसी को भी इन चारों संख्याओं से divide करने पर remainder 7 नहीं आता।"
+    },
+    {
+      "id": "math_hcf_lcm_q9",
+      "question": "तीन bells 4, 6 और 8 मिनट के अंतराल पर बजती हैं। यदि वे सुबह 9:00 बजे एक साथ बजीं, तो अगली बार वे एक साथ कब बजेंगी?",
+      "options": ["9:24 am", "9:20 am", "9:30 am", "9:36 am"],
+      "correctIndex": 0,
+      "explanation": "तीनों bells फिर एक साथ बजेंगी जब समय LCM(4,6,8) मिनट का multiple होगा। LCM(4,6,8) = 24 मिनट, इसलिए वे 9:24 am पर फिर बजेंगी। 9:20, 9:30 और 9:36, 24 के multiple नहीं हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q10",
+      "question": "दो संख्याएँ ratio 3:4 में हैं और उनका HCF 5 है। उनका LCM ज्ञात करें।",
+      "options": ["45", "60", "75", "90"],
+      "correctIndex": 1,
+      "explanation": "संख्याएँ 3×5=15 और 4×5=20 होंगी। LCM(15,20) = 60 (चूँकि दोनों संख्याएँ 5×(coprime numbers 3,4) हैं तो LCM = 5×3×4 = 60)। 45, 75 और 90 इन दो संख्याओं का LCM नहीं हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q11",
+      "question": "1/3, 2/9 और 4/27 का HCF ज्ञात करें।",
+      "options": ["1/9", "1/18", "1/27", "1/54"],
+      "correctIndex": 2,
+      "explanation": "fractions का HCF = (numerators का HCF)/(denominators का LCM) से निकाला जाता है। numerators का HCF(1,2,4)=1 और denominators का LCM(3,9,27)=27, इसलिए HCF = 1/27। 1/9, 1/18 और 1/54 इस सूत्र से मेल नहीं खाते।"
+    },
+    {
+      "id": "math_hcf_lcm_q12",
+      "question": "3/4 और 9/16 का LCM ज्ञात करें।",
+      "options": ["3/4", "9/8", "9/16", "9/4"],
+      "correctIndex": 3,
+      "explanation": "fractions का LCM = (numerators का LCM)/(denominators का HCF) से निकाला जाता है। numerators का LCM(3,9)=9 और denominators का HCF(4,16)=4, इसलिए LCM = 9/4। 3/4, 9/8 और 9/16 इस calculation से नहीं आते।"
+    },
+    {
+      "id": "math_hcf_lcm_q13",
+      "question": "दो संख्याओं का HCF 18 और LCM 720 है। यदि एक संख्या 144 है, तो दूसरी संख्या ज्ञात करें।",
+      "options": ["90", "96", "100", "108"],
+      "correctIndex": 0,
+      "explanation": "HCF × LCM = संख्याओं का product होता है, इसलिए दूसरी संख्या = (18×720)/144 = 90। 96, 100 और 108 इस सम्बन्ध को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_hcf_lcm_q14",
+      "question": "वह सबसे छोटी संख्या ज्ञात करें जिसे 5 से बढ़ाने पर वह 24, 32 और 36 से exactly divisible हो जाए।",
+      "options": ["278", "283", "288", "293"],
+      "correctIndex": 1,
+      "explanation": "पहले LCM(24,32,36) निकालते हैं: 24=2³×3, 32=2⁵, 36=2²×3², इसलिए LCM = 2⁵×3² = 288। required संख्या = 288-5 = 283। 278, 288 और 293 में से किसी को भी 5 जोड़ने पर 288 का multiple नहीं मिलता।"
+    },
+    {
+      "id": "math_hcf_lcm_q15",
+      "question": "दो tankers में क्रमशः 850 litres और 680 litres fuel है। उस container की maximum capacity ज्ञात करें जिससे दोनों tankers का fuel पूरी संख्या में बार-बार measure किया जा सके।",
+      "options": ["150", "160", "170", "180"],
+      "correctIndex": 2,
+      "explanation": "यह HCF(850,680) निकालने वाला प्रश्न है। 850 = 2×5²×17 और 680 = 2³×5×17, इसलिए HCF = 2×5×17 = 170 litres। 150, 160 और 180, दोनों मात्राओं को exactly divide नहीं करते।"
+    },
+    {
+      "id": "math_hcf_lcm_q16",
+      "question": "24, 36 और 40 का LCM ज्ञात करें।",
+      "options": ["240", "300", "340", "360"],
+      "correctIndex": 3,
+      "explanation": "24=2³×3, 36=2²×3², 40=2³×5। highest powers लेने पर LCM = 2³×3²×5 = 360। 240, 300 और 340 तीनों संख्याओं के common multiple नहीं हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q17",
+      "question": "दो संख्याओं के HCF और LCM का product 1050 है। यदि एक संख्या 35 है, तो दूसरी संख्या ज्ञात करें।",
+      "options": ["30", "35", "40", "45"],
+      "correctIndex": 0,
+      "explanation": "HCF × LCM = दोनों संख्याओं का product होता है, इसलिए दूसरी संख्या = 1050/35 = 30। 35, 40 और 45 इस सम्बन्ध को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_hcf_lcm_q18",
+      "question": "वह सबसे बड़ी संख्या ज्ञात करें जो 445, 572 और 699 को divide करने पर क्रमशः 4, 5 और 6 remainder छोड़े।",
+      "options": ["49", "63", "77", "91"],
+      "correctIndex": 1,
+      "explanation": "remainder हटाने पर संख्याएँ 441, 567 और 693 बनती हैं। 441=3²×7², 567=3⁴×7, 693=3²×7×11, इसलिए HCF = 3²×7 = 63। 49, 77 और 91 तीनों संख्याओं को exactly divide नहीं करते।"
+    },
+    {
+      "id": "math_hcf_lcm_q19",
+      "question": "तीन संख्याएँ ratio 2:3:4 में हैं और उनका LCM 240 है। उनका HCF ज्ञात करें।",
+      "options": ["10", "15", "20", "25"],
+      "correctIndex": 2,
+      "explanation": "संख्याओं को 2x, 3x, 4x मानें। LCM(2,3,4)=12 है, इसलिए LCM(2x,3x,4x)=12x=240 => x=20। चूँकि 2,3,4 का HCF 1 है, इसलिए तीनों संख्याओं का HCF = x = 20। 10, 15 और 25 गलत मान हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q20",
+      "question": "एक कमरे की length 15m 17cm और breadth 9m 2cm है। इस फर्श को बिना काटे बराबर आकार की square tiles से पूरी तरह ढकने के लिए न्यूनतम कितनी tiles चाहिए?",
+      "options": ["740", "782", "798", "814"],
+      "correctIndex": 3,
+      "explanation": "cm में length=1517 और breadth=902। tile का maximum side इनका HCF है: HCF(1517,902)=41 cm। tiles की संख्या = (1517×902)/(41×41) = 37×22 = 814। 740, 782 और 798 गलत गणना से आते हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q21",
+      "question": "8, 12 और 20 का HCF ज्ञात करें।",
+      "options": ["4", "2", "6", "8"],
+      "correctIndex": 0,
+      "explanation": "8=2³, 12=2²×3, 20=2²×5। common factor केवल 2² = 4 है। 2 पूरा common factor नहीं लेता, 6 में 3 शामिल है जो 8 और 20 में नहीं है, और 8, 12 या 20 को exactly divide नहीं करता।"
+    },
+    {
+      "id": "math_hcf_lcm_q22",
+      "question": "9 और 12 का LCM ज्ञात करें।",
+      "options": ["24", "36", "48", "54"],
+      "correctIndex": 1,
+      "explanation": "9=3² और 12=2²×3। LCM = 2²×3² = 36। 24, 48 और 54 में से कोई भी दोनों संख्याओं 9 और 12 का common multiple नहीं है।"
+    },
+    {
+      "id": "math_hcf_lcm_q23",
+      "question": "निम्नलिखित में से कौन-सा pair co-prime (HCF = 1) है?",
+      "options": ["(20, 30)", "(16, 24)", "(15, 28)", "(18, 27)"],
+      "correctIndex": 2,
+      "explanation": "15=3×5 और 28=2²×7 में कोई common prime factor नहीं है, इसलिए HCF=1 और यह pair co-prime है। (20,30) का HCF 10, (16,24) का HCF 8, और (18,27) का HCF 9 है, इसलिए ये co-prime नहीं हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q24",
+      "question": "चार bells 6, 8, 12 और 18 सेकंड के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करें, तो कितने सेकंड बाद वे फिर एक साथ बजेंगी?",
+      "options": ["48", "60", "66", "72"],
+      "correctIndex": 3,
+      "explanation": "6=2×3, 8=2³, 12=2²×3, 18=2×3²। LCM = 2³×3² = 72 सेकंड। 48, 60 और 66, चारों संख्याओं के common multiple नहीं हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q25",
+      "question": "दो co-prime संख्याओं 15 और 28 का LCM ज्ञात करें।",
+      "options": ["420", "400", "380", "360"],
+      "correctIndex": 0,
+      "explanation": "जब दो संख्याएँ co-prime होती हैं (HCF=1), तो उनका LCM उनके product के बराबर होता है। इसलिए LCM = 15×28 = 420। 400, 380 और 360 गलत values हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q26",
+      "question": "वह सबसे बड़ी संख्या ज्ञात करें जो 245 और 1029 दोनों को exactly divide करे।",
+      "options": ["35", "49", "63", "77"],
+      "correctIndex": 1,
+      "explanation": "245 = 5×7² और 1029 = 3×7³। common factor की highest power 7² = 49 है, इसलिए HCF = 49। 35, 63 और 77 दोनों संख्याओं को exactly divide नहीं करते।"
+    },
+    {
+      "id": "math_hcf_lcm_q27",
+      "question": "A, B और C एक circular track पर एक साथ start करते हैं और क्रमशः 12, 18 और 24 सेकंड में एक round पूरा करते हैं। कितने सेकंड बाद वे तीनों फिर starting point पर मिलेंगे?",
+      "options": ["48", "60", "72", "84"],
+      "correctIndex": 2,
+      "explanation": "तीनों फिर साथ मिलेंगे जब समय LCM(12,18,24) का multiple होगा। 12=2²×3, 18=2×3², 24=2³×3, इसलिए LCM = 2³×3² = 72 सेकंड। 48, 60 और 84 तीनों समयों के common multiple नहीं हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q28",
+      "question": "25 और 40 का HCF 5 है। इस जानकारी का उपयोग करके 25 और 40 का LCM ज्ञात करें।",
+      "options": ["150", "175", "190", "200"],
+      "correctIndex": 3,
+      "explanation": "HCF × LCM = संख्याओं का product होता है, इसलिए LCM = (25×40)/5 = 200। 150, 175 और 190 इस सम्बन्ध को satisfy नहीं करते।"
+    },
+    {
+      "id": "math_hcf_lcm_q29",
+      "question": "वह सबसे छोटी संख्या ज्ञात करें जो 15, 20 और 25 तीनों से बिना कोई remainder छोड़े exactly divide हो जाए।",
+      "options": ["300", "250", "275", "325"],
+      "correctIndex": 0,
+      "explanation": "यह LCM(15,20,25) पूछता है। 15=3×5, 20=2²×5, 25=5², इसलिए LCM = 2²×3×5² = 300। 250, 275 और 325, तीनों संख्याओं से exactly divisible नहीं हैं।"
+    },
+    {
+      "id": "math_hcf_lcm_q30",
+      "question": "दो संख्याओं का HCF 12 है और उनका अंतर (difference) भी 12 है। यदि ये सबसे छोटी ऐसी (असमान) संख्याएँ हैं, तो वे संख्याएँ क्या होंगी?",
+      "options": ["24 और 36", "12 और 24", "36 और 48", "6 और 18"],
+      "correctIndex": 1,
+      "explanation": "12 के सबसे छोटे लगातार multiples 12 और 24 हैं, जिनका अंतर 12 और HCF भी 12 है (HCF(12,24)=12)। 24 और 36 का HCF भी 12 है पर ये सबसे छोटा pair नहीं है, 36 और 48 भी बड़ा pair है, और 6 व 18 का HCF 6 है, 12 नहीं।"
+    }
+  ]
+}

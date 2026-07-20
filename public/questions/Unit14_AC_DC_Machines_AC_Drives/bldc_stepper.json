@@ -1,0 +1,368 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "bldc_stepper",
+  "topicName": "Brushless DC & Stepper Motors",
+  "questions": [
+    {
+      "id": "u14_bldc_stepper_q1",
+      "question": "BLDC (Brushless DC) motor में commutation किस प्रकार की जाती है, जबकि conventional DC motor में brushes और commutator का उपयोग होता है?",
+      "options": [
+        "Mechanical brushes द्वारा",
+        "Electronic controller द्वारा rotor position sensing के आधार पर",
+        "Slip rings द्वारा",
+        "Carbon brushes और commutator segments द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "BLDC motor में mechanical commutator नहीं होता, बल्कि Hall sensors या back-EMF sensing से rotor position पता करके electronic controller द्वारा windings की current sequence electronically switch की जाती है। Options A, C और D सभी mechanical/brush-based commutation को दर्शाते हैं जो conventional brushed DC motor की विशेषता है, BLDC की नहीं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q2",
+      "question": "BLDC motor में permanent magnets सामान्यतः कहाँ लगे होते हैं?",
+      "options": [
+        "Stator windings पर",
+        "External frame पर",
+        "Rotor पर",
+        "Brush holder assembly में"
+      ],
+      "correctIndex": 2,
+      "explanation": "BLDC motor में permanent magnets rotor पर लगे होते हैं और windings stator पर स्थिर रहती हैं, जिससे moving contacts की आवश्यकता नहीं होती। Option A stator में windings को गलत तरीके से magnet बताता है, C और D BLDC की actual construction से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q3",
+      "question": "BLDC motor में rotor की position sense करने के लिए सबसे common sensor कौन सा प्रयोग होता है?",
+      "options": [
+        "Hall effect sensor",
+        "Thermocouple",
+        "LDR (Light Dependent Resistor)",
+        "Strain gauge"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hall effect sensors magnetic field detect करके rotor की exact position की जानकारी controller को देते हैं, जिससे सही समय पर windings energize होती हैं। Thermocouple temperature मापता है, LDR light intensity मापता है, और strain gauge mechanical strain मापता है — इनका rotor position sensing से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u14_bldc_stepper_q4",
+      "question": "BLDC motor की तुलना में conventional brushed DC motor का एक प्रमुख disadvantage क्या है?",
+      "options": [
+        "अधिक efficiency",
+        "Brushes की wear and tear के कारण अधिक maintenance",
+        "कम noise",
+        "Longer lifespan"
+      ],
+      "correctIndex": 1,
+      "explanation": "Brushed DC motor में brushes commutator से घर्षण के कारण घिसती हैं, जिससे periodic maintenance/replacement की आवश्यकता पड़ती है और sparking भी होती है। BLDC motor में ऐसा नहीं होता इसलिए इसकी efficiency, lifespan बेहतर और noise कम होता है — शेष options brushed motor के वास्तविक disadvantages के विपरीत हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q5",
+      "question": "किस applications में BLDC motors का उपयोग अधिक होता है क्योंकि वे high efficiency और low maintenance प्रदान करते हैं?",
+      "options": [
+        "केवल पुराने toy motors में",
+        "Electric vehicles, drones, CNC spindles जैसे high-performance applications में",
+        "केवल manual hand tools में",
+        "केवल mechanical clocks में"
+      ],
+      "correctIndex": 1,
+      "explanation": "उच्च efficiency, precise speed control और low maintenance के कारण BLDC motors electric vehicles, drones, CNC machines व computer cooling fans जैसी high-performance applications में व्यापक रूप से प्रयोग होते हैं। शेष options इनके actual industrial use से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q6",
+      "question": "Stepper motor को अन्य DC motors से अलग क्या बनाता है?",
+      "options": [
+        "यह केवल continuous rotation करता है",
+        "यह discrete steps में घूमता है और open-loop position control संभव बनाता है",
+        "यह केवल AC supply पर चलता है",
+        "इसमें कोई winding नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stepper motor का rotor एक fixed step angle में rotate होता है, जिससे precise open-loop positioning संभव होती है बिना feedback sensor के। यह continuous smooth rotation के बजाय discrete steps में चलता है, इसलिए option A गलत है; यह DC pulses पर काम करता है (option C गलत) और windings अनिवार्य रूप से होती हैं (option D गलत)।"
+    },
+    {
+      "id": "u14_bldc_stepper_q7",
+      "question": "Stepper motor के मुख्यतः कितने प्रकार होते हैं?",
+      "options": [
+        "केवल एक प्रकार",
+        "Permanent magnet, Variable reluctance और Hybrid — तीन प्रकार",
+        "पांच प्रकार",
+        "सात प्रकार"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stepper motors को तीन main categories में बांटा जाता है: Permanent Magnet (PM), Variable Reluctance (VR) और Hybrid stepper motor, जो construction और torque characteristics में अलग होते हैं। अन्य options में दी गई संख्याएं standard classification के अनुरूप नहीं हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q8",
+      "question": "Variable Reluctance (VR) stepper motor की rotor construction किस प्रकार की होती है?",
+      "options": [
+        "Rotor पर permanent magnet लगा होता है",
+        "Rotor soft iron का बना होता है जिसमें teeth होते हैं, कोई permanent magnet नहीं",
+        "Rotor copper windings से बना होता है",
+        "Rotor में carbon brushes होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "VR stepper motor में rotor soft iron material से बना होता है जिसमें projecting teeth होते हैं और यह magnetic reluctance के minimum path की ओर align होता है, इसमें कोई permanent magnet नहीं होता। Option A permanent magnet stepper को describe करता है, C और D actual construction से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q9",
+      "question": "Hybrid stepper motor किन दो types की विशेषताओं का combination है?",
+      "options": [
+        "Induction motor और synchronous motor",
+        "Permanent Magnet और Variable Reluctance stepper motors",
+        "BLDC motor और DC series motor",
+        "Universal motor और shaded pole motor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hybrid stepper motor, PM stepper की high torque और VR stepper की fine step resolution दोनों को मिलाकर बनाया जाता है, इसलिए यह industrial applications में सबसे अधिक प्रयुक्त होता है। शेष options में दिए गए motor combinations hybrid stepper की actual design से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q10",
+      "question": "यदि एक stepper motor का step angle 1.8° है, तो एक पूर्ण rotation (360°) पूरी करने के लिए कितने steps की आवश्यकता होगी?",
+      "options": [
+        "100 steps",
+        "150 steps",
+        "200 steps",
+        "250 steps"
+      ],
+      "correctIndex": 2,
+      "explanation": "Steps per revolution = 360° / step angle = 360 / 1.8 = 200 steps। यह एक standard hybrid stepper motor की common specification है। अन्य options में calculation formula सही ढंग से apply नहीं होता, इसलिए वे गलत हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q11",
+      "question": "Step angle की गणना करने का सही formula क्या है?",
+      "options": [
+        "Step angle = 360° × rotor teeth की संख्या",
+        "Step angle = 360° / steps per revolution",
+        "Step angle = steps per revolution / 360°",
+        "Step angle = 180° / rotor teeth"
+      ],
+      "correctIndex": 1,
+      "explanation": "Step angle motor की उस न्यूनतम angular displacement को दर्शाता है जो एक pulse input देने पर होता है, और इसे 360° को कुल steps per revolution से भाग देकर calculate किया जाता है। शेष options में formula का mathematical relationship गलत है।"
+    },
+    {
+      "id": "u14_bldc_stepper_q12",
+      "question": "एक stepper motor में यदि steps per revolution 48 है, तो उसका step angle कितना होगा?",
+      "options": [
+        "3.75°",
+        "5.5°",
+        "7.5°",
+        "9°"
+      ],
+      "correctIndex": 2,
+      "explanation": "Step angle = 360° / 48 = 7.5°, जो एक common standard stepper motor specification है। बाकी options calculation में सही formula apply करने पर प्राप्त नहीं होते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q13",
+      "question": "Stepper motor की driving के लिए किस प्रकार के excitation mode में एक समय में केवल एक ही winding energize होती है?",
+      "options": [
+        "Full-step (two-phase-on) mode",
+        "Half-step mode",
+        "Wave drive (single-phase-on) mode",
+        "Micro-stepping mode"
+      ],
+      "correctIndex": 2,
+      "explanation": "Wave drive mode में एक समय में केवल एक winding energize होती है जिससे torque थोड़ा कम मिलता है परंतु power consumption भी कम होता है। Full-step mode में दो windings एक साथ energize होती हैं (अधिक torque), half-step दोनों modes को alternate करता है, और micro-stepping current को sub-divide करके smoother motion देता है।"
+    },
+    {
+      "id": "u14_bldc_stepper_q14",
+      "question": "Micro-stepping technique का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Motor की speed को अचानक बढ़ाना",
+        "Windings की current को sinusoidal रूप से proportion करके smoother motion और finer resolution प्राप्त करना",
+        "Motor को केवल AC supply पर चलाना",
+        "Motor की winding संख्या घटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Micro-stepping में driver current को sub-steps में divide करके windings को proportionally energize करता है, जिससे rotor smoother तरीके से छोटे-छोटे increments में move करता है और vibration/noise कम होती है। अन्य options micro-stepping के actual purpose से असंबंधित हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q15",
+      "question": "BLDC motor की winding किस प्रकार arrange होती है ताकि electronic commutation संभव हो?",
+      "options": [
+        "Single-phase winding केवल",
+        "तीन-phase (3-phase) star या delta configuration में",
+        "केवल एक coil single loop में",
+        "Windings बिल्कुल नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिकांश BLDC motors में तीन-phase star या delta connected stator windings होती हैं, जिन्हें controller sequential रूप से energize करके rotating magnetic field बनाता है। शेष options BLDC की standard winding arrangement से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q16",
+      "question": "BLDC motor controller में back-EMF sensing का उपयोग किसके लिए किया जाता है?",
+      "options": [
+        "Motor की temperature मापने के लिए",
+        "Sensorless commutation में rotor की position estimate करने के लिए",
+        "Supply voltage को नियंत्रित करने के लिए",
+        "केवल motor को band करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sensorless BLDC control में Hall sensors के बजाय unenergized winding में induced back-EMF को monitor करके rotor position estimate की जाती है, जिससे cost कम होती है। यह temperature या supply voltage measurement से संबंधित नहीं है, और motor बंद करने का कार्य नहीं है।"
+    },
+    {
+      "id": "u14_bldc_stepper_q17",
+      "question": "Stepper motor का एक महत्वपूर्ण application क्षेत्र कौन सा है, जहां precise open-loop positioning आवश्यक होती है?",
+      "options": [
+        "बड़े industrial pumps में",
+        "CNC machines, 3D printers और robotic arms में",
+        "Household ceiling fans में",
+        "Large power transformers में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stepper motors की precise angular positioning capability के कारण इन्हें CNC machines, 3D printers, camera lens focusing और robotic arms में position control के लिए व्यापक रूप से प्रयोग किया जाता है। शेष applications में इस precision की आवश्यकता नहीं होती।"
+    },
+    {
+      "id": "u14_bldc_stepper_q18",
+      "question": "PM (Permanent Magnet) stepper motor की तुलना में VR stepper motor में torque कैसा होता है?",
+      "options": [
+        "VR motor में torque PM motor से अधिक होता है",
+        "VR motor में torque सामान्यतः PM motor से कम होता है",
+        "दोनों में torque बिल्कुल समान होता है",
+        "Torque का कोई संबंध construction से नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "VR stepper motor में permanent magnet न होने के कारण holding torque और detent torque PM stepper की तुलना में कम होता है, जबकि PM stepper में magnet के कारण अधिक torque मिलता है। शेष options actual comparison से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q19",
+      "question": "BLDC motor drive circuit में inverter का मुख्य कार्य क्या है?",
+      "options": [
+        "AC supply को केवल measure करना",
+        "DC supply को उचित sequence में switch करके 3-phase AC जैसी waveform windings को देना",
+        "Motor की temperature control करना",
+        "केवल motor को cool रखना"
+      ],
+      "correctIndex": 1,
+      "explanation": "BLDC drive में power electronic inverter (six switches) DC supply को rotor position के अनुसार sequential switching द्वारा windings को energize करता है, जिससे rotating magnetic field बनती है। शेष options inverter के actual function से भिन्न हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q20",
+      "question": "Stepper motor में holding torque किसे कहते हैं?",
+      "options": [
+        "Motor के rotate करते समय अधिकतम torque",
+        "Motor के stationary रहते हुए, energized windings द्वारा shaft को position में पकड़े रखने वाला maximum torque",
+        "Motor के start होने पर लगने वाला torque",
+        "Motor के overload होने पर लगने वाला torque"
+      ],
+      "correctIndex": 1,
+      "explanation": "Holding torque वह maximum external torque है जिसे energized (but stationary) stepper motor बिना rotor को displace किए सहन कर सकता है, यह positioning applications में महत्वपूर्ण parameter है। शेष options torque की अन्य states को दर्शाते हैं, holding torque को नहीं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q21",
+      "question": "BLDC motor के winding energization sequence को नियंत्रित करने वाला मुख्य component कौन सा है?",
+      "options": [
+        "Mechanical commutator",
+        "Electronic Speed Controller (ESC) / motor controller",
+        "Carbon brush assembly",
+        "Slip ring assembly"
+      ],
+      "correctIndex": 1,
+      "explanation": "BLDC motor में Electronic Speed Controller (ESC) rotor position sensors से feedback लेकर सही समय पर सही phase windings को energize करने का निर्णय लेता है। Mechanical commutator, brushes और slip rings BLDC में उपयोग नहीं होते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q22",
+      "question": "यदि किसी stepper motor का step angle 0.9° है, तो प्रति revolution कितने steps लगेंगे?",
+      "options": [
+        "300 steps",
+        "400 steps",
+        "500 steps",
+        "600 steps"
+      ],
+      "correctIndex": 1,
+      "explanation": "Steps per revolution = 360° / 0.9° = 400 steps, जो high-resolution stepper motors में common होता है। अन्य options सही division से प्राप्त नहीं होते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q23",
+      "question": "Full-step (two-phase-on) excitation mode की तुलना में wave drive (single-phase-on) mode में torque कैसा रहता है?",
+      "options": [
+        "अधिक torque मिलता है",
+        "थोड़ा कम torque मिलता है क्योंकि एक समय में केवल एक winding energize होती है",
+        "बिल्कुल समान torque मिलता है",
+        "Torque शून्य हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Wave drive में एक समय में केवल एक phase energize रहती है, इसलिए दो-phase simultaneously energize होने वाले full-step mode की तुलना में torque कम होता है परंतु current consumption भी कम होता है। शेष options actual relationship से मेल नहीं खाते।"
+    },
+    {
+      "id": "u14_bldc_stepper_q24",
+      "question": "BLDC motor में trapezoidal back-EMF waveform के अनुरूप कौन सी commutation technique अधिक उपयुक्त होती है?",
+      "options": [
+        "Six-step (120° conduction) commutation",
+        "Sine-wave field oriented control केवल",
+        "कोई commutation आवश्यक नहीं",
+        "Random switching"
+      ],
+      "correctIndex": 0,
+      "explanation": "BLDC motor का back-EMF trapezoidal होता है, इसलिए इसे six-step commutation (120° conduction mode) द्वारा efficiently drive किया जाता है, जिसमें प्रत्येक समय दो phases conduct करती हैं। Sine-wave FOC सामान्यतः sinusoidal back-EMF वाले PMSM motors के लिए उपयुक्त है, और options C व D व्यावहारिक नहीं हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q25",
+      "question": "Stepper motor drive में 'detent torque' किसे कहा जाता है?",
+      "options": [
+        "Windings energized होने पर मिलने वाला torque",
+        "Windings de-energized (unpowered) रहते हुए permanent magnet के कारण मिलने वाला residual holding torque",
+        "Motor overload पर मिलने वाला torque",
+        "Motor की rated running torque"
+      ],
+      "correctIndex": 1,
+      "explanation": "Detent torque वह छोटा residual torque है जो PM या hybrid stepper motor में windings de-energized होने पर भी permanent magnet के कारण मौजूद रहता है, जो rotor को एक stable position की ओर align करता है। शेष options energized या running conditions से संबंधित हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q26",
+      "question": "BLDC motor की उच्च efficiency का प्रमुख कारण क्या है?",
+      "options": [
+        "Brush friction losses का न होना और precise electronic commutation",
+        "Mechanical commutator का उपयोग",
+        "अत्यधिक heat generation",
+        "अधिक moving mechanical parts"
+      ],
+      "correctIndex": 0,
+      "explanation": "BLDC motor में brush-commutator friction losses और sparking नहीं होते, तथा electronic commutation precisely rotor position के अनुसार होता है, जिससे efficiency अधिक रहती है। शेष options efficiency बढ़ाने के बजाय losses या complexity बढ़ाने वाले factors हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q27",
+      "question": "Stepper motor drive circuits में किस प्रकार के power semiconductor devices commonly winding switching के लिए उपयोग होते हैं?",
+      "options": [
+        "केवल diodes",
+        "MOSFETs या Darlington transistor pairs H-bridge configuration में",
+        "केवल resistors",
+        "केवल capacitors"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stepper motor driver circuits में windings को energize/de-energize करने तथा current direction control करने के लिए MOSFET या transistor आधारित H-bridge configuration प्रयोग होता है। Diodes, resistors और capacitors switching devices के रूप में उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q28",
+      "question": "BLDC motor को stepper motor से अलग करने वाली मुख्य विशेषता क्या है?",
+      "options": [
+        "BLDC continuous smooth rotation के लिए design किया जाता है जबकि stepper discrete positioning के लिए",
+        "BLDC में कभी भी controller नहीं लगता",
+        "Stepper motor केवल AC supply पर काम करता है",
+        "दोनों बिल्कुल एक जैसे होते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "BLDC motor को उच्च speed पर continuous smooth rotation के लिए (जैसे fans, drones) design किया जाता है, जबकि stepper motor precise discrete angular steps में position control के लिए बनाया जाता है। शेष options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q29",
+      "question": "यदि एक hybrid stepper motor में rotor teeth 50 हैं, तो उसका basic step angle (single-phase, full-step मोड में सामान्यतः प्रयुक्त 1.8° के आधार पर) दर्शाने वाला संबंध क्या दर्शाता है?",
+      "options": [
+        "अधिक rotor teeth होने से step angle बड़ा होता है",
+        "अधिक rotor teeth होने से step angle छोटा होता है, अर्थात finer resolution मिलता है",
+        "Rotor teeth की संख्या का step angle से कोई संबंध नहीं",
+        "Step angle हमेशा teeth संख्या के बराबर होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rotor teeth की संख्या बढ़ने पर प्रति revolution अधिक magnetic alignment positions बनती हैं, जिससे step angle छोटा हो जाता है और finer positioning resolution मिलती है (जैसे 50 teeth वाले hybrid motor में सामान्यतः 1.8° step angle मिलता है)। शेष options इस inverse relationship को गलत ढंग से प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "u14_bldc_stepper_q30",
+      "question": "BLDC motor drive में Hall sensor फेल हो जाने पर आमतौर पर क्या समस्या उत्पन्न होती है?",
+      "options": [
+        "Motor और बेहतर efficiency से चलने लगता है",
+        "Controller को rotor position की सही जानकारी नहीं मिलती, जिससे commutation गलत हो सकती है और motor रुक सकता है या असामान्य व्यवहार कर सकता है",
+        "Motor की speed automatically double हो जाती है",
+        "इसका कोई प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hall sensor feedback के बिना electronic controller सही समय पर सही windings energize नहीं कर पाता, जिससे commutation sequence गड़बड़ हो जाती है और motor की performance प्रभावित होती है या यह stall हो सकता है। शेष options वास्तविक फॉल्ट effect को सही ढंग से नहीं दर्शाते।"
+    }
+  ]
+}

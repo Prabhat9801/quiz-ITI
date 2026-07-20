@@ -1,0 +1,337 @@
+{
+  "meta": {
+    "title": "Electronic Mechanic / Mechanic Radio & TV - Quiz Question Bank",
+    "schemaVersion": 1,
+    "questionSchema": {
+      "id": "string (unique, e.g. u1_transistors_basics_q1)",
+      "question": "string",
+      "options": ["string", "string", "string", "string"],
+      "correctIndex": "number (0-3)",
+      "explanation": "string (why correct option is right AND why others are wrong)"
+    }
+  },
+  "units": [
+    {
+      "id": "unit1",
+      "subject": "Trade",
+      "name": "Analog and Digital Electronics circuits",
+      "folder": "Unit1_Analog_and_Digital_Electronics",
+      "topics": [
+        { "id": "transistors_basics", "name": "Transistors - Basics & Working Principle", "file": "transistors_basics.json" },
+        { "id": "transistor_amplifiers", "name": "Transistor Amplifiers (CB, CE, CC, RC-coupled, Darlington)", "file": "transistor_amplifiers.json" },
+        { "id": "opamp_applications", "name": "Op-Amp & Applications (inverting, non-inverting, summing, ZCD, instrumentation)", "file": "opamp_applications.json" },
+        { "id": "oscillators", "name": "Oscillators (RC & Wein-bridge)", "file": "oscillators.json" },
+        { "id": "dac_circuits", "name": "DAC (R-2R ladder & weighted DAC)", "file": "dac_circuits.json" },
+        { "id": "multivibrators_555", "name": "555 IC Astable & Monostable Multivibrators", "file": "multivibrators_555.json" },
+        { "id": "logic_gates_combinational", "name": "Logic Gates & Combinational Circuits (adders, mux, demux, tri-state)", "file": "logic_gates_combinational.json" },
+        { "id": "sequential_circuits", "name": "Sequential Circuits (flip-flops, counters, shift registers)", "file": "sequential_circuits.json" }
+      ]
+    },
+    {
+      "id": "unit2",
+      "subject": "Trade",
+      "name": "Microcontroller (8051) & PIC Microcontrollers",
+      "folder": "Unit2_Microcontroller_8051_and_PIC",
+      "topics": [
+        { "id": "mc_vs_mp", "name": "Microcontroller vs Microprocessor", "file": "mc_vs_mp.json" },
+        { "id": "arch_8051", "name": "8051 Architecture & Pin Details", "file": "arch_8051.json" },
+        { "id": "registers_sfr_8051", "name": "8051 Register Banks & SFRs", "file": "registers_sfr_8051.json" },
+        { "id": "memory_io_8051", "name": "8051 Memory Interfacing & I/O Ports", "file": "memory_io_8051.json" },
+        { "id": "instruction_set_8051", "name": "8051 Instruction Set & Addressing Modes", "file": "instruction_set_8051.json" },
+        { "id": "applications_variants_8051", "name": "8051 Applications & Variants (8051 vs 8052)", "file": "applications_variants_8051.json" },
+        { "id": "pic_intro", "name": "PIC Introduction & Architecture (CISC/RISC)", "file": "pic_intro.json" },
+        { "id": "pic_special_features", "name": "PIC Special Features (WDT, POR, BOR, PUT, LVP)", "file": "pic_special_features.json" },
+        { "id": "pic_memory", "name": "PIC Memory Organization", "file": "pic_memory.json" },
+        { "id": "pic_timers", "name": "PIC Timers/Counters & PWM", "file": "pic_timers.json" },
+        { "id": "pic_interrupts", "name": "PIC Interrupts & Reset Vectors", "file": "pic_interrupts.json" },
+        { "id": "pic_peripherals", "name": "PIC On-chip Peripherals (ADC, Comparator)", "file": "pic_peripherals.json" },
+        { "id": "pic_serial_comm", "name": "PIC Serial Communication (USART/I2C/SPI)", "file": "pic_serial_comm.json" },
+        { "id": "pic_io_programming", "name": "PIC I/O Ports & C-Programming Basics", "file": "pic_io_programming.json" }
+      ]
+    },
+    {
+      "id": "unit3",
+      "subject": "Trade",
+      "name": "Sensors, Transducers and Applications",
+      "folder": "Unit3_Sensors_Transducers",
+      "topics": [
+        { "id": "transducer_basics", "name": "Transducer Basics (active/passive, selection, characteristics)", "file": "transducer_basics.json" },
+        { "id": "standard_outputs", "name": "Standard Outputs (3-15 PSI, 4-20 mA, 1-5 V)", "file": "standard_outputs.json" },
+        { "id": "strain_gauge_loadcell", "name": "Strain Gauge & Load Cell", "file": "strain_gauge_loadcell.json" },
+        { "id": "rtd_thermistor_thermocouple", "name": "RTD, Thermistor & Thermocouple", "file": "rtd_thermistor_thermocouple.json" },
+        { "id": "inductive_lvdt", "name": "Inductive Transducer & LVDT", "file": "inductive_lvdt.json" },
+        { "id": "capacitive_transducer", "name": "Capacitive Transducer", "file": "capacitive_transducer.json" },
+        { "id": "proximity_sensors", "name": "Proximity Sensors (limit switch, capacitive, inductive, IR)", "file": "proximity_sensors.json" }
+      ]
+    },
+    {
+      "id": "unit4",
+      "subject": "Trade",
+      "name": "UPS, Inverters, SMPS",
+      "folder": "Unit4_UPS_Inverters_SMPS",
+      "topics": [
+        { "id": "voltage_stabilizer", "name": "Voltage Stabilizer (manual, automatic, servo)", "file": "voltage_stabilizer.json" },
+        { "id": "smps", "name": "SMPS - Block Diagram & Working", "file": "smps.json" },
+        { "id": "chopper_circuits", "name": "Chopper Circuits (step-up, step-down, inverting)", "file": "chopper_circuits.json" },
+        { "id": "dc_dc_converters", "name": "DC-DC Converters", "file": "dc_dc_converters.json" },
+        { "id": "inverters", "name": "Inverters - Block Diagram & Working", "file": "inverters.json" },
+        { "id": "inverter_protection", "name": "Inverter Protection Circuits", "file": "inverter_protection.json" },
+        { "id": "three_phase_inverter", "name": "Three Phase Inverter Circuits", "file": "three_phase_inverter.json" },
+        { "id": "ups_concept", "name": "UPS Concept & Blocks (vs Inverter)", "file": "ups_concept.json" },
+        { "id": "ups_types", "name": "UPS Types (Online, Offline, Line-interactive)", "file": "ups_types.json" },
+        { "id": "ups_circuits", "name": "UPS Circuits (control, power, alarm, indicator)", "file": "ups_circuits.json" }
+      ]
+    },
+    {
+      "id": "unit5",
+      "subject": "Trade",
+      "name": "SMD Soldering and De-soldering",
+      "folder": "Unit5_SMD_Soldering",
+      "topics": [
+        { "id": "smt_intro", "name": "Surface Mount Technology - Intro & Advantages", "file": "smt_intro.json" },
+        { "id": "smd_components_packages", "name": "SMD Components & Packages (SOT, SOD, MELF)", "file": "smd_components_packages.json" },
+        { "id": "reflow_solder_paste", "name": "Reflow Soldering & Solder Paste (flux)", "file": "reflow_solder_paste.json" },
+        { "id": "smd_package_sizes", "name": "SMD Package Sizes & Codes", "file": "smd_package_sizes.json" },
+        { "id": "rework_repair_concepts", "name": "Rework & Repair Concepts (conformal coating)", "file": "rework_repair_concepts.json" },
+        { "id": "pcb_repair_techniques", "name": "PCB Repair (track, pad, plated hole, solder mask)", "file": "pcb_repair_techniques.json" },
+        { "id": "pga_soldering", "name": "PGA Package Soldering / De-soldering", "file": "pga_soldering.json" },
+        { "id": "pcb_inspection", "name": "PCB Inspection & Continuity Check (dry solder)", "file": "pcb_inspection.json" }
+      ]
+    },
+    {
+      "id": "unit6",
+      "subject": "Trade",
+      "name": "Cable Harnessing & Connectors",
+      "folder": "Unit6_Cable_Harnessing_Connectors",
+      "topics": [
+        { "id": "cable_classification", "name": "Cable Classification (insulation, gauge, current capacity)", "file": "cable_classification.json" },
+        { "id": "db_connectors_ethernet", "name": "DB Connectors & Ethernet Crossover Cables", "file": "db_connectors_ethernet.json" },
+        { "id": "utp_stp_cables", "name": "UTP, STP, SCTP Cables & Cable Trays", "file": "utp_stp_cables.json" },
+        { "id": "av_connectors", "name": "Audio/Video Connectors (XLR, RCA, PHONO, DIN, BNC)", "file": "av_connectors.json" },
+        { "id": "rf_usb_video_connectors", "name": "RF, USB, FireWire, SATA, VGA, DVI, HDMI Connectors", "file": "rf_usb_video_connectors.json" },
+        { "id": "port_pinouts", "name": "Port Pinouts (RS-232, Parallel, Ethernet 568A/B)", "file": "port_pinouts.json" },
+        { "id": "registered_jacks", "name": "Registered Jacks (RJ11, RJ14, RJ25, RJ48)", "file": "registered_jacks.json" }
+      ]
+    },
+    {
+      "id": "unit7",
+      "subject": "Trade",
+      "name": "Computer Hardware, OS, MS Office, Networking",
+      "folder": "Unit7_Computer_Hardware_OS_Networking",
+      "topics": [
+        { "id": "computer_basics_io", "name": "Computer Basics & I/O Devices", "file": "computer_basics_io.json" },
+        { "id": "printers_storage_ports", "name": "Printers, Storage (HDD/DVD) & Ports", "file": "printers_storage_ports.json" },
+        { "id": "windows_os", "name": "Windows OS & File Management", "file": "windows_os.json" },
+        { "id": "ms_word", "name": "MS Word", "file": "ms_word.json" },
+        { "id": "ms_excel", "name": "MS Excel", "file": "ms_excel.json" },
+        { "id": "powerpoint_internet", "name": "PowerPoint & Internet Basics", "file": "powerpoint_internet.json" },
+        { "id": "networking_basics", "name": "Networking Basics (topology, TCP/IP, protocols)", "file": "networking_basics.json" },
+        { "id": "network_components", "name": "Network Components (hub, switch, router, NIC, firewall)", "file": "network_components.json" }
+      ]
+    },
+    {
+      "id": "unit8",
+      "subject": "Trade",
+      "name": "Digital Panel Meter",
+      "folder": "Unit8_Digital_Panel_Meter",
+      "topics": [
+        { "id": "seven_segment_displays", "name": "Seven Segment Displays, Decoders & Driver ICs", "file": "seven_segment_displays.json" },
+        { "id": "multiplexing", "name": "Multiplexing & Its Advantages", "file": "multiplexing.json" },
+        { "id": "icl_7106_7107", "name": "ICL 7106 & 7107 Block Diagrams", "file": "icl_7106_7107.json" },
+        { "id": "dpm_seven_segment", "name": "DPM with Seven Segment Displays", "file": "dpm_seven_segment.json" },
+        { "id": "lcd_working", "name": "LCD Working Principle & Sizes", "file": "lcd_working.json" },
+        { "id": "lcd_driver_ics", "name": "LCD Decoder/Driver ICs", "file": "lcd_driver_ics.json" },
+        { "id": "matrix_display", "name": "Matrix Display & Driving Circuits", "file": "matrix_display.json" }
+      ]
+    },
+    {
+      "id": "unit9",
+      "subject": "Trade",
+      "name": "Solar Power Renewable Energy Systems",
+      "folder": "Unit9_Solar_Power_Renewable_Energy",
+      "topics": [
+        { "id": "renewable_need", "name": "Need for Renewable Energy & Solar Resource", "file": "renewable_need.json" },
+        { "id": "solar_cell_materials", "name": "Materials Used for Solar Cells", "file": "solar_cell_materials.json" },
+        { "id": "photovoltaic_principle", "name": "Photovoltaic Principle (light to electricity)", "file": "photovoltaic_principle.json" },
+        { "id": "types_solar_cells", "name": "Types of Solar Cells (mono & poly crystalline)", "file": "types_solar_cells.json" },
+        { "id": "module_panel_array", "name": "Solar Cell, Module, Panel & Array", "file": "module_panel_array.json" },
+        { "id": "pv_output_factors", "name": "Factors Affecting PV Module Output", "file": "pv_output_factors.json" },
+        { "id": "charge_controller", "name": "Solar Charge Controller / Regulator", "file": "charge_controller.json" },
+        { "id": "solar_safety", "name": "Safety Precautions with Solar Systems", "file": "solar_safety.json" }
+      ]
+    },
+    {
+      "id": "unit10",
+      "subject": "Trade",
+      "name": "LED Lights, LED/LCD TV and CCTV",
+      "folder": "Unit10_LED_TV_CCTV",
+      "topics": [
+        { "id": "led_panels_lamps", "name": "LED Panels & Lamp Specifications", "file": "led_panels_lamps.json" },
+        { "id": "led_drivers", "name": "LED Drivers & Selection", "file": "led_drivers.json" },
+        { "id": "lcd_led_tv_principle", "name": "LCD & LED TV Principle & Sections", "file": "lcd_led_tv_principle.json" },
+        { "id": "tv_3d", "name": "3D TV Principle & Working", "file": "tv_3d.json" },
+        { "id": "backlight_types", "name": "Backlight Types (CCFL, HCFL, Edge LED, IPS)", "file": "backlight_types.json" },
+        { "id": "tv_interfaces", "name": "TV Interfaces (HDMI, USB, RGB)", "file": "tv_interfaces.json" },
+        { "id": "cctv_system", "name": "CCTV System & Working Principle", "file": "cctv_system.json" },
+        { "id": "external_decoders", "name": "External Decoders (Set-top box, DVD, smart box)", "file": "external_decoders.json" },
+        { "id": "tv_remote_control", "name": "TV Remote Control (IR vs RF, faults)", "file": "tv_remote_control.json" }
+      ]
+    },
+    {
+      "id": "unit11",
+      "subject": "Trade",
+      "name": "Cell Phones",
+      "folder": "Unit11_Cell_Phones",
+      "topics": [
+        { "id": "mobile_comm_basics", "name": "Mobile Communication Basics", "file": "mobile_comm_basics.json" },
+        { "id": "cell_concepts", "name": "Cell Site, Hand-off & Frequency Reuse", "file": "cell_concepts.json" },
+        { "id": "cellphone_block_diagram", "name": "Cell Phone Block Diagram & Working", "file": "cellphone_block_diagram.json" },
+        { "id": "gsm_cdma", "name": "GSM & CDMA Technology", "file": "gsm_cdma.json" },
+        { "id": "imei", "name": "IMEI Number & Tracing", "file": "imei.json" }
+      ]
+    },
+    {
+      "id": "unit12",
+      "subject": "Trade",
+      "name": "Domestic Appliances",
+      "folder": "Unit12_Domestic_Appliances",
+      "topics": [
+        { "id": "microwave_oven", "name": "Microwave Oven", "file": "microwave_oven.json" },
+        { "id": "washing_machine", "name": "Washing Machine", "file": "washing_machine.json" },
+        { "id": "vacuum_cleaner", "name": "Vacuum Cleaner", "file": "vacuum_cleaner.json" },
+        { "id": "mixer_grinder_iron", "name": "Mixer/Grinder & Electric Iron", "file": "mixer_grinder_iron.json" },
+        { "id": "water_purifier", "name": "Water Purifier (RO & UV)", "file": "water_purifier.json" },
+        { "id": "immersion_heater", "name": "Immersion Heater", "file": "immersion_heater.json" },
+        { "id": "induction_cooktop", "name": "Induction Cooktop", "file": "induction_cooktop.json" }
+      ]
+    },
+    {
+      "id": "unit13",
+      "subject": "Trade",
+      "name": "PLC",
+      "folder": "Unit13_PLC",
+      "topics": [
+        { "id": "plc_evolution", "name": "Evolution of Control Technology & PLC Advantages", "file": "plc_evolution.json" },
+        { "id": "plc_architecture", "name": "PLC Modular Architecture & I/O Modules", "file": "plc_architecture.json" },
+        { "id": "plc_working", "name": "PLC Working Principle (scan cycle)", "file": "plc_working.json" },
+        { "id": "plc_types", "name": "PLC Types (small, micro, rack)", "file": "plc_types.json" },
+        { "id": "plc_selection", "name": "PLC Selection (IO, memory, clock, power)", "file": "plc_selection.json" },
+        { "id": "plc_wiring_addressing", "name": "PLC Wiring & Addressing of Modules", "file": "plc_wiring_addressing.json" },
+        { "id": "plc_timers_counters", "name": "PLC Relays, Timers & Counters", "file": "plc_timers_counters.json" },
+        { "id": "plc_programming", "name": "PLC Programming (ladder, FBD) & HMI", "file": "plc_programming.json" }
+      ]
+    },
+    {
+      "id": "unit14",
+      "subject": "Trade",
+      "name": "Electrical Control of AC/DC Machines & AC Drives",
+      "folder": "Unit14_AC_DC_Machines_AC_Drives",
+      "topics": [
+        { "id": "ac_induction_motors", "name": "AC Induction Motors (synchronous speed, slip, torque)", "file": "ac_induction_motors.json" },
+        { "id": "induction_motor_control", "name": "Induction Motor Starters & Speed Control", "file": "induction_motor_control.json" },
+        { "id": "dc_motors", "name": "DC Motors (types, working, characteristics)", "file": "dc_motors.json" },
+        { "id": "dc_motor_control", "name": "DC Motor Starters & Speed Control", "file": "dc_motor_control.json" },
+        { "id": "bldc_stepper", "name": "Brushless DC & Stepper Motors", "file": "bldc_stepper.json" },
+        { "id": "emi_emc_grounding", "name": "EMI, EMC, Grounding & Electrical Leakages", "file": "emi_emc_grounding.json" },
+        { "id": "power_switches", "name": "Power Electronic Switches (MOSFET, IGBT, opto)", "file": "power_switches.json" },
+        { "id": "ac_drive_block", "name": "AC Drive Block Diagram (rectifier, DC link, inverter)", "file": "ac_drive_block.json" },
+        { "id": "pwm_switching", "name": "PWM Technique & Switching Control", "file": "pwm_switching.json" },
+        { "id": "vfd_control", "name": "VFD (Variable Frequency Drive) V/F Control", "file": "vfd_control.json" },
+        { "id": "pid_controller", "name": "PID Controller Introduction", "file": "pid_controller.json" },
+        { "id": "mm420_440", "name": "Siemens MM-420/440 Commissioning & Parameterization", "file": "mm420_440.json" }
+      ]
+    },
+    {
+      "id": "unit15",
+      "subject": "Trade",
+      "name": "Servo Motor",
+      "folder": "Unit15_Servo_Motor",
+      "topics": [
+        { "id": "servo_intro", "name": "Servo Motor Introduction", "file": "servo_intro.json" },
+        { "id": "servo_speed_control", "name": "Servo Motor Speed Control", "file": "servo_speed_control.json" },
+        { "id": "servo_drives", "name": "Servo Drives", "file": "servo_drives.json" },
+        { "id": "servo_control_modes", "name": "Control Modes (speed, position, torque/current)", "file": "servo_control_modes.json" },
+        { "id": "servo_feedback", "name": "Feedback Mechanism in Servo System", "file": "servo_feedback.json" },
+        { "id": "resolvers_encoders", "name": "Resolvers & Encoders (incremental, absolute)", "file": "resolvers_encoders.json" }
+      ]
+    },
+    {
+      "id": "unit16",
+      "subject": "Trade",
+      "name": "Electro Pneumatics",
+      "folder": "Unit16_Electro_Pneumatics",
+      "topics": [
+        { "id": "pneumatic_basics", "name": "Pneumatic Power Source & Basics", "file": "pneumatic_basics.json" },
+        { "id": "compressed_air", "name": "Compressed Air (storage, transmission, measure)", "file": "compressed_air.json" },
+        { "id": "pneumatic_symbols", "name": "Pneumatic & Electro-Pneumatic Symbols", "file": "pneumatic_symbols.json" },
+        { "id": "supply_elements", "name": "Supply Elements (compressor, reservoir, FRL)", "file": "supply_elements.json" },
+        { "id": "input_elements", "name": "Input Elements (push-button, roller, proximity valves)", "file": "input_elements.json" },
+        { "id": "control_elements", "name": "Control & Processing Elements (DCV, shuttle, NRV)", "file": "control_elements.json" },
+        { "id": "solenoid_valves", "name": "Solenoid Valves, Limit Switches, Memory Valves", "file": "solenoid_valves.json" }
+      ]
+    },
+    {
+      "id": "math",
+      "subject": "General",
+      "name": "Mathematics",
+      "folder": "General_Mathematics",
+      "topics": [
+        { "id": "real_numbers", "name": "Real Numbers", "file": "real_numbers.json" },
+        { "id": "hcf_lcm", "name": "HCF & LCM", "file": "hcf_lcm.json" },
+        { "id": "algebra", "name": "Algebra", "file": "algebra.json" },
+        { "id": "geometry", "name": "Geometry", "file": "geometry.json" },
+        { "id": "square_cube_roots", "name": "Square and Cube Roots", "file": "square_cube_roots.json" },
+        { "id": "average", "name": "Average", "file": "average.json" },
+        { "id": "ages", "name": "Problems on Ages", "file": "ages.json" },
+        { "id": "percentage", "name": "Percentage", "file": "percentage.json" },
+        { "id": "profit_loss", "name": "Profit and Loss", "file": "profit_loss.json" },
+        { "id": "ratio_proportion", "name": "Ratio and Proportion", "file": "ratio_proportion.json" },
+        { "id": "time_work", "name": "Time and Work", "file": "time_work.json" },
+        { "id": "pipes_cisterns", "name": "Pipes and Cisterns", "file": "pipes_cisterns.json" },
+        { "id": "time_distance", "name": "Time and Distance", "file": "time_distance.json" },
+        { "id": "trains", "name": "Problems on Trains", "file": "trains.json" },
+        { "id": "boats_streams", "name": "Boats and Streams", "file": "boats_streams.json" },
+        { "id": "si_ci", "name": "Simple and Compound Interest", "file": "si_ci.json" },
+        { "id": "mensuration", "name": "Mensuration", "file": "mensuration.json" },
+        { "id": "trigonometry", "name": "Trigonometry", "file": "trigonometry.json" }
+      ]
+    },
+    {
+      "id": "physics",
+      "subject": "General",
+      "name": "Physics",
+      "folder": "General_Physics",
+      "topics": [
+        { "id": "unit_dimension", "name": "Unit & Dimension", "file": "unit_dimension.json" },
+        { "id": "newtons_laws", "name": "Newton's Laws of Motion", "file": "newtons_laws.json" },
+        { "id": "work_energy_power", "name": "Work, Energy & Power", "file": "work_energy_power.json" },
+        { "id": "gravitation", "name": "Gravitation", "file": "gravitation.json" },
+        { "id": "pressure", "name": "Pressure", "file": "pressure.json" },
+        { "id": "sound_wave", "name": "Sound Wave", "file": "sound_wave.json" },
+        { "id": "heat", "name": "Heat", "file": "heat.json" },
+        { "id": "optics", "name": "Optics", "file": "optics.json" },
+        { "id": "current_electricity", "name": "Current Electricity", "file": "current_electricity.json" }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "subject": "General",
+      "name": "Chemistry",
+      "folder": "General_Chemistry",
+      "topics": [
+        { "id": "matter_states", "name": "Matter and its States", "file": "matter_states.json" },
+        { "id": "atomic_structure", "name": "Atomic Structure", "file": "atomic_structure.json" },
+        { "id": "chemical_bonding", "name": "Chemical Bonding", "file": "chemical_bonding.json" },
+        { "id": "periodic_classification", "name": "Periodic Classification of Elements", "file": "periodic_classification.json" },
+        { "id": "oxidation_reduction", "name": "Oxidation and Reduction", "file": "oxidation_reduction.json" },
+        { "id": "acids_bases_salts", "name": "Acids, Bases and Salts", "file": "acids_bases_salts.json" },
+        { "id": "behaviour_gases", "name": "Behaviour of Gases", "file": "behaviour_gases.json" },
+        { "id": "electrolysis", "name": "Electrolysis", "file": "electrolysis.json" },
+        { "id": "carbon_compounds", "name": "Carbon and its Compounds", "file": "carbon_compounds.json" },
+        { "id": "metallurgy", "name": "Metallurgy", "file": "metallurgy.json" },
+        { "id": "metals_nonmetals", "name": "Metals and Non-metals", "file": "metals_nonmetals.json" },
+        { "id": "chemical_reactions", "name": "Chemical Reactions", "file": "chemical_reactions.json" }
+      ]
+    }
+  ]
+}

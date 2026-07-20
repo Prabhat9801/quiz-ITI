@@ -1,0 +1,368 @@
+{
+  "unit": "unit11",
+  "unitName": "Cell Phones",
+  "topic": "cell_concepts",
+  "topicName": "Cell Concepts - Cell Site, Hand-off, Frequency Reuse, Cluster, Sectoring",
+  "questions": [
+    {
+      "id": "u11_cell_concepts_q1",
+      "question": "Cellular mobile system में 'cell' शब्द से क्या तात्पर्य है?",
+      "options": [
+        "एक ही base station द्वारा coverage दिया जाने वाला geographical area",
+        "मोबाइल फोन की battery cell",
+        "SIM card के अंदर लगी memory chip",
+        "एक ही exchange के सभी subscribers की list"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cellular network में पूरे coverage area को छोटे-छोटे geographical hexagonal areas में बांटा जाता है, जिन्हें cell कहते हैं और हर cell को एक base station (cell site) सर्विस देता है। Option B battery से संबंधित है, C SIM की memory है, D subscriber list है — इनका cell concept से कोई लेना-देना नहीं।"
+    },
+    {
+      "id": "u11_cell_concepts_q2",
+      "question": "Cell site (Base Transceiver Station) का मुख्य कार्य क्या है?",
+      "options": [
+        "मोबाइल फोन की battery चार्ज करना",
+        "अपने coverage area में mobile stations के साथ radio link स्थापित करना",
+        "SIM card को activate करना",
+        "केवल internet billing करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cell site यानी BTS अपने cell area में मौजूद mobile phones के साथ antenna व transceiver की मदद से radio communication link बनाता है और calls को MSC तक पहुंचाता है। Battery charging, SIM activation और billing अलग-अलग functions हैं जो cell site का काम नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q3",
+      "question": "Hand-off (या handover) प्रक्रिया किस स्थिति में होती है?",
+      "options": [
+        "जब मोबाइल फोन switch off किया जाता है",
+        "जब user नया SIM card install करता है",
+        "जब मोबाइल एक cell की boundary से दूसरे cell में move करता है और call चालू रहती है",
+        "जब network operator tariff plan बदलता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Hand-off वह process है जिसमें mobile user एक चालू call के दौरान एक cell से दूसरे cell में जाता है, तो call को बिना कटे नए cell के base station पर transfer किया जाता है। Switch off, SIM install और tariff बदलना hand-off से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q4",
+      "question": "Frequency reuse का concept cellular system में क्यों अपनाया जाता है?",
+      "options": [
+        "Signal की speed of light बढ़ाने के लिए",
+        "सीमित frequency spectrum का प्रयोग करके अधिकतम subscribers को service देने के लिए",
+        "मोबाइल की screen resolution बढ़ाने के लिए",
+        "SIM card की storage capacity बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Frequency spectrum सीमित होता है, इसलिए एक ही frequency को पर्याप्त दूरी पर स्थित अलग-अलग cells में दोबारा उपयोग (reuse) किया जाता है जिससे limited spectrum से अधिक users को service दी जा सके। Speed of light, screen resolution और storage capacity का frequency reuse से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q5",
+      "question": "'Cluster' शब्द cellular network में किसे दर्शाता है?",
+      "options": [
+        "एक single subscriber का mobile handset",
+        "cells के एक ऐसे समूह को जिसमें कोई भी frequency दोबारा उपयोग नहीं होती",
+        "केवल एक operator की customer care team",
+        "एक mobile tower की height"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cluster उन आसपास की cells का समूह होता है जिसमें सभी उपलब्ध frequencies एक बार उपयोग होती हैं और किसी भी frequency की पुनरावृत्ति (repeat) cluster के अंदर नहीं होती, repeat अगले cluster में होती है। Handset, customer care team और tower height cluster की परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q6",
+      "question": "यदि किसी cellular system में cluster size N=7 है, तो इसका क्या अर्थ है?",
+      "options": [
+        "हर cell में 7 antennas लगे हैं",
+        "एक cluster 7 cells से मिलकर बना है और उपलब्ध total channels इन 7 cells में बांटे जाते हैं",
+        "network में केवल 7 subscribers हैं",
+        "प्रत्येक call अधिकतम 7 मिनट तक चलेगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cluster size N=7 का मतलब है कि एक cluster सात cells से बना है और total available spectrum को इन 7 cells के बीच बांटा जाता है ताकि frequency reuse efficiently हो सके। Antennas की संख्या, subscribers की संख्या और call duration से N=7 का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q7",
+      "question": "Sectoring (sectorization) का उद्देश्य क्या है?",
+      "options": [
+        "एक cell को कई directional sectors में बांटकर interference कम करना और capacity बढ़ाना",
+        "मोबाइल की battery life बढ़ाना",
+        "SIM card को lock करना",
+        "internet data pack की validity बढ़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sectoring में omni-directional antenna की जगह directional antennas (जैसे 120° के तीन sectors) लगाकर co-channel interference कम किया जाता है और spectrum efficiency व capacity बढ़ाई जाती है। Battery life, SIM lock और data validity sectoring से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q8",
+      "question": "आमतौर पर एक cell को कितने sectors में विभाजित किया जाता है ताकि coverage एक समान बनी रहे?",
+      "options": [
+        "2 sectors of 180° each",
+        "3 sectors of 120° each",
+        "5 sectors of 72° each",
+        "8 sectors of 45° each"
+      ],
+      "correctIndex": 1,
+      "explanation": "व्यवहारिक रूप में एक cell को सामान्यतः 3 sectors (हर एक 120°) में बांटा जाता है ताकि पूरे 360° coverage को समान रूप से cover किया जा सके और interference भी कम रहे। बाकी options में दिए गए division practical standard sectoring pattern नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q9",
+      "question": "Co-channel interference किस स्थिति में होता है?",
+      "options": [
+        "जब दो अलग operators एक ही tower साझा करते हैं",
+        "जब पास-पास स्थित दो cells एक ही frequency का उपयोग करते हैं और उनके signals आपस में टकराते हैं",
+        "जब मोबाइल का charger खराब हो जाए",
+        "जब SIM card का PIN गलत डाला जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Co-channel interference तब होता है जब एक ही frequency का reuse करने वाली दो cells इतनी नजदीक हों कि उनके signals एक-दूसरे में interfere करने लगें, इसीलिए reuse distance और cluster planning जरूरी है। Tower sharing, charger खराबी और गलत PIN का co-channel interference से संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q10",
+      "question": "Cell splitting की प्रक्रिया किस उद्देश्य से की जाती है?",
+      "options": [
+        "एक बड़े cell को छोटे cells में बांटकर उस area में system की capacity बढ़ाने के लिए",
+        "network के सभी towers को बंद करने के लिए",
+        "SIM card को दूसरे operator में transfer करने के लिए",
+        "मोबाइल की भाषा (language) setting बदलने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब किसी cell में subscriber density बहुत बढ़ जाती है तो उस बड़े cell को छोटे-छोटे cells में split कर दिया जाता है जिससे उसी area में अधिक capacity और बेहतर frequency reuse संभव हो सके। Towers बंद करना, SIM transfer और language setting इस concept से असंबंधित हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q11",
+      "question": "MSC (Mobile Switching Centre) cell concept में क्या भूमिका निभाता है?",
+      "options": [
+        "यह केवल SIM card manufacture करता है",
+        "यह विभिन्न cell sites को आपस में जोड़ता है और calls को route व hand-off को control करता है",
+        "यह केवल mobile की screen display करता है",
+        "यह केवल battery चार्जिंग control करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MSC कई BTS/cell sites को आपस में interconnect करता है, calls को PSTN या दूसरे networks तक route करता है, और hand-off को coordinate व control करता है। SIM manufacturing, display और battery charging MSC का कार्य नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q12",
+      "question": "Reuse distance (D) बढ़ाने से cellular network पर क्या प्रभाव पड़ता है?",
+      "options": [
+        "Co-channel interference कम होता है परंतु frequency reuse की efficiency घटती है",
+        "मोबाइल की battery तुरंत खत्म हो जाती है",
+        "SIM card का data delete हो जाता है",
+        "network हमेशा के लिए बंद हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reuse distance बढ़ाने पर एक ही frequency इस्तेमाल करने वाली cells के बीच दूरी बढ़ जाती है जिससे co-channel interference कम होता है, लेकिन साथ ही spectrum का reuse कम efficient होता है क्योंकि cluster size बड़ा हो जाता है। बाकी options का reuse distance से कोई तकनीकी संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q13",
+      "question": "Cellular system में cell की आकृति (shape) आमतौर पर किस रूप में मानी जाती है?",
+      "options": [
+        "Square shape",
+        "Circular shape",
+        "Hexagonal shape",
+        "Triangular shape"
+      ],
+      "correctIndex": 2,
+      "explanation": "Practical रूप से coverage circular होती है लेकिन planning और analysis के लिए cells को hexagonal shape में model किया जाता है क्योंकि hexagon बिना gap या overlap के पूरे area को efficiently cover कर सकता है। Square, circle और triangle से uniform coverage और efficient tessellation संभव नहीं होती।"
+    },
+    {
+      "id": "u11_cell_concepts_q14",
+      "question": "यदि किसी cluster में total 21 channels उपलब्ध हैं और cluster size N=7 है, तो प्रत्येक cell को औसतन कितने channels मिलेंगे?",
+      "options": [
+        "1 channel",
+        "3 channels",
+        "7 channels",
+        "21 channels"
+      ],
+      "correctIndex": 1,
+      "explanation": "Total channels को cluster size से divide करने पर प्रति cell channels मिलते हैं: 21/7 = 3 channels प्रति cell। इसलिए option B सही है; बाकी values (1, 7, 21) इस calculation से मेल नहीं खातीं।"
+    },
+    {
+      "id": "u11_cell_concepts_q15",
+      "question": "Soft hand-off और hard hand-off में मुख्य अंतर क्या है?",
+      "options": [
+        "Soft hand-off में call पूरी तरह कुछ समय के लिए disconnect होती है जबकि hard hand-off में नहीं",
+        "Soft hand-off में mobile पुराने और नए दोनों base stations से एक साथ जुड़ा रहता है जबकि hard hand-off में पहले पुराना link टूटता है फिर नया बनता है",
+        "Soft hand-off केवल GSM में होता है और hard hand-off केवल landline में होता है",
+        "दोनों में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Soft hand-off (जैसे CDMA में) में mobile temporarily दो base stations से simultaneously connected रहता है जिससे call drop की संभावना कम होती है, जबकि hard hand-off में पहले पुराना connection cut होता है फिर नया बनता है (break-before-make)। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q16",
+      "question": "Cell site पर लगे antenna की height बढ़ाने का सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Coverage area घट जाता है",
+        "Coverage area बढ़ जाता है परंतु frequency reuse distance की योजना अधिक सावधानी से करनी पड़ती है",
+        "SIM card का network अपने आप बदल जाता है",
+        "मोबाइल की battery तुरंत खत्म हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Antenna की height बढ़ाने से signal दूर तक पहुंचता है जिससे cell का coverage area बढ़ता है, लेकिन इससे co-channel cells के साथ interference की संभावना भी बढ़ सकती है इसलिए reuse planning सावधानी से करनी होती है। बाकी options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q17",
+      "question": "Umbrella cell approach का उपयोग किस स्थिति के लिए किया जाता है?",
+      "options": [
+        "बहुत तेज गति (high speed) से travel कर रहे users के लिए बार-बार hand-off रोकने हेतु बड़ा cell कवर करने के लिए",
+        "केवल indoor SIM registration के लिए",
+        "मोबाइल की screen brightness बढ़ाने के लिए",
+        "केवल SMS भेजने के लिए विशेष cell बनाने हेतु"
+      ],
+      "correctIndex": 0,
+      "explanation": "Umbrella cell एक बड़ा cell होता है जो कई छोटे microcells के ऊपर overlay किया जाता है ताकि highway जैसी जगह पर तेज गति से चल रहे vehicles में बार-बार hand-off न हो। बाकी विकल्प umbrella cell के actual उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q18",
+      "question": "Microcell का प्रयोग सामान्यतः कहां किया जाता है?",
+      "options": [
+        "बड़े ग्रामीण खुले क्षेत्रों में जहां subscriber density कम हो",
+        "सघन शहरी क्षेत्रों (dense urban areas) में जहां subscriber density अधिक हो",
+        "समुद्र के बीचोंबीच satellite communication के लिए",
+        "केवल हवाई जहाज के अंदर communication के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Microcells छोटी coverage range वाली होती हैं और सघन शहरी क्षेत्रों में लगाई जाती हैं जहां बहुत अधिक subscribers एक साथ service मांगते हैं, जिससे capacity बढ़ती है। ग्रामीण, satellite और aircraft communication के लिए अलग approach अपनाई जाती है।"
+    },
+    {
+      "id": "u11_cell_concepts_q19",
+      "question": "Guard channel concept का hand-off में क्या उपयोग है?",
+      "options": [
+        "यह channels को permanently लॉक कर देता है",
+        "यह कुछ channels को hand-off calls के लिए reserve रखता है ताकि existing call drop न हो",
+        "यह केवल emergency numbers के लिए होता है",
+        "यह SIM card की सुरक्षा (security) बढ़ाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Guard channels कुछ channels को खास तौर पर ongoing hand-off calls के लिए reserve रखते हैं ताकि नए new-call requests के कारण किसी चल रही call का hand-off fail न हो और call drop न हो। बाकी options guard channel की वास्तविक भूमिका को गलत तरीके से दर्शाते हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q20",
+      "question": "Cellular network में 'trunking' का क्या फायदा है?",
+      "options": [
+        "यह सभी users को एक ही fixed channel स्थायी रूप से देता है",
+        "यह सीमित संख्या के channels को बड़ी संख्या के users के बीच बांटकर efficient उपयोग करने देता है",
+        "यह केवल video calling के लिए उपयोग होता है",
+        "यह SIM card की memory बढ़ाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trunking का सिद्धांत यह है कि सीमित channels को बहुत सारे users share करते हैं (on-demand basis पर), जिससे कम resources में अधिक users को सेवा दी जा सकती है। Fixed channel allotment, video calling विशेष और memory बढ़ाना trunking की परिभाषा नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q21",
+      "question": "यदि cluster size बहुत छोटा (जैसे N=3) रखा जाए तो क्या होगा?",
+      "options": [
+        "Capacity बढ़ेगी परंतु co-channel interference भी बढ़ने की संभावना रहेगी",
+        "Network पूरी तरह बंद हो जाएगा",
+        "SIM card काम करना बंद कर देगा",
+        "Battery life तुरंत खत्म हो जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "छोटा cluster size (N कम) होने पर frequencies पास-पास वाली cells में जल्दी reuse होती हैं जिससे system capacity बढ़ती है, परंतु cells के बीच दूरी कम होने से co-channel interference की संभावना भी बढ़ जाती है। बाकी options तकनीकी रूप से असंबद्ध हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q22",
+      "question": "Location update (location registration) प्रक्रिया का उद्देश्य क्या है?",
+      "options": [
+        "मोबाइल की current location को network database (HLR/VLR) में update रखना ताकि incoming call route हो सके",
+        "SIM card की भाषा बदलना",
+        "मोबाइल का IMEI number बदलना",
+        "call की duration record करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Location update में mobile periodically या cell बदलने पर network को अपनी current location जानकारी भेजता है जो HLR/VLR में update होती है, जिससे incoming call को सही cell तक route किया जा सके। भाषा बदलना, IMEI बदलना और call duration record करना location update के कार्य नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q23",
+      "question": "Cellular concept में 'roaming' किसे कहते हैं?",
+      "options": [
+        "जब subscriber अपने home network area से बाहर किसी दूसरे network area में service प्राप्त करता है",
+        "जब मोबाइल का charger बदला जाता है",
+        "जब SIM card की expiry date आ जाती है",
+        "जब call केवल एक ही cell के अंदर रहती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Roaming तब होती है जब subscriber अपने home service area से बाहर जाकर किसी अन्य operator/area के network से सेवा प्राप्त करता है, जो cellular architecture में inter-network agreements के जरिए संभव होता है। Charger बदलना, SIM expiry और single-cell call roaming की परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q24",
+      "question": "Base Station Controller (BSC) cellular architecture में क्या कार्य करता है?",
+      "options": [
+        "यह केवल mobile की battery चार्ज करता है",
+        "यह कई BTS को control करता है और radio resource management व hand-off control में मदद करता है",
+        "यह केवल SIM card बनाता है",
+        "यह केवल SMS store करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "BSC कई BTS को manage करता है, radio resource allocation करता है और hand-off decision में सहायता करता है, इस प्रकार यह BTS और MSC के बीच एक intermediate controlling unit है। बाकी options BSC के actual functions से मेल नहीं खाते।"
+    },
+    {
+      "id": "u11_cell_concepts_q25",
+      "question": "Interference reduction के लिए sectoring में directional antennas किस pattern में radiate करते हैं?",
+      "options": [
+        "पूरे 360° में समान रूप से (omni-directional)",
+        "केवल एक निश्चित दिशा (specific sector) में focused pattern में",
+        "केवल vertically ऊपर की ओर",
+        "केवल जमीन के नीचे की ओर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sectoring में directional antennas अपनी energy एक निश्चित sector (जैसे 120°) की दिशा में focus करते हैं, जिससे बाकी दिशाओं में interference नहीं फैलता। Omni-directional pattern सामान्य single antenna cell में होता है, जबकि vertical patterns sectoring से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q26",
+      "question": "Cell breathing (cell breathing effect) किस technology में विशेष रूप से देखा जाता है और इसका क्या अर्थ है?",
+      "options": [
+        "GSM में, जहां cell की coverage हमेशा स्थिर रहती है",
+        "CDMA में, जहां traffic load बढ़ने पर cell का effective coverage area छोटा हो जाता है",
+        "केवल Bluetooth में, जहां range 10 मीटर तय होती है",
+        "केवल Wi-Fi में, जहां range कभी नहीं बदलती"
+      ],
+      "correctIndex": 1,
+      "explanation": "CDMA systems में जब किसी cell में traffic (users) बढ़ जाता है तो interference बढ़ने के कारण cell का effective coverage radius घट जाता है, इसे cell breathing कहते हैं। GSM में coverage traffic से इस तरह प्रभावित नहीं होता, और Bluetooth/Wi-Fi का इससे संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q27",
+      "question": "Frequency planning करते समय adjacent channel interference से बचने के लिए क्या किया जाता है?",
+      "options": [
+        "पड़ोसी cells को बिल्कुल एक जैसी frequencies दी जाती हैं",
+        "एक ही cell के अंदर adjacent frequencies (nearby channel numbers) को allocate करने से बचा जाता है",
+        "SIM card का number बदल दिया जाता है",
+        "मोबाइल का IMEI बदल दिया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Adjacent channel interference को कम करने के लिए यह ध्यान रखा जाता है कि एक ही cell या पड़ोसी cell में लगातार/nearby frequency channels allocate न किए जाएं। पड़ोसी cells को समान frequency देना co-channel interference बढ़ाएगा, और SIM number या IMEI बदलना इस समस्या से असंबंधित है।"
+    },
+    {
+      "id": "u11_cell_concepts_q28",
+      "question": "किसी cellular system में hand-off request असफल (fail) हो जाए तो सामान्यतः क्या परिणाम होता है?",
+      "options": [
+        "Call आगे नए cell में जारी नहीं रह पाती और call drop हो सकती है",
+        "SIM card स्थायी रूप से block हो जाता है",
+        "मोबाइल फोन automatically factory reset हो जाता है",
+        "network operator बदल जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि hand-off प्रक्रिया सफल नहीं होती (जैसे target cell में कोई channel उपलब्ध न हो) तो existing call maintain नहीं हो पाती और call drop होने की संभावना रहती है। SIM block होना, factory reset और operator बदलना hand-off fail होने के परिणाम नहीं हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q29",
+      "question": "Cell concept में 'co-channel cells' से क्या तात्पर्य है?",
+      "options": [
+        "वे cells जो एक ही operator के हैं लेकिन अलग-अलग frequency उपयोग करते हैं",
+        "वे cells जो समान frequency channels का उपयोग करते हैं और cluster pattern में एक निश्चित दूरी पर स्थित होते हैं",
+        "वे cells जिनमें कोई भी mobile registered नहीं है",
+        "वे cells जो केवल emergency call के लिए reserved हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Co-channel cells वे cells होती हैं जो एक ही set of frequencies का reuse करती हैं और interference रोकने के लिए इन्हें एक न्यूनतम reuse distance पर रखा जाता है। एक ही operator पर अलग frequency, unregistered cells और emergency cells की परिभाषा co-channel cells से मेल नहीं खाती।"
+    },
+    {
+      "id": "u11_cell_concepts_q30",
+      "question": "Cellular architecture में 'paging' प्रक्रिया का उद्देश्य क्या है?",
+      "options": [
+        "SIM card को activate करना",
+        "incoming call आने पर network द्वारा mobile को उसके अनुमानित location area में broadcast संदेश भेजकर ढूंढना",
+        "मोबाइल की भाषा setting बदलना",
+        "battery percentage दिखाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब किसी mobile के लिए incoming call आती है, तो network उस mobile के last known location area की सभी cells में paging message broadcast करता है ताकि mobile response देकर call receive कर सके। SIM activation, language setting और battery display paging का कार्य नहीं है।"
+    }
+  ]
+}

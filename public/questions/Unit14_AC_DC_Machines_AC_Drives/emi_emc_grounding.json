@@ -1,0 +1,368 @@
+{
+  "unit": "unit14",
+  "unitName": "Electrical Control of AC/DC Machines & AC Drives",
+  "topic": "emi_emc_grounding",
+  "topicName": "EMI, EMC, Grounding & Electrical Leakages",
+  "questions": [
+    {
+      "id": "u14_emi_emc_grounding_q1",
+      "question": "EMI (Electromagnetic Interference) से क्या तात्पर्य है?",
+      "options": [
+        "एक electronic circuit की power consumption",
+        "किसी unwanted electromagnetic signal द्वारा दूसरे electronic equipment के काम में disturbance उत्पन्न करना",
+        "किसी motor की rated efficiency",
+        "Circuit की insulation resistance"
+      ],
+      "correctIndex": 1,
+      "explanation": "EMI का अर्थ है कि किसी source (जैसे switching devices, motors) से निकलने वाली unwanted electromagnetic energy nearby equipment के normal operation में disturbance/noise उत्पन्न करती है। Power consumption, efficiency और insulation resistance अलग electrical parameters हैं, EMI की परिभाषा से संबंधित नहीं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q2",
+      "question": "EMC (Electromagnetic Compatibility) का उद्देश्य क्या है?",
+      "options": [
+        "Equipment की cost कम करना",
+        "यह सुनिश्चित करना कि equipment बिना अत्यधिक interference उत्पन्न किए तथा बिना अन्य interference से प्रभावित हुए सही ढंग से कार्य करे",
+        "केवल equipment का weight घटाना",
+        "Equipment की size बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "EMC यह सुनिश्चित करता है कि device अपने electromagnetic environment में satisfactorily कार्य करे — न तो वह दूसरों को अत्यधिक interference दे और न ही दूसरों से affected हो। Cost, weight या size से EMC का सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q3",
+      "question": "AC drives तथा power electronic switching devices EMI का प्रमुख स्रोत क्यों बनते हैं?",
+      "options": [
+        "क्योंकि वे लगातार DC supply पर काम करते हैं",
+        "उच्च dv/dt और di/dt वाली fast switching के कारण",
+        "क्योंकि उनमें कोई semiconductor नहीं होता",
+        "क्योंकि वे कभी गर्म नहीं होते"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGBT/MOSFET जैसे fast-switching devices में voltage और current में तीव्र परिवर्तन (उच्च dv/dt, di/dt) होता है, जो broadband electromagnetic noise उत्पन्न करता है और conducted व radiated EMI का कारण बनता है। शेष options EMI उत्पत्ति के actual कारण को नहीं दर्शाते।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q4",
+      "question": "EMI को दो मुख्य श्रेणियों में बांटा जाता है, वे कौन सी हैं?",
+      "options": [
+        "Conducted EMI और Radiated EMI",
+        "Positive EMI और Negative EMI",
+        "Analog EMI और Digital EMI",
+        "High EMI और Low EMI केवल"
+      ],
+      "correctIndex": 0,
+      "explanation": "EMI को उसके propagation mode के अनुसार Conducted EMI (wires/cables के माध्यम से) और Radiated EMI (free space में electromagnetic waves के रूप में) में वर्गीकृत किया जाता है। शेष options मानक EMI classification नहीं हैं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q5",
+      "question": "Grounding (earthing) का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Equipment की speed बढ़ाना",
+        "Fault current के लिए एक low-impedance path प्रदान करना और personnel तथा equipment की सुरक्षा सुनिश्चित करना",
+        "Voltage को artificially बढ़ाना",
+        "केवल aesthetic purpose के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Grounding fault होने की स्थिति में leakage/fault current को safely earth में transfer करता है, जिससे electric shock का खतरा कम होता है तथा equipment की protection होती है। Speed बढ़ाना या voltage बढ़ाना grounding का कार्य नहीं है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q6",
+      "question": "Shielding (screening) का उपयोग किसलिए किया जाता है?",
+      "options": [
+        "Cable की mechanical strength बढ़ाने के लिए केवल",
+        "Electromagnetic noise को cable/equipment में प्रवेश करने या बाहर निकलने से रोकने के लिए conductive barrier प्रदान करना",
+        "Cable का रंग बदलने के लिए",
+        "Cable की length बढ़ाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Shielding में conductive material (जैसे braided copper या foil) का उपयोग करके cable के अंदर या बाहर की electromagnetic interference को block/attenuate किया जाता है। यह mechanical strength, रंग या length से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q7",
+      "question": "Shielded cable में shield को earth से जोड़ने के लिए सामान्यतः किस विधि की सिफारिश की जाती है?",
+      "options": [
+        "Shield को दोनों सिरों (both ends) पर floating रखना",
+        "Shield को केवल एक ही सिरे पर (single-point grounding) या 360° termination के साथ properly ground करना",
+        "Shield को कभी ground नहीं करना",
+        "Shield को supply line के साथ short करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "High-frequency noise के लिए shield को 360° low-impedance termination से properly earth किया जाता है (कई मामलों में specific applications में single-point grounding), जिससे ground loop और EMI दोनों नियंत्रित हों। Shield को floating रखना या supply से short करना अप्रभावी तथा असुरक्षित है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q8",
+      "question": "Ground loop क्या होता है?",
+      "options": [
+        "एक प्रकार की motor winding",
+        "जब एक system में earth के दो या अधिक बिंदुओं के बीच potential difference के कारण unwanted current प्रवाहित होता है",
+        "एक प्रकार का capacitor",
+        "एक प्रकार का PWM signal"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ground loop तब बनता है जब multiple grounding points के बीच voltage potential अंतर होता है, जिससे undesired circulating current बहता है और noise/interference उत्पन्न होती है। यह winding, capacitor या PWM signal से संबंधित नहीं है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q9",
+      "question": "AC drive installations में EMI filter को कहाँ लगाया जाता है?",
+      "options": [
+        "Motor के अंदर winding में",
+        "Drive के input supply side पर, mains और drive के बीच",
+        "केवल control panel के बाहर बिना किसी connection के",
+        "Motor की shaft पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "EMI (line) filter को drive के input side पर mains supply और converter के बीच लगाया जाता है ताकि conducted noise mains में वापस न जाए और standards compliance सुनिश्चित हो। Motor winding या shaft में filter लगाना व्यावहारिक नहीं है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q10",
+      "question": "Twisted pair cable का उपयोग EMI reduction में किस सिद्धांत पर आधारित है?",
+      "options": [
+        "यह wires की resistance बढ़ाता है",
+        "Adjacent conductors में induced EMI voltages एक-दूसरे को cancel कर देते हैं",
+        "यह cable का weight घटाता है",
+        "यह केवल aesthetic reasons से किया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Twisted pair में दोनों conductors पास-पास मुड़े होते हैं, जिससे external EMI द्वारा दोनों में induced voltage लगभग बराबर व opposite polarity का होता है और net effect cancel हो जाता है (common-mode noise rejection)। शेष options resistance/weight/aesthetics से संबंधित हैं जो actual कारण नहीं है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q11",
+      "question": "Electrical leakage current किसे कहते हैं?",
+      "options": [
+        "Rated load current",
+        "वह छोटा unwanted current जो insulation के माध्यम से या stray capacitance के कारण earth की ओर प्रवाहित होता है",
+        "Starting current",
+        "Short-circuit current"
+      ],
+      "correctIndex": 1,
+      "explanation": "Leakage current एक छोटा current है जो normal insulation resistance के finite होने या stray/parasitic capacitance के कारण live parts से earth की तरफ बहता है, जो सामान्यतः कम मात्रा में होता है परंतु shock का खतरा बना सकता है। Rated, starting और short-circuit currents अलग concepts हैं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q12",
+      "question": "RCD/ELCB (Residual Current Device/ Earth Leakage Circuit Breaker) का मुख्य कार्य क्या है?",
+      "options": [
+        "Motor की speed control करना",
+        "Live और neutral conductor के current में असंतुलन (leakage) का पता लगाकर circuit को trip करना",
+        "Power factor सुधारना",
+        "Harmonics को filter करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "RCD/ELCB live और neutral में बहने वाले currents की तुलना करता है; असंतुलन (leakage) होने पर यह मान लेता है कि current earth में जा रहा है और तुरंत circuit trip कर देता है, जिससे electric shock से सुरक्षा मिलती है। यह speed control, power factor correction या harmonic filtering नहीं करता।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q13",
+      "question": "AC drive से जुड़े motor cables में high-frequency common-mode current के कारण bearing damage होने की समस्या को किस उपाय से कम किया जाता है?",
+      "options": [
+        "Motor की speed बढ़ाकर",
+        "Shielded cable, proper grounding और shaft grounding ring/brush का उपयोग करके",
+        "Motor की winding हटाकर",
+        "Supply voltage बढ़ाकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "VFD switching से उत्पन्न high-frequency common-mode currents bearing के माध्यम से discharge होकर electrical pitting/damage करते हैं; इसे properly shielded cable, effective grounding practices और shaft grounding ring/brush लगाकर कम किया जाता है। Speed या voltage बढ़ाना समस्या को और बढ़ा सकता है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q14",
+      "question": "EMC directive/standards के अनुसार equipment की दो मुख्य आवश्यकताएँ क्या होती हैं?",
+      "options": [
+        "केवल cost कम रखना",
+        "Emission limits (कम interference पैदा करना) और Immunity requirements (बाहरी interference सहन करने की क्षमता)",
+        "केवल weight कम रखना",
+        "केवल color coding"
+      ],
+      "correctIndex": 1,
+      "explanation": "EMC standards दो पहलुओं को कवर करते हैं — Emission (device कितनी EMI पैदा करता है, इसकी सीमा) और Immunity (device बाहरी EMI को कितना सहन कर सकता है)। Cost, weight या color coding EMC requirements नहीं हैं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q15",
+      "question": "Equipotential bonding का उद्देश्य क्या है?",
+      "options": [
+        "अलग-अलग metallic parts के बीच voltage difference उत्पन्न करना",
+        "सभी exposed conductive parts को आपस में जोड़कर उनके बीच potential difference को न्यूनतम करना, जिससे shock का खतरा कम हो",
+        "केवल decoration के लिए metal parts जोड़ना",
+        "Motor की torque बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Equipotential bonding में सभी exposed metallic parts (panels, frames, conduits) को आपस में conductively जोड़ा जाता है ताकि fault की स्थिति में उनके बीच dangerous potential difference न बने। Voltage difference उत्पन्न करना विपरीत उद्देश्य है, और यह torque से संबंधित नहीं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q16",
+      "question": "Control panel wiring में power cables और signal/control cables को अलग-अलग routes में क्यों बिछाया जाता है?",
+      "options": [
+        "केवल panel को सुंदर दिखाने के लिए",
+        "Power cables से निकलने वाली EMI को sensitive signal cables में induce होने से रोकने के लिए",
+        "Cable की लागत घटाने के लिए",
+        "यह कोई विशेष कारण नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power cables (विशेषतः motor/drive cables) में high di/dt के कारण strong EMI होती है, इसलिए इन्हें signal/control cables से अलग route (segregation) में रखा जाता है ताकि sensitive signals में noise induce न हो। Aesthetics या cost से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q17",
+      "question": "Ferrite core (choke) को cable पर लगाने का क्या उद्देश्य होता है?",
+      "options": [
+        "Cable की mechanical strength बढ़ाना",
+        "High-frequency conducted noise को attenuate करना (common-mode choke के रूप में कार्य करना)",
+        "Cable का color पहचानना",
+        "Current rating बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ferrite core cable के चारों ओर लगाकर high-frequency noise के लिए impedance बढ़ाता है, जिससे conducted EMI attenuate होती है और यह एक साधारण, सस्ता common-mode filtering solution है। Mechanical strength, current rating या color identification से इसका संबंध नहीं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q18",
+      "question": "Star (single-point) grounding system का मुख्य लाभ क्या है?",
+      "options": [
+        "यह ground loops को कम करता है क्योंकि सभी ग्राउंड connections एक ही केंद्रीय बिंदु पर मिलते हैं",
+        "यह अधिक wire consume करता है परंतु कोई लाभ नहीं देता",
+        "यह केवल high voltage systems के लिए उपयोगी है",
+        "यह motor की efficiency बढ़ाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Star grounding में सभी ground connections एक single central point पर मिलते हैं, जिससे multiple ground paths के बीच potential difference (ground loop) की संभावना कम हो जाती है। यह वायर बचत या efficiency से संबंधित नहीं, बल्कि noise control के लिए है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q19",
+      "question": "Conducted EMI मुख्यतः किस माध्यम से travel करती है?",
+      "options": [
+        "Free space के माध्यम से बिना किसी conductor के",
+        "Power lines, signal cables जैसे physical conductors के माध्यम से",
+        "केवल light के माध्यम से",
+        "केवल sound waves के माध्यम से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Conducted EMI wires/cables (power supply lines, control cables) के माध्यम से propagate होती है, जबकि radiated EMI free space में electromagnetic waves के रूप में फैलती है। Light और sound waves EMI transmission माध्यम नहीं हैं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q20",
+      "question": "AC drive में DC link capacitor और output inverter switching के कारण उत्पन्न EMI को कम करने के लिए drive manufacturer आमतौर पर कौन सा additional component recommend करते हैं?",
+      "options": [
+        "अतिरिक्त cooling fan",
+        "Input line reactor / EMI filter",
+        "अतिरिक्त motor winding",
+        "अतिरिक्त display unit"
+      ],
+      "correctIndex": 1,
+      "explanation": "AC drives में input line reactor और EMI (RFI) filter लगाकर harmonics तथा conducted EMI को supply mains में वापस जाने से रोका जाता है। Cooling fan, motor winding या display unit का EMI reduction से सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q21",
+      "question": "Radiated EMI को कम करने के लिए sensitive equipment के चारों ओर कौन सा enclosure उपाय अपनाया जाता है?",
+      "options": [
+        "Plastic enclosure without any shielding",
+        "Metallic (conductive) enclosure जो Faraday cage की तरह कार्य करे",
+        "Wooden cabinet",
+        "Open frame बिना किसी cover के"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metallic enclosures Faraday cage effect प्रदान करते हैं, जिससे बाहरी electromagnetic waves अंदर प्रवेश नहीं करतीं और अंदर के sources से निकलने वाली radiated EMI भी बाहर नहीं जाती। Plastic, wooden या open enclosures shielding प्रदान नहीं करते।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q22",
+      "question": "Human body को electric shock से बचाने के लिए protective earthing किस principle पर कार्य करती है?",
+      "options": [
+        "यह body की resistance बढ़ाता है",
+        "Fault होने पर current को low-resistance earth path से प्रवाहित करके body के माध्यम से बहने वाले current को कम करना",
+        "यह supply voltage को शून्य कर देता है",
+        "यह केवल visual indication देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Protective earthing एक low-impedance path बनाता है ताकि fault current शरीर के बजाय earth के माध्यम से प्रवाहित हो और साथ ही protective device (fuse/MCB) को trip कराए। यह body resistance नहीं बढ़ाता और supply voltage को शून्य नहीं करता।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q23",
+      "question": "Common-mode noise और differential-mode noise में क्या अंतर है?",
+      "options": [
+        "दोनों बिल्कुल समान होते हैं",
+        "Common-mode noise दोनों conductors में समान दिशा में (ground के सापेक्ष) होती है, जबकि differential-mode noise दो conductors के बीच होती है",
+        "Common-mode noise केवल DC circuits में होती है",
+        "Differential-mode noise कभी measure नहीं की जा सकती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Common-mode noise दोनों signal/power conductors में ground के सापेक्ष समान phase में होती है, जबकि differential-mode noise दो conductors के बीच (line-to-line) potential अंतर के रूप में होती है — दोनों की filtering techniques भी अलग होती हैं। शेष options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q24",
+      "question": "Insulation resistance test (Megger test) का उद्देश्य क्या है?",
+      "options": [
+        "Motor की speed मापना",
+        "Conductor और earth/ground के बीच insulation की condition जांचना ताकि leakage या insulation failure का पता चले",
+        "Power factor मापना",
+        "Frequency मापना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Megger test high DC voltage apply करके insulation resistance मापता है, जिससे insulation की quality और potential leakage paths का पता चलता है, यह electrical safety के लिए एक routine preventive test है। Speed, power factor या frequency measurement से इसका संबंध नहीं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q25",
+      "question": "Double insulation वाले उपकरणों (Class II equipment) में earthing conductor की आवश्यकता सामान्यतः क्यों नहीं होती?",
+      "options": [
+        "क्योंकि इनमें दो स्वतंत्र insulation layers होती हैं जो accidental contact से पर्याप्त सुरक्षा देती हैं",
+        "क्योंकि इनमें कोई current प्रवाहित नहीं होता",
+        "क्योंकि इनकी voltage rating शून्य होती है",
+        "क्योंकि इन्हें कभी fault नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Class II (double insulated) equipment में basic insulation के अतिरिक्त एक supplementary insulation layer होती है, जिससे किसी single insulation failure में भी exposed metal parts खतरनाक रूप से live नहीं होते, इसलिए separate protective earth conductor आवश्यक नहीं। शेष options तथ्यात्मक रूप से असत्य हैं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q26",
+      "question": "Drive panel में PE (Protective Earth) terminal का connection सामान्यतः किससे किया जाना चाहिए?",
+      "options": [
+        "Neutral terminal से सीधे जोड़ना",
+        "Building/plant के dedicated low-resistance earth electrode/grid से",
+        "Live terminal से जोड़ना",
+        "केवल आवश्यकता होने पर जोड़ना, अन्यथा छोड़ देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "PE terminal को dedicated, low-resistance earth electrode/earthing grid से जोड़ा जाना चाहिए ताकि fault current को सुरक्षित रूप से earth में transfer किया जा सके। इसे neutral या live से सीधे जोड़ना गलत तथा खतरनाक है, और यह हमेशा mandatory होता है, वैकल्पिक नहीं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q27",
+      "question": "Long unshielded motor cables VFD applications में किस समस्या को बढ़ा सकते हैं?",
+      "options": [
+        "Motor की weight",
+        "Cable में reflected voltage waves और EMI radiation, जिससे motor insulation पर stress बढ़ता है",
+        "Motor का color",
+        "Motor की rated power"
+      ],
+      "correctIndex": 1,
+      "explanation": "लंबी unshielded cables में high-frequency PWM pulses के कारण voltage reflection (standing waves) होती है, जिससे motor terminals पर voltage spikes बढ़ते हैं और साथ ही अधिक radiated EMI होती है। इसका motor weight, color या rated power से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q28",
+      "question": "EMI filter को drive के साथ लगाते समय filter की ground/earth connection के बारे में क्या ध्यान रखना चाहिए?",
+      "options": [
+        "Filter की earth connection को छोटा (short) व low-impedance रखना, ताकि high-frequency noise effectively bypass हो सके",
+        "Filter को earth से कभी नहीं जोड़ना",
+        "Filter की earth wire को जितना लंबा हो सके उतना लंबा रखना",
+        "Filter को earth के बजाय neutral से जोड़ना"
+      ],
+      "correctIndex": 0,
+      "explanation": "EMI filter को प्रभावी रूप से कार्य करने के लिए एक short, low-impedance earth connection चाहिए क्योंकि high-frequency noise को earth में bypass करना filter का मुख्य कार्य है; लंबा ground lead impedance बढ़ाकर filter की effectiveness घटा देता है। Filter को earth न जोड़ना या neutral से जोड़ना गलत अभ्यास है।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q29",
+      "question": "किसी factory floor में यदि अलग-अलग equipment अलग-अलग स्वतंत्र earth electrodes से जुड़े हों (multiple, unconnected ground points), तो सबसे संभावित समस्या क्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी",
+        "अलग-अलग earth points के बीच potential difference के कारण ground loop currents और EMI-related malfunction हो सकते हैं",
+        "Equipment की efficiency automatically बढ़ जाएगी",
+        "Power factor में सुधार होगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "अलग-अलग, आपस में असंबद्ध earth electrodes के बीच soil resistance variation के कारण potential difference हो सकता है, जिससे ground loop currents बहते हैं और sensitive electronics में noise/malfunction होता है — इसलिए common grounding grid/bonding की सिफारिश की जाती है। शेष options actual effect को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u14_emi_emc_grounding_q30",
+      "question": "EMC compliance testing में 'Radiated Emission Test' किसे measure करता है?",
+      "options": [
+        "Equipment द्वारा power cables में उत्पन्न conducted noise को",
+        "Equipment से free space में उत्सर्जित electromagnetic field की intensity को, विभिन्न frequencies पर",
+        "Equipment का power factor",
+        "Equipment की mechanical vibration"
+      ],
+      "correctIndex": 1,
+      "explanation": "Radiated Emission Test एक anechoic chamber या open area test site में antenna का उपयोग करके equipment से हवा में विकीर्ण (radiated) electromagnetic field की strength को विभिन्न frequency bands पर मापता है ताकि यह EMC limits के अंदर हो। Conducted emission अलग test है, और power factor या vibration measurement से इसका संबंध नहीं।"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "unit": "unit13",
+  "unitName": "PLC",
+  "topic": "plc_timers_counters",
+  "topicName": "PLC Timers (TON/TOF/RTO), Counters (CTU/CTD), Relays/Coils/Contacts",
+  "questions": [
+    {
+      "id": "u13_plc_timers_counters_q1",
+      "question": "TON (Timer ON Delay) instruction में timer की timing operation कब शुरू होती है?",
+      "options": [
+        "जब timer का input condition (rung) FALSE से TRUE होता है, तब timer count करना शुरू करता है",
+        "जब PLC power off होता है",
+        "जब input condition TRUE से FALSE होता है",
+        "TON timer कभी count नहीं करता"
+      ],
+      "correctIndex": 0,
+      "explanation": "TON timer तब count करना शुरू करता है जब उसका input rung condition TRUE होता है, और preset time पूरा होने पर output (done bit) TRUE हो जाता है। Options B, C, D गलत हैं क्योंकि ये TON की actual working को नहीं दर्शाते।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q2",
+      "question": "यदि TON timer चालू होने के दौरान ही input condition FALSE हो जाए (timer पूरा होने से पहले), तो क्या होगा?",
+      "options": [
+        "Timer accumulated value reset होकर zero हो जाती है और output FALSE रहता है",
+        "Timer accumulated value वहीं freeze हो जाती है",
+        "Timer अपने आप ON output दे देगा",
+        "Timer negative value count करने लगेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "TON timer में यदि input condition timing complete होने से पहले FALSE हो जाए, तो accumulated value reset होकर zero हो जाती है और output energize नहीं होता। बाकी options TON की standard behavior के विपरीत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q3",
+      "question": "TOF (Timer OFF Delay) instruction का उपयोग किस प्रकार की application में किया जाता है?",
+      "options": [
+        "जब input TRUE होने पर output तुरंत ON हो और input FALSE होने पर output कुछ समय बाद (delay के बाद) OFF हो, जैसे exhaust fan को कुछ देर और चलाए रखना",
+        "जब input FALSE होने पर output तुरंत ON हो जाए",
+        "जब timer केवल counting में उपयोग हो",
+        "TOF का उपयोग केवल analog signals के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "TOF timer input TRUE होते ही output को तुरंत ON कर देता है, लेकिन input FALSE होने पर output को preset time तक ON रखकर फिर OFF करता है, जैसे room से बाहर निकलने के बाद exhaust fan कुछ देर और चलाना। बाकी options TOF की working को गलत तरीके से बताते हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q4",
+      "question": "RTO (Retentive Timer ON) और TON timer में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे होते हैं",
+        "RTO timer में input FALSE होने पर accumulated value retain (सुरक्षित) रहती है और केवल separate reset instruction से ही zero होती है, जबकि TON में input FALSE होते ही accumulated value अपने आप reset हो जाती है",
+        "TON timer हमेशा retentive होता है",
+        "RTO timer केवल counters के साथ काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RTO timer की खासियत यह है कि यह accumulated value को input FALSE होने पर भी retain रखता है और इसे reset करने के लिए एक अलग RES (reset) instruction चाहिए होता है, जबकि TON timer input FALSE होते ही स्वतः reset हो जाता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q5",
+      "question": "एक conveyor belt में motor को start करने के 5 seconds बाद buzzer बजाने के लिए किस timer instruction का उपयोग सबसे उपयुक्त रहेगा?",
+      "options": [
+        "TOF timer",
+        "TON (Timer ON Delay), क्योंकि motor start होने (input TRUE) के बाद 5 seconds की delay से buzzer output ON करना है",
+        "CTU counter",
+        "RTO timer इस स्थिति में कभी उपयोग नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "यहाँ input (motor start signal) TRUE होने के बाद fixed delay के बाद output (buzzer) ON करना है, यह TON की standard application है। TOF (A) input FALSE होने पर delay देता है, counter (C) counting के लिए होता है, इसलिए ये उपयुक्त नहीं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q6",
+      "question": "CTU (Count Up) counter instruction में counter की value कब increment होती है?",
+      "options": [
+        "जब counter का input signal FALSE से TRUE (rising edge) पर transition करता है, हर बार एक count बढ़ता है",
+        "जब PLC scan cycle पूरा होता है, चाहे input कुछ भी हो",
+        "जब CPU reset होता है",
+        "CTU counter कभी increment नहीं करता"
+      ],
+      "correctIndex": 0,
+      "explanation": "CTU counter हर बार input में FALSE से TRUE transition (rising edge pulse) होने पर एक count बढ़ाता है, जब accumulated value preset value के बराबर या अधिक हो जाती है तो output TRUE होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q7",
+      "question": "CTD (Count Down) counter instruction का व्यावहारिक उपयोग किस प्रकार की application में होता है?",
+      "options": [
+        "जब counting हमेशा zero से शुरू होकर बढ़ती रहे",
+        "जब किसी preset value से शुरू करके पीछे की ओर (decrement) गिनना हो, जैसे किसी batch में बचे हुए items की गिनती करना",
+        "CTD का उपयोग केवल timer के साथ होता है",
+        "CTD केवल analog signals गिनता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "CTD counter हर pulse पर accumulated value को decrement करता है, इसलिए यह ऐसी applications में उपयोगी है जहाँ किसी preset संख्या से घटते क्रम में गिनती करनी हो, जैसे remaining items का count। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q8",
+      "question": "एक counter का preset value 10 सेट किया गया है और अब तक 7 rising edge pulses आ चुके हैं (CTU counter)। Counter का output bit किस स्थिति में होगा?",
+      "options": [
+        "Output TRUE हो जाएगा क्योंकि 7 pulses आ चुके हैं",
+        "Output अभी भी FALSE रहेगा क्योंकि accumulated value (7), preset value (10) से कम है; output तभी TRUE होगा जब accumulated value 10 पर पहुंचेगी",
+        "Output automatically reset हो जाएगा",
+        "Counter negative counting शुरू कर देगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "CTU counter का output तभी TRUE (done) होता है जब accumulated value, preset value के बराबर या उससे अधिक हो जाए; यहाँ 7, 10 से कम है इसलिए output अभी FALSE ही रहेगा। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q9",
+      "question": "PLC ladder logic में 'Coil' (Output Coil) instruction किसका प्रतिनिधित्व करता है?",
+      "options": [
+        "यह किसी physical output device (जैसे relay, lamp, solenoid) या internal memory bit को energize करने के instruction को दर्शाता है, जब rung की सभी conditions TRUE हों",
+        "यह हमेशा एक input device को दर्शाता है",
+        "यह केवल timer instruction का हिस्सा है",
+        "Coil का ladder logic में कोई विशेष अर्थ नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Coil symbol ladder logic में rung के अंत में होता है और जब rung की सभी input conditions (contacts) TRUE होती हैं, तो coil energize होकर संबंधित physical output या internal bit को TRUE (ON) कर देता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q10",
+      "question": "Ladder logic में 'Normally Open (NO) Contact' और 'Normally Closed (NC) Contact' में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे काम करते हैं",
+        "NO contact तभी TRUE (logic pass) होता है जब संबंधित bit/input ON हो, जबकि NC contact तभी TRUE होता है जब संबंधित bit/input OFF हो",
+        "NC contact केवल output devices के लिए होता है",
+        "NO contact केवल timer instructions के साथ काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "NO contact तब logic continuity देता है जब उसका associated bit ON (TRUE) हो, जबकि NC contact तब logic continuity देता है जब associated bit OFF (FALSE) हो — यह basic ladder logic का concept है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q11",
+      "question": "'Seal-in' या 'Latching' circuit (self-holding circuit) ladder logic में किस उद्देश्य से बनाई जाती है?",
+      "options": [
+        "ताकि push button छोड़ने के बाद भी output ON बना रहे, जब तक कि कोई stop condition (जैसे stop push button) न आए",
+        "ताकि output केवल push button दबाए रखने पर ही ON रहे",
+        "इसका timer/counter से कोई संबंध नहीं और यह कभी उपयोग नहीं होती",
+        "यह केवल analog signals के लिए बनाई जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Seal-in/latching circuit में output coil का अपना NO contact parallel में start push button के साथ जोड़ा जाता है, जिससे push button छोड़ने के बाद भी output tab तक ON रहता है जब तक stop condition activate न हो। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q12",
+      "question": "PLC में 'Internal Relay' या 'Memory Bit' (जैसे M0.0) का उपयोग क्यों किया जाता है जबकि यह कोई physical output नहीं होता?",
+      "options": [
+        "इसका कोई उपयोग नहीं होता",
+        "Complex logic को छोटे हिस्सों में तोड़ने, intermediate conditions store करने और program को व्यवस्थित/readable बनाने के लिए",
+        "यह केवल PLC की memory खत्म करने के लिए होता है",
+        "Internal relay केवल timer के अंदर उपयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Internal relay/memory bit किसी physical output को control नहीं करता, बल्कि complex logic conditions को intermediate steps में तोड़कर program को simple, organized और readable बनाने में मदद करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q13",
+      "question": "एक application में packaging line पर हर box के गुजरने पर एक sensor pulse देता है, और जब 50 boxes गिन लिए जाएं तो एक gate close करना है। इस काम के लिए कौन सा instruction सबसे उपयुक्त रहेगा?",
+      "options": [
+        "TON timer",
+        "CTU counter जिसका preset value 50 सेट किया जाए, ताकि 50वीं pulse पर output TRUE होकर gate close करने का command दे",
+        "TOF timer",
+        "RTO timer"
+      ],
+      "correctIndex": 1,
+      "explanation": "यहाँ event-based counting (boxes की गिनती) करनी है, समय आधारित delay नहीं, इसलिए CTU counter उपयुक्त है जिसका preset 50 सेट करके output द्वारा gate close किया जा सकता है। Timers (A, C, D) counting के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q14",
+      "question": "PLC counter में 'RES (Reset)' instruction का क्या कार्य है?",
+      "options": [
+        "यह counter की accumulated value और status bits को zero करके counter को फिर से गिनती शुरू करने के लिए तैयार करता है",
+        "यह counter की accumulated value को दोगुना कर देता है",
+        "यह counter को permanently disable कर देता है",
+        "RES instruction का counter से कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "RES instruction counter (या retentive timer) की accumulated value और associated status bits को zero करके उसे fresh counting के लिए ready करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q15",
+      "question": "एक motor को 10 seconds के लिए ON रखने के बाद automatically OFF करने के लिए ladder logic में TON timer का उपयोग किस प्रकार किया जा सकता है?",
+      "options": [
+        "TON timer का preset 10 seconds रखकर, timer के done bit को motor output coil के NC contact में series में जोड़कर, ताकि 10 seconds बाद done bit TRUE होकर motor output को OFF कर दे",
+        "TON timer का motor control से कोई संबंध नहीं",
+        "केवल CTU counter से यह काम संभव है",
+        "इसके लिए PLC को restart करना पड़ेगा हर बार"
+      ],
+      "correctIndex": 0,
+      "explanation": "TON timer का preset time जरूरत अनुसार सेट करके, timer के done bit को motor coil की rung में NC contact के रूप में series में जोड़ा जाता है ताकि timing पूरी होने पर done bit TRUE होकर motor coil को de-energize कर दे। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q16",
+      "question": "PLC timer में 'Preset Value (PV)' और 'Accumulated Value (ACC)' में क्या अंतर है?",
+      "options": [
+        "दोनों एक ही चीज़ हैं",
+        "Preset Value वह target time है जो programmer द्वारा सेट किया जाता है, जबकि Accumulated Value वह current elapsed time है जो timer अभी तक count कर चुका है",
+        "Preset Value केवल counters में होता है",
+        "Accumulated Value हमेशा zero रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Preset Value वह desired time-delay है जो programmer configure करता है, जबकि Accumulated Value timer द्वारा अब तक count किया गया actual elapsed समय होता है, जो PV तक पहुंचने पर output trigger करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q17",
+      "question": "यदि दो counters को cascade (एक counter का output दूसरे counter को trigger करे) किया जाए, तो इसका मुख्य उद्देश्य क्या होता है?",
+      "options": [
+        "एक single counter की preset limit से बड़ी counting range प्राप्त करना, जैसे 9999 से अधिक counts गिनना",
+        "इसका कोई व्यावहारिक उपयोग नहीं",
+        "Cascade counters केवल timers के साथ काम करते हैं",
+        "इससे counting धीमी हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cascading counters का मुख्य उद्देश्य single counter की maximum preset limit को पार करके बहुत बड़ी counting range (जैसे लाखों में counts) प्राप्त करना है, जहाँ पहला counter पूरा होने पर दूसरे counter को increment करता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q18",
+      "question": "PLC में 'Retentive' गुण का timers/counters में क्या महत्व है, खासकर power failure की स्थिति में?",
+      "options": [
+        "इसका power failure से कोई संबंध नहीं",
+        "Retentive timers/counters की accumulated value power failure के बाद भी (यदि battery-backed memory है) सुरक्षित रहती है और वहीं से आगे count जारी रह सकता है",
+        "Retentive instructions power failure में हमेशा zero हो जाती हैं",
+        "Retentive केवल output coils के लिए होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Retentive timers/counters (जैसे RTO) की accumulated value non-volatile या battery-backed memory में बनी रहती है, इसलिए power वापस आने पर counting/timing उसी value से आगे जारी रह सकती है, जो कुछ critical processes के लिए जरूरी होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q19",
+      "question": "Ladder logic में दो push buttons (Start और Stop) से एक motor को control करते समय, Stop push button को coil की rung में किस प्रकार जोड़ा जाता है (assuming normally open stop button used with NC contact logic)?",
+      "options": [
+        "Stop button के associated bit का NC contact series में जोड़ा जाता है ताकि stop दबाने पर वह bit TRUE होकर NC contact open हो जाए और circuit break हो जाए",
+        "Stop button को coil के parallel में जोड़ा जाता है",
+        "Stop button का logic से कोई संबंध नहीं होता",
+        "Stop button को हमेशा output coil के बाद जोड़ा जाता है, कभी पहले नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Standard start-stop circuit में stop push button के bit का NC contact series में जोड़ा जाता है, ताकि stop button दबाने पर associated bit TRUE हो और NC contact open होकर circuit को break कर दे, जिससे motor coil de-energize हो जाए। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q20",
+      "question": "एक TOF timer का preset time 8 seconds सेट है। यदि input TRUE से FALSE हो और उससे पहले ही (5 seconds के अंदर) input दोबारा TRUE हो जाए, तो output की स्थिति क्या रहेगी?",
+      "options": [
+        "Output तुरंत OFF हो जाएगा",
+        "Output ON ही रहेगा क्योंकि input दोबारा TRUE होने पर TOF timer reset होकर accumulated value zero हो जाती है, और output continuously ON बना रहता है",
+        "Output अपने आप negative value दिखाएगा",
+        "TOF timer इस स्थिति को handle नहीं कर सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "TOF timer में यदि off-delay timing पूरी होने से पहले input दोबारा TRUE हो जाए, तो timer reset होकर accumulated value zero हो जाती है और output ON ही बना रहता है (क्योंकि input पुनः TRUE है)। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q21",
+      "question": "PLC counter instruction में 'Overflow/Underflow' की स्थिति कब आती है?",
+      "options": [
+        "जब counter accumulated value अपनी data type की maximum या minimum सीमा को पार कर जाए (जैसे 16-bit counter की range -32768 से 32767 पार होना)",
+        "जब counter का preset value zero सेट किया जाए",
+        "Overflow/underflow कभी नहीं होता",
+        "यह केवल timer instructions में होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Overflow/underflow तब होता है जब counter का accumulated value उसके data type की rated maximum/minimum सीमा को पार कर जाए, जिससे कई PLC models में special status bit (OV/UN) set होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q22",
+      "question": "Ladder logic में एक ही rung पर दो push buttons को 'parallel' में जोड़ने से किस प्रकार का logic बनता है?",
+      "options": [
+        "AND logic",
+        "OR logic, क्योंकि दोनों में से किसी एक भी button के TRUE होने पर rung TRUE हो जाएगी",
+        "NOT logic",
+        "कोई logic नहीं बनता"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब दो contacts (push buttons) parallel में जोड़े जाते हैं, तो इनमें से किसी भी एक के TRUE होने पर current flow हो जाता है, यह OR logic को दर्शाता है, जबकि series connection AND logic बनाता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q23",
+      "question": "एक CTU counter और CTD counter को एक साथ 'Up-Down Counter' की तरह इस्तेमाल करने का प्रयोजन क्या है?",
+      "options": [
+        "इसका कोई प्रयोजन नहीं",
+        "एक ही accumulated value को स्थिति के अनुसार बढ़ाने (जैसे item entry होने पर) और घटाने (जैसे item exit होने पर) दोनों के लिए, ताकि net count पता चल सके, जैसे parking lot में उपलब्ध slots की गिनती",
+        "यह केवल timer के साथ काम करता है",
+        "यह केवल analog output के लिए होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Up-Down counter combination का उपयोग वहां होता है जहाँ net count जानना जरूरी हो, जैसे parking lot में कार entry पर count बढ़े (CTU) और exit पर count घटे (CTD), जिससे उपलब्ध slots पता चलते रहें। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q24",
+      "question": "PLC में 'One-Shot' या 'Pulse (P/N) Instruction' का ladder logic में क्या कार्य है?",
+      "options": [
+        "यह किसी input transition (rising या falling edge) पर केवल एक scan cycle के लिए TRUE output देता है, भले ही input बाद में TRUE बना रहे",
+        "यह हमेशा output को permanently ON रखता है",
+        "इसका timer/counter logic से कोई संबंध नहीं",
+        "यह केवल analog signal processing के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "One-shot/pulse instruction input की edge transition (rising/falling) पर केवल एक scan cycle के लिए TRUE pulse देता है, जो counter increment या toggle logic जैसे कार्यों में उपयोगी होता है ताकि बार-बार trigger न हो। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q25",
+      "question": "एक emergency stop button (Normally Closed type) को ladder logic में कैसे implement किया जाना चाहिए ताकि wire टूटने पर भी सुरक्षा बनी रहे (fail-safe design)?",
+      "options": [
+        "NC physical push button को series में इस प्रकार जोड़ा जाता है कि wire टूटने या button दबाने दोनों स्थिति में circuit break होकर output OFF हो जाए (fail-safe)",
+        "Emergency stop को हमेशा parallel में जोड़ा जाता है",
+        "Emergency stop button का logic से कोई संबंध नहीं",
+        "NC push button को output coil के बाद जोड़ा जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fail-safe design के लिए NC (normally closed) emergency stop button को series में इस तरह wire किया जाता है कि wire टूटने या button दबाने पर दोनों ही स्थितियों में circuit break होकर machine automatically OFF हो जाए। बाकी options सुरक्षा सिद्धांत के विपरीत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q26",
+      "question": "PLC scan cycle में timer/counter values को हर scan में update करने का क्या महत्व है (real-time clock आधारित timer के संदर्भ में)?",
+      "options": [
+        "इसका कोई महत्व नहीं",
+        "इससे timer accurate elapsed time को track कर पाता है, चाहे scan time थोड़ा variable हो, ताकि timing operations precise रहें",
+        "इससे PLC की memory क्षमता बढ़ जाती है",
+        "यह केवल output coils को प्रभावित करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर scan cycle में timer अपनी internal clock के आधार पर elapsed time को update करता है, जिससे scan time में मामूली variation होने पर भी timing की accuracy बनी रहती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q27",
+      "question": "एक traffic signal system में red light 20 seconds के लिए, फिर green light 15 seconds के लिए ON रखने के लिए ladder logic design में किस approach का उपयोग सामान्यतः किया जाता है?",
+      "options": [
+        "एक ही counter से पूरा traffic sequence control किया जाता है",
+        "Multiple TON timers को cascade/sequence में उपयोग किया जाता है, जहाँ एक timer complete होने पर अगला timer start होकर अगली light को control करता है",
+        "इसके लिए कोई timer/counter जरूरी नहीं",
+        "केवल RTO timer से यह sequence नहीं बन सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "इस प्रकार की sequential timing applications में सामान्यतः multiple TON timers को cascade/step sequence में उपयोग किया जाता है, जहाँ एक timer के complete होते ही अगला timer अगली light के लिए शुरू होता है। बाकी options व्यावहारिक approach को गलत बताते हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q28",
+      "question": "PLC में 'Latch (OTL)' और 'Unlatch (OTU)' coil instructions में क्या अंतर होता है?",
+      "options": [
+        "दोनों बिल्कुल एक जैसे काम करते हैं",
+        "OTL coil को activate होने पर retentively ON कर देता है (rung false होने पर भी ON रहता है), जबकि OTU coil को retentively OFF कर देता है; इन्हें unlatch करने के लिए opposite instruction चाहिए होता है",
+        "OTL केवल timers के लिए है और OTU केवल counters के लिए",
+        "OTU coil को permanently ON रखता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "OTL (Output Latch) instruction rung TRUE होने पर coil को retentively ON कर देता है, जो rung FALSE होने पर भी ON बना रहता है, जबकि OTU (Output Unlatch) coil को OFF करता है; coil की स्थिति बदलने के लिए विपरीत instruction का उपयोग जरूरी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q29",
+      "question": "यदि किसी ladder rung में एक ही output coil को दो अलग जगहों पर (parallel rungs में) program कर दिया जाए (Duplicate Coil), तो सामान्यतः क्या समस्या आती है?",
+      "options": [
+        "कोई समस्या नहीं आती, PLC इसे automatically handle कर लेता है",
+        "'Duplicate Coil' error/warning आ सकती है और output की final स्थिति अनिश्चित हो सकती है क्योंकि scan के अंत में जो भी rung last में execute हो, वही निर्णायक होती है",
+        "PLC अपने आप coil को delete कर देगा",
+        "इससे PLC की clock speed बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "एक ही output coil को multiple जगहों पर program करना गलत programming practice मानी जाती है क्योंकि इससे 'Duplicate Coil' warning/error आती है और output की अंतिम स्थिति अस्पष्ट हो सकती है (scan के अनुसार last rung का असर रहता है)। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_timers_counters_q30",
+      "question": "एक bottling plant में हर 12 bottles के बाद एक नया tray भेजना है। CTU counter का preset value 12 सेट किया गया है, और counter output true होने पर एक pulse से tray-feed solenoid चलता है। Tray भेजने के बाद counter को reset भी करना जरूरी क्यों है?",
+      "options": [
+        "Reset की कोई जरूरत नहीं, counter अपने आप हमेशा नई गिनती शुरू कर देता है",
+        "Reset instruction (RES) के बिना counter की accumulated value 12 पर ही रहेगी और output TRUE बना रहेगा, जिससे अगली 12 bottles की सही गिनती के लिए counter को दोबारा zero करना जरूरी है",
+        "Reset से counter permanently disable हो जाता है",
+        "Reset instruction का इस application से कोई संबंध नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "CTU counter की accumulated value preset तक पहुंचने के बाद स्वयं zero नहीं होती, इसलिए output TRUE होने के बाद tray-feed action पूरा होते ही counter को RES instruction से reset करना जरूरी है ताकि अगली 12 bottles की सही counting शुरू हो सके। बाकी options गलत हैं।"
+    }
+  ]
+}

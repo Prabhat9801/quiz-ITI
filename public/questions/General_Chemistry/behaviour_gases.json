@@ -1,0 +1,298 @@
+{
+  "subject": "General",
+  "subjectName": "Chemistry",
+  "topic": "behaviour_gases",
+  "topicName": "Behaviour of Gases",
+  "questions": [
+    {
+      "id": "chem_behaviour_gases_q1",
+      "question": "Boyle's law के अनुसार, यदि temperature constant रखा जाए, तो किसी fixed मात्रा वाली gas के pressure और volume के बीच क्या संबंध होता है?",
+      "options": [
+        "Pressure और volume सीधे आनुपातिक (directly proportional) होते हैं",
+        "Pressure और volume व्युत्क्रमानुपाती (inversely proportional) होते हैं",
+        "Pressure और volume का कोई संबंध नहीं होता",
+        "Pressure, volume के वर्ग (square) के अनुपात में बदलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Boyle's law के अनुसार constant temperature पर किसी fixed mass की gas का pressure उसके volume के व्युत्क्रमानुपाती होता है, अर्थात PV = constant। Option A Charles' law जैसा संबंध है, C गलत है क्योंकि स्पष्ट गणितीय संबंध है, और D किसी मान्य gas law पर आधारित नहीं है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q2",
+      "question": "एक gas का प्रारंभिक pressure 2 atm और volume 6 L है। यदि temperature constant रखते हुए pressure बढ़ाकर 4 atm कर दिया जाए, तो नया volume कितना होगा?",
+      "options": ["3 L", "6 L", "12 L", "1.5 L"],
+      "correctIndex": 0,
+      "explanation": "Boyle's law के अनुसार P1V1 = P2V2, अतः 2×6 = 4×V2, जिससे V2 = 3 L प्राप्त होता है। 6 L प्रारंभिक volume है, 12 L केवल P1V1 का मान है, और 1.5 L गणना में गलत division से आता है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q3",
+      "question": "Charles' law के अनुसार, स्थिर (constant) pressure पर किसी fixed मात्रा वाली gas का volume किस पर निर्भर करता है?",
+      "options": [
+        "Absolute temperature के directly proportional",
+        "Absolute temperature के inversely proportional",
+        "Pressure पर, temperature पर नहीं",
+        "Number of moles पर ही, temperature पर नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Charles' law कहता है कि constant pressure पर gas का volume उसके absolute temperature (Kelvin में) के directly proportional होता है, अर्थात V/T = constant। Option B Boyle's law के pressure-volume संबंध जैसा भ्रामक है, C और D प्रश्न की शर्त (constant pressure, fixed moles) को नजरअंदाज करते हैं।"
+    },
+    {
+      "id": "chem_behaviour_gases_q4",
+      "question": "एक gas का volume 273 K पर 4 L है। यदि pressure constant रखते हुए temperature को 546 K तक बढ़ा दिया जाए, तो नया volume कितना होगा?",
+      "options": ["4 L", "2 L", "16 L", "8 L"],
+      "correctIndex": 3,
+      "explanation": "Charles' law से V1/T1 = V2/T2, अतः 4/273 = V2/546, जिससे V2 = 8 L मिलता है क्योंकि temperature ठीक दोगुनी हुई है। 4 L प्रारंभिक मान है, 2 L गलत दिशा में गणना है, और 16 L चार गुना वृद्धि मान लेने की गलती से आता है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q5",
+      "question": "Gay-Lussac's law के अनुसार, स्थिर (constant) volume पर किसी gas का pressure किस पर निर्भर करता है?",
+      "options": [
+        "Volume पर",
+        "Absolute temperature के directly proportional",
+        "Absolute temperature के inversely proportional",
+        "Number of moles पर स्वतंत्र रूप से, temperature से नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gay-Lussac's law कहता है कि constant volume पर gas का pressure उसके absolute temperature के directly proportional होता है, अर्थात P/T = constant। Option A प्रश्न की शर्त के विपरीत है क्योंकि volume स्थिर है, C गलत दिशा दिखाता है, और D तापमान पर निर्भरता को नकारता है जो गलत है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q6",
+      "question": "एक बंद (sealed) पात्र में gas का pressure 300 K पर 1 atm है। यदि volume constant रखते हुए इसे गर्म करके 600 K कर दिया जाए, तो नया pressure कितना होगा?",
+      "options": ["0.5 atm", "1 atm", "2 atm", "4 atm"],
+      "correctIndex": 2,
+      "explanation": "Gay-Lussac's law से P1/T1 = P2/T2, अतः 1/300 = P2/600, जिससे P2 = 2 atm मिलता है क्योंकि temperature दोगुनी हुई है। 0.5 atm गलत दिशा में गणना है, 1 atm प्रारंभिक मान है और 4 atm चार गुना मान लेने की गलती है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q7",
+      "question": "जब किसी fixed मात्रा वाली gas के pressure, volume और temperature तीनों साथ बदलते हैं, तो कौन-सा समीकरण (equation) लागू होता है?",
+      "options": [
+        "P1V1 = P2V2",
+        "V1/T1 = V2/T2",
+        "P1V1/T1 = P2V2/T2",
+        "P1/T1 = P2/T2"
+      ],
+      "correctIndex": 2,
+      "explanation": "जब pressure, volume और temperature तीनों एक साथ बदलते हैं, तो combined gas equation P1V1/T1 = P2V2/T2 लागू होती है जो Boyle's, Charles' और Gay-Lussac's laws को जोड़ती है। Options A, B और D केवल तभी सही होते हैं जब क्रमशः temperature, pressure या volume constant रहे।"
+    },
+    {
+      "id": "chem_behaviour_gases_q8",
+      "question": "एक gas का प्रारंभिक अवस्था में pressure 2 atm, volume 5 L और temperature 250 K है। यदि इसे बदलकर pressure 4 atm और temperature 500 K कर दिया जाए, तो नया volume कितना होगा?",
+      "options": ["5 L", "10 L", "2.5 L", "20 L"],
+      "correctIndex": 0,
+      "explanation": "Combined gas equation से P1V1/T1 = P2V2/T2, अतः (2×5)/250 = (4×V2)/500, जिससे V2 = 5 L मिलता है — pressure और temperature दोनों दोगुने होने से volume अपरिवर्तित रहता है। 10 L, 2.5 L और 20 L गलत अनुपात मानने से आते हैं।"
+    },
+    {
+      "id": "chem_behaviour_gases_q9",
+      "question": "STP (Standard Temperature and Pressure) की मानक (standard) शर्तें क्या मानी जाती हैं?",
+      "options": [
+        "25°C तापमान और 1 atm pressure",
+        "100°C तापमान और 2 atm pressure",
+        "0°C तापमान और 2 atm pressure",
+        "0°C (273 K) तापमान और 1 atm pressure"
+      ],
+      "correctIndex": 3,
+      "explanation": "STP को परंपरागत रूप से 0°C (273 K, या 273.15 K) तापमान और 1 atm pressure के रूप में परिभाषित किया जाता है। 25°C room temperature है जो STP नहीं है, और शेष दोनों विकल्प 2 atm जैसा गलत pressure मान दिखाते हैं।"
+    },
+    {
+      "id": "chem_behaviour_gases_q10",
+      "question": "STP पर किसी भी ideal gas के 1 mole का volume कितना होता है?",
+      "options": ["11.2 L", "22.4 L", "24.0 L", "1 L"],
+      "correctIndex": 1,
+      "explanation": "Avogadro's law के अनुसार STP पर किसी भी ideal gas का 1 mole 22.4 L volume घेरता है, चाहे gas कोई भी हो। 11.2 L आधा mole के लिए सही होता, 24.0 L room temperature (25°C) पर molar volume के करीब है, STP पर नहीं, और 1 L गलत मान है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q11",
+      "question": "Ideal gas equation PV = nRT में 'R' किसे दर्शाता है?",
+      "options": [
+        "किसी विशेष gas का द्रव्यमान",
+        "Universal gas constant, जो सभी ideal gases के लिए समान है",
+        "moles की संख्या",
+        "gas का temperature"
+      ],
+      "correctIndex": 1,
+      "explanation": "R universal gas constant है (लगभग 0.0821 L·atm/mol·K या 8.314 J/mol·K) जो सभी ideal gases के लिए एक समान मान रखता है। n moles दर्शाता है, T temperature दर्शाता है, और R किसी विशेष gas के द्रव्यमान से संबंधित नहीं है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q12",
+      "question": "किसी gas का pressure 1 atm, volume 24.6 L और temperature 300 K है। R = 0.0821 L·atm/(mol·K) मानते हुए, moles (n) की संख्या लगभग कितनी होगी?",
+      "options": ["1 mole (approx)", "2 mole", "0.5 mole", "24.6 mole"],
+      "correctIndex": 0,
+      "explanation": "n = PV/RT = (1×24.6)/(0.0821×300) ≈ 24.6/24.63 ≈ 1 mole। 2 mole और 0.5 mole गलत division से आते हैं, और 24.6 mole गलती से केवल volume को ही answer मान लेने पर मिलता है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q13",
+      "question": "Avogadro's law के अनुसार, समान temperature और pressure पर समान volume वाली विभिन्न gases में क्या समान होता है?",
+      "options": ["द्रव्यमान (mass)", "अणुओं (molecules) की संख्या", "घनत्व (density)", "रंग (colour)"],
+      "correctIndex": 1,
+      "explanation": "Avogadro's law के अनुसार समान temperature और pressure पर समान volume वाली सभी gases में अणुओं की संख्या समान होती है, चाहे gas कोई भी हो। Mass और density gas की molar mass पर निर्भर करते हुए अलग-अलग होते हैं, और colour का इस law से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q14",
+      "question": "1 mole किसी भी पदार्थ (substance) में कणों (particles) की संख्या (Avogadro's number) कितनी होती है?",
+      "options": ["6.022 × 10^23", "3.011 × 10^23", "22.4 × 10^23", "9.8 × 10^23"],
+      "correctIndex": 0,
+      "explanation": "Avogadro's number 6.022 × 10^23 particles प्रति mole होता है, यह एक मूल स्थिरांक (constant) है। शेष विकल्प इससे संबंधित पर गलत मान हैं जो सही स्थिरांक को नहीं दर्शाते।"
+    },
+    {
+      "id": "chem_behaviour_gases_q15",
+      "question": "Kinetic theory of gases की एक मुख्य assumption (मान्यता) के अनुसार, gas के अणुओं (molecules) के आकार (volume) के बारे में क्या माना जाता है?",
+      "options": [
+        "अणुओं का volume container के volume जितना बड़ा होता है",
+        "अणु आकार में लगातार बढ़ते रहते हैं",
+        "अणुओं का कोई निश्चित आकार नहीं होता, वे तरल जैसे होते हैं",
+        "अणुओं का अपना volume container के कुल volume की तुलना में नगण्य (negligible) माना जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Kinetic theory मानती है कि gas के अणुओं का अपना volume, container के कुल volume की तुलना में नगण्य होता है, इसलिए अणुओं को बिंदु-द्रव्यमान (point mass) जैसा माना जाता है। शेष विकल्प इस मूल मान्यता के विपरीत हैं।"
+    },
+    {
+      "id": "chem_behaviour_gases_q16",
+      "question": "Ideal gas के लिए kinetic theory की एक assumption यह भी है कि अणुओं के बीच intermolecular forces कैसे होते हैं?",
+      "options": [
+        "बहुत प्रबल (strong) आकर्षण बल होते हैं",
+        "केवल repulsion (प्रतिकर्षण) बल होते हैं",
+        "नगण्य (negligible) माने जाते हैं, अर्थात कोई आकर्षण या प्रतिकर्षण नहीं",
+        "temperature बढ़ने पर ही उत्पन्न होते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Ideal gas की kinetic theory के अनुसार अणुओं के बीच intermolecular forces नगण्य माने जाते हैं, जिससे टकराव (collisions) perfectly elastic होते हैं। Option A और B वास्तविक (real) gases में देखे जाने वाले बल हैं, न कि ideal gas की मान्यता, और D भी इस मूल मान्यता से मेल नहीं खाता।"
+    },
+    {
+      "id": "chem_behaviour_gases_q17",
+      "question": "वास्तविक (real) gases, ideal gas के व्यवहार से सबसे अधिक विचलन (deviation) किन परिस्थितियों में दिखाती हैं?",
+      "options": [
+        "उच्च (high) temperature और निम्न (low) pressure पर",
+        "निम्न (low) temperature और उच्च (high) pressure पर",
+        "STP पर हमेशा",
+        "केवल vacuum में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Low temperature और high pressure पर अणुओं के बीच की दूरी कम हो जाती है, जिससे intermolecular forces और अणुओं का स्वयं का volume प्रभावी हो जाते हैं और real gas, ideal gas से अधिक विचलित होती है। High temperature-low pressure पर gases लगभग ideal व्यवहार करती हैं, STP पर विचलन बहुत कम होता है, और vacuum में gas के अणु ही न्यूनतम होंगे।"
+    },
+    {
+      "id": "chem_behaviour_gases_q18",
+      "question": "Van der Waals equation में ideal gas equation को real gases के लिए सुधारने हेतु कौन-से दो correction terms जोड़े जाते हैं?",
+      "options": [
+        "केवल temperature correction",
+        "केवल volume correction",
+        "Pressure correction (intermolecular forces हेतु) और volume correction (molecular size हेतु)",
+        "केवल moles की संख्या का correction"
+      ],
+      "correctIndex": 2,
+      "explanation": "Van der Waals equation में intermolecular forces के लिए pressure correction term (a/V²) और अणुओं के स्वयं के volume के लिए volume correction term (b) जोड़ा जाता है, जिससे real gas का व्यवहार बेहतर दर्शाया जा सके। केवल temperature, केवल volume या केवल moles का correction यह पूरा सुधार नहीं दिखाता।"
+    },
+    {
+      "id": "chem_behaviour_gases_q19",
+      "question": "Charles' law के graph को extrapolate करने पर, absolute zero temperature (0 K) पर किसी ideal gas का volume सैद्धांतिक रूप से क्या हो जाता है?",
+      "options": [
+        "दोगुना हो जाता है",
+        "अपरिवर्तित रहता है",
+        "अनंत (infinite) हो जाता है",
+        "शून्य (zero) हो जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Charles' law के अनुसार V∝T होने से, graph को extrapolate करने पर 0 K (absolute zero, -273.15°C) पर volume सैद्धांतिक रूप से शून्य हो जाता है, हालांकि वास्तविक gases इससे पहले ही liquefy/solidify हो जाती हैं। दोगुना, अपरिवर्तित या अनंत होना Charles' law के directly proportional संबंध के विपरीत है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q20",
+      "question": "किसी gas का तापमान 27°C है। gas law के calculations में उपयोग हेतु इसे Kelvin (K) में बदलने पर मान कितना होगा?",
+      "options": ["27 K", "273 K", "300 K", "246 K"],
+      "correctIndex": 2,
+      "explanation": "Celsius से Kelvin में बदलने का सूत्र K = °C + 273 है, अतः 27 + 273 = 300 K। 27 K मूल Celsius मान है, 273 K केवल conversion स्थिरांक है, और 246 K गलत घटाव से आता है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q21",
+      "question": "एक gas cylinder में gas को अधिक compress (संपीड़ित) किया जाता है, जिससे उसका volume कम हो जाता है, जबकि temperature लगभग constant रहती है। इस स्थिति में gas का pressure कैसे बदलेगा?",
+      "options": [
+        "Pressure भी कम होगा",
+        "Pressure बढ़ेगा",
+        "Pressure में कोई बदलाव नहीं होगा",
+        "Pressure पहले बढ़ेगा फिर घटेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Boyle's law के अनुसार constant temperature पर pressure और volume व्युत्क्रमानुपाती होते हैं, अतः volume घटने पर pressure बढ़ता है, जैसा compress की गई gas cylinder में होता है। Pressure का कम होना, अपरिवर्तित रहना या पहले बढ़कर घटना Boyle's law के व्युत्क्रम संबंध के विपरीत है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q22",
+      "question": "hot air balloon को गर्म हवा (hot air) से भरने पर वह फूलकर बड़ा हो जाता है, जबकि उस पर बाहरी pressure लगभग constant रहता है। यह किस gas law से सबसे अच्छी तरह समझाया जा सकता है?",
+      "options": ["Boyle's law", "Avogadro's law", "Gay-Lussac's law", "Charles' law"],
+      "correctIndex": 3,
+      "explanation": "Charles' law के अनुसार constant pressure पर gas का volume temperature के directly proportional होता है, इसलिए हवा गर्म होने पर उसका volume बढ़ता है और balloon फूलता है। Boyle's law pressure-volume (constant temperature) से जुड़ा है, Avogadro's law moles-volume से, और Gay-Lussac's law constant volume पर pressure-temperature से जुड़ा है, जो यहाँ लागू नहीं होते।"
+    },
+    {
+      "id": "chem_behaviour_gases_q23",
+      "question": "pressure cooker में एक fixed volume वाले बंद बर्तन में भोजन पकाते समय gas/steam गर्म होती है और उसका pressure तेजी से बढ़ जाता है। यह घटना मुख्यतः किस gas law से संबंधित है?",
+      "options": ["Boyle's law", "Charles' law", "Gay-Lussac's law", "Ideal gas equation से नहीं"],
+      "correctIndex": 2,
+      "explanation": "Pressure cooker में volume लगभग constant रहता है, और temperature बढ़ने पर pressure भी बढ़ता है, जो Gay-Lussac's law (P∝T at constant V) द्वारा समझाया जाता है। Boyle's law constant temperature पर pressure-volume से जुड़ा है, Charles' law constant pressure पर volume-temperature से, और यह घटना ideal gas equation के सामान्य सिद्धांतों के अंतर्गत ही आती है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q24",
+      "question": "STP पर किसी gas के 3 moles का कुल volume कितना होगा (1 mole ideal gas = 22.4 L at STP मानते हुए)?",
+      "options": ["22.4 L", "44.8 L", "67.2 L", "89.6 L"],
+      "correctIndex": 2,
+      "explanation": "STP पर 1 mole gas का volume 22.4 L होता है, अतः 3 moles के लिए 3 × 22.4 = 67.2 L होगा। 22.4 L केवल 1 mole के लिए सही है, 44.8 L 2 moles के लिए और 89.6 L 4 moles के लिए सही होता।"
+    },
+    {
+      "id": "chem_behaviour_gases_q25",
+      "question": "एक बंद, कठोर (rigid) बर्तन में gas का volume स्थिर रहता है। यदि इसका temperature 400 K से घटाकर 200 K कर दिया जाए, तो pressure पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Pressure आधा हो जाएगा",
+        "Pressure दोगुना हो जाएगा",
+        "Pressure अपरिवर्तित रहेगा",
+        "Pressure चार गुना हो जाएगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "Gay-Lussac's law के अनुसार constant volume पर P∝T (absolute), अतः temperature आधी (400 K से 200 K) होने पर pressure भी आधा हो जाएगा। Pressure का दोगुना या चार गुना होना गलत दिशा/अनुपात दिखाता है, और अपरिवर्तित रहना constant volume की शर्त में temperature-निर्भरता को नकारता है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q26",
+      "question": "Kinetic theory of gases के अनुसार, किसी container की दीवारों पर gas का pressure मुख्यतः किस कारण उत्पन्न होता है?",
+      "options": [
+        "अणुओं के आपस में chemical reaction से",
+        "अणुओं के दीवारों से बार-बार टकराने (collisions) से",
+        "container के तापमान में विकिरण (radiation) से",
+        "अणुओं के स्थिर (stationary) रहने से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Kinetic theory के अनुसार gas के तेजी से गतिशील अणु container की दीवारों से बार-बार टकराते हैं, और इन collisions से लगने वाला बल ही pressure के रूप में मापा जाता है। Chemical reaction, radiation या अणुओं का स्थिर रहना pressure उत्पन्न होने का कारण नहीं है।"
+    },
+    {
+      "id": "chem_behaviour_gases_q27",
+      "question": "कोई real gas ideal gas के व्यवहार के सबसे निकट कब होती है?",
+      "options": [
+        "निम्न temperature और उच्च pressure पर",
+        "उच्च temperature और उच्च pressure पर",
+        "gas के liquid अवस्था के निकट पहुँचने पर",
+        "उच्च temperature और निम्न pressure पर"
+      ],
+      "correctIndex": 3,
+      "explanation": "High temperature पर अणुओं की गतिज ऊर्जा अधिक होती है और low pressure पर अणुओं के बीच दूरी अधिक रहती है, जिससे intermolecular forces और molecular volume का प्रभाव नगण्य हो जाता है और gas लगभग ideal व्यवहार करती है। शेष विकल्पों में high pressure या liquid के निकट होने से विचलन बढ़ता है, घटता नहीं।"
+    },
+    {
+      "id": "chem_behaviour_gases_q28",
+      "question": "Ideal gas equation में universal gas constant R का मान SI इकाइयों (units) में लगभग कितना होता है?",
+      "options": [
+        "0.0821 L·atm/(mol·K)",
+        "22.4 L/mol",
+        "6.022 × 10^23 /mol",
+        "8.314 J/(mol·K)"
+      ],
+      "correctIndex": 3,
+      "explanation": "SI इकाइयों में R का मान लगभग 8.314 J/(mol·K) होता है, जबकि 0.0821 L·atm/(mol·K) वही स्थिरांक L-atm इकाइयों में है। 22.4 L/mol STP पर molar volume है और 6.022×10^23/mol Avogadro's number है, ये R के मान नहीं हैं।"
+    },
+    {
+      "id": "chem_behaviour_gases_q29",
+      "question": "Combined gas equation (P1V1/T1 = P2V2/T2) का उपयोग करते समय किस मात्रा को constant (अपरिवर्तित) माना जाता है?",
+      "options": ["gas की मात्रा (number of moles, n)", "Pressure", "Volume", "Temperature"],
+      "correctIndex": 0,
+      "explanation": "Combined gas equation में pressure, volume और temperature तीनों को बदलने की अनुमति होती है, परन्तु gas की मात्रा (moles, n) को constant माना जाता है, तभी यह समीकरण मान्य रहता है। Pressure, volume और temperature तीनों तो इस समीकरण में स्वयं परिवर्तनशील राशियाँ हैं।"
+    },
+    {
+      "id": "chem_behaviour_gases_q30",
+      "question": "2 moles gas को 10 L के बर्तन में 250 K temperature पर रखा गया है। R = 0.0821 L·atm/(mol·K) मानते हुए, gas का pressure लगभग कितना होगा?",
+      "options": ["2.05 atm", "8.2 atm", "0.41 atm", "4.1 atm"],
+      "correctIndex": 3,
+      "explanation": "Ideal gas equation से P = nRT/V = (2×0.0821×250)/10 ≈ 41.05/10 ≈ 4.1 atm। 2.05 atm आधा moles मान लेने की गलती से, 8.2 atm दोगुना मान लेने से, और 0.41 atm दशमलव स्थान की गलती से आता है।"
+    }
+  ]
+}

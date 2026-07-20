@@ -1,0 +1,368 @@
+{
+  "unit": "unit4",
+  "unitName": "UPS, Inverters, SMPS",
+  "topic": "smps",
+  "topicName": "SMPS - Switched Mode Power Supply",
+  "questions": [
+    {
+      "id": "u4_smps_q1",
+      "question": "SMPS (Switched Mode Power Supply) में voltage regulation मुख्यतः किस principle पर आधारित होती है?",
+      "options": [
+        "Series pass transistor को linear region में चलाकर अतिरिक्त voltage को heat के रूप में नष्ट करना",
+        "केवल transformer के turns ratio को mechanical रूप से बदलना",
+        "Output पर एक बड़ा resistor जोड़कर voltage drop करना",
+        "Switching transistor को high frequency पर ON-OFF करके output pulse की duty cycle को control करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "SMPS में एक switching transistor (MOSFET/BJT) को high frequency पर ON-OFF किया जाता है और duty cycle (PWM) बदलकर output voltage को regulate किया जाता है, जिससे power loss बहुत कम होता है। Option A linear regulator का तरीका है (ज्यादा heat loss), B stabilizer के tap-changing जैसा तरीका है, C एक अव्यवहारिक व अत्यंत lossy तरीका है।"
+    },
+    {
+      "id": "u4_smps_q2",
+      "question": "Linear power supply की तुलना में SMPS का सबसे बड़ा लाभ क्या है?",
+      "options": [
+        "SMPS में transformer बिल्कुल नहीं होता",
+        "SMPS केवल DC input पर ही काम करता है",
+        "उच्च switching frequency के कारण high efficiency तथा transformer व filter components का आकार व वजन कम होना",
+        "SMPS में कभी भी ripple उत्पन्न नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "SMPS high frequency पर switching करता है जिससे transformer और filter (capacitor/inductor) का size छोटा हो जाता है और power loss कम होने से efficiency 70-90% तक पहुँच जाती है, जबकि linear supply में यह 40-60% रहती है। A गलत क्योंकि isolated SMPS में high-frequency transformer होता है, B गलत क्योंकि SMPS AC mains से भी चलता है, D गलत क्योंकि ripple हमेशा कुछ मात्रा में present रहता है, केवल filter से कम किया जाता है।"
+    },
+    {
+      "id": "u4_smps_q3",
+      "question": "एक typical off-line SMPS में AC mains input के तुरंत बाद पहला stage आमतौर पर क्या होता है?",
+      "options": [
+        "Bridge rectifier तथा filter capacitor जो AC को unregulated high-voltage DC में बदलते हैं",
+        "एक low-frequency step-down transformer",
+        "एक opto-coupler feedback circuit",
+        "एक output LC filter"
+      ],
+      "correctIndex": 0,
+      "explanation": "Off-line SMPS में सबसे पहले AC mains को bridge rectifier और bulk filter capacitor द्वारा सीधे high-voltage unregulated DC (लगभग 300V) में बदला जाता है, तभी उसे switching transistor को दिया जाता है। Option B linear supply में उपयोग होता है (यहाँ mains transformer नहीं चाहिए), C feedback stage बाद में आता है, D output side का component है।"
+    },
+    {
+      "id": "u4_smps_q4",
+      "question": "SMPS में high-frequency transformer का उपयोग करने का मुख्य कारण क्या है?",
+      "options": [
+        "क्योंकि high frequency पर transformer में कोई core loss नहीं होता",
+        "क्योंकि यह केवल DC को transform कर सकता है",
+        "क्योंकि high frequency पर transformer core और winding का आकार छोटा तथा हल्का हो जाता है",
+        "क्योंकि इससे output voltage हमेशा शून्य हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Transformer का size उसकी operating frequency के व्युत्क्रमानुपाती (inversely proportional) होता है, इसलिए switching frequency (typically 20kHz-500kHz) बढ़ाकर transformer core और winding को काफी छोटा व हल्का बनाया जा सकता है। A गलत क्योंकि core loss frequency के साथ बढ़ती भी है (इसलिए ferrite core उपयोग होता है), B गलत क्योंकि transformer AC-type varying flux पर काम करता है, D निरर्थक कथन है।"
+    },
+    {
+      "id": "u4_smps_q5",
+      "question": "SMPS में feedback loop का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Input AC voltage को measure करना",
+        "Output DC voltage को sense करके उसे reference से compare करना और PWM duty cycle को adjust करना ताकि output स्थिर रहे",
+        "Switching transistor को permanently बंद करना",
+        "केवल cooling fan की speed control करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Feedback loop output voltage को sense करता है, उसे एक fixed reference voltage से comparator/error amplifier में compare करता है, और अंतर (error) के अनुसार PWM controller duty cycle बदलकर output को नियत रखता है। A input measure करना feedback loop का प्राथमिक कार्य नहीं, C और D feedback loop के उद्देश्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_smps_q6",
+      "question": "Isolated SMPS में primary side और secondary side के बीच feedback signal भेजने के लिए सामान्यतः किस component का उपयोग होता है ताकि electrical isolation बनी रहे?",
+      "options": [
+        "एक साधारण तार का सीधा connection",
+        "एक large electrolytic capacitor",
+        "एक mechanical relay",
+        "एक opto-coupler (opto-isolator) जो light के माध्यम से signal transfer करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Opto-coupler LED और phototransistor के बीच light से signal transfer करता है, जिससे primary व secondary side के बीच galvanic isolation बनी रहती है फिर भी feedback signal पहुँच जाता है। A isolation खत्म कर देगा (खतरनाक), B signal transfer के लिए उपयुक्त नहीं, C बहुत धीमा और अव्यावहारिक होगा।"
+    },
+    {
+      "id": "u4_smps_q7",
+      "question": "SMPS की typical switching frequency range क्या होती है?",
+      "options": [
+        "50 Hz से 60 Hz",
+        "1 Hz से 10 Hz",
+        "लगभग 20 kHz से कई सौ kHz (या MHz तक)",
+        "0.1 Hz से 1 Hz"
+      ],
+      "correctIndex": 2,
+      "explanation": "SMPS आमतौर पर 20 kHz (audible range से ऊपर) से लेकर कई सौ kHz या उससे अधिक frequency पर switching करता है ताकि transformer व filter components छोटे रहें। Option A mains supply की frequency है, न कि switching frequency; B और D बहुत कम हैं और SMPS के लिए अव्यावहारिक हैं।"
+    },
+    {
+      "id": "u4_smps_q8",
+      "question": "PWM (Pulse Width Modulation) controller IC SMPS में output voltage को regulate करने के लिए मुख्यतः क्या बदलता है?",
+      "options": [
+        "Switching pulse की frequency को हमेशा स्थिर रखते हुए उसकी pulse width (ON time) को output के अनुसार बदलता है",
+        "Output rectifier diode की polarity को बदलता है",
+        "Input AC की frequency को बदलता है",
+        "Transformer के turns ratio को हर बार mechanical रूप से बदलता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "साधारण PWM control में switching frequency fixed रहती है, केवल pulse की width (duty cycle) को error signal के अनुसार बदला जाता है, जिससे average output voltage नियंत्रित होता है। B, C, D SMPS की PWM regulation प्रक्रिया से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q9",
+      "question": "SMPS के switching device के रूप में आमतौर पर किसका उपयोग किया जाता है?",
+      "options": [
+        "एक साधारण silicon diode",
+        "एक carbon resistor",
+        "Power MOSFET या high-speed switching transistor/IGBT",
+        "एक neon lamp"
+      ],
+      "correctIndex": 2,
+      "explanation": "SMPS में तेज़ switching के लिए Power MOSFET, high-speed BJT या IGBT उपयोग होते हैं क्योंकि ये कम switching loss के साथ high frequency पर ON-OFF हो सकते हैं। A, B, D switching device के रूप में कार्य करने के लिए उपयुक्त नहीं हैं।"
+    },
+    {
+      "id": "u4_smps_q10",
+      "question": "SMPS के output rectifier stage में सामान्यतः किस प्रकार के diode का उपयोग किया जाता है और क्यों?",
+      "options": [
+        "साधारण general-purpose silicon diode, क्योंकि यह सबसे सस्ता होता है",
+        "Fast-recovery या Schottky diode, क्योंकि high switching frequency पर तेज़ recovery time चाहिए",
+        "Zener diode, क्योंकि यह voltage regulate करता है",
+        "LED, क्योंकि यह light emit करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Output की high-frequency AC pulses को rectify करने के लिए fast-recovery या Schottky diode चाहिए ताकि वे तेज़ switching frequency पर सही तरीके से conduct/block कर सकें, अन्यथा साधारण diode की धीमी recovery से loss और heating बढ़ जाती है। A, C, D इस उद्देश्य के लिए अनुपयुक्त हैं।"
+    },
+    {
+      "id": "u4_smps_q11",
+      "question": "Flyback converter topology, जो कम-power SMPS (जैसे mobile charger) में प्रचलित है, की मुख्य विशेषता क्या है?",
+      "options": [
+        "Transformer में ऊर्जा switch के ON time में core में store होती है और OFF time में secondary को transfer होती है",
+        "इसमें कोई transformer नहीं होता",
+        "यह केवल AC output देता है",
+        "इसमें switching transistor कभी बंद नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Flyback topology में transistor के ON रहने पर transformer (जो actually एक coupled inductor की तरह काम करता है) के core में ऊर्जा magnetic रूप में store होती है, और transistor OFF होने पर वह ऊर्जा secondary winding के माध्यम से load को transfer होती है। B, C, D flyback की वास्तविक कार्यप्रणाली से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q12",
+      "question": "Forward converter topology, flyback की तुलना में किस प्रकार अलग काम करता है?",
+      "options": [
+        "इसमें transformer secondary switch के ON time में ही सीधे energy transfer करता है, न कि केवल OFF time में store करके",
+        "इसमें कोई switching transistor नहीं होता",
+        "यह केवल battery चार्ज करने के लिए बना है",
+        "इसमें feedback की जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Forward converter में switch के ON रहते समय ही transformer secondary से energy सीधे output inductor के माध्यम से load को transfer होती है (transformer core में bulk energy store नहीं होती जैसा flyback में होता है), इसलिए यह आमतौर पर higher power applications के लिए उपयुक्त है। B, C, D कथन गलत हैं।"
+    },
+    {
+      "id": "u4_smps_q13",
+      "question": "SMPS में output के पश्चात लगे LC filter (inductor-capacitor) का मुख्य कार्य क्या है?",
+      "options": [
+        "AC mains voltage को high-voltage DC में बदलना",
+        "PWM signal उत्पन्न करना",
+        "Feedback error signal को amplify करना",
+        "High-frequency switching pulses को smooth करके एक स्वच्छ (low ripple) DC output देना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Rectified pulsating output को output LC filter smooth करता है ताकि ripple कम हो और एक स्थिर DC output मिले, जो sensitive electronics के लिए आवश्यक है। A input rectifier stage का काम है, B PWM controller करता है, C error amplifier करता है।"
+    },
+    {
+      "id": "u4_smps_q14",
+      "question": "SMPS में 'ripple' शब्द से क्या तात्पर्य है?",
+      "options": [
+        "Input AC mains की frequency",
+        "Transformer के core का material",
+        "Output DC voltage में सुपरइम्पोज़्ड छोटी AC variation, जो switching और filtering से बचती है",
+        "PWM controller की internal reference voltage"
+      ],
+      "correctIndex": 2,
+      "explanation": "Ripple, output DC पर बचा हुआ छोटा AC component होता है जो rectification और switching के कारण पूरी तरह filter नहीं हो पाता; अच्छे output filter design से इसे कम रखा जाता है। A, B, D ripple की परिभाषा से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q15",
+      "question": "SMPS की efficiency आमतौर पर linear regulated power supply से अधिक क्यों होती है?",
+      "options": [
+        "क्योंकि switching transistor ज्यादातर समय या तो पूरी तरह ON (low resistance) या पूरी तरह OFF रहता है, जिससे power dissipation कम होती है",
+        "क्योंकि इसमें कोई semiconductor component नहीं होता",
+        "क्योंकि यह हमेशा no-load पर काम करता है",
+        "क्योंकि इसमें transformer हटा दिया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Switching transistor saturation (low VCE, कम power loss) या cut-off (कोई current नहीं, कम power loss) में काम करता है, जबकि linear regulator का pass transistor active region में लगातार voltage drop करके heat के रूप में power नष्ट करता है। B, C, D efficiency के वास्तविक कारण से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_smps_q16",
+      "question": "एक SMPS का input power 250W है और output power 200W मिल रहा है। इसकी efficiency लगभग कितनी है?",
+      "options": [
+        "125%",
+        "80%",
+        "50%",
+        "25%"
+      ],
+      "correctIndex": 1,
+      "explanation": "Efficiency = (Output Power / Input Power) × 100 = (200/250) × 100 = 80%। यह एक typical अच्छे SMPS की efficiency है। 125% असंभव है (energy conservation का उल्लंघन), 50% और 25% गणना के अनुसार गलत हैं।"
+    },
+    {
+      "id": "u4_smps_q17",
+      "question": "SMPS में 'snubber circuit' (आमतौर पर resistor-capacitor-diode का combination) switching transistor के साथ क्यों लगाया जाता है?",
+      "options": [
+        "Output voltage को बढ़ाने के लिए",
+        "Switch के ON/OFF होने पर उत्पन्न voltage spikes को दबाकर transistor को नुकसान से बचाने के लिए",
+        "Battery को चार्ज करने के लिए",
+        "Frequency को कम करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Transformer की leakage inductance के कारण switching के समय high voltage spikes उत्पन्न होते हैं जो transistor को नुकसान पहुँचा सकते हैं; snubber circuit इन spikes को absorb करके clamp कर देता है। A, C, D snubber के वास्तविक उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q18",
+      "question": "Push-pull SMPS topology में दो switching transistors किस प्रकार काम करते हैं?",
+      "options": [
+        "दोनों हमेशा एक साथ ON रहते हैं",
+        "केवल एक transistor कभी काम करता ही नहीं",
+        "दोनों transistor DC को सीधे बिना transformer के output में भेजते हैं",
+        "वे alternately (बारी-बारी से) ON-OFF होकर transformer की primary winding के दोनों आधे हिस्सों को driving करते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Push-pull topology में center-tapped primary winding के दोनों हिस्सों को दो transistors alternately drive करते हैं, जिससे transformer core में दोनों दिशा में flux बनता है और core का उपयोग बेहतर होता है। A, B, C push-pull की कार्यप्रणाली से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q19",
+      "question": "Computer (PC) की ATX SMPS में '+5V standby' rail का उद्देश्य क्या है?",
+      "options": [
+        "यह मुख्य CPU को पूरी power देता है",
+        "यह main switching section बंद रहने पर भी motherboard के power-on circuit और wake-up features के लिए हल्की मात्रा में power उपलब्ध रखता है",
+        "यह केवल cooling fan चलाने के लिए है",
+        "यह AC mains को सीधे output देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "+5V standby एक छोटी अलग auxiliary supply होती है जो PC 'off' होने पर भी चलती रहती है ताकि power button press होने पर या Wake-on-LAN जैसी features के लिए motherboard सक्रिय रह सके। A, C, D standby rail के उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q20",
+      "question": "SMPS में duty cycle का अर्थ क्या है?",
+      "options": [
+        "Output ripple की मात्रा",
+        "Transformer के turns ratio",
+        "Input AC की RMS voltage",
+        "एक switching cycle में transistor के ON रहने के समय का पूरे cycle के समय से अनुपात"
+      ],
+      "correctIndex": 3,
+      "explanation": "Duty cycle = ON time / (ON time + OFF time), यानी एक पूरे switching period में transistor कितने अनुपात में ON रहता है; इसी को बदलकर average output voltage control होता है। A, B, C duty cycle की सही परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u4_smps_q21",
+      "question": "यदि किसी buck-derived SMPS का switching period 10 μs है और duty cycle 40% है, तो transistor का ON time कितना होगा?",
+      "options": [
+        "10 μs",
+        "6 μs",
+        "4 μs",
+        "40 μs"
+      ],
+      "correctIndex": 2,
+      "explanation": "ON time = Duty cycle × Total period = 0.40 × 10 μs = 4 μs। 10 μs पूरा period है, 6 μs OFF time (10−4) है, 40 μs गणना से मेल नहीं खाता।"
+    },
+    {
+      "id": "u4_smps_q22",
+      "question": "SMPS में EMI (Electromagnetic Interference) filter, mains input पर क्यों लगाया जाता है?",
+      "options": [
+        "Output voltage बढ़ाने के लिए",
+        "High-frequency switching के कारण उत्पन्न noise को mains supply में वापस जाने से रोकने और बाहरी noise के प्रभाव को कम करने के लिए",
+        "Battery की life बढ़ाने के लिए",
+        "AC को DC में बदलने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "High-frequency switching conducted व radiated EMI उत्पन्न करता है; input EMI filter (common-mode व differential-mode chokes और capacitors) इस noise को mains लाइन में फैलने से रोकता है और नियमों (जैसे EMC standards) का पालन सुनिश्चित करता है। A, C, D EMI filter के उद्देश्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_smps_q23",
+      "question": "SMPS में 'start-up circuit' का क्या कार्य होता है?",
+      "options": [
+        "Power ON होने के तुरंत बाद PWM controller IC को प्रारंभिक operating voltage देना ताकि switching शुरू हो सके",
+        "Output को permanently बंद रखना",
+        "केवल cooling fan को शुरू करना",
+        "Mains fuse को उड़ाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब SMPS पहली बार ON होता है तब feedback/auxiliary winding से अभी तक supply नहीं बनी होती, इसलिए एक high-value resistor आधारित start-up circuit rectified DC से PWM IC को प्रारंभिक bias देता है ताकि switching शुरू हो जाए, फिर auxiliary winding संभाल लेती है। B, C, D start-up circuit के कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q24",
+      "question": "किसी SMPS में short-circuit protection feature का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Output voltage को स्थायी रूप से बढ़ाना",
+        "Output पर short-circuit होने पर switching को तुरंत रोककर या current सीमित करके switching transistor व transformer को नुकसान से बचाना",
+        "Battery चार्ज करने की गति बढ़ाना",
+        "Ripple को बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Short-circuit protection current sensing के आधार पर switching को shutdown कर देता है या current limit कर देता है ताकि excessive current से switching device व transformer जलने से बचें। A, C, D इस protection feature के उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q25",
+      "question": "SMPS का उपयोग computer power supply के अलावा किन applications में व्यापक रूप से किया जाता है?",
+      "options": [
+        "केवल mechanical clock में",
+        "Mobile phone charger, LED TV/monitor power supply, laptop adapter जैसे compact electronic devices में",
+        "केवल पुराने valve-based radio में",
+        "केवल mercury thermometer में"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMPS का हल्का व compact design इसे mobile charger, LED TV, laptop adapter, inverter/UPS की internal supply जैसे अनेक modern electronic उपकरणों के लिए उपयुक्त बनाता है। A, C, D SMPS के प्रचलित application क्षेत्र नहीं हैं।"
+    },
+    {
+      "id": "u4_smps_q26",
+      "question": "SMPS में multiple output rails (जैसे +12V, +5V, +3.3V) एक साथ कैसे प्राप्त की जाती हैं?",
+      "options": [
+        "एक ही transformer में अलग-अलग secondary windings बनाकर, जिन्हें अलग-अलग rectifier व filter से जोड़ा जाता है",
+        "प्रत्येक rail के लिए एक अलग पूरा SMPS unit लगाकर",
+        "केवल resistor divider से एक ही rail को बाँटकर",
+        "AC mains को कई बार अलग-अलग बदलकर"
+      ],
+      "correctIndex": 0,
+      "explanation": "एक ही high-frequency transformer में कई secondary windings बनाकर, हर winding के output को अलग rectifier-filter से जोड़कर अलग-अलग DC voltage rails एक साथ प्राप्त की जाती हैं, जिससे design compact व economical रहता है। B अनावश्यक रूप से महँगा तरीका है, C उच्च current पर बहुत lossy होगा, D व्यावहारिक तरीका नहीं है।"
+    },
+    {
+      "id": "u4_smps_q27",
+      "question": "SMPS में 'cross regulation' समस्या किस स्थिति में उत्पन्न होती है?",
+      "options": [
+        "जब सभी output rails हमेशा बराबर current देते हैं",
+        "जब एक output rail (जैसे +5V) पर load बदलने से दूसरी rail (जैसे +12V) का voltage भी प्रभावित हो जाता है, क्योंकि feedback केवल एक ही rail को sense करता है",
+        "जब input voltage बिल्कुल स्थिर रहता है",
+        "जब transformer में कोई secondary winding ही न हो"
+      ],
+      "correctIndex": 1,
+      "explanation": "Multi-output SMPS में feedback आमतौर पर केवल एक main rail को sense करता है; इसलिए अन्य rails पर load बदलने से उनका voltage थोड़ा घट-बढ़ सकता है, जिसे cross regulation कहते हैं। A, C, D इस समस्या के कारण से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q28",
+      "question": "SMPS की तुलना में linear power supply किस स्थिति में अभी भी प्राथमिकता में रखी जाती है?",
+      "options": [
+        "जहाँ बहुत low noise/ripple और सरल circuit चाहिए, जैसे sensitive audio या measurement उपकरणों में",
+        "जहाँ बहुत उच्च efficiency और हल्का वजन चाहिए",
+        "जहाँ बड़ी mains voltage variation संभालनी हो",
+        "जहाँ compact आकार सबसे महत्वपूर्ण हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Linear supply switching noise रहित होती है और circuit सरल होता है, इसलिए sensitive audio preamplifier या precision measurement instruments में इसे अभी भी प्राथमिकता दी जाती है, भले ही यह भारी व कम efficient हो। B, C, D सभी SMPS के प्रबल लाभ हैं, linear के नहीं।"
+    },
+    {
+      "id": "u4_smps_q29",
+      "question": "SMPS में voltage-mode control और current-mode control में मूल अंतर क्या है?",
+      "options": [
+        "Voltage-mode केवल output voltage error के आधार पर PWM बनाता है, जबकि current-mode inductor/switch current को भी sense करके तेज़ व अधिक स्थिर regulation देता है",
+        "Current-mode कभी feedback उपयोग नहीं करता",
+        "Voltage-mode में कोई PWM नहीं होता",
+        "दोनों में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Voltage-mode control में सिर्फ output voltage error signal PWM duty cycle तय करता है, जबकि current-mode control में switch/inductor current को भी sense करके एक अतिरिक्त तेज़ inner loop बनाया जाता है, जिससे load व line changes पर response तेज तथा transformer saturation से बचाव बेहतर होता है। B, C, D कथन तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_smps_q30",
+      "question": "किसी SMPS की मरम्मत करते समय technician को capacitor की जाँच से पहले सुरक्षा हेतु सबसे पहले क्या सावधानी बरतनी चाहिए?",
+      "options": [
+        "बिना कुछ discharge किए सीधे multimeter से जाँच शुरू कर देना",
+        "AC mains से unit को disconnect करके तथा bulk filter capacitor को सुरक्षित रूप से discharge करके ही आगे काम करना, क्योंकि वह high voltage स्टोर रखता है",
+        "Fuse को हमेशा short कर देना",
+        "Transformer की winding को काट देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMPS का input bulk filter capacitor (लगभग 300-400V DC) mains disconnect करने के बाद भी काफी देर तक high voltage store रखता है, इसलिए पहले mains disconnect करके capacitor को उचित resistor से सुरक्षित discharge करना अनिवार्य है ताकि electric shock से बचा जा सके। A बहुत खतरनाक है, C fuse short करना protection हटाकर आग/damage का खतरा बढ़ाता है, D मरम्मत के लिए अनावश्यक व विनाशकारी कदम है।"
+    }
+  ]
+}
