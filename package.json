@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "postinstall": "node scripts/copy-sqljs-wasm.mjs",
+    "predev": "node scripts/copy-sqljs-wasm.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/copy-sqljs-wasm.mjs",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
