@@ -143,10 +143,10 @@ export default function Quiz() {
   const answeredCount = answers.filter((a) => a !== null && a !== undefined).length
 
   return (
-    <div className="max-w-2xl pb-24">
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <div className="text-sm text-slate-500">{state.scopeLabel}</div>
+    <div className="max-w-2xl pb-28 sm:pb-24">
+      <div className="flex flex-wrap items-start sm:items-center justify-between gap-2 mb-4">
+        <div className="min-w-0">
+          <div className="text-xs sm:text-sm text-slate-500 truncate">{state.scopeLabel}</div>
           <div className="text-sm font-medium text-slate-700">
             Q {currentIndex + 1} / {questions.length} &middot; {answeredCount} answered
           </div>
@@ -155,7 +155,7 @@ export default function Quiz() {
       </div>
 
       {timeUp && (
-        <div className="mb-4 rounded-lg bg-red-100 px-4 py-2 text-sm font-semibold text-red-700">
+        <div className="mb-4 rounded-lg bg-red-100 px-3 sm:px-4 py-2 text-sm font-semibold text-red-700">
           ⏰ Time khatam ho gaya hai! Ab Submit kar do.
         </div>
       )}
@@ -169,7 +169,7 @@ export default function Quiz() {
             <button
               key={i}
               onClick={() => setCurrentIndex(i)}
-              className={`h-7 w-7 rounded text-xs font-semibold ${
+              className={`h-7 w-7 sm:h-8 sm:w-8 rounded text-xs font-semibold shrink-0 ${
                 isCurrent
                   ? 'bg-indigo-600 text-white'
                   : answered
@@ -183,7 +183,7 @@ export default function Quiz() {
         })}
       </div>
 
-      <div className="rounded-xl border border-slate-200 bg-white p-5">
+      <div className="rounded-xl border border-slate-200 bg-white p-4 sm:p-5">
         {(current.unitName || current.topicName) && (
           <div className="mb-2 text-xs text-slate-400">
             {current.unitName}{current.topicName ? ` · ${current.topicName}` : ''}
@@ -216,21 +216,22 @@ export default function Quiz() {
       </div>
 
       <div className="fixed bottom-0 left-0 right-0 border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-3 flex items-center justify-between gap-2">
+        <div className="mx-auto max-w-2xl px-2 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between gap-1.5 sm:gap-2">
           <button
             type="button"
             onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
             disabled={currentIndex === 0}
-            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium disabled:opacity-40"
+            className="rounded-lg border border-slate-300 px-2.5 sm:px-4 py-2 text-xs sm:text-sm font-medium disabled:opacity-40 shrink-0"
           >
-            ← Previous
+            <span className="sm:hidden">← Prev</span>
+            <span className="hidden sm:inline">← Previous</span>
           </button>
 
           {currentIndex < questions.length - 1 ? (
             <button
               type="button"
               onClick={() => setCurrentIndex((i) => Math.min(questions.length - 1, i + 1))}
-              className="rounded-lg bg-slate-800 px-4 py-2 text-sm font-medium text-white"
+              className="rounded-lg bg-slate-800 px-2.5 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white shrink-0"
             >
               Next →
             </button>
@@ -240,9 +241,10 @@ export default function Quiz() {
             type="button"
             onClick={handleSubmit}
             disabled={submitting}
-            className="ml-auto rounded-lg bg-indigo-600 px-5 py-2 text-sm font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
+            className="ml-auto rounded-lg bg-indigo-600 px-3 sm:px-5 py-2 text-xs sm:text-sm font-semibold text-white hover:bg-indigo-700 disabled:opacity-50 shrink-0"
           >
-            {isExam ? 'Submit Quiz' : 'Quiz Khatam Karo'}
+            <span className="sm:hidden">{isExam ? 'Submit' : 'Khatam Karo'}</span>
+            <span className="hidden sm:inline">{isExam ? 'Submit Quiz' : 'Quiz Khatam Karo'}</span>
           </button>
         </div>
       </div>

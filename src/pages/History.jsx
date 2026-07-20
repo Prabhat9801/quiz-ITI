@@ -42,18 +42,18 @@ export default function History() {
             <div
               key={a.id}
               onClick={() => navigate(`/review/${a.id}`)}
-              className="cursor-pointer rounded-xl border border-slate-200 bg-white p-4 hover:border-indigo-300 transition"
+              className="cursor-pointer rounded-xl border border-slate-200 bg-white p-3 sm:p-4 hover:border-indigo-300 active:bg-slate-50 transition"
             >
               <div className="flex items-start justify-between gap-3">
-                <div>
-                  <div className="text-sm font-medium text-slate-900">{a.scope_label}</div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm font-medium text-slate-900 wrap-break-word">{a.scope_label}</div>
                   <div className="text-xs text-slate-500 mt-0.5">
                     {formatDate(a.timestamp)} &middot; {a.is_exam ? 'Exam Mode' : 'Learning Mode'} &middot; {a.question_count} questions
                   </div>
                 </div>
-                <span className={`text-lg font-bold ${scoreColor}`}>{a.score}%</span>
+                <span className={`shrink-0 text-lg font-bold ${scoreColor}`}>{a.score}%</span>
               </div>
-              <div className="mt-2 flex items-center justify-between">
+              <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
                 <div className="text-xs text-slate-500">
                   {a.correct_count} sahi · {a.wrong_count} galat · {a.unattempted_count} chhoote
                 </div>

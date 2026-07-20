@@ -22,9 +22,9 @@ export default function Setup() {
   const [selectedTopicKeys, setSelectedTopicKeys] = useState(new Set())
   const [expandedUnits, setExpandedUnits] = useState(new Set())
 
-  const [questionCount, setQuestionCount] = useState(10)
+  const [questionCount, setQuestionCount] = useState('10')
   const [timerEnabled, setTimerEnabled] = useState(false)
-  const [timerMinutes, setTimerMinutes] = useState(15)
+  const [timerMinutes, setTimerMinutes] = useState('15')
 
   useEffect(() => {
     getUnits().then((u) => {
@@ -50,10 +50,13 @@ export default function Setup() {
     return 0
   }, [mode, topicId, unitId, units, selectedUnitIds, selectedTopicKeys])
 
+  // Only clamp DOWN when the max shrinks below what's currently typed - never fight the user mid-typing.
   useEffect(() => {
+    if (maxAvailable === 0) return
     setQuestionCount((prev) => {
-      if (maxAvailable === 0) return prev
-      return Math.min(prev, maxAvailable)
+      const n = Number(prev)
+      if (!n) return prev
+      return n > maxAvailable ? String(maxAvailable) : prev
     })
   }, [maxAvailable])
 
@@ -161,15 +164,17 @@ export default function Setup() {
     return ''
   }
 
-  const canStart = maxAvailable > 0 && questionCount > 0
+  const numericQuestionCount = Math.max(1, Math.min(maxAvailable || 1, Number(questionCount) || 0))
+  const numericTimerMinutes = Math.max(1, Number(timerMinutes) || 1)
+  const canStart = maxAvailable > 0 && numericQuestionCount > 0
 
   function handleStart() {
     navigate('/quiz', {
       state: {
         mode,
         topicRefs: buildTopicRefs(),
-        questionCount,
-        timerSeconds: timerEnabled ? timerMinutes * 60 : null,
+        questionCount: numericQuestionCount,
+        timerSeconds: timerEnabled ? numericTimerMinutes * 60 : null,
         scopeLabel: buildScopeLabel(),
         isExam: false,
       },
@@ -187,7 +192,7 @@ export default function Setup() {
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Unit</label>
             <select
-              className="w-full rounded-lg border border-slate-300 p-2"
+              className="w-full rounded-lg border border-slate-300 p-2.5 text-base"
               value={topicUnitId}
               onChange={(e) => { setTopicUnitId(e.target.value); setTopicId('') }}
             >
@@ -201,7 +206,7 @@ export default function Setup() {
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">Topic</label>
               <select
-                className="w-full rounded-lg border border-slate-300 p-2"
+                className="w-full rounded-lg border border-slate-300 p-2.5 text-base"
                 value={topicId}
                 onChange={(e) => setTopicId(e.target.value)}
               >
@@ -219,7 +224,7 @@ export default function Setup() {
         <div className="mb-6">
           <label className="block text-sm font-medium text-slate-700 mb-1">Unit</label>
           <select
-            className="w-full rounded-lg border border-slate-300 p-2"
+            className="w-full rounded-lg border border-slate-300 p-2.5 text-base"
             value={unitId}
             onChange={(e) => setUnitId(e.target.value)}
           >
@@ -232,14 +237,14 @@ export default function Setup() {
       )}
 
       {mode === 'multiunit' && (
-        <div className="mb-6 space-y-2 max-h-96 overflow-y-auto rounded-lg border border-slate-200 p-3 bg-white">
+        <div className="mb-6 space-y-1 max-h-96 overflow-y-auto rounded-lg border border-slate-200 p-3 bg-white">
           {units.map((u) => (
-            <label key={u.id} className="flex items-center gap-2 py-1 cursor-pointer">
+            <label key={u.id} className="flex items-center gap-2.5 py-2 sm:py-1.5 cursor-pointer active:bg-slate-50 rounded-md -mx-1 px-1">
               <input
                 type="checkbox"
                 checked={selectedUnitIds.has(u.id)}
                 onChange={() => toggleUnit(u.id)}
-                className="h-4 w-4"
+                className="h-5 w-5 sm:h-4 sm:w-4 shrink-0"
               />
               <span className="text-sm">
                 {u.name} <span className="text-slate-400">({u.topics.length} topics)</span>
@@ -251,40 +256,40 @@ export default function Setup() {
 
       {mode === 'custom' && (
         <div className="mb-6">
-          <div className="flex gap-2 mb-2">
-            <button type="button" onClick={selectWholeSyllabus} className="text-xs rounded-md bg-indigo-50 text-indigo-700 px-2 py-1 font-medium">
+          <div className="flex flex-wrap gap-2 mb-2">
+            <button type="button" onClick={selectWholeSyllabus} className="text-xs rounded-md bg-indigo-50 text-indigo-700 px-2.5 py-1.5 font-medium">
               Poora Syllabus Select Karo
             </button>
-            <button type="button" onClick={() => setSelectedTopicKeys(new Set())} className="text-xs rounded-md bg-slate-100 text-slate-700 px-2 py-1 font-medium">
+            <button type="button" onClick={() => setSelectedTopicKeys(new Set())} className="text-xs rounded-md bg-slate-100 text-slate-700 px-2.5 py-1.5 font-medium">
               Clear All
             </button>
           </div>
           <div className="space-y-1 max-h-96 overflow-y-auto rounded-lg border border-slate-200 p-3 bg-white">
             {units.map((u) => (
               <div key={u.id} className="border-b border-slate-100 last:border-0 pb-1 mb-1">
-                <div className="flex items-center gap-2 py-1">
+                <div className="flex items-center gap-2.5 py-2 sm:py-1.5">
                   <input
                     type="checkbox"
                     checked={isUnitFullySelected(u)}
                     ref={(el) => { if (el) el.indeterminate = isUnitPartiallySelected(u) }}
                     onChange={() => toggleWholeUnitCustom(u)}
-                    className="h-4 w-4"
+                    className="h-5 w-5 sm:h-4 sm:w-4 shrink-0"
                   />
-                  <button type="button" onClick={() => toggleUnitExpanded(u.id)} className="text-sm font-medium text-left flex-1">
+                  <button type="button" onClick={() => toggleUnitExpanded(u.id)} className="text-sm font-medium text-left flex-1 py-1 -my-1">
                     {expandedUnits.has(u.id) ? '▾' : '▸'} {u.name}
                   </button>
                 </div>
                 {expandedUnits.has(u.id) && (
-                  <div className="pl-6 space-y-1">
+                  <div className="pl-5 sm:pl-6 space-y-0.5">
                     {u.topics.map((t) => (
-                      <label key={t.id} className="flex items-center gap-2 py-0.5 cursor-pointer">
+                      <label key={t.id} className="flex items-center gap-2.5 py-1.5 sm:py-1 cursor-pointer active:bg-slate-50 rounded-md">
                         <input
                           type="checkbox"
                           checked={selectedTopicKeys.has(`${u.id}::${t.id}`)}
                           onChange={() => toggleTopicCustom(u, t)}
-                          className="h-3.5 w-3.5"
+                          className="h-4 w-4 shrink-0"
                         />
-                        <span className="text-xs text-slate-700">{t.name}</span>
+                        <span className="text-xs sm:text-sm text-slate-700">{t.name}</span>
                       </label>
                     ))}
                   </div>
@@ -302,11 +307,13 @@ export default function Setup() {
           </label>
           <input
             type="number"
+            inputMode="numeric"
             min={1}
             max={maxAvailable || 1}
             value={questionCount}
-            onChange={(e) => setQuestionCount(Math.max(1, Math.min(maxAvailable || 1, Number(e.target.value))))}
-            className="w-32 rounded-lg border border-slate-300 p-2"
+            onChange={(e) => setQuestionCount(e.target.value)}
+            onBlur={() => setQuestionCount(String(Math.max(1, Math.min(maxAvailable || 1, Number(questionCount) || 0))))}
+            className="w-full sm:w-32 rounded-lg border border-slate-300 p-2.5 text-base"
             disabled={maxAvailable === 0}
           />
         </div>
@@ -320,10 +327,12 @@ export default function Setup() {
             <div className="flex items-center gap-2">
               <input
                 type="number"
+                inputMode="numeric"
                 min={1}
                 value={timerMinutes}
-                onChange={(e) => setTimerMinutes(Math.max(1, Number(e.target.value)))}
-                className="w-32 rounded-lg border border-slate-300 p-2"
+                onChange={(e) => setTimerMinutes(e.target.value)}
+                onBlur={() => setTimerMinutes(String(Math.max(1, Number(timerMinutes) || 1)))}
+                className="w-full sm:w-32 rounded-lg border border-slate-300 p-2.5 text-base"
               />
               <span className="text-sm text-slate-500">minutes</span>
             </div>

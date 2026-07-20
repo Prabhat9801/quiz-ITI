@@ -42,22 +42,22 @@ const MODES = [
 export default function Home() {
   return (
     <div>
-      <h1 className="text-2xl font-bold text-slate-900 mb-1">
+      <h1 className="text-xl sm:text-2xl font-bold text-slate-900 mb-1">
         Electronic Mechanic / Radio &amp; TV — Quiz System
       </h1>
-      <p className="text-slate-600 mb-6">
+      <p className="text-sm sm:text-base text-slate-600 mb-5 sm:mb-6">
         170 topics, 5,100 questions — Hindi me, technical terms English me.
       </p>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2">
         {MODES.map((m) => (
           <Link
             key={m.to}
             to={m.to}
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-indigo-300 hover:shadow-md"
+            className="rounded-xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm transition hover:border-indigo-300 hover:shadow-md active:bg-slate-50"
           >
-            <div className="text-3xl mb-2">{m.emoji}</div>
-            <div className="text-lg font-semibold text-slate-900">{m.title}</div>
+            <div className="text-2xl sm:text-3xl mb-2">{m.emoji}</div>
+            <div className="text-base sm:text-lg font-semibold text-slate-900">{m.title}</div>
             <div className="text-sm text-slate-600 mt-1">{m.desc}</div>
           </Link>
         ))}

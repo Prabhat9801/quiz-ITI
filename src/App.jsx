@@ -9,21 +9,21 @@ import History from './pages/History.jsx'
 function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-4xl px-4 py-3 flex items-center justify-between">
-          <Link to="/" className="text-lg font-semibold text-indigo-700">
+      <header className="border-b border-slate-200 bg-white sticky top-0 z-10">
+        <div className="mx-auto max-w-4xl px-3 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between gap-2">
+          <Link to="/" className="text-sm sm:text-lg font-semibold text-indigo-700 truncate">
             Electronic Mechanic Quiz
           </Link>
           <Link
             to="/history"
-            className="text-sm font-medium text-slate-600 hover:text-indigo-700"
+            className="shrink-0 text-sm font-medium text-slate-600 hover:text-indigo-700"
           >
             History
           </Link>
         </div>
       </header>
 
-      <main className="mx-auto max-w-4xl px-4 py-6">
+      <main className="mx-auto max-w-4xl px-3 sm:px-4 py-4 sm:py-6">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/setup/:mode" element={<Setup />} />
