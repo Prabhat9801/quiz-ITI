@@ -4,9 +4,12 @@ server {
     root /usr/share/nginx/html;
     index index.html;
 
-    # SPA fallback - client-side routes (react-router) all resolve to index.html
+    # SPA fallback - client-side routes (react-router) all resolve to index.html.
+    # index.html must never be cached, otherwise browsers keep referencing old,
+    # content-hashed JS/CSS bundle filenames after a new deploy.
     location / {
         try_files $uri $uri/ /index.html;
+        add_header Cache-Control "no-cache";
     }
 
     # sql.js wasm file must be served with the correct MIME type
