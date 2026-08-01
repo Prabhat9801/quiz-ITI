@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { loadAllQuestions, loadQuestionsForTopics, prepareQuizQuestions } from '../data/questionBank'
+import {
+  loadPracticeSet,
+  loadQuestionsForTopics,
+  prepareQuizQuestions,
+  prepareFixedQuizQuestions,
+} from '../data/questionBank'
 import { saveAttempt } from '../db/historyService'
 import Timer from '../components/Timer.jsx'
 
@@ -20,12 +25,16 @@ export default function Quiz() {
     if (!state) return
     let cancelled = false
     async function load() {
-      const pool =
-        state.mode === 'practiceset'
-          ? await loadAllQuestions()
-          : await loadQuestionsForTopics(state.topicRefs)
-      if (cancelled) return
-      const prepared = prepareQuizQuestions(pool, state.questionCount)
+      let prepared
+      if (state.mode === 'practiceset') {
+        const fixedSet = await loadPracticeSet(state.practiceSetNumber)
+        if (cancelled) return
+        prepared = prepareFixedQuizQuestions(fixedSet)
+      } else {
+        const pool = await loadQuestionsForTopics(state.topicRefs)
+        if (cancelled) return
+        prepared = prepareQuizQuestions(pool, state.questionCount)
+      }
       setQuestions(prepared)
       setAnswers(new Array(prepared.length).fill(null))
       startTimeRef.current = Date.now()
@@ -126,6 +135,7 @@ export default function Quiz() {
       timerSeconds: state.timerSeconds,
       scopeLabel: state.scopeLabel,
       isExam: state.isExam,
+      practiceSetNumber: state.practiceSetNumber,
     }
 
     const id = await saveAttempt({

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { loadPracticeSet } from '../data/questionBank'
+import { downloadPracticeSetWorksheetPdf, downloadPracticeSetAnswersPdf } from '../pdf/practiceSetPdf'
 
 const TOTAL_SETS = 30
 const SET_QUESTION_COUNT = 100
@@ -9,12 +11,29 @@ export default function PracticeSets() {
   const [openSet, setOpenSet] = useState(null)
   const [timerEnabled, setTimerEnabled] = useState(true)
   const [timerMinutes, setTimerMinutes] = useState('90')
+  const [pdfBusy, setPdfBusy] = useState(null) // e.g. "12-worksheet" while generating
+
+  async function handleDownload(setNumber, variant) {
+    const key = `${setNumber}-${variant}`
+    setPdfBusy(key)
+    try {
+      const questions = await loadPracticeSet(setNumber)
+      if (variant === 'worksheet') {
+        await downloadPracticeSetWorksheetPdf(setNumber, questions)
+      } else {
+        await downloadPracticeSetAnswersPdf(setNumber, questions)
+      }
+    } finally {
+      setPdfBusy(null)
+    }
+  }
 
   function handleStart(setNumber) {
     const minutes = Math.max(1, Number(timerMinutes) || 1)
     navigate('/quiz', {
       state: {
         mode: 'practiceset',
+        practiceSetNumber: setNumber,
         topicRefs: [],
         questionCount: SET_QUESTION_COUNT,
         timerSeconds: timerEnabled ? minutes * 60 : null,
@@ -28,8 +47,8 @@ export default function PracticeSets() {
     <div>
       <h1 className="text-xl font-bold mb-1">Practice Sets (1–30)</h1>
       <p className="text-sm text-slate-600 mb-4">
-        Har set me poore syllabus (5,100 questions) se {SET_QUESTION_COUNT} random questions — exam-style,
-        feedback sirf submit karne ke baad milega.
+        Har set fixed {SET_QUESTION_COUNT} questions ka ek permanent worksheet hai — exam-style, feedback
+        sirf submit karne ke baad milega. Har set ka PDF bhi download kar sakte ho.
       </p>
 
       <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 sm:gap-3">
@@ -86,6 +105,26 @@ export default function PracticeSets() {
           >
             Set {openSet} Shuru Karo
           </button>
+
+          <div className="border-t border-slate-200 pt-3 space-y-2">
+            <p className="text-xs font-medium text-slate-500">PDF Download</p>
+            <button
+              type="button"
+              onClick={() => handleDownload(openSet, 'worksheet')}
+              disabled={pdfBusy === `${openSet}-worksheet`}
+              className="w-full rounded-lg border border-slate-300 py-2 text-sm font-medium text-slate-700 transition hover:border-indigo-300 disabled:opacity-50"
+            >
+              {pdfBusy === `${openSet}-worksheet` ? 'PDF ban raha hai…' : '📄 Worksheet PDF (sirf questions)'}
+            </button>
+            <button
+              type="button"
+              onClick={() => handleDownload(openSet, 'answers')}
+              disabled={pdfBusy === `${openSet}-answers`}
+              className="w-full rounded-lg border border-slate-300 py-2 text-sm font-medium text-slate-700 transition hover:border-indigo-300 disabled:opacity-50"
+            >
+              {pdfBusy === `${openSet}-answers` ? 'PDF ban raha hai…' : '📄 Answer Key PDF (jawab + explanation)'}
+            </button>
+          </div>
         </div>
       )}
     </div>

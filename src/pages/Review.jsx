@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getAttemptById } from '../db/historyService'
+import { downloadAttemptReviewPdf } from '../pdf/practiceSetPdf'
 
 function formatDuration(totalSeconds) {
   const m = Math.floor(totalSeconds / 60)
@@ -13,6 +14,7 @@ export default function Review() {
   const navigate = useNavigate()
   const [attempt, setAttempt] = useState(null)
   const [notFound, setNotFound] = useState(false)
+  const [pdfBusy, setPdfBusy] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -27,6 +29,16 @@ export default function Review() {
   function handleRetry() {
     if (!attempt) return
     navigate('/quiz', { state: attempt.retryConfig })
+  }
+
+  async function handleDownloadPdf() {
+    if (!attempt) return
+    setPdfBusy(true)
+    try {
+      await downloadAttemptReviewPdf(attempt.scope_label, attempt.questions)
+    } finally {
+      setPdfBusy(false)
+    }
   }
 
   if (notFound) {
@@ -64,6 +76,14 @@ export default function Review() {
             className="rounded-lg bg-indigo-600 px-4 py-2.5 sm:py-2 text-sm font-semibold text-white hover:bg-indigo-700"
           >
             🔁 Retry (naye random questions)
+          </button>
+          <button
+            type="button"
+            onClick={handleDownloadPdf}
+            disabled={pdfBusy}
+            className="rounded-lg border border-slate-300 px-4 py-2.5 sm:py-2 text-sm font-medium disabled:opacity-50"
+          >
+            {pdfBusy ? 'PDF ban raha hai…' : '📄 Download PDF'}
           </button>
           <button
             type="button"

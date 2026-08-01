@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Self-hosted so Devanagari renders correctly regardless of the visitor's OS/device fonts —
+   used both on-screen (via .quiz-text) and for the PDF export canvas renderer. */
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  src: url("/fonts/NotoSansDevanagari.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light dark;
 }
@@ -15,6 +24,7 @@ body {
 
 /* Devanagari renders more legibly a touch larger + with slightly more line-height */
 .quiz-text {
+  font-family: "Noto Sans Devanagari", system-ui, "Segoe UI", Roboto, sans-serif;
   font-size: 1.05rem;
   line-height: 1.7;
 }

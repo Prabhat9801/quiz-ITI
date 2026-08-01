@@ -13,6 +13,7 @@ A quiz/practice-test system for **ITI Electronic Mechanic / Mechanic Radio & TV*
 - **sql.js** (SQLite compiled to WebAssembly) — stores quiz history/attempts. The `.wasm` file lives at `public/sql-wasm.wasm`.
 - **idb-keyval** — persists the serialized SQLite database into the browser's IndexedDB so history survives page reloads.
 - **Tailwind CSS v4** (`@tailwindcss/vite` plugin) — styling.
+- **jspdf** — generates Practice Set / attempt-review PDFs entirely client-side (see "Practice Set PDF export" below).
 
 No server, no database service, no user accounts. Everything (question bank + history) lives in the browser/static files.
 
@@ -44,7 +45,11 @@ Every question, option, and explanation is written in **Devanagari Hindi**, with
 
 **Timer:** user sets it (or "No Timer") in every mode, including Practice Sets. When it hits zero: **show a warning only** — do NOT auto-submit. User must submit manually.
 
-**Practice Sets (1–30):** these are **not** pre-baked fixed content — each is just a labeled entry point. Every time one is played (first time or retry), it draws **100 fresh random questions from the full 5,100-question pool**. All 30 sets are functionally identical; only the label differs (for history/tracking purposes).
+**Practice Sets (1–30):** **fixed, permanent content** — each set is a pre-generated, unchanging list of exactly 100 questions (see `public/questions/practice-sets/set-01.json` … `set-30.json`, built by `scripts/generate-practice-sets.mjs` with a fixed seed so regenerating is reproducible). Playing/retrying a set always uses the same 100 questions (only their on-screen order and each question's option order are reshuffled per-play — the question *set* itself never changes). This was a deliberate reversal of the original "always-random" design, made specifically so each set could be exported as a stable, downloadable PDF worksheet (see below). The 30 sets together cover 3,000 of the 5,100 questions (non-overlapping); the rest of the pool is still used by Topic/Unit/Multi-Unit/Custom modes.
+
+**Practice Set PDF export:** every set has two downloadable PDFs, generated entirely client-side from `public/questions/practice-sets/set-NN.json` (`src/pdf/practiceSetPdf.js`, using `jspdf`): a blank worksheet (questions + options only) and an answer-key version (questions + correct answer marked + explanations). A **completed attempt** (any mode, from the History/Review screen) can also be downloaded as a PDF of that specific attempt's question-by-question review.
+
+**Why PDFs render via canvas, not jsPDF's text API:** all content is Devanagari Hindi. jsPDF's built-in fonts (and even a custom TTF registered via `addFont`) don't do real Unicode text shaping — Devanagari needs conjunct-consonant ligatures (क्ष, त्र, ज्ञ) and matra reordering that jsPDF's per-glyph pipeline can't produce correctly, so it renders garbled output. The fix: each PDF page is first drawn to an offscreen `<canvas>` using the browser's own text renderer (which shapes Devanagari correctly), then that canvas is embedded into the PDF as a raster image via `doc.addImage()`. A self-hosted Noto Sans Devanagari font (`public/fonts/NotoSansDevanagari.ttf`, OFL-licensed, loaded via `@font-face` in `src/index.css`) guarantees correct glyphs regardless of the visitor's OS fonts — the code explicitly waits on `document.fonts.ready` before drawing to canvas. This stays fully client-side; no backend or font-shaping service involved.
 
 **Question count logic:** every topic has exactly 30 questions, so max-available for any selection = `30 × number of selected topics`. No need to fetch files just to compute a max.
 
@@ -62,6 +67,8 @@ quiz-app/
     PROJECT_HISTORY.md       # full narrative of the project's design conversation — keep updated
   public/
     sql-wasm.wasm
+    fonts/
+      NotoSansDevanagari.ttf  # self-hosted, OFL — guarantees correct Devanagari shaping everywhere
     questions/
       manifest.json
       all-questions.json     # generated — see scripts/merge-questions.mjs
@@ -69,11 +76,16 @@ quiz-app/
       General_Mathematics/*.json
       General_Physics/*.json
       General_Chemistry/*.json
+      practice-sets/
+        index.json            # generated — set list + question counts
+        set-01.json ... set-30.json  # generated — each a FIXED list of 100 questions
   scripts/
-    merge-questions.mjs       # rebuilds all-questions.json from manifest + topic files
+    merge-questions.mjs        # rebuilds all-questions.json from manifest + topic files
+    generate-practice-sets.mjs # rebuilds the 30 fixed practice-sets/set-NN.json files (seeded, reproducible)
   src/
     db/          # sql.js init + persistence, history CRUD
-    data/        # question bank loading/sampling helpers
+    data/        # question bank loading/sampling helpers (incl. loadPracticeSet)
+    pdf/         # practiceSetPdf.js — client-side PDF generation (canvas-rendered for Devanagari)
     pages/       # Home, Setup, Quiz, Review, History, PracticeSets
     components/  # Timer, shared UI bits
 ```

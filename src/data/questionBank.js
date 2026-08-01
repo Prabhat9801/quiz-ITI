@@ -30,6 +30,22 @@ export function loadAllQuestions() {
   return allQuestionsPromise
 }
 
+const practiceSetCache = new Map()
+
+/**
+ * Loads one FIXED Practice Set (1-30). Each set is a permanent, pre-generated list of exactly
+ * 100 questions (see scripts/generate-practice-sets.mjs) — unlike other modes, this is NOT a
+ * random draw from the pool, so the same set always contains the same questions (needed so the
+ * set can be exported as a stable PDF worksheet). Cached per set number.
+ */
+export async function loadPracticeSet(setNumber) {
+  if (practiceSetCache.has(setNumber)) return practiceSetCache.get(setNumber)
+  const fileName = `set-${String(setNumber).padStart(2, '0')}.json`
+  const data = await fetch(`/questions/practice-sets/${fileName}`).then((r) => r.json())
+  practiceSetCache.set(setNumber, data.questions)
+  return data.questions
+}
+
 /** Loads one topic's 30 questions, tagged with unit/topic metadata. Cached per file. */
 export async function loadTopicQuestions(unit, topic) {
   const cacheKey = `${unit.folder}/${topic.file}`
@@ -88,4 +104,13 @@ export function shuffleQuestionOptions(question) {
 /** Prepares a quiz-ready set: sample `count` questions, then shuffle each one's option order. */
 export function prepareQuizQuestions(pool, count) {
   return sampleQuestions(pool, count).map(shuffleQuestionOptions)
+}
+
+/**
+ * Prepares a FIXED set (e.g. a Practice Set) for play: keeps the exact question list as-is
+ * (no re-sampling — that's what makes the set's content permanent/PDF-able), but still
+ * shuffles each question's own option order and overall question order per-play, per spec.
+ */
+export function prepareFixedQuizQuestions(questions) {
+  return shuffle(questions).map(shuffleQuestionOptions)
 }
