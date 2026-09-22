@@ -213,6 +213,41 @@
       "options": ["आधी हो जाती है", "समान रहती है", "दोगुनी हो जाती है", "चार गुनी हो जाती है"],
       "correctIndex": 2,
       "explanation": "R = ρL/A के अनुसार resistance, length के directly proportional होती है, इसलिए length दोगुनी करने पर resistance भी दोगुनी हो जाती है — option 2 सही। आधी होना (option 0), समान रहना (option 1) और चार गुनी होना (option 3) सूत्र के विरुद्ध हैं; चार गुना तो area या diameter square से जुड़ा होता है।"
+    },
+    {
+      "id": "u6_cable_classification_q31",
+      "question": "Electrical signal diagram में wire/conductor को represent करने के लिए मानक (standard) convention क्या है?",
+      "options": ["Wavy dotted line से", "Straight solid line से", "Circle के रूप में", "Cross (×) चिह्न से"],
+      "correctIndex": 1,
+      "explanation": "Signal/circuit diagram conventions के अनुसार conductor या wire को हमेशा एक straight solid line से दिखाया जाता है, इसलिए option 1 सही है। Wavy dotted line सामान्यतः AC supply या shielded/flexible connection दिखाने के लिए reserved होती है (option 0 गलत), circle terminal/junction या component के लिए है, wire के लिए नहीं (option 2 गलत), और cross चिह्न crossing conductors (unconnected) दिखाने के लिए है, स्वयं wire के लिए नहीं (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q32",
+      "question": "Signal/wiring diagram में दो conductors एक-दूसरे को बिना जुड़े cross कर रहे हों (no electrical connection), उन्हें सही ढंग से कैसे दिखाया जाता है?",
+      "options": ["सीधे एक-दूसरे को काटती हुई plain lines से, बिना किसी dot या jump के", "एक line पर छोटा semicircular jump (hop) बनाकर", "दोनों lines को मोटा (thick) करके", "दोनों lines के बीच बड़ा gap छोड़कर पूरी तरह अलग खींचकर"],
+      "correctIndex": 1,
+      "explanation": "Standard convention में unconnected crossing wires को स्पष्ट करने के लिए एक line पर छोटा semicircular jump (hop/bridge) बनाया जाता है ताकि पढ़ने वाले को यह साफ़ पता चले कि connection नहीं है — option 1 सही। बिना jump के plain crossing lines को अक्सर connected समझ लिया जा सकता है, इसलिए यह ambiguous है (option 0 गलत), line की thickness connection की जानकारी नहीं देती (option 2 गलत), और diagram में conductors को उनके वास्तविक routing के अनुसार ही खींचा जाता है, मनमाना gap छोड़ना convention नहीं है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q33",
+      "question": "एक conductor की current carrying capacity 16A है और उसका cross-section area 1.5 sq mm है। यदि उसी material व insulation प्रकार का एक conductor 2.5 sq mm area का लिया जाए, तो उसकी current carrying capacity लगभग किस दिशा में और क्यों बदलेगी?",
+      "options": ["16A से घटकर कम हो जाएगी, क्योंकि area बढ़ने से resistance बढ़ती है", "16A से बढ़कर अधिक हो जाएगी, क्योंकि अधिक area अधिक current को सुरक्षित रूप से handle कर सकता है", "ठीक 16A ही रहेगी, area का ampacity पर कोई प्रभाव नहीं", "0A हो जाएगी क्योंकि बड़ा conductor अधिक heat generate करता है"],
+      "correctIndex": 1,
+      "explanation": "Cross-section area बढ़ने पर conductor का resistance (R = ρL/A) घटता है, जिससे वह अधिक current को safe temperature limit के भीतर handle कर सकता है; इसलिए 2.5 sq mm conductor की ampacity 1.5 sq mm से अधिक होगी (मानक tables में लगभग 20A के आसपास) — option 1 सही। Resistance area बढ़ने से घटती है, बढ़ती नहीं (option 0 गलत), ampacity area के साथ बदलती है, स्थिर नहीं रहती (option 2 गलत), और बड़ा conductor heat कम generate करता है, current शून्य नहीं होती (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q34",
+      "question": "Insulation की flexibility rating की दृष्टि से, बार-बार तेज़ी से मोड़े (flex) जाने वाले control cable के लिए insulation material चुनते समय किस गुण को सबसे अधिक महत्व दिया जाता है?",
+      "options": ["सबसे अधिक dielectric strength", "सबसे अधिक hardness और rigidity", "अच्छी flex-fatigue resistance के साथ softness/elasticity", "सबसे कम cost, गुणों की परवाह किए बिना"],
+      "correctIndex": 2,
+      "explanation": "बार-बार flexing वाले control cables के लिए insulation में अच्छी flex-fatigue resistance और पर्याप्त softness/elasticity होनी चाहिए ताकि बार-बार मोड़ने पर crack न पड़े — option 2 सही। केवल high dielectric strength flexing सहन करने की गारंटी नहीं देती (option 0 गलत), अधिक hardness/rigidity flexing applications के लिए उल्टा नुकसानदायक है क्योंकि यह जल्दी crack करती है (option 1 गलत), और सुरक्षा से समझौता करके सिर्फ cost देखना गलत engineering practice है (option 3 गलत)।"
+    },
+    {
+      "id": "u6_cable_classification_q35",
+      "question": "Insulated conductor की current capacity रेटिंग निर्धारित करते समय निर्माता (manufacturer) मुख्यतः किन दो factors को आधार बनाता है?",
+      "options": ["केवल cable की length और उसका रंग", "Conductor का cross-section area और insulation की maximum permissible temperature rating", "केवल cable की market price और उसकी packaging", "केवल conductor का brand नाम और उसका वजन"],
+      "correctIndex": 1,
+      "explanation": "Current capacity rating तय करने के लिए मुख्य रूप से conductor का cross-section area (जो resistance/heat generation तय करता है) और insulation की maximum permissible temperature rating (जो यह तय करता है कि conductor कितना गरम हो सकता है बिना insulation खराब हुए) को आधार बनाया जाता है — option 1 सही। Length rating तय नहीं करती और रंग केवल identification के लिए है (option 0 गलत), price/packaging का rating से कोई तकनीकी संबंध नहीं (option 2 गलत), और brand नाम या वज़न current capacity का वैज्ञानिक आधार नहीं हैं (option 3 गलत)।"
     }
   ]
 }
