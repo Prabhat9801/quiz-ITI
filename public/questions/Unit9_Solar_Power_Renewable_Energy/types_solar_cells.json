@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "सही cell type चुनने के लिए efficiency (कितनी power मिलेगी), cost (बजट), और उपलब्ध installation area तथा application की ज़रूरत — इन तीनों factors को संतुलित रूप से देखा जाता है। केवल रंग, manufacturer का नाम, या technology की उम्र देखना पर्याप्त निर्णय-आधार नहीं है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q31",
+      "question": "Monocrystalline silicon ingot बनाने के लिए industry में मुख्यतः किस प्रक्रिया का उपयोग किया जाता है?",
+      "options": [
+        "Czochralski process, जिसमें molten silicon से single seed crystal को धीरे-धीरे घुमाकर खींचा (pull) जाता है",
+        "Casting process, जिसमें molten silicon को सीधे block mould में डाल दिया जाता है",
+        "Sputtering process, जिसमें material को vacuum में substrate पर deposit किया जाता है",
+        "Screen printing process, जिसमें paste को substrate पर छापा जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Monocrystalline ingot Czochralski process से बनता है, जिसमें एक single seed crystal को molten silicon के crucible से धीरे-धीरे घुमाते हुए ऊपर खींचा जाता है ताकि एक ही continuous crystal orientation बना रहे। Casting process polycrystalline silicon के लिए प्रयोग होती है, जबकि sputtering और screen printing thin-film/paste-based deposition तकनीकें हैं, single-crystal ingot बनाने से इनका संबंध नहीं है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q32",
+      "question": "एक residential installer को दो options दिए गए हैं — Option A: monocrystalline panel जिसकी efficiency 21% है, Option B: polycrystalline panel जिसकी efficiency 16% है, दोनों की wattage rating समान है। समान power output के लिए किस option को कम roof area चाहिए होगा, और क्यों?",
+      "options": [
+        "Option B को कम area चाहिए क्योंकि polycrystalline हमेशा compact होते हैं",
+        "Option A को कम area चाहिए क्योंकि उच्च efficiency के कारण प्रति unit area अधिक power मिलता है",
+        "दोनों को बराबर area चाहिए क्योंकि wattage rating समान है",
+        "Option A को अधिक area चाहिए क्योंकि monocrystalline cells बड़े आकार के होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Efficiency यह दर्शाती है कि प्रति unit area कितनी solar energy को usable electrical power में बदला जा सकता है, इसलिए 21% efficiency वाले monocrystalline (Option A) panel को समान wattage के लिए 16% efficiency वाले polycrystalline (Option B) से कम area चाहिए होगा। wattage rating समान होने से area बराबर होना ज़रूरी नहीं — कम efficiency वाले panel को अधिक area covering करके ही समान wattage तक पहुँचाया जाता है, इसलिए option B compact होने या दोनों की area बराबर होने की बातें गलत हैं, और monocrystalline cells का आकार बड़ा होने से संबंधित तर्क भी असंगत है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q33",
+      "question": "किसी polycrystalline wafer को माइक्रोस्कोप से देखने पर अलग-अलग दिशाओं में उन्मुख (oriented) कई छोटे-छोटे crystal patches दिखाई देते हैं, जबकि उसी आकार के monocrystalline wafer में ऐसा पैटर्न नहीं दिखता। इसका मूल कारण क्या है?",
+      "options": [
+        "Polycrystalline wafer पर विशेष रंग की coating की जाती है जिससे patches दिखते हैं",
+        "Polycrystalline silicon solidification के दौरान कई अलग-अलग जगह से crystal growth शुरू होती है, जिससे अलग-अलग orientation वाले grains बन जाते हैं, जबकि monocrystalline में growth एक ही seed crystal से निरंतर होती है",
+        "Monocrystalline wafer को polishing से पूरी तरह smooth बना दिया जाता है इसलिए grains छिप जाते हैं",
+        "यह अंतर केवल measurement instrument की गलती से दिखाई देता है, असल में कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Polycrystalline silicon को cast करते समय molten silicon एक साथ कई nucleation points से solidify होना शुरू करता है, जिससे अलग-अलग orientation वाले grains बनते हैं और grain boundaries पैदा होती हैं। Monocrystalline में growth एक ही seed crystal से क्रमिक रूप से होती है, इसलिए कोई grain boundary नहीं बनती। यह अंतर coating, polishing, या instrument की त्रुटि से नहीं बल्कि solidification के मूल भौतिक process से आता है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q34",
+      "question": "एक remote off-grid site पर, जहाँ transportation के दौरान panels को मोड़कर (flexible रूप में) ले जाना ज़रूरी है और भार (weight) भी बहुत सीमित रखना है, कौन-सा cell type व्यावहारिक रूप से सबसे उपयुक्त रहेगा, भले ही उसकी efficiency थोड़ी कम हो?",
+      "options": [
+        "Rigid monocrystalline glass-backed panel",
+        "Rigid polycrystalline glass-backed panel",
+        "Flexible thin-film based panel, क्योंकि यह हल्का और मोड़ने योग्य होता है",
+        "किसी भी प्रकार का panel उपयुक्त नहीं होगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "Thin-film cells को flexible substrate (जैसे plastic या thin metal foil) पर बनाया जा सकता है, जिससे वे हल्के, मोड़ने योग्य और transport में सुविधाजनक होते हैं — भले ही इनकी efficiency crystalline cells से कम हो, कठिन transportation और weight-सीमा वाली स्थिति में यह practical trade-off स्वीकार्य होता है। Rigid glass-backed monocrystalline और polycrystalline panels भारी और भंगुर होते हैं, इन्हें मोड़ा नहीं जा सकता, इसलिए ये सीमित option हैं, और 'कोई panel उपयुक्त नहीं' कथन गलत है क्योंकि thin-film विकल्प उपलब्ध है।"
+    },
+    {
+      "id": "u9_types_solar_cells_q35",
+      "question": "एक 250 W क्षमता वाला monocrystalline panel (efficiency 20%) और एक 250 W क्षमता वाला polycrystalline panel (efficiency 16%) उपलब्ध हैं। किसी installation में यदि दोनों panels को समान standard test conditions पर rate किया गया है, तो निम्न में से कौन-सा कथन सही होगा?",
+      "options": [
+        "Polycrystalline panel का physical area monocrystalline panel से कम होगा",
+        "दोनों panels का physical area बिल्कुल समान होगा क्योंकि wattage समान है",
+        "Monocrystalline panel का physical area polycrystalline panel से कम होगा क्योंकि इसकी efficiency अधिक है",
+        "Physical area efficiency पर निर्भर नहीं करता, यह पूरी तरह random होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "समान wattage rating होने पर भी, अधिक efficiency वाला monocrystalline panel (20%) कम physical area में उतनी ही power उत्पन्न कर सकता है, जबकि कम efficiency वाले polycrystalline panel (16%) को समान wattage प्राप्त करने के लिए तुलनात्मक रूप से अधिक area चाहिए होता है। इसलिए polycrystalline का area कम होना या दोनों का area बराबर होना गलत कथन हैं, और physical area efficiency से प्रत्यक्ष रूप से जुड़ा होता है, यह random नहीं है।"
     }
   ]
 }

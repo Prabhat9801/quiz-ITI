@@ -363,6 +363,66 @@
       ],
       "correctIndex": 0,
       "explanation": "Solar PV cell में कोई moving mechanical parts नहीं होते, यह केवल solid semiconductor material की layers से बना होता है जिसमें electron-level phenomena से बिजली बनती है, इसलिए इसे 'solid-state' device कहा जाता है। इसका पानी में रखने, gears होने, या battery जैसा काम करने से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q31",
+      "question": "एक basic PV cell की layered structure में front (top) surface पर anti-reflective coating लगाने का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Cell को अतिरिक्त mechanical strength देना ताकि वह टूटे न",
+        "Incident sunlight के reflection losses को कम करना ताकि अधिकतम photons semiconductor के अंदर absorb हो सकें",
+        "Cell के surface को waterproof बनाना ताकि बारिश में खराब न हो",
+        "Cell के अंदर current की दिशा तय करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bare silicon surface से काफी sunlight reflect होकर वापस चली जाती है, इसलिए एक thin anti-reflective coating लगाई जाती है जो इस reflection को कम करके अधिकतम photons को semiconductor के अंदर पहुँचाती है, जिससे अधिक electron-hole pairs बनते हैं। यह coating mechanical strength, waterproofing, या current direction तय करने के लिए नहीं होती — ये अलग-अलग design considerations हैं।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q32",
+      "question": "PV cell की basic structure में front metal contacts (grid fingers/busbars) को पूरी सतह पर फैला हुआ solid sheet बनाने के बजाय thin fingers जैसा क्यों बनाया जाता है?",
+      "options": [
+        "क्योंकि thin fingers से cell का weight कम हो जाता है, बस इसी वजह से",
+        "क्योंकि solid metal sheet से cell का रंग खराब हो जाता है",
+        "ताकि collected current कम resistance से बाहर निकल सके, जबकि साथ ही अधिकतम light भी semiconductor की सतह तक बिना रुके पहुँच सके",
+        "क्योंकि thin fingers लगाना solid sheet से सस्ता manufacturing process है, performance से इसका कोई संबंध नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "यदि front contact पूरी सतह को ढकने वाली solid metal sheet हो, तो वह अधिकांश incident light को block कर देगी; इसलिए thin grid fingers/busbars का design चुना जाता है जो current collection के लिए कम resistance path भी देता है और साथ ही अधिकतम सतह को light के लिए खुला भी रखता है। यह केवल weight कम करने, रंग या cost की बात नहीं बल्कि light-blocking बनाम current-collection के बीच एक ज़रूरी design trade-off है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q33",
+      "question": "एक basic PV cell में p-type और n-type semiconductor layers के बीच बनने वाला p-n junction, photovoltaic effect के लिए इतना आवश्यक क्यों है?",
+      "options": [
+        "क्योंकि junction केवल cell को mechanically दो हिस्सों में मजबूती से जोड़ने का काम करता है",
+        "क्योंकि junction cell के अंदर temperature को नियंत्रित करता है",
+        "क्योंकि junction केवल cell का रंग गहरा करने के लिए होता है ताकि अधिक light absorb हो",
+        "क्योंकि junction के बिना photon absorption से बने electron-hole pairs बिना separation के तुरंत recombine हो जाएँगे और कोई usable voltage नहीं मिलेगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "P-n junction पर बना built-in electric field ही photon-generated electron-hole pairs को अलग करके directional flow देता है; बिना junction के ये carriers बिना किसी useful separation के जल्दी recombine हो जाते और external circuit में कोई net voltage/current उपलब्ध नहीं होता। Junction का काम mechanical जुड़ाव, temperature control, या रंग गहरा करना नहीं है — यह carrier-separation के लिए विद्युत रूप से आवश्यक है।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q34",
+      "question": "PV cell के semiconductor material में डाले जाने वाले doping (p-type के लिए trivalent impurity और n-type के लिए pentavalent impurity) का photovoltaic effect में क्या role होता है?",
+      "options": [
+        "Doping केवल cell का weight बढ़ाने के लिए किया जाता है",
+        "Doping से semiconductor में अतिरिक्त holes (p-type में) और अतिरिक्त free electrons (n-type में) मिलते हैं, जिससे p-n junction और उसका built-in field बन सके",
+        "Doping से material insulator बन जाता है ताकि current बाहर न निकले",
+        "Doping केवल cell के बाहरी रंग को नियंत्रित करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pure (intrinsic) silicon में free carriers बहुत कम होते हैं; trivalent impurity (जैसे Boron) मिलाने से p-type region में अतिरिक्त holes और pentavalent impurity (जैसे Phosphorus) मिलाने से n-type region में अतिरिक्त free electrons मिलते हैं। ये दो अलग doped regions मिलकर ही p-n junction और उसका built-in field बनाते हैं, जो carrier-separation के लिए आवश्यक है। Doping weight बढ़ाने, material को insulator बनाने, या केवल रंग नियंत्रित करने के लिए नहीं किया जाता।"
+    },
+    {
+      "id": "u9_photovoltaic_principle_q35",
+      "question": "यदि किसी PV cell का back (rear) surface पूरी तरह एक continuous metal contact (full-area back contact) से बना हो, जबकि front surface पर केवल thin grid fingers हों, तो इसका मुख्य कारण क्या है?",
+      "options": [
+        "Back surface पर light नहीं पड़ती, इसलिए वहाँ पूरी सतह को metal से ढककर current collection को सरल और कम-resistance बनाया जा सकता है",
+        "Back surface को metal से ढकना केवल सौंदर्य (appearance) के लिए किया जाता है",
+        "Back contact cell के तापमान को शून्य तक ठंडा रखने के लिए होता है",
+        "Back contact दरअसल एक अलग battery की तरह काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cell का rear side सीधे sunlight ग्रहण नहीं करता (light front से आती है), इसलिए वहाँ light blocking की चिंता नहीं होती और पूरी सतह को metal से ढककर एक कम-resistance, आसान current-collection path बनाया जा सकता है, जबकि front पर केवल thin fingers रखकर light entry बनाए रखा जाता है। यह appearance, temperature को शून्य करने, या एक अलग battery के रूप में काम करने से संबंधित नहीं है।"
     }
   ]
 }

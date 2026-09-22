@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "Solar tracking system पूरे दिन सूर्य की गति के अनुसार panel के angle of incidence को optimum रखता है, जिससे fixed installation की तुलना में काफी अधिक energy प्राप्त होती है। Panel को स्थिर रखना suboptimal होता है (हालांकि सरल व सस्ता है), panel को ढकना सीधे तौर पर output बंद कर देगा, और सफाई न करना output घटाएगा, बढ़ाएगा नहीं।"
+    },
+    {
+      "id": "u9_pv_output_factors_q31",
+      "question": "Crystalline silicon PV modules में समय के साथ होने वाला दीर्घकालीन (long-term) degradation rate आमतौर पर किस range में होता है, जिसकी वजह से 20-25 साल बाद output शुरुआती rated value से कम मिलता है?",
+      "options": [
+        "लगभग 0.5% से 0.8% प्रति वर्ष (annual degradation rate)",
+        "लगभग 10% प्रति वर्ष",
+        "Degradation शून्य होता है, output कभी नहीं घटता",
+        "Degradation केवल पहले महीने में होता है, बाद में स्थिर रहता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Encapsulant की ageing, micro-cracks, तथा material properties में धीमे परिवर्तन के कारण standard crystalline silicon modules में सामान्यतः लगभग 0.5%-0.8% प्रति वर्ष की दर से output घटता है, जिसे manufacturers अपने linear performance warranty में दर्शाते हैं। 10% प्रति वर्ष अत्यधिक high और अवास्तविक है, degradation शून्य होना गलत है (सभी modules समय के साथ degrade होते हैं), और यह केवल पहले महीने तक सीमित नहीं बल्कि पूरे जीवनकाल में निरंतर होता रहता है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q32",
+      "question": "तेज़ हवा (wind) चलने पर PV panel के output पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Wind panel को नुकसान पहुँचाकर output हमेशा घटा देती है",
+        "Wind से cell temperature कम होने में मदद मिलती है (convective cooling), जिससे negative temperature coefficient के कारण output में मामूली सुधार हो सकता है",
+        "Wind का cell temperature या output से कोई संबंध नहीं होता",
+        "Wind केवल irradiance को बढ़ाती है, temperature को प्रभावित नहीं करती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Wind panel की सतह से convective heat transfer बढ़ा देती है, जिससे cell temperature तुलनात्मक रूप से कम रहता है, और negative temperature coefficient के कारण थोड़ा बेहतर output मिल सकता है। सामान्य wind speed से नुकसान नहीं होता (केवल अत्यधिक तेज़ तूफान अलग बात है), wind का cell temperature पर स्पष्ट cooling प्रभाव है, और wind irradiance को नहीं बल्कि temperature को प्रभावित करती है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q33",
+      "question": "हल्की बारिश (rain) होने के बाद PV panel के output पर सामान्यतः क्या प्रभाव देखा जाता है, अगर बारिश से पहले panel पर dust जमी हुई थी?",
+      "options": [
+        "बारिश panel को हमेशा स्थायी रूप से क्षतिग्रस्त कर देती है",
+        "बारिश dust को धो देती है, जिससे soiling losses कम होकर output में सुधार हो सकता है",
+        "बारिश का output से कोई संबंध नहीं होता",
+        "बारिश हमेशा output को स्थायी रूप से घटा देती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हल्की बारिश dust/soiling की परत को धोकर हटा देती है, जिससे cells तक पहुँचने वाली effective irradiance बढ़ती है और output में सुधार हो सकता है (हालांकि भारी बादल के कारण अल्पकालिक कमी भी संभव है)। सामान्य बारिश से panel स्थायी क्षति नहीं पहुँचती, बारिश का output पर स्पष्ट प्रभाव होता है, और यह output को स्थायी रूप से घटाती नहीं बल्कि सुधार सकती है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q34",
+      "question": "आंशिक (partial) shading की स्थिति में, cells को series की जगह parallel strings में जोड़ने से power loss पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Parallel wiring से shading का प्रभाव पूरी तरह समाप्त हो जाता है",
+        "Wiring configuration का shading loss से कोई संबंध नहीं",
+        "Series की तुलना में parallel strings में shading का प्रभाव उस विशेष string तक सीमित रह सकता है, जिससे overall power loss शाब्दिक series wiring जितना disproportionate नहीं होता",
+        "Parallel wiring में shading का प्रभाव series से कहीं अधिक बढ़ जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Series wiring में एक shaded cell पूरी string का current सीमित कर देती है, जबकि parallel strings में shading का असर मुख्यतः उस string तक सीमित रहता है और बाकी strings सामान्य रूप से काम करती रहती हैं, इसलिए overall disproportionate loss कम होता है। Shading प्रभाव पूरी तरह समाप्त नहीं होता (उस string में फिर भी loss रहता है), wiring configuration का shading loss पर स्पष्ट असर है, और parallel wiring में प्रभाव series से अधिक नहीं बल्कि कम गंभीर होता है।"
+    },
+    {
+      "id": "u9_pv_output_factors_q35",
+      "question": "एक fixed-tilt panel की तुलना में, जिसे साल में केवल 2 बार (गर्मी और सर्दी के लिए) manually tilt adjust किया जाए, annual energy output पर सामान्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "Seasonal adjustment से output हमेशा घट जाता है",
+        "Tilt adjustment का annual output से कोई संबंध नहीं होता",
+        "Seasonal तौर पर angle of incidence को सूर्य की बदलती altitude के अनुसार बेहतर मिलाने से fixed-tilt की तुलना में annual energy yield में सामान्यतः कुछ सुधार होता है, जबकि full tracking जितना अधिक नहीं",
+        "Fixed-tilt और seasonal-adjusted tilt में output बिल्कुल समान रहता है, कोई अंतर नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "साल में 2 बार tilt adjust करने से गर्मियों और सर्दियों में सूर्य की अलग-अलग altitude के अनुसार angle of incidence बेहतर हो जाता है, जिससे fixed-tilt की तुलना में annual yield में कुछ सुधार मिलता है, हालांकि यह full solar tracking जितना effective नहीं होता। Seasonal adjustment से output घटना गलत है, tilt का annual output पर स्पष्ट प्रभाव है, और दोनों में अंतर नहीं होना गलत कथन है क्योंकि angle optimization का प्रत्यक्ष लाभ मिलता है।"
     }
   ]
 }

@@ -363,6 +363,126 @@
       ],
       "correctIndex": 1,
       "explanation": "Charge controller PV array और battery के बीच एक intelligent interface की तरह कार्य करता है जो charging stages को manage करता है, efficiency बनाए रखता है, और battery को overcharge व deep-discharge दोनों से सुरक्षित रखता है। यह केवल साधारण on/off switch नहीं है, इसकी भूमिका सौंदर्यशास्त्र से संबंधित नहीं, और यह inverter से अलग एक स्वतंत्र device है।"
+    },
+    {
+      "id": "u9_charge_controller_q31",
+      "question": "Solar Photovoltaic (SPV) system को 'clean और renewable' ऊर्जा स्रोत क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि यह coal जलाकर बिजली उत्पन्न करता है परंतु उसे filter कर देता है",
+        "क्योंकि यह sunlight से बिजली उत्पन्न करता है जिसमें कोई fuel जलाना नहीं पड़ता, न ही operation के दौरान कोई harmful emission (जैसे CO2) उत्पन्न होता है",
+        "क्योंकि इसमें diesel generator लगातार backup के रूप में चलता रहता है",
+        "क्योंकि यह केवल night time में बिजली उत्पन्न करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SPV system sunlight को सीधे बिजली में बदलता है, इसमें कोई fuel combustion नहीं होता और operation के दौरान कोई harmful gas emission नहीं होता, इसलिए इसे clean व renewable माना जाता है। Coal जलाना, diesel generator का उपयोग, या केवल night generation — ये सभी गलत विवरण हैं जो SPV की वास्तविक कार्यप्रणाली से मेल नहीं खाते।"
+    },
+    {
+      "id": "u9_charge_controller_q32",
+      "question": "SPV system का conventional (grid/diesel-based) power supply की तुलना में running cost के मामले में मुख्य लाभ क्या है?",
+      "options": [
+        "एक बार installation के बाद, sunlight free होने के कारण SPV system की running/fuel cost बहुत कम होती है, जबकि conventional power में लगातार fuel या electricity bill की लागत आती है",
+        "SPV system में initial installation cost हमेशा शून्य होती है",
+        "SPV system को हर महीने नया panel खरीदना पड़ता है",
+        "Conventional power हमेशा SPV से सस्ता होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "SPV system में एक बार setup होने के बाद sunlight free स्रोत होने के कारण running cost बहुत कम रहती है, जबकि conventional power (grid electricity या diesel generator) में लगातार fuel cost या bill भरना पड़ता है। Initial cost शून्य नहीं होती (panel/controller/battery की लागत आती है), हर महीने नया panel खरीदना गलत है, और लंबी अवधि में conventional हमेशा सस्ता नहीं होता।"
+    },
+    {
+      "id": "u9_charge_controller_q33",
+      "question": "SPV power तथा conventional (grid) power में उपलब्धता (availability) की दृष्टि से मुख्य अंतर क्या है?",
+      "options": [
+        "SPV power दिन-रात दोनों समय बिना battery/storage के समान रूप से उपलब्ध रहती है",
+        "Conventional grid power sunlight पर निर्भर होती है इसलिए रात में उपलब्ध नहीं रहती",
+        "SPV power sunlight की उपलब्धता (दिन के समय, मौसम) पर निर्भर तथा intermittent होती है, जबकि conventional grid power सामान्यतः चौबीसों घंटे निरंतर उपलब्ध रहती है",
+        "दोनों में उपलब्धता का कोई अंतर नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "SPV system केवल sunlight उपलब्ध होने पर बिजली उत्पन्न करता है (दिन में, मौसम पर निर्भर), इसलिए यह intermittent है और रात/बादल में battery storage की आवश्यकता होती है, जबकि conventional grid power निरंतर उपलब्ध रहती है। बिना storage के SPV रात में उपलब्ध नहीं रहती, grid sunlight पर निर्भर नहीं करती, और दोनों में स्पष्ट अंतर है।"
+    },
+    {
+      "id": "u9_charge_controller_q34",
+      "question": "दूरदराज (remote) तथा grid-inaccessible क्षेत्रों में SPV system, conventional power की तुलना में अधिक व्यावहारिक (practical) विकल्प क्यों माना जाता है?",
+      "options": [
+        "SPV system को grid extension जैसी लंबी transmission line बिछाने की आवश्यकता नहीं होती, यह standalone (off-grid) रूप में battery के साथ स्वतंत्र रूप से काम कर सकता है",
+        "SPV system केवल शहरी क्षेत्रों में ही लगाया जा सकता है",
+        "Remote क्षेत्रों में हमेशा diesel generator ही एकमात्र विकल्प होता है",
+        "SPV system को भी grid line की उतनी ही आवश्यकता होती है जितनी conventional power को"
+      ],
+      "correctIndex": 0,
+      "explanation": "दूरदराज क्षेत्रों में grid line बिछाना महँगा और मुश्किल होता है, जबकि SPV system panel-battery-controller के साथ standalone (off-grid) रूप में स्वतंत्र रूप से बिजली दे सकता है, इसलिए यह अधिक practical है। यह शहरी क्षेत्रों तक सीमित नहीं, remote क्षेत्रों में diesel के अलावा भी विकल्प उपलब्ध है, और SPV को grid line की आवश्यकता नहीं होती।"
+    },
+    {
+      "id": "u9_charge_controller_q35",
+      "question": "SPV systems का maintenance (रखरखाव), conventional diesel generator based power की तुलना में सामान्यतः कैसा होता है?",
+      "options": [
+        "SPV systems को daily engine oil बदलने की आवश्यकता होती है",
+        "SPV systems का maintenance diesel generator से हमेशा अधिक जटिल होता है",
+        "SPV systems में maintenance की कोई आवश्यकता ही नहीं होती, कभी नहीं",
+        "SPV systems में कोई moving mechanical parts (जैसे engine) नहीं होते, इसलिए उनका maintenance सामान्यतः diesel generator की तुलना में कम तथा सरल होता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "SPV panels में कोई moving/mechanical parts नहीं होते (जैसा diesel generator के engine में होता है), इसलिए इनका maintenance सामान्यतः कम और सरल होता है (मुख्यतः panel cleaning, connections जाँचना)। Engine oil बदलना diesel generator से संबंधित है, maintenance जटिल नहीं बल्कि सरल है, और 'कभी maintenance नहीं' कहना गलत है क्योंकि periodic cleaning/checking फिर भी ज़रूरी है।"
+    },
+    {
+      "id": "u9_charge_controller_q36",
+      "question": "SPV system का एक प्रमुख नुकसान (limitation) conventional power की तुलना में क्या है?",
+      "options": [
+        "SPV system हमेशा conventional power से सस्ता तथा हर मौसम में समान रूप से उपलब्ध होता है",
+        "SPV system की initial capital cost (panel, battery, controller आदि) सामान्यतः अधिक होती है और यह sunlight की उपलब्धता पर निर्भर रहता है",
+        "SPV system को किसी भी प्रकार के storage या controller की आवश्यकता नहीं होती",
+        "SPV system में कोई limitation नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "SPV system की शुरुआती लागत (panels, battery bank, charge controller आदि) सामान्यतः अधिक होती है और इसका output sunlight की उपलब्धता (दिन/मौसम) पर निर्भर करता है, जो इसकी प्रमुख limitations हैं। यह हमेशा सस्ता नहीं होता, off-grid उपयोग के लिए battery व controller आवश्यक होते हैं, और limitations होना एक वास्तविक तकनीकी तथ्य है।"
+    },
+    {
+      "id": "u9_charge_controller_q37",
+      "question": "यदि charge controller में reverse polarity protection (गलत polarity में panel/battery जोड़ने पर सुरक्षा) built-in हो, तो इसका क्या लाभ है?",
+      "options": [
+        "यह केवल display की brightness बढ़ाता है",
+        "इसका किसी सुरक्षा से कोई संबंध नहीं",
+        "यदि गलती से panel या battery की wiring उल्टी (reverse polarity में) जोड़ दी जाए, तो यह feature controller तथा जुड़े components को नुकसान से बचाता है",
+        "यह feature केवल AC systems में उपयोगी है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Reverse polarity protection यह सुनिश्चित करता है कि यदि wiring गलती से उल्टी जोड़ दी जाए, तो controller तथा उससे जुड़े panel/battery/load को damage से बचाया जा सके। यह display brightness से संबंधित नहीं, इसका सीधा सुरक्षा से संबंध है, और यह DC-based solar systems (AC नहीं) में लागू होता है।"
+    },
+    {
+      "id": "u9_charge_controller_q38",
+      "question": "एक PWM controller की rated efficiency लगभग 75-80% तथा एक MPPT controller की रेटेड efficiency लगभग 92-97% मानी जाती है। यह अंतर मुख्यतः किस कारण से आता है?",
+      "options": [
+        "MPPT में extra components होने के कारण यह हमेशा अधिक heat generate करता है इसलिए efficiency कम बतायी जाती है",
+        "PWM और MPPT की efficiency वास्तव में बराबर होती है, यह केवल marketing का अंतर है",
+        "PWM की efficiency हमेशा MPPT से अधिक होती है",
+        "MPPT, panel के operating voltage को battery voltage से मैच करने हेतु DC-DC conversion से अतिरिक्त उपलब्ध power को उपयोग में लाता है, जिससे energy harvest अधिक होता है, जबकि PWM में voltage mismatch की स्थिति में अतिरिक्त potential power बर्बाद हो जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "MPPT, panel के Vmp को battery voltage में efficient DC-DC conversion द्वारा बदलकर अधिकतम संभव power निकालता है, जबकि PWM में जब panel और battery voltage मेल नहीं खाते तो अतिरिक्त potential power उपयोग में नहीं आता (बर्बाद होता है), इसलिए overall energy harvest efficiency में अंतर दिखता है। MPPT हमेशा अधिक heat के कारण कम efficient नहीं कहलाता, दोनों की efficiency बराबर नहीं होती, और PWM की efficiency MPPT से अधिक नहीं होती।"
+    },
+    {
+      "id": "u9_charge_controller_q39",
+      "question": "Charge controller का स्वयं का 'self-consumption' या 'no-load power draw' किस बात को दर्शाता है, और यह क्यों महत्वपूर्ण है?",
+      "options": [
+        "यह दर्शाता है कि controller कभी भी power उपयोग नहीं करता",
+        "यह केवल AC output की मात्रा दर्शाता है",
+        "इसका battery की ऊर्जा उपलब्धता से कोई संबंध नहीं",
+        "यह दर्शाता है कि controller स्वयं कार्य करने हेतु battery से कुछ थोड़ी मात्रा में power उपयोग करता है; बहुत छोटे off-grid systems में यह self-consumption महत्वपूर्ण हो सकता है क्योंकि यह battery की उपलब्ध ऊर्जा को थोड़ा कम कर देता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Controller के अपने internal electronics (display, microcontroller आदि) को चलाने के लिए थोड़ी power की आवश्यकता होती है, जिसे self-consumption कहा जाता है; छोटे systems में यह battery से उपलब्ध useful ऊर्जा को थोड़ा घटा देता है, इसलिए quality controller चुनते समय इसे भी ध्यान में रखा जाता है। 'कभी power उपयोग न करना' गलत है, यह AC output नहीं दर्शाता, और इसका battery ऊर्जा उपलब्धता से सीधा संबंध है।"
+    },
+    {
+      "id": "u9_charge_controller_q40",
+      "question": "एक household यह विचार कर रहा है कि छोटे, off-grid remote location के लिए SPV + battery + charge controller system लगाए या diesel generator चलाए। दीर्घकालिक (long-term) दृष्टिकोण से इस निर्णय में कौन-सा factor SPV के पक्ष में सबसे मजबूत तर्क देता है?",
+      "options": [
+        "SPV system installation में diesel generator से हमेशा कम समय लगता है",
+        "Diesel generator को कभी maintenance की आवश्यकता नहीं होती",
+        "SPV system में एक बार investment के बाद sunlight free ईंधन स्रोत होने से long-term running cost काफी कम हो जाती है, जबकि diesel generator को निरंतर fuel खरीदते रहना पड़ता है जिसकी लागत समय के साथ बढ़ती रहती है",
+        "Diesel generator हमेशा अधिक स्वच्छ (clean) ऊर्जा उत्पन्न करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "दीर्घकालिक रूप से SPV system की सबसे बड़ी बढ़त यह है कि sunlight free होने के कारण एक बार के investment के बाद running cost बहुत कम रहती है, जबकि diesel generator के लिए निरंतर महँगा fuel खरीदना पड़ता है जिसकी कीमत समय के साथ बढ़ती है। Installation समय की तुलना यह मुख्य तर्क नहीं, diesel generator को भी नियमित maintenance चाहिए, और diesel generator SPV से अधिक clean नहीं बल्कि emission उत्पन्न करता है।"
     }
   ]
 }

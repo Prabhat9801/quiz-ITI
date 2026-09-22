@@ -303,6 +303,61 @@
       ],
       "correctIndex": 1,
       "explanation": "सही क्रम है: Cell (सबसे छोटी unit) → Module/Panel (cells का encapsulated समूह) → Array (कई modules/panels का बड़ा system)। शेष options इस क्रम को उलटा या गलत तरीके से प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q31",
+      "question": "यदि 40W का एक module 8A पर rated हो और ऐसे 6 modules एक साथ parallel में जोड़े जाएँ, तो combination की total power output (approx, ignoring losses) कितनी होगी?",
+      "options": ["40W", "240W", "48W", "6.66W"],
+      "correctIndex": 1,
+      "explanation": "Power सभी modules की individual power का simple addition होता है चाहे connection series हो या parallel, इसलिए total power = 40W × 6 = 240W होगी। 40W केवल single module का मान है, 48W गलत गणना है, और 6.66W तो division की गलत विधि दर्शाता है जो यहाँ लागू नहीं होती।"
+    },
+    {
+      "id": "u9_module_panel_array_q32",
+      "question": "दो modules को उच्च tropical तापमान वाले क्षेत्र में लगाया गया है, जहाँ cell का temperature बढ़ने पर Voc घटता है। Series string के design में इसका मुख्य असर क्या होता है?",
+      "options": [
+        "String का Voc बढ़ने के कारण inverter के लिए अतिरिक्त modules जोड़ने पड़ते हैं",
+        "अधिक तापमान पर string का actual Voc rated (STC) Voc से कम हो सकता है, इसलिए inverter की minimum MPPT voltage limit ध्यान में रखनी पड़ती है",
+        "तापमान का series string के Voc पर कोई असर नहीं पड़ता",
+        "तापमान बढ़ने पर current भी घटकर शून्य हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "तापमान बढ़ने पर हर cell का Voc घटता है, इसलिए series string का actual Voc rated (25°C, STC) मान से कम हो जाता है — इसलिए inverter की minimum operating voltage से नीचे न जाए, यह design में जाँचना ज़रूरी है। Option A दिशा उलटी बताता है (Voc बढ़ता नहीं, घटता है), C गलत है क्योंकि तापमान का स्पष्ट प्रभाव पड़ता है, और D भी गलत है क्योंकि current शून्य नहीं होता, बल्कि तापमान से current पर प्रभाव Voc की तुलना में बहुत कम होता है।"
+    },
+    {
+      "id": "u9_module_panel_array_q33",
+      "question": "एक array में 5 identical modules series में जोड़कर string बनाई गई है; ऐसी 4 identical strings parallel में जोड़ी गई हैं। यदि प्रत्येक module का Voc 40V और Isc 9A है, तो पूरे array का approximate Voc और Isc (ignoring losses) क्या होगा?",
+      "options": [
+        "Voc = 200V, Isc = 36A",
+        "Voc = 160V, Isc = 45A",
+        "Voc = 40V, Isc = 180A",
+        "Voc = 200V, Isc = 9A"
+      ],
+      "correctIndex": 0,
+      "explanation": "String का Voc = 5 × 40V = 200V (series में voltage जुड़ता है) तथा string का Isc = 9A ही रहता है (series में current same रहता है)। चार parallel strings का array Isc = 4 × 9A = 36A (parallel में current जुड़ता है) जबकि array का Voc string जितना ही यानी 200V रहता है। इसलिए सही उत्तर Voc = 200V, Isc = 36A है; शेष options series और parallel के नियमों को आपस में मिला या उलटा देते हैं।"
+    },
+    {
+      "id": "u9_module_panel_array_q34",
+      "question": "किसी manufacturer की datasheet में एक ही physical product के लिए कभी 'module' और कभी 'panel' शब्द प्रयोग किया गया मिलता है, जबकि rating (Wp, Voc, Isc) दोनों जगह समान है। इसका सबसे उपयुक्त कारण क्या है?",
+      "options": [
+        "यह printing की गलती है और असल में ये दो अलग उत्पाद हैं",
+        "'Panel' सदैव 'module' से अधिक cells रखता है इसलिए rating अलग होनी चाहिए थी",
+        "Module और panel शब्द field/commercial usage में प्रायः समान encapsulated PV assembly के लिए ही प्रयोग होते हैं, इसलिए rating एक समान होना सामान्य है",
+        "'Panel' शब्द केवल inverter के लिए प्रयोग होता है, module के लिए कभी नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "जैसा कि उद्योग में सामान्य practice है, 'module' और 'panel' शब्द अक्सर एक ही encapsulated cell-assembly के लिए interchangeably प्रयोग होते हैं, इसलिए दोनों नामों के अंतर्गत समान rating मिलना पूरी तरह सामान्य है, printing error नहीं है। Option B एक गलत निश्चित नियम मान लेता है (panel में हमेशा अधिक cells होने जैसा कोई standard नियम नहीं है), और D भी गलत है क्योंकि 'panel' inverter के लिए प्रयुक्त शब्द नहीं है।"
+    },
+    {
+      "id": "u9_module_panel_array_q35",
+      "question": "एक site पर पहले से 3 modules की एक series string काम कर रही है (हर module: Voc 24V, Isc 7A)। अब एक नया identical module उसी string में series में जोड़ दिया जाता है। नई string के Voc और Isc पर क्या असर पड़ेगा?",
+      "options": [
+        "Voc बढ़कर 96V हो जाएगा, Isc लगभग 7A ही रहेगा",
+        "Voc लगभग 72V ही रहेगा, Isc बढ़कर 28A हो जाएगा",
+        "दोनों Voc और Isc same रहेंगे क्योंकि modules identical हैं",
+        "Voc घटकर 18V हो जाएगा, Isc same रहेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "एक और module series में जोड़ने से कुल modules 4 हो जाते हैं, इसलिए नया Voc = 4 × 24V = 96V होगा, जबकि series में current सभी modules में समान रहता है, अतः Isc लगभग 7A ही रहेगा। Option B parallel के नियम को यहाँ गलत तरीके से लागू करता है, C गलत है क्योंकि voltage स्पष्ट रूप से बढ़ता है, और D तो घटने की दिशा ही गलत बताता है क्योंकि series में और module जोड़ने से voltage घटता नहीं, बढ़ता है।"
     }
   ]
 }
