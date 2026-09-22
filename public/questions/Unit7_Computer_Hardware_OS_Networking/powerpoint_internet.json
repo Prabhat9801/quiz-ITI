@@ -363,6 +363,246 @@
       ],
       "correctIndex": 0,
       "explanation": "'To' field में primary receivers होते हैं जिनसे सीधे response/action अपेक्षित होता है, जबकि 'CC' (Carbon Copy) में उन लोगों को जोड़ा जाता है जिन्हें सिर्फ सूचना/जानकारी के लिए email की copy चाहिए। Option B गलत तरीके से दोनों को समान बताता है, Option C attachment field से जोड़कर गलत जानकारी देता है, और Option D दरअसल BCC field की विशेषता है, CC की नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q31",
+      "question": "PowerPoint में नई presentation बनाते समय 'Blank Presentation' और किसी 'Template' से शुरू करने में क्या मुख्य अंतर होता है?",
+      "options": [
+        "Blank Presentation में कोई भी text नहीं लिखा जा सकता",
+        "Template हमेशा केवल Internet से download करना पड़ता है, offline उपलब्ध नहीं होता",
+        "Blank Presentation एक खाली white slide से शुरू होता है जिसमें user खुद पूरा design तैयार करता है, जबकि Template पहले से बने हुए color scheme, fonts और layouts के साथ आता है जिससे presentation तेज़ी से तैयार हो जाता है",
+        "दोनों में कोई अंतर नहीं है, दोनों एक जैसा ही output देते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Blank Presentation शुरू में सादा white background देता है जिसे user अपने अनुसार design करता है, जबकि Template में predefined theme, colors, fonts और sample layouts पहले से मौजूद होते हैं जिससे काम जल्दी होता है। Option A गलत है क्योंकि blank slide में text लिखा जा सकता है, Option B गलत है क्योंकि PowerPoint में built-in templates offline भी उपलब्ध होते हैं, और Option D दोनों के अलग output को नकारता है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q32",
+      "question": "PowerPoint में एक slide पर कई animation effects को एक निश्चित क्रम (sequence) में चलाने के लिए किस feature का उपयोग किया जाता है?",
+      "options": [
+        "Design tab का Variants group",
+        "Animation Pane, जिसमें हर object के animation को list के रूप में देखकर उनका order, start type (On Click/With Previous/After Previous) और timing set किया जा सकता है",
+        "Slide Sorter view",
+        "Review tab का Comments feature"
+      ],
+      "correctIndex": 1,
+      "explanation": "Animations tab में 'Animation Pane' खोलने पर सभी animations एक sequential list में दिखते हैं, जहाँ drag करके order बदला जा सकता है और हर effect का start type/timing control किया जा सकता है। Option A सिर्फ theme के color variants बदलता है, Option C slides के order arrange करने के लिए है, और Option D reviewers के comments दिखाने के लिए है, animation sequence से इनका संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q33",
+      "question": "PowerPoint में animation के 'Start' विकल्प में 'On Click', 'With Previous' और 'After Previous' का क्रमशः क्या अर्थ है?",
+      "options": [
+        "तीनों का मतलब एक ही है, कोई फर्क नहीं",
+        "On Click में effect mouse click पर चलता है, With Previous में यह पिछले effect के साथ ही एक साथ शुरू होता है, और After Previous में पिछला effect पूरा होने के बाद automatically शुरू होता है",
+        "On Click सिर्फ Transition के लिए है, बाकी दो Animation के लिए",
+        "After Previous का मतलब है कि effect कभी शुरू नहीं होगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "On Click से effect तभी चलता है जब presenter click करे, With Previous उसे पिछले animation के साथ simultaneously चलाता है, और After Previous पिछले effect के खत्म होने पर स्वचालित रूप से अगला effect शुरू करता है। Option A इन्हें गलत तरीके से समान बताता है, Option C गलत categorisation है क्योंकि तीनों Animation के ही start options हैं, और Option D स्पष्ट रूप से गलत है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q34",
+      "question": "PowerPoint में किसी slide का background color या background image अलग से (theme बदले बिना) सेट करने के लिए कौन-सा option उपयोग होता है?",
+      "options": [
+        "Design tab में 'Format Background' option, जिससे solid color, gradient, picture या pattern fill चुना जा सकता है",
+        "Insert tab में 'Header & Footer' option",
+        "Review tab में 'Spelling' option",
+        "Slide Show tab में 'Set Up Slide Show' option"
+      ],
+      "correctIndex": 0,
+      "explanation": "Design tab के अंत में 'Format Background' pane खुलता है जिससे current slide (या सभी slides पर 'Apply to All') के लिए solid color, gradient, texture/pattern या picture fill लगाई जा सकती है, बिना पूरी theme बदले। Option B header/footer text जोड़ने के लिए है, Option C spelling check करता है, और Option D slide show की settings (जैसे resolution, loop) control करता है, background से संबंधित नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q35",
+      "question": "PowerPoint में एक ही Design theme पर अलग-अलग color combinations आज़माने के लिए Design tab में कौन-सा group उपयोग किया जाता है?",
+      "options": [
+        "Variants group, जिसमें same theme के अलग-अलग color/font combinations से पूरे presentation का look बदला जा सकता है",
+        "Transitions group",
+        "Media group",
+        "Illustrations group"
+      ],
+      "correctIndex": 0,
+      "explanation": "Design tab के Variants group में एक ही theme के कई preset color/style combinations दिए होते हैं, जिन्हें click करने पर बिना नई theme चुने ही presentation का रंग-रूप बदल जाता है। Option B, C और D क्रमशः Transitions tab, Insert tab के Media और Illustrations group से जुड़े हैं, Design theme की variants से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q36",
+      "question": "PowerPoint में animation Duration और Delay में क्या फर्क होता है?",
+      "options": [
+        "दोनों का मतलब एक ही होता है",
+        "Duration सिर्फ text animation पर लागू होता है, Delay सिर्फ image animation पर",
+        "Delay का मतलब है कि animation कभी नहीं रुकेगा",
+        "Duration यह तय करता है कि effect कितनी देर तक चलेगा, जबकि Delay यह तय करता है कि effect शुरू होने से पहले कितनी देर रुका (wait) जाएगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "Animations tab में Timing group के अंतर्गत Duration effect के चलने की कुल अवधि सेट करता है, जबकि Delay यह तय करता है कि effect trigger होने के बाद कितने seconds रुककर शुरू हो। Option A इन्हें गलत तरीके से समान बताता है, Option C बिना किसी आधार के object type पर प्रतिबंध लगाता है, और Option D स्पष्ट रूप से गलत परिभाषा है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q37",
+      "question": "PowerPoint में किसी text placeholder के अंदर bullet points की list बनाकर उसमें sub-points (indented level) जोड़ने के लिए कौन-सी key उपयोग होती है?",
+      "options": [
+        "Ctrl+P दबाकर",
+        "Alt+F4 दबाकर",
+        "Ctrl+Z दबाकर",
+        "Tab key दबाकर current line को एक level indent किया जाता है (और Shift+Tab से outdent), जिससे hierarchy वाली bullet list बनती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Bullet list में किसी line पर cursor रखकर Tab दबाने से वह sub-point (एक level नीचे) बन जाती है, और Shift+Tab दबाने से वह ऊपर के level में वापस आती है, इससे multi-level outline बनती है। Option A print करने की shortcut है, Option C application बंद करने की है, और Option D last action को undo करने की shortcut है, indent करने से इनका संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q38",
+      "question": "PowerPoint में 'Morph' नाम का transition किस खासियत के लिए जाना जाता है?",
+      "options": [
+        "यह presentation को automatically PDF में convert करता है",
+        "यह सिर्फ text की spelling check करता है",
+        "यह दो consecutive slides में समान/मिलते-जुलते objects के आकार, position या rotation को smoothly बदलते हुए एक seamless movement effect दिखाता है",
+        "यह email attachment भेजने का option देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Morph transition दो slides के बीच समान objects की position, size, color या rotation में स्वाभाविक (fluid) बदलाव दिखाता है, जिससे एक जैसी वस्तु का smooth animation-जैसा प्रभाव मिलता है, इसके लिए दोनों slides में duplicate object होना जरूरी है। Options A, C और D क्रमशः Export, Spelling और Email feature से संबंधित हैं, Morph transition से इनका कोई लेना-देना नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q39",
+      "question": "PowerPoint में किसी shape या text box पर एक ही समय में 'Fade' entrance और अलग रंग की 'Emphasis' animation दोनों लगाना क्यों संभव है?",
+      "options": [
+        "यह संभव नहीं है, एक object पर केवल एक ही animation लगाई जा सकती है",
+        "क्योंकि Transitions tab अपने आप extra effect जोड़ देता है",
+        "क्योंकि Animation Pane में 'Add Animation' के जरिए एक ही object पर multiple animation effects जोड़े जा सकते हैं, जो अलग-अलग समय या trigger पर चल सकते हैं",
+        "क्योंकि SmartArt automatically दूसरा effect जोड़ता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Animations tab में 'Add Animation' बटन का उपयोग करने पर (सिर्फ 'Animation' gallery से दोबारा चुनने के बजाय) एक ही object पर कई effects जोड़े जा सकते हैं, जैसे पहले Fade entrance फिर अलग emphasis effect, जिनका timing अलग-अलग सेट हो सकता है। Option A गलत सीमा बताता है, जबकि Option C और D Transitions या SmartArt से गलत तरीके से जोड़े गए हैं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q40",
+      "question": "Bookmark (Browser Favorites) का उपयोग करने का मुख्य फायदा क्या है?",
+      "options": [
+        "यह किसी website को हमेशा के लिए block कर देता है",
+        "यह email attachment को automatically save कर देता है",
+        "इससे बार-बार पूरा URL टाइप किए बिना पसंदीदा websites को browser में save करके एक click में फिर से खोला जा सकता है",
+        "यह computer की RAM बढ़ा देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bookmark/Favorite feature से user अक्सर उपयोग होने वाली websites के links browser में save कर सकता है, जिससे बार-बार पूरा URL टाइप करने की जरूरत नहीं पड़ती और एक click में साइट खुल जाती है। Option A website blocking से संबंधित नहीं है, Option B attachment saving अलग process है, और Option D हार्डवेयर RAM से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q41",
+      "question": "Browser के 'Incognito' या 'Private' browsing mode में क्या होता है?",
+      "options": [
+        "Browser इस mode में browsing history, cookies और temporary files को session बंद होने के बाद automatically save नहीं करता/मिटा देता है",
+        "यह mode Internet की speed को दोगुना कर देता है",
+        "यह mode सभी websites को permanently block कर देता है",
+        "यह mode केवल email भेजने के लिए उपयोग होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Private/Incognito mode में browser browsing history, cookies और login जानकारी को session समाप्त होने पर save नहीं रखता, जिससे privacy बनी रहती है, हालांकि ISP या websites अब भी traffic देख सकती हैं। Option B, C और D गलत हैं क्योंकि यह mode न speed बढ़ाता है, न websites को block करता है, और न ही सिर्फ email के लिए है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q42",
+      "question": "Web browser में 'Cache' clear करने का क्या असर होता है?",
+      "options": [
+        "Computer का पूरा data permanently delete हो जाता है",
+        "सभी saved passwords हमेशा के लिए ठीक हो जाते हैं",
+        "Internet connection अपने आप तेज़ हो जाता है हमेशा के लिए",
+        "Browser द्वारा temporarily store की गई website की images, files आदि हट जाती हैं, जिससे कभी-कभी pages दोबारा धीरे load होते हैं लेकिन outdated/corrupt data की समस्या ठीक हो सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Cache वह temporary storage है जहाँ browser पहले देखी गई websites की images/files रखता है ताकि दोबारा तेज़ी से load हो सकें; इसे clear करने पर वह data हट जाता है, जिससे कभी pages थोड़ा धीमे load हो सकते हैं मगर पुराने/corrupt cached data की समस्या हल हो सकती है। Option A, C और D अतिश्योक्तिपूर्ण और गलत परिणाम बताते हैं जो cache clear करने से नहीं होते।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q43",
+      "question": "Instant messenger/chat service (जैसे WhatsApp, Telegram) की मुख्य विशेषता क्या है?",
+      "options": [
+        "यह केवल PowerPoint slides को edit करने के लिए उपयोग होता है",
+        "यह केवल antivirus scan करने के लिए बना है",
+        "यह सिर्फ बड़ी files upload करने के लिए एक cloud storage है",
+        "यह real-time (तुरंत) पर text, image, video और voice messages भेजने-प्राप्त करने की सुविधा देता है, अक्सर online status और read-receipt के साथ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Instant messenger/chat services real-time पर text, media और voice messages का आदान-प्रदान करने देती हैं, साथ ही online/offline status और read-receipt (जैसे seen/blue tick) जैसी सुविधा भी देती हैं। Option A, C और D क्रमशः PowerPoint editing, antivirus scanning और cloud storage से जुड़े हैं, chat service की मुख्य विशेषता नहीं हैं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q44",
+      "question": "Email में किसी दूसरे को प्राप्त हुई मूल email को उसके content के साथ आगे भेजने के लिए किस feature का उपयोग किया जाता है?",
+      "options": [
+        "Reply feature",
+        "Forward feature, जिससे प्राप्त हुई original email (और उसके attachments) को उसी रूप में किसी नए receiver को भेजा जा सकता है",
+        "Delete feature",
+        "Spam/Junk feature"
+      ],
+      "correctIndex": 1,
+      "explanation": "Forward का उपयोग तब किया जाता है जब प्राप्त हुई किसी email के content और attachments को नए receiver तक उसी रूप में पहुँचाना हो। Option A Reply मूल sender को ही उत्तर भेजने के लिए है (नए receiver को नहीं), Option C email हटाने के लिए है, और Option D unwanted email को अलग folder में डालने के लिए है, Forward से इनका संबंध नहीं है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q45",
+      "question": "किसी unknown sender से आई email में मिले suspicious link या attachment को खोलने से पहले सावधानी बरतना क्यों जरूरी है?",
+      "options": [
+        "क्योंकि ऐसी email कभी नहीं खुल सकती",
+        "क्योंकि ऐसी emails Phishing attack या virus/malware फैलाने का एक सामान्य तरीका हो सकती हैं, जिससे personal data चोरी होने या computer संक्रमित होने का खतरा रहता है",
+        "क्योंकि इससे PowerPoint automatically crash हो जाता है",
+        "क्योंकि इससे Internet connection permanently बंद हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Unknown/suspicious sender की emails में अक्सर fake links या infected attachments होते हैं जो phishing (जानकारी चुराने) या malware install करने के लिए बनाए जाते हैं, इसलिए बिना पहचान sure हुए उन्हें खोलना जोखिम भरा है। Option A स्पष्टतः गलत है, और Option C, D भी बिना किसी technical आधार के गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q46",
+      "question": "किसी file को Internet से download करते समय file के आकार (size) के साथ दिखने वाला 'Progress Bar' किस बात की जानकारी देता है?",
+      "options": [
+        "File का कुल कितना हिस्सा अब तक download हो चुका है और अनुमानित समय में कितना और समय/data बाकी है",
+        "File में कितने viruses मौजूद हैं",
+        "File कितनी बार पहले download हुई है",
+        "File का author कौन है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Download के दौरान progress bar यह दिखाता है कि कुल file size में से कितना data अब तक transfer हो चुका है, प्रायः percentage या remaining time के साथ, जिससे user को अनुमान मिलता है कि download पूरा होने में कितना समय लगेगा। Option A, B और D का progress bar के काम से कोई संबंध नहीं है, यह न history, न virus-count, न author बताता है।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q47",
+      "question": "किसी website से file download करते समय browser अक्सर file का extension (जैसे .exe, .pdf, .zip) क्यों दिखाता/चेक करता है?",
+      "options": [
+        "क्योंकि extension से file का रंग तय होता है",
+        "क्योंकि extension से Internet की speed तय होती है",
+        "क्योंकि extension से पता चलता है कि file किस प्रकार की है (जैसे program, document या compressed folder) और इससे user तय कर सकता है कि उसे किस software से खोलना सुरक्षित/उचित होगा, और browser executable files (.exe) पर अतिरिक्त warning भी दे सकता है",
+        "क्योंकि extension से website का domain बदल जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "File extension यह बताता है कि file किस format (document, image, program, archive आदि) की है, जिससे सही software से खोलने में मदद मिलती है, और अधिकतर browsers .exe जैसी executable files पर सुरक्षा चेतावनी भी दिखाते हैं। Option A, C और D निराधार और गलत संबंध बताते हैं जो extension के वास्तविक उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q48",
+      "question": "Search engine में किसी शब्द को double quotes (\" \") के अंदर लिखकर search करने से क्या फायदा मिलता है?",
+      "options": [
+        "इससे search results पूरी तरह छिप जाते हैं",
+        "इससे search engine सिर्फ उन pages को दिखाता है जिनमें उस exact phrase को उसी क्रम में शब्दों के साथ लिखा गया हो, जिससे सामान्य keyword search से ज्यादा सटीक (specific) result मिलता है",
+        "इससे केवल images वाले results दिखते हैं",
+        "इससे search engine automatically websites को download कर लेता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Double quotes में लिखा phrase search engine को यह निर्देश देता है कि सिर्फ उन्हीं pages को दिखाए जिनमें वे शब्द exactly उस order में मौजूद हों, इससे general keyword search की तुलना में अधिक सटीक परिणाम मिलते हैं। Option A, C और D गलत हैं क्योंकि quotes न तो results छिपाते हैं, न सिर्फ images दिखाते हैं, न ही कुछ automatically download करते हैं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q49",
+      "question": "PowerPoint में एक ही slide में लगे कई objects को समान रूप से align करने (जैसे सभी को left align या centre align करना) के लिए कौन-सा tool उपयोग होता है?",
+      "options": [
+        "Animations tab का Timing group",
+        "Review tab का Comments feature",
+        "Slide Show tab का Monitor setting",
+        "Format tab/Shape Format में उपलब्ध 'Align' options (जैसे Align Left, Align Center, Distribute Horizontally), जो selected objects को एक-दूसरे के सापेक्ष या slide के सापेक्ष व्यवस्थित करते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Multiple objects select करने के बाद Shape Format/Format tab में 'Align' menu से उन्हें left, center, right align किया जा सकता है या समान अंतराल पर distribute किया जा सकता है, जिससे slide का layout साफ-सुथरा दिखता है। Option B animation की timing control करता है, Option C reviewers के comments दिखाता है, और Option D presentation के monitor/display setup से संबंधित है, alignment से नहीं।"
+    },
+    {
+      "id": "u7_powerpoint_internet_q50",
+      "question": "Email account में 'Spam' या 'Junk' folder में emails क्यों और कैसे भेजी जाती हैं?",
+      "options": [
+        "Email service द्वारा उन emails को suspicious/unwanted (जैसे advertisement, फर्जी या harmful content वाली) मानकर automatically अलग folder में डाल दिया जाता है ताकि वे मुख्य Inbox को अव्यवस्थित न करें",
+        "User द्वारा हर email को मैन्युअली टाइप करके ही Spam में डाला जाता है, कोई automatic प्रक्रिया नहीं होती",
+        "Spam folder सिर्फ attachments रखने के लिए होता है",
+        "Spam folder की emails तुरंत permanently delete हो जाती हैं और कभी नहीं देखी जा सकतीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Email service filters/algorithms का उपयोग करके संदिग्ध, अनचाहे विज्ञापन या potentially harmful emails को स्वतः पहचानकर Spam/Junk folder में भेज देती है, जिससे Inbox साफ और सुरक्षित बना रहता है, फिर भी user उन्हें खोलकर जरूरत पड़ने पर देख/restore कर सकता है। Option B यह गलत बताता है कि यह प्रक्रिया केवल manual है, Option C attachment storage से गलत तरीके से जोड़ता है, और Option D गलत है क्योंकि Spam की emails आमतौर पर तुरंत permanently delete नहीं होतीं, user उन्हें एक समय तक देख सकता है।"
     }
   ]
 }

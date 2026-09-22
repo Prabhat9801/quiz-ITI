@@ -363,6 +363,246 @@
       ],
       "correctIndex": 1,
       "explanation": "Graphics tablet/digitizer एक input device है जिस पर stylus से बनाई गई drawing या handwriting को computer digital form में लेता है। यह print नहीं करता (A), data store नहीं करता (C), और networking से संबंधित नहीं है (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q31",
+      "question": "किसी computer के functional block diagram में 'Memory Unit' का सबसे उचित वर्णन क्या है?",
+      "options": [
+        "वह block जो केवल final result को monitor पर दिखाता है",
+        "वह block जो data और instructions को processing से पहले और बाद में रखता है",
+        "वह block जो केवल arithmetic operations करता है",
+        "वह block जो user से keyboard द्वारा data लेता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Memory Unit CPU के functional diagram में data/instructions को process होने से पहले load करने और result आने के बाद अस्थायी/स्थायी रूप से रखने का काम करता है। Monitor पर दिखाना output block का काम है (A), arithmetic ALU करता है (C), और keyboard से data लेना input block का काम है (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q32",
+      "question": "Computer के basic functional blocks में 'Input Unit', 'CPU' और 'Output Unit' के अलावा किसे चौथा आवश्यक block माना जाता है?",
+      "options": [
+        "Printer",
+        "Speaker",
+        "Storage/Memory Unit",
+        "Modem"
+      ],
+      "correctIndex": 2,
+      "explanation": "Basic functional block diagram में Input, CPU (Processing), Output के साथ Storage/Memory Unit को चौथा अनिवार्य block माना जाता है क्योंकि data/programs को रखने के लिए यह जरूरी है। Printer और Speaker केवल specific output devices हैं, और Modem एक communication peripheral है — ये तीनों basic functional block नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q33",
+      "question": "हार्डवेयर और सॉफ्टवेयर के संबंध के बारे में कौन-सा कथन सही है?",
+      "options": [
+        "Software के बिना भी hardware अकेले सभी task कर सकता है",
+        "Software को छुआ और देखा जा सकता है जैसे hardware को",
+        "Hardware और software दोनों एक ही physical चीज़ हैं",
+        "Hardware, software के instructions के अनुसार ही कार्य करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hardware केवल physical components होते हैं जो software (programs/instructions) के दिए गए निर्देशों पर काम करते हैं, इसलिए दोनों एक-दूसरे पर निर्भर हैं। Hardware बिना software के useful task नहीं कर सकता, software intangible होता है इसलिए उसे छुआ नहीं जा सकता, और hardware व software दोनों अलग-अलग concept हैं, एक ही physical चीज़ नहीं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q34",
+      "question": "निम्न में से कौन-सा जोड़ा सही ढंग से System Software और Application Software को दर्शाता है?",
+      "options": [
+        "Device Driver (System) और MS Excel (Application)",
+        "MS Excel (System) और Operating System (Application)",
+        "Operating System (Application) और Tally (System)",
+        "Device Driver (Application) और MS PowerPoint (System)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Device Driver hardware को manage करने वाला system software है, जबकि MS Excel किसी specific user task (spreadsheet) के लिए बना application software है, इसलिए यह जोड़ी सही है। बाकी options में classification उल्टी दी गई है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q35",
+      "question": "एक 'wireless mouse' सामान्यतः computer से किस technology के माध्यम से जुड़ता है?",
+      "options": [
+        "RF (Radio Frequency) या Bluetooth signal से",
+        "केवल physical USB cable से",
+        "Parallel port cable से",
+        "VGA cable से"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wireless mouse बिना किसी cable के RF receiver या Bluetooth के माध्यम से data भेजता है। USB cable और parallel port wired connection हैं, और VGA cable monitor को जोड़ने के लिए होता है, mouse के लिए नहीं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q36",
+      "question": "पुराने mechanical mouse में नीचे लगी rubber ball किस काम आती थी?",
+      "options": [
+        "Mouse को साफ रखने के लिए",
+        "Mouse को हल्का बनाने के लिए",
+        "Surface पर घूमकर अंदर के rollers को घुमाना, जिससे movement sense हो",
+        "Battery की तरह power देने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mechanical mouse में नीचे की rubber ball surface पर घूमती है और अंदर लगे दो rollers (X व Y direction) को घुमाती है, जिनसे cursor की movement detect होती है। यह cleaning, weight या power देने का काम नहीं करती।"
+    },
+    {
+      "id": "u7_computer_basics_io_q37",
+      "question": "एक 'laser mouse' सामान्य optical mouse से किस प्रकार बेहतर माना जाता है?",
+      "options": [
+        "यह बिना किसी light source के काम करता है",
+        "यह केवल gaming के लिए काम करता है और normal use में नहीं चलता",
+        "इसमें rubber ball होती है",
+        "यह अधिक precision के साथ surface detail को sense करता है, खासकर glossy surfaces पर"
+      ],
+      "correctIndex": 3,
+      "explanation": "Laser mouse LED के बजाय laser diode का उपयोग करता है जिससे surface की बहुत छोटी details भी बेहतर तरीके से sense होती हैं, जिससे glossy/चमकदार surfaces पर भी accuracy बनी रहती है। यह light source का उपयोग ही करता है, इसमें rubber ball नहीं होती, और यह normal उपयोग में भी चलता है, केवल gaming तक सीमित नहीं है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q38",
+      "question": "Laptop में प्रयोग होने वाला 'touchpad' मुख्य रूप से किस सिद्धांत पर काम करता है?",
+      "options": [
+        "यह उंगली की गर्मी (heat) को measure करता है",
+        "यह उंगली के touch से उत्पन्न capacitance/electrical परिवर्तन को sense करता है",
+        "यह ध्वनि (sound) की frequency को detect करता है",
+        "यह हवा के दबाव (air pressure) को detect करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिकतर touchpad capacitive sensing technology उपयोग करते हैं — उंगली touch करने पर electrical field/capacitance में बदलाव होता है, जिससे position detect होती है। यह heat, sound या air pressure पर आधारित नहीं है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q39",
+      "question": "किसी keyboard पर 'Alphanumeric keys' किसे कहा जाता है?",
+      "options": [
+        "Letters (A-Z) और Numbers (0-9) वाली keys को",
+        "केवल F1 से F12 तक की keys को",
+        "केवल arrow keys को",
+        "केवल Ctrl, Alt, Shift keys को"
+      ],
+      "correctIndex": 0,
+      "explanation": "Alphanumeric keys में letters (A-Z) और numbers (0-9) दोनों तरह की keys शामिल होती हैं, जो मुख्य typing area बनाती हैं। F1-F12 function keys हैं, arrow keys navigation keys हैं, और Ctrl/Alt/Shift modifier keys हैं — ये तीनों alphanumeric keys नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q40",
+      "question": "Keyboard की 'Enter' key का प्राथमिक कार्य क्या है?",
+      "options": [
+        "Cursor को एक character पीछे ले जाना",
+        "Capital letters लॉक करना",
+        "किसी command को confirm करना या नई line शुरू करना",
+        "Numeric keypad को on/off करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Enter key किसी दिए गए command/input को confirm करती है या text में नई line शुरू करती है। Cursor पीछे ले जाना Backspace का काम है, capital lock Caps Lock करता है, और numeric keypad को toggle करना Num Lock का काम है — ये तीनों Enter key का कार्य नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q41",
+      "question": "'Modifier keys' (जैसे Shift, Ctrl, Alt) की मुख्य विशेषता क्या है?",
+      "options": [
+        "यह अकेले दबाने पर screen पर कोई character print करती हैं",
+        "यह केवल numeric keypad में होती हैं",
+        "यह केवल mouse के साथ काम करती हैं",
+        "यह किसी अन्य key के साथ मिलकर उसकी default action को बदल देती हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Modifier keys अकेले प्रयोग होने पर आमतौर पर कोई character generate नहीं करतीं, बल्कि किसी अन्य key के साथ दबाने पर उसकी action बदल देती हैं, जैसे Ctrl+C का combination। यह mouse-specific या numeric keypad तक सीमित नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q42",
+      "question": "एक joystick मुख्य रूप से किस प्रकार के applications में उपयोग होता है?",
+      "options": [
+        "Text document type करने में",
+        "Gaming और simulation control में direction/movement input देने के लिए",
+        "Data permanently store करने में",
+        "Sound output देने में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Joystick एक pointing input device है जो gaming व simulation में direction और movement संबंधी input देने के लिए उपयोग होता है। Text typing keyboard से होती है (A), storage secondary memory करती है (C), और sound output speaker देता है (D)।"
+    },
+    {
+      "id": "u7_computer_basics_io_q43",
+      "question": "Microphone को computer का कौन-सा प्रकार का device माना जाता है?",
+      "options": [
+        "Input device, क्योंकि यह आवाज़ को digital signal में बदलकर computer में भेजता है",
+        "Output device, क्योंकि यह sound देता है",
+        "Storage device",
+        "Processing device"
+      ],
+      "correctIndex": 0,
+      "explanation": "Microphone आवाज़ (analog sound) को electrical/digital signal में बदलकर computer को input के रूप में देता है, इसलिए यह input device है। Output speaker देता है, storage disk करती है, और processing CPU करता है — ये सभी microphone का काम नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q44",
+      "question": "'Software' शब्द के अंतर्गत मुख्य रूप से क्या शामिल किया जाता है?",
+      "options": [
+        "CPU, RAM और motherboard जैसे physical components",
+        "केवल monitor और printer जैसे output devices",
+        "Programs, data और instructions का समूह जो hardware को कार्य करने के लिए निर्देशित करता है",
+        "Power supply unit और cabinet"
+      ],
+      "correctIndex": 2,
+      "explanation": "Software में programs, instructions और related data शामिल होते हैं जो hardware को बताते हैं कि क्या करना है। CPU/RAM/motherboard, monitor/printer और power supply/cabinet सभी physical hardware components हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q45",
+      "question": "यदि किसी computer में केवल hardware मौजूद हो और कोई भी software (OS सहित) install न हो, तो क्या होगा?",
+      "options": [
+        "Computer सामान्य रूप से सभी कार्य कर लेगा",
+        "Computer स्वचालित रूप से software generate कर लेगा",
+        "Computer की speed पहले से भी तेज़ हो जाएगी",
+        "Computer बिना software के user के लिए meaningful कार्य नहीं कर पाएगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "Software के बिना hardware को यह पता नहीं चलता कि क्या करना है, इसलिए बिना OS/software के computer user के लिए कोई meaningful task पूरा नहीं कर सकता। यह सामान्य कार्य नहीं कर पाएगा, speed का सवाल ही नहीं आता, और software खुद-ब-खुद generate नहीं होता — ये तीनों कथन गलत हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q46",
+      "question": "'Numeric Keypad' keyboard के किस भाग में स्थित होता है और इसका मुख्य उपयोग क्या है?",
+      "options": [
+        "बाईं ओर, केवल function keys के लिए",
+        "दाईं ओर, तेज़ी से numbers enter करने और calculator जैसे calculations के लिए",
+        "सबसे ऊपर, केवल F-keys के लिए",
+        "बीच में, केवल cursor move करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिकतर full-size keyboard में numeric keypad दाईं ओर होता है, जो calculator जैसे layout में numbers की fast entry के लिए बनाया जाता है। बाकी options function keys, F-keys या cursor movement से गलत तरीके से जोड़ते हैं जो numeric keypad का काम नहीं है।"
+    },
+    {
+      "id": "u7_computer_basics_io_q47",
+      "question": "एक 'webcam' को I/O classification में किस श्रेणी में रखा जाता है?",
+      "options": [
+        "Input device, क्योंकि यह live video/image capture करके computer में भेजता है",
+        "Output device, क्योंकि यह screen पर video दिखाता है",
+        "Storage device",
+        "Networking device"
+      ],
+      "correctIndex": 0,
+      "explanation": "Webcam live video/images capture करके उन्हें digital data के रूप में computer में input करता है, इसलिए यह input device है। Video दिखाना monitor (output) का काम है, data store करना storage device का काम है, और networking data transfer से संबंधित है — ये सीधे webcam की category नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q48",
+      "question": "CPU के 'Registers' का मुख्य कार्य क्या है?",
+      "options": [
+        "Permanent रूप से बड़ी मात्रा में data store करना",
+        "Screen पर output display करना",
+        "Processing के दौरान बहुत छोटी मात्रा में data/instructions को अत्यंत तेज़ी से temporarily रखना",
+        "External devices से input लेना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Registers CPU के अंदर सबसे तेज़ लेकिन बहुत छोटी memory होती हैं, जो processing के दौरान instructions/data को अस्थायी रूप से रखती हैं। बड़ी मात्रा में permanent storage हार्ड डिस्क करती है, display monitor करता है, और external input keyboard/mouse जैसे devices देते हैं — ये सभी registers का कार्य नहीं हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q49",
+      "question": "एक 'gesture-based touchpad' सामान्य single-touch touchpad से किस प्रकार भिन्न होता है?",
+      "options": [
+        "यह केवल एक finger को ही detect कर सकता है",
+        "यह केवल external mouse जोड़ने पर काम करता है",
+        "इसमें कोई sensor नहीं होता",
+        "यह multiple fingers के movement (जैसे pinch-to-zoom, two-finger scroll) को पहचानकर अतिरिक्त commands देता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Gesture-based (multi-touch) touchpad कई fingers के एक साथ movement को detect कर pinch-to-zoom, scroll जैसे विशेष commands देता है, जबकि सामान्य touchpad केवल single-point cursor movement देता है। यह single finger तक सीमित नहीं है, इसमें sensor होता ही है, और यह अपने आप बिना external mouse के काम करता है — ये तीनों कथन गलत हैं।"
+    },
+    {
+      "id": "u7_computer_basics_io_q50",
+      "question": "Hardware और Software में से 'upgrade' करने के संदर्भ में कौन-सा कथन सबसे सही है?",
+      "options": [
+        "Software को कभी upgrade नहीं किया जा सकता",
+        "Hardware को physically बदलकर या जोड़कर upgrade किया जाता है, जबकि software को नई version install करके upgrade किया जाता है",
+        "Hardware और Software दोनों को एक ही तरीके से upgrade किया जाता है",
+        "केवल software को upgrade किया जा सकता है, hardware को नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hardware upgrade में physical part बदलना या जोड़ना पड़ता है (जैसे RAM बढ़ाना), जबकि software upgrade में केवल नई version install/update की जाती है। Software upgrade होता है (A गलत), दोनों का तरीका अलग है (C गलत), और hardware भी upgrade किया जा सकता है (D गलत)।"
     }
   ]
 }

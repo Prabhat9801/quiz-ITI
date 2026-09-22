@@ -363,6 +363,246 @@
       ],
       "correctIndex": 1,
       "explanation": "BIOS/UEFI setup में boot priority order तय होता है (जैसे पहले SSD, फिर USB, फिर network), जिसके अनुसार OS खोजा जाता है। यह antivirus, printer या monitor resolution पर निर्भर नहीं करता।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q31",
+      "question": "Laser printer के अंदर लेजर बीम सबसे पहले किस part पर image बनाता है, इससे पहले कि toner कागज़ पर आए?",
+      "options": [
+        "Photosensitive drum (OPC drum) पर electrostatic image के रूप में",
+        "सीधे कागज़ पर",
+        "Ink cartridge के nozzle पर",
+        "Fuser roller पर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laser printer में laser beam पहले charged photosensitive drum पर latent electrostatic image बनाती है, फिर उस पर toner चिपकता है और अंत में कागज़ पर transfer होकर fuser से fix होता है। कागज़ पर सीधे (B) या nozzle से (C) नहीं, और fuser सिर्फ अंत में heat/pressure देता है (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q32",
+      "question": "Dot Matrix printer में एक character कैसे बनता है?",
+      "options": [
+        "Pins के एक matrix pattern से ribbon पर टकराकर dots बनाकर",
+        "Laser beam से drum को charge करके",
+        "Ink की बूँदों को nozzle से spray करके",
+        "Heat से special paper को जलाकर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dot Matrix printer में print head में लगी pins का matrix (जैसे 9-pin या 24-pin) ribbon पर टकराता है, जिससे dots की pattern से character बनता है। Laser drum (B), ink nozzle (C) और heat-sensitive paper (D) अन्य printer types में उपयोग होते हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q33",
+      "question": "एक office में बहुत बड़ी संख्या में carbon-copy invoices (multi-part forms) रोज़ाना छापने हैं, जहाँ एक साथ कई copies बनना ज़रूरी है। इसके लिए सबसे उचित printer कौन-सा होगा?",
+      "options": [
+        "Inkjet printer, क्योंकि यह रंगीन print देता है",
+        "Laser printer, क्योंकि यह सबसे तेज़ है",
+        "Dot Matrix printer, क्योंकि impact pressure से multi-part carbon copies एक साथ बन सकती हैं",
+        "Thermal printer, क्योंकि यह सस्ता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Dot Matrix printer impact type होने के कारण pins की मजबूत टक्कर से एक साथ कई carbon layers पर छाप बना सकता है, जो multi-part forms के लिए ज़रूरी है। Inkjet (A), laser (B) और thermal (D) non-impact हैं और carbon copies नहीं बना सकते।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q34",
+      "question": "Inkjet printer की तुलना में laser printer का बड़ी मात्रा में regular printing के लिए एक प्रमुख फ़ायदा क्या है?",
+      "options": [
+        "Laser printer में कोई cartridge नहीं लगती",
+        "Laser printer कभी खराब नहीं होता",
+        "Laser printer की print speed और per-page cost लंबे समय में आमतौर पर बेहतर (कम) होती है",
+        "Laser printer केवल black-and-white print कर सकता है इसलिए सस्ता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Laser printer में toner cartridge अधिक pages तक चलती है और printing speed भी तेज़ होती है, जिससे बड़ी मात्रा में printing करने पर per-page cost कम पड़ती है। Laser में भी cartridge (toner) लगती है (A), वह भी खराब हो सकता है (B), और color laser printer भी उपलब्ध हैं (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q35",
+      "question": "HDD में डेटा read/write करने वाला 'read/write head' platter की सतह को क्यों नहीं छूता?",
+      "options": [
+        "क्योंकि head को हाथ से हिलाया जाता है",
+        "क्योंकि platter पर plastic cover लगा होता है",
+        "क्योंकि head को magnet से हवा में लटकाया जाता है",
+        "क्योंकि head platter के ऊपर एक बहुत पतली air cushion पर तेज़ गति से 'फ्लाई' करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "HDD platter तेज़ गति से घूमने पर अपने ऊपर एक बहुत पतली air cushion बनाता है, जिस पर read/write head बिना छुए 'फ्लाई' करता है — इसे न छूने से data और head दोनों सुरक्षित रहते हैं (head crash से बचाव)। head मैनुअल नहीं चलता (A), platter पर plastic cover नहीं होता (B), और यह magnetic levitation नहीं है (C)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q36",
+      "question": "HDD की storage capacity और performance को प्रभावित करने वाला 'RPM' (जैसे 5400 RPM, 7200 RPM) किसे दर्शाता है?",
+      "options": [
+        "Printer के छापने की गति",
+        "Data transfer की USB speed",
+        "Platters के घूमने की प्रति मिनट गति, जो data access speed को प्रभावित करती है",
+        "CPU की clock speed"
+      ],
+      "correctIndex": 2,
+      "explanation": "HDD का RPM (Rotations Per Minute) यह बताता है कि platters कितनी तेज़ी से घूमती हैं; अधिक RPM का मतलब आमतौर पर तेज़ data access। यह printer speed (A), USB transfer rate (B) या CPU clock (D) से संबंधित नहीं है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q37",
+      "question": "DVD और CD दोनों optical storage होते हुए भी DVD की capacity CD से कई गुना अधिक क्यों होती है?",
+      "options": [
+        "DVD का आकार CD से बड़ा होता है",
+        "DVD में छोटी wavelength के laser और अधिक सघन (denser) pits/tracks होने से अधिक data fit होता है",
+        "DVD magnetic storage उपयोग करता है",
+        "DVD में दो अलग motors होते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "DVD, CD की तुलना में छोटी wavelength वाले laser और अधिक बारीक (closely spaced) pits/tracks उपयोग करता है, जिससे समान आकार की disc में कहीं अधिक data समा जाता है। CD और DVD का physical आकार लगभग समान ही होता है (A), दोनों optical हैं magnetic नहीं (C), और motors की संख्या से capacity तय नहीं होती (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q38",
+      "question": "एक पुराने computer में केवल VGA port है, पर नए monitor में केवल HDMI input है। इस स्थिति में क्या किया जा सकता है?",
+      "options": [
+        "Monitor को कभी connect नहीं किया जा सकता",
+        "RJ-45 cable से connect करना होगा",
+        "VGA-to-HDMI converter/adapter का उपयोग करके connect किया जा सकता है",
+        "PS/2 port से connect करना होगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "VGA (analog) और HDMI (digital) signal अलग होते हैं, इसलिए बीच में एक VGA-to-HDMI converter/adapter लगाकर signal convert करके monitor को जोड़ा जा सकता है। RJ-45 (B) networking के लिए है, PS/2 (D) keyboard/mouse के लिए है, और सही adapter से connection संभव है (A गलत)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q39",
+      "question": "3.5 mm audio jack port का मुख्य उपयोग क्या है?",
+      "options": [
+        "Printer को जोड़ना",
+        "Network cable जोड़ना",
+        "External hard disk जोड़ना",
+        "Speaker/headphone या microphone जैसे audio devices को जोड़ना"
+      ],
+      "correctIndex": 3,
+      "explanation": "3.5 mm audio jack का उपयोग speaker, headphone या microphone जैसे audio input/output devices जोड़ने के लिए होता है। Printer आमतौर पर USB से (A), network RJ-45 से (B), और external HDD USB/SATA से (C) जुड़ते हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q40",
+      "question": "USB port की एक प्रमुख विशेषता जो इसे PS/2 port से अधिक सुविधाजनक बनाती है, क्या है?",
+      "options": [
+        "USB केवल keyboard के लिए बना है",
+        "USB port का आकार गोल होता है",
+        "USB, hot-swappable है यानी computer चालू रहते हुए भी device जोड़ी/निकाली जा सकती है",
+        "USB में power नहीं मिलती"
+      ],
+      "correctIndex": 2,
+      "explanation": "USB devices को computer चलते हुए भी plug/unplug किया जा सकता है (hot-swappable), जबकि पुराने PS/2 devices को अक्सर restart के बाद ही ठीक से पहचाना जाता था। USB कई तरह के devices के लिए है (A गलत), आकार flat होता है round नहीं (B), और USB से power भी मिलती है (D गलत)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q41",
+      "question": "POST के दौरान अगर keyboard connect ही न हो, तो पुराने systems में क्या होता आम तौर पर देखा जाता है?",
+      "options": [
+        "Computer तुरंत shutdown हो जाता है",
+        "Printer automatically चालू हो जाता है",
+        "Monitor का resolution बदल जाता है",
+        "BIOS एक specific error/beep code देकर booting रोक सकता है, क्योंकि keyboard एक आवश्यक जाँचा गया device है"
+      ],
+      "correctIndex": 3,
+      "explanation": "POST के दौरान BIOS ज़रूरी hardware (जैसे keyboard) की मौजूदगी जाँचता है; न मिलने पर कई systems specific beep code या error message देकर आगे booting रोक देते हैं। यह shutdown नहीं करता (A), printer से असंबंधित है (B), और resolution बदलने का सवाल ही नहीं है (C)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q42",
+      "question": "'Booting' के दौरान BIOS POST पूरा करने के बाद control आमतौर पर किसे सौंपा जाता है?",
+      "options": [
+        "सीधे किसी application software को (जैसे MS Word)",
+        "Printer driver को",
+        "Antivirus software को",
+        "Bootstrap loader/boot loader को, जो OS को RAM में load करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "POST सफल होने पर BIOS control boot loader को देता है, जो operating system को storage से RAM में load करके चलाना शुरू करता है। Application software (A), printer driver (B) या antivirus (C) इस स्तर पर load नहीं होते।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q43",
+      "question": "Warm booting सामान्यतः cold booting से तेज़ क्यों होती है?",
+      "options": [
+        "Warm booting में power supply इकाई बदली जाती है",
+        "Warm booting में hardware की पूरी detailed POST जाँच अक्सर छोटी/skip होती है क्योंकि system पहले से powered था",
+        "Warm booting में printer भी साथ restart होता है",
+        "Warm booting में disk पूरी तरह format हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Warm boot में system पहले से power में होता है, इसलिए कई hardware checks को detailed रूप से दोबारा नहीं करना पड़ता, जिससे यह cold boot से तेज़ होती है। Power supply बदलने (A), printer restart (C) या disk format (D) से booting speed का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q44",
+      "question": "एक technician को पुराने dot matrix printer और नए laser printer में से घर पर रंगीन photo-quality print चाहिए। सही विकल्प व कारण क्या है?",
+      "options": [
+        "Dot matrix, क्योंकि वह ज़्यादा शोर करता है",
+        "इनमें से कोई भी उचित नहीं; इस काम के लिए color inkjet printer अधिक उपयुक्त है क्योंकि वह high-resolution रंगीन ink droplets से smooth photo print देता है",
+        "Laser printer, क्योंकि वह toner powder उपयोग करता है इसलिए हमेशा best photo देता है",
+        "Dot matrix, क्योंकि उसकी DPI सबसे अधिक होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Photo-quality रंगीन printing के लिए color inkjet printer बेहतर होता है क्योंकि यह high DPI पर बारीक रंगीन ink droplets मिलाकर smooth gradients बना सकता है; सामान्य monochrome laser और dot matrix इसके लिए उपयुक्त नहीं हैं। शोर (A) कोई फ़ायदा नहीं, laser toner फोटो के लिए आदर्श नहीं (C), और dot matrix की DPI सबसे कम होती है (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q45",
+      "question": "SSD और HDD दोनों secondary storage होते हुए भी SSD को 'shock resistant' (झटकों से कम प्रभावित) क्यों माना जाता है?",
+      "options": [
+        "SSD में कोई moving mechanical part (जैसे spinning platter या head) नहीं होता",
+        "SSD का आकार HDD से बड़ा होता है",
+        "SSD में optical laser होता है",
+        "SSD में magnetic platters मोटी होती हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "SSD में flash memory chips उपयोग होते हैं और कोई घूमता हुआ platter या moving head नहीं होता, इसलिए झटका/vibration लगने पर data corruption या physical damage का खतरा HDD से कम होता है। SSD आकार में सामान्यतः छोटा/समान होता है (B), न ही optical laser (C) या magnetic platters (D) इसमें होते हैं।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q46",
+      "question": "एक desktop computer में एक साथ printer (USB), monitor (HDMI) और LAN cable (RJ-45) जोड़ने हैं। यदि गलती से LAN cable को HDMI port में डालने की कोशिश की जाए, तो क्या होगा?",
+      "options": [
+        "Cable आसानी से लग जाएगी और network चलने लगेगा",
+        "RJ-45 connector का आकार/pins HDMI port से मेल नहीं खाते, इसलिए वह fit नहीं होगी",
+        "Monitor रंगीन हो जाएगा",
+        "Printer अपने आप बंद हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर port का physical shape और pin-layout उसके designated cable/connector के अनुसार ही design होता है; RJ-45 connector HDMI port के shape में fit ही नहीं होता, इसलिए गलत insertion नहीं हो सकती। इसलिए network चलने (A), monitor रंग बदलने (C) या printer बंद होने (D) का सवाल नहीं उठता।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q47",
+      "question": "Line printer (जैसे बड़े industrial dot-matrix/line printers) की गति को सामान्यतः किस unit में बताया जाता है, और यह अन्य साधारण printers से किस प्रकार भिन्न प्रस्तुत होती है?",
+      "options": [
+        "Lines Per Minute (LPM), क्योंकि यह पूरी line एक साथ छापने की क्षमता रखता है",
+        "Dots Per Inch (DPI), क्योंकि यह resolution मापता है",
+        "Rotations Per Minute (RPM), क्योंकि इसमें platter घूमता है",
+        "Bits Per Second (BPS), क्योंकि यह network से जुड़ा होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "बड़े industrial line printers एक बार में पूरी line छाप सकते हैं, इसलिए उनकी गति Lines Per Minute (LPM) में बताई जाती है, जबकि सामान्य printers की गति PPM में होती है। DPI print quality/resolution मापता है (B), RPM storage disk से संबंधित है (C), और BPS data transfer rate की unit है, printing speed नहीं (D)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q48",
+      "question": "DVD-ROM और DVD-RW में मुख्य अंतर क्या है?",
+      "options": [
+        "DVD-ROM पर factory में data पहले से लिखा होता है और उपयोगकर्ता उसे बदल नहीं सकता, जबकि DVD-RW को बार-बार लिखा/मिटाया जा सकता है",
+        "DVD-ROM magnetic storage है",
+        "DVD-RW की capacity हमेशा DVD-ROM से कम होती है",
+        "दोनों में कोई अंतर नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "DVD-ROM (Read Only Memory) पर data manufacturing के समय ही स्थायी रूप से लिखा जाता है और सिर्फ पढ़ा जा सकता है, जबकि DVD-RW (Rewritable) को उपयोगकर्ता कई बार erase करके फिर से लिख सकता है। दोनों optical हैं magnetic नहीं (B), capacity में कोई निश्चित नियम नहीं कि RW हमेशा कम हो (C), और स्पष्ट अंतर मौजूद है (D गलत)।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q49",
+      "question": "किसी नए computer में पुराने parallel port वाले printer को जोड़ना है, लेकिन नए motherboard में केवल USB ports हैं। सबसे व्यावहारिक solution क्या है?",
+      "options": [
+        "Printer को फेंक देना ही एकमात्र उपाय है",
+        "RJ-45 cable से printer को force से जोड़ना",
+        "Printer के अंदर का hardware बदल देना",
+        "USB-to-Parallel port converter/adapter का उपयोग करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "USB-to-Parallel adapter/converter के ज़रिए पुराने parallel-port printer को नए USB-only computer से आसानी से जोड़ा जा सकता है। Printer फेंकना (A) या उसका internal hardware बदलना (C) अव्यवहारिक है, और RJ-45 (B) parallel connector के साथ compatible नहीं है।"
+    },
+    {
+      "id": "u7_printers_storage_ports_q50",
+      "question": "यदि POST के दौरान RAM ठीक से न मिले या faulty हो, तो सामान्यतः क्या परिणाम होगा?",
+      "options": [
+        "Computer सामान्य रूप से boot हो जाएगा बिना किसी समस्या के",
+        "System booting में असफल हो सकता है और beep codes/error के ज़रिए RAM समस्या दिखाई जाएगी",
+        "केवल printer काम करना बंद कर देगा",
+        "केवल internet connection काम नहीं करेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "RAM एक critical component है जिसमें OS load होता है; POST के दौरान RAM न मिलने या faulty होने पर system आमतौर पर आगे बढ़ने में असफल रहता है और specific beep codes/error message से समस्या बताई जाती है। यह सामान्य booting (A) नहीं होने देता, और मुद्दा केवल printer (C) या internet (D) तक सीमित नहीं बल्कि पूरे booting process को प्रभावित करता है।"
     }
   ]
 }

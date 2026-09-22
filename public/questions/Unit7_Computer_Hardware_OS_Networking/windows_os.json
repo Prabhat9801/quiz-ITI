@@ -363,6 +363,426 @@
       ],
       "correctIndex": 1,
       "explanation": "System Restore feature computer की settings और system files को किसी पहले बनाए गए restore point की स्थिति में वापस ले जाता है, जिससे नए software/update से आई समस्याएँ ठीक हो सकती हैं, बिना personal files को प्रभावित किए। Option A, Defragmentation disk performance से संबंधित है, system problems ठीक करने के लिए नहीं। Option C, Recycle Bin Restore केवल deleted individual files वापस लाने के लिए है, पूरे system state के लिए नहीं। Option D, Task Manager processes manage करने के लिए है, system को पुरानी स्थिति में लाने के लिए नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q31",
+      "question": "Windows Display Settings में 'Orientation' विकल्प को Landscape से Portrait में बदलने पर क्या effect होता है?",
+      "options": [
+        "Screen resolution स्वतः सबसे कम हो जाती है",
+        "Sound automatically mute हो जाता है",
+        "Screen की content 90 degree घूम जाती है और display की width-height व्यवस्था बदल जाती है",
+        "Desktop के सभी icons delete हो जाते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Orientation setting बदलने पर display की content 90 या 180 degree rotate होकर Portrait/Landscape mode में दिखती है, जो मुख्यतः rotating monitors या tablets में उपयोगी होता है। Option A गलत है क्योंकि orientation बदलने से resolution अपने आप कम नहीं होती, यह अलग setting है। Option B गलत है क्योंकि sound settings का display orientation से कोई संबंध नहीं। Option D गलत है क्योंकि icons delete नहीं होते, वे नए orientation के अनुसार फिर से arrange दिख सकते हैं।"
+    },
+    {
+      "id": "u7_windows_os_q32",
+      "question": "Windows में 'Night Light' feature मुख्यतः किस उद्देश्य के लिए दिया गया है?",
+      "options": [
+        "Battery की life को स्थायी रूप से बढ़ाना",
+        "Internet की speed बढ़ाना",
+        "Screen पर warmer (कम blue) रंग दिखाकर आँखों पर रात के समय पड़ने वाले strain को कम करना",
+        "Printer की ink बचाना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Night Light feature screen की blue light को कम करके warmer tone display करता है, जिससे रात में लंबे समय तक स्क्रीन देखने पर आँखों की थकान कम होती है। Option A गलत है क्योंकि यह मुख्यतः color temperature बदलता है, battery life में कोई स्थायी सुधार इसका उद्देश्य नहीं। Option B और D का Night Light से कोई तकनीकी संबंध नहीं है, ये बिल्कुल अलग विषय हैं।"
+    },
+    {
+      "id": "u7_windows_os_q33",
+      "question": "Control Panel के 'Sound' settings में 'Playback' और 'Recording' tabs क्रमशः किससे संबंधित होते हैं?",
+      "options": [
+        "Playback keyboard settings से और Recording mouse settings से संबंधित है",
+        "दोनों tabs केवल internet settings दिखाते हैं",
+        "Playback output devices (जैसे speakers, headphones) से और Recording input devices (जैसे microphone) से संबंधित है",
+        "Playback केवल video files से और Recording केवल images से संबंधित है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Playback tab उन devices को manage करता है जिनसे sound सुनाई देता है (speakers, headphones), जबकि Recording tab microphone जैसे input devices को manage करता है जिनसे आवाज़ record होती है। Option A गलत है क्योंकि keyboard/mouse settings Sound Control Panel में नहीं आती। Option B गलत है क्योंकि ये tabs internet से संबंधित नहीं हैं। Option D गलत है क्योंकि video/image files का इन tabs से कोई सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q34",
+      "question": "यदि किसी computer पर आवाज़ (sound) पूरी तरह से नहीं आ रही है, तो सबसे पहले Sound settings में कौन-सी जांच करनी चाहिए?",
+      "options": [
+        "Display resolution की जांच करना",
+        "Disk Cleanup चलाना",
+        "सही playback device select है या नहीं और वह muted तो नहीं है, यह जांचना",
+        "Font settings बदलना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Sound न आने की स्थिति में पहले यह देखना चाहिए कि सही output/playback device (जैसे speakers) selected है और उसका volume mute तो नहीं है, क्योंकि यह सबसे common कारण होता है। Option A गलत है क्योंकि display resolution का sound output से कोई संबंध नहीं। Option B गलत है क्योंकि Disk Cleanup space खाली करने के लिए है, sound problem के लिए नहीं। Option D गलत है क्योंकि fonts text की दिखावट से संबंधित हैं, sound से नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q35",
+      "question": "Windows में Screen Saver का मूल (original) उद्देश्य क्या था?",
+      "options": [
+        "Internet की speed बढ़ाना",
+        "Computer को automatically shut down करना",
+        "Files को automatically backup करना",
+        "पुराने CRT monitors पर लंबे समय तक स्थिर image रहने से होने वाली 'screen burn-in' को रोकना"
+      ],
+      "correctIndex": 3,
+      "explanation": "पुराने CRT monitors में यदि एक जैसी image लंबे समय तक स्थिर रहती थी, तो screen पर उसका permanent निशान (burn-in) पड़ जाता था; Screen Saver moving images दिखाकर इसे रोकता था, और आज यह मुख्यतः privacy व decoration के लिए भी उपयोग होता है। Option A और C का screen saver की मूल तकनीक से कोई संबंध नहीं। Option B गलत है क्योंकि screen saver computer को shut down नहीं करता, केवल display पर animation दिखाता है।"
+    },
+    {
+      "id": "u7_windows_os_q36",
+      "question": "Screen Saver settings में 'Wait' समय (जैसे 10 minutes) निर्धारित करने का क्या अर्थ है?",
+      "options": [
+        "हर 10 minute में computer restart होगा",
+        "10 minute के बाद file अपने आप save हो जाएगी",
+        "10 minute के बाद internet connection टूट जाएगा",
+        "10 minute तक कोई keyboard/mouse activity न होने पर screen saver automatically चालू हो जाएगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Wait' time यह निर्धारित करता है कि user के निष्क्रिय (idle) रहने पर, यानी कीबोर्ड/माउस से कोई input न मिलने पर, कितने समय बाद screen saver activate हो जाए। Option A, B और C गलत हैं क्योंकि इनका screen saver के idle-wait timer से कोई तकनीकी संबंध नहीं है, यह setting केवल display animation शुरू होने के समय को नियंत्रित करती है।"
+    },
+    {
+      "id": "u7_windows_os_q37",
+      "question": "Screen Saver settings में 'On resume, display logon screen' विकल्प चुनने का लाभ क्या है?",
+      "options": [
+        "Screen resolution automatically बढ़ जाती है",
+        "Files की size कम हो जाती है",
+        "Screen saver बंद होने पर वह Desktop directly दिखाने के बजाय password/logon screen मांगेगा, जिससे unauthorized access रोकी जा सके",
+        "Internet automatically connect हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "यह विकल्प security बढ़ाता है — जब user किसी key/mouse से screen saver रोकता है, तो सीधे Desktop पर जाने के बजाय logon screen आती है, जिसमें password डालना ज़रूरी होता है, जिससे कोई और व्यक्ति system का दुरुपयोग न कर सके। Option A, B, D का इस security setting से कोई संबंध नहीं, ये पूरी तरह अलग functions हैं।"
+    },
+    {
+      "id": "u7_windows_os_q38",
+      "question": "Control Panel में 'Fonts' folder खोलकर कोई नया font install करने के लिए सामान्यतः क्या किया जाता है?",
+      "options": [
+        "Font file को Recycle Bin में डालना",
+        "Disk को format करना",
+        "Font file (जैसे .ttf) को Fonts folder में copy/drag करना या उस पर right-click करके 'Install' चुनना",
+        "Screen resolution बदलना"
+      ],
+      "correctIndex": 2,
+      "explanation": "किसी नया font (जैसे .ttf या .otf file) install करने के लिए उसे Fonts folder में drag/copy किया जाता है या file पर right-click करके 'Install' option चुना जाता है, जिससे वह सभी applications में उपयोग के लिए उपलब्ध हो जाता है। Option A गलत है क्योंकि Recycle Bin में डालने से file delete होने की प्रक्रिया शुरू होती है, install नहीं। Option B और D का font install करने की प्रक्रिया से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_windows_os_q39",
+      "question": "यदि किसी document में एक font style (जैसे कोई विशेष Devanagari font) सही से नहीं दिख रहा, तो इसका एक सामान्य कारण क्या हो सकता है?",
+      "options": [
+        "Internet connection धीमा है",
+        "Hard disk full हो गई है",
+        "RAM काम नहीं कर रही",
+        "वह विशेष font computer में install ही नहीं है"
+      ],
+      "correctIndex": 3,
+      "explanation": "यदि किसी document में प्रयोग किया गया font उस computer पर installed नहीं है, तो application उसे किसी default/substitute font में दिखाता है या सही तरीके से render नहीं कर पाता, इसलिए दिखावट में समस्या आती है। Option A, B, C सामान्यतः font rendering की समस्या से सीधे जुड़े नहीं होते, ये अलग तरह की समस्याएँ दर्शाते हैं (network, storage, memory)।"
+    },
+    {
+      "id": "u7_windows_os_q40",
+      "question": "Windows Fonts folder में किसी font preview को double-click करने पर क्या दिखता है?",
+      "options": [
+        "उस font का sample text विभिन्न sizes में दिखने वाला एक preview window",
+        "वह font permanently delete हो जाता है",
+        "Control Panel बंद हो जाता है",
+        "Computer restart होने लगता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "किसी font file को double-click करने पर उस font का नाम, कुछ जानकारी, और विभिन्न sizes में sample text दिखाने वाला एक preview window खुलता है, जिससे font की दिखावट देखी जा सकती है बिना install किए। Option B, C, D गलत हैं क्योंकि double-click करके preview देखने से न font delete होता है, न Control Panel बंद होता है, न ही computer restart होता है।"
+    },
+    {
+      "id": "u7_windows_os_q41",
+      "question": "किसी नए application (जैसे .exe setup file) को install करते समय आमतौर पर किस बात पर ध्यान देना ज़रूरी होता है?",
+      "options": [
+        "Setup wizard के license agreement, installation location और additional software (bundled offers) को ध्यान से पढ़ना/चुनना",
+        "Setup के दौरान screen saver चालू करना",
+        "Setup के दौरान Recycle Bin खाली करना",
+        "Setup के दौरान screen resolution बदलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Software install करते समय license agreement पढ़ना, installation drive/folder चुनना, और कई बार साथ आने वाले extra/unwanted software (bundled offers) को ध्यान से uncheck करना ज़रूरी है ताकि अनावश्यक programs install न हों। Option B, C, D का installation process की सावधानियों से कोई सीधा तकनीकी संबंध नहीं है, ये installation के दौरान आवश्यक कार्य नहीं हैं।"
+    },
+    {
+      "id": "u7_windows_os_q42",
+      "question": "किसी 32-bit application को गलती से 64-bit Windows पर install करने की कोशिश करने पर क्या हो सकता है?",
+      "options": [
+        "सामान्यतः अधिकतर 32-bit applications 64-bit Windows पर compatibility mode में चल जाती हैं",
+        "Windows स्वतः पूरी तरह uninstall हो जाएगा",
+        "Hard disk automatically format हो जाएगी",
+        "Computer कभी restart नहीं होगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "64-bit Windows में backward compatibility होती है, जिससे अधिकतर 32-bit applications सामान्य रूप से या compatibility settings के साथ चल जाती हैं (हालांकि इसका विपरीत यानी 64-bit app को 32-bit OS पर चलाना संभव नहीं होता)। Option B, C, D पूरी तरह गलत और असंभव परिणाम हैं जिनका वास्तविक software installation behavior से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_windows_os_q43",
+      "question": "Control Panel में 'Date and Time' settings बदलने से मुख्यतः क्या प्रभावित हो सकता है?",
+      "options": [
+        "Files/emails पर लगने वाला timestamp और समय-आधारित (scheduled) tasks का सही समय पर चलना",
+        "Screen resolution",
+        "Sound volume",
+        "Installed fonts की list"
+      ],
+      "correctIndex": 0,
+      "explanation": "गलत Date and Time set होने पर files के creation/modification timestamps गलत दिख सकते हैं और scheduled tasks, certificates की validity जैसे कार्य प्रभावित हो सकते हैं। Option B, C, D का date/time settings से कोई तार्किक संबंध नहीं है, ये अलग-अलग control panel items से जुड़े हैं।"
+    },
+    {
+      "id": "u7_windows_os_q44",
+      "question": "Control Panel के 'Power Options' में 'Sleep' mode और 'Shut Down' में मुख्य अंतर क्या है?",
+      "options": [
+        "Sleep mode में current session की state RAM में low-power पर रहती है और जल्दी resume हो सकती है, जबकि Shut Down में computer पूरी तरह बंद होता है और अगली बार पूरा boot process दोबारा चलता है",
+        "दोनों में कोई अंतर नहीं होता",
+        "Shut Down करने पर सभी installed programs delete हो जाते हैं",
+        "Sleep mode में computer तेज़ गति से data को permanently delete करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sleep mode में system की current state (खुले programs, documents) RAM में low-power अवस्था में save रहती है ताकि जल्दी resume हो सके, जबकि Shut Down में power पूरी तरह बंद हो जाती है और अगली बार पूरा startup/boot process होता है। Option B गलत है क्योंकि power consumption और resume speed में स्पष्ट अंतर है। Option C और D गलत हैं क्योंकि न shut down से installed programs delete होते हैं, न sleep mode data delete करता है।"
+    },
+    {
+      "id": "u7_windows_os_q45",
+      "question": "Windows Accessories में मौजूद 'Notepad' application मुख्यतः किस काम आता है?",
+      "options": [
+        "Plain text files बनाना और edit करना (बिना rich formatting के)",
+        "Images को edit करना और drawing बनाना",
+        "Audio files को record करना",
+        "Complex calculations के लिए scientific graphs बनाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Notepad एक basic text editor है जिसमें plain text (.txt) files बनाई और edit की जाती हैं, इसमें bold/italic जैसी rich formatting की सुविधा नहीं होती। Option B, Paint का काम है जो images/drawing बनाने के लिए है। Option C, Voice Recorder जैसे tool का काम है। Option D, scientific graphs बनाना Notepad का उद्देश्य नहीं है, यह केवल plain text संभालता है।"
+    },
+    {
+      "id": "u7_windows_os_q46",
+      "question": "Windows Accessories में 'Paint' और 'Notepad' में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों केवल audio files के लिए हैं",
+        "Paint केवल internet browsing के लिए है, Notepad printing के लिए",
+        "Paint image/drawing बनाने और edit करने के लिए है, जबकि Notepad plain text लिखने के लिए है",
+        "Paint केवल video editing करता है, Notepad images बनाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Paint एक graphics/drawing application है जिससे images बनाई, edit और save (जैसे .bmp, .jpg, .png में) की जा सकती हैं, जबकि Notepad केवल plain text content के लिए बना एक simple text editor है। Option A, B, D में दी गई जानकारी वास्तविक कार्यक्षमता से मेल नहीं खाती, ये पूरी तरह गलत विवरण हैं।"
+    },
+    {
+      "id": "u7_windows_os_q47",
+      "question": "Windows Calculator application में 'Scientific' mode किस लिए उपयोगी होता है?",
+      "options": [
+        "केवल addition और subtraction के लिए",
+        "Files को rename करने के लिए",
+        "Internet browsing के लिए",
+        "Trigonometric functions, logarithms, exponents जैसी advanced गणितीय गणनाओं के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Calculator का Scientific mode trigonometric functions (sin, cos, tan), logarithm, exponent, factorial जैसी advanced mathematical operations करने की सुविधा देता है, जो Standard mode में उपलब्ध नहीं होतीं। Option A केवल Standard mode की basic operations बताता है, यह Scientific mode का विशेष उद्देश्य नहीं। Option B और C का Calculator के गणितीय कार्य से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_windows_os_q48",
+      "question": "Windows का 'Snipping Tool' (या Snip & Sketch) accessory मुख्यतः किस काम आता है?",
+      "options": [
+        "Hard disk को format करने के लिए",
+        "Programs को uninstall करने के लिए",
+        "Internet की speed test करने के लिए",
+        "Screen के किसी हिस्से का screenshot लेकर उसे edit/save करने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Snipping Tool screen के पूरे भाग या किसी चुने हुए हिस्से का screenshot (capture) लेने की सुविधा देता है, जिसे बाद में annotate करके save या share किया जा सकता है। Option A गलत है क्योंकि disk formatting का इससे कोई संबंध नहीं। Option B, Programs and Features का काम है। Option C, internet speed test browser-based tools या websites से होता है, Snipping Tool से नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q49",
+      "question": "Windows Accessories में मौजूद 'Character Map' tool का मुख्य उपयोग क्या है?",
+      "options": [
+        "Special symbols और characters (जैसे ©, ₹, या किसी विशेष font के glyphs) खोजकर copy करने के लिए",
+        "System files को permanently delete करने के लिए",
+        "Screen resolution बदलने के लिए",
+        "Hardware drivers को update करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Character Map उन special characters/symbols को दिखाता है जो सीधे keyboard से type करना कठिन होता है (जैसे ©, ₹, ™, या किसी installed font के विशेष glyphs), जिन्हें select करके copy-paste किया जा सकता है। Option B, C, D का इस tool के मूल उद्देश्य से कोई संबंध नहीं है, ये पूरी तरह अलग कार्य हैं।"
+    },
+    {
+      "id": "u7_windows_os_q50",
+      "question": "'Remote Desktop Connection' accessory का मुख्य उपयोग क्या है?",
+      "options": [
+        "Local printer को configure करना",
+        "Desktop wallpaper बदलना",
+        "Font install करना",
+        "किसी दूसरे network से जुड़े computer को दूर बैठे access और control करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Remote Desktop Connection से user network (या internet) के माध्यम से किसी दूसरे permission-प्राप्त computer को दूर से access करके उस पर काम कर सकता है, जैसे कि सीधे उसी computer के सामने बैठा हो। Option A, B, C का इस tool के remote-access कार्य से कोई संबंध नहीं है, ये सभी अलग-अलग स्थानीय कार्य हैं।"
+    },
+    {
+      "id": "u7_windows_os_q51",
+      "question": "Windows Desktop पर right-click करने पर मिलने वाले context menu में सामान्यतः क्या-क्या options होते हैं?",
+      "options": [
+        "केवल 'Shut Down' का option",
+        "View, Sort by, Refresh, New, Display settings, Personalize जैसे options",
+        "केवल printer settings",
+        "केवल Recycle Bin खोलने का option"
+      ],
+      "correctIndex": 1,
+      "explanation": "Desktop पर right-click करने पर आमतौर पर View, Sort by, Refresh, New (folder/shortcut बनाने के लिए), Display settings और Personalize जैसे कई options दिखते हैं जो desktop को व्यवस्थित/customize करने में मदद करते हैं। Option A, C, D अधूरी और गलत सूचना देते हैं, क्योंकि context menu में इससे कहीं अधिक options होते हैं।"
+    },
+    {
+      "id": "u7_windows_os_q52",
+      "question": "Desktop background (wallpaper) बदलने के लिए Windows में सामान्यतः किस रास्ते का उपयोग किया जाता है?",
+      "options": [
+        "Desktop पर right-click करके Personalize चुनना और फिर Background सेट करना",
+        "File Explorer में जाकर Ctrl+Z दबाना",
+        "Task Manager खोलकर End Task दबाना",
+        "Control Panel के Region settings में जाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wallpaper बदलने के लिए Desktop पर right-click करके 'Personalize' चुना जाता है, जहाँ Background सेटिंग में जाकर image, solid color या slideshow चुना जा सकता है। Option B, Ctrl+Z 'Undo' के लिए है, wallpaper बदलने से इसका कोई संबंध नहीं। Option C, Task Manager processes manage करता है। Option D, Region settings भाषा/date-time format से संबंधित है।"
+    },
+    {
+      "id": "u7_windows_os_q53",
+      "question": "यदि Taskbar में किसी program का icon 'Pin to taskbar' किया जाता है, तो इसका क्या फायदा है?",
+      "options": [
+        "वह program permanently delete नहीं हो सकता",
+        "Computer की RAM बढ़ जाती है",
+        "वह program automatically हर बार startup पर चलने लगता है",
+        "वह program हमेशा Taskbar पर shortcut के रूप में दिखता रहेगा, चाहे वह चल रहा हो या नहीं, जिससे उसे जल्दी खोला जा सके"
+      ],
+      "correctIndex": 3,
+      "explanation": "Pin to taskbar करने पर program का icon स्थायी रूप से Taskbar पर दिखता रहता है (चाहे वह running हो या न हो), जिससे user उसे एक click में जल्दी खोल सके। Option A गलत है क्योंकि pin करने से uninstall/delete होने से कोई सुरक्षा नहीं मिलती। Option B गलत है क्योंकि pin करने से RAM नहीं बढ़ती। Option C गलत है क्योंकि pin करना और startup पर automatically चलाना (Startup folder/Task Manager Startup tab) दो अलग-अलग settings हैं।"
+    },
+    {
+      "id": "u7_windows_os_q54",
+      "question": "File Explorer में 'View' tab के अंतर्गत 'Details' view चुनने पर क्या दिखता है?",
+      "options": [
+        "केवल files के बड़े thumbnail icons",
+        "Files/folders की सूची के साथ Name, Date modified, Type, Size जैसे columns में जानकारी",
+        "केवल Recycle Bin की content",
+        "केवल installed fonts की सूची"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Details' view में files और folders की सूची अलग-अलग columns (जैसे Name, Date modified, Type, Size) के रूप में व्यवस्थित दिखती है, जिससे items को अधिक जानकारी सहित sort करना आसान होता है। Option A, 'Large icons' view का वर्णन है, Details का नहीं। Option C और D का इस specific view setting से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_windows_os_q55",
+      "question": "File Explorer में किसी folder के अंदर files को 'Date modified' के अनुसार sort करने का क्या फायदा है?",
+      "options": [
+        "सभी files एक जैसे नाम में बदल जाती हैं",
+        "हाल ही में बदली/बनाई गई या पुरानी files को क्रम में देखना आसान हो जाता है",
+        "Files का extension बदल जाता है",
+        "Files automatically compress हो जाती हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Date modified' के अनुसार sort करने पर सबसे हाल में बदली गई या सबसे पुरानी files क्रम से (ascending/descending) दिखती हैं, जिससे नई/पुरानी files ढूँढना आसान होता है। Option A, C, D गलत हैं क्योंकि sorting से files के नाम, extension या size/compression पर कोई असर नहीं पड़ता, यह केवल display order बदलता है।"
+    },
+    {
+      "id": "u7_windows_os_q56",
+      "question": "किसी file को copy करके किसी दूसरे folder में paste करने पर (Ctrl+C फिर Ctrl+V) क्या होता है?",
+      "options": [
+        "Original file हट जाती है और नई location पर चली जाती है",
+        "File का extension automatically बदल जाता है",
+        "Original स्थान पर file बनी रहती है और नए स्थान पर उसकी एक duplicate copy भी बन जाती है",
+        "File permanently delete हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Copy-Paste करने पर original file अपने पुराने स्थान पर बनी रहती है और नए स्थान पर उसकी एक duplicate copy तैयार हो जाती है, यानी अब दो जगह वही content मौजूद रहता है। Option A, Move (Cut-Paste) का behavior है, Copy का नहीं। Option B गलत है क्योंकि extension copy करने से नहीं बदलता। Option D गलत है क्योंकि copy करने से कोई file delete नहीं होती।"
+    },
+    {
+      "id": "u7_windows_os_q57",
+      "question": "File Explorer में किसी folder की Properties खोलकर देखी जाने वाली 'Size on disk' और 'Size' में क्या अंतर हो सकता है?",
+      "options": [
+        "दोनों हमेशा exactly बराबर होती हैं",
+        "'Size' actual data की मात्रा दर्शाती है जबकि 'Size on disk' file system द्वारा allocate की गई वास्तविक disk space दर्शाती है, जो blocks/clusters के कारण थोड़ी अधिक हो सकती है",
+        "'Size on disk' हमेशा 'Size' से कम होती है",
+        "इन दोनों का आपस में कोई संबंध नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Size' file के actual content की मात्रा (bytes में) बताती है, जबकि 'Size on disk' file system के cluster/block allocation के कारण उतनी या थोड़ी अधिक जगह दिखाती है, क्योंकि storage हमेशा fixed-size blocks में allocate होता है। Option A सामान्यतः सही नहीं होता, ये अक्सर थोड़े अलग होते हैं। Option C गलत है क्योंकि 'Size on disk' सामान्यतः 'Size' से कम नहीं, बराबर या अधिक होती है। Option D गलत है क्योंकि दोनों एक ही file के दो related measurements हैं।"
+    },
+    {
+      "id": "u7_windows_os_q58",
+      "question": "File Explorer में 'This PC' खोलने पर सामान्यतः क्या दिखता है?",
+      "options": [
+        "केवल installed fonts की सूची",
+        "Computer से जुड़े drives (C:, D: आदि), folders (Documents, Pictures) और devices with removable storage",
+        "केवल internet browsing history",
+        "केवल Recycle Bin की content"
+      ],
+      "correctIndex": 1,
+      "explanation": "'This PC' में computer के सभी local drives (जैसे C:, D:), common user folders (Documents, Downloads, Pictures) और connected removable devices (जैसे USB, external drive) दिखाई देते हैं। Option A, फ़ॉन्ट्स Control Panel के Fonts folder में होते हैं। Option C, browsing history browser software में होती है, 'This PC' में नहीं। Option D, Recycle Bin अलग से Desktop पर icon के रूप में होता है।"
+    },
+    {
+      "id": "u7_windows_os_q59",
+      "question": "Windows में किसी folder को Zip करके compress करने का मुख्य लाभ क्या है?",
+      "options": [
+        "Folder का data permanently delete हो जाता है",
+        "Folder की सभी files का size बढ़ जाता है",
+        "File का extension बदलकर .exe हो जाता है",
+        "Files/folders का कुल size कम होकर उन्हें share/transfer करना आसान हो जाता है, और कई files एक ही .zip file में समाहित हो जाती हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Zip करने पर files compress होकर छोटी size की एक single .zip file में बदल जाती हैं, जिससे उन्हें email/USB से transfer करना और storage में जगह बचाना आसान हो जाता है। Option A गलत है क्योंकि zipping से data delete नहीं होता, केवल compress होता है। Option B गलत है क्योंकि compression से size घटता है, बढ़ता नहीं। Option C गलत है क्योंकि zip file का extension .zip होता है, .exe नहीं।"
+    },
+    {
+      "id": "u7_windows_os_q60",
+      "question": "Control Panel में 'Ease of Access Center' मुख्यतः किन users के लिए उपयोगी features प्रदान करता है?",
+      "options": [
+        "केवल gaming के लिए",
+        "जिन users को देखने, सुनने या typing में सहायता चाहिए (जैसे Magnifier, Narrator, On-Screen Keyboard जैसे tools)",
+        "केवल network configuration के लिए",
+        "केवल printer setup के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ease of Access Center उन users के लिए accessibility tools प्रदान करता है जिन्हें visual, hearing या physical सहायता चाहिए, जैसे Magnifier (स्क्रीन बड़ा करना), Narrator (text पढ़कर सुनाना), और On-Screen Keyboard। Option A, C, D का accessibility features से कोई संबंध नहीं है, ये पूरी तरह अलग उद्देश्यों के लिए हैं।"
+    },
+    {
+      "id": "u7_windows_os_q61",
+      "question": "Windows में 'Personalization' settings के अंतर्गत 'Themes' चुनने से क्या बदलता है?",
+      "options": [
+        "Internet की speed",
+        "Computer की RAM capacity",
+        "Desktop background, window colors, sounds और mouse cursor जैसी visual/audio सेटिंग्स का एक साथ संग्रह (combination)",
+        "Hard disk का file system"
+      ],
+      "correctIndex": 2,
+      "explanation": "एक Theme, Desktop background, accent colors, system sounds और कभी-कभी mouse cursor जैसी कई personalization settings का एक pre-defined combination होता है, जिसे एक साथ apply किया जा सकता है। Option A, B, D का themes से कोई तकनीकी संबंध नहीं है, ये पूरी तरह अलग-अलग hardware/network विषय हैं।"
+    },
+    {
+      "id": "u7_windows_os_q62",
+      "question": "यदि Taskbar अचानक गायब (hidden) हो जाए, तो इसका एक सामान्य कारण क्या हो सकता है?",
+      "options": [
+        "'Automatically hide the taskbar' setting on हो सकती है, जिससे वह mouse हटाने पर छुप जाती है",
+        "Hard disk पूरी तरह खराब हो गई",
+        "RAM पूरी तरह fail हो गई",
+        "Internet connection टूट गया"
+      ],
+      "correctIndex": 0,
+      "explanation": "Taskbar settings में 'Automatically hide the taskbar' option enable होने पर, mouse cursor को उससे हटाने पर वह अपने आप छुप जाती है और वापस mouse ले जाने पर फिर दिखती है — यह एक normal setting behavior है, कोई खराबी नहीं। Option B, C, D गंभीर hardware/network समस्याएँ हैं जिनका इस सामान्य display behavior से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u7_windows_os_q63",
+      "question": "किसी folder की Properties में 'Read-only' attribute enable करने का क्या असर होता है?",
+      "options": [
+        "File/folder पूरी तरह delete हो जाता है",
+        "File/folder में content को आसानी से बदलने से रोका जाता है (यह accidental modification से बचाने के लिए उपयोगी है)",
+        "File का extension बदल जाता है",
+        "File automatically hidden हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Read-only' attribute set करने पर file/folder को बिना permission बदले modify करना कठिन हो जाता है, जिससे गलती से data बदलने या delete होने से बचाव होता है। Option A गलत है क्योंकि read-only करने से file delete नहीं होती। Option C गलत है क्योंकि extension attribute से independent रहता है। Option D गलत है क्योंकि Hidden और Read-only दो अलग-अलग attributes हैं।"
+    },
+    {
+      "id": "u7_windows_os_q64",
+      "question": "Windows Update के माध्यम से मिलने वाले 'Security updates/patches' का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Desktop wallpaper बदलना",
+        "System में मौजूद security vulnerabilities को ठीक करना और OS को नए खतरों से सुरक्षित रखना",
+        "Screen resolution बढ़ाना",
+        "Installed fonts हटाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Security updates/patches, OS में पाई गई कमजोरियों (vulnerabilities) को ठीक करते हैं, जिससे malware/hackers द्वारा उनका फायदा उठाकर system को नुकसान पहुँचाने का खतरा कम हो जाता है। Option A, C, D का security patching से कोई तकनीकी संबंध नहीं है, ये अलग-अलग असंबंधित settings हैं।"
+    },
+    {
+      "id": "u7_windows_os_q65",
+      "question": "Control Panel में 'Network and Sharing Center' से किसी folder को network पर 'Share' करने का क्या फायदा है (केवल local file-sharing के दृष्टिकोण से)?",
+      "options": [
+        "उस folder का data permanently delete हो जाता है",
+        "उसी local network से जुड़े अन्य computers उस shared folder की files को permission अनुसार access कर सकते हैं",
+        "उस folder का extension बदल जाता है",
+        "Computer की screen resolution बदल जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "किसी folder को network share करने पर, उसी local network (जैसे LAN) से जुड़े अन्य authorized computers/users उस folder की files को दिए गए permission (read/write) के अनुसार access कर सकते हैं, जिससे बिना pen-drive के files आसानी से आदान-प्रदान होती हैं। Option A, C, D का folder sharing की इस functionality से कोई संबंध नहीं है, ये पूरी तरह असंबंधित परिणाम हैं।"
     }
   ]
 }

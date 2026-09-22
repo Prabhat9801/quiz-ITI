@@ -363,6 +363,366 @@
       ],
       "correctIndex": 0,
       "explanation": "सही उत्तर option A है क्योंकि client-server model में एक या अधिक dedicated servers centralized resources/services (जैसे files, database, printing) प्रदान करते हैं और clients उनसे request करके सेवा प्राप्त करते हैं, जबकि peer-to-peer model में सभी nodes (peers) बराबर होते हैं और हर peer client और server दोनों की भूमिका निभा सकता है, जैसे कि direct file sharing। Option B गलत है क्योंकि peer-to-peer model में कोई dedicated central server जरूरी नहीं होता, यही तो client-server से इसका मुख्य अंतर है। Option C गलत है क्योंकि client-server model में server एक विशेष (dedicated) भूमिका निभाता है, सभी computers बराबर नहीं होते। Option D गलत है क्योंकि दोनों models की architecture, resource-sharing तरीका और उपयोग के परिदृश्य स्पष्ट रूप से भिन्न होते हैं।"
+    },
+    {
+      "id": "u7_networking_basics_q31",
+      "question": "Computer networking बनाने के पीछे मुख्य उद्देश्य (benefit) के रूप में निम्नलिखित में से क्या सबसे उचित माना जाता है?",
+      "options": [
+        "Resource sharing (जैसे printer, files, internet connection) और devices के बीच आसान communication को संभव बनाना",
+        "हर computer को दूसरे computers से पूरी तरह isolate करना ताकि कोई data share न हो",
+        "केवल gaming के लिए अलग hardware तैयार करना",
+        "Computers की processing speed को स्थायी रूप से बढ़ा देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि networking का मूल उद्देश्य ही resource sharing (jaise printer, files, internet) और devices के बीच तेज़ व सुविधाजनक communication (जैसे email, messaging) को संभव बनाना है, जिससे लागत और समय दोनों की बचत होती है। Option B गलत है क्योंकि network का उद्देश्य isolation नहीं बल्कि connectivity और sharing है। Option C गलत है क्योंकि networking gaming तक सीमित नहीं, यह एक सामान्य-उद्देश्य वाली सुविधा है। Option D गलत है क्योंकि network जोड़ने से individual computer की processing speed नहीं बढ़ती, केवल connectivity और resource-access बढ़ता है।"
+    },
+    {
+      "id": "u7_networking_basics_q32",
+      "question": "Networking का उपयोग करने से किसी organization को centralized data management के रूप में क्या फायदा मिलता है?",
+      "options": [
+        "हर employee को अपना अलग-अलग hardware खरीदना पड़ता है, जिससे लागत बढ़ जाती है",
+        "Centralized management से network की security कम हो जाती है",
+        "Data हमेशा हर computer में अलग-अलग duplicate रूप में रखना पड़ता है",
+        "Data को एक ही जगह (जैसे server) पर centrally store करके सभी authorized users आसानी से access, backup और manage कर सकते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि networking की मदद से data को केंद्रीय रूप से (जैसे एक server पर) रखा जा सकता है, जिससे backup लेना, updates करना और access control manage करना आसान हो जाता है। Option A गलत है क्योंकि centralization से हार्डवेयर और सॉफ़्टवेयर की लागत घटती है, बढ़ती नहीं। Option C गलत है क्योंकि centralized storage का उद्देश्य ही duplicate copies से बचना है। Option B गलत है क्योंकि centralized management से security बेहतर तरीके से नियंत्रित और monitor की जा सकती है, यह कम नहीं होती।"
+    },
+    {
+      "id": "u7_networking_basics_q33",
+      "question": "Bus topology में जब दो devices एक साथ backbone cable पर data भेजने की कोशिश करती हैं, तो जो समस्या उत्पन्न होती है उसे क्या कहा जाता है?",
+      "options": [
+        "Handshaking failure",
+        "Token loss",
+        "Subnetting error",
+        "Data collision, जिसमें signals आपस में टकराकर corrupt हो जाते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि bus topology में सभी devices एक ही shared cable इस्तेमाल करती हैं, इसलिए जब दो devices एक साथ transmit करती हैं तो उनके signals टकराकर collision उत्पन्न करते हैं और data corrupt हो जाता है। Option A गलत है क्योंकि handshaking, TCP जैसे connection-oriented protocols से जुड़ा concept है, bus topology की physical समस्या नहीं। Option C गलत है क्योंकि subnetting, IP addressing से संबंधित है, topology की physical समस्या नहीं। Option B गलत है क्योंकि token loss, ring/token-passing based networks की समस्या है, bus topology में token का उपयोग नहीं होता।"
+    },
+    {
+      "id": "u7_networking_basics_q34",
+      "question": "Star topology को छोटे office/home networks में bus topology की तुलना में अधिक पसंद क्यों किया जाता है?",
+      "options": [
+        "क्योंकि इसमें cable की length की कोई सीमा नहीं होती",
+        "क्योंकि इसमें data collision कभी नहीं होता चाहे कितनी भी devices एक साथ भेजें",
+        "क्योंकि star topology में कोई central device की जरूरत नहीं होती",
+        "क्योंकि एक cable के fault होने पर केवल वही device प्रभावित होती है, बाकी network सामान्य रूप से चलता रहता है, और troubleshooting आसान होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि star topology में हर device individual cable से central device से जुड़ी होती है, इसलिए किसी एक cable में fault आने पर केवल वही device प्रभावित होती है और fault ढूँढना (troubleshoot करना) भी आसान होता है। Option A गलत है क्योंकि cable length की physical सीमाएँ (जैसे UTP की attenuation limit) फिर भी लागू होती हैं। Option C गलत है क्योंकि star topology में central device (hub/switch) अनिवार्य होती है। Option B गलत है क्योंकि यदि central device एक hub है (न कि switch) तो collision अब भी हो सकता है।"
+    },
+    {
+      "id": "u7_networking_basics_q35",
+      "question": "Ring topology में यदि केवल एक ही cable/link में fault आ जाए (और कोई redundant/dual ring न हो), तो सामान्यतः क्या होता है?",
+      "options": [
+        "पूरा network प्रभावित हो सकता है क्योंकि data की circular path टूट जाती है",
+        "Network पर कोई असर नहीं पड़ता क्योंकि data automatically दूसरी दिशा से चला जाता है",
+        "केवल एक device permanently बंद हो जाती है, बाकी सब चलता रहता है",
+        "Network तुरंत mesh topology में बदल जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि simple (single) ring topology में data एक निश्चित circular path से गुजरता है, इसलिए किसी एक link में break आने पर वह circular path टूट जाती है और data पूरा चक्र पूरा नहीं कर पाता, जिससे पूरा network प्रभावित हो सकता है। Option B गलत है क्योंकि automatic reroute केवल dual/redundant ring configuration में संभव है, simple ring में नहीं। Option C गलत है क्योंकि प्रभाव किसी एक device तक सीमित नहीं रहता। Option D गलत है क्योंकि topology hardware fault से अपने आप नहीं बदलती।"
+    },
+    {
+      "id": "u7_networking_basics_q36",
+      "question": "Full mesh topology में यदि किसी network में कुल 5 devices हों, तो कुल कितने dedicated point-to-point links की आवश्यकता होगी?",
+      "options": [
+        "5 links",
+        "20 links",
+        "10 links, फार्मूला n(n-1)/2 का उपयोग करके, जहाँ n devices की संख्या है",
+        "25 links"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि full mesh topology में links की संख्या फार्मूला n(n-1)/2 से निकलती है; यहाँ n=5 है तो 5×4/2 = 10 links चाहिए ताकि हर device सीधे हर दूसरी device से जुड़ी हो। Option A गलत है क्योंकि 5 links से हर device दूसरी सभी devices से सीधे नहीं जुड़ पाएगी। Option B और D गलत हैं क्योंकि ये गलत calculation (n² या n×4 जैसी) पर आधारित हैं, सही फार्मूला n(n-1)/2 ही है।"
+    },
+    {
+      "id": "u7_networking_basics_q37",
+      "question": "Hybrid topology का व्यावहारिक (practical) उदाहरण किस स्थिति में देखा जा सकता है?",
+      "options": [
+        "जब कोई network केवल एक ही cable से बना हो और उसमें कोई device न जुड़ी हो",
+        "जब किसी बड़े campus network में अलग-अलग departments में star topology इस्तेमाल हो और उन सभी star networks को एक बड़े backbone (जैसे bus या mesh) से जोड़ा गया हो",
+        "जब network में केवल दो computers हों और वे सीधे cable से जुड़े हों",
+        "जब सभी devices एक ही cable के साथ ring बनाकर घूमती हों"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि hybrid topology व्यावहारिक रूप से तब बनती है जब अलग-अलग topologies (जैसे कई departments में star topology) को एक बड़े backbone के माध्यम से आपस में जोड़ा जाता है — यह दो या अधिक topologies का मिश्रण है। Option A गलत है क्योंकि इसमें कोई topology का मिश्रण नहीं दिख रहा। Option C गलत है क्योंकि दो devices का सीधा connection एक साधारण point-to-point link है, hybrid नहीं। Option D गलत है क्योंकि यह सिर्फ pure ring topology का वर्णन है।"
+    },
+    {
+      "id": "u7_networking_basics_q38",
+      "question": "WAN (Wide Area Network) में data transmission के लिए सामान्यतः किन माध्यमों का उपयोग किया जाता है?",
+      "options": [
+        "केवल एक ही building के अंदर लगी छोटी UTP cables",
+        "केवल infrared beam, जो सीधी line-of-sight में काम करता है",
+        "केवल Bluetooth जैसी short-range wireless technology",
+        "Satellite links, leased telephone lines, fiber optic cables जैसे long-distance माध्यम, क्योंकि WAN बहुत बड़े भौगोलिक क्षेत्र को cover करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि WAN बहुत बड़ी दूरी (शहरों/देशों के बीच) को cover करता है, इसलिए इसमें satellite links, leased lines और fiber optic जैसे long-distance transmission माध्यमों का उपयोग होता है। Option A गलत है क्योंकि छोटी UTP cables केवल LAN जैसी सीमित दूरी के लिए उपयुक्त हैं। Option C गलत है क्योंकि Bluetooth केवल कुछ मीटर की range के लिए है (PAN), WAN के लिए नहीं। Option B गलत है क्योंकि infrared भी बहुत सीमित line-of-sight range में काम करता है, बड़ी दूरी के लिए उपयुक्त नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q39",
+      "question": "किसी college campus के सभी buildings को आपस में जोड़ने वाले network को सामान्यतः किस category में रखा जाता है (यह मानते हुए कि सभी buildings एक ही परिसर में हैं)?",
+      "options": [
+        "WAN, क्योंकि इसमें कई buildings शामिल हैं",
+        "PAN, क्योंकि यह एक व्यक्ति के आसपास काम करता है",
+        "CAN (Campus Area Network), जो LAN का ही एक विस्तृत रूप है और एक सीमित परिसर के भीतर कई buildings को जोड़ता है",
+        "MAN, क्योंकि इसमें एक से अधिक buildings हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि एक ही परिसर (campus) के भीतर कई buildings को जोड़ने वाला network आमतौर पर Campus Area Network (CAN) कहलाता है, जो essentially एक विस्तृत LAN जैसा ही होता है और भौगोलिक रूप से सीमित होता है। Option A गलत है क्योंकि WAN बहुत बड़े (शहरों/देशों के पार) क्षेत्र के लिए होता है, एक campus उतना बड़ा नहीं। Option B गलत है क्योंकि PAN बहुत छोटी personal-device range के लिए है। Option D गलत है क्योंकि MAN पूरे शहर स्तर के network के लिए प्रयोग होता है, एक single campus के लिए नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q40",
+      "question": "TCP/IP model की Internet layer, OSI model की किस layer के कार्यों से मिलती-जुलती (mostly equivalent) मानी जाती है?",
+      "options": [
+        "OSI की Application layer से",
+        "OSI की Network layer से, क्योंकि दोनों logical addressing और routing से संबंधित कार्य करती हैं",
+        "OSI की Physical layer से",
+        "OSI की Session layer से"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि TCP/IP की Internet layer मुख्यतः logical (IP) addressing और routing decisions से संबंधित है, जो लगभग OSI model की Network layer के कार्यों के समान है। Option A गलत है क्योंकि Application layer, end-user services से संबंधित है, addressing/routing से नहीं। Option C गलत है क्योंकि Physical layer raw bits की transmission से संबंधित है। Option D गलत है क्योंकि Session layer, sessions को manage करने से संबंधित है, IP addressing से नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q41",
+      "question": "TCP/IP model की Network Access (Link) layer मुख्यतः किन कार्यों को cover करती है?",
+      "options": [
+        "यह केवल session management से संबंधित है",
+        "यह केवल IP address को assign करने का कार्य करती है",
+        "यह केवल file transfer से संबंधित है",
+        "यह OSI model की Physical और Data Link दोनों layers के कार्यों (जैसे MAC addressing, physical transmission) को cover करती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि TCP/IP model में Network Access (Link) layer, OSI model की Physical और Data Link layers दोनों के कार्यों (जैसे MAC addressing, framing, physical signal transmission) को एक साथ handle करती है। Option B गलत है क्योंकि IP addressing, Internet layer का कार्य है। Option C गलत है क्योंकि file transfer, Application layer के FTP जैसे protocols से संबंधित है। Option A गलत है क्योंकि session management, OSI model की Session layer से संबंधित concept है, जो TCP/IP model में अलग से मौजूद नहीं है।"
+    },
+    {
+      "id": "u7_networking_basics_q42",
+      "question": "TCP (Transmission Control Protocol) को 'connection-oriented और reliable' protocol क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि यह हमेशा broadcast के रूप में data भेजता है",
+        "क्योंकि यह केवल एक बार data भेजकर connection को तुरंत बंद कर देता है",
+        "क्योंकि इसमें packet loss होने पर कोई retransmission नहीं होती",
+        "क्योंकि यह data भेजने से पहले connection establish करता है, packets को sequence में पहुँचाता है, acknowledgment लेता है और गुम/corrupt packets को फिर से भेजता (retransmit) है"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि TCP, three-way handshake से connection establish करता है, फिर sequence numbers और acknowledgments का उपयोग करके यह सुनिश्चित करता है कि सभी packets सही क्रम में और बिना loss के पहुँचें, और यदि कोई packet खो जाए तो उसे फिर से भेजा जाता है। Option B गलत है क्योंकि TCP एक स्थायी connection बनाकर रखता है जब तक data transfer पूरा न हो। Option C गलत है क्योंकि retransmission ही TCP की reliability का मुख्य आधार है। Option A गलत है क्योंकि TCP सामान्यतः point-to-point communication करता है, broadcast नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q43",
+      "question": "DNS lookup जैसी छोटी, तेज़ query-response services के लिए UDP को TCP से अधिक उपयुक्त क्यों माना जाता है?",
+      "options": [
+        "क्योंकि UDP हमेशा data को encrypt करके भेजता है",
+        "क्योंकि handshake और acknowledgment के overhead के बिना छोटे request-response cycles बहुत तेज़ी से पूरे हो जाते हैं, जो short queries के लिए उपयुक्त है",
+        "क्योंकि UDP केवल large files भेजने के लिए बना है",
+        "क्योंकि UDP में डेटा हमेशा दोहराया (duplicate) जाकर भेजा जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि DNS query जैसी छोटी request-response services में connection setup (handshake) का extra overhead अनावश्यक delay जोड़ देगा, इसलिए UDP का lightweight, connectionless तरीका ऐसी छोटी और तेज़ queries के लिए बेहतर उपयुक्त होता है। Option A गलत है क्योंकि UDP खुद encryption प्रदान नहीं करता। Option C गलत है क्योंकि large reliable file transfer के लिए सामान्यतः TCP-आधारित protocols (जैसे FTP) उपयुक्त होते हैं। Option D गलत है क्योंकि UDP data को duplicate करके नहीं भेजता, यह केवल acknowledgment नहीं लेता।"
+    },
+    {
+      "id": "u7_networking_basics_q44",
+      "question": "FTP में 'active mode' और 'passive mode' के संदर्भ में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": [
+        "FTP में control connection के लिए port 21 और data transfer के लिए active/passive mode के अनुसार अलग connection उपयोग होता है",
+        "FTP में सारा communication हमेशा केवल एक ही single connection पर होता है, कोई अलग control/data connection नहीं होता",
+        "Active और passive mode का FTP से कोई संबंध नहीं, यह केवल HTTP में उपयोग होता है",
+        "FTP केवल passive mode में ही काम कर सकता है, active mode कभी उपयोग नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि FTP सामान्यतः दो अलग connections इस्तेमाल करता है — control connection (port 21) commands के लिए, और एक अलग data connection actual file transfer के लिए, जो active या passive mode के अनुसार स्थापित होती है। Option B गलत है क्योंकि FTP का design ही dual-connection आधारित है। Option C गलत है क्योंकि active/passive mode विशेष रूप से FTP से संबंधित concept है। Option D गलत है क्योंकि दोनों modes उपयोग की जा सकती हैं, network/firewall configuration के अनुसार चुनाव किया जाता है।"
+    },
+    {
+      "id": "u7_networking_basics_q45",
+      "question": "SMTP (Simple Mail Transfer Protocol) का मुख्य उपयोग किसके लिए होता है?",
+      "options": [
+        "Web pages को browser में render करने के लिए",
+        "Domain names को IP addresses में resolve करने के लिए",
+        "Files को दो computers के बीच transfer करने के लिए",
+        "Email भेजने (sending/outgoing mail) के लिए उपयोग होने वाला protocol"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि SMTP विशेष रूप से outgoing email messages को mail server तक भेजने के लिए उपयोग होने वाला protocol है। Option A गलत है क्योंकि web pages render करने के लिए HTTP/HTTPS उपयोग होता है। Option C गलत है क्योंकि file transfer के लिए FTP उपयोग होता है। Option B गलत है क्योंकि domain name resolution DNS का कार्य है।"
+    },
+    {
+      "id": "u7_networking_basics_q46",
+      "question": "Networking standards और protocols की जरूरत क्यों पड़ती है (जैसे IEEE standards)?",
+      "options": [
+        "ताकि devices को आपस में connect होने से रोका जा सके",
+        "ताकि केवल एक ही company के products बाजार में बिक सकें",
+        "ताकि network की cost हमेशा बढ़ती रहे",
+        "ताकि अलग-अलग manufacturers के devices और systems आपस में सही तरीके से compatible रहें और एक-दूसरे से communicate कर सकें"
+      ],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर option D है क्योंकि standards (जैसे IEEE 802 series) यह सुनिश्चित करते हैं कि विभिन्न manufacturers द्वारा बनाए गए hardware/software आपस में interoperable रहें, जिससे अलग brands के devices भी एक साथ ठीक से काम कर सकें। Option B गलत है क्योंकि standards का उद्देश्य किसी एक company का monopoly बनाना नहीं, बल्कि सबके लिए एक समान आधार तैयार करना है। Option C गलत है क्योंकि standardization अक्सर लागत कम करने और mass production को सुगम बनाने में मदद करती है। Option A गलत है क्योंकि standards devices को connect होने से रोकने के लिए नहीं, बल्कि आसानी से connect करने के लिए बनाए जाते हैं।"
+    },
+    {
+      "id": "u7_networking_basics_q47",
+      "question": "IEEE 802.3 standard मुख्यतः किस technology से संबंधित है?",
+      "options": [
+        "Wi-Fi (wireless LAN)",
+        "Bluetooth",
+        "Ethernet (wired LAN) technology की specifications से",
+        "Satellite communication"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि IEEE 802.3, Ethernet (wired LAN) की physical और data link layer specifications को परिभाषित करने वाला standard है, जिसमें cabling, signaling और frame format जैसी बातें शामिल हैं। Option A गलत है क्योंकि wireless LAN (Wi-Fi) के लिए IEEE 802.11 standard उपयोग होता है। Option B गलत है क्योंकि Bluetooth के लिए IEEE 802.15 जैसे standards संबंधित हैं। Option D गलत है क्योंकि satellite communication किसी IEEE 802 LAN standard के अंतर्गत नहीं आता।"
+    },
+    {
+      "id": "u7_networking_basics_q48",
+      "question": "UTP (Unshielded Twisted Pair) cable में wires को क्यों twisted (मुड़ा हुआ) रखा जाता है?",
+      "options": [
+        "केवल cable को देखने में आकर्षक बनाने के लिए",
+        "ताकि cable की लागत बढ़ जाए",
+        "ताकि electromagnetic interference (EMI) और crosstalk को कम किया जा सके, क्योंकि twisting से आस-पास के wires में उत्पन्न होने वाले noise signals एक-दूसरे को काफी हद तक cancel कर देते हैं",
+        "ताकि data transmission पूरी तरह बंद हो जाए"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि wires को twisted रखने से पास के wires में उत्पन्न होने वाले electromagnetic noise (interference) का असर परस्पर काफी हद तक cancel हो जाता है, जिससे data की quality बेहतर बनी रहती है। Option A गलत है क्योंकि twisting का उद्देश्य कोई cosmetic (दिखावटी) कारण नहीं, बल्कि electrical/technical है। Option B गलत है क्योंकि twisting का प्राथमिक उद्देश्य cost बढ़ाना नहीं, बल्कि signal quality सुधारना है। Option D गलत है क्योंकि उद्देश्य transmission रोकना नहीं, बल्कि उसे बेहतर व स्वच्छ बनाना है।"
+    },
+    {
+      "id": "u7_networking_basics_q49",
+      "question": "STP (Shielded Twisted Pair) cable, UTP cable से किस प्रकार भिन्न है?",
+      "options": [
+        "STP में wires के चारों ओर एक अतिरिक्त metallic shielding layer होती है जो बाहरी electromagnetic interference से बेहतर सुरक्षा देती है, जबकि UTP में यह shielding नहीं होती",
+        "STP केवल wireless communication के लिए बनी होती है",
+        "STP, UTP से हमेशा सस्ती होती है",
+        "STP में कोई twisted pair wires नहीं होतीं, केवल single straight wire होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि STP cable में twisted pairs के ऊपर एक extra metallic (foil/braided) shielding लगी होती है जो बाहरी electromagnetic interference (EMI) और noise से बेहतर सुरक्षा देती है, जबकि UTP में यह shielding अनुपस्थित होती है। Option B गलत है क्योंकि STP भी एक wired (physical) cable है, wireless नहीं। Option C गलत है क्योंकि extra shielding के कारण STP सामान्यतः UTP से महंगी होती है, सस्ती नहीं। Option D गलत है क्योंकि STP में भी pairs of wires twisted होकर ही रखे जाते हैं, बस उन पर shielding जुड़ी होती है।"
+    },
+    {
+      "id": "u7_networking_basics_q50",
+      "question": "किस स्थिति में UTP cable की तुलना में STP cable का उपयोग करना अधिक उचित होगा?",
+      "options": [
+        "जब cabling एक शांत office room में होगी जहाँ कोई electrical interference का स्रोत नहीं है",
+        "जब लागत को हर हाल में सबसे कम रखना प्राथमिकता हो",
+        "जब cable को factory floor जैसे high electromagnetic interference वाले environment (जैसे heavy machinery, motors के पास) में बिछाना हो",
+        "जब cable की installation को सबसे सरल और flexible बनाना हो"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि STP की extra shielding उसे उन environments में उपयुक्त बनाती है जहाँ भारी machinery/motors से high electromagnetic interference होता है, जिससे data signal को noise से बचाया जा सके। Option A गलत है क्योंकि कम-interference वाली सामान्य office setting में UTP ही पर्याप्त और अधिक cost-effective होती है। Option B गलत है क्योंकि cost-sensitive scenario में UTP प्राथमिकता होती है, STP महंगी होती है। Option D गलत है क्योंकि शील्डिंग के कारण STP, UTP की तुलना में installation में थोड़ी कम flexible और मोटी (bulky) होती है।"
+    },
+    {
+      "id": "u7_networking_basics_q51",
+      "question": "Coaxial cable की physical संरचना (construction) के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": [
+        "इसमें केवल एक अकेला तार होता है जिस पर कोई insulation नहीं होती",
+        "इसमें एक केंद्रीय (central) copper conductor होता है जिसके ऊपर insulating layer, फिर एक metallic shield (braided mesh) और अंत में एक outer protective covering होती है",
+        "यह पूरी तरह fiber glass से बनी होती है, इसमें कोई copper conductor नहीं होता",
+        "इसमें दो समान conductors एक-दूसरे के चारों ओर twisted रहते हैं, कोई shielding नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि coaxial cable की परतदार (layered) संरचना होती है — केंद्र में एक copper conductor, उसके ऊपर insulating (dielectric) layer, फिर एक metallic braided/foil shield, और सबसे बाहर एक protective outer jacket। Option A गलत है क्योंकि इसमें बिना insulation के केवल एक तार नहीं होता, बल्कि layered structure होती है। Option C गलत है क्योंकि coaxial cable copper-based होती है, fiber optic अलग technology है जो glass/plastic fibers का उपयोग करती है। Option D गलत है क्योंकि यह वर्णन twisted pair cable (UTP/STP) का है, coaxial cable का नहीं।"
+    },
+    {
+      "id": "u7_networking_basics_q52",
+      "question": "Coaxial cable का पुराने cable TV network और शुरुआती Ethernet networks में उपयोग क्यों होता था?",
+      "options": [
+        "क्योंकि इसकी built-in shielding अच्छी interference resistance और लंबी distance तक signal transmission प्रदान करती थी",
+        "क्योंकि यह wireless तरीके से data भेजती थी",
+        "क्योंकि यह cable सबसे सस्ती और सबसे कम durable होती थी",
+        "क्योंकि इसमें कोई electrical conductor नहीं होता, यह पूरी तरह optical होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि coaxial cable की metallic shielding इसे अच्छा interference resistance देती है और यह signal को twisted pair cables की तुलना में अधिक दूरी तक बिना अधिक degradation के भेज सकती है, इसलिए यह cable TV और शुरुआती Ethernet (जैसे 10BASE2/10BASE5) में लोकप्रिय थी। Option B गलत है क्योंकि coaxial cable एक wired (physical conductor आधारित) माध्यम है, wireless नहीं। Option C गलत है क्योंकि यह अपनी durability और shielding के कारण जानी जाती थी, न कि केवल सस्तेपन के लिए। Option D गलत है क्योंकि coaxial cable में केंद्रीय copper conductor होता है, यह fiber optic cable नहीं है।"
+    },
+    {
+      "id": "u7_networking_basics_q53",
+      "question": "आज के आधुनिक LAN setups में coaxial cable की जगह UTP cable (जैसे Cat5e/Cat6) को अधिक प्राथमिकता क्यों दी जाती है?",
+      "options": [
+        "क्योंकि UTP, coaxial cable से भारी और कम flexible होती है",
+        "क्योंकि UTP में कोई bandwidth limit नहीं होती जबकि coaxial में बहुत सीमित bandwidth होती है",
+        "क्योंकि UTP सस्ती, हल्की, अधिक flexible होती है, इसे install करना आसान होता है, और यह modern switches/hubs के साथ star topology में बेहतर काम करती है",
+        "क्योंकि coaxial cable अब किसी भी प्रकार का electrical signal transmit नहीं कर पाती"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि UTP cables (जैसे Cat5e, Cat6) coaxial cable की तुलना में सस्ती, हल्की और अधिक flexible होती हैं, इन्हें install करना आसान है, और ये आधुनिक switch-आधारित star topology networks के साथ बेहतर तरीके से मेल खाती हैं। Option A गलत है क्योंकि वास्तव में UTP, coaxial cable से हल्की और अधिक flexible होती है, भारी नहीं। Option B गलत है क्योंकि दोनों प्रकार की cables की अपनी bandwidth सीमाएँ होती हैं, UTP unlimited नहीं है। Option D गलत है क्योंकि coaxial cable आज भी (जैसे cable TV/broadband में) signal transmit करने में सक्षम है, सिर्फ modern LAN में इसे प्राथमिकता नहीं दी जाती।"
+    },
+    {
+      "id": "u7_networking_basics_q54",
+      "question": "Network cables की तुलना करते समय, coaxial cable की attenuation (signal loss) विशेषता twisted pair cable (UTP) की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "Coaxial cable में UTP की तुलना में समान दूरी पर सामान्यतः कम attenuation होता है, इसलिए यह अधिक दूरी तक बेहतर signal quality बनाए रख सकती है",
+        "Coaxial cable में हमेशा UTP से बहुत अधिक attenuation होता है",
+        "दोनों प्रकार की cables में attenuation बिल्कुल समान होता है, कोई अंतर नहीं",
+        "Attenuation केवल fiber optic cable में होता है, coaxial या UTP में कभी नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि coaxial cable की shielded संरचना इसे UTP की तुलना में समान दूरी पर आमतौर पर कम signal loss (attenuation) के साथ बेहतर performance देने में सक्षम बनाती है, यही कारण था कि इसे लंबी दूरी के शुरुआती नेटवर्क्स में पसंद किया गया। Option B गलत है क्योंकि तथ्य इसके विपरीत है। Option C गलत है क्योंकि cable की संरचना के आधार पर attenuation में अंतर होता है। Option D गलत है क्योंकि attenuation हर प्रकार की cable (coaxial, UTP, fiber) में किसी न किसी हद तक होता है, यह केवल fiber तक सीमित concept नहीं है।"
+    },
+    {
+      "id": "u7_networking_basics_q55",
+      "question": "एक network administrator को बहुत सारे computers वाले office के लिए topology चुनते समय, यदि scalability (आगे और devices जोड़ने की सुविधा) और आसान troubleshooting प्राथमिकता हो, तो सामान्यतः कौन सी topology अधिक व्यावहारिक मानी जाती है?",
+      "options": [
+        "Ring topology, क्योंकि इसमें devices जोड़ना बहुत आसान और बिना किसी रुकावट के होता है",
+        "Star topology (switch-based), क्योंकि नई device जोड़ने के लिए बस एक नया cable switch के free port में लगाना होता है और किसी एक link की समस्या पूरे network को प्रभावित नहीं करती",
+        "Bus topology, क्योंकि इसमें backbone cable जितनी बार चाहें तोड़ी जा सकती है बिना किसी असर के",
+        "Mesh topology, क्योंकि यह सबसे कम cost में सबसे बड़े networks के लिए उपयुक्त होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि switch-based star topology में नई device जोड़ना बहुत सरल है (केवल एक नया cable switch से जोड़ना होता है) और individual link fault पूरे network को प्रभावित नहीं करता, जिससे troubleshooting भी आसान रहता है। Option A गलत है क्योंकि ring topology में नई device जोड़ने के लिए ring को तोड़ना पड़ता है, जिससे अस्थायी रुकावट आ सकती है। Option C गलत है क्योंकि bus topology में backbone cable को बार-बार tap करना/तोड़ना practical नहीं और इससे पूरा network प्रभावित हो सकता है। Option D गलत है क्योंकि mesh topology बड़ी संख्या में devices के लिए बहुत costly और जटिल हो जाती है, यह सबसे किफायती विकल्प नहीं है।"
+    },
+    {
+      "id": "u7_networking_basics_q56",
+      "question": "TCP और UDP दोनों protocols, OSI model की किस layer के अंतर्गत आते हैं?",
+      "options": [
+        "Application layer",
+        "Physical layer",
+        "Transport layer, जहाँ ये end-to-end data delivery से संबंधित सेवाएँ प्रदान करते हैं",
+        "Data Link layer"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि TCP और UDP दोनों Transport layer के प्रमुख protocols हैं, जो applications के बीच end-to-end data delivery (एक reliable तरीके से, दूसरा तेज़ लेकिन less-reliable तरीके से) की सेवाएँ प्रदान करते हैं। Option A गलत है क्योंकि Application layer पर HTTP, FTP, DNS जैसे protocols काम करते हैं, TCP/UDP नहीं। Option B गलत है क्योंकि Physical layer, raw bits की transmission से संबंधित है। Option D गलत है क्योंकि Data Link layer, MAC addressing और framing से संबंधित है, TCP/UDP transport layer के protocols हैं।"
+    },
+    {
+      "id": "u7_networking_basics_q57",
+      "question": "किसी बड़े company network में जहाँ बहुत से departments और उनके अलग-अलग IP address ranges निर्धारित करने हैं, subnetting का सबसे उपयुक्त उपयोग क्या होगा?",
+      "options": [
+        "एक बड़े network block को विभाजित करके प्रत्येक department को उसका अपना छोटा logical sub-network देना, जिससे traffic अलग रहे और management बेहतर हो",
+        "सभी departments को हमेशा एक ही IP address इस्तेमाल करने के लिए मजबूर करना",
+        "Subnetting से MAC address स्वयं बदल जाता है, इसलिए उसका उपयोग devices को rename करने के लिए किया जाता है",
+        "Subnetting का उपयोग केवल wireless networks में किया जा सकता है, wired networks में नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर option A है क्योंकि subnetting का व्यावहारिक उपयोग यही है कि एक बड़े IP address block को छोटे logical sub-networks में divide करके अलग-अलग departments/segments को अलग traffic domain दिया जाए, जिससे network management, security और performance बेहतर हो। Option B गलत है क्योंकि एक ही IP address कई devices को साथ में assign करना conflict पैदा करेगा। Option C गलत है क्योंकि subnetting logical (IP) addressing से संबंधित है, MAC address (जो hardware-level है) उससे नहीं बदलता। Option D गलत है क्योंकि subnetting concept, wired और wireless दोनों प्रकार के IP-आधारित networks में समान रूप से लागू होता है।"
+    },
+    {
+      "id": "u7_networking_basics_q58",
+      "question": "OSI model की Presentation layer मुख्य रूप से किस कार्य के लिए जिम्मेदार होती है?",
+      "options": [
+        "MAC address के आधार पर frame forwarding करना",
+        "IP address के आधार पर packets को route करना",
+        "Data का format, encryption/decryption और compression करना ताकि यह Application layer और नीचे की layers के बीच सही तरीके से समझा जा सके",
+        "Raw bits को physical medium पर transmit करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर option C है क्योंकि Presentation layer, data को एक consistent format में translate करने, आवश्यकता अनुसार encrypt/decrypt करने और compress/decompress करने का कार्य करती है, जिससे दोनों तरफ के systems एक-दूसरे का data सही तरीके से समझ सकें। Option B गलत है क्योंकि routing decisions Network layer का कार्य है। Option A गलत है क्योंकि frame forwarding, Data Link layer का कार्य है। Option D गलत है क्योंकि raw bits की transmission, Physical layer से संबंधित है।"
+    },
+    {
+      "id": "u7_networking_basics_q59",
+      "question": "OSI model की Session layer का मुख्य कार्य क्या है?",
+      "options": [
+        "Physical cables के माध्यम से signal transmit करना",
+        "दो communicating applications/devices के बीच session (संवाद) को establish, maintain और terminate करना, ताकि data exchange व्यवस्थित रूप से हो सके",
+        "IP addressing के आधार पर best route चुनना",
+        "Data को encrypt करके सुरक्षित बनाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि Session layer, दो devices/applications के बीच एक संवाद (session) को शुरू करने, उसे बीच में बनाए रखने (synchronization सहित) और अंत में सही तरीके से समाप्त करने की जिम्मेदारी लेती है। Option A गलत है क्योंकि physical transmission, Physical layer का कार्य है। Option C गलत है क्योंकि best route चुनना Network layer का कार्य है। Option D गलत है क्योंकि data encryption मुख्यतः Presentation layer से संबंधित माना जाता है।"
+    },
+    {
+      "id": "u7_networking_basics_q60",
+      "question": "यदि किसी network में केवल कुछ ही devices हैं और उन्हें उच्चतम level की reliability और redundancy चाहिए (यहाँ तक कि cost कोई बड़ी बाधा नहीं है), तो कौन सी topology सबसे उपयुक्त विकल्प होगी और क्यों?",
+      "options": [
+        "Bus topology, क्योंकि इसमें सबसे कम cable लगती है",
+        "Mesh topology, क्योंकि प्रत्येक device के बीच dedicated links होने से एक या अधिक links fail होने पर भी data दूसरे रास्तों से पहुँच सकता है, जिससे उच्चतम fault tolerance मिलती है",
+        "Ring topology, क्योंकि इसमें एक link के टूटने से किसी divisor पर कोई असर नहीं पड़ता",
+        "Star topology, क्योंकि central device के बिना भी network हमेशा चलता रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर option B है क्योंकि mesh topology में हर device की हर दूसरी device से dedicated link होती है, जिससे किसी एक या कुछ links के fail होने पर भी data alternate paths से अपनी मंज़िल तक पहुँच सकता है — यही इसे सबसे reliable और fault-tolerant topology बनाता है, बेशक cost और cabling ज्यादा हो। Option A गलत है क्योंकि bus topology में single cable fault पूरे network को प्रभावित कर सकता है, यह उच्च reliability नहीं देती। Option C गलत है क्योंकि simple ring topology में एक link टूटने से पूरा circular data path बाधित हो सकता है। Option D गलत है क्योंकि star topology में central device fail होने पर पूरा network down हो जाता है, इसलिए यह उच्चतम redundancy नहीं देती।"
     }
   ]
 }
