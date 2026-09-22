@@ -363,6 +363,66 @@
       ],
       "correctIndex": 3,
       "explanation": "'±1 digit' का अर्थ है कि reading में percentage error के अतिरिक्त एक least significant digit के बराबर uncertainty भी जुड़ सकती है, जो digital counting/rounding से उत्पन्न होती है। यह brightness variation (A), power supply variation (B) या केवल decimal point की स्थिति (C) से संबंधित नहीं है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q31",
+      "question": "BCD to seven segment decoder/driver IC (जैसे CD4511 या 7447) का DPM circuit में क्या कार्य है?",
+      "options": [
+        "ADC के BCD output को seven segment display की individual segment lines में convert करना ताकि सही digit दिखे",
+        "Input signal को attenuate करना",
+        "Shunt resistor की current sense करना",
+        "Power supply को regulate करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Decoder/driver IC ADC से प्राप्त BCD (Binary Coded Decimal) output को उचित logic combination में convert करके seven segment display की a-g segment lines को drive करता है ताकि सही numeric digit प्रदर्शित हो। Input attenuation (option B) divider resistors का कार्य है, current sensing (option C) shunt का काम है, और power supply regulation (option D) एक अलग regulator block करता है, decoder नहीं।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q32",
+      "question": "Dual slope ADC (जैसे ICL7107) की measurement process में 'integrate' phase के दौरान क्या होता है?",
+      "options": [
+        "Display की brightness कम होती है",
+        "Unknown input signal को एक fixed समय के लिए integrator द्वारा integrate किया जाता है जिससे उससे proportional एक ramp voltage बनता है",
+        "Reference voltage को display किया जाता है",
+        "Shunt resistor गरम होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dual slope conversion में सबसे पहले unknown input signal को एक fixed (known) समय अवधि के लिए integrate किया जाता है, जिससे input की magnitude के अनुरूप एक ramp voltage उत्पन्न होता है; इसके बाद इसे known reference से de-integrate करके count निकाला जाता है। Brightness (option A) का इस phase से संबंध नहीं है, reference voltage display होना (option C) गलत है, और shunt का गरम होना (option D) ADC की internal integration प्रक्रिया से असंबंधित है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q33",
+      "question": "जब DPM में negative polarity input voltage measure किया जाता है, तो display पर सामान्यतः क्या अतिरिक्त संकेत दिखता है?",
+      "options": [
+        "एक extra seven segment digit जुड़ जाता है",
+        "Display की brightness कम हो जाती है",
+        "एक separate minus sign (polarity) indicator segment on हो जाता है",
+        "Decimal point हट जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Negative input voltage आने पर ADC की polarity detection circuitry एक separate minus sign (polarity indicator) segment को on करके user को बताती है कि reading negative है, जबकि numeric digits सामान्य magnitude दिखाते रहते हैं। Extra digit जुड़ना (option A) resolution बढ़ाने से संबंधित है, brightness कम होना (option B) से इसका संबंध नहीं, और decimal point हटना (option D) range/scaling से जुड़ा है, polarity से नहीं।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q34",
+      "question": "एक ammeter shunt का value 0.05 Ω है और उसमें से रेटेड full-load current 20A बह रही है। इस shunt में dissipate होने वाली approximate power कितनी होगी, जो shunt की wattage rating चुनते समय ध्यान रखना जरूरी है?",
+      "options": [
+        "1 W",
+        "20 W",
+        "0.05 W",
+        "100 W"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power dissipation P = I²R = (20)² × 0.05 = 400 × 0.05 = 20W होगी, इसलिए shunt को इस heat को सुरक्षित रूप से dissipate करने योग्य wattage rating का चुना जाना चाहिए। 1W (option A) और 0.05W (option C) गणना से बहुत कम हैं जबकि 100W (option D) आवश्यकता से अधिक overestimate है।"
+    },
+    {
+      "id": "u8_dpm_seven_segment_q35",
+      "question": "DPM circuit में लगे 'hold' या 'peak hold' function का उपयोग किस उद्देश्य से किया जाता है?",
+      "options": [
+        "Power supply की frequency बदलने के लिए",
+        "Shunt resistor का value स्वतः बदलने के लिए",
+        "उस समय की highest/last reading को display पर capture करके रोक रखने के लिए, ताकि बदलते हुए signal में भी value पढ़ी जा सके",
+        "Decoder IC को बदलने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "Peak/hold function circuit की तेजी से बदलती हुई reading में से highest (peak) या किसी particular instant की value को capture करके display पर स्थिर रूप से रोक रखता है, जिससे fluctuating signal में भी measurement आराम से पढ़ी जा सके। यह power supply frequency (option A), shunt value बदलने (option B) या decoder IC बदलने (option D) से संबंधित नहीं है।"
     }
   ]
 }

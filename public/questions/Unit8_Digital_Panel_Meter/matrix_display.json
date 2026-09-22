@@ -363,6 +363,186 @@
       ],
       "correctIndex": 0,
       "explanation": "जब केवल numeric digits (0-9) दिखाने हों तो seven segment display अपनी simple driving circuit, कम wiring और कम cost के कारण अधिक उपयुक्त विकल्प है, जबकि dot matrix की extra flexibility यहाँ अनावश्यक जटिलता जोड़ेगी। Dot matrix सस्ता होना (B) गलत तथ्य है, कोई फर्क न पड़ना (C) गलत है क्योंकि cost/complexity में स्पष्ट अंतर है, और दोनों में से कोई भी उपयुक्त न होना (D) भी गलत है।"
+    },
+    {
+      "id": "u8_matrix_display_q31",
+      "question": "Dot matrix display की row-column driving circuit के block diagram में microcontroller के बाद सामान्यतः कौन सा block आता है जो LEDs को पर्याप्त current देने योग्य बनाता है?",
+      "options": [
+        "केवल एक capacitor filter block",
+        "Row/column driver (transistor या driver IC) stage जो current sourcing/sinking करता है",
+        "एक AC to DC rectifier block",
+        "केवल एक voltage divider network"
+      ],
+      "correctIndex": 1,
+      "explanation": "Block diagram में microcontroller/scanning logic के output signal स्तर पर पर्याप्त current नहीं होता, इसलिए एक driver stage (transistor array या dedicated driver IC) लगाया जाता है जो हर row/column line को LEDs जलाने योग्य current sourcing/sinking क्षमता देता है। Capacitor filter (A) ripple हटाने के लिए होता है यहाँ अप्रासंगिक है, rectifier (C) AC को DC बनाने के लिए है जो इस digital driving stage का काम नहीं है, और voltage divider (D) से current क्षमता नहीं मिलती।"
+    },
+    {
+      "id": "u8_matrix_display_q32",
+      "question": "Dot matrix display driving circuit के block diagram में 'character generator/ROM' block का मुख्य कार्य क्या होता है?",
+      "options": [
+        "power supply को regulate करना",
+        "AC ripple को filter करना",
+        "प्रत्येक character के लिए row-column ON/OFF pattern data store करना जो scanning के दौरान भेजा जाता है",
+        "current limiting resistor की जगह लेना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Character generator/ROM block में हर character (अंक, अक्षर, symbol) के लिए predefined bit-pattern store रहता है, जिसे scanning sequence के साथ sync करके column data के रूप में भेजा जाता है ताकि सही pattern glow हो। यह power regulate (A) नहीं करता, ripple filter (B) का काम नहीं करता, और यह current limiting resistor (D) का विकल्प भी नहीं है।"
+    },
+    {
+      "id": "u8_matrix_display_q33",
+      "question": "Dot matrix display की driving circuit में scanning oscillator/clock की भूमिका क्या होती है?",
+      "options": [
+        "यह केवल display का रंग बदलता है",
+        "यह LEDs की संख्या घटाता है",
+        "यह row-to-row switching के लिए समय-आधारित sequential signal प्रदान करता है",
+        "यह current limiting resistor की value बदलता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Scanning oscillator/clock एक निश्चित rate पर pulses देता है जिससे row selector sequentially एक-एक row activate करता है और उसी क्रम में column data भेजा जाता है, इस तरह पूरा पैटर्न बार-बार refresh होता है। यह रंग (A) नहीं बदलता, LEDs की संख्या (B) fixed hardware है इसे नहीं बदल सकता, और resistor value (D) से इसका कोई संबंध नहीं।"
+    },
+    {
+      "id": "u8_matrix_display_q34",
+      "question": "Dot matrix display की driving circuit में 'row decoder/selector' block का कार्य क्या है?",
+      "options": [
+        "सभी rows को हमेशा एक साथ activate रखना",
+        "columns की जगह rows को permanently OFF रखना",
+        "AC supply को DC में बदलना",
+        "scanning counter के binary output को decode करके एक समय में केवल एक row line को activate करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Row decoder/selector counter से आने वाले binary count को decode करके क्रमिक रूप से एक समय पर केवल एक ही row line को select/activate करता है, ताकि multiplexed scanning सही ढंग से हो सके। सभी rows एक साथ activate (A) करना multiplexing के विपरीत है, rows को permanently OFF रखना (B) कोई display नहीं दिखाएगा, और यह AC-DC conversion (C) का काम नहीं करता।"
+    },
+    {
+      "id": "u8_matrix_display_q35",
+      "question": "Seven segment display की तुलना में dot matrix display को assemble/replace करते समय technician के लिए एक practical disadvantage क्या हो सकता है?",
+      "options": [
+        "अधिक pins/connections और complex PCB routing के कारण troubleshooting व wiring अधिक कठिन होती है",
+        "इसमें कोई pin ही नहीं होते",
+        "इसे कभी भी replace नहीं किया जा सकता",
+        "इसमें soldering की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dot matrix module में rows+columns के कारण अधिक pins और multiplexed connections होती हैं, जिससे PCB routing तथा fault-finding seven segment की तुलना में अधिक जटिल हो जाती है। Option B तथ्यात्मक रूप से गलत है क्योंकि pins होते हैं, option C गलत है क्योंकि इसे replace किया जा सकता है, और option D गलत है क्योंकि इसमें भी soldering आवश्यक होती है।"
+    },
+    {
+      "id": "u8_matrix_display_q36",
+      "question": "LCD आधारित Digital Panel Meter में voltage signal को display पर अंक के रूप में दिखाने से पहले किस block की सबसे पहले आवश्यकता होती है?",
+      "options": [
+        "केवल एक buzzer circuit",
+        "Analog voltage को digital data में बदलने वाला ADC (Analog to Digital Converter) block",
+        "केवल एक AC transformer",
+        "केवल एक cooling fan"
+      ],
+      "correctIndex": 1,
+      "explanation": "Input analog voltage/current signal को LCD पर numeric रूप में दिखाने के लिए पहले उसे ADC block द्वारा digital data में convert किया जाता है, फिर वह data microcontroller/driver द्वारा LCD पर भेजा जाता है। Buzzer (A) केवल audio alert देता है, transformer (C) voltage level बदलता है पर digital data नहीं बनाता, और cooling fan (D) का measurement से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u8_matrix_display_q37",
+      "question": "Digital Panel Meter (DPM) में LCD display का उपयोग करने का एक मुख्य लाभ क्या है, विशेष रूप से battery/low-power operated instruments में?",
+      "options": [
+        "LCD self-luminous होकर seven segment LED से अधिक current लेती है",
+        "LCD को कभी backlight की आवश्यकता नहीं होती",
+        "LCD केवल AC supply पर ही काम करती है",
+        "LCD power consumption बहुत कम होता है क्योंकि यह light emit नहीं करती बल्कि ambient/backlight light को modulate करती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "LCD स्वयं प्रकाश उत्पन्न नहीं करती बल्कि liquid crystal cells द्वारा ambient light या backlight को modulate करती है, इसलिए इसकी power खपत LED-based display की तुलना में बहुत कम होती है — यही कारण है कि battery-operated DPM में LCD प्राथमिकता से चुनी जाती है। Option A उल्टा तथ्य है, option B गलत है क्योंकि कुछ applications में backlight चाहिए भी हो सकती है, और option C गलत है क्योंकि LCD DC supply पर भी सामान्यतः काम करती है।"
+    },
+    {
+      "id": "u8_matrix_display_q38",
+      "question": "LCD-based Digital Panel Meter में voltage और current दोनों signals को एक ही display पर बारी-बारी दिखाने के लिए सामान्यतः क्या किया जाता है?",
+      "options": [
+        "microcontroller/selector circuit द्वारा channel select करके संबंधित ADC reading को समय-समय पर LCD पर multiplex करके भेजना",
+        "दोनों signals को हमेशा एक साथ overlap करके दिखाना जिससे दोनों एक साथ पढ़े जा सकें",
+        "केवल voltage दिखाना, current कभी नहीं दिखाना",
+        "LCD की जगह buzzer लगाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Practically DPM में एक channel-select mechanism (manual switch या automatic sequencing) से voltage और current signals को बारी-बारी sample करके ADC से digital data प्राप्त किया जाता है और microcontroller उसे उचित समय पर LCD पर भेजता है। दोनों को एक साथ overlap करना (B) पढ़ने में confusing होगा, केवल voltage दिखाना (C) DPM की dual measurement capability को नकारता है, और buzzer (D) measurement display नहीं है।"
+    },
+    {
+      "id": "u8_matrix_display_q39",
+      "question": "LCD आधारित DPM में यदि measured voltage rated range से अधिक (over-range) हो जाए, तो सामान्यतः display पर क्या behavior expect किया जाता है?",
+      "options": [
+        "LCD स्थायी रूप से बंद हो जाती है",
+        "display का रंग स्थायी रूप से बदल जाता है",
+        "current खपत शून्य हो जाती है",
+        "display पर over-range indication (जैसे 'Err' या blinking/flashing digits) दिखाई देती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "अधिकांश digital panel meters में over-range होने पर firmware द्वारा LCD पर 'Err' जैसा message या digits का blinking/flashing कराया जाता है जो user को alert करता है कि reading valid range से बाहर है। LCD स्थायी रूप से बंद होना (A) सामान्य design नहीं है, रंग स्थायी बदलना (B) standard monochrome LCD में संभव नहीं, और current खपत शून्य होना (C) over-range condition से संबंधित नहीं है।"
+    },
+    {
+      "id": "u8_matrix_display_q40",
+      "question": "Dot matrix display और LCD-based DPM की तुलना करने पर, dot matrix अपनी बड़ी character size के साथ alphanumeric messages दिखाने में बेहतर क्यों माना जाता है?",
+      "options": [
+        "क्योंकि दोनों में कोई अंतर नहीं होता",
+        "क्योंकि dot matrix के हर LED individually बहुत तेज़ चमकता है जिससे दूर से भी scrolling text/signage स्पष्ट पढ़ी जा सकती है, जो साधारण small LCD panel में संभव नहीं",
+        "क्योंकि LCD में power की कोई सीमा नहीं होती",
+        "क्योंकि dot matrix कभी scanning का उपयोग नहीं करता"
+      ],
+      "correctIndex": 1,
+      "explanation": "LED dot matrix स्वयं-luminous होकर उच्च brightness produce करता है, जिससे बड़े signboards व scrolling displays में दूर से भी पढ़ा जा सकता है, जबकि small LCD panels मुख्यतः close-range numeric/DPM display के लिए उपयुक्त होते हैं। विकल्प A गलत है क्योंकि दोनों तकनीकों में स्पष्ट अंतर है, विकल्प C गलत है क्योंकि LCD की power सीमा ही इसका फायदा है, और विकल्प D गलत है क्योंकि dot matrix scanning का उपयोग ही करता है।"
+    },
+    {
+      "id": "u8_matrix_display_q41",
+      "question": "Dot matrix display की row-column driving circuit में यदि सभी columns के driver transistors एक साथ खराब (short) हो जाएँ, तो क्या परिणाम होने की सबसे अधिक संभावना है?",
+      "options": [
+        "display पूरी तरह unaffected रहेगी",
+        "केवल brightness थोड़ी बढ़ जाएगी",
+        "उन columns से संबंधित सभी LEDs असामान्य रूप से glow हो सकती हैं या पूरा pattern गलत/garbled दिखेगा",
+        "power supply स्वतः बंद हो जाएगी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Column driver transistors short होने पर current control खत्म हो जाता है जिससे संबंधित columns की LEDs uncontrolled रूप से glow कर सकती हैं या scanning sequence बाधित होने से पूरा displayed pattern गलत/garbled हो जाता है। Display unaffected रहना (A) या केवल brightness बढ़ना (B) गलत है क्योंकि fault गंभीर malfunction पैदा करता है, और power supply का स्वतः बंद होना (D) एक अतिरिक्त protection circuit के बिना सामान्यतः नहीं होता।"
+    },
+    {
+      "id": "u8_matrix_display_q42",
+      "question": "Dot matrix display को design करते समय, seven segment की तुलना में PCB पर जगह (space) और cost बढ़ने का एक और कारण क्या है?",
+      "options": [
+        "अधिक LEDs, अधिक driver components और अतिरिक्त character-generator/controller logic के कारण अधिक components व larger PCB area चाहिए होती है",
+        "dot matrix में कोई component नहीं लगता",
+        "seven segment में LEDs नहीं होतीं",
+        "PCB size का display type से कोई संबंध नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dot matrix में अधिक LEDs, row/column driver stages और character pattern control के लिए अतिरिक्त logic/IC चाहिए होते हैं, जिससे seven segment की तुलना में अधिक components व बड़ी PCB area तथा अधिक cost लगती है। Option B तथ्यात्मक रूप से गलत है, option C गलत है क्योंकि seven segment में भी LEDs होती हैं, और option D गलत है क्योंकि display type सीधे PCB size को प्रभावित करता है।"
+    },
+    {
+      "id": "u8_matrix_display_q43",
+      "question": "Row-column driving वाले dot matrix display में यदि scanning frequency बहुत अधिक (जैसे कई kHz) रखी जाए, seven segment की तुलना में इसका एक फायदा क्या है (जो seven segment की static/simple multiplexing से dot matrix को अलग करता है)?",
+      "options": [
+        "इससे LEDs हमेशा के लिए बंद हो जाती हैं",
+        "उच्च scanning frequency से बड़ी matrix में भी flicker-free और smooth animation/scrolling text संभव होती है",
+        "इससे current खपत हमेशा शून्य हो जाती है",
+        "इससे display का आकार छोटा हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "उच्च scanning frequency के कारण persistence of vision के अंतर्गत बड़े dot matrix module में भी flicker नहीं दिखता और साथ ही column data को तेज़ी से बदलकर smooth scrolling text व animation प्रभाव दिया जा सकता है, जो seven segment की सरल static display में संभव नहीं। LEDs हमेशा बंद होना (A), current शून्य होना (C), और आकार छोटा होना (D) — ये scanning frequency बढ़ाने के वास्तविक प्रभाव नहीं हैं।"
+    },
+    {
+      "id": "u8_matrix_display_q44",
+      "question": "LCD-based DPM में voltage/current reading को display करने की process में block diagram क्रम सामान्यतः क्या रहता है?",
+      "options": [
+        "Signal conditioning → ADC → microcontroller (data processing) → LCD driver → LCD display",
+        "LCD display → ADC → microcontroller → signal conditioning",
+        "केवल signal conditioning और LCD display, बीच में कोई processing नहीं",
+        "क्रम का कोई महत्व नहीं होता, कहीं से भी शुरू किया जा सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही signal flow में पहले input voltage/current को signal conditioning (scaling/attenuation) से सुरक्षित range में लाया जाता है, फिर ADC digital data बनाता है, microcontroller उसे process करके सही numeric value निकालता है, और अंत में LCD driver के माध्यम से LCD पर दिखाया जाता है। बाकी विकल्प क्रम को उल्टा या अपूर्ण दिखाते हैं, जो व्यावहारिक रूप से काम नहीं करेगा, और क्रम का महत्व न होना (D) भी गलत है क्योंकि प्रत्येक block पिछले के output पर निर्भर करता है।"
+    },
+    {
+      "id": "u8_matrix_display_q45",
+      "question": "Trade/ITI स्तर पर, यदि किसी portable battery-operated multimeter जैसे DPM में voltage/current दिखाना है और power saving प्राथमिकता है, तो dot matrix LED display और LCD display में से सामान्यतः किसे चुना जाता है और क्यों?",
+      "options": [
+        "Dot matrix LED display, क्योंकि यह हमेशा कम current लेता है",
+        "LCD display, क्योंकि यह बहुत कम power खपत करती है जो battery life बढ़ाने में सहायक है",
+        "दोनों में power consumption बराबर होता है",
+        "कोई भी display उपयुक्त नहीं है, केवल analog meter चाहिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Battery-operated portable instruments में LCD display को प्राथमिकता दी जाती है क्योंकि यह स्वयं प्रकाश उत्पन्न नहीं करती और इसकी power खपत LED dot matrix की तुलना में बहुत कम होती है, जिससे battery अधिक समय तक चलती है। Dot matrix LED (A) का current हमेशा कम होना गलत तथ्य है (यह वास्तव में अधिक लेता है), option C गलत है क्योंकि दोनों की खपत में स्पष्ट अंतर होता है, और option D गलत है क्योंकि प्रश्न में digital display चुनने की बात हो रही है।"
     }
   ]
 }

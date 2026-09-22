@@ -363,6 +363,126 @@
       ],
       "correctIndex": 1,
       "explanation": "ICL7136 जैसी A/D converter IC सीधे LCD-compatible segment/backplane AC output देती है, जिससे बाहर से अलग LCD driver/decoder IC जोड़ने की आवश्यकता नहीं पड़ती और पूरा circuit सरल, सस्ता व compact बन जाता है — यही digital panel meter डिज़ाइन में इसका बड़ा लाभ है। इससे resolution घटना (option 1), supply voltage बढ़ानी पड़ना (option 3), या केवल DC output मिलना (option 4) सही नहीं है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q31",
+      "question": "HD44780 जैसी standard character LCD driver/controller IC के 14-pin (या 16-pin backlight सहित) interface में RS (Register Select) pin का मुख्य कार्य क्या है?",
+      "options": [
+        "यह केवल display का contrast set करता है",
+        "यह केवल power supply को ON/OFF करता है",
+        "यह केवल backlight LED को control करता है",
+        "यह बताता है कि data bus पर भेजा जा रहा byte command/instruction है या display पर लिखा जाने वाला character data है"
+      ],
+      "correctIndex": 3,
+      "explanation": "RS (Register Select) pin यह तय करता है कि microcontroller द्वारा data bus (D0-D7) पर भेजी जा रही जानकारी command/instruction register (RS=0, जैसे clear display, cursor set) के लिए है या data register (RS=1, यानी actual character जो screen पर print होना है) के लिए है। Contrast set करना (option 1) VEE/VLCD pin का काम है, power ON/OFF (option 2) अलग supply pin से होता है, और backlight control (option 3) अलग A/K pins से होता है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q32",
+      "question": "HD44780 controller आधारित character LCD module में RW (Read/Write) pin को LOW करने पर क्या संभव होता है?",
+      "options": [
+        "Display का contrast बदल जाता है",
+        "Microcontroller LCD module में data/command write कर सकता है",
+        "LCD module से busy flag या data microcontroller पढ़ सकता है",
+        "Backlight बंद हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RW pin LOW होने पर LCD module 'Write' mode में रहता है, जिससे microcontroller data bus के माध्यम से command या character data LCD में write कर सकता है। RW को HIGH करने पर 'Read' mode सक्रिय होता है जिसमें busy flag या internal data पढ़ा जा सकता है (option 3), इसलिए option 3 गलत है; contrast (option 1) VEE pin से control होता है और backlight (option 4) अलग pins से।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q33",
+      "question": "Character LCD interface में EN (Enable) pin पर HIGH-to-LOW transition (या pulse) देने का उद्देश्य क्या है?",
+      "options": [
+        "इससे display permanently बंद हो जाती है",
+        "यह केवल contrast adjust करता है",
+        "यह controller को संकेत देता है कि data bus पर मौजूद जानकारी को latch करके execute/store कर लिया जाए",
+        "यह केवल power supply reset करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "EN (Enable) pin पर pulse (सामान्यतः HIGH रखकर फिर LOW करना) देने पर ही LCD controller data bus पर मौजूद command या character data को actual रूप से latch करके internally process करता है; बिना EN pulse के केवल RS/RW/data lines सेट करने से कुछ नहीं होता। इससे display permanently बंद नहीं होती (option 1), यह contrast adjust नहीं करता (option 2), और यह power supply reset भी नहीं करता (option 4)।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q34",
+      "question": "Standard 16-pin character LCD module में VEE (या V0) pin किस काम के लिए दिया जाता है?",
+      "options": [
+        "यह data bus का ground reference है",
+        "इसका उपयोग backlight brightness control के लिए होता है",
+        "यह potentiometer के माध्यम से LCD screen का contrast adjust करने हेतु variable voltage input pin है",
+        "यह केवल RS signal के लिए reserved है"
+      ],
+      "correctIndex": 2,
+      "explanation": "VEE (कभी V0 भी कहा जाता है) एक variable voltage input pin है, जिसे सामान्यतः एक बाहरी potentiometer से जोड़कर contrast की मात्रा adjust की जाती है ताकि characters साफ दिखें। यह data bus का ground reference नहीं है (option 1), backlight brightness (option 2) अलग A/K pins से control होती है, और यह RS signal के लिए reserved नहीं है (option 4)।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q35",
+      "question": "Character LCD module को 8-bit interfacing mode में जोड़ते समय microcontroller के साथ कितनी data lines (D0-D7) जोड़नी पड़ती हैं?",
+      "options": [
+        "केवल 4 lines (D4-D7)",
+        "केवल 2 lines",
+        "कोई data line नहीं जोड़नी पड़ती",
+        "सभी 8 data lines (D0 से D7)"
+      ],
+      "correctIndex": 3,
+      "explanation": "8-bit mode में पूरा byte (command या character data) एक ही बार में transfer करने के लिए सभी 8 data lines (D0 से D7) microcontroller के पोर्ट pins से जोड़ी जाती हैं, जिससे data transfer तेज़ होता है पर अधिक I/O pins लगते हैं। केवल 4 lines जोड़ना (option 1) 4-bit mode है, 2 lines (option 2) पर्याप्त नहीं और बिना किसी data line (option 3) के data transfer संभव नहीं।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q36",
+      "question": "4-bit interfacing mode में character LCD module से जोड़ने के लिए मुख्यतः किन data lines का उपयोग किया जाता है, तथा प्रत्येक byte को कैसे भेजा जाता है?",
+      "options": [
+        "D0-D3 lines का उपयोग होता है और पूरा byte एक साथ भेजा जाता है",
+        "D4-D7 lines का उपयोग होता है और प्रत्येक byte को दो हिस्सों (upper nibble फिर lower nibble) में क्रमिक रूप से भेजा जाता है",
+        "सभी 8 lines का उपयोग होता है परंतु आधी speed पर",
+        "कोई data line जोड़ने की आवश्यकता नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "4-bit mode में केवल D4-D7 lines जोड़ी जाती हैं और microcontroller I/O pins बचाने के लिए, प्रत्येक 8-bit byte को दो nibbles में बाँटकर पहले upper nibble फिर lower nibble के रूप में क्रमिक EN pulses के साथ भेजा जाता है। D0-D3 का उपयोग (option 1) गलत है क्योंकि 4-bit mode में हमेशा upper nibble lines (D4-D7) प्रयोग होती हैं, सभी 8 lines जोड़ना (option 3) 4-bit mode का उद्देश्य ही समाप्त कर देगा, और data lines जोड़े बिना (option 4) कुछ नहीं होता।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q37",
+      "question": "8-bit mode की तुलना में 4-bit interfacing mode अपनाने का मुख्य लाभ क्या है?",
+      "options": [
+        "Display की resolution बढ़ जाती है",
+        "Contrast automatically adjust हो जाता है",
+        "Microcontroller के कम I/O pins खर्च होते हैं, जिससे शेष pins अन्य peripherals के लिए उपलब्ध रहते हैं",
+        "Data transfer speed 8-bit mode से अधिक हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "4-bit mode का मुख्य लाभ यह है कि data transfer के लिए केवल 4 pins (D4-D7) प्रयोग होती हैं, जिससे microcontroller के बचे हुए I/O pins अन्य sensors/peripherals के लिए उपयोग किए जा सकते हैं — यह resource-constrained designs में बहुत उपयोगी है। इससे display resolution नहीं बढ़ती (option 1), contrast automatically adjust नहीं होता (option 2), बल्कि प्रत्येक byte को दो nibbles में भेजने के कारण data transfer speed 8-bit mode से धीमी होती है, तेज़ नहीं (इसलिए option 4 गलत)।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q38",
+      "question": "Character LCD driver IC (जैसे HD44780) में power supply pins VSS और VDD क्रमशः किसे represent करते हैं?",
+      "options": [
+        "VSS = ground (0V) और VDD = supply voltage (सामान्यतः +5V)",
+        "VSS = contrast voltage और VDD = ground",
+        "दोनों केवल data lines हैं",
+        "VSS = backlight supply और VDD = RS control"
+      ],
+      "correctIndex": 0,
+      "explanation": "किसी भी character LCD module में VSS ground (0V) reference होता है और VDD मुख्य logic supply voltage (सामान्यतः +5V या 3.3V) होता है, जिससे internal controller IC तथा logic circuitry को power मिलती है। VSS को contrast voltage तथा VDD को ground बताना (option 2) उल्टा और गलत है, ये data lines नहीं हैं (option 3), और ये backlight/RS control pins भी नहीं हैं (option 4)।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q39",
+      "question": "यदि किसी character LCD module के RS pin को स्थायी रूप से LOW रख दिया जाए और कभी HIGH न किया जाए, तो व्यवहारिक रूप से क्या समस्या होगी?",
+      "options": [
+        "Display पर केवल instructions/commands ही जाएँगे, कोई actual character/text screen पर print नहीं होगा",
+        "Display का contrast बहुत बढ़ जाएगा",
+        "Backlight स्थायी रूप से बंद हो जाएगी",
+        "Data transfer speed दोगुनी हो जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "RS pin स्थायी रूप से LOW रहने पर controller data bus पर आने वाली प्रत्येक byte को command/instruction register की तरह ही treat करेगा, इसलिए actual characters (RS=1 होने पर भेजे जाने वाला text data) कभी display नहीं होंगे, केवल commands execute होते रहेंगे और screen पर text print नहीं होगा। इससे contrast नहीं बढ़ता (option 2), backlight पर सीधा असर नहीं पड़ता (option 3), और data transfer speed भी नहीं बदलती (option 4), बल्कि केवल data की interpretation प्रभावित होती है।"
+    },
+    {
+      "id": "u8_lcd_driver_ics_q40",
+      "question": "Character LCD module के standard pin-out में D0-D7 data lines के अतिरिक्त RS, RW और EN — इन तीन control lines को एक साथ 'control bus' मानते हुए, इनका संयुक्त रूप से मुख्य उद्देश्य क्या है?",
+      "options": [
+        "केवल backlight brightness नियंत्रित करना",
+        "microcontroller और LCD controller IC के बीच यह तय करना कि कौन सी जानकारी (command/data), किस दिशा में (read/write) और कब (timing/latch) transfer होगी",
+        "केवल supply voltage regulate करना",
+        "केवल display का physical size बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "RS यह तय करता है कि जानकारी command है या data, RW यह तय करता है कि transfer किस दिशा में (microcontroller से LCD या LCD से microcontroller) होगा, और EN उस transfer के exact timing/latch instant को नियंत्रित करता है — तीनों मिलकर पूरे data transfer protocol को synchronize करते हैं। ये backlight brightness (option 1) नियंत्रित नहीं करते, supply voltage regulation (option 3) इनका काम नहीं है, और physical display size (option 4) पूर्णतः hardware/glass का गुण है जिसे control lines नहीं बदल सकतीं।"
     }
   ]
 }

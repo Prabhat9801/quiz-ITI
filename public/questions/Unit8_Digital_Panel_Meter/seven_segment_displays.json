@@ -363,6 +363,126 @@
       ],
       "correctIndex": 1,
       "explanation": "Common anode display को segment ON करने के लिए LOW चाहिए, पर active HIGH driver segment को HIGH देता है; anode पहले से Vcc पर है, इसलिए दोनों सिरों पर HIGH होने से कोई forward current नहीं बहेगा और segments OFF रहेंगे। इसलिए सही digits (A) नहीं दिखेंगे, रंग (C) या refresh rate (D) का इससे कोई संबंध नहीं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q31",
+      "question": "एक common anode seven segment display में किसी segment को OFF रखने के लिए उसके cathode terminal पर कौन-सा logic level देना पड़ता है?",
+      "options": [
+        "Logic LOW (0)",
+        "Logic HIGH (1)",
+        "High impedance (Z) अनिवार्य रूप से",
+        "Negative voltage अनिवार्य रूप से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Common anode display में common terminal Vcc से जुड़ा रहता है, इसलिए किसी segment को OFF रखने के लिए उसके cathode को Logic HIGH देना पड़ता है ताकि LED के दोनों सिरों पर समान potential रहे और current न बहे। Logic LOW (option A) देने पर तो segment ON हो जाएगा। High impedance (C) एक अलग output स्थिति है, अनिवार्य नहीं, और negative voltage (D) की यहाँ आवश्यकता नहीं होती।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q32",
+      "question": "यदि किसी IC 4511 के BI (Blanking Input) pin को active LOW किया जाए, तो display पर क्या प्रभाव पड़ेगा, चाहे BCD input कुछ भी हो?",
+      "options": [
+        "सभी segments ON हो जाएँगे (lamp test जैसा)",
+        "सभी segments OFF हो जाएँगे और display पूरी तरह blank हो जाएगी",
+        "केवल decimal point ON होगा",
+        "पिछला digit hold हो जाएगा, नया नहीं दिखेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "4511 में BI pin को active LOW करने पर, BCD input की परवाह किए बिना सभी 7 segment outputs LOW हो जाते हैं जिससे display पूरी तरह blank हो जाती है — यह मुख्यतः power-saving या multiplexed multi-digit circuits में unwanted digit को blank करने हेतु उपयोगी है। सभी segments ON करना (option A) तो Lamp Test फंक्शन का काम है, केवल decimal point (C) BI से नियंत्रित नहीं होता, और data hold (D) latch enable (LE) pin का काम है, BI का नहीं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q33",
+      "question": "IC 4511 में Latch Enable (LE) pin को HIGH करने पर क्या होता है?",
+      "options": [
+        "Output, input BCD के बदलने पर भी तुरंत बदलता रहता है",
+        "सभी segments स्थायी रूप से OFF हो जाते हैं",
+        "वर्तमान BCD data output latch में स्थिर (freeze) हो जाता है, आगे input बदलने पर भी output नहीं बदलता",
+        "IC पूरी तरह से power down हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "LE को HIGH करने पर 4511 का internal latch वर्तमान BCD data को पकड़ (hold) लेता है, इसलिए इसके बाद input lines पर data बदलने पर भी display का output नहीं बदलता, जब तक LE फिर LOW न किया जाए। Output का तुरंत follow करना (option A) तो LE LOW रहने पर होता है। सभी segments OFF (option B) BI pin से होता है और power down (D) जैसा कोई pin function यहाँ नहीं है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q34",
+      "question": "सामान्यतः BCD-to-seven-segment decoder ICs (जैसे 7447/4511) कितने input lines लेते हैं?",
+      "options": [
+        "2 input lines",
+        "7 input lines",
+        "8 input lines",
+        "4 input lines"
+      ],
+      "correctIndex": 3,
+      "explanation": "BCD (Binary Coded Decimal) में 0–9 तक प्रत्येक decimal digit को 4-bit binary code से represent किया जाता है, इसलिए decoder को 4 input lines (A, B, C, D) चाहिए। 2 lines (option A) से केवल 4 combinations बन सकते हैं जो अपर्याप्त है, जबकि 7 (option B) और 8 (option C) lines तो output segment count के आस-पास हैं, input count नहीं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q35",
+      "question": "एक common cathode seven segment display में digit '6' दिखाने के लिए कौन-सा segment OFF रहता है?",
+      "options": [
+        "segment a",
+        "segment c",
+        "segment b",
+        "segment g"
+      ],
+      "correctIndex": 2,
+      "explanation": "digit '6' बनाने के लिए segments a, c, d, e, f, g ON रहते हैं जबकि केवल b (ऊपर दाहिनी ओर का vertical segment) OFF रहता है। segment a (option A) तो '6' के ऊपरी हिस्से में ON रहता है, c (option B) दाहिने नीचे ON रहता है, और g (option D) बीच का bar भी ON रहता है — इसलिए ये तीनों गलत विकल्प हैं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q36",
+      "question": "किसी digital panel meter में यदि 4511 decoder और display के बीच का कोई series resistor शॉर्ट (short-circuit) हो जाए, तो दीर्घकाल में क्या समस्या हो सकती है?",
+      "options": [
+        "कोई प्रभाव नहीं पड़ेगा, display सामान्य रहेगी",
+        "Segment current बढ़ जाएगा जिससे LED या driver output अधिक गरम होकर खराब हो सकता है",
+        "Display की brightness अपने-आप कम हो जाएगी",
+        "BCD input स्वतः बदल जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Resistor short होने पर उसका current-limiting कार्य समाप्त हो जाता है, जिससे segment LED से अत्यधिक current बहता है — इससे LED का ताप बढ़कर वह जल सकती है या driver IC का output stage भी क्षतिग्रस्त हो सकता है। इसलिए 'कोई प्रभाव नहीं' (option A) गलत है, brightness बढ़ेगी घटेगी नहीं (C), और resistor short होने से BCD input (D) पर कोई असर नहीं पड़ता।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q37",
+      "question": "यदि किसी common anode seven segment display में केवल segments a, b, g, e, d ON हों (c, f OFF), तो कौन-सा digit प्रदर्शित होगा?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "9"
+      ],
+      "correctIndex": 0,
+      "explanation": "digit '2' बनाने के लिए a, b, g, e, d segments ON होते हैं जबकि c और f OFF रहते हैं — यही स्थिति प्रश्न में दी गई है। digit '3' में c ON और e OFF रहता है, digit '6' में f ON और b OFF रहता है, तथा digit '9' में f ON और e OFF रहता है; इसलिए ये विकल्प इस pattern से मेल नहीं खाते।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q38",
+      "question": "Driver IC चुनते समय seven segment LED display के साथ मुख्यतः किस विद्युत विशेषता (rating) का मिलान आवश्यक होता है?",
+      "options": [
+        "IC की clock frequency और display का response time",
+        "IC का output sink/source current rating और LED का required forward current",
+        "IC का package size और display का physical आकार",
+        "IC की storage temperature और display का weight"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक segment LED को glow करने के लिए एक निश्चित forward current चाहिए, इसलिए driver IC का output current sink/source rating इस required current के अनुरूप या उससे अधिक होना चाहिए, अन्यथा display मंद रहेगी या IC over-load हो सकती है। Clock frequency (option A) यहाँ लागू नहीं क्योंकि यह combinational decoding है, package size (C) और weight (D) विद्युत rating नहीं हैं।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q39",
+      "question": "IC 7447 के RBI (Ripple Blanking Input) pin को LOW करने पर, जब BCD input भी 0000 (digit 0) हो, तो क्या होता है?",
+      "options": [
+        "digit '0' सामान्य रूप से display होगा",
+        "सभी segments ON होकर lamp test जैसा दिखेगा",
+        "IC output अनिश्चित (undefined) रहेगा",
+        "वह digit blank हो जाता है (leading zero suppress होता है)"
+      ],
+      "correctIndex": 3,
+      "explanation": "RBI को LOW करने पर, यदि साथ ही BCD input 0000 हो, तो 7447 उस particular digit की सभी segments को blank कर देता है, जिससे leading zero display नहीं होता — यही multi-digit meters में leading-zero suppression का आधार है। इसलिए digit '0' सामान्य रूप से दिखना (option A) गलत है, यह lamp test फंक्शन (option B) नहीं है, और output undefined (option C) नहीं बल्कि एक निश्चित blank state में रहता है।"
+    },
+    {
+      "id": "u8_seven_segment_displays_q40",
+      "question": "Seven segment display को driver IC के बिना सीधे कई TTL/CMOS logic gates के outputs से जोड़ने पर सामान्यतः क्या व्यावहारिक कठिनाई आती है?",
+      "options": [
+        "Gates के outputs इतना current नहीं दे/ले सकते कि LED segment पर्याप्त brightness से glow करे",
+        "Gates BCD code को समझ ही नहीं सकते",
+        "Display का आकार अपने-आप बड़ा हो जाता है",
+        "Decimal point स्वतः हमेशा ON रहेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "साधारण logic gates मुख्यतः signal-level current (कुछ mA) देने/लेने के लिए डिज़ाइन होते हैं, जबकि LED segment को उचित brightness के लिए पर्याप्त current चाहिए — इसीलिए dedicated driver IC या buffer/transistor stage जरूरी होता है। Gates तो boolean logic के अनुसार पहले से ही उचित pattern बना सकते हैं इसलिए 'BCD समझ न पाना' (option B) गलत है, display का आकार (C) इससे प्रभावित नहीं होता, और decimal point की स्थिति (D) इस समस्या से असंबंधित है।"
     }
   ]
 }

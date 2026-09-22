@@ -363,6 +363,186 @@
       ],
       "correctIndex": 1,
       "explanation": "ICL7106/7107 जैसे ICs एक ही chip में dual slope A/D conversion, auto-zero, automatic polarity detection और सीधे display drive करने की सुविधा एकीकृत करते हैं, जिससे digital panel meter/multimeter का overall circuit सरल, छोटा और सस्ता बन जाता है (Option B सही)। इनमें वास्तव में विस्तृत analog circuitry होती है (A गलत), ये मुख्यतः DC quantities मापने के लिए हैं (C गलत), और इनमें display drive क्षमता अंतर्निहित ही होती है, अलग driver IC की जरूरत नहीं (D गलत)।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q31",
+      "question": "ICL7106/7107 आधारित digital panel meter में current मापने के लिए सामान्यतः क्या किया जाता है?",
+      "options": [
+        "एक known-value shunt resistor को current path में लगाकर उसके आर-पार बने voltage drop को IN HI/IN LO पर measure किया जाता है",
+        "IC के internal reference voltage को current में सीधे convert कर दिया जाता है",
+        "Current को सीधे OSC1 pin पर लगाया जाता है",
+        "Current माप के लिए backplane signal की frequency बदल दी जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "ICL7106/7107 केवल voltage को measure करने वाला ADC है, इसलिए current मापने के लिए current path में एक known-value shunt resistor डाला जाता है और उसके आर-पार उत्पन्न voltage drop (V = I × Rshunt) को IN HI/IN LO input पर लगाया जाता है (Option A सही)। Reference voltage को current में सीधे convert करना (B) संभव नहीं, current को OSC1 पर लगाना (C) पूरी तरह गलत है, और current माप का backplane frequency (D) से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q32",
+      "question": "किसी current-measuring digital panel meter में 10A full-scale current के लिए 200.0mV full-scale ICL7106 configuration उपयोग किया जा रहा है। शंट रेजिस्टर (Rshunt) का मान लगभग कितना होना चाहिए?",
+      "options": [
+        "2 ohm",
+        "20 ohm",
+        "0.02 ohm (20 milliohm)",
+        "200 ohm"
+      ],
+      "correctIndex": 2,
+      "explanation": "Full-scale voltage 200.0mV को full-scale current 10A पर पैदा करने के लिए Rshunt = V/I = 0.2V ÷ 10A = 0.02 ohm यानी 20 milliohm चाहिए (Option C सही)। 2 ohm (A) रखने पर drop 20V हो जाता जो range से बहुत अधिक है, 20 ohm (B) और 200 ohm (D) तो और भी अधिक drop देंगे, जो IC की input range से बाहर होगा।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q33",
+      "question": "Current मापते समय shunt resistor का चयन करते हुए किस बात का विशेष ध्यान रखा जाता है?",
+      "options": [
+        "Shunt resistor की value इतनी बड़ी रखी जाए कि full-scale पर कई volt drop हो",
+        "Shunt resistor को सीधे reference voltage pins REF HI/REF LO के बीच लगाया जाए",
+        "Shunt resistor की value का कोई महत्व नहीं होता",
+        "Shunt resistor की power rating पर्याप्त हो और उसका drop IC की input voltage range के भीतर ही रहे"
+      ],
+      "correctIndex": 3,
+      "explanation": "Shunt resistor की power rating इतनी होनी चाहिए कि वह continuous current पर गरम होकर खराब न हो, और उसकी value इस प्रकार चुनी जाती है कि full-scale current पर बनने वाला voltage drop ADC की input range (जैसे 200mV) के भीतर ही रहे (Option D सही)। बहुत बड़ा drop (A) input range से बाहर चला जाएगा, shunt को REF HI/REF LO के बीच लगाना (B) गलत है क्योंकि वह input signal है, reference नहीं, और shunt value का महत्व न होना (C) पूरी तरह गलत कथन है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q34",
+      "question": "Current-measuring panel meter में shunt resistor के आर-पार का voltage drop IN HI/IN LO पर लगाने से पहले प्रायः क्या किया जाता है?",
+      "options": [
+        "उसे सीधे बिना किसी buffering के लगा दिया जाता है, चाहे source impedance कितनी भी अधिक हो",
+        "उसे पहले AC में convert किया जाता है",
+        "आवश्यकतानुसार एक high-impedance buffer/attenuator network से जोड़ा जाता है ताकि IC का input loading प्रभावित न हो",
+        "उसे oscillator RC network से जोड़ा जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Shunt का drop सीधे या आवश्यकतानुसार एक उचित buffer/attenuator के माध्यम से IN HI/IN LO पर लगाया जाता है ताकि ADC का high input impedance measurement को disturb न करे और accurate reading मिले (Option C सही)। बिना ध्यान दिए सीधे जोड़ना (A) source impedance अधिक होने पर error देगा, DC quantity को AC में convert करना (B) आवश्यक नहीं, और shunt drop का oscillator network (D) से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q35",
+      "question": "Voltage measurement configuration में ICL7106/7107 के IN HI pin पर सामान्यतः कैसा signal लगाया जाता है?",
+      "options": [
+        "मापी जाने वाली voltage को (आवश्यकतानुसार attenuator/voltage divider से scale करके) सीधे IN HI पर, तथा IN LO को COMMON/circuit ground के सापेक्ष लगाया जाता है",
+        "सदैव केवल reference voltage ही IN HI पर लगाई जाती है",
+        "IN HI को हमेशा floating रखा जाता है",
+        "IN HI को सीधे oscillator से जोड़ा जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Voltage measurement में मापी जाने वाली quantity को ज़रूरत पड़ने पर resistive attenuator/divider से उचित range में scale करके IN HI पर दिया जाता है, जबकि IN LO को circuit common के सापेक्ष रखा जाता है, जिससे differential measurement सही होता है (Option A सही)। Reference voltage (B) REF HI/REF LO पर जाता है, IN HI को floating रखना (C) कोई useful measurement नहीं देगा, और oscillator से इसका सीधा जोड़ (D) गलत है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q36",
+      "question": "एक ICL7106 आधारित voltmeter को 2V full-scale range पर काम करना है (यानी display 1.999V तक दिखाए)। इसका Vref कितना रखा जाना चाहिए?",
+      "options": [
+        "2.000V",
+        "1.000V",
+        "0.500V",
+        "4.000V"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि Vref को हमेशा full-scale input का आधा रखा जाता है, 2V full-scale (1.999V अधिकतम reading) के लिए Vref = 1.000V होना चाहिए (Option B सही)। 2.000V (A) पूरे full-scale के बराबर है, 0.500V (C) एक-चौथाई है, और 4.000V (D) double है — ये तीनों गलत counting ratio देंगे।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q37",
+      "question": "यदि किसी ICL7106 सर्किट में Vref को गलती से आवश्यक मान के दुगुने पर सेट कर दिया जाए, तो display की reading पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Reading सही ही दिखेगी, Vref की value से कोई फर्क नहीं पड़ता",
+        "Display की reading वास्तविक input की तुलना में लगभग आधी (गलत रूप से कम) दिखेगी",
+        "Display permanently overrange दिखाएगा, चाहे input कुछ भी हो",
+        "Display की reading वास्तविक input की तुलना में लगभग दोगुनी दिखेगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dual slope ADC में de-integrate समय (और इसलिए count) Vin/Vref के अनुपात से तय होता है; यदि Vref को दुगुना कर दिया जाए तो समान input के लिए count लगभग आधा हो जाएगा, यानी display वास्तविक मान से लगभग आधा (कम) दिखाएगा (Option B सही)। Reading सही रहना (A) गलत है क्योंकि Vref calibration की base है, permanently overrange (C) तब होगा जब Vref बहुत कम कर दिया जाए न कि दुगुना करने पर, और reading दोगुनी दिखना (D) उल्टा प्रभाव है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q38",
+      "question": "ICL7106/7107 में decimal point (DP) का चयन display पर किस प्रकार किया जाता है?",
+      "options": [
+        "यह IC के अंदर automatically fixed होता है और बदला नहीं जा सकता",
+        "DP केवल POL pin के माध्यम से control होता है",
+        "किसी भी उपयुक्त digit के DP segment को external जम्पर/connection द्वारा उस digit के backplane (BP) drive signal से जोड़कर वांछित स्थान पर decimal point दिखाया जाता है",
+        "DP केवल TEST pin सक्रिय करने पर दिखता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Decimal point की स्थिति IC द्वारा तय नहीं होती; PCB पर वांछित digit के DP segment को उस digit के backplane drive signal (BP) से जोड़ दिया जाता है ताकि वह segment भी अन्य ON segments की तरह BP के विपरीत phase में drive हो और दिखे — इस तरह किसी भी range के लिए उचित स्थान पर decimal point set किया जाता है (Option C सही)। DP का automatically fixed होना (A) गलत है क्योंकि यह external wiring से set होता है, POL pin (B) केवल polarity दिखाता है DP नहीं, और TEST pin (D) से DP का सामान्य प्रदर्शन नियंत्रित नहीं होता।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q39",
+      "question": "यदि किसी 3.5 digit ICL7106 voltmeter में 200.0mV range उपयोग हो रहा हो, तो decimal point किस digit position पर रखा जाना चाहिए ताकि reading 'XXX.X mV' के रूप में दिखे?",
+      "options": [
+        "तीसरे (rightmost) digit के बाद, यानी सबसे दायीं ओर",
+        "पहले (leftmost/half) digit के तुरंत बाद",
+        "किसी भी digit के बाद रखने से कोई फर्क नहीं पड़ता",
+        "दूसरे digit के बाद (यानी दायें से दूसरे अंक के आगे)"
+      ],
+      "correctIndex": 3,
+      "explanation": "200.0mV range में display को 'XXX.X' पैटर्न में दिखना है ताकि reading जैसे 199.9 दिखे, इसके लिए decimal point दायें से दूसरे digit के बाद यानी तीसरे digit से दायें, तीसरे व चौथे digit के बीच में रखा जाता है (Option D सही, यानी last digit से पहले)। सबसे दायीं ओर रखने (A) से पूरी संख्या integer जैसी (कोई दशमलव भाग नहीं) दिखेगी, पहले digit के बाद रखना (B) पूरी तरह गलत scale देगा, और DP position का कोई फर्क न पड़ना (C) गलत कथन है क्योंकि DP सीधे reading के units/scale को दर्शाता है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q40",
+      "question": "ICL7106/7107 के BUFF (buffer output) pin और INT (integrator output) pin के बीच बाहरी integrating capacitor (Cint) को किस प्रकार जोड़ा जाता है?",
+      "options": [
+        "Cint को केवल AZ pin और ground के बीच जोड़ा जाता है",
+        "BUFF और INT pins के बीच Cint जोड़ा जाता है, जो integrator amplifier का feedback capacitor बनता है",
+        "इनके बीच कोई component नहीं जोड़ा जाता",
+        "Cint को सीधे supply voltage और ground के बीच जोड़ा जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buffer amplifier का output (BUFF) एक external integrating resistor (Rint) से गुजरकर integrator के summing point तक जाता है, और integrating capacitor (Cint) BUFF/summing-node तथा INT (integrator output) के बीच feedback में जोड़ा जाता है, जिससे integrator amplifier की gain-vs-time (slope) व्यवहार बनता है (Option B सही)। Cint को AZ-ground (A) के बीच जोड़ना सही design नहीं है, कोई component न जोड़ना (C) circuit को अधूरा बना देगा, और supply-ground (D) के बीच जोड़ना भी सामान्य design practice नहीं है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q41",
+      "question": "ICL7106 और ICL7107 के display multiplexing approach में मुख्य अंतर क्या है?",
+      "options": [
+        "ICL7106 सभी digits को non-multiplexed, static (direct) drive से LCD पर दिखाता है जबकि ICL7107 भी digits को static drive से LED पर दिखाता है, लेकिन LED के लिए current buffering आवश्यक होती है",
+        "दोनों में समान रूप से समय-विभाजित (time-multiplexed) scanning होती है",
+        "ICL7106 में multiplexing होती है जबकि ICL7107 में नहीं",
+        "दोनों में digits को सॉफ्टवेयर द्वारा multiplex किया जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "ICL7106 और ICL7107 दोनों प्रत्येक digit के सभी segments को स्वतंत्र, static (non-multiplexed) outputs से drive करते हैं (multiplexing नहीं होती); अंतर सिर्फ यह है कि ICL7107 के outputs LED segments के लिए पर्याप्त current देने योग्य (current sourcing/sinking) होते हैं जबकि ICL7106 के outputs LCD चलाने योग्य AC-type होते हैं (Option A सही)। समान time-multiplexed scanning (B) या केवल ICL7106 में multiplexing (C) गलत कथन हैं, और यह कोई software-controlled multiplexing (D) नहीं है क्योंकि IC में कोई microprocessor core नहीं होता।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q42",
+      "question": "ICL7107 आधारित panel meter में यदि LED display की forward current सीमा से अधिक हो जाए, तो सामान्यतः किस component के माध्यम से current सीमित किया जाता है?",
+      "options": [
+        "Auto-zero capacitor के मान को बढ़ाकर",
+        "Reference voltage को घटाकर",
+        "Backplane frequency को बढ़ाकर",
+        "प्रत्येक LED segment के साथ श्रेणी में उचित मान का current-limiting resistor जोड़कर"
+      ],
+      "correctIndex": 3,
+      "explanation": "ICL7107 के segment output pins सीधे LED चला सकते हैं, परंतु current को IC व LED की rated सीमा में रखने के लिए प्रत्येक segment path में एक उचित मान का series current-limiting resistor जोड़ा जाता है (Option D सही)। Auto-zero capacitor का मान (A) इससे असंबंधित है, reference voltage घटाना (B) measurement accuracy बदल देगा न कि LED current सीमित करेगा, और backplane frequency बढ़ाना (C) तो ICL7106 (LCD) से संबंधित concept है, ICL7107 में backplane नहीं होता।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q43",
+      "question": "किसी ICL7107 आधारित ammeter में 20A full-scale के लिए Vref = 100.0mV रखा गया है (यानी full-scale input voltage = 200.0mV)। इसके लिए आवश्यक shunt resistor का मान लगभग कितना होगा?",
+      "options": [
+        "5 ohm",
+        "0.5 ohm",
+        "0.01 ohm (10 milliohm)",
+        "0.02 ohm (20 milliohm)"
+      ],
+      "correctIndex": 2,
+      "explanation": "Full-scale reading के लिए full-scale input voltage, Vref के दुगुने के बराबर होता है यानी 200.0mV; इसलिए Rshunt = V/I = 0.2V ÷ 20A = 0.01 ohm यानी 10 milliohm चाहिए (Option C सही)। 5 ohm (A) और 0.5 ohm (B) रखने पर drop कई volt हो जाएगा जो range से बहुत बाहर है, और 0.02 ohm (D) 10A full-scale के लिए सही होता, 20A के लिए नहीं।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q44",
+      "question": "Common-mode input range (analog input signal को supply/COMMON के सापेक्ष कितनी सीमा में रखा जा सकता है) की दृष्टि से ICL7106/7107 के उपयोग में क्या ध्यान रखना जरूरी है?",
+      "options": [
+        "Input signal, IC की specified common-mode voltage limits के भीतर ही रहे, अन्यथा measurement गलत हो सकता है या IC ठीक काम नहीं करेगा",
+        "Common-mode range असीमित होता है, कोई सीमा नहीं",
+        "Input सिग्नल की common-mode limits का auto-zero phase से कोई संबंध नहीं",
+        "Common-mode limits केवल current measurement में लागू होती हैं, voltage measurement में नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "किसी भी real op-amp/comparator based IC की तरह ICL7106/7107 के analog input्स की भी एक specified common-mode voltage range होती है (सामान्यतः supply rails के पास कुछ सीमा तक); यदि input इस सीमा से बाहर चला जाए तो internal stages सही रूप से काम नहीं करेंगे और measurement में error आ सकती है (Option A सही)। Common-mode range असीमित होना (B) गलत है, इसका auto-zero संचालन (जो internal offsets को null करता है) से कोई असर न होना (C) आंशिक रूप से गलत सरलीकरण है क्योंकि extreme common-mode स्थिति overall accuracy को प्रभावित कर सकती है, और यह सीमा current measurement तक ही सीमित (D) नहीं बल्कि voltage measurement में भी समान रूप से लागू होती है।"
+    },
+    {
+      "id": "u8_icl_7106_7107_q45",
+      "question": "एक digital panel meter में ICL7106 (LCD version) की जगह गलती से ICL7107 (LED version) को उसी PCB में बिना बदलाव के लगा दिया जाए, तो सामान्यतः क्या समस्या आएगी?",
+      "options": [
+        "Dual slope conversion बंद हो जाएगा और IC कोई reading नहीं देगा",
+        "LED display को उसके लिए बनी LCD-type backplane (AC) drive से चलाने का प्रयास होगा, जिससे display सही ढंग से glow नहीं करेगा या segments बहुत कमजोर/असंगत दिखेंगे",
+        "Reference voltage automatically LED के अनुसार खुद बदल जाएगा",
+        "कोई फर्क नहीं पड़ेगा क्योंकि दोनों ICs का pinout और output type पूरी तरह समान है"
+      ],
+      "correctIndex": 1,
+      "explanation": "ICL7106 का output stage LCD के लिए AC-type backplane-referenced drive देता है, LED के लिए यह पर्याप्त direct current नहीं दे सकता; इसलिए PCB को ICL7107 (जो LED के लिए current-sourcing/sinking output देता है) के लिए ही design किया जाना चाहिए — गलत IC लगाने पर display glow ठीक से नहीं होगा या segments कमजोर/असंगत दिखेंगे (Option B सही)। Dual slope conversion बंद होना (A) नहीं होगा क्योंकि core ADC section दोनों में समान रहता है, reference voltage का अपने आप बदल जाना (C) संभव नहीं (वह external resistor network से set होता है), और दोनों output stage अलग design के होने के कारण pinout/output type समान (D) कहना गलत है।"
     }
   ]
 }

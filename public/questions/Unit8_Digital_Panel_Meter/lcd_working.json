@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "multi-digit LED display में हर segment एक LED होता है जो लगातार current खींचता है, इसलिए LED, LCD की तुलना में काफी अधिक power consume करती है — यही कारण है कि battery चालित panel meters में LCD अधिक लोकप्रिय है (Option B सही)। Option A (glare न होना) LED का सामान्यतः विपरीत गुण है (LED में अधिक glare/brightness issue हो सकता है)। Option C (इतनी महंगी कि कभी प्रयोग न हो) तथ्यों के विपरीत है क्योंकि LED displays व्यापक रूप से प्रयुक्त होती हैं, और Option D (LED का response LCD से धीमा होना) गलत है क्योंकि वास्तव में LED का response LCD से तेज होता है।"
+    },
+    {
+      "id": "u8_lcd_working_q31",
+      "question": "एक 20x4 character LCD module में कुल कितने characters एक साथ प्रदर्शित हो सकते हैं, और यह 16x2 module से किस प्रकार भिन्न है?",
+      "options": [
+        "20 characters, यह 16x2 के बराबर capacity रखता है",
+        "80 characters (20 columns × 4 rows), जो 16x2 module (32 characters) से अधिक data एक साथ दिखा सकता है",
+        "64 characters, दोनों module की capacity लगभग समान होती है",
+        "16 characters, यह 16x2 से छोटा module है"
+      ],
+      "correctIndex": 1,
+      "explanation": "20x4 LCD module में 20 columns और 4 rows होती हैं, इसलिए total characters = 20 × 4 = 80 होते हैं, जो 16x2 module (16 × 2 = 32 characters) से कहीं अधिक जानकारी एक साथ दिखा सकते हैं — इसलिए बड़े menu/multi-line data दिखाने के लिए 20x4 उपयुक्त है (Option B सही)। Option A (20 characters, बराबर capacity) गलत गणना है। Option C (64 characters) और Option D (16 characters, छोटा module) दोनों गलत आकार व capacity बताते हैं।"
+    },
+    {
+      "id": "u8_lcd_working_q32",
+      "question": "character LCD modules अलग-अलग sizes (जैसे 16x1, 16x2, 20x2, 20x4) में क्यों उपलब्ध होते हैं?",
+      "options": [
+        "क्योंकि हर size का liquid crystal material रासायनिक रूप से भिन्न होता है",
+        "क्योंकि हर size के लिए अलग backlight color आवश्यक होता है",
+        "क्योंकि छोटे size में polarizer नहीं लगाया जाता",
+        "क्योंकि application की जरूरत के अनुसार display किए जाने वाले text/lines की मात्रा (space व readability requirement) अलग-अलग होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "character LCD modules को अलग-अलग sizes में बनाया जाता है ताकि विभिन्न applications की जरूरत के अनुसार (जैसे simple single-line status बताने के लिए 16x1, या अधिक menu/data दिखाने के लिए 20x4) पर्याप्त space और readability मिल सके (Option D सही)। Option A (रासायनिक रूप से भिन्न liquid crystal material) गलत है, size बदलने से material की chemistry नहीं बदलती। Option B (अलग backlight color जरूरी) और Option C (छोटे size में polarizer न होना) दोनों तथ्यात्मक रूप से गलत हैं क्योंकि हर size के LCD में समान basic construction (polarizers सहित) होती है।"
+    },
+    {
+      "id": "u8_lcd_working_q33",
+      "question": "LED (Light Emitting Diode) आधारित seven-segment display और LCD आधारित seven-segment display के मूल कार्य सिद्धांत में सबसे बड़ा अंतर क्या है?",
+      "options": [
+        "LED स्वयं प्रकाश उत्सर्जित (emit) करता है, जबकि LCD केवल उपलब्ध प्रकाश को liquid crystal व polarizer के जरिए modulate/block करती है",
+        "दोनों बिल्कुल समान सिद्धांत पर काम करते हैं, केवल material अलग है",
+        "LED भी liquid crystal का प्रयोग करता है, बस उसका रंग अलग होता है",
+        "LCD, LED से अधिक तेज गति से प्रकाश उत्सर्जित करती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LED एक emissive device है जो electrical energy से स्वयं प्रकाश उत्पन्न करता है, जबकि LCD एक non-emissive device है जो liquid crystal molecules के orientation को voltage से बदलकर backlight/ambient light को selectively block या pass करती है (Option A सही)। Option B (बिल्कुल समान सिद्धांत) गलत है क्योंकि दोनों की physics अलग है। Option C (LED में भी liquid crystal होना) तथ्यात्मक रूप से गलत है, और Option D (LCD का प्रकाश उत्सर्जन LED से तेज होना) गलत है क्योंकि LCD प्रकाश उत्सर्जित ही नहीं करती।"
+    },
+    {
+      "id": "u8_lcd_working_q34",
+      "question": "यदि किसी portable digital panel meter को ऐसी जगह उपयोग करना है जहाँ बहुत तेज बाहरी sunlight होती है परंतु battery life भी महत्वपूर्ण है, तो कौन-सा display विकल्प सबसे उपयुक्त रहेगा?",
+      "options": [
+        "high-brightness LED display, क्योंकि यह हमेशा कम power लेता है",
+        "reflective अथवा transflective LCD, क्योंकि यह ambient sunlight को ही reflect करके पढ़ने योग्य बनती है और backlight की जरूरत कम पड़ने से power भी बचती है",
+        "बिना किसी display के केवल buzzer का प्रयोग",
+        "केवल transmissive LCD बिना किसी backlight के"
+      ],
+      "correctIndex": 1,
+      "explanation": "तेज sunlight में reflective/transflective LCD ambient light को ही reflect करके अच्छा contrast दे देती है, जिससे अलग backlight की जरूरत सामान्यतः कम पड़ती है और साथ ही LCD की मूलतः कम power consumption के कारण battery life भी लंबी बनी रहती है (Option B सही)। Option A (high-brightness LED) गलत है क्योंकि LED tुलनात्मक रूप से बहुत अधिक power लेता है। Option C (कोई display नहीं, केवल buzzer) प्रश्न की मूल आवश्यकता (reading दिखाना) पूरी नहीं करता। Option D (transmissive LCD बिना backlight) अंधेरे/low-light में तो ठीक है परंतु तेज sunlight glare में backlight न होने से भी सामान्यतः पढ़ने योग्य रहती है, पर reflective/transflective प्रकार इस specific स्थिति के लिए अधिक उपयुक्त डिज़ाइन है।"
+    },
+    {
+      "id": "u8_lcd_working_q35",
+      "question": "LCD की 'contrast ratio' का क्या अर्थ है और यह किस पर निर्भर करती है?",
+      "options": [
+        "यह backlight की केवल color पर निर्भर करती है",
+        "यह supply voltage की frequency पर निर्भर करती है, प्रकाश से इसका कोई संबंध नहीं",
+        "यह ON (dark) segment और OFF (clear) background के बीच light transmission/reflection के अंतर को दर्शाती है, जो viewing angle व liquid crystal molecules के alignment पर निर्भर करती है",
+        "यह केवल glass plate की मोटाई पर निर्भर करती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "contrast ratio यह दर्शाती है कि ON (dark/activated) segment और OFF (clear) background के बीच light transmission या reflection में कितना अंतर है — यह अंतर liquid crystal molecules के orientation और देखने के angle (viewing angle) पर निर्भर करता है, इसीलिए अलग-अलग angle से देखने पर contrast बदल जाता है (Option C सही)। Option A (केवल backlight color पर निर्भर) अधूरा व गलत है। Option B (प्रकाश से कोई संबंध न होना) पूरी तरह गलत है क्योंकि contrast की परिभाषा ही light transmission के अंतर पर आधारित है। Option D (केवल glass की मोटाई पर निर्भर) भी मुख्य कारण नहीं है।"
     }
   ]
 }
