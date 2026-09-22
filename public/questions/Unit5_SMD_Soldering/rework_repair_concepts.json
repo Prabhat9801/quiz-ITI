@@ -363,6 +363,126 @@
       ],
       "correctIndex": 0,
       "explanation": "IPC standards और quality requirements के अनुसार critical boards पर rework cycles सीमित रखे जाते हैं क्योंकि हर cycle से material fatigue, pad lifting और long-term reliability में गिरावट का खतरा रहता है। Option B अर्थहीन है, C अधूरा/गलत कारण देता है और D गलत practice है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q31",
+      "question": "Through-hole component का rework करते समय, नये component को insert करने से पहले hole को clean करने के लिए मुख्यतः किस तरीके का इस्तेमाल होता है?",
+      "options": [
+        "Desoldering pump/braid से पुराना solder हटाकर hole को clear करना",
+        "Hole में hammer से ठोक कर मलबा निकालना",
+        "Hole को permanently बंद कर देना",
+        "Hole को sand paper से चौड़ा कर देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Through-hole rework में सबसे पहले desoldering pump या braid से plated hole में जमा पुराना solder पूरी तरह हटाया जाता है ताकि hole clear हो जाए और नया component बिना force के आसानी से insert हो सके। Option B मशीनी रूप से hole/pad को नुकसान पहुँचाएगा, Option C rework का उद्देश्य ही खत्म कर देता है, और Option D hole का size बदल देगा जो component fit को गलत बना देगा।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q32",
+      "question": "Through-hole joint के rework में नया component लगाने के बाद solder किस तरह से apply किया जाना चाहिए ताकि proper joint बने?",
+      "options": [
+        "Iron tip को lead और pad दोनों को touch कराकर heat देना, फिर solder wire जोड़कर पूरी तरह hole fill करना",
+        "सिर्फ lead को heat करना, pad को छूना जरूरी नहीं",
+        "Solder को सीधे iron tip पर पहले melt करके फिर joint पर गिराना",
+        "बिना heat दिए ठंडे solder को pad पर चिपका देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "सही through-hole joint के लिए iron tip को component lead और copper pad दोनों पर simultaneously touch कराया जाता है जिससे दोनों सतह उपयुक्त temperature पर पहुँचें, फिर solder wire जोड़कर hole को अच्छी तरह fill किया जाता है, जिससे strong metallic bond बनता है। Option B अधूरी heating देगा जिससे cold joint बनेगा, Option C 'solder ball' या 'solder blob' बनाता है जो proper wetting नहीं देता, Option D कभी solder नहीं करेगा क्योंकि बिना heat के bonding संभव नहीं है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q33",
+      "question": "Surface mounted (SMD) joint के rework में fine-pitch component (जैसे QFP) को हटाने के लिए hot air nozzle की air flow किस तरह set की जानी चाहिए?",
+      "options": [
+        "बहुत high air flow तेज़ी से component हटाने के लिए",
+        "Controlled, moderate air flow और उचित nozzle size जो केवल target component तक heat सीमित रखे",
+        "Air flow को completely बंद करके केवल tip से heat देना",
+        "Air flow की दिशा को random रखना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fine-pitch SMD components के rework में controlled/moderate air flow और सही nozzle size इस्तेमाल की जाती है ताकि heat केवल target component तक सीमित रहे और आसपास के छोटे-छोटे नज़दीकी components/joints को नुकसान न हो। Option A से adjacent components भी heat होकर damage या shift हो सकते हैं, Option C hot-air rework का तरीका ही नहीं है, और Option D uncontrolled heating देगा जिससे uneven results मिलेंगे।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q34",
+      "question": "SMD component हटाने के बाद pad पर बचे हुए extra/उभरे solder को नए component के लिए ready करने हेतु क्या किया जाता है?",
+      "options": [
+        "Pad को वैसे ही छोड़ दिया जाता है",
+        "Solder wick/braid और flux की मदद से pads को level/flat और साफ किया जाता है ताकि नया component सही से बैठ सके",
+        "Pad पर extra solder paste और डाल दिया जाता है बिना सफाई के",
+        "Pad को file से घिस कर हटा दिया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Component हटाने के बाद pad पर बचा असमान/excess solder solder wick और flux के इस्तेमाल से level किया जाता है, जिससे pad की surface flat और clean हो जाती है और नया component ठीक से align होकर बैठ सके। Option A असमान pad से नया component tilt/misalign हो सकता है, Option C पुराने residue के ऊपर नया paste ठीक से bond नहीं बनाएगा, और Option D mechanical filing से copper pad ही हट सकता है जो permanent damage है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q35",
+      "question": "Through-hole rework की तुलना में surface mounted joint का rework सामान्यतः अधिक सावधानी क्यों माँगता है?",
+      "options": [
+        "क्योंकि through-hole joints हमेशा ज्यादा मजबूत होते हैं",
+        "क्योंकि SMD pads और leads का size छोटा होता है और नज़दीकी components के बीच spacing कम होने से heat व alignment control ज्यादा critical हो जाता है",
+        "क्योंकि SMD components में कोई solder joint नहीं होता",
+        "क्योंकि through-hole components heat से प्रभावित नहीं होते"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD pads/leads छोटे pitch पर होते हैं और आसपास अन्य components बहुत पास होते हैं, इसलिए rework के दौरान heat सीमित रखना और component की सही alignment बनाना through-hole की तुलना में अधिक कठिन और सावधानी वाला काम है। Option A तथ्यात्मक रूप से सही नहीं है (mechanical strength भिन्न कारणों पर निर्भर करती है), Option C गलत है क्योंकि SMD में भी solder joint होता ही है, और Option D गलत है क्योंकि through-hole components भी excess heat से damage हो सकते हैं।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q36",
+      "question": "Acrylic conformal coating को अन्य coating types (जैसे epoxy) की तुलना में rework के लिए ज्यादा पसंद क्यों किया जाता है?",
+      "options": [
+        "क्योंकि यह common solvents से आसानी से dissolve होकर हटाई जा सकती है, जिससे rework समय कम लगता है",
+        "क्योंकि यह किसी भी solvent से बिल्कुल नहीं घुलती",
+        "क्योंकि इसे हटाने के लिए PCB को जलाना पड़ता है",
+        "क्योंकि इसमें rework की जरूरत ही नहीं पड़ती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Acrylic coating common solvents (जैसे कुछ ketone-based cleaners) में आसानी से घुल जाती है, इसलिए इसे हटाकर rework करना epoxy जैसी hard-cure coatings की तुलना में तेज़ और सरल होता है। Option B और C इसके actual गुण के विपरीत हैं, और Option D गलत है क्योंकि किसी भी coated board पर rework की जरूरत आ सकती है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q37",
+      "question": "Conformal coating हटाने की mechanical (micro-abrasion) method चुनते समय technician को किस बात का विशेष ध्यान रखना चाहिए?",
+      "options": [
+        "Abrasive pressure और speed इतनी हो कि केवल coating हटे, नीचे के pad/trace और component body को scratch/damage न हो",
+        "जितना अधिक force लगाया जाए उतना अच्छा result मिलता है",
+        "Abrasion हमेशा पूरे PCB पर एक साथ किया जाना चाहिए",
+        "Micro-abrasion के दौरान coating type का कोई महत्व नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Micro-abrasion में controlled, low pressure और सही tip speed इस्तेमाल की जाती है ताकि सिर्फ coating की layer हटे और नीचे मौजूद copper pad, trace या component body scratch/damage न हो। Option B अधिक force से pad/trace को नुकसान पहुँचा सकता है, Option C localized method के उद्देश्य के विपरीत है (यह selective removal के लिए है), और Option D गलत है क्योंकि अलग coating types की hardness अलग होती है जो abrasion parameters को प्रभावित करती है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q38",
+      "question": "Silicone conformal coating को solvent से हटाना अन्य coatings (जैसे acrylic) की तुलना में सामान्यतः क्यों कठिन माना जाता है?",
+      "options": [
+        "क्योंकि silicone coating का chemical resistance बहुत अधिक होता है जिससे अधिकतर common solvents इस पर प्रभावी ढंग से काम नहीं करते",
+        "क्योंकि silicone coating पानी में तुरंत घुल जाती है",
+        "क्योंकि silicone coating की मोटाई हमेशा acrylic से कम होती है",
+        "क्योंकि silicone coating का rework कभी भी जरूरी नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Silicone coating का chemical व solvent resistance बहुत अच्छा होता है, इसलिए इसे केवल specialized/strong solvent से ही effectively हटाया जा सकता है, सामान्य solvents पर यह प्रतिरोधी बनी रहती है। Option B इसके actual गुण के विपरीत है, Option C thickness से removal की कठिनाई का सीधा संबंध नहीं है, और Option D गलत है क्योंकि rework की जरूरत coating type पर निर्भर नहीं बल्कि board की जरूरत पर निर्भर करती है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q39",
+      "question": "किसी board पर rework शुरू करने से पहले technician को उस coating का प्रकार पहचानना क्यों जरूरी होता है?",
+      "options": [
+        "क्योंकि coating का रंग हमेशा एक जैसा होता है इसलिए पहचान की जरूरत नहीं",
+        "क्योंकि गलत removal method (solvent/thermal/mechanical) चुनने से coating ठीक से नहीं हटेगी या PCB/component को नुकसान हो सकता है",
+        "क्योंकि coating का प्रकार rework की कीमत से कोई संबंध नहीं रखता",
+        "क्योंकि coating पहचान से component की internal circuitry बदल जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर coating type (acrylic, silicone, urethane, epoxy आदि) की chemical/thermal properties अलग होती हैं, इसलिए सही removal method चुनने के लिए पहले coating का प्रकार पहचानना जरूरी है — गलत method से coating अधूरी हटेगी या board को नुकसान पहुँच सकता है। Option A तथ्यात्मक रूप से गलत है क्योंकि रंग से coating type की पुष्टि नहीं होती, Option C अप्रासंगिक बिंदु है, और Option D निरर्थक/गलत कथन है।"
+    },
+    {
+      "id": "u5_rework_repair_concepts_q40",
+      "question": "Through-hole और surface mounted दोनों तरह के joints के rework में common रूप से किस बात का पालन करना जरूरी होता है ताकि रिपीट rework की जरूरत न पड़े?",
+      "options": [
+        "Manufacturer के अनुशंसित temperature profile, उचित flux और सही solder alloy का उपयोग करना ताकि पहली बार में ही reliable joint बने",
+        "जितना जल्दी हो सके काम खत्म करना, temperature की परवाह न करना",
+        "हमेशा एक ही fixed temperature सभी components के लिए इस्तेमाल करना चाहे datasheet कुछ भी कहे",
+        "Flux का उपयोग बिलकुल न करना ताकि joint साफ दिखे"
+      ],
+      "correctIndex": 0,
+      "explanation": "दोनों तरह के rework (through-hole और SMD) में manufacturer-recommended temperature profile, सही flux और उपयुक्त solder alloy का पालन करने से पहली बार में ही reliable, void-free joint बनता है जिससे बार-बार rework की जरूरत नहीं पड़ती। Option B जल्दबाज़ी में cold joint या overheating का खतरा बढ़ाता है, Option C अलग-अलग components की अलग thermal requirement को नज़रअंदाज़ करता है जिससे कुछ components damage हो सकते हैं, और Option D flux के बिना proper wetting नहीं होगी जिससे joint की reliability कम हो जाएगी।"
     }
   ]
 }

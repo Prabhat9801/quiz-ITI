@@ -363,6 +363,246 @@
       ],
       "correctIndex": 1,
       "explanation": "सही package/component identification से सही replacement, सही polarity/orientation और उपयुक्त soldering/rework method चुना जाता है, जो repair की सफलता के लिए जरूरी है। बाकी विकल्प गलत या असंगत हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q31",
+      "question": "SMD chip resistor की body पर आमतौर पर कौन-सा marking प्रचलित है?",
+      "options": [
+        "color bands जैसे through-hole resistor में",
+        "top surface पर छोटे numeric code (जैसे 3 या 4 अंकों का code) जो resistance value बताता है",
+        "कोई marking नहीं होती कभी भी",
+        "केवल company का logo"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिकतर SMD chip resistors पर top surface पर numeric code (जैसे '103' = 10 × 10^3 Ω) print होता है जिससे resistance value पढ़ी जाती है। Color bands through-hole resistor में होते हैं, बहुत छोटे resistors में marking नहीं भी हो सकती पर आमतौर पर code होता है, और यह केवल logo नहीं होता।"
+    },
+    {
+      "id": "u5_smd_components_packages_q32",
+      "question": "SMD chip resistor की power rating मुख्यतः किस factor पर निर्भर करती है?",
+      "options": [
+        "केवल उसके रंग पर",
+        "उसके physical size (package size) और substrate material पर, बड़े size में अधिक power dissipation संभव है",
+        "केवल supply voltage पर",
+        "resistor की उम्र पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़े physical size वाले SMD resistor में अधिक surface area होने से अधिक heat dissipate हो सकती है, इसलिए power rating size के साथ बढ़ती है। रंग resistor में होता ही नहीं, supply voltage सीधे power rating तय नहीं करती, और उम्र से rating नहीं बदलती।"
+    },
+    {
+      "id": "u5_smd_components_packages_q33",
+      "question": "SMD ceramic chip capacitor (MLCC) के अंदर construction कैसा होता है?",
+      "options": [
+        "एक single dielectric plate जिसमें कोई layer नहीं",
+        "ceramic dielectric की multiple layers जिनके बीच internal metal electrodes होते हैं (multilayer construction)",
+        "electrolyte से भरा हुआ can",
+        "wound foil roll जैसे film capacitor"
+      ],
+      "correctIndex": 1,
+      "explanation": "MLCC में ceramic dielectric की कई layers होती हैं जिनके बीच internal metal electrodes sandwich होते हैं, जिससे कम जगह में अधिक capacitance मिलती है। Option A गलत सरलीकरण है, C electrolytic capacitor का वर्णन है, D film capacitor का है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q34",
+      "question": "SMD tantalum capacitor की एक प्रमुख विशेषता क्या है?",
+      "options": [
+        "यह बिना polarity के काम करता है",
+        "यह polarized होता है और अपेक्षाकृत छोटे size में अधिक capacitance value देता है, पर reverse voltage से खराब हो सकता है",
+        "यह हमेशा cylindrical MELF रूप में ही आता है",
+        "इसमें कोई terminal नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD tantalum capacitor polarized होता है, छोटे package में उच्च capacitance देता है, लेकिन reverse polarity लगाने पर damage या यहां तक कि short/fail हो सकता है। यह non-polarized नहीं है, MELF रूप में नहीं आता, और इसके terminals होते हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q35",
+      "question": "SMD capacitor की power/voltage rating किससे प्रभावित होती है?",
+      "options": [
+        "capacitor के केवल रंग से",
+        "dielectric material की thickness और type से, जो अधिकतम working voltage (WV) निर्धारित करते हैं",
+        "capacitor को किस दिन बनाया गया इससे",
+        "board के रंग से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dielectric की thickness और type अधिकतम working voltage rating तय करते हैं — मोटी/उच्च-गुणवत्ता dielectric अधिक voltage सहन कर सकती है। रंग, निर्माण-तिथि या board रंग से rating का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q36",
+      "question": "SOT-89 package की एक विशेषता क्या है, जो इसे SOT-23 से अलग बनाती है?",
+      "options": [
+        "SOT-89 में कोई terminal नहीं होता",
+        "SOT-89 में bottom पर बड़ा exposed metal tab होता है जो बेहतर heat dissipation देता है, इसलिए यह अधिक power handle कर सकता है",
+        "SOT-89 केवल diode के लिए है",
+        "SOT-89 का आकार हमेशा SOT-23 से छोटा होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOT-89 में bottom पर बड़ा metal tab होता है जो PCB से जुड़कर heat dissipation बढ़ाता है, जिससे यह SOT-23 से अधिक power वाले transistors के लिए उपयुक्त है। इसमें terminals होते हैं, यह transistor package है (diode के लिए नहीं), और यह SOT-23 से बड़ा होता है, छोटा नहीं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q37",
+      "question": "SOT package में transistor की power rating मुख्यतः किस पर निर्भर करती है?",
+      "options": [
+        "package के रंग पर",
+        "package के size, metal tab की उपस्थिति और PCB copper area से होने वाले heat dissipation पर",
+        "केवल इनपुट voltage पर",
+        "package में कितने अक्षर लिखे हैं उस पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOT transistor की power handling क्षमता package size, exposed metal tab (यदि हो) और PCB पर copper area के माध्यम से heat dissipation पर निर्भर करती है। रंग, केवल voltage या marking के अक्षरों से power rating तय नहीं होती।"
+    },
+    {
+      "id": "u5_smd_components_packages_q38",
+      "question": "SOD-323 और SOD-123 package में मुख्य अंतर क्या है?",
+      "options": [
+        "SOD-323, SOD-123 से भौतिक रूप से छोटा होता है, दोनों small outline diode packages हैं",
+        "SOD-323 केवल transistor के लिए है",
+        "SOD-123 में कोई polarity नहीं होती",
+        "SOD-323 हमेशा through-hole होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "SOD-323 और SOD-123 दोनों small outline diode packages हैं, पर SOD-323 का physical size SOD-123 से छोटा होता है, जो अधिक miniaturized boards के लिए उपयोगी है। SOD packages diode के लिए हैं (transistor नहीं), diode में polarity होती है, और ये surface-mount हैं, through-hole नहीं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q39",
+      "question": "MELF package में power rating बढ़ाने के लिए क्या किया जाता है?",
+      "options": [
+        "body को छोटा किया जाता है",
+        "body का diameter और length बढ़ाकर अधिक surface area व heat dissipation क्षमता दी जाती है (जैसे MMU/MMB variants)",
+        "केवल color band बदल दी जाती है",
+        "end caps हटा दिए जाते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "बड़े MELF variants (जैसे MMB, MMU series) में body का diameter/length बढ़ाकर अधिक surface area मिलती है, जिससे अधिक heat dissipate होकर higher power rating संभव होती है। Body छोटा करने से power rating घटेगी, color band से power का संबंध नहीं, और end caps हटाना असंभव है क्योंकि वही terminal हैं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q40",
+      "question": "MELF resistor में color band code का उपयोग क्यों किया जाता है, जबकि rectangular chip resistor में numeric code होता है?",
+      "options": [
+        "क्योंकि MELF की बेलनाकार सतह पर band print करना, चारों तरफ से पढ़े जाने के लिए आसान है",
+        "क्योंकि MELF में value की जरूरत नहीं होती",
+        "क्योंकि color band केवल capacitor के लिए है",
+        "यह सिर्फ पुराने time की परंपरा है, कोई तकनीकी कारण नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "MELF की cylindrical shape पर band जैसी marking किसी भी angle से आसानी से पढ़ी जा सकती है, जबकि flat chip पर numeric code बेहतर फिट होता है। हर resistor की एक value होती है इसलिए marking जरूरी है, color band resistor के लिए है (सामान्यतः capacitor के लिए नहीं), और यह सिर्फ परंपरा नहीं बल्कि shape-आधारित practical कारण है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q41",
+      "question": "SMD capacitor और resistor के बीच बिना marking पढ़े पहचान का एक सामान्य तरीका क्या है?",
+      "options": [
+        "capacitor हमेशा लाल रंग का होता है",
+        "अधिकतर ceramic capacitor पर कोई marking नहीं होती जबकि अधिकतर chip resistor पर numeric code print होता है",
+        "resistor में हमेशा तीन terminals होते हैं",
+        "capacitor का आकार हमेशा गोल होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "व्यवहार में अधिकतर छोटे ceramic chip capacitors पर कोई value marking नहीं होती, जबकि अधिकतर chip resistors पर numeric code होता है — यह एक सामान्य visual संकेत है। रंग से कोई निश्चित पहचान नहीं होती, chip resistor में 2 ही terminals होते हैं, और capacitor rectangular chip रूप में भी आता है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q42",
+      "question": "SMD MELF diode में color band की स्थिति क्या दर्शाती है?",
+      "options": [
+        "band वाला सिरा cathode को दर्शाता है, जैसे through-hole diode में",
+        "band का polarity से कोई संबंध नहीं",
+        "band हमेशा anode दर्शाता है",
+        "band सिर्फ manufacturer का logo है"
+      ],
+      "correctIndex": 0,
+      "explanation": "MELF diode में भी band वाला सिरा cathode को दर्शाता है, यह through-hole diode की परंपरा जैसा ही है। इसलिए यह polarity indicator ही है (B गलत), anode नहीं दर्शाता (C गलत), और logo नहीं है (D गलत)।"
+    },
+    {
+      "id": "u5_smd_components_packages_q43",
+      "question": "किसी circuit में जहाँ अधिक current handle करने वाला rectifier diode चाहिए, कौन-सा package अधिक उपयुक्त होगा?",
+      "options": [
+        "SOD-123 (बहुत छोटा signal diode package)",
+        "बड़ा MELF या SMB/SMC जैसा power diode package जिसमें अधिक surface area हो",
+        "SOT-23",
+        "0201 आकार का chip"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक current/power वाले rectifier diode के लिए बड़े surface area वाला package (जैसे बड़ा MELF या SMB/SMC) जरूरी होता है ताकि heat dissipate हो सके। SOD-123 और 0201 बहुत छोटे-signal-level components के लिए हैं, और SOT-23 transistor package है, diode नहीं।"
+    },
+    {
+      "id": "u5_smd_components_packages_q44",
+      "question": "SOT package में gate/base terminal को accidental short से बचाने के लिए soldering के दौरान क्या सावधानी जरूरी है?",
+      "options": [
+        "सभी तीन pads पर एक साथ बहुत ज्यादा solder paste लगाना",
+        "pad spacing और paste की मात्रा नियंत्रित रखना ताकि adjacent छोटे pins के बीच solder bridge न बने",
+        "सोल्डरिंग से पहले package को गर्म पानी में डुबोना",
+        "बिना flux के solder करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOT जैसे छोटे-pitch packages में adjacent terminals के बीच अत्यधिक solder paste bridging (short) पैदा कर सकता है, इसलिए paste की मात्रा और pad spacing नियंत्रित रखना जरूरी है। बहुत ज्यादा paste लगाना ही समस्या पैदा करता है, गर्म पानी में डुबोना गलत practice है, और flux के बिना अच्छा solder joint नहीं बनता।"
+    },
+    {
+      "id": "u5_smd_components_packages_q45",
+      "question": "SMD resistor की body में यदि कोई numeric code न हो (जैसे बहुत छोटे 0201/01005 size में), तो value कैसे पहचानी जाती है?",
+      "options": [
+        "component को छूकर अंदाजा लगाया जाता है",
+        "packaging tape/reel की label या PCB assembly documentation/BOM से value confirm की जाती है",
+        "value का कोई महत्व नहीं रहता",
+        "हमेशा 1kΩ मान लिया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अत्यंत छोटे resistors पर marking छापना संभव नहीं होता, इसलिए value को reel/tape की label या BOM (Bill of Materials) दस्तावेज़ से पहचाना जाता है। छूकर अंदाजा लगाना अवैज्ञानिक है, value का महत्व बना रहता है, और मान लेना गलत तरीका है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q46",
+      "question": "SMD capacitor के package (body size) और उसकी voltage rating के बीच सामान्य संबंध क्या है?",
+      "options": [
+        "size से voltage rating का कोई सीधा संबंध नहीं होता कभी भी",
+        "समान capacitance पर बड़े physical size वाले package में सामान्यतः higher voltage rating प्राप्त करना आसान होता है (dielectric thickness बढ़ाई जा सकती है)",
+        "छोटे size में हमेशा अधिक voltage rating होती है",
+        "voltage rating केवल resistor में लागू होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "समान capacitance मान के लिए बड़े package में मोटी dielectric layer रखी जा सकती है, जिससे उच्च voltage rating मिलती है। इसलिए size और voltage rating में संबंध होता है (A गलत), छोटे size में उच्च rating रखना कठिन होता है (C गलत), और voltage rating capacitor पर भी लागू होती है (D गलत)।"
+    },
+    {
+      "id": "u5_smd_components_packages_q47",
+      "question": "SMD package को उसके terminal की संख्या और आकार से पहचानते समय, 2-terminal cylindrical component (color band सहित) और 2-terminal rectangular chip में मुख्य अंतर क्या है?",
+      "options": [
+        "cylindrical वाला MELF है, rectangular वाला chip resistor/capacitor है — दोनों अलग body shape के package हैं",
+        "दोनों एक ही package हैं अलग नाम से",
+        "rectangular वाला हमेशा capacitor ही होता है, resistor कभी नहीं",
+        "cylindrical वाला हमेशा IC होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "2-terminal cylindrical shape MELF की पहचान है जबकि 2-terminal flat rectangular chip resistor या capacitor दोनों हो सकते हैं — body shape अलग packages को अलग करती है। ये एक जैसे package नहीं हैं, rectangular chip resistor भी हो सकता है (केवल capacitor नहीं), और cylindrical IC नहीं होती।"
+    },
+    {
+      "id": "u5_smd_components_packages_q48",
+      "question": "MELF package की standard sizes (जैसे MELF, MiniMELF, MicroMELF) में अंतर किस बात का सूचक है?",
+      "options": [
+        "केवल रंग का अंतर",
+        "body के diameter और length का अंतर, जो power rating और board space requirement को प्रभावित करता है",
+        "इनमें कोई तकनीकी अंतर नहीं, नाम बदलते रहते हैं",
+        "केवल manufacturer का brand नाम"
+      ],
+      "correctIndex": 1,
+      "explanation": "MELF, MiniMELF और MicroMELF के नाम उनके भौतिक आकार (diameter, length) के अनुसार हैं, जिससे उनकी power rating और PCB पर लगने वाली जगह अलग-अलग होती है। यह रंग या brand का अंतर नहीं, बल्कि वास्तविक size-आधारित तकनीकी अंतर है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q49",
+      "question": "SOT package के transistor की datasheet में power rating (जैसे Pd) किस स्थिति के लिए दी जाती है?",
+      "options": [
+        "केवल cold storage temperature पर",
+        "किसी निश्चित ambient temperature (जैसे 25°C) और उपयुक्त heat-sinking/PCB copper area की मानी गई condition पर, जिससे अधिक गर्मी में actual rating घट जाती है (derating)",
+        "यह rating हर temperature पर एक समान रहती है, कभी नहीं घटती",
+        "power rating का datasheet में उल्लेख नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "SOT transistor datasheet में power rating एक मानी गई ambient temperature और PCB heat-sinking condition पर दी जाती है; तापमान बढ़ने पर derating curve के अनुसार actual allowable power घटती है। यह cold storage जैसी असंगत condition पर नहीं दी जाती, हर temperature पर स्थिर नहीं रहती, और datasheet में जरूर दी जाती है।"
+    },
+    {
+      "id": "u5_smd_components_packages_q50",
+      "question": "एक SMD board पर तीन प्रकार के छोटे package दिख रहे हैं: (1) 3-terminal छोटा package transistor जैसा, (2) 2-terminal छोटा package जिसके एक सिरे पर band है, (3) बेलनाकार 2-सिरा component। इन्हें क्रमशः क्या कहा जाएगा?",
+      "options": [
+        "(1) SOT transistor, (2) SOD diode, (3) MELF component",
+        "(1) MELF, (2) SOT, (3) SOD",
+        "तीनों ही SOT हैं अलग size में",
+        "तीनों ही MELF हैं अलग color में"
+      ],
+      "correctIndex": 0,
+      "explanation": "3-terminal छोटा transistor-जैसा package SOT है, band-मार्किंग वाला 2-terminal flat package SOD diode है, और बेलनाकार 2-सिरा component MELF है। बाकी विकल्प इन तीन अलग-अलग package types को गलत तरीके से जोड़ते हैं या एक ही category में मिला देते हैं।"
     }
   ]
 }

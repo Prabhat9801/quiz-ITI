@@ -363,6 +363,186 @@
       ],
       "correctIndex": 0,
       "explanation": "Detailed defect documentation से quality trends और recurring issues (जैसे किसी specific process step में बार-बार आने वाली defect) पहचानी जा सकती हैं, जो process improvement और future troubleshooting में मदद करता है। Options B, C, D गलत/निरर्थक कारण हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q31",
+      "question": "SM assembly inspection में 'bridging' defect किसे कहते हैं?",
+      "options": [
+        "जब पिघला हुआ solder दो adjacent pads/leads के बीच फैलकर unwanted electrical connection बना दे",
+        "जब एक joint बिल्कुल shiny और smooth बने",
+        "जब component board पर सही जगह पर mount हो",
+        "जब solder mask का रंग हल्का हरा हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bridging में excess solder दो अलग-अलग pads या leads के बीच पुल (bridge) जैसा जुड़ जाता है, जिससे उनके बीच अनचाहा short-circuit बन जाता है। Option B एक अच्छे joint की पहचान है, C normal mounting है, D solder mask का सामान्य रंग है — इनका bridging defect से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q32",
+      "question": "Bridging defect की पहचान visual inspection में किस तरह की जाती है?",
+      "options": [
+        "PCB को हिलाकर आवाज़ सुनकर",
+        "Adjacent pads/leads के बीच solder का continuous पुल जैसा material दिखने पर, और multimeter से उन दो points के बीच low resistance/beep मिलने पर",
+        "PCB का weight तराजू पर मापकर",
+        "PCB का रंग देखकर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bridging visually तब दिखती है जब solder दो pads/leads के बीच जुड़ा हुआ material जैसा दिखे, और electrically confirm करने के लिए उन दो अलग nets के बीच continuity test से low resistance/beep मिलती है जो short इंगित करता है। Options A, C, D bridging पहचानने के relevant methods नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q33",
+      "question": "'Tombstoning' defect में क्या होता है?",
+      "options": [
+        "Component पूरी तरह flat और सही alignment में बैठ जाता है",
+        "Solder joint बहुत shiny और perfect बनता है",
+        "Chip component (जैसे resistor/capacitor) एक सिरे से उठकर खड़ा (vertical) हो जाता है और दूसरा सिरा pad से disconnect हो जाता है",
+        "PCB track पूरी तरह टूट जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Tombstoning में reflow के दौरान असमान heating या surface tension के कारण chip component का एक सिरा उठकर headstone जैसा खड़ा हो जाता है, जिससे दूसरा end pad से open हो जाता है — इससे component non-functional हो जाता है। Options A, B सही/normal स्थिति बताते हैं, D एक अलग (track) defect है, tombstoning component orientation का defect है।"
+    },
+    {
+      "id": "u5_pcb_inspection_q34",
+      "question": "Tombstoned component को inspection में कैसे पहचाना जाता है?",
+      "options": [
+        "केवल PCB का रंग देखकर",
+        "केवल component का weight मापकर",
+        "PCB को धूप में रखकर",
+        "Visually component का एक सिरा board से ऊपर उठा और खड़ा दिखता है, और continuity test में उस component का circuit open (no continuity) दिखता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Tombstoned component स्पष्ट रूप से खड़ा दिखता है (visual defect) और उसका एक lead pad से disconnect होने के कारण continuity test में वह circuit path open दिखाता है। Options A, B, C इस defect की पहचान के relevant तरीके नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q35",
+      "question": "Component 'misalignment' (गलत alignment) inspection में किस समस्या का कारण बन सकता है?",
+      "options": [
+        "PCB का रंग तुरंत बदल जाना",
+        "Lead pad के साथ ठीक से overlap न होने से insufficient/loose solder joint और संभावित open या partial connection",
+        "Component का weight बढ़ जाना",
+        "कोई प्रभाव नहीं, हमेशा perfect joint बनता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Misaligned component का lead pad के pattern से ठीक से overlap नहीं होता, जिससे solder fillet असमान/अपूर्ण बनता है और joint mechanically व electrically कमजोर रह सकता है। Options A, C, D गलत परिणाम हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q36",
+      "question": "Visual inspection में component misalignment को पहचानने का तरीका क्या है?",
+      "options": [
+        "Multimeter से केवल voltage मापना",
+        "PCB को हिलाकर देखना",
+        "Component body/leads की position को pad pattern के outline (footprint) से compare करके देखना कि वह centered और parallel है या नहीं",
+        "Component को हटाकर फिर से लगाना बिना जांचे"
+      ],
+      "correctIndex": 2,
+      "explanation": "Misalignment पहचानने के लिए component की body/leads की स्थिति को pad footprint outline के सापेक्ष visually compare किया जाता है — यदि component centered/parallel नहीं है तो misalignment confirm होती है। Options A, B, D सही visual inspection तरीके नहीं हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q37",
+      "question": "'Insufficient solder' defect visual inspection में किस रूप में दिखती है?",
+      "options": [
+        "Solder pad और lead को पूरी तरह और अत्यधिक मोटाई से cover करता है",
+        "Component पूरी तरह उखड़ जाता है",
+        "Track पूरी तरह टूट जाती है",
+        "Pad और lead की सतह का सिर्फ आंशिक भाग solder से covered होता है, fillet बहुत thin या incomplete दिखता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Insufficient solder में pad/lead junction पर solder की मात्रा कम होने से fillet thin या partial दिखता है, जिससे mechanical strength और electrical contact area दोनों कम रहते हैं। Option A excessive solder defect है, B और C अलग defects हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q38",
+      "question": "Insufficient solder joint electrically किस तरह की समस्या दे सकता है?",
+      "options": [
+        "High resistance connection या समय के साथ पूरी तरह open हो जाने की संभावना, विशेषकर vibration/thermal cycling में",
+        "हमेशा zero resistance वाला perfect connection",
+        "PCB का रंग स्थायी रूप से बदल जाना",
+        "कोई electrical प्रभाव नहीं पड़ता"
+      ],
+      "correctIndex": 0,
+      "explanation": "कम solder मात्रा के कारण contact area छोटा रहता है, जिससे resistance अधिक हो सकता है, और vibration/thermal cycling में joint समय के साथ पूरी तरह open भी हो सकता है। Options B, C, D गलत परिणाम हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q39",
+      "question": "SM assembly की सामान्य visual inspection checklist में मुख्यतः किन defects की जांच शामिल होती है?",
+      "options": [
+        "केवल PCB का weight और color",
+        "Bridging, tombstoning, misalignment, insufficient/excessive solder, dewetting और joint की shine/fillet shape",
+        "केवल component का brand name",
+        "केवल PCB की invoice date"
+      ],
+      "correctIndex": 1,
+      "explanation": "SM assembly visual inspection में standard रूप से bridging, tombstoning, misalignment, insufficient/excessive solder, dewetting और joint की shine/fillet shape जैसी criteria check होती हैं क्योंकि ये सीधे joint reliability से जुड़ी हैं। Options A, C, D inspection से असंबंधित हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q40",
+      "question": "दो पास-पास स्थित fine-pitch IC leads के बीच अनजाने में solder bridge बन जाने पर circuit में क्या हो सकता है?",
+      "options": [
+        "IC हमेशा सामान्य रूप से काम करता रहेगा",
+        "PCB का weight कम हो जाएगा",
+        "उन दो pins के signals आपस में short हो जाएंगे, जिससे IC या circuit गलत/अनियमित तरीके से काम कर सकता है या बिल्कुल काम नहीं कर सकता",
+        "कोई प्रभाव नहीं पड़ेगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "Fine-pitch IC में adjacent leads के बीच bridge बनने से उन pins के signal paths short हो जाते हैं, जिससे IC malfunction कर सकता है या पूरी तरह fail हो सकता है। Options A, B, D गलत निष्कर्ष हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q41",
+      "question": "Continuity check के दौरान probe को pad के बजाय component lead की जगह पर रखकर टेस्ट करने का क्या फायदा हो सकता है?",
+      "options": [
+        "इससे PCB का रंग साफ हो जाता है",
+        "इससे कोई अतिरिक्त information नहीं मिलती, दोनों तरीके बिल्कुल समान हैं",
+        "इससे solder की मात्रा बढ़ जाती है",
+        "यह joint के अंदर की actual connection (lead-to-pad bond) को भी शामिल करके check करता है, जबकि केवल pad-to-pad test कुछ internal defects miss कर सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Lead पर probe रखकर test करने से joint के अंदर का actual bond (lead-pad interface) भी test में शामिल हो जाता है, जबकि सिर्फ pad-to-pad testing में कमजोर internal bond छूट सकता है। Options A, B, C गलत हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q42",
+      "question": "किसी SM assembly में एक joint की visual जांच में fillet का angle बहुत ज्यादा convex (उभरा हुआ गोल) और अपारदर्शी दिखे, तो यह किस बात का संकेत हो सकता है?",
+      "options": [
+        "यह हमेशा एक perfect, high-quality joint की निशानी है",
+        "Poor wetting या insufficient heat के कारण solder ठीक से lead/pad की सतह पर फैला नहीं है",
+        "यह दर्शाता है कि joint में कोई solder ही नहीं लगा",
+        "यह केवल PCB manufacturer की marking है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अच्छे joint में concave, shiny fillet होती है जो proper wetting दर्शाती है; अत्यधिक convex और dull/opaque fillet poor wetting या insufficient heat का संकेत देती है। Options A, C, D गलत निष्कर्ष हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q43",
+      "question": "Multiple joints वाले एक PCB में continuity check को व्यवस्थित (systematic) तरीके से करने के लिए क्या approach अपनाई जाती है?",
+      "options": [
+        "बिना किसी क्रम के random points पर test करना",
+        "Circuit diagram/schematic का reference लेकर एक निश्चित क्रम में node-to-node test करना और results को नोट करना",
+        "केवल एक बार पूरे PCB को एक साथ छूकर test करना",
+        "Continuity test की कोई systematic approach जरूरी नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Systematic testing के लिए schematic/circuit diagram को reference लेकर एक logical क्रम (जैसे power path से शुरू करके) में node-to-node continuity check की जाती है और results record किए जाते हैं, जिससे कोई fault छूटे नहीं। Options A, C, D अव्यवस्थित और अविश्वसनीय तरीके हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q44",
+      "question": "PCB inspection में यह पता चले कि एक joint में insufficient solder के साथ-साथ हल्का misalignment भी है, तो inspector को क्या करना चाहिए?",
+      "options": [
+        "दोनों defects को अलग-अलग document करना और joint को rework/reflow के लिए flag करना ताकि दोनों समस्याएं ठीक हो सकें",
+        "केवल एक defect (जो पहले दिखे) को नोट करना, दूसरे को नजरअंदाज करना",
+        "PCB को तुरंत scrap कर देना बिना rework के विचार के",
+        "कुछ भी document न करना क्योंकि defects छोटी हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब एक joint में एक साथ कई defects (insufficient solder + misalignment) मिलें, तो सही practice यही है कि दोनों को अलग-अलग स्पष्ट रूप से document किया जाए और joint को rework के लिए flag किया जाए ताकि पूरी समस्या ठीक हो। Options B, C, D अपूर्ण/गलत inspection practice हैं।"
+    },
+    {
+      "id": "u5_pcb_inspection_q45",
+      "question": "Continuity test के लिए multimeter का उपयोग करने से पहले उसे किस तरह verify किया जाना चाहिए ताकि गलत/भ्रामक readings न आएं?",
+      "options": [
+        "Multimeter को हिलाकर आवाज़ सुनना",
+        "Multimeter की battery निकाल देना",
+        "किसी verification की जरूरत नहीं होती",
+        "दोनों probes को आपस में सीधे touch कराकर देखना कि वह zero resistance/continuity beep सही तरह show करता है या नहीं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Testing शुरू करने से पहले probes को आपस में touch कराकर multimeter की calibration/battery health verify की जाती है — सही उपकरण zero resistance/beep दिखाएगा, जिससे बाद की सभी readings भरोसेमंद बनती हैं। Options A, B, C गलत या अप्रभावी verification तरीके हैं।"
     }
   ]
 }

@@ -363,6 +363,126 @@
       ],
       "correctIndex": 2,
       "explanation": "जब manual/easy rework और उच्च reliability प्राथमिकता हो, तो 0805 या 1206 जैसे अपेक्षाकृत बड़े packages चुने जाते हैं क्योंकि इन्हें handle करना, inspect करना व rework करना आसान होता है, जबकि 01005/0201 जैसे micro-packages अत्यंत fragile व rework में कठिन हैं। इसलिए 01005, 0201 विकल्प तथा 'कोई लेना-देना नहीं' गलत हैं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q31",
+      "question": "SMD package code '0603' का actual dimension mil में क्या है, और metric package naming में इसे किस code से approx represent किया जाता है?",
+      "options": [
+        "60 mil x 30 mil (imperial), और metric code में approx 1608 (1.6mm x 0.8mm)",
+        "6 mil x 3 mil (imperial), और metric code में approx 0603 ही रहता है",
+        "600 mil x 300 mil (imperial), और metric में कोई equivalent नहीं होता",
+        "6.03 mil x 6.03 mil (imperial), और metric code 0603M होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "0603 imperial code का मतलब 0.060 inch x 0.030 inch (60 mil x 30 mil) है, जो mm में लगभग 1.6mm x 0.8mm होता है — इसी physical size को metric naming में '1608' कहा जाता है। दूसरे option में digits की scale गलत है (6 mil x 3 mil बहुत छोटा है), तीसरे में scale बहुत बड़ी है, और चौथा option वास्तविक naming convention नहीं है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q32",
+      "question": "किसी assembly line पर जहाँ केवल fine-pitch capability वाला automated pick-and-place machine और stencil उपलब्ध है, वहाँ 0201 size के components को अगर 1206 pad footprint पर design कर दिया जाए तो मुख्य समस्या क्या होगी?",
+      "options": [
+        "कोई समस्या नहीं, machine automatically size adjust कर लेगी",
+        "Pad व component size में भारी mismatch के कारण component ठीक से align नहीं होगा और solder joint अविश्वसनीय (unreliable) बनेगा",
+        "इससे केवल visual appearance खराब होगी, functionality पर कोई असर नहीं",
+        "इससे board का cost automatically कम हो जायेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pad footprint हमेशा component के actual package size के अनुसार design होना चाहिए; 0201 जैसे बहुत छोटे component को बड़े 1206 pad पर रखने से component tilt/float कर सकता है और solder joint का alignment व reliability बुरी तरह प्रभावित होती है। Machine स्वयं size adjust नहीं कर सकती, यह केवल appearance का मुद्दा नहीं है, और cost अपने आप कम नहीं होता।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q33",
+      "question": "Hardware selection के समय, यदि rework station पर उपलब्ध सबसे छोटा soldering tip size 0805 tweezer-tip रिवर्क के लिए suitable है, तो 0402 या उससे छोटे packages के rework के लिए क्या करना उचित है?",
+      "options": [
+        "उसी tip से जबरन काम चला लेना क्योंकि tip size से कोई फर्क नहीं पड़ता",
+        "0402/0201 जैसे छोटे packages के लिए finer-tip tweezers व micro hot-air nozzle जैसा उपयुक्त hardware अलग से arrange करना चाहिए",
+        "0402 components को हमेशा हाथ से मोड़कर बड़ा बना देना चाहिए",
+        "इतने छोटे components को कभी भी rework नहीं किया जा सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hardware selection में rule यह है कि tool (tweezer tip, nozzle size) component के actual package size के अनुसार match होना चाहिए; छोटे packages के लिए finer/micro tools जरूरी हैं ताकि adjacent joints को नुकसान न हो। बड़े tip से जबरन काम करना खराब practice है, component को physically बदलना असंभव है, और सही tools से छोटे components का rework संभव है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q34",
+      "question": "Visual inspection के दौरान किसी SMD package के '1210' code को गलती से '1206' समझ लिया जाए, तो inspection में यह गलती किस प्रकार पकड़ी जा सकती है?",
+      "options": [
+        "Component का width अलग होगा — 1210 में width लगभग 100 mil होती है जबकि 1206 में width लगभग 60 mil होती है, यानी length समान (120 mil) पर width अलग है",
+        "दोनों codes का dimension बिल्कुल identical है इसलिए फर्क नहीं पकड़ा जा सकता",
+        "केवल resistance value देखकर ही फर्क पता चलता है",
+        "1210 और 1206 केवल color से अलग होते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "1206 का dimension 120 mil x 60 mil है जबकि 1210 का dimension 120 mil x 100 mil है — length (पहले दो digits) समान होते हुए भी width (अगले दो digits) में स्पष्ट अंतर है, जो careful visual/dimensional inspection से पकड़ा जा सकता है। दोनों identical नहीं हैं, resistance value package size नहीं बताती, और color इनका पहचान-आधार नहीं है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q35",
+      "question": "Incoming SMD components के visual inspection में package size verification (जैसे caliper/magnifier से actual dimension check करना) क्यों जरूरी माना जाता है, भले ही label पर सही size print हो?",
+      "options": [
+        "क्योंकि labeling/packaging में गलती या mixed-lot की संभावना रहती है, इसलिए actual physical size verify करने से wrong-size placement रोकी जा सकती है",
+        "क्योंकि caliper से measurement करना केवल दिखावे के लिए किया जाता है",
+        "क्योंकि label पर size कभी print नहीं होता",
+        "क्योंकि इससे component की resistance value अपने आप बदल जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Supplier की तरफ से packaging/labeling में गलती, mixed reels या wrong tape-and-reel जैसी errors हो सकती हैं, इसलिए incoming inspection में actual physical dimension को magnifier/caliper से verify करना wrong-size component के PCB पर चढ़ने से बचाता है। यह केवल दिखावा नहीं है, label पर size print होता ही है, और measurement से resistance value नहीं बदलती।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q36",
+      "question": "एक design में उपलब्ध board space बहुत सीमित है परंतु required power rating लगभग 0.2 W है। इन दो constraints (space और power) के बीच सही balance के लिए कौन सा package size उपयुक्त विकल्प होगा?",
+      "options": [
+        "0201, क्योंकि यह सबसे छोटा है और space बचाता है, power rating की चिंता नहीं करनी चाहिए",
+        "0805 या समान size, जो सीमित space में fit होते हुए भी लगभग 0.1-0.125 W जैसी rating दे सकता है, इसलिए designer को दोनों constraints के अनुसार सही package चुनना होगा",
+        "01005, क्योंकि सबसे छोटे package में हमेशा सबसे अधिक power rating होती है",
+        "package size का power requirement से कोई लेना-देना नहीं, कोई भी size चल जायेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hardware/package selection में space और power rating दोनों को साथ में देखना पड़ता है; 0201/01005 जैसे अत्यंत छोटे packages की power rating बहुत कम होती है और वे 0.2W जैसी requirement के लिए अनुपयुक्त हो सकते हैं, जबकि 0805 जैसे package उचित balance दे सकते हैं (exact rating datasheet से confirm करनी चाहिए)। सबसे छोटा package हमेशा सबसे अधिक power नहीं देता, और size का power requirement से सीधा संबंध होता है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q37",
+      "question": "SMD package size codes को पढ़ते समय एक technician को यह कैसे पता चलेगा कि दिया गया 4-digit code imperial (mil-based) है या metric (mm-based)?",
+      "options": [
+        "Code के digits से यह कभी पता नहीं चलता, अनुमान लगाना पड़ता है",
+        "Datasheet/manufacturer specification में स्पष्ट रूप से mentioned होता है कि code imperial या metric standard पर आधारित है, क्योंकि समान digits से अलग physical size बन सकता है",
+        "यह हमेशा component के रंग से पता चलता है",
+        "Metric code में हमेशा 'M' suffix compulsory होता है इसलिए बिना suffix वाला हर code imperial होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूंकि एक जैसे digits (जैसे 0603) imperial में अलग physical size दर्शाते हैं और metric में अलग (metric 0603 = 0.6mm x 0.3mm, जो imperial 0201 के करीब है), इसलिए manufacturer datasheet/specification में standard स्पष्ट किया जाता है ताकि गलत size न चुना जाए। यह अनुमान का विषय नहीं, रंग से संबंधित नहीं, और 'M' suffix compulsory नाम convention नहीं है — दोनों systems बिना suffix भी प्रचलित हैं इसलिए context/datasheet देखना जरूरी है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q38",
+      "question": "Final visual inspection में एक 0805 SMD resistor पर solder joint 'tombstoning' (component का एक end उठा हुआ) दिखे, तो package size के संदर्भ में इसका एक संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Package size से tombstoning का कोई संबंध नहीं होता, यह केवल paste composition पर निर्भर करता है",
+        "दोनों pads पर असमान solder paste volume/heating के कारण छोटे-lightweight component (जैसे smaller packages में अधिक common) का एक end पहले पिघलकर उसे उठा देता है",
+        "0805 हमेशा tombstone होता है चाहे कुछ भी हो",
+        "Tombstoning केवल through-hole components में होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tombstoning तब होता है जब दो pads के बीच solder reflow असमान समय पर होता है और component का हल्का/छोटा शरीर एक end से उठकर खड़ा हो जाता है — यह प्रभाव छोटे व light packages में अधिक common देखा जाता है, इसलिए inspection के दौरान package size भी एक contributing factor माना जाता है। यह paste के अलावा package size से भी जुड़ा है, 0805 हमेशा नहीं tombstone होता, और यह SMD packages में होने वाली समस्या है, through-hole में लागू नहीं।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q39",
+      "question": "एक हाथ में सिर्फ नग्न आँख (naked eye) से inspection की सुविधा है, magnifier/microscope उपलब्ध नहीं है। इस स्थिति में किस SMD package size की सही inspection सबसे अधिक कठिन होगी?",
+      "options": [
+        "1206, क्योंकि यह सबसे बड़ा है इसलिए देखना कठिन है",
+        "0805, क्योंकि इसका दिखना सामान्य है",
+        "0201 या 01005 जैसे अत्यंत छोटे packages, क्योंकि इनके solder joints व markings नग्न आँख से स्पष्ट रूप से दिखाई ही नहीं देते",
+        "package size से inspection की कठिनाई का कोई संबंध नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "0201/01005 जैसे micro-packages के terminals व solder fillets इतने छोटे होते हैं कि बिना magnification के defect (जैसे insufficient solder, bridging, misalignment) पहचानना लगभग असंभव है, इसलिए इनकी proper inspection के लिए magnifier/microscope जरूरी माना जाता है। 1206 अपने बड़े size के कारण नग्न आँख से भी inspect करना अपेक्षाकृत आसान है, और package size का inspection कठिनाई से सीधा संबंध होता है।"
+    },
+    {
+      "id": "u5_smd_package_sizes_q40",
+      "question": "एक PCB design review में यह सुझाव आया कि पूरे board में एक ही package size (जैसे केवल 0603) का प्रयोग किया जाए ताकि assembly आसान रहे। इस approach की एक practical limitation क्या हो सकती है?",
+      "options": [
+        "इसमें कोई limitation नहीं है, हर component हर जगह 0603 में उपलब्ध होता है",
+        "कुछ components (जैसे उच्च capacitance value या उच्च power rating वाले) 0603 जितने छोटे package में उपलब्ध ही नहीं हो सकते, इसलिए board में अलग-अलग जरूरतों के अनुसार अलग sizes भी चुनने पड़ते हैं",
+        "0603 size में हमेशा सबसे अधिक power rating मिलती है इसलिए limitation जैसी कोई बात नहीं",
+        "एक size का प्रयोग करने से board हमेशा महंगा हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर electrical value (उच्च capacitance, उच्च power resistor आदि) छोटे 0603 जैसे package में fit नहीं हो पाती — बड़ी values के लिए बड़ा package चाहिए होता है, इसलिए एक ही size से पूरा board design करना व्यावहारिक रूप से सीमित है और designer को value-specific package भी चुनना पड़ता है। यह कहना गलत है कि हर component हर size में मिलता है, 0603 में हमेशा सबसे अधिक power rating नहीं मिलती, और single size से cost का सीधा संबंध नहीं बताया जा सकता।"
     }
   ]
 }

@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "Ramp-up rate को नियंत्रित सीमा (typically 1-3°C/second के आसपास) में रखा जाता है ताकि components व PCB में अचानक temperature difference से होने वाले thermal stress, warping या cracking से बचाव हो सके। यह PCB draw करने, flux खत्म करने या बिजली खपत बढ़ाने के लिए नहीं किया जाता।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q31",
+      "question": "Reflow oven में Nitrogen (N2) atmosphere का प्रयोग करने से solder joint quality पर क्या असर पड़ता है?",
+      "options": [
+        "Oxygen को कम करके oxidation घटाता है जिससे wetting बेहतर व solder balling/dross कम होता है",
+        "यह केवल oven की cost बढ़ाता है, quality पर कोई असर नहीं",
+        "यह flux को पूरी तरह निष्क्रिय (inactive) कर देता है",
+        "यह components को magnetize कर देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "N2 atmosphere reflow chamber में oxygen concentration को बहुत कम कर देता है, जिससे molten solder की surface oxidation घटती है, wetting angle सुधरता है और solder balling/dross जैसे defects कम होते हैं। Cost बढ़ना एक trade-off हो सकता है पर quality पर असर 'कोई नहीं' कहना गलत है, flux inactive नहीं होता और magnetization का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q32",
+      "question": "Stencil design में 'aperture area ratio' (aperture opening area ÷ aperture wall area) कम होने से paste release पर क्या असर होता है?",
+      "options": [
+        "Paste release बेहतर होकर अधिक consistent transfer efficiency मिलती है",
+        "Paste release खराब हो जाता है क्योंकि paste aperture walls से चिपक जाता है",
+        "Reflow oven का temperature खुद-ब-खुद बदल जाता है",
+        "PCB की thickness कम हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Area ratio कम होने का मतलब है aperture की wall area, opening area से अनुपात में अधिक है — ऐसे में fine-pitch/small apertures से paste अच्छी तरह release नहीं होता और स्टेंसिल की दीवारों पर चिपक जाता है, जिससे transfer efficiency गिरती है (आमतौर पर 0.66 से ऊपर area ratio अच्छा माना जाता है)। यह oven temperature या PCB thickness से स्वतः जुड़ा नहीं है।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q33",
+      "question": "'Solder bridging' defect (दो adjacent pads/leads के बीच अनचाहा solder connection) का एक सामान्य कारण क्या है?",
+      "options": [
+        "Stencil apertures का बहुत छोटा होना",
+        "Excess solder paste volume या misaligned stencil printing के कारण adjacent pads में paste का overlap",
+        "Flux का बिल्कुल इस्तेमाल न होना",
+        "Board को बहुत धीरे cool करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब stencil misalignment या aperture design के कारण अधिक मात्रा में paste adjacent fine-pitch pads के बीच overlap कर जाता है, तो reflow के दौरान वह मिलकर bridge बना देता है जो short-circuit का कारण बनता है। बहुत छोटे apertures से bridging नहीं बल्कि insufficient paste की समस्या आती है, flux न होने या धीमी cooling से bridging सीधे नहीं होता।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q34",
+      "question": "Lead-free SAC alloy paste का उपयोग करते समय traditional Sn-Pb paste की तुलना में reflow oven के 'peak temperature' setting पर क्या बदलाव जरूरी होता है?",
+      "options": [
+        "Peak temperature घटाना पड़ता है क्योंकि SAC alloy का melting point कम होता है",
+        "Peak temperature बढ़ाना पड़ता है क्योंकि SAC alloy का melting point (लगभग 217-220°C) अधिक है",
+        "कोई बदलाव जरूरी नहीं, दोनों का melting point एक समान है",
+        "Peak temperature की जरूरत ही खत्म हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SAC alloy (Sn-Ag-Cu) का melting point लगभग 217-220°C होता है जबकि Sn-Pb eutectic का लगभग 183°C होता है, इसलिए SAC paste के लिए reflow profile का peak temperature ऊँचा (आमतौर पर 235-250°C तक) रखना पड़ता है ताकि proper wetting व TAL मिल सके। घटाना, बराबर मानना या temperature की जरूरत ही न होना — सभी गलत हैं।"
+    },
+    {
+      "id": "u5_reflow_solder_paste_q35",
+      "question": "Solder paste की printed deposit की height, component pad की तुलना में असामान्य रूप से कम (insufficient paste) रहने पर सबसे संभावित defect कौन सा होगा?",
+      "options": [
+        "Solder bridging",
+        "Insufficient solder / weak joint (open joint) की समस्या",
+        "PCB का रंग बदल जाना",
+        "Component की value बदल जाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि stencil printing के दौरान पर्याप्त मात्रा में paste deposit नहीं होता, तो reflow के बाद joint में पर्याप्त solder नहीं होगा जिससे weak या open joint (insufficient solder) की समस्या आती है, जो electrical connection को अस्थिर बना सकती है। Bridging तो excess paste से जुड़ी समस्या है, और PCB रंग या component value से इसका कोई संबंध नहीं है।"
     }
   ]
 }

@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "SMT ने automation, high-speed placement और mass reflow soldering द्वारा production को तेज़, किफायती और consistent बनाया। बाकी विकल्प SMT के वास्तविक प्रभाव के उलट हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q31",
+      "question": "SMT को THT की तुलना में parts count (raw materials) के नज़रिए से एक cost-saving कारण क्या माना जाता है?",
+      "options": [
+        "SMD में lead-forming और trimming जैसी extra operations की जरूरत नहीं पड़ती",
+        "SMD components हमेशा double price के आते हैं",
+        "SMD में हर component के लिए अलग socket चाहिए",
+        "SMD boards में हमेशा extra copper layers जरूरी होते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "THT में leads को holes के अनुसार bend/trim करना पड़ता है, जबकि SMD में यह extra operation नहीं होता, जिससे processing cost और समय बचता है। Option B, C, D तथ्यगत रूप से गलत हैं — SMD की price जरूरी नहीं दोगुनी हो, socket की जरूरत सामान्यतः नहीं होती और extra copper layers अनिवार्य नहीं हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q32",
+      "question": "एक SMD assembly line में design होने पर PCB layout stage पर SMT का क्या असर पड़ता है?",
+      "options": [
+        "layout में सिर्फ एक ही layer उपयोग हो सकती है",
+        "pads को component footprint के according सीधे surface पर design किया जाता है, hole-position की जगह pad-position महत्वपूर्ण होती है",
+        "layout करने की कोई जरूरत नहीं रहती",
+        "PCB का material बदलकर हमेशा ceramic करना पड़ता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMT layout में designer को हर component के लिए surface pads का सही आकार व स्थिति (footprint) design करना होता है, न कि drill holes की position। Option A गलत है क्योंकि multi-layer PCB भी SMT में सामान्य है; C और D निराधार हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q33",
+      "question": "SMT assembly अपनाने से किसी company के inventory (component stock) पर क्या फायदा हो सकता है?",
+      "options": [
+        "components बड़े होने से storage space अधिक चाहिए",
+        "छोटे size और tape-reel packaging के कारण storage space कम लगता है और handling आसान होती है",
+        "components को हमेशा अलग-अलग बक्सों में manually गिनना पड़ता है",
+        "inventory पर कोई असर नहीं पड़ता"
+      ],
+      "correctIndex": 1,
+      "explanation": "SMD components छोटे होते हैं और tape-and-reel form में compact रूप से store होते हैं, जिससे storage space कम लगता है और automated feeding/counting आसान होती है। Option A उल्टा तथ्य है; C और D SMT की वास्तविक विशेषताओं को नज़रअंदाज़ करते हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q34",
+      "question": "SMT introduction के संदर्भ में, किसी नए electronics product को design करते समय SMT चुनने का एक व्यावसायिक (business) कारण क्या हो सकता है?",
+      "options": [
+        "बड़े पैमाने पर उत्पादन (high volume) में automation से per-unit cost कम होकर competitive pricing संभव होती है",
+        "SMT केवल prototype बनाने के लिए उपयोगी है, mass production के लिए नहीं",
+        "SMT हमेशा single-unit hobby projects के लिए सस्ता होता है",
+        "SMT चुनने से design का कोई commercial फायदा नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "High-volume production में automated placement और reflow से labour व समय की बचत होती है, जिससे per-unit cost घटता है और product competitively priced बन पाता है — यही SMT अपनाने का मुख्य business कारण है। Option B तथ्यगत रूप से गलत है (SMT mass production में विशेष उपयोगी है); C और D SMT के वास्तविक फायदे को नकारते हैं।"
+    },
+    {
+      "id": "u5_smt_intro_q35",
+      "question": "SMD assembly की basic concept में 'footprint' शब्द का क्या अर्थ है?",
+      "options": [
+        "operator के जूते का निशान PCB पर",
+        "PCB पर बने वे pads व उनकी exact layout जो किसी विशेष SMD component के आकार व terminal spacing से मेल खाते हैं",
+        "board का कुल वज़न",
+        "reflow oven का तापमान profile"
+      ],
+      "correctIndex": 1,
+      "explanation": "Footprint वह pad pattern है जो किसी specific SMD component के body size और terminal pitch के अनुसार PCB layout में design किया जाता है, ताकि component सही ढंग से mount हो सके। बाकी विकल्प (जूते का निशान, वज़न, temperature profile) footprint की परिभाषा से कोई संबंध नहीं रखते।"
     }
   ]
 }
