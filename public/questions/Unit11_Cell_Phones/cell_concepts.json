@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "जब किसी mobile के लिए incoming call आती है, तो network उस mobile के last known location area की सभी cells में paging message broadcast करता है ताकि mobile response देकर call receive कर सके। SIM activation, language setting और battery display paging का कार्य नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q31",
+      "question": "Mobile Assisted Hand-off (MAHO) में परंपरागत (conventional) hand-off की तुलना में क्या अलग होता है?",
+      "options": [
+        "Hand-off decision पूरी तरह mobile phone स्वयं ले लेता है, network की कोई भूमिका नहीं रहती",
+        "Mobile आसपास के base stations से signal strength measure करके network को report करता है, जिससे network तेज़ और सही hand-off decision ले पाता है",
+        "इसमें hand-off की जरूरत ही खत्म हो जाती है",
+        "यह केवल SIM card बदलने पर ही activate होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "MAHO में mobile station आसपास की neighbouring cells के signal strength को स्वयं measure करके network को assist करता है, जिससे MSC/BSC पहले से बेहतर और तेज़ hand-off decision ले सकते हैं; पूरा decision अकेले mobile नहीं लेता (यह network-controlled ही रहता है, केवल measurement में mobile सहायता करता है)। Option A गलत है क्योंकि final control network के पास रहता है, C गलत है क्योंकि hand-off फिर भी होता है, D का SIM बदलने से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cell_concepts_q32",
+      "question": "Cellular system में 'blocked call' और 'dropped call' में क्या अंतर है?",
+      "options": [
+        "दोनों एक ही घटना के अलग नाम हैं",
+        "Blocked call वह है जो call शुरू होने के बाद hand-off fail होने पर कटती है, जबकि dropped call शुरू में ही channel न मिलने से नहीं लगती",
+        "Blocked call वह है जो शुरुआत में ही किसी channel के उपलब्ध न होने के कारण connect नहीं हो पाती, जबकि dropped call चालू call का hand-off fail होने या channel छिन जाने से बीच में कट जाना है",
+        "Blocked call केवल SMS के लिए होती है और dropped call केवल data call के लिए होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Blocked call तब होती है जब call attempt के समय ही किसी cell में कोई free channel उपलब्ध न हो और call शुरू ही न हो पाए, जबकि dropped call चालू call के दौरान hand-off असफल होने या channel छिन जाने से call बीच में कट जाना है। Option A गलत है क्योंकि दोनों अलग-अलग स्थितियां हैं, B में परिभाषाएं आपस में बदल दी गई हैं, D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u11_cell_concepts_q33",
+      "question": "Frequency reuse factor (K) को सामान्यतः किस प्रकार परिभाषित किया जाता है?",
+      "options": [
+        "K, cluster में मौजूद cells की संख्या (cluster size N) के बराबर होता है, जो यह बताता है कि कोई particular frequency कितनी cells के बाद दोबारा उपयोग होगी",
+        "K हमेशा 1 होता है चाहे cluster size कुछ भी हो",
+        "K केवल antenna की height पर निर्भर करता है",
+        "K मोबाइल की battery क्षमता को दर्शाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Frequency reuse factor K, cluster size N के बराबर लिया जाता है क्योंकि यह बताता है कि total available channels में से हर cell को कितना हिस्सा मिलेगा और कोई frequency कितनी cells के बाद दोबारा उपयोग होगी (जितना बड़ा N/K, उतना अधिक reuse distance)। Option B, C और D तथ्यात्मक रूप से गलत हैं क्योंकि K, N पर निर्भर करता है, न कि antenna height या battery पर।"
+    },
+    {
+      "id": "u11_cell_concepts_q34",
+      "question": "यदि cellular planning में valid cluster size केवल N = i² + ij + j² (जहां i, j non-negative integers हैं) के रूप में लिया जाता है, तो इसका मुख्य कारण क्या है?",
+      "options": [
+        "यह केवल एक अनुमानित (approximate) संख्या होती है जिसका hexagonal geometry से कोई संबंध नहीं",
+        "यह सुनिश्चित करता है कि hexagonal cell layout में co-channel cells बिना gap या overlap के सही ज्यामितीय दूरी (geometric tiling) पर स्थित हो सकें",
+        "यह केवल network operator की marketing policy पर आधारित होता है",
+        "यह मोबाइल हैंडसेट की कीमत तय करने के लिए उपयोग होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hexagonal cell structure में cluster बिना किसी gap या overlap के tessellate (पूरी तरह fit) हो, इसके लिए cluster size N केवल i² + ij + j² के रूप के values (जैसे 1, 3, 4, 7, 9, 12...) ही ले सकता है; इससे co-channel cells सही geometric pattern में equally-spaced रहती हैं। Option A, C और D इस गणितीय सीमा के वास्तविक कारण को गलत तरीके से दर्शाते हैं।"
+    },
+    {
+      "id": "u11_cell_concepts_q35",
+      "question": "यदि किसी क्षेत्र का कुल coverage area स्थिर रखते हुए cell radius को घटा दिया जाए (यानी cells को छोटा कर दिया जाए), तो कुल cells की संख्या और आवश्यक hand-off की frequency पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "कुल cells की संख्या घट जाएगी और hand-off लगभग बिल्कुल नहीं होंगे",
+        "कुल cells की संख्या और hand-off frequency दोनों अपरिवर्तित (unchanged) रहेंगे",
+        "इससे केवल SIM card की storage capacity प्रभावित होगी",
+        "कुल cells की संख्या बढ़ जाएगी क्योंकि उसी क्षेत्र को cover करने के लिए अधिक छोटी cells चाहिए, और mobile के बार-बार cell boundary पार करने से hand-off की frequency भी बढ़ेगी"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब cell radius छोटा किया जाता है तो उसी total area को cover करने के लिए अधिक संख्या में cells की आवश्यकता होती है (जिससे capacity भी बढ़ती है), और छोटी cells होने से mobile अधिक बार cell boundaries पार करता है जिससे hand-off requests की frequency भी बढ़ जाती है। Option A और B तथ्यात्मक रूप से गलत हैं, C का इस परिवर्तन से कोई संबंध नहीं है।"
     }
   ]
 }

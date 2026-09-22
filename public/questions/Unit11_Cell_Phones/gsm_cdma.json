@@ -363,6 +363,126 @@
       ],
       "correctIndex": 1,
       "explanation": "Spectral efficiency यह दर्शाती है कि दी गई सीमित frequency bandwidth में किसी system द्वारा कितना अधिक useful data/voice traffic (users) को efficiently handle किया जा सकता है, जो GSM व CDMA जैसी technologies की तुलना में एक अहम parameter है। Screen brightness, battery charging और camera lens efficiency से इस technical term का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q31",
+      "question": "GSM security architecture में IMSI (International Mobile Subscriber Identity) को हवा (air interface) पर बार-बार clear text में भेजने से बचने के लिए क्या उपयोग किया जाता है?",
+      "options": [
+        "SIM card का रंग बदलकर",
+        "Camera के resolution को घटाकर",
+        "TMSI (Temporary Mobile Subscriber Identity), जो VLR द्वारा subscriber को temporarily allot की जाती है",
+        "Battery की mAh रेटिंग बढ़ाकर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Privacy बढ़ाने के लिए network एक temporary identity TMSI subscriber को allot करता है, जिसे air interface पर बार-बार भेजा जाता है ताकि असली IMSI कम-से-कम बार transmit हो और eavesdropping का खतरा घटे। SIM रंग, camera resolution और battery rating का security से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q32",
+      "question": "GSM में A5 algorithm का उपयोग मुख्यतः किस कार्य के लिए किया जाता है?",
+      "options": [
+        "Air interface पर voice/data को encrypt (cipher) करने के लिए",
+        "Battery charging speed नियंत्रित करने के लिए",
+        "Camera flash की timing तय करने के लिए",
+        "SIM card की physical size निर्धारित करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "A5 एक stream cipher algorithm है जिसका उपयोग GSM में mobile और base station के बीच air interface पर transmit होने वाली voice/data को encrypt करके eavesdropping से बचाने के लिए किया जाता है। Battery charging, camera flash timing और SIM physical size से A5 का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q33",
+      "question": "GSM network architecture में EIR (Equipment Identity Register) किस उद्देश्य से उपयोग होता है?",
+      "options": [
+        "यह केवल SMS के अक्षरों को count करता है",
+        "यह केवल camera की megapixel जांचता है",
+        "यह केवल battery का temperature मापता है",
+        "यह handset के IMEI को black-list/white-list/grey-list में रखकर चोरी हुए या faulty handsets को network access से रोकने में मदद करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "EIR में handsets के IMEI numbers की lists (black, white, grey) रखी जाती हैं ताकि चोरी या fault वाले handsets को पहचान कर network access से रोका जा सके। SMS character count, camera megapixel जांच और battery temperature मापना EIR के कार्य नहीं हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q34",
+      "question": "पारंपरिक narrowband CDMA (IS-95) system में एक single CDMA channel के लिए सामान्यतः कितनी bandwidth उपयोग होती है?",
+      "options": [
+        "लगभग 200 kHz",
+        "लगभग 1.25 MHz",
+        "लगभग 20 MHz",
+        "लगभग 5 kHz"
+      ],
+      "correctIndex": 1,
+      "explanation": "IS-95 आधारित CDMA में एक single carrier channel लगभग 1.25 MHz की wide bandwidth में spread होता है, जो spread spectrum technique का हिस्सा है। 200 kHz GSM carrier की bandwidth के करीब है, 20 MHz बहुत अधिक wide है और 5 kHz बहुत narrow, ये CDMA का वास्तविक channel bandwidth नहीं दर्शाते।"
+    },
+    {
+      "id": "u11_gsm_cdma_q35",
+      "question": "CDMA forward link (base station से mobile की ओर) में 'pilot channel' का क्या कार्य होता है?",
+      "options": [
+        "यह केवल SMS text भेजता है",
+        "यह एक निरंतर unmodulated reference signal प्रदान करता है जिससे mobile timing/phase synchronization व channel estimation कर पाता है",
+        "यह केवल camera के लिए flash trigger देता है",
+        "यह केवल battery charging status भेजता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pilot channel base station से लगातार transmit होने वाला एक known reference signal होता है, जिसका उपयोग mobile receiver synchronization, phase reference और channel strength estimation के लिए करता है, जो सही de-spreading में सहायक है। SMS भेजना, flash trigger और charging status pilot channel के कार्य नहीं हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q36",
+      "question": "GSM में BCCH (Broadcast Control Channel) किस प्रकार की जानकारी प्रसारित करता है?",
+      "options": [
+        "केवल user के personal photos",
+        "केवल battery charging cycles की गिनती",
+        "केवल camera की ISO setting",
+        "Cell/network संबंधी सामान्य जानकारी जैसे cell identity, frequency allocation और network parameters, जिसे सभी mobiles सुन सकते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "BCCH एक broadcast control channel है जिसके माध्यम से base station cell-specific और network-specific सामान्य जानकारी (जैसे cell identity, neighbouring cell list, frequency parameters) सभी mobiles को प्रसारित करता है ताकि वे network से sync व camp कर सकें। Personal photos, charging cycles और ISO setting से BCCH का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q37",
+      "question": "पारंपरिक CDMA (जैसे IS-95/CDMA2000) handsets में subscriber-specific जानकारी अक्सर कहाँ store होती थी, जबकि GSM में यह removable SIM में store होती है?",
+      "options": [
+        "केवल कागज़ की पर्ची पर",
+        "अक्सर handset के internal memory में (ESN/MEID से जुड़ी हुई), बिना किसी अलग removable card के",
+        "केवल SD memory card में",
+        "केवल Bluetooth module में"
+      ],
+      "correctIndex": 1,
+      "explanation": "Traditional CDMA handsets में subscriber पहचान अक्सर handset के internal memory/hardware (ESN/MEID के जरिए) से जुड़ी होती थी, जिससे handset बदलने पर subscriber को नया handset activate करवाना पड़ता था; GSM में यह जानकारी removable SIM में होती है जिससे handset बदलना आसान है। कागज़ की पर्ची, SD card और Bluetooth module का इससे कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_gsm_cdma_q38",
+      "question": "GSM और CDMA handsets की 'network locking' (subsidy lock) संबंधी सामान्य प्रवृत्ति के बारे में निम्न में से कौन सा कथन सही है?",
+      "options": [
+        "GSM handsets कभी लॉक नहीं होते जबकि CDMA handsets हमेशा unlocked होते हैं",
+        "दोनों प्रकार के operators अपने subsidised handsets को अपने network तक सीमित करने के लिए lock कर सकते हैं, हालांकि GSM में SIM बदलकर unlock स्थिति जांचना आसान है",
+        "Locking केवल camera resolution घटाने के लिए होती है",
+        "Locking केवल SIM card का रंग बदलने के लिए होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "GSM और CDMA दोनों में operators subsidy दिए हुए handsets को अपने network तक locked रख सकते हैं; GSM में SIM बदलकर आसानी से जांचा जा सकता है कि handset locked है या नहीं, जबकि CDMA में traditionally handset ही carrier से activate होता था। पहला विकल्प तथ्यात्मक रूप से गलत है, camera resolution और SIM रंग locking का कारण नहीं हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q39",
+      "question": "GSM का विकास होते हुए जब यह 2G digital standard के रूप में आया, तो इसकी तुलना उससे पहले प्रचलित analog cellular systems (जैसे 1G) से किस प्रमुख अंतर के कारण की जाती है?",
+      "options": [
+        "GSM में केवल camera feature जोड़ा गया था",
+        "GSM में battery की जरूरत ही खत्म हो गई",
+        "GSM में SIM card हटा दिया गया",
+        "GSM में voice को digitize करके error-correction व encryption के साथ digital रूप में transmit किया जाता है, जबकि 1G analog systems में सीधे analog voice signal transmit होता था"
+      ],
+      "correctIndex": 3,
+      "explanation": "GSM का मुख्य अंतर यही है कि यह voice signal को digitize करके, error-correction coding और encryption के साथ digital form में transmit करता है, जिससे quality व security बेहतर होती है, जबकि 1G analog systems में सीधे analog waveform transmit होती थी। Camera feature जोड़ना, battery की जरूरत खत्म होना और SIM हटाना गलत कथन हैं।"
+    },
+    {
+      "id": "u11_gsm_cdma_q40",
+      "question": "किसी CDMA system में variable rate vocoder के अतिरिक्त, अलग-अलग users के traffic channels के बीच interference कम रखने के लिए power control के साथ-साथ किस अन्य technique का उपयोग महत्वपूर्ण माना जाता है?",
+      "options": [
+        "केवल SIM card का design बदलना",
+        "प्रत्येक user को orthogonal spreading codes (जैसे Walsh codes) allot करना ताकि codes के बीच cross-correlation कम रहे",
+        "केवल camera lens की coating बदलना",
+        "केवल battery की mAh रेटिंग बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power control के साथ orthogonal spreading codes (जैसे Walsh codes) का सही allotment सुनिश्चित करता है कि अलग-अलग users के signals के बीच cross-correlation न्यूनतम रहे, जिससे multiple access interference कम होता है। SIM design, camera lens coating और battery mAh रेटिंग का इस interference-reduction technique से कोई संबंध नहीं है।"
     }
   ]
 }

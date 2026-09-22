@@ -363,6 +363,126 @@
       ],
       "correctIndex": 1,
       "explanation": "Phone पूरी तरह off होने पर भी RTC circuit एक छोटी backup power source (जैसे capacitor या coin cell) से चलती रहती है ताकि सही समय व दिनांक बना रहे। Main application processor, camera sensor और power amplifier फोन off होने पर बंद रहते हैं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q31",
+      "question": "मोबाइल फोन में Bluetooth और WiFi feature के लिए अलग connectivity module होने का मुख्य कारण क्या है?",
+      "options": [
+        "ये modules camera sensor की तरह images capture करते हैं",
+        "ये short-range wireless communication के लिए अलग frequency band और protocol पर काम करते हैं, जो cellular RF section से भिन्न होता है",
+        "ये केवल SIM card की जगह data store करते हैं",
+        "ये PMIC की तरह battery को charge करते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bluetooth और WiFi connectivity module cellular network से अलग short-range unlicensed band (जैसे 2.4 GHz) पर अपने specific protocol से काम करते हैं, इसलिए इन्हें cellular RF transceiver से अलग dedicated chip/module के रूप में block diagram में दिखाया जाता है। ये images capture नहीं करते, data storage या battery charging का कार्य नहीं करते।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q32",
+      "question": "मोबाइल फोन में accelerometer sensor block diagram में शामिल होने पर इसका मुख्य कार्य क्या है?",
+      "options": [
+        "यह phone की orientation और movement/acceleration को measure करके processor को data देता है (जैसे screen rotation के लिए)",
+        "यह केवल SIM card को authenticate करता है",
+        "यह केवल RF signal को demodulate करता है",
+        "यह केवल battery की internal temperature control करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Accelerometer एक motion sensor है जो phone की tilt, orientation और acceleration को detect करके digital signal के रूप में processor को भेजता है, जिससे screen auto-rotation, step counting जैसे features संभव होते हैं। SIM authentication, RF demodulation और battery temperature control अलग blocks का कार्य है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q33",
+      "question": "मोबाइल फोन के camera module block में image sensor (जैसे CMOS sensor) का क्या कार्य है?",
+      "options": [
+        "यह केवल RF signal को amplify करता है",
+        "यह केवल SIM card की जानकारी पढ़ता है",
+        "यह optical image को electrical signal (digital data) में convert करता है जिसे image processor द्वारा process किया जाता है",
+        "यह केवल speaker की आवाज तेज करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "CMOS image sensor lens से आने वाली light (optical image) को pixel-by-pixel electrical signal में बदलता है, जिसे आगे image signal processor (ISP) digital image/video data में convert करता है। RF amplification, SIM reading और speaker volume से sensor का संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q34",
+      "question": "मोबाइल फोन में proximity sensor का उपयोग किस उद्देश्य के लिए किया जाता है?",
+      "options": [
+        "यह केवल camera की flash intensity control करता है",
+        "Call के दौरान phone को कान के पास लाने पर touchscreen को automatically disable करने हेतु",
+        "यह केवल SIM card slot की physical presence check करता है",
+        "यह केवल battery की charging current control करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Proximity sensor infrared light भेजकर उसका reflection detect करता है; जब कोई object (जैसे कान) पास आता है तो यह touchscreen को accidental touch से बचाने के लिए disable कर देता है। यह flash intensity, SIM presence या charging current से संबंधित नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q35",
+      "question": "मोबाइल फोन के block diagram में display driver IC का क्या कार्य होता है?",
+      "options": [
+        "यह processor से मिले digital image/video data को display panel (जैसे LCD/OLED) के लिए उपयुक्त signals में convert करके drive करता है",
+        "यह केवल antenna की length को tune करता है",
+        "यह केवल SIM card को reset करता है",
+        "यह केवल microphone की sensitivity बढ़ाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Display driver IC processor से आने वाले digital video/image data को row-column drive signals में convert करता है जिससे display panel पर सही pixels light up हों और image/video दिखे। Antenna tuning, SIM reset और microphone sensitivity display driver का कार्य नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q36",
+      "question": "मोबाइल फोन में keypad/touchscreen से इनपुट लेकर उसे processor तक पहुंचाने की प्रक्रिया में स्कैनिंग (scanning) या sensing का क्या महत्व है?",
+      "options": [
+        "यह किस key/touch point पर press हुआ है यह detect करके उसका corresponding digital code processor को भेजता है",
+        "यह केवल battery की voltage बढ़ाता है",
+        "यह केवल RF signal की frequency बदलता है",
+        "यह केवल SIM card की memory साफ करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Keypad/touchscreen controller periodically rows-columns (keypad) या touch panel (capacitive sensing) को scan करता है ताकि यह पता चले कि कौन सी key/स्थान press हुआ, और फिर उसका digital code processor को भेजा जाता है। यह battery voltage, RF frequency या SIM memory से संबंधित नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q37",
+      "question": "मोबाइल फोन के block diagram में RAM (volatile memory) की भूमिका Flash memory से किस प्रकार भिन्न है?",
+      "options": [
+        "RAM केवल permanent data (जैसे OS files) store करती है जबकि Flash temporary data रखती है",
+        "RAM processor द्वारा running programs और temporary data के लिए तेज़ अस्थायी (volatile) storage है, जबकि Flash power off होने पर भी data permanent रखती है",
+        "RAM केवल SIM card का data रखती है और Flash केवल camera images रखती है",
+        "RAM और Flash दोनों का कार्य पूरी तरह एक समान है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RAM एक fast volatile memory है जिसमें processor currently running applications और temporary data रखता है, जो power off होने पर erase हो जाता है; इसके विपरीत Flash/EEPROM non-volatile होती है और power off होने पर भी data बनाए रखती है। शेष options RAM और Flash के वास्तविक कार्य को गलत तरीके से बताते हैं।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q38",
+      "question": "मोबाइल फोन में fingerprint sensor जैसे biometric feature module को block diagram में किस प्रकार से जोड़ा जाता है?",
+      "options": [
+        "यह antenna switch के साथ series में जुड़ा रहता है",
+        "यह केवल power amplifier के अंदर बना होता है",
+        "यह SIM card के अंदर embedded होता है",
+        "यह एक dedicated sensor module के रूप में processor से जुड़ता है और captured biometric data को secure verification के लिए भेजता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Fingerprint sensor एक separate dedicated module होता है जो user के finger pattern को capture करके digital data के रूप में processor (कई बार secure enclave) को भेजता है, जहां verification के बाद access दिया जाता है। यह antenna switch, power amplifier या SIM card के अंदर नहीं होता।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q39",
+      "question": "मोबाइल फोन के block diagram में एक ही antenna से multiple bands (जैसे 2G, 3G, 4G) को handle करने के लिए किस block की आवश्यकता होती है?",
+      "options": [
+        "केवल camera image sensor की",
+        "Antenna switch/RF front-end module की, जो अलग-अलग bands के लिए signal path को select करता है",
+        "केवल SIM card reader की",
+        "केवल vibrator motor driver की"
+      ],
+      "correctIndex": 1,
+      "explanation": "Antenna switch या RF front-end module विभिन्न frequency bands (2G/3G/4G आदि) के लिए उपयुक्त signal path को select करके एक ही antenna को शेयर करने योग्य बनाता है। Camera sensor, SIM reader और vibrator driver का multi-band antenna handling से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u11_cellphone_block_diagram_q40",
+      "question": "मोबाइल फोन में crystal oscillator (reference clock) block का क्या महत्व है?",
+      "options": [
+        "यह केवल camera की shutter speed set करता है",
+        "यह एक stable और सटीक reference frequency उत्पन्न करता है जिसका उपयोग processor timing और frequency synthesizer दोनों में होता है",
+        "यह केवल SIM card की expiry date check करता है",
+        "यह केवल battery की discharge rate मापता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Crystal oscillator एक बहुत stable और accurate reference frequency generate करता है, जिसका उपयोग processor की clock timing तथा RF section के frequency synthesizer/PLL दोनों के लिए reference के रूप में किया जाता है। Camera shutter speed, SIM expiry check और battery discharge rate measurement से इसका संबंध नहीं है।"
     }
   ]
 }
