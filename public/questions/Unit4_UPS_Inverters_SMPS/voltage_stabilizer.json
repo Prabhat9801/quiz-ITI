@@ -363,6 +363,306 @@
       ],
       "correctIndex": 1,
       "explanation": "Power बहाल होते ही अगर compressor तुरंत start हो तो अंदर का pressure असंतुलित होने से उसे नुकसान हो सकता है; time delay कुछ मिनट रुककर compressor को सुरक्षित start कराता है। A frequency से संबंध नहीं, C battery यहाँ नहीं, D stabilizer AC output देता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q31",
+      "question": "Automatic voltage stabilizer के block diagram में 'sensing circuit' के बाद signal सामान्यतः किस block को दिया जाता है?",
+      "options": [
+        "सीधे output terminal को",
+        "केवल fuse को",
+        "Control/driver circuit को, जो relay या servo motor को चलाने का निर्णय लेता है",
+        "सीधे transformer की main winding को"
+      ],
+      "correctIndex": 2,
+      "explanation": "Sensing circuit input/output voltage मापकर उसका signal control (driver) circuit को देता है, जो तय करता है कि relay या servo motor को कब और किस दिशा में चलाना है। A गलत क्योंकि sensing सीधा output से नहीं जुड़ता, B fuse केवल protection देता है सेंसिंग नहीं, D winding driver का काम नहीं करती।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q32",
+      "question": "Manual voltage stabilizer के block diagram में मुख्यतः कौन-से ब्लॉक होते हैं?",
+      "options": [
+        "Input, tapped/buck-boost transformer, rotary tap-selector switch, voltmeter, output",
+        "Input, microcontroller, LCD display, battery, output",
+        "Input, servo motor, carbon brush, feedback amplifier, output",
+        "Input, SCR bridge, PWM controller, output"
+      ],
+      "correctIndex": 0,
+      "explanation": "Manual stabilizer सबसे साधारण होता है — input से tapped transformer तक जाकर उपयोगकर्ता rotary switch से tap चुनता है और voltmeter से output देखता है। B automatic/digital का हिस्सा है, C servo type का है, D static/electronic type का है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q33",
+      "question": "Automatic stabilizer में output voltage adjustment के लिए 'set point' या 'reference voltage' का क्या उपयोग है?",
+      "options": [
+        "यह केवल indicator LED को चलाता है",
+        "यह mains frequency तय करता है",
+        "यह load current मापता है",
+        "यह वह value है जिसके आसपास output को बनाए रखने की कोशिश circuit करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Reference/set point voltage वह target value है जिससे actual output की तुलना कर के error निकाला जाता है, और उसी के आधार पर correction होता है ताकि output लगभग set point के बराबर रहे। A, B, C इस reference के मुख्य उपयोग से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q34",
+      "question": "Servo voltage stabilizer में motor की rotation direction किस पर निर्भर करती है?",
+      "options": [
+        "कमरे के तापमान पर",
+        "Load की rating पर हमेशा एक ही दिशा में",
+        "केवल user के switch दबाने पर",
+        "Error signal की polarity पर — output कम है या ज्यादा, इसी अनुसार motor उलटी या सीधी दिशा में घूमता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Error amplifier से मिलने वाले error signal की polarity (output ज्यादा या कम) motor drive circuit को बताती है कि brush को किस दिशा में घुमाना है ताकि voltage सही सीमा में आए। A, B, C motor की rotation direction तय करने का आधार नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q35",
+      "question": "Relay-type automatic stabilizer में कितने relay/steps होने पर regulation बेहतर होती है?",
+      "options": [
+        "Steps जितने कम होंगे, regulation उतनी ही बेहतर होगी",
+        "Steps (taps) जितने अधिक होंगे, output उतना ही finer/बेहतर regulate होगा, हालांकि लागत बढ़ती है",
+        "Steps की संख्या का regulation से कोई संबंध नहीं",
+        "केवल एक ही step होना जरूरी है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक tap/steps होने पर हर correction छोटे voltage अंतराल में होता है, जिससे output finer तरीके से regulate होता है, पर transformer व relay की संख्या/cost बढ़ती है। A उलटा है, C और D गलत हैं क्योंकि steps की संख्या सीधे regulation quality तय करती है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q36",
+      "question": "एक automatic stabilizer में 'over-voltage cut-off' किस स्थिति में activate होगा?",
+      "options": [
+        "जब load बहुत कम हो",
+        "जब frequency 50Hz हो",
+        "जब input voltage निर्धारित सुरक्षित ऊपरी सीमा (जैसे 285-300V) से भी अधिक हो जाए",
+        "जब power factor 1 हो"
+      ],
+      "correctIndex": 2,
+      "explanation": "Over-voltage cut-off तब trip होता है जब input इतना अधिक हो जाए कि buck mode भी उसे सुरक्षित output सीमा में नहीं ला सकता, तब appliance की सुरक्षा के लिए output बंद कर दिया जाता है। A, B, D over-voltage cut-off होने की शर्त नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q37",
+      "question": "Under-voltage (low-voltage) cut-off का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Frequency को स्थिर रखना",
+        "Battery को overcharge होने से बचाना",
+        "Output को हमेशा DC बनाना",
+        "Motor/compressor जैसे load को बहुत कम voltage पर overheating व winding damage से बचाना"
+      ],
+      "correctIndex": 3,
+      "explanation": "बहुत कम voltage पर motor/compressor अधिक current खींचते हैं जिससे winding गरम होकर जल सकती है; इसलिए low-voltage cut-off ऐसी स्थिति में output बंद कर देता है। A, B, C इस cut-off के उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q38",
+      "question": "Stabilizer में प्रयुक्त electromagnetic relay मुख्यतः किस सिद्धांत पर कार्य करता है?",
+      "options": [
+        "Piezoelectric effect पर",
+        "Coil में current बहने से बने electromagnet द्वारा armature/contacts को खींचकर switching करना",
+        "Photoelectric effect पर",
+        "थर्मल expansion पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "Electromagnetic relay में control coil को current देने पर बना चुंबकीय क्षेत्र armature को खींचता है, जिससे contacts खुलते/बंद होते हैं और tap switching होती है। A, C, D relay के इस मुख्य कार्य-सिद्धांत से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q39",
+      "question": "स्टेबिलाइज़र में 'changeover relay' का उपयोग सामान्यतः किस काम के लिए होता है?",
+      "options": [
+        "केवल pilot lamp जलाने के लिए",
+        "Frequency counter चलाने के लिए",
+        "Battery को disconnect करने के लिए",
+        "Output को दो अलग taps के बीच स्विच करने के लिए (जैसे buck से boost में बदलना)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Changeover (SPDT) relay एक common contact को दो अलग taps (जैसे buck winding या boost winding) के बीच स्विच करता है ताकि सही correction लागू हो। A, B, C changeover relay का सामान्य उपयोग नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q40",
+      "question": "Stabilizer में प्रयुक्त 'step relay' (मल्टी-टैप रिले) की विशेषता क्या है?",
+      "options": [
+        "यह केवल एक ही ON/OFF स्थिति देता है",
+        "यह केवल DC सर्किट में उपयोग होता है",
+        "यह कई अलग-अलग tap positions के बीच क्रमिक रूप से switch कर सकता है",
+        "इसमें कोई coil नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Step relay में कई contacts होते हैं जो अलग-अलग transformer taps से जुड़े रहते हैं, जिससे voltage को कई steps में क्रमिक रूप से बदला जा सकता है। A सामान्य single relay का वर्णन है, B और D step relay की वास्तविक संरचना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q41",
+      "question": "यदि किसी relay-type stabilizer में सभी relay coils को एक साथ बहुत बार-बार on/off किया जाए (hunting), तो सबसे बड़ी समस्या क्या होगी?",
+      "options": [
+        "Output frequency कम हो जाएगी",
+        "Transformer का आकार घट जाएगा",
+        "Battery की life बढ़ जाएगी",
+        "Relay contacts जल्दी घिस/जल जाएँगे और connected load पर voltage spikes आ सकते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "बार-बार switching (hunting) से relay contacts पर arcing बढ़ती है जिससे वे जल्दी खराब होते हैं, और अचानक tap बदलने से load पर voltage spike भी लग सकता है। A, B, C hunting की वास्तविक हानि नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q42",
+      "question": "Servo stabilizer की तुलना में relay type stabilizer आमतौर पर किस applications में अधिक उपयुक्त माना जाता है?",
+      "options": [
+        "जहाँ बहुत उच्च precision और continuously variable correction चाहिए",
+        "बड़े industrial three-phase load जहाँ ±1% accuracy अनिवार्य है",
+        "केवल laboratory measurement instruments के लिए",
+        "साधारण घरेलू उपकरणों (TV, fridge) जहाँ moderate accuracy और कम लागत पर्याप्त है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Relay type सस्ता होता है और moderate (step-wise) regulation देता है, जो घरेलू उपकरणों के लिए पर्याप्त है, जबकि high precision वाले industrial/lab applications के लिए servo type बेहतर होता है। A और B servo type के लिए उपयुक्त हैं, C भी उच्च precision की मांग करता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q43",
+      "question": "Buck-boost transformer में यदि auxiliary winding को main supply से पूरी तरह disconnect कर दिया जाए (bypass mode), तो output क्या होगा?",
+      "options": [
+        "Output शून्य हो जाएगा",
+        "Output लगभग input voltage के बराबर ही रहेगा, बिना किसी correction के",
+        "Output हमेशा 230V पर fix हो जाएगा चाहे input कुछ भी हो",
+        "Output DC में बदल जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब auxiliary winding bypass/disconnect रहती है (न buck, न boost), तो output लगभग सीधे input के बराबर पास हो जाता है, कोई correction नहीं होता — यह तब होता है जब input पहले से ही normal range में हो। A, C, D bypass mode के वास्तविक प्रभाव से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q44",
+      "question": "Automatic stabilizer के output voltage adjustment (fine tuning) के लिए कुछ मॉडलों में एक potentiometer या selector switch क्यों दिया जाता है?",
+      "options": [
+        "ताकि frequency बदली जा सके",
+        "ताकि battery जल्दी चार्ज हो",
+        "ताकि उपयोगकर्ता desired output range (जैसे 200V या 220V set point) को अपनी जरूरत अनुसार चुन सके",
+        "ताकि stabilizer का वजन कम हो"
+      ],
+      "correctIndex": 2,
+      "explanation": "यह potentiometer/selector reference (set point) voltage को बदलने देता है, जिससे उपयोगकर्ता अपने उपकरण की जरूरत अनुसार desired output level चुन सकता है। A, B, D इस adjustment feature के उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q45",
+      "question": "किसी servo stabilizer में feedback path (output से sensing circuit तक) टूट जाए, तो सबसे संभावित परिणाम क्या होगा?",
+      "options": [
+        "Output बिल्कुल सही regulate होता रहेगा",
+        "Correction बंद हो जाएगा या motor एक ही दिशा में लगातार घूमकर brush को extreme position तक ले जा सकता है",
+        "Frequency तुरंत बदल जाएगी",
+        "Transformer स्वतः बंद हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Feedback टूटने पर error amplifier को सही signal नहीं मिलता, जिससे closed-loop control खत्म हो जाता है और motor बिना रुके एक दिशा में घूमकर brush को end-stop तक पहुँचा सकता है, जो असुरक्षित है। A उलटा है, C और D इस फॉल्ट के प्रत्यक्ष परिणाम नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q46",
+      "question": "Voltage stabilizer के block diagram में 'protection block' सामान्यतः किन-किन खतरों से सुरक्षा देता है?",
+      "options": [
+        "केवल frequency variation से",
+        "Over-voltage, under-voltage, overload और short-circuit जैसी असामान्य स्थितियों से",
+        "केवल color of wire से",
+        "केवल dust से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Protection block में fuse/MCB, over/under-voltage cut-off relay जैसे तत्व शामिल होते हैं जो voltage और current दोनों की असामान्य स्थितियों में load को सुरक्षित रखते हैं। A, C, D इस block के वास्तविक कार्य क्षेत्र में नहीं आते।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q47",
+      "question": "एक automatic stabilizer में 'delay-on-restart' timer आमतौर पर कितने समय (typical range) के लिए output रोकता है?",
+      "options": [
+        "लगभग 3-7 मिनट, जिससे compressor जैसे load को pressure बराबर करने का समय मिले",
+        "लगभग 24 घंटे",
+        "1 माइक्रोसेकंड से कम",
+        "यह कभी समय-सीमा पर आधारित नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "अधिकतर stabilizers में यह delay लगभग 3 से 7 मिनट के बीच सेट किया जाता है ताकि compressor-आधारित उपकरण सुरक्षित रूप से restart हो सकें। B अव्यावहारिक रूप से लंबा है, C बहुत छोटा है, D गलत है क्योंकि यह timer-based ही होता है।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q48",
+      "question": "Servo stabilizer में variac (auto-transformer) के carbon brush का मुख्य कार्य क्या है?",
+      "options": [
+        "Winding के अलग-अलग turns से contact बनाकर एक variable tapping point प्रदान करना",
+        "केवल cooling देना",
+        "AC को DC में बदलना",
+        "Frequency measure करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Carbon brush variac की winding पर घूमते हुए एक continuously variable tap point बनाता है, जिससे output voltage smooth तरीके से बदला जा सकता है। B, C, D brush के इस मुख्य function से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q49",
+      "question": "यदि किसी buck-boost आधारित stabilizer में auxiliary winding की turns संख्या बढ़ा दी जाए (design में), तो इसका प्रभाव क्या होगा?",
+      "options": [
+        "Correction range (voltage जिसे buck/boost किया जा सकता है) बढ़ जाएगी",
+        "Output हमेशा शून्य हो जाएगा",
+        "Frequency बदल जाएगी",
+        "Fuse की रेटिंग घट जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "Auxiliary winding के turns बढ़ाने से उसका voltage contribution बढ़ता है, जिससे stabilizer अधिक बड़े input variation को buck/boost करके correct कर सकता है। B, C, D turns बढ़ाने का सीधा परिणाम नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q50",
+      "question": "Manual stabilizer में rotary tap-selector switch को गलत position पर छोड़ देने से क्या हो सकता है?",
+      "options": [
+        "Output स्वतः सही हो जाएगा क्योंकि यह automatic है",
+        "Output निर्धारित सुरक्षित सीमा से बाहर जाकर उपकरण को नुकसान पहुँचा सकता है",
+        "Frequency 60Hz हो जाएगी",
+        "Battery चार्ज होने लगेगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Manual stabilizer में कोई automatic correction नहीं होता, इसलिए गलत tap छूटने पर output बहुत अधिक या कम रह सकता है जो connected उपकरण के लिए हानिकारक है। A गलत है क्योंकि manual में automatic correction नहीं होता, C और D असंबंधित हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q51",
+      "question": "Automatic voltage stabilizer में 'hysteresis band' (dead band) को बहुत छोटा रखने पर क्या समस्या आ सकती है?",
+      "options": [
+        "Output कभी correct नहीं होगा",
+        "Relay बार-बार on/off होकर hunting करेगा, जिससे contacts जल्दी खराब होंगे",
+        "Transformer ठंडा रहेगा",
+        "Servo motor की जरूरत खत्म हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "बहुत संकीर्ण hysteresis band रखने पर छोटे-छोटे voltage उतार-चढ़ाव पर भी relay बार-बार trip करेगा (hunting), जिससे contacts की life घटती है। A, C, D hysteresis band को बहुत छोटा रखने का वास्तविक प्रभाव नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q52",
+      "question": "Three-phase 'balanced' servo stabilizer में करेक्शन किस प्रकार किया जाता है?",
+      "options": [
+        "प्रत्येक phase के लिए अलग-अलग स्वतंत्र motor व control loop होता है",
+        "तीनों phases को एक ही common control signal द्वारा एक साथ correct किया जाता है, यह मानकर कि तीनों phase लगभग balanced हैं",
+        "केवल एक phase पर correction होता है, बाकी दो बिना correction रहते हैं",
+        "इसमें कोई servo motor उपयोग नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Balanced type servo stabilizer यह मानकर चलता है कि तीनों phases में voltage लगभग समान रूप से बदलता है, इसलिए एक ही common control से सभी phases को साथ में correct कर दिया जाता है, जो सस्ता पड़ता है। A unbalanced/independent type का वर्णन है, C और D गलत हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q53",
+      "question": "Automatic voltage stabilizer में 'output voltage off' (output disconnect) की स्थिति सामान्यतः किन कारणों से हो सकती है?",
+      "options": [
+        "Over-voltage cut-off, under-voltage cut-off, overload trip, या restart delay timer के चलते समय",
+        "केवल जब frequency ठीक हो",
+        "केवल रात के समय स्वतः",
+        "जब power factor 1 हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Output बंद होने की सामान्य वजहें असुरक्षित उच्च/निम्न voltage, overload trip, या restart delay के दौरान इंतज़ार करना होती हैं, ताकि उपकरण सुरक्षित रहे। B, C, D इनमें से किसी भी सामान्य output-off कारण से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q54",
+      "question": "Buck-boost concept में यदि auxiliary transformer winding के connections उलट (reverse polarity में) कर दिए जाएँ, तो क्या होगा?",
+      "options": [
+        "जो buck होना था वह boost हो जाएगा और जो boost होना था वह buck हो जाएगा",
+        "कोई प्रभाव नहीं पड़ेगा",
+        "Output पूरी तरह DC हो जाएगा",
+        "Frequency आधी हो जाएगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "Buck/boost, auxiliary winding की main winding के सापेक्ष phase (additive या subtractive) पर निर्भर करता है; polarity उलटने से additive subtractive बन जाता है और subtractive additive, यानी mode उलट जाता है। B, C, D इस उलटफेर के वास्तविक प्रभाव नहीं हैं।"
+    },
+    {
+      "id": "u4_voltage_stabilizer_q55",
+      "question": "किसी automatic stabilizer में indicator के अनुसार वह लगातार 'LOW' दिखा रहा है और output भी बहुत कम है, जबकि mains पर मापने पर voltage normal (230V) है। सबसे संभावित फॉल्ट क्या हो सकता है?",
+      "options": [
+        "Load बहुत हल्का है",
+        "Sensing circuit या उसकी wiring में फॉल्ट है, जिससे गलत sensing हो रही है, या tap-selector relay किसी buck tap पर अटका है",
+        "Frequency 50Hz से 60Hz हो गई है",
+        "Battery डिस्चार्ज हो गई है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब actual mains voltage normal हो पर stabilizer गलत sensing कर रहा हो या relay किसी buck tap पर अटक (welded contact) गया हो, तो output गलत तरीके से कम बना रहेगा। A load हल्का होने से voltage level की sensing नहीं बदलती, C और D इस लक्षण से असंबंधित हैं।"
     }
   ]
 }

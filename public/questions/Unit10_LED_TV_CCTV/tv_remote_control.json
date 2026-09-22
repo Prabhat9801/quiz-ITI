@@ -6,247 +6,247 @@
   "questions": [
     {
       "id": "u10_tv_remote_control_q1",
-      "question": "IR (Infrared) remote control mein transmitter section ka basic working principle kya hai?",
+      "question": "IR (Infrared) remote control में transmitter section का basic working principle क्या है?",
       "options": [
-        "Key press hone par encoder IC us key ke liye unique digital pulse code generate karta hai jise IR LED modulated infrared light ke roop mein emit karta hai",
-        "Transmitter seedhe radio waves generate karke TV tak bhejta hai bina kisi encoding ke",
-        "Transmitter mein ek microphone hota hai jo voice command ko IR signal mein badal deta hai",
-        "Transmitter TV ke power supply ko direct wire ke through control karta hai"
+        "Key press होने पर encoder IC उस key के लिए unique digital pulse code generate करता है जिसे IR LED modulated infrared light के रूप में emit करता है",
+        "Transmitter सीधे radio waves generate करके TV तक भेजता है बिना किसी encoding के",
+        "Transmitter में एक microphone होता है जो voice command को IR signal में बदल देता है",
+        "Transmitter TV के power supply को direct wire के through control करता है"
       ],
       "correctIndex": 0,
-      "explanation": "IR remote mein key press hote hi encoder IC us key ka corresponding unique pulse pattern generate karta hai jo IR LED ke through modulated infrared light ke roop mein transmit hota hai, isliye option A सही है। Option B RF remote ka principle है (radio waves), option C basic IR remote में मौजूद नहीं होता, और option D गलत है क्योंकि remote wireless device है, कोई direct wire connection TV से नहीं होता।"
+      "explanation": "IR remote में key press होते ही encoder IC उस key का corresponding unique pulse pattern generate करता है जो IR LED के through modulated infrared light के रूप में transmit होता है, इसलिए option A सही है। Option B RF remote का principle है (radio waves), option C basic IR remote में मौजूद नहीं होता, और option D गलत है क्योंकि remote wireless device है, कोई direct wire connection TV से नहीं होता।"
     },
     {
       "id": "u10_tv_remote_control_q2",
-      "question": "IR remote mein carrier frequency (commonly approx 38kHz) ka use kis liye kiya jata hai?",
+      "question": "IR remote में carrier frequency (commonly approx 38kHz) का use किस लिए किया जाता है?",
       "options": [
-        "IR LED ki brightness ko bढ़ाने ke liye",
-        "Taaki IR receiver ambient light/sunlight jaisi random infrared noise se actual remote signal ko alag pehchan sake",
-        "Battery life ko direct रूप से बढ़ाने के लिए",
-        "Remote ki wireless range ko control karne ke liye frequency adjust karke"
+        "IR LED की brightness को बढ़ाने के लिए",
+        "ताकि IR receiver ambient light/sunlight जैसी random infrared noise से actual remote signal को अलग पहचान सके",
+        "Battery life को direct रूप से बढ़ाने के लिए",
+        "Remote की wireless range को control करने के लिए frequency adjust करके"
       ],
       "correctIndex": 1,
-      "explanation": "Data ko एक fixed carrier frequency (जैसे 38kHz) पर modulate किया जाता है ताकि receiver केवल उसी frequency के signal को valid माने और sunlight/ambient IR noise को ignore कर सके, इसलिए option B सही है। Brightness modulation से नहीं बढ़ती, carrier frequency का battery life पर सीधा effect नहीं है, और range frequency से नहीं बल्कि LED power/receiver sensitivity से तय होती है।"
+      "explanation": "Data को एक fixed carrier frequency (जैसे 38kHz) पर modulate किया जाता है ताकि receiver केवल उसी frequency के signal को valid माने और sunlight/ambient IR noise को ignore कर सके, इसलिए option B सही है। Brightness modulation से नहीं बढ़ती, carrier frequency का battery life पर सीधा effect नहीं है, और range frequency से नहीं बल्कि LED power/receiver sensitivity से तय होती है।"
     },
     {
       "id": "u10_tv_remote_control_q3",
-      "question": "TV mein IR receiver module ka sensing element commonly kya hota hai?",
+      "question": "TV में IR receiver module का sensing element commonly क्या होता है?",
       "options": [
         "Thermocouple",
-        "LDR (Light Dependent Resistor) jo सिर्फ visible light detect करता है",
-        "Photodiode ya phototransistor jo infrared wavelength ke prati sensitive hota hai",
+        "LDR (Light Dependent Resistor) जो सिर्फ visible light detect करता है",
+        "Photodiode या phototransistor जो infrared wavelength के प्रति sensitive होता है",
         "Piezoelectric crystal"
       ],
       "correctIndex": 2,
-      "explanation": "TV ke IR receiver module में एक IR-sensitive photodiode ya phototransistor होता है जो remote की infrared light को detect करके electrical signal में बदलता है, इसलिए option C सही है। Thermocouple heat/temperature sense करता है, LDR visible light के लिए है, और piezoelectric crystal vibration/pressure sense करता है — ये IR sensing के लिए उपयुक्त नहीं हैं।"
+      "explanation": "TV के IR receiver module में एक IR-sensitive photodiode या phototransistor होता है जो remote की infrared light को detect करके electrical signal में बदलता है, इसलिए option C सही है। Thermocouple heat/temperature sense करता है, LDR visible light के लिए है, और piezoelectric crystal vibration/pressure sense करता है — ये IR sensing के लिए उपयुक्त नहीं हैं।"
     },
     {
       "id": "u10_tv_remote_control_q4",
-      "question": "IR remote control system ki sabse badi limitation kya hai jab ise RF remote se compare karte hain?",
+      "question": "IR remote control system की सबसे बड़ी limitation क्या है जब इसे RF remote से compare करते हैं?",
       "options": [
-        "IR remote generally RF se jyada costly hota hai",
-        "IR remote ka range RF remote se lamba hota hai",
-        "IR remote walls/obstruction ke through easily kaam karta hai",
-        "IR ko kaam karne ke liye line-of-sight chahiye, aur ye kisi obstruction/wall ke through signal nahi bhej sakta"
+        "IR remote generally RF से ज्यादा costly होता है",
+        "IR remote का range RF remote से लंबा होता है",
+        "IR remote walls/obstruction के through easily काम करता है",
+        "IR को काम करने के लिए line-of-sight चाहिए, और यह किसी obstruction/wall के through signal नहीं भेज सकता"
       ],
       "correctIndex": 3,
-      "explanation": "IR signal light ki tarah straight-line mein travel karta hai isliye transmitter aur receiver ke beech clear line-of-sight zaroori hai, wall ya obstruction hone par signal block ho jata hai — isliye option D सही है। IR remote generally RF se sasta hota hai, iska range kam hota hai, aur ye obstruction ke through kaam nahi karta — बाकी तीनों statements गलत हैं।"
+      "explanation": "IR signal light की तरह straight-line में travel करता है इसलिए transmitter और receiver के बीच clear line-of-sight जरूरी है, wall या obstruction होने पर signal block हो जाता है — इसलिए option D सही है। IR remote generally RF से सस्ता होता है, इसका range कम होता है, और यह obstruction के through काम नहीं करता — बाकी तीनों statements गलत हैं।"
     },
     {
       "id": "u10_tv_remote_control_q5",
-      "question": "RF (Radio Frequency) remote control IR remote se kis prakar different hota hai?",
+      "question": "RF (Radio Frequency) remote control IR remote से किस प्रकार different होता है?",
       "options": [
-        "RF remote radio waves use karta hai jinhe line-of-sight ki zaroorat nahi hoti aur ye walls/obstruction ke through bhi kaam kar sakta hai",
-        "RF remote sirf infrared light use karta hai lekin jyada intensity ke saath",
-        "RF remote ko bhi IR jaisa hi strict line-of-sight chahiye hota hai",
-        "RF remote battery ke bina hi operate ho jata hai"
+        "RF remote radio waves use करता है जिन्हें line-of-sight की जरूरत नहीं होती और यह walls/obstruction के through भी काम कर सकता है",
+        "RF remote सिर्फ infrared light use करता है लेकिन ज्यादा intensity के साथ",
+        "RF remote को भी IR जैसा ही strict line-of-sight चाहिए होता है",
+        "RF remote battery के बिना ही operate हो जाता है"
       ],
       "correctIndex": 0,
-      "explanation": "RF remote radio waves use karta hai jo obstacles/walls ke through penetrate kar sakti hain aur line-of-sight ki zaroorat nahi padti, isliye option A सही है। Option B galat hai kyunki RF infrared light use nahi karta, option C IR ka characteristic hai na ki RF ka, aur option D galat hai kyunki RF remote ko bhi battery se hi power milta hai."
+      "explanation": "RF remote radio waves use करता है जो obstacles/walls के through penetrate कर सकती हैं और line-of-sight की जरूरत नहीं पड़ती, इसलिए option A सही है। Option B गलत है क्योंकि RF infrared light use नहीं करता, option C IR की characteristic है ना कि RF की, और option D गलत है क्योंकि RF remote को भी battery से ही power मिलता है।"
     },
     {
       "id": "u10_tv_remote_control_q6",
-      "question": "Smart TV ke saath aane wale Bluetooth-based voice remote commonly kis technology par based hote hain?",
+      "question": "Smart TV के साथ आने वाले Bluetooth-based voice remote commonly किस technology पर based होते हैं?",
       "options": [
-        "Pure infrared (IR) modulation par",
-        "RF (radio frequency) technology par, jisme Bluetooth ek prakar ka RF communication hai",
-        "Sirf mechanical switch signal par bina kisi wireless transmission ke",
-        "Ultrasonic sound waves par"
+        "Pure infrared (IR) modulation पर",
+        "RF (radio frequency) technology पर, जिसमें Bluetooth एक प्रकार का RF communication है",
+        "सिर्फ mechanical switch signal पर बिना किसी wireless transmission के",
+        "Ultrasonic sound waves पर"
       ],
       "correctIndex": 1,
-      "explanation": "Bluetooth remote radio waves ke ek standardized RF protocol par kaam karte hain, jisse walls/obstruction ke through bhi communication possible hoti hai aur line-of-sight ki zaroorat nahi rehti, isliye option B सही है। Ye pure IR modulation nahi hai, mechanical signal bina wireless transmission ke kaam nahi karega, aur ultrasonic sound remote control mein commonly use nahi hoti।"
+      "explanation": "Bluetooth remote radio waves के एक standardized RF protocol पर काम करते हैं, जिससे walls/obstruction के through भी communication possible होती है और line-of-sight की जरूरत नहीं रहती, इसलिए option B सही है। यह pure IR modulation नहीं है, mechanical signal बिना wireless transmission के काम नहीं करेगा, और ultrasonic sound remote control में commonly use नहीं होती।"
     },
     {
       "id": "u10_tv_remote_control_q7",
-      "question": "IR remote aur RF remote ki cost/complexity compare karne par kaunsa statement sahi hai?",
+      "question": "IR remote और RF remote की cost/complexity compare करने पर कौनसा statement सही है?",
       "options": [
-        "IR remote generally RF remote se jyada complex aur costly hota hai",
-        "Dono types ki cost aur complexity hamesha exactly same hoti hai",
-        "RF remote generally IR se jyada complex circuitry (transceiver, pairing logic) ke karan costly hota hai",
-        "RF remote mein koi electronic circuit hota hi nahi"
+        "IR remote generally RF remote से ज्यादा complex और costly होता है",
+        "दोनों types की cost और complexity हमेशा exactly same होती है",
+        "RF remote generally IR से ज्यादा complex circuitry (transceiver, pairing logic) के कारण costly होता है",
+        "RF remote में कोई electronic circuit होता ही नहीं"
       ],
       "correctIndex": 2,
-      "explanation": "RF remote ko radio transceiver, antenna aur pairing/encoding circuitry chahiye hoti hai jo simple IR LED-photodiode setup se zyada complex aur costly hoti hai, isliye option C सही है। IR remote actually RF se saral aur sasta hota hai, dono ki cost same nahi hoti, aur RF remote mein bhi poora electronic circuit maujood hota hai।"
+      "explanation": "RF remote को radio transceiver, antenna और pairing/encoding circuitry चाहिए होती है जो simple IR LED-photodiode setup से ज्यादा complex और costly होती है, इसलिए option C सही है। IR remote actually RF से सरल और सस्ता होता है, दोनों की cost same नहीं होती, और RF remote में भी पूरा electronic circuit मौजूद होता है।"
     },
     {
       "id": "u10_tv_remote_control_q8",
-      "question": "Ek basic remote control ki keypad section mein commonly kya hota hai?",
+      "question": "एक basic remote control की keypad section में commonly क्या होता है?",
       "options": [
-        "Ek single rotary potentiometer",
-        "Ek microphone array voice detection ke liye",
-        "Ek LCD display driver circuit",
-        "Tact switches ki ek matrix jisme rows aur columns ka scan karke key-press encoder IC tak bheja jata hai"
+        "एक single rotary potentiometer",
+        "एक microphone array voice detection के लिए",
+        "एक LCD display driver circuit",
+        "Tact switches की एक matrix जिसमें rows और columns का scan करके key-press encoder IC तक भेजा जाता है"
       ],
       "correctIndex": 3,
-      "explanation": "Remote ki keypad mein chhote-chhote tact switches ek matrix (rows aur columns) mein arranged hote hain, jinhe encoder IC scan karke pehchanta hai ki kaunsi key dabai gayi, isliye option D सही है। Potentiometer, microphone array, ya LCD driver basic IR remote ke standard components nahi hain।"
+      "explanation": "Remote की keypad में छोटे-छोटे tact switches एक matrix (rows और columns) में arranged होते हैं, जिन्हें encoder IC scan करके पहचानता है कि कौनसी key दबाई गई, इसलिए option D सही है। Potentiometer, microphone array, या LCD driver basic IR remote के standard components नहीं हैं।"
     },
     {
       "id": "u10_tv_remote_control_q9",
-      "question": "Remote control ke andar carrier frequency generate karne ke liye commonly kis component ka use hota hai?",
+      "question": "Remote control के अंदर carrier frequency generate करने के लिए commonly किस component का use होता है?",
       "options": [
-        "Ek ceramic resonator ya crystal jo encoder IC ke oscillator ko stable frequency reference provide karta hai jisse carrier (jaise approx 38kHz) accurately generate hota hai",
-        "Ek step-down transformer",
-        "Ek akela electrolytic capacitor",
-        "Ek small DC motor"
+        "एक ceramic resonator या crystal जो encoder IC के oscillator को stable frequency reference provide करता है जिससे carrier (जैसे approx 38kHz) accurately generate होता है",
+        "एक step-down transformer",
+        "एक अकेला electrolytic capacitor",
+        "एक small DC motor"
       ],
       "correctIndex": 0,
-      "explanation": "Encoder IC ke andar internal oscillator ko stable carrier frequency dene ke liye ek ceramic resonator ya crystal use hota hai, isliye option A सही है। Transformer voltage step-down/up ke liye hai, akela capacitor frequency reference nahi de sakta, aur DC motor to mechanical device hai, inka carrier frequency generation se koi lena-dena nahi hai।"
+      "explanation": "Encoder IC के अंदर internal oscillator को stable carrier frequency देने के लिए एक ceramic resonator या crystal use होता है, इसलिए option A सही है। Transformer voltage step-down/up के लिए है, अकेला capacitor frequency reference नहीं दे सकता, और DC motor तो mechanical device है, इनका carrier frequency generation से कोई लेना-देना नहीं है।"
     },
     {
       "id": "u10_tv_remote_control_q10",
-      "question": "Remote control mein IR LED ko drive karne ke liye commonly kis component ka use hota hai?",
+      "question": "Remote control में IR LED को drive करने के लिए commonly किस component का use होता है?",
       "options": [
-        "Ek relay",
-        "Ek driver transistor jo encoder IC ke output pulses ko amplify karke IR LED ko sufficient current supply karta hai",
-        "Ek voltage regulator IC jaise 7805",
-        "Ek triac"
+        "एक relay",
+        "एक driver transistor जो encoder IC के output pulses को amplify करके IR LED को sufficient current supply करता है",
+        "एक voltage regulator IC जैसे 7805",
+        "एक triac"
       ],
       "correctIndex": 1,
-      "explanation": "Encoder IC ka output current directly IR LED ko strongly drive karne ke liye kaafi nahi hota, isliye ek driver transistor use hota hai jo pulses ko amplify karke LED ko proper current deta hai, isliye option B सही है। Relay mechanical switching ke liye hai, 7805 fixed DC voltage regulate karta hai, aur triac AC power control mein use hota hai — ye teeno IR LED driving ke liye standard component nahi hain।"
+      "explanation": "Encoder IC का output current directly IR LED को strongly drive करने के लिए काफी नहीं होता, इसलिए एक driver transistor use होता है जो pulses को amplify करके LED को proper current देता है, इसलिए option B सही है। Relay mechanical switching के लिए है, 7805 fixed DC voltage regulate करता है, और triac AC power control में use होता है — ये तीनों IR LED driving के लिए standard component नहीं हैं।"
     },
     {
       "id": "u10_tv_remote_control_q11",
-      "question": "TV remote control mein typically kis type ki battery aur approx voltage use hoti hai?",
+      "question": "TV remote control में typically किस type की battery और approx voltage use होती है?",
       "options": [
-        "Ek single 12V battery",
-        "Hamesha ek rechargeable Li-ion 3.7V battery",
-        "Do 1.5V cells (AA/AAA) series mein jinse approx 3V supply milta hai",
-        "TV ke main supply se direct wire connection"
+        "एक single 12V battery",
+        "हमेशा एक rechargeable Li-ion 3.7V battery",
+        "दो 1.5V cells (AA/AAA) series में जिनसे approx 3V supply मिलता है",
+        "TV के main supply से direct wire connection"
       ],
       "correctIndex": 2,
-      "explanation": "Zyadatar TV remotes mein do 1.5V AA/AAA cells series mein lage hote hain jinse approx 3V milta hai jo encoder IC aur IR LED chalane ke liye kaafi hota hai, isliye option C सही है। 12V battery ka use nahi hota, remote hamesha rechargeable Li-ion nahi hote (usually replaceable dry cells), aur remote wireless hone ki wajah se TV ke supply se direct wire se connected nahi hota।"
+      "explanation": "ज्यादातर TV remotes में दो 1.5V AA/AAA cells series में लगे होते हैं जिनसे approx 3V मिलता है जो encoder IC और IR LED चलाने के लिए काफी होता है, इसलिए option C सही है। 12V battery का use नहीं होता, remote हमेशा rechargeable Li-ion नहीं होते (usually replaceable dry cells), और remote wireless होने की वजह से TV के supply से direct wire से connected नहीं होता।"
     },
     {
       "id": "u10_tv_remote_control_q12",
-      "question": "Agar remote control TV ko response nahi de raha ho, to sabse pehla aur sabse common check kya karna chahiye?",
+      "question": "अगर remote control TV को response नहीं दे रहा हो, तो सबसे पहला और सबसे common check क्या करना चाहिए?",
       "options": [
-        "Encoder IC replace karna",
-        "Crystal ya ceramic resonator change karna",
-        "TV ka main circuit board check karna",
-        "Battery ki charge aur polarity check karna, kyunki weak ya dead battery sabse common fault hai"
+        "Encoder IC replace करना",
+        "Crystal या ceramic resonator change करना",
+        "TV का main circuit board check करना",
+        "Battery की charge और polarity check करना, क्योंकि weak या dead battery सबसे common fault है"
       ],
       "correctIndex": 3,
-      "explanation": "Remote fail hone ka sabse common aur simple karan weak/dead battery ya galat polarity hota hai, isliye troubleshooting ki shuruaat option D se karni chahiye। Encoder IC ya crystal replace karna aur TV ka main board check karna advanced steps hain jo battery check karne ke baad hi kiye jate hain jab basic cause exclude ho jaye।"
+      "explanation": "Remote fail होने का सबसे common और simple कारण weak/dead battery या गलत polarity होता है, इसलिए troubleshooting की शुरुआत option D से करनी चाहिए। Encoder IC या crystal replace करना और TV का main board check करना advanced steps हैं जो battery check करने के बाद ही किए जाते हैं जब basic cause exclude हो जाए।"
     },
     {
       "id": "u10_tv_remote_control_q13",
-      "question": "Remote ki IR LED burnt/damaged hai ya nahi, ye check karne ka ek common practical tarika kya hai?",
+      "question": "Remote की IR LED burnt/damaged है या नहीं, ये check करने का एक common practical तरीका क्या है?",
       "options": [
-        "Mobile phone ke camera se remote ki IR LED ki taraf dekhte hue koi button dabana — agar LED sahi hai to camera screen par ek jhilmilata white/purple glow dikhta hai",
-        "Remote ko paani mein daal kar dekhna ki LED chalti hai ya nahi",
-        "LED ko directly 230V AC supply se connect karke test karna",
-        "Remote ko heat karke dekhna ki LED garam hoti hai ya nahi"
+        "Mobile phone के camera से remote की IR LED की तरफ देखते हुए कोई button दबाना — अगर LED सही है तो camera screen पर एक झिलमिलाता white/purple glow दिखता है",
+        "Remote को पानी में डाल कर देखना कि LED चलती है या नहीं",
+        "LED को directly 230V AC supply से connect करके test करना",
+        "Remote को heat करके देखना कि LED गरम होती है या नहीं"
       ],
       "correctIndex": 0,
-      "explanation": "Mobile camera sensor infrared light ko capture kar sakta hai isliye remote ki IR LED ka test karne ke liye button dabakar camera se dekhna ek safe aur common practical method hai, agar glow dikhe to LED theek hai — isliye option A सही है। Paani mein daalna LED aur circuit ko damage kar sakta hai, 230V AC directly LED ko turant jala dega, aur heating se koi valid test nahi hota — ये सभी असुरक्षित/गलत तरीके हैं।"
+      "explanation": "Mobile camera sensor infrared light को capture कर सकता है इसलिए remote की IR LED का test करने के लिए button दबाकर camera से देखना एक safe और common practical method है, अगर glow दिखे तो LED ठीक है — इसलिए option A सही है। पानी में डालना LED और circuit को damage कर सकता है, 230V AC directly LED को तुरंत जला देगा, और heating से कोई valid test नहीं होता — ये सभी असुरक्षित/गलत तरीके हैं।"
     },
     {
       "id": "u10_tv_remote_control_q14",
-      "question": "Mobile camera se IR LED test karte samay glow dikhna sambhav hota hai kyunki?",
+      "question": "Mobile camera से IR LED test करते समय glow दिखना संभव होता है क्योंकि?",
       "options": [
-        "IR light itni high intensity hoti hai ki human eye ko bhi normally dikhti hai",
-        "Mobile camera sensor infrared wavelength ke prati bhi sensitive hota hai (jabki human eye IR nahi dekh sakti), isliye ye glow ke roop mein capture ho jata hai",
-        "Mobile camera IR ko special filter se visible red light mein convert kar deta hai",
-        "Remote transmit karte samay khud visible light bhi produce karta hai"
+        "IR light इतनी high intensity होती है कि human eye को भी normally दिखती है",
+        "Mobile camera sensor infrared wavelength के प्रति भी sensitive होता है (जबकि human eye IR नहीं देख सकती), इसलिए यह glow के रूप में capture हो जाता है",
+        "Mobile camera IR को special filter से visible red light में convert कर देता है",
+        "Remote transmit करते समय खुद visible light भी produce करता है"
       ],
       "correctIndex": 1,
-      "explanation": "Camera ka image sensor (CMOS) infrared range ke kuch hisse ke prati bhi sensitive hota hai jabki human eye sirf visible spectrum dekh sakti hai, isliye IR LED ka signal camera screen par glow ke roop mein dikh jata hai — option B सही है। IR light naked eye ko normally invisible hoti hai, camera koi special conversion filter nahi lagata, aur remote khud visible light produce nahi karta।"
+      "explanation": "Camera का image sensor (CMOS) infrared range के कुछ हिस्से के प्रति भी sensitive होता है जबकि human eye सिर्फ visible spectrum देख सकती है, इसलिए IR LED का signal camera screen पर glow के रूप में दिख जाता है — option B सही है। IR light naked eye को normally invisible होती है, camera कोई special conversion filter नहीं लगाता, और remote खुद visible light produce नहीं करता।"
     },
     {
       "id": "u10_tv_remote_control_q15",
-      "question": "Remote ke tact switches (buttons) oxidise ya dirty ho jaane par kaisa symptom common taur par dikhta hai?",
+      "question": "Remote के tact switches (buttons) oxidise या dirty हो जाने पर कैसा symptom common तौर पर दिखता है?",
       "options": [
-        "Remote ka poora circuit short ho jata hai",
-        "Sabhi buttons ek saath permanently ON reh jate hain",
-        "Kuch particular buttons dabane par response inconsistent ya bilkul nahi milta jabki baaki buttons theek kaam karte hain",
-        "Remote ki battery achanak jaldi khatam hone lagti hai"
+        "Remote का पूरा circuit short हो जाता है",
+        "सभी buttons एक साथ permanently ON रह जाते हैं",
+        "कुछ particular buttons दबाने पर response inconsistent या बिल्कुल नहीं मिलता जबकि बाकी buttons ठीक काम करते हैं",
+        "Remote की battery अचानक जल्दी खत्म होने लगती है"
       ],
       "correctIndex": 2,
-      "explanation": "Tact switch contacts par oxidation ya dust jam jaane se sirf usी particular button ka electrical contact kamzor ho jata hai, jisse wo button kabhi kaam karta hai kabhi nahi, jabki baaki buttons normal rehte hain — isliye option C सही है। Iske karan circuit short nahi hota, sabhi buttons permanently ON nahi hote, aur battery drain se iska koi direct sambandh nahi hai।"
+      "explanation": "Tact switch contacts पर oxidation या dust जम जाने से सिर्फ उसी particular button का electrical contact कमजोर हो जाता है, जिससे वो button कभी काम करता है कभी नहीं, जबकि बाकी buttons normal रहते हैं — इसलिए option C सही है। इसके कारण circuit short नहीं होता, सभी buttons permanently ON नहीं होते, और battery drain से इसका कोई direct संबंध नहीं है।"
     },
     {
       "id": "u10_tv_remote_control_q16",
-      "question": "TV ke front panel par laga IR sensor window agar dust ya kisi object se blocked ho jaye to kya hoga?",
+      "question": "TV के front panel पर लगा IR sensor window अगर dust या किसी object से blocked हो जाए तो क्या होगा?",
       "options": [
-        "TV apne aap band ho jayega",
-        "Remote ki battery jaldi drain hone lagegi",
-        "Sirf volume control buttons kaam karna band karenge",
-        "TV remote ke kisi bhi button ka response nahi dega, kyunki IR signal receiver tak pahunch hi nahi payega"
+        "TV अपने आप बंद हो जाएगा",
+        "Remote की battery जल्दी drain होने लगेगी",
+        "सिर्फ volume control buttons काम करना बंद करेंगे",
+        "TV remote के किसी भी button का response नहीं देगा, क्योंकि IR signal receiver तक पहुँच ही नहीं पाएगा"
       ],
       "correctIndex": 3,
-      "explanation": "Agar IR sensor window blocked ho jaye to remote se bheja gaya IR signal receiver tak pahunch hi nahi payega, isliye TV kisi bhi command ka response nahi dega — option D सही है। TV apne aap band nahi hoga, remote ki battery is se drain nahi hoti, aur sirf ek button ka effect nahi hoga balki sabhi buttons affected hote hain kyunki sabhi ek hi IR path use karte hain।"
+      "explanation": "अगर IR sensor window blocked हो जाए तो remote से भेजा गया IR signal receiver तक पहुँच ही नहीं पाएगा, इसलिए TV किसी भी command का response नहीं देगा — option D सही है। TV अपने आप बंद नहीं होगा, remote की battery इससे drain नहीं होती, और सिर्फ एक button का effect नहीं होगा बल्कि सभी buttons affected होते हैं क्योंकि सभी एक ही IR path use करते हैं।"
     },
     {
       "id": "u10_tv_remote_control_q17",
-      "question": "Ek technician mobile camera se confirm karta hai ki remote ki IR LED theek glow kar rahi hai, phir bhi TV ke andar laga IR receiver IC faulty ho to symptom kya hoga?",
+      "question": "एक technician mobile camera से confirm करता है कि remote की IR LED ठीक glow कर रही है, फिर भी TV के अंदर लगा IR receiver IC faulty हो तो symptom क्या होगा?",
       "options": [
-        "TV remote ke kisi bhi button ka response nahi dega, chahe remote sahi tarike se IR signal bhej raha ho",
-        "Sirf ek button kaam nahi karega, baaki sab normal rahenge",
-        "TV ki picture quality kharab ho jayegi",
-        "Remote ki wireless range achanak badh jayegi"
+        "TV remote के किसी भी button का response नहीं देगा, चाहे remote सही तरीके से IR signal भेज रहा हो",
+        "सिर्फ एक button काम नहीं करेगा, बाकी सब normal रहेंगे",
+        "TV की picture quality खराब हो जाएगी",
+        "Remote की wireless range अचानक बढ़ जाएगी"
       ],
       "correctIndex": 0,
-      "explanation": "Chahe transmitter (remote) sahi kaam kar raha ho, agar TV ka IR receiver IC faulty hai to wo aane wale signal ko decode hi nahi kar payega, isliye TV kisi bhi command ka response nahi dega — option A सही है। Ye problem sirf ek button tak seemित nahi rehti, TV ki picture quality (video processing) se iska seedha sambandh nahi hai, aur faulty receiver se range badhna technically galat hai।"
+      "explanation": "चाहे transmitter (remote) सही काम कर रहा हो, अगर TV का IR receiver IC faulty है तो वो आने वाले signal को decode ही नहीं कर पाएगा, इसलिए TV किसी भी command का response नहीं देगा — option A सही है। ये problem सिर्फ एक button तक सीमित नहीं रहती, TV की picture quality (video processing) से इसका सीधा संबंध नहीं है, और faulty receiver से range बढ़ना technically गलत है।"
     },
     {
       "id": "u10_tv_remote_control_q18",
-      "question": "Remote control mein encoder IC fault hone par kaunsa symptom common taur par dekha jata hai?",
+      "question": "Remote control में encoder IC fault होने पर कौनसा symptom common तौर पर देखा जाता है?",
       "options": [
-        "Remote ki battery life double ho jati hai",
-        "Remote galat code transmit karta hai ya bilkul code generate nahi karta, jisse TV wrong command follow kare ya koi response na de",
-        "IR LED bina kisi button dabaye permanently ON reh jati hai normal operation mein",
-        "Remote ka range automatically badh jata hai"
+        "Remote की battery life double हो जाती है",
+        "Remote गलत code transmit करता है या बिल्कुल code generate नहीं करता, जिससे TV wrong command follow करे या कोई response ना दे",
+        "IR LED बिना किसी button दबाए permanently ON रह जाती है normal operation में",
+        "Remote का range automatically बढ़ जाता है"
       ],
       "correctIndex": 1,
-      "explanation": "Encoder IC hi key press ke corresponding sahi digital code banata hai; iske faulty hone par galat code ban sakta hai ya koi code generate hi nahi hota, jisse TV wrong action kare ya kuch bhi na kare — isliye option B सही है। Battery life encoder fault se badhती nahi, normal working mein LED continuously ON nahi rehti, aur range fault se badhने ka koi technical aadhaar nahi hai।"
+      "explanation": "Encoder IC ही key press के corresponding सही digital code बनाता है; इसके faulty होने पर गलत code बन सकता है या कोई code generate ही नहीं होता, जिससे TV wrong action करे या कुछ भी ना करे — इसलिए option B सही है। Battery life encoder fault से बढ़ती नहीं, normal working में LED continuously ON नहीं रहती, और range fault से बढ़ने का कोई technical आधार नहीं है।"
     },
     {
       "id": "u10_tv_remote_control_q19",
-      "question": "\"Universal remote\" ya \"learning remote\" ka concept kya hai?",
+      "question": "\"Universal remote\" या \"learning remote\" का concept क्या है?",
       "options": [
-        "Ye remote sirf ek hi TV brand ke liye kaam karta hai",
-        "Ye remote bina battery ke sirf solar power se chalta hai",
-        "Ye remote multiple devices (jaise TV, DVD player, set-top box) ke IR codes ko store/learn karke ek hi remote se sabko control kar sakta hai",
-        "Ye remote sirf RF signal use karta hai, IR bilkul nahi"
+        "ये remote सिर्फ एक ही TV brand के लिए काम करता है",
+        "ये remote बिना battery के सिर्फ solar power से चलता है",
+        "ये remote multiple devices (जैसे TV, DVD player, set-top box) के IR codes को store/learn करके एक ही remote से सबको control कर सकता है",
+        "ये remote सिर्फ RF signal use करता है, IR बिल्कुल नहीं"
       ],
       "correctIndex": 2,
-      "explanation": "Universal ya learning remote alag-alag devices ke IR command codes ko internal memory mein store/learn kar leta hai, jisse ek hi remote se multiple brands/devices control ho sakte hain, isliye option C सही है। Ye single brand tak seemित nahi hota, generally standard battery use karta hai (solar nahi), aur commonly IR technology par hi based hota hai, sirf RF par nahi।"
+      "explanation": "Universal या learning remote अलग-अलग devices के IR command codes को internal memory में store/learn कर लेता है, जिससे एक ही remote से multiple brands/devices control हो सकते हैं, इसलिए option C सही है। ये single brand तक सीमित नहीं होता, generally standard battery use करता है (solar नहीं), और commonly IR technology पर ही based होता है, सिर्फ RF पर नहीं।"
     },
     {
       "id": "u10_tv_remote_control_q20",
-      "question": "IR aur RF remote control ki obstruction (jaise deewar) ke through kaam karne ki capability compare karne par sahi statement kaunsa hai?",
+      "question": "IR और RF remote control की obstruction (जैसे दीवार) के through काम करने की capability compare करने पर सही statement कौनसा है?",
       "options": [
-        "Dono technologies equally deewar ke through kaam karti hain",
-        "IR remote deewar ke through sabse behtar kaam karta hai",
-        "RF remote ko bhi obstruction se utna hi block kiya ja sakta hai jitna IR remote ko",
-        "RF remote ki radio waves obstruction ko significant had tak penetrate kar sakti hain jabki IR remote ka signal solid obstruction se easily block ho jata hai"
+        "दोनों technologies equally दीवार के through काम करती हैं",
+        "IR remote दीवार के through सबसे बेहतर काम करता है",
+        "RF remote को भी obstruction से उतना ही block किया जा सकता है जितना IR remote को",
+        "RF remote की radio waves obstruction को significant हद तक penetrate कर सकती हैं जबकि IR remote का signal solid obstruction से easily block हो जाता है"
       ],
       "correctIndex": 3,
-      "explanation": "Radio waves apni physical properties ki wajah se solid obstacles ke through kaafi hadd tak penetrate kar sakti hain, jabki infrared light straight-line travel karti hai aur wall jaise obstruction se turant block ho jati hai — isliye option D सही है। IR aur RF ki capability equal nahi hai, IR deewar ke through kaam nahi karta, aur RF IR jitna easily block nahi hota।"
+      "explanation": "Radio waves अपनी physical properties की वजह से solid obstacles के through काफी हद तक penetrate कर सकती हैं, जबकि infrared light straight-line travel करती है और wall जैसे obstruction से तुरंत block हो जाती है — इसलिए option D सही है। IR और RF की capability equal नहीं है, IR दीवार के through काम नहीं करता, और RF IR जितना easily block नहीं होता।"
     },
     {
       "id": "u10_tv_remote_control_q21",
-      "question": "Ek IR remote ka carrier frequency approx 38kHz hai. Iska time period (T) approx kitna hoga?",
+      "question": "एक IR remote का carrier frequency approx 38kHz है। इसका time period (T) approx कितना होगा?",
       "options": [
         "Approx 26.3 microseconds (T = 1/f = 1/38000 ≈ 26.3 µs)",
         "Approx 38 milliseconds",
@@ -254,115 +254,115 @@
         "Approx 380 microseconds"
       ],
       "correctIndex": 0,
-      "explanation": "Time period T = 1/frequency = 1/38000 Hz ≈ 26.3 microseconds, isliye option A सही है। 38 milliseconds बहुत बड़ा मान है (ये लगभग 26.3 Hz ka time period hota), 2.6 seconds to bilkul galat scale hai, aur 380 microseconds galat calculation ka result hai (dus guna galat)।"
+      "explanation": "Time period T = 1/frequency = 1/38000 Hz ≈ 26.3 microseconds, इसलिए option A सही है। 38 milliseconds बहुत बड़ा मान है (ये लगभग 26.3 Hz का time period होता), 2.6 seconds तो बिल्कुल गलत scale है, और 380 microseconds गलत calculation का result है (दस गुना गलत)।"
     },
     {
       "id": "u10_tv_remote_control_q22",
-      "question": "IR technology wale remote control ka typical operating range kitna hota hai?",
+      "question": "IR technology वाले remote control का typical operating range कितना होता है?",
       "options": [
-        "Sainkdo meter tak, deewar ke through bhi",
-        "Approx 5 se 10 meter tak, aur wo bhi sirf line-of-sight ke andar",
-        "Unlimited range, kabhi bhi kahin se bhi",
-        "1 cm se bhi kam, physical contact zaroori"
+        "सैंकड़ों meter तक, दीवार के through भी",
+        "Approx 5 से 10 meter तक, और वो भी सिर्फ line-of-sight के अंदर",
+        "Unlimited range, कभी भी कहीं से भी",
+        "1 cm से भी कम, physical contact जरूरी"
       ],
       "correctIndex": 1,
-      "explanation": "IR remote generally approx 5-10 meter ke range mein kaam karta hai, aur wo bhi sirf tab jab transmitter aur receiver ke beech clear line-of-sight ho — isliye option B सही है। Sainkdo meter ka range ya deewar ke through kaam karna IR ki characteristic nahi hai (ye RF ke liye zyada sahi hai), unlimited range ek anrealistic claim hai, aur physical contact ki zaroorat wireless IR remote mein bilkul nahi hoti।"
+      "explanation": "IR remote generally approx 5-10 meter के range में काम करता है, और वो भी सिर्फ तब जब transmitter और receiver के बीच clear line-of-sight हो — इसलिए option B सही है। सैंकड़ों meter का range या दीवार के through काम करना IR की characteristic नहीं है (ये RF के लिए ज्यादा सही है), unlimited range एक अवास्तविक claim है, और physical contact की जरूरत wireless IR remote में बिल्कुल नहीं होती।"
     },
     {
       "id": "u10_tv_remote_control_q23",
-      "question": "Remote control mein oscillator/ceramic resonator ka role IR transmission mein kya hota hai?",
+      "question": "Remote control में oscillator/ceramic resonator का role IR transmission में क्या होता है?",
       "options": [
-        "Keypad ko electrical power dena",
-        "IR LED ko sirf mechanical support dena",
-        "Encoder IC ko ek stable reference frequency provide karna jisse carrier frequency (jaise approx 38kHz) accurately generate ho sake",
-        "Battery ke output voltage ko regulate karna"
+        "Keypad को electrical power देना",
+        "IR LED को सिर्फ mechanical support देना",
+        "Encoder IC को एक stable reference frequency provide करना जिससे carrier frequency (जैसे approx 38kHz) accurately generate हो सके",
+        "Battery के output voltage को regulate करना"
       ],
       "correctIndex": 2,
-      "explanation": "Ceramic resonator/oscillator encoder IC ko ek stable timing reference deta hai jisse IC accurately carrier frequency generate kar paata hai jis par data modulate hota hai — isliye option C सही है। Ye keypad ko power nahi deta, LED ke liye ye koi mechanical support nahi hai, aur voltage regulation ka kaam ye component nahi karta।"
+      "explanation": "Ceramic resonator/oscillator encoder IC को एक stable timing reference देता है जिससे IC accurately carrier frequency generate कर पाता है जिस पर data modulate होता है — इसलिए option C सही है। ये keypad को power नहीं देता, LED के लिए ये कोई mechanical support नहीं है, और voltage regulation का काम ये component नहीं करता।"
     },
     {
       "id": "u10_tv_remote_control_q24",
-      "question": "RF remote control mein IR remote ke muqable additional circuitry ki zarurat kyun padti hai?",
+      "question": "RF remote control में IR remote के मुकाबले additional circuitry की जरूरत क्यों पड़ती है?",
       "options": [
-        "Kyunki RF technology mein IR se kam range milti hai",
-        "Kyunki RF signal ko bhi IR jaisa hi simple LED se transmit kiya ja sakta hai",
-        "Kyunki RF remote ko battery ki koi zarurat nahi hoti",
-        "Kyunki RF transmission ke liye RF transmitter/receiver module, antenna aur pairing/encoding circuitry chahiye jo IR ke simple LED-photodiode setup se zyada complex hai"
+        "क्योंकि RF technology में IR से कम range मिलती है",
+        "क्योंकि RF signal को भी IR जैसा ही simple LED से transmit किया जा सकता है",
+        "क्योंकि RF remote को battery की कोई जरूरत नहीं होती",
+        "क्योंकि RF transmission के लिए RF transmitter/receiver module, antenna और pairing/encoding circuitry चाहिए जो IR के simple LED-photodiode setup से ज्यादा complex है"
       ],
       "correctIndex": 3,
-      "explanation": "RF communication ke liye dedicated RF transceiver chip, antenna aur device pairing/encoding logic zaroori hoti hai jo basic IR ke LED-photodiode setup se kaafi zyada complex hoti hai, isliye option D सही है। RF range IR se generally jyada hoti hai (kam nahi), RF signal simple visible/IR LED se transmit nahi hota, aur RF remote ko bhi normal battery ki hi zaroorat hoti hai।"
+      "explanation": "RF communication के लिए dedicated RF transceiver chip, antenna और device pairing/encoding logic जरूरी होती है जो basic IR के LED-photodiode setup से काफी ज्यादा complex होती है, इसलिए option D सही है। RF range IR से generally ज्यादा होती है (कम नहीं), RF signal simple visible/IR LED से transmit नहीं होता, और RF remote को भी normal battery की ही जरूरत होती है।"
     },
     {
       "id": "u10_tv_remote_control_q25",
-      "question": "Ek technician remote check karta hai — battery replace kar chuka hai, mobile camera se IR LED ka glow bhi confirm ho chuka hai, aur sabhi tact switches theek kaam kar rahe hain, phir bhi TV response nahi de rahi. Agla logical troubleshooting step kya hoga?",
+      "question": "एक technician remote check करता है — battery replace कर चुका है, mobile camera से IR LED का glow भी confirm हो चुका है, और सभी tact switches ठीक काम कर रहे हैं, फिर भी TV response नहीं दे रही। अगला logical troubleshooting step क्या होगा?",
       "options": [
-        "TV ke IR receiver module/sensor ko check karna (blocked window, faulty receiver IC ya faulty demodulator ho sakta hai)",
-        "Remote ki battery ko dobara replace karna",
-        "Remote ke tact switches ko dobara solder karna",
-        "Bina further check kiye seedhe remote ka encoder IC change kar dena"
+        "TV के IR receiver module/sensor को check करना (blocked window, faulty receiver IC या faulty demodulator हो सकता है)",
+        "Remote की battery को दोबारा replace करना",
+        "Remote के tact switches को दोबारा solder करना",
+        "बिना further check किए सीधे remote का encoder IC change कर देना"
       ],
       "correctIndex": 0,
-      "explanation": "Jab remote transmitter side ki sabhi possible faults (battery, LED, switches) exclude ho chuki hain aur signal sahi bheja ja raha hai, to logical agla step TV ke receiving side (IR sensor window, receiver IC, demodulator) ko check karna hai — isliye option A सही है। Battery ya switches ko dobara check karna repetitive hai jab wo already theek confirm ho chuke hain, aur bina further diagnosis ke encoder IC change karna galat approach hai।"
+      "explanation": "जब remote transmitter side की सभी possible faults (battery, LED, switches) exclude हो चुकी हैं और signal सही भेजा जा रहा है, तो logical अगला step TV के receiving side (IR sensor window, receiver IC, demodulator) को check करना है — इसलिए option A सही है। Battery या switches को दोबारा check करना repetitive है जब वो already ठीक confirm हो चुके हैं, और बिना further diagnosis के encoder IC change करना गलत approach है।"
     },
     {
       "id": "u10_tv_remote_control_q26",
-      "question": "IR receiver module mein \"demodulator IC\" ka kaam kya hota hai?",
+      "question": "IR receiver module में \"demodulator IC\" का काम क्या होता है?",
       "options": [
-        "IR LED ko current supply karna",
-        "Modulated IR signal ko receive karke usme se carrier frequency hata kar original digital data pulses ko decode karna",
-        "Tact switch ke contacts ko saaf karna",
-        "TV ke main power supply ko control karna"
+        "IR LED को current supply करना",
+        "Modulated IR signal को receive करके उसमें से carrier frequency हटाकर original digital data pulses को decode करना",
+        "Tact switch के contacts को साफ करना",
+        "TV के main power supply को control करना"
       ],
       "correctIndex": 1,
-      "explanation": "Demodulator IC photodiode/phototransistor se aaye modulated IR signal ko process karke carrier frequency hata deta hai aur original digital data (jo key-press ko represent karta hai) ko decode karke TV ke microcontroller tak bhejta hai — isliye option B सही है। Ye IR LED (transmitter side ka part) ko current nahi deta, tact switch cleaning se iska koi lena-dena nahi, aur TV ka main power supply control karna iska kaam nahi hai।"
+      "explanation": "Demodulator IC photodiode/phototransistor से आए modulated IR signal को process करके carrier frequency हटा देता है और original digital data (जो key-press को represent करता है) को decode करके TV के microcontroller तक भेजता है — इसलिए option B सही है। ये IR LED (transmitter side का part) को current नहीं देता, tact switch cleaning से इसका कोई लेना-देना नहीं, और TV का main power supply control करना इसका काम नहीं है।"
     },
     {
       "id": "u10_tv_remote_control_q27",
-      "question": "Remote control ka ek particular button baar-baar dabane par kabhi response deta hai kabhi nahi. Sabse likely cause kya hai?",
+      "question": "Remote control का एक particular button बार-बार दबाने पर कभी response देता है कभी नहीं। सबसे likely cause क्या है?",
       "options": [
-        "Encoder IC completely dead ho gaya hai",
-        "TV ka IR sensor permanently block ho gaya hai",
-        "Us particular tact switch ke contacts oxidise ya dirty ho gaye hain jisse intermittent contact ban raha hai",
-        "Battery bilkul dead ho gayi hai"
+        "Encoder IC completely dead हो गया है",
+        "TV का IR sensor permanently block हो गया है",
+        "उस particular tact switch के contacts oxidise या dirty हो गए हैं जिससे intermittent contact बन रहा है",
+        "Battery बिल्कुल dead हो गई है"
       ],
       "correctIndex": 2,
-      "explanation": "Jab sirf ek particular button ka response inconsistent ho jabki baaki buttons normal kaam kar rahe hon, to sabse likely cause usी switch ke contacts par oxidation/dust ke karan intermittent connection hona hai — isliye option C सही है। Agar encoder IC dead ho ya battery dead ho to sabhi buttons affect honge, aur TV sensor permanently blocked hone par bhi sabhi buttons ka response ruk jayega, sirf ek button nahi।"
+      "explanation": "जब सिर्फ एक particular button का response inconsistent हो जबकि बाकी buttons normal काम कर रहे हों, तो सबसे likely cause उसी switch के contacts पर oxidation/dust के कारण intermittent connection होना है — इसलिए option C सही है। अगर encoder IC dead हो या battery dead हो तो सभी buttons affect होंगे, और TV sensor permanently blocked होने पर भी सभी buttons का response रुक जाएगा, सिर्फ एक button नहीं।"
     },
     {
       "id": "u10_tv_remote_control_q28",
-      "question": "IR aur RF remote control ki comparison mein \"examples\" ke roop mein sahi jodi kaunsi hai?",
+      "question": "IR और RF remote control की comparison में \"examples\" के रूप में सही जोड़ी कौनसी है?",
       "options": [
-        "IR - smart TV ka Bluetooth voice remote; RF - basic ceiling fan ka remote",
-        "Dono types hamesha sirf IR technology use karte hain",
-        "Dono types hamesha sirf RF technology use karte hain",
-        "IR - traditional TV/AC remote; RF - wireless keyboard/mouse aur modern smart TV ke Bluetooth/voice remote"
+        "IR - smart TV का Bluetooth voice remote; RF - basic ceiling fan का remote",
+        "दोनों types हमेशा सिर्फ IR technology use करते हैं",
+        "दोनों types हमेशा सिर्फ RF technology use करते हैं",
+        "IR - traditional TV/AC remote; RF - wireless keyboard/mouse और modern smart TV के Bluetooth/voice remote"
       ],
       "correctIndex": 3,
-      "explanation": "Traditional TV/AC remotes classically IR par based hote hain, jabki wireless keyboard/mouse aur smart TV ke modern voice/Bluetooth remotes RF technology use karte hain, isliye option D सही example pairing है। Option A ulti jodi banata hai (Bluetooth remote actually RF hai, IR nahi), aur options B/C dono galat generalization hain kyunki practically dono technologies alag-alag use cases mein use hoti hain."
+      "explanation": "Traditional TV/AC remotes classically IR पर based होते हैं, जबकि wireless keyboard/mouse और smart TV के modern voice/Bluetooth remotes RF technology use करते हैं, इसलिए option D सही example pairing है। Option A उल्टी जोड़ी बनाता है (Bluetooth remote actually RF है, IR नहीं), और options B/C दोनों गलत generalization हैं क्योंकि practically दोनों technologies अलग-अलग use cases में use होती हैं।"
     },
     {
       "id": "u10_tv_remote_control_q29",
-      "question": "Remote control ka encoder IC har key press par IR LED ko kis form mein signal bhejne ke liye drive karta hai?",
+      "question": "Remote control का encoder IC हर key press पर IR LED को किस form में signal भेजने के लिए drive करता है?",
       "options": [
-        "Ek series of modulated pulses (carrier frequency par ON-OFF pattern) jo us particular key ka unique digital code represent karte hain",
-        "Ek continuous steady DC current bina kisi pattern ke",
-        "Ek analog sine wave audio signal",
-        "Ek single fixed voltage jo hamesha same rehta hai chahe koi bhi key dabayi jaye"
+        "एक series of modulated pulses (carrier frequency पर ON-OFF pattern) जो उस particular key का unique digital code represent करते हैं",
+        "एक continuous steady DC current बिना किसी pattern के",
+        "एक analog sine wave audio signal",
+        "एक single fixed voltage जो हमेशा same रहता है चाहे कोई भी key दबायी जाए"
       ],
       "correctIndex": 0,
-      "explanation": "Har key ke liye encoder IC ek unique modulated pulse pattern (carrier frequency par ON-OFF sequence) generate karta hai jo IR LED se transmit hota hai aur receiver side par decode hokar sahi key identify hoti hai — isliye option A सही है। Continuous DC current mein koi data encode nahi ho sakta, analog audio sine wave IR remote ka standard nahi hai, aur agar sabhi keys ke liye fixed same voltage ho to receiver alag-alag keys ko differentiate hi nahi kar payega।"
+      "explanation": "हर key के लिए encoder IC एक unique modulated pulse pattern (carrier frequency पर ON-OFF sequence) generate करता है जो IR LED से transmit होता है और receiver side पर decode होकर सही key identify होती है — इसलिए option A सही है। Continuous DC current में कोई data encode नहीं हो सकता, analog audio sine wave IR remote का standard नहीं है, और अगर सभी keys के लिए fixed same voltage हो तो receiver अलग-अलग keys को differentiate ही नहीं कर पाएगा।"
     },
     {
       "id": "u10_tv_remote_control_q30",
-      "question": "IR remote control system ke complete signal chain mein components ka sahi order kya hai?",
+      "question": "IR remote control system के complete signal chain में components का सही order क्या है?",
       "options": [
         "IR receiver -> encoder IC -> IR LED -> keypad",
         "Keypad (tact switch) -> encoder IC -> IR LED driver transistor -> IR LED (transmit) -> IR photodiode/receiver -> demodulator IC (decode) -> TV control circuit",
         "Battery -> demodulator IC -> keypad -> TV",
-        "IR LED -> keypad -> TV directly, bina kisi receiver ke"
+        "IR LED -> keypad -> TV directly, बिना किसी receiver के"
       ],
       "correctIndex": 1,
-      "explanation": "Sahi signal chain hai: keypad se key press detect hoti hai, encoder IC us key ka code generate karta hai, driver transistor IR LED ko drive karta hai jo signal transmit karti hai, phir TV ka photodiode/receiver signal pakadta hai aur demodulator IC use decode karke TV ke control circuit tak bhejta hai — isliye option B सही है। Baaki teeno options mein order ulta ya incomplete/galat hai (jaise receiver pehle rakhna, ya bina receiver ke seedhe TV se connect karna), jo actual working ko sahi tarike se represent nahi karte।"
+      "explanation": "सही signal chain है: keypad से key press detect होती है, encoder IC उस key का code generate करता है, driver transistor IR LED को drive करता है जो signal transmit करती है, फिर TV का photodiode/receiver signal पकड़ता है और demodulator IC उसे decode करके TV के control circuit तक भेजता है — इसलिए option B सही है। बाकी तीनों options में order उल्टा या incomplete/गलत है (जैसे receiver पहले रखना, या बिना receiver के सीधे TV से connect करना), जो actual working को सही तरीके से represent नहीं करते।"
     }
   ]
 }

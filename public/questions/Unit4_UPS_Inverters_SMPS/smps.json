@@ -363,6 +363,186 @@
       ],
       "correctIndex": 1,
       "explanation": "SMPS का input bulk filter capacitor (लगभग 300-400V DC) mains disconnect करने के बाद भी काफी देर तक high voltage store रखता है, इसलिए पहले mains disconnect करके capacitor को उचित resistor से सुरक्षित discharge करना अनिवार्य है ताकि electric shock से बचा जा सके। A बहुत खतरनाक है, C fuse short करना protection हटाकर आग/damage का खतरा बढ़ाता है, D मरम्मत के लिए अनावश्यक व विनाशकारी कदम है।"
+    },
+    {
+      "id": "u4_smps_q31",
+      "question": "एक isolated SMPS के block diagram में stages का सही क्रम (AC mains input से DC output तक) क्या होता है?",
+      "options": [
+        "Input rectifier-filter → High-frequency switching (chopper) stage → High-frequency transformer → Output rectifier-filter → Feedback/control",
+        "Feedback/control → Output rectifier-filter → Input rectifier-filter → Transformer → Switching stage",
+        "High-frequency transformer → Input rectifier-filter → Feedback/control → Switching stage → Output rectifier-filter",
+        "Output rectifier-filter → Switching stage → Feedback/control → Input rectifier-filter → Transformer"
+      ],
+      "correctIndex": 0,
+      "explanation": "SMPS में AC mains पहले input rectifier-filter से unregulated DC बनती है, फिर switching transistor उसे high frequency पर chop करता है, high-frequency transformer के माध्यम से isolate व transform होकर output rectifier-filter से smooth DC मिलती है, और feedback loop इस पूरे process को control करता है। अन्य options का क्रम व्यावहारिक block diagram से मेल नहीं खाता।"
+    },
+    {
+      "id": "u4_smps_q32",
+      "question": "Buck converter topology (step-down SMPS) में output voltage input voltage से कैसे कम रहता है?",
+      "options": [
+        "Transformer के turns ratio को हमेशा 1:1 से अधिक रखकर",
+        "Series resistor द्वारा अतिरिक्त voltage को heat में नष्ट करके",
+        "Switch को duty cycle D पर ON-OFF करके, जिससे average output = D × Input voltage होता है और D सदैव 1 से कम रखा जाता है",
+        "Output पर एक बड़ा capacitor जोड़कर voltage को घटाकर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck (step-down) converter में switch की duty cycle D (जो 0 से 1 के बीच होती है) के अनुसार average output voltage = D × Vin मिलता है, इसलिए D<1 रहने पर output हमेशा input से कम रहता है, बिना अधिक heat loss के। A boost-type सोच है, B linear regulator का lossy तरीका है, D केवल ripple कम करता है, voltage स्तर तय नहीं करता।"
+    },
+    {
+      "id": "u4_smps_q33",
+      "question": "Boost converter topology (step-up SMPS) में output voltage, input voltage से अधिक कैसे प्राप्त होता है?",
+      "options": [
+        "Switch OFF होने पर inductor में store ऊर्जा, अपने collapsing magnetic field के कारण उच्च voltage के रूप में diode के माध्यम से output capacitor को दी जाती है",
+        "एक step-up mains transformer लगाकर आवृत्ति 50Hz पर काम करके",
+        "Input AC को सीधे बिना rectify किए output में भेजकर",
+        "Duty cycle को 1 से अधिक बनाकर"
+      ],
+      "correctIndex": 0,
+      "explanation": "Boost converter में switch ON रहने पर inductor में current व ऊर्जा बढ़ती है, और switch OFF होने पर inductor अपनी collapsing field ऊर्जा को उच्च voltage spike के रूप में diode के माध्यम से output capacitor में transfer करता है, जिससे output, input से अधिक बनता है। B यह एक अलग (linear) तरीका है, C अव्यावहारिक है, D duty cycle हमेशा 0 और 1 के बीच ही सीमित रहती है।"
+    },
+    {
+      "id": "u4_smps_q34",
+      "question": "SMPS के control block में error amplifier (comparator) का क्या कार्य है?",
+      "options": [
+        "AC mains की frequency को amplify करना",
+        "Output rectifier diode की current को बढ़ाना",
+        "Sensed output voltage और fixed reference voltage के बीच के अंतर (error) को amplify करके PWM controller को भेजना, जो duty cycle तय करता है",
+        "Transformer core की temperature मापना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Error amplifier feedback से मिले sensed output voltage की reference voltage से तुलना करता है, अंतर को amplify करता है, और यह amplified error signal PWM controller को दिया जाता है जो duty cycle adjust करके output को नियत रखता है। A, B, D control block के इस कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q35",
+      "question": "SMPS में high-frequency transformer का एक अन्य महत्वपूर्ण कार्य (size कम करने के अलावा) क्या है?",
+      "options": [
+        "Output ripple को पूरी तरह समाप्त करना",
+        "Input AC mains और output DC के बीच electrical isolation प्रदान करना ताकि user को shock से सुरक्षा मिले",
+        "PWM signal उत्पन्न करना",
+        "Switching frequency को स्थिर रखना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Transformer, size कम करने के साथ-साथ primary (high-voltage mains side) और secondary (low-voltage output side) के बीच galvanic isolation भी देता है, जो user safety के लिए आवश्यक है। A ripple filter का काम है, C PWM controller IC करती है, D control loop की जिम्मेदारी है।"
+    },
+    {
+      "id": "u4_smps_q36",
+      "question": "SMPS के input side पर लगा NTC (Negative Temperature Coefficient) thermistor किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Output voltage को regulate करने के लिए",
+        "Power ON होते समय bulk filter capacitor की चार्जिंग के कारण होने वाले उच्च inrush current को सीमित करने के लिए",
+        "High-frequency switching noise को filter करने के लिए",
+        "Transformer के core को गरम रखने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Power ON के तुरंत बाद discharged bulk filter capacitor बहुत अधिक inrush current खींचता है; NTC thermistor ठंडा होने पर उच्च resistance दिखाता है जो इस current को सीमित करता है और गरम होने पर resistance घटा देता है ताकि सामान्य operation में loss न हो। A feedback loop का काम है, C EMI filter करता है, D निरर्थक कथन है।"
+    },
+    {
+      "id": "u4_smps_q37",
+      "question": "SMPS में auxiliary (bias) winding, main output winding के अलावा transformer पर क्यों बनाई जाती है?",
+      "options": [
+        "PWM controller IC और अन्य control circuitry को उनकी running supply देने के लिए, ताकि start-up resistor के बाद स्थायी रूप से power मिलता रहे",
+        "केवल cooling fan को चलाने के लिए",
+        "Output ripple को बढ़ाने के लिए",
+        "AC mains को सीधे rectify करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Start-up circuit केवल प्रारंभिक switching शुरू करने के लिए होता है; उसके बाद transformer पर बनी एक अलग auxiliary/bias winding rectify होकर PWM IC व control circuit को निरंतर low-power supply देती है, जिससे start-up resistor में होने वाला power loss बचता है। B, C, D auxiliary winding के उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q38",
+      "question": "Half-bridge SMPS topology, single-switch (forward) topology की तुलना में किस प्रकार भिन्न है?",
+      "options": [
+        "इसमें कोई transformer नहीं होता",
+        "यह केवल low-power application में उपयोग होता है",
+        "इसमें दो switching transistors एक साथ, कभी बंद न होकर, DC को सीधे output में भेजते हैं",
+        "इसमें दो switching transistors alternately conduct करके transformer primary पर higher voltage swing लगाते हैं, जिससे यह relatively higher power handle कर पाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Half-bridge में दो transistors bulk DC bus के आधे-आधे हिस्से को alternately transformer primary पर लगाते हैं, जिससे single-switch forward converter की तुलना में transistor पर voltage stress कम रहता है और अधिक power handle हो सकता है। A, B, C half-bridge की वास्तविक संरचना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q39",
+      "question": "SMPS के switching transistor (MOSFET) पर सामान्यतः heat sink क्यों लगाया जाता है, जबकि इसे 'kम loss' device कहा जाता है?",
+      "options": [
+        "क्योंकि switching के दौरान transition समय (ON से OFF और OFF से ON के बीच) में transistor कुछ समय के लिए आंशिक रूप से conduct करता है, जिससे कुछ switching loss उत्पन्न होती है और उसे dissipate करना पड़ता है",
+        "क्योंकि transistor हमेशा पूरी तरह active region में रहता है",
+        "क्योंकि output rectifier diode कभी गरम नहीं होता",
+        "क्योंकि heat sink output voltage को बढ़ाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "यद्यपि switching transistor साधारणतः ON (कम loss) या OFF (कोई loss नहीं) रहता है, transition के दौरान वह क्षणिक रूप से आंशिक conduction (linear-जैसी स्थिति) से गुजरता है जिससे switching loss होती है; उच्च frequency पर यह loss बढ़ जाती है, इसलिए heat sink आवश्यक होता है। B linear regulator जैसी स्थिति है (SMPS में नहीं होनी चाहिए), C व D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_smps_q40",
+      "question": "समान output power के लिए SMPS का transformer, 50Hz linear supply के transformer से आकार व वजन में इतना छोटा क्यों होता है?",
+      "options": [
+        "क्योंकि transformer core में required flux density उच्च switching frequency पर कम समय के लिए ही बदलती है, जिससे समान power transfer के लिए core cross-section व turns कम हो जाते हैं",
+        "क्योंकि SMPS transformer में कोई core नहीं होता",
+        "क्योंकि SMPS में output power हमेशा बहुत कम रखा जाता है",
+        "क्योंकि SMPS transformer केवल DC पर काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transformer की आवश्यक core size, operating frequency के व्युत्क्रमानुपाती होती है (उच्च frequency पर प्रति cycle कम समय में समान volt-time area प्राप्त होता है), इसलिए kHz range में switching करने से core व winding दोनों काफी छोटे हो जाते हैं। B, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_smps_q41",
+      "question": "SMPS का एक प्रमुख disadvantage (advantage के साथ trade-off) क्या है, जिसकी वजह से इसका design अधिक जटिल हो जाता है?",
+      "options": [
+        "यह हमेशा linear supply से भारी होता है",
+        "High-frequency switching के कारण यह EMI (electromagnetic noise) उत्पन्न करता है, जिसके लिए proper filtering व shielding आवश्यक होती है",
+        "यह केवल AC output देता है",
+        "इसमें feedback control संभव नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "High-frequency switching के कारण SMPS conducted व radiated EMI उत्पन्न करता है, जिसे control करने के लिए input/output filters, shielding व proper PCB layout जैसी अतिरिक्त design सावधानियाँ लेनी पड़ती हैं। A, C, D SMPS के वास्तविक गुणों के विपरीत हैं (यह हल्का होता है, DC output देता है, और feedback पर ही आधारित है)।"
+    },
+    {
+      "id": "u4_smps_q42",
+      "question": "Buck, boost और flyback/forward topologies में से किसे चुना जाता है, यह मुख्यतः किस आवश्यकता पर निर्भर करता है?",
+      "options": [
+        "केवल available room के रंग पर",
+        "यह चाहे किसी भी requirement पर निर्भर न हो, सभी topology हर जगह equally उपयुक्त हैं",
+        "क्या output voltage input से कम/अधिक चाहिए, कितनी power level चाहिए, और input-output electrical isolation आवश्यक है या नहीं",
+        "केवल mains supply की frequency पर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck (non-isolated step-down), boost (non-isolated step-up) और flyback/forward (isolated, transformer-based) का चुनाव required voltage relation (कम/अधिक), power level तथा safety के लिए isolation की आवश्यकता के अनुसार किया जाता है। A, B, D चयन के वास्तविक आधार से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_smps_q43",
+      "question": "SMPS की working principle में 'closed-loop regulation' का क्या अर्थ है?",
+      "options": [
+        "Output voltage को बिना किसी feedback के केवल fixed duty cycle पर चलाना",
+        "Output की वास्तविक स्थिति को निरंतर sense करके feedback के माध्यम से duty cycle को स्वचालित रूप से adjust करना, ताकि load या input variation के बावजूद output स्थिर रहे",
+        "Switching transistor को स्थायी रूप से बंद रखना",
+        "Transformer को circuit से हटाकर सीधे output लेना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Closed-loop (feedback-based) regulation में output continuously sense होता है और उसकी reference से तुलना करके PWM duty cycle real-time में adjust होती रहती है, जिससे load/line changes में भी output स्थिर रहता है; open-loop में ऐसा auto-correction नहीं होता (option A)। C, D निरर्थक कथन हैं।"
+    },
+    {
+      "id": "u4_smps_q44",
+      "question": "यदि SMPS पर सामान्य से अधिक load (अधिक current draw) लगाई जाए, तो सही feedback control में duty cycle पर क्या प्रभाव पड़ेगा ताकि output voltage स्थिर रहे?",
+      "options": [
+        "Duty cycle में कोई बदलाव नहीं होगा",
+        "Switching frequency शून्य हो जाएगी",
+        "Output तुरंत permanently बंद हो जाएगा",
+        "Output voltage थोड़ा गिरने की प्रवृत्ति को feedback loop sense करेगा और PWM controller duty cycle को थोड़ा बढ़ा देगा ताकि average output voltage पुनः नियत स्तर पर आ जाए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Load बढ़ने पर output voltage गिरने की tendency होती है; error amplifier इस गिरावट को sense करता है और PWM controller duty cycle को बढ़ाकर energy transfer बढ़ा देता है जिससे output फिर नियत स्तर पर स्थिर हो जाता है। A गलत क्योंकि यही closed-loop control का मुख्य कार्य है, B और C अव्यावहारिक व असामान्य protection स्थितियाँ हैं, सामान्य regulation नहीं।"
+    },
+    {
+      "id": "u4_smps_q45",
+      "question": "SMPS की तुलना में एक साधारण linear power supply के block diagram में high-frequency switching stage और high-frequency transformer के स्थान पर क्या होता है?",
+      "options": [
+        "एक PWM controller IC जो switching करता है",
+        "एक opto-coupler आधारित isolation stage",
+        "एक 50Hz mains-frequency step-down transformer और उसके बाद एक series pass transistor आधारित linear regulator stage",
+        "कोई transformer या regulator stage ही नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Linear supply में mains frequency (50Hz) पर काम करने वाला भारी step-down transformer होता है और उसके बाद output regulation series pass transistor द्वारा linear (continuously conducting) mode में की जाती है, जिससे SMPS की तुलना में size बड़ा व efficiency कम रहती है। A, B SMPS की विशेषताएँ हैं, D तथ्यात्मक रूप से गलत है क्योंकि regulation stage आवश्यक होता है।"
     }
   ]
 }

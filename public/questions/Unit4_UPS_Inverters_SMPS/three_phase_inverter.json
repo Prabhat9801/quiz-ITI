@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "Three phase inverter तीनों phases के बीच सही 120° phase relationship बनाकर three-phase motors में smoother rotating field और बेहतर torque देता है, जिससे यह बड़े industrial loads के लिए अधिक efficient साबित होता है। Option A गलत है क्योंकि यह मुख्यतः बड़े/industrial loads के लिए है, option C गलत है क्योंकि इसमें single-phase (4) से अधिक (6) switches होते हैं, और option D स्पष्ट रूप से गलत है क्योंकि इसे जटिल control circuit चाहिए।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q31",
+      "question": "Three phase inverter में square-wave switching की जगह Sinusoidal PWM (SPWM) technique अपनाने से output waveform की quality पर मुख्य रूप से क्या effect पड़ता है?",
+      "options": [
+        "Output में harmonics बढ़ जाते हैं और waveform अधिक square हो जाता है",
+        "Switches की संख्या 6 से घटकर 3 हो जाती है",
+        "Output frequency हमेशा 0 Hz हो जाती है",
+        "High-frequency carrier signal के साथ modulation करने से output waveform fundamental sine wave के अधिक निकट होता है और low-order harmonics कम हो जाते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "SPWM में एक high-frequency triangular carrier को sinusoidal reference से compare करके gate pulses बनाए जाते हैं, जिससे average output voltage एक sine wave के आकार का अनुसरण करता है और low-order harmonics काफी कम हो जाते हैं, जबकि plain square-wave switching की तुलना में filtering आसान होती है। Option A उलटा तथ्य है, option B गलत है क्योंकि three-phase bridge में switches की संख्या 6 ही रहती है, और option C गलत है क्योंकि output frequency user-defined रहती है, शून्य नहीं होती।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q32",
+      "question": "Three phase inverter installation में यदि load को star (Y) की जगह delta (Δ) में जोड़ा जाए, तो neutral point की उपलब्धता के संदर्भ में क्या अंतर आता है?",
+      "options": [
+        "Delta connection में एक अलग neutral conductor उपलब्ध होता है जबकि star में नहीं होता",
+        "Star connection में एक neutral point उपलब्ध होता है (line और phase voltage अलग होते हैं) जबकि delta connection में कोई neutral point नहीं होता (line voltage = phase voltage)",
+        "दोनों connections में neutral point हमेशा उपलब्ध रहता है",
+        "Delta और star दोनों में output frequency बदल जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Star (Y) connection में तीनों windings का एक common point होता है जिसे neutral के रूप में निकाला जा सकता है और line voltage = √3 × phase voltage होता है, जबकि delta (Δ) connection में कोई common/neutral point नहीं होता और line voltage = phase voltage के बराबर होता है। Option A तथ्यात्मक रूप से उलटा है, option C गलत है क्योंकि delta में neutral नहीं मिलता, और option D गलत है क्योंकि connection type बदलने से inverter की output frequency नहीं बदलती।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q33",
+      "question": "यदि three phase bridge inverter की किसी एक leg का switch permanently open-fault होकर काम करना बंद कर दे, तो output पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "तीनों output phases पहले जैसी ही balanced और normal बनी रहेंगी",
+        "Output frequency automatically दोगुनी हो जाएगी",
+        "प्रभावित phase का output असामान्य/विकृत (distorted) हो जाएगा और तीनों phases के बीच current असंतुलित (unbalanced) हो जाएगा",
+        "केवल DC bus voltage शून्य हो जाएगा, AC output पर कोई असर नहीं होगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "एक leg का switch fail होने पर उस leg से जुड़ी phase का switching pattern बिगड़ जाता है, जिससे उस phase का waveform विकृत हो जाता है और तीनों phases के बीच balanced 120° relationship टूट जाने से current असंतुलित हो जाता है, जो motor winding में असमान heating कर सकता है। Option A गलत है क्योंकि balance बिगड़ता है, option B और D भी तथ्यात्मक रूप से गलत हैं क्योंकि single switch fault से frequency दोगुनी नहीं होती और AC output भी प्रभावित होता है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q34",
+      "question": "Single-phase inverter की तुलना में three phase inverter panel की installation में isolation और protective switchgear (जैसे तीन अलग MCCBs/contactor poles) की व्यवस्था अधिक व्यापक क्यों रखी जाती है?",
+      "options": [
+        "क्योंकि तीनों phases को अलग-अलग तथा सुरक्षित रूप से isolate करने के लिए प्रत्येक phase हेतु उचित rating की switching/protection device चाहिए",
+        "क्योंकि three phase system में कोई fault नहीं होता",
+        "क्योंकि single-phase inverter को किसी protection की जरूरत ही नहीं होती",
+        "क्योंकि three phase inverter हमेशा बिना किसी switchgear के सीधे मोटर से जुड़ता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Three phase system में तीनों live conductors को fault या maintenance के समय एक साथ व स्वतंत्र रूप से safely isolate करना जरूरी होता है, इसलिए प्रत्येक phase के लिए उचित rating का pole/protection device लगाया जाता है, जिससे switchgear अधिक व्यापक हो जाता है। Option B गलत है क्योंकि three phase system में भी faults हो सकते हैं, option C गलत है क्योंकि single-phase inverter को भी protection चाहिए, और option D गलत है क्योंकि बिना switchgear सीधे जोड़ना असुरक्षित practice है।"
+    },
+    {
+      "id": "u4_three_phase_inverter_q35",
+      "question": "यदि three phase inverter के साथ output पर एक series reactor (line filter) जोड़ा जाए, तो installation में इसका मुख्य उद्देश्य क्या होता है?",
+      "options": [
+        "Output frequency को स्थायी रूप से आधा कर देना",
+        "DC bus voltage को बढ़ा देना",
+        "Motor की rotation direction बदल देना",
+        "PWM switching से उत्पन्न high dv/dt व high-frequency harmonics को कम करके motor cable व winding insulation पर stress घटाना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Inverter की fast PWM switching से output में तेज dv/dt और high-frequency harmonics उत्पन्न होते हैं जो लंबी motor cable व winding insulation पर stress डाल सकते हैं; series line reactor इन्हें कम करके waveform को अधिक smooth बनाता है और insulation की सुरक्षा करता है। Option A, B और C reactor जोड़ने के actual उद्देश्य से मेल नहीं खाते, क्योंकि reactor न तो frequency को स्थायी रूप से बदलता है, न DC bus voltage बढ़ाता है, न ही rotation direction को प्रभावित करता है।"
     }
   ]
 }

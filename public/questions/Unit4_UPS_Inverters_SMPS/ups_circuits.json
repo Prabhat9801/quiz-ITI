@@ -363,6 +363,186 @@
       ],
       "correctIndex": 2,
       "explanation": "Blink-code आधारित indication से limited संख्या में LEDs का उपयोग करके भी अलग-अलग fault conditions को सटीक रूप से पहचाना जा सकता है, जिससे technician जल्दी सही समस्या की ओर ध्यान दे सके। Option A, B, D इस blink-code design के actual लाभ से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q31",
+      "question": "UPS के control circuit में PWM (Pulse Width Modulation) technique का उपयोग inverter output को control करने के लिए क्यों किया जाता है?",
+      "options": [
+        "इससे battery की charging voltage स्थायी रूप से बढ़ जाती है",
+        "Switching devices के ON-time की duty cycle बदलकर output AC voltage/waveform shape को नियंत्रित करने के लिए, जिससे load बदलने पर भी voltage स्थिर रहे",
+        "इससे buzzer की beep frequency तय होती है",
+        "इससे केवल indicator LED की brightness control होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Control circuit PWM signals से switching devices के ON/OFF duty cycle को adjust करता है, जिससे output waveform का RMS voltage load-variation या battery-voltage-variation में भी लगभग स्थिर रखा जा सकता है। Option A charger का काम है, C और D क्रमशः alarm व indicator circuit से संबंधित हैं, PWM का core उद्देश्य नहीं।"
+    },
+    {
+      "id": "u4_ups_circuits_q32",
+      "question": "Power circuit में output filter (inductor-capacitor combination) inverter stage के बाद क्यों लगाया जाता है?",
+      "options": [
+        "ताकि switching के कारण उत्पन्न high-frequency harmonics/ripples को हटाकर smooth sine-wave जैसा AC output मिल सके",
+        "ताकि battery तेजी से चार्ज हो",
+        "ताकि buzzer की आवाज़ कम हो",
+        "ताकि control circuit का microcontroller ठंडा रहे"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inverter switching action high-frequency components उत्पन्न करता है; LC filter इन्हें attenuate करके load तक cleaner, smoother AC waveform पहुँचाता है। Option B, C, D output filter के actual purpose से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q33",
+      "question": "यदि UPS का alarm circuit हर 30 सेकंड में एक छोटी beep दे रहा है जबकि mains present है, battery भी fully charged है और कोई overload नहीं है, तो यह सबसे अधिक संभावना किस स्थिति का संकेत है?",
+      "options": [
+        "Inverter power stage पूरी तरह खराब हो गया है",
+        "Rectifier ने काम करना बंद कर दिया है",
+        "Self-test/periodic status beep हो सकती है, जो कुछ UPS designs में control circuit द्वारा normal operation confirm करने के लिए दी जाती है",
+        "Transformer की winding short हो गई है"
+      ],
+      "correctIndex": 2,
+      "explanation": "कुछ UPS models में control circuit periodic रूप से छोटी beep देकर यह confirm करता है कि alarm circuit तथा control logic सही काम कर रहे हैं, जबकि कोई actual fault नहीं है। Option A, B, D गंभीर faults हैं जो अलग तरह के continuous/अलग alarm pattern या output loss दिखाते, न कि हल्की periodic beep।"
+    },
+    {
+      "id": "u4_ups_circuits_q34",
+      "question": "Control circuit में hysteresis (एक छोटा voltage band) low-battery detection comparator के साथ क्यों जोड़ा जाता है?",
+      "options": [
+        "ताकि battery voltage threshold के आसपास बार-बार oscillate करने पर alarm/cut-off signal भी बार-बार ON-OFF (chattering) न करे",
+        "ताकि battery तेजी से discharge हो",
+        "ताकि buzzer permanently बंद रहे",
+        "ताकि indicator LED हमेशा जलती रहे"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hysteresis comparator के trip और reset points के बीच एक gap रखता है, जिससे voltage के threshold के पास मामूली उतार-चढ़ाव से बार-बार output बदलने (chattering) की समस्या नहीं होती। Option B, C, D hysteresis के actual उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_circuits_q35",
+      "question": "UPS में indicator circuit के लिए seven-segment display का उपयोग साधारण LEDs की तुलना में किस लाभ के लिए किया जाता है?",
+      "options": [
+        "इससे battery charger की current क्षमता बढ़ जाती है",
+        "यह अंकों (जैसे fault code number, load percentage) को स्पष्ट रूप से numeric form में दिखा सकता है, जो केवल on/off LED से संभव नहीं",
+        "इससे mains frequency automatically 60 Hz हो जाती है",
+        "इससे transfer switch की speed बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Seven-segment display numeric information (जैसे specific fault code या load %) दिखा सकता है जबकि simple LED केवल on/off स्थिति बताती है, इसलिए अधिक detailed status के लिए इसका उपयोग होता है। Option A, C, D seven-segment display के इस function से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q36",
+      "question": "Power circuit में freewheeling/snubber diode inverter के switching transistors के साथ parallel में क्यों जोड़े जाते हैं?",
+      "options": [
+        "ताकि LED की brightness control हो",
+        "ताकि inductive load (जैसे transformer winding) के switch-off के समय उत्पन्न voltage spike को safe path देकर transistor को damage से बचाया जा सके",
+        "ताकि buzzer की आवाज़ तेज हो",
+        "ताकि battery की चार्जिंग dar बढ़े"
+      ],
+      "correctIndex": 1,
+      "explanation": "Inductive components (transformer/winding) में current अचानक बंद होने पर high voltage spike उत्पन्न होता है; freewheeling/snubber diode इस spike के लिए एक safe circulating path देकर switching transistor को over-voltage से बचाता है। Option A, C, D इस protection function से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q37",
+      "question": "Control circuit में watchdog timer feature का उद्देश्य क्या होता है?",
+      "options": [
+        "यह battery की temperature मापता है",
+        "यह buzzer की frequency set करता है",
+        "यह LED का रंग बदलता है",
+        "यदि microcontroller किसी गड़बड़ी (जैसे software hang) के कारण expected समय पर reset signal न भेजे, तो watchdog timer स्वतः microcontroller को reset करके control circuit को सुरक्षित/normal स्थिति में लाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Watchdog timer एक सुरक्षा feature है जो microcontroller के hang/freeze होने पर स्वतः reset करके control logic को फिर से सही ढंग से चालू करता है। Option A, B, C watchdog timer के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_circuits_q38",
+      "question": "यदि UPS में battery ठीक है, mains भी present है, लेकिन output में कोई AC नहीं मिल रही और सभी indicator LEDs भी बंद हैं, तो सबसे संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Control circuit की supply rail (जैसे internal DC supply जो microcontroller/IC को चाहिए) fail हो गई है, जिससे पूरा control logic ही काम नहीं कर रहा",
+        "केवल buzzer खराब हो गया है",
+        "केवल एक indicator LED फुँकी है",
+        "Charging थोड़ी धीमी हो गई है"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब सभी indicators बंद हों और output भी न मिले, जबकि mains व battery दोनों ठीक हों, तो सबसे संभावित कारण control circuit की अपनी internal supply का fail होना है, क्योंकि इसके बिना कोई भी block (सेंसिंग, drive, indicator) काम नहीं करेगा। Option B, C, D इतने व्यापक symptom की व्याख्या नहीं कर सकते।"
+    },
+    {
+      "id": "u4_ups_circuits_q39",
+      "question": "Alarm circuit में buzzer को directly microcontroller की output pin से न जोड़कर एक transistor/driver IC के माध्यम से क्यों जोड़ा जाता है?",
+      "options": [
+        "क्योंकि microcontroller pin की current rating buzzer को पर्याप्त तेज़ और तेज़ आवाज़ में बजाने के लिए काफी current नहीं दे पाती, इसलिए driver current amplify करता है",
+        "क्योंकि इससे battery charging तेज हो जाती है",
+        "क्योंकि इससे mains voltage rectify होती है",
+        "क्योंकि इससे transformer की dono windings बदल जाती हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Microcontroller की GPIO pin से मिलने वाला current सीमित होता है, जो buzzer को प्रभावी रूप से चलाने के लिए अक्सर पर्याप्त नहीं होता; इसलिए transistor/driver IC इस signal को amplify करके buzzer को उचित current देता है। Option B, C, D buzzer driving से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q40",
+      "question": "Power circuit में charger block को 'constant current' mode से 'constant voltage' mode में क्यों switch किया जाता है जैसे-जैसे battery चार्ज होती जाती है?",
+      "options": [
+        "ताकि buzzer बंद हो जाए",
+        "ताकि battery शुरुआत में सुरक्षित उच्च current से जल्दी चार्ज हो, और जैसे-जैसे वह लगभग full होती है, voltage को सीमित रखकर overcharging व damage से बचाया जा सके",
+        "ताकि indicator LED हमेशा एक जैसी चमके",
+        "ताकि transfer switch तेजी से काम करे"
+      ],
+      "correctIndex": 1,
+      "explanation": "आमतौर पर charger पहले constant current से battery को तेज़ी से चार्ज करता है, फिर जब voltage निर्धारित सीमा के पास पहुँचता है तो constant voltage mode में चला जाता है जिससे overcharging रुकती है और battery की life सुरक्षित रहती है। Option A, C, D इस charging strategy के उद्देश्य से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q41",
+      "question": "Control circuit में zero-crossing detector का उपयोग transfer switching के समय क्यों किया जाता है?",
+      "options": [
+        "ताकि switching को AC waveform के zero-voltage point के पास किया जा सके, जिससे switching के समय बड़ा transient/spike और connected equipment पर झटका कम हो",
+        "ताकि battery की capacity बढ़ जाए",
+        "ताकि buzzer का volume कम हो जाए",
+        "ताकि LED की चमक स्थिर रहे"
+      ],
+      "correctIndex": 0,
+      "explanation": "Zero-crossing detector AC waveform के वे points पहचानता है जहाँ voltage शून्य के पास होता है; उस समय transfer switching करने से बड़ा voltage transient नहीं बनता और connected sensitive load को कम झटका लगता है। Option B, C, D zero-crossing detector के actual उपयोग से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q42",
+      "question": "यदि indicator circuit में 'Overload' LED बार-बार blink कर रही है लेकिन actual load current निर्धारित सीमा से कम है, तो संभावित fault कहाँ हो सकता है?",
+      "options": [
+        "Power circuit के transformer में short-circuit हो गया है",
+        "Current sensing block (जैसे current sensor/shunt resistor या उससे जुड़ी comparator circuitry) में गड़बड़ी हो सकती है, जो गलत high-current signal control circuit को भेज रही है",
+        "Battery पूरी तरह खत्म हो गई है",
+        "Mains supply पूरी तरह गायब है"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूँकि actual load current सीमा में है फिर भी overload indication मिल रही है, इसलिए समस्या sensing block में गलत/faulty signal उत्पन्न होने में है, न कि actual overload में। Option A, C, D अलग तरह के symptoms देंगे और इस विशेष स्थिति की व्याख्या नहीं करते।"
+    },
+    {
+      "id": "u4_ups_circuits_q43",
+      "question": "UPS के control circuit में temperature sensor (जैसे thermistor) power circuit के heat-sink पर क्यों लगाया जाता है?",
+      "options": [
+        "ताकि buzzer की pitch adjust हो सके",
+        "ताकि switching devices/transformer के अत्यधिक गरम होने पर control circuit समय पर alarm दे और/या output को limit/shutdown करके components को damage से बचा सके",
+        "ताकि LED का रंग बदल जाए",
+        "ताकि mains voltage automatically stabilize हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Over-temperature होना power devices के लिए हानिकारक होता है; temperature sensor से मिला signal control circuit को समय पर protective action (alarm, current limit, shutdown) लेने में सक्षम बनाता है। Option A, C, D temperature sensing के इस protective उद्देश्य से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_ups_circuits_q44",
+      "question": "Alarm circuit में 'mute' या 'silence' switch की सुविधा क्यों दी जाती है?",
+      "options": [
+        "ताकि battery permanently चार्ज होना बंद हो जाए",
+        "ताकि उपयोगकर्ता किसी सक्रिय अलार्म की beep sound को अस्थायी रूप से बंद कर सके, जबकि fault indicator LED और underlying fault condition तब भी बनी रहे जब तक समस्या ठीक न हो",
+        "ताकि power circuit पूरी तरह बंद हो जाए",
+        "ताकि control circuit का microcontroller reset हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mute/silence switch केवल audible beep को अस्थायी रूप से बंद करता है ताकि शोर कम हो, परंतु visual indicator और actual fault condition तब तक बनी रहती है जब तक समस्या हल न हो जाए। Option A, C, D mute switch के actual सीमित उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_circuits_q45",
+      "question": "UPS के control circuit में EEPROM/non-volatile memory का उपयोग कभी-कभी किस उद्देश्य से किया जाता है?",
+      "options": [
+        "ताकि power off होने पर भी fault history/last operating parameters जैसी जानकारी सुरक्षित रहे और दोबारा power आने पर या troubleshooting के समय उपयोगी हो",
+        "ताकि battery की physical size बदल जाए",
+        "ताकि buzzer की आवाज़ स्थायी रूप से बंद हो जाए",
+        "ताकि transformer की turns ratio बदल जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "EEPROM जैसी non-volatile memory power हटने के बाद भी data (जैसे पिछले faults, settings) को सुरक्षित रखती है, जिससे बाद में उसे पढ़कर diagnosis या configuration में मदद मिलती है। Option B, C, D इस memory के actual उपयोग से असंबंधित हैं।"
     }
   ]
 }

@@ -363,6 +363,186 @@
       ],
       "correctIndex": 1,
       "explanation": "अधिक ripple voltage sensitive digital circuits और ICs के गलत operation या noise का कारण बन सकती है, इसलिए output को clean और stable रखना ज़रूरी है (Option B)। Option A, C, D ripple voltage के तकनीकी प्रभावों से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q31",
+      "question": "DC-DC converter के basic block diagram में input DC source के बाद सामान्यतः कौन सा block आता है जो actual voltage conversion करता है?",
+      "options": [
+        "Rectifier block",
+        "AC output stage",
+        "Switching (power stage) block जिसमें MOSFET/transistor होता है",
+        "Battery charger block"
+      ],
+      "correctIndex": 2,
+      "explanation": "Block diagram में input DC source के बाद switching/power stage block आता है जिसमें high-frequency switching device (MOSFET/transistor) actual voltage-level conversion करता है (Option C)। Option A rectifier AC को DC बनाने के लिए है, यहाँ input पहले से DC है, Option B ग़लत है क्योंकि output भी DC ही रहता है, और Option D एक application हो सकता है पर block diagram का core stage नहीं है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q32",
+      "question": "DC-DC converter के block diagram में control/feedback block (जो PWM controller IC पर आधारित होता है) किस block से input लेता है?",
+      "options": [
+        "केवल input source से",
+        "केवल ambient temperature sensor से",
+        "किसी भी block से input नहीं लेता",
+        "Output voltage sensing block से, ताकि output को reference के साथ compare किया जा सके"
+      ],
+      "correctIndex": 3,
+      "explanation": "Control/feedback block output voltage को sense करने वाले block से input लेता है और उसे internal reference voltage से compare करके switching device के duty cycle को adjust करता है (Option D)। Option A अकेला feedback के लिए पर्याप्त नहीं है, Option B सामान्य DC-DC converter block diagram का core हिस्सा नहीं है, और Option C स्पष्टतः ग़लत है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q33",
+      "question": "LM2596 जैसी popular DC-DC converter regulator IC में 'FEEDBACK' नाम का pin किस काम के लिए होता है?",
+      "options": [
+        "IC को ground करने के लिए",
+        "Output voltage को sense करके internal control circuit तक जानकारी पहुँचाने के लिए, जिससे output regulated रहे",
+        "Input AC supply देने के लिए",
+        "केवल LED indicator चलाने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "LM2596 जैसी regulator IC में FEEDBACK pin output voltage की एक sample sense करता है ताकि internal error amplifier उसे reference से compare करके output को regulated रख सके (Option B)। Option A ग़लत है क्योंकि ground के लिए अलग pin (GND) होता है, Option C ग़लत है क्योंकि यह IC DC input पर काम करती है, और Option D इस pin का उद्देश्य नहीं है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q34",
+      "question": "LM2596 जैसी step-down DC-DC converter IC के 'ON/OFF' control pin का मुख्य उपयोग क्या है?",
+      "options": [
+        "IC की switching frequency बदलने के लिए",
+        "Converter को externally enable या disable (shutdown) करने के लिए, जिससे power saving हो सके",
+        "Output voltage की polarity invert करने के लिए",
+        "Input voltage को rectify करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "ON/OFF pin से किसी external signal द्वारा converter को enable या disable किया जा सकता है, जो battery-powered devices में power saving के लिए उपयोगी है (Option B)। Option A frequency इस pin से control नहीं होती, Option C polarity invert करने का कार्य नहीं है, और Option D rectification से इस pin का संबंध नहीं है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q35",
+      "question": "LM317 जैसी adjustable regulator IC, जब DC-DC step-down converter की तरह प्रयोग की जाती है, तो उसके 'ADJUST' pin का उद्देश्य क्या है?",
+      "options": [
+        "Output voltage को external resistor divider के माध्यम से सेट करने के लिए",
+        "IC को permanently disconnect करने के लिए",
+        "Input frequency को measure करने के लिए",
+        "केवल heat sink को जोड़ने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "LM317 के ADJUST pin पर external resistor divider जोड़कर desired output voltage set किया जाता है, क्योंकि IC internal reference के according feedback के आधार पर output बनाती है (Option A)। Option B, C, D ADJUST pin के actual कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q36",
+      "question": "DC-DC converter regulator IC (जैसे LM2596) के डेटाशीट में दिया गया pin-out diagram पढ़ने का मुख्य फायदा क्या है?",
+      "options": [
+        "इससे IC की internal silicon design समझी जा सकती है",
+        "इससे केवल IC की price पता चलती है",
+        "इससे IC का manufacturing year पता चलता है",
+        "इससे यह पता चलता है कि IN, OUT, GND, FEEDBACK जैसे किस pin पर कौन सा external component (inductor, capacitor, diode) जोड़ना है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Pin-out diagram से technician को पता चलता है कि किस pin पर input, output, ground, feedback जैसे connections और उनसे जुड़ने वाले external components (inductor, diode, capacitor) कैसे लगाना है (Option D)। Option A, B, C pin-out diagram पढ़ने का उद्देश्य नहीं हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q37",
+      "question": "किसी DC-DC converter module के block diagram में 'input filter' block को input source और switching stage के बीच क्यों रखा जाता है?",
+      "options": [
+        "ताकि output voltage automatically double हो जाए",
+        "ताकि converter का weight बढ़ सके",
+        "ताकि feedback loop को बंद किया जा सके",
+        "ताकि switching stage से generate होने वाला high-frequency noise input source की तरफ वापस ना जाए और input supply साफ रहे"
+      ],
+      "correctIndex": 3,
+      "explanation": "Input filter block switching stage से उत्पन्न high-frequency noise को input source (जैसे battery या bus supply) की तरफ जाने से रोकता है, जिससे source line साफ (clean) रहती है और अन्य connected devices disturb नहीं होते (Option D)। Option A, B, C input filter के उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q38",
+      "question": "Battery-powered portable devices (जैसे mobile phone, laptop) में DC-DC converter का उपयोग क्यों आवश्यक होता है?",
+      "options": [
+        "क्योंकि battery से मिलने वाला voltage discharge के साथ बदलता है जबकि internal ICs को constant regulated voltage चाहिए होता है",
+        "क्योंकि battery AC output देती है",
+        "क्योंकि DC-DC converter battery की capacity (mAh) बढ़ा देता है",
+        "क्योंकि इससे battery को चार्ज करने की ज़रूरत ख़त्म हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Battery का voltage discharge होते समय धीरे-धीरे घटता है, जबकि processor, memory जैसी ICs को स्थिर regulated voltage चाहिए होता है, इसलिए DC-DC converter battery voltage को उपयुक्त constant level में बदलता है (Option A)। Option B ग़लत है क्योंकि battery DC ही देती है, Option C ग़लत है क्योंकि converter capacity नहीं बढ़ाता बल्कि voltage-level manage करता है, और Option D ग़लत है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q39",
+      "question": "Solar power systems में photovoltaic (PV) panel के output और battery/load के बीच DC-DC converter क्यों लगाया जाता है?",
+      "options": [
+        "ताकि PV panel का variable DC output, battery charging या load के लिए required stable DC level में convert हो सके",
+        "ताकि PV panel AC current उत्पन्न करने लगे",
+        "ताकि panel की sunlight पर निर्भरता ख़त्म हो जाए",
+        "ताकि panel का output frequency बढ़ जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "PV panel का output sunlight की तीव्रता के साथ बदलता रहता है; DC-DC converter इस variable DC को battery charging या load requirement के अनुसार एक stable regulated DC level में convert करता है (Option A)। Option B, C, D solar system में DC-DC converter की actual भूमिका से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q40",
+      "question": "Automotive electronics में DC-DC converter का एक सामान्य application कौन सा है?",
+      "options": [
+        "12V vehicle battery supply से इंफोटेनमेंट सिस्टम, sensors और अन्य low-voltage ICs के लिए required अलग-अलग regulated DC voltage प्रदान करना",
+        "इंजन के petrol की quantity मापना",
+        "सिर्फ headlight को on/off करना बिना किसी voltage regulation के",
+        "AC mains supply को car battery से जोड़ना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vehicle की main battery (आमतौर पर 12V या 48V) से विभिन्न electronic modules को अलग-अलग stable DC voltage चाहिए होते हैं, जिन्हें DC-DC converters प्रदान करते हैं (Option A)। Option B, C, D DC-DC converter के typical automotive application से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q41",
+      "question": "Isolated DC-DC converter modules का उपयोग medical equipment या industrial control panels जैसे applications में विशेष रूप से क्यों किया जाता है?",
+      "options": [
+        "क्योंकि isolation, patient/operator को electrical shock के खतरे से बचाने के लिए input और output के बीच direct electrical connection नहीं रहने देता",
+        "क्योंकि isolated converter हमेशा सस्ता होता है",
+        "क्योंकि isolation से converter का size हमेशा छोटा हो जाता है",
+        "क्योंकि isolated converter बिना किसी switching के काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Medical और industrial control applications में safety critical होती है; isolated converter transformer के माध्यम से input-output के बीच direct electrical path हटा देता है, जिससे fault होने पर operator/patient को shock का खतरा कम हो जाता है (Option A)। Option B, C, D isolation देने का मुख्य कारण नहीं हैं।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q42",
+      "question": "किसी multi-output DC-DC converter module के block diagram में एक ही input stage से कई अलग-अलग output voltage rails (जैसे 5V, 3.3V, 1.8V) कैसे मिलती हैं?",
+      "options": [
+        "इसके लिए तीन अलग-अलग input batteries चाहिए होती हैं",
+        "सभी output rails हमेशा एक जैसे voltage पर होती हैं",
+        "एक ही switching stage के बाद अलग-अलग regulation/output blocks (जैसे अलग-अलग secondary winding या अलग post-regulator) से अलग-अलग levels निकाले जाते हैं",
+        "इसमें कोई feedback block नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "Multi-output converter में common switching/power stage के बाद अलग-अलग secondary taps या post-regulation blocks लगाकर अलग-अलग regulated voltage rails प्राप्त की जाती हैं (Option C)। Option A ग़लत है क्योंकि एक ही input source से यह संभव है, Option B स्पष्टतः ग़लत है क्योंकि rails अलग-अलग levels की होती हैं, और Option D ग़लत है क्योंकि प्रत्येक rail की stability के लिए feedback ज़रूरी होता है।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q43",
+      "question": "DC-DC converter regulator IC का datasheet पढ़ते समय 'maximum input voltage rating' को जानना क्यों ज़रूरी है?",
+      "options": [
+        "क्योंकि इससे IC का color पता चलता है",
+        "क्योंकि इस rating से अधिक voltage लगाने पर IC permanently damage हो सकती है",
+        "क्योंकि इससे output voltage automatically तय हो जाता है",
+        "क्योंकि यह rating केवल decoration के लिए दी जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर regulator IC की एक maximum input voltage rating होती है; इससे अधिक voltage लगाने पर internal components (जैसे switching MOSFET) permanently damage हो सकते हैं, इसलिए circuit design करते समय इस limit के भीतर रहना आवश्यक है (Option B)। Option A, C, D इस rating के तकनीकी महत्व से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q44",
+      "question": "किसी DC-DC converter regulator IC के pin-out में 'BOOTSTRAP' या 'BST' pin किस प्रकार के converter design में महत्वपूर्ण होता है?",
+      "options": [
+        "केवल AC-AC converter designs में",
+        "केवल तब जब कोई switching ना हो",
+        "उन designs में जहाँ high-side switching MOSFET को properly turn-on करने के लिए उसके gate पर supply voltage से अधिक drive voltage चाहिए होता है",
+        "केवल output capacitor को discharge करने के लिए"
+      ],
+      "correctIndex": 2,
+      "explanation": "High-side N-channel MOSFET को fully turn-on करने के लिए gate को source से ऊँचे (higher) voltage पर drive करना पड़ता है; इसके लिए bootstrap capacitor और BST pin की circuitry एक temporarily higher voltage बनाती है (Option C)। Option A, B, D bootstrap pin के तकनीकी उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_dc_dc_converters_q45",
+      "question": "DC-DC converter को चुनते समय 'load regulation' specification का क्या महत्व है?",
+      "options": [
+        "यह बताता है कि load current में बदलाव होने पर output voltage कितना stable रहता है",
+        "यह बताता है कि converter कितना heavy (वज़नी) है",
+        "यह बताता है कि converter किस रंग का है",
+        "यह बताता है कि converter को कितनी बार switch on/off किया जा सकता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Load regulation यह दर्शाती है कि no-load से full-load तक current बदलने पर output voltage में कितना deviation आता है; कम load regulation प्रतिशत मतलब output अधिक stable रहता है, जो sensitive electronic loads के लिए ज़रूरी है (Option A)। Option B, C, D load regulation specification के तकनीकी अर्थ से संबंधित नहीं हैं।"
     }
   ]
 }

@@ -363,6 +363,66 @@
       ],
       "correctIndex": 0,
       "explanation": "Comparator IC accurate internal reference और high gain के कारण threshold के पास बहुत तेज (sharp) output transition देता है, जिससे trip point सटीक व स्थिर रहता है; अकेले zener/diode से ऐसी sharpness और adjustability प्राप्त करना कठिन होता है। Option B, C, D comparator IC के वास्तविक कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q31",
+      "question": "अच्छे design वाले inverter में electronic overload/short-circuit protection के अलावा एक glass/cartridge fuse भी series में क्यों लगाया जाता है?",
+      "options": [
+        "Fuse charging current को नियमित करने के लिए लगाया जाता है",
+        "Fuse केवल frequency को स्थिर रखने के लिए होता है",
+        "Fuse electronic protection के fail हो जाने या comparator/relay के respond न करने की स्थिति में एक अंतिम (backup) सुरक्षा के रूप में circuit को permanently तोड़कर catastrophic damage से बचाता है",
+        "Fuse LED indication देने के लिए लगाया जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Electronic protection कभी-कभी component fail होने या comparator के सही समय पर respond न करने की स्थिति में काम नहीं करती; ऐसी स्थिति में series fuse एक last-line-of-defense के रूप में अत्यधिक current पर उड़कर circuit को permanently open कर देता है और transformer/output devices को पूरी तरह जलने से बचाता है। Option A charging control का कार्य है, B frequency से असंबंधित है, D fuse indication device नहीं है।"
+    },
+    {
+      "id": "u4_inverter_protection_q32",
+      "question": "Overload protection द्वारा चलाए जाने वाले relay की contact current rating को load current से पर्याप्त अधिक क्यों रखा जाता है?",
+      "options": [
+        "ताकि relay का coil resistance बढ़ जाए",
+        "ताकि switching के समय contacts पर arcing/contact welding न हो और relay लंबे समय तक बार-बार trip-reset cycle सहन कर सके",
+        "ताकि battery की charging speed बढ़ जाए",
+        "ताकि thermistor की sensitivity कम हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि relay contacts की current rating load current के बहुत करीब रखी जाए, तो बार-बार switching के दौरान contacts पर arcing होकर वे weld या pit हो सकते हैं, जिससे relay जल्दी खराब हो जाएगा; इसलिए rating में पर्याप्त margin रखा जाता है ताकि relay बार-बार trip-reset cycles को सुरक्षित रूप से सहन कर सके। Option A, C, D relay rating चुनने के वास्तविक कारण से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q33",
+      "question": "Over-temperature protection activate होने के बाद inverter का सामान्य auto-reset व्यवहार overload trip के व्यवहार से किस प्रकार अलग होता है?",
+      "options": [
+        "दोनों में कोई अंतर नहीं होता, तुरंत reset हो जाता है",
+        "Thermal shutdown के बाद circuit output तुरंत फिर चालू कर देता है चाहे heatsink अभी भी गरम हो",
+        "Thermal shutdown में output तब तक बंद रहता है जब तक thermistor sense किया गया तापमान पर्याप्त रूप से ठंडा (cool-down) न हो जाए, जबकि overload trip थोड़ी देर बाद ही periodically retry कर सकता है चाहे तापमान से उसका सीधा संबंध न हो",
+        "Overload trip में तापमान sense किया जाता है, thermal shutdown में current sense किया जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Thermal protection तापमान-आधारित होती है, इसलिए output तब तक disable रहता है जब तक heatsink/transformer पर्याप्त ठंडा न हो जाए (अन्यथा तुरंत फिर overheating का खतरा रहेगा); overload trip में retry समय-आधारित होता है और current कम होने पर तुरंत recover हो सकता है। Option A, B गलत behavior बताते हैं, D दोनों की sensing quantity को आपस में उलट देता है।"
+    },
+    {
+      "id": "u4_inverter_protection_q34",
+      "question": "एक inverter का LVC trip voltage 10.4V और reset (cut-in) voltage 11.2V पर सेट किया गया है (यानी लगभग 0.8V hysteresis है)। यदि battery voltage discharge होते हुए 10.4V पर पहुँचकर output बंद हो जाए, तो output फिर से कब चालू होगा?",
+      "options": [
+        "Battery voltage फिर से बढ़कर लगभग 11.2V या उससे अधिक होने पर (चाहे mains से charging द्वारा हो)",
+        "Battery voltage 10.4V पर पहुँचते ही तुरंत दोबारा चालू हो जाएगा",
+        "Battery voltage 9.0V पर पहुँचने पर",
+        "Output कभी दोबारा चालू नहीं होगा जब तक fuse न बदला जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hysteresis के कारण cut-off (10.4V) और reset (11.2V) की threshold अलग-अलग रखी गई है, इसलिए output तभी दोबारा चालू होगा जब battery voltage charging द्वारा बढ़कर लगभग 11.2V या उससे ऊपर पहुँच जाए, न कि उसी 10.4V पर। Option B hysteresis के उद्देश्य को ही नकारता है, C और D इस setting से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverter_protection_q35",
+      "question": "कुछ inverter models में over-temperature protection के साथ एक cooling fan भी जोड़ा जाता है, जो thermistor sense किए गए तापमान के अनुसार controller द्वारा चलाया जाता है। यह arrangement protection की दृष्टि से कैसे लाभदायक है?",
+      "options": [
+        "Fan चलाकर heatsink/transformer का तापमान समय रहते नियंत्रित रखा जा सकता है, जिससे thermal shutdown trip होने की संभावना और बार-बार होने वाली outage कम हो जाती है",
+        "Fan चलने से battery की voltage automatically बढ़ जाती है",
+        "Fan चलने से overload की सीमा (rated current) स्थायी रूप से बढ़ जाती है",
+        "Fan चलने से LVC threshold अपने आप ऊँचा हो जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thermistor-controlled cooling fan तापमान बढ़ने पर पहले ही active होकर heat को dissipate करने में मदद करता है, जिससे critical components hard thermal-shutdown limit तक पहुँचने से पहले ही ठंडे रह सकते हैं और अनावश्यक outage कम होती है। Option B, C, D fan की actual protective भूमिका से मेल नहीं खाते — यह battery voltage, current rating या LVC threshold को नहीं बदलता।"
     }
   ]
 }

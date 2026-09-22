@@ -363,6 +363,246 @@
       ],
       "correctIndex": 1,
       "explanation": "CD4047 जैसी IC-आधारित oscillator, temperature और component tolerance से कम प्रभावित होकर discrete transistor circuit की तुलना में अधिक स्थिर frequency और balanced duty cycle देती है, जिससे push-pull transistors व transformer पर असंतुलित (asymmetric) loading कम होती है। A, C, D तथ्यात्मक रूप से गलत हैं क्योंकि इनमें से कोई भी सीधे oscillator IC के उपयोग से नहीं होता।"
+    },
+    {
+      "id": "u4_inverters_q31",
+      "question": "CD4047 IC को astable multivibrator mode में जोड़ते समय, output frequency के approximately स्थिर बने रहने के लिए timing resistor R और timing capacitor C के मान चुनते समय क्या ध्यान रखा जाता है?",
+      "options": [
+        "R और C को इस तरह चुना जाता है कि उनका उत्पाद (product) उपयुक्त time-constant दे, जिससे IC के internal formula के अनुसार desired frequency (जैसे 50 Hz) प्राप्त हो सके",
+        "R और C का मान inverter की battery voltage के बराबर रखा जाता है",
+        "केवल capacitor का मान frequency तय करता है, resistor का कोई प्रभाव नहीं होता",
+        "R और C को output transformer के turns ratio के बराबर रखा जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "CD4047 के astable operation में output frequency IC के निर्धारित formula के अनुसार external R और C के time-constant पर निर्भर करती है, इसलिए दोनों को मिलाकर सही मान चुना जाता है ताकि desired frequency मिले। B और D भौतिक रूप से असंबंधित हैं, C गलत है क्योंकि दोनों components मिलकर frequency तय करते हैं, केवल capacitor नहीं।"
+    },
+    {
+      "id": "u4_inverters_q32",
+      "question": "Push-pull inverter के driver stage (oscillator IC और power switching transistors के बीच का stage) की मुख्य आवश्यकता क्यों होती है?",
+      "options": [
+        "क्योंकि oscillator IC का low output current सीधे heavy power transistors/MOSFETs के gate/base को drive करने के लिए पर्याप्त नहीं होता, इसलिए बीच में current-amplifying driver transistors लगाए जाते हैं",
+        "क्योंकि driver stage battery को charge करता है",
+        "क्योंकि driver stage output waveform को DC में बदल देता है",
+        "क्योंकि driver stage transformer के turns ratio को बदल देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "CMOS oscillator IC जैसे CD4047 का output current बहुत कम होता है, जबकि power switching transistors/MOSFETs को जल्दी और पूरी तरह ON-OFF करने के लिए अधिक drive current चाहिए; इसलिए driver transistor stage इस current को amplify करके switching devices तक पहुँचाता है। B, C, D driver stage के वास्तविक कार्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q33",
+      "question": "Push-pull inverter के oscillator/driver design में दोनों switching transistors के बीच थोड़ा 'dead time' (ऐसा छोटा अंतराल जिसमें दोनों transistors एक साथ OFF रहें) रखना क्यों जरूरी होता है?",
+      "options": [
+        "ताकि battery तेज़ी से discharge हो",
+        "ताकि दोनों transistors कभी भी एक साथ ON न हों और shoot-through (cross-conduction) current से transistors क्षतिग्रस्त न हों",
+        "ताकि output frequency दुगुनी हो जाए",
+        "ताकि transformer की core saturation बढ़ जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि switching के transition के दौरान दोनों transistors क्षण भर के लिए एक साथ ON हो जाएँ, तो battery से एक बहुत उच्च शॉर्ट-सर्किट जैसा current (shoot-through) प्रवाहित होकर transistors को नुकसान पहुँचा सकता है; इसलिए oscillator/driver design में एक छोटा dead time जोड़ा जाता है। A, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q34",
+      "question": "एक inverter की VA rating चुनते समय step-up transformer की VA rating के बारे में क्या सिद्धांत लागू होता है?",
+      "options": [
+        "Transformer की VA rating हमेशा battery की Ah rating के बराबर रखी जाती है",
+        "Transformer की VA rating output frequency से कोई संबंध नहीं रखती, इसलिए मनमाने ढंग से कम भी चुनी जा सकती है",
+        "Transformer की VA rating inverter की overall output VA rating से कम या उसके बराबर नहीं, बल्कि उससे अधिक या कम से कम बराबर होनी चाहिए ताकि वह rated load को बिना overheat हुए संभाल सके",
+        "Transformer की VA rating केवल oscillator IC के मान पर निर्भर होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Step-up transformer inverter का एक core power-handling component है, इसलिए इसकी VA rating inverter की overall rated output VA के बराबर या उससे अधिक रखी जाती है ताकि पूरे rated load पर भी वह overheat न हो और उसकी life प्रभावित न हो। A, B, D तकनीकी रूप से गलत कथन हैं।"
+    },
+    {
+      "id": "u4_inverters_q35",
+      "question": "एक inverter की rated VA क्षमता 1000 VA है, परंतु किसी घर में जोड़े गए उपकरणों का कुल load केवल 400 W (power factor 0.8) है। इस स्थिति के बारे में सही कथन क्या है?",
+      "options": [
+        "Inverter इस load को कभी नहीं चला सकता क्योंकि rating बहुत अधिक है",
+        "Inverter automatically अपनी rating को 500 VA में बदल देगा",
+        "Load और rating का कोई संबंध नहीं होता",
+        "आवश्यक VA (400/0.8 = 500 VA) inverter की 1000 VA rating से कम है, इसलिए inverter सुरक्षित रूप से इस load को संभाल सकता है और margin भी उपलब्ध है"
+      ],
+      "correctIndex": 3,
+      "explanation": "आवश्यक VA = Watt / PF = 400/0.8 = 500 VA होती है, जो inverter की 1000 VA rating से कम है; इसलिए inverter बिना किसी दबाव के यह load चला सकता है, बल्कि भविष्य में और उपकरण जोड़ने के लिए भी margin शेष रहता है। A, B, C तथ्यात्मक और तार्किक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q36",
+      "question": "Inverter installation में battery bank का backup time (कितनी देर तक load चलेगी) मुख्य रूप से किन दो factors पर निर्भर करता है?",
+      "options": [
+        "केवल inverter के रंग और उसके आकार पर",
+        "केवल oscillator IC की frequency पर",
+        "Battery की Ah (Ampere-hour) capacity और जुड़े हुए load की actual current खपत (जो watt व voltage से निकलती है) पर",
+        "केवल transformer के turns ratio पर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Backup time लगभग (Battery Ah × Battery Voltage) / Load Watt के अनुपात में होता है, इसलिए यह battery की Ah rating और load की actual power खपत दोनों पर निर्भर करता है। A, B, D backup time निर्धारित करने वाले वास्तविक factors नहीं हैं।"
+    },
+    {
+      "id": "u4_inverters_q37",
+      "question": "एक inverter installation में यह सलाह क्यों दी जाती है कि पुरानी और नई battery को एक ही बैंक में मिलाकर parallel में न जोड़ा जाए?",
+      "options": [
+        "क्योंकि इससे inverter की frequency बदल जाती है",
+        "क्योंकि पुरानी व नई batteries की internal condition/capacity अलग होने से असमान charging-discharging होती है, जिससे बेहतर battery पर भी अतिरिक्त तनाव पड़ता है और बैंक की overall life घट जाती है",
+        "क्योंकि पुरानी battery inverter को permanently बंद कर देती है",
+        "क्योंकि नई battery अपने-आप पुरानी बन जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "अलग-अलग health/capacity वाली batteries को parallel जोड़ने पर current असमान रूप से बहता है — कमजोर battery जल्दी discharge होकर अधिक तनाव में आती है और अच्छी battery पर भी extra load पड़ता है, जिससे समूचे बैंक की life कम हो जाती है। A, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q38",
+      "question": "Inverter को installation के समय battery के ठीक ऊपर या बहुत नज़दीक, बिना किसी gap के रखने की सलाह सामान्यतः नहीं दी जाती। इसका मुख्य कारण क्या है?",
+      "options": [
+        "क्योंकि battery और inverter का रंग अलग होना चाहिए",
+        "क्योंकि इससे output frequency बदल जाती है",
+        "क्योंकि इससे battery की Ah rating घट जाती है",
+        "क्योंकि battery से निकलने वाली नमी/gas और संभावित acid spillage inverter के electronic circuit को नुकसान पहुँचा सकती है, इसलिए दोनों के बीच पर्याप्त, हवादार दूरी रखी जाती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Battery से निकलने वाली नमी, संभावित corrosive gas और acid spillage का खतरा inverter के sensitive electronic components को नुकसान पहुँचा सकता है, इसलिए installation guideline में battery और inverter के बीच उचित, हवादार दूरी रखने की सलाह दी जाती है। A, B, C तथ्यात्मक रूप से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverters_q39",
+      "question": "Inverter को installation के समय नमी वाले (damp) स्थान या सीधे पानी के स्रोत के पास रखने से क्यों बचा जाता है?",
+      "options": [
+        "क्योंकि नमी से oscillator IC की frequency अपने-आप बढ़ जाती है",
+        "क्योंकि नमी से battery जल्दी charge हो जाती है",
+        "क्योंकि नमी/पानी electronic circuit board में short-circuit, corrosion और insulation breakdown का खतरा बढ़ा देती है, जिससे equipment खराब हो सकता है या shock का खतरा बन सकता है",
+        "क्योंकि नमी से transformer की VA rating बढ़ जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "नमी या पानी PCB tracks में corrosion और अनचाहा conduction path (short-circuit) बना सकती है, साथ ही insulation को कमजोर कर shock/fire का खतरा बढ़ा सकती है; इसलिए inverter को सूखे व हवादार स्थान पर रखने की सलाह दी जाती है। A, B, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q40",
+      "question": "Inverter installation में battery terminals को tight और corrosion-free connection के साथ जोड़ने की सलाह क्यों दी जाती है?",
+      "options": [
+        "ताकि battery की Ah rating बढ़ जाए",
+        "ढीले या corroded connections से contact resistance बढ़ जाती है, जिससे उस जोड़ पर अत्यधिक गर्मी उत्पन्न हो सकती है, voltage drop बढ़ सकता है और spark/fire का खतरा भी बढ़ सकता है",
+        "ताकि oscillator IC की frequency स्थिर रहे",
+        "ताकि output waveform pure sine wave बन जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Battery cable और terminal के बीच ढीला या corroded जोड़ contact resistance बढ़ाता है, जिससे उच्च current प्रवाहित होने पर वह जोड़ अत्यधिक गर्म हो सकता है, voltage drop बढ़ सकता है और spark लगने का खतरा भी रहता है; इसलिए tight, clean connection आवश्यक है। A, C, D इस installation practice के वास्तविक कारण से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q41",
+      "question": "Inverter installation में यह सुनिश्चित करना क्यों जरूरी है कि केवल आवश्यक (backup पर रखे जाने वाले) circuits ही inverter से जोड़े जाएँ, बजाय पूरे घर की wiring को?",
+      "options": [
+        "ताकि oscillator IC खराब हो जाए",
+        "ताकि transformer की turns ratio बदल जाए",
+        "ताकि battery कभी charge न हो पाए",
+        "ताकि inverter पर अनावश्यक रूप से अधिक load न पड़े और चुनी गई VA rating के अनुसार backup समय व सुरक्षा बनी रहे"
+      ],
+      "correctIndex": 3,
+      "explanation": "Selective wiring (केवल जरूरी lights/fans/appliances को inverter सर्किट पर रखना) inverter पर पड़ने वाले load को उसकी design VA rating के भीतर सीमित रखता है, जिससे backup time पर्याप्त रहता है और overloading से inverter सुरक्षित रहता है। A, B, C इस installation practice से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverters_q42",
+      "question": "Automatic changeover switch/relay की current rating का चुनाव करते समय मुख्य रूप से किस बात का ध्यान रखा जाता है?",
+      "options": [
+        "Relay की current rating जुड़े हुए कुल load के अधिकतम current से अधिक या कम से कम बराबर होनी चाहिए ताकि contacts overheat होकर जलें नहीं",
+        "Relay की current rating केवल battery की voltage पर निर्भर होती है",
+        "Relay का आकार जितना छोटा होगा, उतना ही अधिक current वह संभाल सकता है",
+        "Relay की current rating का load current से कोई संबंध नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Changeover relay के contacts से पूरा load current गुजरता है, इसलिए contacts की current rating अधिकतम expected load current के बराबर या उससे अधिक चुनी जाती है, ताकि बार-बार switching में contacts overheat होकर जलें या पिट (pit) न जाएँ। B, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q43",
+      "question": "एक inverter का mains-to-battery changeover time लगभग 8-15 milliseconds होता है। इस अवधि के दौरान सामान्यतः क्या होता रहता है?",
+      "options": [
+        "Inverter इस दौरान battery को नई सिरे से charge करना शुरू कर देता है",
+        "इस अत्यंत छोटी अवधि में connected उपकरणों को इतनी कम बिजली-रुकावट महसूस होती है कि अधिकांश उपकरण (जैसे light, fan, computer with capacitor-based supply) बिना ध्यान देने योग्य असर के चलते रहते हैं",
+        "Inverter की frequency इस दौरान permanently बदल जाती है",
+        "Output waveform इस दौरान pure DC में बदल जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Changeover time जितना कम (milliseconds के क्रम में) होगा, उतना ही उपकरणों को power interruption कम महसूस होगी; अधिकांश उपकरण internal capacitors/inertia के कारण इस छोटी अवधि को सहन कर लेते हैं और बिना restart के चलते रहते हैं। A, C, D changeover के दौरान होने वाली वास्तविक प्रक्रिया से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q44",
+      "question": "Inverter की 'no-load current' (जब कोई load जुड़ा न हो, तब भी battery से खींचा जाने वाला थोड़ा current) किस कारण से होता है?",
+      "options": [
+        "क्योंकि battery खुद ही बिना किसी कारण current छोड़ती रहती है",
+        "क्योंकि mains supply हमेशा जुड़ी रहती है",
+        "क्योंकि oscillator, driver stage और standby control circuitry को चलाने के लिए तथा transformer की core में होने वाले iron losses के लिए हमेशा कुछ न कुछ current आवश्यक होता है",
+        "क्योंकि changeover relay लगातार चालू-बंद होता रहता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Load न होने पर भी oscillator/driver circuitry को चलाने के लिए तथा transformer core में hysteresis व eddy current losses के कारण एक छोटा-सा no-load current लगातार बहता रहता है, जो battery को धीरे-धीरे discharge करता है। A, B, D इस current के वास्तविक कारण से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_inverters_q45",
+      "question": "Inverter की overall efficiency (output AC power ÷ input DC power से लिया गया अनुपात, प्रतिशत में) कम होने का एक प्रमुख तकनीकी कारण क्या है?",
+      "options": [
+        "क्योंकि battery की Ah rating बहुत अधिक होती है",
+        "क्योंकि output frequency बहुत कम होती है",
+        "क्योंकि inverter का रंग गहरा होता है",
+        "Switching transistors में conduction/switching losses, transformer में core व copper losses, और driver circuitry की खपत के कारण कुछ input power heat के रूप में नष्ट हो जाती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "किसी भी वास्तविक inverter में switching devices, transformer core/winding और control circuitry में कुछ न कुछ losses (heat के रूप में) होते हैं, जिससे output power input DC power से थोड़ा कम रहता है और efficiency 100% से कम होती है। A, B, C efficiency कम होने के वास्तविक तकनीकी कारण नहीं हैं।"
+    },
+    {
+      "id": "u4_inverters_q46",
+      "question": "Oscillator IC आधारित inverter driver circuit में CD4047 की तुलना में सामान्य 555 timer IC को astable mode में उपयोग करना संभव तो है, परंतु push-pull inverter के लिए CD4047 को अधिक सुविधाजनक क्यों माना जाता है?",
+      "options": [
+        "क्योंकि CD4047 केवल DC output देता है, 555 नहीं",
+        "क्योंकि CD4047 में internal रूप से दो complementary (एक-दूसरे के विपरीत phase वाले) outputs Q और Q' उपलब्ध होते हैं, जो सीधे push-pull के दो switching transistors को drive करने के लिए सुविधाजनक होते हैं, जबकि 555 के लिए यह arrangement अलग से बनाना पड़ता है",
+        "क्योंकि 555 timer कभी oscillate नहीं कर सकता",
+        "क्योंकि CD4047 में battery की जरूरत नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "CD4047 astable mode में दो complementary outputs (Q और इसका उलटा) देता है जो push-pull के दो switching transistors को सीधे alternately drive करने के लिए उपयुक्त होते हैं; 555 timer में यह complementary output arrangement built-in नहीं है और अलग से circuitry (जैसे flip-flop) जोड़नी पड़ती है। A, C, D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q47",
+      "question": "Inverter installation करते समय उसे ज्वलनशील (flammable) पदार्थों (जैसे पेट्रोल, thinner, कपड़े के ढेर) से दूर और स्थिर, समतल सतह पर रखने की सलाह क्यों दी जाती है?",
+      "options": [
+        "क्योंकि इससे inverter की VA rating बढ़ जाती है",
+        "क्योंकि switching components व battery से हल्की गर्मी और कभी-कभी spark उत्पन्न हो सकता है, और अस्थिर सतह पर रखने से गिरने या तार खिंचने का खतरा रहता है, जिससे fire या accident का खतरा बढ़ जाता है",
+        "क्योंकि इससे output waveform बेहतर हो जाता है",
+        "क्योंकि इससे battery की Ah rating अपने आप बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Operation के दौरान थोड़ी गर्मी और शायद ही कभी spark/arc उत्पन्न होने की संभावना के कारण inverter को ज्वलनशील पदार्थों से दूर, समतल व स्थिर सतह पर रखा जाता है ताकि fire hazard और गिरने/तार टूटने जैसी दुर्घटनाओं से बचा जा सके। A, C, D इस safety guideline से असंबंधित हैं।"
+    },
+    {
+      "id": "u4_inverters_q48",
+      "question": "Battery से inverter तक जाने वाले connecting cable की length जितनी अधिक (लंबी) होगी, उसका एक प्रमुख प्रभाव क्या पड़ता है, जिस कारण installation में इसे यथासंभव छोटा रखने की सलाह दी जाती है?",
+      "options": [
+        "Cable की length बढ़ने से oscillator IC की frequency बदल जाती है",
+        "Cable की length बढ़ने से battery की Ah rating बढ़ जाती है",
+        "Cable की length का किसी भी विद्युत पैरामीटर पर कोई असर नहीं पड़ता",
+        "Cable की length बढ़ने से उसका resistance भी बढ़ता है, जिससे high current पर voltage drop अधिक हो जाता है और inverter को प्रभावी रूप से कम voltage मिलता है, साथ ही cable में extra heating भी होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "किसी भी cable का resistance उसकी length के अनुपात में बढ़ता है; battery-to-inverter cable में high DC current बहता है, इसलिए लंबी व पतली cable में अधिक voltage drop और heating होती है, जिससे inverter को मिलने वाली प्रभावी voltage कम हो जाती है और performance घट सकती है। A, B, C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u4_inverters_q49",
+      "question": "Inverter के block diagram में 'sensing/control circuit' (जो battery voltage को लगातार monitor करता है) का एक मुख्य कार्य क्या होता है?",
+      "options": [
+        "यह battery voltage एक निश्चित low स्तर (deep discharge point) से नीचे जाने पर inverter को load से automatically disconnect या alarm देने का संकेत देता है, ताकि battery को अत्यधिक discharge होने से बचाया जा सके",
+        "यह output transformer के turns ratio को बदलता रहता है",
+        "यह oscillator की frequency को mains frequency से अलग कर देता है",
+        "यह हमेशा output waveform को square wave से sine wave में बदल देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Battery की life बनाए रखने के लिए sensing/control circuit battery voltage पर नज़र रखता है और उसे एक सुरक्षित न्यूनतम स्तर (low battery cut-off) से नीचे जाने पर load हटाकर या alarm देकर deep-discharge से बचाता है। B, C, D इस control circuit के actual कार्य से मेल नहीं खाते; यह waveform-conversion या turns-ratio का कार्य नहीं है।"
+    },
+    {
+      "id": "u4_inverters_q50",
+      "question": "एक inverter installation में यह सलाह दी जाती है कि DC wiring (battery से inverter तक) और AC output wiring (inverter से load तक) को अलग-अलग तथा स्पष्ट रूप से चिह्नित (labelled) रखा जाए। इसका मुख्य कारण क्या है?",
+      "options": [
+        "ताकि oscillator IC तेज़ी से गर्म हो जाए",
+        "ताकि maintenance/troubleshooting के दौरान गलती से DC और AC wiring को आपस में न जोड़ा जाए, जिससे equipment को नुकसान या shock का गंभीर खतरा हो सकता है",
+        "ताकि transformer की VA rating बढ़ जाए",
+        "ताकि battery की charging speed बढ़ जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "DC (battery side) और AC (output side) wiring में voltage level और nature दोनों अलग होते हैं; इन्हें स्पष्ट रूप से अलग व चिह्नित न रखने पर maintenance के समय गलत जुड़ाव से short-circuit, equipment damage या shock का गंभीर खतरा हो सकता है। A, C, D इस labelling practice के वास्तविक कारण से असंबंधित हैं।"
     }
   ]
 }

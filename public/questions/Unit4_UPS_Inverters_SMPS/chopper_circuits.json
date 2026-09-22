@@ -363,6 +363,186 @@
       ],
       "correctIndex": 3,
       "explanation": "Boost chopper सूत्र Vo = Vin/(1-D) से: 48 = 12/(1-D) ⇒ (1-D) = 12/48 = 0.25 ⇒ D = 1 - 0.25 = 0.75। Option B उलटा मान है, C, D सही समीकरण हल करने पर नहीं मिलते और D मान 1 से अधिक भी नहीं हो सकता।"
+    },
+    {
+      "id": "u4_chopper_circuits_q31",
+      "question": "एक Step-down (Buck) chopper से 150V DC input देकर 90V output प्राप्त करना है। इसके लिए आवश्यक duty cycle लगभग कितनी होनी चाहिए?",
+      "options": [
+        "D = 0.9",
+        "D = 1.67",
+        "D = 0.6",
+        "D = 0.4"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck chopper में Vo = D × Vin, इसलिए D = Vo/Vin = 90/150 = 0.6। Option A गलत गणना है, B, D सही समीकरण हल करने पर नहीं मिलते (D सदैव 0 और 1 के बीच होनी चाहिए)।"
+    },
+    {
+      "id": "u4_chopper_circuits_q32",
+      "question": "Buck chopper की तुलना में Boost chopper की circuit topology में एक बुनियादी संरचनात्मक अंतर क्या है?",
+      "options": [
+        "Boost chopper में inductor, switch के साथ series में और supply-load के बीच नहीं बल्कि switch के parallel path में इस प्रकार जुड़ा होता है कि वह supply से energy लेकर diode के माध्यम से load को दे सके, जबकि Buck में inductor सीधे load-side series में रहता है",
+        "Boost chopper में कोई inductor उपयोग ही नहीं होता",
+        "Boost chopper में केवल resistor का उपयोग होता है, inductor का नहीं",
+        "Buck और Boost chopper की topology पूरी तरह एक समान होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Boost chopper में inductor को supply-side पर इस तरह जोड़ा जाता है कि switch ON रहने पर वह energy store करे और switch OFF होने पर वह energy diode के माध्यम से उच्च voltage पर load को दे, जबकि Buck chopper में inductor switch और load के बीच series में रहता है ताकि average voltage को केवल कम करे। Option B, C तथ्यात्मक रूप से गलत हैं, D गलत है क्योंकि दोनों topology भिन्न होती हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q33",
+      "question": "एक Boost chopper में Vin = 24V है और आवश्यक output 96V है। इसके लिए duty cycle लगभग कितनी होगी?",
+      "options": [
+        "D = 0.25",
+        "D = 0.75",
+        "D = 4",
+        "D = 0.5"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vo = Vin/(1-D) ⇒ 96 = 24/(1-D) ⇒ (1-D) = 24/96 = 0.25 ⇒ D = 0.75। Option A उलटा मान है, C और D सही समीकरण हल करने पर नहीं मिलते, और D का मान 1 से अधिक नहीं हो सकता।"
+    },
+    {
+      "id": "u4_chopper_circuits_q34",
+      "question": "Inverting (Buck-Boost) chopper में output voltage की polarity input voltage की तुलना में उलट क्यों जाती है?",
+      "options": [
+        "क्योंकि switch ON रहने पर inductor जिस polarity में energy store करता है, switch OFF होने पर diode के माध्यम से discharge होते समय inductor के सिरों की voltage polarity उलट जाती है और वही load को मिलती है",
+        "क्योंकि इसमें एक transformer होता है जो polarity बदल देता है",
+        "क्योंकि इसमें एक अतिरिक्त rectifier bridge लगाया जाता है",
+        "क्योंकि switching frequency बहुत अधिक होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Buck-boost chopper में inductor, switch ON के दौरान एक polarity में charge होता है, और OFF होने पर discharge करते समय उसकी voltage polarity उलट जाती है, जिससे diode के माध्यम से load को उलटी polarity की DC output मिलती है। Option B, C, D गलत कारण बताते हैं क्योंकि transformer या rectifier bridge की आवश्यकता नहीं होती।"
+    },
+    {
+      "id": "u4_chopper_circuits_q35",
+      "question": "एक Buck-boost chopper में Vin = 48V और duty cycle D = 0.4 है। Output voltage का magnitude लगभग कितना होगा?",
+      "options": [
+        "72 V",
+        "19.2 V",
+        "32 V",
+        "48 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "Vo = (D × Vin)/(1-D) = (0.4 × 48)/(1-0.4) = 19.2/0.6 = 32 V। Option A, B, D सही गणना से मेल नहीं खाते; ध्यान दें D=0.4 (यानी 0.5 से कम) होने के कारण output, input से कम आना चाहिए, जो 32V के रूप में सही सिद्ध होता है।"
+    },
+    {
+      "id": "u4_chopper_circuits_q36",
+      "question": "Buck-boost chopper में duty cycle D = 0.5 रखने पर output voltage का magnitude, input voltage की तुलना में कैसा होगा?",
+      "options": [
+        "Output, input से आधा होगा",
+        "Output, input के बराबर होगा",
+        "Output शून्य हो जाएगा",
+        "Output, input से दुगुना होगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "D = 0.5 पर Vo = (D×Vin)/(1-D) = (0.5×Vin)/0.5 = Vin, अर्थात यह वह critical duty cycle है जहाँ output magnitude, input के बराबर हो जाता है (यही buck-boost chopper की विशेष खूबी है कि D=0.5 से कम पर step-down और अधिक पर step-up व्यवहार मिलता है)। Option A, C, D गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q37",
+      "question": "Step-down chopper में यदि duty cycle को 0.3 से बढ़ाकर 0.7 कर दिया जाए (Vin स्थिर रहते हुए), तो output voltage पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Output voltage घट जाएगा",
+        "Output voltage में कोई परिवर्तन नहीं होगा",
+        "Output voltage बढ़ जाएगा क्योंकि Vo, D के सीधे अनुपात में है",
+        "Output की polarity उलट जाएगी"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck chopper में Vo = D×Vin होता है, इसलिए duty cycle बढ़ाने पर (Vin स्थिर रहते हुए) average output voltage भी सीधे अनुपात में बढ़ जाता है। Option A विपरीत सही है, B गलत है क्योंकि Vo सीधे D पर निर्भर करता है, D में buck chopper से polarity उलटने का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u4_chopper_circuits_q38",
+      "question": "Boost chopper में यदि duty cycle को 1 के बहुत करीब (जैसे 0.99) रखा जाए, तो सैद्धांतिक रूप से क्या होगा?",
+      "options": [
+        "Output voltage शून्य हो जाएगा",
+        "Output voltage, input के बराबर रहेगा",
+        "Output की polarity उलट जाएगी",
+        "Output voltage सैद्धांतिक रूप से बहुत अधिक (बहुत उच्च) हो जाएगा, क्योंकि Vo = Vin/(1-D) में (1-D) शून्य के बहुत करीब पहुँच जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Vo = Vin/(1-D) में जैसे-जैसे D, 1 के करीब पहुँचता है, (1-D) बहुत छोटा हो जाता है जिससे Vo सैद्धांतिक रूप से बहुत बड़ा हो जाता है; व्यवहार में component losses और stress के कारण D को 1 के बहुत करीब नहीं रखा जाता। Option A, B, C गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q39",
+      "question": "किसी DC chopper में यदि switching frequency बहुत कम (जैसे कुछ Hz) रखी जाए, तो output पर मुख्य समस्या क्या आएगी?",
+      "options": [
+        "Output voltage की polarity उलट जाएगी",
+        "Duty cycle को नियंत्रित करना असंभव हो जाएगा",
+        "Output current और voltage में ripple बढ़ जाएगी और filter components (inductor-capacitor) का आकार बड़ा करना पड़ेगा",
+        "Switching losses बहुत अधिक बढ़ जाएँगी"
+      ],
+      "correctIndex": 2,
+      "explanation": "कम switching frequency पर हर cycle की अवधि लंबी होती है, जिससे inductor current में अधिक ripple आता है और उसे smooth करने के लिए बड़े inductor/capacitor values की आवश्यकता होती है। Option A, B गलत परिणाम हैं, D वास्तव में विपरीत सत्य है — उच्च frequency पर switching losses बढ़ती हैं, कम frequency पर नहीं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q40",
+      "question": "एक Step-up chopper में स्थिर Vin के लिए duty cycle D को 0.2 से 0.8 तक बढ़ाया जाता है। इस दौरान output voltage का व्यवहार कैसा होगा?",
+      "options": [
+        "Output voltage लगातार घटता जाएगा",
+        "Output voltage स्थिर रहेगा",
+        "Output की polarity उलट जाएगी",
+        "Output voltage लगातार बढ़ता जाएगा क्योंकि (1-D) घटता जाता है और Vo = Vin/(1-D) में हर (denominator) छोटा होता जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "जैसे D बढ़ता है, (1-D) घटता है, और Vo = Vin/(1-D) में हर के छोटे होने से Vo का मान लगातार बढ़ता जाता है। Option A विपरीत सही है, B, C गलत हैं क्योंकि boost chopper में polarity नहीं उलटती (वह buck-boost की विशेषता है)।"
+    },
+    {
+      "id": "u4_chopper_circuits_q41",
+      "question": "Chopper की तुलना rectifier से करते समय, दोनों में मुख्य अंतर क्या है?",
+      "options": [
+        "Rectifier AC input से DC output बनाता है, जबकि chopper एक fixed DC input से नियंत्रित/variable DC output बनाता है",
+        "दोनों केवल AC output देते हैं",
+        "दोनों में कोई अंतर नहीं होता, दोनों एक ही कार्य करते हैं",
+        "Rectifier केवल duty cycle control से काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rectifier का मुख्य कार्य AC को DC में बदलना है (diode/thyristor द्वारा), जबकि chopper एक पहले से मौजूद fixed DC voltage को switching action द्वारा किसी अपेक्षित variable DC voltage में बदलता है। Option B, C, D तथ्यात्मक रूप से गलत हैं क्योंकि rectifier duty cycle control पर आधारित नहीं होता।"
+    },
+    {
+      "id": "u4_chopper_circuits_q42",
+      "question": "एक battery-operated forklift में traction motor की speed को chopper द्वारा नियंत्रित किया जा रहा है। low speed पर duty cycle कैसा रखा जाएगा और क्यों?",
+      "options": [
+        "Duty cycle बहुत कम (low) रखा जाएगा क्योंकि motor को दी जाने वाली average voltage कम रखनी है, ताकि motor धीमी गति से घूमे",
+        "Duty cycle 1 से अधिक रखा जाएगा",
+        "Duty cycle बहुत अधिक (high, लगभग 1) रखा जाएगा ताकि motor तेज़ चले",
+        "Duty cycle का motor speed से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Buck-type chopper में average output voltage, duty cycle के सीधे अनुपात में होता है (Vo = D×Vin), इसलिए motor की low speed चाहिए तो duty cycle को कम रखा जाता है जिससे कम average voltage मिले। Option B असंभव है (D>1 नहीं हो सकता), C विपरीत स्थिति है, D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_chopper_circuits_q43",
+      "question": "एक Boost chopper based solar panel application में panel से 18V DC मिलता है और battery को charge करने के लिए 24V DC चाहिए। आवश्यक duty cycle लगभग कितनी होगी?",
+      "options": [
+        "D ≈ 0.75",
+        "D ≈ 0.25",
+        "D ≈ 1.33",
+        "D ≈ 0.5"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vo = Vin/(1-D) ⇒ 24 = 18/(1-D) ⇒ (1-D) = 18/24 = 0.75 ⇒ D = 1 - 0.75 = 0.25। Option A उलटा मान है, C, D सही समीकरण हल करने पर नहीं मिलते।"
+    },
+    {
+      "id": "u4_chopper_circuits_q44",
+      "question": "किसी chopper circuit में यदि switching device (जैसे MOSFET) अचानक fail होकर permanently OFF (open) हो जाए, तो Buck chopper के output पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Output voltage असीमित (infinite) हो जाएगा",
+        "Output की polarity उलट जाएगी",
+        "Output voltage शून्य के लगभग हो जाएगा क्योंकि supply से load तक current pass करने का path ही टूट गया है",
+        "Output voltage, input voltage के बराबर हो जाएगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck chopper में switch ही supply और load के बीच का मुख्य conduction path है; यदि यह permanently open हो जाए तो load तक कोई current/voltage नहीं पहुँच पाएगा और output लगभग शून्य हो जाएगा (freewheeling diode केवल stored inductor energy को थोड़ी देर के लिए बनाए रख सकता है)। Option A, B, D गलत परिणाम बताते हैं।"
+    },
+    {
+      "id": "u4_chopper_circuits_q45",
+      "question": "Step-up, Step-down और Inverting choppers में से किस प्रकार का chopper, output magnitude को input से कम भी और अधिक भी दोनों तरह से नियंत्रित कर सकता है?",
+      "options": [
+        "केवल Step-down (Buck) chopper",
+        "केवल Step-up (Boost) chopper",
+        "Inverting (Buck-boost) chopper, क्योंकि इसमें D < 0.5 पर output कम और D > 0.5 पर output अधिक हो जाता है",
+        "तीनों में से कोई भी नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Buck-boost chopper के सूत्र Vo = (D×Vin)/(1-D) के अनुसार D=0.5 से कम रहने पर output magnitude, input से कम रहता है और D=0.5 से अधिक होने पर input से अधिक हो जाता है, इसलिए यह एकमात्र प्रकार है जो दोनों दिशाओं में काम कर सकता है (साथ ही polarity भी उलट देता है)। Option A केवल घटा सकता है, B केवल बढ़ा सकता है, D तथ्यात्मक रूप से गलत है।"
     }
   ]
 }

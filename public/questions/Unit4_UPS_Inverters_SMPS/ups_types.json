@@ -363,6 +363,186 @@
       ],
       "correctIndex": 1,
       "explanation": "Real power = VA × pf = 650 × 0.8 = 520 Watt। Option A तब सही होता जब pf = 1 हो, C गलत division (650/0.8) से आता है जो VA से भी अधिक real power दिखाता है (असंभव), D गणना से मेल नहीं खाता।"
+    },
+    {
+      "id": "u4_ups_types_q31",
+      "question": "Offline UPS में mains fail होने पर static switch के operate होते समय अक्सर एक हल्की 'click' आवाज सुनाई देती है। इसका मुख्य कारण क्या है?",
+      "options": [
+        "Battery के अंदर chemical reaction की आवाज",
+        "Inverter की output frequency बदलने की आवाज",
+        "Relay/electromagnetic switch के contacts का mains से inverter output की ओर mechanically transfer होना",
+        "AVR के tap-changer का घूमना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Offline UPS में transfer switch अक्सर एक relay/electromechanical contact होता है, जो mains fail होने पर load को inverter output से जोड़ता है, और यह mechanical operation ही click sound पैदा करता है। Option A battery की सामान्य working नहीं है, B और D इस switching sound के source नहीं हैं (line-interactive में AVR होता है, offline में नहीं)।"
+    },
+    {
+      "id": "u4_ups_types_q32",
+      "question": "किसी UPS की front panel पर मौजूद LED/LCD indications में सामान्यतः कौन-सी जानकारी दिखाई जाती है?",
+      "options": [
+        "केवल UPS का serial number",
+        "Mains present/absent, battery mode, battery charge level तथा fault/overload status जैसी operating condition",
+        "केवल manufacturing date",
+        "केवल room temperature"
+      ],
+      "correctIndex": 1,
+      "explanation": "UPS के indication panel पर आमतौर पर mains ON/OFF, battery mode में running, battery charge level (%), और किसी fault/overload की स्थिति दिखाई जाती है ताकि user को operating status पता चले। Options A, C, D इस purpose के indications नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_types_q33",
+      "question": "अधिकांश UPS में battery low होने पर audible alarm (beep) की frequency (बीप की दर) सामान्य low-battery warning की तुलना में क्या पैटर्न दिखाती है?",
+      "options": [
+        "Beep की दर पूरी तरह बंद हो जाती है",
+        "Beep हमेशा एक जैसी ही रहती है, कभी नहीं बदलती",
+        "Beep केवल mains present होने पर सुनाई देती है",
+        "जैसे-जैसे battery और अधिक discharge होती जाती है, beep अधिक तेज़ (rapid intermittent) होती जाती है ताकि तुरंत शटडाउन से पहले user को सचेत किया जा सके"
+      ],
+      "correctIndex": 3,
+      "explanation": "अधिकतर UPS में low-battery warning beep की rate बढ़ती जाती है जैसे battery voltage critical level के करीब आता है, जिससे user को system सुरक्षित रूप से बंद करने का समय मिल सके। Options A, B, C इस design purpose से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_types_q34",
+      "question": "UPS में overload protection का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Rated capacity से अधिक load current खींचने पर inverter/transformer को damage से बचाने के लिए supply को trip/limit करना",
+        "Battery को हमेशा 100% charge रखना",
+        "Mains voltage को स्थिर रखना",
+        "Output frequency को दोगुना करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Overload protection UPS के rated VA से अधिक load current draw होने पर automatically supply को disconnect या limit कर देता है, जिससे inverter switches व transformer overheating से सुरक्षित रहते हैं। Options A, C, D overload protection का कार्य नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_types_q35",
+      "question": "UPS में short-circuit protection सामान्यतः किस प्रकार काम करता है?",
+      "options": [
+        "यह fast-acting fuse/electronic current-limit circuit के जरिए output पर बहुत अधिक (abnormal) current sense होने पर तुरंत supply काट देता है",
+        "यह battery को permanently disconnect कर देता है",
+        "यह output current को अत्यधिक बढ़ा देता है",
+        "यह केवल mains voltage को कम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Short-circuit protection एक fast sensing circuit (fuse या electronic current limiter) होता है जो output पर असामान्य रूप से बढ़े हुए current को detect करते ही supply को तुरंत disconnect कर देता है, जिससे internal components सुरक्षित रहते हैं। Options A, B, D इसकी सही working नहीं दर्शाते।"
+    },
+    {
+      "id": "u4_ups_types_q36",
+      "question": "किसी UPS में 'battery low' protection सक्रिय होने पर आमतौर पर क्या होता है?",
+      "options": [
+        "UPS output voltage अचानक दोगुना कर देता है",
+        "UPS मुख्य mains को तुरंत short कर देता है",
+        "UPS battery को reverse-charge करने लगता है",
+        "UPS load को output देना बंद कर देता है (auto shutdown) ताकि battery deep-discharge से खराब न हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब battery voltage एक न्यूनतम safe स्तर तक गिर जाता है, तो battery-low protection UPS के output को auto-shutdown कर देती है, जिससे battery deep-discharge होकर स्थायी रूप से damage न हो। Options A, B, D तथ्यात्मक रूप से गलत हैं और protection का उद्देश्य नहीं।"
+    },
+    {
+      "id": "u4_ups_types_q37",
+      "question": "एक office में तीन UPS types (Offline, Line-interactive, Online) में से किसी एक को चुनते समय, 'load पर लगातार lightly fluctuating mains voltage (छोटे sag/surge)' होने की स्थिति में सबसे practical व economical विकल्प कौन-सा होगा?",
+      "options": [
+        "Offline UPS, क्योंकि यह सबसे सस्ता है चाहे voltage fluctuations सीधे load तक पहुँचें",
+        "Line-interactive UPS, क्योंकि इसका AVR इन छोटे fluctuations को बिना battery mode में गए ठीक कर देता है और यह online से सस्ता भी है",
+        "Online UPS, क्योंकि cost कोई मुद्दा नहीं है",
+        "किसी भी UPS की जरूरत नहीं, क्योंकि fluctuations हानिकारक नहीं होते"
+      ],
+      "correctIndex": 1,
+      "explanation": "बार-बार छोटे voltage sag/surge को line-interactive UPS का AVR battery activate किए बिना ही ठीक कर देता है, जिससे battery life भी बचती है और यह online से किफायती भी रहता है। Option A में fluctuations सीधे load तक जाएंगे जो नुकसानदायक हो सकता है, C अनावश्यक रूप से महँगा है, D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_ups_types_q38",
+      "question": "एक load का real power requirement 1.5 kW है और उसका power factor 0.6 है। इस load के लिए UPS की न्यूनतम आवश्यक VA rating कितनी होनी चाहिए?",
+      "options": [
+        "900 VA",
+        "1500 VA",
+        "2500 VA (2.5 kVA)",
+        "1800 VA"
+      ],
+      "correctIndex": 2,
+      "explanation": "VA = Watt / pf = 1500 / 0.6 = 2500 VA (2.5 kVA)। Option A उल्टी गणना (1500 × 0.6) से आता है, B pf = 1 मानने पर मिलता है जो गलत है, D गणना से मेल नहीं खाता।"
+    },
+    {
+      "id": "u4_ups_types_q39",
+      "question": "किसी UPS की rating 3 kVA है और उससे जुड़े मिश्रित load का average power factor 0.65 है। इस UPS से अधिकतम कितना real power (kW में) सुरक्षित रूप से लिया जा सकता है?",
+      "options": [
+        "3 kW",
+        "4.6 kW",
+        "0.65 kW",
+        "1.95 kW"
+      ],
+      "correctIndex": 3,
+      "explanation": "Real power = kVA × pf = 3 × 0.65 = 1.95 kW। Option A तभी सही होता जब pf = 1 हो, C गलत division (3/0.65) से आता है जो rating से भी अधिक दिखाता है (असंभव), D pf का मान ही है, real power नहीं।"
+    },
+    {
+      "id": "u4_ups_types_q40",
+      "question": "UPS specification sheet में 'load power factor range' (जैसे 0.6 lagging से 1.0) क्यों दी जाती है?",
+      "options": [
+        "क्योंकि यह केवल battery की price बताता है",
+        "क्योंकि इससे mains voltage तय होता है",
+        "क्योंकि UPS का inverter/transformer एक निश्चित pf range तक ही सुरक्षित रूप से rated VA पर काम कर सकता है; बहुत कम pf वाला load उसे उसकी rated current-limit के करीब या ऊपर धकेल सकता है",
+        "क्योंकि यह UPS का weight बताता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "UPS के internal components (switches, transformer) एक specified pf range के लिए design होते हैं; बहुत low pf वाला load दिए गए VA पर अधिक current खींच सकता है, इसलिए manufacturer एक सुरक्षित pf range specify करता है। Options A, C, D specification के इस उद्देश्य से मेल नहीं खाते।"
+    },
+    {
+      "id": "u4_ups_types_q41",
+      "question": "Offline, Line-interactive और Online UPS में से battery backup runtime (एक ही battery AH rating और load के लिए) आमतौर पर सबसे कम किसमें मिलता है, और क्यों?",
+      "options": [
+        "Offline UPS में, क्योंकि इसकी battery capacity सबसे बड़ी होती है",
+        "Line-interactive UPS में, क्योंकि AVR battery को अतिरिक्त discharge करता है",
+        "Online UPS में, क्योंकि battery हमेशा continuously inverter को feed करती रहती है (double conversion के कारण थोड़ी अधिक overall losses), जिससे same AH पर backup समय थोड़ा कम मिलता है",
+        "तीनों में backup runtime हमेशा बराबर होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Online UPS में battery हर समय inverter को feed करने के अतिरिक्त overall conversion losses (rectifier+inverter continuous operation) के कारण, समान AH rating की battery से backup time थोड़ा कम मिल सकता है, जबकि offline/line-interactive में battery केवल mains fail होने पर ही सक्रिय होती है। Option A तथ्यात्मक रूप से गलत है, B AVR battery discharge नहीं बढ़ाता बल्कि घटाता है, D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u4_ups_types_q42",
+      "question": "एक UPS specification में 'input power factor' (जैसे > 0.95) और 'output/load power factor' (जैसे 0.6-1.0) — इन दोनों में क्या अंतर है?",
+      "options": [
+        "दोनों एक ही चीज़ हैं, कोई अंतर नहीं",
+        "Input pf यह दर्शाता है कि UPS mains से current कितनी अच्छी तरह (कम harmonics/near-unity) खींचता है, जबकि output pf जुड़े हुए load की characteristic को दर्शाता है जिसे UPS को supply करना है",
+        "Input pf केवल battery के लिए होता है",
+        "Output pf हमेशा input pf से अधिक होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Input power factor UPS द्वारा mains से current खींचने की quality (near-unity/कम harmonic distortion) बताता है, जबकि output/load power factor जुड़े हुए load (जैसे मोटर, SMPS) की nature पर निर्भर करता है — ये दो अलग parameters हैं। Options A, C, D इस अंतर को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u4_ups_types_q43",
+      "question": "किसी UPS में 'input protection' के रूप में input MCB/fuse क्यों दिया जाता है?",
+      "options": [
+        "ताकि battery की जगह mains को charge किया जा सके",
+        "ताकि mains side पर किसी fault या अत्यधिक inrush current की स्थिति में UPS के rectifier/internal circuit को नुकसान से बचाया जा सके",
+        "ताकि output frequency control हो सके",
+        "ताकि indication LED जले"
+      ],
+      "correctIndex": 1,
+      "explanation": "Input MCB/fuse mains side की किसी abnormal fault current या inrush की स्थिति में UPS के rectifier/charger circuit को damage से बचाने के लिए primary protection के रूप में काम करता है। Options A, C, D input protection का उद्देश्य नहीं हैं।"
+    },
+    {
+      "id": "u4_ups_types_q44",
+      "question": "Offline, Line-interactive और Online UPS की तुलना करते समय, इनमें से कौन-सा कथन तीनों types के बीच सही समानता (similarity) दर्शाता है?",
+      "options": [
+        "तीनों में switch-over time बिल्कुल समान (zero) होता है",
+        "तीनों की cost पूरी तरह बराबर होती है",
+        "तीनों में ही एक battery और एक inverter होता है जो mains fail होने पर (या online में हमेशा) load को AC power देने के लिए उपयोग होता है, चाहे उनकी architecture और switching strategy अलग हो",
+        "तीनों में AVR (tap-changer) अनिवार्य रूप से होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "तीनों UPS types की मूल जरूरत एक जैसी है — battery व inverter के माध्यम से load को backup AC power देना — भले ही उनकी internal switching strategy, transfer time और cost अलग-अलग हों। Option A, B तथ्यात्मक रूप से गलत हैं (transfer time और cost अलग होती है), D गलत है क्योंकि AVR केवल line-interactive में होता है, offline/online में नहीं।"
+    },
+    {
+      "id": "u4_ups_types_q45",
+      "question": "एक data-entry की दुकान में कई desktop PCs लगे हैं जहाँ बजट सीमित है लेकिन mains में बार-बार छोटे voltage sag आते रहते हैं (हालांकि पूरी power failure कभी-कभार ही होती है)। इस स्थिति के लिए सबसे संतुलित (balanced) UPS choice क्या होगी और क्यों?",
+      "options": [
+        "Offline UPS, क्योंकि यह सबसे सस्ता विकल्प है चाहे voltage sag load तक पहुँचे",
+        "Online UPS, क्योंकि यह सर्वोत्तम protection देता है चाहे बजट से बाहर हो",
+        "Line-interactive UPS, क्योंकि इसका AVR बार-बार होने वाले sag को battery activate किए बिना ठीक कर देता है और यह offline से बेहतर protection देते हुए भी online से किफायती रहता है",
+        "कोई भी UPS न लगाया जाए क्योंकि PCs स्वयं voltage variations सहन कर सकते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "बार-बार होने वाले छोटे voltage sag के लिए line-interactive UPS सबसे practical है क्योंकि AVR उन्हें बिना battery activate किए ठीक कर देता है, जिससे battery life भी बचती है और cost भी online से कम रहती है। Option A में sag सीधे load तक जाएगा जो लगातार risky है, B अनावश्यक रूप से महँगा है, D तथ्यात्मक रूप से गलत है क्योंकि बार-बार sag से PC hardware को नुकसान का खतरा रहता है।"
     }
   ]
 }
