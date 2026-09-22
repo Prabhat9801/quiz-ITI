@@ -363,6 +363,126 @@
       ],
       "correctIndex": 1,
       "explanation": "टॉर्च की रोशनी में हल्की image दिखना सिद्ध करता है कि LCD panel अपनी pixel-modulation ठीक से कर रहा है और video signal भी सही है, केवल backlight (source या driver/inverter) काम नहीं कर रहा — यही diagnostic test option B को सही बनाता है। यदि panel पूरी तरह dead होता तो torch से भी कोई image न दिखता; speaker और remote की battery का brightness या image से कोई संबंध नहीं है, वे केवल audio व control से जुड़े हैं।"
+    },
+    {
+      "id": "u10_backlight_types_q31",
+      "question": "आधुनिक LED backlight (Edge या Direct type) में white light उत्पन्न करने के लिए सामान्यतः किस प्रकार की LED technology प्रयोग होती है?",
+      "options": [
+        "mercury vapour को LED के अंदर भरकर discharge कराया जाता है",
+        "केवल pure white-emitting semiconductor material से LED बनाई जाती है, कोई phosphor नहीं लगता",
+        "LED में filament को गर्म करके white glow उत्पन्न किया जाता है",
+        "अधिकतर blue LED chip पर yellow phosphor coating लगाकर white light उत्पन्न किया जाता है, या red-green-blue LEDs को mix करके white बनाया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "व्यवहार में सबसे सामान्य तरीका blue LED chip पर yellow phosphor coating का उपयोग है (जिससे मिलकर आँख को white दिखता है), या फिर RGB LEDs को mix करना — इसलिए option D सही है। mercury vapour discharge CCFL/HCFL का सिद्धांत है LED का नहीं, कोई भी semiconductor सीधे pure white photon emit नहीं करता, और LED में filament heating जैसी कोई क्रिया नहीं होती क्योंकि यह solid-state electroluminescence पर काम करती है।"
+    },
+    {
+      "id": "u10_backlight_types_q32",
+      "question": "LED backlight (CCFL की तुलना में) का जीवनकाल (lifespan) सामान्यतः अधिक क्यों माना जाता है?",
+      "options": [
+        "क्योंकि LED में हमेशा उच्च striking voltage आवश्यक होती है",
+        "क्योंकि LED में भी mercury vapour discharge होता है परंतु मात्रा कम होती है",
+        "क्योंकि LED का response time CCFL से धीमा होता है",
+        "क्योंकि LED में glass tube या filament नहीं होता, यह solid-state device है जिसमें mercury जैसी घटती-बढ़ती gas प्रक्रिया शामिल नहीं होती"
+      ],
+      "correctIndex": 3,
+      "explanation": "LED एक solid-state semiconductor device है जिसमें कोई filament, glass tube या gas discharge शामिल नहीं है, इसलिए यह CCFL/HCFL जितना घिसता नहीं और अधिक lifespan देता है — यही option D को सही बनाता है। LED को high striking voltage की आवश्यकता नहीं होती (वह CCFL का गुण है), LED में mercury vapour बिल्कुल नहीं होती, और response time lifespan से सीधे संबंधित नहीं है, न ही LED धीमी होती है।"
+    },
+    {
+      "id": "u10_backlight_types_q33",
+      "question": "Direct LED (Full Array) backlight में zones की संख्या बढ़ाने से picture quality पर मुख्यतः क्या प्रभाव पड़ता है?",
+      "options": [
+        "power consumption हमेशा घट जाती है, चाहे content जो भी हो",
+        "अधिक zones होने से local dimming अधिक सटीक (finer) हो जाती है, जिससे halo/blooming effect कम होता है और contrast व detail बेहतर मिलता है",
+        "picture quality पर कोई असर नहीं पड़ता, zones केवल cost बढ़ाते हैं",
+        "screen की resolution (pixels की संख्या) बढ़ जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अधिक dimming zones होने से brightness control अधिक बारीकी से किया जा सकता है, जिससे bright क्षेत्र के पास dark क्षेत्र में फैलने वाला अनचाहा प्रकाश (halo/blooming) कम होता है और contrast/detail सुधरता है — यही option B को सही बनाता है। Power consumption content पर निर्भर करती है, हमेशा नहीं घटती; zones का सीधा असर picture quality पर पड़ता है इसलिए विकल्प C गलत है; और dimming zones की संख्या panel resolution (pixel count) से अलग concept है।"
+    },
+    {
+      "id": "u10_backlight_types_q34",
+      "question": "Edge LED backlight design में LEDs को केवल एक ही किनारे (जैसे केवल bottom edge) पर लगाने की तुलना में दो विपरीत किनारों (जैसे top और bottom दोनों) पर लगाने से क्या लाभ मिलता है?",
+      "options": [
+        "power consumption पूर्णतः शून्य हो जाती है",
+        "screen की resolution बढ़ जाती है",
+        "brightness अधिक समान रूप से (more evenly) पूरे panel क्षेत्र में फैलती है, जिससे uneven brightness/edge glow की समस्या कुछ कम होती है",
+        "backlight की आवश्यकता ही समाप्त हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "दो विपरीत किनारों से प्रकाश आने पर light guide plate को दोनों तरफ से light मिलती है, जिससे distribution अधिक uniform हो जाता है और edge glow जैसी समस्या घटती है — इसलिए option C सही है। Power consumption शून्य नहीं होती, resolution panel के pixels पर निर्भर है न कि LED arrangement पर, और backlight की आवश्यकता खत्म नहीं होती क्योंकि LCD अभी भी photon स्वयं उत्पन्न नहीं करता।"
+    },
+    {
+      "id": "u10_backlight_types_q35",
+      "question": "CCFL backlight के inverter/ballast circuit की तुलना में LED backlight को चलाने वाले driver circuit में एक मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों circuits बिल्कुल एक जैसे काम करते हैं, कोई अंतर नहीं",
+        "LED driver भी high AC striking voltage उत्पन्न करता है",
+        "CCFL inverter भी constant current केवल DC में देता है",
+        "CCFL inverter high AC voltage उत्पन्न करता है जबकि LED driver सामान्यतः constant DC current नियंत्रित करता है ताकि LEDs की brightness स्थिर व सुरक्षित रहे"
+      ],
+      "correctIndex": 3,
+      "explanation": "CCFL inverter tube को strike व sustain करने के लिए high voltage AC उत्पन्न करता है, जबकि LED driver LEDs को जलाने के लिए सामान्यतः एक निर्धारित constant current पर DC supply नियंत्रित करता है (ताकि over-current से LED न जले) — इसलिए option D सही है। दोनों circuits की कार्यप्रणाली अलग होने से 'कोई अंतर नहीं' गलत है, LED driver को high AC striking voltage की आवश्यकता नहीं होती, और CCFL inverter output मूलतः high voltage AC होता है, केवल DC नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q36",
+      "question": "किसी LCD TV में backlight प्रकार (CCFL/LED) कुछ भी हो, फिर भी panel के आगे और पीछे polarizer sheets क्यों लगाई जाती हैं?",
+      "options": [
+        "क्योंकि polarizer, backlight से आने वाले light की एक निश्चित दिशा (orientation) को ही गुजरने देता है, और liquid crystal molecules इस polarized light की दिशा को voltage से नियंत्रित कर image बनाते हैं",
+        "क्योंकि polarizer, mercury vapour को tube के अंदर रोककर रखता है",
+        "क्योंकि polarizer केवल सजावट (cosmetic purpose) के लिए लगाई जाती है",
+        "क्योंकि polarizer, LED driver की current को सीमित करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LCD का कार्य ही polarized light को liquid crystal orientation के अनुसार गुजरने या रोकने पर आधारित है, इसलिए backlight चाहे CCFL हो या LED, polarizer sheets ज़रूरी रहती हैं — यही option A को सही बनाता है। Polarizer, mercury vapour रोकने या LED current सीमित करने का कार्य नहीं करता (ये अलग-अलग components के कार्य हैं), और यह केवल cosmetic नहीं बल्कि display के कार्य करने के लिए functionally आवश्यक है।"
+    },
+    {
+      "id": "u10_backlight_types_q37",
+      "question": "एक पुरानी CCFL backlight वाली LCD TV में समय के साथ screen पर हल्का pinkish या हल्का हरा (tint जैसा) रंग झुकाव दिखने लगे, तो इसका एक संभावित कारण क्या हो सकता है?",
+      "options": [
+        "remote control की IR sensor खराब हो गई है",
+        "CCFL tube की उम्र बढ़ने के साथ phosphor coating का degradation असमान रूप से होने से उसका रंग output धीरे-धीरे बदल सकता है",
+        "TV का speaker खराब हो गया है",
+        "LCD panel का resolution अपने आप घट गया है"
+      ],
+      "correctIndex": 1,
+      "explanation": "CCFL tube में समय के साथ phosphor coating असमान रूप से degrade हो सकती है जिससे उत्पन्न white light का रंग संतुलन बदल जाता है और screen पर हल्का tint दिखने लगता है — इसलिए option B सही है। IR sensor और speaker की खराबी का रंग/tint से कोई संबंध नहीं, और resolution एक fixed hardware पैरामीटर है जो अपने आप घटता नहीं।"
+    },
+    {
+      "id": "u10_backlight_types_q38",
+      "question": "एक gaming/graphics-oriented उपयोगकर्ता के लिए fast-moving content देखते समय ghosting/motion blur कम करना प्राथमिकता है। पैनल चुनते समय response time के आधार पर सामान्यतः कौन-सा क्रम (सबसे तेज़ से धीमा) सही माना जाता है?",
+      "options": [
+        "VA सबसे तेज़, फिर IPS, फिर TN",
+        "IPS सबसे तेज़, फिर TN, फिर VA",
+        "TN सबसे तेज़ (fastest response), उसके बाद सामान्यतः IPS, और VA अपेक्षाकृत धीमा माना जाता है",
+        "तीनों technologies का response time हमेशा बिल्कुल समान होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "सामान्य industry अनुभव के अनुसार TN panels की switching सबसे तेज़ होती है (fast response), IPS सामान्यतः बीच में आता है, और VA panels गहरे black के लिए thicker liquid crystal layer के कारण अपेक्षाकृत धीमे माने जाते हैं — इसलिए option C सही है। शेष क्रम (A, B) वास्तविक तुलना के विपरीत हैं, और तीनों का response time कभी बिल्कुल समान नहीं माना जाता, यह हर technology के अनुसार भिन्न होता है।"
+    },
+    {
+      "id": "u10_backlight_types_q39",
+      "question": "एक ग्राहक पूछता है कि क्या IPS panel वाला TV बिना किसी backlight (जैसे केवल ambient light से) काम कर सकता है। तकनीशियन को इसका सही उत्तर क्या देना चाहिए?",
+      "options": [
+        "नहीं, क्योंकि IPS भी एक LCD-आधारित technology है और liquid crystal स्वयं प्रकाश उत्पन्न नहीं करता, इसलिए इसे भी backlight (CCFL, Edge LED या Direct LED) की आवश्यकता होती है",
+        "हाँ, क्योंकि IPS panel स्वयं प्रकाश emit करता है, यह OLED जैसा self-emissive होता है",
+        "हाँ, परंतु केवल रात में काम करेगा, दिन में नहीं",
+        "नहीं, क्योंकि IPS panel में कोई liquid crystal ही नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "IPS केवल liquid crystal molecules के alignment/switching का एक तरीका है, यह मूलतः LCD technology है और स्वयं photon emit नहीं करता, इसलिए इसे भी backlight आवश्यक होता है — यही option A को सही बनाता है। IPS self-emissive नहीं है (यह गुण OLED का है), प्रकाश की आवश्यकता दिन-रात दोनों में backlight से ही पूरी होती है ambient light से नहीं, और IPS में liquid crystal होता ही है, इसी के alignment पर तो पूरी technology आधारित है।"
+    },
+    {
+      "id": "u10_backlight_types_q40",
+      "question": "यदि किसी बड़े flat TV में weight और manufacturing cost दोनों कम रखना प्राथमिकता हो, तो Edge LED, Direct LED (Full Array) और पुराने CCFL में से कौन-सा विकल्प सामान्यतः सबसे उपयुक्त माना जाता है, और क्यों?",
+      "options": [
+        "CCFL, क्योंकि इसमें सबसे कम components लगते हैं",
+        "Direct LED (Full Array), क्योंकि इसमें सबसे अधिक LEDs व dimming circuitry होने से यह सबसे हल्का व सस्ता बनता है",
+        "Edge LED, क्योंकि इसमें LEDs केवल किनारों पर सीमित संख्या में लगती हैं तथा भारी glass tubes व अधिक LEDs वाली matrix arrangement से बचा जाता है, जिससे weight व cost दोनों तुलनात्मक रूप से कम रहते हैं",
+        "तीनों technologies का weight और cost हमेशा बिल्कुल समान होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Edge LED में सीमित संख्या में LEDs केवल किनारों पर लगती हैं और भारी glass tube arrangement की आवश्यकता नहीं होती, इसलिए यह सामान्यतः weight व cost दोनों में किफायती विकल्प माना जाता है — यही option C को सही बनाता है। CCFL में भारी glass tubes व inverter होने से यह हल्का/सस्ता विकल्प नहीं है, Direct LED में अधिक LEDs व complex dimming circuitry के कारण यह सामान्यतः अधिक costly होता है (कम नहीं), और तीनों technologies का weight/cost कभी बिल्कुल समान नहीं होता।"
     }
   ]
 }

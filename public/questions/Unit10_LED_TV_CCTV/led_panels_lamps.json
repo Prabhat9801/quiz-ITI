@@ -213,6 +213,111 @@
       "options": ["क्योंकि LED का रंग हमेशा तापमान से बदलता है", "क्योंकि उच्च ताप पर LED की efficiency और life घटती है, इसलिए सुरक्षित परिचालन सीमा जानना आवश्यक है", "क्योंकि LED केवल 0°C पर चलती है", "क्योंकि तापमान का LED पर कोई प्रभाव नहीं"],
       "correctIndex": 1,
       "explanation": "उच्च ambient/junction temperature पर LED की light output और जीवन दोनों घटते हैं, इसलिए निर्माता सुरक्षित परिचालन तापमान सीमा देते हैं ताकि विश्वसनीय प्रदर्शन मिले (option B सही)। LED किसी एक तापमान तक सीमित नहीं, और तापमान का प्रभाव नगण्य कहना गलत है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q31",
+      "question": "Office और commercial ceiling lighting में सबसे अधिक उपयोग होने वाला 'LED flat panel' किस आकार में सामान्यतः उपलब्ध होता है?",
+      "options": ["600mm × 600mm (2ft × 2ft)", "50mm × 50mm", "10mm × 10mm", "केवल गोल आकार में"],
+      "correctIndex": 0,
+      "explanation": "Office suspended ceiling (grid) में fit होने के लिए LED flat panel सामान्यतः 600mm × 600mm (या 1200×600mm) size में बनते हैं, इसलिए option A सही है। 50mm या 10mm size में flat panel practical नहीं, और यह केवल गोल आकार तक सीमित नहीं होता — round panel अलग category है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q32",
+      "question": "LED 'troffer' fixture मुख्यतः किस प्रकार के lighting application के लिए design किया जाता है?",
+      "options": ["Street lighting के लिए pole पर लगाने हेतु", "Underwater swimming pool lighting हेतु", "Suspended ceiling grid में recessed mounting हेतु indoor commercial lighting", "Automobile headlight हेतु"],
+      "correctIndex": 2,
+      "explanation": "LED troffer एक rectangular fixture है जो office/commercial buildings की drop/suspended ceiling grid में recessed mount होता है, इसलिए option C सही है। Street lighting के लिए street light fixture अलग design का होता है, pool lighting waterproof housing माँगती है, और headlight पूरी तरह अलग automotive application है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q33",
+      "question": "LED 'downlight' और LED 'flat panel' के बीच मुख्य अंतर क्या है?",
+      "options": ["दोनों बिल्कुल एक जैसे होते हैं", "Downlight गोल/छोटा recessed fixture होता है जो केंद्रित प्रकाश देता है, जबकि flat panel बड़ा सपाट फैला हुआ uniform प्रकाश देता है", "Downlight केवल outdoor में लगता है", "Flat panel केवल battery से चलता है"],
+      "correctIndex": 1,
+      "explanation": "LED downlight एक छोटा, गोल या square recessed fixture है जो एक सीमित area पर केंद्रित (spot-like) प्रकाश देता है, वहीं flat panel बड़े सतह क्षेत्र में समान रूप से फैला हुआ diffused प्रकाश देता है — इसलिए option B सही है। दोनों समान नहीं हैं, downlight indoor (जैसे corridor, false ceiling) में भी सामान्य है, और flat panel मुख्यतः mains AC पर चलता है, battery पर नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q34",
+      "question": "Residential (घरेलू) कमरों के लिए LED lamp चुनते समय आमतौर पर किस colour temperature की सलाह दी जाती है ताकि आराम मिले?",
+      "options": ["約 2700K-3000K (warm white)", "約 10000K (अत्यधिक cool blue)", "約 500K", "यह पूरी तरह अप्रासंगिक है"],
+      "correctIndex": 0,
+      "explanation": "घरेलू bedrooms/living rooms में आमतौर पर 2700K-3000K warm white lamp पसंद किया जाता है क्योंकि यह आँखों को सहज लगता है, इसलिए option A सही है। 10000K बहुत ठंडी नीली रोशनी देता है जो घर के लिए असुविधाजनक होती है, 500K व्यावहारिक रूप से LED lamps में उपलब्ध नहीं होता, और colour temperature का चुनाव comfort के लिए महत्वपूर्ण होता है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q35",
+      "question": "Street lighting के लिए LED fixture चुनते समय कौन-सी specification सबसे अधिक प्राथमिकता में देखी जाती है?",
+      "options": ["केवल lamp का रंग सुंदर दिखना", "केवल low cost, बाकी सब गौण है", "केवल छोटा आकार होना", "उच्च lumen output, उचित IP rating (weatherproofing) और लंबी lifespan"],
+      "correctIndex": 3,
+      "explanation": "Street lighting fixtures को बड़े क्षेत्र में पर्याप्त illumination देने के लिए उच्च lumen output, बारिश/धूल से बचाव हेतु उपयुक्त IP rating और बिना बार-बार maintenance के लंबी lifespan चाहिए, इसलिए option D सही है। केवल सुंदर रंग, केवल low cost या केवल छोटा आकार outdoor उपयोग के लिए पर्याप्त criteria नहीं हैं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q36",
+      "question": "दो LED lamps की तुलना करते समय — Lamp X: 12W में 1080 lumen, Lamp Y: 15W में 1200 lumen — कौन-सी लैंप अधिक efficient है?",
+      "options": ["Lamp X (90 lm/W)", "Lamp Y (80 lm/W)", "दोनों बराबर हैं", "यह तय नहीं किया जा सकता"],
+      "correctIndex": 0,
+      "explanation": "Lamp X की efficacy = 1080/12 = 90 lm/W और Lamp Y की efficacy = 1200/15 = 80 lm/W; अधिक lm/W अधिक efficient होता है, इसलिए option A सही है। Option B की गणना कम efficacy दर्शाती है इसलिए वह अधिक efficient नहीं है, दोनों बराबर नहीं हैं, और दिए गए data से तुलना स्पष्ट रूप से की जा सकती है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q37",
+      "question": "LED lamp की datasheet में 'beam angle 120°' दिए जाने का क्या व्यावहारिक महत्व है?",
+      "options": ["इससे lamp की wattage पता चलती है", "इससे lamp का CRI पता चलता है", "यह बताता है कि प्रकाश कितने कोण में फैलेगा, जो fixture की coverage area तय करने में मदद करता है", "इससे केवल lamp का रंग पता चलता है"],
+      "correctIndex": 2,
+      "explanation": "Beam angle यह बताता है कि प्रकाश किस कोणीय फैलाव में केंद्रित है (narrow spot vs wide flood), जिससे installer यह तय कर सकता है कि किसी क्षेत्र को कवर करने के लिए कितनी दूरी/संख्या में lamps चाहिए, इसलिए option C सही है। यह wattage, CRI या रंग की जानकारी नहीं देता।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q38",
+      "question": "एक narrow beam angle (जैसे 15°) वाला LED downlight किस application के लिए अधिक उपयुक्त होगा?",
+      "options": ["पूरे कमरे में समान रूप से फैली general lighting के लिए", "बड़े हॉल की uniform ceiling lighting के लिए", "किसी भी application के लिए अनुपयुक्त", "किसी विशेष वस्तु या area को highlight करने वाली accent/spot lighting के लिए"],
+      "correctIndex": 3,
+      "explanation": "Narrow beam angle प्रकाश को एक छोटे क्षेत्र में केंद्रित करता है, इसलिए यह किसी वस्तु/feature को highlight करने वाली accent या spot lighting के लिए उपयुक्त है, इसलिए option D सही है। General/uniform room या hall lighting के लिए wide beam angle (जैसे 100°-120°) वाले fixtures बेहतर होते हैं, और यह पूर्णतः अनुपयुक्त नहीं है बल्कि सही application में बहुत उपयोगी है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q39",
+      "question": "किसी LED lamp पack पर 'Life: 25,000 hours' लिखा है। यदि lamp रोज़ाना औसतन 8 घंटे उपयोग हो, तो इसकी अनुमानित life लगभग कितने वर्ष होगी?",
+      "options": ["約 8.5 वर्ष", "約 1 वर्ष", "約 25 वर्ष", "約 100 वर्ष"],
+      "correctIndex": 0,
+      "explanation": "कुल दिन = 25000/8 ≈ 3125 दिन, वर्षों में = 3125/365 ≈ 8.5 वर्ष, इसलिए option A सही है। 1 वर्ष और 100 वर्ष स्पष्टतः बहुत कम/अधिक गणनाएँ हैं, और 25 वर्ष rated hours को सीधे वर्ष मान लेने की गलत धारणा से आता है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q40",
+      "question": "Retail shop lighting में उत्पादों के असली रंग दिखाने के लिए LED lamp चुनते समय कौन-सा parameter सबसे महत्वपूर्ण है?",
+      "options": ["कम lumen output", "कम wattage", "उच्च CRI (जैसे 90 से अधिक)", "छोटा beam angle हमेशा"],
+      "correctIndex": 2,
+      "explanation": "Retail displays में सामान (कपड़े, फल, आभूषण) के प्राकृतिक रंग सही दिखने के लिए उच्च CRI (>90) वाली lamp आवश्यक है, इसलिए option C सही है। कम lumen output या कम wattage से रंग-प्रदर्शन नहीं सुधरता, और beam angle का चुनाव coverage पर निर्भर करता है, CRI से अलग मुद्दा है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q41",
+      "question": "LED 'surface mount panel' और 'recessed/troffer panel' installation में मुख्य अंतर क्या है?",
+      "options": ["Surface mount panel ceiling के अंदर धँसाया जाता है जबकि troffer बाहर लगता है", "दोनों में कोई अंतर नहीं", "Surface mount केवल outdoor के लिए है", "Surface mount panel ceiling की सतह पर बाहर से fix होता है जबकि troffer ceiling के अंदर धँसाया (recessed) जाता है"],
+      "correctIndex": 3,
+      "explanation": "Surface mount LED panel सीधे ceiling/wall की सतह पर बाहर से fix किया जाता है (जहाँ false ceiling नहीं है), जबकि troffer/recessed panel को suspended ceiling grid के अंदर धँसाकर लगाया जाता है, इसलिए option D सही है। Option A दिशा उल्टी बताता है, दोनों में installation का स्पष्ट अंतर है, और surface mount indoor उपयोग में भी सामान्य है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q42",
+      "question": "एक LED bulb की rating '7W, 630 lumen, 3000K, CRI 80' दी गई है। इस specification से क्या नहीं जाना जा सकता?",
+      "options": ["इसकी luminous efficacy (lm/W)", "इसका रंग temperature (warm/cool)", "इसका रंग-प्रदर्शन गुणवत्ता स्तर", "इसकी physical lifespan (कुल घंटे)"],
+      "correctIndex": 3,
+      "explanation": "दी गई specification में wattage, lumen, colour temperature और CRI तो मिलते हैं जिनसे efficacy (630/7=90 lm/W), warm colour (3000K) और moderate colour rendering (CRI 80) पता चलते हैं, लेकिन lifespan (घंटों में) अलग से specify किया जाना ज़रूरी है और यहाँ नहीं दिया गया, इसलिए option D सही है। बाकी तीनों values सीधे दी गई जानकारी से निकाली जा सकती हैं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q43",
+      "question": "किसी LED panel का wattage बढ़ाए बिना उसकी lumen output बढ़ाने का सबसे प्रभावी तरीका (design दृष्टिकोण से) क्या है?",
+      "options": ["Panel का रंग बदलना", "Beam angle को हमेशा घटाना", "अधिक luminous efficacy (उच्च lm/W) वाली बेहतर quality LED chips और optics का उपयोग करना", "CRI को घटाना"],
+      "correctIndex": 2,
+      "explanation": "बिना अधिक बिजली खपत बढ़ाए अधिक प्रकाश पाने के लिए उच्च efficacy (अधिक lm/W) वाली बेहतर LED chips, phosphor और optics design का उपयोग करना पड़ता है, इसलिए option C सही है। पैनल का रंग बदलना lumen output नहीं बढ़ाता, beam angle घटाने से total lumen नहीं बढ़ता (केवल concentration बदलती है), और CRI घटाने का efficacy से सीधा सकारात्मक संबंध नहीं है।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q44",
+      "question": "Hospital operation theatre जैसी जगह पर lighting चुनते समय CRI और colour temperature की क्या भूमिका होती है?",
+      "options": ["उच्च CRI और उचित cool white colour temperature से रंगों (जैसे रक्त/tissue) की सटीक पहचान संभव होती है", "कोई भूमिका नहीं, केवल brightness मायने रखती है", "कम CRI बेहतर होता है ताकि रंग dull दिखें", "colour temperature केवल decoration के लिए होती है"],
+      "correctIndex": 0,
+      "explanation": "Operation theatre में डॉक्टरों को tissue और रक्त के रंगों में सटीक अंतर पहचानना ज़रूरी होता है, इसके लिए उच्च CRI (सामान्यतः >90) और उपयुक्त cool white colour temperature वाली lighting उपयोग होती है, इसलिए option A सही है। केवल brightness पर्याप्त नहीं, कम CRI रंग-पहचान बिगाड़ देगा, और colour temperature का चुनाव यहाँ functional है, सिर्फ decoration नहीं।"
+    },
+    {
+      "id": "u10_led_panels_lamps_q45",
+      "question": "एक warehouse (गोदाम) की high-bay ceiling के लिए किस प्रकार का LED fixture सबसे उपयुक्त होगा?",
+      "options": ["छोटा decorative LED downlight", "Low-power indicator LED lamp", "केवल coloured decorative LED strip", "High lumen output वाला high-bay LED fixture जो ऊँची छत से नीचे तक पर्याप्त illumination दे सके"],
+      "correctIndex": 3,
+      "explanation": "Warehouse की high ceiling (आमतौर पर 6 मीटर से अधिक ऊँचाई) में फर्श तक पर्याप्त प्रकाश पहुँचाने के लिए उच्च lumen output और उचित beam control वाला high-bay LED fixture design किया जाता है, इसलिए option D सही है। छोटा decorative downlight, indicator lamp या coloured strip इतनी ऊँचाई से पर्याप्त illumination नहीं दे सकते।"
     }
   ]
 }

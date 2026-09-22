@@ -213,6 +213,76 @@
       "options": ["लगभग 19.8V और 350mA", "लगभग 3.3V और 2100mA", "लगभग 9.9V और 700mA", "लगभग 19.8V और 2100mA"],
       "correctIndex": 0,
       "explanation": "Series connection में voltages जुड़ते हैं (6 × 3.3V = 19.8V) जबकि current सभी LEDs में समान (350mA) रहता है, इसलिए driver को लगभग 19.8V पर 350mA output देना चाहिए, इसलिए option A सही है। Option B में voltage केवल एक LED का लिया गया और current गलत तरीके से 6 गुना बढ़ा दिया गया, option C में voltage आधा और current भी गलत है, और option D में voltage तो सही है पर current को गलत तरीके से जोड़ दिया गया है जबकि series में current नहीं जुड़ता।"
+    },
+    {
+      "id": "u10_led_drivers_q31",
+      "question": "एक LED stack में 4 समान LEDs parallel में जुड़ी हैं, प्रत्येक का rated current 300mA है और सबका Vf लगभग समान (3.2V) है। इस stack को चलाने के लिए driver से output voltage और कुल current लगभग कितनी होनी चाहिए?",
+      "options": ["लगभग 3.2V और 1200mA", "लगभग 12.8V और 300mA", "लगभग 3.2V और 300mA", "लगभग 12.8V और 1200mA"],
+      "correctIndex": 0,
+      "explanation": "Parallel connection में voltage सभी branches में समान (एक LED का Vf ≈ 3.2V) रहता है जबकि कुल current सभी branches की current का योग होता है (4 × 300mA = 1200mA), इसलिए driver को लगभग 3.2V पर 1200mA देना चाहिए, इसलिए option A सही है। Option B और D में voltage को गलत तरीके से 4 गुना (जैसे series में) कर दिया गया है, और option C में current को केवल एक LED जितना मान लिया गया जबकि parallel में सभी branches की current जुड़ती है।"
+    },
+    {
+      "id": "u10_led_drivers_q32",
+      "question": "समान rated current वाली LEDs को parallel में stack करते समय, प्रत्येक branch में एक छोटा series resistor (या individual current-balancing element) जोड़ने का मुख्य कारण क्या है?",
+      "options": ["LED की brightness स्थायी रूप से बढ़ाना", "प्रत्येक LED के Vf में मामूली manufacturing अंतर के कारण होने वाले असमान current बँटवारे (current hogging) को रोकना, जिससे कोई एक branch अधिक current खींचकर जल्दी खराब न हो", "driver का output voltage कम करना", "LED का रंग एक जैसा बनाना"],
+      "correctIndex": 1,
+      "explanation": "LEDs के Vf में छोटा-सा manufacturing tolerance भी parallel branches में असमान current वितरण (current hogging) कर सकता है; balancing resistor इस असमानता को कम करता है और एक branch को अधिक current लेकर जल्दी fail होने से बचाता है, इसलिए option B सही है। इससे brightness स्थायी रूप से नहीं बढ़ती, driver का output voltage सीधे कम नहीं होता, और रंग एक जैसा करने का यह उपाय नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q33",
+      "question": "Constant-current LED driver और constant-voltage LED driver के output behaviour में मुख्य अंतर क्या है?",
+      "options": ["Constant-current driver load के Vf में बदलाव के बावजूद output current को fixed रखने की कोशिश करता है, जबकि constant-voltage driver एक fixed DC voltage देता है और LED string में current सीमित करने के लिए अलग resistor/current-regulator की आवश्यकता होती है", "दोनों प्रकार के driver हमेशा एक जैसा ही output देते हैं", "Constant-voltage driver सीधे बिना किसी current-limiting element के bare LED चलाने के लिए उपयुक्त होता है", "Constant-current driver का output हमेशा AC होता है"],
+      "correctIndex": 0,
+      "explanation": "Constant-current driver feedback के माध्यम से output current को fixed रखता है चाहे load का Vf थोड़ा बदल जाए, जबकि constant-voltage driver (जैसे 12V/24V DC output) एक fixed voltage rail देता है और bare LED/LED strip को इससे जोड़ने के लिए series resistor या linear regulator से current सीमित करना पड़ता है, इसलिए option A सही है। दोनों का behaviour अलग होता है, constant-voltage driver से bare LED बिना current-limiting सीधे नहीं जोड़ी जा सकती, और output सामान्यतः DC ही होता है।"
+    },
+    {
+      "id": "u10_led_drivers_q34",
+      "question": "LED strip lighting (जैसे 12V DC COB/SMD strip, जिसमें strip के अंदर ही series resistor बना होता है) के लिए सामान्यतः किस प्रकार का driver चुना जाता है?",
+      "options": ["Constant-current driver, क्योंकि strip को हमेशा fixed current चाहिए", "कोई भी driver नहीं, strip सीधे AC mains पर चलती है", "Constant-voltage driver, क्योंकि strip के अंदर पहले से current-limiting resistor मौजूद होता है और उसे केवल एक स्थिर rated DC voltage (जैसे 12V) की आवश्यकता होती है", "केवल capacitive dropper driver"],
+      "correctIndex": 2,
+      "explanation": "12V/24V LED strips में हर LED segment के साथ एक built-in series resistor होता है जो current सीमित करता है, इसलिए इन्हें केवल एक स्थिर constant-voltage DC source चाहिए, इसलिए option C सही है। Constant-current driver इसके लिए ज़रूरी नहीं, strip सीधे AC mains पर नहीं चलती (यह DC LED strip है), और capacitive dropper विशेष रूप से इसके लिए अनिवार्य नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q35",
+      "question": "किसी LED driver की datasheet में दी गई 'output current ripple' specification का practical महत्व क्या है?",
+      "options": ["यह driver के input voltage range को दर्शाता है", "यह बताता है कि output DC current में कितना AC-जैसा उतार-चढ़ाव (ripple) मौजूद है; अधिक ripple से LED brightness में दिखने योग्य flicker और long-term stress हो सकता है", "यह LED के colour temperature को नियंत्रित करता है", "यह driver की dimming range को दर्शाता है"],
+      "correctIndex": 1,
+      "explanation": "Output current ripple यह दर्शाता है कि DC output के ऊपर कितना residual AC component है; उच्च ripple percentage LED में visible flicker (विशेषकर camera/video में striping) और अतिरिक्त thermal/electrical stress पैदा कर सकता है, इसलिए low-ripple driver select करना महत्वपूर्ण है, इसलिए option B सही है। यह input voltage range, colour temperature या dimming range का सीधा माप नहीं है।"
+    },
+    {
+      "id": "u10_led_drivers_q36",
+      "question": "LED driver select करते समय ambient operating temperature rating (जैसे -20°C to +50°C) की जांच क्यों आवश्यक है?",
+      "options": ["क्योंकि इससे LED का forward voltage स्थायी रूप से बदल जाता है", "क्योंकि इससे driver की dimmability बढ़ जाती है", "क्योंकि इससे PFC value स्वतः सुधर जाती है", "क्योंकि driver के अंदर के components (capacitor, IC आदि) की rated temperature range से बाहर काम करने पर driver की life घट सकती है या वह असामान्य व्यवहार कर सकता है, विशेषकर outdoor/high-ambient installations में"],
+      "correctIndex": 3,
+      "explanation": "Driver की rated ambient temperature range से बाहर (जैसे बहुत गर्म enclosure या outdoor fixture में) चलाने पर internal electrolytic capacitor और IC जल्दी degrade हो सकते हैं, जिससे driver की life व reliability घट जाती है, इसलिए option D सही है। इससे LED का Vf, dimmability या PFC सीधे नहीं बदलते।"
+    },
+    {
+      "id": "u10_led_drivers_q37",
+      "question": "एक LED lighting fixture में इस्तेमाल हुई LEDs की rated life 50,000 घंटे है, लेकिन driver (उसके internal electrolytic capacitor की सीमा के कारण) की rated life केवल 25,000 घंटे है। इस स्थिति का practical निष्कर्ष क्या है?",
+      "options": ["चूँकि driver की life LED से कम है, fixture का प्रभावी working life अक्सर driver की failure से सीमित हो जाता है, इसलिए driver का चुनाव/replacement भी उतना ही महत्वपूर्ण है जितना LED का", "LED और driver दोनों हमेशा एक साथ ही खराब होंगे", "driver की life का fixture की overall life पर कोई असर नहीं पड़ता", "इसका अर्थ है कि LED की rated life गलत मापी गई है"],
+      "correctIndex": 0,
+      "explanation": "किसी fixture की practical life उसके सबसे कमज़ोर हिस्से से सीमित होती है; यदि driver की life LED से काफी कम है तो fixture प्रायः driver fail होने पर ही 'खराब' मानी जाएगी, इसलिए quality driver चुनना उतना ही ज़रूरी है, इसलिए option A सही है। दोनों साथ खराब होना आवश्यक नहीं, driver की life का असर होता ही है, और इससे LED की rated life गलत नहीं सिद्ध होती।"
+    },
+    {
+      "id": "u10_led_drivers_q38",
+      "question": "LED driver चुनते समय 'derating' (यानी driver को उसकी full rated capacity से कुछ कम पर operate करना, जैसे 40W driver से केवल 32W की LED load चलाना) की practice क्यों अपनाई जाती है?",
+      "options": ["driver को हमेशा underpowered रखकर उसे कमज़ोर बनाना", "LED की brightness को कम दिखाना", "driver पर stress और heat कम करके उसकी reliability और operating life बढ़ाने के लिए, विशेषकर उच्च ambient temperature या 24×7 operation वाली जगहों पर", "driver की input voltage range को सीमित करना"],
+      "correctIndex": 2,
+      "explanation": "Derating driver को उसकी अधिकतम rated capacity से कुछ कम लोड पर चलाता है, जिससे internal components पर thermal व electrical stress घटता है और driver लंबे समय तक अधिक भरोसेमंद रहता है, इसलिए option C सही है। यह driver को 'कमज़ोर' बनाने के लिए नहीं, LED brightness घटाने के लिए नहीं, और input voltage range सीमित करने के लिए नहीं अपनाया जाता।"
+    },
+    {
+      "id": "u10_led_drivers_q39",
+      "question": "किसी पुरानी CFL/incandescent fixture को LED में retrofit करते समय एक उचित LED driver चुनने के लिए सबसे पहले किन दो parameters का मिलान (matching) करना अनिवार्य है?",
+      "options": ["fixture का बाहरी रंग और आकार", "नई LED assembly की total wattage/current requirement तथा उसकी total forward voltage (Vf) आवश्यकता को driver के output rating से मिलाना", "पुराने CFL ballast की frequency", "केवल fixture की मूल कीमत"],
+      "correctIndex": 1,
+      "explanation": "Retrofit में सबसे पहला और अनिवार्य कदम है कि नई LED load की wattage/current और कुल Vf requirement को नए driver के output voltage व current rating से सही मिलाया जाए, अन्यथा under-drive या over-drive की समस्या होगी, इसलिए option B सही है। बाहरी रंग/आकार, पुराने ballast की frequency, या fixture की मूल कीमत electrical matching के लिए relevant नहीं हैं।"
+    },
+    {
+      "id": "u10_led_drivers_q40",
+      "question": "एक hybrid LED driver डिज़ाइन में शुरुआती stage में capacitive/resistive dropper से mains voltage को मोटे तौर पर कम किया जाता है और फिर एक छोटे switching/linear regulator stage से fine current regulation की जाती है। इस hybrid approach का मुख्य फायदा क्या है?",
+      "options": ["यह पूरी तरह से केवल resistive dropper जितना ही अकुशल रहता है", "यह हमेशा mains से पूर्ण isolation प्रदान करता है", "इसमें किसी भी प्रकार का current regulation संभव नहीं होता", "यह अपेक्षाकृत कम cost और सरल circuit के साथ, pure resistive dropper की तुलना में बेहतर current regulation व थोड़ी बेहतर efficiency प्रदान कर सकता है, यद्यपि यह पूर्ण SMPS driver जितना उन्नत/isolated नहीं होता"],
+      "correctIndex": 3,
+      "explanation": "Hybrid dropper + छोटे regulation stage वाला design, pure resistive/capacitive dropper से बेहतर current control और थोड़ी बेहतर efficiency देता है जबकि पूर्ण SMPS driver जितना जटिल/महंगा नहीं होता, इसलिए option D सही है। यह pure resistive dropper जितना अकुशल नहीं है, यह सामान्यतः isolation प्रदान नहीं करता (जब तक अलग transformer न जोड़ा जाए), और इसमें current regulation संभव होता है, यही तो इसका उद्देश्य है।"
     }
   ]
 }

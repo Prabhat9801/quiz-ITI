@@ -363,6 +363,66 @@
       ],
       "correctIndex": 2,
       "explanation": "External decoder को जोड़ने के बाद TV पर उस specific HDMI input को Source/Input button से manually select करना पड़ता है ताकि TV उसी port का signal display करे, इसलिए option C सही है। Factory reset, firmware update या TV restart करके antenna जोड़ना — ये सामान्य external device connect करने के लिए आवश्यक कदम नहीं हैं।"
+    },
+    {
+      "id": "u10_external_decoders_q31",
+      "question": "EPG (Electronic Program Guide) feature किसी STB में क्या सुविधा देता है?",
+      "options": [
+        "Screen की brightness स्वतः control करना",
+        "स्क्रीन पर विभिन्न channels के आने वाले programs की सूची, समय व विवरण दिखाना जिससे user आगे के programs देख/plan कर सके",
+        "TV के speaker की tone quality सुधारना",
+        "HDMI cable की length बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "EPG एक on-screen schedule/listing है जिसमें अलग-अलग channels के current और upcoming programs की जानकारी (नाम, समय, संक्षिप्त विवरण) दिखाई जाती है, इसलिए option B सही है। Brightness control TV की setting है, speaker tone quality का EPG से कोई संबंध नहीं, और HDMI cable की length बढ़ाना एक hardware limitation है जिसे software feature हल नहीं करता।"
+    },
+    {
+      "id": "u10_external_decoders_q32",
+      "question": "PVR (Personal Video Recorder) सुविधा वाले STB में recording किस storage पर की जाती है?",
+      "options": [
+        "STB के internal ROM (firmware chip) पर, जो सामान्यतः बहुत कम size का होता है",
+        "STB में लगी built-in hard disk या connected external USB storage पर",
+        "केवल TV की internal memory पर",
+        "Smart card के अंदर मौजूद chip पर"
+      ],
+      "correctIndex": 1,
+      "explanation": "PVR-सक्षम STB में live TV programs को उसमें लगी hard disk या बाहर से जोड़ी गई USB storage पर record किया जाता है, इसलिए option B सही है। Firmware ROM का size recording के लिए पर्याप्त नहीं होता, TV की internal memory ऐसे recording के लिए प्रयोग नहीं होती, और smart card केवल subscription keys रखने के लिए होता है, video data record करने के लिए नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q33",
+      "question": "एक digital multimedia player, network के माध्यम से किसी दूसरे computer/NAS पर रखी media files को stream करके play करने के लिए सामान्यतः किस protocol/feature का प्रयोग करता है?",
+      "options": [
+        "DLNA (Digital Living Network Alliance) जैसा network-sharing protocol, जिससे LAN पर रखी media files को बिना copy किए play किया जा सके",
+        "केवल infrared remote signal",
+        "केवल smart card के अंदर की keys",
+        "केवल HDMI cable के through सीधे data transfer"
+      ],
+      "correctIndex": 0,
+      "explanation": "DLNA जैसे network protocol से multimedia player, LAN पर मौजूद computer/NAS की shared media files को बिना local copy किए directly stream करके play कर सकता है, इसलिए option A सही है। Infrared remote केवल control signal भेजता है, smart card keys का network streaming से कोई संबंध नहीं, और HDMI cable केवल display output देने के लिए है, network file access के लिए नहीं।"
+    },
+    {
+      "id": "u10_external_decoders_q34",
+      "question": "अच्छी performance वाले Android smart box में RAM और internal storage की भूमिका क्या होती है?",
+      "options": [
+        "ये केवल TV की screen resolution तय करते हैं",
+        "RAM व storage एक-दूसरे का विकल्प हैं, दोनों में से कोई एक ही पर्याप्त होता है",
+        "अधिक RAM apps को smoothly चलाने में तथा अधिक internal storage अधिक apps/data install करने में मदद करता है, जिससे multitasking व performance बेहतर होती है",
+        "इनका smart box के कार्य से कोई संबंध नहीं, ये केवल marketing के लिए बताए जाते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "RAM अधिक होने पर apps smoothly तथा बिना lag चलते हैं, और अधिक internal storage होने पर अधिक apps एवं data रखे जा सकते हैं, इससे overall performance व multitasking बेहतर होती है — इसलिए option C सही है। Screen resolution TV/box की video output capability पर निर्भर है, RAM व storage एक-दूसरे के विकल्प नहीं (दोनों अलग कार्य करते हैं), और ये केवल marketing terms नहीं बल्कि actual performance को प्रभावित करते हैं।"
+    },
+    {
+      "id": "u10_external_decoders_q35",
+      "question": "BD/DVD players में 'region code' का क्या अर्थ है?",
+      "options": [
+        "Disc पर data लिखने की speed को दर्शाने वाला code",
+        "Player के internal circuit board पर लगा एक serial number",
+        "Content producers/studios द्वारा तय किया गया एक code जिसके कारण कुछ discs केवल उन्हीं geographic regions के players पर play होती हैं जिनके लिए वे licensed हैं",
+        "TV के HDMI port की compatibility बताने वाला code"
+      ],
+      "correctIndex": 2,
+      "explanation": "Region code studios द्वारा distribution rights नियंत्रित करने के लिए दिया जाता है, जिससे एक region की disc किसी दूसरे region के player पर सामान्यतः नहीं चलती, इसलिए option C सही है। Data लिखने की speed अलग parameter (जैसे 'x' rating) से जुड़ी है, region code circuit board के serial number जैसा नहीं होता, और यह HDMI compatibility से भी असंबंधित है।"
     }
   ]
 }

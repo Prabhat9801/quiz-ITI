@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "Monitor/display DVR/NVR से मिले video output को visual image के रूप में दिखाने का काम करता है ताकि operator live या recorded footage देख सके, इसलिए option B सही है। Video को digitize/store करना DVR/NVR-HDD का काम है, camera को power देना power supply का काम है, और IR LEDs camera assembly का हिस्सा हैं, monitor का नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q31",
+      "question": "CCTV camera lens की focal length कम (जैसे 2.8mm) होने पर field of view और coverage पर क्या असर पड़ता है?",
+      "options": [
+        "Field of view wide हो जाता है और camera एक बड़े area को कवर करती है, लेकिन दूर की चीज़ें कम detail के साथ दिखती हैं",
+        "Field of view narrow हो जाता है और सिर्फ बहुत दूर की चीज़ें दिखती हैं",
+        "Focal length का field of view से कोई संबंध नहीं होता",
+        "कम focal length से camera resolution automatically बढ़ जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "कम focal length वाली lens (जैसे 2.8mm) wide-angle view देती है, जिससे camera बड़े area को कवर कर पाती है, पर दूर की objects की detail कम होती है — इसलिए option A सही है। Narrow view ज़्यादा focal length (जैसे 8mm, 12mm) से मिलता है, focal length का field of view से सीधा संबंध होता है, और यह resolution को नहीं बदलता, resolution sensor पर निर्भर करता है।"
+    },
+    {
+      "id": "u10_cctv_system_q32",
+      "question": "एक CCTV camera का frame rate 25 fps (frames per second) है। इसका क्या मतलब है?",
+      "options": [
+        "Camera हर 25 सेकंड में एक image capture करता है",
+        "Camera 1 सेकंड में 25 अलग-अलग still images capture करके smooth video बनाता है",
+        "Camera की storage capacity 25 GB है",
+        "Camera सिर्फ 25 मिनट तक record कर सकता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "fps (frames per second) यह बताता है कि camera 1 सेकंड में कितने still frames capture करता है; 25 fps में हर सेकंड 25 frames लगातार दिखाकर smooth motion वाली video बनती है, इसलिए option B सही है। यह capture interval को उल्टा बताता है, इसका storage capacity (GB) या recording duration (मिनट) से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u10_cctv_system_q33",
+      "question": "Multi-camera CCTV installation में monitor पर एक साथ कई cameras की video देखने के लिए DVR/NVR में कौन-सी सुविधा उपयोग होती है?",
+      "options": [
+        "IR cut filter",
+        "PoE injector",
+        "Multiplexer/split-screen display feature, जो एक ही screen को कई sections में बाँटकर हर section में अलग camera की live feed दिखाता है",
+        "DDNS service"
+      ],
+      "correctIndex": 2,
+      "explanation": "DVR/NVR की multiplexer/split-screen feature एक monitor screen को grid (जैसे 4, 9, 16 sections) में बाँटकर सभी connected cameras की live video एक साथ दिखाती है, इसलिए option C सही है। IR cut filter camera के अंदर day/night switching करता है, PoE injector power+data देता है, और DDNS internet पर remote access के लिए है — इनका split-screen viewing से सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q34",
+      "question": "Cloud-based CCTV recording (cloud storage) की traditional local HDD-based DVR/NVR recording की तुलना में मुख्य विशेषता क्या है?",
+      "options": [
+        "Video footage local HDD के बजाय internet के through remote server पर store होता है, जिससे device चोरी/damage होने पर भी footage सुरक्षित रहता है",
+        "Cloud recording में कोई internet connection की ज़रूरत नहीं होती",
+        "Cloud storage हमेशा local HDD से सस्ती होती है और कोई monthly cost नहीं लगता",
+        "Cloud recording सिर्फ analog DVR system में उपलब्ध होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cloud recording में video internet के माध्यम से remote server पर upload होकर store होता है, इसलिए DVR/NVR या HDD चोरी/खराब होने पर भी footage cloud पर सुरक्षित रहता है — इसलिए option A सही है। इसके लिए stable internet connection ज़रूरी होता है, अक्सर इसमें recurring subscription cost लगता है (local HDD से हमेशा सस्ती नहीं), और यह मुख्यतः IP/NVR-based systems में common है, पुराने analog DVR में नहीं।"
+    },
+    {
+      "id": "u10_cctv_system_q35",
+      "question": "किसी घर की main entry gate की चौबीसों घंटे surveillance के लिए एक fixed-direction, weatherproof outdoor camera चुननी है जिसमें अच्छी IR night vision range भी हो। इस applications के लिए कौन-सी camera type सबसे उपयुक्त रहेगी?",
+      "options": [
+        "PTZ camera, क्योंकि इसे लगातार घुमाना पड़ता है",
+        "Bullet camera, क्योंकि इसका weatherproof housing और fixed direction outdoor gate monitoring के साथ-साथ अच्छी IR range भी देता है",
+        "Box camera without housing, क्योंकि यह सबसे सस्ती होती है",
+        "Wireless indoor dome camera, क्योंकि इसमें IR LEDs नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bullet camera का cylindrical weatherproof housing outdoor use और fixed direction monitoring (जैसे gate) के लिए उपयुक्त है, और इसमें प्रायः लंबी IR range होती है — इसलिए option B सही है। PTZ का उद्देश्य movement/scanning है, fixed gate-view के लिए ज़रूरी नहीं; box camera without housing outdoor weather से सुरक्षित नहीं रहती; और indoor dome camera outdoor 24-घंटे weatherproof monitoring के लिए उपयुक्त नहीं होती।"
     }
   ]
 }

@@ -363,6 +363,246 @@
       ],
       "correctIndex": 1,
       "explanation": "सही signal chain है: keypad से key press detect होती है, encoder IC उस key का code generate करता है, driver transistor IR LED को drive करता है जो signal transmit करती है, फिर TV का photodiode/receiver signal पकड़ता है और demodulator IC उसे decode करके TV के control circuit तक भेजता है — इसलिए option B सही है। बाकी तीनों options में order उल्टा या incomplete/गलत है (जैसे receiver पहले रखना, या बिना receiver के सीधे TV से connect करना), जो actual working को सही तरीके से represent नहीं करते।"
+    },
+    {
+      "id": "u10_tv_remote_control_q31",
+      "question": "Remote control में IR LED को continuous (non-modulated) constant current पर लगातार ON रखने के बजाय pulsed/modulated pattern में drive करने का मुख्य फायदा क्या है?",
+      "options": [
+        "Pulsed drive से LED की average current कम रहती है (जिससे battery life बेहतर रहती है) और साथ ही carrier पर modulated digital data भी transmit हो पाता है",
+        "Continuous ON रखने से LED का color बदल जाता है",
+        "Pulsed drive से receiver की range कम हो जाती है",
+        "Continuous current से data encode करना ज्यादा आसान होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pulsed/modulated drive में LED सिर्फ short duty cycle के लिए ON होती है इसलिए average current कम रहती है और battery ज्यादा चलती है, साथ ही ON-OFF pattern के through ही actual digital data carrier frequency पर encode होता है — इसलिए option A सही है। LED का color current pattern से नहीं बदलता, pulsed drive range को कम नहीं करता (बल्कि peak current ज्यादा दे सकता है), और continuous constant current में कोई data encode ही नहीं हो सकता।"
+    },
+    {
+      "id": "u10_tv_remote_control_q32",
+      "question": "Universal remote control में किसी नए TV brand को \"program/set\" करने का सबसे common तरीका क्या है?",
+      "options": [
+        "Remote को खोल कर उसका encoder IC replace करना",
+        "Remote की battery को कुछ मिनट के लिए निकाल कर रखना",
+        "Manufacturer द्वारा दिए गए specific numeric code को remote में enter करना या remote को \"auto search/scan\" mode में डालकर सही code find होने तक buttons दबाना",
+        "Remote को धूप में कुछ समय रखना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Universal remote में device की company/model के हिसाब से एक pre-defined numeric setup code enter किया जाता है, या remote के auto-search mode में सही code मिलने तक अलग-अलग codes cycle किए जाते हैं जिससे remote उस TV brand के command-set पर set हो जाता है — इसलिए option C सही है। Encoder IC replace करना अव्यावहारिक और अनावश्यक है, सिर्फ battery निकालना कोई brand-set नहीं करता, और धूप में रखने से setup से कुछ लेना-देना नहीं है।"
+    },
+    {
+      "id": "u10_tv_remote_control_q33",
+      "question": "Video wall display किसे कहा जाता है?",
+      "options": [
+        "कई अलग-अलग display panels (screens) को grid में एक साथ जोड़कर एक बड़ी, seamless-जैसी combined display बनाना, जिसे एक video wall controller drive करता है",
+        "एक अकेला बहुत बड़ा single LED panel जिसमें कोई joint नहीं होता",
+        "सिर्फ एक projector से wall पर image project करना",
+        "TV remote के अंदर लगा एक छोटा display screen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Video wall multiple individual display panels (LED/LCD tiles) को rows-columns के grid में जोड़कर बनाई जाती है ताकि वो मिलकर एक बड़ी combined picture दिखा सकें, और इस पूरे content distribution को एक dedicated video wall controller manage करता है — इसलिए option A सही है। Single बड़ा panel बिना joints के अलग concept है, projector-based projection video wall नहीं है, और remote के अंदर display screen होने की कोई ऐसी standard practice नहीं है।"
+    },
+    {
+      "id": "u10_tv_remote_control_q34",
+      "question": "Video wall में इस्तेमाल होने वाले panels का design आमतौर पर \"narrow bezel\" या \"bezel-less\" क्यों रखा जाता है?",
+      "options": [
+        "ताकि adjacent panels के बीच की मोटी frame/border कम से कम दिखे और पूरी video wall एक seamless, continuous image जैसी दिखे",
+        "ताकि power consumption कम हो जाए",
+        "ताकि remote control का IR signal panels के बीच से आसानी से गुजर सके",
+        "ताकि panel का weight कम हो जाए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Panels के बीच मोटा bezel/border होने पर combined image में साफ लाइनें/gaps दिखते हैं, इसलिए video wall panels को narrow या bezel-less design में बनाया जाता है ताकि joints कम से कम नजर आएं और image एक continuous single picture जैसी लगे — इसलिए option A सही है। इसका मुख्य purpose power consumption या weight कम करना नहीं है, और यह remote के IR signal path से बिल्कुल संबंधित नहीं है।"
+    },
+    {
+      "id": "u10_tv_remote_control_q35",
+      "question": "Video wall controller का मुख्य function क्या होता है?",
+      "options": [
+        "सिर्फ पूरी video wall को ON/OFF करने वाला एक mechanical switch",
+        "Input video source (जैसे computer/media player) से आए content को split/scale करके सही हिस्सों में हर individual panel तक भेजना, ताकि सभी panels मिलकर एक coordinated बड़ी image दिखाएं",
+        "हर panel की battery को charge करना",
+        "सिर्फ audio volume control करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Video wall controller incoming video signal को process करके उसे उतने हिस्सों में split और scale करता है जितने panels लगे हैं, और हर हिस्सा सही panel तक भेजता है ताकि पूरी wall पर एक coordinated combined image दिखे — इसलिए option B सही है। ये सिर्फ mechanical ON/OFF switch नहीं है, panels battery से नहीं चलते (mains supply से चलते हैं), और सिर्फ audio control इसका मुख्य function नहीं है।"
+    },
+    {
+      "id": "u10_tv_remote_control_q36",
+      "question": "एक remote में keypad का matrix design (rows x columns) का मुख्य फायदा क्या है?",
+      "options": [
+        "इससे battery की life automatically बढ़ जाती है",
+        "इससे IR LED की brightness बढ़ जाती है",
+        "कम encoder IC pins का उपयोग करके ज्यादा number of keys को scan/detect किया जा सकता है (जैसे 4x4 matrix से 16 keys सिर्फ 8 pins से detect होती हैं)",
+        "इससे remote का range automatically बढ़ जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Matrix arrangement में rows और columns को scan करके ही multiple keys को कम IC pins से पहचाना जा सकता है — जैसे 4 rows और 4 columns से 16 keys detect हो जाती हैं सिर्फ 8 pins use करके, इसके बिना हर key के लिए अलग pin चाहिए होता — इसलिए option C सही है। इसका battery life, LED brightness या range पर कोई direct प्रभाव नहीं होता।"
+    },
+    {
+      "id": "u10_tv_remote_control_q37",
+      "question": "अगर remote के keypad matrix में दो आसपास की tracks (rows/columns) आपस में short हो जाएं (जैसे moisture/dust के कारण), तो कौनसा symptom likely होगा?",
+      "options": [
+        "Remote बिल्कुल भी काम नहीं करेगा, कोई response नहीं देगा",
+        "सिर्फ battery जल्दी खत्म होगी, बाकी सब normal रहेगा",
+        "TV की picture धीरे-धीरे fade होने लगेगी",
+        "एक साथ multiple wrong/unwanted keys press होने जैसा behaviour दिख सकता है, जैसे किसी एक key को दबाने पर कोई दूसरी unrelated key की command भी trigger हो जाना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Matrix में short होने पर encoder IC को गलत row-column combination मिलता है जिससे actual key से अलग कोई दूसरी key (या multiple keys) trigger होने जैसा गलत behaviour दिख सकता है — इसलिए option D सही है। ये पूरे remote को पूरी तरह non-functional नहीं बनाता (कुछ keys normal भी रह सकती हैं), battery drain से इसका सीधा संबंध नहीं, और TV की picture quality से matrix short का कोई लेना-देना नहीं है।"
+    },
+    {
+      "id": "u10_tv_remote_control_q38",
+      "question": "IR receiver module के अंदर लगे narrow bandpass optical filter (आमतौर पर dark-tinted plastic window) का क्या purpose होता है?",
+      "options": [
+        "Sirf visible light को receiver के अंदर आने देना",
+        "Receiver की IR sensitivity को पूरी तरह खत्म कर देना",
+        "Battery की current draw को कम करना",
+        "IR wavelength को छोड़कर बाकी sunlight/visible light के wavelengths को block/attenuate करना, जिससे receiver सिर्फ relevant IR signal पर बेहतर respond करे और false triggering कम हो"
+      ],
+      "correctIndex": 3,
+      "explanation": "Receiver window पर लगा dark filter visible light और अन्य unwanted wavelengths को काफी हद तक block कर देता है जबकि IR wavelength को गुजरने देता है, जिससे sunlight/ambient light की वजह से होने वाला false triggering या noise कम हो जाता है — इसलिए option D सही है। यह visible light को अंदर नहीं आने देता (उल्टा), receiver की IR sensitivity खत्म नहीं करता, और battery current draw से इसका कोई direct संबंध नहीं है।"
+    },
+    {
+      "id": "u10_tv_remote_control_q39",
+      "question": "TV के IR receiver circuit में AGC (Automatic Gain Control) जैसी feature होने का क्या फायदा है?",
+      "options": [
+        "यह incoming IR signal की strength (weak या strong, remote की distance/angle के हिसाब से) के अनुसार receiver की gain को automatically adjust कर देता है ताकि signal सही तरीके से detect हो सके",
+        "यह remote की battery को automatically recharge कर देता है",
+        "यह TV की picture brightness को control करता है",
+        "यह remote के encoder IC की frequency को बदल देता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Remote की distance और angle बदलने से receiver तक पहुंचने वाला IR signal कमजोर या तेज हो सकता है; AGC circuit receiver की gain को automatically adjust करता है ताकि weak signal भी सही detect हो और बहुत strong signal से saturation ना हो — इसलिए option A सही है। यह battery recharge नहीं करता, TV की picture brightness (video circuit) से अलग है, और remote के encoder की frequency को यह control नहीं करता।"
+    },
+    {
+      "id": "u10_tv_remote_control_q40",
+      "question": "एक user complaint करता है कि उसका TV remote सिर्फ तब काम करता है जब वो remote को TV के बहुत पास (लगभग 30 cm के अंदर) लाकर point करता है, normal distance (जैसे 3-4 meter) से काम नहीं करता। सबसे likely cause क्या हो सकता है?",
+      "options": [
+        "TV का power supply पूरी तरह से fail हो गया है",
+        "IR LED या उसकी driving circuitry weak हो गई है (जैसे LED की intensity कम होना या driver transistor की performance घटना), जिससे effective range काफी कम हो गई है",
+        "TV की screen resolution कम हो गई है",
+        "Remote का keypad matrix पूरी तरह short हो गया है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब remote बहुत पास से तो काम करे पर normal distance से ना करे, तो इसका मतलब IR signal transmit तो हो रहा है लेकिन उसकी intensity/strength कमजोर है — यह commonly weak/aging IR LED या degraded driver transistor performance के कारण होता है — इसलिए option B सही है। Power supply पूरी तरह fail होने पर TV ही on नहीं होगी, screen resolution का remote range से कोई संबंध नहीं, और keypad matrix पूरी तरह short होने पर बिल्कुल भी response ना मिलने की संभावना ज्यादा होती, distance-based range कम होना नहीं।"
+    },
+    {
+      "id": "u10_tv_remote_control_q41",
+      "question": "Modern smart TV के कुछ remote control \"voice command\" feature देते हैं। इसके लिए remote में commonly किस additional component की जरूरत होती है?",
+      "options": [
+        "एक अतिरिक्त बड़ा IR LED array",
+        "एक extra tact switch matrix",
+        "एक microphone module जो voice को capture करके उसे processing के लिए TV/cloud तक (आमतौर पर RF/Bluetooth link के through) भेजता है",
+        "एक second battery compartment"
+      ],
+      "correctIndex": 2,
+      "explanation": "Voice command वाले remote में एक microphone module होता है जो user की voice capture करता है और उसे processing के लिए TV या cloud service तक भेजता है, आमतौर पर यह link RF/Bluetooth आधारित होता है क्योंकि voice data की मात्रा IR की simple pulse coding से handle करना practical नहीं है — इसलिए option C सही है। ज्यादा IR LEDs, extra tact switch matrix, या दूसरा battery compartment voice feature के लिए जरूरी component नहीं हैं।"
+    },
+    {
+      "id": "u10_tv_remote_control_q42",
+      "question": "IR remote के मुकाबले RF remote का एक practical फायदा यह भी है कि यूज़र remote को TV की तरफ point किए बिना भी use कर सकता है। इसका technical कारण क्या है?",
+      "options": [
+        "Radio waves omni-directional तरीके से फैलती हैं और strict line-of-sight की जरूरत नहीं होती, जबकi IR light को सीधे receiver की तरफ point करना जरूरी होता है",
+        "RF remote में battery ज्यादा powerful होती है",
+        "RF remote में IR LED ज्यादा तेज light देती है",
+        "RF remote का encoder IC ज्यादा fast होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Radio waves सभी दिशाओं में omni-directional तरीके से फैल सकती हैं और obstruction के through भी पहुंच सकती हैं, इसलिए RF remote को सीधा point करना जरूरी नहीं होता, जबकि IR light straight-line में travel करती है इसलिए उसे receiver की तरफ ही point करना पड़ता है — इसलिए option A सही है। यह battery power, LED intensity, या encoder की speed से संबंधित नहीं है।"
+    },
+    {
+      "id": "u10_tv_remote_control_q43",
+      "question": "Remote adjustment/setup में मौजूद कुछ TVs में \"remote pairing\" या \"code matching\" जैसी advanced setting क्यों दी जाती है (especially RF/Bluetooth remote में)?",
+      "options": [
+        "ताकि remote की battery life बढ़ जाए",
+        "ताकि TV की picture quality बेहतर हो जाए",
+        "ताकि पास-पास रखे multiple similar TVs में से एक specific remote सिर्फ अपने assigned/paired TV को ही control करे, दूसरे TV को नहीं",
+        "ताकि IR LED की carrier frequency automatically बदल जाए"
+      ],
+      "correctIndex": 2,
+      "explanation": "RF/Bluetooth remote wall/obstruction के through भी signal भेज सकते हैं इसलिए अगर पास में कई similar TVs हों तो बिना pairing के एक remote गलती से दूसरे TV को भी control कर सकता है; pairing/code-matching setting उस remote को specifically एक ही TV से link कर देती है — इसलिए option C सही है। इससे battery life नहीं बढ़ती, picture quality पर कोई effect नहीं, और यह carrier frequency को automatically नहीं बदलता।"
+    },
+    {
+      "id": "u10_tv_remote_control_q44",
+      "question": "एक technician दो remotes को टेस्ट करता है — remote-1 सिर्फ line-of-sight में काम करता है और दीवार के through नहीं चलता, remote-2 बिना point किए भी दूसरे कमरे से TV control कर देता है। इनकी technology को सही तरीके से identify करें।",
+      "options": [
+        "Remote-1 = RF based, Remote-2 = IR based",
+        "दोनों remotes actually एक ही technology (IR) use करते हैं, सिर्फ range अलग है",
+        "Remote-1 = IR based (line-of-sight जरूरी), Remote-2 = RF based (walls/obstruction के through भी काम करता है)",
+        "दोनों remotes RF based हैं लेकिन अलग-अलग frequency पर"
+      ],
+      "correctIndex": 2,
+      "explanation": "Line-of-sight की सख्त जरूरत और दीवार से block होना IR technology की classic पहचान है, जबकि बिना point किए और दूसरे कमरे से भी काम करना RF technology (radio waves obstruction penetrate करती हैं) की पहचान है — इसलिए option C सही identification है। बाकी options में technology को गलत तरीके से match किया गया है या दोनों को एक जैसा बता दिया गया है, जो दिए गए behaviour से मेल नहीं खाता।"
+    },
+    {
+      "id": "u10_tv_remote_control_q45",
+      "question": "Remote control सर्विसिंग के दौरान PCB पर लगे encoder IC के आसपास corrosion/moisture damage दिखे तो सबसे appropriate step क्या होगा?",
+      "options": [
+        "Directly पूरा remote फेंक कर नया खरीद लेना, बिना कोई inspection किए",
+        "Encoder IC के ऊपर सीधे पानी डालकर धो देना",
+        "IC को हटाकर उसकी जगह tact switch लगा देना",
+        "PCB को साफ करना (isopropyl alcohol जैसे safe cleaner से), corroded tracks/pads को inspect करना, और जरूरत पड़ने पर damaged track/IC को repair या replace करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Moisture/corrosion damage मिलने पर सही तरीका है PCB को उचित cleaner से साफ करना, corroded tracks/solder joints को carefully inspect करना, और जो भी component/track damaged हो उसे repair/replace करना — इसलिए option D सही है। बिना inspection के सीधे फेंक देना एक valid repair approach नहीं है (economical भी नहीं), IC पर पानी डालना उसे और नुकसान पहुंचा सकता है, और encoder IC की जगह tact switch लगाना functionally गलत है क्योंकि दोनों अलग काम करते हैं।"
+    },
+    {
+      "id": "u10_tv_remote_control_q46",
+      "question": "Video wall setup में अगर एक individual panel का driver board fail हो जाए, तो आमतौर पर क्या symptom दिखता है?",
+      "options": [
+        "पूरी video wall के सभी panels एक साथ पूरी तरह बंद हो जाते हैं हमेशा",
+        "सिर्फ उस faulty panel वाला हिस्सा display नहीं करेगा (blank/black या abnormal दिख सकता है) जबकि बाकी panels अपना-अपना हिस्सा normally दिखाते रहेंगे",
+        "पूरी video wall का color permanently बदल जाएगा",
+        "Video wall controller खुद बंद हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "हर panel अपनी individual driver board से चलता है, इसलिए एक panel का driver board fail होने पर सिर्फ उसी panel का हिस्सा affected होगा (blank/abnormal), जबकि बाकी सभी panels अपने-अपने content normally display करते रहेंगे — इसलिए option B सही है। पूरी wall एक साथ बंद होना जरूरी नहीं (panels independent होते हैं), पूरे color scheme का permanently बदलना अवास्तविक है, और एक panel के fail होने से controller खुद बंद नहीं होता।"
+    },
+    {
+      "id": "u10_tv_remote_control_q47",
+      "question": "Remote control में इस्तेमाल होने वाले IR LED का wavelength commonly किस range में होता है?",
+      "options": [
+        "Approx 380-450 nm (violet/blue visible range)",
+        "Approx 10-15 nm (X-ray range)",
+        "Approx 1 mm (radio wave range)",
+        "Approx 850-950 nm (near-infrared range, जो human eye को invisible होती है)"
+      ],
+      "correctIndex": 3,
+      "explanation": "TV remote में इस्तेमाल होने वाली IR LED का wavelength आमतौर पर approx 850-950 nm (near-infrared) range में होता है, जो human eye के visible spectrum से बाहर होता है इसलिए naked eye को invisible रहता है — इसलिए option D सही है। 380-450 nm violet/blue visible light range है, X-ray की wavelength nm से भी बहुत छोटी (picometer scale के करीब) होती है, और 1 mm scale radio waves की होती है — ये तीनों IR LED के actual wavelength से मेल नहीं खाते।"
+    },
+    {
+      "id": "u10_tv_remote_control_q48",
+      "question": "एक user को कई बार एक ही button को 2-3 बार दबाना पड़ता है तभी command execute होती है, हालांकि battery नई है और IR LED का glow भी mobile camera से confirm हो चुका है। सबसे likely cause क्या हो सकता है?",
+      "options": [
+        "TV की video wall controller settings गलत हैं",
+        "उस button का tact switch mechanically weak हो गया है या उसके contact पर light oxidation है, जिससे पहली बार दबाने पर हमेशा proper/full contact नहीं बन पाता",
+        "TV का RF antenna टूट गया है",
+        "Remote की carrier frequency permanently बदल गई है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब LED और battery दोनों confirmed ठीक हों लेकिन एक particular button को बार-बार दबाना पड़े, तो सबसे likely cause उस switch के mechanical/electrical contact का weak या partially oxidised होना है जिससे हर बार reliable contact नहीं बनता — इसलिए option B सही है। Video wall setting का यहां कोई संबंध नहीं (यह अलग context है), TV में RF antenna की बात तब आती जब TV RF remote use कर रहा हो ना कि IR, और carrier frequency permanently खुद से नहीं बदलती।"
+    },
+    {
+      "id": "u10_tv_remote_control_q49",
+      "question": "\"Learning remote\" किसी नई device का IR code कैसे \"learn\" करता है?",
+      "options": [
+        "यह internet से automatically सभी codes download कर लेता है बिना किसी setup के",
+        "यह TV के main circuit को खोलकर सीधे उसकी memory से code copy करता है",
+        "यह सिर्फ RF signal सुनकर code अनुमान लगा लेता है",
+        "इसमें एक built-in IR receiver होता है जिसे original remote के सामने रखकर हर button को original remote से press करते हुए उसका code capture और store किया जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Learning remote में एक built-in छोटा IR receiver होता है; setup के दौरान original remote के उस IR receiver के सामने रखकर हर button एक-एक करके press किया जाता है, और learning remote उस IR code को capture करके अपनी memory में store कर लेता है — इसलिए option D सही है। यह automatically internet से codes download नहीं करता (basic learning remotes में), TV को खोलने की जरूरत नहीं होती, और सिर्फ RF signal सुनकर IR code अनुमान लगाना technically संभव नहीं है।"
+    },
+    {
+      "id": "u10_tv_remote_control_q50",
+      "question": "Video wall को traditional single बड़े TV screen के मुकाबले commercial/public display applications (जैसे control room, advertising) में ज्यादा पसंद क्यों किया जाता है?",
+      "options": [
+        "क्योंकि video wall हमेशा एक single TV से सस्ती होती है",
+        "क्योंकि video wall बड़े custom-size displays बनाने में flexible होती है (जरूरत के हिसाब से panels जोड़/घटाए जा सकते हैं) और individual panel खराब होने पर उसे अलग से बदला जा सकता है",
+        "क्योंकि video wall को remote control से control करना जरूरी नहीं होता",
+        "क्योंकि video wall में IR receiver की जरूरत नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "Video wall को जरूरत के मुताबिक अलग-अलग grid sizes में scale किया जा सकता है (जैसे बड़े control room या advertising displays के लिए), और अगर कोई एक panel खराब हो जाए तो पूरी wall बदलने के बजाय सिर्फ वो panel replace किया जा सकता है, जो large-scale commercial use में ज्यादा practical और cost-effective होता है — इसलिए option B सही है। यह हमेशा single TV से सस्ती नहीं होती (बड़े setup में ज्यादा costly भी हो सकती है), remote control की जरूरत context पर depend करती है, और IR receiver से इसका कोई direct exemption नहीं है।"
     }
   ]
 }

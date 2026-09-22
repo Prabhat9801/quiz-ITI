@@ -363,6 +363,246 @@
       ],
       "correctIndex": 1,
       "explanation": "Response time यह दर्शाता है कि panel का कोई pixel एक colour/grey-level state से दूसरे state में बदलने में कितना समय (milliseconds में) लेता है; यह जितना कम होगा, fast-moving content में motion blur उतना ही कम दिखेगा — इसलिए option B सही है। TV on होने का समय (A), remote signal receive होने का समय (C) और SMPS का गर्म होना (D) — इनमें से किसी का भी panel के response time से कोई तकनीकी संबंध नहीं है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q31",
+      "question": "CRT (CTV) में picture बनाने के लिए electron beam को screen पर किस प्रक्रिया से घुमाया जाता है?",
+      "options": [
+        "Deflection coils द्वारा magnetic field उत्पन्न कर beam को horizontal व vertical दिशा में scan कराया जाता है",
+        "Liquid crystal molecules की twist द्वारा",
+        "T-CON board के LVDS signal द्वारा",
+        "Backlight LED driver द्वारा"
+      ],
+      "correctIndex": 0,
+      "explanation": "CRT TV में horizontal व vertical deflection coils, electron gun से निकले beam को magnetic field के माध्यम से पूरी screen पर raster pattern में scan कराती हैं ताकि phosphor coating चमके — इसलिए option A सही है। Option B, C और D तीनों LCD/LED TV की तकनीकों से संबंधित हैं, CRT में इनका कोई अस्तित्व नहीं होता।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q32",
+      "question": "CRT TV में रंग बनाने के लिए screen पर किस प्रकार की coating होती है, जबकि LCD/LED TV में रंग किस layer से बनता है?",
+      "options": [
+        "दोनों में समान phosphor coating होती है",
+        "CRT में color filter layer होती है, LCD में phosphor coating होती है",
+        "दोनों में रंग backlight के रंग बदलने से बनता है",
+        "CRT में RGB phosphor dots की coating होती है, LCD/LED में RGB color filter layer से रंग बनता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "CRT screen पर RGB phosphor dots/stripes की coating होती है जो electron beam से टकराकर चमकती है, जबकि LCD/LED panel में एक अलग RGB color filter layer प्रकाश को पार करते समय रंग देती है — इसलिए option D सही है। Options A और B तथ्यों को मिला या उल्टा देते हैं, और option C गलत है क्योंकि backlight सामान्यतः white light देता है, रंग बदलकर नहीं चलता।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q33",
+      "question": "CTV (CRT TV) की तुलना में LCD/LED TV में screen पर 'geometric distortion' (जैसे pincushion, barrel distortion) की समस्या सामान्यतः क्यों बहुत कम होती है?",
+      "options": [
+        "क्योंकि audio amplifier अलग होता है",
+        "क्योंकि इसमें कोई electron beam scanning व deflection coil नहीं होती जो beam के असमान bending से distortion उत्पन्न करे; प्रत्येक pixel fixed स्थान पर होता है",
+        "क्योंकि इसमें SMPS नहीं होता",
+        "क्योंकि इसमें remote sensor नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "CRT में electron beam की deflection के असमान होने से screen के किनारों पर geometric distortion हो सकता है; LCD/LED panel में हर pixel भौतिक रूप से fixed grid स्थान पर होता है और कोई beam-deflection प्रक्रिया नहीं होती, इसलिए distortion व्यावहारिक रूप से नहीं होता — इसलिए option B सही है। Options A, C, D असंबंधित sections का हवाला देकर भ्रामक हैं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q34",
+      "question": "Plasma TV के प्रत्येक cell के भीतर मुख्यतः कौन-सी gas भरी होती है, जिसका discharge होने पर UV light बनती है?",
+      "options": [
+        "केवल Nitrogen",
+        "केवल Oxygen",
+        "Hydrogen और Helium का मिश्रण",
+        "Neon और Xenon का मिश्रण"
+      ],
+      "correctIndex": 3,
+      "explanation": "Plasma TV cells में सामान्यतः Neon व Xenon gas के मिश्रण को भरा जाता है; उच्च voltage लगाने पर यह ionize होकर plasma बनाती है जिससे UV light निकलती है जो phosphor को उत्तेजित करती है — इसलिए option D सही है। Nitrogen (A), Oxygen (B) तथा Hydrogen-Helium मिश्रण (C) इस उद्देश्य के लिए उपयोग नहीं किए जाते।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q35",
+      "question": "Plasma cell के अंदर discharge से उत्पन्न UV light अंततः दृश्य (visible) रंगीन प्रकाश में कैसे बदलती है?",
+      "options": [
+        "UV light सीधे आँख को दिखाई देती है, किसी परिवर्तन की आवश्यकता नहीं",
+        "UV light cell की भीतरी सतह पर लगी RGB phosphor coating से टकराकर विभिन्न रंगों में परिवर्तित होती है",
+        "UV light backlight LED से मिलकर रंग बनाती है",
+        "UV light liquid crystal से गुजरकर रंग प्राप्त करती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक Plasma cell की भीतरी दीवार पर RGB phosphor coating होती है; discharge से बनी UV light इस coating से टकराकर visible red/green/blue प्रकाश में बदल जाती है, जैसा CRT screen के phosphor में होता है — इसलिए option B सही है। Option A गलत है क्योंकि UV light आँख को सीधे दृश्य नहीं होती, और options C, D LCD/LED technology से संबंधित हैं, Plasma से नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q36",
+      "question": "Plasma TV में भी SMPS (Power Supply) section की आवश्यकता क्यों होती है, जबकि यह self-emissive technology है?",
+      "options": [
+        "क्योंकि Plasma cells को ionize करने तथा discharge बनाए रखने के लिए भी विभिन्न regulated उच्च व निम्न voltages चाहिए होते हैं, जो AC mains से बनाए जाते हैं",
+        "क्योंकि self-emissive होने से बिजली की आवश्यकता ही समाप्त हो जाती है",
+        "SMPS केवल remote sensor के लिए होता है",
+        "SMPS केवल audio amplifier के लिए होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Self-emissive' का अर्थ है cell स्वयं प्रकाश देता है, परन्तु उसे ionize व discharge करने के लिए भी नियंत्रित DC/pulse voltages चाहिए होती हैं जो SMPS AC mains से तैयार करता है — इसलिए option A सही है। Option B तथ्यात्मक रूप से गलत है, और options C, D SMPS के वास्तविक व्यापक कार्य को अनुचित रूप से सीमित करते हैं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q37",
+      "question": "LCD/LED TV के main/mother board में video processor के अतिरिक्त सामान्यतः और कौन-सा महत्वपूर्ण कार्य होता है?",
+      "options": [
+        "Backlight LEDs को सीधे mains से जोड़ना",
+        "Liquid crystal molecules को twist करना",
+        "Panel के glass substrate को गर्म करना",
+        "System control (microcontroller/SoC आधारित) जो user commands, OSD menu तथा विभिन्न sections के बीच समन्वय (coordination) संभालता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Main board पर लगा microcontroller/SoC केवल video ही नहीं संभालता, बल्कि remote/keys से आए commands, on-screen display (OSD) menu तथा SMPS, T-CON, audio जैसे विभिन्न sections के बीच समन्वय भी करता है — इसलिए option D सही है। Option A तथ्यात्मक रूप से गलत व असुरक्षित है, option B panel/liquid crystal का कार्य है, और option C निरर्थक है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q38",
+      "question": "यदि किसी LCD/LED TV में T-CON board खराब हो जाए, तो सामान्यतः screen पर किस प्रकार का लक्षण (symptom) दिखने की संभावना सबसे अधिक होती है?",
+      "options": [
+        "केवल आवाज़ बंद हो जाना",
+        "केवल remote काम न करना",
+        "स्क्रीन पर lines/garbage pattern आना, image का असामान्य/blank दिखना या पूरी तरह blank white/black screen आना, जबकि backlight जल रहा हो",
+        "केवल channel search न होना"
+      ],
+      "correctIndex": 2,
+      "explanation": "T-CON board panel को row/column timing व drive signals देता है; इसके खराब होने पर backlight तो जल सकता है परन्तु image में lines, garbage pattern, या पूर्णतः blank/white/black screen जैसी समस्याएँ आती हैं — इसलिए option C सही है। Audio बंद होना (A), remote काम न करना (B) और channel search न होना (D) तीनों अन्य sections (audio amplifier, remote sensor, tuner) से जुड़े लक्षण हैं, T-CON से नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q39",
+      "question": "यदि LCD/LED TV में LED backlight driver board पूरी तरह fail हो जाए (परन्तु main board व panel ठीक हों), तो सामान्यतः क्या लक्षण दिखेगा?",
+      "options": [
+        "TV पूरी तरह से बंद हो जाएगा और power भी नहीं आएगा",
+        "केवल remote काम करना बंद कर देगा",
+        "Screen पर image तो सही बनेगी परन्तु बहुत अंधेरी (dim) या पूर्णतः काली (backlight रहित) दिखेगी, जबकि audio व OSD सामान्य रूप से चल रहे होंगे",
+        "Tuner channel search करना बंद कर देगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "Backlight driver केवल backlight LEDs को power देता है; इसके fail होने पर panel में image data तो सही बनता रहता है (audio/OSD चलते रहते हैं) परन्तु प्रकाश न मिलने से screen dim या पूर्णतः काली (dark) दिखती है — इसे 'flashlight test' से जाँचा जा सकता है — इसलिए option C सही है। Options A, B, D असंबंधित sections के लक्षण बताते हैं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q40",
+      "question": "LCD/LED TV में power supply (SMPS) section से main board तक जाने वाले DC voltage rails में से किसी एक rail (जैसे standby 5V) के हमेशा उपलब्ध रहने का क्या कारण है?",
+      "options": [
+        "ताकि remote/power-button से TV को 'on' करने का command sense किया जा सके, यानी microcontroller standby mode में भी जागृत (active) रहे",
+        "ताकि backlight हमेशा जलता रहे",
+        "ताकि audio amplifier हमेशा आवाज़ देता रहे",
+        "ताकि panel के pixels हमेशा रंग बदलते रहें"
+      ],
+      "correctIndex": 0,
+      "explanation": "TV बंद (standby) अवस्था में भी main board के microcontroller को remote/power key का command सुनने हेतु एक छोटी standby DC rail (जैसे 5V) निरंतर चालू रखी जाती है, ताकि TV को on किया जा सके — इसलिए option A सही है। Backlight (B), audio (C) व panel pixels (D) standby में बंद ही रहते हैं, यह उनके लिए नहीं है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q41",
+      "question": "LCD TV में color filter (RGB) layer किस स्थान पर लगाई जाती है?",
+      "options": [
+        "SMPS board पर",
+        "Speaker के अंदर",
+        "Remote sensor circuit में",
+        "Liquid crystal layer और आगे की polarizer sheet के बीच, glass substrate पर"
+      ],
+      "correctIndex": 3,
+      "explanation": "RGB color filter layer, liquid crystal layer के ऊपर front glass substrate पर लगाई जाती है ताकि उसमें से गुजरने वाला modulated white backlight प्रकाश लाल/हरे/नीले रंग में विभाजित होकर उपयुक्त sub-pixel रंग दे — इसलिए option D सही है। SMPS board (A), speaker (B) और remote sensor circuit (C) का color filter से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q42",
+      "question": "एक single pixel को red, green और blue रंग दिखाने के लिए LCD/LED panel में सामान्यतः कैसी संरचना होती है?",
+      "options": [
+        "एक pixel में एक ही sub-pixel होता है जो बारी-बारी रंग बदलता है",
+        "रंग केवल backlight की rotating color wheel से बनता है",
+        "एक pixel तीन sub-pixels (red, green, blue filter के साथ) से मिलकर बनता है, जिनकी संयुक्त intensity से अंतिम रंग बनता है",
+        "रंग केवल T-CON board के अंदर mix होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "प्रत्येक pixel सामान्यतः तीन sub-pixels (red, green, blue color filter युक्त) से बना होता है; इन तीनों की अलग-अलग intensity मिलकर मानव आँख को अंतिम मिश्रित रंग का अनुभव देती है — इसलिए option C सही है। Option A तथ्यात्मक रूप से गलत है, option B (color wheel) DLP projector technology से संबंधित है LCD से नहीं, और option D निरर्थक है क्योंकि T-CON केवल timing signal देता है, रंग mix नहीं करता।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q43",
+      "question": "CRT TV और LCD/LED TV के बीच 'screen flicker' (हल्की चमक-बुझक) के अनुभव में सामान्य अंतर का कारण क्या है?",
+      "options": [
+        "CRT में beam प्रत्येक frame पर screen को दोबारा scan व refresh करता है जिससे कम refresh rate पर flicker महसूस हो सकता है, जबकि LCD/LED में pixel अगली update तक अपनी state बनाए रखता है (hold-type display) जिससे flicker कम अनुभव होता है",
+        "दोनों में flicker बिल्कुल समान अनुभव होता है",
+        "LCD/LED में flicker CRT से हमेशा अधिक होता है",
+        "Flicker का संबंध केवल audio amplifier से है"
+      ],
+      "correctIndex": 0,
+      "explanation": "CRT एक 'impulse-type' display है जो हर frame पर phosphor को फिर उत्तेजित करता है, जिससे कम refresh rate पर आँख को flicker महसूस हो सकता है; LCD/LED एक 'hold-type' display है जहाँ pixel अगली update तक अपनी state रखता है, जिससे यह अनुभव सामान्यतः कम होता है — इसलिए option A सही है। Options B, C तथ्यात्मक रूप से गलत हैं, और D निरर्थक/असंबंधित है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q44",
+      "question": "LCD/LED TV में panel तथा T-CON board के बीच data सामान्यतः किस प्रकार के interface/signal द्वारा भेजा जाता है?",
+      "options": [
+        "केवल analog composite video signal द्वारा",
+        "LVDS (Low Voltage Differential Signaling) जैसे high-speed digital signal द्वारा",
+        "केवल IR (infrared) signal द्वारा",
+        "केवल AC mains signal द्वारा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Main board से T-CON board तक तथा वहाँ से पूरे panel तक data को उच्च गति व low-noise के साथ भेजने हेतु LVDS जैसी digital differential signaling तकनीक का उपयोग होता है — इसलिए option B सही है। Analog composite signal (A) पुरानी CRT/AV तकनीक से जुड़ा है, IR signal (C) remote control के लिए है, और AC mains (D) केवल power वितरण के लिए है, data transfer के लिए नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q45",
+      "question": "'LED TV' नाम की प्रचलित marketing terminology को तकनीकी दृष्टि से भ्रामक (misleading) क्यों माना जाता है?",
+      "options": [
+        "क्योंकि इसमें असल में कोई LED होती ही नहीं",
+        "क्योंकि LED TV में backlight ही नहीं होता",
+        "क्योंकि यह सुनने में लगता है कि प्रत्येक pixel स्वयं एक अलग self-emissive LED display तकनीक है (जैसे OLED), जबकि वास्तव में यह liquid crystal panel ही है जिसमें केवल backlight के रूप में LED का प्रयोग हुआ है",
+        "क्योंकि LED TV वास्तव में Plasma technology है"
+      ],
+      "correctIndex": 2,
+      "explanation": "'LED TV' नाम से भ्रम होता है कि यह एक अलग/नई self-emissive display तकनीक है (जैसा true LED/OLED display में होता है), जबकि वास्तविकता में यह पहले जैसा liquid crystal panel ही है, केवल CCFL backlight की जगह LED backlight लगा दिया गया है — इसलिए option C सही है। Option A तथ्यात्मक रूप से गलत है (LED backlight में असल LEDs होती हैं), option B गलत है क्योंकि backlight ज़रूरी है, और option D गलत है क्योंकि Plasma पूर्णतः अलग तकनीक है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q46",
+      "question": "यदि कोई display वास्तव में हर pixel के लिए अपना स्वयं का self-emissive LED (जैसे OLED में प्रत्येक pixel स्वयं प्रकाश देता है) उपयोग करे, तो यह पारंपरिक 'LED TV' (LED-backlit LCD) से किस प्रकार भिन्न होगी?",
+      "options": [
+        "कोई अंतर नहीं होगा, दोनों एक ही तकनीक हैं",
+        "सच्ची self-emissive तकनीक में अलग backlight layer व liquid crystal modulation की आवश्यकता नहीं होगी, जबकि marketing वाली 'LED TV' में backlight और liquid crystal दोनों अनिवार्य हैं",
+        "Self-emissive तकनीक में color filter की आवश्यकता अधिक होगी",
+        "Self-emissive तकनीक में SMPS की आवश्यकता समाप्त हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "सच्ची self-emissive pixel-level तकनीक (जैसे OLED) में हर pixel स्वयं प्रकाश उत्सर्जित करता है, इसलिए अलग backlight व liquid crystal modulation ज़रूरी नहीं रहती; जबकि आम बिकने वाली 'LED TV' असल में LED-backlit LCD है जिसमें दोनों (backlight + liquid crystal) अनिवार्य हैं — इसलिए option B सही है। Option A तथ्यात्मक रूप से गलत है, option C अनावश्यक विवरण है, और option D गलत है क्योंकि किसी भी display को SMPS/power supply चाहिए ही होती है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q47",
+      "question": "CRT, LCD/LED और Plasma तीनों technologies में से समान screen size पर सबसे अधिक भारी (heavy) व मोटी (thick) technology सामान्यतः कौन-सी होती है, और क्यों?",
+      "options": [
+        "LCD/LED, क्योंकि इसमें ज़्यादा glass filters होते हैं",
+        "Plasma, क्योंकि हर cell में gas चैम्बर होता है",
+        "CRT, क्योंकि इसमें भारी glass picture tube, electron gun व deflection coils होती हैं जो अन्य दोनों में नहीं होतीं",
+        "तीनों का वज़न व मोटाई बराबर होती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "CRT technology में भारी glass vacuum tube, electron gun assembly तथा deflection yoke coils होती हैं, जो इसे LCD/LED और Plasma दोनों की तुलना में सबसे भारी व मोटी बनाती हैं — इसलिए option C सही है। LCD/LED (A) व Plasma (B) दोनों flat-panel तकनीकें हैं जो CRT से बहुत पतली व हल्की होती हैं, और option D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q48",
+      "question": "किसी LCD/LED TV की मरम्मत करते समय, यह पुष्टि करने के लिए कि समस्या backlight/LED driver में है या panel/T-CON में, तकनीशियन सामान्यतः कौन-सा प्रारंभिक परीक्षण (test) करता है?",
+      "options": [
+        "केवल remote की battery बदलना",
+        "अंधेरे कमरे में torch/flashlight की रोशनी सीधे screen पर डालकर देखना कि कोई faint image दिखाई देती है या नहीं (backlight fail होने पर भी panel पर image data मौजूद हो सकता है)",
+        "केवल speaker की जांच करना",
+        "केवल AC mains plug बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "यदि backlight fail हो परन्तु panel व T-CON ठीक हों, तो अंधेरे कमरे में torch की रोशनी screen पर डालने से एक धुंधली (faint) image दिखाई दे सकती है — इस 'flashlight test' से backlight fault को panel/T-CON fault से अलग पहचाना जाता है — इसलिए option B सही है। Options A, C, D असंबंधित परीक्षण हैं जो इस समस्या के निदान में सीधे सहायक नहीं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q49",
+      "question": "Plasma TV की तुलना में LCD/LED TV को उच्च ऊँचाई (high altitude) वाले स्थानों पर उपयोग हेतु सामान्यतः अधिक उपयुक्त क्यों माना जाता है?",
+      "options": [
+        "क्योंकि LCD/LED TV में gas-filled cells नहीं होती जिनके internal pressure व altitude के अंतर से 'buzzing noise' जैसी समस्या हो सकती है, जबकि कुछ Plasma models में यह देखी गई",
+        "क्योंकि LCD/LED TV हल्की gravity में काम नहीं करता",
+        "क्योंकि Plasma TV में remote control नहीं चलता",
+        "क्योंकि LCD/LED TV में कोई SMPS नहीं होता"
+      ],
+      "correctIndex": 0,
+      "explanation": "Plasma cells के भीतर gas भरी होती है और अधिक ऊँचाई पर वायुमंडलीय दबाव में अंतर के कारण कुछ पुराने Plasma models में हल्की buzzing/audible noise की समस्या रिपोर्ट हुई थी; LCD/LED panel में ऐसी कोई gas-filled cell संरचना नहीं होती — इसलिए option A सही है। Options B, C, D तथ्यात्मक रूप से निरर्थक/गलत हैं।"
+    },
+    {
+      "id": "u10_lcd_led_tv_principle_q50",
+      "question": "LCD/LED TV के functional block diagram में, video signal के प्रवाह (flow) का सही सामान्य क्रम (tuner/AV input से panel तक) क्या है?",
+      "options": [
+        "Panel → T-CON board → Main board → Tuner/AV input",
+        "Tuner/AV input → Main board (processing व scaling) → T-CON board → Panel",
+        "SMPS → Audio amplifier → Speaker → Panel",
+        "Remote sensor → Backlight driver → SMPS → Panel"
+      ],
+      "correctIndex": 1,
+      "explanation": "सही signal flow यह है: पहले tuner/AV input से raw signal main board तक आता है, जहाँ वह process व scale होता है, फिर T-CON board उसे panel के लिए timing signals में बदलता है और अंत में panel पर image बनती है — इसलिए option B सही है। Option A क्रम को उल्टा दर्शाता है, और options C, D असंबंधित sections को गलत क्रम में जोड़ते हैं जो वास्तविक video path का प्रतिनिधित्व नहीं करते।"
     }
   ]
 }
