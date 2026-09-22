@@ -213,6 +213,426 @@
       "options": ["ANL", "ORL", "XRL", "CLR"],
       "correctIndex": 2,
       "explanation": "XRL (exclusive OR) में जिन bit positions पर mask में 1 हो वे toggle हो जाते हैं और बाकी अपरिवर्तित रहते हैं, इसलिए selective toggling के लिए option C सही है। ANL bits clear/mask करता, ORL bits set करता, और CLR पूरे को 0 कर देता है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q31",
+      "question": "8051 में instruction MOV DPTR, #1234H किस addressing mode का उदाहरण है, और यह किस register में value load करता है?",
+      "options": ["Immediate addressing; पूरे 16-bit DPTR (DPH व DPL) में value load होती है", "Direct addressing; केवल DPL में value load होती है", "Register indirect addressing; DPTR pointer के रूप में काम करता है", "Indexed addressing; A और DPTR जुड़ते हैं"],
+      "correctIndex": 0,
+      "explanation": "'#' यह दर्शाता है कि 1234H एक constant है जो 16-bit DPTR register pair (DPH high byte, DPL low byte) में एक ही instruction से सीधे load होती है, इसलिए option A सही है। यह न किसी RAM address को reference करता (direct), न कोई pointer use होता (indirect), और न ही कोई base+index जोड़ होता (indexed)।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q32",
+      "question": "8051 में instruction MOV R3, A में destination operand R3 किस addressing mode से access होता है?",
+      "options": ["Direct addressing", "Register addressing", "Immediate addressing", "Indirect addressing"],
+      "correctIndex": 1,
+      "explanation": "R3 सीधे register bank के register-name से specify हुआ है, यही register addressing mode है, इसलिए option B सही है। Direct addressing में numeric RAM address दिया जाता (जैसे 03H), immediate में # के साथ constant, और indirect में @Rn प्रयोग होता — यहाँ इनमें से कोई नहीं है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q33",
+      "question": "8051 में instruction MOV @R1, #30H में destination operand की addressing mode कौन-सी है, जबकि source operand कैसा है?",
+      "options": ["destination immediate, source direct", "destination direct, source immediate", "destination register indirect (@R1), source immediate (#30H)", "destination indexed, source register"],
+      "correctIndex": 2,
+      "explanation": "@R1 का अर्थ है R1 में रखा गया पता एक pointer है (register indirect), और #30H '#' के कारण एक constant (immediate) है — instruction R1 द्वारा इंगित RAM location पर constant 30H store करता है, इसलिए option C सही है। शेष विकल्प addressing modes को गलत तरीके से आपस में बदल देते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q34",
+      "question": "8051 में instruction JMP @A+DPTR किस addressing mode का उपयोग करता है और jump target address कैसे बनता है?",
+      "options": ["Direct addressing; केवल DPTR का पता प्रयोग होता है", "Register addressing; केवल A प्रयोग होता है", "Immediate addressing; एक constant address दिया जाता है", "Indexed addressing; target address = A(index) + DPTR(base) जोड़कर बनता है"],
+      "correctIndex": 3,
+      "explanation": "base (DPTR) और index (A) जोड़कर effective address बनता है, यही indexed addressing है, इसलिए option D सही है — यह jump-table (menu selection) implement करने के लिए उपयोगी है। बाकी विकल्प addressing modes की सही परिभाषा नहीं देते।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q35",
+      "question": "8051 में instruction MOV 30H, 40H के दोनों operands किस addressing mode में हैं और यह क्या करता है?",
+      "options": ["दोनों direct addressing; RAM location 40H की सामग्री 30H में copy होती है", "दोनों immediate; दोनों values सीधे constants हैं", "source indirect, destination direct", "दोनों register addressing (R-numbers)"],
+      "correctIndex": 0,
+      "explanation": "बिना '#' या '@' के दोनों numbers सीधे RAM addresses हैं, इसलिए दोनों operand direct addressing में हैं और instruction internal RAM location 40H का data location 30H में copy करता है, अतः option A सही है। '#' न होने से immediate नहीं, '@' न होने से indirect नहीं, और ये register names (Rn) नहीं हैं इसलिए register addressing भी नहीं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q36",
+      "question": "8051 में instruction MOV A, R7 में source operand R7 किस addressing mode को दर्शाता है?",
+      "options": ["Direct addressing", "Register addressing", "Immediate addressing", "Register indirect addressing"],
+      "correctIndex": 1,
+      "explanation": "R7 register bank का एक named register है, सीधे नाम से access होने के कारण यह register addressing है, इसलिए option B सही है। Direct में numeric address होता (07H), immediate में # constant, और indirect में @Rn होता — यहाँ इनमें से कोई नहीं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q37",
+      "question": "8051 में MOVX A, @R0 और MOVX A, @DPTR में addressing की दृष्टि से मुख्य अंतर क्या है?",
+      "options": ["@R0 पूरे 64 KB access करता है जबकि @DPTR केवल 256 bytes", "दोनों की range समान (64 KB) होती है", "@R0 (8-bit address) केवल 256 external bytes access कर सकता है, जबकि @DPTR (16-bit address) पूरे 64 KB access कर सकता है", "@R0 केवल internal RAM access करता है, @DPTR external memory"],
+      "correctIndex": 2,
+      "explanation": "R0/R1 केवल 8-bit address दे सकते हैं इसलिए बाहरी memory के केवल 256 bytes access होते हैं, जबकि DPTR 16-bit होने से पूरे 64 KB external data memory access कर सकता है, इसलिए option C सही है। दोनों ही instructions external (X) memory के लिए हैं, internal RAM के लिए नहीं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q38",
+      "question": "8051 में instruction CJNE @R0, #40H, LABEL में पहला operand @R0 किस addressing mode में है?",
+      "options": ["Direct addressing", "Immediate addressing", "Indexed addressing", "Register indirect addressing"],
+      "correctIndex": 3,
+      "explanation": "@R0 का अर्थ है R0 में रखा पता जिस RAM location को इंगित करता है उसकी सामग्री compare होती है, यही register indirect addressing है, इसलिए option D सही है। Direct में सीधा address होता, immediate में # के साथ constant (जो यहाँ दूसरा operand #40H है), और indexed में base+index जुड़ता है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q39",
+      "question": "8051 में ADD A, <source> instruction में source operand के लिए निम्न में से कौन-सी addressing mode मान्य (valid) नहीं है?",
+      "options": ["Indexed addressing (जैसे @A+DPTR)", "Register addressing (Rn)", "Direct addressing", "Register indirect addressing (@Ri)"],
+      "correctIndex": 0,
+      "explanation": "ADD केवल Rn, direct address, immediate (#data) और @Ri के साथ काम करता है; @A+DPTR जैसा indexed रूप केवल MOVC/JMP में उपयोग होता है, ADD में नहीं, इसलिए option A सही है। बाकी तीनों ADD के लिए वैध source modes हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q40",
+      "question": "8051 में MOV A, #00H और MOV A, 00H में क्या अंतर है?",
+      "options": ["दोनों बिल्कुल समान कार्य करते हैं", "पहला immediate addressing (constant 0 accumulator में जाता है), दूसरा direct addressing (RAM location 00H यानी R0 की सामग्री accumulator में जाती है)", "पहला direct, दूसरा immediate", "दोनों indirect addressing हैं"],
+      "correctIndex": 1,
+      "explanation": "'#' के साथ 00H एक constant (immediate) है, बिना '#' के 00H एक RAM address (bank 0 का R0) है जिसकी content copy होती है, इसलिए ये अलग परिणाम दे सकते हैं यदि R0 में 0 के अलावा कोई मान हो — option B सही है। Options A, C, D गलत तरीके से modes describe करते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q41",
+      "question": "8051 में instruction MOVX A, @DPTR का उद्देश्य क्या है?",
+      "options": ["Internal RAM से data पढ़ना", "Code memory (ROM) से constant पढ़ना", "External data memory (RAM) से, DPTR द्वारा दिए गए 16-bit address पर स्थित byte को accumulator में पढ़ना", "Accumulator को external memory में लिखना"],
+      "correctIndex": 2,
+      "explanation": "'X' external data memory को दर्शाता है; DPTR 16-bit pointer के रूप में address देता है और वहाँ का byte accumulator में आता है, इसलिए option C सही है। यह internal RAM या code memory access नहीं करता, और यह read operation है, write (MOVX @DPTR,A) नहीं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q42",
+      "question": "8051 में instruction MOVX @DPTR, A क्या करता है?",
+      "options": ["External memory से A में data पढ़ता है", "A को internal RAM में copy करता है", "DPTR को increment करता है", "Accumulator के मान को DPTR द्वारा इंगित external RAM location पर लिखता (write) है"],
+      "correctIndex": 3,
+      "explanation": "यह write operation है — A का data external RAM के उस address पर जाता है जो DPTR में है, इसलिए option D सही है। पढ़ने के लिए विपरीत क्रम (MOVX A,@DPTR) चाहिए, यह internal RAM पर काम नहीं करता, और यह DPTR को स्वतः increment नहीं करता।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q43",
+      "question": "8051 में instruction XCHD A, @R0 क्या exchange करता है?",
+      "options": ["केवल A और (R0 द्वारा इंगित RAM byte) के lower nibbles (निचले 4 bits) आपस में बदलते हैं", "पूरे byte (सभी 8 bits) आपस में बदलते हैं", "केवल upper nibbles बदलते हैं", "A का पूरा मान RAM में copy होता है, कुछ exchange नहीं होता"],
+      "correctIndex": 0,
+      "explanation": "XCHD (exchange digit) केवल lower nibble (BCD digit) का आदान-प्रदान करता है, upper nibbles अपरिवर्तित रहते हैं, इसलिए option A सही है। पूर्ण byte exchange के लिए XCH उपयोग होता है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q44",
+      "question": "8051 में PUSH ACC instruction execute होते समय Stack Pointer (SP) के साथ क्या क्रम होता है?",
+      "options": ["पहले value stack में जाती है, फिर SP increment होता है", "पहले SP increment होता है, फिर ACC का मान नए SP location पर store होता है", "SP decrement होकर value store होती है", "SP में कोई परिवर्तन नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "8051 में PUSH पहले SP को 1 से बढ़ाता है और फिर उस नए address पर data store करता है (कुछ processors के विपरीत जो पहले store करके decrement करते हैं), इसलिए option B सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q45",
+      "question": "8051 में एक subroutine में क्रम से 'POP DPH' के बाद 'POP DPL' execute किया गया — इसका परिणाम और SP पर प्रभाव क्या होगा?",
+      "options": ["DPTR सही से restore होगा क्योंकि क्रम महत्वपूर्ण नहीं", "SP में कोई बदलाव नहीं आएगा", "गलत क्रम के कारण DPH और DPL आपस में उल्टे (swap) हो जाएंगे, जबकि हर POP पर SP decrement होता है", "यह instruction error देगा और execute नहीं होगा"],
+      "correctIndex": 2,
+      "explanation": "PUSH के दौरान पहले DPL फिर DPH push हुआ हो तो pop क्रम भी वही (पहले DPH फिर DPL) होना चाहिए वरना values आपस में बदल जाएँगी; प्रत्येक POP पर SP 1 से decrement होता है, इसलिए option C सही है। क्रम matter करता है, SP जरूर बदलता है, और यह syntax error नहीं देता।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q46",
+      "question": "8051 में instruction MOV 20H, #0FFH execute होने के बाद internal RAM location 20H में क्या मान होगा, और यह किस addressing combination का उदाहरण है?",
+      "options": ["RAM 20H में 20H रहेगा; direct-direct addressing", "RAM 20H में 00H रहेगा; register addressing", "RAM 20H अपरिवर्तित रहेगा; indirect addressing", "RAM 20H में FFH store होगा; destination direct addressing, source immediate addressing"],
+      "correctIndex": 3,
+      "explanation": "'#' के कारण FFH एक constant है जो सीधे RAM location 20H (direct addressing destination) में store हो जाता है, इसलिए option D सही है। बाकी विकल्प गलत मान या गलत addressing combination बताते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q47",
+      "question": "8051 में instruction MOV A, PSW किस addressing mode का उपयोग करता है और क्या कार्य करता है?",
+      "options": ["Direct addressing; PSW register (SFR) की सामग्री accumulator में copy होती है", "Immediate addressing; PSW नाम की constant load होती है", "Register indirect addressing", "Indexed addressing"],
+      "correctIndex": 0,
+      "explanation": "PSW एक SFR है जिसे उसके direct address (D0H) से access किया जाता है, इसलिए यह direct addressing है और flags सहित पूरा PSW byte A में copy हो जाता है, अतः option A सही है। यह न कोई constant है, न कोई pointer या index प्रयोग हो रहा है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q48",
+      "question": "8051 में instruction MOV C, P1.0 क्या करता है?",
+      "options": ["P1.0 pin को set करता है", "Port pin P1.0 की वर्तमान logic value को carry flag (CY) में copy करता है", "Carry की value P1.0 पर भेजता है", "पूरे Port 1 को carry में copy करता है"],
+      "correctIndex": 1,
+      "explanation": "यह एक boolean (bit) data transfer instruction है जो bit-addressable P1.0 का मान पढ़कर CY में रखता है, स्वयं P1.0 को नहीं बदलता, इसलिए option B सही है। विपरीत दिशा के लिए MOV P1.0, C चाहिए, और यह पूरे port को नहीं छूता।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q49",
+      "question": "8051 में instruction MOV P1.0, C का प्रभाव क्या होता है?",
+      "options": ["P1.0 की value carry में copy होती है", "यह अमान्य (invalid) instruction है", "Carry flag (CY) का वर्तमान मान port pin P1.0 पर output के रूप में set/clear होता है", "पूरे accumulator की value P1.0 पर जाती है"],
+      "correctIndex": 2,
+      "explanation": "यह carry से bit की ओर data transfer है — CY=1 हो तो P1.0 set होगा, CY=0 हो तो clear, इसलिए option C सही है। दिशा उल्टी (bit से carry) MOV C,P1.0 करता है, यह valid instruction है, और accumulator से कोई संबंध नहीं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q50",
+      "question": "8051 में instruction XCH A, @R1 (register indirect addressing के साथ) क्या करता है?",
+      "options": ["केवल lower nibble exchange करता है", "A को R1 में copy करता है, R1 अपरिवर्तित रहता है", "R1 का मान बदले बिना उसका address accumulator में copy करता है", "Accumulator और R1 द्वारा इंगित RAM location की सामग्री पूरी तरह आपस में बदल (exchange) जाती हैं"],
+      "correctIndex": 3,
+      "explanation": "XCH हमेशा दोनों तरफ की सामग्री का पूर्ण byte exchange करता है, चाहे operand register direct हो (XCH A,Rn) या यहाँ indirect (@R1), इसलिए option D सही है। nibble-only exchange XCHD करता है, और यह one-way copy नहीं है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q51",
+      "question": "यदि internal RAM location 30H में मान 25H stored है, तो instruction MOV A, 30H execute करने के बाद accumulator में क्या मान होगा?",
+      "options": ["25H", "30H", "00H", "55H"],
+      "correctIndex": 0,
+      "explanation": "बिना '#' के 30H एक direct RAM address है, इसलिए उस location की content (25H) accumulator में copy होती है, इसलिए option A सही है। शेष विकल्प address को ही value मान लेने या गलत गणना की भूल हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q52",
+      "question": "यदि R0 = 40H और internal RAM location 40H में मान 3AH stored है, तो instruction MOV A, @R0 execute होने के बाद accumulator में क्या मान होगा?",
+      "options": ["40H", "3AH", "00H", "R0 और A दोनों अपरिवर्तित रहेंगे"],
+      "correctIndex": 1,
+      "explanation": "@R0 register indirect addressing में R0 का मान (40H) एक pointer है, उस RAM address की content (3AH) accumulator में जाती है, इसलिए option B सही है। accumulator में pointer value (40H) नहीं आती।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q53",
+      "question": "8051 में MOVC और MOVX instructions के बीच मुख्य अंतर क्या है?",
+      "options": ["दोनों एक ही memory (external RAM) access करते हैं", "MOVC केवल write करता है, MOVX केवल read करता है", "MOVC code memory (ROM) से पढ़ने के लिए है (read-only), जबकि MOVX external data memory (RAM) से पढ़ने/लिखने दोनों के लिए है", "MOVC internal RAM access करता है, MOVX code memory access करता है"],
+      "correctIndex": 2,
+      "explanation": "MOVC (move code) lookup tables जैसे fixed data के लिए code memory से केवल पढ़ता है, जबकि MOVX (move external) external RAM से पढ़ या लिख सकता है, इसलिए option C सही है। दोनों अलग memory space हैं और MOVC write नहीं कर सकता।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q54",
+      "question": "MOVX/MOVC instructions में DPTR का उपयोग @R0/@R1 की तुलना में क्यों अधिक व्यापक (versatile) माना जाता है?",
+      "options": ["DPTR flags को प्रभावित करता है, R0/R1 नहीं", "DPTR केवल internal RAM access करता है", "DPTR का उपयोग केवल MOVC में होता है, MOVX में नहीं", "DPTR 16-bit होने से पूरे 64 KB external/code memory space को address कर सकता है, जबकि R0/R1 केवल 8-bit होने से सीमित (256 bytes) range देते हैं"],
+      "correctIndex": 3,
+      "explanation": "DPTR (Data Pointer) 16-bit register pair है इसलिए यह पूरा address space cover करता है, जो R0/R1 (केवल 8-bit) नहीं कर सकते, इसलिए option D सही है। DPTR flags प्रभावित नहीं करता, यह external दोनों (MOVX और MOVC) में उपयोग होता है, internal RAM तक सीमित नहीं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q55",
+      "question": "8051 में DA A instruction सही परिणाम केवल किस स्थिति के तुरंत बाद देता है?",
+      "options": ["केवल ADD या ADDC instruction से BCD numbers जोड़ने के तुरंत बाद", "SUBB instruction के बाद भी समान रूप से", "किसी भी logical instruction (ANL/ORL) के बाद", "DEC या INC के बाद"],
+      "correctIndex": 0,
+      "explanation": "DA A specifically addition के बाद accumulator में BCD correction करता है (nibble > 9 या carry होने पर +6/+60 जोड़कर), यह subtraction, logical या increment/decrement operations के परिणाम को सही नहीं करता, इसलिए केवल ADD/ADDC ही सही संदर्भ है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q56",
+      "question": "यदि A = 0FFH हो और instruction ADD A, #25H execute किया जाए, तो accumulator (A) और carry flag (CY) का अंतिम मान क्रमशः क्या होगा?",
+      "options": ["A = 25H, CY = 0", "A = 24H, CY = 1", "A = D9H, CY = 0", "A = 24H, CY = 0"],
+      "correctIndex": 1,
+      "explanation": "0FFH + 25H = 124H (8-bit से अधिक); low byte 24H accumulator में रहता है और bit-7 से बाहर carry निकलने के कारण CY = 1 होता है, इसलिए option B सही है। अन्य विकल्प गलत योग या गलत carry स्थिति दिखाते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q57",
+      "question": "यदि A = 10H, R0 = 05H और instruction से पहले CY = 1 है, तो ADDC A, R0 execute करने के बाद A और नया CY क्या होगा?",
+      "options": ["A = 15H, CY = 1", "A = 16H, CY = 1", "A = 16H, CY = 0", "A = 10H, CY = 0"],
+      "correctIndex": 2,
+      "explanation": "ADDC में A + R0 + पिछला CY जुड़ता है: 10H + 05H + 1 = 16H, जो 8-bit में पूरी तरह fit होता है इसलिए कोई नया carry नहीं बनता (CY = 0), इसलिए option C सही है। शेष विकल्प पिछले carry को अनदेखा करते हैं या गलत CY बताते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q58",
+      "question": "यदि A = 05H, CY = 0 (पहले से कोई borrow नहीं) और instruction SUBB A, #02H execute किया जाए, तो A और CY का मान क्या होगा?",
+      "options": ["A = 07H, CY = 1", "A = 02H, CY = 0", "A = 03H, CY = 1", "A = 03H, CY = 0"],
+      "correctIndex": 3,
+      "explanation": "05H - 02H - 0(CY) = 03H, और चूँकि minuend, subtrahend से बड़ा है इसलिए कोई borrow नहीं होता (CY = 0), इसलिए option D सही है। शेष विकल्प गलत घटाव या अनावश्यक borrow दिखाते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q59",
+      "question": "यदि A = 03H, CY = 1 (पिछला borrow) और instruction SUBB A, #05H execute किया जाए, तो परिणाम A और CY में क्या होगा?",
+      "options": ["A = 0FDH, CY = 1", "A = 02H, CY = 0", "A = 0FEH, CY = 0", "A = 03H, CY = 1 (अपरिवर्तित)"],
+      "correctIndex": 0,
+      "explanation": "03H - 05H - 1(CY) = -3, जो 8-bit two's complement में 0FDH होता है, और चूँकि परिणाम ऋणात्मक बनता है इसलिए borrow उत्पन्न होकर CY = 1 सेट होता है, इसलिए option A सही है। शेष विकल्प गलत हिसाब या borrow की स्थिति गलत दिखाते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q60",
+      "question": "यदि DPTR का वर्तमान मान 00FFH है (DPH=00H, DPL=FFH), तो instruction INC DPTR execute करने के बाद DPTR का मान क्या होगा, और flags पर क्या प्रभाव पड़ेगा?",
+      "options": ["DPTR = 0000H, और CY flag set होगा", "DPTR = 0100H (DPH=01H, DPL=00H), और कोई भी flag प्रभावित नहीं होगा", "केवल DPL = 00H होगा, DPH अपरिवर्तित रहेगा", "DPTR = 00FEH, कोई flag प्रभावित नहीं होगा"],
+      "correctIndex": 1,
+      "explanation": "INC DPTR पूरे 16-bit register pair को एक इकाई के रूप में बढ़ाता है (DPL overflow होने पर DPH भी बढ़ता है) और यह कोई flag (CY सहित) प्रभावित नहीं करता, इसलिए option B सही है। शेष विकल्प गलत परिणाम या गलत flag प्रभाव दिखाते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q61",
+      "question": "यदि A = 0AH (10 decimal) और B = 0CH (12 decimal) हो, तो MUL AB execute करने के बाद A, B और overflow (OV) flag का मान क्या होगा?",
+      "options": ["A = 00H, B = 78H, OV = 1", "A = 78H, B = 01H, OV = 1", "A = 78H, B = 00H, OV = 0", "A = 0CH, B = 0AH, OV = 0"],
+      "correctIndex": 2,
+      "explanation": "10 × 12 = 120 decimal = 78H, जो एक byte में पूरी तरह समा जाता है इसलिए B (high byte) = 00H रहता है और OV = 0 होता है (OV तभी set होता है जब product > 255 हो), इसलिए option C सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q62",
+      "question": "यदि A = 20H (32 decimal) और B = 10H (16 decimal) हो, तो MUL AB execute करने के बाद A, B और OV flag का मान क्या होगा?",
+      "options": ["A = 02H, B = 00H, OV = 0", "A = 00H, B = 20H, OV = 0", "A = 20H, B = 10H, OV = 1", "A = 00H, B = 02H, OV = 1"],
+      "correctIndex": 3,
+      "explanation": "32 × 16 = 512 decimal = 0200H; low byte A = 00H, high byte B = 02H, और चूँकि result 255 से अधिक है इसलिए OV = 1 set होता है, इसलिए option D सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q63",
+      "question": "8051 में यदि DIV AB execute करते समय B = 00H (divisor zero) हो, तो क्या परिणाम होगा?",
+      "options": ["OV flag set (1) हो जाता है और A, B के परिणाम अनिश्चित (undefined/meaningless) रहते हैं", "Program अपने आप रुक (halt) जाता है", "A और B दोनों 00H हो जाते हैं, कोई flag प्रभावित नहीं होता", "CY flag set होकर error indicate करता है"],
+      "correctIndex": 0,
+      "explanation": "8051 hardware trap नहीं देता; divide-by-zero की स्थिति में केवल OV flag set हो जाता है ताकि programmer condition जाँच सके, जबकि A व B के contents अर्थहीन रह जाते हैं, इसलिए option A सही है। Program halt नहीं होता, results zero नहीं होते, और CY (जो DIV में हमेशा 0 होता है) इसे indicate नहीं करता।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q64",
+      "question": "यदि A = 17H (23 decimal) और B = 05H (5 decimal) हो, तो DIV AB execute करने के बाद A और B में क्रमशः क्या मान होंगे?",
+      "options": ["A = 03H, B = 04H", "A = 04H, B = 03H", "A = 05H, B = 00H", "A = 23H, B = 05H"],
+      "correctIndex": 1,
+      "explanation": "23 ÷ 5 = quotient 4, remainder 3; quotient A में और remainder B में रखा जाता है, इसलिए A = 04H, B = 03H सही है (option B)।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q65",
+      "question": "यदि A = 00H हो और instruction DEC A execute किया जाए, तो A का नया मान क्या होगा और इसका carry flag (CY) पर क्या प्रभाव पड़ेगा — SUBB जैसी borrow-based instruction से इसकी तुलना में?",
+      "options": ["A = 01H होगा, CY अपरिवर्तित रहेगा", "A = FFH होगा और CY भी set (1) हो जाएगा जैसे SUBB में borrow होता है", "A = FFH (wraparound) होगा, लेकिन DEC कभी भी CY को प्रभावित नहीं करता (SUBB के विपरीत, जो borrow पर CY set करता है)", "A अपरिवर्तित (00H) रहेगा"],
+      "correctIndex": 2,
+      "explanation": "DEC A, 00H से घटाकर wraparound द्वारा FFH बना देता है, परंतु DEC (INC की तरह) कभी CY flag नहीं बदलता, जबकि SUBB जैसी instructions borrow होने पर CY set करती हैं, इसलिए option C सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q66",
+      "question": "8051 के PSW में Auxiliary Carry (AC) flag किस स्थिति में set होता है और इसका मुख्य उपयोग क्या है?",
+      "options": ["जब accumulator का मान शून्य हो जाए", "जब result 255 से बड़ा हो जाए (जैसे CY)", "जब कोई bit-manipulation instruction execute हो", "जब ADD/ADDC/SUBB के दौरान bit-3 से bit-4 की ओर carry/borrow उत्पन्न हो — यह मुख्यतः DA A द्वारा BCD correction में उपयोग होता है"],
+      "correctIndex": 3,
+      "explanation": "AC lower nibble से upper nibble की ओर carry/borrow को दर्शाता है (bit3→bit4), जिसे DA A BCD correction के लिए जाँचता है, इसलिए option D सही है। यह accumulator zero होने, 255 से अधिक होने (वह CY है), या bit-instructions से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q67",
+      "question": "ADD instruction के बाद CY (Carry) flag और OV (Overflow) flag के अर्थ में क्या अंतर है?",
+      "options": ["CY unsigned arithmetic में bit-7 से बाहर carry दर्शाता है, जबकि OV signed (two's complement) arithmetic में गलत sign result (overflow) दर्शाता है", "दोनों बिल्कुल एक ही चीज़ दर्शाते हैं", "CY signed overflow दर्शाता है, OV unsigned carry दर्शाता है", "OV केवल subtraction में उपयोगी है, addition में नहीं"],
+      "correctIndex": 0,
+      "explanation": "CY unsigned numbers के लिए result का 255 से बाहर जाना बताता है, जबकि OV बताता है कि signed numbers के रूप में परिणाम का sign अप्रत्याशित रूप से बदल गया (overflow), इसलिए option A सही है। शेष विकल्प भूमिकाएँ उलट देते हैं या गलत सीमित करते हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q68",
+      "question": "8051 के PSW register में explicit 'Zero flag (Z)' bit नहीं होता — तो JZ LABEL instruction 'zero' condition कैसे determine करता है?",
+      "options": ["यह PSW के parity bit को जाँचकर", "यह सीधे accumulator (A) की वर्तमान content को जाँचता है — यदि A = 00H हो तभी jump होता है, किसी अलग flag की जरूरत नहीं", "यह CY flag को जाँचकर", "यह AC flag को जाँचकर"],
+      "correctIndex": 1,
+      "explanation": "8051 का PSW कई अन्य processors की तरह अलग zero-flag नहीं रखता; JZ/JNZ सीधे accumulator का मान पढ़कर निर्णय लेते हैं, इसलिए option B सही है। Parity, CY या AC flags zero-condition से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q69",
+      "question": "यदि accumulator में packed BCD जोड़ के फलस्वरूप ADD A, #45H के बाद A = 9DH बना है (मूल रूप से A = 58H था, यानी BCD 58 + 45), तो DA A execute करने के बाद अंतिम A और CY का मान क्या होगा?",
+      "options": ["A = 9DH, CY = 0 (कोई परिवर्तन नहीं)", "A = 43H, CY = 0", "A = 03H, CY = 1 (BCD result 103 को दर्शाते हुए)", "A = A3H, CY = 0"],
+      "correctIndex": 2,
+      "explanation": "9DH में lower nibble D(13)>9 है इसलिए +06H जुड़ता है = A3H; फिर upper nibble A(10)>9 है इसलिए +60H जुड़ता है = 103H, जिसका byte भाग A=03H रहता है और overflow CY=1 सेट होता है, जो दशमलव BCD परिणाम 103 (58+45) को सही दर्शाता है, इसलिए option C सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q70",
+      "question": "यदि A = 70H (signed +112) और R2 = 10H (signed +16) हो, तो ADD A, R2 execute करने के बाद CY और OV flags का मान क्या होगा, और क्यों?",
+      "options": ["CY = 1, OV = 0 (unsigned overflow के कारण)", "CY = 0, OV = 0 (कोई overflow नहीं)", "CY = 1, OV = 1 (दोनों overflow)", "CY = 0, OV = 1, क्योंकि परिणाम A=80H unsigned रूप से सही (128) है पर signed रूप में negative (-128) दिखता है — यह sign overflow है"],
+      "correctIndex": 3,
+      "explanation": "70H+10H=80H; unsigned दृष्टि से यह 8-bit सीमा में ही है इसलिए CY=0, परंतु दो धनात्मक signed numbers जोड़ने पर परिणाम negative (bit-7=1) दिखा, जो गलत sign है, इसलिए OV=1 होता है। यही CY और OV के अलग-अलग उद्देश्य को स्पष्ट करता है, option D सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q71",
+      "question": "यदि A = 05H (00000101) और CY = 1 (execute करने से पहले) हो, तो instruction RRC A के बाद A और नया CY क्या होगा?",
+      "options": ["A = 82H, CY = 1", "A = 02H, CY = 1", "A = 82H, CY = 0", "A = 0AH, CY = 0"],
+      "correctIndex": 0,
+      "explanation": "RRC A में सभी bits दायीं ओर shift होते हैं, LSB (यहाँ 1) नए CY में जाता है और पुराना CY (1) MSB (bit7) में आता है, इसलिए A = 10000010 = 82H और CY = 1, option A सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q72",
+      "question": "यदि A = 81H (10000001) और CY = 0 (execute करने से पहले) हो, तो instruction RLC A के बाद A और नया CY क्या होगा?",
+      "options": ["A = 02H, CY = 0", "A = 02H, CY = 1", "A = 03H, CY = 1", "A = 81H, CY = 1"],
+      "correctIndex": 1,
+      "explanation": "RLC A में सभी bits बायीं ओर shift होते हैं, MSB (यहाँ 1) नए CY में जाता है और पुराना CY (0) LSB (bit0) में आता है, इसलिए A = 00000010 = 02H और CY = 1, option B सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q73",
+      "question": "8051 में RR A और RRC A instructions में मुख्य अंतर क्या है?",
+      "options": ["RR केवल accumulator के bit-7 को प्रभावित करता है, RRC bit-0 को", "दोनों बिल्कुल समान कार्य करते हैं", "RR में bit-0 सीधे bit-7 में wrap होता है (CY शामिल नहीं), जबकि RRC में CY एक 9वें bit के रूप में rotation में शामिल होता है", "RR केवल Carry flag rotate करता है, accumulator नहीं"],
+      "correctIndex": 2,
+      "explanation": "RR A में LSB सीधे MSB position में चला जाता है और CY अप्रभावित रहता है, जबकि RRC A में CY rotation-loop का हिस्सा बनकर 9-bit rotate करता है, इसलिए option C सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q74",
+      "question": "यदि internal RAM location 40H में मान 3AH है, तो instruction ANL 40H, #0F0H execute करने के बाद उस location में क्या मान होगा?",
+      "options": ["0AH", "FAH", "3AH (अपरिवर्तित)", "30H"],
+      "correctIndex": 3,
+      "explanation": "3AH (00111010) को F0H (11110000) से AND करने पर lower nibble 0 हो जाता है और upper nibble जस का तस रहता है: 00110000 = 30H, इसलिए option D सही है। यह direct addressing के साथ किसी भी internal RAM byte पर काम करता है, केवल accumulator तक सीमित नहीं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q75",
+      "question": "8051 में यदि 90H, Port 1 (P1) का SFR address है, तो instruction ORL 90H, #01H का उपयोग किसलिए किया जाता है?",
+      "options": ["Port 1 के bit-0 को बाकी bits को बदले बिना 1 set करने के लिए (read-modify-write तकनीक)", "पूरे Port 1 को साफ (0) करने के लिए", "केवल bit-0 पढ़ने के लिए", "Port 1 को complement करने के लिए"],
+      "correctIndex": 0,
+      "explanation": "ORL direct,#data read-modify-write cycle में मौजूदा port value पढ़ता है, mask के साथ OR करके सिर्फ चाहे गए bits (यहाँ bit-0) को set करता है, बाकी bits अपरिवर्तित रहते हैं, इसलिए option A सही है। पूरे port को clear करने, केवल पढ़ने या complement करने का यह तरीका नहीं है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q76",
+      "question": "यदि A = 3CH हो, तो instruction XRL A, #0FFH execute करने के बाद A का मान क्या होगा?",
+      "options": ["3CH (अपरिवर्तित)", "C3H", "FFH", "00H"],
+      "correctIndex": 1,
+      "explanation": "किसी भी bit को FFH (सभी 1) के साथ XOR करने पर वह bit उलट (toggle) जाता है, जो पूरे byte का 1's complement बना देता है: 3CH का complement C3H होता है, इसलिए option B सही है, यह प्रभाव CPL A के समान है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q77",
+      "question": "8051 में bit-logical instruction ANL C, /P1.5 में '/' (slash) चिह्न का क्या अर्थ है?",
+      "options": ["P1.5 bit को permanently complement (toggle) कर देना", "P1.5 को पूरी तरह ignore करना", "operation में P1.5 के complement (उलटे) मान का उपयोग करना, जबकि P1.5 का वास्तविक मान अपरिवर्तित रहता है", "Carry को P1.5 में copy करना"],
+      "correctIndex": 2,
+      "explanation": "'/' सूचित करता है कि AND operation में उस bit का complement value उपयोग होगा (CY = CY AND (NOT P1.5)), परंतु स्वयं P1.5 का actual मान नहीं बदलता, इसलिए option C सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q78",
+      "question": "8051 में instruction ORL C, P2.3 का परिणाम क्या होगा?",
+      "options": ["P2.3 का मान बदलकर CY जैसा हो जाएगा", "CY हमेशा 1 हो जाएगा", "P2.3 clear हो जाएगा", "नया CY = (पुराना CY) OR (P2.3 का वर्तमान मान) होगा"],
+      "correctIndex": 3,
+      "explanation": "यह bit-level logical OR है जो carry और निर्दिष्ट bit के मान का OR लेकर परिणाम carry में रखता है, बिना P2.3 को प्रभावित किए, इसलिए option D सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q79",
+      "question": "8051 में यदि क्रम से 'MOV C, P2.3' और फिर 'ANL C, P2.4' execute किया जाए, तो carry flag (CY) में अंतिम रूप से क्या मान आएगा, और इसका सामान्य उपयोग क्या है?",
+      "options": ["CY = P2.3 AND P2.4 — यह दो port bits की logical AND condition (जैसे दो sensors की interlock स्थिति) जाँचने के लिए उपयोगी है", "CY = P2.3 OR P2.4", "CY हमेशा P2.4 के बराबर रहेगा, P2.3 का कोई प्रभाव नहीं", "यह instruction sequence अमान्य है"],
+      "correctIndex": 0,
+      "explanation": "पहले P2.3 का मान CY में आता है, फिर ANL C,P2.4 carry को P2.4 के साथ AND कर देता है — यानी अंतिम CY दोनों bits के AND जैसा होता है, जो कई bit conditions को बिना accumulator उपयोग किए combine करने की तकनीक है, इसलिए option A सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q80",
+      "question": "8051 में instruction CPL P1.5, CPL A से किस प्रकार भिन्न है?",
+      "options": ["दोनों बिल्कुल समान प्रभाव डालते हैं", "CPL P1.5 केवल port pin P1.5 को toggle करता है (शेष bits अप्रभावित), जबकि CPL A पूरे accumulator के सभी 8 bits को complement करता है", "CPL P1.5 पूरे Port 1 को complement करता है", "CPL A केवल एक bit को complement करता है"],
+      "correctIndex": 1,
+      "explanation": "CPL bit-addressable operand के साथ केवल उस एक bit को उलटता है (bit-level operation), जबकि CPL A byte-level operation है जो accumulator के सभी 8 bits को एक साथ complement करता है, इसलिए option B सही है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q81",
+      "question": "8051 में JC LABEL और JNC LABEL instructions किस flag की जाँच करते हैं और कब jump करते हैं?",
+      "options": ["दोनों accumulator zero होने पर jump करते हैं", "दोनों OV flag जाँचते हैं", "JC तब jump करता है जब CY = 1 हो, JNC तब जब CY = 0 हो — दोनों carry flag जाँचते हैं", "JC parity flag जाँचता है"],
+      "correctIndex": 2,
+      "explanation": "JC (Jump if Carry) और JNC (Jump if No Carry) दोनों carry flag (CY) की स्थिति देखकर निर्णय लेते हैं — विपरीत शर्तों पर branch करते हैं, इसलिए option C सही है। ये accumulator, OV या parity से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q82",
+      "question": "8051 में instruction JNZ LABEL कब branch (jump) करता है?",
+      "options": ["जब CY = 0 हो", "जब accumulator में कोई विशेष bit set हो", "हमेशा unconditionally jump करता है", "जब accumulator (A) का मान शून्य (00H) न हो"],
+      "correctIndex": 3,
+      "explanation": "JNZ (Jump if Not Zero) accumulator की जाँच करता है और A ≠ 00H होने पर branch करता है, ठीक JZ के विपरीत, इसलिए option D सही है। यह CY, किसी विशेष bit, या unconditional jump से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q83",
+      "question": "यदि R3 = 20H हो, तो instruction CJNE R3, #20H, LABEL execute करने पर क्या होगा?",
+      "options": ["दोनों operand बराबर होने के कारण LABEL पर jump नहीं होगा, और CY = 0 सेट होगा (क्योंकि R3, 20H से कम नहीं है)", "LABEL पर jump होगा क्योंकि दोनों बराबर हैं", "CY = 1 सेट होगा", "R3 का मान बदल जाएगा"],
+      "correctIndex": 0,
+      "explanation": "CJNE केवल असमान होने पर jump करता है; यहाँ R3 = 20H (बराबर) है इसलिए jump नहीं होगा, और चूँकि R3, comparand से कम नहीं है इसलिए CY = 0 रहता है, इसलिए option A सही है। R3 का मान compare के दौरान नहीं बदलता।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q84",
+      "question": "8051 में instruction SJMP $ (या समकक्ष self-referencing relative jump) का सामान्य उपयोग क्या है?",
+      "options": ["यह accumulator को clear करता है", "यह प्रोग्राम को उसी instruction पर बार-बार jump कराकर एक अनंत लूप (infinite loop) बनाता है, जिसका उपयोग प्रोग्राम को वहीं रोकने (halt जैसा प्रभाव) के लिए होता है", "यह अगली line पर आगे बढ़ जाता है", "यह interrupt को disable करता है"],
+      "correctIndex": 1,
+      "explanation": "'$' वर्तमान instruction के address को दर्शाता है, इसलिए SJMP $ स्वयं पर ही relative jump करता है और प्रोग्राम को उसी बिंदु पर अनंत काल तक फंसा देता है, इसलिए option B सही है। यह accumulator, अगली-line execution या interrupts से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q85",
+      "question": "यदि किसी LABEL का target instruction, SJMP LABEL के अगले instruction से लगभग 100 bytes आगे स्थित है, तो क्या यह एक valid SJMP instruction होगा?",
+      "options": ["नहीं, SJMP केवल exactly 127 bytes की दूरी पर ही काम करता है", "नहीं, SJMP कभी forward jump नहीं कर सकता", "हाँ, क्योंकि SJMP का signed 8-bit offset +127 तक forward jump की अनुमति देता है, और 100, इस सीमा के भीतर है", "नहीं, forward jump के लिए हमेशा LJMP चाहिए"],
+      "correctIndex": 2,
+      "explanation": "SJMP का displacement byte -128 से +127 तक की range कवर करता है; 100 bytes इस सीमा में है इसलिए यह valid forward SJMP होगा, इसलिए option C सही है। SJMP forward jump कर सकता है, exact 127 की बाध्यता नहीं, और LJMP अनिवार्य नहीं है जब तक range के भीतर हो।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q86",
+      "question": "8051 में instruction DJNZ 30H, LOOP में counter के रूप में किसका उपयोग हो रहा है, और यह DJNZ Rn, LOOP से किस तरह भिन्न है?",
+      "options": ["यह अमान्य instruction है क्योंकि DJNZ केवल register के साथ काम करता है", "R0 का उपयोग हो रहा है", "accumulator counter के रूप में उपयोग हो रहा है", "यह internal RAM location 30H (direct addressing) को counter के रूप में decrement करता है, जबकि DJNZ Rn किसी working register को decrement करता है — दोनों valid हैं, केवल operand type भिन्न है"],
+      "correctIndex": 3,
+      "explanation": "DJNZ किसी भी direct-addressable byte (जैसे RAM location 30H) या register (Rn) दोनों के साथ काम कर सकता है, दोनों ही मामलों में मान को 1 घटाकर 0 न होने पर LOOP पर jump करता है, इसलिए option D सही है, यह अमान्य नहीं है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q87",
+      "question": "8051 में ACALL या LCALL instruction execute होने पर Stack Pointer (SP) और stack पर क्या प्रभाव पड़ता है?",
+      "options": ["Return address के दो bytes (PC का low व high byte) stack पर push होते हैं और SP कुल 2 से बढ़ जाता है", "केवल 1 byte push होता है, SP 1 से बढ़ता है", "कोई byte push नहीं होता, केवल PC बदल जाता है", "SP घट जाता है (decrement)"],
+      "correctIndex": 0,
+      "explanation": "Subroutine से लौटने के लिए वर्तमान PC (16-bit यानी 2 bytes) को stack पर push करना जरूरी है, इसलिए SP दो बार बढ़ता है (कुल 2 count), इसलिए option A सही है। यह single-byte नहीं, बिना push के नहीं, और 8051 में CALL पर SP बढ़ता है, घटता नहीं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q88",
+      "question": "8051 में किसी Interrupt Service Routine (ISR) के अंत में RET के बजाय RETI का उपयोग क्यों अनिवार्य है?",
+      "options": ["RETI और RET में कोई अंतर नहीं, दोनों में से कोई भी चलेगा", "RETI अतिरिक्त रूप से आंतरिक interrupt logic को restore करता है (जिससे उसी या निम्न priority का अगला interrupt सेवा पा सके), जो सामान्य RET नहीं करता — इसलिए ISR के अंत में RETI अनिवार्य है", "RETI accumulator को clear कर देता है जबकि RET नहीं", "RET केवल ISR के लिए है, सामान्य subroutine के लिए नहीं"],
+      "correctIndex": 1,
+      "explanation": "RET केवल stack से return address pop करता है, जबकि RETI यही काम करने के साथ-साथ interrupt-in-progress की internal latch/logic को भी clear करता है ताकि नया interrupt सही से handle हो सके, इसलिए ISR के लिए RETI अनिवार्य है — RET का उपयोग वहाँ interrupt लॉक होने जैसा गलत परिणाम दे सकता है। शेष विकल्प तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q89",
+      "question": "8051 में instruction JB ACC.7, LABEL का उपयोग सामान्यतः किस उद्देश्य के लिए किया जाता है?",
+      "options": ["यह accumulator के zero होने की जाँच करता है", "यह carry flag की जाँच करता है", "यह accumulator के bit-7 (MSB) को जाँचता है, जो signed number representation में sign bit होता है — इस प्रकार यह किसी संख्या के negative होने की जाँच के लिए उपयोगी है", "यह पूरे accumulator को zero कर देता है"],
+      "correctIndex": 2,
+      "explanation": "bit-7 accumulator का सबसे significant bit है और signed (two's complement) numbers में sign दर्शाता है (1 = negative); JB ACC.7 इसे bit-addressable रूप में जाँचकर branch करता है, इसलिए option C सही है। यह zero-check, carry-check या clear operation नहीं है।"
+    },
+    {
+      "id": "u2_instruction_set_8051_q90",
+      "question": "8051 में instruction NOP का क्या कार्य है?",
+      "options": ["यह accumulator को 1 से increment करता है", "यह किसी register को clear करता है", "यह अगले instruction पर unconditionally jump करता है", "यह केवल 1 machine cycle की समय-देरी (delay) उत्पन्न करता है, बिना किसी flag या register को प्रभावित किए ('No Operation')"],
+      "correctIndex": 3,
+      "explanation": "NOP कोई डेटा परिवर्तन नहीं करता, केवल एक machine cycle खपत करके execution को अगली instruction तक आगे बढ़ाता है — यह timing adjustment/छोटे delay के लिए उपयोगी है, इसलिए option D सही है। यह increment, clear या jump नहीं करता।"
     }
   ]
 }

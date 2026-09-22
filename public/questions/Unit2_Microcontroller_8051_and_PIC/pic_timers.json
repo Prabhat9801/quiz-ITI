@@ -213,6 +213,251 @@
       "options": ["PR2 की value घटानी पड़ती है जिससे duty cycle के लिए उपलब्ध count steps कम हो जाते हैं", "ADC clock बदल जाता है", "prescaler अपने-आप 1:256 हो जाता है", "Timer1 बंद हो जाता है"],
       "correctIndex": 0,
       "explanation": "अधिक PWM frequency के लिए छोटी period चाहिए यानी छोटी PR2 value, जिससे duty cycle को दर्शाने वाले steps घट जाते हैं और resolution कम हो जाती है, इसलिए option A सही है। यह ADC clock, prescaler auto-set या Timer1 से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q31",
+      "question": "Timer0 का prescaler अधिकतम कितने ratio तक set किया जा सकता है?",
+      "options": ["1:8", "1:64", "1:128", "1:256"],
+      "correctIndex": 3,
+      "explanation": "Timer0 का prescaler PS0-PS2 bits से 1:2 से लेकर अधिकतम 1:256 तक set होता है, इसलिए option D सही है। 1:8 Timer1 का अधिकतम है, 1:64 और 1:128 Timer0 के मध्यवर्ती standard ratios नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q32",
+      "question": "CCP module को Capture mode में इस्तेमाल करने से पहले संबंधित CCP pin को कैसे configure करना जरूरी है?",
+      "options": ["TRISC के संबंधित bit को input (1) set करना होगा", "उसी bit को output बनाना होगा", "उसे केवल analog input के लिए ADC channel बनाना होगा", "किसी configuration की जरूरत नहीं है"],
+      "correctIndex": 0,
+      "explanation": "Capture mode में external signal को pin पर पढ़ना होता है, इसलिए TRISC का संबंधित bit input (1) रखना जरूरी है, यानी option A सही है। इसे output बनाने पर capture काम नहीं करेगा, ADC configuration अलग purpose है, और कोई-न-कोई configuration जरूर चाहिए।"
+    },
+    {
+      "id": "u2_pic_timers_q33",
+      "question": "CCP module का operating mode (Capture/Compare/PWM) किन bits से select किया जाता है?",
+      "options": ["T2CON के bits से", "CCPxCON रजिस्टर के CCPxM3:CCPxM0 bits से", "OPTION_REG के bits से", "PIE1 रजिस्टर के bits से"],
+      "correctIndex": 1,
+      "explanation": "CCPxCON register के CCPxM3:CCPxM0 mode-select bits यह तय करते हैं कि module Capture, Compare या PWM mode में काम करेगा, इसलिए option B सही है। T2CON Timer2 का, OPTION_REG Timer0 का और PIE1 interrupt enable का register है।"
+    },
+    {
+      "id": "u2_pic_timers_q34",
+      "question": "Compare mode के 'special event trigger' output action का क्या असर होता है?",
+      "options": ["यह PWM duty cycle को तुरंत बदल देता है", "यह सिर्फ output pin को toggle करता है और कुछ नहीं करता", "यह Timer1 को reset कर सकता है और साथ ही ADC conversion को भी automatically start कर सकता है", "यह Timer0 को permanently रोक देता है"],
+      "correctIndex": 2,
+      "explanation": "Special event trigger match होने पर Timer1 को 0 पर reset करता है और यदि configure किया हो तो ADC conversion भी शुरू कर देता है, इसलिए option C सही है। यह PWM duty नहीं बदलता, केवल pin toggle तक सीमित नहीं और Timer0 से इसका सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q35",
+      "question": "Capture mode में edge-select (जैसे every rising edge से every 4th/16th rising edge) बदलते समय क्या सावधानी बरतनी चाहिए?",
+      "options": ["कोई सावधानी जरूरी नहीं, सीधे बिट बदल सकते हैं", "पहले Timer1 को स्थायी रूप से बंद करना जरूरी है", "पहले PR2 register को बदलना जरूरी है", "false/spurious capture से बचने के लिए edge-select बदलने से पहले CCP module को capture से किसी और mode में डालकर फिर वापस सेट करना चाहिए"],
+      "correctIndex": 3,
+      "explanation": "Capture prescaler/edge-select settings बदलते समय एक spurious interrupt/capture होने की संभावना रहती है, इसलिए पहले CCPxCON को disable/किसी और mode में सेट कर फिर वांछित edge-select के साथ enable करना उचित है, यानी option D सही है। बाकी options यह समस्या हल नहीं करते।"
+    },
+    {
+      "id": "u2_pic_timers_q36",
+      "question": "किसी digital pulse की width (duration) मापने के लिए Capture mode का सामान्य तरीका क्या है?",
+      "options": ["rising edge पर एक capture और falling edge पर दूसरा capture लेकर दोनों Timer1 values का अंतर pulse width देता है", "केवल एक capture value से सीधे pulse width मिल जाती है", "PR2 register की value पढ़ना ही पर्याप्त है", "इसके लिए ADC module अनिवार्य है"],
+      "correctIndex": 0,
+      "explanation": "CCP pin को rising edge पर capture करने पर पहला time-stamp और falling edge पर capture करने पर दूसरा time-stamp मिलता है, दोनों के अंतर से pulse width निकाली जाती है, इसलिए option A सही है। बाकी तरीके इस माप के लिए सही नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q37",
+      "question": "Capture mode का उपयोग करके किसी signal की frequency मापने का तरीका क्या है?",
+      "options": ["capture value स्वयं ही frequency को सीधे दर्शाता है", "दो लगातार rising edges पर capture किए गए Timer1 values का अंतर signal का period देता है, जिससे frequency = 1/period निकाली जाती है", "capture value सीधे duty cycle बताता है", "capture mode से केवल voltage स्तर पता चलता है"],
+      "correctIndex": 1,
+      "explanation": "लगातार दो rising-edge captures के बीच Timer1 counts का अंतर = period (समय की इकाइयों में), और इसका reciprocal frequency देता है, इसलिए option B सही है। capture value अकेले न तो frequency है, न duty cycle, न voltage की जानकारी देता है।"
+    },
+    {
+      "id": "u2_pic_timers_q38",
+      "question": "Fosc = 4 MHz पर Timer1 बिना prescaler के चल रहा है (हर count = 1 µs)। दो लगातार rising-edge captures की values 200 और 700 हैं। input signal की frequency क्या है?",
+      "options": ["500 Hz", "1000 Hz", "2000 Hz", "4000 Hz"],
+      "correctIndex": 2,
+      "explanation": "Period = (700 − 200) × 1 µs = 500 µs, इसलिए frequency = 1 / 500 µs = 2000 Hz, यानी option C सही है। 500 Hz, 1000 Hz और 4000 Hz गलत गणना से आते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q39",
+      "question": "PWM में PR2 = 99 (यानी period के लिए 100 count-steps उपलब्ध) है और duty cycle को दर्शाने वाला प्रभावी count value 25 है। duty cycle लगभग कितने % है?",
+      "options": ["25%", "50%", "75%", "99%"],
+      "correctIndex": 0,
+      "explanation": "Duty % ≈ (duty count / (PR2+1)) × 100 = (25/100) × 100 = 25%, इसलिए option A सही है। 50%, 75% और 99% तब आते जब duty count क्रमशः 50, 75 या 99 होता।"
+    },
+    {
+      "id": "u2_pic_timers_q40",
+      "question": "Fosc = 4 MHz (Tosc = 0.25 µs), PR2 = 124, prescaler = 1 है। PWM period = (PR2+1)×4×Tosc×prescaler सूत्र से PWM frequency क्या होगी?",
+      "options": ["4 kHz", "8 kHz", "16 kHz", "2 kHz"],
+      "correctIndex": 1,
+      "explanation": "Period = (124+1) × 4 × 0.25 µs × 1 = 125 × 1 µs = 125 µs, इसलिए frequency = 1/125 µs = 8 kHz, यानी option B सही है। 4 kHz, 16 kHz और 2 kHz गलत गुणा/भाग से आते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q41",
+      "question": "Timer1 की 16-bit count value किन दो 8-bit रजिस्टरों को मिलाकर बनती है?",
+      "options": ["TMR0H:TMR0L", "TMR2H:TMR2L", "TMR1H:TMR1L", "CCPR1H:CCPR1L"],
+      "correctIndex": 2,
+      "explanation": "Timer1 की 16-bit value TMR1H (upper byte) और TMR1L (lower byte) को मिलाकर बनती है, इसलिए option C सही है। TMR0H:TMR0L और TMR2H:TMR2L जैसे कोई रजिस्टर pair मौजूद नहीं (Timer0/2 8-bit हैं), और CCPR1H:CCPR1L capture/compare value रखते हैं, Timer1 का count नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q42",
+      "question": "Timer1 के चलते समय अगर TMR1L और TMR1H को अलग-अलग instructions में पढ़ा जाए तो क्या समस्या हो सकती है?",
+      "options": ["कोई समस्या नहीं होती, values हमेशा सही आती हैं", "Timer1 हमेशा 8-bit की तरह व्यवहार करने लगता है", "प्रश्न prescaler बदलने से हल हो जाता है", "बीच में rollover होने पर TMR1L और TMR1H की values आपस में असंगत (mismatched) हो सकती हैं, इसलिए timer रोककर पढ़ना या विशेष sequence अपनाना उचित है"],
+      "correctIndex": 3,
+      "explanation": "यदि TMR1L पढ़ने के बाद और TMR1H पढ़ने से पहले rollover हो जाए तो गलत combined value मिल सकती है, इसलिए इसे टालने के लिए timer रोककर पढ़ना या सही sequence अपनाना जरूरी है — option D सही है। बाकी options यह risk नकारते हैं जो गलत है।"
+    },
+    {
+      "id": "u2_pic_timers_q43",
+      "question": "T1CON register का TMR1CS bit किस काम आता है?",
+      "options": ["Timer1 के clock source (internal Fosc/4 या external T1CKI/oscillator) को select करने में", "PWM की duty cycle तय करने में", "Timer0 का prescaler set करने में", "Timer1 module को स्थायी रूप से बंद करने में"],
+      "correctIndex": 0,
+      "explanation": "TMR1CS bit यह तय करता है कि Timer1 internal instruction clock से चले या external T1CKI/T1OSC से, इसलिए option A सही है। यह PWM duty, Timer0 prescaler या permanent shutdown से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q44",
+      "question": "T1CON register का TMR1ON bit किस काम आता है?",
+      "options": ["Timer1 का clock source चुनने में", "Timer1 module को enable/disable (counting ON/OFF) करने में", "Capture edge चुनने में", "PWM resolution तय करने में"],
+      "correctIndex": 1,
+      "explanation": "TMR1ON = 1 करने पर Timer1 counting शुरू करता है और 0 करने पर रुक जाता है, इसलिए option B सही है। Clock source TMR1CS से, capture edge CCPxCON से और PWM resolution PR2/duty registers से तय होती है।"
+    },
+    {
+      "id": "u2_pic_timers_q45",
+      "question": "T2CON register में मुख्य रूप से कौन-कौन से bits होते हैं?",
+      "options": ["केवल prescaler select bits", "केवल postscaler select bits", "prescaler (T2CKPS) और postscaler (TOUTPS) दोनों select bits", "केवल Timer2 का interrupt flag bit"],
+      "correctIndex": 2,
+      "explanation": "T2CON में Timer2 का prescaler select (T2CKPS1:T2CKPS0) और postscaler select (TOUTPS3:TOUTPS0) दोनों bits होते हैं (साथ में TMR2ON), इसलिए option C सही है। केवल prescaler या postscaler अधूरा उत्तर है, और interrupt flag PIR1 में होता है T2CON में नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q46",
+      "question": "Timer2 की value PR2 से match होने पर कौन सा flag set होता है?",
+      "options": ["TMR0IF", "TMR1IF", "RBIF", "TMR2IF (PIR1 रजिस्टर में)"],
+      "correctIndex": 3,
+      "explanation": "Timer2 का overflow/match flag TMR2IF होता है जो peripheral interrupt register PIR1 में रहता है, इसलिए option D सही है। TMR0IF Timer0 का, TMR1IF Timer1 का और RBIF port-change interrupt का flag है।"
+    },
+    {
+      "id": "u2_pic_timers_q47",
+      "question": "PIC16F के CCP module का Capture/Compare feature किस timer के साथ काम करता है, Timer2 के साथ क्यों नहीं?",
+      "options": ["यह Timer1 के साथ काम करता है क्योंकि Timer2 मुख्यतः PWM/general timing के लिए बना है और इसका capture register interface नहीं है", "यह हमेशा Timer2 के साथ ही काम करता है", "यह Timer0 के साथ काम करता है", "यह किसी भी timer के बिना स्वतंत्र रूप से काम करता है"],
+      "correctIndex": 0,
+      "explanation": "Capture और Compare modes Timer1 (16-bit) की value का उपयोग करते हैं; Timer2 का डिज़ाइन PWM/period-based timing के लिए है और उसे capture register से जोड़ने की सुविधा नहीं है, इसलिए option A सही है। बाकी options गलत timer या स्वतंत्रता का दावा करते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q48",
+      "question": "यदि CCP1 module को PWM mode में configure किया जाए, तो उसका time base कौन सा timer होगा?",
+      "options": ["Timer0", "Timer2", "Timer1", "Watchdog Timer"],
+      "correctIndex": 1,
+      "explanation": "PWM mode में CCP module Timer2 (PR2 के साथ) को time base के रूप में इस्तेमाल करता है, इसलिए option B सही है। Timer0 counter/timer applications के लिए, Timer1 capture/compare के लिए और Watchdog Timer PWM से असंबंधित है।"
+    },
+    {
+      "id": "u2_pic_timers_q49",
+      "question": "यदि वही CCP1 module Capture mode में हो, तो उसका time base कौन सा timer होता है?",
+      "options": ["Timer0", "Timer2", "Timer1", "किसी timer की जरूरत नहीं"],
+      "correctIndex": 2,
+      "explanation": "Capture mode हमेशा Timer1 (16-bit TMR1H:TMR1L) की value को capture करता है, इसलिए option C सही है। Timer0 और Timer2 8-bit हैं और capture के लिए उपयुक्त नहीं, और एक time base जरूर चाहिए।"
+    },
+    {
+      "id": "u2_pic_timers_q50",
+      "question": "Capture mode में 'हर 4th/16th rising edge पर capture' select करने वाले bits किस चीज का हिस्सा होते हैं?",
+      "options": ["यह Timer1 का clock prescaler है", "यह Timer0 का prescaler है", "यह PWM का postscaler है", "यह CCPxCON रजिस्टर के mode-select bits का हिस्सा है, जो Timer1 के prescaler से अलग होते हैं"],
+      "correctIndex": 3,
+      "explanation": "Capture edge/event selection CCPxCON के CCPxM bits से होता है, जो Timer1 के अपने T1CON prescaler से अलग एक स्वतंत्र setting है, इसलिए option D सही है। यह Timer0 prescaler या PWM postscaler नहीं है।"
+    },
+    {
+      "id": "u2_pic_timers_q51",
+      "question": "Fosc = 4 MHz पर Timer1 बिना prescaler के चल रहा है (हर count = 1 µs)। एक pulse के rising edge पर capture value 100 और falling edge पर 350 मिला। pulse की width क्या है?",
+      "options": ["250 µs", "150 µs", "300 µs", "200 µs"],
+      "correctIndex": 0,
+      "explanation": "Pulse width = (350 − 100) × 1 µs = 250 µs, इसलिए option A सही है। 150 µs, 300 µs और 200 µs गलत घटाव/गणना से आते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q52",
+      "question": "Capture-based माप में यदि signal का period 2 ms निकला हो, तो उसकी frequency क्या होगी?",
+      "options": ["250 Hz", "500 Hz", "1000 Hz", "2000 Hz"],
+      "correctIndex": 1,
+      "explanation": "Frequency = 1/period = 1/2 ms = 500 Hz, इसलिए option B सही है। 250 Hz, 1000 Hz और 2000 Hz गलत reciprocal गणना से आते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q53",
+      "question": "PWM mode में यदि duty cycle को दर्शाने वाला register value 0 कर दिया जाए तो output कैसा होगा?",
+      "options": ["output हमेशा HIGH रहेगा", "output 50% duty देगा", "output लगभग हमेशा LOW रहेगा (0% duty)", "PWM की frequency अपने-आप बदल जाएगी"],
+      "correctIndex": 2,
+      "explanation": "duty value 0 होने पर output पूरे period के दौरान LOW रहता है यानी लगभग 0% duty cycle, इसलिए option C सही है। 100% duty तब जब value PR2 के बराबर/अधिक हो, 50% आधी value पर, और frequency PR2/prescaler से तय होती है duty value से नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q54",
+      "question": "PR2 को स्थिर रखते हुए Timer2 का prescaler value बढ़ा दिया जाए तो PWM frequency पर क्या असर होगा?",
+      "options": ["PWM frequency बढ़ जाएगी", "कोई असर नहीं पड़ेगा", "duty cycle अपने-आप 100% हो जाएगी", "period बढ़ जाने से PWM frequency घट जाएगी"],
+      "correctIndex": 3,
+      "explanation": "Period = (PR2+1)×4×Tosc×prescaler के अनुसार prescaler बढ़ने पर period बढ़ता है और frequency = 1/period घट जाती है, इसलिए option D सही है। frequency बढ़ना, कोई असर न होना, या duty का अपने-आप 100% होना गलत है।"
+    },
+    {
+      "id": "u2_pic_timers_q55",
+      "question": "General-purpose समय delay बनाने के लिए Timer0, Timer1 या Timer2 में से किसी एक का चुनाव किस आधार पर किया जाता है?",
+      "options": ["चाहिए गए delay की duration, resolution और उपलब्ध prescaler/bit-width के अनुसार", "केवल pin के रंग के अनुसार", "हमेशा केवल Timer2 ही चुना जाता है", "यह चुनाव पूरी तरह ADC पर निर्भर करता है"],
+      "correctIndex": 0,
+      "explanation": "अलग-अलग timers की bit-width (8/16-bit) और prescaler options अलग हैं, इसलिए चाहिए गए delay की length और resolution के अनुसार सही timer चुना जाता है — option A सही है। बाकी options व्यवहारिक आधार नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q56",
+      "question": "Software delay loop की तुलना में hardware Timer module का उपयोग करने का मुख्य फायदा क्या है?",
+      "options": ["hardware timer भी CPU को software delay loop जितना ही पूरी तरह busy रखता है", "hardware timer background में स्वतंत्र रूप से चलता है जिससे CPU उसी समय दूसरे कार्य कर सकता है", "hardware timer से समय की accuracy घट जाती है", "hardware timer केवल PWM के लिए ही प्रयोग हो सकता है"],
+      "correctIndex": 1,
+      "explanation": "Timer peripheral background में स्वतंत्र रूप से count करता है, जिससे CPU polling/interrupt के सहारे अन्य कार्य साथ-साथ कर सकता है, इसलिए option B सही है। यह CPU को busy नहीं रखता, accuracy बेहतर देता है, और केवल PWM तक सीमित नहीं है।"
+    },
+    {
+      "id": "u2_pic_timers_q57",
+      "question": "बहुत लंबे (slow) pulse की width मापते समय अगर Timer1 माप के बीच में overflow हो जाए तो सही समय कैसे निकाला जाता है?",
+      "options": ["Timer1 को कभी overflow नहीं होने दिया जा सकता, इसलिए ऐसे pulses मापे ही नहीं जा सकते", "इतने लंबे pulses का माप संभव ही नहीं है", "overflow interrupt की संख्या गिनकर उसे final capture value में जोड़कर कुल elapsed समय निकाला जाता है", "prescaler को हमेशा 1:1 रखना ही एकमात्र उपाय है"],
+      "correctIndex": 2,
+      "explanation": "हर overflow पर interrupt count बढ़ाकर, अंत में उस count को final capture value के साथ जोड़ने से लंबे pulses का सही कुल समय निकाला जा सकता है, इसलिए option C सही है। बाकी विकल्प इसे असंभव बताते हैं जो गलत है।"
+    },
+    {
+      "id": "u2_pic_timers_q58",
+      "question": "Fosc = 4 MHz और Timer1 prescaler = 1:2 है (हर count = 2 µs)। दो लगातार rising-edge captures का अंतर 1000 counts है। signal की frequency क्या होगी?",
+      "options": ["250 Hz", "1000 Hz", "2000 Hz", "500 Hz"],
+      "correctIndex": 3,
+      "explanation": "Period = 1000 × 2 µs = 2000 µs = 2 ms, इसलिए frequency = 1/2 ms = 500 Hz, यानी option D सही है। 250 Hz, 1000 Hz और 2000 Hz गलत गणना से आते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q59",
+      "question": "PIC16F के CCP module में PWM की अधिकतम resolution आमतौर पर कितनी होती है?",
+      "options": ["अधिकतम 10-bit (8-bit CCPRxL + 2-bit DCxB1:DCxB0)", "अधिकतम 16-bit", "अधिकतम 4-bit", "इसकी कोई सीमा नहीं होती"],
+      "correctIndex": 0,
+      "explanation": "PWM duty cycle CCPRxL के 8 bits और CCPxCON के 2 अतिरिक्त bits मिलाकर अधिकतम 10-bit resolution देती है, इसलिए option A सही है। 16-bit या 4-bit गलत हैं, और व्यवहारिक रूप से एक निश्चित सीमा होती है।"
+    },
+    {
+      "id": "u2_pic_timers_q60",
+      "question": "अगर PR2 को 0 set कर दिया जाए तो PWM period पर क्या असर होगा?",
+      "options": ["PWM पूरी तरह बंद हो जाएगा", "PWM का period न्यूनतम (सबसे छोटा संभव) हो जाएगा, जिससे duty cycle को सही तरह control करना बहुत कठिन हो जाएगा", "duty cycle अपने-आप 100% निश्चित हो जाएगी", "Timer2 module स्थायी रूप से रुक जाएगा"],
+      "correctIndex": 1,
+      "explanation": "Period = (PR2+1)×4×Tosc×prescaler के अनुसार PR2 = 0 करने पर period अपने न्यूनतम मान पर पहुँच जाता है जिससे उपयोगी duty control लगभग असंभव हो जाता है, इसलिए option B सही है। PWM बंद नहीं होता, duty अपने-आप 100% नहीं होती, और Timer2 रुकता नहीं।"
+    },
+    {
+      "id": "u2_pic_timers_q61",
+      "question": "Compare mode के mode-select bits में एक विकल्प ऐसा भी होता है जो पूरी तरह क्या करता है?",
+      "options": ["compare mode में केवल pin toggle करना ही एकमात्र संभव action है", "compare match होने पर output pin को हमेशा HIGH कर देता है", "match होने पर केवल एक software interrupt generate करता है जबकि output pin की state अप्रभावित रहती है", "compare mode ADC का channel select करता है"],
+      "correctIndex": 2,
+      "explanation": "Compare mode के कुछ configurations में match होने पर output pin बिना बदले सिर्फ interrupt flag set होता है (pure software-timed interrupt), इसलिए option C सही है। pin toggle, हमेशा HIGH करना या ADC channel select करना अन्य/गलत behaviors हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q62",
+      "question": "Timer0 और Timer1 के counter mode के लिए external clock input pins में क्या अंतर है?",
+      "options": ["दोनों एक ही pin साझा करते हैं", "Timer1 भी केवल T0CKI इस्तेमाल करता है", "Timer0 केवल T1CKI इस्तेमाल करता है", "Timer0 का external input T0CKI होता है जबकि Timer1 का T1CKI/T1OSI होता है, दोनों अलग-अलग pins हैं"],
+      "correctIndex": 3,
+      "explanation": "Timer0 counter mode में T0CKI pin इस्तेमाल करता है जबकि Timer1 T1CKI/T1OSI (oscillator input सहित) इस्तेमाल करता है, ये अलग-अलग dedicated pins हैं, इसलिए option D सही है। बाकी options गलत तरीके से pins को मिला देते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q63",
+      "question": "Counter mode में prescaler value बढ़ाने से overflow rate और measurement resolution पर क्या प्रभाव पड़ता है?",
+      "options": ["overflow rate घट जाती है परंतु छोटे बदलाव पकड़ने की resolution भी कम हो जाती है", "overflow rate बढ़ती है और resolution भी बढ़ती है", "इसका कोई असर नहीं पड़ता", "prescaler केवल PWM पर असर डालता है, counter mode पर नहीं"],
+      "correctIndex": 0,
+      "explanation": "अधिक prescaler से timer कम बार overflow करता है (गिनती धीमी बढ़ती है) परंतु प्रत्येक increment अधिक input pulses का प्रतिनिधित्व करता है जिससे fine resolution घट जाती है, यह एक trade-off है, इसलिए option A सही है। बाकी options यह trade-off गलत तरीके से बताते हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q64",
+      "question": "Capture mode में एक बार capture value पढ़ लेने के बाद CCPxIF flag के साथ क्या करना जरूरी है?",
+      "options": ["यह flag अपने-आप कभी set नहीं होता इसलिए कुछ करने की जरूरत नहीं", "capture value पढ़ने के बाद CCPxIF flag को software से clear करना चाहिए ताकि अगली capture घटना सही तरीके से पहचानी जा सके", "यह flag अपने-आप Timer1 को reset कर देता है", "यह flag केवल PWM mode में प्रयोग होता है Capture mode में नहीं"],
+      "correctIndex": 1,
+      "explanation": "CCPxIF hardware द्वारा set होता है लेकिन software द्वारा clear किया जाना चाहिए, अन्यथा पुराना flag अगली वास्तविक capture घटना को पहचानने में भ्रम पैदा कर सकता है, इसलिए option B सही है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u2_pic_timers_q65",
+      "question": "एक निश्चित frequency की exact 50% duty cycle वाली square wave किसी pin पर generate करने के लिए CCP module का कौन सा तरीका सबसे उपयुक्त माना जाता है?",
+      "options": ["केवल Capture mode का प्रयोग", "केवल ADC module का प्रयोग", "Compare mode को 'toggle output on match' पर set करना, ताकि हर match पर pin toggle हो और सटीक square wave बने", "अकेले Timer0 का प्रयोग, बिना किसी CCP mode के"],
+      "correctIndex": 2,
+      "explanation": "Compare mode में हर बार Timer1 की value CCPRx से match होने पर output pin को toggle करने से exact आधे-आधे समय की HIGH/LOW अवधि यानी 50% duty square wave मिलती है, इसलिए option C सही है। Capture mode input मापता है, ADC output generate नहीं करता, और अकेला Timer0 बिना CCP के pin control नहीं कर सकता।"
     }
   ]
 }
