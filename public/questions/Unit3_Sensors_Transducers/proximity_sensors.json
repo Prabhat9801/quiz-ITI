@@ -363,6 +363,246 @@
       ],
       "correctIndex": 1,
       "explanation": "IR proximity sensor (reflective या through-beam type) fast response, non-contact operation देता है और cardboard/plastic जैसे non-metallic packaging boxes को भी reliably detect कर सकता है, जिससे यह packaging line में position confirmation के लिए उपयुक्त choice है। Option A और D पूर्णतः अलग parameters (temperature, force) measure करते हैं, और Option C mechanical wear की समस्या के कारण high-speed automated line के लिए कम उपयुक्त है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q31",
+      "question": "Plunger type limit switch किस प्रकार की motion detect करने के लिए उपयुक्त होता है?",
+      "options": [
+        "केवल rotational motion के लिए",
+        "केवल light intensity detect करने के लिए",
+        "केवल liquid के dielectric constant में change detect करने के लिए",
+        "Object द्वारा actuator पर सीधी linear/vertical pushing force लगाए जाने पर, जैसे किसी slide या ram की end position पर"
+      ],
+      "correctIndex": 3,
+      "explanation": "Plunger (push-type) limit switch में actuator को सीधे रेखीय दिशा में (linear/vertical) दबाया जाता है, इसलिए यह उन applications में उपयुक्त है जहाँ object सीधा push करता है, जैसे hydraulic ram या sliding part की end-of-travel detection। Option A rotational motion के लिए roller/rotary type अधिक उपयुक्त है, Option C IR sensor का domain है और Option D capacitive sensor का principle है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q32",
+      "question": "Limit switch में contact bounce की समस्या क्यों उत्पन्न होती है?",
+      "options": [
+        "क्योंकि यह हमेशा AC supply पर चलता है",
+        "Mechanical contacts के तेजी से open/close होने पर उनके बीच microscopic vibration/bouncing होती है, जिससे momentarily multiple make-break signals generate हो सकते हैं",
+        "क्योंकि limit switch में कोई electrical contact ही नहीं होता",
+        "क्योंकि यह eddy current पर आधारित होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Limit switch के mechanical contacts जब actuator के तेज़ operation से अचानक open या close होते हैं, तो उनकी springy metal surfaces थोड़ी देर के लिए vibrate/bounce करती हैं, जिससे control circuit को momentarily कई false transitions दिखाई दे सकते हैं (debouncing circuit की जरूरत पड़ती है)। Option A, C और D तथ्यात्मक रूप से गलत हैं — limit switch eddy current पर आधारित नहीं है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q33",
+      "question": "Safety interlock applications (जैसे machine guard door) में limit switch को प्राथमिकता क्यों दी जाती है, जबकि proximity sensor भी उपलब्ध है?",
+      "options": [
+        "क्योंकि proximity sensor कभी काम नहीं करता",
+        "क्योंकि limit switch हमेशा सस्ता होता है, कोई और कारण नहीं",
+        "क्योंकि limit switch का mechanical positive-break action door पूरी तरह बंद होने की physically guaranteed confirmation देता है, जो critical safety circuits में विश्वसनीय माना जाता है",
+        "क्योंकि limit switch wireless होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "कई safety-critical applications में mechanically actuated limit switch की 'positive-break' (forced contact separation) action को अधिक विश्वसनीय माना जाता है क्योंकि यह physically confirm करता है कि guard/door अपनी सही स्थिति में है, जबकि electronic proximity sensor की failure modes (जैसे electronic fault) कम predictable मानी जा सकती हैं। Option A, B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q34",
+      "question": "एक lift/elevator system में top floor और bottom floor पर limit switches लगाने का प्राथमिक उद्देश्य क्या है?",
+      "options": [
+        "Cabin के तापमान को measure करना",
+        "Cabin की speed बढ़ाना",
+        "Cabin में light जलाना",
+        "Cabin को उसकी अंतिम travel limits से आगे जाने से mechanically रोकना (over-travel protection के रूप में motor को stop/cut-off करना)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Elevator के top और bottom limit switches over-travel protection के रूप में काम करते हैं — जब cabin अपनी निर्धारित extreme position पर पहुंचती है, actuator दबकर motor supply को cut कर देता है ताकि cabin mechanical structure से टकराए नहीं। Option A, C और D limit switch की actual safety application से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_proximity_sensors_q35",
+      "question": "Capacitive proximity sensor का basic sensing element सामान्यतः किससे बनता है?",
+      "options": [
+        "एक IR LED और phototransistor pair से",
+        "एक coil और ferrite core से",
+        "दो concentric/parallel metal electrodes (plates) जो एक capacitor बनाते हैं, जिनका air के साथ मिलकर एक oscillator circuit बनता है",
+        "एक bimetallic strip से"
+      ],
+      "correctIndex": 2,
+      "explanation": "Capacitive proximity sensor के sensing face पर दो electrodes होते हैं जो air (dielectric) के साथ मिलकर एक small capacitor बनाते हैं, यह capacitor oscillator circuit का हिस्सा होता है; target के पास आने पर effective dielectric/capacitance बदलने से oscillation amplitude/frequency में change आता है। Option A IR sensor का component है और Option B inductive sensor का है, Option D thermal sensor का है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q36",
+      "question": "यदि किसी capacitive proximity sensor के सामने उच्च dielectric constant वाला material (जैसे पानी) रखा जाए बजाय low dielectric constant वाले material (जैसे dry plastic) के, तो sensor की sensing range पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Sensing range घट जाएगी क्योंकि high dielectric material sensor को damage कर देता है",
+        "Sensing range में कोई परिवर्तन नहीं होगा",
+        "उच्च dielectric constant वाला material (जैसे पानी) capacitance में अधिक बड़ा change उत्पन्न करता है, इसलिए ऐसे materials के लिए sensor की effective sensing range अधिक होती है",
+        "Sensor केवल metallic materials के लिए ही range देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Capacitive sensor की range target material के dielectric constant पर निर्भर करती है — पानी जैसे high dielectric constant वाले materials capacitance में बड़ा change उत्पन्न करते हैं जिससे अधिक sensing range मिलती है, जबकि dry plastic जैसे low dielectric constant materials के लिए range कम होती है। Option A, B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q37",
+      "question": "Capacitive proximity sensor को गलत तरीके से mount करने पर (जैसे बहुत पास-पास दो sensors लगाने पर) कौन सी समस्या हो सकती है?",
+      "options": [
+        "कोई समस्या नहीं होती, capacitive sensors कभी interfere नहीं करते",
+        "Sensor स्वतः IR sensor में बदल जाता है",
+        "Sensor की dielectric constant permanently बदल जाती है",
+        "Adjacent sensors के electric fields आपस में interfere/cross-talk कर सकते हैं, जिससे false triggering हो सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "जब दो capacitive proximity sensors बहुत पास-पास mount किए जाते हैं, तो उनके oscillating electric fields एक-दूसरे को प्रभावित (cross-talk/interference) कर सकते हैं, जिससे unwanted false triggering हो सकती है; इसलिए manufacturer द्वारा दी गई minimum mounting distance का पालन करना जरूरी होता है। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q38",
+      "question": "इंडक्टिव प्रॉक्सिमिटी सेंसर में उत्पन्न होने वाली eddy currents किस physical law/principle पर आधारित होती हैं?",
+      "options": [
+        "Ohm's law पर",
+        "Coulomb's law पर",
+        "Boyle's law पर",
+        "Faraday's law of electromagnetic induction पर — coil द्वारा उत्पन्न बदलते magnetic field के कारण target में circulating currents induce होती हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Inductive sensor की coil में high-frequency AC current oscillator द्वारा एक बदलता (alternating) magnetic field उत्पन्न करती है; जब कोई conductive target इस field में आता है, तो Faraday's law of electromagnetic induction के अनुसार उसमें eddy currents induce होती हैं। Option A, C और D इस phenomenon से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q39",
+      "question": "Inductive proximity sensor की sensing distance non-ferrous metal (जैसे aluminium) के लिए ferrous metal (mild steel) की तुलना में कम क्यों होती है?",
+      "options": [
+        "क्योंकि aluminium का रंग अलग होता है",
+        "क्योंकि non-ferrous materials की electrical conductivity कम होती है",
+        "क्योंकि non-ferrous materials की magnetic permeability बहुत कम (लगभग non-magnetic) होती है, जिससे eddy current effect और परिणामी damping ferrous material की तुलना में कमज़ोर होता है",
+        "क्योंकि aluminium हमेशा sensor को demagnetize कर देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Ferrous materials (जैसे mild steel) की high magnetic permeability के कारण उनमें eddy currents strongly induce होती हैं और oscillator पर अधिक damping effect पड़ता है, जबकि aluminium जैसे non-ferrous materials में permeability बहुत कम होने से यह effect कमज़ोर होता है, इसलिए इनके लिए correction factor apply करके कम rated sensing distance मिलती है। Option A, B और D तथ्यात्मक रूप से गलत/अपर्याप्त explanation हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q40",
+      "question": "किसी automated bottling plant में केवल metallic caps की presence check करने के लिए inductive proximity sensor का चुनाव क्यों उचित है, capacitive sensor के बजाय?",
+      "options": [
+        "क्योंकि inductive sensor specifically metallic targets के लिए अधिक stable और selective response देता है, और non-metallic bottle body या liquid से false triggering की संभावना कम रहती है",
+        "क्योंकि capacitive sensor कभी metal detect नहीं कर सकता",
+        "क्योंकि inductive sensor हमेशा सस्ता होता है",
+        "क्योंकि दोनों sensors बिल्कुल एक जैसे परिणाम देते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inductive sensor केवल metallic (conductive) objects के प्रति sensitive होता है, इसलिए metallic caps को detect करते समय आसपास की non-metallic bottle body, liquid या packaging material से false triggering की संभावना कम होती है — जबकि capacitive sensor लगभग सभी materials (liquid सहित) के प्रति sensitive होने के कारण यहाँ कम selective होगा। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q41",
+      "question": "Inductive proximity sensor के output stage में सामान्यतः किस प्रकार का switching device उपयोग होता है?",
+      "options": [
+        "एक mechanical relay contact जो हाथ से operate होता है",
+        "एक बिना बदले हुए thermocouple junction",
+        "Solid-state switching device (जैसे transistor आधारित output), जो fast, contactless switching प्रदान करता है",
+        "एक photodiode जो light detect करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Inductive proximity sensor के output stage में सामान्यतः solid-state (transistor-based, PNP/NPN) switching device होता है जो detector circuit से मिले signal को fast, wear-free electronic switching output में बदलता है। Option A mechanical device है (limit switch जैसा), Option B thermal sensor का component है और Option D IR sensor से संबंधित है।"
+    },
+    {
+      "id": "u3_proximity_sensors_q42",
+      "question": "IR proximity sensor का transmitter (IR LED) और receiver (phototransistor/photodiode) के बीच 'optical axis alignment' का क्या महत्व है, विशेषकर through-beam type में?",
+      "options": [
+        "इसका कोई महत्व नहीं है, alignment की जरूरत नहीं होती",
+        "Transmitter और receiver को सही तरीके से align करना जरूरी है ताकि emitted IR beam पूरी तरह receiver पर पड़े, अन्यथा weak/no signal मिलने से detection गलत हो सकती है",
+        "Alignment केवल sensor का रंग बदलने के लिए किया जाता है",
+        "Alignment केवल capacitive sensors में किया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Through-beam (opposed) type IR sensor में transmitter और receiver अलग-अलग units में होते हैं, इसलिए दोनों की optical axis का सही alignment आवश्यक है ताकि transmitted beam receiver तक पूरी तरह पहुंचे; misalignment से signal weak हो सकता है और object न होने पर भी false 'blocked' signal या गलत detection हो सकती है। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q43",
+      "question": "IR proximity sensor की तुलना में inductive proximity sensor dusty या smoky industrial environment में अधिक reliable क्यों मानी जाती है?",
+      "options": [
+        "क्योंकि IR sensor की light beam dust/smoke particles से scatter/block होकर signal को कमजोर या गलत बना सकती है, जबकि inductive sensor का electromagnetic field इन airborne particles से प्रभावित नहीं होता",
+        "क्योंकि inductive sensor कभी fail नहीं होता",
+        "क्योंकि IR sensor धूल में काम ही नहीं करता, बिल्कुल भी signal नहीं भेजता",
+        "क्योंकि dust हमेशा sensor को permanently damage कर देती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dusty/smoky environment में airborne particles IR light को scatter या partially block कर सकते हैं, जिससे optical detection में false triggering या missed detection हो सकती है; इसके विपरीत, inductive sensor का electromagnetic field ऐसे non-conductive airborne particles से प्रभावित नहीं होता, इसलिए metallic target detection के लिए यह अधिक reliable रहता है। Option B, C और D तथ्यात्मक रूप से अत्यधिक/गलत बयान हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q44",
+      "question": "एक CNC machine में tool की home position confirm करने के लिए limit switch का उपयोग करते समय, actuator पर बार-बार लगने वाले mechanical stress को कम करने के लिए क्या practice अपनाई जाती है?",
+      "options": [
+        "Actuator को कभी भी adjust न करना",
+        "उपयुक्त roller/lever type actuator चुनना और over-travel की भरपाई के लिए sufficient spring-return movement रखना, ताकि repeated impact का असर कम हो",
+        "Limit switch को हटा देना और कुछ भी न लगाना",
+        "Supply voltage बहुत अधिक बढ़ा देना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Repeated high-stress actuation से बचने के लिए roller/lever type actuator (जो smooth rolling contact देता है) और पर्याप्त over-travel allowance के साथ spring-return mechanism का उपयोग किया जाता है, जिससे actuator पर sudden mechanical shock कम लगता है और switch की life बढ़ती है। Option A, C और D व्यावहारिक/सुरक्षित practice नहीं हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q45",
+      "question": "Capacitive proximity sensor का उपयोग transparent glass bottle में liquid level detect करने के लिए किया जा सकता है, क्योंकि—",
+      "options": [
+        "Glass बिल्कुल opaque होता है इसलिए sensor उसे detect नहीं कर पाता",
+        "Sensor bottle के बाहर से भी liquid और air के बीच dielectric constant के अंतर को sense कर सकता है, भले ही glass wall के through non-contact तरीके से sensing हो रही हो",
+        "Capacitive sensor केवल metal bottles के साथ काम करता है",
+        "इसके लिए sensor को liquid के अंदर डुबाना जरूरी है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capacitive proximity sensor bottle की outer wall के बाहर mount किया जा सकता है और liquid व air के dielectric constant में स्पष्ट अंतर के कारण यह non-contact तरीके से liquid level बदलने का पता लगा सकता है, glass wall सामान्यतः इस sensing में बाधा नहीं डालती। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q46",
+      "question": "यदि किसी IR proximity sensor के receiver के सामने strong sunlight सीधे पड़ रही हो, तो इसका क्या प्रभाव हो सकता है (यदि modulation/filtering ठीक से न हो)?",
+      "options": [
+        "Sensor की range अनंत हो जाएगी",
+        "Sensor स्वतः capacitive sensor में बदल जाएगा",
+        "Sunlight की तेज ambient IR content receiver को saturate या confuse कर सकती है, जिससे false triggering या detection में error हो सकती है",
+        "Sensor पर कोई प्रभाव नहीं पड़ेगा चाहे modulation हो या न हो"
+      ],
+      "correctIndex": 2,
+      "explanation": "Sunlight में IR component प्रचुर मात्रा में होता है; अगर sensor का receiver इस ambient IR से properly filtered/modulated frequency पर tuned नहीं है, तो receiver saturate हो सकता है या false signal generate हो सकता है, जिससे गलत detection होती है। इसलिए modulated IR और optical filters का उपयोग किया जाता है। Option A, B और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q47",
+      "question": "किसी assembly line पर robotic arm द्वारा part pick करने से पहले उसकी exact presence confirm करने हेतु inductive sensor के बजाय limit switch लगाने का एक practical drawback क्या हो सकता है?",
+      "options": [
+        "Limit switch को part से physically contact करना पड़ेगा, जिससे high-speed operation में additional mechanical wear, समय की देरी (actuation time) और misalignment का खतरा बढ़ सकता है",
+        "Limit switch हमेशा तेज़ होता है, कोई drawback नहीं",
+        "Limit switch कभी metal part detect नहीं कर सकता",
+        "Limit switch का price हमेशा inductive sensor से बहुत अधिक होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "High-speed automated assembly line में limit switch को part के साथ physical contact में आना पड़ता है, जिससे actuator पर repeated mechanical stress, wear, और actuation में लगने वाला अतिरिक्त समय जैसी समस्याएं आ सकती हैं — जबकि non-contact inductive sensor बिना touch के तेज़ी से metallic part detect कर सकता है। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q48",
+      "question": "Proximity sensors (inductive/capacitive/IR) में 'output indicator LED' का क्या व्यावहारिक उपयोग है?",
+      "options": [
+        "यह sensor की temperature control करता है",
+        "यह केवल decoration के लिए होता है",
+        "यह sensor के output switching status (target detected या नहीं) को visually indicate करता है, जो wiring/commissioning और troubleshooting में सहायक होता है",
+        "यह IR light emit करने वाला मुख्य transmitter होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "अधिकांश proximity sensors में एक छोटी indicator LED होती है जो target detect होने पर ON/OFF होकर output की current switching status दिखाती है, इससे field wiring जांचने और fault troubleshooting करने में technician को आसानी होती है। Option A, B और D actual purpose से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_proximity_sensors_q49",
+      "question": "एक mild steel target और उसी आकार के aluminium target के लिए समान inductive sensor का rated sensing distance अलग-अलग क्यों दिखाया जाता है (correction factor के रूप में)?",
+      "options": [
+        "क्योंकि aluminium हमेशा magnetic होता है",
+        "क्योंकि विभिन्न materials की conductivity और magnetic permeability अलग होने से उनमें उत्पन्न eddy current का effect अलग होता है, जिससे प्रत्येक material के लिए एक अलग correction factor (Sn के सापेक्ष प्रतिशत) लागू होता है",
+        "क्योंकि दोनों materials का रंग अलग होता है",
+        "क्योंकि sensor हर material के लिए एक नया coil अपने आप बना लेता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "अलग-अलग conductive materials की electrical conductivity और magnetic permeability भिन्न होने के कारण उनमें प्रेरित eddy currents की तीव्रता अलग होती है, इसलिए manufacturers हर non-ferrous material के लिए मानक ferrous (mild steel) sensing distance के सापेक्ष एक correction factor (percentage) प्रदान करते हैं। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_proximity_sensors_q50",
+      "question": "किसी packaging machine में flap/door का पूरी तरह बंद होना सुनिश्चित करने के लिए limit switch, और उसी लाइन पर metallic component की counting के लिए inductive sensor — दोनों का combined उपयोग करने का क्या तर्क है?",
+      "options": [
+        "दोनों sensors हमेशा एक जैसा काम करते हैं इसलिए एक ही काफी है",
+        "प्रत्येक sensor को उसकी strength के अनुसार चुना गया है — door की positive mechanical confirmation के लिए limit switch उपयुक्त है, जबकि तेज़, non-contact metallic part counting के लिए inductive sensor अधिक उपयुक्त और लंबे समय तक चलने वाला है",
+        "Limit switch केवल counting के लिए होता है",
+        "Inductive sensor कभी counting में उपयोग नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "अलग-अलग applications की जरूरत अलग होती है — door की सुरक्षित/positive mechanical confirmation के लिए limit switch का forced-contact action उपयुक्त है, जबकि उच्च गति पर metallic parts की गिनती के लिए non-contact, wear-free और fast-responding inductive sensor बेहतर विकल्प है। इसलिए industry में दोनों sensors को उनकी strength के अनुसार अलग-अलग उद्देश्यों के लिए साथ उपयोग किया जाता है। Option A, C और D तथ्यात्मक रूप से गलत हैं।"
     }
   ]
 }

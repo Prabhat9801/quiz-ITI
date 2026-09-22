@@ -363,6 +363,186 @@
       ],
       "correctIndex": 1,
       "explanation": "Weighing applications में load को पहले एक elastic member (spring/cantilever/proving ring) के deflection में convert किया जाता है, और उस deflection को LVDT core से mechanically couple किया जाता है ताकि output voltage load के proportional हो। Option A, C और D LVDT के indirect sensing principle के विपरीत हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q31",
+      "question": "Inductive transducer में displacement को measure करने के लिए तीन में से कौन-सी basic method common रूप से use की जाती है?",
+      "options": [
+        "केवल coil की resistance change को measure करना",
+        "केवल coil का color change करके",
+        "केवल coil की physical length बदलकर measure करना",
+        "Single coil की self-inductance में change, coils के बीच mutual-inductance में change, अथवा eddy current losses में change"
+      ],
+      "correctIndex": 3,
+      "explanation": "Inductive transducers तीन मुख्य methods पर आधारित हो सकते हैं: (1) single coil की self-inductance में variation, (2) दो coils के बीच mutual-inductance में variation (जैसे LVDT), और (3) eddy current losses में variation। Option A resistive transducer का principle है, Option B और C अवास्तविक और गलत हैं क्योंकि measurement electrical parameter में change पर आधारित होता है, physical color या length बदलने पर नहीं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q32",
+      "question": "एक variable air-gap type inductive transducer में यदि air-gap को दोगुना (double) कर दिया जाए, तो reluctance पर (approximately, अन्य factors constant मानते हुए) क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Reluctance आधी हो जाएगी",
+        "Reluctance approximately दोगुनी हो जाएगी क्योंकि यह air-gap length के directly proportional होती है",
+        "Reluctance पर कोई प्रभाव नहीं पड़ेगा",
+        "Reluctance zero हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Magnetic circuit की reluctance (S = l / (μ·A)) air-gap की length के directly proportional होती है, इसलिए air-gap double करने पर reluctance approximately double हो जाएगी (अन्य factors जैसे area और permeability constant मानते हुए)। Option A relationship को उल्टा बताता है, Option C गलत है क्योंकि air-gap length का सीधा प्रभाव पड़ता है, और Option D भौतिक रूप से असंभव है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q33",
+      "question": "Inductive transducers का उपयोग करने का एक disadvantage यह भी है कि वे किस प्रकार की environment में performance में गड़बड़ी दिखा सकते हैं?",
+      "options": [
+        "केवल पूर्ण vacuum environment में",
+        "केवल पूर्ण अंधकार (darkness) में",
+        "केवल तब जब supply DC हो",
+        "External stray magnetic fields और nearby ferromagnetic objects की उपस्थिति में, जो coupling को disturb कर सकते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Inductive transducers magnetic coupling पर निर्भर करते हैं, इसलिए nearby stray magnetic fields या अन्य ferromagnetic objects की उपस्थिति unwanted coupling पैदा कर सकती है, जिससे measurement में error आ सकता है। Option A और B irrelevant environmental factors हैं (light और vacuum inductive coupling को प्रभावित नहीं करते), और Option C गलत है क्योंकि ये transducers सामान्यतः AC excitation पर काम करते हैं, DC पर नहीं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q34",
+      "question": "LVDT को inductive transducers की category में क्यों रखा जाता है, capacitive या resistive की जगह?",
+      "options": [
+        "क्योंकि इसका output measurement core की position से coils के बीच mutual-inductance (coupling) बदलने पर आधारित है, न कि capacitance या resistance change पर",
+        "क्योंकि इसमें दो parallel plates होती हैं जिनके बीच dielectric बदलता है",
+        "क्योंकि इसमें एक sliding resistive wiper होता है",
+        "क्योंकि यह केवल light intensity पर आधारित है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LVDT का output core की movement के कारण primary-secondary windings के बीच mutual-inductance (coupling coefficient) में change पर आधारित होता है, इसलिए यह एक inductive transducer है। Option B capacitive transducer का description है (dielectric/plate separation change), Option C resistive potentiometer का principle है, और Option D photoelectric sensing है — तीनों LVDT के actual mechanism से मेल नहीं खाते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q35",
+      "question": "LVDT के output को एक oscilloscope पर देखा जाए और core, null position के ठीक बीच में स्थिर (stationary) है, तो waveform की प्रकृति कैसी दिखेगी?",
+      "options": [
+        "एक बड़ा sine wave जिसका amplitude excitation जितना होगा",
+        "एक square wave",
+        "व्यावहारिक रूप से almost flat line (residual noise के अलावा कोई significant AC signal नहीं) क्योंकि दोनों secondary EMFs एक दूसरे को cancel कर देती हैं",
+        "एक DC signal जो धीरे-धीरे बढ़ता रहेगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "Null position पर दोनों secondary windings में induced EMF लगभग equal होती हैं और series opposition के कारण एक दूसरे को cancel कर देती हैं, इसलिए output ideally near-zero (केवल residual null voltage/noise के साथ) रहता है। Option A और B core displaced होने की स्थिति दर्शाते हैं, और Option D गलत है क्योंकि raw LVDT output AC होता है, बढ़ता हुआ DC नहीं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q36",
+      "question": "LVDT-based displacement sensing system में यदि excitation voltage स्वयं अस्थिर (unstable/fluctuating) हो, तो measurement पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "कोई प्रभाव नहीं पड़ेगा क्योंकि output केवल core position पर depend करता है",
+        "Output amplitude भी excitation के साथ fluctuate करेगा, जिससे displacement measurement में error आएगा",
+        "Output हमेशा zero हो जाएगा",
+        "केवल phase information खो जाएगी, magnitude स्थिर रहेगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "LVDT का output secondary EMF, excitation voltage के amplitude के directly proportional होता है (transformer action), इसलिए यदि excitation unstable हो तो output भी उसी अनुपात में fluctuate करेगा, जिससे displacement की measurement में error आएगा — इसलिए stable, regulated AC excitation supply आवश्यक होती है। Option A तथ्यात्मक रूप से गलत है, और Option C, D actual behavior को सही नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q37",
+      "question": "किसी manufacturing process में LVDT का उपयोग thickness gauging के लिए किया जा रहा है। यह किस प्रकार काम करेगा?",
+      "options": [
+        "LVDT सीधे material की thickness को light beam से measure करता है",
+        "Sheet material की thickness को LVDT core के movement से mechanically couple किया जाता है, जिससे thickness variation, core displacement और output voltage में बदलाव देती है",
+        "LVDT thickness को केवल sound waves से measure करता है",
+        "Thickness gauging LVDT के लिए संभव ही नहीं है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Thickness gauging में एक mechanical probe/feeler sheet की surface को touch करता है और उसकी movement (thickness variation के अनुसार) LVDT core से coupled होती है, जिससे output voltage thickness के proportional होता है। Option A light-based (optical) sensing है, Option C ultrasonic sensing है, और Option D गलत तथ्य है क्योंकि यह LVDT का एक common industrial application है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q38",
+      "question": "एक LVDT की linear range ±25 mm है और इसकी sensitivity 40 mV/mm है। यदि core को null से 20 mm displace किया जाए, तो output voltage (magnitude) कितना होगा?",
+      "options": [
+        "0.5 V",
+        "8 V",
+        "800 mV",
+        "80 mV"
+      ],
+      "correctIndex": 2,
+      "explanation": "Output voltage = sensitivity × displacement = 40 mV/mm × 20 mm = 800 mV। Option A (0.5 V = 500 mV) गलत calculation है, Option B (8 V) unit की गलती से आता है, और Option D (80 mV) displacement को गलत तरीके से divide करने से आता है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q39",
+      "question": "Inductive transducers की तुलना resistive (potentiometric) transducers से करते समय, inductive transducers का एक स्पष्ट advantage क्या है?",
+      "options": [
+        "इनमें wiper और resistive element के बीच physical contact नहीं होता, इसलिए wear, noise और contact resistance की समस्या नहीं होती",
+        "इन्हें हमेशा DC supply पर operate किया जा सकता है, AC की जरूरत नहीं",
+        "इनकी accuracy हमेशा temperature independent होती है",
+        "इनकी construction resistive transducers से हमेशा सरल होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inductive transducers (जैसे LVDT) में contactless operation होता है (कोई sliding wiper नहीं), इसलिए mechanical wear, contact noise और contact resistance variation जैसी समस्याएँ नहीं आती, जो resistive potentiometers में common होती हैं। Option B गलत है क्योंकि inductive transducers सामान्यतः AC excitation चाहते हैं, Option C गलत है क्योंकि temperature variations फिर भी प्रभाव डाल सकते हैं, और Option D एक overgeneralization है जो हमेशा सही नहीं है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q40",
+      "question": "LVDT के primary winding को excitation देने के लिए एक स्थिर (regulated), sinusoidal AC oscillator use करने का मुख्य कारण क्या है?",
+      "options": [
+        "ताकि core हमेशा saturate रहे",
+        "ताकि secondary windings जल जाएँ",
+        "ताकि output की accuracy और repeatability बनी रहे, क्योंकि output amplitude excitation पर directly depend करता है और harmonics से distortion हो सकता है",
+        "इसका output की accuracy से कोई संबंध नहीं है"
+      ],
+      "correctIndex": 2,
+      "explanation": "एक stable, pure sinusoidal excitation source यह सुनिश्चित करता है कि output केवल core displacement के अनुसार बदले, न कि supply की instability या harmonic distortion के कारण, जिससे accuracy और repeatability बनी रहती है। Option A और B अवांछित/हानिकारक स्थितियाँ हैं जिनसे बचना चाहिए, और Option D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q41",
+      "question": "यदि किसी LVDT-based system में demodulator के बाद एक low-pass filter लगाया जाता है, तो इसका उद्देश्य क्या है?",
+      "options": [
+        "Signal की frequency को बढ़ाना",
+        "Core की position को physically बदलना",
+        "Primary winding की resistance बढ़ाना",
+        "Output signal से excitation frequency के ripple/carrier components को हटाकर एक smooth DC signal प्राप्त करना जो केवल displacement को represent करे"
+      ],
+      "correctIndex": 3,
+      "explanation": "Demodulation के बाद output में excitation frequency से संबंधित ripple/carrier components रह सकते हैं; low-pass filter इन्हें हटाकर एक smooth, clean DC signal देता है जो displacement के proportional होता है। Option A, B और C filter के actual function से असंबंधित हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q42",
+      "question": "LVDT की तुलना एक simple single-secondary transformer-type inductive transducer से करें, तो differential (दो secondary) arrangement का मुख्य फायदा क्या है?",
+      "options": [
+        "यह temperature और supply voltage variations के common-mode प्रभावों को काफी हद तक cancel कर देता है, क्योंकि दोनों secondaries समान रूप से प्रभावित होती हैं",
+        "इससे core की जरूरत ही खत्म हो जाती है",
+        "इससे output हमेशा digital हो जाता है",
+        "इससे excitation supply की आवश्यकता समाप्त हो जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "दो identical secondary windings का differential (series-opposing) arrangement common-mode disturbances (जैसे temperature drift, supply voltage variation) को काफी हद तक cancel कर देता है क्योंकि दोनों windings समान रूप से प्रभावित होती हैं, जिससे केवल core displacement के कारण होने वाला differential output रह जाता है। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q43",
+      "question": "Automobile suspension testing में LVDT का उपयोग किस प्रकार किया जा सकता है?",
+      "options": [
+        "Suspension की temperature measure करने के लिए",
+        "Suspension component की linear travel/compression (displacement) को measure करने के लिए, core को moving part से mechanically जोड़कर",
+        "Fuel की मात्रा measure करने के लिए बिना किसी mechanical linkage के",
+        "LVDT automobile testing में उपयोग नहीं किया जा सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Suspension testing में LVDT के movable core को suspension के moving part से mechanically couple किया जाता है, जिससे compression/extension के दौरान होने वाला linear displacement measure किया जा सकता है। Option A अलग प्रकार का sensing है, Option C भी गलत application है (fuel level के लिए अन्य methods उपयुक्त हैं), और Option D तथ्यात्मक रूप से गलत है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q44",
+      "question": "एक inductive transducer में यदि coil की turns की संख्या (N) बढ़ा दी जाए (core और geometry same रखते हुए), तो coil की self-inductance पर सामान्यतः क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Self-inductance घट जाएगी क्योंकि turns बढ़ने से resistance बढ़ती है",
+        "Self-inductance पर कोई प्रभाव नहीं पड़ेगा",
+        "Self-inductance बढ़ जाएगी क्योंकि यह turns की संख्या के square (N²) के approximately proportional होती है",
+        "Self-inductance केवल core के रंग पर depend करती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Coil की self-inductance L, turns की संख्या के square (N²) के approximately proportional होती है (L = N²/S, जहाँ S reluctance है), इसलिए turns बढ़ाने पर inductance बढ़ जाती है। Option A गलत relationship बताता है और resistance का inductance से सीधा संबंध नहीं जोड़ा जा सकता इस तरह, Option B गलत है क्योंकि प्रभाव स्पष्ट होता है, और Option D एक अप्रासंगिक/गलत factor है।"
+    },
+    {
+      "id": "u3_inductive_lvdt_q45",
+      "question": "LVDT में core को हटाकर (completely remove करके) यदि केवल windings को excite किया जाए, तो secondary output की स्थिति क्या होगी अपेक्षित रूप से?",
+      "options": [
+        "Output normal से अधिक बढ़ जाएगा",
+        "Output coupling बहुत कमजोर होने के कारण सामान्य operation से बहुत कम/अनियमित होगा, क्योंकि core magnetic path को efficiently complete करता है",
+        "Output पर कोई प्रभाव नहीं पड़ेगा",
+        "Primary winding स्वतः short-circuit हो जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Core magnetic flux path को efficiently complete करने में मुख्य भूमिका निभाता है; core को हटाने पर coupling बहुत कमजोर हो जाएगी (केवल air-core coupling रहेगी) जिससे secondary output सामान्य operation की तुलना में बहुत कम और अविश्वसनीय (unreliable) हो जाएगा। Option A तथ्यात्मक रूप से गलत है, Option C गलत है क्योंकि core हटाने का सीधा प्रभाव पड़ता है, और Option D एक असंबंधित/गलत परिणाम है।"
     }
   ]
 }

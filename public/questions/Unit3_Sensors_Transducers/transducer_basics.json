@@ -363,6 +363,186 @@
       ],
       "correctIndex": 1,
       "explanation": "Dynamic characteristics समय के साथ बदलते input के प्रति transducer के response (जैसे response time, dynamic error, bandwidth) को दर्शाती हैं। Option A static characteristic है, और C, D माप गुणों से असंबंधित हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q31",
+      "question": "किसी transducer का response time किसे कहते हैं?",
+      "options": [
+        "input में step change होने के बाद output को एक निश्चित प्रतिशत तक स्थिर मान तक पहुँचने में लगने वाला समय",
+        "measured value का true value से अंतर",
+        "input की न्यूनतम detectable value",
+        "output और input के अनुपात का maximum मान"
+      ],
+      "correctIndex": 0,
+      "explanation": "Response time यह बताता है कि sudden (step) input change के बाद transducer का output अपने अंतिम स्थिर मान के निर्धारित प्रतिशत (जैसे 95% या 63.2%) तक पहुँचने में कितना समय लेता है, जो एक dynamic characteristic है। Option B accuracy/error है, C resolution है, और D sensitivity/gain से संबंधित है — ये response time नहीं दर्शाते।"
+    },
+    {
+      "id": "u3_transducer_basics_q32",
+      "question": "किसी transducer का चयन (selection) करते समय निम्नलिखित में से कौन-सा factor महत्वपूर्ण नहीं माना जाता?",
+      "options": [
+        "measurand की range और transducer की operating range का मिलान",
+        "required accuracy और sensitivity",
+        "transducer का market में बिकने का brand नाम",
+        "environmental conditions (temperature, humidity, vibration) के प्रति उसकी सहनशीलता"
+      ],
+      "correctIndex": 2,
+      "explanation": "Transducer चुनते समय range, accuracy, sensitivity, linearity, response time और environmental suitability जैसे technical factors देखे जाते हैं, न कि केवल brand नाम — वह performance की गारंटी नहीं देता। Option A, B और D सभी वास्तविक selection criteria हैं जिन्हें अनदेखा नहीं किया जा सकता।"
+    },
+    {
+      "id": "u3_transducer_basics_q33",
+      "question": "किसी measurement system में transducer की क्या भूमिका होती है?",
+      "options": [
+        "यह केवल final output को display करता है",
+        "यह physical measurand को एक ऐसे signal में convert करता है जिसे आगे signal-conditioning और display/recording circuit process कर सके",
+        "यह केवल power supply को regulate करता है",
+        "यह केवल data को store करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Measurement system की पहली stage transducer होती है, जो physical quantity को measurable (आमतौर पर electrical) signal में बदलकर आगे signal conditioning, processing और display के लिए भेजती है। Option A display unit का कार्य है, C power supply का, और D storage device का — ये transducer की मुख्य भूमिका नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q34",
+      "question": "एक transducer में 'reproducibility' शब्द किस पर लागू होता है?",
+      "options": [
+        "अलग-अलग समय पर, समान conditions में किए गए मापों में समान output देने की क्षमता, भले ही measurement method अलग हो",
+        "input की न्यूनतम detectable value",
+        "output का maximum मान जो achieve किया जा सकता है",
+        "input और output के बीच का phase shift"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reproducibility यह दर्शाती है कि long-term या अलग-अलग परिस्थितियों/operators/instruments के बावजूद transducer कितनी consistency से समान output देता है। Option B resolution है, C full-scale output है, और D dynamic characteristic (phase) है — ये reproducibility की परिभाषा नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q35",
+      "question": "किसी transducer में 'dead zone' या 'dead band' से क्या तात्पर्य है?",
+      "options": [
+        "input की वह range जिसमें transducer कोई भी detectable output नहीं देता",
+        "output का वह भाग जो हमेशा linear रहता है",
+        "true value और measured value के बीच अंतर",
+        "sensitivity का सबसे high मान"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dead zone/dead band वह input range है (आमतौर पर threshold के आस-पास) जिसमें input बदलने पर भी output में कोई परिवर्तनशील/detectable प्रतिक्रिया नहीं मिलती। Option B linearity है, C accuracy/error है, और D sensitivity का high value है — ये dead zone से भिन्न अवधारणाएँ हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q36",
+      "question": "Systematic (fixed) error और random error में मुख्य अंतर क्या है?",
+      "options": [
+        "Systematic error एक निश्चित कारण से लगातार एक ही दिशा में होती है, जबकि random error अनियमित रूप से बदलती रहती है और इसका कारण अस्पष्ट होता है",
+        "दोनों एक ही चीज़ हैं",
+        "Random error हमेशा transducer के calibration से ठीक हो जाती है",
+        "Systematic error केवल digital transducer में होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Systematic error (जैसे calibration error, loading effect) एक निश्चित पैटर्न में repeat होती है और सुधारी जा सकती है, जबकि random error unpredictable कारणों (noise आदि) से इधर-उधर होती है और statistically ही कम की जा सकती है। Option B गलत है, C भ्रामक है (calibration systematic error ठीक करता है, random नहीं), और D निराधार है।"
+    },
+    {
+      "id": "u3_transducer_basics_q37",
+      "question": "एक transducer की 'full-scale deflection (FSD)' या 'full-scale output' किसे दर्शाती है?",
+      "options": [
+        "input की न्यूनतम मान जिसे transducer detect कर सके",
+        "transducer की rated maximum input पर प्राप्त होने वाला अधिकतम output मान",
+        "output और input के बीच phase difference",
+        "बार-बार माप दोहराने पर मिलने वाला औसत output"
+      ],
+      "correctIndex": 1,
+      "explanation": "Full-scale output वह output value है जो transducer अपनी rated maximum input capacity पर देता है; अधिकांश accuracy specifications इसी के प्रतिशत (% of FSD) में दी जाती हैं। Option A threshold है, C dynamic characteristic है, और D repeatability से संबंधित औसत है — ये FSD नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q38",
+      "question": "किसी pressure transducer की accuracy ±0.5% of FSD बताई गई है और उसकी range 0-200 kPa है। इसकी maximum error कितनी होगी?",
+      "options": [
+        "0.5 kPa",
+        "1 kPa",
+        "2 kPa",
+        "5 kPa"
+      ],
+      "correctIndex": 1,
+      "explanation": "Maximum error = 0.5% × 200 kPa = (0.5/100) × 200 = 1 kPa। Option A सीधे प्रतिशत मान को kPa मान लेता है (गलत), C और D गणना में गुणा/भाग की त्रुटि दर्शाते हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q39",
+      "question": "Transducer के 'transfer function' या 'transfer characteristic' का क्या अर्थ है?",
+      "options": [
+        "input quantity और output signal के बीच का mathematical या graphical संबंध",
+        "transducer की physical size और वजन",
+        "transducer को चलाने के लिए आवश्यक न्यूनतम voltage",
+        "output का समय के साथ धीरे-धीरे बदलना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transfer function/characteristic यह बताता है कि input में परिवर्तन के अनुसार output किस समीकरण या curve के अनुसार बदलता है (linear, quadratic आदि); यही sensitivity और linearity के आकलन का आधार बनता है। Option B आकार से संबंधित है, C excitation requirement है, और D drift है — ये transfer function नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q40",
+      "question": "किसी transducer को अपनी measurement range से बाहर (overrange) चलाने पर सामान्यतः क्या समस्या हो सकती है?",
+      "options": [
+        "sensitivity स्थायी रूप से शून्य हो जाती है",
+        "transducer स्वतः दूसरी physical quantity मापने लगता है",
+        "permanent damage या characteristics में स्थायी बदलाव (जैसे calibration शिफ्ट) हो सकता है",
+        "यह हमेशा अधिक accurate हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rated range से अधिक input देने पर transducer की internal structure (जैसे diaphragm, crystal) पर stress पड़ सकता है, जिससे permanent damage या characteristics में स्थायी shift आ सकता है। Option A, B और D तथ्यात्मक रूप से गलत हैं — overrange से accuracy नहीं बढ़ती।"
+    },
+    {
+      "id": "u3_transducer_basics_q41",
+      "question": "निम्नलिखित में से कौन-सा कथन transducer selection के लिए 'loading effect' को सही ढंग से समझाता है?",
+      "options": [
+        "Loading effect का transducer की accuracy से कोई संबंध नहीं है",
+        "जब transducer measurand से energy लेता है, तो वह measurand की मूल स्थिति को बदल सकता है, जिससे measurement में त्रुटि आती है",
+        "Loading effect केवल digital transducer में होता है",
+        "Loading effect output impedance को हमेशा शून्य कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "एक अच्छा transducer measurand से न्यूनतम energy लेता है; यदि वह अधिक energy खींचता है तो measured quantity स्वयं बदल जाती है (जैसे हल्की object का temperature मापते समय thermometer उसकी heat ले लेना), जिससे systematic error आता है। Option A, C और D गलत/निराधार कथन हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q42",
+      "question": "Transducer selection में 'operating environment' (जैसे उच्च temperature, corrosive वातावरण, vibration) को ध्यान में रखना क्यों आवश्यक है?",
+      "options": [
+        "क्योंकि यह transducer के रंग को प्रभावित करता है",
+        "क्योंकि प्रतिकूल environment transducer की accuracy, life और characteristics को प्रभावित/खराब कर सकता है",
+        "क्योंकि इससे transducer की sensitivity हमेशा बढ़ जाती है",
+        "environment का transducer के performance से कोई संबंध नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "अत्यधिक temperature, corrosion, humidity या vibration transducer के material properties, calibration और life को प्रभावित करते हैं, इसलिए selection में environmental compatibility देखी जाती है। Option A निराधार है, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q43",
+      "question": "एक transducer की 'null method' या 'balancing technique' का क्या लाभ है?",
+      "options": [
+        "यह loading effect को समाप्त करके अधिक accurate माप देती है, क्योंकि measurement के समय संतुलन (balance) की स्थिति में measurand से कोई energy नहीं ली जाती",
+        "यह हमेशा output को amplify करती है",
+        "यह transducer की range को बढ़ा देती है",
+        "यह केवल active transducer के लिए उपयोगी है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Null/balancing method (जैसे Wheatstone bridge में balance point) में measurement उस बिंदु पर लिया जाता है जहाँ कोई net current/energy transfer नहीं होता, इसलिए loading effect कम होकर accuracy बढ़ती है। Option B, C और D इसके वास्तविक लाभ नहीं हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q44",
+      "question": "यदि दो transducer समान range के हैं परन्तु एक की sensitivity अधिक है, तो सामान्यतः इसका क्या प्रभाव होगा?",
+      "options": [
+        "अधिक sensitivity वाला transducer छोटे input परिवर्तन के लिए भी अधिक ध्यान देने योग्य output परिवर्तन देगा, जिससे छोटे बदलाव पहचानना आसान होगा",
+        "sensitivity का output की पहचान क्षमता से कोई संबंध नहीं",
+        "अधिक sensitivity वाला transducer हमेशा कम accurate होगा",
+        "दोनों transducer एक जैसा ही output देंगे"
+      ],
+      "correctIndex": 0,
+      "explanation": "अधिक sensitivity का अर्थ है कि input में छोटे-से बदलाव पर भी output में अपेक्षाकृत बड़ा परिवर्तन मिलता है, जो छोटे signals को measure/detect करने में सहायक है (हालाँकि noise भी अधिक प्रभावित कर सकता है)। Option B, C और D तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u3_transducer_basics_q45",
+      "question": "किसी transducer के static characteristics में मुख्यतः किन गुणों को शामिल किया जाता है?",
+      "options": [
+        "response time और bandwidth",
+        "accuracy, sensitivity, linearity, resolution, hysteresis और repeatability जैसे स्थिर (steady-state) input पर आधारित गुण",
+        "केवल output का रंग और आकार",
+        "केवल transducer की कीमत"
+      ],
+      "correctIndex": 1,
+      "explanation": "Static characteristics वे गुण हैं जो steady (constant या slowly varying) input पर transducer के व्यवहार को दर्शाते हैं, जैसे accuracy, sensitivity, linearity, resolution, hysteresis, repeatability। Option A dynamic characteristics हैं, तथा C, D transducer के measurement गुणों से असंबंधित हैं।"
     }
   ]
 }
