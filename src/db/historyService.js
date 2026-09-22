@@ -7,9 +7,9 @@ function newId() {
 /**
  * Saves a completed attempt.
  * @param {object} attempt
- * @param {string} attempt.mode - 'topic' | 'unit' | 'multiunit' | 'custom' | 'practiceset'
+ * @param {string} attempt.mode - 'topic' | 'unit' | 'multiunit' | 'custom' | 'practiceset' | 'unitpracticeset'
  * @param {string} attempt.scopeLabel - human-readable label, e.g. "Unit 3 - Sensors, Transducers"
- * @param {boolean} attempt.isExam - true for Practice Sets (exam mode), false for learning modes
+ * @param {boolean} attempt.isExam - true for Practice Sets / Unit Practice Sets (exam mode), false for learning modes
  * @param {number} attempt.timerSeconds - null if no timer was set
  * @param {number} attempt.timeTakenSeconds
  * @param {Array} attempt.questions - full snapshot: [{id, question, options, correctIndex, userAnswer, explanation, unitName, topicName}]

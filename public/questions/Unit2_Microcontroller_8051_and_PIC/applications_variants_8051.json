@@ -213,6 +213,111 @@
       "options": ["Chip का केवल रंग और आकार", "Required program/data memory size, execution speed और available peripherals (जैसे extra timer)", "केवल packaging की कीमत, बिना technical requirement देखे", "Manufacturer का logo design"],
       "correctIndex": 1,
       "explanation": "variant selection में आवश्यक ROM/RAM size, speed requirement और peripherals (जैसे 8052 का extra Timer 2) जैसे technical factors महत्वपूर्ण होते हैं, इसलिए option B सही है। रंग, आकार, केवल कीमत या logo design तकनीकी चयन का आधार नहीं होते।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q31",
+      "question": "8051 के लिए assembly language में लिखे गए source code (.asm) को microcontroller पर execute होने वाले machine code (.hex) में convert करने के लिए किस software tool की आवश्यकता होती है?",
+      "options": ["केवल एक text editor, कोई अलग tool आवश्यक नहीं", "Cross-assembler", "Web browser", "Spreadsheet program"],
+      "correctIndex": 1,
+      "explanation": "Cross-assembler PC पर चलकर 8051 assembly mnemonics को उसके machine code/hex file में translate करता है, इसलिए option B सही है। केवल text editor से mnemonics machine code में नहीं बदलते, और web browser व spreadsheet program का assembly translation से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q32",
+      "question": "Keil µVision जैसे software tool का 8051 programming में मुख्य उपयोग क्या है?",
+      "options": ["केवल PCB track layout design करना", "केवल video editing करना", "Embedded C/assembly code लिखने, cross-compile करने और simulate/debug करने वाले integrated development environment (IDE) के रूप में", "केवल mechanical part की CAD drawing बनाना"],
+      "correctIndex": 2,
+      "explanation": "Keil µVision एक IDE है जो code editing, cross-compiling और built-in simulator/debugger के जरिए program को hardware पर load करने से पहले test करने की सुविधा देता है, इसलिए option C सही है। PCB layout, video editing और mechanical CAD design अलग specialized software के कार्य हैं, Keil का मुख्य उद्देश्य नहीं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q33",
+      "question": "8051 पर जटिल (complex) embedded application बनाते समय, pure assembly language की तुलना में C जैसी high-level language का प्रयोग करने का मुख्य लाभ क्या है?",
+      "options": ["Code लिखना, पढ़ना व maintain करना आसान हो जाता है जिससे development time कम लगता है", "Compiled program हमेशा assembly code से छोटा (fewer bytes) होता है", "SFR registers तक direct bit-level access पूरी तरह समाप्त हो जाता है", "Microcontroller की internal clock frequency स्वतः बढ़ जाती है"],
+      "correctIndex": 0,
+      "explanation": "C जैसी high-level language में structured programming, functions और readable syntax के कारण complex logic लिखना व debug करना आसान होता है, इसलिए option A सही है। compiled C code आमतौर पर hand-optimized assembly से थोड़ा बड़ा होता है (छोटा नहीं), C compilers SFR registers को bit-addressable variables के रूप में access देते रहते हैं, और language choice से oscillator/clock frequency नहीं बदलती।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q34",
+      "question": "AT89S51 microcontroller की वह विशेष सुविधा जो इसे कुछ पुराने 8051 variants से अलग बनाती है, क्या है?",
+      "options": ["इसमें program memory के लिए कोई Flash उपलब्ध नहीं होती", "इसमें In-System Programming (ISP) सुविधा होती है, जिससे chip को circuit board पर लगे रहते हुए ही serial pins के माध्यम से program किया जा सकता है", "यह केवल 4-bit data bus पर काम करता है", "इसे program करने के लिए अनिवार्य रूप से UV lamp चाहिए"],
+      "correctIndex": 1,
+      "explanation": "AT89S51 में ISP feature होने से chip को socket से निकाले बिना ही SPI-type serial pins से directly program/reprogram किया जा सकता है, इसलिए option B सही है। इसमें Flash memory मौजूद होती है, data bus 8-bit है, और इसे UV lamp की आवश्यकता नहीं (वह पुराने EPROM variants के लिए थी)।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q35",
+      "question": "Keil जैसे IDE में मिलने वाले simulator/debugger tool का उपयोग 8051 program development में क्यों किया जाता है?",
+      "options": ["PCB को solder करने के लिए", "Power supply की output voltage स्थायी रूप से बढ़ाने के लिए", "Actual hardware पर program burn करने से पहले, register values, memory contents और output logic को software में ही test व verify करने के लिए", "Microcontroller chip की body को thermally cool करने के लिए"],
+      "correctIndex": 2,
+      "explanation": "Simulator/debugger developer को बिना hardware के ही step-by-step execution देखकर registers, variables और output verify करने देता है जिससे programming errors पहले ही पकड़ में आ जाती हैं, इसलिए option C सही है। यह soldering, voltage बढ़ाने या thermal cooling से संबंधित tool नहीं है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q36",
+      "question": "coin-operated vending machine application में 8051 microcontroller मुख्यतः किस कार्य के लिए उपयोग होता है?",
+      "options": ["Satellite orbit की गणना करने के लिए", "Long-range radar signal detect करने के लिए", "High-voltage transmission line की protection करने के लिए", "Coin/sensor inputs को verify करके सही item dispense करना और आवश्यक change वापस देने की logic control करना"],
+      "correctIndex": 3,
+      "explanation": "vending machine में microcontroller inserted coin की value validate करता है, selected item के अनुसार dispensing mechanism चलाता है और बचा हुआ change return करता है, इसलिए option D सही है। satellite orbit calculation, radar detection और high-voltage line protection इस consumer application से असंबंधित हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q37",
+      "question": "ATM (Automated Teller Machine) टर्मिनल में लगा embedded microcontroller keypad व display से जुड़े किस कार्य में सहायक होता है?",
+      "options": ["User द्वारा दबाई गई keys/PIN entry पढ़ना और transaction status को local display पर दिखाना", "सीधे bank के central server का पूरा database चलाना", "Currency notes की printing ink तैयार करना", "Satellite संचार हेतु frequency allocate करना"],
+      "correctIndex": 0,
+      "explanation": "ATM terminal में microcontroller keypad scanning, local display update और अन्य peripherals (card reader, cash mechanism) के coordination जैसा local control कार्य करता है, इसलिए option A सही है। bank का central database अलग बड़े servers पर चलता है, note printing ink निर्माण और satellite frequency allocation इस local controller के कार्य नहीं हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q38",
+      "question": "80C52 variant के बारे में कौन-सा कथन सही है?",
+      "options": ["इसमें कोई internal timer उपलब्ध नहीं होता", "इसमें केवल 2 KB program memory होती है", "यह पुरानी HMOS technology पर आधारित है", "यह 8052 की extra Timer 2 व अधिक internal RAM जैसी features को CMOS (कम power खपत वाली) technology के साथ जोड़ता है"],
+      "correctIndex": 3,
+      "explanation": "80C52 8052 की enhanced resources (256 bytes RAM, Timer 2) को CMOS process के साथ जोड़कर कम power consumption देता है, इसलिए option D सही है। इसमें timers मौजूद हैं, program memory 8 KB होती है (2 KB नहीं), और यह HMOS नहीं बल्कि CMOS पर आधारित है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q39",
+      "question": "Dallas Semiconductor के DS5000 जैसे 8051-compatible variant की एक विशेष पहचान क्या है?",
+      "options": ["इसमें कोई CPU core मौजूद नहीं होता", "इसमें battery-backed non-volatile RAM होती है जो mains power off होने पर भी data को सुरक्षित (secure) रखती है", "यह केवल pure analog signal process करता है", "इसे केवल mechanical relay से control किया जाता है"],
+      "correctIndex": 1,
+      "explanation": "DS5000 में लगी lithium battery-backed NV RAM power जाने पर भी program/data व security keys को बनाए रखती है, इसलिए option B सही है। इसमें पूरा 8051-compatible CPU core होता है, यह digital microcontroller है analog signal processor नहीं, और यह mechanical relay से नहीं बल्कि software/hardware logic से control होता है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q40",
+      "question": "AT89C2051 microcontroller की एक प्रमुख विशेषता क्या है?",
+      "options": ["यह 64-pin वाला बड़ा package रखता है", "इसमें program memory के लिए कोई Flash उपलब्ध नहीं होती", "यह छोटे 20-pin package में आता है जिसमें कम I/O lines व कम Flash memory होती है, छोटे low-cost applications के लिए उपयुक्त है", "यह 32-bit data bus पर काम करता है"],
+      "correctIndex": 2,
+      "explanation": "AT89C2051 compact 20-pin package में आता है जिसमें सीमित I/O व 2 KB जैसी छोटी Flash memory होती है, इसलिए यह छोटे low-cost embedded applications के लिए उपयुक्त होता है और option C सही है। यह बड़ा 64-pin package नहीं है, इसमें Flash memory मौजूद होती है, और यह 8-bit variant है, 32-bit नहीं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q41",
+      "question": "electronic printer में embedded microcontroller print head की movement नियंत्रित करने के लिए सामान्यतः किस actuator को कौन-सा signal भेजता है?",
+      "options": ["Stepper motor को sequenced step pulses भेजकर print head positioning और paper feed control करता है", "AC mains को सीधे उच्च voltage पर switch करता है", "केवल analog audio signal generate करता है", "Satellite dish की दिशा नियंत्रित करता है"],
+      "correctIndex": 0,
+      "explanation": "printer में microcontroller stepper motor को उचित sequence में step pulses देकर print head की horizontal positioning और paper feed roller की movement precisely control करता है, इसलिए option A सही है। बाकी options mains switching, audio या satellite control जैसे असंबंधित कार्य बताते हैं जो printer की core operation नहीं हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q42",
+      "question": "AT89C51 जैसे Flash-based 8051 microcontroller में compiled program (hex file) को chip के अंदर load करने के लिए कौन-सा hardware device उपयोग होता है?",
+      "options": ["Digital multimeter", "CRO (Cathode Ray Oscilloscope)", "Soldering iron", "Programmer/burner device (जो hex file को Flash memory में write करता है)"],
+      "correctIndex": 3,
+      "explanation": "compiled hex file को actual chip में डालने के लिए एक dedicated programmer/burner unit होता है जो PC से file लेकर microcontroller की Flash memory में write करता है, इसलिए option D सही है। multimeter measurement के लिए, CRO waveform देखने के लिए और soldering iron mechanical assembly के लिए है, ये program load करने के उपकरण नहीं हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q43",
+      "question": "8052 microcontroller में मौजूद अतिरिक्त Timer 2, अन्य modes के साथ किस अतिरिक्त कार्य के लिए भी configure किया जा सकता है?",
+      "options": ["केवल external LED को blink कराने के लिए", "Serial communication (UART) के लिए baud rate generator के रूप में", "केवल AC मुख्य आपूर्ति की frequency मापने के लिए", "केवल ADC की sampling rate तय करने के लिए (built-in ADC के बिना यह लागू नहीं)"],
+      "correctIndex": 1,
+      "explanation": "8052 का Timer 2 auto-reload/capture modes के साथ-साथ baud rate generator mode में भी configure हो सकता है जिससे serial port की baud rate अधिक flexibility से set होती है, इसलिए option B सही है। यह केवल LED blinking, mains frequency measurement या ADC sampling (8051/8052 में built-in ADC नहीं होता) के लिए dedicated नहीं है।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q44",
+      "question": "domestic smart energy meter application में 8051 microcontroller मुख्यतः किस कार्य के लिए उपयोग होता है?",
+      "options": ["Satellite television signal decode करने के लिए", "Long-distance wireless base station चलाने के लिए", "Sensor से power consumption data पढ़कर units की गणना करना और display/communication module पर भेजना", "High-power industrial welding current उत्पन्न करने के लिए"],
+      "correctIndex": 2,
+      "explanation": "smart energy meter में microcontroller current/voltage sensing circuit से data लेकर consumed units की गणना करता है और उसे local display या communication module (जैसे GSM/RF) के माध्यम से भेजता है, इसलिए option C सही है। satellite TV decoding, wireless base station operation और industrial welding current इस domestic metering application से असंबंधित हैं।"
+    },
+    {
+      "id": "u2_applications_variants_8051_q45",
+      "question": "मूल Intel 8051 design को बाद में Atmel, Philips (NXP), Dallas Semiconductor जैसी कई कंपनियों द्वारा भी बनाया गया — इस स्थिति को क्या कहा जाता है और इसका क्या लाभ है?",
+      "options": ["यह second-sourcing कहलाता है, जिससे उपयोगकर्ताओं को अलग-अलग manufacturers से pin/functionally compatible chips चुनने की flexibility मिलती है", "इसे patent violation कहा जाता है और यह पूर्णतः अवैध है", "इसका अर्थ है कि हर कंपनी का चिप पूरी तरह अलग instruction set रखता है और आपस में असंगत (incompatible) है", "यह केवल packaging रंग बदलने की प्रक्रिया है, कार्यक्षमता में कोई अंतर नहीं आता"],
+      "correctIndex": 0,
+      "explanation": "Intel ने 8051 architecture को अन्य manufacturers को license दिया जिससे कई कंपनियां pin-compatible व largely code-compatible variants बनाती हैं, इस practice को second-sourcing कहा जाता है और यह users को choice व supply flexibility देता है, इसलिए option A सही है। यह legal licensing है patent violation नहीं, चिप्स core instruction set स्तर पर largely compatible रहते हैं पूरी तरह अलग नहीं, और अंतर केवल packaging रंग तक सीमित नहीं बल्कि resources (ROM/RAM/timer/technology) में भी होता है।"
     }
   ]
 }

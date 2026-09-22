@@ -213,6 +213,181 @@
       "options": ["केवल एक ही reset source (POR) होता है", "केवल software द्वारा triggered reset होते हैं", "केवल external switch से reset संभव होता है", "POR, MCLR reset, WDT reset और BOR — ये चारों प्रमुख reset sources होते हैं"],
       "correctIndex": 3,
       "explanation": "PIC microcontroller में सामान्यतः POR, MCLR pin reset, WDT reset और BOR चार प्रमुख reset sources माने जाते हैं, इसलिए option D सही है। बाकी options इस सूची को अधूरा या गलत ढंग से दर्शाते हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q31",
+      "question": "PIC microcontroller के STATUS register में उपस्थित TO और PD bits का उपयोग किस उद्देश्य के लिए किया जाता है?",
+      "options": ["यह पता लगाने के लिए कि पिछला reset POR, WDT time-out, या Sleep से wake-up में से किस कारण से हुआ", "ADC की resolution set करने के लिए", "केवल serial baud rate set करने के लिए", "केवल oscillator frequency बदलने के लिए"],
+      "correctIndex": 0,
+      "explanation": "TO (Time-out) bit यह दर्शाता है कि WDT time-out हुआ या नहीं, और PD (Power-down) bit यह बताता है कि device Sleep में गया था या नहीं; इन bits के combination से firmware reset की वास्तविक वजह पहचान सकता है, इसलिए option A सही है। बाकी options इन bits की भूमिका नहीं हैं क्योंकि ये ADC, baud rate या oscillator frequency से संबंधित नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q32",
+      "question": "Enhanced PIC18F devices में RCON (या PCON) register में उपस्थित POR और BOR status bits का क्या उपयोग है?",
+      "options": ["ADC channel select करने के लिए", "ये bits software को यह बताते हैं कि last reset Power-on Reset या Brown-out Reset के कारण हुआ, ताकि program अनुसार recovery action ले सके", "केवल EEPROM write cycle पूरा होने का संकेत", "केवल timer overflow फ्लैग"],
+      "correctIndex": 1,
+      "explanation": "POR और BOR status bits set/clear होकर software को बताते हैं कि पिछला reset किस कारण से हुआ, जिससे firmware उचित recovery routine चला सके, इसलिए option B सही है। बाकी options ADC, EEPROM या timer से संबंधित हैं, इन status bits की वास्तविक भूमिका नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q33",
+      "question": "PIC microcontroller में oscillator mode (XT, HS, LP, RC आदि) का चयन किस माध्यम से किया जाता है?",
+      "options": ["runtime में program द्वारा किसी register को बार-बार लिखकर", "केवल external DIP switch से", "Configuration Word में उपस्थित FOSC selection bits के माध्यम से, जो programming के समय set किए जाते हैं", "केवल ADC input voltage से"],
+      "correctIndex": 2,
+      "explanation": "oscillator mode Configuration Word के FOSC selection bits द्वारा तय होता है, जिन्हें device programming के समय एक बार set किया जाता है, इसलिए option C सही है। बाकी options oscillator selection का वास्तविक तरीका नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_special_features_q34",
+      "question": "यदि device Sleep mode में हो और WDT time-out हो जाए, तो सामान्यतः क्या होता है?",
+      "options": ["device स्थायी रूप से बंद हो जाता है", "program memory erase हो जाती है", "oscillator permanently disable हो जाता है", "device Sleep से wake हो जाता है और normal execution जारी रहता है (पूर्ण reset नहीं, बल्कि wake-up), जिसे TO/PD bits से पहचाना जा सकता है"],
+      "correctIndex": 3,
+      "explanation": "Sleep के दौरान WDT time-out सामान्यतः device को केवल wake-up कराता है और execution आगे जारी रहता है, इस स्थिति को TO/PD bits से पहचाना जा सकता है, इसलिए option D सही है। बाकी options वास्तविक व्यवहार को बहुत अधिक गंभीर और गलत ढंग से दर्शाते हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q35",
+      "question": "यदि WDT का nominal timeout लगभग 18 ms है और OPTION register में prescaler ratio 1:128 set किया गया है, तो approximate WDT timeout period कितना होगा?",
+      "options": ["लगभग 2.3 सेकंड (18 ms × 128)", "लगभग 18 ms", "लगभग 230 ms", "लगभग 23 सेकंड"],
+      "correctIndex": 0,
+      "explanation": "18 ms को 128 से गुणा करने पर लगभग 2304 ms यानी लगभग 2.3 सेकंड मिलता है, इसलिए option A सही है। option B prescaler को नज़रअंदाज़ करता है, option C और D गुणा की गलत गणना पर आधारित हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q36",
+      "question": "क्या PWRT और WDT को configuration bits के माध्यम से individually enable/disable किया जा सकता है?",
+      "options": ["नहीं, ये हमेशा permanently enabled रहते हैं और कभी disable नहीं हो सकते", "हाँ, PWRTE और WDTE जैसे configuration bits के द्वारा इन्हें programming के समय क्रमशः enable या disable किया जा सकता है", "केवल WDT disable हो सकता है, PWRT कभी नहीं", "केवल PWRT disable हो सकता है, WDT कभी नहीं"],
+      "correctIndex": 1,
+      "explanation": "PWRTE और WDTE अलग-अलग configuration bits होते हैं जिनसे PWRT और WDT को स्वतंत्र रूप से enable/disable किया जा सकता है, इसलिए option B सही है। बाकी options इन features को गलत तरीके से permanently fixed या एकतरफा disable-able बताते हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q37",
+      "question": "XT, HS और LP oscillator modes में crystal/resonator के साथ सामान्यतः किन additional components की आवश्यकता होती है?",
+      "options": ["कोई external component नहीं चाहिए", "केवल एक external pull-up resistor", "crystal pins पर दो छोटे external load capacitors (ground से), जो oscillation को stabilize करने में मदद करते हैं", "एक external voltage regulator IC"],
+      "correctIndex": 2,
+      "explanation": "crystal-based modes में OSC1 और OSC2 pins पर ground से जुड़े छोटे load capacitors लगाए जाते हैं जो oscillation को stable रखते हैं, इसलिए option C सही है। बाकी options इन modes की actual hardware requirement नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q38",
+      "question": "LP oscillator mode को प्रायः किस प्रकार की applications में प्राथमिकता दी जाती है?",
+      "options": ["high-speed video processing applications में", "high current motor control applications में", "केवल high-voltage industrial applications में", "battery-powered, low-power applications जैसे real-time clock/watch सर्किट में, जहाँ 32 kHz crystal से न्यूनतम current खपत होती है"],
+      "correctIndex": 3,
+      "explanation": "LP mode न्यूनतम power खपत के लिए design किया गया है, इसलिए यह battery-operated RTC/watch जैसी applications में उपयुक्त है जहाँ speed की बजाय power saving प्राथमिकता है, इसलिए option D सही है। बाकी options high-speed या high-power applications से संबंधित हैं, जिनके लिए LP उपयुक्त नहीं है।"
+    },
+    {
+      "id": "u2_pic_special_features_q39",
+      "question": "RC या INTOSC oscillator modes में OST (Oscillator Start-up Timer) की आवश्यकता क्यों नहीं होती?",
+      "options": ["क्योंकि इनमें crystal जैसी stabilization delay नहीं होती, इसलिए OST की wait आवश्यक नहीं समझी जाती", "क्योंकि इनमें कोई clock ही generate नहीं होता", "क्योंकि इनमें WDT हमेशा disable रहता है", "क्योंकि इनमें PWRT हमेशा compulsorily disable होता है"],
+      "correctIndex": 0,
+      "explanation": "RC और INTOSC oscillator तुरंत काम करना शुरू कर देते हैं और उन्हें crystal जैसी stabilization period की आवश्यकता नहीं होती, इसलिए OST को skip किया जाता है, इसलिए option A सही है। बाकी options तथ्यात्मक रूप से गलत हैं क्योंकि इन modes में clock generate होता है और WDT/PWRT इनसे स्वतंत्र रूप से configure होते हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q40",
+      "question": "Configuration bits को chip के अंदर किस प्रकार store किया जाता है?",
+      "options": ["ये RAM में store होते हैं और power off होने पर erase हो जाते हैं", "ये एक अलग विशेष non-volatile configuration memory location में store होते हैं, जो normal program memory से अलग होती है", "ये user program memory के भीतर normal instructions के रूप में store होते हैं", "ये केवल external EEPROM chip में store होते हैं"],
+      "correctIndex": 1,
+      "explanation": "Configuration bits एक dedicated non-volatile configuration memory location में store होते हैं जो user program memory से अलग होती है, इसलिए power off होने पर भी ये बने रहते हैं, इसलिए option B सही है। बाकी options इनकी वास्तविक storage location को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_special_features_q41",
+      "question": "LVP को configuration bit द्वारा disable करने का क्या प्रभाव पड़ता है?",
+      "options": ["device स्थायी रूप से program नहीं हो सकता", "WDT स्वतः permanently enable हो जाता है", "designated LVP pin सामान्य digital I/O के रूप में उपलब्ध हो जाता है, परंतु फिर programming के लिए High Voltage Programming (HVP) यानी MCLR पर उच्च voltage आवश्यक होता है", "oscillator mode स्वतः RC में बदल जाता है"],
+      "correctIndex": 2,
+      "explanation": "LVP disable करने पर वह designated pin सामान्य I/O के रूप में free हो जाता है, परंतु तब device को program करने के लिए HVP method अपनानी पड़ती है जिसमें MCLR पर उच्च voltage apply होती है, इसलिए option C सही है। बाकी options इस configuration change के actual प्रभाव को गलत ढंग से बढ़ा-चढ़ाकर या असंबंधित रूप से दर्शाते हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q42",
+      "question": "पारंपरिक PIC16F84A जैसे devices में LVP के लिए designated pin सामान्यतः कौन सा होता है?",
+      "options": ["RA0/AN0 pin", "OSC1/CLKIN pin", "MCLR pin", "RB3/PGM pin"],
+      "correctIndex": 3,
+      "explanation": "ऐसे classic devices में RB3/PGM pin को LVP programming के लिए designated pin के रूप में उपयोग किया जाता है, इसलिए option D सही है। बाकी options oscillator, reset या analog input से संबंधित pins हैं, LVP programming pin नहीं।"
+    },
+    {
+      "id": "u2_pic_special_features_q43",
+      "question": "कुछ PIC devices में BOR के trip voltage को कैसे set किया जा सकता है?",
+      "options": ["कुछ devices में BORV जैसे configuration bits द्वारा अलग-अलग threshold voltage levels में से चुना जा सकता है", "यह हमेशा fixed 5V होता है और कभी नहीं बदलता", "यह केवल external potentiometer से set होता है", "यह ADC register से runtime में बदलता है"],
+      "correctIndex": 0,
+      "explanation": "कुछ PIC devices BORV जैसे configuration bits उपलब्ध कराते हैं जिनसे BOR का trip point कुछ निश्चित options में से चुना जा सकता है, इसलिए option A सही है। बाकी options वास्तविक configuration तरीके से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_special_features_q44",
+      "question": "यदि मुख्य external crystal oscillator किसी कारण से fail हो जाए (जैसे crystal टूट जाए), तो WDT का क्या होगा?",
+      "options": ["WDT भी तुरंत बंद हो जाएगा क्योंकि वह मुख्य oscillator पर निर्भर है", "WDT अपने independent internal RC oscillator पर चलता रहेगा और उचित समय पर device को reset कर सकता है, भले ही मुख्य clock रुक गई हो", "पूरा chip स्थायी रूप से damage हो जाएगा", "program memory तुरंत erase हो जाएगी"],
+      "correctIndex": 1,
+      "explanation": "WDT का अपना स्वतंत्र internal RC oscillator होता है जो main system clock से बिल्कुल अलग है, इसलिए main oscillator fail होने पर भी WDT चलता रहकर device को reset कर सकता है, इसलिए option B सही है। बाकी options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q45",
+      "question": "औद्योगिक (industrial) environment में जहाँ electrical noise अधिक होता है, WDT का उपयोग करने का मुख्य लाभ क्या है?",
+      "options": ["यह noise को पूरी तरह खत्म कर देता है", "यह ADC की accuracy बढ़ा देता है", "यदि noise के कारण program किसी अनजान loop में फँस जाए, तो WDT automatically device को reset कर के normal operation पुनः शुरू करा देता है, बिना manual intervention के", "यह supply voltage को स्थिर कर देता है"],
+      "correctIndex": 2,
+      "explanation": "noisy environment में program glitch से hang हो सकता है; ऐसे में WDT automatically reset करके system को बिना manual intervention के फिर से चालू कर देता है, इसलिए option C सही है। बाकी options WDT की वास्तविक क्षमता से मेल नहीं खाते क्योंकि यह noise cancellation या voltage regulation नहीं करता।"
+    },
+    {
+      "id": "u2_pic_special_features_q46",
+      "question": "कुछ enhanced PIC18F devices में STVREN (Stack Overflow/Underflow Reset Enable) configuration bit का क्या कार्य है?",
+      "options": ["यह केवल ADC resolution निर्धारित करता है", "यह केवल serial baud rate set करता है", "यह केवल sleep mode की duration निर्धारित करता है", "enable होने पर, hardware stack के overflow या underflow होने पर device को automatically reset कर देता है, जिससे program corruption से बचाव होता है"],
+      "correctIndex": 3,
+      "explanation": "STVREN enable होने पर hardware stack overflow/underflow की स्थिति में device automatically reset हो जाता है, जिससे corrupted execution से बचा जा सकता है, इसलिए option D सही है। बाकी options इस configuration bit की भूमिका नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q47",
+      "question": "crystal-based oscillator mode (जैसे XT) में device के power-up से लेकर पहली instruction execute होने तक की कुल delay में कौन-कौन से समय शामिल होते हैं?",
+      "options": ["PWRT की लगभग 72 ms fixed delay तथा उसके बाद OST द्वारा oscillator के स्थिर होने तक का अतिरिक्त समय, दोनों मिलकर", "केवल POR का समय", "केवल WDT timeout period", "केवल BOR threshold detection समय"],
+      "correctIndex": 0,
+      "explanation": "POR trigger होने के बाद PWRT लगभग 72 ms की delay देता है और उसके बाद OST oscillator के stable होने तक CPU को hold में रखता है, ये दोनों मिलकर कुल start-up delay बनाते हैं, इसलिए option A सही है। बाकी options केवल एक अलग unrelated timer/feature की अवधि दर्शाते हैं, कुल start-up delay नहीं।"
+    },
+    {
+      "id": "u2_pic_special_features_q48",
+      "question": "MCLR reset और POR के बीच मुख्य अंतर क्या है?",
+      "options": ["दोनों में कोई अंतर नहीं है", "MCLR reset external pin को externally low करने पर user/circuit द्वारा किसी भी समय trigger किया जा सकता है, जबकि POR केवल पहली बार supply voltage rise होने पर internally trigger होता है", "MCLR केवल software instruction से trigger होता है", "POR केवल sleep mode में trigger होता है"],
+      "correctIndex": 1,
+      "explanation": "MCLR pin को कभी भी externally low करके manual reset कराया जा सकता है, जबकि POR केवल एक बार, जब supply voltage पहली बार rise होती है, internally trigger होता है, इसलिए option B सही है। बाकी statements तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q49",
+      "question": "यदि किसी application में fast response आवश्यक है और WDT को unnecessary overhead समझकर disable कर दिया जाए, तो क्या device अभी भी POR और PWRT का लाभ ले सकता है?",
+      "options": ["नहीं, WDT disable करने पर POR और PWRT भी automatically disable हो जाते हैं क्योंकि ये सभी एक ही feature हैं", "नहीं, WDT disable करने पर oscillator भी बंद हो जाता है", "हाँ, WDTE, PWRTE जैसे configuration bits अलग-अलग होते हैं, इसलिए WDT disable करने पर भी POR और PWRT स्वतंत्र रूप से अपना कार्य करते रहते हैं", "हाँ, परंतु केवल BOR भी disable होने पर"],
+      "correctIndex": 2,
+      "explanation": "POR, PWRT और WDT स्वतंत्र features हैं जिनके अपने-अपने configuration bits होते हैं, इसलिए WDT disable करने से POR और PWRT की कार्यप्रणाली प्रभावित नहीं होती, इसलिए option C सही है। बाकी options इन features को गलत तरीके से आपस में जोड़ते हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q50",
+      "question": "Low Voltage Programming (LVP) और High Voltage Programming (HVP) के बीच वोल्टेज संबंधी मुख्य अंतर क्या है?",
+      "options": ["LVP में MCLR पर लगभग 12-13V जैसी उच्च voltage चाहिए, जबकि HVP सामान्य logic voltage पर काम करता है", "दोनों में समान voltage चाहिए", "LVP और HVP दोनों केवल battery से चलते हैं, voltage से कोई संबंध नहीं", "LVP सामान्य operating voltage (Vdd स्तर) पर designated pin के माध्यम से programming allow करता है, जबकि HVP में MCLR pin पर एक विशेष उच्च voltage (लगभग 12-13V) apply करनी पड़ती है"],
+      "correctIndex": 3,
+      "explanation": "LVP सामान्य Vdd स्तर पर एक designated pin से programming allow करता है जबकि HVP में MCLR पर लगभग 12-13V जैसी उच्च voltage apply करनी होती है, इसलिए option D सही है। option A यह अंतर पूरी तरह उल्टा बताता है, और B, C तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q51",
+      "question": "कुछ PIC devices में program memory के लिए Code Protect (CP) bit के अतिरिक्त data EEPROM के लिए एक अलग CPD (Data Code Protection) bit क्यों रखा जाता है?",
+      "options": ["क्योंकि दोनों memories को स्वतंत्र रूप से protect करने की सुविधा देने के लिए, ताकि जरूरत अनुसार केवल एक या दोनों को protect किया जा सके", "क्योंकि data EEPROM और program memory वास्तव में एक ही होते हैं", "क्योंकि CPD bit केवल oscillator को protect करता है", "क्योंकि CPD bit केवल WDT को protect करता है"],
+      "correctIndex": 0,
+      "explanation": "CP और CPD अलग-अलग bits होने से program memory और data EEPROM को स्वतंत्र रूप से protect किया जा सकता है, जिससे designer को flexibility मिलती है, इसलिए option A सही है। बाकी options इस अलग bit रखने के वास्तविक कारण को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_special_features_q52",
+      "question": "RC oscillator mode में OSC2/CLKOUT pin का उपयोग प्रायः किस प्रकार किया जाता है, जो crystal modes में संभव नहीं होता?",
+      "options": ["OSC2 pin हमेशा ground से जुड़ा रहता है", "OSC2 pin से Fosc/4 जैसी clock signal output ली जा सकती है, जिसका उपयोग external circuit को synchronize करने के लिए किया जा सकता है", "OSC2 pin ADC input बन जाता है", "OSC2 pin permanently disable हो जाता है"],
+      "correctIndex": 1,
+      "explanation": "RC oscillator mode में OSC1 पर ही RC network लगता है और OSC2 pin से Fosc/4 जैसी clock output निकाली जा सकती है जिसका उपयोग अन्य circuits को synchronize करने के लिए किया जा सकता है, इसलिए option B सही है। crystal modes में OSC2 crystal से जुड़ा रहता है, यह सुविधा नहीं मिलती, इसलिए बाकी options गलत हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q53",
+      "question": "safety-critical embedded applications (जैसे industrial control) में WDT और BOR दोनों को साथ enable करने की सलाह क्यों दी जाती है?",
+      "options": ["क्योंकि दोनों वास्तव में एक ही कार्य करते हैं इसलिए backup के लिए", "क्योंकि इससे oscillator की speed बढ़ जाती है", "क्योंकि WDT केवल program hang से तथा BOR केवल असामान्य रूप से गिरते supply voltage से बचाव करता है, दोनों मिलकर अलग-अलग प्रकार की faults से protection देते हैं", "क्योंकि इससे program memory की size बढ़ जाती है"],
+      "correctIndex": 2,
+      "explanation": "WDT software hang से सुरक्षा देता है जबकि BOR supply voltage की गड़बड़ी से सुरक्षा देता है; ये दोनों अलग-अलग प्रकार की fault conditions को cover करते हैं, इसलिए साथ उपयोग करना सुरक्षित माना जाता है, इसलिए option C सही है। बाकी options इनकी वास्तविक भूमिका को गलत ढंग से दर्शाते हैं।"
+    },
+    {
+      "id": "u2_pic_special_features_q54",
+      "question": "classic PIC16F में configuration word के माध्यम से चुने जाने वाले प्रमुख oscillator modes में से कौन सा समूह सही है?",
+      "options": ["PWM, ADC, DAC और UART", "SPI, I2C, USB और CAN", "TMR0, TMR1, TMR2 और CCP", "XT, HS, LP और RC"],
+      "correctIndex": 3,
+      "explanation": "classic PIC16F devices में configuration word के माध्यम से सामान्यतः XT, HS, LP और RC जैसे oscillator modes में से एक चुना जाता है, इसलिए option D सही है। बाकी options actually peripherals/communication modules के नाम हैं, oscillator modes नहीं।"
+    },
+    {
+      "id": "u2_pic_special_features_q55",
+      "question": "एक designer को एक low-cost, timing-tolerant application (जैसे साधारण LED blinking) के लिए oscillator चुनना है, जहाँ सटीक frequency आवश्यक नहीं है। कौन सा विकल्प सबसे उपयुक्त और किफ़ायती रहेगा?",
+      "options": ["RC oscillator mode, क्योंकि यह सस्ता है और जब सटीक timing critical न हो तो इसकी कम accuracy स्वीकार्य होती है", "HS mode के साथ 20 MHz crystal, क्योंकि यह सबसे तेज़ है", "LP mode के साथ 32 kHz crystal, क्योंकि यह सबसे कम power लेता है भले ही application को इतनी कम speed चाहिए या नहीं", "external precision TCXO module, क्योंकि यह सबसे महंगा होने के कारण सबसे अच्छा माना जाता है"],
+      "correctIndex": 0,
+      "explanation": "जब timing सटीक होना जरूरी नहीं है तो सस्ते RC oscillator mode का उपयोग cost-effective समाधान है, इसलिए option A सही है। HS mode अनावश्यक रूप से fast और costly है, LP mode की low speed इस application की जरूरत नहीं है, और महंगा TCXO सिर्फ इसलिए बेहतर नहीं हो जाता कि वह महंगा है।"
     }
   ]
 }

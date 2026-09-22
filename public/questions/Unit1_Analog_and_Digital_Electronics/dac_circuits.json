@@ -363,6 +363,186 @@
       ],
       "correctIndex": 2,
       "explanation": "10-bit DAC में 2^10 = 1024 levels होते हैं जबकि 8-bit में केवल 256, इसलिए अधिक levels और छोटा step size होने से 10-bit की resolution बेहतर है। पहला और चौथा विकल्प गलत हैं क्योंकि 8-bit में कम levels और बड़ा step size होता है, और दूसरा गलत है क्योंकि दोनों की resolution समान नहीं होती।"
+    },
+    {
+      "id": "u1_dac_circuits_q31",
+      "question": "R-2R ladder DAC की संरचना (structure) के बारे में कौन सा कथन सही है?",
+      "options": [
+        "इसमें हर bit stage के लिए एक series resistor R और एक shunt resistor 2R (ground या reference की ओर) होता है, जो मिलकर एक ladder network बनाते हैं",
+        "इसमें सभी bits एक ही common resistor से जुड़े होते हैं",
+        "इसमें resistor नहीं बल्कि केवल capacitor उपयोग होते हैं",
+        "इसमें हर bit के लिए अलग-अलग op-amp होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "R-2R ladder में हर bit stage पर एक series R और एक shunt 2R resistor जुड़ा होता है, और ये मिलकर पूरी ladder network बनाते हैं जिससे binary weighted current मिलती है। दूसरा विकल्प गलत है क्योंकि हर bit की अपनी switch-resistor जोड़ी होती है, तीसरा गलत है क्योंकि यह resistor-based network है, और चौथा गलत है क्योंकि सामान्यतः पूरे DAC के लिए एक ही output op-amp पर्याप्त होता है।"
+    },
+    {
+      "id": "u1_dac_circuits_q32",
+      "question": "weighted resistor DAC में op-amp को किस configuration में उपयोग किया जाता है, और उसका output किस पर निर्भर करता है?",
+      "options": [
+        "op-amp को comparator की तरह उपयोग किया जाता है और output केवल clock पर निर्भर करता है",
+        "op-amp को summing (inverting adder) amplifier की तरह उपयोग किया जाता है, जिसका output feedback resistor Rf और हर bit की weighted input current के योग पर निर्भर करता है",
+        "op-amp को oscillator की तरह उपयोग किया जाता है",
+        "op-amp का output केवल supply voltage पर निर्भर करता है, resistors पर नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "weighted resistor DAC में op-amp एक summing/inverting amplifier की तरह काम करता है जो सभी bit-currents (अलग-अलग weighted resistors से आने वाली) को जोड़कर एक analog output voltage बनाता है, जो Rf और उन currents पर निर्भर करता है। पहला और तीसरा विकल्प गलत हैं क्योंकि op-amp यहाँ comparator या oscillator नहीं है, और चौथा गलत है क्योंकि output resistor weighting पर निर्भर करता है, केवल supply पर नहीं।"
+    },
+    {
+      "id": "u1_dac_circuits_q33",
+      "question": "एक 4-bit binary weighted resistor DAC में resistor values MSB से LSB तक बढ़ते binary अनुपात (R, 2R, 4R, 8R) में लगाई जाती हैं। यदि MSB के लिए resistor R है, तो LSB के लिए resistor का मान क्या होगा?",
+      "options": [
+        "2R",
+        "4R",
+        "8R",
+        "R"
+      ],
+      "correctIndex": 2,
+      "explanation": "4-bit weighted resistor DAC में MSB से LSB तक resistor values R, 2R, 4R, 8R के क्रम में होती हैं, इसलिए सबसे कम weight वाले LSB के लिए सबसे बड़ा resistor यानी 8R चाहिए। 2R और 4R बीच के bits के लिए हैं, और R केवल MSB के लिए है।"
+    },
+    {
+      "id": "u1_dac_circuits_q34",
+      "question": "एक 4-bit R-2R ladder DAC का Vref = 12 V है। यदि digital input 0110 (decimal 6) दिया जाए और output Vo = Vref × (D/2^n) से निकाला जाए, तो output voltage कितना होगा?",
+      "options": [
+        "6 V",
+        "3 V",
+        "9 V",
+        "4.5 V"
+      ],
+      "correctIndex": 3,
+      "explanation": "यहाँ D = 6, n = 4, इसलिए Vo = 12 × (6/16) = 4.5 V। 6 V, 3 V और 9 V गलत गणनाएँ हैं क्योंकि इनमें D/2^n का सही अनुपात (6/16 = 0.375) का उपयोग नहीं किया गया।"
+    },
+    {
+      "id": "u1_dac_circuits_q35",
+      "question": "R-2R ladder DAC को binary weighted resistor DAC की तुलना में अधिक accurate क्यों माना जाता है?",
+      "options": [
+        "क्योंकि इसमें केवल दो resistor values (R, 2R) होने से matched pair बनाना और temperature के साथ उनकी tracking बनाए रखना आसान होता है, जिससे error कम होता है",
+        "क्योंकि इसमें resistor बिल्कुल नहीं होते",
+        "क्योंकि इसका output हमेशा digital रहता है",
+        "क्योंकि यह बिना reference voltage के काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "केवल दो resistor values होने से उन्हें matched pair के रूप में precisely बनाना और temperature परिवर्तन के साथ भी उनका अनुपात स्थिर (track) रखना आसान होता है, जिससे accuracy बेहतर बनी रहती है; जबकि weighted DAC में wide-range resistors में mismatch और error अधिक होता है। बाकी विकल्प स्पष्ट रूप से गलत हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q36",
+      "question": "binary weighted DAC में उच्च bit count (जैसे 12-bit) के लिए बहुत बड़े resistor value (जैसे 2048R) का उपयोग करने से क्या practical समस्या आती है?",
+      "options": [
+        "resistor value बड़ा होने से output current भी उतना ही बड़ा हो जाता है",
+        "बहुत बड़े resistor में tolerance और leakage current का असर अधिक होता है, जिससे accurate weighting बिगड़ जाती है",
+        "बड़े resistor से op-amp तुरंत जल जाता है",
+        "बड़ा resistor DAC की speed को दोगुना कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "बहुत बड़े मान के resistors में percentage tolerance और stray leakage currents का प्रभाव अधिक होता है, जिससे सटीक binary weighting बिगड़ जाती है और accuracy घटती है। पहला विकल्प गलत है क्योंकि बड़ा resistor वास्तव में current को घटाता है, तीसरा और चौथा निराधार कथन हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q37",
+      "question": "R-2R ladder DAC में output op-amp के inverting input को virtual ground पर रखने का क्या फायदा है?",
+      "options": [
+        "इससे reference voltage शून्य हो जाता है",
+        "इससे सभी switches स्थायी रूप से बंद हो जाते हैं",
+        "इससे ladder network में current distribution binary switches की स्थिति से independent और सुसंगत रहती है, जिससे accurate summing होती है",
+        "इससे resistor की value आधी हो जाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "op-amp के inverting input को virtual ground पर रखने से ladder की current paths की गणना सरल और सुसंगत रहती है, जिससे प्रत्येक bit की weighted current सही तरीके से sum होकर accurate analog output बनती है। पहला, दूसरा और चौथा विकल्प निराधार और गलत कथन हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q38",
+      "question": "एक weighted resistor DAC (op-amp summing amplifier आधारित) में Rf = R और Vref = 10 V है। 3-bit input के लिए resistor values R (MSB, b2), 2R (b1), 4R (LSB, b0) हैं। binary input 101 (b2=1, b1=0, b0=1) के लिए output voltage का magnitude Vo = Vref × (b2 + b1/2 + b0/4) से कितना होगा?",
+      "options": [
+        "10 V",
+        "5 V",
+        "7.5 V",
+        "12.5 V"
+      ],
+      "correctIndex": 3,
+      "explanation": "यहाँ Vo = Vref × (b2 + b1/2 + b0/4) = 10 × (1 + 0 + 0.25) = 10 × 1.25 = 12.5 V। 10 V, 5 V और 7.5 V गलत हैं क्योंकि इनमें प्रत्येक bit का सही weight (1, 1/2, 1/4) जोड़कर हिसाब नहीं किया गया।"
+    },
+    {
+      "id": "u1_dac_circuits_q39",
+      "question": "R-2R ladder network की वह विशेषता क्या है, जो इसके विश्लेषण (analysis) को सरल बनाती है?",
+      "options": [
+        "network के किसी भी node से आगे देखने पर बचा हुआ ladder हिस्सा हमेशा 2R के समतुल्य (equivalent) resistance दिखाता है",
+        "network में कोई resistor जुड़ा नहीं होता",
+        "network का हर node हमेशा short circuit होता है",
+        "network में केवल एक ही bit कभी काम करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "R-2R ladder की खासियत यह है कि किसी भी node से आगे का बचा हुआ network हमेशा 2R के बराबर equivalent resistance दिखाता है, जिससे superposition द्वारा हर bit के contribution की गणना सरल हो जाती है। बाकी विकल्प गलत और अर्थहीन कथन हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q40",
+      "question": "resistor values की विविधता (variety) की दृष्टि से binary weighted DAC और R-2R ladder DAC की तुलना करें।",
+      "options": [
+        "दोनों में समान संख्या में unique resistor values होती हैं",
+        "weighted DAC में bits की संख्या के बराबर अलग-अलग (unique) resistor values चाहिए, जबकि R-2R ladder में केवल दो values (R, 2R) से पूरा काम चल जाता है",
+        "R-2R ladder में bits की संख्या के बराबर unique resistor values चाहिए",
+        "दोनों में resistor की जरूरत ही नहीं होती"
+      ],
+      "correctIndex": 1,
+      "explanation": "binary weighted DAC में हर bit के लिए अलग weighted resistor चाहिए, यानी n bits के लिए n अलग values, जबकि R-2R ladder में bits की संख्या चाहे जितनी हो, केवल दो resistor values (R और 2R) से पूरा network बन जाता है। पहला, तीसरा और चौथा विकल्प गलत हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q41",
+      "question": "एक 5-bit R-2R ladder DAC का Vref = 32 V है। digital input 01010 (decimal 10) के लिए output voltage Vo = Vref × (D/2^n) के अनुसार कितना होगा?",
+      "options": [
+        "32 V",
+        "20 V",
+        "10 V",
+        "16 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "यहाँ D = 10, n = 5, इसलिए Vo = 32 × (10/32) = 10 V। 32 V केवल full scale (सभी bits 1) पर मिलता, और 20 V तथा 16 V गलत गणनाएँ हैं जिनमें D/2^n का सही मान उपयोग नहीं किया गया।"
+    },
+    {
+      "id": "u1_dac_circuits_q42",
+      "question": "weighted resistor DAC के summing amplifier में feedback resistor Rf की मुख्य भूमिका क्या है?",
+      "options": [
+        "यह binary input bits को store करता है",
+        "यह केवल reference voltage को generate करता है",
+        "यह binary switches को control करता है",
+        "यह summing junction पर आई कुल weighted current को output voltage में convert करता है और overall gain/scale तय करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Rf, summing amplifier में आई कुल current (सभी bit-currents का योग) को output voltage में बदलता है और इसका मान समग्र gain अथवा scale factor तय करता है। पहला, दूसरा और तीसरा विकल्प गलत हैं क्योंकि Rf न bits store करता है, न reference बनाता है, न switches control करता है।"
+    },
+    {
+      "id": "u1_dac_circuits_q43",
+      "question": "एक 4-bit R-2R ladder DAC में Vref = 20 V है। यदि measured output voltage 15 V है, तो Vo = Vref × (D/2^n) मानकर digital input का decimal मान (D) क्या होगा?",
+      "options": [
+        "12",
+        "10",
+        "8",
+        "15"
+      ],
+      "correctIndex": 0,
+      "explanation": "D = Vo × 2^n / Vref = 15 × 16 / 20 = 12, जिसका binary रूप 1100 होगा। 10, 8 और 15 गलत हैं क्योंकि ये समीकरण को सही तरीके से हल करने पर नहीं मिलते।"
+    },
+    {
+      "id": "u1_dac_circuits_q44",
+      "question": "R-2R ladder DAC में binary switches (हर bit के लिए एक) का मुख्य कार्य क्या होता है?",
+      "options": [
+        "वे केवल reference voltage को बंद/चालू करते हैं",
+        "हर bit का switch, bit की value (0 या 1) के अनुसार उस node को ground अथवा Vref (summing/virtual ground input) से जोड़ता है, जिससे उस bit की weighted current तय होती है",
+        "वे op-amp के अंदर built-in होते हैं और अलग से नहीं लगाए जाते",
+        "वे केवल clock pulse उत्पन्न करते हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक bit का switch, digital bit 0 या 1 होने के अनुसार network के उस node को ground या Vref से जोड़ता है, जिससे उस bit की सही weighted current network में प्रवाहित होकर output में जोड़ी जाती है। पहला, तीसरा और चौथा विकल्प गलत और असंबंधित कथन हैं।"
+    },
+    {
+      "id": "u1_dac_circuits_q45",
+      "question": "बहुत अधिक bits (जैसे 12-bit या 16-bit) वाले high-resolution DAC के लिए कौन-सा architecture अधिक उपयुक्त माना जाता है और क्यों?",
+      "options": [
+        "binary weighted DAC, क्योंकि इसमें सबसे कम resistors लगते हैं",
+        "दोनों architecture समान रूप से उपयुक्त हैं",
+        "R-2R ladder DAC, क्योंकि केवल दो resistor values होने के कारण उच्च bit count पर भी matching और accuracy बनाए रखना आसान रहता है",
+        "कोई भी resistor-based architecture उपयुक्त नहीं है"
+      ],
+      "correctIndex": 2,
+      "explanation": "उच्च bit counts पर binary weighted DAC में resistor values की range बहुत बड़ी हो जाती है जिससे accuracy बिगड़ती है, जबकि R-2R ladder में सिर्फ दो values होने से high resolution पर भी matching बनी रहती है, इसलिए यह अधिक उपयुक्त है। पहला और चौथा विकल्प गलत हैं, और दूसरा गलत है क्योंकि दोनों समान रूप से उपयुक्त नहीं हैं।"
     }
   ]
 }

@@ -213,6 +213,426 @@
       "options": ["क्योंकि P2 के pins उस समय A8-A15 address lines के रूप में busy रहते हैं", "क्योंकि P2 में pull-up नहीं होता", "क्योंकि P2 केवल input होता है", "क्योंकि P2 serial port बन जाता है"],
       "correctIndex": 0,
       "explanation": "External memory access में P2 continuously higher address byte A8-A15 drive करता है, इसलिए वे pins general purpose I/O के लिए उपलब्ध नहीं रहते, अतः option A सही है। P2 में internal pull-up होता है, यह केवल input नहीं है, और यह serial port नहीं बनता।"
+    },
+    {
+      "id": "u2_memory_io_8051_q31",
+      "question": "74LS373 octal latch (जो 8051 के P0 से address latch करने में use होता है) के Latch Enable (LE) input active (high) रहने पर उसका output किस प्रकार व्यवहार करता है?",
+      "options": [
+        "Output input को transparent रूप से follow करता है",
+        "Output अपनी पिछली value पर hold रहता है",
+        "Output tri-state (disabled) हो जाता है",
+        "Output invert होकर मिलता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "LE high रहने पर 74LS373 transparent mode में रहता है यानी output लगातार input को follow करता है; LE के high से low transition पर present data latch हो जाती है, इसलिए option A सही है। Option B तब होता है जब LE low हो जाए, C तब जब OE disable किया जाए, और D गलत है क्योंकि 373 non-inverting device है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q32",
+      "question": "8051 के ALE-based address latching scheme में 74LS373 (transparent latch) को 74LS374 (edge-triggered flip-flop) की जगह क्यों prefer किया जाता है?",
+      "options": [
+        "क्योंकि 374 महंगा होता है",
+        "क्योंकि ALE एक level pulse है, clock edge नहीं, और 373 जैसा level-controlled latch इसके साथ सही तरीके से काम करता है",
+        "क्योंकि 373 में अधिक pins होते हैं",
+        "क्योंकि 374 केवल serial data store करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "ALE एक level pulse है (clock edge नहीं), इसलिए level-triggered transparent latch 373 उसके साथ address byte को सही समय पर hold करता है, अतः option B सही है। Cost या pin count (A, C) निर्णायक कारण नहीं हैं, और D गलत है क्योंकि 374 भी parallel data ही store करता है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q33",
+      "question": "8051 trainer kit में external program memory expand करने हेतु दो 2764 (8K×8) EPROM chips को address decoding के through parallel में (एक बार में सिर्फ एक chip enable) use किया गया है। इस arrangement से मिलने वाली total addressable external program memory कितनी होगी?",
+      "options": [
+        "8 KB",
+        "32 KB",
+        "16 KB",
+        "64 KB"
+      ],
+      "correctIndex": 2,
+      "explanation": "दोनों chips की क्षमता 8 KB + 8 KB जोड़ने पर कुल 16 KB contiguous program memory मिलती है, इसलिए option C सही है। 8 KB तो एक चिप की क्षमता है, जबकि 32 KB और 64 KB को पाने के लिए क्रमशः 4 या 8 चिप्स चाहिए होंगे।"
+    },
+    {
+      "id": "u2_memory_io_8051_q34",
+      "question": "एक EPROM chip की capacity 8K×8 (जैसे 2764) है। इस chip को पूरी तरह uniquely address करने के लिए कितनी address lines की आवश्यकता होती है?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correctIndex": 3,
+      "explanation": "8K = 2^13 = 8192, इसलिए 8 K locations को uniquely address करने के लिए 13 address lines चाहिए, अतः option D सही है। 10, 11 और 12 lines क्रमशः केवल 1K, 2K और 4K locations ही cover कर पाती हैं जो 8K के लिए अपर्याप्त हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q35",
+      "question": "6264 static RAM chip की capacity 8K×8 है। control/chip-select pins को छोड़कर, इस chip पर memory locations को address करने के लिए उपलब्ध address pins की संख्या कितनी होगी?",
+      "options": [
+        "13",
+        "11",
+        "12",
+        "16"
+      ],
+      "correctIndex": 0,
+      "explanation": "8K locations को cover करने के लिए 2^13=8192 के अनुसार 13 address pins चाहिए, इसलिए option A सही है। 11 और 12 pins क्रमशः केवल 2K और 4K तक cover करते, और 16 pins की जरूरत तब होती जब capacity 64K होती।"
+    },
+    {
+      "id": "u2_memory_io_8051_q36",
+      "question": "8051 आधारित system में external memory expansion के दौरान multiple chips के लिए अलग-अलग chip-select signals generate करने में 74LS138 (3-to-8 line decoder) का मुख्य role क्या होता है?",
+      "options": [
+        "यह data bus को buffer करता है",
+        "यह higher-order address lines को decode करके अलग-अलग memory chips के लिए unique select signals देता है",
+        "यह ALE signal generate करता है",
+        "यह clock signal divide करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "74LS138 upper address lines (जो chip के अंदर की addressing में शामिल नहीं होतीं) को decode करके प्रत्येक chip के लिए अलग-अलग active-low chip-select output देता है, इसलिए option B सही है। यह data बफर, ALE या clock generate करने का काम नहीं करता।"
+    },
+    {
+      "id": "u2_memory_io_8051_q37",
+      "question": "Memory address decoding में \"partial (linear) decoding\" अपनाने पर आम तौर पर क्या समस्या आती है?",
+      "options": [
+        "यह पूरी तरह error-free होती है",
+        "इसमें decoder IC की आवश्यकता नहीं होती",
+        "कुछ unused higher address lines को decoding में शामिल न करने पर एक ही chip कई अलग address ranges पर response कर देता है (address foldback/aliasing)",
+        "यह केवल serial memory के लिए valid है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Partial decoding में सभी unused higher address lines को decode logic में शामिल नहीं किया जाता, जिससे chip कई अलग address values पर भी select हो जाता है (foldback/aliasing), इसलिए option C सही है। यह error-free नहीं है, decoder की जरूरत तो रहती ही है, और यह समस्या parallel memory पर भी लागू होती है, केवल serial पर नहीं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q38",
+      "question": "जब 8051 kit में कई memory व I/O devices जोड़े गए हों, तो P0 और system data bus के बीच 74LS244/245 जैसा buffer/transceiver IC क्यों जोड़ा जाता है?",
+      "options": [
+        "ताकि serial baud rate बढ़े",
+        "ताकि EPROM को erase किया जा सके",
+        "ताकि internal RAM का size बढ़े",
+        "ताकि P0 pins पर अतिरिक्त loading से बचकर पर्याप्त drive/fan-out क्षमता बनी रहे"
+      ],
+      "correctIndex": 3,
+      "explanation": "अधिक devices जुड़ने पर P0 pins पर loading बढ़ जाती है; buffer/transceiver IC लगाने से P0 का fan-out सुरक्षित रहता है और signal integrity बनी रहती है, इसलिए option D सही है। इसका baud rate, EPROM erase या internal RAM size से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q39",
+      "question": "8051 trainer kit में 8255 Programmable Peripheral Interface (PPI) IC जोड़ने का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "जब P0-P3 external memory access में busy हों तब यह अतिरिक्त programmable parallel I/O ports (Port A, B, C) उपलब्ध कराता है",
+        "यह पूरी तरह internal RAM replace करता है",
+        "यह timer resource बढ़ाता है",
+        "यह केवल serial communication के लिए है"
+      ],
+      "correctIndex": 0,
+      "explanation": "External memory interfacing में P0/P2 address-data के लिए busy हो जाने पर 8255 additional parallel I/O ports देता है, इसलिए option A सही है। यह internal RAM की जगह नहीं लेता, timer resource नहीं बढ़ाता, और यह parallel I/O IC है, serial के लिए नहीं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q40",
+      "question": "8051 के साथ 8255 PPI को सामान्यतः किस तरीके से interface किया जाता है?",
+      "options": [
+        "इसे केवल interrupt pin से जोड़ा जाता है",
+        "इसे memory-mapped I/O device के रूप में जोड़ा जाता है, जिसे address decode करके MOVX instruction से access किया जाता है",
+        "इसे serial port से जोड़ा जाता है",
+        "इसे crystal oscillator से जोड़ा जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "8255 को एक external data memory location की तरह address decode कर के जोड़ा जाता है और CPU उसे MOVX instruction से access करता है, इसलिए option B सही है। यह interrupt pin, serial port या oscillator से सीधे नहीं जोड़ा जाता।"
+    },
+    {
+      "id": "u2_memory_io_8051_q41",
+      "question": "8051 trainer kit के serial communication section में लगी MAX232 IC का मुख्य कार्य क्या है?",
+      "options": [
+        "यह EPROM program करती है",
+        "यह address decoding करती है",
+        "यह microcontroller के TTL level (0/5V) serial signals को RS232 voltage levels में convert करती है ताकि PC से communication हो सके",
+        "यह timer resource बढ़ाती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "MAX232, 8051 के TxD/RxD के TTL levels को RS232 के आवश्यक higher voltage levels में और वापस convert करती है, जिससे PC के साथ serial communication संभव होता है, इसलिए option C सही है। यह EPROM programming, address decoding या timer resource से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q42",
+      "question": "एक 8051 kit के memory map में external EPROM को address range 0000H-1FFFH (8 KB) और external RAM को 2000H-3FFFH (8 KB) assign किया गया है, दोनों 74LS138 decoder से select होते हैं। इन दोनों blocks को अलग करने वाला निर्णायक address bit कौन-सा है?",
+      "options": [
+        "A0",
+        "A8",
+        "A12",
+        "A13"
+      ],
+      "correctIndex": 3,
+      "explanation": "8 KB block का size 2^13 है, इसलिए 0000H-1FFFH में A13=0 रहता है और 2000H-3FFFH में A13=1 हो जाता है — यही bit दोनों ranges को अलग करता है, अतः option D सही है। A0, A8 और A12 इस 8 KB boundary को निर्धारित नहीं करते।"
+    },
+    {
+      "id": "u2_memory_io_8051_q43",
+      "question": "8051 के on-chip Timer0 hardware को उसके सामान्य internal-clock counting mode से हटाकर external event counter के रूप में उपयोग करना on-chip resource utilization का कैसा उदाहरण है?",
+      "options": [
+        "उसी hardware timer resource को counter mode में reconfigure करके external pulses (जैसे sensor pulses) count करने हेतु पुनः उपयोग करना",
+        "Timer को केवल delay generate करने तक सीमित रखना",
+        "Timer को पूरी तरह disable करना",
+        "Timer को serial port से बदल देना"
+      ],
+      "correctIndex": 0,
+      "explanation": "यह एक ही on-chip timer hardware को अलग-अलग कार्यों (delay generation या external event counting) के लिए reconfigure करके पुनः उपयोग करने का उदाहरण है, इसलिए option A सही है। यह timer को केवल delay तक सीमित नहीं रखता, disable नहीं करता, और serial port से इसका कोई प्रतिस्थापन नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q44",
+      "question": "8051 trainer kit में on-chip serial port resource (UART hardware) का उपयोग सिर्फ PC communication के अलावा और किस काम के लिए किया जा सकता है?",
+      "options": [
+        "केवल external memory address भेजने के लिए",
+        "दो या अधिक 8051 boards के बीच multiprocessor/point-to-point data communication के लिए",
+        "केवल ADC interfacing के लिए",
+        "केवल reset generate करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "on-chip UART resource को दो या अधिक microcontroller boards के बीच data exchange के लिए भी उपयोग किया जा सकता है, इसलिए option B सही है। यह address भेजने, ADC interfacing या reset generation के लिए dedicated resource नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q45",
+      "question": "External memory interfacing में यदि P0 पर address latch (74LS373) बिलकुल न लगाया जाए तो क्या समस्या आएगी?",
+      "options": [
+        "कोई समस्या नहीं आएगी",
+        "Program memory का size बढ़ जाएगा",
+        "Low-order address (A0-A7) memory cycle के data phase तक stable नहीं रह पाएगा क्योंकि उसी समय P0 पर data आ जाएगा",
+        "केवल serial port प्रभावित होगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "Latch न होने पर P0 पर आया address जल्दी ही data द्वारा overwrite हो जाएगा, जिससे memory access के दौरान address stable नहीं रह पाएगा और गलत location access होगी, इसलिए option C सही है। इससे memory size नहीं बढ़ती और serial port का इससे कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q46",
+      "question": "एक 8051 system को 32 KB external program memory चाहिए और उपलब्ध EPROM chips 2764 (प्रत्येक 8K×8) हैं। इस आवश्यकता को पूरा करने के लिए कुल कितने EPROM chips लगेंगे?",
+      "options": [
+        "2 chips",
+        "8 chips",
+        "3 chips",
+        "4 chips"
+      ],
+      "correctIndex": 3,
+      "explanation": "32 KB ÷ 8 KB प्रति chip = 4 chips चाहिए, इसलिए option D सही है। 2 chips से केवल 16 KB, 3 chips से 24 KB मिलेंगे जो अपर्याप्त हैं, और 8 chips (64 KB) आवश्यकता से अधिक हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q47",
+      "question": "दो 6116 SRAM chips (प्रत्येक 2K×8) को जोड़कर 4 KB का contiguous external data memory बनाया गया है। इन दोनों chips के बीच चयन (chip-select) के लिए कौन-सा address bit उपयोग होगा?",
+      "options": [
+        "A11",
+        "A0",
+        "A9",
+        "A15"
+      ],
+      "correctIndex": 0,
+      "explanation": "2 K = 2^11 होने के कारण प्रत्येक chip के भीतर addressing के लिए A0-A10 चाहिए और chip चुनने के लिए अगला higher bit A11 काम आता है, इसलिए option A सही है। A0 तो within-chip addressing में ही शामिल है, और A9, A15 इस size के लिए निर्णायक bit नहीं हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q48",
+      "question": "Memory address decoding process का मुख्य उद्देश्य क्या होता है?",
+      "options": [
+        "Data bus की speed बढ़ाना",
+        "Higher-order address lines का उपयोग करके सही समय पर सही chip को select करने वाला chip-select signal generate करना, ताकि एक समय में केवल एक ही device data bus drive करे",
+        "Program memory को erase करना",
+        "Serial baud rate set करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Address decoding का काम higher-order address bits से unique chip-select signals बनाना है ताकि किसी भी समय केवल एक ही memory/IO device data bus पर active रहे, इसलिए option B सही है। यह bus speed, EPROM erase या baud rate से संबंधित प्रक्रिया नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q49",
+      "question": "यदि address decoding में fault के कारण दो अलग-अलग memory chips एक ही समय पर enable हो जाएँ, तो क्या समस्या होगी?",
+      "options": [
+        "कुछ नहीं होगा, दोनों सही data देंगे",
+        "केवल clock speed कम होगी",
+        "दोनों chips एक साथ data bus को drive करने की कोशिश करेंगे जिससे bus contention/data corruption होगा",
+        "केवल ROM का data corrupt होगा, RAM सुरक्षित रहेगी"
+      ],
+      "correctIndex": 2,
+      "explanation": "दो चिप्स के एक साथ enable होने पर वे data bus पर परस्पर विरोधी logic levels drive करने की कोशिश करेंगे, जिससे bus contention और data corruption होता है, इसलिए option C सही है। यह harmless नहीं है, clock speed से असंबंधित है, और दोनों प्रकार की memory प्रभावित हो सकती हैं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q50",
+      "question": "External EPROM/RAM chip पर मौजूद Chip Select (CS) / Chip Enable (CE) pin का interfacing में क्या कार्य होता है?",
+      "options": [
+        "यह data की polarity बदलता है",
+        "यह केवल clock generate करता है",
+        "यह केवल write operation control करता है",
+        "Active होने पर ही उस particular chip को select करता है, बाकी समय chip का output tri-state में disabled रहता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "CS/CE active होने पर ही वह chip data bus पर response करता है; बाकी समय उसका output high-impedance (tri-state) रहता है ताकि दूसरे devices bus को उपयोग कर सकें, इसलिए option D सही है। यह polarity, clock generation या केवल write control से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q51",
+      "question": "EPROM interfacing में Chip Enable (CE) और Output Enable (OE) pins के बीच functional अंतर क्या है?",
+      "options": [
+        "CE पूरे chip को power/select करता है जबकि OE केवल data output buffers को bus पर enable करता है (RD strobe के साथ जोड़ा जाता है)",
+        "दोनों एक ही काम करते हैं",
+        "CE केवल write के लिए है",
+        "OE address decode करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "CE chip को overall selected करता है जबकि OE सिर्फ output data buffers को bus पर drive करने के लिए enable करता है, आमतौर पर microcontroller के RD strobe से जुड़ा होता है, इसलिए option A सही है। दोनों समान नहीं हैं, EPROM में write pin अलग से नहीं होता, और OE address decode नहीं करता।"
+    },
+    {
+      "id": "u2_memory_io_8051_q52",
+      "question": "EPROM chip 27256 की naming में \"256\" का क्या अर्थ है और इसकी byte capacity क्या बनती है?",
+      "options": [
+        "256 bytes memory",
+        "कुल 256 Kilobits capacity, जो byte में 32 KB होती है",
+        "256 pins वाला package",
+        "256 MHz operating frequency"
+      ],
+      "correctIndex": 1,
+      "explanation": "27256 naming में 256, chip की कुल capacity 256 Kilobits दर्शाता है, जो byte में बदलने पर 256/8 = 32 KB होती है, इसलिए option B सही है। यह न तो byte count, न pin count और न ही frequency को दर्शाता है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q53",
+      "question": "8051 trainer kit में external data memory के लिए Static RAM (SRAM) को DRAM की तुलना में interfacing के लिए क्यों prefer किया जाता है?",
+      "options": [
+        "DRAM सस्ती होती है",
+        "DRAM की access speed हमेशा तेज़ होती है",
+        "SRAM को periodic refresh circuitry की जरूरत नहीं होती जिससे microcontroller interfacing सरल रहती है, जबकि DRAM को refresh चाहिए",
+        "SRAM केवल serial access देती है"
+      ],
+      "correctIndex": 2,
+      "explanation": "SRAM को data बनाए रखने के लिए refresh की जरूरत नहीं होती, इसलिए इसका interface सरल microcontroller logic से ही हो जाता है, जबकि DRAM को periodic refresh circuitry चाहिए, अतः option C सही है। लागत या speed संबंधी दावे (A, B) निर्णायक कारण नहीं हैं, और SRAM parallel access देती है, केवल serial नहीं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q54",
+      "question": "गैर-volatile data storage के लिए battery-backed SRAM की तुलना में EEPROM का क्या फायदा होता है?",
+      "options": [
+        "EEPROM तेज़ access देती है हमेशा SRAM से",
+        "EEPROM की cost हमेशा ज्यादा होती है",
+        "EEPROM केवल read-only होती है, write नहीं हो सकता",
+        "EEPROM बिना किसी battery/continuous power supply के भी data retain करती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "EEPROM electrically non-volatile होती है और power हटने पर भी data बनाए रखती है, जबकि battery-backed SRAM को data retain करने के लिए निरंतर battery power चाहिए, इसलिए option D सही है। EEPROM हमेशा तेज़ नहीं होती, महंगी होना निश्चित नहीं, और यह read-write दोनों supports करती है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q55",
+      "question": "8051 trainer kit में relay/motor जैसे उच्च current load को output port pin से directly drive न करके ULN2803 जैसी driver IC के through क्यों drive किया जाता है?",
+      "options": [
+        "क्योंकि 8051 का port pin सीमित current source/sink कर सकता है, इसलिए ULN2803 (Darlington driver) उच्च current भार को safely switch करता है",
+        "क्योंकि port pin polarity बदलनी होती है",
+        "क्योंकि ULN2803 memory address decode करता है",
+        "क्योंकि यह serial communication को fast बनाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "8051 का port pin केवल सीमित current handle कर सकता है, इसलिए relay/motor जैसे भारी load के लिए ULN2803 driver IC लगाई जाती है जो अपेक्षित current safely switch करती है, अतः option A सही है। यह polarity बदलने, address decoding या serial speed से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q56",
+      "question": "8051 trainer kit के reset circuit में RC network के साथ 74HC14 (Schmitt trigger inverter) जोड़ने का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "यह EPROM program करने के लिए है",
+        "RC की धीमी rising/falling edge को तेज़ और स्थिर (clean) transition में बदलकर false/multiple reset triggering रोकना",
+        "यह address decoding करता है",
+        "यह timer clock provide करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RC network से मिलने वाला धीमा transition Schmitt trigger 74HC14 द्वारा तेज़, clean edge में convert हो जाता है जिससे unreliable/multiple reset pulses नहीं बनते, इसलिए option B सही है। यह EPROM programming, address decoding या timer clock से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q57",
+      "question": "एक 8051 system में 74LS138 decoder के select inputs A14 और A15 दोनों 0 होने पर एक EPROM chip select active होता है (यानी address range 0000H-3FFFH)। इस decoding scheme से मिलने वाला memory block size कितना है?",
+      "options": [
+        "4 KB",
+        "8 KB",
+        "16 KB",
+        "32 KB"
+      ],
+      "correctIndex": 2,
+      "explanation": "0000H से 3FFFH तक total 0x4000 = 16384 locations यानी 16 KB होती है, इसलिए option C सही है। 4 KB और 8 KB इससे छोटी ranges होती हैं, और 32 KB इससे बड़ी range होगी जो इस address boundary से मेल नहीं खाती।"
+    },
+    {
+      "id": "u2_memory_io_8051_q58",
+      "question": "External memory interfacing करते समय P0 और P2 का उपयोग address/data के लिए होता है, लेकिन P1 को इस काम के लिए क्यों उपयोग नहीं किया जाता?",
+      "options": [
+        "P1 केवल analog signals लेता है",
+        "P1 में pins की संख्या कम है",
+        "P1 केवल input होता है",
+        "P1 का कोई alternate multiplexed function नहीं होता, यह pure general-purpose port है, इसलिए वह address/data bus का हिस्सा नहीं बन सकता"
+      ],
+      "correctIndex": 3,
+      "explanation": "P1 hardware रूप से किसी address/data multiplexing function से नहीं जुड़ा, यह पूरी तरह general-purpose I/O port है, इसलिए option D सही है। P1 analog नहीं है, इसके pins की संख्या P0/P2 जितनी ही (8) है, और यह bidirectional port है केवल input नहीं।"
+    },
+    {
+      "id": "u2_memory_io_8051_q59",
+      "question": "किसी kit में external RAM का address range 4000H से 5FFFH assign किया गया है। इस RAM block का size (bytes में) कितना होगा?",
+      "options": [
+        "8 KB",
+        "4 KB",
+        "16 KB",
+        "32 KB"
+      ],
+      "correctIndex": 0,
+      "explanation": "5FFFH − 4000H + 1 = 2000H = 8192 bytes = 8 KB, इसलिए option A सही है। 4 KB, 16 KB और 32 KB इस address difference की गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_memory_io_8051_q60",
+      "question": "8051 kit में प्रयुक्त होने वाली UV-EPROM (जैसे 2764) के package के ऊपर पारदर्शी quartz window क्यों दी जाती है?",
+      "options": [
+        "ताकि chip ठंडी रहे",
+        "ताकि UV light डालकर उसकी floating gate cells को discharge कर पूरी memory erase की जा सके ताकि उसे फिर से program किया जा सके",
+        "ताकि address lines दिखें",
+        "यह केवल decoration के लिए है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Quartz window से UV light सीधे floating gate cells पर पड़ती है जिससे stored charge discharge होकर पूरी memory erase हो जाती है और chip को फिर से program किया जा सकता है, इसलिए option B सही है। यह cooling, address lines दिखाने या decoration के लिए नहीं होती।"
+    },
+    {
+      "id": "u2_memory_io_8051_q61",
+      "question": "8051 आधारित system में program memory के लिए UV-EPROM की तुलना में EEPROM/Flash memory उपयोग करने का मुख्य practical फायदा क्या है?",
+      "options": [
+        "EEPROM हमेशा volatile होती है",
+        "EEPROM की data बिना power के तुरंत मिट जाती है",
+        "EEPROM/Flash को UV light से erase करने की जरूरत नहीं, इन्हें electrically ही in-circuit erase/reprogram किया जा सकता है",
+        "EEPROM केवल data memory के रूप में प्रयोग होती है, program memory के लिए नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "EEPROM/Flash को UV lamp से erase करने के बजाय circuit में ही electrically erase और reprogram किया जा सकता है, जिससे field-programming आसान होती है, इसलिए option C सही है। यह non-volatile होती है, power हटने पर data नहीं मिटती, और इसे program memory के रूप में भी उपयोग किया जाता है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q62",
+      "question": "8051 kit में keyboard/display जैसे multiple I/O devices को on-chip ports की कमी के कारण handle करने के लिए विशेष scanning/multiplexing support IC (जैसे 8279) का क्या लाभ होता है?",
+      "options": [
+        "यह केवल clock generate करता है",
+        "यह EPROM की जगह program memory बन जाता है",
+        "यह serial baud rate control करता है",
+        "यह keyboard scanning और display refreshing दोनों को स्वतंत्र रूप से manage कर microcontroller पर load कम करता है, सीमित port pins से अधिक keys/displays जोड़ने देता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "8279 जैसी dedicated support IC keyboard scanning और display refreshing स्वयं manage करती है जिससे microcontroller पर processing load कम हो जाता है और सीमित pins से अधिक keys/displays जोड़े जा सकते हैं, इसलिए option D सही है। यह clock generate, program memory बनने या baud rate control से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q63",
+      "question": "External memory interfacing में \"memory-mapped I/O\" (जैसे 8255 या latch-based output port का उपयोग) का concept क्या दर्शाता है?",
+      "options": [
+        "I/O devices को data memory address space के हिस्से के रूप में treat किया जाता है और उन्हें MOVX instruction से access किया जाता है",
+        "I/O devices केवल interrupt से control होते हैं",
+        "यह केवल program memory access के लिए है",
+        "इसमें कोई address decoding की जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Memory-mapped I/O में peripheral device को एक external data memory address की तरह treat किया जाता है और उसे उसी MOVX instruction से पढ़ा/लिखा जाता है, इसलिए option A सही है। यह केवल interrupt-driven नहीं है, program memory access से अलग है, और इसके लिए address decoding आवश्यक होती है।"
+    },
+    {
+      "id": "u2_memory_io_8051_q64",
+      "question": "एक 8051 प्रणाली में 4 अलग-अलग external devices (2 RAM chips + 8255 + एक latch-based output port) को individually select करने के लिए 74LS138 (3-to-8 decoder) के कम-से-कम कितने output lines का उपयोग किया जाएगा?",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "8"
+      ],
+      "correctIndex": 1,
+      "explanation": "चार अलग devices को अलग-अलग chip-select चाहिए, इसलिए decoder के 8 outputs में से कम-से-कम 4 outputs उपयोग होंगे, अतः option B सही है। 2 या 3 outputs से चार devices individually select नहीं हो सकते, और 8 outputs जरूरत से अधिक हैं (बाकी unused रह सकते हैं)।"
+    },
+    {
+      "id": "u2_memory_io_8051_q65",
+      "question": "8051 trainer kit के power supply section में प्रयुक्त 7805 IC का मुख्य कार्य क्या है, जो पूरे memory व I/O interfacing circuitry के सही operation के लिए आवश्यक है?",
+      "options": [
+        "यह data bus buffer करता है",
+        "यह address decode करता है",
+        "यह regulated +5V DC output देता है ताकि microcontroller, memory chips और support ICs को स्थिर supply voltage मिले",
+        "यह EPROM erase करता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "7805 एक fixed +5V voltage regulator IC है जो unregulated input से स्थिर +5V DC देता है, जिस पर microcontroller, EPROM/RAM व अन्य support ICs निर्भर रहते हैं, इसलिए option C सही है। यह data buffering, address decoding या EPROM erase करने वाली IC नहीं है।"
     }
   ]
 }

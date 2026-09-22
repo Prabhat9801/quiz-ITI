@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import {
   loadPracticeSet,
+  loadUnitPracticeSet,
   loadQuestionsForTopics,
   prepareQuizQuestions,
   prepareFixedQuizQuestions,
@@ -30,6 +31,10 @@ export default function Quiz() {
         const fixedSet = await loadPracticeSet(state.practiceSetNumber)
         if (cancelled) return
         prepared = prepareFixedQuizQuestions(fixedSet)
+      } else if (state.mode === 'unitpracticeset') {
+        const setData = await loadUnitPracticeSet(state.unitFolder, state.unitSetNumber)
+        if (cancelled) return
+        prepared = prepareFixedQuizQuestions(setData.questions)
       } else {
         const pool = await loadQuestionsForTopics(state.topicRefs)
         if (cancelled) return
@@ -136,6 +141,8 @@ export default function Quiz() {
       scopeLabel: state.scopeLabel,
       isExam: state.isExam,
       practiceSetNumber: state.practiceSetNumber,
+      unitFolder: state.unitFolder,
+      unitSetNumber: state.unitSetNumber,
     }
 
     const id = await saveAttempt({

@@ -213,6 +213,181 @@
       "options": ["synchronous master mode चुनना", "asynchronous mode चुनना", "high baud rate चुनना", "9-bit data enable करना"],
       "correctIndex": 1,
       "explanation": "SYNC = 0 asynchronous mode select करता है (SYNC = 1 synchronous), इसलिए option B सही है। Synchronous master mode के लिए SYNC = 1 और CSRC set करना पड़ता है। High baud rate BRGH bit से चुना जाता है और 9-bit data TX9/RX9 bits से enable होता है, SYNC से नहीं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q31",
+      "question": "PIC USART को synchronous master mode में operate करने के लिए TXSTA register में कौन-से bits set किए जाते हैं?",
+      "options": ["SYNC = 1 और CSRC = 1", "SYNC = 0 और CSRC = 1", "SYNC = 1 और CSRC = 0", "SPEN = 1 और CREN = 1"],
+      "correctIndex": 0,
+      "explanation": "SYNC = 1 synchronous mode select करता है और CSRC = 1 करने से device अपनी internal clock generate करके master बन जाता है, इसलिए option A सही है। SYNC = 0 asynchronous mode है, यह combination सही नहीं (option B)। SYNC = 1 के साथ CSRC = 0 synchronous slave mode होता है जहाँ clock external master से आती है (option C)। SPEN और CREN क्रमशः serial port enable और continuous receive से संबंधित हैं, master/slave role तय नहीं करते (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q32",
+      "question": "Synchronous mode (SYNC = 1) में CSRC = 0 set करने का क्या अर्थ है?",
+      "options": ["device अपनी internal clock generate करेगा और master बनेगा", "device slave mode में काम करेगा और clock external master से receive करेगा", "device asynchronous mode में चला जाएगा", "baud rate double हो जाएगा"],
+      "correctIndex": 1,
+      "explanation": "CSRC = 0 clock source को external रखता है, यानी यह device slave है जो दूसरे master की clock line follow करता है, इसलिए option B सही है। CSRC = 1 होने पर device master बनता (option A)। SYNC पहले से 1 है, इसलिए asynchronous mode select नहीं होगा (option C)। CSRC baud rate double नहीं करता, यह BRGH bit का काम है (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q33",
+      "question": "High speed mode (BRGH=1) में baud rate का सूत्र Fosc/(16×(SPBRG+1)) है। Fosc = 20 MHz पर 9600 baud के लिए SPBRG की approximate value क्या होगी?",
+      "options": ["12", "25", "129", "51"],
+      "correctIndex": 2,
+      "explanation": "SPBRG = Fosc/(16×baud) − 1 = 20000000/(16×9600) − 1 ≈ 130.2 − 1 ≈ 129, इसलिए option C सही है। 12 और 25 low speed (÷64) formula के छोटे Fosc values के लिए आते हैं, 51 इस calculation से मेल नहीं खाता।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q34",
+      "question": "RCSTA register का CREN bit set करने से क्या होता है?",
+      "options": ["transmit register खाली हो जाता है", "high baud rate select होता है", "synchronous mode select होता है", "continuous receive enable होता है, जिससे USART data लगातार receive करता रहता है"],
+      "correctIndex": 3,
+      "explanation": "CREN = 1 करने पर receiver लगातार आने वाला data receive करता रहता है जब तक इसे clear न किया जाए, इसलिए option D सही है। Option A TXIF flag का function है, B BRGH bit का, C SYNC bit का — इनका CREN से कोई सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q35",
+      "question": "TXSTA register का TXEN bit किस काम के लिए है?",
+      "options": ["USART transmitter को enable करता है ताकि TXREG का data भेजना शुरू हो", "receiver को enable करता है", "baud rate generator को बंद करता है", "9-bit data mode enable करता है"],
+      "correctIndex": 0,
+      "explanation": "TXEN = 1 transmitter circuitry को active करता है, तभी TXREG में लिखा data actually transmit होता है, इसलिए option A सही है। Receiver enable CREN से होता है (option B)। Baud rate generator TXEN से बंद नहीं होता (option C)। 9-bit mode TX9 bit से enable होता है, TXEN से नहीं (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q36",
+      "question": "PIC USART receive में \"Framing Error (FERR)\" किस स्थिति में set होता है?",
+      "options": ["जब receive buffer overflow हो जाए", "जब byte के अंत में expected stop bit सही समय पर detect न हो", "जब baud rate बहुत high set हो", "जब SPBRG register में गलत value हो"],
+      "correctIndex": 1,
+      "explanation": "FERR तब set होता है जब byte के end में सही stop bit detect नहीं होता, जो galat baud rate matching या noise की वजह से हो सकता है, इसलिए option B सही है। Buffer overflow पर OERR set होता है, FERR नहीं (option A)। High baud rate या galat SPBRG value indirectly timing बिगाड़ सकते हैं, लेकिन FERR की परिभाषा सीधे stop bit detection से है (options C, D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q37",
+      "question": "PIC USART में TXREG aur TSR (Transmit Shift Register) के बीच क्या संबंध है?",
+      "options": ["दोनों same register हैं", "CPU directly TSR में data लिखता है", "CPU TXREG में byte लिखता है और वहाँ से यह automatically TSR में copy होकर bit-by-bit serially shift होता है, इससे double buffering मिलती है", "TSR baud rate value store करता है"],
+      "correctIndex": 2,
+      "explanation": "TXREG एक buffer register है जिसमें CPU byte लिखता है; वहाँ से TSR में load होकर data bit-by-bit serially बाहर shift होता है, यह double buffering transmit को smooth बनाती है, इसलिए option C सही है। दोनों अलग-अलग registers हैं (option A गलत)। CPU directly TSR में नहीं लिखता (option B गलत)। Baud rate value SPBRG में store होती है, TSR में नहीं (option D गलत)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q38",
+      "question": "जब PIC USART का SPEN bit = 1 करके serial port enable किया जाता है, तो RC6/TX और RC7/RX pins के बारे में क्या सही है?",
+      "options": ["वे general purpose digital I/O के रूप में ही काम करते रहते हैं, USART उन्हें छूता नहीं", "USART hardware उन pins को अपने control में ले लेता है ताकि serial data transmit/receive हो सके, सामान्य I/O function override हो जाता है", "वे सिर्फ analog input के रूप में काम करने लगते हैं", "उनकी direction सिर्फ software से ही तय होती है, hardware का कोई role नहीं होता"],
+      "correctIndex": 1,
+      "explanation": "SPEN = 1 होने पर USART peripheral RC6 और RC7 (device के अनुसार designated TX/RX pins) को serial communication के लिए internally configure कर लेता है, जिससे उनका default general-purpose digital I/O function override हो जाता है, इसलिए option B सही है। Option A गलत है क्योंकि serial port enable होने के बाद ये pins normal I/O नहीं रहते। Option C गलत है क्योंकि ये digital serial pins हैं, analog input नहीं। Option D गलत है क्योंकि hardware peripheral इनकी direction/function को control करता है, सिर्फ software नहीं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q39",
+      "question": "Low speed asynchronous mode (BRGH=0) का सूत्र baud = Fosc/(64×(SPBRG+1)) है। Fosc = 11.0592 MHz crystal के साथ 9600 baud के लिए SPBRG की exact value क्या होगी?",
+      "options": ["17", "25", "51", "103"],
+      "correctIndex": 0,
+      "explanation": "SPBRG = Fosc/(64×baud) − 1 = 11059200/(64×9600) − 1 = 11059200/614400 − 1 = 18 − 1 = 17, इसलिए option A सही है (यही वजह है कि 11.0592 MHz crystal standard baud rates के लिए zero error देता है)। 25, 51 और 103 अन्य Fosc/baud combinations के लिए आते हैं, यह calculation से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q40",
+      "question": "I2C protocol में \"clock stretching\" का क्या अर्थ है?",
+      "options": ["master SCL की frequency permanently बढ़ा देता है", "slave device processing complete करने तक SCL line को low खींच कर रखे रहता है, जिससे master को wait करना पड़ता है", "master SDA line को stretch करके ज्यादा bits भेजता है", "यह सिर्फ SPI protocol की feature है"],
+      "correctIndex": 1,
+      "explanation": "जब slow slave device data process करने में समय लेता है, तो वह SCL को low खींचकर master को रोक देता है (clock stretching), master इसके बाद ही आगे बढ़ता है, इसलिए option B सही है। Frequency permanently बढ़ाना clock stretching नहीं है (option A)। SDA data line है, उसे \"stretch\" करने का कोई ऐसा concept नहीं (option C)। यह I2C-specific feature है, SPI में नहीं (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q41",
+      "question": "I2C में \"NACK (Not Acknowledge)\" कैसे indicate होता है?",
+      "options": ["receiver SCL को low खींच देता है", "master START condition दोबारा भेजता है", "9वें clock pulse पर receiver SDA को high ही छोड़ देता है (low नहीं खींचता)", "receiver data byte को double भेजता है"],
+      "correctIndex": 2,
+      "explanation": "ACK के लिए receiver SDA को low खींचता है; अगर वह SDA को high ही रहने दे (न खींचे), तो इसे NACK माना जाता है, यानी byte receive नहीं हुआ या समझ नहीं आया, इसलिए option C सही है। SCL low खींचना clock stretching है (option A), repeated START एक अलग concept है (option B), और data double भेजना NACK का तरीका नहीं है (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q42",
+      "question": "I2C में master जो पहला byte bus पर भेजता है, उसकी structure क्या होती है (standard 7-bit addressing में)?",
+      "options": ["8-bit पूरी तरह data byte", "16-bit extended address", "सिर्फ clock configuration bits", "7-bit slave address + 1 R/W bit जो बताता है कि आगे read होगा या write"],
+      "correctIndex": 3,
+      "explanation": "Standard 7-bit addressing में पहला byte 7 address bits और 8वाँ bit R/W (0 = write, 1 = read) होता है, इसलिए option D सही है। यह पूरी तरह data byte नहीं है (option A), न ही 16-bit address (option B, वह 10-bit extended addressing में भी अलग तरह होता है), और clock configuration इस byte से संबंधित नहीं है (option C)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q43",
+      "question": "I2C multi-master system में जब दो masters एक साथ bus access करने की कोशिश करते हैं, तो \"arbitration\" कैसे resolve होती है?",
+      "options": ["हर master अपने भेजे गए SDA bit को actual bus level से compare करता है; फर्क आने पर जो master अपना bit low नहीं रख पाया वह arbitration हार जाता है और रुक जाता है", "जो master पहले SS line low करता है वह जीत जाता है", "दोनों masters एक साथ data भेजते रहते हैं, कोई conflict नहीं होता", "एक fixed priority register decide करता है, bus देखने की जरूरत नहीं"],
+      "correctIndex": 0,
+      "explanation": "I2C में हर master अपने transmit किए bit को bus के actual SDA level से compare करता है; जैसे ही mismatch आता है (किसी ने 1 भेजा पर bus 0 पर है), वह master arbitration हार कर transmission रोक देता है, इसलिए option A सही है। SS line SPI का concept है, I2C में नहीं (option B)। बिना conflict resolution के दोनों एक साथ चलना गलत data देगा (option C)। I2C में कोई fixed priority register नहीं होता, arbitration dynamically bus देखकर होती है (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q44",
+      "question": "I2C के standard speed modes के बारे में कौन-सा कथन सही है?",
+      "options": ["Standard mode 400 kHz और Fast mode 100 kHz होता है", "Standard mode ≈100 kHz, Fast mode ≈400 kHz और High-speed mode ≈3.4 MHz तक जाता है", "I2C की speed हमेशा fixed 1 Mbps होती है", "I2C में speed सिर्फ SPBRG register से set होती है"],
+      "correctIndex": 1,
+      "explanation": "I2C specification में Standard mode ≈100 kHz, Fast mode ≈400 kHz और High-speed mode ≈3.4 MHz तक define किए गए हैं, इसलिए option B सही है। Option A ने values उलट दिए हैं। I2C की speed fixed नहीं है, mode के हिसाब से बदलती है (option C)। SPBRG PIC USART का register है, I2C की clock rate PIC में इससे अलग register (जैसे SSPADD) से set होती है (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q45",
+      "question": "I2C protocol के data validity rule के अनुसार SDA line के बारे में क्या सही है?",
+      "options": ["SDA हमेशा SCL से पहले change होनी चाहिए", "SDA का level कोई matter नहीं करता, सिर्फ SCL important है", "जब SCL high हो तब SDA stable रहनी चाहिए; SDA सिर्फ SCL low होने पर change हो सकती है (START/STOP conditions के अलावा)", "SDA और SCL दोनों एक साथ continuously toggle होते रहते हैं"],
+      "correctIndex": 2,
+      "explanation": "I2C का data validity rule कहता है कि SCL high होने पर SDA stable रहनी चाहिए ताकि data सही से read हो; SDA सिर्फ SCL low रहते हुए change होती है, सिर्फ START/STOP conditions इस नियम का अपवाद हैं जब SCL high रहते SDA बदलती है, इसलिए option C सही है। Options A, B और D इस rule का सही वर्णन नहीं देते।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q46",
+      "question": "I2C में \"General Call Address\" (0x00) का क्या purpose होता है?",
+      "options": ["यह सबसे fast slave का permanent address होता है", "यह सिर्फ master के अपने internal use के लिए reserved होता है, bus पर कभी नहीं जाता", "यह baud rate set करने के लिए use होता है", "master इसे भेजकर bus के सभी slave devices को एक साथ (broadcast की तरह) address करता है"],
+      "correctIndex": 3,
+      "explanation": "Address 0x00 एक special reserved \"general call\" address है जिसे master भेजता है तो सभी slaves जो इसे support करते हैं simultaneously respond/listen करते हैं, एक प्रकार का broadcast, इसलिए option D सही है। यह किसी specific fast slave का address नहीं है (option A), master internal use तक सीमित नहीं है बल्कि bus पर भेजा जाता है (option B), और baud rate से इसका संबंध नहीं है (option C)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q47",
+      "question": "PIC microcontroller में MSSP module के SSPCON (SSP Control) register का मुख्य काम क्या है?",
+      "options": ["SPI या I2C mode select करना और उनके operating mode/speed से संबंधित control bits set करना", "सिर्फ USART baud rate set करना", "सिर्फ ADC channel select करना", "सिर्फ digital output port की direction set करना"],
+      "correctIndex": 0,
+      "explanation": "SSPCON register MSSP module को SPI या I2C mode में configure करता है और mode-specific control bits (जैसे master/slave, clock rate) set करता है, इसलिए option A सही है। Baud rate USART के SPBRG से संबंधित है, SSPCON से नहीं (option B)। ADC channel selection ADCON registers से होता है (option C)। Port direction TRIS registers से होता है, SSPCON से नहीं (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q48",
+      "question": "SPI protocol में clock polarity (CPOL) और clock phase (CPHA) के combinations से कुल कितने standard SPI modes बनते हैं?",
+      "options": ["2", "4 (Mode 0, 1, 2, 3), जो CPOL और CPHA के 2×2 combinations से बनती हैं", "8", "सिर्फ 1 fixed mode होता है"],
+      "correctIndex": 1,
+      "explanation": "CPOL (idle clock level: 0 या 1) और CPHA (data sample करने का edge: leading या trailing) के दो-दो values मिलकर 2×2 = 4 standard SPI modes (0,1,2,3) बनाते हैं, इसलिए option B सही है। 2 या 8 modes की कोई standard definition नहीं है (options A, C)। SPI का mode fixed नहीं होता, device application के हिसाब से चुना जाता है (option D)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q49",
+      "question": "SPI data transfer के बारे में क्या सही है जब master और slave के shift registers connect होते हैं?",
+      "options": ["सिर्फ master data भेज सकता है, slave कभी नहीं", "data transfer एक समय में सिर्फ एक direction में होता है जैसे half-duplex", "master और slave के shift registers इस तरह connect होते हैं कि हर clock pulse पर master से slave और slave से master, दोनों तरफ simultaneously एक-एक bit shift होता है", "data shift होने के लिए अलग baud rate generator register जैसे SPBRG जरूरी है"],
+      "correctIndex": 2,
+      "explanation": "SPI में master और slave के shift registers एक circular loop की तरह connected होते हैं; हर clock edge पर एक bit master से slave (SDO→SDI) और एक bit slave से master (SDO→SDI) simultaneously shift होता है, यानी full-duplex transfer, इसलिए option C सही है। Slave भी data भेज सकता है (option A गलत)। यह half-duplex नहीं, full-duplex है (option B गलत)। SPI का clock SCK से सीधे generate होता है, USART जैसा SPBRG जरूरी नहीं (option D गलत, PIC में SPI clock rate SSPCON के bits से set होती है)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q50",
+      "question": "I2C के ACK/NACK mechanism की तुलना में SPI protocol में data integrity के बारे में क्या सही है?",
+      "options": ["SPI में भी हर byte के बाद ACK bit होता है", "SPI automatically corrupt data को दोबारा भेजता है", "SPI में CRC check hardware level पर mandatory है", "SPI में कोई built-in acknowledgment नहीं होता; अगर slave ready न हो या data miss हो जाए तो hardware level पर कोई error signal नहीं मिलता, यह software design पर depend करता है"],
+      "correctIndex": 3,
+      "explanation": "SPI एक simple shift-register based protocol है जिसमें I2C जैसा ACK/NACK bit नहीं होता, इसलिए data miss होने पर भी hardware कुछ बताता नहीं, reliability software logic (जैसे fixed timing, ready signals) पर depend करती है, इसलिए option D सही है। Options A, B और C SPI की actual (बिना इन built-in features के) working का गलत वर्णन हैं।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q51",
+      "question": "PIC MSSP के SPI mode में SS pin का behavior master mode और slave mode में कैसे अलग होता है?",
+      "options": ["Slave mode में SS pin को low करना जरूरी होता है ताकि वह slave active हो और data exchange करे; master mode में SS pin generally इस role के लिए use नहीं होता (या general I/O रहता है)", "Master mode में SS pin को low करना जरूरी होता है", "SS pin का use सिर्फ baud rate set करने के लिए होता है", "SS pin दोनों modes में हमेशा ignore होता है"],
+      "correctIndex": 0,
+      "explanation": "Slave mode में SS/CS pin को low किए बिना slave अपना SDO output drive नहीं करता (यह active होने का signal है); master mode में device खुद ही communication start करता है, इसलिए यह select role वहाँ लागू नहीं होता, इसलिए option A सही है। Master को SS low करने की जरूरत नहीं (option B गलत, master ही दूसरे slave की SS line को control करता है)। SS का baud rate से संबंध नहीं है (option C)। Slave mode में SS ignore नहीं होता, उसका role critical है (option D गलत)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q52",
+      "question": "External SD card या serial Flash memory को high speed data transfer के लिए interface करते समय SPI को prefer क्यों किया जाता है?",
+      "options": ["क्योंकि SPI में device addressing simple होती है जैसे I2C", "क्योंकि SPI dedicated SDO/SDI lines और high clock rate की वजह से I2C के मुकाबले काफी तेज data throughput देता है", "क्योंकि SPI के लिए कोई clock line नहीं चाहिए", "क्योंकि SPI में सिर्फ एक ही wire का use होता है"],
+      "correctIndex": 1,
+      "explanation": "SPI में full-duplex dedicated lines और high SCK frequency support होने से बड़े data blocks (जैसे SD card/Flash memory) high speed में transfer हो सकते हैं, जो I2C से तेज होता है, इसलिए option B सही है। SPI addressing नहीं करता, SS line से device select करता है (option A गलत)। SPI को SCK line चाहिए ही होती है (option C गलत)। SPI single wire पर नहीं चलता, multiple dedicated lines use करता है (option D गलत)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q53",
+      "question": "SPI protocol में clock (SCK) signal के बारे में क्या सही है?",
+      "options": ["हर slave अपनी अलग clock generate करता है", "clock line optional होती है, चाहे तो हटा सकते हैं", "SCK हमेशा master device generate करता है; slave devices सिर्फ इसी clock को follow करते हैं, खुद clock generate नहीं करते", "clock line data के साथ multiplex होती है, अलग pin नहीं होती"],
+      "correctIndex": 2,
+      "explanation": "SPI एक master-driven synchronous protocol है जिसमें SCK हमेशा master generate करता है और सभी connected slaves उसी common clock के साथ synchronize होते हैं, इसलिए option C सही है। Slaves अपनी clock generate नहीं करते (option A गलत)। SCK जरूरी है, हटाया नहीं जा सकता क्योंकि यह timing का आधार है (option B गलत)। SPI में SCK के लिए अलग dedicated pin होता है, data के साथ multiplex नहीं होती (option D गलत)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q54",
+      "question": "PIC microcontroller के MSSP module में SPI master mode का clock rate (जैसे Fosc/4, Fosc/16, Fosc/64) कैसे select किया जाता है?",
+      "options": ["SPBRG register में value load करके", "TRISC register के bits set करके", "सिर्फ crystal frequency बदल कर", "SSPCON register के SSPM (SSP Mode select) bits set करके"],
+      "correctIndex": 3,
+      "explanation": "SPI master mode में clock rate SSPCON register के SSPM bits से select होता है (जिनसे Fosc/4, Fosc/16, Fosc/64 या Timer2 based clock चुना जा सकता है), इसलिए option D सही है। SPBRG USART baud rate का register है, SPI clock rate से नहीं (option A)। TRISC pin direction set करता है, clock rate नहीं (option B)। Crystal frequency बदलना पूरे system का Fosc बदल देगा, सिर्फ SPI clock select करने का तरीका नहीं है (option C)।"
+    },
+    {
+      "id": "u2_pic_serial_comm_q55",
+      "question": "एक application में external serial EEPROM से बहुत बड़ा data block बहुत तेजी से transfer करना है और सिर्फ एक ही device connect है; तीनों protocols (USART, I2C, SPI) में से सबसे उपयुक्त कौन सा होगा और क्यों?",
+      "options": ["SPI, क्योंकि high clock rate, full-duplex dedicated lines और simple shift-register mechanism high-speed point-to-point transfer के लिए best suited है", "I2C, क्योंकि उसमें सबसे ज्यादा devices जुड़ सकते हैं", "USART, क्योंकि उसमें clock line की जरूरत नहीं", "तीनों protocols की speed exactly same होती है, कोई फर्क नहीं पड़ता"],
+      "correctIndex": 0,
+      "explanation": "Single dedicated high-speed device के लिए SPI अपनी high clock rate, full-duplex nature और simple protocol की वजह से सबसे तेज और उपयुक्त होता है, इसलिए option A सही है। I2C का multi-device advantage यहाँ जरूरी नहीं (option B), और I2C धीमी होती है। USART में clock न होना इस scenario में फायदा नहीं देता, और वह SPI से धीमा होता है (option C)। तीनों protocols की speed अलग-अलग होती है (option D गलत)।"
     }
   ]
 }

@@ -178,6 +178,28 @@ export async function downloadPracticeSetAnswersPdf(setNumber, questions) {
   doc.save(`practice-set-${String(setNumber).padStart(2, '0')}-with-answers.pdf`)
 }
 
+function safeFileName(label) {
+  return label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+}
+
+/** Downloads a blank worksheet PDF (questions + options only, no answers) for a Unit Practice Set. */
+export async function downloadUnitPracticeSetWorksheetPdf(label, questions) {
+  const doc = await renderBlocksToPdf(questionBlocks(questions, { withAnswers: false }), {
+    title: label,
+    subtitle: `${questions.length} Questions`,
+  })
+  doc.save(`${safeFileName(label) || 'unit-practice-set'}-worksheet.pdf`)
+}
+
+/** Downloads the full PDF (questions + options + correct answer marked + explanations) for a Unit Practice Set. */
+export async function downloadUnitPracticeSetAnswersPdf(label, questions) {
+  const doc = await renderBlocksToPdf(questionBlocks(questions, { withAnswers: true }), {
+    title: label,
+    subtitle: `${questions.length} Questions · Answer Key & Explanations`,
+  })
+  doc.save(`${safeFileName(label) || 'unit-practice-set'}-with-answers.pdf`)
+}
+
 /** Downloads a PDF of a completed attempt review (question + user's answer + correct answer + explanation). */
 export async function downloadAttemptReviewPdf(scopeLabel, questions) {
   const blocks = []

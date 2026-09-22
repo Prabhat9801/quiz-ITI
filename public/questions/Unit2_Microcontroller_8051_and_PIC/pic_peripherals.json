@@ -213,6 +213,66 @@
       "options": ["समान Vref पर छोटा step size मिलता है यानी input voltage को अधिक बारीकी से माप सकते हैं", "conversion हमेशा तेज हो जाती है", "Vref की जरूरत खत्म हो जाती है", "power खपत शून्य हो जाती है"],
       "correctIndex": 0,
       "explanation": "अधिक bits से 2^n बड़ा होता है इसलिए step size (Vref/2^n) छोटा और measurement अधिक बारीक होता है, इसलिए option A सही है। यह conversion तेज करना, Vref हटाना या power शून्य करना नहीं दर्शाता।"
+    },
+    {
+      "id": "u2_pic_peripherals_q31",
+      "question": "ADC (Analog-to-Digital Converter) में quantization error की सही परिभाषा क्या है?",
+      "options": [
+        "यह ADC की resolution (bits की संख्या) को सीधे दर्शाने वाला पैरामीटर है",
+        "यह वह अनिवार्य error है जो किसी continuous analog signal को discrete digital levels में convert करते समय step size के कारण उत्पन्न होता है, जिसका अधिकतम मान लगभग ±(1/2) LSB होता है",
+        "यह केवल external electrical noise के कारण उत्पन्न होने वाला error है",
+        "यह sampling frequency गलत चुनने पर होने वाली aliasing error है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Quantization error digitization की एक बुनियादी सीमा है — किसी continuous analog value को finite discrete levels में approximate करने पर उत्पन्न अंतर, जिसका worst-case मान ±(1/2) LSB (step/2) होता है, इसलिए option B सही है। Option A resolution की परिभाषा है (bits की संख्या), quantization error नहीं; option C noise error है जो अलग स्रोत से आता है; option D aliasing (sampling theorem violation) है, जो quantization से अलग समस्या है।"
+    },
+    {
+      "id": "u2_pic_peripherals_q32",
+      "question": "PIC microcontroller के comparator module में CMCON register के C1OUT और C2OUT bits किस बात का संकेत देते हैं?",
+      "options": [
+        "Timer1 module का overflow status",
+        "ADC का GO/DONE conversion status",
+        "संबंधित comparator (C1 अथवा C2) के दो analog inputs VIN+ और VIN- की तुलना का current output logic state",
+        "USART का data-ready (RCIF) status"
+      ],
+      "correctIndex": 2,
+      "explanation": "C1OUT और C2OUT bits अपने-अपने comparator के real-time comparison result को reflect करते हैं — यानी VIN+, VIN- से बड़ा है या छोटा, इसके अनुसार logic 1/0, इसलिए option C सही है। Option A Timer1 overflow (TMR1IF) से संबंधित है, option B ADC के GO/DONE bit से और option D USART के RCIF flag से संबंधित है, comparator से नहीं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q33",
+      "question": "जब किसी enabled comparator module का output किसी transition (logic state में बदलाव) से गुजरता है, तो PIC में कौन सा interrupt flag set होता है?",
+      "options": [
+        "CMIF (Comparator Interrupt Flag)",
+        "ADIF (A/D Interrupt Flag)",
+        "TMR2IF (Timer2 Interrupt Flag)",
+        "RCIF (USART Receive Interrupt Flag)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Comparator module का अपना dedicated interrupt flag CMIF होता है जो output में transition होने पर set होता है (PIR register में), इसलिए option A सही है। ADIF ADC conversion complete होने पर, TMR2IF Timer2 overflow/match पर और RCIF USART में नया byte receive होने पर set होते हैं — comparator transition से इनका सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u2_pic_peripherals_q34",
+      "question": "एक 10-bit ADC में Vref = 5V है, जिससे step size ≈ 4.88 mV बनता है। इस ADC का theoretical अधिकतम (worst-case) quantization error लगभग कितना होगा?",
+      "options": [
+        "± 1.22 mV",
+        "± 4.88 mV",
+        "± 9.76 mV",
+        "± 2.44 mV"
+      ],
+      "correctIndex": 3,
+      "explanation": "Worst-case quantization error = ± (step size / 2) = ± (4.88 mV / 2) ≈ ± 2.44 mV, इसलिए option D सही है। Option A बहुत छोटा (लगभग step/4) है, option B पूरा step size (1 LSB) है और option C पूरे step का दोगुना है — दोनों actual quantization error से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_peripherals_q35",
+      "question": "Analog comparator, किसी input voltage के threshold-crossing को detect करने में ADC की तुलना में सामान्यतः बहुत अधिक तेज़ (faster response) क्यों साबित होता है?",
+      "options": [
+        "क्योंकि comparator circuit में कोई transistor नहीं होता",
+        "क्योंकि comparator को केवल दो voltages की instantaneous (लगभग तुरंत) तुलना करनी होती है, जबकि ADC को SAR algorithm के अंतर्गत bit-by-bit कई approximation steps (कई clock cycles) चलाने पड़ते हैं",
+        "क्योंकि comparator हमेशा digital signal पर सीधे काम करता है",
+        "क्योंकि ADC में कोई Vref नहीं होता, इसलिए वह धीमा रहता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Comparator एक simple analog decision circuit है जो दो voltages की तुलना कर लगभग तत्काल HIGH/LOW output देता है, जबकि SAR-based ADC को n-bit resolution के लिए n approximation cycles (प्रत्येक में Tad clock) चलाना पड़ता है, इसलिए वह तुलनात्मक रूप से धीमा होता है — option B सही है। Option A तथ्यात्मक रूप से गलत है (comparator में भी transistors होते हैं), option C गलत है (comparator analog inputs पर ही काम करता है), और option D गलत है क्योंकि ADC को भी Vref चाहिए होता है।"
     }
   ]
 }

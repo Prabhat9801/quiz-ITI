@@ -363,6 +363,306 @@
       ],
       "correctIndex": 2,
       "explanation": "मानक 555 monostable non-retriggerable तरह से व्यवहार करता है; timing cycle पूरा होने तक बीच के अतिरिक्त trigger का सामान्यतः कोई प्रभाव नहीं पड़ता और यह अपनी 1.1RC अवधि पूरी करता है, इसलिए यही सही है। यह न तो तुरंत reset होता है, न frequency बदलता है, न capacitor तुरंत full charge होता है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q31",
+      "question": "555 timer IC सामान्यतः किस package में उपलब्ध होता है और इसमें कुल कितनी pins होती हैं?",
+      "options": [
+        "8-pin DIP (या समान) package, कुल 8 pins",
+        "14-pin DIP package, कुल 14 pins",
+        "16-pin DIP package, कुल 16 pins",
+        "केवल 6 pins वाला package"
+      ],
+      "correctIndex": 0,
+      "explanation": "555 timer IC मानक रूप से 8-pin package (जैसे DIP-8) में आता है जिसमें GND, Trigger, Output, Reset, Control Voltage, Threshold, Discharge और Vcc — ये कुल 8 pins होती हैं, इसलिए यही सही है। 14, 16 या 6 pins वाले package इस IC के लिए सही नहीं हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q32",
+      "question": "555 timer के internal block diagram में मुख्य रूप से कौन-से blocks होते हैं?",
+      "options": [
+        "केवल एक amplifier और एक resistor",
+        "तीन resistor की voltage divider, दो comparator, एक SR flip-flop, एक discharge transistor और एक output buffer/driver stage",
+        "केवल एक free-running oscillator circuit",
+        "चार op-amp और एक binary counter"
+      ],
+      "correctIndex": 1,
+      "explanation": "555 के अंदर voltage divider (Vcc/3, 2Vcc/3 बनाने के लिए), दो comparator (upper व lower), एक SR flip-flop, discharge transistor और output stage होते हैं, इसलिए यही सही है। बाकी विकल्प internal architecture को गलत तरीके से बताते हैं; 555 में कोई counter नहीं होता।"
+    },
+    {
+      "id": "u1_multivibrators_555_q33",
+      "question": "निम्नलिखित में से कौन-सा application astable multivibrator mode के लिए सबसे उपयुक्त है?",
+      "options": [
+        "Switch की bounce को हटाना (debouncing)",
+        "एक बार का fixed-width delay pulse उत्पन्न करना",
+        "LED flasher या clock/square-wave generator जैसे continuous oscillation की आवश्यकता वाले circuit",
+        "केवल एक स्थिर (constant) DC voltage output देना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Astable mode बिना trigger के लगातार oscillate करता है, इसलिए यह continuous square wave चाहने वाले applications जैसे LED flasher या clock generator के लिए उपयुक्त है, इसलिए यही सही है। Debouncing और fixed-width single pulse monostable के काम हैं, और astable कभी स्थिर DC output नहीं देता।"
+    },
+    {
+      "id": "u1_multivibrators_555_q34",
+      "question": "निम्नलिखित में से कौन-सा application monostable multivibrator mode के लिए सबसे उपयुक्त है?",
+      "options": [
+        "लगातार square wave उत्पन्न करने वाला clock generator",
+        "Free-running tone generator जो बिना trigger के बजता रहे",
+        "LED flasher जो लगातार blink करता रहे",
+        "Switch debouncing या trigger मिलने पर एक निश्चित अवधि का single pulse/time-delay उत्पन्न करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Monostable की एक stable state होती है और trigger पर यह एक निश्चित चौड़ाई का single pulse देता है, इसलिए यह switch debouncing और fixed time-delay जैसे applications के लिए उपयुक्त है, यही सही है। लगातार oscillate करने वाले clock/tone/flasher applications astable के काम हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q35",
+      "question": "555 monostable को सही तरीके से trigger करने के लिए pin 2 पर आने वाले negative-going trigger pulse की width कैसी होनी चाहिए?",
+      "options": [
+        "output pulse width (1.1RC) से छोटी, ताकि circuit अपना पूरा timing cycle बिना बाधा के पूरा कर सके",
+        "output pulse width से बड़ी होनी चाहिए",
+        "trigger pulse की width का timing पर कोई प्रभाव नहीं पड़ता",
+        "trigger pulse हमेशा positive-going होनी चाहिए, negative कभी नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "Standard non-retriggerable 555 monostable में trigger pulse को output pulse width से छोटा रखा जाता है ताकि cycle चलते समय trigger pin अपनी सामान्य स्थिति में लौट सके और गलत/बार-बार triggering न हो, इसलिए यही सही है। बड़ी width समस्या पैदा कर सकती है, trigger का असर होता है, और standard 555 का trigger negative-going ही होता है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q36",
+      "question": "एक 555 astable circuit में Ra = 2kΩ, Rb = 4kΩ और C = 0.1µF है। इसकी frequency लगभग कितनी होगी?",
+      "options": [
+        "लगभग 720 Hz",
+        "लगभग 1.44 kHz",
+        "लगभग 2.88 kHz",
+        "लगभग 144 Hz"
+      ],
+      "correctIndex": 1,
+      "explanation": "f = 1.44/((Ra+2Rb)C) = 1.44/((2000+8000)×0.1×10⁻⁶) = 1.44/(10000×10⁻⁷) = 1.44/0.001 = 1440 Hz ≈ 1.44 kHz, इसलिए यही सही है। बाकी मान इस गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q37",
+      "question": "ऊपर वाले circuit (Ra = 2kΩ, Rb = 4kΩ, C = 0.1µF) में duty cycle लगभग कितनी होगी?",
+      "options": [
+        "50%",
+        "40%",
+        "60%",
+        "75%"
+      ],
+      "correctIndex": 2,
+      "explanation": "Duty cycle = (Ra+Rb)/(Ra+2Rb) = (2000+4000)/10000 = 6000/10000 = 0.6 = 60%, इसलिए यही सही है। बाकी प्रतिशत इस अनुपात से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q38",
+      "question": "एक 555 monostable में R = 220kΩ और C = 1µF है। output pulse width लगभग कितनी होगी?",
+      "options": [
+        "लगभग 2.42 s",
+        "लगभग 0.022 s",
+        "लगभग 1.1 s",
+        "लगभग 0.242 s"
+      ],
+      "correctIndex": 3,
+      "explanation": "T = 1.1RC = 1.1 × 220,000 × 1×10⁻⁶ = 1.1 × 0.22 = 0.242 s, इसलिए यही सही है। बाकी मान इस गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q39",
+      "question": "555 astable में यदि केवल capacitor C का मान बढ़ा दिया जाए (Ra, Rb वही रहें), तो क्या प्रभाव पड़ता है?",
+      "options": [
+        "Frequency घट जाती है परंतु duty cycle लगभग same रहती है, क्योंकि T_high और T_low दोनों समान अनुपात में बढ़ते हैं",
+        "Frequency बढ़ जाती है और duty cycle भी बदल जाती है",
+        "केवल duty cycle बदलती है, frequency same रहती है",
+        "Output waveform sine wave में बदल जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "T_high = 0.693(Ra+Rb)C और T_low = 0.693RbC दोनों C के सीधे अनुपात में बढ़ते हैं, इसलिए period बढ़ने से frequency घटती है परंतु उनका अनुपात (duty cycle) वही रहता है, यही सही है। duty cycle Ra व Rb के अनुपात पर निर्भर करती है, C बदलने से वह नहीं बदलती, और 555 कभी sine wave output नहीं देता।"
+    },
+    {
+      "id": "u1_multivibrators_555_q40",
+      "question": "Standard 555 astable में duty cycle हमेशा 50% से अधिक रहती है। duty cycle को लगभग 50% (या उससे कम) तक लाने के लिए सामान्यतः क्या तरकीब अपनाई जाती है?",
+      "options": [
+        "Rb को पूरी तरह हटा देना",
+        "C का मान दोगुना कर देना",
+        "Reset pin (pin 4) को GND से जोड़ देना",
+        "Rb के parallel में एक diode लगाना ताकि charging के समय Rb का प्रभाव bypass हो जाए और T_high मुख्यतः Ra पर निर्भर हो जाए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Rb के parallel में diode (cathode capacitor की ओर) लगाने से charging के समय current diode से होकर बहता है और Rb का असर कम हो जाता है, जिससे T_high ≈ 0.693 Ra C हो जाता है और Ra = Rb रखकर duty cycle लगभग 50% के करीब लाई जा सकती है, इसलिए यही सही है। Rb हटाने, C दोगुना करने या Reset को GND से जोड़ने से circuit की timing खराब हो जाएगी या timer काम करना बंद कर देगा।"
+    },
+    {
+      "id": "u1_multivibrators_555_q41",
+      "question": "555 timer के अंदर discharge transistor के बारे में कौन-सा कथन सही है?",
+      "options": [
+        "यह एक PNP transistor है जिसका emitter pin 7 से जुड़ा है",
+        "यह एक zener diode है जो internal voltage regulate करता है",
+        "यह एक NPN transistor है जिसका collector pin 7 (Discharge) से और emitter GND से जुड़ा है, base flip-flop के output द्वारा नियंत्रित होता है",
+        "यह output buffer stage का ही एक हिस्सा है, अलग transistor नहीं होता"
+      ],
+      "correctIndex": 2,
+      "explanation": "Discharge transistor एक NPN transistor होता है जिसका collector pin 7 से, emitter GND से जुड़ा होता है, और flip-flop का Q output इसके base को drive करता है ताकि यह timing capacitor को discharge कर सके, इसलिए यही सही है। यह न PNP है, न zener diode है, और यह output buffer से अलग एक स्वतंत्र block है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q42",
+      "question": "मानक बाइपोलर 555 timer IC किस सामान्य Vcc range में सही ढंग से कार्य करता है?",
+      "options": [
+        "लगभग 4.5V से 15V (कुछ versions में लगभग 18V तक)",
+        "केवल ठीक 5V पर, अन्य कोई voltage नहीं चलता",
+        "लगभग 1V से 3V के बीच",
+        "केवल 50V से 100V के बीच"
+      ],
+      "correctIndex": 0,
+      "explanation": "मानक बाइपोलर 555 IC लगभग 4.5V से 15V (कुछ versions में 16-18V तक) की Vcc range में काम करने के लिए बनाया गया है, इसलिए यही सही है। केवल 5V तक सीमित होना, बहुत कम (1-3V) या बहुत अधिक (50-100V) range इस IC की actual rating से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q43",
+      "question": "निम्नलिखित में से कौन-सा जोड़ा (mode – application) सही रूप से सुमेलित है?",
+      "options": [
+        "Monostable – लगातार चलने वाला square wave clock generator",
+        "Astable – switch debounce circuit",
+        "Astable – एक बार का fixed delay one-shot timer",
+        "Astable – LED/tone flasher जैसे continuous oscillation applications, Monostable – switch debounce/one-shot time-delay applications"
+      ],
+      "correctIndex": 3,
+      "explanation": "Astable अपने free-running oscillation के कारण continuous flasher/tone जैसे कामों में और monostable अपने single pulse behaviour के कारण debounce/time-delay जैसे कामों में उपयुक्त होता है, इसलिए यही जोड़ा सही है। बाकी विकल्पों में mode और application आपस में उल्टे/गलत जोड़े गए हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q44",
+      "question": "एक 555 astable circuit में Ra = 5kΩ, Rb = 5kΩ और C = 1µF है। इसकी frequency लगभग कितनी होगी?",
+      "options": [
+        "लगभग 48 Hz",
+        "लगभग 96 Hz",
+        "लगभग 192 Hz",
+        "लगभग 480 Hz"
+      ],
+      "correctIndex": 1,
+      "explanation": "f = 1.44/((Ra+2Rb)C) = 1.44/((5000+10000)×1×10⁻⁶) = 1.44/(15000×10⁻⁶) = 1.44/0.015 = 96 Hz, इसलिए यही सही है। बाकी मान इस गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q45",
+      "question": "ऊपर वाले circuit (Ra = 5kΩ, Rb = 5kΩ, C = 1µF) में duty cycle लगभग कितनी होगी?",
+      "options": [
+        "50%",
+        "60%",
+        "लगभग 66.7%",
+        "75%"
+      ],
+      "correctIndex": 2,
+      "explanation": "Duty cycle = (Ra+Rb)/(Ra+2Rb) = (5000+5000)/15000 = 10000/15000 ≈ 0.667 = 66.7%, इसलिए यही सही है। बाकी प्रतिशत इस अनुपात से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q46",
+      "question": "एक 555 monostable timer में R = 33kΩ और C = 100µF है। output pulse width लगभग कितनी होगी?",
+      "options": [
+        "लगभग 0.363 s",
+        "लगभग 36.3 s",
+        "लगभग 33 s",
+        "लगभग 3.63 s"
+      ],
+      "correctIndex": 3,
+      "explanation": "T = 1.1RC = 1.1 × 33,000 × 100×10⁻⁶ = 1.1 × 3.3 = 3.63 s, इसलिए यही सही है। बाकी मान इस गणना से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q47",
+      "question": "555 monostable circuit में pin 2 (Trigger) पर cycle शुरू करने के लिए किस प्रकार का signal देना चाहिए?",
+      "options": [
+        "एक स्थिर (constant) HIGH level",
+        "एक negative-going pulse या edge जो momentarily Vcc/3 से नीचे जाए",
+        "एक sine wave input",
+        "pin को बस खुला (floating) छोड़ देना ही पर्याप्त है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trigger pin पर एक momentary negative-going pulse चाहिए जो Vcc/3 से नीचे जाए ताकि lower comparator flip-flop को set कर दे और timing cycle शुरू हो जाए, इसलिए यही सही है। स्थिर HIGH level, sine wave या floating pin से सही triggering नहीं मिलती।"
+    },
+    {
+      "id": "u1_multivibrators_555_q48",
+      "question": "555 astable circuit में resistor Ra किस path में भाग लेता है?",
+      "options": [
+        "केवल discharge path में; charging में इसका कोई योगदान नहीं होता",
+        "charging और discharge दोनों paths में बराबर योगदान देता है",
+        "केवल charging path में; discharge के दौरान capacitor केवल Rb के माध्यम से discharge होता है, Ra इस path में शामिल नहीं होता",
+        "Ra का timing से कोई संबंध नहीं होता, यह केवल एक pull-up resistor है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Charging के दौरान current Vcc से Ra और Rb दोनों से होकर capacitor तक जाता है, परंतु discharge के दौरान discharge transistor pin 7 को GND से जोड़ देता है जिससे capacitor केवल Rb से होकर discharge होता है, इसलिए Ra केवल charging path में है, यही सही है। बाकी विकल्प Ra की भूमिका को गलत बताते हैं।"
+    },
+    {
+      "id": "u1_multivibrators_555_q49",
+      "question": "555 timer के output pin की HIGH state में output voltage लगभग किसके करीब होता है?",
+      "options": [
+        "लगभग Vcc से 1-1.5V कम, यानी Vcc के काफी करीब",
+        "हमेशा ठीक 5V, Vcc की मात्रा की परवाह किए बिना",
+        "0V के करीब",
+        "Vcc/2 के करीब"
+      ],
+      "correctIndex": 0,
+      "explanation": "555 का totem-pole output stage HIGH state में लगभग Vcc से 1 से 1.5V कम voltage देता है (internal transistor drop के कारण), जो Vcc के काफी करीब होता है, इसलिए यही सही है। यह Vcc की मात्रा से independent 5V नहीं होता, न ही HIGH state में यह 0V या Vcc/2 के करीब होता है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q50",
+      "question": "555 के दो comparators में से lower comparator किस pin से input लेता है और किस reference से तुलना करता है?",
+      "options": [
+        "Pin 6 (Threshold) से input लेकर Vcc/3 से तुलना करता है",
+        "Pin 2 (Trigger) से input लेकर Vcc/3 से तुलना करता है",
+        "Pin 5 (Control Voltage) से input लेकर 2Vcc/3 से तुलना करता है",
+        "Pin 7 (Discharge) से input लेकर Vcc/2 से तुलना करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lower comparator, Trigger pin (pin 2) से input लेता है और उसकी तुलना Vcc/3 reference से करता है; इसी comparator के आधार पर flip-flop set होता है, इसलिए यही सही है। Pin 6 (Threshold) upper comparator से जुड़ी होती है जो 2Vcc/3 से तुलना करता है, और बाकी विकल्पों में pin व reference का मिलान गलत है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q51",
+      "question": "555 astable circuit में यदि Ra को गलती से शून्य (short) कर दिया जाए, तो कौन-सी व्यावहारिक समस्या हो सकती है?",
+      "options": [
+        "कुछ नहीं होगा, circuit वैसे ही सामान्य रहेगा",
+        "output permanently HIGH हो जाएगा",
+        "frequency शून्य हो जाएगी",
+        "charge होने के प्रारंभिक क्षण में discharge transistor ON रहते हुए सीधे Vcc से भारी current flow हो सकता है, जो IC को नुकसान पहुँचा सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Ra को शून्य करने पर charging cycle की शुरुआत में, जब discharge transistor अभी ON होता है, Vcc से discharge transistor तक बिना किसी सीमित resistor के भारी current प्रवाहित हो सकता है जिससे IC गर्म होकर खराब हो सकता है, इसलिए यही सही है। circuit सामान्य नहीं रहता, output permanently HIGH नहीं होता और frequency शून्य नहीं होती, बल्कि IC को नुकसान की संभावना रहती है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q52",
+      "question": "555 monostable में output pulse समाप्त होने के बाद (stable state में लौटने पर) timing capacitor का voltage लगभग कितना रह जाता है?",
+      "options": [
+        "लगभग 2Vcc/3",
+        "लगभग Vcc",
+        "लगभग 0V, क्योंकि discharge transistor इसे discharge कर देता है",
+        "लगभग Vcc/3"
+      ],
+      "correctIndex": 2,
+      "explanation": "जैसे ही capacitor voltage 2Vcc/3 तक पहुँचता है, flip-flop reset हो जाता है और discharge transistor ON होकर capacitor को लगभग 0V तक discharge कर देता है, जो अगली trigger तक stable state बनाए रखता है, इसलिए यही सही है। बाकी मान इस stable-state स्थिति से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q53",
+      "question": "Diode-modified astable circuit में यदि diode के कारण लगभग T_high ≈ 0.693 Ra C और T_low = 0.693 Rb C हो जाए, तथा Ra = Rb रखा जाए, तो duty cycle लगभग क्या होगी?",
+      "options": [
+        "लगभग 50%",
+        "लगभग 66%",
+        "लगभग 33%",
+        "लगभग 25%"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब T_high ≈ 0.693 Ra C और T_low = 0.693 Rb C हो और Ra = Rb रखा जाए, तो दोनों समय लगभग बराबर हो जाते हैं, अतः duty cycle = T_high/(T_high+T_low) ≈ 50%, इसलिए यही सही है। बाकी प्रतिशत तभी आते जब Ra और Rb असमान होते।"
+    },
+    {
+      "id": "u1_multivibrators_555_q54",
+      "question": "एक security light circuit में motion sensor से trigger pulse आने पर light को ठीक एक निश्चित समय तक ON रखना है और फिर स्वतः बंद करना है। इसके लिए 555 timer का कौन-सा mode उपयुक्त है?",
+      "options": [
+        "Astable mode, क्योंकि यह लगातार blink करता है",
+        "Bistable mode",
+        "555 का इसमें कोई उपयोग नहीं हो सकता",
+        "Monostable mode, क्योंकि trigger मिलने पर यह एक निश्चित अवधि (1.1RC) का single output pulse देता है जो समय पूरा होने पर स्वयं बंद हो जाता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Monostable mode trigger पर एक fixed-duration single pulse देकर स्वयं वापस stable state में लौट आता है, जो ठीक इस प्रकार के fixed-time-delay applications (जैसे security light) के लिए उपयुक्त है, इसलिए यही सही है। Astable लगातार blink करता रहेगा जो यहाँ काम का नहीं, bistable को अलग trigger से बंद करना पड़ेगा, और 555 इस काम के लिए उपयुक्त है इसलिए तीसरा विकल्प गलत है।"
+    },
+    {
+      "id": "u1_multivibrators_555_q55",
+      "question": "555 astable से बहुत उच्च frequencies (सामान्यतः कुछ MHz से अधिक) प्राप्त करना कठिन क्यों होता है?",
+      "options": [
+        "IC के अंदर comparators व flip-flop की internal propagation delay तथा discharge transistor की switching speed की सीमा के कारण",
+        "क्योंकि Vcc बहुत अधिक (100V से ऊपर) होनी चाहिए",
+        "क्योंकि capacitor का timing पर कोई असर नहीं पड़ता",
+        "क्योंकि 555 केवल DC output दे सकता है, AC नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "बहुत छोटे R और C चुनने पर IC के internal comparators, flip-flop और discharge transistor की propagation delay व switching speed timing formula की तुलना में significant हो जाती है, जिससे actual frequency calculated frequency से भटक जाती है, इसलिए यही सही है। Vcc बढ़ाना, capacitor को अप्रभावी मानना या 555 को केवल DC output वाला कहना तथ्यात्मक रूप से गलत है।"
     }
   ]
 }

@@ -79,6 +79,36 @@ export async function loadQuestionsForTopics(topicRefs) {
   return groups.flat()
 }
 
+let unitPracticeSetsIndexPromise = null
+const unitPracticeSetCache = new Map()
+
+/**
+ * Loads the Unit Practice Sets index — for every Trade Unit, the list of its FIXED sets
+ * (see scripts/generate-unit-practice-sets.mjs), each already labelled with which topics it
+ * covers. Unlike the global Practice Sets (sampled across the whole syllabus), each unit's sets
+ * together cover every question of every topic in that unit.
+ */
+export function loadUnitPracticeSetsIndex() {
+  if (!unitPracticeSetsIndexPromise) {
+    unitPracticeSetsIndexPromise = fetch('/questions/unit-practice-sets/index.json').then((r) => r.json())
+  }
+  return unitPracticeSetsIndexPromise
+}
+
+/**
+ * Loads one FIXED Unit Practice Set (identified by the unit's folder + its set number). Like the
+ * global Practice Sets, this is a permanent, pre-generated list (not a random draw) — Retry always
+ * replays the same set, only the on-screen question/option order is reshuffled per-play.
+ */
+export async function loadUnitPracticeSet(folder, setNumber) {
+  const cacheKey = `${folder}/${setNumber}`
+  if (unitPracticeSetCache.has(cacheKey)) return unitPracticeSetCache.get(cacheKey)
+  const fileName = `set-${String(setNumber).padStart(2, '0')}.json`
+  const data = await fetch(`/questions/unit-practice-sets/${folder}/${fileName}`).then((r) => r.json())
+  unitPracticeSetCache.set(cacheKey, data)
+  return data
+}
+
 function shuffle(array) {
   const result = [...array]
   for (let i = result.length - 1; i > 0; i--) {

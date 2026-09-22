@@ -213,6 +213,66 @@
       "options": ["जब address compile time पर fixed रहता है और कभी नहीं बदलता", "जब किसी array या table के elements को runtime पर calculated address (जैसे loop counter के आधार पर) से access करना हो", "जब केवल एक single fixed register access करना हो", "जब केवल program memory को erase करना हो"],
       "correctIndex": 1,
       "explanation": "indirect addressing (FSR/INDF के जरिए) तब सबसे उपयोगी होती है जब array जैसी data structure के elements को runtime पर calculated address से access करना हो, जैसे loop के माध्यम से, इसलिए option B सही है। बाकी options indirect addressing के मुख्य use-case को सही ढंग से नहीं दर्शाते।"
+    },
+    {
+      "id": "u2_pic_memory_q31",
+      "question": "PIC microcontroller की data memory को अक्सर 'register file' क्यों कहा जाता है?",
+      "options": [
+        "क्योंकि इसमें GPR और SFR दोनों को uniformly addressable registers के रूप में organize किया जाता है, जिन्हें direct या indirect addressing से access किया जा सकता है",
+        "क्योंकि इसमें केवल SFRs होते हैं, कोई GPR नहीं होता",
+        "क्योंकि यह वास्तव में program memory का ही एक हिस्सा है",
+        "क्योंकि यह पूरी तरह से external chip पर स्थित होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "PIC data memory में GPR और SFR दोनों प्रकार के locations एक जैसी addressable register array की तरह organize होते हैं और direct/indirect addressing से access किए जाते हैं, इसलिए option A सही है। Option B गलत है क्योंकि GPR भी मौजूद होते हैं, option C गलत है क्योंकि Harvard architecture में program memory अलग होती है, और option D गलत है क्योंकि यह on-chip होती है।"
+    },
+    {
+      "id": "u2_pic_memory_q32",
+      "question": "classic PIC16F mid-range devices की तुलना में PIC18F family में return address stack के संबंध में कौन-सा additional feature उपलब्ध है?",
+      "options": [
+        "PIC16F mid-range में भी एक software-accessible STKPTR register होता है, PIC18F में इसमें कोई अंतर नहीं है",
+        "PIC18F में STKPTR (stack pointer) register होता है जिससे current stack depth को software द्वारा read/write किया जा सकता है, जो classic PIC16F mid-range में उपलब्ध नहीं है",
+        "PIC18F में hardware return address stack को पूरी तरह हटा दिया गया है",
+        "PIC18F में stack केवल interrupt entry के लिए उपयोग होता है, CALL/RETURN instructions के लिए नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "PIC18F family में STKPTR register software को stack pointer पढ़ने/लिखने देता है ताकि current nesting level track की जा सके, जबकि classic PIC16F mid-range में ऐसा कोई user-accessible stack pointer नहीं होता, इसलिए option B सही है। Option A तथ्यात्मक रूप से उल्टा है, option C गलत है क्योंकि stack हटाया नहीं गया, और option D गलत है क्योंकि stack CALL/RETURN दोनों के लिए उपयोग होता है।"
+    },
+    {
+      "id": "u2_pic_memory_q33",
+      "question": "Data EEPROM की तुलना में PIC flash program memory पर erase operation की granularity (unit) के बारे में कौन-सा कथन सही है?",
+      "options": [
+        "Flash में erase हमेशा single byte स्तर पर होता है, ठीक EEPROM जैसा",
+        "Flash memory को erase करने की कोई आवश्यकता ही नहीं होती, इसे सीधे overwrite किया जा सकता है",
+        "Flash program memory में erase सामान्यतः एक पूरे block/row (कई program memory words) की granularity पर होता है, जबकि data EEPROM byte-level erase/write सपोर्ट करती है",
+        "Flash memory को erase करने के लिए हमेशा external UV light source आवश्यक होता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Flash cell technology की वजह से erase एक पूरे block/row (कई words) की granularity पर किया जाता है, जबकि data EEPROM byte-addressable होकर byte-level erase/write सपोर्ट करती है, इसलिए option C सही है। Option A गलत है क्योंकि flash byte-level erase सपोर्ट नहीं करती, option B गलत है क्योंकि flash cell को rewrite से पहले erase करना जरूरी होता है, और option D गलत है क्योंकि वह पुरानी UV-erasable EPROM technology है, modern flash में नहीं।"
+    },
+    {
+      "id": "u2_pic_memory_q34",
+      "question": "यदि subroutine A से subroutine B को, और फिर B से subroutine C को CALL किया जाए (nested calls), तो hardware return address stack से addresses किस order में pop होकर उपयोग होंगे?",
+      "options": [
+        "पहले A का return address pop होगा, फिर B का, फिर C का",
+        "यह हमेशा random order में pop होता है",
+        "केवल C का address ही store रहेगा, A और B के addresses automatically discard हो जाते हैं",
+        "सबसे पहले C (सबसे नया pushed) का return address pop होगा, फिर B का, फिर A का — क्योंकि hardware stack LIFO (Last-In-First-Out) order में काम करता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "hardware return address stack LIFO order में काम करता है, इसलिए सबसे बाद में push किया गया C का address सबसे पहले pop होता है, फिर B का, और अंत में A का, इसलिए option D सही है। Option A order उल्टा (FIFO जैसा) बताता है जो गलत है, option B गलत है क्योंकि order deterministic होता है, और option C गलत है क्योंकि stack अपनी depth तक सभी nested return addresses retain रखता है।"
+    },
+    {
+      "id": "u2_pic_memory_q35",
+      "question": "PIC16F mid-range में instruction का 7-bit direct address field और STATUS register के 2-bit bank select (RP1:RP0) को मिलाकर, सैद्धांतिक रूप से अधिकतम कितना data memory address space addressable होता है (चाहे किसी particular device में उतना physically implement न हो)?",
+      "options": [
+        "128 bytes (केवल 7-bit direct address से, bank select को गिने बिना)",
+        "256 bytes",
+        "512 bytes (4 banks × 128 bytes per bank)",
+        "1024 bytes"
+      ],
+      "correctIndex": 2,
+      "explanation": "2-bit RP1:RP0 से 4 banks select होते हैं और प्रत्येक bank के अंदर 7-bit direct address से 128 locations access होती हैं, इस तरह अधिकतम addressable space 4 × 128 = 512 bytes बनता है, इसलिए option C सही है। Option A केवल एक bank तक सीमित गिनती है, और option B व D इस 4×128 calculation से मेल नहीं खाते।"
     }
   ]
 }

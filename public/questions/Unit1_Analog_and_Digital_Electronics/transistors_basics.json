@@ -213,6 +213,181 @@
       "options": ["β बहुत छोटा हो जाएगा", "β पर कोई प्रभाव नहीं", "β बहुत बड़ा (लगभग 999) हो जाएगा", "β ऋणात्मक हो जाएगा"],
       "correctIndex": 2,
       "explanation": "सही उत्तर है: β = α/(1-α) = 0.999/0.001 = 999, यानी α के 1 के करीब जाने पर β बहुत बड़ा हो जाता है। पहला विकल्प उल्टा है। दूसरा गलत है क्योंकि β सीधे α पर निर्भर है। β कभी ऋणात्मक नहीं होता क्योंकि α सदा 0 और 1 के बीच रहता है, इसलिए चौथा विकल्प भी गलत है।"
+    },
+    {
+      "id": "u1_transistors_basics_q31",
+      "question": "यदि Collector-Base junction पर लगाया गया reverse voltage उसकी rated breakdown voltage से अधिक हो जाए, तो क्या होता है?",
+      "options": ["Transistor स्वतः cut-off region में चला जाता है", "Avalanche breakdown होकर Ic अनियंत्रित रूप से बढ़ जाती है और transistor स्थायी रूप से क्षतिग्रस्त हो सकता है", "Transistor सुरक्षित रूप से saturation में चला जाता है", "केवल base current शून्य हो जाती है, कोई नुकसान नहीं"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: rated breakdown voltage से अधिक reverse voltage पर collector-base junction में avalanche multiplication होता है, जिससे Ic base द्वारा नियंत्रण से बाहर होकर तेज़ी से बढ़ती है और device permanently damage हो सकता है। पहला और तीसरा विकल्प गलत हैं क्योंकि breakdown कोई सामान्य safe operating region (cut-off या saturation) नहीं है। चौथा विकल्प गलत है क्योंकि नुकसान की सम्भावना वास्तविक है, केवल base current से कोई सम्बन्ध नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q32",
+      "question": "एक transistor switch में base को 5 V supply से चलाया जा रहा है। Silicon transistor का Vbe ≈ 0.7 V है और saturation के लिए आवश्यक base current Ib = 1 mA है। base resistor Rb का मान लगभग कितना होना चाहिए?",
+      "options": ["4.3 kΩ", "5 kΩ", "0.7 kΩ", "43 kΩ"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: Rb = (Vin - Vbe)/Ib = (5 - 0.7) V / 1 mA = 4.3 V/1 mA = 4.3 kΩ। 'Vbe को घटाना भूलकर' Vin/Ib लेने से गलत विकल्प '5 kΩ' आता है। 'Vbe/Ib' लेने से '0.7 kΩ' मिलता है जो गलत है। 'दस गुना अधिक' गणना करने से '43 kΩ' आता है, जो बहुत अधिक होगा और transistor को ठीक से saturate नहीं करेगा।"
+    },
+    {
+      "id": "u1_transistors_basics_q33",
+      "question": "Common-base current gain α को परिभाषित करने वाला सही सूत्र क्या है?",
+      "options": ["α = Ic/Ie", "α = Ic/Ib", "α = Ib/Ie", "α = Ie/Ic"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: α को collector current और emitter current के अनुपात, यानी α = Ic/Ie, के रूप में परिभाषित किया जाता है और यह सदा 1 से कम होता है। 'Ic/Ib' असल में β की परिभाषा है। 'Ib/Ie' कोई मानक parameter नहीं है। 'Ie/Ic' α का व्युत्क्रम है, जो सदा 1 से अधिक होगा, इसलिए यह α नहीं हो सकता।"
+    },
+    {
+      "id": "u1_transistors_basics_q34",
+      "question": "Common-emitter current gain β को परिभाषित करने वाला सही सूत्र क्या है?",
+      "options": ["β = Ie/Ib", "β = Ic/Ib", "β = Ib/Ic", "β = Ic/Ie"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: β को collector current और base current के अनुपात, यानी β = Ic/Ib, के रूप में परिभाषित किया जाता है। 'Ie/Ib' β से थोड़ा बड़ा (β+1) होता है, असल β नहीं। 'Ib/Ic' β का व्युत्क्रम है। 'Ic/Ie' असल में α की परिभाषा है, β की नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q35",
+      "question": "किसी transistor का α = 0.995 है, तो उसका β लगभग कितना होगा?",
+      "options": ["19.9", "995", "199", "0.199"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: β = α/(1-α) = 0.995/0.005 = 199। '19.9' दस गुना छोटी गणना है। '995' गलत गणना है जो α को सीधे 0.005 से गुणा करने जैसी भूल से आती है। '0.199' तो α का ही एक अंश जैसा मान है, β नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q36",
+      "question": "किसी transistor का β = 249 है, तो उसका α लगभग कितना होगा?",
+      "options": ["0.249", "1.004", "2.49", "0.996"],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर है: α = β/(1+β) = 249/250 = 0.996। '0.249' में β को सीधे 1000 से भाग देने जैसी गलत गणना है। '1.004' असम्भव है क्योंकि α सदा 1 से कम रहता है। '2.49' का कोई सूत्र आधार नहीं है।"
+    },
+    {
+      "id": "u1_transistors_basics_q37",
+      "question": "किसी transistor में emitter current Ie = 8 mA और β = 99 है, तो base current Ib लगभग कितनी होगी?",
+      "options": ["8 mA", "800 µA", "0.8 mA", "80 µA"],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर है: Ib = Ie/(1+β) = 8 mA/100 = 0.08 mA = 80 µA। '8 mA' तो Ie का मान है। '800 µA' और '0.8 mA' (दोनों बराबर) दस गुना बड़ी गणना है क्योंकि (1+β) को 10 मान लिया गया प्रतीत होता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q38",
+      "question": "किसी transistor का Icbo = 5 µA और β = 124 है। Common-emitter configuration में Iceo लगभग कितनी होगी?",
+      "options": ["0.005 mA", "0.124 mA", "6.25 mA", "0.625 mA"],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर है: Iceo = (1+β) × Icbo = 125 × 5 µA = 625 µA = 0.625 mA। '0.005 mA' तो Icbo का ही मान है (µA से mA में)। '0.124 mA' β की गलत व्याख्या से आता है। '6.25 mA' गणना में दशमलव स्थान की गलती से आया दस गुना बड़ा मान है।"
+    },
+    {
+      "id": "u1_transistors_basics_q39",
+      "question": "अच्छे transistor action के लिए base की width, minority carriers की diffusion length की तुलना में कैसी होनी चाहिए?",
+      "options": ["diffusion length से बहुत अधिक", "diffusion length के ठीक बराबर", "diffusion length से बहुत कम", "diffusion length से इसका कोई सम्बन्ध नहीं"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: base की width, minority carriers के diffusion length से बहुत कम रखी जाती है ताकि emitter से injected carriers recombine हुए बिना collector तक पहुँच सकें और α व β अधिकतम रहें। 'बहुत अधिक' और 'बराबर' रखने पर अधिकांश carriers base में ही recombine हो जाएँगे और transistor action कमजोर पड़ जाएगा। चौथा विकल्प गलत है क्योंकि यह सम्बन्ध transistor की design का मूल आधार है।"
+    },
+    {
+      "id": "u1_transistors_basics_q40",
+      "question": "PNP transistor के active region में conventional current की मुख्य दिशा क्या होती है?",
+      "options": ["बाहरी परिपथ से emitter terminal में अन्दर की ओर", "Emitter terminal से बाहरी परिपथ में", "Base से collector की ओर सीधे", "Collector terminal से बाहरी परिपथ में emitter की तरफ"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: PNP transistor में majority carriers holes हैं, इसलिए conventional current emitter terminal से बाहरी परिपथ की ओर बहती है (NPN के ठीक विपरीत दिशा)। पहला विकल्प दिशा उल्टी बताता है। तीसरा विकल्प गलत है क्योंकि base से collector की सीधी current transistor action नहीं है। चौथा विकल्प भी वास्तविक current path को गलत तरीके से दर्शाता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q41",
+      "question": "Silicon transistor और Germanium transistor के typical forward Vbe(on) मानों की तुलना कैसी होती है?",
+      "options": ["Silicon लगभग 0.6-0.7 V, Germanium लगभग 0.2-0.3 V", "Silicon लगभग 0.2-0.3 V, Germanium लगभग 0.6-0.7 V", "दोनों का Vbe लगभग 1.2 V के बराबर होता है", "दोनों का Vbe लगभग शून्य होता है"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: Silicon transistor का forward Vbe(on) लगभग 0.6-0.7 V और Germanium का लगभग 0.2-0.3 V होता है, इसी कारण Silicon devices अधिक temperature-stable और आज व्यापक रूप से उपयोग होते हैं। दूसरा विकल्प मान उलट देता है। तीसरा और चौथा विकल्प किसी भी वास्तविक junction material के व्यावहारिक मान से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_transistors_basics_q42",
+      "question": "यदि किसी transistor का base बहुत पतला हो और Collector-Base junction पर उच्च reverse voltage लगे, तो depletion region पूरे base को पार करके emitter junction तक पहुँच सकता है — इस स्थिति को क्या कहा जाता है?",
+      "options": ["Thermal runaway", "Avalanche multiplication", "Punch-through (reach-through)", "Forward recovery"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: इस स्थिति को punch-through या reach-through कहा जाता है, जिसमें base अपना नियंत्रण खो देता है और transistor action समाप्त हो जाता है। 'Thermal runaway' तापमान बढ़ने से leakage current की cascading वृद्धि है, अलग phenomenon है। 'Avalanche multiplication' अत्यधिक reverse voltage से carrier multiplication है, base पार होने से भिन्न है। 'Forward recovery' diode/junction के ON होने में लगने वाले समय से सम्बंधित है।"
+    },
+    {
+      "id": "u1_transistors_basics_q43",
+      "question": "Leakage currents को नज़रअंदाज़ करते हुए, cut-off region में transistor की Ic और Ie का approximate मान क्या माना जाता है?",
+      "options": ["Ic = β × Ib के बराबर अधिकतम मान", "लगभग शून्य (0)", "Ic, Ie के बराबर पूर्ण मान", "Ie, Ic से आधी"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: cut-off में दोनों junctions reverse biased होने से (leakage को छोड़कर) Ic और Ie दोनों लगभग शून्य मानी जाती हैं, इसलिए transistor OFF अवस्था में रहता है। पहला विकल्प saturation की स्थिति है। तीसरा और चौथा विकल्प सामान्य conducting अवस्था के अनुपात हैं, cut-off के नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q44",
+      "question": "Transistor को linear amplifier के रूप में और digital switch के रूप में उपयोग करने में मूल अन्तर क्या है?",
+      "options": ["Amplifier में transistor हमेशा cut-off में रहता है", "दोनों उपयोगों में transistor की bias अवस्था में कोई अन्तर नहीं होता", "Amplifier में active region में रखकर output को input के समानुपाती रखा जाता है, switch में साधारणतः केवल saturation और cut-off के बीच toggle किया जाता है", "Switch में transistor हमेशा active region में रहता है"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: amplifier उपयोग में transistor को active region में bias करके output को input के समानुपाती (linear) रखा जाता है, जबकि switch उपयोग में इसे केवल दो extreme states — saturation (ON) और cut-off (OFF) — के बीच toggle किया जाता है। पहला विकल्प गलत है क्योंकि amplifier cut-off में नहीं, active region में bias होता है। दूसरा विकल्प गलत है क्योंकि bias अवस्था में स्पष्ट अन्तर होता है। चौथा विकल्प भी अवस्थाओं को उल्टा बताता है क्योंकि switch active region में नहीं रहता।"
+    },
+    {
+      "id": "u1_transistors_basics_q45",
+      "question": "Active region में transistor के Emitter-Base junction और Collector-Base junction के प्रभावी resistance की तुलना कैसी होती है?",
+      "options": ["Emitter-Base (forward biased) का resistance कम, Collector-Base (reverse biased) का resistance अधिक", "दोनों junctions का resistance बराबर होता है", "Emitter-Base का resistance अधिक, Collector-Base का कम", "दोनों junctions का resistance शून्य होता है"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: forward biased Emitter-Base junction का resistance कम होता है (आसानी से current प्रवाहित होती है) जबकि reverse biased Collector-Base junction का resistance अधिक होता है — यही असमान resistance transistor को current/voltage amplification देने में सहायक है। दूसरा विकल्प गलत है क्योंकि bias अवस्थाएँ अलग हैं। तीसरा विकल्प तुलना उल्टी बताता है। चौथा विकल्प असम्भव है क्योंकि किसी भी वास्तविक junction का resistance शून्य नहीं होता।"
+    },
+    {
+      "id": "u1_transistors_basics_q46",
+      "question": "किसी transistor में Ib = 0.06 mA और Ic = 5.94 mA मापी गई। emitter current Ie कितनी होगी?",
+      "options": ["5.88 mA", "0.06 mA", "6.00 mA", "59.4 mA"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: Ie = Ic + Ib = 5.94 + 0.06 = 6.00 mA। '5.88 mA' में गलती से घटा दिया गया है, जबकि जोड़ना सही है। '0.06 mA' तो Ib का ही मान है, Ie नहीं। '59.4 mA' दशमलव स्थान की गलती से दस गुना बड़ा मान है।"
+    },
+    {
+      "id": "u1_transistors_basics_q47",
+      "question": "किसी transistor में Ic = 45 mA और Ib = 0.5 mA है। इसका DC current gain β कितना है?",
+      "options": ["45", "9", "900", "90"],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर है: β = Ic/Ib = 45 mA/0.5 mA = 90। '45' तो केवल Ic का संख्यात्मक मान है। '9' और '900' दोनों गलत गणना/इकाई रूपांतरण की भूल से आते हैं।"
+    },
+    {
+      "id": "u1_transistors_basics_q48",
+      "question": "BJT को सामान्यतः 'current-controlled device' क्यों कहा जाता है?",
+      "options": ["क्योंकि इसमें कोई current नहीं बहती, केवल voltage काम करता है", "क्योंकि Vce, Ic को कोई प्रभाव नहीं डालता", "क्योंकि output collector current, input base current के द्वारा नियंत्रित होती है", "क्योंकि collector current, केवल supply voltage पर निर्भर करती है"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: BJT में base current (Ib) collector current (Ic) को नियंत्रित करता है (Ic = β × Ib), इसलिए इसे current-controlled device कहा जाता है, जबकि MOSFET जैसे devices voltage-controlled होते हैं। पहला विकल्प गलत है क्योंकि transistor में currents ही मुख्य नियंत्रण parameter हैं। दूसरा और चौथा विकल्प वास्तविक controlling parameter (base current) को नज़रअंदाज़ करते हैं।"
+    },
+    {
+      "id": "u1_transistors_basics_q49",
+      "question": "Active region में forward biased Emitter-Base junction और reverse biased Collector-Base junction के depletion region की चौड़ाई की तुलना कैसी होती है?",
+      "options": ["Emitter-Base junction का depletion region अधिक चौड़ा होता है", "Collector-Base junction का depletion region अधिक चौड़ा होता है", "दोनों की चौड़ाई हमेशा बराबर होती है", "किसी भी junction में depletion region नहीं बनता"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: reverse biased Collector-Base junction का depletion region, forward biased Emitter-Base junction की तुलना में काफी अधिक चौड़ा होता है, जो junction को उच्च reverse voltage सहने की क्षमता देता है। पहला विकल्प तुलना उल्टी बताता है। तीसरा विकल्प गलत है क्योंकि bias अवस्था अलग होने से चौड़ाई भी अलग होती है। चौथा विकल्प गलत है क्योंकि हर PN junction में depletion region बनता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q50",
+      "question": "यदि किसी transistor का β = 99 है, तो base current Ib, emitter current Ie का लगभग कितना प्रतिशत होगी?",
+      "options": ["99%", "50%", "0.99%", "1%"],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर है: Ib/Ie = 1/(1+β) = 1/100 = 1%, यानी base current, emitter current का केवल लगभग 1% होती है (बाकी 99% collector current के रूप में जाती है)। '99%' असल में Ic का Ie से प्रतिशत है। '50%' और '0.99%' किसी सही सूत्र से नहीं आते।"
+    },
+    {
+      "id": "u1_transistors_basics_q51",
+      "question": "Temperature बढ़ने पर transistor के Emitter-Base junction का forward voltage Vbe सामान्यतः कैसे बदलता है?",
+      "options": ["लगभग अपरिवर्तित रहता है", "बढ़ता है", "घटता है (लगभग 2 mV प्रति °C की दर से)", "शून्य हो जाता है"],
+      "correctIndex": 2,
+      "explanation": "सही उत्तर है: silicon transistor में Vbe temperature बढ़ने पर लगभग 2 mV प्रति °C की दर से घटता है, जो temperature compensation design में महत्वपूर्ण होता है। 'अपरिवर्तित' और 'बढ़ता है' गलत हैं क्योंकि व्यवहार में यह घटता है। 'शून्य हो जाता है' अवास्तविक है क्योंकि junction सामान्य तापमान रेंज में forward-biased ही रहता है।"
+    },
+    {
+      "id": "u1_transistors_basics_q52",
+      "question": "Thermal runaway की स्थिति में transistor के अन्दर क्या cascading प्रक्रिया होती है?",
+      "options": ["Base current घटने से Vce शून्य हो जाता है और transistor cut-off में चला जाता है", "Collector voltage स्वतः स्थिर हो जाता है और कोई प्रभाव नहीं पड़ता", "Emitter doping स्वतः कम हो जाती है जिससे current रुक जाती है", "Leakage current बढ़ने से Ic बढ़ती है, जिससे heat बढ़ती है, जिससे leakage और अधिक बढ़ती है — यह चक्र चलता रहता है"],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर है: thermal runaway में बढ़ी हुई temperature leakage current (Icbo/Iceo) बढ़ाती है, जिससे Ic और अधिक बढ़ती है, जिससे और अधिक heat उत्पन्न होती है — यह self-reinforcing चक्र अंततः transistor को क्षतिग्रस्त कर सकता है। पहला, दूसरा और तीसरा विकल्प इस cascading heating प्रभाव को नज़रअंदाज़ करते हैं और भौतिक रूप से गलत हैं।"
+    },
+    {
+      "id": "u1_transistors_basics_q53",
+      "question": "किसी transistor में Ic = 99 mA और Ie = 100 mA है। इसका β लगभग कितना होगा?",
+      "options": ["9.9", "100", "0.99", "99"],
+      "correctIndex": 3,
+      "explanation": "सही उत्तर है: पहले Ib = Ie - Ic = 100 - 99 = 1 mA निकालें, फिर β = Ic/Ib = 99/1 = 99। '9.9' और '0.99' गलत दशमलव-स्थान की गणना हैं। '100' तो Ie का मान है, β नहीं।"
+    },
+    {
+      "id": "u1_transistors_basics_q54",
+      "question": "आज अधिकांश transistors बनाने में Silicon को Germanium की तुलना में अधिक प्राथमिकता क्यों दी जाती है?",
+      "options": ["क्योंकि Germanium की doping संभव नहीं है", "क्योंकि Silicon का leakage current कम होता है और यह उच्च temperature तक स्थिर रहता है", "क्योंकि Germanium transistor में कोई PN junction नहीं होता", "क्योंकि Silicon transistor कभी गर्म नहीं होते"],
+      "correctIndex": 1,
+      "explanation": "सही उत्तर है: Silicon का reverse leakage current Germanium की तुलना में बहुत कम होता है और यह अधिक temperature range तक stable रहता है, इसलिए Silicon devices अधिक भरोसेमंद हैं। पहला विकल्प गलत है क्योंकि Germanium में doping सम्भव है और होती भी है। तीसरा विकल्प गलत है क्योंकि हर BJT में PN junctions होते हैं चाहे वह किसी भी material का हो। चौथा विकल्प अवास्तविक है क्योंकि सभी transistors में कुछ heat generate होती है।"
+    },
+    {
+      "id": "u1_transistors_basics_q55",
+      "question": "Active region और breakdown region दोनों में Collector-Base junction reverse biased होता है। इन दोनों के बीच मूल अन्तर क्या है?",
+      "options": ["Active region में reverse voltage rated breakdown voltage से कम रहता है, जबकि breakdown region में यह उससे अधिक हो जाता है और base का नियंत्रण खत्म हो जाता है", "Active region में Emitter-Base junction भी reverse biased होता है", "Breakdown region में transistor amplification बेहतर करता है", "दोनों region में transistor का व्यवहार पूरी तरह समान होता है"],
+      "correctIndex": 0,
+      "explanation": "सही उत्तर है: active region में CB junction का reverse voltage rated breakdown limit के अन्दर रहता है, जिससे base current द्वारा Ic पर नियंत्रण बना रहता है; breakdown में यह limit पार होने से avalanche होकर base का नियंत्रण खत्म हो जाता है। दूसरा विकल्प गलत है क्योंकि active region में EB junction forward biased ही रहता है। तीसरा विकल्प गलत है क्योंकि breakdown में सामान्य controlled amplification सम्भव नहीं रहती। चौथा विकल्प स्पष्ट रूप से गलत है क्योंकि दोनों regions का व्यवहार और सुरक्षा-स्थिति भिन्न है।"
     }
   ]
 }

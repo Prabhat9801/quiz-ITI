@@ -213,6 +213,306 @@
       "options": ["baud rate तय करने के लिए", "किसी भी I/O operation से पहले प्रत्येक pin की दिशा (input/output) निर्धारित करने के लिए", "delay generate करने के लिए", "config bits बदलने के लिए"],
       "correctIndex": 1,
       "explanation": "किसी pin पर read/write से पहले उसकी दिशा TRIS से तय करनी होती है, इसलिए program के शुरू में TRIS registers सेट किए जाते हैं और option B सही है। Baud rate SPBRG/TXSTA से, delay _XTAL_FREQ आधारित functions से, और config bits #pragma config से नियंत्रित होते हैं, TRIS से नहीं।"
+    },
+    {
+      "id": "u2_pic_io_programming_q31",
+      "question": "Parallel Slave Port (PSP) mode का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Serial data transfer को तेज करना",
+        "Timer की accuracy बढ़ाना",
+        "External microprocessor/peripheral के साथ 8-bit parallel data को तेज़ी से exchange करना",
+        "ADC की resolution बढ़ाना"
+      ],
+      "correctIndex": 2,
+      "explanation": "PSP mode को इसलिए बनाया गया है ताकि PIC किसी external microprocessor या host device के साथ पूरा byte एक ही parallel operation में तेज़ी से exchange कर सके, इसलिए option C सही है। यह serial communication (जैसे USART) से भिन्न है, timer की accuracy से असंबंधित है, और ADC resolution को नहीं बदलता।"
+    },
+    {
+      "id": "u2_pic_io_programming_q32",
+      "question": "PSP mode को enable करने के लिए सामान्यतः कौन-सा bit set किया जाता है?",
+      "options": [
+        "TRISB register का bit 0",
+        "INTCON का GIE bit",
+        "OPTION_REG का RBPU bit",
+        "TRISE register का PSPMODE bit (bit4) को 1 set करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "PIC (जैसे PIC16F877 परिवार) में TRISE register के PSPMODE bit को 1 करने से Parallel Slave Port mode active होता है, इसलिए option D सही है। TRISB का bit direction control के लिए है, GIE global interrupt enable करता है, और RBPU PORTB pull-ups से संबंधित है, इनमें से किसी का PSP से सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u2_pic_io_programming_q33",
+      "question": "PSP mode में 8-bit parallel data bus के रूप में कौन-सा port उपयोग होता है?",
+      "options": [
+        "PORTD",
+        "PORTA",
+        "PORTB",
+        "PORTE"
+      ],
+      "correctIndex": 0,
+      "explanation": "PSP mode में PORTD पूरे 8 bits के साथ data bus का कार्य करता है जिससे external device एक साथ पूरा byte भेज/पढ़ सकता है, इसलिए option A सही है। PORTA सामान्यतः analog/general I/O के लिए है, PORTB general purpose है, और PORTE control signals (RD/WR/CS) के लिए उपयोग होता है, data bus के रूप में नहीं।"
+    },
+    {
+      "id": "u2_pic_io_programming_q34",
+      "question": "PSP mode में CS, RD और WR control signals सामान्यतः किन pins पर उपलब्ध होते हैं?",
+      "options": [
+        "PORTA के RA0-RA2",
+        "PORTE के RE0(RD), RE1(WR), RE2(CS)",
+        "PORTB के RB0-RB2",
+        "PORTC के RC0-RC2"
+      ],
+      "correctIndex": 1,
+      "explanation": "PSP mode में PORTE के RE0, RE1, RE2 pins क्रमशः RD, WR और CS control signals के रूप में कार्य करते हैं, इसलिए option B सही है। PORTA, PORTB और PORTC इन विशेष control signals के लिए designated नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_io_programming_q35",
+      "question": "PSP से संबंधित OBF (Output Buffer Full) flag क्या इंगित करता है?",
+      "options": [
+        "Input buffer खाली है",
+        "PSP mode में कोई error हुआ",
+        "PSP mode disable है",
+        "Output buffer full है यानी microcontroller ने PORTD में data लिख दिया है जो external device द्वारा अभी पढ़ा नहीं गया"
+      ],
+      "correctIndex": 3,
+      "explanation": "OBF flag set होने का अर्थ है कि microcontroller ने PORTD में output data रख दिया है पर external device ने अभी वह data नहीं पढ़ा, इसलिए option D सही है। यह input buffer, किसी error की सूचना, या PSP disable होने की स्थिति नहीं बताता।"
+    },
+    {
+      "id": "u2_pic_io_programming_q36",
+      "question": "PSP से संबंधित IBF (Input Buffer Full) flag किस स्थिति को दर्शाता है?",
+      "options": [
+        "Input buffer में external device द्वारा लिखा गया data मौजूद है जिसे microcontroller ने अभी नहीं पढ़ा",
+        "Output buffer भरा है",
+        "PSP mode बंद है",
+        "TRIS register सेट नहीं है"
+      ],
+      "correctIndex": 0,
+      "explanation": "IBF flag बताता है कि external device ने PORTD पर नया data लिख दिया है और वह microcontroller द्वारा अभी read नहीं किया गया, इसलिए option A सही है। यह output buffer की स्थिति, PSP mode की on/off स्थिति, या TRIS setting नहीं दर्शाता।"
+    },
+    {
+      "id": "u2_pic_io_programming_q37",
+      "question": "IBOV (Input Buffer Overflow) flag कब set होता है?",
+      "options": [
+        "जब output data पढ़ लिया गया हो",
+        "जब PSP mode बंद हो",
+        "जब external device ने नया data लिख दिया जबकि पुराना input data अभी CPU द्वारा पढ़ा नहीं गया",
+        "जब TRISD गलत set हुआ"
+      ],
+      "correctIndex": 2,
+      "explanation": "IBOV तब set होता है जब IBF अभी clear नहीं हुआ (यानी पुराना data अभी unread है) और external device एक और write कर देता है — यह data overflow/loss की चेतावनी है, इसलिए option C सही है। यह output data पढ़े जाने, PSP बंद होने, या केवल TRISD गलत होने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q38",
+      "question": "PSP mode को high-speed data exchange के लिए सामान्य serial communication से अधिक उपयुक्त क्यों माना जाता है?",
+      "options": [
+        "यह ADC को तेज करता है",
+        "यह serial protocol के overhead और bit-by-bit shifting से बचाकर पूरे byte को एक ही parallel operation में transfer करता है",
+        "यह timer की accuracy बढ़ाता है",
+        "यह power consumption को शून्य कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Serial communication में data bit-by-bit shift होकर धीमी गति से जाता है, जबकि PSP में पूरा byte एक साथ parallel रूप में transfer होता है, जिससे गति काफी बढ़ जाती है — इसलिए option B सही है। यह ADC, timer accuracy या power consumption को शून्य करने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q39",
+      "question": "जब कोई external host PSP के माध्यम से PORTD में data लिखना चाहता है, तो microcontroller के लिए PORTD की प्रभावी दिशा कैसी होनी चाहिए?",
+      "options": [
+        "Output",
+        "दिशा महत्वहीन है",
+        "आधा input आधा output",
+        "Input, ताकि external device द्वारा दिए गए data को microcontroller पढ़ सके"
+      ],
+      "correctIndex": 3,
+      "explanation": "External write की स्थिति में microcontroller को data receive करना होता है, इसलिए PORTD को effectively input के रूप में कार्य करना चाहिए ताकि host का लिखा data पढ़ा जा सके — option D सही है। Output दिशा microcontroller से बाहर भेजने के लिए है, दिशा अप्रासंगिक नहीं है, और आंशिक input/output PSP data bus के लिए मानक व्यवहार नहीं है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q40",
+      "question": "PSP feature सामान्यतः किस प्रकार के PIC devices में उपलब्ध होता है?",
+      "options": [
+        "अधिक pin count वाले (जैसे 40/44-pin) mid-range PIC जिनमें PORTD और PORTE उपलब्ध हों",
+        "सभी 8-pin छोटे PIC में",
+        "केवल PIC C compilers में सॉफ्टवेयर feature के रूप में",
+        "केवल analog peripherals वाले PIC में"
+      ],
+      "correctIndex": 0,
+      "explanation": "PSP के लिए एक पूरा 8-bit PORTD और नियंत्रण के लिए PORTE जैसे अतिरिक्त pins चाहिए, जो केवल अधिक pin count वाले mid-range devices में उपलब्ध होते हैं, इसलिए option A सही है। छोटे 8-pin PIC में इतने pins नहीं होते, यह compiler-level feature नहीं बल्कि hardware feature है, और यह analog peripherals पर निर्भर नहीं करता।"
+    },
+    {
+      "id": "u2_pic_io_programming_q41",
+      "question": "PIC16F877A जैसे mid-range microcontroller में सामान्यतः कितने I/O ports होते हैं?",
+      "options": [
+        "दो (केवल PORTA, PORTB)",
+        "पाँच (PORTA से PORTE)",
+        "तीन",
+        "आठ"
+      ],
+      "correctIndex": 1,
+      "explanation": "PIC16F877A जैसे mid-range chip में सामान्यतः PORTA, PORTB, PORTC, PORTD और PORTE — कुल पाँच I/O ports होते हैं, इसलिए option B सही है। बाकी विकल्पों में गिनती गलत है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q42",
+      "question": "PORTA में सामान्यतः कितने usable I/O pins होते हैं (जैसे PIC16F877A में)?",
+      "options": [
+        "8",
+        "3",
+        "6 (RA0-RA5)",
+        "5"
+      ],
+      "correctIndex": 2,
+      "explanation": "PORTA में सामान्यतः 6 pins (RA0 से RA5) होते हैं, इसलिए option C सही है। PORTB/PORTC/PORTD जैसे 8-bit wide ports से यह अलग है, और 3 या 5 गिनती इस मानक configuration से मेल नहीं खाती।"
+    },
+    {
+      "id": "u2_pic_io_programming_q43",
+      "question": "जब PSP mode enable किया जाता है, तो PORTE के RE0-RE2 pins का सामान्य digital I/O उपयोग किस प्रकार प्रभावित होता है?",
+      "options": [
+        "वे control signals (RD, WR, CS) के रूप में समर्पित हो जाते हैं और सामान्य digital I/O के लिए उपलब्ध नहीं रहते",
+        "इनका सामान्य digital I/O उपयोग पर कोई प्रभाव नहीं पड़ता",
+        "वे केवल output-only बन जाते हैं",
+        "वे analog input बन जाते हैं"
+      ],
+      "correctIndex": 0,
+      "explanation": "PSP mode active होने पर RE0-RE2 अपने control-signal role (RD/WR/CS) में चले जाते हैं और सामान्य bit-level digital I/O के लिए उपयोग नहीं किए जा सकते, इसलिए option A सही है। इसका सामान्य I/O पर असर पड़ता ही है, वे केवल output-only नहीं बनते, और यह analog mode नहीं है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q44",
+      "question": "PORTD की तुलना अन्य सामान्य ports (जैसे PORTA) से किस विशेष क्षमता के कारण अलग मानी जाती है?",
+      "options": [
+        "यह केवल analog signals संभालता है",
+        "इसमें internal pull-up resistors नहीं होते",
+        "यह केवल interrupt trigger के लिए reserved है",
+        "यह PSP mode में पूरे 8-bit byte को parallel data bus के रूप में handle कर सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "PORTD की विशेष क्षमता यह है कि PSP mode में यह एक पूर्ण 8-bit parallel data bus बन जाता है, जो सामान्य ports नहीं कर सकते, इसलिए option D सही है। यह क्षमता analog handling, pull-up की अनुपस्थिति, या interrupt reservation से संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q45",
+      "question": "PIC assembly में MOVLW instruction का कार्य क्या है?",
+      "options": [
+        "किसी file register की value को W में लाना",
+        "एक literal (constant) value को W register में load करना",
+        "दो values को जोड़ना",
+        "किसी bit को clear करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "MOVLW (Move Literal to W) किसी fixed constant value को सीधे W (working/accumulator) register में load करता है, इसलिए option B सही है। File register से W में लाने का कार्य MOVF करता है, जोड़ना ADDWF/ADDLW से होता है, और bit clear BCF से होता है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q46",
+      "question": "MOVWF instruction का उपयोग किसके लिए होता है?",
+      "options": [
+        "W register में literal load करना",
+        "दो values subtract करना",
+        "W register की value को किसी file register (जैसे PORTB) में move करना",
+        "किसी bit को test करके skip करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "MOVWF (Move W to File) W register में रखी value को किसी specified file register (जैसे PORTB या किसी variable) में move करता है, इसलिए option C सही है। Literal load MOVLW से होता है, subtract SUBWF/SUBLW से, और bit-test-skip BTFSS/BTFSC से होता है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q47",
+      "question": "BSF instruction (Bit Set File) क्या करता है?",
+      "options": [
+        "किसी file register के निर्दिष्ट bit को set (1) करना",
+        "किसी bit को clear करना",
+        "bit test करके line skip करना",
+        "किसी subroutine को call करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "BSF किसी दिए गए file register के specified bit को 1 (set) करता है, इसलिए option A सही है। Bit clear करने के लिए BCF, bit test-skip के लिए BTFSS/BTFSC, और subroutine call के लिए CALL instruction का उपयोग होता है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q48",
+      "question": "BCF instruction (Bit Clear File) का कार्य क्या है?",
+      "options": [
+        "किसी bit को set करना",
+        "दो register values जोड़ना",
+        "GOTO जैसा unconditional jump करना",
+        "किसी file register के निर्दिष्ट bit को clear (0) करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "BCF किसी दिए गए file register के specified bit को 0 (clear) करता है, इसलिए option D सही है। Bit set करने के लिए BSF, addition के लिए ADDWF, और unconditional jump के लिए GOTO instruction होता है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q49",
+      "question": "BTFSS (Bit Test File, Skip if Set) instruction program में सामान्यतः किस उद्देश्य के लिए उपयोग होता है?",
+      "options": [
+        "केवल एक fixed delay बनाने के लिए",
+        "किसी bit की स्थिति जाँच कर conditional branching/decision लेने के लिए (assembly में if-type logic)",
+        "पूरी memory clear करने के लिए",
+        "global interrupt disable करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "BTFSS किसी bit की स्थिति जाँचकर, यदि वह set है तो अगली instruction skip कर देता है, जिससे assembly में conditional (if-type) decision लिया जा सकता है, इसलिए option B सही है। यह अकेले delay नहीं बनाता, memory clear नहीं करता, और interrupt enable/disable से सीधा संबंध नहीं रखता।"
+    },
+    {
+      "id": "u2_pic_io_programming_q50",
+      "question": "PIC assembly में GOTO और CALL instructions में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों पूरी तरह समान कार्य करते हैं",
+        "CALL केवल interrupt handling के लिए विशेष रूप से आरक्षित है",
+        "GOTO unconditionally किसी label पर कूदता है जबकि CALL subroutine पर जाकर return address को stack में सुरक्षित रखता है ताकि RETURN से वापस आया जा सके",
+        "GOTO केवल loop बनाने के लिए ही उपयोग हो सकता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "GOTO सीधे किसी label पर jump कर देता है और वापस नहीं आता, जबकि CALL जाने से पहले return address को stack में save करता है ताकि subroutine के अंत में RETURN से वापसी हो सके — इसलिए option C सही है। दोनों समान नहीं हैं, CALL सामान्य subroutine call के लिए है (केवल interrupt तक सीमित नहीं), और GOTO केवल loop तक सीमित नहीं है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q51",
+      "question": "DECFSZ instruction (Decrement File, Skip if Zero) का सामान्य उपयोग किस स्थिति में होता है?",
+      "options": [
+        "software delay loops या counter-based repetition में, जहाँ value 0 होने पर आगे की line skip हो जाती है",
+        "ADC channel select करने में",
+        "UART से data भेजने में",
+        "PSP control signals सेट करने में"
+      ],
+      "correctIndex": 0,
+      "explanation": "DECFSZ किसी counter को decrement करता है और यदि result 0 हो जाता है तो अगली instruction skip कर देता है, जिससे यह loop समाप्ति की जाँच के लिए बहुत उपयोगी है (जैसे delay loops में), इसलिए option A सही है। यह ADC selection, UART transmission, या PSP control से सीधे संबंधित नहीं है।"
+    },
+    {
+      "id": "u2_pic_io_programming_q52",
+      "question": "PIC C में port/register values के लिए सामान्यतः किस data type का उपयोग होता है क्योंकि ये मूलतः 8-bit होते हैं?",
+      "options": [
+        "float",
+        "unsigned char",
+        "double",
+        "long long"
+      ],
+      "correctIndex": 1,
+      "explanation": "PIC के registers/ports 8-bit होते हैं, इसलिए unsigned char (जो 8-bit unsigned value रखता है) इनके लिए सबसे उपयुक्त data type है, इसलिए option B सही है। float और double decimal/fractional values के लिए हैं और memory-heavy हैं, और long long कई bytes का बड़ा integer type है, ये embedded 8-bit register को represent करने के लिए अनुपयुक्त/अनावश्यक रूप से बड़े हैं।"
+    },
+    {
+      "id": "u2_pic_io_programming_q53",
+      "question": "PIC C program में single-line और multi-line comment के लिए क्रमशः कौन-से symbols उपयोग होते हैं?",
+      "options": [
+        "# और ##",
+        "; और :",
+        "// (single-line) और /* ... */ (multi-line)",
+        "$ और %"
+      ],
+      "correctIndex": 2,
+      "explanation": "Standard C syntax के अनुसार // से single-line comment और /* ... */ से multi-line comment लिखा जाता है, जिन्हें compiler ignore करता है, इसलिए option C सही है। #/## preprocessor से संबंधित हैं, ;/: statement termination/labels के लिए हैं, और $/% comment syntax नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_io_programming_q54",
+      "question": "PIC C में PORTAbits.RA0 = 1; लिखने का क्या अर्थ है?",
+      "options": [
+        "पूरे PORTA register को 1 (0x01) कर देना",
+        "TRISA register को सेट कर देना",
+        "एक निश्चित समय की delay generate करना",
+        "bit-field access के द्वारा केवल RA0 pin को individually 1 (high) करना, बाकी bits अप्रभावित रहते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "PORTAbits जैसा bit-field structure compiler को केवल specified bit (यहाँ RA0) को access/modify करने देता है, बाकी bits बिना छुए रहते हैं, इसलिए option D सही है। यह पूरे PORTA को नहीं बदलता, TRISA (direction register) को नहीं छूता, और यह कोई delay generate नहीं करता।"
+    },
+    {
+      "id": "u2_pic_io_programming_q55",
+      "question": "एक typical PIC C program की मूल संरचना (basic structure) में सामान्यतः किस क्रम का पालन किया जाता है?",
+      "options": [
+        "#include headers, config bits, TRIS/port setup, फिर void main(void) के अंदर while(1) super-loop",
+        "पहले while(1) super-loop लिखकर बाद में #include करना",
+        "केवल एक ही statement पूरा program होता है",
+        "कोई निश्चित क्रम नहीं होता, जैसे भी लिखो चलेगा"
+      ],
+      "correctIndex": 0,
+      "explanation": "सामान्य structure में सबसे पहले header files #include होती हैं, फिर config bits सेट होते हैं, फिर main() के भीतर TRIS/port initialization होती है, और अंत में while(1) का super-loop चलता रहता है, इसलिए option A सही है। while(1) को #include से पहले रखना, केवल एक statement से पूरा program मानना, या कोई क्रम न मानना — ये व्यावहारिक embedded C program की संरचना का सही वर्णन नहीं करते।"
     }
   ]
 }

@@ -213,6 +213,41 @@
       "options": ["Laptop के लिए microcontroller, temperature controller के लिए microprocessor", "Temperature controller के लिए microcontroller, general purpose laptop के लिए microprocessor", "दोनों कार्यों के लिए केवल microprocessor", "दोनों कार्यों के लिए केवल microcontroller"],
       "correctIndex": 1,
       "explanation": "छोटे dedicated कार्य (temperature controller) के लिए microcontroller और भारी general purpose कार्य (laptop) के लिए microprocessor उपयुक्त है, इसलिए option B सही है। option A में चयन उलटा है इसलिए गलत। दोनों कार्यों के लिए एक ही प्रकार चुनना उपयुक्तता की दृष्टि से सही नहीं, अतः C और D गलत हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q31",
+      "question": "बैटरी से चलने वाले पोर्टेबल उपकरणों (जैसे wearable fitness band) में microcontroller को प्राथमिकता देने का एक महत्वपूर्ण कारण क्या है?",
+      "options": ["इसमें on-chip sleep/low-power modes उपलब्ध होते हैं जिससे battery life बढ़ती है", "इसकी clock frequency हमेशा microprocessor से अधिक होती है", "इसे कभी भी power off नहीं किया जा सकता", "यह केवल AC mains पर चलता है"],
+      "correctIndex": 0,
+      "explanation": "Microcontroller में built-in idle/sleep power-saving modes होते हैं जो अनावश्यक हिस्सों की power काट देते हैं, जिससे battery-operated device की battery life बढ़ती है, इसलिए option A सही है। clock frequency सामान्यतः microprocessor से कम ही होती है, अतः B गलत है। device को on/off किया जा सकता है, इसलिए C गलत। पोर्टेबल उपकरण battery पर चलते हैं, AC mains पर नहीं, अतः D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q32",
+      "question": "8051 जैसे microcontroller में bit-addressable RAM व विशेष bit-manipulation instructions (जैसे SETB, CLR) होने का मुख्य लाभ किस कार्य में मिलता है?",
+      "options": ["भारी floating-point scientific calculation में", "individual I/O pin/bit को control करने वाले real-time control कार्यों में", "बड़ी video file editing में", "केवल internet browsing में"],
+      "correctIndex": 1,
+      "explanation": "bit-addressable memory व SETB/CLR जैसी instructions से किसी एक GPIO pin या flag bit को सीधे set/clear किया जा सकता है, जो relay, LED, sensor जैसे real-time control कार्यों में उपयोगी है, इसलिए option B सही है। भारी floating-point calculation, video editing व internet browsing जैसे general-purpose भारी कार्यों के लिए यह विशेष सुविधा प्रमुख कारण नहीं होती, इसलिए A, C और D गलत हैं।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q33",
+      "question": "एक typical microcontroller आधारित embedded product (जैसे washing machine controller) में program (firmware) सामान्यतः कहाँ store होता है, और यह microprocessor आधारित PC से किस प्रकार भिन्न है?",
+      "options": ["दोनों में program केवल RAM में स्थायी रूप से रहता है", "PC में program केवल CPU register में रहता है", "Firmware on-chip Flash/ROM में स्थायी रूप से रहता है; PC में OS व software हार्ड डिस्क/SSD जैसी secondary storage से load होते हैं", "Microcontroller में कोई program store नहीं होता"],
+      "correctIndex": 2,
+      "explanation": "Microcontroller की firmware chip के on-chip Flash/ROM में permanently burn होती है, जबकि PC जैसे microprocessor system में OS व applications हार्ड डिस्क/SSD से RAM में load किए जाते हैं, इसलिए option C सही है। RAM volatile होती है, इसमें program स्थायी रूप से नहीं रहता, अतः A गलत। register बहुत छोटे व अस्थायी storage होते हैं, पूरा program वहाँ नहीं रहता, इसलिए B गलत। microcontroller को कार्य के लिए program चाहिए ही होता है, अतः D गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q34",
+      "question": "8051 microcontroller को 8-bit device कहा जाता है जबकि एक आधुनिक desktop microprocessor को प्रायः 64-bit कहा जाता है। यह अंतर मुख्यतः किस बात को दर्शाता है?",
+      "options": ["chip का रंग अलग होना", "chip पर pins की संख्या का कोई महत्व न होना", "केवल price का अंतर", "एक बार में ALU/registers द्वारा process किए जाने वाले data की word length"],
+      "correctIndex": 3,
+      "explanation": "8-bit या 64-bit जैसे आँकड़े यह बताते हैं कि CPU के ALU व registers एक instruction cycle में कितने bits का data एक साथ process कर सकते हैं, यही word length है, इसलिए option D सही है। यह chip के रंग से कोई संबंध नहीं रखता, अतः A गलत। pins की संख्या एक अलग parameter है, इसलिए B गलत। यह मात्र price का मुद्दा नहीं बल्कि computing capability का है, अतः C गलत है।"
+    },
+    {
+      "id": "u2_mc_vs_mp_q35",
+      "question": "Microcontroller आधारित product में firmware डालने के लिए सामान्यतः किस tool/process का उपयोग होता है, जबकि microprocessor आधारित PC में नया software किस प्रकार डाला जाता है?",
+      "options": ["दोनों में सॉफ्टवेयर बदलना असंभव है", "Microcontroller में programmer/burner tool से Flash में firmware burn होता है; PC में OS के अंदर installer चलाकर software install किया जाता है", "दोनों में केवल internet से ही program डाला जा सकता है", "PC में भी हर बार chip को burner से burn करना पड़ता है"],
+      "correctIndex": 1,
+      "explanation": "Microcontroller की firmware एक programmer/burner device से इसकी on-chip Flash/ROM में burn की जाती है, जबकि PC में OS पर installer/setup चलाकर नया software आसानी से install किया जाता है, इसलिए option B सही है। दोनों में software update/install संभव है, अतः A गलत। internet के बिना भी offline installer या burner से program डाला जा सकता है, इसलिए C गलत। PC में हर बार chip burn करने की जरूरत नहीं होती, केवल install किया जाता है, अतः D गलत है।"
     }
   ]
 }

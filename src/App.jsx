@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Setup from './pages/Setup.jsx'
 import PracticeSets from './pages/PracticeSets.jsx'
+import UnitPracticeSets from './pages/UnitPracticeSets.jsx'
 import Quiz from './pages/Quiz.jsx'
 import Review from './pages/Review.jsx'
 import History from './pages/History.jsx'
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/setup/:mode" element={<Setup />} />
           <Route path="/practice-sets" element={<PracticeSets />} />
+          <Route path="/unit-practice-sets" element={<UnitPracticeSets />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/review/:id" element={<Review />} />
           <Route path="/history" element={<History />} />

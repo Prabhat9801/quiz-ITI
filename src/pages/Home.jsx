@@ -32,6 +32,12 @@ const MODES = [
     emoji: '📝',
   },
   {
+    to: '/unit-practice-sets',
+    title: 'Unit Practice Sets',
+    desc: 'Har Unit ke apne fixed sets, topic-wise labeled',
+    emoji: '📚',
+  },
+  {
     to: '/history',
     title: 'History',
     desc: 'Pichle attempts ka review',

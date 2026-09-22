@@ -213,6 +213,111 @@
       "options": ["1382 Hz", "690 Hz", "3386 Hz", "276 Hz"],
       "correctIndex": 0,
       "explanation": "R*C = 4700*10^-8 = 4.7*10^-5 s, sqrt(6) ≈ 2.449. f = 1/(2*3.14159*4.7*10^-5*2.449) = 1/(7.23*10^-4) ≈ 1382 Hz. 690 Hz तो लगभग दुगुने R*C पर आता; बिना sqrt(6) के मान 3386 Hz होता, इसलिए सही उत्तर लगभग 1382 Hz है।"
+    },
+    {
+      "id": "u1_oscillators_q31",
+      "question": "RC phase-shift oscillator के feedback network द्वारा phase-shift frequency पर दिया गया attenuation factor लगभग कितना होता है?",
+      "options": ["लगभग 1/3", "लगभग 1/29", "लगभग 1/6", "लगभग 1/2"],
+      "correctIndex": 1,
+      "explanation": "RC phase-shift network तीनों sections मिलकर कुल लगभग 1/29 attenuation करता है, इसी कारण loop gain |Aβ|=1 बनाने के लिए amplifier gain कम से कम 29 चाहिए। 1/3 attenuation Wien bridge network का है (जहाँ gain 3 चाहिए), और 1/6, 1/2 किसी मानक analysis से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_oscillators_q32",
+      "question": "Wien bridge oscillator के bridge circuit में एक arm series R1-C1 (lead-lag network का series भाग) और दूसरी adjacent arm parallel R2-C2 से बनी होती है। शेष दो arms सामान्यतः किससे बनी होती हैं?",
+      "options": ["दो अतिरिक्त inductors", "दो और समान RC lead-lag networks", "दो resistors (R3, R4) जो voltage-divider बनाकर negative feedback देते हैं", "केवल दो capacitors"],
+      "correctIndex": 2,
+      "explanation": "शेष दो arms दो resistors (R3, R4) होती हैं जो एक voltage-divider बनाती हैं और amplifier को negative feedback देकर gain को लगभग 3 पर स्थिर रखती हैं। Bridge में कोई extra inductor नहीं होता, दो और RC lead-lag network जोड़ना अनावश्यक जटिलता है, और केवल capacitors से आवश्यक voltage-divider अनुपात नहीं मिलता।"
+    },
+    {
+      "id": "u1_oscillators_q33",
+      "question": "RC phase-shift oscillator में प्रायः तीनों sections के R और C मान बराबर (equal) रखे जाते हैं। इसका मुख्य कारण क्या है?",
+      "options": ["equal values रखने से output power बहुत बढ़ जाती है", "equal values रखने से amplifier की आवश्यकता समाप्त हो जाती है", "equal values oscillator को rectifier में बदल देते हैं", "equal values रखने से हर section बराबर लगभग 60 degrees phase shift देता है जिससे standard sqrt(6) व gain-29 जैसे design formulae सीधे लागू होते हैं"],
+      "correctIndex": 3,
+      "explanation": "तीनों R और C को बराबर रखने पर प्रत्येक section बराबर मात्रा में (लगभग 60 degrees) phase shift देता है, जिससे कुल 180 degrees सरलता से मिल जाता है और sqrt(6), gain=29 जैसे standard सूत्र सीधे लागू हो जाते हैं। इससे output power नहीं बढ़ती, amplifier फिर भी अनिवार्य है, और यह circuit को rectifier में परिवर्तित नहीं करता।"
+    },
+    {
+      "id": "u1_oscillators_q34",
+      "question": "Wien bridge oscillator में R3-R4 voltage-divider द्वारा दिया गया negative feedback मुख्यतः किस उद्देश्य के लिए होता है?",
+      "options": ["amplifier का gain व oscillation की amplitude को स्थिर (stabilize) रखने और distortion कम करने के लिए", "loop को आवश्यक 180 degrees phase shift देने के लिए", "oscillation की frequency को दोगुना करने के लिए", "AC signal को DC में बदलने के लिए"],
+      "correctIndex": 0,
+      "explanation": "R3-R4 का negative feedback amplifier gain को लगभग 3 पर स्थिर रखता है जिससे oscillation की amplitude constant रहती है और waveform में distortion कम होता है। phase shift की जिम्मेदारी lead-lag (R1C1-R2C2) network की है, यह frequency को नहीं बदलता और न ही AC को DC में बदलता है।"
+    },
+    {
+      "id": "u1_oscillators_q35",
+      "question": "एक op-amp आधारित Wien bridge oscillator में non-inverting amplifier का gain सूत्र (1 + Rf/R1) है, और oscillation के लिए यह gain ठीक 3 होना चाहिए। यदि R1 = 10 kΩ हो, तो Rf का मान क्या होना चाहिए?",
+      "options": ["10 kΩ", "20 kΩ", "5 kΩ", "30 kΩ"],
+      "correctIndex": 1,
+      "explanation": "gain = 1 + Rf/R1 = 3 से Rf/R1 = 2, अतः Rf = 2×10 kΩ = 20 kΩ। Rf = 10 kΩ रखने पर gain केवल 2 मिलेगा, 5 kΩ पर gain 1.5, और 30 kΩ पर gain 4 हो जाएगा — इनमें से कोई भी आवश्यक gain 3 नहीं देता।"
+    },
+    {
+      "id": "u1_oscillators_q36",
+      "question": "RC phase-shift oscillator में C = 0.001 µF है और frequency of oscillation 10 kHz चाहिए। सूत्र f = 1/(2*pi*R*C*sqrt(6)) के अनुसार R का मान लगभग कितना होना चाहिए?",
+      "options": ["3.25 kΩ", "13 kΩ", "6.5 kΩ", "1 kΩ"],
+      "correctIndex": 2,
+      "explanation": "R = 1/(2*pi*f*C*sqrt(6)) = 1/(2*3.14159*10000*10^-9*2.449) ≈ 1/(1.539*10^-4) ≈ 6.5 kΩ. 13 kΩ आधी frequency के लिए सही होता, 3.25 kΩ दुगुनी frequency देता, और 1 kΩ इस सूत्र से मेल नहीं खाता।"
+    },
+    {
+      "id": "u1_oscillators_q37",
+      "question": "Wien bridge oscillator में R = 2.2 kΩ और C = 0.047 µF है। इस oscillator के output signal का time period (T = 1/f, जहाँ f = 1/(2*pi*R*C)) लगभग कितना होगा?",
+      "options": ["1.3 ms", "0.325 ms", "6.5 ms", "0.65 ms"],
+      "correctIndex": 3,
+      "explanation": "पहले f = 1/(2*pi*R*C) = 1/(2*3.14159*2200*0.047*10^-6) ≈ 1540 Hz निकाला जाता है। फिर time period T = 1/f = 1/1540 ≈ 0.65 ms (लगभग 650 µs)। 1.3 ms दुगुना, 0.325 ms आधा, और 6.5 ms दस गुना मान है जो सही calculation से मेल नहीं खाता।"
+    },
+    {
+      "id": "u1_oscillators_q38",
+      "question": "Wien bridge oscillator का सरल सूत्र f = 1/(2*pi*R*C) केवल तभी सही लागू होता है जब कौन-सी शर्त पूरी हो?",
+      "options": ["series arm का R1 और parallel arm का R2 बराबर हो तथा C1=C2 दोनों बराबर हों", "केवल R1=R2 होना पर्याप्त है, C का कोई असर नहीं", "केवल C1=C2 होना पर्याप्त है, R का कोई असर नहीं", "R1, R2 से बहुत अधिक (R1>>R2) होना चाहिए"],
+      "correctIndex": 0,
+      "explanation": "सरल सूत्र f=1/(2πRC) तभी सही है जब दोनों arms के R बराबर (R1=R2=R) और दोनों C बराबर (C1=C2=C) हों। यदि केवल R या केवल C बराबर हो तो सामान्य सूत्र f=1/(2π√(R1R2C1C2)) उपयोग करना पड़ता है; R1>>R2 रखने से यह सरल सूत्र लागू नहीं होता।"
+    },
+    {
+      "id": "u1_oscillators_q39",
+      "question": "RC phase-shift oscillator को बहुत उच्च (radio) frequencies के लिए सामान्यतः पसंद नहीं किया जाता, इसका मुख्य कारण क्या है?",
+      "options": ["यह केवल DC output देता है", "उच्च frequency पर आवश्यक R और C के मान इतने छोटे हो जाते हैं कि practical design व stray capacitance की समस्या आ जाती है", "यह oscillation शुरू ही नहीं कर पाता", "इसमें अनिवार्य रूप से costly inductor चाहिए"],
+      "correctIndex": 1,
+      "explanation": "उच्च frequency पर f=1/(2πRCsqrt6) से आवश्यक R व C के मान बहुत छोटे हो जाते हैं, जिससे stray/parasitic capacitance का प्रभाव हावी हो जाता है और सटीक design कठिन हो जाता है; इसलिए वहाँ LC oscillator बेहतर रहते हैं। यह oscillator DC नहीं बल्कि AC output देता है, सही design में oscillation शुरू होती है, और इसमें inductor की आवश्यकता नहीं होती (वह LC oscillator में लगता है)।"
+    },
+    {
+      "id": "u1_oscillators_q40",
+      "question": "Wien bridge oscillator को audio-frequency (AF) signal generators में व्यापक रूप से क्यों उपयोग किया जाता है?",
+      "options": ["इसकी frequency stability बहुत खराब होती है", "इसका output अत्यधिक distorted होता है", "यह audio range में अच्छी frequency stability और कम distortion वाला sine wave output देता है", "इसे चलाने के लिए 100 से अधिक gain वाला amplifier चाहिए"],
+      "correctIndex": 2,
+      "explanation": "Wien bridge oscillator का amplitude-stabilized feedback (R3-R4 negative feedback) audio range में स्थिर frequency और low-distortion sine wave output देता है, इसलिए यह AF signal generators में लोकप्रिय है। खराब stability या अधिक distortion इसके गुण नहीं हैं, और इसे केवल gain 3 वाला amplifier चाहिए, 100 से अधिक gain की आवश्यकता नहीं।"
+    },
+    {
+      "id": "u1_oscillators_q41",
+      "question": "RC phase-shift oscillator सामान्य (properly designed, |Aβ|=1) operation में किस प्रकार का output waveform देता है और क्यों?",
+      "options": ["Square wave, क्योंकि amplifier हमेशा saturation में काम करता है", "Triangular wave, क्योंकि capacitors संकेत को integrate करते हैं", "Pulse waveform, क्योंकि circuit एक switching action करता है", "Sine wave, क्योंकि RC feedback network केवल fundamental frequency पर आवश्यक 180 degrees phase shift देता है और harmonics को दबा देता है"],
+      "correctIndex": 3,
+      "explanation": "सही design में RC network केवल एक विशेष (fundamental) frequency पर 180 degrees phase shift व Barkhausen शर्तें पूरी करता है, इसलिए स्थिर-अवस्था output लगभग शुद्ध sine wave होता है। amplifier को saturation में नहीं चलाया जाता (वरना distortion होगी), capacitors यहाँ integrator के रूप में नहीं बल्कि phase-shift element के रूप में काम करते हैं, और यह switching circuit नहीं है इसलिए pulse output नहीं मिलता।"
+    },
+    {
+      "id": "u1_oscillators_q42",
+      "question": "यदि Wien bridge oscillator में series arm का R1 = 2 kΩ, parallel arm का R2 = 8 kΩ तथा दोनों capacitors C1=C2=0.01 µF हों, तो सामान्य सूत्र f = 1/(2*pi*sqrt(R1*R2)*C) से frequency लगभग कितनी होगी?",
+      "options": ["3980 Hz", "1990 Hz", "7960 Hz", "995 Hz"],
+      "correctIndex": 0,
+      "explanation": "sqrt(R1*R2) = sqrt(2000*8000) = sqrt(1.6*10^7) = 4000 Ω. f = 1/(2*3.14159*4000*10^-8) = 1/(2.513*10^-4) ≈ 3980 Hz. 1990 Hz दुगुने प्रभावी R पर आता, 7960 Hz आधे प्रभावी R पर, और 995 Hz चार गुने R पर — ये दिए गए मानों से मेल नहीं खाते।"
+    },
+    {
+      "id": "u1_oscillators_q43",
+      "question": "यदि RC phase-shift oscillator में सामान्य inverting amplifier की जगह एक non-inverting amplifier (0 degrees phase shift) उपयोग किया जाए, तो Barkhausen criterion पूरा करने के लिए feedback RC network में क्या बदलाव आवश्यक होगा?",
+      "options": ["कोई बदलाव आवश्यक नहीं, phase shift अप्रासंगिक है", "feedback network को कुल 180 degrees के स्थान पर 0/360 degrees phase shift देने के लिए फिर से design करना होगा", "RC sections की संख्या घटाकर केवल एक करनी होगी", "सभी capacitors को inductors से बदलना अनिवार्य होगा"],
+      "correctIndex": 1,
+      "explanation": "Barkhausen criterion के लिए loop का total phase shift 0/360 degrees होना चाहिए। inverting amplifier (180°) के साथ feedback network को 180° phase shift देना पड़ता है, परन्तु non-inverting amplifier (0°) उपयोग करने पर network को स्वयं 0° अथवा 360° phase shift देने के लिए दोबारा design करना होगा। phase shift को अप्रासंगिक कहना गलत है, केवल एक RC section पर्याप्त phase shift नहीं दे सकता, और capacitors को inductors से बदलना अनिवार्य नहीं है।"
+    },
+    {
+      "id": "u1_oscillators_q44",
+      "question": "Wien bridge oscillator में automatic amplitude stabilization के लिए feedback resistor arm में सामान्यतः किस प्रकार का घटक उपयोग किया जाता है?",
+      "options": ["एक अतिरिक्त series capacitor जो output को block करता है", "एक अतिरिक्त series inductor जो high frequencies filter करता है", "Thermistor या अन्य nonlinear resistive element, जो amplitude बढ़ने पर gain को स्वतः घटा देता है", "एक transformer जो केवल voltage level बदलता है"],
+      "correctIndex": 2,
+      "explanation": "Thermistor (या back-to-back diodes/FET जैसा nonlinear element) feedback resistor की जगह लगाया जाता है ताकि amplitude बढ़ने पर उसका प्रभावी प्रतिरोध बदलकर gain स्वतः घट जाए और amplitude स्थिर बनी रहे। series capacitor, series inductor या transformer इस automatic gain-control कार्य के लिए उपयोग नहीं होते।"
+    },
+    {
+      "id": "u1_oscillators_q45",
+      "question": "RC phase-shift oscillator में यदि R को constant रखते हुए तीनों sections के capacitor C का मान बढ़ा दिया जाए, तो frequency of oscillation पर क्या प्रभाव पड़ेगा?",
+      "options": ["frequency बढ़ जाएगी", "frequency पर कोई प्रभाव नहीं पड़ेगा", "oscillation पूरी तरह रुक जाएगी", "frequency घट जाएगी, क्योंकि f, C के व्युत्क्रमानुपाती (inversely proportional) है"],
+      "correctIndex": 3,
+      "explanation": "सूत्र f = 1/(2*pi*R*C*sqrt(6)) के अनुसार f, R और C दोनों के व्युत्क्रमानुपाती है; इसलिए C बढ़ाने पर frequency घट जाएगी। frequency बढ़ना या अप्रभावित रहना सूत्र के विरुद्ध है, और केवल C बढ़ाने से Barkhausen की phase/gain शर्तें इतनी नहीं बिगड़तीं कि oscillation पूरी तरह रुक जाए (यदि gain अभी भी पर्याप्त है)।"
     }
   ]
 }

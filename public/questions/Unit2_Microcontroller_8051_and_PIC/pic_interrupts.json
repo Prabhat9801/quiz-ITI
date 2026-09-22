@@ -213,6 +213,111 @@
       "options": ["CPU को हर समय flag check नहीं करना पड़ता, वह event होने पर ही तुरंत react करता है", "यह हमेशा कम memory लेता है", "इसमें flags नहीं होते", "यह Fosc घटा देता है"],
       "correctIndex": 0,
       "explanation": "Interrupt में CPU अन्य काम करता रहता है और event होने पर तुरंत ISR चलाता है, जिससे CPU समय बर्बाद किए बिना तेज response मिलता है, इसलिए option A सही है। यह हमेशा कम memory नहीं लेता, flags तब भी होते हैं और Fosc से संबंध नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q31",
+      "question": "ADC (Analog-to-Digital Converter) की conversion complete होने पर PIR1 register का कौन सा flag set होता है, जिसका उपयोग एक temperature monitoring system में CPU को बार-बार polling से बचाने के लिए interrupt-driven sampling में किया जा सकता है?",
+      "options": ["ADIF", "RCIF", "SSPIF", "CCP1IF"],
+      "correctIndex": 0,
+      "explanation": "ADC conversion पूरी होने पर PIR1 register का ADIF flag set होता है, जिससे CPU बिना बार-बार GO/DONE bit poll किए interrupt द्वारा result process कर सकता है, इसलिए option A सही है। RCIF USART receive के लिए, SSPIF I2C/SPI transfer complete के लिए और CCP1IF capture/compare event के लिए set होते हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q32",
+      "question": "CCP (Capture/Compare/PWM) module में जब किसी external event पर Timer value capture होता है या compare match होता है, तो कौन सा interrupt flag set होकर CPU को सूचित करता है?",
+      "options": ["ADIF", "CCP1IF", "TMR0IF", "INTF"],
+      "correctIndex": 1,
+      "explanation": "Capture event या compare match होने पर PIR1 register का CCP1IF flag set होता है जिससे CPU को interrupt द्वारा सूचना मिलती है, इसलिए option B सही है। ADIF ADC completion, TMR0IF Timer0 overflow और INTF external INT pin से संबंधित flags हैं, CCP event से नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q33",
+      "question": "किसी voltage-monitoring application में जब internal comparator का output किसी reference स्तर को पार करके state बदलता है, तो यह घटना किस peripheral interrupt flag के माध्यम से CPU को सूचित की जा सकती है?",
+      "options": ["RBIF", "TMR1IF", "CMIF", "WRIF"],
+      "correctIndex": 2,
+      "explanation": "Comparator output की state बदलने पर CMIF (Comparator Interrupt Flag) set होता है, जिससे बिना polling किए over/under-voltage जैसी घटनाओं का पता चल जाता है, इसलिए option C सही है। RBIF port-change, TMR1IF Timer1 overflow और WRIF EEPROM write-complete से संबंधित flags हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q34",
+      "question": "Internal data EEPROM में write operation पूरा होने पर CPU को बिना WR control bit को बार-बार poll किए सूचित करने के लिए कौन सा interrupt flag उपलब्ध है?",
+      "options": ["ADIF", "CCP1IF", "RCIF", "WRIF (EEPROM write complete flag)"],
+      "correctIndex": 3,
+      "explanation": "कुछ PIC devices में data EEPROM write cycle पूरा होने पर WRIF flag set होता है जिससे CPU interrupt द्वारा confirm कर सकता है कि write हो गया, बिना WR bit की continuous polling के, इसलिए option D सही है। ADIF ADC, CCP1IF capture/compare और RCIF USART receive के flags हैं, EEPROM write से संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q35",
+      "question": "किसी I2C sensor से data पढ़ते समय, byte transfer पूरा होने पर कौन सा peripheral interrupt flag set होता है जिससे polling के बिना next action लिया जा सके?",
+      "options": ["SSPIF", "TMR2IF", "CCP1IF", "INTF"],
+      "correctIndex": 0,
+      "explanation": "SSP module में I2C/SPI byte transfer complete होने पर SSPIF flag set होता है, इसलिए option A सही है। TMR2IF Timer2 overflow, CCP1IF capture/compare event और INTF external pin interrupt से संबंधित हैं, I2C transfer से नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q36",
+      "question": "PIC18F devices में interrupt priority scheme (high/low priority levels) को enable करने के लिए कौन सा bit set किया जाता है?",
+      "options": ["GIE", "RCON register का IPEN bit", "PEIE", "ADON"],
+      "correctIndex": 1,
+      "explanation": "PIC18F में RCON register का IPEN (Interrupt Priority Enable) bit set करने पर ही high/low priority scheme active होती है, इसलिए option B सही है। GIE सामान्य global enable है, PEIE peripheral master enable है और ADON ADC को on करता है, ये priority scheme से सीधे संबंधित नहीं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q37",
+      "question": "IPEN set होने के बाद PIC18F में किसी individual peripheral interrupt (जैसे Timer1) को high-priority या low-priority category में डालने के लिए कौन सा bit प्रयोग होता है?",
+      "options": ["PIE1 का TMR1IE", "PIR1 का TMR1IF", "IPR1 register का TMR1IP bit", "INTCON2 का कोई bit"],
+      "correctIndex": 2,
+      "explanation": "IPR1/IPR2 registers के individual priority bits जैसे TMR1IP यह तय करते हैं कि वह specific interrupt high या low priority में service होगा, इसलिए option C सही है। TMR1IE केवल enable करता है, TMR1IF केवल flag है और INTCON2 का इससे सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q38",
+      "question": "IPEN=1 (priority scheme active) होने पर PIC18F में nested interrupt किस स्थिति में संभव होता है?",
+      "options": ["कभी नहीं, PIC में nesting असंभव है", "जब दो low-priority interrupts एक साथ आएँ", "जब कोई low-priority interrupt दूसरे low-priority को interrupt करे", "जब कोई high-priority interrupt पहले से चल रहे low-priority ISR को interrupt कर दे"],
+      "correctIndex": 3,
+      "explanation": "Priority scheme में GIEH और GIEL अलग-अलग control होते हैं, इसलिए एक high-priority interrupt पहले से executing low-priority ISR को interrupt करके nesting उत्पन्न कर सकता है, इसलिए option D सही है। PIC में यह संभव है (A गलत), और दो समान-priority interrupts एक-दूसरे को interrupt नहीं करते (B, C गलत)।"
+    },
+    {
+      "id": "u2_pic_interrupts_q39",
+      "question": "PIC16F जैसे mid-range devices में हार्डवेयर call stack की सीमित depth (जैसे 8 levels) होने के कारण ISR डिजाइन करते समय क्या सावधानी जरूरी है?",
+      "options": ["ISR के अंदर बहुत अधिक nested function calls से बचना ताकि stack overflow से program corrupt न हो", "ISR में GIE को हमेशा set रखना", "ISR में हमेशा RETLW का प्रयोग करना", "ISR को EEPROM में लिखना"],
+      "correctIndex": 0,
+      "explanation": "Hardware stack सीमित होने से ISR के भीतर गहरी nested calls से stack overflow होकर return addresses corrupt हो सकते हैं और program गलत जगह jump कर सकता है, इसलिए option A सही सावधानी है। GIE को हमेशा set रखना, हमेशा RETLW का प्रयोग या ISR को EEPROM में लिखना इस समस्या का हल नहीं है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q40",
+      "question": "Interrupt flag bit और interrupt enable bit के बीच मुख्य अंतर क्या है?",
+      "options": ["दोनों एक ही काम करते हैं", "Flag bit hardware द्वारा event होने पर set होता है जबकि enable bit software द्वारा यह तय करता है कि उस event को CPU तक पहुँचने दिया जाए या नहीं", "Flag bit software set करता है और enable bit hardware set करता है", "Enable bit केवल reset पर काम करता है"],
+      "correctIndex": 1,
+      "explanation": "Flag (जैसे TMR0IF) संबंधित घटना होने पर hardware द्वारा automatically set होता है, जबकि enable bit (जैसे TMR0IE) programmer द्वारा पहले से set किया जाता है कि उस flag को interrupt में बदलने दिया जाए या नहीं, इसलिए option B सही है। बाकी विकल्प इनका सही संबंध नहीं बताते।"
+    },
+    {
+      "id": "u2_pic_interrupts_q41",
+      "question": "Interrupt-driven serial printing (बिना polling) में, जब USART का transmit shift register खाली होकर अगला byte भेजने के लिए तैयार होता है, तो कौन सा flag set होता है?",
+      "options": ["RCIF", "ADIF", "TXIF", "SSPIF"],
+      "correctIndex": 2,
+      "explanation": "Transmit buffer खाली होकर नया byte लेने के लिए तैयार होने पर TXIF flag set होता है जिससे interrupt-driven transmission संभव होती है, इसलिए option C सही है। RCIF receive complete पर, ADIF ADC completion पर और SSPIF I2C/SPI transfer पर set होते हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q42",
+      "question": "किसी rotation sensor से आने वाले pulses को बिना CPU को लगातार busy रखे गिनने के लिए किस approach का प्रयोग करना उपयुक्त है?",
+      "options": ["लगातार loop में pin की state पढ़ना (polling)", "ADC से sensor को जोड़ना", "USART से sensor को जोड़ना", "RB0/INT pin पर external interrupt लगाकर हर pulse पर count बढ़ाना"],
+      "correctIndex": 3,
+      "explanation": "RB0/INT pin पर हर pulse edge पर interrupt लेकर ISR में counter बढ़ाना CPU को अन्य काम करने की आज़ादी देता है और कोई pulse miss होने की संभावना भी कम करता है, इसलिए option D सही है। लगातार polling CPU को busy रखता है और ADC/USART pulse counting के उपयुक्त तरीके नहीं हैं।"
+    },
+    {
+      "id": "u2_pic_interrupts_q43",
+      "question": "एक real-time clock जैसी application में हर एक सेकंड पर कोई कार्य (जैसे LCD update) करने के लिए polling के बजाय कौन सा तरीका बेहतर है?",
+      "options": ["Timer1 को overflow पर interrupt (TMR1IE enable करके) उत्पन्न करने देना और ISR में समय गिनना", "बार-बार main loop में TMR1IF को polling से check करना", "GIE को हमेशा disable रखना", "ADC से समय मापना"],
+      "correctIndex": 0,
+      "explanation": "Timer overflow पर TMR1IE enable करके interrupt उत्पन्न कराना CPU को अन्य कार्य करने की स्वतंत्रता देते हुए सटीक समय आधार बनाता है, इसलिए option A सही है। बार-बार polling CPU busy रखती है, GIE disable रखने पर interrupt ही नहीं आएगा और ADC समय मापने का उपयुक्त तरीका नहीं है।"
+    },
+    {
+      "id": "u2_pic_interrupts_q44",
+      "question": "यदि PIC18F में IPEN=1 है और एक ही समय high-priority व low-priority दोनों interrupts pending हो जाएँ, तो CPU पहले किसे service करेगा?",
+      "options": ["जो पहले program में लिखा गया हो", "High-priority interrupt को पहले service किया जाएगा", "Low-priority interrupt को पहले service किया जाएगा", "दोनों को एक साथ parallel में service किया जाएगा"],
+      "correctIndex": 1,
+      "explanation": "Priority scheme का उद्देश्य ही यह है कि जरूरी events पहले service हों, इसलिए high-priority interrupt को low-priority से पहले service किया जाता है, option B सही है। Program order, low-priority को पहले चुनना, या parallel execution PIC के single-core hardware व्यवहार से मेल नहीं खाते।"
+    },
+    {
+      "id": "u2_pic_interrupts_q45",
+      "question": "'Interrupt vector' शब्द का सही अर्थ क्या है?",
+      "options": ["Interrupt की frequency मापने वाला parameter", "Data EEPROM का कोई address", "Program memory का वह निश्चित address जहाँ interrupt आने पर program counter जाता है (जहाँ ISR कोड या उस तक jump करने वाला instruction रखा जाता है)", "Interrupt की duration"],
+      "correctIndex": 2,
+      "explanation": "Interrupt vector program memory का एक fixed address होता है जहाँ interrupt होने पर program counter automatically पहुँच जाता है, और वहाँ सीधे ISR कोड या main ISR तक jump कराने वाला instruction रखा जाता है, इसलिए option C सही है। यह frequency, EEPROM address या duration नहीं है।"
     }
   ]
 }
