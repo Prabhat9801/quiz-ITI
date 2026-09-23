@@ -363,6 +363,186 @@
       ],
       "correctIndex": 0,
       "explanation": "दोनों appliances में fuse या thermal cut-out protector द्वारा overcurrent/overheating से सुरक्षा दी जाती है और metal body की proper earthing से shock से बचाव किया जाता है। Iron में motor नहीं होती (केवल mixer में), mixer में thermostat नहीं होता (केवल iron में), और jar केवल mixer grinder का भाग है, iron में नहीं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q31",
+      "question": "पुराने मॉडल के mixer grinder में mechanical (non-electronic) speed regulator सामान्यतः किस component का प्रयोग करके speed control करता है?",
+      "options": [
+        "Series-connected rheostat/wire-wound resistor द्वारा armature current को सीमित करके",
+        "TRIAC द्वारा firing angle control करके",
+        "Capacitor bank द्वारा reactive power adjust करके",
+        "Transformer द्वारा voltage step-down करके"
+      ],
+      "correctIndex": 0,
+      "explanation": "पुराने mechanical regulators में एक series-connected wire-wound resistor (rheostat) होता है जिसके tapping points बदलने से motor को मिलने वाला effective current/voltage कम-ज्यादा होता है और speed बदलती है। TRIAC based control electronic regulators में होता है, capacitor bank reactive power correction में प्रयोग होता है, और transformer AC voltage को step-down/step-up करने के लिए होता है — mixer के mechanical regulator में नहीं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q32",
+      "question": "यदि mixer grinder का electronic speed regulator (TRIAC) fail हो जाए और short-circuit mode में चला जाए, तो motor पर क्या प्रभाव पड़ेगा?",
+      "options": [
+        "Motor बिल्कुल बंद रहेगी",
+        "Motor को regulator की setting की परवाह किए बिना पूरी (full) speed पर लगातार supply मिलेगी",
+        "Motor केवल low speed पर चलेगी",
+        "Motor की direction उलट जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "TRIAC short-circuit (shorted) हो जाने पर वह हर समय conduct करता रहता है, जिससे firing angle control समाप्त हो जाता है और motor को पूरा supply voltage मिलता रहता है, अर्थात regulator knob किसी भी स्थिति में हो, motor full speed पर चलेगी। Open-circuit fault में motor बंद हो सकती है (यह short-circuit fault नहीं है), केवल low speed पर चलना control-loss की स्थिति में नहीं होता, और TRIAC fail होने से rotation direction नहीं बदलती क्योंकि यह universal motor की winding connection पर निर्भर करता है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q33",
+      "question": "Mixer grinder की jar coupling (drive coupler) में सामान्यतः rubber/plastic bush या cushion का प्रयोग क्यों किया जाता है?",
+      "options": [
+        "Motor की speed बढ़ाने के लिए",
+        "Motor shaft और jar blade shaft के बीच sudden jerk/vibration को absorb करने तथा shock load से coupler को टूटने से बचाने के लिए",
+        "Current की खपत कम करने के लिए",
+        "Overload protector को bypass करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Coupler में लगा rubber/plastic cushion grinding के दौरान होने वाले sudden jerks और vibrations को absorb करता है जिससे shaft व coupler पर अचानक mechanical shock कम लगता है और parts जल्दी नहीं टूटते। यह speed नहीं बढ़ाता, सीधे current खपत को कम नहीं करता, और overload protector से इसका कोई electrical संबंध नहीं है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q34",
+      "question": "Mixer grinder की motor का armature core सामान्यतः किस material से बना होता है और क्यों?",
+      "options": [
+        "Solid mild steel block से, ताकि यह भारी हो",
+        "Pure copper sheets से",
+        "Laminated silicon steel sheets से, ताकि eddy current losses कम हों",
+        "Plastic composite से"
+      ],
+      "correctIndex": 2,
+      "explanation": "Armature core को thin laminated silicon steel sheets से बनाया जाता है क्योंकि यह eddy current losses को कम करता है और motor की efficiency बढ़ाता है। Solid steel block में eddy currents अधिक बनेंगे जिससे heating loss बढ़ेगी, copper sheets magnetic core के लिए उपयुक्त नहीं (यह winding material है, core नहीं), और plastic composite magnetic flux carry नहीं कर सकता।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q35",
+      "question": "यदि mixer grinder चलाने पर motor तो चलती है परंतु blade बहुत धीमी गति से घूमती है और सामान्य से ज़्यादा गर्म हो रही है, जबकि regulator पूरी speed पर सेट है — सबसे संभावित कारण क्या है?",
+      "options": [
+        "Regulator/TRIAC आंशिक रूप से faulty होकर पूरा voltage नहीं पहुँचा रहा, या brushes worn-out होकर सही contact नहीं बना रहे",
+        "Jar में पानी अधिक भर दिया गया है",
+        "Overload protector स्थायी रूप से खुला है",
+        "Sole plate ठंडी है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Partial voltage supply (faulty regulator/TRIAC) या worn commutator-brushes के कारण armature को पूरा current नहीं मिल पाता, जिससे speed कम हो जाती है परंतु current draw असामान्य रहने से heating बढ़ती है। Jar में अधिक material डालने से mechanical load बढ़ता है पर यह प्रश्न में विशेष रूप से नहीं बताया गया, overload protector स्थायी रूप से खुला होने पर motor बिल्कुल नहीं चलेगी, और sole plate iron से संबंधित है, mixer से नहीं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q36",
+      "question": "Electric iron के thermostat की contact points सामान्यतः किस material की बनी होती हैं ताकि arcing के कारण जल्दी खराब न हों?",
+      "options": [
+        "Aluminium",
+        "Silver या silver-alloy contacts",
+        "Plastic",
+        "Rubber"
+      ],
+      "correctIndex": 1,
+      "explanation": "Silver व silver-alloy contacts उच्च conductivity और arc-resistance रखते हैं, इसलिए बार-बार on/off होने पर होने वाली arcing से जल्दी खराब नहीं होते। Aluminium में oxide layer बनने से contact resistance बढ़ जाती है, और plastic/rubber insulators हैं, ये current conduct नहीं करते इसलिए contact material के रूप में अनुपयुक्त हैं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q37",
+      "question": "यदि electric iron का thermostat जाम (stuck) होकर हमेशा closed (ON) स्थिति में रह जाए, तो क्या खतरा उत्पन्न होगा?",
+      "options": [
+        "Iron बिल्कुल गरम नहीं होगी",
+        "Steam production तुरंत बंद हो जाएगा",
+        "Indicator lamp हमेशा बंद रहेगा",
+        "Sole plate का temperature लगातार बढ़ता रहेगा जिससे कपड़े जलने और overheating का खतरा होगा"
+      ],
+      "correctIndex": 3,
+      "explanation": "Thermostat के contacts जाम होकर हमेशा closed रहने पर heating element को supply cut ही नहीं होगी, जिससे temperature नियंत्रण से बाहर होकर बढ़ता रहेगा और कपड़े जलने या element/sole plate को नुकसान होने का खतरा रहता है। Iron गरम ना होना thermostat के open-stuck होने पर होगा (इसका उल्टा), steam production पानी की उपलब्धता व heat पर निर्भर करता है, और indicator lamp सामान्यतः तब तक जलता रहेगा जब तक supply चालू है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q38",
+      "question": "Steam iron के water tank से पानी steam chamber तक पहुँचने की प्रक्रिया को नियंत्रित करने के लिए सामान्यतः क्या प्रयोग होता है?",
+      "options": [
+        "एक manual/spring-loaded steam control valve या button जो पानी की drip rate को नियंत्रित करता है",
+        "एक transformer",
+        "एक capacitor bank",
+        "एक photodiode sensor"
+      ],
+      "correctIndex": 0,
+      "explanation": "Steam control valve/button पानी की drip rate को adjust करता है जिससे user जरूरत के अनुसार कम या ज्यादा steam उत्पन्न कर सके। Transformer voltage परिवर्तन के लिए, capacitor bank reactive power या filtering के लिए, और photodiode light sensing के लिए प्रयोग होते हैं — इनका steam flow नियंत्रण से कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q39",
+      "question": "Electric iron में spray/mist function (यदि उपलब्ध हो) किस principle पर कार्य करता है?",
+      "options": [
+        "Heating element द्वारा पानी को उबालकर बाहर फेंकना",
+        "Thermostat द्वारा पानी को नियंत्रित करना",
+        "एक छोटी manual pump द्वारा tank के पानी को nozzle से दबाव के साथ बाहर निकालना, बिना heat के",
+        "Bimetallic strip द्वारा पानी pump करना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Spray function में एक mechanical push-button pump होता है जो tank के ठंडे पानी को nozzle के माध्यम से दबाव से बाहर निकालता है, यह steam बनाने की process से अलग है और heat की आवश्यकता नहीं होती। Heating element का सीधा संबंध water spray से नहीं, thermostat केवल temperature control करता है, और bimetallic strip केवल heat sense कर के contact खोलती/बंद करती है, पानी pump नहीं करती।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q40",
+      "question": "यदि आप एक overload-protected mixer में मोटर चलाने की कोशिश करें और वह तुरंत बंद हो जाए, फिर कुछ मिनट बाद अपने आप वापस चालू हो जाए, तो यह किस प्रकार के overload protector का व्यवहार दर्शाता है?",
+      "options": [
+        "Manual reset type protector",
+        "Auto-reset (self-resetting) bimetallic thermal protector, जो ठंडा होने पर स्वतः फिर से contact जोड़ देता है",
+        "Fuse-based protector",
+        "MCB (Miniature Circuit Breaker)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Auto-reset bimetallic thermal protector overheat होने पर contact खोल देता है और strip ठंडी होकर सामान्य आकार में लौटने पर स्वतः contact फिर जुड़ जाता है, जिससे motor बिना किसी manual intervention के फिर चालू हो जाती है। Manual reset type में button दबाकर reset करना पड़ता है, fuse एक बार उड़ने पर बदलना पड़ता है (यह अपने आप वापस नहीं आता), और MCB को manually लीवर से ON करना पड़ता है — ये स्वतः reset नहीं होते।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q41",
+      "question": "Mixer grinder की motor की no-load speed, full-load (heavy grinding) speed की तुलना में सामान्यतः कैसी होती है?",
+      "options": [
+        "No-load speed हमेशा full-load speed से कम होती है",
+        "दोनों speeds हमेशा बिल्कुल समान रहती हैं",
+        "No-load पर motor बिल्कुल नहीं घूमेगी",
+        "No-load speed full-load speed से अधिक होती है क्योंकि load कम होने पर armature को कम opposing torque मिलता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Universal (series) motor में load कम होने पर armature पर opposing mechanical torque कम लगता है, जिससे speed बढ़ जाती है (no-load पर series motor की speed बहुत अधिक हो सकती है)। इसलिए no-load speed, full-load speed से अधिक होती है, कम नहीं, दोनों समान नहीं रहतीं (load के अनुसार बदलती हैं), और no-load पर motor रुकती नहीं बल्कि तेज़ घूमती है।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q42",
+      "question": "Electric iron की body/handle सामान्यतः किस material से बनाई जाती है और क्यों?",
+      "options": [
+        "Aluminium, क्योंकि यह अच्छा electrical conductor है",
+        "Heat-resistant plastic/bakelite जैसे insulating material से, ताकि user को गर्मी और shock से सुरक्षा मिले",
+        "Copper, ताकि यह हल्की रहे",
+        "Cast iron, ताकि यह सस्ती बने"
+      ],
+      "correctIndex": 1,
+      "explanation": "Iron की body/handle heat-resistant insulating plastic या bakelite से बनाई जाती है ताकि user के हाथ में heat conduct न हो और accidental electrical leakage से भी सुरक्षा मिले। Aluminium और Copper अच्छे electrical व thermal conductors हैं इसलिए handle के लिए असुरक्षित हैं, और Cast iron बहुत भारी होने के साथ-साथ अच्छा thermal conductor है, insulator नहीं।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q43",
+      "question": "Mixer grinder में एक साथ बहुत lengthy (लगातार लंबे समय तक) grinding करने से बचने की सलाह क्यों दी जाती है?",
+      "options": [
+        "इससे blades कुंद (blunt) होकर हमेशा के लिए खराब हो जाती हैं",
+        "इससे केवल jar का रंग बदल जाता है",
+        "इससे motor winding लगातार गर्म होकर overheating व insulation damage का खतरा बढ़ जाता है, इसलिए short intervals में rest देना आवश्यक है",
+        "इससे केवल overload protector स्थायी रूप से बेकार हो जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Universal motor duty-cycle rated होती है (intermittent duty), लगातार लंबे समय तक चलाने पर winding का temperature बढ़ता रहता है जिससे insulation को नुकसान पहुँचने और motor जलने का खतरा रहता है, इसलिए beech-beech में rest देना जरूरी है। Blade की sharpness का यह प्रत्यक्ष कारण नहीं, jar के रंग से heating का सीधा संबंध नहीं है, और overload protector बार-बार सही तरीके से काम करता रहता है, स्थायी रूप से बेकार नहीं होता।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q44",
+      "question": "Iron में thermostat की calibration (setting) गलत हो जाने पर (उदाहरण के लिए 'Cotton' setting पर भी iron बहुत कम गरम हो रही है) इसका सबसे संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Bimetallic strip की tension बदल जाना या selector dial का mechanical linkage खिसक जाना, जिससे actual cut-off temperature setting से मेल नहीं खाता",
+        "Sole plate का रंग बदलना",
+        "Water tank में पानी कम होना",
+        "Indicator lamp का fuse उड़ना"
+      ],
+      "correctIndex": 0,
+      "explanation": "यदि bimetallic strip की tension बदल गई हो या selector dial का mechanical linkage अपनी सही स्थिति से खिसक गया हो, तो actual cut-off temperature dial की दिखाई गई setting से मेल नहीं खाता, जिससे कम या ज्यादा गर्म होने की समस्या आती है। Sole plate का रंग temperature control को प्रभावित नहीं करता, water tank केवल steam iron के steam function से संबंधित है (dry heating से नहीं), और indicator lamp केवल visual संकेत देता है, temperature control नहीं करता।"
+    },
+    {
+      "id": "u12_mixer_grinder_iron_q45",
+      "question": "Mixer grinder और electric iron दोनों ही उपकरणों में power cord/plug की नियमित जांच क्यों आवश्यक मानी जाती है?",
+      "options": [
+        "क्योंकि cord का रंग समय के साथ बदलता रहता है",
+        "क्योंकि इससे motor/heating element की speed control होती है",
+        "क्योंकि इससे thermostat की calibration बदलती है",
+        "क्योंकि cord में insulation टूटने या wires ढीले होने से short-circuit, sparking या electric shock का खतरा उत्पन्न हो सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "बार-बार मुड़ने और उपयोग होने से cord का insulation घिस सकता है या internal wires ढीले/टूटे हो सकते हैं, जिससे short-circuit, sparking, या user को electric shock लगने का गंभीर खतरा रहता है, इसलिए नियमित जांच जरूरी है। Cord के रंग बदलने से सुरक्षा जांच का संबंध नहीं, cord speed control या thermostat calibration से सीधे नहीं जुड़ा — ये अलग components का कार्य है।"
     }
   ]
 }

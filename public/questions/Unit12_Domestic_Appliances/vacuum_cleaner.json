@@ -363,6 +363,126 @@
       ],
       "correctIndex": 1,
       "explanation": "सही fit और proper contact के लिए brush का size, spring tension तथा material motor की original specification से मेल खाना चाहिए, अन्यथा sparking बढ़ सकती है या commutator को नुकसान पहुँच सकता है। रंग, कीमत या केवल अधिक लंबाई से सही performance सुनिश्चित नहीं होती।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q31",
+      "question": "Vacuum cleaner motor के आगे लगा foam/sponge pre-filter (motor protection filter) किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Motor की RPM बढ़ाने के लिए",
+        "Dust bag से बचकर आए हुए बारीक particles को motor में पहुँचने से पहले रोकने के लिए",
+        "Suction noise बंद करने के लिए",
+        "Exhaust air को गरम करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dust bag/main filter से गुजरने के बाद भी कुछ बारीक कण बचे रह सकते हैं; motor के ठीक पहले लगा foam/sponge pre-filter इन्हें रोककर armature व bearings को धूल से बचाता है, जिससे motor की life बढ़ती है। यह RPM बढ़ाने, noise पूरी तरह बंद करने या air गरम करने का कार्य नहीं करता।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q32",
+      "question": "दो vacuum cleaners में से एक अधिक air-flow (CFM) परन्तु कम suction pressure (water lift) देता है, दूसरा कम air-flow परन्तु अधिक suction pressure देता है। किस प्रकार की सफाई के लिए अधिक suction pressure वाला मॉडल अधिक उपयुक्त होगा?",
+      "options": [
+        "खुले बड़े फर्श पर हल्की धूल साफ करने के लिए",
+        "Carpet के गहरे रेशों में फंसी बारीक धूल खींचने के लिए, जहाँ air को अधिक दबाव से खींचना पड़ता है",
+        "केवल exhaust vent साफ करने के लिए",
+        "केवल cord को स्टोर करने के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Carpet के रेशों के बीच फंसी धूल को बाहर खींचने के लिए हवा को अधिक resistance के विरुद्ध खींचना पड़ता है, इसलिए अधिक suction pressure (water lift) वाला motor यहाँ अधिक प्रभावी होता है, जबकि खुले फर्श पर अधिक air-flow (CFM) पर्याप्त होता है। Exhaust vent सफाई या cord storage से suction pressure के इस अंतर का कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q33",
+      "question": "कुछ vacuum cleaners में dust bag full होने का संकेत देने वाला indicator किस सिद्धांत पर कार्य करता है?",
+      "options": [
+        "Dust bag के अंदर लगे LED bulb की चमक से",
+        "Bag भर जाने पर airflow कम होने से बने differential air pressure को sense करने वाले mechanism/switch से",
+        "Motor की RPM स्थायी रूप से शून्य होने से",
+        "Cord की लंबाई मापने से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dust bag भर जाने पर airflow अवरुद्ध होने लगता है जिससे hose व bag के बीच air pressure में अंतर (differential pressure) बदल जाता है; यह बदलाव एक mechanical/diaphragm switch या pressure sensor द्वारा sense कर indicator चलाया जाता है। LED bulb, motor RPM शून्य होना या cord की लंबाई मापना इसका कार्य सिद्धांत नहीं है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q34",
+      "question": "Vacuum cleaner nozzle में लगा agitator/brush roll यदि motor द्वारा सीधे नहीं बल्कि एक अलग belt से चलाया जाता है, तो यह किस प्रकार की design कहलाती है?",
+      "options": [
+        "Direct-drive design",
+        "Belt-driven design, जिसमें suction motor की shaft से belt द्वारा brush roll को घुमाया जाता है",
+        "Wireless design",
+        "Hydraulic design"
+      ],
+      "correctIndex": 1,
+      "explanation": "Belt-driven design में suction motor की shaft पर लगी pulley से एक rubber belt के माध्यम से nozzle के brush roll को घुमाया जाता है, जबकि direct-drive design में brush roll के लिए अलग dedicated motor होता है। Wireless और hydraulic design brush roll चलाने की सामान्य विधियाँ नहीं हैं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q35",
+      "question": "सामान्य घरेलू (dry-only) vacuum cleaner को गीली सतह या पानी चूसने के लिए प्रयोग नहीं करना चाहिए, इसका मुख्य तकनीकी कारण क्या है?",
+      "options": [
+        "इससे केवल suction pressure कम हो जाता है",
+        "पानी motor winding, brushes व electrical parts में पहुँचकर short-circuit या insulation failure कर सकता है",
+        "इससे केवल dust bag का रंग बदल जाता है",
+        "इससे केवल cord की लंबाई कम हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "सामान्य dry vacuum cleaner में motor व electrical parts water-sealed नहीं होते; पानी अंदर जाने पर वह winding, commutator या brushes तक पहुँचकर short-circuit, insulation failure या electric shock का खतरा उत्पन्न कर सकता है — इसीलिए विशेष wet & dry vacuum cleaner अलग design के साथ आते हैं। बाकी options वास्तविक खतरे को नहीं दर्शाते।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q36",
+      "question": "Vacuum cleaner की rating plate पर दी गई Wattage (जैसे 1200 W) मुख्यतः किस बात का संकेत देती है?",
+      "options": [
+        "Dust bag की क्षमता (capacity) का",
+        "Motor द्वारा rated supply पर लिए जाने वाले electrical input power का, जो suction क्षमता से संबंधित होता है",
+        "Cord की लंबाई का",
+        "Filter के size का"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rating plate पर दी गई Wattage motor द्वारा सामान्य ऑपरेशन में लिए जाने वाले electrical input power को दर्शाती है, जो suction क्षमता (यद्यपि सीधे रूप से नहीं, दक्षता पर भी निर्भर) से जुड़ी होती है और सही fuse/circuit चुनने में भी मदद करती है। Dust bag capacity, cord length और filter size अलग specifications हैं जो wattage से इंगित नहीं होतीं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q37",
+      "question": "Vacuum cleaner के motor supply circuit में brushes के पास लगे छोटे capacitor (suppressor capacitor) का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "Motor की speed को स्थायी रूप से कम करना",
+        "Brush-commutator sparking से उत्पन्न radio frequency interference (RFI/noise) को कम करना",
+        "Dust bag को चार्ज करना",
+        "Suction pressure बढ़ाना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Universal motor में brushes और commutator के बीच sparking से high-frequency electrical noise उत्पन्न होता है जो radio/TV जैसे उपकरणों में interference कर सकता है; suppressor capacitor (कभी-कभी choke के साथ) इस noise को filter कर देता है। यह speed को स्थायी रूप से कम नहीं करता, dust bag चार्ज नहीं करता और suction pressure से इसका सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q38",
+      "question": "Vacuum cleaner motor की winding पर लगी insulation की class (जैसे Class B/F) का मुख्य महत्व क्या है?",
+      "options": [
+        "यह motor का रंग निर्धारित करती है",
+        "यह उस अधिकतम तापमान को दर्शाती है जिसे winding insulation लंबे समय तक बिना क्षतिग्रस्त हुए सह सकती है",
+        "यह dust bag की क्षमता तय करती है",
+        "यह cord की मोटाई तय करती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Insulation class winding material की उस अधिकतम सतत operating temperature limit को दर्शाती है जिसके ऊपर insulation जल्दी खराब होने लगती है; उच्च RPM पर चलने वाले vacuum cleaner motor में इसलिए उचित insulation class का चुनाव महत्वपूर्ण होता है। रंग, dust bag क्षमता या cord मोटाई से इसका कोई संबंध नहीं है।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q39",
+      "question": "Cordless (battery-operated) handheld vacuum cleaner में suction motor को शक्ति देने के लिए सामान्यतः किस प्रकार की battery और motor का संयोजन प्रयोग होता है?",
+      "options": [
+        "Lead-acid battery के साथ three-phase induction motor",
+        "Rechargeable Li-ion battery के साथ छोटा high-speed DC motor (brushed या brushless)",
+        "Dry cell battery के साथ synchronous motor",
+        "Solar cell के साथ stepper motor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cordless handheld vacuum cleaner में हल्की व उच्च energy density वाली rechargeable Li-ion battery से एक compact high-speed DC motor (brushed या brushless DC) चलाया जाता है, जो सीमित battery capacity में भी पर्याप्त suction दे सके। Lead-acid battery, three-phase induction motor, dry cell या solar cell के साथ synchronous/stepper motor जैसे संयोजन ऐसे compact portable उपकरण में प्रयोग नहीं होते।"
+    },
+    {
+      "id": "u12_vacuum_cleaner_q40",
+      "question": "Vacuum cleaner के motor की winding की insulation resistance को megger से जांचते समय बहुत कम value (जैसे कुछ kilo-ohm) मिलना क्या दर्शाता है?",
+      "options": [
+        "Motor पूरी तरह ठीक है और सामान्य चल सकता है",
+        "Winding की insulation कमजोर/नम/क्षतिग्रस्त है और shock या short-circuit का खतरा है",
+        "Suction pressure सामान्य से अधिक होगा",
+        "Dust bag भर गया है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Megger से मापी गई बहुत कम insulation resistance यह दर्शाती है कि winding की insulation नमी, धूल या aging के कारण कमजोर हो गई है, जिससे current leakage, electric shock या short-circuit का खतरा बढ़ जाता है — ऐसे motor को उपयोग से पहले ठीक/बदलना चाहिए। यह motor के ठीक होने, suction बढ़ने या dust bag भरने का संकेत नहीं है।"
     }
   ]
 }

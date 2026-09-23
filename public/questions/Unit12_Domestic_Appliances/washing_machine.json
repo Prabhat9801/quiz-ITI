@@ -363,6 +363,366 @@
       ],
       "correctIndex": 1,
       "explanation": "Capacitor बदलते समय motor की nameplate specification के अनुसार सही capacitance value (µF) और voltage rating का capacitor लगाना आवश्यक है, अन्यथा motor ठीक से start/run नहीं करेगा या जल्दी खराब हो सकता है। Physical size, रंग या brand name electrical performance तय नहीं करते।"
+    },
+    {
+      "id": "u12_washing_machine_q31",
+      "question": "Electromechanical timer के अंदर लगे 'cam' (cam stack) का मुख्य कार्य क्या होता है?",
+      "options": [
+        "अलग-अलग कोणों पर contacts को खोलकर/बंद करके wash cycle के हर step की sequence बनाना",
+        "Water को सीधे गरम करना",
+        "Motor की winding को short करना",
+        "Detergent को measure करके dispense करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Timer motor द्वारा धीरे-धीरे घुमाया गया cam stack अपनी अलग-अलग profile shapes से जुड़े contacts को पूर्वनिर्धारित क्रम में खोलता/बंद करता है, जिससे fill, wash, drain, rinse और spin जैसे steps सही sequence व duration में होते हैं। पानी गरम करना heater का काम है, winding short करना खराबी है, detergent dispensing अलग mechanism से होता है।"
+    },
+    {
+      "id": "u12_washing_machine_q32",
+      "question": "Timer को घुमाने के लिए स्वयं timer के अंदर कौन-सा छोटा motor प्रयोग होता है?",
+      "options": [
+        "मुख्य spin motor",
+        "एक छोटा synchronous timer motor (कम RPM, high torque gear-reduced)",
+        "Drain pump motor",
+        "BLDC main motor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Timer के अंदर एक छोटा synchronous motor gear reduction के साथ बहुत धीमी और steady speed से cam shaft को घुमाता है ताकि प्रत्येक step सही duration तक चले। मुख्य spin motor, drain pump motor और BLDC main motor washing/spinning के लिए हैं, timer चलाने के लिए नहीं।"
+    },
+    {
+      "id": "u12_washing_machine_q33",
+      "question": "Electronic (PCB-based) timer, mechanical cam timer की तुलना में किस प्रकार बेहतर माना जाता है?",
+      "options": [
+        "यह बिना किसी power supply के काम करता है",
+        "इसमें कोई component खराब नहीं होता कभी",
+        "Microcontroller/IC आधारित programmable logic से flexible cycles, precise timing और diagnostic display दे सकता है",
+        "यह केवल manual machines में लगता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Electronic timer एक PCB पर microcontroller/IC आधारित होता है जो software द्वारा flexible wash programs, सटीक timing, sensors से feedback और error/diagnostic display दे सकता है, जबकि mechanical timer में यह सीमित व fixed रहता है। इसे भी power supply चाहिए, कलपुर्जे खराब हो सकते हैं, और यह fully-automatic machines में प्रयोग होता है न कि manual में।"
+    },
+    {
+      "id": "u12_washing_machine_q34",
+      "question": "Fully-automatic washing machine के power supply section में AC mains से PCB के लिए low DC voltage प्राप्त करने हेतु सामान्यतः कौन-सा circuit प्रयोग होता है?",
+      "options": [
+        "केवल एक resistor",
+        "केवल एक capacitor series में",
+        "Direct AC मुख्यतः बिना किसी conversion के",
+        "Step-down transformer/SMPS के बाद bridge rectifier और voltage regulator"
+      ],
+      "correctIndex": 3,
+      "explanation": "PCB के microcontroller व logic circuits को steady low DC voltage चाहिए, इसलिए power supply section में step-down transformer या SMPS के बाद bridge rectifier से AC को pulsating DC में बदला जाता है और फिर regulator (जैसे 7805) से fixed DC मिलती है। केवल resistor या capacitor यह कार्य नहीं कर सकते, direct AC microcontroller को नुकसान पहुंचाएगी।"
+    },
+    {
+      "id": "u12_washing_machine_q35",
+      "question": "Fully-automatic washing machine के control PCB में triac (या relay) का मुख्य उपयोग किसमें होता है?",
+      "options": [
+        "High current AC loads (motor, water valve, drain pump, heater) को low-power microcontroller signal से switch करने में",
+        "DC logic signals को generate करने में",
+        "Water temperature मापने में",
+        "Timer knob को manually घुमाने में"
+      ],
+      "correctIndex": 0,
+      "explanation": "Microcontroller के pins बहुत कम current देते हैं, इसलिए triac या relay driver stage motor, solenoid valve, drain pump और heater जैसी high-current AC loads को microcontroller के छोटे control signal से on/off करने के लिए प्रयोग होते हैं। ये DC logic generate नहीं करते, तापमान माप नहीं सकते और timer knob mechanical machines में manual होता है।"
+    },
+    {
+      "id": "u12_washing_machine_q36",
+      "question": "Manual washing machine में साधारणतः कौन-सी washing technique प्रयोग होती है और यह semi/fully-automatic से किस प्रकार भिन्न है?",
+      "options": [
+        "Tumbling action motorized drum द्वारा",
+        "Pulsator द्वारा उच्च गति agitation",
+        "Hand-operated agitation/scrubbing, जिसमें कोई motor-driven agitation या automatic timing नहीं होती",
+        "Steam-based washing"
+      ],
+      "correctIndex": 2,
+      "explanation": "Manual washing machine में washing technique पूर्णतः hand-operated agitation/scrubbing (crank या lever) पर आधारित होती है, कोई motor-driven pulsator, tumbling drum या automatic timing नहीं होती जो semi/fully-automatic में मौजूद रहती है। Tumbling action front-load की, pulsator top-load की विशेषता है, steam washing domestic machines में प्रयुक्त नहीं होती।"
+    },
+    {
+      "id": "u12_washing_machine_q37",
+      "question": "Semi-automatic (twin-tub) washing machine में spin tub के अंदर लगी basket/drum में सामान्यतः छेद (perforations) क्यों होते हैं?",
+      "options": [
+        "Spinning के दौरान centrifugal force से पानी को बाहर निकलने देने के लिए",
+        "Detergent को अंदर रखने के लिए",
+        "Water को गरम करने के लिए",
+        "Motor को हवा देने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Spin basket में perforations इसलिए होते हैं ताकि high-speed rotation के दौरान centrifugal force से कपड़ों में फंसा पानी छेदों से बाहर outer tub में जाकर drain हो सके। यह detergent रखने, पानी गरम करने या motor cooling के लिए नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q38",
+      "question": "Twin-tub semi-automatic machine के block diagram में wash tub और spin tub के अलावा कौन-सा common component दोनों को जोड़ता है?",
+      "options": [
+        "एक साझा electronic PCB जो पूरी automatic sequence चलाती है",
+        "एक साझा water level sensor",
+        "एक साझा heating element",
+        "Single power supply cord और उससे जुड़े दो अलग switch/timer knob (wash timer व spin timer)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Twin-tub machine में सामान्यतः कोई automatic control PCB नहीं होता; एक ही mains cord से power दोनों sections को मिलती है परंतु wash tub और spin tub के लिए अलग-अलग manual timer knob/switch होते हैं जिन्हें user स्वयं set करता है। Automatic PCB, common water level sensor और common heater fully-automatic machines में मिलते हैं।"
+    },
+    {
+      "id": "u12_washing_machine_q39",
+      "question": "Fully-automatic top-load washing machine के block diagram में मुख्य blocks का सही क्रम (water inlet से लेकर drain तक) कौन-सा है?",
+      "options": [
+        "Drain pump → Water inlet valve → Timer/PCB → Drum/Motor",
+        "Motor → Detergent dispenser → Water inlet valve केवल",
+        "Water inlet valve → Tub/Drum (with pulsator) → Motor & Gearbox (control द्वारा) → Drain pump, यह सब Timer/PCB द्वारा नियंत्रित",
+        "Heater → Drain pump → Water inlet valve"
+      ],
+      "correctIndex": 2,
+      "explanation": "सामान्य block diagram में पहले water inlet valve से tub में पानी भरता है, फिर motor व gearbox पुल्सेटर/drum को agitate या spin करते हैं, अंत में drain pump पानी निकालता है — यह पूरा sequence timer या PCB द्वारा नियंत्रित होता है। अन्य विकल्पों में क्रम या components तार्किक रूप से गलत हैं।"
+    },
+    {
+      "id": "u12_washing_machine_q40",
+      "question": "Washing machine में 'buzzer/alarm' (यदि उपलब्ध हो) cycle पूरी होने पर क्या संकेत देता है?",
+      "options": [
+        "Wash cycle पूरा होने और कपड़े निकालने के लिए तैयार होने का संकेत",
+        "Motor में fault है",
+        "Water level कम है",
+        "Capacitor खराब है"
+      ],
+      "correctIndex": 0,
+      "explanation": "PCB-controlled fully-automatic machines में cycle के अंत में buzzer बजता है जो user को सूचित करता है कि washing/spinning पूरी हो चुकी है और कपड़े निकाले जा सकते हैं। यह motor fault, low water level या capacitor की खराबी का संकेत नहीं है — इनके लिए अलग error indications होती हैं।"
+    },
+    {
+      "id": "u12_washing_machine_q41",
+      "question": "यदि fully-automatic washing machine बार-बार पानी भरकर तुरंत drain कर देती है (wash cycle शुरू ही नहीं होता), तो सबसे संभावित कारण क्या हो सकता है?",
+      "options": [
+        "Run capacitor खराब है",
+        "Lint filter भर गया है",
+        "Suspension spring टूट गया है",
+        "Water level pressure switch/sensor में खराबी जिससे PCB को गलत level signal मिल रहा है"
+      ],
+      "correctIndex": 3,
+      "explanation": "अगर पानी भरने के तुरंत बाद बार-बार drain होकर cycle आगे नहीं बढ़ता, तो सामान्यतः pressure sensor/level switch सही level signal PCB को नहीं दे पा रहा जिससे PCB गलत निर्णय लेता है। Capacitor खराब होने पर motor नहीं चलेगा (न कि पानी बार-बार भरेगा), lint filter और suspension spring का इस समस्या से सीधा संबंध नहीं।"
+    },
+    {
+      "id": "u12_washing_machine_q42",
+      "question": "Washing machine के universal motor (कुछ पुराने/छोटे spin dryer में प्रयुक्त) की मुख्य विशेषता क्या है?",
+      "options": [
+        "यह केवल DC supply पर चलता है",
+        "यह AC और DC दोनों supply पर brushes व commutator के माध्यम से high speed व high starting torque देता है",
+        "इसमें कोई brush नहीं होता",
+        "यह हमेशा constant low speed पर चलता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Universal motor brushes और commutator के माध्यम से series-wound field व armature से high starting torque और उच्च RPM (जैसे spin dryer के लिए आवश्यक) देता है, और यह AC तथा DC दोनों supply पर काम कर सकता है। यह केवल DC पर सीमित नहीं, brush-रहित नहीं होता, और constant low speed इसकी विशेषता नहीं बल्कि high-speed applications में प्रयोग इसकी पहचान है।"
+    },
+    {
+      "id": "u12_washing_machine_q43",
+      "question": "Induction motor की तुलना में universal motor को washing machine spin dryer में प्रयोग करने का एक मुख्य कारण क्या है?",
+      "options": [
+        "Universal motor सस्ता होकर कभी गरम नहीं होता",
+        "Universal motor को capacitor की जरूरत नहीं होती इसीलिए यह induction motor से बेहतर है",
+        "Universal motor केवल single speed पर चलता है इसलिए सरल है",
+        "Universal motor छोटे आकार में भी उच्च RPM और high torque-to-weight ratio दे सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Universal motor कॉम्पैक्ट आकार में भी बहुत उच्च RPM व अच्छा torque-to-weight ratio देता है, जो spin dryer जैसी high-speed जरूरत के लिए उपयुक्त है। यह capacitor-रहित होना कोई selection कारण नहीं, यह गरम भी हो सकता है (brush wear की समस्या भी है), और यह variable speed control में भी प्रयोग होता है, single speed तक सीमित नहीं।"
+    },
+    {
+      "id": "u12_washing_machine_q44",
+      "question": "Washing machine में motor की winding जांचने के लिए multimeter से सामान्यतः क्या परीक्षण किया जाता है?",
+      "options": [
+        "Winding की continuity (resistance) और winding-to-body insulation (earth leakage) जांचना",
+        "केवल AC voltage मापना supply पर",
+        "केवल capacitor की physical size मापना",
+        "केवल पानी का तापमान मापना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Motor की जांच के लिए multimeter की resistance range पर main व auxiliary winding की continuity check की जाती है (open winding न हो) तथा winding से motor body के बीच insulation/earth leakage भी जांची जाती है ताकि shock का खतरा न हो। केवल supply voltage मापने, capacitor का size देखने या पानी का तापमान मापने से winding की स्थिति पता नहीं चलती।"
+    },
+    {
+      "id": "u12_washing_machine_q45",
+      "question": "Fully-automatic washing machine में 'soak' (pre-soak) फंक्शन का उद्देश्य क्या है?",
+      "options": [
+        "कपड़ों को तुरंत spin करना",
+        "कपड़ों को धोने से पहले पानी व detergent में कुछ समय भिगोकर जिद्दी दाग ढीले करना",
+        "Motor को गरम करना",
+        "Water level सेंस करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Soak फंक्शन में timer/PCB कुछ समय के लिए agitation रोककर कपड़ों को detergent-mixed पानी में भीगने देता है, जिससे जिद्दी दाग ढीले होकर बाद की wash cycle में आसानी से निकल जाते हैं। यह तुरंत spin करने, motor गरम करने या water level सेंस करने का कार्य नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q46",
+      "question": "Semi-automatic washing machine में wash tub का motor सामान्यतः किस प्रकार agitator को घुमाता है?",
+      "options": [
+        "Direct high-speed coupling से बिना किसी gear के",
+        "Motor agitator को कभी नहीं घुमाता, केवल पानी बहाता है",
+        "Motor केवल एक दिशा में लगातार उच्च गति पर घुमाता है",
+        "Motor से belt/pulley या gearbox के माध्यम से कम speed पर agitator को alternately दोनों दिशाओं में घुमाकर"
+      ],
+      "correctIndex": 3,
+      "explanation": "Wash motor की rotation को gearbox या belt-pulley व्यवस्था से कम speed में बदलकर agitator को alternately clockwise-anticlockwise घुमाया जाता है ताकि प्रभावी washing action मिले। Direct high-speed coupling, motor का पानी बहाना, या हमेशा एक दिशा में उच्च गति चलाना वास्तविक design के अनुरूप नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q47",
+      "question": "Washing machine के PCB पर लगा 'MOV (Metal Oxide Varistor)' या surge protector किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "Motor की speed बढ़ाने के लिए",
+        "Water को गरम करने के लिए",
+        "Timer की duration बढ़ाने के लिए",
+        "AC mains में आने वाले voltage spikes/surges से sensitive components को सुरक्षा देने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "MOV या surge protector, mains supply में अचानक आए voltage spikes (जैसे lightning या switching surge) को absorb/clamp कर microcontroller व अन्य sensitive electronic components को नुकसान से बचाता है। यह motor speed, हीटिंग या timer duration से संबंधित नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q48",
+      "question": "यदि washing machine का drain pump चल तो रहा है (आवाज आ रही है) परंतु पानी बाहर नहीं निकल रहा, तो सबसे संभावित कारण क्या है?",
+      "options": [
+        "Run capacitor खराब है",
+        "Water inlet valve खराब है",
+        "Drain pipe/impeller में lint या कोई विदेशी वस्तु फंसकर blockage हो गई है",
+        "Door lock switch खराब है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Pump चलने की आवाज आना बताता है कि motor को power मिल रही है, परंतु पानी न निकलना सामान्यतः drain pipe या pump impeller में lint, सिक्का या कपड़े का टुकड़ा फंसने से blockage को दर्शाता है। Capacitor खराब होने पर motor बिल्कुल नहीं चलेगा, water inlet valve और door lock switch पानी निकालने की प्रक्रिया से सीधे संबंधित नहीं।"
+    },
+    {
+      "id": "u12_washing_machine_q49",
+      "question": "Washing machine में 'anti-crease' या 'gentle/delicate' program में मुख्यतः क्या बदलाव किया जाता है?",
+      "options": [
+        "Spin speed बढ़ा दी जाती है और agitation तेज कर दिया जाता है",
+        "Agitation कम तीव्र (धीमी गति व लंबे विराम सहित) और spin speed कम रखी जाती है ताकि नाजुक कपड़े खराब न हों",
+        "Water temperature को अधिकतम कर दिया जाता है",
+        "Timer पूरी तरह बंद कर दिया जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Delicate/gentle program में PCB agitation की तीव्रता व अवधि घटाकर तथा spin RPM कम रखकर नाजुक कपड़ों (जैसे silk, wool) को क्षति से बचाता है। Agitation या spin speed बढ़ाना, तापमान अधिकतम करना, या timer बंद करना gentle wash के उद्देश्य के विपरीत है।"
+    },
+    {
+      "id": "u12_washing_machine_q50",
+      "question": "Washing machine में लगे 'thermistor/thermostat' का मुख्य कार्य क्या है?",
+      "options": [
+        "Water level मापना",
+        "Detergent की मात्रा मापना",
+        "Motor की rotation direction बदलना",
+        "Wash water के तापमान को सेंस करके heater को control board के माध्यम से on/off करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "Thermistor/thermostat पानी के तापमान को सेंस करता है और यह जानकारी control board को भेजता है ताकि heater को selected temperature तक पहुंचने पर बंद और नीचे गिरने पर चालू किया जा सके। Water level, motor direction और detergent मात्रा अलग sensors/mechanisms से नियंत्रित होते हैं।"
+    },
+    {
+      "id": "u12_washing_machine_q51",
+      "question": "Manual washing machine में कोई electrical fault-diagnosis संभव न होने का मुख्य कारण क्या है?",
+      "options": [
+        "इसमें बहुत जटिल PCB होता है",
+        "इसमें बहुत सारे sensors होते हैं",
+        "इसमें capacitor बहुत बड़ा होता है",
+        "इसमें कोई motor, timer या electronic control नहीं होता — यह पूर्णतः mechanical/hand-operated है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Manual washing machine में कोई motor, timer या electronic circuit नहीं होता, यह पूरी तरह hand-operated mechanical उपकरण है, इसलिए इसमें electrical fault-diagnosis का प्रश्न ही नहीं उठता। शेष options किसी वास्तविक तथ्य को नहीं दर्शाते क्योंकि manual machine में PCB, sensors या capacitor होते ही नहीं।"
+    },
+    {
+      "id": "u12_washing_machine_q52",
+      "question": "Fully-automatic washing machine का main control PCB बदलते समय technician को सबसे पहले कौन-सी सावधानी बरतनी चाहिए?",
+      "options": [
+        "PCB को सीधे बिना supply काटे बदलना",
+        "Mains supply बंद करके, capacitors को discharge कर, तथा wiring harness के connectors का सही मिलान करते हुए बदलना",
+        "केवल PCB का रंग जांचना",
+        "Motor को घुमाते हुए PCB बदलना"
+      ],
+      "correctIndex": 1,
+      "explanation": "PCB बदलने से पहले सुरक्षा हेतु mains supply बंद करनी चाहिए, अंदर मौजूद किसी capacitor को discharge करना चाहिए, और नए PCB में wiring harness के सभी connectors सही स्थान व क्रम में जोड़ने चाहिए ताकि गलत wiring से नुकसान न हो। Supply चालू रखकर या motor चलाते हुए काम करना खतरनाक है, केवल रंग देखना अर्थहीन है।"
+    },
+    {
+      "id": "u12_washing_machine_q53",
+      "question": "Washing machine के outer cabinet और tub के बीच जगह में यदि साबुन का झाग (foam) अत्यधिक बनकर बाहर बहने लगे, तो इसका सबसे संभावित कारण क्या है?",
+      "options": [
+        "Motor की खराबी",
+        "Timer की खराबी",
+        "Capacitor की खराबी",
+        "आवश्यकता से अधिक detergent का प्रयोग या गलत (non-low-foam) detergent का उपयोग"
+      ],
+      "correctIndex": 3,
+      "explanation": "Fully-automatic machines के लिए विशेष low-foam detergent बनाया जाता है; यदि सामान्य detergent अधिक मात्रा में डाला जाए तो अत्यधिक झाग बनकर बाहर बहने लगता है, जो washing performance व machine को भी नुकसान पहुंचा सकता है। Motor, timer या capacitor की खराबी का झाग बनने से सीधा संबंध नहीं होता।"
+    },
+    {
+      "id": "u12_washing_machine_q54",
+      "question": "Front-load washing machine, top-load की तुलना में पानी की खपत में सामान्यतः कैसी होती है और इसका मुख्य कारण क्या है?",
+      "options": [
+        "अधिक पानी खर्च करती है क्योंकि drum ऊपर की तरफ खुला होता है",
+        "कम पानी खर्च करती है क्योंकि horizontal drum में कपड़े आंशिक रूप से पानी में डूबते हैं और tumbling action से ही सफाई होती है",
+        "यह पानी बिल्कुल प्रयोग नहीं करती",
+        "पानी की खपत दोनों में बराबर होती है हमेशा"
+      ],
+      "correctIndex": 1,
+      "explanation": "Front-load machine में horizontal drum के कारण कपड़े पूरी तरह डूबे बिना भी tumbling action (ऊपर उठकर गिरना) से प्रभावी सफाई हो जाती है, इसलिए यह top-load की तुलना में सामान्यतः कम पानी खर्च करती है। शेष options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u12_washing_machine_q55",
+      "question": "Washing machine में लगे 'belt' (यदि motor से drum को belt-driven किया गया हो, जैसे कई front-load machines में) के ढीला या टूटा होने पर क्या लक्षण दिखेगा?",
+      "options": [
+        "Machine बिल्कुल power ही नहीं लेगी",
+        "केवल पानी भरना बंद हो जाएगा",
+        "Motor चलने की आवाज तो आएगी परंतु drum ठीक से नहीं घूमेगा या बिल्कुल नहीं घूमेगा",
+        "केवल detergent dispenser काम करना बंद कर देगा"
+      ],
+      "correctIndex": 2,
+      "explanation": "Belt-driven front-load machines में यदि belt ढीली हो जाए या टूट जाए, तो motor तो चलता रहेगा (आवाज आएगी) परंतु उसकी power drum तक ठीक से transfer नहीं होगी, जिससे drum धीमा घूमेगा या बिल्कुल नहीं घूमेगा। Power supply, water inlet या detergent dispenser का belt से सीधा संबंध नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q56",
+      "question": "Washing machine में 'delay start/timer-set' फीचर (fully-automatic में) किस प्रकार काम करता है?",
+      "options": [
+        "यह केवल spin speed बढ़ाता है",
+        "User द्वारा चुने गए समय के बाद PCB स्वतः wash cycle शुरू कर देता है, ताकि cycle किसी निश्चित समय पर पूरी हो",
+        "यह capacitor को चार्ज करता है",
+        "यह water level को स्थायी रूप से बढ़ा देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Delay start फीचर में user एक समय (जैसे 2 घंटे बाद) set करता है, और PCB का internal timer/clock उस अवधि बाद automatically wash cycle को शुरू कर देता है ताकि cycle उपयोगकर्ता की सुविधानुसार समय पर पूरी हो। यह spin speed, capacitor charging या water level से संबंधित नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q57",
+      "question": "Twin-tub washing machine में wash tub और spin tub के बीच कपड़े transfer करते समय user को कौन-सी सावधानी बरतनी चाहिए?",
+      "options": [
+        "कोई सावधानी आवश्यक नहीं है",
+        "Motor चालू रखते हुए ही कपड़े निकालना तेज़ है",
+        "पहले wash tub का motor/timer बंद करके, हाथ से सावधानीपूर्वक कपड़े निकालकर स्पिन बास्केट में डालना ताकि चोट या उलझाव न हो",
+        "Spin tub में सीधे पानी सहित कपड़े उलट देना बिना संतुलन देखे"
+      ],
+      "correctIndex": 2,
+      "explanation": "Twin-tub में कोई automatic transfer mechanism नहीं होता, इसलिए safety के लिए पहले wash motor/timer बंद कर, कपड़ों को हाथ से निकालकर सावधानी से spin basket में डालना चाहिए तथा basket में कपड़े संतुलित रखने चाहिए ताकि spin के दौरान असंतुलन/कंपन न हो। Motor चालू रखते हुए हाथ डालना खतरनाक है, और असंतुलित तरीके से डालने से अत्यधिक vibration होगी।"
+    },
+    {
+      "id": "u12_washing_machine_q58",
+      "question": "Washing machine PCB में प्रयुक्त 'opto-isolator' या relay driver stage microcontroller को किससे बचाती है?",
+      "options": [
+        "Water leakage से सीधे",
+        "High-voltage AC side और low-voltage DC logic side के बीच direct electrical connection से, जिससे microcontroller high voltage/noise से सुरक्षित रहता है",
+        "Detergent के रासायनिक प्रभाव से",
+        "Motor की mechanical vibration से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Opto-isolator या relay driver stage AC power side और DC control/logic side के बीच electrical isolation प्रदान करता है ताकि high voltage spikes या noise सीधे sensitive microcontroller तक न पहुंचें और वह सुरक्षित रहे। यह water leakage, detergent के रासायनिक प्रभाव या mechanical vibration से सुरक्षा के लिए नहीं है।"
+    },
+    {
+      "id": "u12_washing_machine_q59",
+      "question": "यदि washing machine का spin cycle शुरू होते ही machine जोर से हिलने लगे (excessive vibration) और आगे न बढ़े, तो सबसे संभावित कारण क्या है?",
+      "options": [
+        "Water inlet valve खराब है",
+        "Detergent dispenser जाम है",
+        "कपड़ों का असंतुलित वितरण (unbalanced load) या खराब suspension springs/shock absorbers, जिसे balance switch/sensor द्वारा detect कर PCB spin रोक देता है",
+        "Timer knob घिस गया है"
+      ],
+      "correctIndex": 2,
+      "explanation": "अधिकांश fully-automatic machines में एक balance switch/sensor होता है जो अत्यधिक vibration (असंतुलित कपड़े या घिसे suspension springs के कारण) को detect करके सुरक्षा हेतु PCB को spin रोकने या speed कम करने का संकेत देता है। Water inlet valve या detergent dispenser का spin vibration से सीधा संबंध नहीं, और यह समस्या टाइमर knob घिसने से नहीं होती।"
+    },
+    {
+      "id": "u12_washing_machine_q60",
+      "question": "Washing machine की servicing के दौरान PCB पर मौजूद fuse बार-बार उड़ जाए (blow हो जाए), तो technician को जांच का सबसे तार्किक क्रम क्या अपनाना चाहिए?",
+      "options": [
+        "बिना कारण जांचे बार-बार उच्च rating का fuse लगा देना",
+        "Fuse हटाकर सीधे तार जोड़ देना",
+        "पहले short-circuit के संभावित कारण (जैसे खराब motor winding, faulty triac/relay, या water-damaged PCB track) ढूंढकर ठीक करना, फिर सही rating का fuse लगाना",
+        "केवल fuse होल्डर बदल देना पर्याप्त है"
+      ],
+      "correctIndex": 2,
+      "explanation": "बार-बार fuse उड़ना किसी underlying short-circuit या overload फॉल्ट (जैसे shorted motor winding, faulty triac/relay, या नमी से PCB track short होना) का संकेत है; सही तरीका है पहले उस मूल कारण को ढूंढकर ठीक करना और फिर सही rating का fuse लगाना। उच्च rating का fuse लगाना या तार से bypass करना अत्यंत खतरनाक है और आगे बड़ा नुकसान (fire hazard) कर सकता है, केवल holder बदलना पर्याप्त नहीं।"
     }
   ]
 }

@@ -363,6 +363,186 @@
       ],
       "correctIndex": 0,
       "explanation": "Induction cooktop में mains AC पहले EMI filter से गुजरती है, फिर bridge rectifier व filter capacitor द्वारा smooth DC बनती है, जिसे IGBT (gate driver व heat sink सहित) high-frequency AC में बदलकर resonant capacitor-coil circuit को भेजता है, जबकि microcontroller व sensors (temperature, pan detection) पूरे process को नियंत्रित व सुरक्षित रखते हैं। साधारण switch-bulb, compressor-condenser (refrigeration), और magnetron-waveguide (microwave oven) induction cooktop की संरचना नहीं हैं।"
+    },
+    {
+      "id": "u12_induction_cooktop_q31",
+      "question": "Induction cooktop में लगे touch control panel (capacitive touch buttons) की तुलना साधारण mechanical push-button switch से करने पर इसका एक प्रमुख लाभ क्या है?",
+      "options": [
+        "Touch panel mains voltage को स्वयं rectify कर देता है",
+        "Touch panel coil की frequency को स्थायी रूप से बढ़ा देता है",
+        "Touch panel सतह पर कोई moving mechanical part ना होने के कारण पानी/भाप से बेहतर सुरक्षित रहता है और सफाई आसान होती है",
+        "Touch panel बर्तन का material स्वयं पहचान कर बदल देता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Capacitive touch panel में कोई mechanical moving contact नहीं होता, इसलिए सतह पर गिरे पानी/भाप/खाने के छींटे अंदर घुसकर contacts को खराब नहीं करते, और सपाट सतह होने से सफाई भी आसान रहती है। यह rectification नहीं करता, coil की frequency से इसका सीधा संबंध नहीं, और यह बर्तन का material पहचान कर 'बदलता' नहीं — pan detection एक अलग sensing कार्य है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q32",
+      "question": "कुछ induction cooktop में 'boost/quick-heat' feature दिया जाता है, यह वास्तव में क्या करता है?",
+      "options": [
+        "यह coil का आकार अस्थायी रूप से बड़ा कर देता है",
+        "यह IGBT को कुछ समय के लिए rated से अधिक duty cycle/power पर चलाकर तेज़ heating देता है, जिसके बाद सामान्यतः automatically सामान्य power level पर वापस आ जाता है",
+        "यह mains supply की voltage स्थायी रूप से बढ़ा देता है",
+        "यह बर्तन के तल की मोटाई कम कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Boost mode में control circuit सीमित समय के लिए IGBT को अधिक power/duty cycle पर operate करता है ताकि तेज़ी से heating हो (जैसे पानी जल्दी उबालना), और overheating से बचने के लिए एक निश्चित समय बाद यह automatically सामान्य power level पर वापस आ जाता है। इसमें coil का भौतिक आकार नहीं बदलता, mains voltage स्थायी रूप से नहीं बढ़ती, और बर्तन की मोटाई electronics द्वारा नियंत्रित नहीं होती।"
+    },
+    {
+      "id": "u12_induction_cooktop_q33",
+      "question": "Multi-zone (जैसे दो या चार burner वाले) induction cooktop में सामान्यतः coil व्यवस्था किस प्रकार की होती है?",
+      "options": [
+        "सभी zones के लिए केवल एक ही coil साझा होती है",
+        "Multi-zone cooktop में coil होती ही नहीं, केवल resistive element होता है",
+        "प्रत्येक heating zone के लिए अलग-अलग coil (व अपना control) होता है, जिन्हें एक साझा power supply व microcontroller द्वारा स्वतंत्र रूप से नियंत्रित किया जाता है",
+        "सभी zones में केवल एक ही IGBT काम करता है और बाकी बंद रहते हैं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Multi-burner induction cooktop में प्रत्येक zone की अपनी अलग coil (और सामान्यतः अपना switching section) होता है, जिससे हर burner की power level, timer व detection स्वतंत्र रूप से नियंत्रित हो सके, जबकि main power supply व microcontroller साझा हो सकते हैं। एक coil का सभी zones में साझा होना, coil का ना होना, या केवल एक IGBT से सभी zones चलाना व्यावहारिक multi-zone डिज़ाइन नहीं है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q34",
+      "question": "'Flexi-zone' या flexible induction coil व्यवस्था (जहाँ कई छोटी coils मिलकर एक बड़ा heating area बनाती हैं) का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "अलग-अलग आकार व स्थिति के बर्तनों (जैसे बड़ा griddle या असामान्य आकार का बर्तन) को किसी भी स्थिति में रखने पर भी उचित heating प्रदान करना",
+        "केवल coil की लागत कम करना",
+        "Mains frequency को 50 Hz से 100 Hz में बदलना",
+        "बर्तन के वजन को शून्य दिखाना"
+      ],
+      "correctIndex": 0,
+      "explanation": "Flexi-zone व्यवस्था में कई छोटी coils मिलकर एक बड़ा flexible heating क्षेत्र बनाती हैं, ताकि control system उन्हीं coils को active करे जिनके ऊपर बर्तन का ferromagnetic तल detect हो, जिससे अलग-अलग आकार/स्थिति के बर्तनों (जैसे griddle) पर भी सही heating मिल सके। यह coil की लागत घटाने के लिए नहीं, mains frequency बदलने के लिए नहीं, और वजन दिखाने से असंबंधित है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q35",
+      "question": "Induction cooktop में control PCB पर एक buzzer (beeper) सामान्यतः किन स्थितियों में बजता है?",
+      "options": [
+        "जब बर्तन का रंग बदल जाए",
+        "Button press confirmation, timer समाप्त होने, या किसी error/fault (जैसे overheat, no pan) की सूचना देने के लिए",
+        "जब mains frequency ठीक 50 Hz हो",
+        "जब coil ठंडी हो जाए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buzzer microcontroller द्वारा user को feedback देने के लिए प्रयोग होता है — जैसे touch button दबने की पुष्टि, timer पूरा होना, या किसी fault (overheat, pan detect ना होना आदि) की चेतावनी। बर्तन का रंग बदलना, mains frequency सामान्य होना, या coil का ठंडा होना ऐसी घटनाएँ नहीं हैं जिनके लिए विशेष रूप से buzzer alert डिज़ाइन किया जाता है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q36",
+      "question": "यदि किसी induction cooktop की display पर बार-बार एक विशेष E-code (fault code) आकर unit बंद हो जाए, तो technician के लिए सबसे उचित पहला कदम क्या है?",
+      "options": [
+        "तुरंत पूरी unit को बदल देना",
+        "बर्तन का brand बदल देना",
+        "Coil को स्थायी रूप से हटा देना",
+        "Service manual में उस E-code का अर्थ देखना और उससे संबंधित संभावित कारणों (जैसे sensor, IGBT, voltage) की व्यवस्थित रूप से जांच करना"
+      ],
+      "correctIndex": 3,
+      "explanation": "प्रत्येक E-code किसी विशेष fault category (जैसे over-voltage, over-temperature, sensor open/short, IGBT fault) को इंगित करता है; इसलिए सही तरीका है service manual में उस code का अर्थ देखकर संबंधित components की व्यवस्थित (systematic) जांच करना, ना कि बिना निदान (diagnosis) के पूरी unit बदल देना, बर्तन का brand बदलना, या coil स्थायी रूप से हटा देना — ये समाधान नहीं हैं।"
+    },
+    {
+      "id": "u12_induction_cooktop_q37",
+      "question": "Induction cooktop में under-voltage/over-voltage protection feature किस लिए दिया जाता है?",
+      "options": [
+        "बर्तन का वजन मापने के लिए",
+        "Coil का रंग बदलने के लिए",
+        "Timer की गिनती तेज़ करने के लिए",
+        "Mains supply की voltage निर्धारित सुरक्षित सीमा से बाहर जाने पर unit को automatically बंद/निष्क्रिय करके IGBT व अन्य components को damage से बचाने के लिए"
+      ],
+      "correctIndex": 3,
+      "explanation": "Voltage sensing circuit लगातार input voltage को monitor करता है; यदि यह निर्धारित सुरक्षित range (जैसे बहुत कम या बहुत अधिक voltage) से बाहर जाए तो microcontroller unit को बंद कर देता है ताकि IGBT व power components अत्यधिक current/voltage stress से क्षतिग्रस्त ना हों। यह वजन मापने, coil का रंग बदलने, या timer तेज़ करने से असंबंधित सुरक्षा feature है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q38",
+      "question": "Snubber circuit (सामान्यतः resistor-capacitor combination) IGBT के साथ किस उद्देश्य से लगाया जाता है?",
+      "options": [
+        "IGBT के switching के दौरान उत्पन्न होने वाले voltage spikes/transients को कम करके IGBT को damage से बचाना",
+        "बर्तन को detect करने के लिए",
+        "Coil की wire को मोटा दिखाने के लिए",
+        "Mains supply को DC में बदलने के लिए (rectification)"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब IGBT तेज़ी से switch off होता है, तो coil (inductive load) में तेज़ voltage spike उत्पन्न हो सकता है; snubber circuit (RC combination, कभी-कभी diode सहित) इस spike को absorb/limit करके IGBT को over-voltage से होने वाले damage से बचाता है। यह pan detection, coil की मोटाई दिखाने, या rectification का कार्य नहीं करता — वह क्रमशः sensor coil और bridge rectifier का कार्य है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q39",
+      "question": "Induction cooktop में 'auto pan removal detection' feature कैसे काम करता है?",
+      "options": [
+        "यह user की आवाज़ पहचान कर काम करता है",
+        "बर्तन हटाने पर coil की impedance/load characteristics में परिवर्तन sensor द्वारा detect होकर microcontroller heating को कुछ सेकंड में रोक देता है या alert देता है",
+        "यह केवल timer समाप्त होने पर काम करता है",
+        "यह mains supply काट कर काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब बर्तन को coil के ऊपर से हटाया जाता है, तो coil की resonant/impedance characteristics में अचानक परिवर्तन होता है, जिसे sensing circuit detect करके microcontroller को सूचित करता है — इसके फलस्वरूप heating रोक दी जाती है या warning दी जाती है, चाहे timer अभी समाप्त ना हुआ हो। यह आवाज़ पहचान पर आधारित नहीं है, केवल timer पर निर्भर नहीं है, और यह mains supply को स्थायी रूप से नहीं काटता।"
+    },
+    {
+      "id": "u12_induction_cooktop_q40",
+      "question": "Induction cooktop के coil व top plate के बीच सामान्यतः mica sheet या insulating layer क्यों लगाई जाती है?",
+      "options": [
+        "Coil व glass-ceramic plate के बीच विद्युत इन्सुलेशन प्रदान करने तथा coil से उत्पन्न सीधे उच्च तापमान से plate को कुछ सुरक्षा देने के लिए",
+        "Magnetic field को पूरी तरह block करने के लिए",
+        "बर्तन का वजन कम दिखाने के लिए",
+        "IGBT की जगह काम करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mica sheet/insulating layer coil व top plate के बीच electrical insulation प्रदान करती है और coil से उत्पन्न गर्मी को कुछ हद तक distribute/सुरक्षित करती है, जबकि यह magnetic field को गुजरने देने के लिए काफी हद तक transparent रहती है (इसे पूरी तरह block नहीं करती, वरना heating होगी ही नहीं)। यह वजन मापने या IGBT के कार्य से असंबंधित है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q41",
+      "question": "Induction cooktop की servicing में यदि coil open (टूटी हुई) पाई जाए, तो cooktop चालू करने पर सबसे संभावित लक्षण क्या होगा?",
+      "options": [
+        "पूरा display काम करना बंद कर देगा",
+        "Timer उल्टा गिनना शुरू कर देगा",
+        "Cooling fan बंद हो जाएगा",
+        "Display व अन्य functions सामान्य रहेंगे परंतु उस zone में बर्तन कभी गरम नहीं होगा तथा सामान्यतः 'no pan'/coil fault error आ सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "यदि coil open circuit हो जाए तो उस zone में current प्रवाहित नहीं होगा, जिससे heating बिल्कुल नहीं होगी और control circuit को coil की impedance में अनपेक्षित परिवर्तन (open) मिलने पर सामान्यतः error/fault indication देगा, जबकि display व अन्य नियंत्रण सामान्यतः काम करते रहेंगे। पूरे display का बंद होना, timer का उल्टा गिनना, या fan का बंद होना coil open होने के सीधे लक्षण नहीं हैं।"
+    },
+    {
+      "id": "u12_induction_cooktop_q42",
+      "question": "Induction cooktop की base में लगे rubber feet/ventilation gap का क्या उद्देश्य है?",
+      "options": [
+        "बर्तन का वजन मापना",
+        "Unit के नीचे व आसपास हवा का प्रवाह बनाए रखना ताकि cooling fan द्वारा हवा सही तरीके से अंदर-बाहर हो सके तथा unit स्थिर रहे",
+        "Coil की frequency बदलना",
+        "Display की brightness नियंत्रित करना"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rubber feet unit को समतल सतह पर स्थिर रखते हैं और साथ ही base में हल्का gap बनाकर air ventilation में सहायता करते हैं, जिससे cooling fan द्वारा हवा का प्रवाह ठीक से हो सके और heat sink प्रभावी रूप से ठंडा रहे — यदि ये openings ढक दी जाएँ (जैसे कपड़े से) तो overheating का खतरा बढ़ जाता है। यह वजन मापने, coil frequency, या display brightness से असंबंधित है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q43",
+      "question": "Induction cooktop पर यदि खाली बर्तन (बिना पानी/भोजन के) को लंबे समय तक high power पर रखा जाए, तो क्या खतरा हो सकता है?",
+      "options": [
+        "कोई खतरा नहीं, induction cooktop खाली बर्तन के साथ पूर्णतः सुरक्षित है",
+        "बर्तन अत्यधिक तेज़ी से तापमान बढ़ाकर overheat/जल सकता है, तथा कुछ units में built-in dry-pot/overheat protection ना होने पर top plate या बर्तन को नुकसान हो सकता है",
+        "Cooktop की frequency शून्य हो जाएगी",
+        "IGBT स्वतः cool हो जाएगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "चूंकि heat सीधे बर्तन के तल में उत्पन्न होती है, खाली बर्तन में heat को अवशोषित करने के लिए तरल/भोजन ना होने से तापमान बहुत तेज़ी से बढ़ता है, जिससे बर्तन जल सकता है या (यदि dry-pot protection ना हो) top plate/बर्तन को नुकसान हो सकता है — इसलिए अच्छे units में temperature sensor इसे detect कर power कम/बंद करता है। 'कोई खतरा नहीं' कहना गलत है, frequency शून्य नहीं होती, और IGBT स्वतः cool नहीं होता बल्कि अधिक load से अधिक गरम हो सकता है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q44",
+      "question": "Induction cooktop में power supply section व coil driver section के बीच PCB पर सामान्यतः proper spacing/isolation (creepage व clearance distance) क्यों बनाए रखी जाती है?",
+      "options": [
+        "High voltage sections व low-voltage control (microcontroller) sections के बीच electrical breakdown/arcing तथा shock के खतरे को रोकने के लिए",
+        "केवल PCB को सुंदर दिखाने के लिए",
+        "Coil की frequency बढ़ाने के लिए",
+        "बर्तन detect होने की गति तेज़ करने के लिए"
+      ],
+      "correctIndex": 0,
+      "explanation": "PCB डिज़ाइन में high-voltage power section (rectifier, IGBT) व low-voltage control section (microcontroller, sensors) के बीच पर्याप्त creepage व clearance distance रखी जाती है ताकि नमी/धूल के कारण electrical breakdown, arcing, या sensitive control circuitry व user तक high voltage पहुंचने का खतरा ना हो। यह सौंदर्य के लिए नहीं, coil frequency बढ़ाने के लिए नहीं, और pan detection की गति से असंबंधित है — यह विशुद्ध रूप से सुरक्षा संबंधी डिज़ाइन नियम है।"
+    },
+    {
+      "id": "u12_induction_cooktop_q45",
+      "question": "किसी induction cooktop में सभी बर्तन ठीक से detect हो रहे हैं और heating भी हो रही है, परंतु heating power अपेक्षा से बहुत कम/धीमी महसूस होती है (कोई error code भी नहीं है), तो जांच के लिए सबसे तर्कसंगत संभावित कारण क्या हो सकता है?",
+      "options": [
+        "उपयोगकर्ता ने गलती से कम power level select किया हो, या mains voltage निर्धारित सीमा से कम आ रहा हो, अथवा IGBT/driver आंशिक रूप से कमजोर होकर पूरा rated duty cycle ना दे पा रहा हो",
+        "बर्तन का brand बदल गया है",
+        "Display का रंग हल्का पड़ गया है",
+        "Timer की battery खत्म हो गई है"
+      ],
+      "correctIndex": 0,
+      "explanation": "बिना किसी error code के धीमी heating के पीछे सामान्यतः user द्वारा गलती से कम power level select होना, mains voltage का सामान्य से कम रहना (जिससे available power कम मिलता है), या IGBT/gate driver का आंशिक रूप से degrade होकर पूर्ण duty cycle पर काम ना कर पाना — जैसे practical कारण होते हैं, जिनकी जांच power level setting, voltage मापकर, तथा waveform जांचकर की जाती है। बर्तन का brand बदलना, display के रंग में हल्कापन, या timer की battery (जो सामान्यतः cooktop में अलग से नहीं होती) इसका तकनीकी कारण नहीं है।"
     }
   ]
 }

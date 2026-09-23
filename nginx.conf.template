@@ -17,8 +17,13 @@ server {
         add_header Content-Type application/wasm;
     }
 
-    # question bank JSON is static and immutable per build - cache aggressively
+    # Question bank JSON changes across deploys now (question bank is being actively
+    # expanded unit-by-unit, unlike the original one-time-build assumption). Do NOT
+    # cache this immutably any more - a returning visitor's browser would otherwise
+    # keep serving a stale question bank for up to a year after a new deploy. Cache
+    # briefly with must-revalidate so repeat requests within a session are still fast,
+    # but any new deploy is picked up on the visitor's very next page load.
     location /questions/ {
-        add_header Cache-Control "public, max-age=31536000, immutable";
+        add_header Cache-Control "public, max-age=300, must-revalidate";
     }
 }
