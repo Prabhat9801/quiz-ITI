@@ -7,16 +7,16 @@
     {
       "id": "u2_pic_peripherals_q1",
       "question": "PIC का on-chip ADC किस conversion तकनीक पर आधारित होता है?",
-      "options": ["Flash conversion", "Successive Approximation (SAR)", "Dual slope integration", "Sigma-delta"],
-      "correctIndex": 1,
-      "explanation": "PIC का ADC Successive Approximation Register (SAR) तकनीक इस्तेमाल करता है इसलिए option B सही है। Flash बहुत तेज पर महँगा, dual-slope धीमा (DMM में) और sigma-delta audio में प्रयोग होता है, PIC के सामान्य ADC में नहीं।"
+      "options": ["Flash conversion", "Dual slope integration", "Successive Approximation (SAR)", "Sigma-delta"],
+      "correctIndex": 2,
+      "explanation": "PIC का ADC Successive Approximation Register (SAR) तकनीक इस्तेमाल करता है इसलिए option C सही है। Flash (A) बहुत तेज पर महँगा, dual-slope (B) धीमा (DMM में) और sigma-delta (D) audio में प्रयोग होता है, PIC के सामान्य ADC में नहीं।"
     },
     {
       "id": "u2_pic_peripherals_q2",
       "question": "अधिकांश mid-range PIC16F के ADC की resolution कितनी होती है?",
-      "options": ["8-bit या 10-bit", "16-bit", "4-bit", "24-bit"],
-      "correctIndex": 0,
-      "explanation": "Mid-range PIC16F में आमतौर पर 8-bit या 10-bit ADC होता है इसलिए option A सही है। 16-bit और 24-bit high-end converters में, और 4-bit इतना कम resolution इन devices में नहीं होता।"
+      "options": ["16-bit", "4-bit", "8-bit या 10-bit", "24-bit"],
+      "correctIndex": 2,
+      "explanation": "Mid-range PIC16F में आमतौर पर 8-bit या 10-bit ADC होता है इसलिए option C सही है। 16-bit (A) और 24-bit (D) high-end converters में, और 4-bit (B) इतना कम resolution इन devices में नहीं होता।"
     },
     {
       "id": "u2_pic_peripherals_q3",
@@ -28,9 +28,9 @@
     {
       "id": "u2_pic_peripherals_q4",
       "question": "ADC का 10-bit result किन दो registers में store होता है?",
-      "options": ["ADRESH और ADRESL", "TMR1H और TMR1L", "PORTA और PORTB", "PR2 और CCPR1L"],
-      "correctIndex": 0,
-      "explanation": "ADC का 10-bit result ADRESH (उच्च bits) और ADRESL (निम्न bits) register pair में रखा जाता है, इसलिए option A सही है। TMR1H:TMR1L Timer1 का, PORTA/B I/O ports और PR2/CCPR1L PWM के हैं।"
+      "options": ["TMR1H और TMR1L", "PORTA और PORTB", "ADRESH और ADRESL", "PR2 और CCPR1L"],
+      "correctIndex": 2,
+      "explanation": "ADC का 10-bit result ADRESH (उच्च bits) और ADRESL (निम्न bits) register pair में रखा जाता है, इसलिए option C सही है। TMR1H:TMR1L (A) Timer1 का, PORTA/B (B) I/O ports और PR2/CCPR1L (D) PWM के हैं।"
     },
     {
       "id": "u2_pic_peripherals_q5",
@@ -63,9 +63,9 @@
     {
       "id": "u2_pic_peripherals_q9",
       "question": "8-bit ADC पर Vref = 5.12V है। step size क्या होगा?",
-      "options": ["20 mV", "10 mV", "5 mV", "40 mV"],
-      "correctIndex": 0,
-      "explanation": "Step size = 5.12 / 256 = 0.02 V = 20 mV इसलिए option A सही है। 10 mV आधी value, 5 mV चौथाई और 40 mV दोगुनी value है, जो गलत हैं।"
+      "options": ["10 mV", "5 mV", "20 mV", "40 mV"],
+      "correctIndex": 2,
+      "explanation": "Step size = 5.12 / 256 = 0.02 V = 20 mV इसलिए option C सही है। 10 mV (A) आधी value, 5 mV (B) चौथाई और 40 mV (D) दोगुनी value है, जो गलत हैं।"
     },
     {
       "id": "u2_pic_peripherals_q10",
@@ -140,65 +140,65 @@
     {
       "id": "u2_pic_peripherals_q20",
       "question": "MSSP module मुख्य रूप से किन serial protocols को support करता है?",
-      "options": ["SPI और I2C", "USB और CAN", "Ethernet और Wi-Fi", "RS-485 और Modbus"],
-      "correctIndex": 0,
-      "explanation": "MSSP (Master Synchronous Serial Port) SPI और I2C synchronous serial communication देता है इसलिए option A सही है। USB/CAN, Ethernet/Wi-Fi और RS-485/Modbus MSSP के सीधे modes नहीं हैं।"
+      "options": ["USB और CAN", "Ethernet और Wi-Fi", "SPI और I2C", "RS-485 और Modbus"],
+      "correctIndex": 2,
+      "explanation": "MSSP (Master Synchronous Serial Port) SPI और I2C synchronous serial communication देता है इसलिए option C सही है। USB/CAN (A), Ethernet/Wi-Fi (B) और RS-485/Modbus (D) MSSP के सीधे modes नहीं हैं।"
     },
     {
       "id": "u2_pic_peripherals_q21",
       "question": "Parallel Slave Port (PSP) का मुख्य उपयोग क्या है?",
-      "options": ["PIC को किसी external microprocessor के data bus से 8-bit parallel तरीके से जोड़ना", "ADC resolution बढ़ाना", "PWM frequency set करना", "internal Vref बनाना"],
-      "correctIndex": 0,
-      "explanation": "PSP, PIC के PORTD को एक 8-bit parallel slave interface की तरह इस्तेमाल कर external microprocessor के bus से जोड़ने देता है, इसलिए option A सही है। यह ADC, PWM या Vref से संबंधित नहीं।"
+      "options": ["ADC resolution बढ़ाना", "PWM frequency set करना", "PIC को किसी external microprocessor के data bus से 8-bit parallel तरीके से जोड़ना", "internal Vref बनाना"],
+      "correctIndex": 2,
+      "explanation": "PSP, PIC के PORTD को एक 8-bit parallel slave interface की तरह इस्तेमाल कर external microprocessor के bus से जोड़ने देता है, इसलिए option C सही है। यह ADC (A), PWM (B) या Vref (D) से संबंधित नहीं।"
     },
     {
       "id": "u2_pic_peripherals_q22",
       "question": "12-bit ADC पर Vref = 4.096V हो तो step size क्या होगा?",
-      "options": ["1 mV", "4 mV", "0.5 mV", "16 mV"],
-      "correctIndex": 0,
-      "explanation": "Step = 4.096 / 4096 = 0.001 V = 1 mV, इसलिए option A सही है। यह मान इसलिए चुना जाता है ताकि हर count 1 mV बने; 4 mV, 0.5 mV और 16 mV गलत हैं।"
+      "options": ["4 mV", "0.5 mV", "1 mV", "16 mV"],
+      "correctIndex": 2,
+      "explanation": "Step = 4.096 / 4096 = 0.001 V = 1 mV, इसलिए option C सही है। यह मान इसलिए चुना जाता है ताकि हर count 1 mV बने; 4 mV (A), 0.5 mV (B) और 16 mV (D) गलत हैं।"
     },
     {
       "id": "u2_pic_peripherals_q23",
       "question": "ADC clock (Tad) को सही चुनना क्यों जरूरी है?",
-      "options": ["हर bit conversion के लिए एक न्यूनतम समय चाहिए; बहुत तेज Tad गलत result देगा", "इससे baud rate बदलता है", "इससे PWM duty cycle तय होता है", "इससे reset vector बदलता है"],
-      "correctIndex": 0,
-      "explanation": "SAR ADC को प्रत्येक bit के लिए एक न्यूनतम Tad चाहिए; बहुत छोटा Tad चुनने पर capacitor settle नहीं होता और conversion गलत आता है, इसलिए option A सही है। यह baud rate, PWM या reset vector से संबंधित नहीं।"
+      "options": ["इससे baud rate बदलता है", "इससे PWM duty cycle तय होता है", "इससे reset vector बदलता है", "हर bit conversion के लिए एक न्यूनतम समय चाहिए; बहुत तेज Tad गलत result देगा"],
+      "correctIndex": 3,
+      "explanation": "SAR ADC को प्रत्येक bit के लिए एक न्यूनतम Tad चाहिए; बहुत छोटा Tad चुनने पर capacitor settle नहीं होता और conversion गलत आता है, इसलिए option D सही है। यह baud rate (A), PWM (B) या reset vector (C) से संबंधित नहीं।"
     },
     {
       "id": "u2_pic_peripherals_q24",
       "question": "10-bit ADC result को यदि केवल 8-bit variable में चाहिए (approx.) तो 'left justified' format क्यों सुविधाजनक है?",
-      "options": ["ऊपरी 8 bits ADRESH में आ जाते हैं जिन्हें सीधे पढ़कर 8-bit approximation मिल जाती है", "यह resolution 16-bit कर देता है", "यह conversion तेज करता है", "यह Vref बदल देता है"],
-      "correctIndex": 0,
-      "explanation": "Left-justified format में सबसे significant 8 bits ADRESH में होते हैं, इसलिए सिर्फ ADRESH पढ़कर 8-bit approximate value मिल जाती है, option A सही है। यह resolution, speed या Vref नहीं बदलता।"
+      "options": ["यह resolution 16-bit कर देता है", "यह conversion तेज करता है", "यह Vref बदल देता है", "ऊपरी 8 bits ADRESH में आ जाते हैं जिन्हें सीधे पढ़कर 8-bit approximation मिल जाती है"],
+      "correctIndex": 3,
+      "explanation": "Left-justified format में सबसे significant 8 bits ADRESH में होते हैं, इसलिए सिर्फ ADRESH पढ़कर 8-bit approximate value मिल जाती है, option D सही है। यह resolution (A), speed (B) या Vref (C) नहीं बदलता।"
     },
     {
       "id": "u2_pic_peripherals_q25",
       "question": "Comparator का एक विशिष्ट अनुप्रयोग क्या है?",
-      "options": ["एक analog signal के किसी threshold पार करते ही तुरंत digital संकेत/interrupt देना", "10-bit binary number बनाना", "I2C address भेजना", "crystal oscillate कराना"],
-      "correctIndex": 0,
-      "explanation": "Comparator का सामान्य उपयोग है किसी voltage के threshold को पार करते ही तुरंत HIGH/LOW output या interrupt देना (जैसे over-voltage detection), इसलिए option A सही है। बाकी काम ADC, MSSP और oscillator के हैं।"
+      "options": ["10-bit binary number बनाना", "I2C address भेजना", "crystal oscillate कराना", "एक analog signal के किसी threshold पार करते ही तुरंत digital संकेत/interrupt देना"],
+      "correctIndex": 3,
+      "explanation": "Comparator का सामान्य उपयोग है किसी voltage के threshold को पार करते ही तुरंत HIGH/LOW output या interrupt देना (जैसे over-voltage detection), इसलिए option D सही है। बाकी काम (A, B, C) ADC, MSSP और oscillator के हैं।"
     },
     {
       "id": "u2_pic_peripherals_q26",
       "question": "ADC channel बदलने के तुरंत बाद conversion शुरू करने से पहले सामान्यतः क्या करना चाहिए?",
-      "options": ["नई channel के लिए पर्याप्त acquisition delay देना ताकि holding capacitor settle हो जाए", "Fosc बदलना", "GIE clear करना", "PR2 सेट करना"],
-      "correctIndex": 0,
-      "explanation": "Channel switch करने पर holding capacitor को नए source तक settle होने के लिए acquisition delay चाहिए, वरना result गलत आएगा, इसलिए option A सही है। Fosc, GIE या PR2 का इससे संबंध नहीं।"
+      "options": ["Fosc बदलना", "GIE clear करना", "PR2 सेट करना", "नई channel के लिए पर्याप्त acquisition delay देना ताकि holding capacitor settle हो जाए"],
+      "correctIndex": 3,
+      "explanation": "Channel switch करने पर holding capacitor को नए source तक settle होने के लिए acquisition delay चाहिए, वरना result गलत आएगा, इसलिए option D सही है। Fosc (A), GIE (B) या PR2 (C) का इससे संबंध नहीं।"
     },
     {
       "id": "u2_pic_peripherals_q27",
       "question": "ADC का digital output N दिया हो तो input voltage निकालने का सूत्र क्या है?",
-      "options": ["Vin = N × Vref / 2^n", "Vin = N × 2^n / Vref", "Vin = Vref / N", "Vin = N + Vref"],
-      "correctIndex": 0,
-      "explanation": "Vin = N × step = N × (Vref / 2^n), इसलिए option A सही है। बाकी सूत्र आयामिक रूप से गलत हैं और सही voltage नहीं देते।"
+      "options": ["Vin = N × 2^n / Vref", "Vin = Vref / N", "Vin = N + Vref", "Vin = N × Vref / 2^n"],
+      "correctIndex": 3,
+      "explanation": "Vin = N × step = N × (Vref / 2^n), इसलिए option D सही है। बाकी सूत्र (A, B, C) आयामिक रूप से गलत हैं और सही voltage नहीं देते।"
     },
     {
       "id": "u2_pic_peripherals_q28",
       "question": "एक 10-bit ADC (Vref = 5V) का output N = 300 पढ़ा गया। input voltage लगभग क्या है?",
-      "options": ["1.47 V", "2.50 V", "3.66 V", "0.30 V"],
-      "correctIndex": 0,
-      "explanation": "Vin = 300 × 5 / 1024 ≈ 1.465 V ≈ 1.47 V, इसलिए option A सही है। 2.50 V तो N≈512 पर, 3.66 V बहुत अधिक और 0.30 V बहुत कम है।"
+      "options": ["2.50 V", "3.66 V", "0.30 V", "1.47 V"],
+      "correctIndex": 3,
+      "explanation": "Vin = 300 × 5 / 1024 ≈ 1.465 V ≈ 1.47 V, इसलिए option D सही है। 2.50 V (A) तो N≈512 पर, 3.66 V (B) बहुत अधिक और 0.30 V (C) बहुत कम है।"
     },
     {
       "id": "u2_pic_peripherals_q29",

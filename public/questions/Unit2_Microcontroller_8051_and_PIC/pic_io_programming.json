@@ -7,100 +7,100 @@
     {
       "id": "u2_pic_io_programming_q1",
       "question": "PIC में किसी port pin को output बनाने के लिए संबंधित TRIS bit को क्या रखना चाहिए?",
-      "options": ["1", "0", "high-impedance", "toggle"],
-      "correctIndex": 1,
-      "explanation": "TRIS bit = 0 करने पर pin output बनता है (याद रखने के लिए O = 0, Output = 0), इसलिए option B सही है। TRIS bit = 1 pin को input बनाता है (I = 1)। High-impedance input की स्थिति का प्रभाव है, TRIS का सीधा मान नहीं। Toggle एक operation है, TRIS setting नहीं।"
+      "options": ["0", "toggle", "1", "high-impedance"],
+      "correctIndex": 0,
+      "explanation": "TRIS bit = 0 करने पर pin output बनता है (याद रखने के लिए O = 0, Output = 0), इसलिए option A सही है। Option C (1) pin को input बनाता है (I = 1)। Option D (high-impedance) input की स्थिति का प्रभाव है, TRIS का सीधा मान नहीं। Option B (toggle) एक operation है, TRIS setting नहीं।"
     },
     {
       "id": "u2_pic_io_programming_q2",
       "question": "instruction TRISB = 0x00; निष्पादित करने पर PORTB के pins का क्या होगा?",
-      "options": ["सभी 8 pins input बन जाएँगे", "सभी 8 pins output बन जाएँगे", "निचले 4 output, ऊपरी 4 input", "कोई प्रभाव नहीं"],
-      "correctIndex": 1,
-      "explanation": "0x00 का अर्थ सभी 8 bits = 0, और TRIS = 0 का मतलब output है, इसलिए PORTB के सभी pins output बनते हैं और option B सही है। सभी input के लिए TRISB = 0xFF चाहिए। मिश्रित 4-4 के लिए 0xF0 या 0x0F जैसा value चाहिए।"
+      "options": ["सभी 8 pins input बन जाएँगे", "निचले 4 output, ऊपरी 4 input", "सभी 8 pins output बन जाएँगे", "कोई प्रभाव नहीं"],
+      "correctIndex": 2,
+      "explanation": "0x00 का अर्थ सभी 8 bits = 0, और TRIS = 0 का मतलब output है, इसलिए PORTB के सभी pins output बनते हैं और option C सही है। सभी input के लिए TRISB = 0xFF चाहिए (option A)। मिश्रित 4-4 के लिए 0xF0 या 0x0F जैसा value चाहिए (option B)।"
     },
     {
       "id": "u2_pic_io_programming_q3",
       "question": "यदि TRISB = 0x0F; लिखा जाए तो PORTB के pins किस प्रकार configure होंगे?",
-      "options": ["RB0-RB3 output, RB4-RB7 input", "RB0-RB3 input, RB4-RB7 output", "सभी input", "सभी output"],
-      "correctIndex": 1,
-      "explanation": "0x0F = 0000 1111, जहाँ निचले 4 bits (RB0-RB3) = 1 यानी input और ऊपरी 4 bits (RB4-RB7) = 0 यानी output, इसलिए option B सही है। Option A उल्टा है। सभी input के लिए 0xFF और सभी output के लिए 0x00 चाहिए।"
+      "options": ["RB0-RB3 output, RB4-RB7 input", "सभी input", "सभी output", "RB0-RB3 input, RB4-RB7 output"],
+      "correctIndex": 0,
+      "explanation": "0x0F = 0000 1111, जहाँ निचले 4 bits (RB0-RB3) = 1 यानी input और ऊपरी 4 bits (RB4-RB7) = 0 यानी output, यानी RB0-RB3 output और RB4-RB7 input, इसलिए option A सही है। Option D उल्टा वर्णन है। सभी input के लिए 0xFF (option B) और सभी output के लिए 0x00 (option C) चाहिए।"
     },
     {
       "id": "u2_pic_io_programming_q4",
       "question": "PIC में read-modify-write hazard से बचने के लिए output लिखते समय PORTx के बजाय किस register का उपयोग बेहतर है?",
-      "options": ["TRISx", "LATx", "ANSELx", "OPTION_REG"],
-      "correctIndex": 1,
-      "explanation": "LATx (output latch) में लिखने से read-modify-write hazard टलता है क्योंकि यह actual pin voltage के बजाय latch value पढ़ता है, इसलिए option B सही है। PORTx पढ़ना pin की वास्तविक स्थिति देता है जिससे hazard होता है। TRISx direction सेट करता है, ANSELx analog/digital और OPTION_REG अन्य settings के लिए है।"
+      "options": ["TRISx", "ANSELx", "LATx", "OPTION_REG"],
+      "correctIndex": 2,
+      "explanation": "LATx (output latch) में लिखने से read-modify-write hazard टलता है क्योंकि यह actual pin voltage के बजाय latch value पढ़ता है, इसलिए option C सही है। PORTx पढ़ना pin की वास्तविक स्थिति देता है जिससे hazard होता है। TRISx direction सेट करता है (option A), ANSELx analog/digital (option B) और OPTION_REG अन्य settings के लिए है (option D)।"
     },
     {
       "id": "u2_pic_io_programming_q5",
       "question": "Read-modify-write hazard मुख्यतः किस स्थिति में समस्या पैदा करता है?",
-      "options": ["जब सभी pins input हों", "जब लगातार bit-set/clear operations हों और pin पर capacitive load या धीमा rise-time हो", "जब TRIS register न हो", "जब clock बहुत धीमा हो"],
-      "correctIndex": 1,
-      "explanation": "PORTx पर bit-wise operations pin की actual voltage पढ़ते हैं; यदि पिछले लिखे pin की voltage load/slow rise-time के कारण अभी पूरी नहीं बदली, तो गलत value वापस लिखा जा सकता है, इसलिए option B सही है। सभी input होने पर writing समस्या नहीं देती। TRIS हमेशा मौजूद है और slow clock सीधे इसका कारण नहीं।"
+      "options": ["जब सभी pins input हों", "जब TRIS register न हो", "जब लगातार bit-set/clear operations हों और pin पर capacitive load या धीमा rise-time हो", "जब clock बहुत धीमा हो"],
+      "correctIndex": 2,
+      "explanation": "PORTx पर bit-wise operations pin की actual voltage पढ़ते हैं; यदि पिछले लिखे pin की voltage load/slow rise-time के कारण अभी पूरी नहीं बदली, तो गलत value वापस लिखा जा सकता है, इसलिए option C सही है। सभी input होने पर writing समस्या नहीं देती (option A)। TRIS हमेशा मौजूद है (option B) और slow clock सीधे इसका कारण नहीं (option D)।"
     },
     {
       "id": "u2_pic_io_programming_q6",
       "question": "कई PIC में RA0-RA5 जैसे pins power-on पर analog होते हैं; उन्हें digital I/O के रूप में उपयोग करने के लिए सामान्यतः किसे configure करना पड़ता है?",
-      "options": ["केवल TRISA", "ADCON1 / ANSEL bits", "SPBRG", "PORTB pull-ups"],
-      "correctIndex": 1,
-      "explanation": "ADCON1 (या ANSEL/ANSELx) bits से संबंधित pins को analog के बजाय digital के रूप में सेट करना पड़ता है, वरना digital read हमेशा 0 आ सकता है, इसलिए option B सही है। केवल TRISA सेट करना पर्याप्त नहीं जब pin अभी भी analog हो। SPBRG baud rate का है और PORTB pull-ups analog select से असंबंधित हैं।"
+      "options": ["केवल TRISA", "SPBRG", "ADCON1 / ANSEL bits", "PORTB pull-ups"],
+      "correctIndex": 2,
+      "explanation": "ADCON1 (या ANSEL/ANSELx) bits से संबंधित pins को analog के बजाय digital के रूप में सेट करना पड़ता है, वरना digital read हमेशा 0 आ सकता है, इसलिए option C सही है। केवल TRISA सेट करना पर्याप्त नहीं जब pin अभी भी analog हो (option A)। SPBRG baud rate का है (option B) और PORTB pull-ups analog select से असंबंधित हैं (option D)।"
     },
     {
       "id": "u2_pic_io_programming_q7",
       "question": "PORTB के internal pull-ups को enable करने के लिए OPTION_REG का कौन-सा bit उपयोग होता है और उसे किस स्थिति में रखा जाता है?",
-      "options": ["RBPU bit को 1 करना", "RBPU (active-low) bit को 0 करना", "GIE bit को 1 करना", "T0CS bit को 0 करना"],
-      "correctIndex": 1,
-      "explanation": "RBPU एक active-low control है; RBPU = 0 करने पर PORTB के internal weak pull-ups enable होते हैं (उन pins के लिए जो input हैं), इसलिए option B सही है। RBPU = 1 pull-ups को disable करता है। GIE global interrupt का है और T0CS Timer0 clock source का, pull-ups से असंबंधित।"
+      "options": ["RBPU (active-low) bit को 0 करना", "RBPU bit को 1 करना", "GIE bit को 1 करना", "T0CS bit को 0 करना"],
+      "correctIndex": 0,
+      "explanation": "RBPU एक active-low control है; RBPU = 0 करने पर PORTB के internal weak pull-ups enable होते हैं (उन pins के लिए जो input हैं), इसलिए option A सही है। RBPU = 1 pull-ups को disable करता है (option B)। GIE global interrupt का है (option C) और T0CS Timer0 clock source का, pull-ups से असंबंधित (option D)।"
     },
     {
       "id": "u2_pic_io_programming_q8",
       "question": "PORTB के internal pull-ups किस प्रकार के pins पर प्रभावी होते हैं?",
-      "options": ["output के रूप में configure pins", "input के रूप में configure pins", "केवल analog pins", "केवल RB0 पर"],
-      "correctIndex": 1,
-      "explanation": "Weak pull-ups केवल उन pins पर सार्थक हैं जो input (TRIS = 1) हैं, ताकि खुली अवस्था में एक निश्चित high level मिले; output pins पर वे प्रभावहीन रहते हैं, इसलिए option B सही है। ये सुविधा analog-only या केवल RB0 तक सीमित नहीं है।"
+      "options": ["output के रूप में configure pins", "केवल analog pins", "input के रूप में configure pins", "केवल RB0 पर"],
+      "correctIndex": 2,
+      "explanation": "Weak pull-ups केवल उन pins पर सार्थक हैं जो input (TRIS = 1) हैं, ताकि खुली अवस्था में एक निश्चित high level मिले; output pins पर वे प्रभावहीन रहते हैं, इसलिए option C सही है। ये सुविधा analog-only (option B) या केवल RB0 (option D) तक सीमित नहीं है, और output pins (option A) पर लागू नहीं होती।"
     },
     {
       "id": "u2_pic_io_programming_q9",
       "question": "PIC C (जैसे XC8/mikroC) program में अनंत रूप से चलने वाला main loop सामान्यतः कैसे लिखा जाता है?",
-      "options": ["for(;;) के बिना केवल एक बार", "while(1) { ... } super-loop", "do-once block", "goto end;"],
-      "correctIndex": 1,
-      "explanation": "Embedded C में सामान्यतः while(1) { ... } super-loop का उपयोग होता है ताकि microcontroller लगातार अपना कार्य दोहराता रहे, इसलिए option B सही है। केवल एक बार चलाकर main छोड़ देने से program रुक जाएगा। do-once और goto end; निरंतर execution सुनिश्चित नहीं करते।"
+      "options": ["while(1) { ... } super-loop", "for(;;) के बिना केवल एक बार", "do-once block", "goto end;"],
+      "correctIndex": 0,
+      "explanation": "Embedded C में सामान्यतः while(1) { ... } super-loop का उपयोग होता है ताकि microcontroller लगातार अपना कार्य दोहराता रहे, इसलिए option A सही है। केवल एक बार चलाकर main छोड़ देने से program रुक जाएगा (option B)। do-once (option C) और goto end; (option D) निरंतर execution सुनिश्चित नहीं करते।"
     },
     {
       "id": "u2_pic_io_programming_q10",
       "question": "PIC C program में __CONFIG (configuration bits) का मुख्य उद्देश्य क्या है?",
-      "options": ["variables को initialize करना", "oscillator, watchdog timer, brown-out जैसे hardware options set करना", "delay बनाना", "port को output बनाना"],
-      "correctIndex": 1,
-      "explanation": "__CONFIG / #pragma config से chip के मूलभूत hardware विकल्प जैसे oscillator type, watchdog timer, power-up timer, brown-out reset आदि तय होते हैं, इसलिए option B सही है। Variable init, delay या port direction ये कार्य program के statements करते हैं, config bits नहीं।"
+      "options": ["oscillator, watchdog timer, brown-out जैसे hardware options set करना", "delay बनाना", "port को output बनाना", "variables को initialize करना"],
+      "correctIndex": 0,
+      "explanation": "__CONFIG / #pragma config से chip के मूलभूत hardware विकल्प जैसे oscillator type, watchdog timer, power-up timer, brown-out reset आदि तय होते हैं, इसलिए option A सही है। Delay (B) या port direction (C) या variable init (D) ये कार्य program के statements करते हैं, config bits नहीं।"
     },
     {
       "id": "u2_pic_io_programming_q11",
       "question": "निम्न code का व्यवहार क्या होगा: TRISB = 0x00; PORTB = 0xFF;",
-      "options": ["सभी PORTB pins input होकर 0 पढ़ेंगे", "सभी PORTB pins output होकर high (1) हो जाएँगे", "आधे high आधे low", "कुछ नहीं होगा"],
-      "correctIndex": 1,
-      "explanation": "TRISB = 0x00 सभी pins को output बनाता है और PORTB = 0xFF सभी output pins को high (logic 1) करता है, इसलिए option B सही है। Input readout तब होता जब TRISB = 0xFF होता। 0xFF का अर्थ सभी 8 pins high है, आधे-आधे नहीं।"
+      "options": ["सभी PORTB pins input होकर 0 पढ़ेंगे", "आधे high आधे low", "सभी PORTB pins output होकर high (1) हो जाएँगे", "कुछ नहीं होगा"],
+      "correctIndex": 2,
+      "explanation": "TRISB = 0x00 सभी pins को output बनाता है और PORTB = 0xFF सभी output pins को high (logic 1) करता है, इसलिए option C सही है। Input readout तब होता जब TRISB = 0xFF होता (option A)। 0xFF का अर्थ सभी 8 pins high है, आधे-आधे नहीं (option B)।"
     },
     {
       "id": "u2_pic_io_programming_q12",
       "question": "PIC C में किसी header file (जैसे xc.h) को शामिल करने के लिए कौन-सा directive प्रयोग होता है?",
-      "options": ["#define", "#include", "#pragma", "typedef"],
-      "correctIndex": 1,
-      "explanation": "#include <xc.h> जैसी line register definitions और prototypes लाने के लिए header शामिल करती है, इसलिए option B सही है। #define macro/constant बनाता है, #pragma compiler-specific settings (जैसे config) देता है, और typedef नया type नाम बनाता है, ये header शामिल नहीं करते।"
+      "options": ["#define", "#pragma", "typedef", "#include"],
+      "correctIndex": 3,
+      "explanation": "#include <xc.h> जैसी line register definitions और prototypes लाने के लिए header शामिल करती है, इसलिए option D सही है। #define macro/constant बनाता है (option A), #pragma compiler-specific settings (जैसे config) देता है (option B), और typedef नया type नाम बनाता है (option C), ये header शामिल नहीं करते।"
     },
     {
       "id": "u2_pic_io_programming_q13",
       "question": "PIC C में केवल RB0 pin को high करने के लिए (बाकी pins बदले बिना) सही तरीका क्या है?",
-      "options": ["PORTB = 0x01;", "PORTB |= 0x01;", "PORTB &= 0x01;", "PORTB = 0xFF;"],
-      "correctIndex": 1,
-      "explanation": "PORTB |= 0x01; (bitwise OR) केवल RB0 को set करता है और बाकी bits यथावत रखता है, इसलिए option B सही है। PORTB = 0x01; बाकी सभी pins को 0 कर देता है। PORTB &= 0x01; (AND) उल्टा RB0 को छोड़ बाकी clear कर देगा। 0xFF सभी pins high कर देता है।"
+      "options": ["PORTB = 0x01;", "PORTB &= 0x01;", "PORTB |= 0x01;", "PORTB = 0xFF;"],
+      "correctIndex": 2,
+      "explanation": "PORTB |= 0x01; (bitwise OR) केवल RB0 को set करता है और बाकी bits यथावत रखता है, इसलिए option C सही है। PORTB = 0x01; बाकी सभी pins को 0 कर देता है (option A)। PORTB &= 0x01; (AND) उल्टा RB0 को छोड़ बाकी clear कर देगा (option B)। 0xFF सभी pins high कर देता है (option D)।"
     },
     {
       "id": "u2_pic_io_programming_q14",
       "question": "PIC C में RB3 pin को clear (0) करने के लिए (बाकी अपरिवर्तित) कौन-सा statement उपयुक्त है?",
-      "options": ["PORTB |= (1<<3);", "PORTB &= ~(1<<3);", "PORTB = (1<<3);", "PORTB ^= 0xFF;"],
-      "correctIndex": 1,
-      "explanation": "PORTB &= ~(1<<3); mask 1111 0111 बनाकर केवल RB3 को 0 करता है और बाकी bits सुरक्षित रखता है, इसलिए option B सही है। |= (1<<3) उल्टा RB3 को set करता है। = (1<<3) बाकी सभी को 0 कर देता है। ^= 0xFF सभी bits को toggle कर देता है।"
+      "options": ["PORTB |= (1<<3);", "PORTB = (1<<3);", "PORTB ^= 0xFF;", "PORTB &= ~(1<<3);"],
+      "correctIndex": 3,
+      "explanation": "PORTB &= ~(1<<3); mask 1111 0111 बनाकर केवल RB3 को 0 करता है और बाकी bits सुरक्षित रखता है, इसलिए option D सही है। |= (1<<3) उल्टा RB3 को set करता है (option A)। = (1<<3) बाकी सभी को 0 कर देता है (option B)। ^= 0xFF सभी bits को toggle कर देता है (option C)।"
     },
     {
       "id": "u2_pic_io_programming_q15",
@@ -112,23 +112,23 @@
     {
       "id": "u2_pic_io_programming_q16",
       "question": "PIC I/O pin की current sourcing/sinking limit का ध्यान रखना क्यों आवश्यक है?",
-      "options": ["ताकि program तेज चले", "ताकि अधिक current से pin/port damage न हो; इसलिए LED के साथ series resistor लगाते हैं", "ताकि baud rate सही रहे", "ताकि ADC सही पढ़े"],
-      "correctIndex": 1,
-      "explanation": "प्रत्येक pin और पूरे port की maximum current सीमा होती है; उससे अधिक current pin को damage कर सकता है, इसलिए LED आदि के साथ current-limiting series resistor लगाया जाता है और option B सही है। Current limit program speed, baud rate या ADC accuracy से सीधे संबंधित नहीं।"
+      "options": ["ताकि program तेज चले", "ताकि baud rate सही रहे", "ताकि ADC सही पढ़े", "ताकि अधिक current से pin/port damage न हो; इसलिए LED के साथ series resistor लगाते हैं"],
+      "correctIndex": 3,
+      "explanation": "प्रत्येक pin और पूरे port की maximum current सीमा होती है; उससे अधिक current pin को damage कर सकता है, इसलिए LED आदि के साथ current-limiting series resistor लगाया जाता है और option D सही है। Current limit program speed (A), baud rate (B) या ADC accuracy (C) से सीधे संबंधित नहीं।"
     },
     {
       "id": "u2_pic_io_programming_q17",
       "question": "यदि किसी switch को PORTB input pin से जोड़ना हो और बाहरी resistor न लगाना हो, तो सबसे सुविधाजनक विकल्प क्या है?",
-      "options": ["pin को output बनाना", "PORTB का internal pull-up (RBPU = 0) enable करना और switch को ground से जोड़ना", "TRISB = 0x00 करना", "ANSEL सेट करके analog बनाना"],
-      "correctIndex": 1,
-      "explanation": "PORTB में internal weak pull-ups होते हैं; RBPU = 0 से उन्हें enable कर switch को ground से जोड़ने पर दबाने पर 0 और छोड़ने पर 1 मिलता है, बाहरी resistor की जरूरत नहीं, इसलिए option B सही है। Input pin के लिए output बनाना (A, C) गलत है और analog बनाना digital switch पढ़ने के लिए अनुचित है।"
+      "options": ["pin को output बनाना", "TRISB = 0x00 करना", "ANSEL सेट करके analog बनाना", "PORTB का internal pull-up (RBPU = 0) enable करना और switch को ground से जोड़ना"],
+      "correctIndex": 3,
+      "explanation": "PORTB में internal weak pull-ups होते हैं; RBPU = 0 से उन्हें enable कर switch को ground से जोड़ने पर दबाने पर 0 और छोड़ने पर 1 मिलता है, बाहरी resistor की जरूरत नहीं, इसलिए option D सही है। Input pin के लिए output बनाना (A, B) गलत है और analog बनाना (C) digital switch पढ़ने के लिए अनुचित है।"
     },
     {
       "id": "u2_pic_io_programming_q18",
       "question": "PIC C में __delay_ms() जैसे delay function के सही काम करने के लिए किसका सही define होना आवश्यक है?",
-      "options": ["TRIS register", "_XTAL_FREQ (oscillator frequency)", "baud rate", "PORT value"],
-      "correctIndex": 1,
-      "explanation": "__delay_ms()/__delay_us() अपने loop counts oscillator frequency के आधार पर गणना करते हैं, इसलिए _XTAL_FREQ को सही define करना जरूरी है वरना delay गलत होगा, यानी option B सही है। TRIS, baud rate और PORT value delay की timing गणना में उपयोग नहीं होते।"
+      "options": ["TRIS register", "baud rate", "PORT value", "_XTAL_FREQ (oscillator frequency)"],
+      "correctIndex": 3,
+      "explanation": "__delay_ms()/__delay_us() अपने loop counts oscillator frequency के आधार पर गणना करते हैं, इसलिए _XTAL_FREQ को सही define करना जरूरी है वरना delay गलत होगा, यानी option D सही है। TRIS (A), baud rate (B) और PORT value (C) delay की timing गणना में उपयोग नहीं होते।"
     },
     {
       "id": "u2_pic_io_programming_q19",
@@ -140,9 +140,9 @@
     {
       "id": "u2_pic_io_programming_q20",
       "question": "PIC C में void main(void) function का प्रयोग क्यों किया जाता है?",
-      "options": ["क्योंकि यह value return करता है", "यह program का entry point है और microcontroller में इसे कोई value return करने की आवश्यकता नहीं होती", "यह interrupt handle करता है", "यह config bits set करता है"],
-      "correctIndex": 1,
-      "explanation": "Embedded PIC program में main() ही execution की शुरुआत (entry point) है और चूँकि कोई OS इसकी return value नहीं लेता, इसे void रखा जाता है, इसलिए option B सही है। यह value return नहीं करता, interrupts अलग ISR संभालते हैं, और config bits #pragma config से सेट होते हैं।"
+      "options": ["क्योंकि यह value return करता है", "यह interrupt handle करता है", "यह config bits set करता है", "यह program का entry point है और microcontroller में इसे कोई value return करने की आवश्यकता नहीं होती"],
+      "correctIndex": 3,
+      "explanation": "Embedded PIC program में main() ही execution की शुरुआत (entry point) है और चूँकि कोई OS इसकी return value नहीं लेता, इसे void रखा जाता है, इसलिए option D सही है। यह value return नहीं करता (A), interrupts अलग ISR संभालते हैं (B), और config bits #pragma config से सेट होते हैं (C)।"
     },
     {
       "id": "u2_pic_io_programming_q21",
@@ -154,9 +154,9 @@
     {
       "id": "u2_pic_io_programming_q22",
       "question": "open-drain output pin की क्या विशेषता है?",
-      "options": ["यह स्वयं high और low दोनों drive करता है", "यह केवल low खींच सकता है; high के लिए external pull-up चाहिए", "यह हमेशा input रहता है", "यह analog output देता है"],
-      "correctIndex": 1,
-      "explanation": "Open-drain output केवल line को low (ground) खींच सकता है; high state के लिए external pull-up resistor की आवश्यकता होती है, इसलिए option B सही है। सामान्य push-pull output दोनों drive करता है (option A)। Open-drain pin input-only नहीं है और यह digital output है, analog नहीं।"
+      "options": ["यह स्वयं high और low दोनों drive करता है", "यह हमेशा input रहता है", "यह analog output देता है", "यह केवल low खींच सकता है; high के लिए external pull-up चाहिए"],
+      "correctIndex": 3,
+      "explanation": "Open-drain output केवल line को low (ground) खींच सकता है; high state के लिए external pull-up resistor की आवश्यकता होती है, इसलिए option D सही है। सामान्य push-pull output दोनों drive करता है (option A)। Open-drain pin input-only नहीं है (option B) और यह digital output है, analog नहीं (option C)।"
     },
     {
       "id": "u2_pic_io_programming_q23",

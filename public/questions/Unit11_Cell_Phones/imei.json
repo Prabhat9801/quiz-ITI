@@ -8,13 +8,13 @@
       "id": "u11_imei_q1",
       "question": "IMEI का पूरा नाम क्या है?",
       "options": [
-        "International Mobile Equipment Identity",
         "Internal Mobile Electronic Index",
         "International Media Equipment Interface",
-        "Integrated Mobile Emergency Identifier"
+        "Integrated Mobile Emergency Identifier",
+        "International Mobile Equipment Identity"
       ],
-      "correctIndex": 0,
-      "explanation": "IMEI का full form International Mobile Equipment Identity है, जो हर mobile device को uniquely identify करने वाला number है (Option A)। Option B, C, D सुनने में similar लगते हैं पर ये actual full form नहीं हैं।"
+      "correctIndex": 3,
+      "explanation": "IMEI का full form International Mobile Equipment Identity है, जो हर mobile device को uniquely identify करने वाला number है (Option D)। Option A, B, C सुनने में similar लगते हैं पर ये actual full form नहीं हैं।"
     },
     {
       "id": "u11_imei_q2",
@@ -33,12 +33,12 @@
       "question": "IMEI number किस device को identify करता है?",
       "options": [
         "SIM card को",
-        "Mobile phone (hardware) को",
         "Mobile network operator को",
+        "Mobile phone (hardware) को",
         "User के bank account को"
       ],
-      "correctIndex": 1,
-      "explanation": "IMEI mobile phone के hardware को uniquely identify करता है, चाहे उसमें कोई भी SIM card लगी हो (Option B)। Option A SIM card का काम IMSI number करता है, Option C network operator को नहीं बल्कि device को identify करता है, और Option D का IMEI से कोई संबंध नहीं है।"
+      "correctIndex": 2,
+      "explanation": "IMEI mobile phone के hardware को uniquely identify करता है, चाहे उसमें कोई भी SIM card लगी हो (Option C)। Option A SIM card का काम IMSI number करता है, Option B network operator को नहीं बल्कि device को identify करता है, और Option D का IMEI से कोई संबंध नहीं है।"
     },
     {
       "id": "u11_imei_q4",
@@ -69,72 +69,72 @@
       "question": "IMEI structure में TAC के बाद वाले digits (Serial Number, SNR) क्या दर्शाते हैं?",
       "options": [
         "Manufacturer का नाम",
-        "उस particular unit/device का unique serial number",
         "Network provider का code",
+        "उस particular unit/device का unique serial number",
         "SIM card का serial number"
       ],
-      "correctIndex": 1,
-      "explanation": "TAC के बाद वाले 6 digits SNR (Serial Number) होते हैं, जो उसी model के अलग-अलग individual devices को unique बनाते हैं (Option B)। Option A TAC में शामिल होता है, Option C और D IMEI structure का हिस्सा नहीं हैं।"
+      "correctIndex": 2,
+      "explanation": "TAC के बाद वाले 6 digits SNR (Serial Number) होते हैं, जो उसी model के अलग-अलग individual devices को unique बनाते हैं (Option C)। Option A TAC में शामिल होता है, Option B और D IMEI structure का हिस्सा नहीं हैं।"
     },
     {
       "id": "u11_imei_q7",
       "question": "IMEI का अंतिम (15वाँ) digit किसे कहा जाता है और इसका क्या उपयोग है?",
       "options": [
-        "Check digit, जो Luhn algorithm द्वारा IMEI की validity verify करने के लिए प्रयोग होता है",
         "Network code, जो operator पहचानता है",
         "Battery serial number",
-        "Country code"
+        "Country code",
+        "Check digit, जो Luhn algorithm द्वारा IMEI की validity verify करने के लिए प्रयोग होता है"
       ],
-      "correctIndex": 0,
-      "explanation": "IMEI का 15वाँ digit Check Digit होता है, जो Luhn algorithm के आधार पर calculate किया जाता है ताकि पूरे IMEI number की validity verify हो सके (Option A)। Option B, C, D IMEI structure में मौजूद नहीं हैं।"
+      "correctIndex": 3,
+      "explanation": "IMEI का 15वाँ digit Check Digit होता है, जो Luhn algorithm के आधार पर calculate किया जाता है ताकि पूरे IMEI number की validity verify हो सके (Option D)। Option A, B, C IMEI structure में मौजूद नहीं हैं।"
     },
     {
       "id": "u11_imei_q8",
       "question": "किसी mobile phone में IMEI number देखने के लिए कौन सा standard dial code प्रयोग होता है?",
       "options": [
         "*#100#",
-        "*#06#",
         "*#123#",
+        "*#06#",
         "*#999#"
       ],
-      "correctIndex": 1,
-      "explanation": "*#06# dial करने पर लगभग हर mobile phone अपनी IMEI number screen पर दिखा देता है (Option B)। Option A, C, D standard universally accepted IMEI check codes नहीं हैं।"
+      "correctIndex": 2,
+      "explanation": "*#06# dial करने पर लगभग हर mobile phone अपनी IMEI number screen पर दिखा देता है (Option C)। Option A, B, D standard universally accepted IMEI check codes नहीं हैं।"
     },
     {
       "id": "u11_imei_q9",
       "question": "Dual-SIM mobile phones में IMEI number की संख्या के बारे में क्या सही है?",
       "options": [
         "दोनों SIM slots के लिए मिलाकर एक ही IMEI होता है",
-        "प्रत्येक SIM slot (radio) के लिए अलग-अलग IMEI होता है, यानी सामान्यतः दो IMEI numbers होते हैं",
         "Dual-SIM phones में IMEI होता ही नहीं",
-        "IMEI केवल SIM 1 के लिए होता है, SIM 2 का कोई IMEI नहीं होता"
+        "IMEI केवल SIM 1 के लिए होता है, SIM 2 का कोई IMEI नहीं होता",
+        "प्रत्येक SIM slot (radio) के लिए अलग-अलग IMEI होता है, यानी सामान्यतः दो IMEI numbers होते हैं"
       ],
-      "correctIndex": 1,
-      "explanation": "Dual-SIM phones में प्रत्येक SIM slot से जुड़े radio module के लिए अलग IMEI होता है, इसलिए ऐसे phones में सामान्यतः दो अलग IMEI numbers होते हैं (Option B)। Option A, C, D तथ्यात्मक रूप से ग़लत हैं।"
+      "correctIndex": 3,
+      "explanation": "Dual-SIM phones में प्रत्येक SIM slot से जुड़े radio module के लिए अलग IMEI होता है, इसलिए ऐसे phones में सामान्यतः दो अलग IMEI numbers होते हैं (Option D)। Option A, B, C तथ्यात्मक रूप से ग़लत हैं।"
     },
     {
       "id": "u11_imei_q10",
       "question": "यदि किसी का mobile phone चोरी हो जाए, तो IMEI number की मदद से क्या किया जा सकता है?",
       "options": [
         "SIM card का password change किया जा सकता है",
-        "Network operator के through phone को track और block किया जा सकता है ताकि वह किसी भी network पर काम न करे",
         "Phone की battery life बढ़ाई जा सकती है",
-        "Phone का color बदला जा सकता है"
+        "Phone का color बदला जा सकता है",
+        "Network operator के through phone को track और block किया जा सकता है ताकि वह किसी भी network पर काम न करे"
       ],
-      "correctIndex": 1,
-      "explanation": "IMEI number को network operator के database (जैसे EIR - Equipment Identity Register) में blacklist कराकर चोरी हुए phone को track किया जा सकता है और उसे किसी भी network पर काम करने से रोका जा सकता है (Option B)। Option A, C, D IMEI के कार्य से असंबंधित हैं।"
+      "correctIndex": 3,
+      "explanation": "IMEI number को network operator के database (जैसे EIR - Equipment Identity Register) में blacklist कराकर चोरी हुए phone को track किया जा सकता है और उसे किसी भी network पर काम करने से रोका जा सकता है (Option D)। Option A, B, C IMEI के कार्य से असंबंधित हैं।"
     },
     {
       "id": "u11_imei_q11",
       "question": "भारत में IMEI-based tracking और blocking के लिए सरकार द्वारा कौन सा portal चलाया जाता है?",
       "options": [
         "Aadhaar Portal",
-        "CEIR (Central Equipment Identity Register) Portal",
         "GST Portal",
+        "CEIR (Central Equipment Identity Register) Portal",
         "UPI Portal"
       ],
-      "correctIndex": 1,
-      "explanation": "भारत सरकार ने चोरी/खोए हुए phones को track और block करने के लिए CEIR (Central Equipment Identity Register) portal शुरू किया है, जहाँ IMEI number के आधार पर complaint दर्ज की जा सकती है (Option B)। Option A, C, D अन्य उद्देश्यों के लिए हैं, इनका IMEI tracking से कोई संबंध नहीं है।"
+      "correctIndex": 2,
+      "explanation": "भारत सरकार ने चोरी/खोए हुए phones को track और block करने के लिए CEIR (Central Equipment Identity Register) portal शुरू किया है, जहाँ IMEI number के आधार पर complaint दर्ज की जा सकती है (Option C)। Option A, B, D अन्य उद्देश्यों के लिए हैं, इनका IMEI tracking से कोई संबंध नहीं है।"
     },
     {
       "id": "u11_imei_q12",
@@ -165,12 +165,12 @@
       "question": "EIR (Equipment Identity Register) network में क्या भूमिका निभाता है?",
       "options": [
         "यह SIM cards को activate करता है",
-        "यह network में एक database है जो valid, suspect और blacklisted IMEI numbers की list रखता है",
         "यह केवल billing की जानकारी store करता है",
-        "यह mobile towers की location record करता है"
+        "यह mobile towers की location record करता है",
+        "यह network में एक database है जो valid, suspect और blacklisted IMEI numbers की list रखता है"
       ],
-      "correctIndex": 1,
-      "explanation": "EIR एक database है जो mobile network में उपयोग होने वाले IMEI numbers को White list (valid), Grey list (suspect) और Black list (blocked) में categorize करके रखता है (Option B)। Option A, C, D EIR के actual कार्य से मेल नहीं खाते।"
+      "correctIndex": 3,
+      "explanation": "EIR एक database है जो mobile network में उपयोग होने वाले IMEI numbers को White list (valid), Grey list (suspect) और Black list (blocked) में categorize करके रखता है (Option D)। Option A, B, C EIR के actual कार्य से मेल नहीं खाते।"
     },
     {
       "id": "u11_imei_q15",
@@ -213,24 +213,24 @@
       "question": "IMEI number किस हिस्से में सामान्यतः store रहता है?",
       "options": [
         "SIM card की memory में",
-        "Phone के baseband/firmware (device memory) में",
         "SD card में",
-        "Cloud server में बिना device के"
+        "Cloud server में बिना device के",
+        "Phone के baseband/firmware (device memory) में"
       ],
-      "correctIndex": 1,
-      "explanation": "IMEI number device के firmware/baseband memory में permanently embed किया जाता है, यह hardware से जुड़ा होता है ना कि SIM card से (Option B)। Option A, C, D IMEI store करने की actual location नहीं हैं।"
+      "correctIndex": 3,
+      "explanation": "IMEI number device के firmware/baseband memory में permanently embed किया जाता है, यह hardware से जुड़ा होता है ना कि SIM card से (Option D)। Option A, B, C IMEI store करने की actual location नहीं हैं।"
     },
     {
       "id": "u11_imei_q19",
       "question": "एक valid IMEI number को verify करने के लिए कौन सा algorithm प्रयोग होता है?",
       "options": [
         "RSA algorithm",
-        "Luhn algorithm",
         "AES encryption",
-        "MD5 hashing"
+        "MD5 hashing",
+        "Luhn algorithm"
       ],
-      "correctIndex": 1,
-      "explanation": "IMEI number का check digit calculate और verify करने के लिए Luhn algorithm प्रयोग होता है, जो एक checksum formula है (Option B)। Option A, C, D encryption/security algorithms हैं जिनका IMEI checksum से सीधा संबंध नहीं है।"
+      "correctIndex": 3,
+      "explanation": "IMEI number का check digit calculate और verify करने के लिए Luhn algorithm प्रयोग होता है, जो एक checksum formula है (Option D)। Option A, B, C encryption/security algorithms हैं जिनका IMEI checksum से सीधा संबंध नहीं है।"
     },
     {
       "id": "u11_imei_q20",
