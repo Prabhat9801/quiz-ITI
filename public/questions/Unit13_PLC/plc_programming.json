@@ -363,6 +363,246 @@
       ],
       "correctIndex": 1,
       "explanation": "Function Block with instance data approach में एक ही logic template को बार-बार लिखने के बजाय, हर similar machine/station के लिए अलग instance data के साथ reuse किया जाता है, जिससे program compact, consistent और maintain करने में आसान बनता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q31",
+      "question": "एक ladder rung में तीन contacts A, B, C को series में जोड़कर coil D को drive किया गया है, और साथ ही contact E को इस पूरी series-combination के parallel में जोड़ा गया है ताकि E अकेला भी D को ON कर सके। इस rung का overall Boolean logic क्या होगा?",
+      "options": [
+        "D = A AND B AND C AND E",
+        "D = A OR B OR C OR E",
+        "D = (A AND B AND C) OR E — यानी या तो तीनों contacts A, B, C एक साथ TRUE हों, या फिर अकेला E TRUE हो, दोनों में से कोई भी condition D को energize कर देगी",
+        "D कभी energize नहीं होगा क्योंकि parallel path invalid है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Series contacts (A, B, C) आपस में AND logic बनाते हैं, और उस पूरे series-branch के parallel में जुड़ा E एक स्वतंत्र OR path बनाता है, इसलिए overall logic (A AND B AND C) OR E होता है। Option A गलत है क्योंकि E को भी series मान लिया गया, Option C गलत है क्योंकि A,B,C series में हैं न कि parallel, Option D गलत है क्योंकि parallel branches ladder logic में पूर्णतः valid हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q32",
+      "question": "Instruction List (IL) programming में 'ANDN' (AND NOT) mnemonic का उपयोग किस स्थिति में किया जाता है?",
+      "options": [
+        "जब दो Normally Open contacts को series में जोड़ना हो",
+        "जब किसी Normally Closed (NC) contact को series logic में शामिल करना हो, यानी उस input के FALSE होने पर ही condition आगे बढ़े",
+        "ANDN का उपयोग केवल output coil के साथ होता है",
+        "ANDN केवल timer instructions के साथ काम करता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "ANDN (AND NOT) mnemonic उस स्थिति के लिए है जहाँ एक NC contact को series में जोड़ना है — यानी संबंधित bit के 0/FALSE रहने पर condition true मानी जाए। Option A सामान्य AND के लिए है, Option C और D गलत हैं क्योंकि ANDN input contacts की logic से संबंधित है, coil या timer से नहीं।"
+    },
+    {
+      "id": "u13_plc_programming_q33",
+      "question": "FBD में एक OR block के तीन inputs हैं जिनमें से केवल एक input TRUE है, बाकी दो FALSE हैं। OR block का output क्या होगा?",
+      "options": [
+        "Output TRUE होगा, क्योंकि OR logic में किसी भी एक input के TRUE होने मात्र से output TRUE हो जाता है",
+        "Output FALSE होगा क्योंकि सभी inputs TRUE नहीं हैं",
+        "Output undefined रहेगा",
+        "OR block तीन inputs को support नहीं करता"
+      ],
+      "correctIndex": 0,
+      "explanation": "OR logic का नियम है कि जब भी कोई एक भी input TRUE हो तो output TRUE हो जाता है, चाहे बाकी inputs FALSE हों। Option B, AND logic का नियम है, Option C गलत है क्योंकि logic result सदैव defined होता है, Option D गलत है क्योंकि OR blocks multiple (2 से अधिक) inputs support करते हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q34",
+      "question": "एक motor start-stop ladder program में यदि 'Stop push button' को गलती से Normally Open (NO) contact की जगह लगा दिया जाए (जबकि circuit design में NC अपेक्षित था), तो क्या समस्या होगी?",
+      "options": [
+        "कोई फर्क नहीं पड़ेगा, motor सामान्य रूप से काम करेगा",
+        "Motor कभी start ही नहीं होगा",
+        "Normal operation में motor को stop करने के लिए operator को stop button दबाना होगा जो logic को उल्टा कर देगा — असल में wire break होने पर (जैसे स्विच खराब होने या तार कटने पर) motor रोका नहीं जा सकेगा, जो एक safety hazard है",
+        "यह केवल HMI पर प्रभाव डालेगा, PLC logic पर नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "Stop button को हमेशा NC contact के रूप में wire किया जाता है ताकि wire टूटने या contact fail होने की स्थिति में भी circuit break हो जाए और motor सुरक्षित रूप से रुक जाए (fail-safe design)। NO से wire करने पर यह fail-safe गुण खत्म हो जाता है, जो गंभीर safety issue है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q35",
+      "question": "HMI configuration में एक 'Push Button' object को PLC के एक momentary input bit से link करने के बजाय गलती से एक 'Toggle/Latch' behavior के रूप में configure कर दिया जाए, तो क्या समस्या आ सकती है?",
+      "options": [
+        "कोई समस्या नहीं आएगी, दोनों behavior एक जैसे ही काम करते हैं",
+        "HMI toggle button कभी PLC को signal ही नहीं भेजता",
+        "यह समस्या केवल SFC programming में होती है",
+        "यदि ladder logic momentary pulse की अपेक्षा कर रहा है (जैसे एक seal-in circuit को trigger करने के लिए), तो toggle behavior के कारण bit गलत समय तक ON रह सकता है, जिससे unintended operation या sequence में गड़बड़ी हो सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "यदि underlying ladder logic momentary (pulse-type) signal की अपेक्षा करता है लेकिन HMI object toggle/latch के रूप में configure हो, तो bit अपेक्षा से अलग समय तक HIGH रह सकता है, जिससे logic sequence में unintended behavior आ सकता है। इसलिए HMI object का behavior underlying PLC logic से मेल खाना चाहिए। बाकी options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q36",
+      "question": "Ladder logic, FBD और IL तीनों languages की तुलना करते समय, कौन सा कथन सबसे सटीक है?",
+      "options": [
+        "ये तीनों IEC 61131-3 के अंतर्गत एक ही underlying logic को अलग-अलग रूपों (graphical relay-style, graphical block-style, textual mnemonic) में represent करती हैं, इसलिए एक साधारण Boolean logic को इन तीनों में equivalent रूप से लिखा जा सकता है",
+        "तीनों languages पूरी तरह असंगत हैं और एक-दूसरे में convert नहीं की जा सकतीं",
+        "केवल Ladder logic ही वास्तविक PLC logic है, बाकी दोनों केवल documentation के लिए हैं",
+        "FBD और IL का उपयोग कभी एक साथ नहीं हो सकता"
+      ],
+      "correctIndex": 0,
+      "explanation": "IEC 61131-3 standard के अंतर्गत ये सभी languages एक ही underlying control logic को अलग प्रस्तुतिकरण (representation) में दिखाती हैं, इसलिए सरल Boolean/relay-type logic को Ladder, FBD या IL तीनों में equivalent रूप से express किया जा सकता है। बाकी options गलत हैं क्योंकि तीनों वास्तविक और उपयोगी programming languages हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q37",
+      "question": "एक ladder rung में coil के आगे 'Latch (OTL)' instruction का उपयोग किया गया है, जिसे केवल एक अलग rung में 'Unlatch (OTU)' instruction द्वारा ही reset किया जा सकता है। यह किस प्रकार का output behavior दर्शाता है?",
+      "options": [
+        "Non-retentive output, जो rung के false होते ही तुरंत OFF हो जाता है",
+        "यह instruction केवल analog values के लिए काम करता है",
+        "Retentive (latched) output, जो एक बार ON होने पर तब तक ON रहता है जब तक उसे explicitly OTU instruction से reset न किया जाए, यहां तक कि power cycle के बाद भी (यदि memory retentive हो)",
+        "OTL instruction का ladder logic में कोई मान्य उपयोग नहीं है"
+      ],
+      "correctIndex": 2,
+      "explanation": "OTL (Output Latch) एक retentive output बनाता है जो तब तक ON रहता है जब तक OTU (Output Unlatch) instruction द्वारा उसे specifically reset न किया जाए, यह साधारण OTE (non-retentive) output से अलग होता है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q38",
+      "question": "HMI screen configuration में 'Multi-language Support' feature जोड़ने का मुख्य व्यावहारिक कारण क्या है?",
+      "options": [
+        "इसका कोई व्यावहारिक कारण नहीं है, यह सिर्फ एक decorative feature है",
+        "यह feature केवल ladder logic को तेज़ चलाने के लिए है",
+        "Multi-language support PLC scan time को प्रभावित करता है",
+        "अलग-अलग region/plant के operators अपनी सुविधा की भाषा में screen text देख सकें, जिससे समझने में गलतियाँ कम हों और operation सुरक्षित व कुशल बने"
+      ],
+      "correctIndex": 3,
+      "explanation": "Multi-language support अलग-अलग operators को उनकी परिचित भाषा में instructions, alarms, labels देखने देता है, जिससे miscommunication और operational errors की संभावना घटती है, विशेषकर विविध workforce वाले plants में। बाकी options गलत/असंबंधित हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q39",
+      "question": "FBD programming में दो अलग-अलग AND blocks के outputs को एक common OR block के दो inputs से जोड़ा गया है। यह overall structure किस Boolean expression के समान है?",
+      "options": [
+        "(A AND B) AND (C AND D)",
+        "(A AND B) OR (C AND D) — यानी दोनों AND-branches में से किसी एक branch के TRUE होने पर भी final OR block का output TRUE हो जाएगा",
+        "A OR B OR C OR D, बिना किसी AND condition के",
+        "यह संरचना FBD में बनाई ही नहीं जा सकती"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक AND block अपने दो inputs को AND करता है, और उनके outputs जब OR block में जाते हैं तो final logic (A AND B) OR (C AND D) बनता है — यह ladder logic में दो parallel series-branches के बराबर है। बाकी options गलत logic दर्शाते हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q40",
+      "question": "PLC programming में 'Simulation Mode' (बिना actual hardware/field devices से जोड़े program test करने की सुविधा) का उपयोग करने का मुख्य फायदा क्या है?",
+      "options": [
+        "इसका कोई फायदा नहीं, simulation हमेशा गलत परिणाम देता है",
+        "Simulation mode केवल HMI graphics के लिए उपयोग होता है",
+        "Logic को actual machine पर download करने से पहले ही ऑफिस/lab में test और debug किया जा सकता है, जिससे commissioning के दौरान समय बचता है और hardware को गलत logic से होने वाले नुकसान से बचाया जा सकता है",
+        "Simulation mode में timer और counter instructions काम नहीं करते"
+      ],
+      "correctIndex": 2,
+      "explanation": "Simulation mode में program को virtual inputs/outputs के साथ test किया जा सकता है, जिससे logic errors actual field hardware से जोड़ने से पहले ही पकड़े जा सकते हैं, इससे commissioning समय और hardware damage risk दोनों कम होते हैं। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q41",
+      "question": "Instruction List (IL) में एक sequence है: 'LD I0.0', 'OR I0.1', 'ANDN I0.2', 'OUT Q0.0'। इसका ladder logic और Boolean equivalent क्या होगा?",
+      "options": [
+        "Q0.0 = (I0.0 OR I0.1) AND (NOT I0.2), यानी I0.0 या I0.1 में से कोई एक TRUE हो और साथ ही I0.2 FALSE (NC contact के रूप में) हो तभी output ON होगा",
+        "Q0.0 = I0.0 AND I0.1 AND I0.2",
+        "Q0.0 = NOT(I0.0 OR I0.1 OR I0.2)",
+        "यह sequence syntactically invalid है"
+      ],
+      "correctIndex": 0,
+      "explanation": "'LD I0.0' पहला contact लोड करता है, 'OR I0.1' उसे parallel में जोड़ता है, 'ANDN I0.2' पूरे OR-result को series में I0.2 के NOT (NC contact) से जोड़ता है, और 'OUT Q0.0' परिणाम आउटपुट में देता है — इसलिए Q0.0 = (I0.0 OR I0.1) AND (NOT I0.2)। बाकी options गलत Boolean logic दर्शाते हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q42",
+      "question": "HMI और PLC के बीच communication स्थापित करते समय 'Driver/Protocol Selection' (जैसे Modbus RTU, Modbus TCP, या manufacturer-specific protocol) configure करना क्यों आवश्यक है?",
+      "options": [
+        "यह step optional है और इसे skip किया जा सकता है",
+        "Driver selection केवल screen के graphics को प्रभावित करता है",
+        "HMI और PLC को एक-दूसरे का data सही ढंग से समझने के लिए एक common communication protocol और उससे जुड़ी settings (जैसे baud rate, station address) match होनी चाहिए, वरना कोई data exchange नहीं होगा",
+        "Protocol selection सिर्फ ladder logic लिखते समय जरूरी होता है, HMI में नहीं"
+      ],
+      "correctIndex": 2,
+      "explanation": "HMI और PLC को communicate करने के लिए दोनों तरफ एक जैसा communication protocol और उसकी parameters (address, baud rate आदि) match होनी चाहिए, अन्यथा tags का data सही तरीके से transfer नहीं होगा और HMI 'communication error' दिखाएगा। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q43",
+      "question": "एक ladder rung में output coil D के तुरंत बाद (उसी rung में आगे) एक अन्य coil E भी जोड़ा गया है, दोनों coils उन्हीं input conditions से control होते हैं। इसे किस प्रकार की ladder programming technique कहा जाता है?",
+      "options": [
+        "यह invalid programming है, एक rung में दो coils नहीं हो सकते",
+        "यह केवल timer instructions के लिए allowed है",
+        "इसका कोई नाम नहीं है और यह programmers द्वारा उपयोग नहीं की जाती",
+        "'Multiple/Parallel Outputs' technique, जहाँ एक ही input condition से एक साथ कई outputs (जैसे motor coil और indicator lamp coil दोनों) energize किए जा सकते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "एक ही rung logic (input conditions पूरे होने) से एक से अधिक output coils को energize करना multiple/parallel outputs कहलाता है, जैसे motor coil के साथ-साथ status indicator lamp भी ON करना, यह common और valid practice है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q44",
+      "question": "SFC (Sequential Function Chart) में 'Transition Condition' का क्या अर्थ है?",
+      "options": [
+        "एक Boolean condition जो यह तय करती है कि प्रक्रिया एक step/state से अगले step में कब आगे बढ़ेगी, जैसे 'Tank Full Sensor = TRUE' होने पर fill-step से mix-step में transition हो",
+        "यह केवल एक decorative graphical element है",
+        "Transition condition केवल HMI में उपयोग होती है, SFC में नहीं",
+        "यह हमेशा एक timer preset value होती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "SFC में हर step के बाद एक transition condition होती है जो यह निर्धारित करती है कि अगला step कब active होगा — यह कोई भी Boolean logic (sensor input, calculated condition आदि) हो सकती है, न कि केवल timer। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q45",
+      "question": "PLC programming में 'Forcing I/O' (जैसे किसी input bit को manually TRUE/FALSE force करना) का उपयोग करते समय क्यों सावधानी बरतनी चाहिए?",
+      "options": [
+        "क्योंकि forcing से PLC हमेशा permanently खराब हो जाता है",
+        "क्योंकि forced bit वास्तविक field condition को override कर देता है, जिससे actual sensor/safety input की स्थिति की परवाह किए बिना logic execute होता रहता है — यह debugging के लिए उपयोगी पर गलत उपयोग में सुरक्षा जोखिम पैदा कर सकता है",
+        "Forcing I/O का किसी भी safety या logic से कोई संबंध नहीं होता",
+        "Forcing केवल HMI screens पर किया जा सकता है, PLC में नहीं"
+      ],
+      "correctIndex": 1,
+      "explanation": "Forcing किसी I/O bit की actual field स्थिति को अनदेखा करके उसे manually एक value पर 'lock' कर देता है, यह troubleshooting में सहायक है परंतु यदि सुरक्षा-संबंधी input (जैसे emergency stop) को गलती से force कर दिया जाए तो गंभीर hazard बन सकता है। बाकी options तथ्यात्मक रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q46",
+      "question": "एक ladder program में दो अलग-अलग rungs में एक ही output coil (जैसे Q0.0) को दो बार program कर दिया गया है (duplicate coil error)। ज्यादातर PLC programming software इस पर क्या प्रतिक्रिया देंगे?",
+      "options": [
+        "PLC इसे बिना किसी warning के चुपचाप स्वीकार कर लेगा और कोई समस्या नहीं होगी",
+        "यह हमेशा PLC को permanently लॉक कर देगा",
+        "Duplicate coil केवल counters के लिए संभव है",
+        "अधिकांश software एक 'Duplicate Coil' warning/error देंगे, क्योंकि इससे केवल अंतिम rung का परिणाम ही output पर लागू होगा (scan के अनुसार overwrite), जिससे logic अस्पष्ट और अनिश्चित (unpredictable) व्यवहार कर सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Duplicate coil (एक ही output address को दो अलग rungs में coil के रूप में उपयोग करना) एक common programming mistake मानी जाती है क्योंकि scan cycle में बाद वाली rung पहले वाली की value को overwrite कर देती है, जिससे logic का व्यवहार भ्रामक हो जाता है; इसलिए अधिकतर software इसके लिए चेतावनी देते हैं। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q47",
+      "question": "HMI configuration में 'Recipe Management' feature किस प्रकार की applications में उपयोगी होता है?",
+      "options": [
+        "जहाँ एक ही machine पर अलग-अलग products के लिए बार-बार बदलने वाले parameters का सेट (जैसे तापमान, समय, speed) होते हैं, वहाँ operator एक बटन दबाकर पूरा parameter-set (recipe) एक साथ PLC में load कर सके",
+        "इसका PLC या process control से कोई संबंध नहीं है",
+        "यह केवल screen का wallpaper बदलने के लिए है",
+        "Recipe management केवल alarm history दिखाने के लिए है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Recipe Management operator को एक saved parameter-set (जैसे product A के लिए temperature, speed, time values) को एक क्लिक में PLC में load करने देता है, जिससे बार-बार manually हर parameter बदलने की जरूरत नहीं पड़ती, यह विशेष रूप से multi-product manufacturing लाइनों में उपयोगी है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q48",
+      "question": "एक ladder rung का वर्णन है: contact A (NO) series में contact B (NC) के साथ है, और यह पूरा combination coil C को drive करता है। यह rung कब TRUE होगी (यानी C कब energize होगा)?",
+      "options": [
+        "जब A और B दोनों की physical field स्थिति ON हो",
+        "जब input A associated field device से ON (TRUE) हो और input B associated field device से OFF (FALSE) हो — क्योंकि B का NC contact तभी logic में TRUE pass करता है जब उसका वास्तविक input FALSE हो",
+        "यह rung कभी TRUE नहीं होगी क्योंकि NO और NC को साथ नहीं जोड़ा जा सकता",
+        "C हमेशा energize रहेगा चाहे A और B कुछ भी हों"
+      ],
+      "correctIndex": 1,
+      "explanation": "NO contact तभी logic-true देता है जब उससे जुड़ा input वास्तव में TRUE हो, जबकि NC contact तभी logic-true देता है जब उससे जुड़ा input वास्तव में FALSE हो; series (AND) होने के कारण C तभी energize होगा जब A=TRUE और B=FALSE दोनों शर्तें पूरी हों। बाकी options गलत हैं, NO-NC को series में जोड़ना बिल्कुल valid और common practice है।"
+    },
+    {
+      "id": "u13_plc_programming_q49",
+      "question": "PLC programming environments में 'Version Control' या 'Program Backup History' बनाए रखना एक अच्छी engineering practice क्यों मानी जाती है?",
+      "options": [
+        "इसका कोई व्यावहारिक लाभ नहीं है",
+        "Version control केवल HMI screen designs के लिए उपयोगी है",
+        "यह practice केवल SFC programming में लागू होती है",
+        "यदि किसी नए modification से unexpected problem आती है, तो पुराने working version पर वापस लौटा जा सके, इसके अलावा यह यह भी track करता है कि किसने, कब और क्या बदलाव किया"
+      ],
+      "correctIndex": 3,
+      "explanation": "Version control/backup history से यदि कोई नया change समस्या पैदा करे तो पहले के stable/working version पर rollback किया जा सकता है, साथ ही यह accountability के लिए बदलावों का record भी रखता है, जो industrial maintenance में बेहद महत्वपूर्ण है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_programming_q50",
+      "question": "FBD, Ladder और IL तीनों में से किसे टेक्स्ट-आधारित (textual) programming language माना जाता है, और शेष दो को किस श्रेणी में रखा जाता है?",
+      "options": [
+        "Ladder textual है, जबकि FBD और IL graphical हैं",
+        "IL (Instruction List) textual/mnemonic-based language है, जबकि Ladder Diagram और FBD दोनों graphical languages हैं जो visual elements (contacts/coils या function blocks) का उपयोग करती हैं",
+        "तीनों ही पूर्णतः graphical languages हैं",
+        "तीनों ही पूर्णतः textual languages हैं"
+      ],
+      "correctIndex": 1,
+      "explanation": "IEC 61131-3 के अनुसार Instruction List (IL) एक text-based mnemonic language है (assembly जैसी), जबकि Ladder Diagram (relay contacts/coils) और Function Block Diagram (interconnected blocks) दोनों graphical representations हैं। बाकी options गलत वर्गीकरण देते हैं।"
     }
   ]
 }

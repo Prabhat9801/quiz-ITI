@@ -363,6 +363,66 @@
       ],
       "correctIndex": 0,
       "explanation": "Scan cycle तब तक continuously चलता रहता है जब तक CPU RUN mode में है और power supply चालू है; CPU को STOP/PROGRAM mode में डालने या power OFF करने पर ही यह cyclic scanning रुकती है। यह हर scan के बाद अपने आप नहीं रुकता।"
+    },
+    {
+      "id": "u13_plc_working_q31",
+      "question": "PLC की cyclic/synchronous scanning और traditional hard-wired relay logic (जहाँ सभी relays parallel में तुरंत react करते हैं) के बीच scan cycle की दृष्टि से मुख्य अंतर क्या है?",
+      "options": [
+        "PLC में logic को sequential (एक-एक rung करके) execute किया जाता है इसलिए किसी result को image table update होने और अगले rung तक पहुँचने में थोड़ा delay संभव है, जबकि hard-wired relays वास्तव में parallel और instant होते हैं",
+        "दोनों में कोई अंतर नहीं है, दोनों बिल्कुल एक जैसे instantly react करते हैं",
+        "PLC हमेशा relay logic से तेज़ होता है क्योंकि उसमें scan cycle होता ही नहीं",
+        "Hard-wired relay logic में भी input image table का उपयोग होता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "PLC ladder program को rung-by-rung sequentially execute करता है और परिणाम image tables में जमा होकर अगले scan/rung में उपयोग होते हैं, इसलिए कुछ scan-related delay स्वाभाविक है; जबकि traditional hard-wired relay circuits सभी paths को truly parallel और तुरंत process करते हैं। Option B गलत है क्योंकि यही मौलिक अंतर PLC working principle की पहचान है, C तथ्यात्मक रूप से गलत है क्योंकि PLC में scan cycle अनिवार्य रूप से होता है, और D गलत है क्योंकि image table concept केवल PLC-type sequential processing से जुड़ा है।"
+    },
+    {
+      "id": "u13_plc_working_q32",
+      "question": "PLC program में यदि 'Jump' या 'Skip' instruction का उपयोग करके program scan के दौरान rungs के एक block को bypass कर दिया जाए, तो scan time पर क्या असर पड़ता है?",
+      "options": [
+        "Scan time हमेशा बढ़ जाता है क्योंकि extra instruction जुड़ा है",
+        "Bypass किए गए rungs execute नहीं होते इसलिए उस scan के लिए प्रभावी scan time घट सकता है, जिससे overall cycle तेज़ हो जाता है",
+        "Scan cycle पूरी तरह रुक जाता है",
+        "Input Image Table पूरी तरह delete हो जाता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Jump/Skip instruction उपयोग करने पर CPU उन rungs को उस scan में evaluate ही नहीं करता, इसलिए उतना processing समय बचता है और scan time कम हो सकता है — यह conditional logic को optimize करने की एक तकनीक है। Option A उल्टा प्रभाव बताता है, C और D scan cycle की वास्तविक working से मेल नहीं खाते।"
+    },
+    {
+      "id": "u13_plc_working_q33",
+      "question": "PLC working principle में 'Force I/O' (forcing किसी input/output bit को manually ON या OFF सेट करना) का scan cycle पर क्या प्रभाव होता है?",
+      "options": [
+        "Forced bit की value program scan के actual logic परिणाम को override करके उस status पर fix रहती है, चाहे वास्तविक field condition या logic कुछ भी हो, जब तक force हटाया न जाए",
+        "Force I/O से scan cycle पूरी तरह बंद हो जाता है",
+        "Force I/O केवल output scan को disable करता है, बाकी सब सामान्य रहता है",
+        "Force I/O से program automatically permanently बदल जाता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Force I/O feature का उपयोग testing/troubleshooting के लिए किया जाता है, जिसमें किसी input या output bit की value को manually fixed status पर रख दिया जाता है, जो वास्तविक logic execution या field signal को override कर देती है, जब तक force manually हटाया न जाए। यह scan cycle बंद नहीं करता (B), केवल output scan तक सीमित नहीं है (C), और program की स्थायी logic को नहीं बदलता (D)।"
+    },
+    {
+      "id": "u13_plc_working_q34",
+      "question": "एक PLC application में यदि scan time लगातार बदलता रहे (यानी हर cycle की duration अलग-अलग हो) तो इसे किस प्रकार का scanning कहा जाता है, और यह किस कारण से हो सकता है?",
+      "options": [
+        "Fixed/Synchronous scanning, जो program के अपरिवर्तनीय (constant) structure के कारण होता है",
+        "Variable/Asynchronous scanning, जो conditional branches (jump/skip), subroutine calls या communication overhead में बदलाव के कारण scan-to-scan अलग समय लेने से होता है",
+        "यह कभी नहीं होता, scan time हमेशा बिल्कुल fixed रहता है",
+        "यह केवल power supply fluctuation के कारण होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "जब program में conditional jump/skip, subroutine calls, या communication servicing की मात्रा हर scan में बदलती है, तो actual instructions execute होने की संख्या भी बदलती है, जिससे scan time variable/asynchronous हो जाता है। Option A गलत है क्योंकि fixed scanning में समय लगभग स्थिर रहता है, C तथ्यात्मक रूप से गलत है, और D केवल एक संभावित बाहरी कारण है, मुख्य कारण नहीं।"
+    },
+    {
+      "id": "u13_plc_working_q35",
+      "question": "PLC की working principle में यह क्यों कहा जाता है कि 'PLC एक deterministic sequential machine की तरह काम करता है'?",
+      "options": [
+        "क्योंकि यह हर scan में random rungs चुनकर execute करता है",
+        "क्योंकि यह हर scan cycle में उसी निश्चित क्रम (input scan → program scan → output scan → housekeeping) को दोहराता है, जिससे व्यवहार predictable और repeatable रहता है",
+        "क्योंकि यह केवल एक बार program run करके हमेशा के लिए रुक जाता है",
+        "क्योंकि इसमें कभी scan time measure नहीं किया जा सकता"
+      ],
+      "correctIndex": 1,
+      "explanation": "PLC हर cycle में एक निश्चित, पूर्व-निर्धारित क्रम में steps दोहराता है (input scan, program scan, output scan, housekeeping), जिससे उसका व्यवहार predictable और repeatable (deterministic) रहता है — यही scan-based sequential working principle की मूल पहचान है। Option A ग़लत है क्योंकि execution order random नहीं है, C गलत है क्योंकि scanning continuous/cyclic होती है, और D गलत है क्योंकि scan time को measure किया जा सकता है और practically किया भी जाता है।"
     }
   ]
 }

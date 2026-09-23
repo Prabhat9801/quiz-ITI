@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "अच्छा vendor support और आसानी से उपलब्ध spare parts breakdown की स्थिति में downtime को काफी कम कर देते हैं, जो production continuity के लिए जरूरी है। बाकी options तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_selection_q31",
+      "question": "एक conveyor sorting application में 200 ms के अंदर हर cycle पूरा होना जरूरी है, लेकिन selected PLC का actual scan time लोड होने पर 250 ms आता है। इस स्थिति में PLC selection में सुधार के लिए सबसे उचित कदम क्या होगा?",
+      "options": [
+        "Higher clock speed वाला processor या optimized/faster scan वाला PLC select करना ताकि scan time required 200 ms से कम हो जाए",
+        "Program को वैसा ही रखकर सिर्फ power supply की rating बढ़ा देना",
+        "PLC का data memory बढ़ा देना, इससे scan time अपने आप कम हो जाएगा",
+        "I/O modules की संख्या कम कर देना, भले ही जरूरी sensors हटाने पड़ें"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब actual scan time application की required response time से अधिक हो, तो higher clock speed processor या faster-scanning PLC select करना सही समाधान है ताकि scan time घटकर requirement के अंदर आ जाए। Option B power supply rating बढ़ाने से scan time नहीं बदलता; option C data memory बढ़ाने से scan speed पर सीधा असर नहीं पड़ता (यह अलग parameter है); option D जरूरी sensors हटाना application की functionality ही खराब कर देगा, यह उचित selection approach नहीं है।"
+    },
+    {
+      "id": "u13_plc_selection_q32",
+      "question": "किसी application के लिए PLC select करते समय 'Memory' पक्ष में program memory के अलावा किन दो अन्य memory requirements का आकलन करना जरूरी होता है ताकि पूरी capacity सही तरीके से sized हो?",
+      "options": [
+        "केवल PLC के front panel की keypad memory और display memory",
+        "Data memory (process variables, timer/counter values, flags के लिए) और I/O image memory/table जो input-output status को represent करती है",
+        "केवल programming software की installation size",
+        "PLC के carton box की packaging size और manual की मोटाई"
+      ],
+      "correctIndex": 1,
+      "explanation": "Program memory के साथ-साथ data memory (runtime values जैसे timers, counters, flags के लिए) और I/O image/table memory (input-output status रखने के लिए) का भी सही आकलन जरूरी है ताकि overall memory sizing सही हो। Options A, C, D memory sizing criteria से कोई संबंध नहीं रखते।"
+    },
+    {
+      "id": "u13_plc_selection_q33",
+      "question": "एक chemical processing plant में continuous production चलती रहती है, और थोड़ी सी भी बिजली बंद होने पर भारी material loss होता है। PLC selection में power supply के संबंध में कौन सा feature सबसे उपयुक्त रहेगा?",
+      "options": [
+        "साधारण single power supply module जिसमें कोई backup न हो",
+        "सिर्फ बड़ा cooling fan लगाना, power supply वैसी ही रखना",
+        "Redundant power supply configuration (dual power supply modules with automatic switchover) ताकि एक supply fail होने पर दूसरी तुरंत संभाल ले",
+        "Power supply की जगह केवल बड़ी battery पूरे प्लांट के लिए लगा देना"
+      ],
+      "correctIndex": 2,
+      "explanation": "Continuous, critical process plants में redundant power supply (dual modules with automatic switchover) selection के समय जरूरी feature है ताकि एक supply fail होने पर दूसरी तुरंत operation संभाल ले और production loss न हो। Option A कोई सुरक्षा नहीं देता, option B cooling से power failure की समस्या हल नहीं होती, और option D पूरे प्लांट को केवल battery पर चलाना practical या technically सही approach नहीं है।"
+    },
+    {
+      "id": "u13_plc_selection_q34",
+      "question": "किसी बॉटलिंग प्लांट में PLC panel को धूल भरे और नमी वाले वातावरण में लगाना है, जहाँ occasional water splash भी होता है। PLC/enclosure selection में इसके लिए कौन सा factor जांचना सबसे जरूरी है?",
+      "options": [
+        "PLC की programming software का version number",
+        "PLC keypad का color scheme",
+        "PLC manufacturer का logo design",
+        "PLC/enclosure की उचित IP rating (जैसे IP65) जो dust और water splash से protection दे सके"
+      ],
+      "correctIndex": 3,
+      "explanation": "Dust और water splash वाले वातावरण के लिए उपयुक्त IP rating (जैसे IP65) वाला PLC/enclosure select करना जरूरी है ताकि internal circuitry सुरक्षित रहे और long-term reliability बनी रहे। बाकी options (software version, keypad color, logo) environmental protection से कोई संबंध नहीं रखते।"
+    },
+    {
+      "id": "u13_plc_selection_q35",
+      "question": "PLC selection के दौरान clock speed और I/O count को एक साथ क्यों evaluate किया जाता है, अलग-अलग नहीं?",
+      "options": [
+        "क्योंकि clock speed और I/O count का आपस में कोई संबंध नहीं होता, इन्हें हमेशा अलग-अलग ही देखा जाता है",
+        "क्योंकि अधिक I/O points होने पर हर scan cycle में सभी inputs पढ़ने और outputs update करने में अधिक समय लगता है, इसलिए बड़े I/O count वाले system के लिए पर्याप्त clock speed वाला processor चुनना जरूरी है ताकि scan time acceptable बना रहे",
+        "क्योंकि clock speed सिर्फ power supply की rating तय करता है, I/O count से उसका कोई लेना-देना नहीं",
+        "क्योंकि I/O count बढ़ने से PLC की memory अपने आप कम हो जाती है, clock speed से उसका सीधा संबंध होता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "I/O count बढ़ने पर हर scan cycle में अधिक inputs read और outputs update करने पड़ते हैं, जिससे scan time बढ़ने का खतरा रहता है; इसलिए बड़े I/O वाले systems के लिए पर्याप्त clock speed वाला processor चुनना जरूरी है ताकि overall scan time application की जरूरत के अनुसार बना रहे। Option A गलत है क्योंकि दोनों आपस में जुड़े हैं; option C power supply से संबंधित गलत तर्क है; option D memory और clock speed के बीच गलत causation दर्शाता है।"
     }
   ]
 }

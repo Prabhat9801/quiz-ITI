@@ -363,6 +363,186 @@
       ],
       "correctIndex": 0,
       "explanation": "Field side पर motors, contactors आदि से उत्पन्न electrical noise या voltage spikes को isolated power supply design internal CPU/logic circuitry तक पहुँचने से रोकता है, जिससे system reliable रहता है। यह execution speed, memory size या weight से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q31",
+      "question": "Digital Input Module में एक sinking (NPN) type sensor को connect करते समय field wiring architecture किस principle पर काम करता है?",
+      "options": [
+        "Sensor output pin से current, input module के terminal में प्रवाहित होकर common (0V) की ओर लौटता है जब sensor ON होता है",
+        "Sensor हमेशा सीधे AC mains से जुड़ता है",
+        "Sensor module के अंदर ही स्थायी रूप से mount रहता है",
+        "Sensor और input module के बीच किसी wiring की जरूरत नहीं होती"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sinking (NPN) type sensor active होने पर current को अपने output से module के input terminal की तरफ 'sink' करता है और वह current common/0V रेल पर लौटता है, जिससे module उस logic level को detect करता है। Option B, C, D discrete input wiring की वास्तविक architecture को गलत दर्शाते हैं।"
+    },
+    {
+      "id": "u13_plc_architecture_q32",
+      "question": "PLC architecture में Analog Output Module का उपयोग किस प्रकार के field actuator को control करने के लिए किया जाता है?",
+      "options": [
+        "केवल simple ON/OFF indicator lamp के लिए",
+        "Variable speed drive (VFD) या control valve जिन्हें 4-20mA/0-10V जैसे continuously variable signal से नियंत्रित किया जाता है",
+        "केवल push button switch के लिए",
+        "केवल limit switch के लिए"
+      ],
+      "correctIndex": 1,
+      "explanation": "Analog output module CPU के digital value को एक proportional continuous current/voltage signal (4-20mA या 0-10V) में convert करता है जिससे VFD की speed या control valve की opening जैसे actuators को precisely control किया जा सके। Indicator lamp, push button और limit switch discrete devices हैं, इन्हें digital I/O module handle करता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q33",
+      "question": "Modular PLC के rack/chassis में एक slot खाली (empty) रहने पर सामान्यतः क्या किया जाता है?",
+      "options": [
+        "उस slot को हमेशा जबरदस्ती किसी दूसरे module से भर दिया जाता है चाहे compatible हो या न हो",
+        "उस slot को blank/filler plate से cover किया जाता है ताकि backplane connector धूल व नमी से सुरक्षित रहे",
+        "पूरे rack को बदलना पड़ता है",
+        "PLC काम करना पूरी तरह बंद कर देता है"
+      ],
+      "correctIndex": 1,
+      "explanation": "खाली slot को blank/filler plate से cover करना अच्छी practice है जिससे उस slot का backplane connector धूल, नमी और accidental contact से सुरक्षित रहे तथा rack की enclosure rating बनी रहे। खाली slot होने से PLC bंद नहीं होता और rack बदलने की जरूरत नहीं पड़ती।"
+    },
+    {
+      "id": "u13_plc_architecture_q34",
+      "question": "Digital Output Module में transistor-type output के लिए एक महत्वपूर्ण architectural सीमा क्या है?",
+      "options": [
+        "यह किसी भी AC load को बिना किसी बाहरी device के सीधे चला सकता है",
+        "यह सामान्यतः केवल DC load तक सीमित होता है और AC load चलाने के लिए बाहरी relay/contactor की सहायता लेनी पड़ती है",
+        "इसकी switching speed relay से हमेशा धीमी होती है",
+        "इसमें short-circuit protection कभी नहीं होता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Transistor output modules solid-state होने के कारण high-speed switching देते हैं परंतु सामान्यतः केवल DC voltage पर काम करते हैं; AC load चलाने के लिए एक interposing relay/contactor की आवश्यकता होती है। Relay output की तुलना में इनकी switching speed तेज़ होती है, धीमी नहीं, और आधुनिक modules में short-circuit protection उपलब्ध होता है।"
+    },
+    {
+      "id": "u13_plc_architecture_q35",
+      "question": "Analog Input Module के अंदर field से आया हुआ current/voltage signal, CPU तक पहुँचने से पहले किस internal component से गुजरता है?",
+      "options": [
+        "केवल एक साधारण mechanical switch से",
+        "Analog-to-Digital Converter (ADC) से, जो continuous signal को digital binary value में convert करता है",
+        "सीधे output module में transfer हो जाता है, बिना किसी conversion के",
+        "Battery backup circuit से"
+      ],
+      "correctIndex": 1,
+      "explanation": "Analog input module में मौजूद ADC circuit field से आए continuous 4-20mA/0-10V signal को एक proportional digital binary value में बदलता है, जिसे CPU process कर सके। Mechanical switch discrete input में प्रयुक्त होता है, यह directly output module में नहीं जाता, और battery backup memory retention के लिए है, signal conversion के लिए नहीं।"
+    },
+    {
+      "id": "u13_plc_architecture_q36",
+      "question": "एक modular PLC architecture में यदि power supply module की rated capacity (wattage) rack में लगे सभी modules की कुल power requirement से कम हो, तो क्या परिणाम हो सकता है?",
+      "options": [
+        "कोई फर्क नहीं पड़ता, सब सामान्य रूप से काम करेगा",
+        "CPU की processing speed automatically बढ़ जाएगी",
+        "System overloaded होकर unreliable operation, random reset या modules के काम न करने जैसी समस्या आ सकती है",
+        "Analog modules अपने आप digital modules में बदल जाएँगे"
+      ],
+      "correctIndex": 2,
+      "explanation": "यदि power supply की capacity rack के सभी modules (CPU + I/O) की combined current/power demand को पूरा नहीं कर पाती, तो voltage drop, unreliable operation या unexpected reset हो सकता है, इसलिए architecture design करते समय power budgeting जरूरी होती है। Options A, B और D तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_architecture_q37",
+      "question": "PLC architecture में rack के slots को क्रमांकित (numbered) करने का मुख्य लाभ क्या है?",
+      "options": [
+        "इससे rack का वजन कम हो जाता है",
+        "प्रत्येक slot का एक निश्चित पहचान (address) बन जाती है जिससे program में उस slot में लगे module के I/O points को सही ढंग से reference किया जा सके",
+        "इससे modules की cost कम हो जाती है",
+        "इससे केवल cosmetic appearance बेहतर होती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Slot numbering से हर module की एक निश्चित physical location तय होती है, जो addressing scheme (rack.slot.channel) का आधार बनती है, जिससे programmer program में सही input/output को uniquely access कर सके। यह weight, cost या cosmetic appearance से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q38",
+      "question": "Digital Output Module में 'relay output' का उपयोग करते समय एक practical limitation क्या ध्यान में रखनी चाहिए?",
+      "options": [
+        "Relay output केवल analog signal control कर सकता है",
+        "Relay output कभी भी AC load control नहीं कर सकता",
+        "Relay contacts की एक निश्चित mechanical life होती है और frequent high-speed switching में वे जल्दी खराब हो सकते हैं",
+        "Relay output को field wiring की जरूरत नहीं होती"
+      ],
+      "correctIndex": 2,
+      "explanation": "Relay में mechanical contacts होते हैं जो बार-बार तथा high-frequency switching में wear-out होकर उनकी life कम हो जाती है, इसलिए fast-switching applications में transistor output बेहतर होता है। Options A और B तकनीकी रूप से गलत हैं क्योंकि relay output actually AC load को अच्छी तरह control कर सकता है और यह discrete signal के लिए है, analog के लिए नहीं; और D गलत है क्योंकि किसी भी output module को field wiring की जरूरत होती ही है।"
+    },
+    {
+      "id": "u13_plc_architecture_q39",
+      "question": "PLC modular architecture में 'hot-swappable' I/O module का क्या अर्थ है?",
+      "options": [
+        "Module हमेशा गर्म रहता है इसलिए उसे छूना मना है",
+        "Module केवल high-temperature environment में काम करता है",
+        "Module को एक बार लगाने के बाद कभी नहीं बदला जा सकता",
+        "Module को बिना पूरे system का power off किए rack में से निकाला और लगाया जा सकता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hot-swappable module architecture यह सुविधा देती है कि किसी faulty module को पूरे PLC system का power बंद किए बिना ही rack से निकालकर बदला जा सके, जिससे downtime कम होता है। Options A, B और C शब्द 'hot' का गलत/शाब्दिक अर्थ ले रहे हैं जो तकनीकी concept नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q40",
+      "question": "Analog Output Module से जुड़ने वाले field actuator तक signal पहुँचाने में यदि लंबी cable length हो, तो किस architecture feature का ध्यान रखा जाता है?",
+      "options": [
+        "Voltage signal (0-10V) की तुलना में current signal (4-20mA) को प्राथमिकता दी जाती है क्योंकि यह cable resistance से कम प्रभावित होता है",
+        "हमेशा digital ON/OFF signal ही भेजा जाता है",
+        "Cable length का signal quality पर कोई असर नहीं पड़ता",
+        "Voltage signal हमेशा current signal से बेहतर होता है चाहे cable कितनी भी लंबी हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "Current loop signal (4-20mA) लंबी cable में voltage drop या resistance के कारण भी अपेक्षाकृत accurate रहता है, इसलिए long-distance analog transmission के लिए इसे प्राथमिकता दी जाती है, जबकि voltage signal (0-10V) लंबी दूरी में attenuate हो सकता है। Digital signal यहाँ प्रासंगिक नहीं है क्योंकि यह analog output module की बात है।"
+    },
+    {
+      "id": "u13_plc_architecture_q41",
+      "question": "PLC architecture में 'local I/O' और 'remote I/O' में मुख्य अंतर क्या है?",
+      "options": [
+        "दोनों बिल्कुल एक ही चीज़ हैं, कोई अंतर नहीं",
+        "Local I/O केवल analog signal handle करता है और remote I/O केवल digital",
+        "Remote I/O कभी भी CPU से communicate नहीं कर सकता",
+        "Local I/O modules CPU के साथ same rack/chassis में होते हैं जबकि remote I/O modules communication link के जरिए दूर स्थित rack में होते हैं"
+      ],
+      "correctIndex": 3,
+      "explanation": "Local I/O modules CPU module के साथ उसी rack/backplane bus पर mount होते हैं, जबकि remote I/O modules physically दूर स्थित होकर network/communication link (जैसे Ethernet, fieldbus) के माध्यम से CPU से जुड़ते हैं। Options A, B और C गलत हैं क्योंकि दोनों में स्पष्ट अंतर है, यह classification signal type पर आधारित नहीं है, और remote I/O वास्तव में communication link से CPU से जुड़कर संचार करता ही है।"
+    },
+    {
+      "id": "u13_plc_architecture_q42",
+      "question": "PLC के rack architecture में 'card guide' या 'guide rail' का उद्देश्य क्या है?",
+      "options": [
+        "यह module को सही orientation में slide करके backplane connector से सही तरीके से align होने में मदद करता है",
+        "यह केवल rack का वजन बढ़ाने के लिए होता है",
+        "यह field devices को directly जोड़ता है",
+        "यह power supply की voltage regulate करता है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Card guide/guide rail module को insert करते समय सही mechanical alignment सुनिश्चित करता है ताकि पिन backplane connector से बिना damage के सही तरीके से mate हो जाएँ। यह field wiring, voltage regulation या weight बढ़ाने से संबंधित नहीं है।"
+    },
+    {
+      "id": "u13_plc_architecture_q43",
+      "question": "Digital Input Module में 'input voltage rating' (जैसे 24V DC) से अलग field device (जैसे 110V AC signal) directly जोड़ने पर architecture की दृष्टि से क्या हो सकता है?",
+      "options": [
+        "Module सामान्य रूप से काम करेगा क्योंकि सभी input modules universal voltage support करते हैं",
+        "Module की internal circuitry damage हो सकती है क्योंकि हर input module एक निश्चित voltage rating के लिए design होता है",
+        "इससे केवल analog signal accurate हो जाएगा",
+        "Rack का backplane bus automatically voltage adjust कर लेगा"
+      ],
+      "correctIndex": 1,
+      "explanation": "प्रत्येक digital input module एक specific voltage range (जैसे 24V DC) के लिए design किया जाता है; उससे अधिक rated voltage (जैसे 110V AC) directly लगाने पर internal components damage हो सकते हैं, इसलिए module selection field voltage के अनुसार करना जरूरी है। Backplane bus स्वतः voltage adjust नहीं करता।"
+    },
+    {
+      "id": "u13_plc_architecture_q44",
+      "question": "PLC architecture में 'mixed I/O module' (combined digital व analog channels एक ही module में) रखने का व्यावहारिक लाभ क्या है?",
+      "options": [
+        "इससे CPU की speed स्वतः दोगुनी हो जाती है",
+        "इससे programming language बदलनी पड़ती है",
+        "इससे power supply की जरूरत खत्म हो जाती है",
+        "इससे rack में कम slots उपयोग करके digital और analog दोनों प्रकार के field signals handle किए जा सकते हैं, विशेषकर छोटे I/O count वाले applications में"
+      ],
+      "correctIndex": 3,
+      "explanation": "Mixed I/O module एक ही slot में digital तथा analog दोनों channels उपलब्ध कराता है, जिससे सीमित I/O आवश्यकता वाले applications में rack space और cost की बचत होती है। Options A, B और C गलत हैं क्योंकि यह CPU speed, programming language या power supply requirement को प्रभावित नहीं करता।"
+    },
+    {
+      "id": "u13_plc_architecture_q45",
+      "question": "PLC modular architecture में rack के दोनों सिरों (ends) पर लगने वाले 'End Cap' या 'Terminator' का क्या कार्य होता है (जहाँ लागू हो)?",
+      "options": [
+        "यह CPU का program स्वतः बदल देता है",
+        "यह field actuators को सीधे चलाता है",
+        "यह केवल rack की length बढ़ाने के लिए होता है",
+        "यह backplane bus की electrical continuity को उचित रूप से terminate करके signal reflection/noise कम करने में मदद करता है और खुले सिरे को mechanically सुरक्षित रखता है"
+      ],
+      "correctIndex": 3,
+      "explanation": "End cap/terminator backplane bus के open end पर electrical termination प्रदान करके signal integrity बनाए रखने में मदद करता है और साथ ही खुले connector को धूल व accidental touch से mechanically सुरक्षित रखता है। Options A, B और C गलत हैं क्योंकि यह program, actuators या rack की length से संबंधित नहीं है।"
     }
   ]
 }

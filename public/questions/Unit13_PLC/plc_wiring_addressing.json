@@ -363,6 +363,186 @@
       ],
       "correctIndex": 1,
       "explanation": "यदि कोई channel damaged हो जाए तो device को किसी working spare channel में rewire करके ladder logic में उस नए address को update किया जा सकता है, जिससे पूरा module/PLC बदलने की जरूरत नहीं पड़ती। बाकी options अव्यावहारिक हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q31",
+      "question": "किसी PLC के CPU module पर 'RUN' LED लगातार OFF है जबकि 'FAULT' LED लगातार ON है और POWER supply healthy है। इस स्थिति की सबसे संभावित व्याख्या क्या है?",
+      "options": [
+        "Field wiring का कोई terminal ढीला है, इसका CPU status से कोई लेना-देना नहीं",
+        "CPU किसी critical fault (जैसे corrupted program, hardware error या watchdog timeout) के कारण program execution रोक चुका है",
+        "यह सामान्य normal operating condition है और कोई action जरूरी नहीं",
+        "इसका मतलब है कि केवल output module में overload है"
+      ],
+      "correctIndex": 1,
+      "explanation": "RUN LED OFF के साथ FAULT LED ON होना दर्शाता है कि CPU ने किसी internal fault (corrupt program, memory error, watchdog timeout आदि) के कारण scan/execution बंद कर दिया है। Option A field wiring की बात करता है जो अलग issue है, C गलत है क्योंकि FAULT ON normal नहीं है, D भी गलत है क्योंकि यह specifically output module तक सीमित नहीं बताया गया।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q32",
+      "question": "एक digital input module के किसी channel की 'I/O status LED' उस समय भी OFF रहती है जब field पर connected limit switch physically actuate किया गया है और multimeter पर terminal पर सही voltage भी आ रहा है। सबसे संभावित कारण क्या है?",
+      "options": [
+        "Input module का वह specific channel internally faulty है या program में उस address की मैपिंग गलत है",
+        "PLC की RUN LED हमेशा इस समस्या का कारण होती है",
+        "Limit switch का rating गलत होने से LED कभी काम नहीं करेगी",
+        "Terminal पर voltage आना यह सिद्ध करता है कि कोई समस्या नहीं है इसलिए LED देखना जरूरी नहीं"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब terminal पर सही voltage होते हुए भी status LED नहीं जलती, तो अक्सर उस channel की internal circuitry (opto-isolator/LED driver) faulty होती है या addressing/wiring में mapping की गलती होती है। Option B अप्रासंगिक है, C गलत तर्क है, D गलत है क्योंकि voltage होना ही sufficient proof नहीं—LED status भी जांचनी जरूरी है।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q33",
+      "question": "PLC specification sheet में input module के लिए दिया गया 'ON-state voltage range: 15V-30V DC' पैरामीटर किस बात को दर्शाता है?",
+      "options": [
+        "Module केवल exactly 24V DC पर ही काम करेगा, अन्य किसी voltage पर नहीं",
+        "यह module की output current rating बताता है",
+        "इस range के भीतर किसी भी voltage को module logically 'ON' (1) मानकर पहचानेगा, इससे कम या अधिक voltage पर behavior अनिश्चित/OFF हो सकता है",
+        "यह केवल AC supply के लिए लागू specification है"
+      ],
+      "correctIndex": 2,
+      "explanation": "ON-state voltage range specification बताती है कि किस voltage band में input signal को reliably logical HIGH माना जाएगा; इस range के बाहर voltage अनिश्चित या LOW मानी जा सकती है। Option A गलत है क्योंकि range के अंदर कोई भी value मान्य है सिर्फ 24V नहीं, B गलत है यह input parameter है output नहीं, D गलत है यह DC specification है।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q34",
+      "question": "किसी output module की specification में 'Response time: OFF to ON = 1ms, ON to OFF = 8ms (Transistor type)' दिया गया है। इसका व्यावहारिक महत्व क्या है?",
+      "options": [
+        "यह module की current rating को दर्शाता है",
+        "यह केवल module की price तय करता है",
+        "High-speed switching applications (जैसे fast pulse output) के लिए यह जानना जरूरी है कि module कितनी तेजी से state बदल सकता है, ताकि timing requirements पूरी हों",
+        "इसका application selection से कोई महत्व नहीं, केवल reference के लिए दिया जाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Response time specification बताती है कि output module electrical रूप से कितनी तेजी से switch कर सकता है, जो high-speed या pulse-based applications में critical होता है ताकि actual output, program के logic से delay के कारण mismatch न हो। Option A गलत है यह current rating नहीं है, B और D गलत हैं क्योंकि यह specification व्यावहारिक application selection में जरूरी होती है।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q35",
+      "question": "एक modular PLC में rack के Slot 2 में 8-point digital input module लगा है (channels 0-7)। यदि इसी rack के addressing convention में previous slot (Slot 1) पहले ही 16 addresses (0-15) उपयोग कर चुका है, तो Slot 2 के channel 0 का address क्या होगा (यदि sequential/word-based addressing हो)?",
+      "options": [
+        "I:2/0 अर्थात हमेशा slot number 2 और channel 0 से शुरू होगा, पिछले slot की गिनती से कोई मतलब नहीं",
+        "यह sequential बिट-नंबरिंग में अगला उपलब्ध address होगा, जैसे यदि पिछला slot 0-15 तक था तो नया channel 16 से शुरू होगा",
+        "Address हमेशा शून्य से फिर से शुरू होगा चाहे convention कोई भी हो",
+        "इसका उत्तर देना असंभव है क्योंकि PLC कभी sequential addressing उपयोग नहीं करता"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sequential/word-based addressing convention में नए module का addressing पिछले occupied addresses के ठीक बाद से जारी रहता है (जैसे 16 से आगे), जबकि slot-based convention में हर slot का अपना निश्चित addressing होता है (जैसे प्रश्न में option A बताता है)। यह प्रश्न विशेष रूप से sequential convention पर आधारित है, इसलिए B सही है; A उस स्थिति में सही होता जब addressing purely slot-based हो, यहाँ sequential बताया गया है इसलिए C, D तकनीकी रूप से गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q36",
+      "question": "किसी field sensor की wiring करते समय technician sensor के brown wire को +24V, blue wire को 0V, और black (signal) wire को PLC input terminal से जोड़ता है, लेकिन गलती से black wire को accidentally 0V rail से भी shorted कर देता है। संभावित परिणाम क्या होगा?",
+      "options": [
+        "PLC input हमेशा logical HIGH ही पढ़ेगा चाहे sensor की actual स्थिति कुछ भी हो",
+        "इससे PLC की CPU module स्थायी रूप से खराब हो जाएगी",
+        "इसका input reading पर कोई असर नहीं पड़ेगा",
+        "Signal line 0V से shorted होने के कारण input हमेशा LOW (या sensor की वास्तविक स्थिति से independent) रहेगा, जिससे गलत/false reading मिलेगी"
+      ],
+      "correctIndex": 3,
+      "explanation": "Signal wire का सीधे 0V से short होना input voltage को हमेशा low (लगभग 0V) पर clamp कर देगा, जिससे sensor की वास्तविक actuation स्थिति के बावजूद input गलत/false LOW दिखाएगा। Option A विपरीत गलत तर्क है, B बहुत extreme और असंभावित परिणाम है, C गलत है क्योंकि प्रभाव पड़ता ही है।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q37",
+      "question": "PLC specification में 'Isolation voltage: 1500V AC (field to logic side)' दिए जाने का व्यावहारिक फायदा क्या है?",
+      "options": [
+        "यह module की normal operating voltage है जिस पर वह हमेशा चलता है",
+        "यह module के output current की अधिकतम सीमा है",
+        "यह केवल AC-only modules के लिए लागू specification है, DC modules में यह parameter होता ही नहीं",
+        "यह दर्शाता है कि field side पर होने वाले surge/transient या fault की स्थिति में internal logic/CPU circuitry कितनी उच्च voltage तक सुरक्षित रह सकती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Isolation voltage rating बताती है कि field side में आए किसी fault/surge के दौरान internal logic circuitry को कितनी उच्च voltage तक protection मिलती है, बिना breakdown हुए। Option A गलत है यह test/withstand rating है operating voltage नहीं, B गलत है यह current नहीं voltage parameter है, C गलत है यह AC और DC दोनों modules के लिए relevant specification है।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q38",
+      "question": "किसी output module की individual channel LED 'ON' दिखा रही है (यानी program ने output true किया है) परंतु field में जुड़ा actual contactor energize नहीं हो रहा। समस्या की जांच के सही क्रम में सबसे पहले क्या check करना चाहिए?",
+      "options": [
+        "Output terminal से field wiring, fuse, external supply और contactor coil की continuity/voltage चेक करनी चाहिए क्योंकि internal output logic (LED के अनुसार) सही काम कर रहा है",
+        "सीधे पूरा PLC बदल देना चाहिए क्योंकि LED ON होने के बावजूद output काम न करना हमेशा CPU fault ही होता है",
+        "Program logic को दोबारा लिखना चाहिए क्योंकि addressing जरूर गलत होगी",
+        "Input module को check करना चाहिए क्योंकि समस्या वहीं होगी"
+      ],
+      "correctIndex": 0,
+      "explanation": "जब output channel की LED ON है तो इसका मतलब है internal logic ने सही तरीके से उस बिट को true किया और driver circuit ने उसे activate किया; समस्या इसके आगे external wiring/fuse/supply/contactor में होने की संभावना अधिक है। Option B जरूरत से ज्यादा extreme कदम है, C व D गलत दिशा में जांच है क्योंकि LED ON होना logic/addressing सही होने का संकेत है।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q39",
+      "question": "PLC में 'Diagnostic LED' (जैसे किसी module पर अलग से लगी 'Module OK' या 'Channel Fault' indicator) का क्या उद्देश्य होता है, सामान्य I/O status LED से अलग?",
+      "options": [
+        "यह केवल decoration के लिए लगाई जाती है, इसका कोई तकनीकी उपयोग नहीं",
+        "यह केवल CPU की RUN स्थिति दिखाने के लिए होती है",
+        "यह हमेशा input module और output module दोनों में समान रूप से अनुपस्थित होती है",
+        "यह module के internal health/hardware fault (जैसे short circuit, wire break, over-current) की जानकारी देती है, जबकि I/O status LED केवल signal की logical ON/OFF स्थिति दिखाती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Diagnostic LED विशेष रूप से module/channel के hardware-level fault (जैसे short, open circuit, over-current) को इंगित करती है, जबकि सामान्य I/O status LED केवल यह दिखाती है कि signal logically ON है या OFF। बाकी options गलत व्याख्या देते हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q40",
+      "question": "एक analog output module की specification में 'Load resistance range: 250Ω-500Ω (for 4-20mA output)' दिया गया है। यदि field में जुड़ी actuator/device की resistance इस range से अधिक हो, तो क्या समस्या आ सकती है?",
+      "options": [
+        "कोई समस्या नहीं होगी, module हमेशा सही current output देगा चाहे load resistance कुछ भी हो",
+        "अधिक resistance के कारण module अपनी compliance voltage limit तक पहुंचकर rated current maintain नहीं कर पाएगा, जिससे output signal में error आएगा",
+        "इससे module की RUN LED बंद हो जाएगी",
+        "इससे केवल addressing बदल जाएगी"
+      ],
+      "correctIndex": 1,
+      "explanation": "Current-output analog modules की एक निश्चित compliance voltage limit होती है; यदि load resistance specification से अधिक हो जाए तो आवश्यक voltage उस limit से बाहर चली जाती है और module rated current (4-20mA) को accurately maintain नहीं कर पाता, जिससे reading/output में error आता है। बाकी options असंबंधित और गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q41",
+      "question": "PLC wiring practice में field devices के लिए wire ferrule number और terminal strip label का मिलान (matching) करना addressing की दृष्टि से क्यों जरूरी है?",
+      "options": [
+        "क्योंकि इसका addressing से कोई सम्बन्ध नहीं, यह केवल सौंदर्य (aesthetic) उद्देश्य है",
+        "क्योंकि इससे field device और उसकी program में दी गई logical address (जैसे I:1/3) के बीच सही correspondence सुनिश्चित होती है, जिससे troubleshooting और modification के समय गलत wiring की संभावना कम होती है",
+        "क्योंकि यह केवल analog modules में लागू होता है",
+        "क्योंकि इससे PLC की scan time कम हो जाती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ferrule number और terminal label का मिलान सुनिश्चित करता है कि physical wiring, program में दी गई logical address से exactly correspond करे, जिससे भविष्य में troubleshooting/modification के दौरान confusion या गलत connection की संभावना घटती है। Option A, C, D गलत/असंबंधित कारण देते हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q42",
+      "question": "एक PLC सिस्टम में CPU module पर 'BATT' (battery) LED blink कर रही है जबकि RUN LED normal ON है। इस स्थिति का सही अर्थ और तुरंत जरूरी action क्या है?",
+      "options": [
+        "इसका मतलब है कि output module में overload है, output wiring चेक करनी चाहिए",
+        "इसका मतलब है कि PLC तुरंत बंद हो जाएगा, तुरंत पूरा module बदलना चाहिए",
+        "इसका मतलब है कि backup battery low/weak हो चुकी है, इसे समय रहते बदलना चाहिए ताकि program/data memory loss से बचा जा सके",
+        "इसका कोई महत्व नहीं, इसे नजरअंदाज किया जा सकता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "BATT LED blink करना backup battery के weak/low होने का संकेत देता है, जिसे समय पर न बदला जाए तो power loss की स्थिति में program/retentive data खोने का खतरा रहता है। Option A असंबंधित है, B अनावश्यक रूप से extreme है, D सही approach नहीं है क्योंकि इसे नजरअंदाज करना risky है।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q43",
+      "question": "PLC में 'Group Fault LED' (सामान्यतः एक module के ऊपर एक ही LED, जो group के किसी भी channel में fault होने पर जलती है) की तुलना में 'Individual Channel Fault LED' का क्या फायदा है?",
+      "options": [
+        "कोई फायदा नहीं, दोनों एक ही जानकारी देती हैं",
+        "Individual LED केवल CPU module में होती है, I/O module में नहीं",
+        "Group Fault LED हमेशा ज्यादा accurate होती है",
+        "Individual channel LED exact faulty channel को तुरंत pinpoint करती है, जिससे troubleshooting का समय कम लगता है, जबकि group LED केवल यह बताती है कि group के भीतर कहीं fault है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Individual channel fault LED प्रत्येक channel की स्थिति अलग से दिखाती है जिससे faulty channel को तुरंत पहचाना जा सकता है, जबकि group fault LED केवल यह इंगित करती है कि उस group के भीतर कहीं समस्या है, जिससे additional जांच (multimeter/individual testing) की जरूरत पड़ती है। बाकी options गलत हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q44",
+      "question": "एक PLC module की specification sheet में 'Simultaneous ON channels: 100% at 40°C ambient, derate to 50% above 55°C' उल्लेख है। wiring/installation करते समय इसका क्या practical महत्व है?",
+      "options": [
+        "इसका कोई महत्व नहीं, सभी channels हमेशा एक साथ पूरी क्षमता से चल सकते हैं चाहे ambient temperature कुछ भी हो",
+        "यह केवल module की addressing को प्रभावित करता है, current से कोई सम्बन्ध नहीं",
+        "यह specification केवल analog modules के लिए होती है, digital modules में लागू नहीं होती",
+        "उच्च ambient temperature वाले panel/enclosure में यदि सभी channels एक साथ full load पर चलाए जाएं, तो module overheat हो सकता है, इसलिए proper ventilation या channel loading में सावधानी जरूरी है"
+      ],
+      "correctIndex": 3,
+      "explanation": "Derating specification बताती है कि उच्च ambient temperature पर module की सभी channels को एक साथ full rated current पर चलाना सुरक्षित नहीं है, इसलिए panel में उचित ventilation/cooling या loading control जरूरी है ताकि overheating से module damage न हो। बाकी options गलत व्याख्या हैं।"
+    },
+    {
+      "id": "u13_plc_wiring_addressing_q45",
+      "question": "PLC panel में दो अलग-अलग racks (Rack 0 और Rack 1) आपस में communication link (जैसे ribbon/fiber) से जुड़े हैं। Rack 1 की addressing में rack number को शामिल करना (जैसे I:1:0/2 का 'दूसरा 1' rack को दर्शाना) क्यों जरूरी होता है?",
+      "options": [
+        "क्योंकि बिना rack number के PLC यह पहचान नहीं पाएगा कि signal किस physical rack के किस module/channel से संबंधित है, जिससे addressing में अस्पष्टता (ambiguity) होगी",
+        "Rack number केवल display purpose के लिए होता है, addressing की uniqueness से कोई सम्बन्ध नहीं",
+        "क्योंकि सभी racks की addressing हमेशा समान (identical) होनी चाहिए",
+        "क्योंकि rack number जोड़ने से module की current rating बदल जाती है"
+      ],
+      "correctIndex": 0,
+      "explanation": "Multi-rack systems में rack number addressing का हिस्सा होना जरूरी है ताकि प्रत्येक physical rack के प्रत्येक module/channel की address पूरे सिस्टम में unique रहे, अन्यथा अलग-अलग racks में समान slot/channel number की वजह से ambiguity पैदा होगी। बाकी options गलत हैं।"
     }
   ]
 }

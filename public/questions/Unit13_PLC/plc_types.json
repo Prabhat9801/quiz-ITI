@@ -363,6 +363,66 @@
       ],
       "correctIndex": 1,
       "explanation": "सही PLC प्रकार चुनने के लिए वर्तमान I/O जरूरत, भविष्य में संभावित expansion, processing/memory requirement और उपलब्ध budget — इन सभी factors को संतुलित रूप से ध्यान में रखना जरूरी है, न कि केवल रंग, brand नाम या खरीद स्थान जैसी अप्रासंगिक बातों को।"
+    },
+    {
+      "id": "u13_plc_types_q31",
+      "question": "एक textile plant में तीन अलग-अलग departments हैं, हर एक में लगभग 40-50 I/O points हैं, और तीनों को एक ही central location से coordinate भी करना है। इस स्थिति में PLC architecture चुनते समय सबसे उपयुक्त दृष्टिकोण क्या होगा?",
+      "options": [
+        "प्रत्येक department में Small/Compact PLC लगाकर उन्हें communication network के जरिए एक central Rack/Modular PLC या SCADA से जोड़ना, ताकि local control और central coordination दोनों संभव हों",
+        "हर department में एक अलग-अलग Nano PLC लगाना जो आपस में कभी communicate न करें",
+        "पूरे plant के लिए केवल एक Nano PLC लगाना, चाहे I/O count कितना भी हो",
+        "किसी भी प्रकार की PLC ना लगाकर सारा काम manual switches से करना"
+      ],
+      "correctIndex": 0,
+      "explanation": "मध्यम I/O count वाले अलग-अलग departments के लिए Small/Compact PLC उपयुक्त हैं, और उन्हें एक central Rack/Modular PLC या SCADA से network के जरिए जोड़ने से local control efficient रहता है जबकि overall coordination भी संभव होता है। अलग-थलग Nano PLC coordination नहीं दे सकतीं, अकेली Nano PLC इतना I/O संभाल नहीं सकती, और manual switches से automation संभव नहीं।"
+    },
+    {
+      "id": "u13_plc_types_q32",
+      "question": "Micro PLC और Small (Compact) PLC दोनों ही fixed housing में आते हैं, फिर भी इन्हें अलग category में क्यों रखा जाता है?",
+      "options": [
+        "क्योंकि दोनों का रंग अलग होता है",
+        "क्योंकि Micro PLC की I/O capacity, memory और processing power Small/Compact PLC से सामान्यतः कम होती है, जिससे यह और भी छोटी व सरल applications तक सीमित रहती है",
+        "क्योंकि Micro PLC में कभी CPU नहीं होता जबकि Small PLC में होता है",
+        "क्योंकि Small PLC केवल analog signals ही handle करती है"
+      ],
+      "correctIndex": 1,
+      "explanation": "Micro PLC और Small/Compact PLC दोनों fixed housing के अंदर आती हैं, पर Micro PLC की I/O capacity, memory तथा processing power आमतौर पर Small PLC से कम रखी जाती है ताकि वह अत्यंत छोटी automation tasks को न्यूनतम लागत में पूरा कर सके। दोनों में CPU होता है, और categorization रंग या केवल analog handling पर आधारित नहीं है।"
+    },
+    {
+      "id": "u13_plc_types_q33",
+      "question": "एक maintenance engineer को किसी plant में लगी PLC के बारे में यह पता करना है कि वह Rack/Modular प्रकार की है या Fixed/Compact प्रकार की। इसके लिए सबसे विश्वसनीय (reliable) तरीका क्या होगा?",
+      "options": [
+        "PLC का बाहरी रंग देखकर अनुमान लगाना",
+        "PLC को चलाकर उसकी आवाज़ सुनना",
+        "यह देखना कि क्या CPU, power supply और I/O अलग-अलग हटाए/जोड़े जा सकने वाले modules के रूप में एक rack/backplane में लगे हैं, या सब कुछ एक ही single integrated housing में built-in है",
+        "केवल manufacturer का नाम पढ़ लेना, क्योंकि हर manufacturer केवल एक ही प्रकार बनाता है"
+      ],
+      "correctIndex": 2,
+      "explanation": "Fixed और Modular PLC में मूल अंतर उनकी physical/structural design में होता है — अगर CPU, power supply, I/O अलग-अलग removable modules के रूप में rack/backplane में लगे हों तो यह Modular/Rack PLC है, और अगर सब कुछ एक ही single housing में built-in हो तो यह Fixed/Compact PLC है। रंग, आवाज़ या manufacturer का नाम इसका विश्वसनीय संकेतक नहीं है, क्योंकि अधिकांश manufacturers दोनों प्रकार बनाते हैं।"
+    },
+    {
+      "id": "u13_plc_types_q34",
+      "question": "किसी automation training institute में विद्यार्थियों को PLC प्रकार समझाते समय यह बताया गया कि 'Rack PLC हमेशा बेहतर choice होती है, चाहे application कोई भी हो'। यह statement तकनीकी दृष्टि से क्यों गलत है?",
+      "options": [
+        "क्योंकि Rack PLC वास्तव में PLC ही नहीं होती",
+        "क्योंकि Rack PLC कभी भी digital I/O handle नहीं कर सकती",
+        "क्योंकि Rack PLC में CPU नहीं लगाया जा सकता",
+        "क्योंकि छोटी, सीमित I/O वाली applications में Rack PLC की उच्च cost और अतिरिक्त complexity अनावश्यक (over-engineering) होती है, जबकि Micro/Small PLC वहाँ अधिक cost-effective और practical विकल्प होती है"
+      ],
+      "correctIndex": 3,
+      "explanation": "PLC का चुनाव हमेशा application की I/O जरूरत, budget और future expansion को ध्यान में रखकर किया जाना चाहिए। छोटी applications में Rack PLC की उच्च cost और अनावश्यक complexity केवल संसाधनों की बर्बादी होगी, जबकि वहाँ Micro/Small PLC ज्यादा उपयुक्त और economical रहती है। Rack PLC एक वास्तविक व सक्षम PLC प्रकार है जो digital व analog दोनों I/O संभाल सकती है और उसमें CPU अवश्य होता है।"
+    },
+    {
+      "id": "u13_plc_types_q35",
+      "question": "PLC के तीन प्रमुख प्रकारों — Micro, Small (Compact/Fixed), और Rack (Modular) — की तुलना करते समय, 'I/O capacity बढ़ने के साथ typical use-case कैसे बदलता है' इसका सही क्रम कौन सा है?",
+      "options": [
+        "Micro PLC छोटी सीमित-I/O tasks (जैसे single machine control) के लिए, Small PLC मध्यम आकार की applications के लिए, और Rack PLC बड़े, बहु-विभागीय industrial plants जहाँ सैकड़ों-हज़ारों I/O चाहिए, वहाँ के लिए उपयुक्त होती है",
+        "Micro PLC बड़े multi-department plants में उपयोग होती है, जबकि Rack PLC केवल घरेलू उपकरणों में",
+        "तीनों प्रकार हमेशा एक जैसी I/O capacity देती हैं, इसलिए use-case में कोई अंतर नहीं होता",
+        "Rack PLC केवल तभी उपयोग होती है जब बिल्कुल कोई automation न करनी हो"
+      ],
+      "correctIndex": 0,
+      "explanation": "जैसे-जैसे application की I/O जरूरत और complexity बढ़ती है, PLC का चुनाव भी बदलता है — Micro PLC सीमित I/O वाली छोटी tasks के लिए, Small/Compact PLC मध्यम I/O व applications के लिए, और Rack/Modular PLC बड़े industrial plants जहाँ सैकड़ों से हज़ारों I/O points तथा विभिन्न विभागों का coordination चाहिए, वहाँ के लिए उपयुक्त होती है। तीनों की I/O capacity और typical use-case स्पष्ट रूप से भिन्न होते हैं।"
     }
   ]
 }
